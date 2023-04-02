@@ -16,6 +16,7 @@ SECTIONS
 		src/title.o(.text);
 		src/intro.o(.text);
 		asm/rom_801BAD8.o(.text);
+		asm/eCard.o(.text);
 		src/rom_8032408.o(.text);
 		asm/rom_8032408.o(.text);
 		src/rom_8032FB0.o(.text);

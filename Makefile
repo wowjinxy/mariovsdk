@@ -38,6 +38,7 @@ SFILES   := \
 	asm/rom_80066FC.s \
 	asm/rom1.s \
 	asm/rom_801BAD8.s \
+	asm/eCard.s \
 	asm/rom_8032408.s \
 	asm/rom_8032FB0.s \
 	asm/rom_8033D80.s \
