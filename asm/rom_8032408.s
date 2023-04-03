@@ -216,10 +216,10 @@ _08032978:
 	cmp r0, #0
 	ble _080329DC
 	add r2, r2, r0
-	ldr r1, _08032A7C  @ =gUnknown_03001720
+	ldr r1, _08032A7C  @ =gCurrentLevelWidth
 	ldrh r0, [r2, #4]
 	strh r0, [r1]
-	ldr r1, _08032A80  @ =gUnknown_0300170C
+	ldr r1, _08032A80  @ =gCurrentLevelHeight
 	ldrh r0, [r2, #6]
 	strh r0, [r1]
 	ldr r1, _08032A5C  @ =0x030012A4
@@ -312,9 +312,9 @@ _08032A74:
 _08032A78:
 	.4byte 0x030012E4
 _08032A7C:
-	.4byte gUnknown_03001720
+	.4byte gCurrentLevelWidth
 _08032A80:
-	.4byte gUnknown_0300170C
+	.4byte gCurrentLevelHeight
 _08032A84:
 	.4byte 0x03000E70
 _08032A88:

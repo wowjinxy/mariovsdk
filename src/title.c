@@ -21,7 +21,7 @@ void title_init_callback(void)
     gUnknown_03000BE0 = 0;
     gUnknown_030000B0 = -1;
     gUnknown_030012A0 = 0;
-    gUnknown_03001710 = 0;
+    gCameraVerticalOffset = 0;
     arr[0] = &gUnknown_08867560;
     arr[1] = gUnknown_0886A328;
     arr[2] = &gUnknown_0886CFCC;
@@ -32,7 +32,7 @@ void title_init_callback(void)
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
     gUnknown_03000BE4 = 0;
     gUnknown_03000BE8 = 0;
-    gUnknown_03000B54 = 0;
+    gLevelTimer = 0;
     if (sub_08071FE4() != 10)
         sub_0807204C(10, 128, 1);
     sub_08033C74();
@@ -82,8 +82,8 @@ void title_main(void)
         else
         {
             gUnknown_03000B80 = 0;
-            gUnknown_03000B58 = gUnknown_0807954C[gUnknown_03000B64].unk1;
-            sub_0800F744(gUnknown_03000B58);
+            gAfterTutorialWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
+            sub_0800F744(gAfterTutorialWorld);
             sub_08004428(gUnknown_03000B90.unk0->unk4);
             sub_080070E8(2, 1);
             gUnknown_030012F8 = 0;
@@ -147,7 +147,7 @@ void sub_0801B88C(void)
 
 void sub_0801B908(void)
 {
-    gUnknown_03000B54++;
+    gLevelTimer++;
     DmaFill32(3, 0xA0, gOamData, 0x400);
     if (gUnknown_03000C28 == 0 && sub_080721A8(gUnknown_030000B0) != 0)
     {

@@ -179,7 +179,7 @@ sub_08000430:
 	adds r7, r3, r1
 	blt _080005A0
 _08000464:
-	ldr r7, _080006CC  @ =gUnknown_03001720
+	ldr r7, _080006CC  @ =gCurrentLevelWidth
 	ldr r7, [r7]
 	cmp r5, r7, lsl #8
 	bgt _08000480
@@ -213,7 +213,7 @@ _080004BC:
 	adds r7, r4, r2
 	blt _080005A0
 _080004D8:
-	ldr r7, _080006D0  @ =gUnknown_0300170C
+	ldr r7, _080006D0  @ =gCurrentLevelHeight
 	ldr r7, [r7]
 	cmp r6, r7, lsl #8
 	bgt _080004F4
@@ -359,9 +359,9 @@ _080006B0:
 	bge _08000580
 	b _080005A8
 _080006CC:
-	.4byte gUnknown_03001720
+	.4byte gCurrentLevelWidth
 _080006D0:
-	.4byte gUnknown_0300170C
+	.4byte gCurrentLevelHeight
 _080006D4:
 	.4byte gUnknown_0807820C
 

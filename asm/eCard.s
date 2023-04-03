@@ -295,7 +295,7 @@ e_world_return_init_callback: @ 0x0802DE08
 	ldrh r5, [r0]
 	ldr r4, _0802DF18  @ =gUnknown_087DED6C
 	ldr r3, _0802DF1C  @ =gUnknown_030012A0
-	ldr r2, _0802DF20  @ =gUnknown_03001710
+	ldr r2, _0802DF20  @ =gCameraVerticalOffset
 	mov r0, #0
 	strh r0, [r2]
 	strh r0, [r3]
@@ -427,7 +427,7 @@ _0802DF18:
 _0802DF1C:
 	.4byte gUnknown_030012A0
 _0802DF20:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _0802DF24:
 	.4byte 0x0100047E
 _0802DF28:
@@ -850,7 +850,7 @@ _0802E236:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r0, _0802E268  @ =gUnknown_03000B74
+	ldr r0, _0802E268  @ =gAfterTutorialLevel
 	strb r4, [r0]
 	mov r0, #12
 	mov r1, #1
@@ -861,7 +861,7 @@ _0802E236:
 _0802E264:
 	.4byte gUnknown_03000BBC
 _0802E268:
-	.4byte gUnknown_03000B74
+	.4byte gAfterTutorialLevel
 _0802E26C:
 	mov r0, #2
 	and r0, r0, r1
@@ -1327,7 +1327,7 @@ _0802E5C4:
 _0802E5C8:
 	.4byte gUnknown_08076800
 _0802E5CC:
-	ldr r0, _0802E604  @ =gUnknown_03000B74
+	ldr r0, _0802E604  @ =gAfterTutorialLevel
 	strb r1, [r0]
 	ldr r1, _0802E608  @ =gUnknown_03000BB4
 	mov r0, #1
@@ -1357,7 +1357,7 @@ _0802E5F6:
 	.byte 0x00
 	.byte 0x00
 _0802E604:
-	.4byte gUnknown_03000B74
+	.4byte gAfterTutorialLevel
 _0802E608:
 	.4byte gUnknown_03000BB4
 _0802E60C:
@@ -2218,7 +2218,7 @@ _0802EC6E:
 _0802EC9A:
 	mov r0, #1
 	strb r0, [r5]
-	ldr r1, _0802ECC4  @ =gUnknown_03000B58
+	ldr r1, _0802ECC4  @ =gAfterTutorialWorld
 	mov r0, #0
 	strb r0, [r1]
 	pop {r4,r5}
@@ -2239,7 +2239,7 @@ _0802ECBC:
 _0802ECC0:
 	.4byte 0x000008FC
 _0802ECC4:
-	.4byte gUnknown_03000B58
+	.4byte gAfterTutorialWorld
 	THUMB_FUNC_END e_world_init_callback
 
 	THUMB_FUNC_START sub_0802ECC8
@@ -3677,7 +3677,7 @@ _0802F6D8:
 	.4byte _0802F72C
 	.4byte _0802F74C
 _0802F6EC:
-	ldr r0, _0802F6FC  @ =gUnknown_03000B54
+	ldr r0, _0802F6FC  @ =gLevelTimer
 	ldr r0, [r0]
 	bl sub_0802F5C0
 	mov r1, #100
@@ -3686,7 +3686,7 @@ _0802F6EC:
 	.byte 0x00
 	.byte 0x00
 _0802F6FC:
-	.4byte gUnknown_03000B54
+	.4byte gLevelTimer
 _0802F700:
 	ldr r0, _0802F714  @ =gUnknown_03000B44
 	ldr r0, [r0]
@@ -6027,7 +6027,7 @@ _08030750:
 	mov r0, #50
 	strh r0, [r7, #56]
 _08030830:
-	ldr r2, _08030860  @ =gUnknown_03001724
+	ldr r2, _08030860  @ =gSpriteHorizontalOffset
 	ldr r1, _08030864  @ =gUnknown_030012F4
 	mov r0, #0
 	strh r0, [r1]
@@ -6051,7 +6051,7 @@ _08030858:
 _0803085C:
 	.4byte 0x030001DC
 _08030860:
-	.4byte gUnknown_03001724
+	.4byte gSpriteHorizontalOffset
 _08030864:
 	.4byte gUnknown_030012F4
 	THUMB_FUNC_END sub_08030408
@@ -6204,7 +6204,7 @@ sub_0803095C: @ 0x0803095C
 	mov r9, r1
 	str r2, [sp]
 	str r3, [sp, #4]
-	ldr r0, _080309CC  @ =gUnknown_03001724
+	ldr r0, _080309CC  @ =gSpriteHorizontalOffset
 	mov r2, #0
 	ldrsh r1, [r0, r2]
 	str r1, [sp, #20]
@@ -6253,7 +6253,7 @@ _08030998:
 	.byte 0x00
 	.byte 0x00
 _080309CC:
-	.4byte gUnknown_03001724
+	.4byte gSpriteHorizontalOffset
 _080309D0:
 	.4byte gUnknown_030012F4
 _080309D4:
@@ -7708,11 +7708,11 @@ sub_08031408: @ 0x08031408
 	ldrb r4, [r0, #1]
 	lsl r0, r4, #6
 	add r1, r0, r5
-	ldr r0, _080314D0  @ =gUnknown_03001720
+	ldr r0, _080314D0  @ =gCurrentLevelWidth
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r7, r0, #19
-	ldr r0, _080314D4  @ =gUnknown_0300170C
+	ldr r0, _080314D4  @ =gCurrentLevelHeight
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r6, r0, #19
@@ -7774,9 +7774,9 @@ _080314C8:
 _080314CC:
 	.4byte gUnknown_0807DC70
 _080314D0:
-	.4byte gUnknown_03001720
+	.4byte gCurrentLevelWidth
 _080314D4:
-	.4byte gUnknown_0300170C
+	.4byte gCurrentLevelHeight
 	THUMB_FUNC_END sub_08031408
 
 	THUMB_FUNC_START sub_080314D8
@@ -8688,7 +8688,7 @@ _08031AE4:
 	beq _08031BA4
 	mov r0, #8
 	ldrsh r1, [r6, r0]
-	ldr r0, _08031BC0  @ =gUnknown_03001724
+	ldr r0, _08031BC0  @ =gSpriteHorizontalOffset
 	mov r2, #0
 	ldrsh r0, [r0, r2]
 	sub r1, r1, r0
@@ -8789,7 +8789,7 @@ _08031BA4:
 _08031BBC:
 	.4byte 0x03000284
 _08031BC0:
-	.4byte gUnknown_03001724
+	.4byte gSpriteHorizontalOffset
 _08031BC4:
 	.4byte gUnknown_030012F4
 _08031BC8:

@@ -128,8 +128,8 @@ static inline bool32 inline_2(void)
     {
         sub_080070E8(7, 1);
         gUnknown_03000B80 = 0;
-        gUnknown_03000B58 = 0;
-        gUnknown_03000B74 = 0;
+        gAfterTutorialWorld = 0;
+        gAfterTutorialLevel = 0;
         gUnknown_03000BB4 = 0;
         sub_080720AC();
         sub_08071C24();
@@ -199,7 +199,7 @@ void sub_080331FC(void)
         }
         else if (gMainState == MAIN_STATE_LEVEL_PLAY)
         {
-            if (gUnknown_03000B54 <= 10)
+            if (gLevelTimer <= 10)
             {
                 gUnknown_030012E8 = gUnknown_030012E0 = 0;
             }
@@ -233,16 +233,16 @@ void sub_08033440(void)
 {
     if (gUnknown_030012A0 < 0)
         gUnknown_030012A0 = 0;
-    if ((gUnknown_030012A0 >> 1) + 240 >= gUnknown_03001720)
-        gUnknown_030012A0 = ((u16)gUnknown_03001720 - 240) * 2;
+    if ((gUnknown_030012A0 >> 1) + 240 >= gCurrentLevelWidth)
+        gUnknown_030012A0 = ((u16)gCurrentLevelWidth - 240) * 2;
     
-    if (gUnknown_03001710 < 0)
-        gUnknown_03001710 = 0;
-    if ((gUnknown_03001710 >> 1) + 160 >= gUnknown_0300170C)
-        gUnknown_03001710 = ((u16)gUnknown_0300170C - 160) * 2;
+    if (gCameraVerticalOffset < 0)
+        gCameraVerticalOffset = 0;
+    if ((gCameraVerticalOffset >> 1) + 160 >= gCurrentLevelHeight)
+        gCameraVerticalOffset = ((u16)gCurrentLevelHeight - 160) * 2;
     
-    gUnknown_03001724 = gUnknown_030012A0 >> 1;
-    gUnknown_030012F4 = gUnknown_03001710 >> 1;
+    gSpriteHorizontalOffset = gUnknown_030012A0 >> 1;
+    gUnknown_030012F4 = gCameraVerticalOffset >> 1;
 }
 
 #ifdef NONMATCHING
@@ -260,8 +260,8 @@ void sub_080334C4(s32 a)
         gUnknown_030002B8.unk0 = r1;
         if (gUnknown_030002B8.unk0 < 0)
             gUnknown_030002B8.unk0 = 0;
-        if ((gUnknown_030002B8.unk0 >> 8) + 240 >= gUnknown_03001720)
-            gUnknown_030002B8.unk0 = (gUnknown_03001720 - 240) << 8;
+        if ((gUnknown_030002B8.unk0 >> 8) + 240 >= gCurrentLevelWidth)
+            gUnknown_030002B8.unk0 = (gCurrentLevelWidth - 240) << 8;
         gUnknown_030002C8.unk0 = (gUnknown_030002B8.unk0 - gUnknown_030002B0.unk0) / a;
         asm("");
     }
@@ -275,8 +275,8 @@ void sub_080334C4(s32 a)
         gUnknown_030002B8.unk4 = r5;
         if (gUnknown_030002B8.unk4 < 0)
             gUnknown_030002B8.unk4 = 0;
-        if ((gUnknown_030002B8.unk4 >> 8) + 160 >= gUnknown_0300170C)
-            gUnknown_030002B8.unk4 = (gUnknown_0300170C - 160) << 8;
+        if ((gUnknown_030002B8.unk4 >> 8) + 160 >= gCurrentLevelHeight)
+            gUnknown_030002B8.unk4 = (gCurrentLevelHeight - 160) << 8;
         gUnknown_030002C8.unk4 = (gUnknown_030002B8.unk4 - gUnknown_030002B0.unk4) / a;
     }
 }
@@ -316,7 +316,7 @@ _080334F8:\n\
 	ldr r0, [r2]\n\
 	asr r0, r0, #8\n\
 	add r0, r0, #240\n\
-	ldr r1, _08033534  @ =gUnknown_03001720\n\
+	ldr r1, _08033534  @ =gCurrentLevelWidth\n\
 	mov r4, #0\n\
 	ldrsh r1, [r1, r4]\n\
 	cmp r0, r1\n\
@@ -345,7 +345,7 @@ _08033520:\n\
 _08033530:\n\
 	.4byte gUnknown_030002B8\n\
 _08033534:\n\
-	.4byte gUnknown_03001720\n\
+	.4byte gCurrentLevelWidth\n\
 _08033538:\n\
 	.4byte gUnknown_030002C8\n\
 _0803353C:\n\
@@ -361,7 +361,7 @@ _0803354C:\n\
 	ldr r0, [r2, #4]\n\
 	asr r0, r0, #8\n\
 	add r0, r0, #160\n\
-	ldr r1, _08033580  @ =gUnknown_0300170C\n\
+	ldr r1, _08033580  @ =gCurrentLevelHeight\n\
 	mov r4, #0\n\
 	ldrsh r1, [r1, r4]\n\
 	cmp r0, r1\n\
@@ -387,7 +387,7 @@ _08033574:\n\
 _0803357C:\n\
 	.4byte gUnknown_030002B8\n\
 _08033580:\n\
-	.4byte gUnknown_0300170C\n\
+	.4byte gCurrentLevelHeight\n\
 _08033584:\n\
 	.4byte gUnknown_030002C8\n");
 }
@@ -405,8 +405,8 @@ void sub_08033588(int a, int b, int c)
         gUnknown_030002B8.unk0 = a;
         if (gUnknown_030002B8.unk0 < 0)
             gUnknown_030002B8.unk0 = 0;
-        if ((gUnknown_030002B8.unk0 >> 8) + DISPLAY_WIDTH >= gUnknown_03001720)
-            gUnknown_030002B8.unk0 = (gUnknown_03001720 - DISPLAY_WIDTH) << 8;
+        if ((gUnknown_030002B8.unk0 >> 8) + DISPLAY_WIDTH >= gCurrentLevelWidth)
+            gUnknown_030002B8.unk0 = (gCurrentLevelWidth - DISPLAY_WIDTH) << 8;
         if (gUnknown_030002B8.unk0 - gUnknown_030002B0.unk0 > 0)
             gUnknown_030002C8.unk0 = c;
         else
@@ -423,8 +423,8 @@ void sub_08033588(int a, int b, int c)
         gUnknown_030002B8.unk4 = b;
         if (gUnknown_030002B8.unk4 < 0)
             gUnknown_030002B8.unk4 = 0;
-        if ((gUnknown_030002B8.unk4 >> 8) + DISPLAY_HEIGHT >= gUnknown_0300170C)
-            gUnknown_030002B8.unk4 = (gUnknown_0300170C - DISPLAY_HEIGHT) << 8;
+        if ((gUnknown_030002B8.unk4 >> 8) + DISPLAY_HEIGHT >= gCurrentLevelHeight)
+            gUnknown_030002B8.unk4 = (gCurrentLevelHeight - DISPLAY_HEIGHT) << 8;
         if (gUnknown_030002B8.unk4 - gUnknown_030002B0.unk4 > 0)
             gUnknown_030002C8.unk4 = c;
         else

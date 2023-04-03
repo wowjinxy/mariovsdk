@@ -316,7 +316,7 @@ sub_08006A0C: @ 0x08006A0C
 	ldr r1, _08006A24  @ =0x03000934
 	mov r0, #1
 	strb r0, [r1]
-	ldr r1, _08006A28  @ =gUnknown_03000B74
+	ldr r1, _08006A28  @ =gAfterTutorialLevel
 	ldr r0, _08006A2C  @ =gUnknown_0807820C
 	ldr r0, [r0]
 	ldr r2, _08006A30  @ =0x0000400C
@@ -329,7 +329,7 @@ sub_08006A0C: @ 0x08006A0C
 _08006A24:
 	.4byte 0x03000934
 _08006A28:
-	.4byte gUnknown_03000B74
+	.4byte gAfterTutorialLevel
 _08006A2C:
 	.4byte gUnknown_0807820C
 _08006A30:

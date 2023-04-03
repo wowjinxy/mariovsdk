@@ -91,7 +91,7 @@ void sub_08006F90(void)
     s32 x;
     s32 y;
 
-    x = ((gUnknown_030009B0.unk0 >> 8) - gUnknown_03001724 - 4) & 0xFF;
+    x = ((gUnknown_030009B0.unk0 >> 8) - gSpriteHorizontalOffset - 4) & 0xFF;
     oam->x = x;
     y = (gUnknown_030009B0.unk4 >> 8) - (u8)gUnknown_030012F4;
     oam->y = y;

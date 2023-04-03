@@ -82,7 +82,7 @@ _080336D8:
 	lsr r2, r2, #7
 	ldr r0, _080336FC  @ =gUnknown_030012A0
 	strh r1, [r0]
-	ldr r0, _08033700  @ =gUnknown_03001710
+	ldr r0, _08033700  @ =gCameraVerticalOffset
 	strh r2, [r0]
 	bl sub_08033440
 	mov r0, #0
@@ -98,7 +98,7 @@ _080336F4:
 _080336FC:
 	.4byte gUnknown_030012A0
 _08033700:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 	THUMB_FUNC_END sub_08033658
 
 	THUMB_FUNC_START sub_08033704
@@ -148,7 +148,7 @@ _08033748:
 	lsr r2, r2, #7
 	ldr r0, _08033764  @ =gUnknown_030012A0
 	strh r1, [r0]
-	ldr r0, _08033768  @ =gUnknown_03001710
+	ldr r0, _08033768  @ =gCameraVerticalOffset
 	strh r2, [r0]
 	bl sub_08033440
 	add r0, r6, #0
@@ -158,7 +158,7 @@ _08033748:
 _08033764:
 	.4byte gUnknown_030012A0
 _08033768:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 	THUMB_FUNC_END sub_08033704
 
 	THUMB_FUNC_START sub_0803376C
@@ -209,7 +209,7 @@ _080337B4:
 	lsl r0, r0, #9
 	asr r0, r0, #16
 	mov r4, #0
-	ldr r3, _080337F8  @ =gUnknown_03001710
+	ldr r3, _080337F8  @ =gCameraVerticalOffset
 	strh r0, [r3]
 	cmp r0, #0
 	bge _080337C8
@@ -220,7 +220,7 @@ _080337C8:
 	lsl r0, r0, #16
 	asr r0, r0, #17
 	add r0, r0, #160
-	ldr r2, _080337FC  @ =gUnknown_0300170C
+	ldr r2, _080337FC  @ =gCurrentLevelHeight
 	mov r7, #0
 	ldrsh r1, [r2, r7]
 	cmp r0, r1
@@ -243,9 +243,9 @@ _080337E4:
 	.byte 0x00
 	.byte 0x00
 _080337F8:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _080337FC:
-	.4byte gUnknown_0300170C
+	.4byte gCurrentLevelHeight
 _08033800:
 	.4byte gUnknown_030012F4
 _08033804:
@@ -283,7 +283,7 @@ sub_08033824: @ 0x08033824
 	ldr r4, _08033878  @ =gUnknown_030012A0
 	mov r5, #0
 	ldrsh r6, [r4, r5]
-	ldr r5, _0803387C  @ =gUnknown_03001710
+	ldr r5, _0803387C  @ =gCameraVerticalOffset
 	mov r3, #0
 	ldrsh r7, [r5, r3]
 	mov r10, r7
@@ -317,7 +317,7 @@ sub_08033824: @ 0x08033824
 _08033878:
 	.4byte gUnknown_030012A0
 _0803387C:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _08033880:
 	lsl r0, r0, #16
 	asr r0, r0, #16
@@ -338,7 +338,7 @@ _08033894:
 	strh r0, [r4]
 	bl sub_08033440
 _080338A2:
-	ldr r3, _080338C8  @ =gUnknown_03001710
+	ldr r3, _080338C8  @ =gCameraVerticalOffset
 	mov r1, #0
 	ldrsh r0, [r3, r1]
 	mov r2, #160
@@ -358,7 +358,7 @@ _080338A2:
 	sub r0, r0, #2
 	b _080338DE
 _080338C8:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _080338CC:
 	cmp r1, r4
 	bgt _080338DA
@@ -392,7 +392,7 @@ _080338F8:
 	ldrsh r0, [r0, r5]
 	cmp r6, r0
 	bne _0803391E
-	ldr r0, _08033934  @ =gUnknown_03001710
+	ldr r0, _08033934  @ =gCameraVerticalOffset
 	mov r7, #0
 	ldrsh r0, [r0, r7]
 	cmp r10, r0
@@ -418,7 +418,7 @@ _0803391E:
 _08033930:
 	.4byte gUnknown_030012A0
 _08033934:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _08033938:
 	.4byte gUnknown_03001A1C
 	THUMB_FUNC_END sub_08033824
@@ -438,7 +438,7 @@ sub_0803393C: @ 0x0803393C
 	mov r6, #0
 	ldrsh r5, [r4, r6]
 	str r5, [sp, #4]
-	ldr r5, _0803398C  @ =gUnknown_03001710
+	ldr r5, _0803398C  @ =gCameraVerticalOffset
 	mov r3, #0
 	ldrsh r7, [r5, r3]
 	mov r10, r7
@@ -467,7 +467,7 @@ sub_0803393C: @ 0x0803393C
 _08033988:
 	.4byte gUnknown_030012A0
 _0803398C:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _08033990:
 	ldr r0, [sp, #4]
 	mov r7, #160
@@ -511,7 +511,7 @@ _080339C8:
 	strh r1, [r4]
 	bl sub_08033440
 _080339E2:
-	ldr r4, _08033A24  @ =gUnknown_03001710
+	ldr r4, _08033A24  @ =gCameraVerticalOffset
 	mov r5, #0
 	ldrsh r0, [r4, r5]
 	mov r7, #160
@@ -543,7 +543,7 @@ _080339E2:
 	.byte 0x00
 	.byte 0x00
 _08033A24:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _08033A28:
 	.4byte 0x3FD00000
 _08033A2C:
@@ -606,7 +606,7 @@ _08033A92:
 	ldr r1, [sp, #4]
 	cmp r1, r0
 	bne _08033ABA
-	ldr r0, _08033AD0  @ =gUnknown_03001710
+	ldr r0, _08033AD0  @ =gCameraVerticalOffset
 	mov r2, #0
 	ldrsh r0, [r0, r2]
 	cmp r10, r0
@@ -632,7 +632,7 @@ _08033ABA:
 _08033ACC:
 	.4byte gUnknown_030012A0
 _08033AD0:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _08033AD4:
 	.4byte gUnknown_03001A1C
 	THUMB_FUNC_END sub_0803393C
@@ -652,7 +652,7 @@ sub_08033AD8: @ 0x08033AD8
 	mov r6, #0
 	ldrsh r5, [r4, r6]
 	str r5, [sp, #8]
-	ldr r5, _08033B2C  @ =gUnknown_03001710
+	ldr r5, _08033B2C  @ =gCameraVerticalOffset
 	mov r3, #0
 	ldrsh r7, [r5, r3]
 	str r7, [sp, #4]
@@ -682,7 +682,7 @@ sub_08033AD8: @ 0x08033AD8
 _08033B28:
 	.4byte gUnknown_030012A0
 _08033B2C:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _08033B30:
 	ldr r0, [sp, #8]
 	mov r7, #160
@@ -721,7 +721,7 @@ _08033B6C:
 	bl sub_08033440
 	mov r6, #0
 _08033B72:
-	ldr r4, _08033BA0  @ =gUnknown_03001710
+	ldr r4, _08033BA0  @ =gCameraVerticalOffset
 	mov r5, #0
 	ldrsh r0, [r4, r5]
 	mov r7, #160
@@ -744,7 +744,7 @@ _08033B72:
 	bl sub_08033440
 	b _08033BEC
 _08033BA0:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _08033BA4:
 	cmp r1, r2
 	ble _08033BB4
@@ -793,7 +793,7 @@ _08033BEE:
 	ldr r2, [sp, #8]
 	cmp r2, r0
 	bne _08033C18
-	ldr r0, _08033C30  @ =gUnknown_03001710
+	ldr r0, _08033C30  @ =gCameraVerticalOffset
 	mov r3, #0
 	ldrsh r0, [r0, r3]
 	ldr r5, [sp, #4]
@@ -821,7 +821,7 @@ _08033C18:
 _08033C2C:
 	.4byte gUnknown_030012A0
 _08033C30:
-	.4byte gUnknown_03001710
+	.4byte gCameraVerticalOffset
 _08033C34:
 	.4byte gUnknown_03001A1C
 	THUMB_FUNC_END sub_08033AD8

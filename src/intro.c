@@ -9,7 +9,7 @@ void intro_init_callback(void)
     gUnknown_03000BE0 = 0;
     gUnknown_03000BD0 = 0;
     gUnknown_030012A0 = 0;
-    gUnknown_03001710 = 0;
+    gCameraVerticalOffset = 0;
     arr[0] = &gUnknown_08866A48;
     arr[1] = NULL;
     arr[2] = NULL;
@@ -20,7 +20,7 @@ void intro_init_callback(void)
     REG_BLDY = gUnknown_08866A48.bldY;
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
     REG_DISPCNT = 0x100;
-    gUnknown_03000B54 = 0;
+    gLevelTimer = 0;
     sub_08029CDC(gUnknown_08866A48.bldCnt, gUnknown_08866A48.bldAlpha, gUnknown_08866A48.bldY);
 }
 
@@ -46,7 +46,7 @@ void intro_main(void)
 
 void sub_0801BAC4(void)
 {
-    gUnknown_03000B54++;
+    gLevelTimer++;
 }
 
 void sub_0801BAD4(void)
