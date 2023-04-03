@@ -1443,8 +1443,8 @@ _08035384:
 	.4byte 0x06010000
 	THUMB_FUNC_END sub_080352F8
 
-	THUMB_FUNC_START sub_08035388
-sub_08035388: @ 0x08035388
+	THUMB_FUNC_START expert_levels_init_callback
+expert_levels_init_callback: @ 0x08035388
 	push {r4-r6,lr}
 	mov r6, r8
 	push {r6}
@@ -1576,7 +1576,7 @@ _08035494:
 	.4byte 0x001FFFFF
 _08035498:
 	.4byte gUnknown_03001730
-	THUMB_FUNC_END sub_08035388
+	THUMB_FUNC_END expert_levels_init_callback
 
 	THUMB_FUNC_START sub_0803549C
 sub_0803549C: @ 0x0803549C
@@ -2175,8 +2175,8 @@ _08035904:
 	.4byte gUnknown_03000B74
 	THUMB_FUNC_END sub_080356B8
 
-	THUMB_FUNC_START sub_08035908
-sub_08035908: @ 0x08035908
+	THUMB_FUNC_START expert_levels_main
+expert_levels_main: @ 0x08035908
 	push {r4,lr}
 	bl sub_08029C20
 	ldr r0, _08035940  @ =gUnknown_03000C28
@@ -2354,7 +2354,7 @@ _08035A54:
 	.4byte 0x030002EA
 _08035A58:
 	.4byte 0x030002EE
-	THUMB_FUNC_END sub_08035908
+	THUMB_FUNC_END expert_levels_main
 
 	THUMB_FUNC_START sub_08035A5C
 sub_08035A5C: @ 0x08035A5C
@@ -5228,8 +5228,8 @@ sub_0803704C: @ 0x0803704C
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08037050
-sub_08037050: @ 0x08037050
+	THUMB_FUNC_START world_start_init_callback
+world_start_init_callback: @ 0x08037050
 	push {r4,r5,lr}
 	sub sp, sp, #32
 	mov r0, #0
@@ -5462,7 +5462,7 @@ _08037228:
 	.4byte 0x030002F8
 _0803722C:
 	.4byte 0xFFFFCE00
-	THUMB_FUNC_END sub_08037050
+	THUMB_FUNC_END world_start_init_callback
 
 	THUMB_FUNC_START sub_08037230
 sub_08037230: @ 0x08037230
@@ -5831,8 +5831,8 @@ _080374DC:
 	.4byte gUnknown_03001730
 	THUMB_FUNC_END sub_080372A0
 
-	THUMB_FUNC_START sub_080374E0
-sub_080374E0: @ 0x080374E0
+	THUMB_FUNC_START world_start_main
+world_start_main: @ 0x080374E0
 	push {r4,lr}
 	sub sp, sp, #12
 	bl sub_08029C20
@@ -5966,7 +5966,7 @@ _080375E4:
 	.4byte gUnknown_086593A0
 _080375E8:
 	.4byte 0x03000300
-	THUMB_FUNC_END sub_080374E0
+	THUMB_FUNC_END world_start_main
 
 	THUMB_FUNC_START sub_080375EC
 sub_080375EC: @ 0x080375EC

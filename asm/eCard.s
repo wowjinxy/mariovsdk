@@ -183,8 +183,8 @@ _0802DD48:
 	.4byte 0x80000200
 	THUMB_FUNC_END sub_0802DBEC
 
-	THUMB_FUNC_START sub_0802DD4C
-sub_0802DD4C: @ 0x0802DD4C
+	THUMB_FUNC_START e_card_scan_init_callback
+e_card_scan_init_callback: @ 0x0802DD4C
 	push {r4,lr}
 	sub sp, sp, #4
 	ldr r0, _0802DDC0  @ =0x030001B4
@@ -262,7 +262,7 @@ _0802DDE0:
 	.4byte 0x80000200
 _0802DDE4:
 	.4byte 0x0000FDFF
-	THUMB_FUNC_END sub_0802DD4C
+	THUMB_FUNC_END e_card_scan_init_callback
 
 	THUMB_FUNC_START sub_0802DDE8
 sub_0802DDE8: @ 0x0802DDE8
@@ -282,8 +282,8 @@ _0802DE04:
 	.4byte 0x030001B4
 	THUMB_FUNC_END sub_0802DDE8
 
-	THUMB_FUNC_START sub_0802DE08
-sub_0802DE08: @ 0x0802DE08
+	THUMB_FUNC_START e_world_return_init_callback
+e_world_return_init_callback: @ 0x0802DE08
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -450,10 +450,10 @@ _0802DF48:
 	.4byte gUnknown_03001730
 _0802DF4C:
 	.4byte 0x01000008
-	THUMB_FUNC_END sub_0802DE08
+	THUMB_FUNC_END e_world_return_init_callback
 
-	THUMB_FUNC_START sub_0802DF50
-sub_0802DF50: @ 0x0802DF50
+	THUMB_FUNC_START e_world_main
+e_world_main: @ 0x0802DF50
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -1553,7 +1553,7 @@ _0802E762:
 	.byte 0x00
 _0802E77C:
 	.4byte 0x030001C4
-	THUMB_FUNC_END sub_0802DF50
+	THUMB_FUNC_END e_world_main
 
 	THUMB_FUNC_START sub_0802E780
 sub_0802E780: @ 0x0802E780
@@ -2172,8 +2172,8 @@ _0802EC30:
 	.4byte 0x80000400
 	THUMB_FUNC_END sub_0802E888
 
-	THUMB_FUNC_START sub_0802EC34
-sub_0802EC34: @ 0x0802EC34
+	THUMB_FUNC_START e_world_init_callback
+e_world_init_callback: @ 0x0802EC34
 	push {r4,r5,lr}
 	mov r0, #0
 	bl sub_08034898
@@ -2207,7 +2207,7 @@ _0802EC6E:
 	ldr r0, _0802ECC0  @ =0x000008FC
 	bl sub_08034854
 	str r0, [r4]
-	bl sub_0802DE08
+	bl e_world_return_init_callback
 	bl sub_08071FE4
 	cmp r0, #10
 	beq _0802EC9A
@@ -2240,7 +2240,7 @@ _0802ECC0:
 	.4byte 0x000008FC
 _0802ECC4:
 	.4byte gUnknown_03000B58
-	THUMB_FUNC_END sub_0802EC34
+	THUMB_FUNC_END e_world_init_callback
 
 	THUMB_FUNC_START sub_0802ECC8
 sub_0802ECC8: @ 0x0802ECC8
@@ -2991,8 +2991,8 @@ _0802F1E8:
 	.4byte gUnknown_0807CA94
 	THUMB_FUNC_END sub_0802F1D4
 
-	THUMB_FUNC_START sub_0802F1EC
-sub_0802F1EC: @ 0x0802F1EC
+	THUMB_FUNC_START e_world_debug_main
+e_world_debug_main: @ 0x0802F1EC
 	push {r4-r7,lr}
 	sub sp, sp, #12
 	bl sub_080331FC
@@ -3306,7 +3306,7 @@ _0802F432:
 	.byte 0x00
 _0802F43C:
 	.4byte 0x030001C9
-	THUMB_FUNC_END sub_0802F1EC
+	THUMB_FUNC_END e_world_debug_main
 
 	THUMB_FUNC_START sub_0802F440
 sub_0802F440: @ 0x0802F440
@@ -3487,8 +3487,8 @@ _0802F58C:
 	.4byte 0x80000200
 	THUMB_FUNC_END sub_0802F440
 
-	THUMB_FUNC_START sub_0802F590
-sub_0802F590: @ 0x0802F590
+	THUMB_FUNC_START e_world_debug_init_callback
+e_world_debug_init_callback: @ 0x0802F590
 	ldr r3, _0802F5AC  @ =0x030001C8
 	ldr r2, _0802F5B0  @ =0x030001C9
 	ldr r1, _0802F5B4  @ =0x030001CA
@@ -3511,7 +3511,7 @@ _0802F5B4:
 	.4byte 0x030001CA
 _0802F5B8:
 	.4byte 0x0000FDFF
-	THUMB_FUNC_END sub_0802F590
+	THUMB_FUNC_END e_world_debug_init_callback
 
 	THUMB_FUNC_START sub_0802F5BC
 sub_0802F5BC: @ 0x0802F5BC
@@ -9233,8 +9233,8 @@ _08031EDC:
 	bx r1
 	THUMB_FUNC_END sub_08031E04
 
-	THUMB_FUNC_START sub_08031EE8
-sub_08031EE8: @ 0x08031EE8
+	THUMB_FUNC_START e_world_from_menu_main
+e_world_from_menu_main: @ 0x08031EE8
 	push {r4-r6,lr}
 	sub sp, sp, #4
 	bl sub_080331FC
@@ -9497,7 +9497,7 @@ _080320D6:
 	.byte 0x00
 _080320E0:
 	.4byte 0x0300028C
-	THUMB_FUNC_END sub_08031EE8
+	THUMB_FUNC_END e_world_from_menu_main
 
 	THUMB_FUNC_START sub_080320E4
 sub_080320E4: @ 0x080320E4
@@ -9586,8 +9586,8 @@ _08032188:
 	.4byte 0x80000200
 	THUMB_FUNC_END sub_080320E4
 
-	THUMB_FUNC_START sub_0803218C
-sub_0803218C: @ 0x0803218C
+	THUMB_FUNC_START e_world_from_menu_init_callback
+e_world_from_menu_init_callback: @ 0x0803218C
 	push {r4,lr}
 	sub sp, sp, #4
 	mov r0, #0
@@ -9597,7 +9597,7 @@ sub_0803218C: @ 0x0803218C
 	mov r4, #0
 	strh r4, [r0]
 	strh r4, [r1]
-	bl sub_0802EC34
+	bl e_world_init_callback
 	ldr r0, _080321F4  @ =gUnknown_08B29054
 	bl sub_08006968
 	bl sub_0802A458
@@ -9647,7 +9647,7 @@ _08032204:
 	.4byte gUnknown_03001730
 _08032208:
 	.4byte 0x01000008
-	THUMB_FUNC_END sub_0803218C
+	THUMB_FUNC_END e_world_from_menu_init_callback
 
 	THUMB_FUNC_START sub_0803220C
 sub_0803220C: @ 0x0803220C
@@ -9656,8 +9656,8 @@ sub_0803220C: @ 0x0803220C
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08032210
-sub_08032210: @ 0x08032210
+	THUMB_FUNC_START level_view_main
+level_view_main: @ 0x08032210
 	push {r4,lr}
 	bl sub_080331FC
 	ldr r0, _0803224C  @ =gUnknown_030012E0
@@ -9729,7 +9729,7 @@ _080322A0:
 	pop {r4}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_08032210
+	THUMB_FUNC_END level_view_main
 
 	.byte 0x00
 	.byte 0x00
@@ -9838,8 +9838,8 @@ _0803236C:
 	.4byte 0xFFFFFE00
 	THUMB_FUNC_END sub_080322A8
 
-	THUMB_FUNC_START sub_08032370
-sub_08032370: @ 0x08032370
+	THUMB_FUNC_START level_view_init_callback
+level_view_init_callback: @ 0x08032370
 	push {r4,r5,lr}
 	sub sp, sp, #12
 	bl sub_080720E4
@@ -9883,7 +9883,7 @@ _080323C4:
 	.4byte 0x03000B78
 _080323C8:
 	.4byte 0x03001A00
-	THUMB_FUNC_END sub_08032370
+	THUMB_FUNC_END level_view_init_callback
 
 	THUMB_FUNC_START sub_080323CC
 sub_080323CC: @ 0x080323CC

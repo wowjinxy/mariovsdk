@@ -447,8 +447,8 @@ _0801BE30:
 	.4byte 0x030000B4
 	THUMB_FUNC_END sub_0801BAD8
 
-	THUMB_FUNC_START sub_0801BE34
-sub_0801BE34: @ 0x0801BE34
+	THUMB_FUNC_START pause_menu_init_callback
+pause_menu_init_callback: @ 0x0801BE34
 	push {lr}
 	ldr r0, _0801BE60  @ =0x030000B4
 	mov r2, #0
@@ -485,10 +485,10 @@ _0801BE74:
 	.4byte 0x03000BEC
 _0801BE78:
 	.4byte 0x030000B6
-	THUMB_FUNC_END sub_0801BE34
+	THUMB_FUNC_END pause_menu_init_callback
 
-	THUMB_FUNC_START sub_0801BE7C
-sub_0801BE7C: @ 0x0801BE7C
+	THUMB_FUNC_START pause_menu_main
+pause_menu_main: @ 0x0801BE7C
 	push {lr}
 	bl sub_080331FC
 	bl sub_0801BAD8
@@ -520,7 +520,7 @@ _0801BEB4:
 	bl sub_0800CC6C
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0801BE7C
+	THUMB_FUNC_END pause_menu_main
 
 	THUMB_FUNC_START sub_0801BEBC
 sub_0801BEBC: @ 0x0801BEBC
@@ -579,8 +579,8 @@ _0801BF10:
 	.4byte 0x030000B6
 	THUMB_FUNC_END sub_0801BED4
 
-	THUMB_FUNC_START sub_0801BF14
-sub_0801BF14: @ 0x0801BF14
+	THUMB_FUNC_START boss_clear_init_callback
+boss_clear_init_callback: @ 0x0801BF14
 	push {r4-r6,lr}
 	sub sp, sp, #36
 	mov r0, #0
@@ -947,7 +947,7 @@ _0801C1E8:
 	.4byte 0x81000100
 _0801C1EC:
 	.4byte 0x030000C1
-	THUMB_FUNC_END sub_0801BF14
+	THUMB_FUNC_END boss_clear_init_callback
 
 	THUMB_FUNC_START sub_0801C1F0
 sub_0801C1F0: @ 0x0801C1F0
@@ -1019,8 +1019,8 @@ _0801C274:
 	.4byte gUnknown_03000B74
 	THUMB_FUNC_END sub_0801C1F0
 
-	THUMB_FUNC_START sub_0801C278
-sub_0801C278: @ 0x0801C278
+	THUMB_FUNC_START boss_clear_main
+boss_clear_main: @ 0x0801C278
 	push {r4,r5,lr}
 	sub sp, sp, #12
 	bl sub_08029C20
@@ -1240,7 +1240,7 @@ _0801C424:
 	.4byte gUnknown_0807976C
 _0801C428:
 	.4byte gUnknown_03000B90
-	THUMB_FUNC_END sub_0801C278
+	THUMB_FUNC_END boss_clear_main
 
 	THUMB_FUNC_START sub_0801C42C
 sub_0801C42C: @ 0x0801C42C
@@ -11983,8 +11983,8 @@ _080215AE:
 	bx r0
 	THUMB_FUNC_END sub_08021534
 
-	THUMB_FUNC_START sub_080215B4
-sub_080215B4: @ 0x080215B4
+	THUMB_FUNC_START bonus_stoparrow_init_callback
+bonus_stoparrow_init_callback: @ 0x080215B4
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -12418,10 +12418,10 @@ _0802191C:
 	.4byte 0x030000E0
 _08021920:
 	.4byte gUnknown_080798B0
-	THUMB_FUNC_END sub_080215B4
+	THUMB_FUNC_END bonus_stoparrow_init_callback
 
-	THUMB_FUNC_START sub_08021924
-sub_08021924: @ 0x08021924
+	THUMB_FUNC_START bonus_stoparrow_main
+bonus_stoparrow_main: @ 0x08021924
 	push {r4,r5,lr}
 	sub sp, sp, #4
 	ldr r0, _08021990  @ =gUnknown_03000BBC
@@ -12482,7 +12482,7 @@ _0802199C:
 	.4byte 0x0000199A
 _080219A0:
 	.4byte 0x030000DC
-	THUMB_FUNC_END sub_08021924
+	THUMB_FUNC_END bonus_stoparrow_main
 
 	THUMB_FUNC_START sub_080219A4
 sub_080219A4: @ 0x080219A4
@@ -23974,8 +23974,8 @@ _08027062:
 	bx r0
 	THUMB_FUNC_END sub_08026FE8
 
-	THUMB_FUNC_START sub_08027068
-sub_08027068: @ 0x08027068
+	THUMB_FUNC_START bonus_swapboxes_init_callback
+bonus_swapboxes_init_callback: @ 0x08027068
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -25148,10 +25148,10 @@ _080278F8:
 	.4byte 0x03000C0C
 _080278FC:
 	.4byte 0x030000F0
-	THUMB_FUNC_END sub_08027068
+	THUMB_FUNC_END bonus_swapboxes_init_callback
 
-	THUMB_FUNC_START sub_08027900
-sub_08027900: @ 0x08027900
+	THUMB_FUNC_START bonus_swapboxes_main
+bonus_swapboxes_main: @ 0x08027900
 	push {r4,r5,lr}
 	sub sp, sp, #4
 	ldr r0, _0802797C  @ =gUnknown_03000BBC
@@ -25221,7 +25221,7 @@ _08027988:
 	.4byte 0x0000199A
 _0802798C:
 	.4byte 0x03000C10
-	THUMB_FUNC_END sub_08027900
+	THUMB_FUNC_END bonus_swapboxes_main
 
 	THUMB_FUNC_START sub_08027990
 sub_08027990: @ 0x08027990
@@ -27422,8 +27422,8 @@ _08028958:
 	.4byte 0x00001134
 	THUMB_FUNC_END sub_08028824
 
-	THUMB_FUNC_START sub_0802895C
-sub_0802895C: @ 0x0802895C
+	THUMB_FUNC_START options_init_callback
+options_init_callback: @ 0x0802895C
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -27762,10 +27762,10 @@ _08028C00:
 	.4byte gUnknown_03001730
 _08028C04:
 	.4byte 0x01000008
-	THUMB_FUNC_END sub_0802895C
+	THUMB_FUNC_END options_init_callback
 
-	THUMB_FUNC_START sub_08028C08
-sub_08028C08: @ 0x08028C08
+	THUMB_FUNC_START options_main
+options_main: @ 0x08028C08
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -28054,7 +28054,7 @@ _08028E3C:
 	.4byte 0x0000112C
 _08028E40:
 	.4byte 0x01000400
-	THUMB_FUNC_END sub_08028C08
+	THUMB_FUNC_END options_main
 
 	THUMB_FUNC_START sub_08028E44
 sub_08028E44: @ 0x08028E44
@@ -28753,8 +28753,8 @@ _08029358:
 	.4byte 0x0300010D
 	THUMB_FUNC_END sub_0802919C
 
-	THUMB_FUNC_START sub_0802935C
-sub_0802935C: @ 0x0802935C
+	THUMB_FUNC_START level_results_init_callback
+level_results_init_callback: @ 0x0802935C
 	push {r4,r5,lr}
 	sub sp, sp, #4
 	ldr r1, _0802937C  @ =0x0300010F
@@ -29168,10 +29168,10 @@ _0802969C:
 	.4byte 0x03000DD0
 _080296A0:
 	.4byte gUnknown_03000B74
-	THUMB_FUNC_END sub_0802935C
+	THUMB_FUNC_END level_results_init_callback
 
-	THUMB_FUNC_START sub_080296A4
-sub_080296A4: @ 0x080296A4
+	THUMB_FUNC_START level_results_main
+level_results_main: @ 0x080296A4
 	push {r4-r7,lr}
 	sub sp, sp, #12
 	mov r4, #0
@@ -29676,7 +29676,7 @@ _08029A74:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_080296A4
+	THUMB_FUNC_END level_results_main
 
 	THUMB_FUNC_START sub_08029A80
 sub_08029A80: @ 0x08029A80
@@ -30069,8 +30069,8 @@ _08029D44:
 	.4byte 0x04000050
 	THUMB_FUNC_END sub_08029CDC
 
-	THUMB_FUNC_START sub_08029D48
-sub_08029D48: @ 0x08029D48
+	THUMB_FUNC_START fade_transition_init_callback
+fade_transition_init_callback: @ 0x08029D48
 	ldr r1, _08029D70  @ =0x03000110
 	mov r0, #0
 	strb r0, [r1]
@@ -30100,7 +30100,7 @@ _08029D78:
 	.4byte 0x00007FFF
 _08029D7C:
 	.4byte 0x04000050
-	THUMB_FUNC_END sub_08029D48
+	THUMB_FUNC_END fade_transition_init_callback
 
 	THUMB_FUNC_START sub_08029D80
 sub_08029D80: @ 0x08029D80
@@ -30351,8 +30351,8 @@ _08029F1E:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08029F24
-sub_08029F24: @ 0x08029F24
+	THUMB_FUNC_START fade_transition_main
+fade_transition_main: @ 0x08029F24
 	push {lr}
 	ldr r3, _08029F38  @ =0x03000110
 	ldrb r1, [r3]
@@ -30401,7 +30401,7 @@ _08029F74:
 	.4byte 0x04000054
 _08029F78:
 	.4byte 0x03000110
-	THUMB_FUNC_END sub_08029F24
+	THUMB_FUNC_END fade_transition_main
 
 	THUMB_FUNC_START sub_08029F7C
 sub_08029F7C: @ 0x08029F7C
@@ -31185,8 +31185,8 @@ _0802A4AE:
 	bx r1
 	THUMB_FUNC_END sub_0802A464
 
-	THUMB_FUNC_START sub_0802A4B4
-sub_0802A4B4: @ 0x0802A4B4
+	THUMB_FUNC_START help_init_callback
+help_init_callback: @ 0x0802A4B4
 	push {r4,lr}
 	mov r2, #128
 	lsl r2, r2, #19
@@ -31323,7 +31323,7 @@ _0802A5A2:
 	bx r0
 _0802A5A8:
 	.4byte 0x03000133
-	THUMB_FUNC_END sub_0802A4B4
+	THUMB_FUNC_END help_init_callback
 
 	THUMB_FUNC_START sub_0802A5AC
 sub_0802A5AC: @ 0x0802A5AC
@@ -31935,8 +31935,8 @@ sub_0802AA1C: @ 0x0802AA1C
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0802AA28
-sub_0802AA28: @ 0x0802AA28
+	THUMB_FUNC_START help_main
+help_main: @ 0x0802AA28
 	push {lr}
 	sub sp, sp, #12
 	bl sub_080331FC
@@ -31989,7 +31989,7 @@ _0802AA84:
 	.byte 0x00
 _0802AA8C:
 	.4byte 0x00007FFF
-	THUMB_FUNC_END sub_0802AA28
+	THUMB_FUNC_END help_main
 
 	THUMB_FUNC_START sub_0802AA90
 sub_0802AA90: @ 0x0802AA90
@@ -32042,8 +32042,8 @@ _0802AAE2:
 	bx r0
 	THUMB_FUNC_END sub_0802AA9C
 
-	THUMB_FUNC_START sub_0802AAE8
-sub_0802AAE8: @ 0x0802AAE8
+	THUMB_FUNC_START level_retry_init_callback
+level_retry_init_callback: @ 0x0802AAE8
 	push {r4-r7,lr}
 	mov r2, #128
 	lsl r2, r2, #19
@@ -32280,10 +32280,10 @@ _0802ACA4:
 	.4byte 0x03000155
 _0802ACA8:
 	.4byte 0x03000150
-	THUMB_FUNC_END sub_0802AAE8
+	THUMB_FUNC_END level_retry_init_callback
 
-	THUMB_FUNC_START sub_0802ACAC
-sub_0802ACAC: @ 0x0802ACAC
+	THUMB_FUNC_START level_retry_main
+level_retry_main: @ 0x0802ACAC
 	push {r4,lr}
 	ldr r2, _0802ACF4  @ =0x03000150
 	ldrb r0, [r2]
@@ -32412,7 +32412,7 @@ _0802ADA4:
 	pop {r4}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0802ACAC
+	THUMB_FUNC_END level_retry_main
 
 	.byte 0x00
 	.byte 0x00
@@ -37520,8 +37520,8 @@ _0802D204:
 	.4byte 0x03000170
 	THUMB_FUNC_END sub_0802D1DC
 
-	THUMB_FUNC_START sub_0802D208
-sub_0802D208: @ 0x0802D208
+	THUMB_FUNC_START movie_player_main
+movie_player_main: @ 0x0802D208
 	push {r4,lr}
 	ldr r4, _0802D224  @ =0x03000DCC
 	ldrb r0, [r4]
@@ -37828,7 +37828,7 @@ _0802D460:
 	.4byte gUnknown_030012E8
 _0802D464:
 	.4byte 0x030001A0
-	THUMB_FUNC_END sub_0802D208
+	THUMB_FUNC_END movie_player_main
 
 	THUMB_FUNC_START sub_0802D468
 sub_0802D468: @ 0x0802D468
@@ -37923,8 +37923,8 @@ _0802D50C:
 	.4byte gUnknown_08B37424
 	THUMB_FUNC_END sub_0802D468
 
-	THUMB_FUNC_START sub_0802D510
-sub_0802D510: @ 0x0802D510
+	THUMB_FUNC_START movie_player_init_callback
+movie_player_init_callback: @ 0x0802D510
 	push {r4,lr}
 	mov r0, #0
 	bl sub_08034898
@@ -37980,7 +37980,7 @@ _0802D580:
 	.4byte sub_0802D608
 _0802D584:
 	.4byte 0x0000FF7F
-	THUMB_FUNC_END sub_0802D510
+	THUMB_FUNC_END movie_player_init_callback
 
 	THUMB_FUNC_START sub_0802D588
 sub_0802D588: @ 0x0802D588
@@ -38171,8 +38171,8 @@ _0802D6D8:
 	.4byte 0x030001B0
 	THUMB_FUNC_END sub_0802D614
 
-	THUMB_FUNC_START sub_0802D6DC
-sub_0802D6DC: @ 0x0802D6DC
+	THUMB_FUNC_START e_card_scan_main
+e_card_scan_main: @ 0x0802D6DC
 	push {r4,r5,lr}
 	sub sp, sp, #12
 	bl sub_080331FC
@@ -38835,4 +38835,4 @@ _0802DBE4:
 	.4byte 0x030001AC
 _0802DBE8:
 	.4byte 0x030001A8
-	THUMB_FUNC_END sub_0802D6DC
+	THUMB_FUNC_END e_card_scan_main

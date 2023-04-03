@@ -39,7 +39,7 @@ extern struct UnknownStruct13 gUnknown_0807DD1C[];
 extern void *const gUnknown_0807CA94;
 extern const u16 gUnknown_08081D98[];
 
-void sub_08032408(void)
+void game_init_callback(void)
 {
     gUnknown_03000B50 = 0;
     gUnknown_03001704 = 0;
@@ -59,7 +59,7 @@ void sub_08032408(void)
     sub_080331FC();
 }
 
-void sub_080324DC(void)
+void game_init_main(void)
 {
     sub_080331FC();
     switch (gUnknown_0300029C->unk1000)

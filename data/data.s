@@ -218,79 +218,79 @@ gUnknown_08078234:
 
 	.GLOBAL gMainStateInitCallbacks
 gMainStateInitCallbacks:
-	.4byte intro_init_callback
-	.4byte sub_080347DC
-	.4byte sub_08008B8C
-	.4byte sub_080114D4
-	.4byte sub_0802895C
-	.4byte sub_08008B8C
-	.4byte sub_0800748C
-	.4byte title_init_callback
-	.4byte sub_08015280
-	.4byte sub_08035388
-	.4byte sub_08008C34
-	.4byte sub_08008C9C
-	.4byte sub_08008A9C
-	.4byte sub_08008B14
-	.4byte sub_0802AAE8
-	.4byte 0
-	.4byte sub_0801BE34
-	.4byte sub_0802A4B4
-	.4byte sub_0802AAE8
-	.4byte 0
-	.4byte sub_0801BF14
-	.4byte sub_0802935C
-	.4byte sub_080215B4
-	.4byte sub_08027068
-	.4byte sub_0802EC34
-	.4byte sub_0802DE08
-	.4byte sub_0802DD4C
-	.4byte sub_0802DD4C
-	.4byte sub_0802F590
-	.4byte sub_0803218C
-	.4byte sub_0802D510
-	.4byte sub_08029D48
-	.4byte sub_08037050
-	.4byte sub_08032370
-	.4byte sub_08032408
+	.4byte intro_init_callback @ sub_0801B9DC 		  (Mode 0x0)
+	.4byte goto_credits_init_callback @ sub_080347DC      	  (Mode 0x1)
+	.4byte level_demo_init_callback @ sub_08008B8C 		  (Mode 0x2)
+	.4byte main_menu_init_callback @ sub_080114D4 		  (Mode 0x3)
+	.4byte options_init_callback @ sub_0802895C		  (Mode 0x4)
+	.4byte level_demo_init_callback @ sub_08008B8C 		  (Mode 0x5)
+	.4byte level_demo_reset_init_callback @ sub_0800748C      (Mode 0x6)
+	.4byte title_init_callback @ sub_0801B55C		  (Mode 0x7)
+	.4byte level_select_init_callback @ sub_08015280 	  (Mode 0x8)
+	.4byte expert_levels_init_callback @ sub_08035388 	  (Mode 0x9)
+	.4byte unkown_0A_init_callback @ sub_08008C34 	          (Mode 0xA)
+	.4byte level_editor_init_callback @ sub_08008C9C 	  (Mode 0xB)
+	.4byte after_tutorial_init_callback @ sub_08008A9C 	  (Mode 0xC)
+	.4byte level_play_init_callback @ sub_08008B14 	          (Mode 0xD)
+	.4byte level_retry_init_callback @ sub_0802AAE8 	  (Mode 0xE)
+	.4byte 0 @  						  (Mode 0xF)
+	.4byte pause_menu_init_callback @ sub_0801BE34 		  (Mode 0x10)
+	.4byte help_init_callback @ sub_0802A4B4 	          (Mode 0x11)
+	.4byte level_retry_init_callback @ sub_0802AAE8 	  (Mode 0x12)
+	.4byte 0 @						  (Mode 0x13)
+	.4byte boss_clear_init_callback @ sub_0801BF14 		  (Mode 0x14)
+	.4byte level_results_init_callback @ sub_0802935C         (Mode 0x15)
+	.4byte bonus_stoparrow_init_callback @ sub_080215B4       (Mode 0x16)
+	.4byte bonus_swapboxes_init_callback @ sub_08027068       (Mode 0x17)
+	.4byte e_world_init_callback @ sub_0802EC34               (Mode 0x18)
+	.4byte e_world_return_init_callback @ sub_0802DE08        (Mode 0x19)
+	.4byte e_card_scan_init_callback @ sub_0802DD4C           (Mode 0x1A)
+	.4byte e_card_scan_init_callback @ sub_0802DD4C           (Mode 0x1B)
+	.4byte e_world_debug_init_callback @ sub_0802F590         (Mode 0x1C)
+	.4byte e_world_from_menu_init_callback @ sub_0803218C 	  (Mode 0x1D)
+	.4byte movie_player_init_callback @ sub_0802D510 	  (Mode 0x1E)
+	.4byte fade_transition_init_callback @ sub_08029D48       (Mode 0x1F)
+	.4byte world_start_init_callback @ sub_08037050           (Mode 0x20)
+	.4byte level_view_init_callback @ sub_08032370            (Mode 0x21)
+	.4byte game_init_callback @ sub_08032408                  (Mode 0x22)
 
 	.GLOBAL gMainStateMainCallbacks
 gMainStateMainCallbacks:
-	.4byte intro_main
-	.4byte sub_08034820
-	.4byte sub_080080F8
-	.4byte sub_080123B8
-	.4byte sub_08028C08
-	.4byte sub_080080F8
-	.4byte sub_080080F8
-	.4byte title_main
-	.4byte sub_08016BEC
-	.4byte sub_08035908
-	.4byte sub_08008CF0
-	.4byte sub_08008CF0
-	.4byte 0
-	.4byte sub_08007B58
-	.4byte sub_0802ACAC
-	.4byte sub_08007B58
-	.4byte sub_0801BE7C
-	.4byte sub_0802AA28
-	.4byte sub_0802ACAC
-	.4byte 0
-	.4byte sub_0801C278
-	.4byte sub_080296A4
-	.4byte sub_08021924
-	.4byte sub_08027900
-	.4byte sub_0802DF50
-	.4byte sub_0802DF50
-	.4byte sub_0802D6DC
-	.4byte sub_0802D6DC
-	.4byte sub_0802F1EC
-	.4byte sub_08031EE8
-	.4byte sub_0802D208
-	.4byte sub_08029F24
-	.4byte sub_080374E0
-	.4byte sub_08032210
-	.4byte sub_080324DC
+	.4byte intro_main @ sub_0801ba88			  (Mode 0x0)
+	.4byte goto_credits_main @ sub_08034820			  (Mode 0x1)
+	.4byte level_demo_main @ sub_080080F8			  (Mode 0x2)
+	.4byte main_menu_main @ sub_080123B8			  (Mode 0x3)
+	.4byte options_main @ sub_08028C08			  (Mode 0x4)
+	.4byte level_demo_main @ sub_080080F8			  (Mode 0x5)
+	.4byte level_demo_main @ sub_080080F8			  (Mode 0x6)
+	.4byte title_main @ sub_0801B64C			  (Mode 0x7)
+	.4byte level_select_main @ sub_08016BEC			  (Mode 0x8)
+	.4byte expert_levels_main @ sub_08035908		  (Mode 0x9)
+	.4byte level_edit_main @ sub_08008CF0			  (Mode 0xA)
+	.4byte level_edit_main @ sub_08008CF0			  (Mode 0xB)
+	.4byte 0 @ 					  	  (Mode 0xC)
+	.4byte level_play_main @ sub_08007B58			  (Mode 0xD)
+	.4byte level_retry_main @ sub_0802ACAC			  (Mode 0xE)
+	.4byte level_play_main @ sub_08007B58			  (Mode 0xF)
+	.4byte pause_menu_main @ sub_0801BE7C			  (Mode 0x10)
+	.4byte help_main @ sub_0802AA28				  (Mode 0x11)
+	.4byte level_retry_main @ sub_0802ACAC			  (Mode 0x12)
+	.4byte 0 @ 					  	  (Mode 0x13)
+	.4byte boss_clear_main @ sub_0801C278			  (Mode 0x14)
+	.4byte level_results_main @ sub_080296A4		  (Mode 0x15)
+	.4byte bonus_stoparrow_main @ sub_08021924		  (Mode 0x16)
+	.4byte bonus_swapboxes_main @ sub_08027900		  (Mode 0x17)
+	.4byte e_world_main @ sub_0802DF50			  (Mode 0x18)
+	.4byte e_world_main @ sub_0802DF50			  (Mode 0x19)
+	.4byte e_card_scan_main @ sub_0802D6DC			  (Mode 0x1A)
+	.4byte e_card_scan_main @ sub_0802D6DC			  (Mode 0x1B)
+	.4byte e_world_debug_main @ sub_0802F1EC		  (Mode 0x1C)
+	.4byte e_world_from_menu_main @ sub_08031EE8		  (Mode 0x1D)
+	.4byte movie_player_main @ sub_0802D208			  (Mode 0x1E)
+	.4byte fade_transition_main @ sub_08029F24		  (Mode 0x1F)
+	.4byte world_start_main @ sub_080374E0			  (Mode 0x20)
+	.4byte level_view_main @ sub_08032210			  (Mode 0x21)
+	.4byte game_init_main @ sub_080324DC			  (Mode 0x22)
 
 	.GLOBAL gUnknown_08078354
 gUnknown_08078354:

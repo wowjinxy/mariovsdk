@@ -935,7 +935,7 @@ void *sub_08034790(struct UnknownStruct2 *a, u16 *b, int c)
     return b;
 }
 
-void sub_080347DC(void)
+void goto_credits_init_callback(void)
 {
     u8 arr[16];  // Needed to match. Probably some unused variable
     
@@ -947,7 +947,7 @@ void sub_080347DC(void)
     sub_080070E8(30, 1);
 }
 
-void sub_08034820(void)
+void goto_credits_main(void)
 {
 }
 
