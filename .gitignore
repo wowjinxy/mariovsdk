@@ -6,10 +6,6 @@ src/*.s
 *.map
 *.dump
 
-# Tools
-tools/*
-*.exe
-
 # Emulator save files
 *.sav
 *.sgm
