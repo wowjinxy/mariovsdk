@@ -77,12 +77,12 @@ void sub_080072A4(void)
     if (gUnknown_030009D0 & 8)
         sub_0802C938();
     gUnknown_03000028 = 0;
-    gGeneralTimerOnOffFlag = 0;
+    gLevelTimerOnOffFlag = 0;
     if ((!(gUnknown_03000B68 & 2) || (gUnknown_03000B90.unk20 & 32))
      && gMainState != MAIN_STATE_TUTORIAL)
     {
         sub_080720AC();
-        if (gUnknown_03000B80 == 2 || gUnknown_03000B80 == 3 || gUnknown_03000BB4 != 0)
+        if (gUnknown_03000B80 == 2 || gUnknown_03000B80 == 3 || gLevelEWorldFlag != 0)
         {
             gUnknown_03001BDC = 1;
             sub_0807204C(17, 128, 0);
@@ -132,7 +132,7 @@ void level_demo_reset_init_callback(void)
     if (r1 != NULL)
         sub_08033FAC((r1->unk20 >> 7) - DISPLAY_WIDTH, (r1->unk24 >> 7) - DISPLAY_HEIGHT);
     gUnknown_03000028 = 0;
-    gGeneralTimerOnOffFlag = 0;
+    gLevelTimerOnOffFlag = 0;
     sub_08033FC8();
     gUnknown_03000034 = 0;
     gUnknown_03000029 = 0;
@@ -151,7 +151,7 @@ void sub_08007544(void)
     
     if (r2 > 0x708)
         r7 = TRUE;
-    if (r2 > 0 && gGeneralTimerOnOffFlag != 0 && gUnknown_03000B5C == 0)
+    if (r2 > 0 && gLevelTimerOnOffFlag != 0 && gUnknown_03000B5C == 0)
     {
         if (!(gUnknown_03001A1C & 0x901000) && gUnknown_03001A38 == 0)
         {
@@ -161,7 +161,7 @@ void sub_08007544(void)
                 {
                     sub_08071CD4();
                     gUnknown_03000033 = 1;
-                    gGeneralTimerOnOffFlag = 0;
+                    gLevelTimerOnOffFlag = 0;
                 }
             }
             else
@@ -204,7 +204,7 @@ void sub_08007544(void)
             sub_080720AC();
             sub_08071CD4();
         }
-        gGeneralTimerOnOffFlag = 0;
+        gLevelTimerOnOffFlag = 0;
     }
     
     if (gUnknown_03000038 & 0x800)
@@ -261,11 +261,11 @@ void sub_08007544(void)
         {
             gUnknown_03000029 = 1;
         }
-        gGeneralTimerOnOffFlag = 1;
+        gLevelTimerOnOffFlag = 1;
     }
 
     if (gUnknown_03000B5C == 0 && (gUnknown_03000B90.unk20 & 2) && gUnknown_03000029 == 0
-     && gGeneralTimerOnOffFlag != 0 && sub_08072144() != 0)
+     && gLevelTimerOnOffFlag != 0 && sub_08072144() != 0)
     {
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
             sub_08071FA0(gUnknown_03000B90.unk14, gUnknown_03000B90.unk18, 1, gUnknown_03000B90.unk1D);
@@ -274,7 +274,7 @@ void sub_08007544(void)
 
     if (gUnknown_03000038 & 0x10000)
     {
-        gGeneralTimerOnOffFlag = 0;
+        gLevelTimerOnOffFlag = 0;
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
@@ -287,7 +287,7 @@ void sub_08007544(void)
     
     if (gUnknown_03000038 & 0x20000)
     {
-        gGeneralTimerOnOffFlag = 0;
+        gLevelTimerOnOffFlag = 0;
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO
          && gUnknown_03000B5C == 0)
@@ -301,7 +301,7 @@ void sub_08007544(void)
 
     if (gUnknown_03000038 & 0x40000)
     {
-        gGeneralTimerOnOffFlag = 0;
+        gLevelTimerOnOffFlag = 0;
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO
          && gUnknown_03000B5C == 0)
@@ -316,7 +316,7 @@ void sub_08007544(void)
     if (gUnknown_03000038 & 0x100)
     {
         gUnknown_03000029 = 0;
-        gGeneralTimerOnOffFlag = 0;
+        gLevelTimerOnOffFlag = 0;
         if (gUnknown_03000B80 != 5)
             sub_08071CD4();
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO

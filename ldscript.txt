@@ -89,14 +89,14 @@ SECTIONS
 		. = 0x9B0;		gUnknown_030009B0 = .;
 		. = 0x9C0;		gMainState = .;
 		. = 0x9C4;		gNextMainState = .;
-		. = 0x9C8;		gUnknown_030009C8 = .;
+		. = 0x9C8;		gPreviousMainState = .;
 		. = 0x9CC;		gUnknown_030009CC = .;
 		. = 0x9D0;		gUnknown_030009D0 = .;
 		. = 0x9D4;		gUnknown_030009D4 = .;
 		. = 0x9D8;		gUnknown_030009D8 = .;
 		. = 0x9DC;		gUnknown_030009DC = .;
 		. = 0x9E4;		gUnknown_030009E4 = .;
-		. = 0x9E8;		gGeneralTimerOnOffFlag = .;
+		. = 0x9E8;		gLevelTimerOnOffFlag = .;
 		. = 0x9EC;		gUnknown_030009EC = .;
 		. = 0xB44;		gUnknown_03000B44 = .;
 		. = 0xB48;		gUnknown_03000B48 = .;
@@ -114,7 +114,7 @@ SECTIONS
 		. = 0xB78;		gUnknown_03000B78 = .;
 		. = 0xB80;		gUnknown_03000B80 = .;
 		. = 0xB90;		gUnknown_03000B90 = .;
-		. = 0xBB4;		gUnknown_03000BB4 = .;
+		. = 0xBB4;		gLevelEWorldFlag = .;
 		. = 0xBB8;		gUnknown_03000BB8 = .;
 		. = 0xBBC;		gUnknown_03000BBC = .;
 		. = 0xBD0;		gUnknown_03000BD0 = .;

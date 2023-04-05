@@ -429,7 +429,7 @@ _08007EA4:
 	lsr r0, r0, #24
 	cmp r0, #1
 	bls _08007EB8
-	ldr r0, _08007EC4  @ =gUnknown_03000BB4
+	ldr r0, _08007EC4  @ =gLevelEWorldFlag
 	mov r4, #0
 	ldrsb r4, [r0, r4]
 	cmp r4, #0
@@ -443,7 +443,7 @@ _08007EBA:
 	.byte 0x00
 	.byte 0x00
 _08007EC4:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _08007EC8:
 	mov r5, #8
 	and r5, r5, r2
@@ -549,7 +549,7 @@ _08007F92:
 	bl sub_0802BAA0
 	bl sub_0802CF78
 	bl sub_08030F50
-	ldr r0, _08008004  @ =gGeneralTimerOnOffFlag
+	ldr r0, _08008004  @ =gLevelTimerOnOffFlag
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08007FAA
@@ -598,7 +598,7 @@ _08007FFC:
 _08008000:
 	.4byte gUnknown_030009D0
 _08008004:
-	.4byte gGeneralTimerOnOffFlag
+	.4byte gLevelTimerOnOffFlag
 _08008008:
 	.4byte gUnknown_03000B90
 _0800800C:
@@ -2020,7 +2020,7 @@ _08008A98:
 	THUMB_FUNC_START after_tutorial_init_callback
 after_tutorial_init_callback: @ 0x08008A9C
 	push {lr}
-	ldr r0, _08008AC0  @ =gUnknown_03000BB4
+	ldr r0, _08008AC0  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -2037,7 +2037,7 @@ after_tutorial_init_callback: @ 0x08008A9C
 	bl sub_0800F6EC
 	b _08008AFA
 _08008AC0:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _08008AC4:
 	.4byte gAfterTutorialWorld
 _08008AC8:
@@ -5296,7 +5296,7 @@ sub_0800A2B8: @ 0x0800A2B8
 	add r6, r6, #24
 	mov r1, #4
 	add r12, r12, r1
-	ldr r0, _0800A3A8  @ =gUnknown_03000BB4
+	ldr r0, _0800A3A8  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -5362,7 +5362,7 @@ _0800A3A0:
 _0800A3A4:
 	.4byte 0xFFFFFC00
 _0800A3A8:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0800A3AC:
 	.4byte gUnknown_082EAE78
 _0800A3B0:
@@ -13067,7 +13067,7 @@ _0800DDB0:
 _0800DDB4:
 	.4byte gUnknown_082F0944
 _0800DDB8:
-	ldr r0, _0800DDC8  @ =gUnknown_03000BB4
+	ldr r0, _0800DDC8  @ =gLevelEWorldFlag
 	mov r1, #0
 	ldrsb r1, [r0, r1]
 	cmp r1, #0
@@ -13077,7 +13077,7 @@ _0800DDB8:
 	.byte 0x00
 	.byte 0x00
 _0800DDC8:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0800DDCC:
 	lsl r0, r2, #24
 	lsr r0, r0, #24
@@ -13173,7 +13173,7 @@ _0800DDE2:
 	ldrh r0, [r7]
 	add r0, r0, #1
 	strh r0, [r7]
-	ldr r3, _0800DEE8  @ =gUnknown_03000BB4
+	ldr r3, _0800DEE8  @ =gLevelEWorldFlag
 	mov r0, #0
 	ldrsb r0, [r3, r0]
 	cmp r0, #0
@@ -13225,7 +13225,7 @@ _0800DEE0:
 _0800DEE4:
 	.4byte 0xFFFFFC00
 _0800DEE8:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0800DEEC:
 	.4byte 0x03000BF8
 _0800DEF0:
@@ -17338,7 +17338,7 @@ sub_0800FCE4: @ 0x0800FCE4
 	lsl r0, r0, #2
 	ldr r1, [r2]
 	add r6, r1, r0
-	ldr r0, _0800FD60  @ =gUnknown_03000BB4
+	ldr r0, _0800FD60  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -17387,7 +17387,7 @@ _0800FD58:
 _0800FD5C:
 	.4byte gUnknown_080788F4
 _0800FD60:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0800FD64:
 	cmp r4, #7
 	bne _0800FD78
@@ -18527,7 +18527,7 @@ sub_08010534: @ 0x08010534
 	lsl r0, r0, #2
 	ldr r1, [r2]
 	add r4, r1, r0
-	ldr r0, _08010574  @ =gUnknown_03000BB4
+	ldr r0, _08010574  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -18542,7 +18542,7 @@ _0801056C:
 _08010570:
 	.4byte gUnknown_080788F4
 _08010574:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _08010578:
 	ldr r0, _080105AC  @ =gUnknown_03000B80
 	ldrb r0, [r0]
@@ -18911,7 +18911,7 @@ sub_080107E8: @ 0x080107E8
 	lsl r0, r0, #2
 	ldr r1, [r2]
 	add r1, r1, r0
-	ldr r0, _08010838  @ =gUnknown_03000BB4
+	ldr r0, _08010838  @ =gLevelEWorldFlag
 	mov r3, #0
 	ldrsb r3, [r0, r3]
 	cmp r3, #0
@@ -18927,7 +18927,7 @@ _08010830:
 _08010834:
 	.4byte gUnknown_080788F4
 _08010838:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0801083C:
 	ldr r0, _08010868  @ =gUnknown_03000B6C
 	str r3, [r0]
@@ -19119,7 +19119,7 @@ sub_0801095C: @ 0x0801095C
 	lsl r1, r1, #2
 	ldr r2, [r3]
 	add r2, r2, r1
-	ldr r1, _080109B0  @ =gUnknown_03000BB4
+	ldr r1, _080109B0  @ =gLevelEWorldFlag
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -19135,7 +19135,7 @@ _080109A8:
 _080109AC:
 	.4byte gUnknown_080788F4
 _080109B0:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _080109B4:
 	cmp r4, #0
 	bne _080109E8
@@ -19474,7 +19474,7 @@ sub_08010BE0: @ 0x08010BE0
 	lsl r0, r0, #2
 	ldr r1, [r3]
 	add r4, r1, r0
-	ldr r0, _08010C40  @ =gUnknown_03000BB4
+	ldr r0, _08010C40  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -19496,7 +19496,7 @@ _08010C38:
 _08010C3C:
 	.4byte gUnknown_080788F4
 _08010C40:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _08010C44:
 	.4byte gUnknown_080788F8
 _08010C48:
@@ -20682,7 +20682,7 @@ main_menu_init_callback: @ 0x080114D4
 	strb r0, [r1]
 	strb r0, [r2]
 _080114FC:
-	ldr r0, _0801151C  @ =gUnknown_030009C8
+	ldr r0, _0801151C  @ =gPreviousMainState
 	ldr r1, [r0]
 	cmp r1, #4
 	bne _08011524
@@ -20700,7 +20700,7 @@ _08011514:
 _08011518:
 	.4byte gUnknown_0807CA94
 _0801151C:
-	.4byte gUnknown_030009C8
+	.4byte gPreviousMainState
 _08011520:
 	.4byte 0x03000058
 _08011524:
@@ -20779,7 +20779,7 @@ _0801157E:
 	strh r5, [r0]
 	ldr r0, _08011670  @ =gCameraVerticalOffset
 	strh r5, [r0]
-	ldr r4, _08011674  @ =gUnknown_087B2FF8
+	ldr r4, _08011674  @ =gMainMenuData
 	add r0, r4, #0
 	bl sub_08032EB8
 	mov r1, sp
@@ -20874,7 +20874,7 @@ _0801166C:
 _08011670:
 	.4byte gCameraVerticalOffset
 _08011674:
-	.4byte gUnknown_087B2FF8
+	.4byte gMainMenuData
 _08011678:
 	.4byte 0x040000D4
 _0801167C:
@@ -27743,7 +27743,7 @@ sub_080149F8: @ 0x080149F8
 	lsl r0, r0, #2
 	ldr r1, [r2]
 	add r1, r1, r0
-	ldr r0, _08014A30  @ =gUnknown_03000BB4
+	ldr r0, _08014A30  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -27760,7 +27760,7 @@ _08014A28:
 _08014A2C:
 	.4byte gUnknown_080788F4
 _08014A30:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 	THUMB_FUNC_END sub_080149F8
 
 	THUMB_FUNC_START sub_08014A34
@@ -27802,7 +27802,7 @@ sub_08014A58: @ 0x08014A58
 	lsl r0, r0, #2
 	ldr r1, [r2]
 	add r3, r1, r0
-	ldr r0, _08014AB0  @ =gUnknown_03000BB4
+	ldr r0, _08014AB0  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -27834,7 +27834,7 @@ _08014AA8:
 _08014AAC:
 	.4byte gUnknown_080788F4
 _08014AB0:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _08014AB4:
 	.4byte gUnknown_03000BBC
 	THUMB_FUNC_END sub_08014A58
@@ -28833,7 +28833,7 @@ _08015124:
 	ldr r0, [r0]
 	mov r1, #3
 	bl sub_08032788
-	ldr r0, _08015168  @ =gUnknown_087B8A08
+	ldr r0, _08015168  @ =gLevelSelectData
 	b _080151F8
 _0801515C:
 	.4byte gUnknown_0807951C
@@ -28842,7 +28842,7 @@ _08015160:
 _08015164:
 	.4byte gUnknown_080794EC
 _08015168:
-	.4byte gUnknown_087B8A08
+	.4byte gLevelSelectData
 _0801516C:
 	mov r0, #0
 	str r0, [sp]
@@ -28880,7 +28880,7 @@ _080151AC:
 	str r0, [sp]
 	str r0, [sp, #4]
 	str r0, [sp, #8]
-	ldr r0, _080151D0  @ =gUnknown_087C81C8
+	ldr r0, _080151D0  @ =gLevelSelectDKBossData
 	str r0, [sp, #12]
 	mov r1, #1
 	neg r1, r1
@@ -28889,20 +28889,20 @@ _080151AC:
 	mov r0, #17
 	mov r1, #3
 	bl sub_08032788
-	ldr r0, _080151D4  @ =gUnknown_087B8A08
+	ldr r0, _080151D4  @ =gLevelSelectData
 	b _080151F8
 	.byte 0x00
 	.byte 0x00
 _080151D0:
-	.4byte gUnknown_087C81C8
+	.4byte gLevelSelectDKBossData
 _080151D4:
-	.4byte gUnknown_087B8A08
+	.4byte gLevelSelectData
 _080151D8:
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]
 	str r0, [sp, #8]
-	ldr r0, _08015204  @ =gUnknown_087D9894
+	ldr r0, _08015204  @ =gLevelSelectDKPlusBossData
 	str r0, [sp, #12]
 	mov r1, #1
 	neg r1, r1
@@ -28912,7 +28912,7 @@ _080151D8:
 _080151F0:
 	mov r1, #3
 	bl sub_08032788
-	ldr r0, _08015208  @ =gUnknown_087CB20C
+	ldr r0, _08015208  @ =gLevelSelectPlusData
 _080151F8:
 	bl sub_08006968
 	ldr r1, _0801520C  @ =0x03000070
@@ -28921,9 +28921,9 @@ _080151F8:
 	.byte 0x00
 	.byte 0x00
 _08015204:
-	.4byte gUnknown_087D9894
+	.4byte gLevelSelectDKPlusBossData
 _08015208:
-	.4byte gUnknown_087CB20C
+	.4byte gLevelSelectPlusData
 _0801520C:
 	.4byte 0x03000070
 _08015210:
@@ -29133,7 +29133,7 @@ _08015362:
 	add r0, r3, #1
 	strb r0, [r7]
 	strb r0, [r5]
-	ldr r4, _08015460  @ =gUnknown_087CB20C
+	ldr r4, _08015460  @ =gLevelSelectPlusData
 	str r4, [sp]
 	str r4, [sp, #4]
 	str r4, [sp, #8]
@@ -29234,7 +29234,7 @@ _08015458:
 _0801545C:
 	.4byte 0x03000082
 _08015460:
-	.4byte gUnknown_087CB20C
+	.4byte gLevelSelectPlusData
 _08015464:
 	.4byte gUnknown_08079534
 _08015468:
@@ -29250,11 +29250,11 @@ _0801546C:
 	mov r0, #6
 	strb r0, [r5]
 	strb r0, [r7]
-	ldr r4, _0801549C  @ =gUnknown_087B8A08
+	ldr r4, _0801549C  @ =gLevelSelectData
 	str r4, [sp]
 	str r4, [sp, #4]
 	str r4, [sp, #8]
-	ldr r0, _080154A0  @ =gUnknown_087C81C8
+	ldr r0, _080154A0  @ =gLevelSelectDKBossData
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #3
@@ -29264,9 +29264,9 @@ _0801546C:
 _08015498:
 	.4byte 0x03000082
 _0801549C:
-	.4byte gUnknown_087B8A08
+	.4byte gLevelSelectData
 _080154A0:
-	.4byte gUnknown_087C81C8
+	.4byte gLevelSelectDKBossData
 _080154A4:
 	cmp r2, #5
 	bne _080154E0
@@ -29279,11 +29279,11 @@ _080154A4:
 	mov r0, #7
 	strb r0, [r5]
 	strb r0, [r7]
-	ldr r4, _080154D8  @ =gUnknown_087CB20C
+	ldr r4, _080154D8  @ =gLevelSelectPlusData
 	str r4, [sp]
 	str r4, [sp, #4]
 	str r4, [sp, #8]
-	ldr r0, _080154DC  @ =gUnknown_087D9894
+	ldr r0, _080154DC  @ =gLevelSelectDKPlusBossData
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #3
@@ -29295,9 +29295,9 @@ _080154A4:
 _080154D4:
 	.4byte 0x03000082
 _080154D8:
-	.4byte gUnknown_087CB20C
+	.4byte gLevelSelectPlusData
 _080154DC:
-	.4byte gUnknown_087D9894
+	.4byte gLevelSelectDKPlusBossData
 _080154E0:
 	cmp r2, #2
 	bne _080154F4
@@ -29319,7 +29319,7 @@ _080154F4:
 	mov r0, r9
 	mov r2, r12
 	strb r0, [r2]
-	ldr r4, _0801552C  @ =gUnknown_087CB20C
+	ldr r4, _0801552C  @ =gLevelSelectPlusData
 	str r4, [sp]
 	str r4, [sp, #4]
 	str r4, [sp, #8]
@@ -29338,7 +29338,7 @@ _080154F4:
 _08015528:
 	.4byte 0x03000082
 _0801552C:
-	.4byte gUnknown_087CB20C
+	.4byte gLevelSelectPlusData
 _08015530:
 	.4byte gUnknown_08079534
 _08015534:
@@ -29347,7 +29347,7 @@ _08015538:
 	ldr r0, _080155FC  @ =0x03000082
 	strb r6, [r0]
 _0801553C:
-	ldr r4, _08015600  @ =gUnknown_087B8A08
+	ldr r4, _08015600  @ =gLevelSelectData
 	str r4, [sp]
 	str r4, [sp, #4]
 	str r4, [sp, #8]
@@ -29417,7 +29417,7 @@ _08015566:
 	mov r2, #1
 	bl sub_0807204C
 _080155CE:
-	ldr r0, _08015600  @ =gUnknown_087B8A08
+	ldr r0, _08015600  @ =gLevelSelectData
 	bl sub_08029C9C
 	mov r1, #128
 	lsl r1, r1, #19
@@ -29442,7 +29442,7 @@ _080155CE:
 _080155FC:
 	.4byte 0x03000082
 _08015600:
-	.4byte gUnknown_087B8A08
+	.4byte gLevelSelectData
 _08015604:
 	.4byte gUnknown_0807951C
 _08015608:
@@ -32670,7 +32670,7 @@ _08016E44:
 	bne _08016E50
 	b _0801706A
 _08016E50:
-	ldr r5, _08016EB0  @ =gUnknown_087CB20C
+	ldr r5, _08016EB0  @ =gLevelSelectPlusData
 	str r5, [sp]
 	str r5, [sp, #4]
 	str r5, [sp, #8]
@@ -32715,7 +32715,7 @@ _08016E50:
 	mov r0, #8
 	b _08016F4C
 _08016EB0:
-	.4byte gUnknown_087CB20C
+	.4byte gLevelSelectPlusData
 _08016EB4:
 	.4byte gUnknown_08079534
 _08016EB8:
@@ -32763,11 +32763,11 @@ _08016EFC:
 	b _0801706A
 _08016F08:
 	add r0, sp, #20
-	ldr r4, _08016F5C  @ =gUnknown_087B8A08
+	ldr r4, _08016F5C  @ =gLevelSelectData
 	str r4, [sp, #20]
 	str r4, [r0, #4]
 	str r4, [r0, #8]
-	ldr r1, _08016F60  @ =gUnknown_087C81C8
+	ldr r1, _08016F60  @ =gLevelSelectDKBossData
 	str r1, [r0, #12]
 	mov r1, #3
 	bl sub_08032F24
@@ -32802,9 +32802,9 @@ _08016F4C:
 	.byte 0x00
 	.byte 0x00
 _08016F5C:
-	.4byte gUnknown_087B8A08
+	.4byte gLevelSelectData
 _08016F60:
-	.4byte gUnknown_087C81C8
+	.4byte gLevelSelectDKBossData
 _08016F64:
 	.4byte 0x03000074
 _08016F68:
@@ -41506,7 +41506,7 @@ _0801B11A:
 	ldr r0, _0801B168  @ =0x03000074
 	ldr r0, [r0]
 	str r0, [r2]
-	ldr r0, _0801B16C  @ =gUnknown_087B8A08
+	ldr r0, _0801B16C  @ =gLevelSelectData
 	ldr r0, [r0, #64]
 	str r0, [r2, #4]
 	ldr r0, _0801B170  @ =0x03000078
@@ -41532,7 +41532,7 @@ _0801B164:
 _0801B168:
 	.4byte 0x03000074
 _0801B16C:
-	.4byte gUnknown_087B8A08
+	.4byte gLevelSelectData
 _0801B170:
 	.4byte 0x03000078
 	THUMB_FUNC_END sub_0801ADBC

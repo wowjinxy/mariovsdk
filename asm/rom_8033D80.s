@@ -1482,7 +1482,7 @@ expert_levels_init_callback: @ 0x08035388
 	mov r4, #0
 	str r4, [sp]
 	str r4, [sp, #4]
-	ldr r5, _08035490  @ =gUnknown_087DCC50
+	ldr r5, _08035490  @ =gExpertLevelMenuData
 	str r5, [sp, #8]
 	str r5, [sp, #12]
 	mov r0, sp
@@ -1571,7 +1571,7 @@ _08035488:
 _0803548C:
 	.4byte gUnknown_085C7A78
 _08035490:
-	.4byte gUnknown_087DCC50
+	.4byte gExpertLevelMenuData
 _08035494:
 	.4byte 0x001FFFFF
 _08035498:
@@ -5427,7 +5427,7 @@ _080371D0:
 	mov r1, #22
 	bl sub_080379BC
 _080371E6:
-	ldr r2, _0803721C  @ =gUnknown_0882B4C4
+	ldr r2, _0803721C  @ =gWorldStartData
 	ldrh r0, [r2, #48]
 	ldrh r1, [r2, #50]
 	ldrh r2, [r2, #52]
@@ -5453,7 +5453,7 @@ _080371E6:
 _08037218:
 	.4byte 0x030002F4
 _0803721C:
-	.4byte gUnknown_0882B4C4
+	.4byte gWorldStartData
 _08037220:
 	.4byte gUnknown_03001730
 _08037224:
@@ -5857,7 +5857,7 @@ world_start_main: @ 0x080374E0
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r0, _08037544  @ =gUnknown_030009C8
+	ldr r0, _08037544  @ =gPreviousMainState
 	ldr r0, [r0]
 	cmp r0, #3
 	bne _08037548
@@ -5878,7 +5878,7 @@ _0803753C:
 _08037540:
 	.4byte gUnknown_030012E8
 _08037544:
-	.4byte gUnknown_030009C8
+	.4byte gPreviousMainState
 _08037548:
 	mov r0, #8
 	mov r1, #1
@@ -6364,7 +6364,7 @@ _080378C8:
 	add r4, r4, r3
 	add r4, r4, r2
 	ldr r2, [r4]
-	ldr r6, _0803792C  @ =gUnknown_0882B4C4
+	ldr r6, _0803792C  @ =gWorldStartData
 	ldr r3, [r6, #76]
 	mov r5, #5
 	str r5, [sp]
@@ -6395,7 +6395,7 @@ _08037924:
 _08037928:
 	.4byte 0x030002F0
 _0803792C:
-	.4byte gUnknown_0882B4C4
+	.4byte gWorldStartData
 _08037930:
 	ldr r0, _08037998  @ =0x030002FC
 	ldr r5, [r0]
@@ -6414,7 +6414,7 @@ _08037930:
 	add r4, r4, r7
 	add r4, r4, r2
 	ldr r2, [r4]
-	ldr r3, _080379A0  @ =gUnknown_0882B4C4
+	ldr r3, _080379A0  @ =gWorldStartData
 	ldr r3, [r3, #76]
 	mov r4, #5
 	str r4, [sp]
@@ -6454,7 +6454,7 @@ _08037998:
 _0803799C:
 	.4byte 0x030002F0
 _080379A0:
-	.4byte gUnknown_0882B4C4
+	.4byte gWorldStartData
 _080379A4:
 	.4byte 0x03000300
 _080379A8:
@@ -69557,7 +69557,7 @@ _08053D46:
 	ldrb r0, [r3, #2]
 	cmp r0, #0
 	beq _08053D64
-	ldr r0, _08053DF0  @ =gUnknown_03000BB4
+	ldr r0, _08053DF0  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -69636,7 +69636,7 @@ _08053DE8:
 _08053DEC:
 	.4byte gUnknown_03000C28
 _08053DF0:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _08053DF4:
 	.4byte gUnknown_082EB2B0
 _08053DF8:
@@ -71143,7 +71143,7 @@ _08054948:
 	cmp r0, #0
 	beq _08054A86
 _080549B6:
-	ldr r0, _08054A1C  @ =gUnknown_03000BB4
+	ldr r0, _08054A1C  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -71197,7 +71197,7 @@ _08054A14:
 _08054A18:
 	.4byte gUnknown_08259FE8
 _08054A1C:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _08054A20:
 	mov r0, #1
 _08054A22:
@@ -81553,7 +81553,7 @@ sub_08059658: @ 0x08059658
 	ldrsh r0, [r0, r2]
 	cmp r0, #0
 	beq _08059702
-	ldr r1, _080596B4  @ =gGeneralTimerOnOffFlag
+	ldr r1, _080596B4  @ =gLevelTimerOnOffFlag
 	mov r0, #0
 	strb r0, [r1]
 	b _080596C6
@@ -81564,14 +81564,14 @@ _080596AC:
 _080596B0:
 	.4byte 0x03000444
 _080596B4:
-	.4byte gGeneralTimerOnOffFlag
+	.4byte gLevelTimerOnOffFlag
 _080596B8:
 	ldr r0, _080596DC  @ =0x03000444
 	mov r2, #0
 	ldrsh r1, [r0, r2]
 	cmp r1, #0
 	bne _08059702
-	ldr r0, _080596E0  @ =gGeneralTimerOnOffFlag
+	ldr r0, _080596E0  @ =gLevelTimerOnOffFlag
 	strb r1, [r0]
 _080596C6:
 	ldr r1, _080596E4  @ =0x03000434
@@ -81586,11 +81586,11 @@ _080596C6:
 _080596DC:
 	.4byte 0x03000444
 _080596E0:
-	.4byte gGeneralTimerOnOffFlag
+	.4byte gLevelTimerOnOffFlag
 _080596E4:
 	.4byte 0x03000434
 _080596E8:
-	ldr r1, _08059708  @ =gGeneralTimerOnOffFlag
+	ldr r1, _08059708  @ =gLevelTimerOnOffFlag
 	mov r0, #0
 	strb r0, [r1]
 	ldr r1, _0805970C  @ =0x03000434
@@ -81606,7 +81606,7 @@ _08059702:
 	pop {r0}
 	bx r0
 _08059708:
-	.4byte gGeneralTimerOnOffFlag
+	.4byte gLevelTimerOnOffFlag
 _0805970C:
 	.4byte 0x03000434
 	THUMB_FUNC_END sub_08059658

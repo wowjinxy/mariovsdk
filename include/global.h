@@ -187,13 +187,13 @@ extern struct Struct30002B8 gUnknown_030002C8;
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
 extern struct Struct30009B0 gUnknown_030009B0;
 extern u32 gNextMainState;
-extern u32 gUnknown_030009C8;
+extern u32 gPreviousMainState;
 extern u32 gUnknown_030009CC;
 extern u8 gUnknown_030009D0;
 extern u8 gUnknown_030009D4;
 extern u16 gUnknown_030009D8;
 extern u8 gUnknown_030009E4[];  // unknown type
-extern u8 gGeneralTimerOnOffFlag;
+extern u8 gLevelTimerOnOffFlag;
 extern u8 gUnknown_030009EC;
 extern s32 gUnknown_03000B44;
 extern u32 gUnknown_03000B48;
@@ -211,7 +211,7 @@ extern s8 gAfterTutorialLevel;
 extern u8 gUnknown_03000B78;
 extern s8 gUnknown_03000B80;
 extern struct UnknownStruct4 gUnknown_03000B90;
-extern s8 gUnknown_03000BB4;
+extern s8 gLevelEWorldFlag;
 extern u32 gUnknown_03000BB8;
 extern s8 gUnknown_03000BBC;
 extern u8 gUnknown_03000BD0;
@@ -271,10 +271,10 @@ extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];
 extern const u8 gUnknown_08079698[];
 extern u16 *const gUnknown_0807DD94;
-extern const struct UnknownStruct14 gUnknown_08866A48;
-extern const struct UnknownStruct14 gUnknown_08867560;
-extern const u8 gUnknown_0886A328[];
-extern struct UnknownStruct16 gUnknown_0886CFCC;  // non-const (likely in .data instead of .rodata)
+extern const struct UnknownStruct14 gNintendoSoftwareTechnologyLogo;
+extern const struct UnknownStruct14 gTitleScreenLeftData;
+extern const u8 gTitleScreenRightData[];
+extern struct UnknownStruct16 gTitleMarioDKEyes;  // non-const (likely in .data instead of .rodata)
 
 //------------------------------------------------------------------------------
 // Functions

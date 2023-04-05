@@ -293,7 +293,7 @@ e_world_return_init_callback: @ 0x0802DE08
 	add r0, r1, #0
 	add r0, r0, #200
 	ldrh r5, [r0]
-	ldr r4, _0802DF18  @ =gUnknown_087DED6C
+	ldr r4, _0802DF18  @ =gEWorldMenuData2
 	ldr r3, _0802DF1C  @ =gUnknown_030012A0
 	ldr r2, _0802DF20  @ =gCameraVerticalOffset
 	mov r0, #0
@@ -423,7 +423,7 @@ _0802DED8:
 _0802DF14:
 	.4byte 0x030001C4
 _0802DF18:
-	.4byte gUnknown_087DED6C
+	.4byte gEWorldMenuData2
 _0802DF1C:
 	.4byte gUnknown_030012A0
 _0802DF20:
@@ -869,7 +869,7 @@ _0802E26C:
 	bne _0802E276
 	b _0802E762
 _0802E276:
-	ldr r0, _0802E290  @ =gUnknown_03000BB4
+	ldr r0, _0802E290  @ =gLevelEWorldFlag
 	strb r4, [r0]
 	mov r0, #3
 	mov r1, #1
@@ -883,7 +883,7 @@ _0802E276:
 	.byte 0x00
 	.byte 0x00
 _0802E290:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0802E294:
 	ldr r0, _0802E2C0  @ =gUnknown_030012E8
 	ldrh r1, [r0]
@@ -1329,7 +1329,7 @@ _0802E5C8:
 _0802E5CC:
 	ldr r0, _0802E604  @ =gAfterTutorialLevel
 	strb r1, [r0]
-	ldr r1, _0802E608  @ =gUnknown_03000BB4
+	ldr r1, _0802E608  @ =gLevelEWorldFlag
 	mov r0, #1
 	strb r0, [r1]
 	ldr r0, _0802E60C  @ =gUnknown_03000B80
@@ -1359,7 +1359,7 @@ _0802E5F6:
 _0802E604:
 	.4byte gAfterTutorialLevel
 _0802E608:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0802E60C:
 	.4byte gUnknown_03000B80
 _0802E610:
@@ -1770,7 +1770,7 @@ _0802E90C:
 	ldr r0, [r0, #8]
 	bl sub_0801B2CC
 _0802E926:
-	ldr r0, _0802E964  @ =gUnknown_087DED6C
+	ldr r0, _0802E964  @ =gEWorldMenuData2
 	ldr r0, [r0, #68]
 	str r0, [sp, #12]
 	bl sub_080351E0
@@ -1802,7 +1802,7 @@ _0802E938:
 	.byte 0x00
 	.byte 0x00
 _0802E964:
-	.4byte gUnknown_087DED6C
+	.4byte gEWorldMenuData2
 _0802E968:
 	.4byte 0x030001C4
 _0802E96C:
@@ -2178,7 +2178,7 @@ e_world_init_callback: @ 0x0802EC34
 	mov r0, #0
 	bl sub_08034898
 	bl sub_08038B18
-	ldr r4, _0802ECAC  @ =gUnknown_087DED6C
+	ldr r4, _0802ECAC  @ =gEWorldMenuData2
 	add r0, r4, #0
 	bl sub_08032EB8
 	mov r2, #128
@@ -2191,7 +2191,7 @@ e_world_init_callback: @ 0x0802EC34
 	bl sub_08032788
 	add r0, r4, #0
 	bl sub_08029C9C
-	ldr r5, _0802ECB4  @ =gUnknown_03000BB4
+	ldr r5, _0802ECB4  @ =gLevelEWorldFlag
 	mov r0, #0
 	ldrsb r0, [r5, r0]
 	cmp r0, #0
@@ -2227,11 +2227,11 @@ _0802EC9A:
 	.byte 0x00
 	.byte 0x00
 _0802ECAC:
-	.4byte gUnknown_087DED6C
+	.4byte gEWorldMenuData2
 _0802ECB0:
 	.4byte 0x0000FEFF
 _0802ECB4:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0802ECB8:
 	.4byte gUnknown_08B2AD88
 _0802ECBC:
@@ -5055,7 +5055,7 @@ sub_080300CC: @ 0x080300CC
 	ldr r0, _080301A4  @ =0x03000DF8
 	mov r6, #0
 	ldrsb r6, [r0, r6]
-	ldr r0, _080301A8  @ =gUnknown_03000BB4
+	ldr r0, _080301A8  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -5162,7 +5162,7 @@ _0803019A:
 _080301A4:
 	.4byte 0x03000DF8
 _080301A8:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _080301AC:
 	.4byte gUnknown_03000B80
 _080301B0:
@@ -5272,7 +5272,7 @@ sub_08030264: @ 0x08030264
 	and r0, r0, r1
 	cmp r0, #0
 	bne _080302D8
-	ldr r0, _080302E4  @ =gUnknown_03000BB4
+	ldr r0, _080302E4  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -5332,7 +5332,7 @@ _080302D8:
 _080302E0:
 	.4byte gUnknown_03000B90
 _080302E4:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _080302E8:
 	.4byte gUnknown_03000B80
 _080302EC:
@@ -5356,7 +5356,7 @@ sub_080302FC: @ 0x080302FC
 	lsl r0, r0, #24
 	asr r0, r0, #24
 	mov r8, r0
-	ldr r0, _08030388  @ =gUnknown_03000BB4
+	ldr r0, _08030388  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -5421,7 +5421,7 @@ _08030368:
 _08030384:
 	.4byte 0x03000DF8
 _08030388:
-	.4byte gUnknown_03000BB4
+	.4byte gLevelEWorldFlag
 _0803038C:
 	.4byte gUnknown_03000B80
 _08030390:
@@ -9598,7 +9598,7 @@ e_world_from_menu_init_callback: @ 0x0803218C
 	strh r4, [r0]
 	strh r4, [r1]
 	bl e_world_init_callback
-	ldr r0, _080321F4  @ =gUnknown_08B29054
+	ldr r0, _080321F4  @ =gEWorldMenuData1
 	bl sub_08006968
 	bl sub_0802A458
 	cmp r0, #0
@@ -9636,7 +9636,7 @@ _080321EC:
 _080321F0:
 	.4byte gUnknown_0300192C
 _080321F4:
-	.4byte gUnknown_08B29054
+	.4byte gEWorldMenuData1
 _080321F8:
 	.4byte 0x0300028C
 _080321FC:

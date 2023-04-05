@@ -998,8 +998,8 @@ gUnknown_0807DD7C:
 gUnknown_0807DD94:
 	.INCBIN "baserom.gba", 0x7DD94, 0x81D98-0x7DD94
 
-	.GLOBAL gUnknown_08081D98
-gUnknown_08081D98:
+	.GLOBAL gMainPaletteTable
+gMainPaletteTable:
 	.INCBIN "baserom.gba", 0x81D98, 0xA7D98-0x81D98
 
 	.GLOBAL gUnknown_080A7D98
@@ -3298,184 +3298,184 @@ gUnknown_08706FC8:
 gUnknown_08707E30:
 	.INCBIN "baserom.gba", 0x707E30, 0x7B2FF8-0x707E30
 
-	.GLOBAL gUnknown_087B2FF8
-gUnknown_087B2FF8:
+	.GLOBAL gMainMenuData
+gMainMenuData:
 	.INCBIN "baserom.gba", 0x7B2FF8, 0x7B8A08-0x7B2FF8
 
-	.GLOBAL gUnknown_087B8A08
-gUnknown_087B8A08:
+	.GLOBAL gLevelSelectData
+gLevelSelectData:
 	.INCBIN "baserom.gba", 0x7B8A08, 0x7C81C8-0x7B8A08
 
-	.GLOBAL gUnknown_087C81C8
-gUnknown_087C81C8:
+	.GLOBAL gLevelSelectDKBossData
+gLevelSelectDKBossData:
 	.INCBIN "baserom.gba", 0x7C81C8, 0x7CB20C-0x7C81C8
 
-	.GLOBAL gUnknown_087CB20C
-gUnknown_087CB20C:
+	.GLOBAL gLevelSelectPlusData
+gLevelSelectPlusData:
 	.INCBIN "baserom.gba", 0x7CB20C, 0x7D9894-0x7CB20C
 
-	.GLOBAL gUnknown_087D9894
-gUnknown_087D9894:
+	.GLOBAL gLevelSelectDKPlusBossData
+gLevelSelectDKPlusBossData:
 	.INCBIN "baserom.gba", 0x7D9894, 0x7DCC50-0x7D9894
 
-	.GLOBAL gUnknown_087DCC50
-gUnknown_087DCC50:
+	.GLOBAL gExpertLevelMenuData
+gExpertLevelMenuData:
 	.INCBIN "baserom.gba", 0x7DCC50, 0x7DED6C-0x7DCC50
 
-	.GLOBAL gUnknown_087DED6C
-gUnknown_087DED6C:
+	.GLOBAL gEWorldMenuData2
+gEWorldMenuData2:
 	.INCBIN "baserom.gba", 0x7DED6C, 0x7E21D0-0x7DED6C
 
-	.GLOBAL gUnknown_087E21D0
-gUnknown_087E21D0:
+	.GLOBAL gWorldOneBossClearData1
+gWorldOneBossClearData1:
 	.INCBIN "baserom.gba", 0x7E21D0, 0x7E4B48-0x7E21D0
 
-	.GLOBAL gUnknown_087E4B48
-gUnknown_087E4B48:
+	.GLOBAL gWorldOneBossClearData2
+gWorldOneBossClearData2:
 	.INCBIN "baserom.gba", 0x7E4B48, 0x7E88DC-0x7E4B48
 
-	.GLOBAL gUnknown_087E88DC
-gUnknown_087E88DC:
+	.GLOBAL gWorldTwoBossClearData1
+gWorldTwoBossClearData1:
 	.INCBIN "baserom.gba", 0x7E88DC, 0x7EB618-0x7E88DC
 
-	.GLOBAL gUnknown_087EB618
-gUnknown_087EB618:
+	.GLOBAL gWorldTwoBossClearData2
+gWorldTwoBossClearData2:
 	.INCBIN "baserom.gba", 0x7EB618, 0x7EF674-0x7EB618
 
-	.GLOBAL gUnknown_087EF674
-gUnknown_087EF674:
+	.GLOBAL gWorldThreeBossClearData1
+gWorldThreeBossClearData1:
 	.INCBIN "baserom.gba", 0x7EF674, 0x7F1714-0x7EF674
 
-	.GLOBAL gUnknown_087F1714
-gUnknown_087F1714:
+	.GLOBAL gWorldThreeBossClearData2
+gWorldThreeBossClearData2:
 	.INCBIN "baserom.gba", 0x7F1714, 0x7F52DC-0x7F1714
 
-	.GLOBAL gUnknown_087F52DC
-gUnknown_087F52DC:
+	.GLOBAL gWorldFourBossClearData1
+gWorldFourBossClearData1:
 	.INCBIN "baserom.gba", 0x7F52DC, 0x7F6CF0-0x7F52DC
 
-	.GLOBAL gUnknown_087F6CF0
-gUnknown_087F6CF0:
+	.GLOBAL gWorldFourBossClearData2
+gWorldFourBossClearData2:
 	.INCBIN "baserom.gba", 0x7F6CF0, 0x7FB054-0x7F6CF0
 
-	.GLOBAL gUnknown_087FB054
-gUnknown_087FB054:
+	.GLOBAL gWorldFiveBossClearData1
+gWorldFiveBossClearData1:
 	.INCBIN "baserom.gba", 0x7FB054, 0x7FD5AC-0x7FB054
 
-	.GLOBAL gUnknown_087FD5AC
-gUnknown_087FD5AC:
+	.GLOBAL gWorldFiveBossClearData2
+gWorldFiveBossClearData2:
 	.INCBIN "baserom.gba", 0x7FD5AC, 0x801ABC-0x7FD5AC
 
-	.GLOBAL gUnknown_08801ABC
-gUnknown_08801ABC:
+	.GLOBAL gWorldSixBossClearData1
+gWorldSixBossClearData1:
 	.INCBIN "baserom.gba", 0x801ABC, 0x8034AC-0x801ABC
 
-	.GLOBAL gUnknown_088034AC
-gUnknown_088034AC:
+	.GLOBAL gWorldSixBossClearData2
+gWorldSixBossClearData2:
 	.INCBIN "baserom.gba", 0x8034AC, 0x8076D4-0x8034AC
 
-	.GLOBAL gUnknown_088076D4
-gUnknown_088076D4:
+	.GLOBAL gWorldOnePlusBossClearData1
+gWorldOnePlusBossClearData1:
 	.INCBIN "baserom.gba", 0x8076D4, 0x8095E0-0x8076D4
 
-	.GLOBAL gUnknown_088095E0
-gUnknown_088095E0:
+	.GLOBAL gWorldOnePlusBossClearData2
+gWorldOnePlusBossClearData2:
 	.INCBIN "baserom.gba", 0x8095E0, 0x80D09C-0x8095E0
 
-	.GLOBAL gUnknown_0880D09C
-gUnknown_0880D09C:
+	.GLOBAL gWorldTwoPlusBossClearData1
+gWorldTwoPlusBossClearData1:
 	.INCBIN "baserom.gba", 0x80D09C, 0x80F0A4-0x80D09C
 
-	.GLOBAL gUnknown_0880F0A4
-gUnknown_0880F0A4:
+	.GLOBAL gWorldTwoPlusBossClearData2
+gWorldTwoPlusBossClearData2:
 	.INCBIN "baserom.gba", 0x80F0A4, 0x8133F0-0x80F0A4
 
-	.GLOBAL gUnknown_088133F0
-gUnknown_088133F0:
+	.GLOBAL gWorldThreePlusBossClearData1
+gWorldThreePlusBossClearData1:
 	.INCBIN "baserom.gba", 0x8133F0, 0x814E6C-0x8133F0
 
-	.GLOBAL gUnknown_08814E6C
-gUnknown_08814E6C:
+	.GLOBAL gWorldThreePlusBossClearData2
+gWorldThreePlusBossClearData2:
 	.INCBIN "baserom.gba", 0x814E6C, 0x8184BC-0x814E6C
 
-	.GLOBAL gUnknown_088184BC
-gUnknown_088184BC:
+	.GLOBAL gWorldFourPlusBossClearData1
+gWorldFourPlusBossClearData1:
 	.INCBIN "baserom.gba", 0x8184BC, 0x81A270-0x8184BC
 
-	.GLOBAL gUnknown_0881A270
-gUnknown_0881A270:
+	.GLOBAL gWorldFourPlusBossClearData2
+gWorldFourPlusBossClearData2:
 	.INCBIN "baserom.gba", 0x81A270, 0x81E02C-0x81A270
 
-	.GLOBAL gUnknown_0881E02C
-gUnknown_0881E02C:
+	.GLOBAL gWorldFivePlusBossClearData1
+gWorldFivePlusBossClearData1:
 	.INCBIN "baserom.gba", 0x81E02C, 0x81FE98-0x81E02C
 
-	.GLOBAL gUnknown_0881FE98
-gUnknown_0881FE98:
+	.GLOBAL gWorldFivePlusBossClearData2
+gWorldFivePlusBossClearData2:
 	.INCBIN "baserom.gba", 0x81FE98, 0x823B74-0x81FE98
 
-	.GLOBAL gUnknown_08823B74
-gUnknown_08823B74:
+	.GLOBAL gWorldSixPlusBossClearData1
+gWorldSixPlusBossClearData1:
 	.INCBIN "baserom.gba", 0x823B74, 0x825F04-0x823B74
 
-	.GLOBAL gUnknown_08825F04
-gUnknown_08825F04:
+	.GLOBAL gWorldSixPlusBossClearData2
+gWorldSixPlusBossClearData2:
 	.INCBIN "baserom.gba", 0x825F04, 0x829B18-0x825F04
 
-	.GLOBAL gUnknown_08829B18
-gUnknown_08829B18:
+	.GLOBAL gGameOverData
+gGameOverData:
 	.INCBIN "baserom.gba", 0x829B18, 0x82B4C4-0x829B18
 
-	.GLOBAL gUnknown_0882B4C4
-gUnknown_0882B4C4:
+	.GLOBAL gWorldStartData
+gWorldStartData:
 	.INCBIN "baserom.gba", 0x82B4C4, 0x85A088-0x82B4C4
 
-	.GLOBAL gUnknown_0885A088
-gUnknown_0885A088:
+	.GLOBAL gLevelResultsData
+gLevelResultsData:
 	.INCBIN "baserom.gba", 0x85A088, 0x85C4C4-0x85A088
 
-	.GLOBAL gUnknown_0885C4C4
-gUnknown_0885C4C4:
+	.GLOBAL gBonusStopArrowData
+gBonusStopArrowData:
 	.INCBIN "baserom.gba", 0x85C4C4, 0x85D720-0x85C4C4
 
-	.GLOBAL gUnknown_0885D720
-gUnknown_0885D720:
+	.GLOBAL gBonusStopArrowBackgroundData
+gBonusStopArrowBackgroundData:
 	.INCBIN "baserom.gba", 0x85D720, 0x86022C-0x85D720
 
-	.GLOBAL gUnknown_0886022C
-gUnknown_0886022C:
+	.GLOBAL gBonusSwapBoxesData
+gBonusSwapBoxesData:
 	.INCBIN "baserom.gba", 0x86022C, 0x8637E8-0x86022C
 
-	.GLOBAL gUnknown_088637E8
-gUnknown_088637E8:
+	.GLOBAL gBonusSwapBoxesBackgroundData
+gBonusSwapBoxesBackgroundData:
 	.INCBIN "baserom.gba", 0x8637E8, 0x866A48-0x8637E8
 
-	.GLOBAL gUnknown_08866A48
-gUnknown_08866A48:
+	.GLOBAL gNintendoSoftwareTechnologyLogo
+gNintendoSoftwareTechnologyLogo:
 	.INCBIN "baserom.gba", 0x866A48, 0x867560-0x866A48
 
-	.GLOBAL gUnknown_08867560
-gUnknown_08867560:
+	.GLOBAL gTitleScreenLeftData
+gTitleScreenLeftData:
 	.INCBIN "baserom.gba", 0x867560, 0x86A328-0x867560
 
-	.GLOBAL gUnknown_0886A328
-gUnknown_0886A328:
+	.GLOBAL gTitleScreenRightData
+gTitleScreenRightData:
 	.INCBIN "baserom.gba", 0x86A328, 0x86CFCC-0x86A328
 
-	.GLOBAL gUnknown_0886CFCC
-gUnknown_0886CFCC:
+	.GLOBAL gTitleMarioDKEyes
+gTitleMarioDKEyes:
 	.INCBIN "baserom.gba", 0x86CFCC, 0x8754F8-0x86CFCC
 
-	.GLOBAL gUnknown_088754F8
-gUnknown_088754F8:
+	.GLOBAL gOptionsMenuData
+gOptionsMenuData:
 	.INCBIN "baserom.gba", 0x8754F8, 0xAF43E4-0x8754F8
 
 	.GLOBAL gUnknown_08AF43E4
 gUnknown_08AF43E4:
 	.INCBIN "baserom.gba", 0xAF43E4, 0xB29054-0xAF43E4
 
-	.GLOBAL gUnknown_08B29054
-gUnknown_08B29054:
+	.GLOBAL gEWorldMenuData1
+gEWorldMenuData1:
 	.INCBIN "baserom.gba", 0xB29054, 0xB2AD88-0xB29054
 
 	.GLOBAL gUnknown_08B2AD88

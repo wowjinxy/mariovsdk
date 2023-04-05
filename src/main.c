@@ -148,7 +148,7 @@ void sub_080070E8(s32 a, s32 b)
 {
     if (gNextMainState != MAIN_STATE_FADETRANSITION)
     {
-        if (gUnknown_03000BB4 != MAIN_STATE_INTRO && a == MAIN_STATE_LEVEL_SELECT)
+        if (gLevelEWorldFlag != MAIN_STATE_INTRO && a == MAIN_STATE_LEVEL_SELECT)
             a = MAIN_STATE_EWORLD_LEVEL_SELECT;
         if (b == 0)
         {
@@ -157,7 +157,7 @@ void sub_080070E8(s32 a, s32 b)
         else
         {
             gUnknown_030009CC = a;
-            gUnknown_030009C8 = gNextMainState;
+            gPreviousMainState = gNextMainState;
             gNextMainState = MAIN_STATE_FADETRANSITION;
         }
 
