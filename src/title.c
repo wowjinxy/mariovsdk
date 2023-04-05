@@ -32,7 +32,7 @@ void title_init_callback(void)
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
     gUnknown_03000BE4 = 0;
     gUnknown_03000BE8 = 0;
-    gLevelTimer = 0;
+    gGeneralTimer = 0;
     if (sub_08071FE4() != 10)
         sub_0807204C(10, 128, 1);
     sub_08033C74();
@@ -147,7 +147,7 @@ void sub_0801B88C(void)
 
 void sub_0801B908(void)
 {
-    gLevelTimer++;
+    gGeneralTimer++;
     DmaFill32(3, 0xA0, gOamData, 0x400);
     if (gUnknown_03000C28 == 0 && sub_080721A8(gUnknown_030000B0) != 0)
     {

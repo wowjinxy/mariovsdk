@@ -96,13 +96,13 @@ SECTIONS
 		. = 0x9D8;		gUnknown_030009D8 = .;
 		. = 0x9DC;		gUnknown_030009DC = .;
 		. = 0x9E4;		gUnknown_030009E4 = .;
-		. = 0x9E8;		gLevelTimerOnOffFlag = .;
+		. = 0x9E8;		gGeneralTimerOnOffFlag = .;
 		. = 0x9EC;		gUnknown_030009EC = .;
 		. = 0xB44;		gUnknown_03000B44 = .;
 		. = 0xB48;		gUnknown_03000B48 = .;
 		. = 0xB4C;		gUnknown_03000B4C = .;
 		. = 0xB50;		gUnknown_03000B50 = .;
-		. = 0xB54;		gLevelTimer = .;
+		. = 0xB54;		gGeneralTimer = .;
 		. = 0xB58;		gAfterTutorialWorld = .;
 		. = 0xB5C;		gUnknown_03000B5C = .;
 		. = 0xB60;		gUnknown_03000B60 = .;

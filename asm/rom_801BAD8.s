@@ -12021,7 +12021,7 @@ bonus_stoparrow_init_callback: @ 0x080215B4
 	strh r1, [r0]
 	ldr r0, _08021664  @ =gUnknown_030009DC
 	ldr r5, [r0]
-	ldr r0, _08021668  @ =gLevelTimer
+	ldr r0, _08021668  @ =gGeneralTimer
 	ldr r0, [r0]
 	bl sub_0802F5C0
 	add r4, r0, #0
@@ -12069,7 +12069,7 @@ _08021660:
 _08021664:
 	.4byte gUnknown_030009DC
 _08021668:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _0802166C:
 	ldr r1, [r7]
 	mov r0, #4
@@ -24022,7 +24022,7 @@ bonus_swapboxes_init_callback: @ 0x08027068
 	strh r1, [r0]
 	ldr r0, _08027134  @ =gUnknown_030009DC
 	ldr r6, [r0]
-	ldr r0, _08027138  @ =gLevelTimer
+	ldr r0, _08027138  @ =gGeneralTimer
 	ldr r0, [r0]
 	bl sub_0802F5C0
 	add r4, r0, #0
@@ -24072,7 +24072,7 @@ _08027130:
 _08027134:
 	.4byte gUnknown_030009DC
 _08027138:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _0802713C:
 	ldr r1, [r7]
 	mov r0, #4
@@ -29624,7 +29624,7 @@ _080299E4:
 	cmp r0, #0
 	beq _08029A50
 _08029A1A:
-	ldr r0, _08029A34  @ =gLevelTimer
+	ldr r0, _08029A34  @ =gGeneralTimer
 	ldr r0, [r0]
 	bl sub_0802F5C0
 	mov r1, #1
@@ -29638,9 +29638,9 @@ _08029A1A:
 _08029A30:
 	.4byte gUnknown_03001A30
 _08029A34:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _08029A38:
-	ldr r0, _08029A4C  @ =gLevelTimer
+	ldr r0, _08029A4C  @ =gGeneralTimer
 	ldr r0, [r0]
 	bl sub_0802F5C0
 	mov r1, #1
@@ -29650,7 +29650,7 @@ _08029A38:
 	mov r0, #23
 	b _08029A52
 _08029A4C:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _08029A50:
 	mov r0, #22
 _08029A52:
@@ -37548,7 +37548,7 @@ _0802D230:
 	bl sub_0805739C
 	bl sub_0802BE50
 	bl sub_080331FC
-	ldr r1, _0802D264  @ =gLevelTimer
+	ldr r1, _0802D264  @ =gGeneralTimer
 	ldr r0, [r1]
 	add r2, r0, #1
 	str r2, [r1]
@@ -37569,7 +37569,7 @@ _0802D25C:
 _0802D260:
 	.4byte 0x030001A0
 _0802D264:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _0802D268:
 	.4byte gUnknown_030009C8
 _0802D26C:
@@ -37944,7 +37944,7 @@ movie_player_init_callback: @ 0x0802D510
 	strh r1, [r0]
 	ldr r0, _0802D570  @ =gUnknown_03001930
 	strh r1, [r0]
-	ldr r2, _0802D574  @ =gLevelTimer
+	ldr r2, _0802D574  @ =gGeneralTimer
 	mov r0, #0
 	str r0, [r2]
 	ldr r0, _0802D578  @ =0x03000DCC
@@ -37971,7 +37971,7 @@ _0802D56C:
 _0802D570:
 	.4byte gUnknown_03001930
 _0802D574:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _0802D578:
 	.4byte 0x03000DCC
 _0802D57C:

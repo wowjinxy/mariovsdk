@@ -19,13 +19,13 @@ void sub_08007170(void)
     sub_080317F8();
     gUnknown_030009EC = 1;
     sub_0802BF1C();
-    gLevelTimer = gUnknown_03000B90.unk0->unk8 * 60 + 60;
+    gGeneralTimer = gUnknown_03000B90.unk0->unk8 * 60 + 60;
     if (gUnknown_03000B80 == 0 && (gUnknown_03000B90.unk20 & 8))
     {
         u32 var;
         
         if (gUnknown_03000B44 > 60)
-            gLevelTimer += gUnknown_03000B44 - 60;
+            gGeneralTimer += gUnknown_03000B44 - 60;
         var = sub_0802F5C0(gUnknown_03000B44);
         gUnknown_030009DC = var;
         gUnknown_03000B44 = 0;
@@ -77,7 +77,7 @@ void sub_080072A4(void)
     if (gUnknown_030009D0 & 8)
         sub_0802C938();
     gUnknown_03000028 = 0;
-    gLevelTimerOnOffFlag = 0;
+    gGeneralTimerOnOffFlag = 0;
     if ((!(gUnknown_03000B68 & 2) || (gUnknown_03000B90.unk20 & 32))
      && gMainState != MAIN_STATE_TUTORIAL)
     {
@@ -132,7 +132,7 @@ void level_demo_reset_init_callback(void)
     if (r1 != NULL)
         sub_08033FAC((r1->unk20 >> 7) - DISPLAY_WIDTH, (r1->unk24 >> 7) - DISPLAY_HEIGHT);
     gUnknown_03000028 = 0;
-    gLevelTimerOnOffFlag = 0;
+    gGeneralTimerOnOffFlag = 0;
     sub_08033FC8();
     gUnknown_03000034 = 0;
     gUnknown_03000029 = 0;
@@ -146,12 +146,12 @@ void level_demo_reset_init_callback(void)
 void sub_08007544(void)
 {
     bool32 r7 = FALSE;
-    s32 *r3 = &gLevelTimer;
+    s32 *r3 = &gGeneralTimer;
     s32 r2 = *r3;
     
     if (r2 > 0x708)
         r7 = TRUE;
-    if (r2 > 0 && gLevelTimerOnOffFlag != 0 && gUnknown_03000B5C == 0)
+    if (r2 > 0 && gGeneralTimerOnOffFlag != 0 && gUnknown_03000B5C == 0)
     {
         if (!(gUnknown_03001A1C & 0x901000) && gUnknown_03001A38 == 0)
         {
@@ -161,7 +161,7 @@ void sub_08007544(void)
                 {
                     sub_08071CD4();
                     gUnknown_03000033 = 1;
-                    gLevelTimerOnOffFlag = 0;
+                    gGeneralTimerOnOffFlag = 0;
                 }
             }
             else
@@ -169,10 +169,10 @@ void sub_08007544(void)
                 *r3 = r2 - gUnknown_03001748;
             }
         }
-        if (gLevelTimer <= 0 && !(gUnknown_030019A0 & 0x80000000))
+        if (gGeneralTimer <= 0 && !(gUnknown_030019A0 & 0x80000000))
         {
             gUnknown_03001B30.unk14 |= 32;
-            gLevelTimer = 0;
+            gGeneralTimer = 0;
             gUnknown_03001A1C |= 0x400;
             gUnknown_03000029 = 0;
             if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
@@ -186,7 +186,7 @@ void sub_08007544(void)
     if (gUnknown_03000038 & 0x2000000)
         sub_08071990(68, 8, 16, 64, 0, 128, 0);
     
-    if (r7 && gLevelTimer <= 0x708 && !(gUnknown_03001A1C & 0x80))
+    if (r7 && gGeneralTimer <= 0x708 && !(gUnknown_03001A1C & 0x80))
     {
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
@@ -204,7 +204,7 @@ void sub_08007544(void)
             sub_080720AC();
             sub_08071CD4();
         }
-        gLevelTimerOnOffFlag = 0;
+        gGeneralTimerOnOffFlag = 0;
     }
     
     if (gUnknown_03000038 & 0x800)
@@ -214,7 +214,7 @@ void sub_08007544(void)
         gUnknown_030009D8++;
         if (gUnknown_03000BBC > 1)
         {
-            asm(""::"r"(gLevelTimer));  // Why is this variable read? Is it volatile?
+            asm(""::"r"(gGeneralTimer));  // Why is this variable read? Is it volatile?
             sub_08014A58(-1);
             sub_080070E8(14, 0);
         }
@@ -261,11 +261,11 @@ void sub_08007544(void)
         {
             gUnknown_03000029 = 1;
         }
-        gLevelTimerOnOffFlag = 1;
+        gGeneralTimerOnOffFlag = 1;
     }
 
     if (gUnknown_03000B5C == 0 && (gUnknown_03000B90.unk20 & 2) && gUnknown_03000029 == 0
-     && gLevelTimerOnOffFlag != 0 && sub_08072144() != 0)
+     && gGeneralTimerOnOffFlag != 0 && sub_08072144() != 0)
     {
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
             sub_08071FA0(gUnknown_03000B90.unk14, gUnknown_03000B90.unk18, 1, gUnknown_03000B90.unk1D);
@@ -274,7 +274,7 @@ void sub_08007544(void)
 
     if (gUnknown_03000038 & 0x10000)
     {
-        gLevelTimerOnOffFlag = 0;
+        gGeneralTimerOnOffFlag = 0;
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
@@ -287,7 +287,7 @@ void sub_08007544(void)
     
     if (gUnknown_03000038 & 0x20000)
     {
-        gLevelTimerOnOffFlag = 0;
+        gGeneralTimerOnOffFlag = 0;
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO
          && gUnknown_03000B5C == 0)
@@ -301,7 +301,7 @@ void sub_08007544(void)
 
     if (gUnknown_03000038 & 0x40000)
     {
-        gLevelTimerOnOffFlag = 0;
+        gGeneralTimerOnOffFlag = 0;
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO
          && gUnknown_03000B5C == 0)
@@ -316,7 +316,7 @@ void sub_08007544(void)
     if (gUnknown_03000038 & 0x100)
     {
         gUnknown_03000029 = 0;
-        gLevelTimerOnOffFlag = 0;
+        gGeneralTimerOnOffFlag = 0;
         if (gUnknown_03000B80 != 5)
             sub_08071CD4();
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO
@@ -343,7 +343,7 @@ void sub_08007544(void)
 
     if (gUnknown_03000B5C == 0)
     {
-        if (gLevelTimer > 0x708)
+        if (gGeneralTimer > 0x708)
         {
             if (gUnknown_03000038 & 0x4000000)
             {
@@ -362,7 +362,7 @@ void sub_08007544(void)
                 }
             }
         }
-        if (gUnknown_03000B5C == 0 && gLevelTimer > 0x708)
+        if (gUnknown_03000B5C == 0 && gGeneralTimer > 0x708)
         {
             if ((gUnknown_03000038 & 1)
              || ((gUnknown_03001A1C & 1) && (gUnknown_03000034 & 4) && !(gUnknown_03001A1C & 4)))

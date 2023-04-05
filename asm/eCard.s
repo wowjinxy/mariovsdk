@@ -3677,7 +3677,7 @@ _0802F6D8:
 	.4byte _0802F72C
 	.4byte _0802F74C
 _0802F6EC:
-	ldr r0, _0802F6FC  @ =gLevelTimer
+	ldr r0, _0802F6FC  @ =gGeneralTimer
 	ldr r0, [r0]
 	bl sub_0802F5C0
 	mov r1, #100
@@ -3686,7 +3686,7 @@ _0802F6EC:
 	.byte 0x00
 	.byte 0x00
 _0802F6FC:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _0802F700:
 	ldr r0, _0802F714  @ =gUnknown_03000B44
 	ldr r0, [r0]

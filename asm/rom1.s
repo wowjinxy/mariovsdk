@@ -518,7 +518,7 @@ _08007F42:
 	str r0, [r1]
 	str r5, [r2]
 	ldr r1, _08007FE4  @ =gUnknown_03000B44
-	ldr r0, _08007FE8  @ =gLevelTimer
+	ldr r0, _08007FE8  @ =gGeneralTimer
 	ldr r0, [r0]
 	str r0, [r1]
 	ldr r0, _08007FEC  @ =gUnknown_03001A30
@@ -549,7 +549,7 @@ _08007F92:
 	bl sub_0802BAA0
 	bl sub_0802CF78
 	bl sub_08030F50
-	ldr r0, _08008004  @ =gLevelTimerOnOffFlag
+	ldr r0, _08008004  @ =gGeneralTimerOnOffFlag
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08007FAA
@@ -584,7 +584,7 @@ _08007FE0:
 _08007FE4:
 	.4byte gUnknown_03000B44
 _08007FE8:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _08007FEC:
 	.4byte gUnknown_03001A30
 _08007FF0:
@@ -598,7 +598,7 @@ _08007FFC:
 _08008000:
 	.4byte gUnknown_030009D0
 _08008004:
-	.4byte gLevelTimerOnOffFlag
+	.4byte gGeneralTimerOnOffFlag
 _08008008:
 	.4byte gUnknown_03000B90
 _0800800C:
@@ -621,7 +621,7 @@ _08008022:
 	ldrh r0, [r0]
 	cmp r0, #8
 	bne _0800807E
-	ldr r0, _080080E0  @ =gLevelTimer
+	ldr r0, _080080E0  @ =gGeneralTimer
 	ldr r0, [r0]
 	cmp r0, #0
 	ble _0800807E
@@ -705,7 +705,7 @@ _080080D8:
 _080080DC:
 	.4byte gUnknown_030012E8
 _080080E0:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _080080E4:
 	.4byte gUnknown_03000B5C
 _080080E8:
@@ -3943,7 +3943,7 @@ sub_0800991C: @ 0x0800991C
 	ldr r0, _08009A38  @ =gUnknown_03000BBC
 	ldrb r0, [r0]
 	mov r9, r0
-	ldr r0, _08009A3C  @ =gLevelTimer
+	ldr r0, _08009A3C  @ =gGeneralTimer
 	ldr r1, [r0]
 	lsl r0, r1, #4
 	add r0, r0, r1
@@ -4054,7 +4054,7 @@ _080099EC:
 	strb r0, [r6, #16]
 _08009A1E:
 	strb r7, [r6, #14]
-	ldr r0, _08009A3C  @ =gLevelTimer
+	ldr r0, _08009A3C  @ =gGeneralTimer
 	ldr r1, [r0]
 	cmp r1, #59
 	bgt _08009A5C
@@ -4069,7 +4069,7 @@ _08009A34:
 _08009A38:
 	.4byte gUnknown_03000BBC
 _08009A3C:
-	.4byte gLevelTimer
+	.4byte gGeneralTimer
 _08009A40:
 	.4byte 0x03000A10
 _08009A44:

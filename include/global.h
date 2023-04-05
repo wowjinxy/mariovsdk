@@ -193,13 +193,13 @@ extern u8 gUnknown_030009D0;
 extern u8 gUnknown_030009D4;
 extern u16 gUnknown_030009D8;
 extern u8 gUnknown_030009E4[];  // unknown type
-extern u8 gLevelTimerOnOffFlag;
+extern u8 gGeneralTimerOnOffFlag;
 extern u8 gUnknown_030009EC;
 extern s32 gUnknown_03000B44;
 extern u32 gUnknown_03000B48;
 extern u32 gUnknown_03000B4C;
 extern u8 gUnknown_03000B50;
-extern s32 gLevelTimer;
+extern s32 gGeneralTimer;
 extern s8 gAfterTutorialWorld;
 extern u8 gUnknown_03000B5C;
 extern u8 gUnknown_03000B60;

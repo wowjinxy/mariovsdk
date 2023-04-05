@@ -199,7 +199,7 @@ void sub_080331FC(void)
         }
         else if (gMainState == MAIN_STATE_LEVEL_PLAY)
         {
-            if (gLevelTimer <= 10)
+            if (gGeneralTimer <= 10)
             {
                 gUnknown_030012E8 = gUnknown_030012E0 = 0;
             }
