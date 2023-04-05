@@ -153,7 +153,7 @@ void game_init_main(void)
     }
 }
 
-void sub_08032708(void)
+void game_init_loop(void)
 {
     u16 val = 0;
 

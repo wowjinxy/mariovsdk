@@ -292,43 +292,43 @@ gMainStateMainCallbacks:
 	.4byte level_view_main @ sub_08032210			  (Mode 0x21)
 	.4byte game_init_main @ sub_080324DC			  (Mode 0x22)
 
-	.GLOBAL gUnknown_08078354
-gUnknown_08078354:
-	.4byte sub_0801BAC4
-	.4byte sub_08034824
-	.4byte sub_080088F0
-	.4byte sub_08014780
-	.4byte sub_08028E44
-	.4byte sub_080088F0
-	.4byte sub_080088F0
-	.4byte sub_0801B908
-	.4byte sub_0801ADBC
-	.4byte sub_08036F28
+	.GLOBAL gMainStateLoopCallbacks
+gMainStateLoopCallbacks:
+	.4byte intro_loop
+	.4byte goto_credits_loop
+	.4byte level_play_loop
+	.4byte main_menu_loop
+	.4byte options_loop
+	.4byte level_play_loop
+	.4byte level_play_loop
+	.4byte title_loop
+	.4byte level_select_loop
+	.4byte expert_levels_loop
 	.4byte 0
-	.4byte sub_080088F0
-	.4byte sub_080088F0
-	.4byte sub_080088F0
-	.4byte sub_0802B78C
-	.4byte sub_080088F0
-	.4byte sub_0801BEBC
-	.4byte sub_0802AA90
-	.4byte sub_0802B78C
+	.4byte level_play_loop
+	.4byte level_play_loop
+	.4byte level_play_loop
+	.4byte level_retry_loop
+	.4byte level_play_loop
+	.4byte pause_menu_loop
+	.4byte help_loop
+	.4byte level_retry_loop
 	.4byte 0
-	.4byte sub_0801C9AC
-	.4byte sub_08029B84
-	.4byte sub_080219A4
-	.4byte sub_08027990
-	.4byte sub_0802E888
-	.4byte sub_0802E888
-	.4byte sub_0802DBEC
-	.4byte sub_0802DBEC
-	.4byte sub_0802F440
-	.4byte sub_080320E4
-	.4byte sub_0802D588
+	.4byte boss_clear_loop
+	.4byte level_results_loop
+	.4byte bonus_stoparrow_loop
+	.4byte bonus_swapboxes_loop
+	.4byte e_world_loop
+	.4byte e_world_loop
+	.4byte e_card_scan_loop
+	.4byte e_card_scan_loop
+	.4byte e_world_debug_loop
+	.4byte e_world_from_menu_loop
+	.4byte movie_player_loop
 	.4byte 0
-	.4byte sub_08037848
-	.4byte sub_080323CC
-	.4byte sub_08032708
+	.4byte world_start_loop
+	.4byte level_view_loop
+	.4byte game_init_loop
 
 	.GLOBAL gUnknown_080783E0
 gUnknown_080783E0:
@@ -2966,8 +2966,8 @@ gUnknown_086576C0:
 gUnknown_086576C8:
 	.INCBIN "baserom.gba", 0x6576C8, 0x6593A0-0x6576C8
 
-	.GLOBAL gUnknown_086593A0
-gUnknown_086593A0:
+	.GLOBAL gUncompressedGraphicsTable
+gUncompressedGraphicsTable:
 	.INCBIN "baserom.gba", 0x6593A0, 0x65F610-0x6593A0
 
 	.GLOBAL gUnknown_0865F610

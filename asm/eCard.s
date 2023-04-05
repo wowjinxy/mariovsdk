@@ -1,7 +1,7 @@
 	.INCLUDE "macro.inc"
 
-	THUMB_FUNC_START sub_0802DBEC
-sub_0802DBEC: @ 0x0802DBEC
+	THUMB_FUNC_START e_card_scan_loop
+e_card_scan_loop: @ 0x0802DBEC
 	push {r4-r7,lr}
 	sub sp, sp, #12
 	add r4, sp, #8
@@ -181,7 +181,7 @@ _0802DD44:
 	.4byte gOamData
 _0802DD48:
 	.4byte 0x80000200
-	THUMB_FUNC_END sub_0802DBEC
+	THUMB_FUNC_END e_card_scan_loop
 
 	THUMB_FUNC_START e_card_scan_init_callback
 e_card_scan_init_callback: @ 0x0802DD4C
@@ -1688,8 +1688,8 @@ _0802E884:
 	.4byte gUnknown_0807CA40
 	THUMB_FUNC_END sub_0802E780
 
-	THUMB_FUNC_START sub_0802E888
-sub_0802E888: @ 0x0802E888
+	THUMB_FUNC_START e_world_loop
+e_world_loop: @ 0x0802E888
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -2170,7 +2170,7 @@ _0802EC2C:
 	.4byte 0x000008F4
 _0802EC30:
 	.4byte 0x80000400
-	THUMB_FUNC_END sub_0802E888
+	THUMB_FUNC_END e_world_loop
 
 	THUMB_FUNC_START e_world_init_callback
 e_world_init_callback: @ 0x0802EC34
@@ -3308,8 +3308,8 @@ _0802F43C:
 	.4byte 0x030001C9
 	THUMB_FUNC_END e_world_debug_main
 
-	THUMB_FUNC_START sub_0802F440
-sub_0802F440: @ 0x0802F440
+	THUMB_FUNC_START e_world_debug_loop
+e_world_debug_loop: @ 0x0802F440
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -3485,7 +3485,7 @@ _0802F588:
 	.4byte gOamData
 _0802F58C:
 	.4byte 0x80000200
-	THUMB_FUNC_END sub_0802F440
+	THUMB_FUNC_END e_world_debug_loop
 
 	THUMB_FUNC_START e_world_debug_init_callback
 e_world_debug_init_callback: @ 0x0802F590
@@ -9499,8 +9499,8 @@ _080320E0:
 	.4byte 0x0300028C
 	THUMB_FUNC_END e_world_from_menu_main
 
-	THUMB_FUNC_START sub_080320E4
-sub_080320E4: @ 0x080320E4
+	THUMB_FUNC_START e_world_from_menu_loop
+e_world_from_menu_loop: @ 0x080320E4
 	push {r4,lr}
 	sub sp, sp, #12
 	add r4, sp, #8
@@ -9584,7 +9584,7 @@ _08032184:
 	.4byte gOamData
 _08032188:
 	.4byte 0x80000200
-	THUMB_FUNC_END sub_080320E4
+	THUMB_FUNC_END e_world_from_menu_loop
 
 	THUMB_FUNC_START e_world_from_menu_init_callback
 e_world_from_menu_init_callback: @ 0x0803218C
@@ -9885,14 +9885,14 @@ _080323C8:
 	.4byte 0x03001A00
 	THUMB_FUNC_END level_view_init_callback
 
-	THUMB_FUNC_START sub_080323CC
-sub_080323CC: @ 0x080323CC
+	THUMB_FUNC_START level_view_loop
+level_view_loop: @ 0x080323CC
 	push {r4,r5,lr}
 	ldr r4, _080323E4  @ =gMainState
 	ldr r5, [r4]
 	mov r0, #13
 	str r0, [r4]
-	bl sub_080088F0
+	bl level_play_loop
 	str r5, [r4]
 	pop {r4,r5}
 	pop {r0}
@@ -9901,7 +9901,7 @@ sub_080323CC: @ 0x080323CC
 	.byte 0x00
 _080323E4:
 	.4byte gMainState
-	THUMB_FUNC_END sub_080323CC
+	THUMB_FUNC_END level_view_loop
 
 	THUMB_FUNC_START sub_080323E8
 sub_080323E8: @ 0x080323E8

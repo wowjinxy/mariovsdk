@@ -1796,8 +1796,8 @@ _080088EC:
 	.4byte 0x03000C0C
 	THUMB_FUNC_END sub_080088C4
 
-	THUMB_FUNC_START sub_080088F0
-sub_080088F0: @ 0x080088F0
+	THUMB_FUNC_START level_play_loop
+level_play_loop: @ 0x080088F0
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -2015,7 +2015,7 @@ _08008A94:
 	.4byte gAfterTutorialWorld
 _08008A98:
 	.4byte 0x0000A00C
-	THUMB_FUNC_END sub_080088F0
+	THUMB_FUNC_END level_play_loop
 
 	THUMB_FUNC_START after_tutorial_init_callback
 after_tutorial_init_callback: @ 0x08008A9C
@@ -27363,8 +27363,8 @@ _0801476E:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08014780
-sub_08014780: @ 0x08014780
+	THUMB_FUNC_START main_menu_loop
+main_menu_loop: @ 0x08014780
 	push {lr}
 	sub sp, sp, #4
 	ldr r3, _080147D8  @ =gUnknown_03001930
@@ -27493,7 +27493,7 @@ _08014878:
 	.4byte gOamData
 _0801487C:
 	.4byte 0x84000100
-	THUMB_FUNC_END sub_08014780
+	THUMB_FUNC_END main_menu_loop
 
 	THUMB_FUNC_START sub_08014880
 sub_08014880: @ 0x08014880
@@ -41062,8 +41062,8 @@ _0801ADB8:
 	.4byte 0x040000D4
 	THUMB_FUNC_END sub_0801A7D8
 
-	THUMB_FUNC_START sub_0801ADBC
-sub_0801ADBC: @ 0x0801ADBC
+	THUMB_FUNC_START level_select_loop
+level_select_loop: @ 0x0801ADBC
 	push {r4,r5,lr}
 	sub sp, sp, #8
 	mov r0, #160
@@ -41535,7 +41535,7 @@ _0801B16C:
 	.4byte gLevelSelectData
 _0801B170:
 	.4byte 0x03000078
-	THUMB_FUNC_END sub_0801ADBC
+	THUMB_FUNC_END level_select_loop
 
 	THUMB_FUNC_START sub_0801B174
 sub_0801B174: @ 0x0801B174

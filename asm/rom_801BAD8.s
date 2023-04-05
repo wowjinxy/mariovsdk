@@ -522,13 +522,13 @@ _0801BEB4:
 	bx r0
 	THUMB_FUNC_END pause_menu_main
 
-	THUMB_FUNC_START sub_0801BEBC
-sub_0801BEBC: @ 0x0801BEBC
+	THUMB_FUNC_START pause_menu_loop
+pause_menu_loop: @ 0x0801BEBC
 	push {lr}
-	bl sub_080088F0
+	bl level_play_loop
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0801BEBC
+	THUMB_FUNC_END pause_menu_loop
 
 	.byte 0x00
 	.byte 0x00
@@ -1376,7 +1376,7 @@ sub_0801C51C: @ 0x0801C51C
 	lsl r1, r2, #1
 	add r1, r1, r2
 	lsl r1, r1, #3
-	ldr r2, _0801C5BC  @ =gUnknown_086593A0
+	ldr r2, _0801C5BC  @ =gUncompressedGraphicsTable
 	add r1, r1, r2
 	ldr r2, _0801C5C0  @ =0x040000D4
 	ldr r1, [r1, #16]
@@ -1450,7 +1450,7 @@ sub_0801C51C: @ 0x0801C51C
 	.byte 0x00
 	.byte 0x00
 _0801C5BC:
-	.4byte gUnknown_086593A0
+	.4byte gUncompressedGraphicsTable
 _0801C5C0:
 	.4byte 0x040000D4
 _0801C5C4:
@@ -1980,8 +1980,8 @@ _0801C9A2:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0801C9AC
-sub_0801C9AC: @ 0x0801C9AC
+	THUMB_FUNC_START boss_clear_loop
+boss_clear_loop: @ 0x0801C9AC
 	push {r4-r6,lr}
 	sub sp, sp, #20
 	ldr r0, _0801CAC0  @ =0x030000C4
@@ -2233,7 +2233,7 @@ _0801CB90:
 	.4byte 0x030000BE
 _0801CB94:
 	.4byte 0x84000100
-	THUMB_FUNC_END sub_0801C9AC
+	THUMB_FUNC_END boss_clear_loop
 
 	THUMB_FUNC_START sub_0801CB98
 sub_0801CB98: @ 0x0801CB98
@@ -12484,8 +12484,8 @@ _080219A0:
 	.4byte 0x030000DC
 	THUMB_FUNC_END bonus_stoparrow_main
 
-	THUMB_FUNC_START sub_080219A4
-sub_080219A4: @ 0x080219A4
+	THUMB_FUNC_START bonus_stoparrow_loop
+bonus_stoparrow_loop: @ 0x080219A4
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -12740,7 +12740,7 @@ _08021B98:
 	.4byte 0x030000E0
 _08021B9C:
 	.4byte 0x80000200
-	THUMB_FUNC_END sub_080219A4
+	THUMB_FUNC_END bonus_stoparrow_loop
 
 	THUMB_FUNC_START sub_08021BA0
 sub_08021BA0: @ 0x08021BA0
@@ -25223,8 +25223,8 @@ _0802798C:
 	.4byte 0x03000C10
 	THUMB_FUNC_END bonus_swapboxes_main
 
-	THUMB_FUNC_START sub_08027990
-sub_08027990: @ 0x08027990
+	THUMB_FUNC_START bonus_swapboxes_loop
+bonus_swapboxes_loop: @ 0x08027990
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -25486,7 +25486,7 @@ _08027B90:
 	.4byte 0x03000C08
 _08027B94:
 	.4byte 0x80000200
-	THUMB_FUNC_END sub_08027990
+	THUMB_FUNC_END bonus_swapboxes_loop
 
 	THUMB_FUNC_START sub_08027B98
 sub_08027B98: @ 0x08027B98
@@ -26181,7 +26181,7 @@ sub_08028068: @ 0x08028068
 	lsl r2, r1, #1
 	add r2, r2, r1
 	lsl r2, r2, #3
-	ldr r1, _080280AC  @ =gUnknown_086593A0
+	ldr r1, _080280AC  @ =gUncompressedGraphicsTable
 	add r2, r2, r1
 	str r2, [r0]
 	mov r1, #0
@@ -26213,7 +26213,7 @@ sub_08028068: @ 0x08028068
 	.byte 0x00
 	.byte 0x00
 _080280AC:
-	.4byte gUnknown_086593A0
+	.4byte gUncompressedGraphicsTable
 _080280B0:
 	.4byte gUnknown_03001930
 _080280B4:
@@ -28056,8 +28056,8 @@ _08028E40:
 	.4byte 0x01000400
 	THUMB_FUNC_END options_main
 
-	THUMB_FUNC_START sub_08028E44
-sub_08028E44: @ 0x08028E44
+	THUMB_FUNC_START options_loop
+options_loop: @ 0x08028E44
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -28318,7 +28318,7 @@ _08029044:
 	.4byte gOamData
 _08029048:
 	.4byte 0x84000100
-	THUMB_FUNC_END sub_08028E44
+	THUMB_FUNC_END options_loop
 
 	THUMB_FUNC_START sub_0802904C
 sub_0802904C: @ 0x0802904C
@@ -29813,8 +29813,8 @@ _08029B80:
 	.4byte 0x0300010E
 	THUMB_FUNC_END sub_08029A80
 
-	THUMB_FUNC_START sub_08029B84
-sub_08029B84: @ 0x08029B84
+	THUMB_FUNC_START level_results_loop
+level_results_loop: @ 0x08029B84
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -29890,7 +29890,7 @@ _08029C14:
 	.4byte 0x03000E00
 _08029C18:
 	.4byte 0x84000100
-	THUMB_FUNC_END sub_08029B84
+	THUMB_FUNC_END level_results_loop
 
 	THUMB_FUNC_START sub_08029C1C
 sub_08029C1C: @ 0x08029C1C
@@ -31991,13 +31991,13 @@ _0802AA8C:
 	.4byte 0x00007FFF
 	THUMB_FUNC_END help_main
 
-	THUMB_FUNC_START sub_0802AA90
-sub_0802AA90: @ 0x0802AA90
+	THUMB_FUNC_START help_loop
+help_loop: @ 0x0802AA90
 	push {lr}
-	bl sub_080088F0
+	bl level_play_loop
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0802AA90
+	THUMB_FUNC_END help_loop
 
 	.byte 0x00
 	.byte 0x00
@@ -33764,13 +33764,13 @@ sub_0802B780: @ 0x0802B780
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0802B78C
-sub_0802B78C: @ 0x0802B78C
+	THUMB_FUNC_START level_retry_loop
+level_retry_loop: @ 0x0802B78C
 	push {lr}
-	bl sub_080088F0
+	bl level_play_loop
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0802B78C
+	THUMB_FUNC_END level_retry_loop
 
 	.byte 0x00
 	.byte 0x00
@@ -37982,8 +37982,8 @@ _0802D584:
 	.4byte 0x0000FF7F
 	THUMB_FUNC_END movie_player_init_callback
 
-	THUMB_FUNC_START sub_0802D588
-sub_0802D588: @ 0x0802D588
+	THUMB_FUNC_START movie_player_loop
+movie_player_loop: @ 0x0802D588
 	push {r4-r6,lr}
 	sub sp, sp, #16
 	add r0, sp, #8
@@ -38042,7 +38042,7 @@ _0802D5F4:
 	.4byte 0x030001A0
 _0802D5F8:
 	.4byte 0x84000100
-	THUMB_FUNC_END sub_0802D588
+	THUMB_FUNC_END movie_player_loop
 
 	THUMB_FUNC_START sub_0802D5FC
 sub_0802D5FC: @ 0x0802D5FC

@@ -5075,8 +5075,8 @@ _08036F24:
 	.4byte 0x030002E2
 	THUMB_FUNC_END sub_08036D3C
 
-	THUMB_FUNC_START sub_08036F28
-sub_08036F28: @ 0x08036F28
+	THUMB_FUNC_START expert_levels_loop
+expert_levels_loop: @ 0x08036F28
 	push {r4-r7,lr}
 	sub sp, sp, #8
 	ldr r0, _08036F40  @ =gUnknown_03000B80
@@ -5219,7 +5219,7 @@ _08037044:
 	.4byte 0x85000100
 _08037048:
 	.4byte 0x84000100
-	THUMB_FUNC_END sub_08036F28
+	THUMB_FUNC_END expert_levels_loop
 
 	THUMB_FUNC_START sub_0803704C
 sub_0803704C: @ 0x0803704C
@@ -5891,7 +5891,7 @@ _08037550:
 	lsl r0, r1, #1
 	add r0, r0, r1
 	lsl r0, r0, #3
-	ldr r1, _080375E4  @ =gUnknown_086593A0
+	ldr r1, _080375E4  @ =gUncompressedGraphicsTable
 	add r2, r0, r1
 	ldrh r0, [r3, #14]
 	sub r0, r0, #1
@@ -5963,7 +5963,7 @@ _080375D8:
 _080375E0:
 	.4byte 0x03000304
 _080375E4:
-	.4byte gUnknown_086593A0
+	.4byte gUncompressedGraphicsTable
 _080375E8:
 	.4byte 0x03000300
 	THUMB_FUNC_END world_start_main
@@ -5985,7 +5985,7 @@ sub_080375EC: @ 0x080375EC
 	lsl r0, r1, #1
 	add r0, r0, r1
 	lsl r0, r0, #3
-	ldr r1, _08037644  @ =gUnknown_086593A0
+	ldr r1, _08037644  @ =gUncompressedGraphicsTable
 	add r7, r0, r1
 	ldr r1, [r7, #12]
 	ldr r0, [r1, #8]
@@ -6016,7 +6016,7 @@ _08037622:
 	asr r0, r1, #18
 	b _0803765E
 _08037644:
-	.4byte gUnknown_086593A0
+	.4byte gUncompressedGraphicsTable
 _08037648:
 	.4byte gUnknown_0300192C
 _0803764C:
@@ -6279,8 +6279,8 @@ _08037844:
 	.4byte 0xFFFFFE00
 	THUMB_FUNC_END sub_080375EC
 
-	THUMB_FUNC_START sub_08037848
-sub_08037848: @ 0x08037848
+	THUMB_FUNC_START world_start_loop
+world_start_loop: @ 0x08037848
 	push {r4-r7,lr}
 	mov r7, r9
 	mov r6, r8
@@ -6465,7 +6465,7 @@ _080379B0:
 	.4byte 0x84000100
 _080379B4:
 	.4byte gUnknown_03000C28
-	THUMB_FUNC_END sub_08037848
+	THUMB_FUNC_END world_start_loop
 
 	THUMB_FUNC_START sub_080379B8
 sub_080379B8: @ 0x080379B8

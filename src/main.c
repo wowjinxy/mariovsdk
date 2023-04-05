@@ -126,7 +126,7 @@ static void main_loop(void)
         }
 
         sub_0801500C(gUnknown_0807846C[gUnknown_03000020]);
-        sub_08033EA0(gUnknown_08078354[gUnknown_03000020]);
+        sub_08033EA0(gMainStateLoopCallbacks[gUnknown_03000020]);
 
         while (gNextMainState == gUnknown_03000020 && gUnknown_03000024 == 0)
         {

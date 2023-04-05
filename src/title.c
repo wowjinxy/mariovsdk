@@ -145,7 +145,7 @@ void sub_0801B88C(void)
     }
 }
 
-void sub_0801B908(void)
+void title_loop(void)
 {
     gGeneralTimer++;
     DmaFill32(3, 0xA0, gOamData, 0x400);

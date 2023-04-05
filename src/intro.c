@@ -44,7 +44,7 @@ void intro_main(void)
     gUnknown_03000BE0 &= 0xFFFF;
 }
 
-void sub_0801BAC4(void)
+void intro_loop(void)
 {
     gGeneralTimer++;
 }
