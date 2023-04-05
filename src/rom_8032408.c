@@ -165,7 +165,7 @@ void game_init_loop(void)
     DmaCopy32(3, gOamData, (void *)OAM, 0x400);
 }
 
-void sub_08032784(void)
+void game_init_end(void)
 {
 }
 

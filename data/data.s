@@ -330,43 +330,43 @@ gMainStateLoopCallbacks:
 	.4byte level_view_loop
 	.4byte game_init_loop
 
-	.GLOBAL gUnknown_080783E0
-gUnknown_080783E0:
-	.4byte sub_0801BAD4
-	.4byte sub_08034828
-	.4byte sub_08008BF4
-	.4byte sub_08014880
-	.4byte sub_0802904C
-	.4byte sub_08008BF4
-	.4byte sub_08008BF4
-	.4byte sub_0801BA6C
-	.4byte sub_0801B220
-	.4byte sub_0803704C
-	.4byte sub_08008D7C
-	.4byte sub_08008D7C
+	.GLOBAL gMainStateEndCallbacks
+gMainStateEndCallbacks:
+	.4byte intro_end
+	.4byte goto_credits_end
+	.4byte level_play_end
+	.4byte main_menu_end
+	.4byte options_end
+	.4byte level_play_end
+	.4byte level_play_end
+	.4byte title_end
+	.4byte level_select_end
+	.4byte expert_levels_end
+	.4byte level_editor_end
+	.4byte level_editor_end
 	.4byte 0
-	.4byte sub_08008BF4
-	.4byte sub_0802B780
-	.4byte sub_08008BF4
-	.4byte sub_0801BEC8
-	.4byte sub_0802AA1C
-	.4byte sub_0802B780
+	.4byte level_play_end
+	.4byte level_retry_end
+	.4byte level_play_end
+	.4byte pause_menu_end
+	.4byte help_end
+	.4byte level_retry_end
 	.4byte 0
-	.4byte sub_0801CB98
-	.4byte sub_08029C1C
-	.4byte sub_08021BA0
-	.4byte sub_08027B98
-	.4byte sub_0802ECF0
-	.4byte sub_0802ECF0
-	.4byte sub_0802DDE8
-	.4byte sub_0802DDE8
-	.4byte sub_0802F5BC
-	.4byte sub_0803220C
-	.4byte sub_0802D5FC
-	.4byte sub_08029E70
-	.4byte sub_080379B8
-	.4byte sub_080323E8
-	.4byte sub_08032784
+	.4byte boss_clear_end
+	.4byte level_results_end
+	.4byte bonus_stoparrow_end
+	.4byte bonus_swapbxoes_end
+	.4byte e_world_end
+	.4byte e_world_end
+	.4byte e_card_scan_end
+	.4byte e_card_scan_end
+	.4byte e_world_debug_end
+	.4byte e_world_from_menu_end
+	.4byte movie_player_end
+	.4byte fade_transition_end
+	.4byte world_start_end
+	.4byte level_view_end
+	.4byte game_init_end
 
 	.GLOBAL gUnknown_0807846C
 gUnknown_0807846C:

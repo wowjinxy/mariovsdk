@@ -24,7 +24,7 @@ void intro_init_callback(void)
     sub_08029CDC(gNintendoSoftwareTechnologyLogo.bldCnt, gNintendoSoftwareTechnologyLogo.bldAlpha, gNintendoSoftwareTechnologyLogo.bldY);
 }
 
-void sub_0801BA6C(void)
+void title_end(void)
 {
     REG_BLDALPHA = 0;
     REG_BLDCNT = 0;
@@ -49,7 +49,7 @@ void intro_loop(void)
     gGeneralTimer++;
 }
 
-void sub_0801BAD4(void)
+void intro_end(void)
 {
 }
 

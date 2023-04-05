@@ -265,7 +265,7 @@ extern u8 *const gUnknown_0807820C;
 extern void (*const gMainStateInitCallbacks[])(void);
 extern void (*const gMainStateMainCallbacks[])(void);
 extern void (*const gMainStateLoopCallbacks[])(void);
-extern void (*const gUnknown_080783E0[])(void);
+extern void (*const gMainStateEndCallbacks[])(void);
 extern const u32 gUnknown_0807846C[];
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];

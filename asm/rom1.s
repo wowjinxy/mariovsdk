@@ -2182,8 +2182,8 @@ _08008BF0:
 	.4byte gUnknown_03000B60
 	THUMB_FUNC_END level_demo_init_callback
 
-	THUMB_FUNC_START sub_08008BF4
-sub_08008BF4: @ 0x08008BF4
+	THUMB_FUNC_START level_play_end
+level_play_end: @ 0x08008BF4
 	push {lr}
 	ldr r0, _08008C0C  @ =gNextMainState
 	ldr r1, [r0]
@@ -2215,7 +2215,7 @@ _08008C26:
 	.byte 0x00
 _08008C2C:
 	.4byte gMainState
-	THUMB_FUNC_END sub_08008BF4
+	THUMB_FUNC_END level_play_end
 
 	THUMB_FUNC_START sub_08008C30
 sub_08008C30: @ 0x08008C30
@@ -2381,8 +2381,8 @@ _08008D78:
 	.4byte gUnknown_03000B90
 	THUMB_FUNC_END level_edit_main
 
-	THUMB_FUNC_START sub_08008D7C
-sub_08008D7C: @ 0x08008D7C
+	THUMB_FUNC_START level_editor_end
+level_editor_end: @ 0x08008D7C
 	push {lr}
 	ldr r0, _08008D98  @ =0x0400000A
 	ldr r1, _08008D9C  @ =0x03000A0C
@@ -2399,7 +2399,7 @@ _08008D98:
 	.4byte 0x0400000A
 _08008D9C:
 	.4byte 0x03000A0C
-	THUMB_FUNC_END sub_08008D7C
+	THUMB_FUNC_END level_editor_end
 
 	THUMB_FUNC_START sub_08008DA0
 sub_08008DA0: @ 0x08008DA0
@@ -27495,13 +27495,13 @@ _0801487C:
 	.4byte 0x84000100
 	THUMB_FUNC_END main_menu_loop
 
-	THUMB_FUNC_START sub_08014880
-sub_08014880: @ 0x08014880
+	THUMB_FUNC_START main_menu_end
+main_menu_end: @ 0x08014880
 	push {lr}
 	bl sub_080382A8
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_08014880
+	THUMB_FUNC_END main_menu_end
 
 	.byte 0x00
 	.byte 0x00
@@ -41633,10 +41633,10 @@ _0801B218:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0801B220
-sub_0801B220: @ 0x0801B220
+	THUMB_FUNC_START level_select_end
+level_select_end: @ 0x0801B220
 	bx lr
-	THUMB_FUNC_END sub_0801B220
+	THUMB_FUNC_END level_select_end
 
 	.byte 0x00
 	.byte 0x00

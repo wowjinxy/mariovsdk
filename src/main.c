@@ -137,8 +137,8 @@ static void main_loop(void)
 
         gUnknown_03000024 = 0;
 
-        if (gUnknown_080783E0[gUnknown_03000020] != NULL)
-            gUnknown_080783E0[gUnknown_03000020]();
+        if (gMainStateEndCallbacks[gUnknown_03000020] != NULL)
+            gMainStateEndCallbacks[gUnknown_03000020]();
 
         gMainState = gNextMainState;
     }

@@ -264,8 +264,8 @@ _0802DDE4:
 	.4byte 0x0000FDFF
 	THUMB_FUNC_END e_card_scan_init_callback
 
-	THUMB_FUNC_START sub_0802DDE8
-sub_0802DDE8: @ 0x0802DDE8
+	THUMB_FUNC_START e_card_scan_end
+e_card_scan_end: @ 0x0802DDE8
 	push {lr}
 	bl sub_080382A8
 	mov r0, #3
@@ -280,7 +280,7 @@ sub_0802DDE8: @ 0x0802DDE8
 	.byte 0x00
 _0802DE04:
 	.4byte 0x030001B4
-	THUMB_FUNC_END sub_0802DDE8
+	THUMB_FUNC_END e_card_scan_end
 
 	THUMB_FUNC_START e_world_return_init_callback
 e_world_return_init_callback: @ 0x0802DE08
@@ -2266,8 +2266,8 @@ _0802ECEC:
 	.4byte gUnknown_03001730
 	THUMB_FUNC_END sub_0802ECC8
 
-	THUMB_FUNC_START sub_0802ECF0
-sub_0802ECF0: @ 0x0802ECF0
+	THUMB_FUNC_START e_world_end
+e_world_end: @ 0x0802ECF0
 	push {r4,lr}
 	ldr r4, _0802ED20  @ =0x030001C4
 	ldr r0, [r4]
@@ -2297,7 +2297,7 @@ _0802ED20:
 	.4byte 0x030001C4
 _0802ED24:
 	.4byte 0x0000FEFF
-	THUMB_FUNC_END sub_0802ECF0
+	THUMB_FUNC_END e_world_end
 
 	THUMB_FUNC_START sub_0802ED28
 sub_0802ED28: @ 0x0802ED28
@@ -3513,10 +3513,10 @@ _0802F5B8:
 	.4byte 0x0000FDFF
 	THUMB_FUNC_END e_world_debug_init_callback
 
-	THUMB_FUNC_START sub_0802F5BC
-sub_0802F5BC: @ 0x0802F5BC
+	THUMB_FUNC_START e_world_debug_end
+e_world_debug_end: @ 0x0802F5BC
 	bx lr
-	THUMB_FUNC_END sub_0802F5BC
+	THUMB_FUNC_END e_world_debug_end
 
 	.byte 0x00
 	.byte 0x00
@@ -9649,10 +9649,10 @@ _08032208:
 	.4byte 0x01000008
 	THUMB_FUNC_END e_world_from_menu_init_callback
 
-	THUMB_FUNC_START sub_0803220C
-sub_0803220C: @ 0x0803220C
+	THUMB_FUNC_START e_world_from_menu_end
+e_world_from_menu_end: @ 0x0803220C
 	bx lr
-	THUMB_FUNC_END sub_0803220C
+	THUMB_FUNC_END e_world_from_menu_end
 
 	.byte 0x00
 	.byte 0x00
@@ -9903,8 +9903,8 @@ _080323E4:
 	.4byte gMainState
 	THUMB_FUNC_END level_view_loop
 
-	THUMB_FUNC_START sub_080323E8
-sub_080323E8: @ 0x080323E8
+	THUMB_FUNC_START level_view_end
+level_view_end: @ 0x080323E8
 	push {lr}
 	ldr r1, _08032400  @ =0x03000B78
 	mov r0, #0
@@ -9921,4 +9921,4 @@ _08032400:
 	.4byte 0x03000B78
 _08032404:
 	.4byte 0x03001A00
-	THUMB_FUNC_END sub_080323E8
+	THUMB_FUNC_END level_view_end

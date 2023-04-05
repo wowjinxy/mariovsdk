@@ -955,7 +955,7 @@ void goto_credits_loop(void)
 {
 }
 
-void sub_08034828(void)
+void goto_credits_end(void)
 {
 }
 

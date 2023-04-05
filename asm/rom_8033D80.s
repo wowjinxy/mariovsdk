@@ -5221,10 +5221,10 @@ _08037048:
 	.4byte 0x84000100
 	THUMB_FUNC_END expert_levels_loop
 
-	THUMB_FUNC_START sub_0803704C
-sub_0803704C: @ 0x0803704C
+	THUMB_FUNC_START expert_levels_end
+expert_levels_end: @ 0x0803704C
 	bx lr
-	THUMB_FUNC_END sub_0803704C
+	THUMB_FUNC_END expert_levels_end
 
 	.byte 0x00
 	.byte 0x00
@@ -6467,10 +6467,10 @@ _080379B4:
 	.4byte gUnknown_03000C28
 	THUMB_FUNC_END world_start_loop
 
-	THUMB_FUNC_START sub_080379B8
-sub_080379B8: @ 0x080379B8
+	THUMB_FUNC_START world_start_end
+world_start_end: @ 0x080379B8
 	bx lr
-	THUMB_FUNC_END sub_080379B8
+	THUMB_FUNC_END world_start_end
 
 	.byte 0x00
 	.byte 0x00
