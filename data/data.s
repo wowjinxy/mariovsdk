@@ -3624,4 +3624,215 @@ gUnknown_08D7B116:
 
 	.GLOBAL gUnknown_08EBFE90
 gUnknown_08EBFE90:
-	.INCBIN "baserom.gba", 0xEBFE90
+	.INCBIN "baserom.gba", 0xEBFE90, 0xECCA3C-0xEBFE90
+	
+BGM_1AXM:
+	.INCBIN "music/BGM_1AXM.bin"
+	
+HAMMERXM:
+	.INCBIN "music/HAMMERXM.bin"
+	
+WINXM:
+	.INCBIN "music/WINXM.bin"
+	
+FAIL_1XM:
+	.INCBIN "music/FAIL_1XM.bin"
+	
+FAIL_2XM:
+	.INCBIN "music/FAIL_2XM.bin"
+	
+FAIL_3XM:
+	.INCBIN "music/FAIL_3XM.bin"
+	
+TIMEXM:
+	.INCBIN "music/TIMEXM.bin"
+	
+INTRO_2XM:
+	.INCBIN "music/INTRO_2XM.bin"
+	
+BGM_1CXM:
+	.INCBIN "music/BGM_1CXM.bin"
+	
+BGM_1BXM:
+	.INCBIN "music/BGM_1BXM.bin"
+	
+TITLEXM:
+	.INCBIN "music/TITLEXM.bin"
+	
+RESULTSXM:
+	.INCBIN "music/RESULTSXM.bin"
+	
+BGM_MM1XM:
+	.INCBIN "music/BGM_MM1XM.bin"
+	
+BOSS1XM:
+	.INCBIN "music/BOSS1XM.bin"
+	
+MM_PROTECTXM:
+	.INCBIN "music/MM_PROTECTXM.bin"
+	
+GAMEOVERXM:
+	.INCBIN "music/GAMEOVERXM.bin"
+	
+INTRO_1XM:
+	.INCBIN "music/INTRO_1XM.bin"
+	
+INTRO_3XM:
+	.INCBIN "music/INTRO_3XM.bin"
+	
+BGM_2AXM:
+	.INCBIN "music/BGM_2AXM.bin"
+	
+BGM_2BXM:
+	.INCBIN "music/BGM_2BXM.bin"
+	
+BGM_2CXM:
+	.INCBIN "music/BGM_2CXM.bin"
+	
+WIN2XM:
+	.INCBIN "music/WIN2XM.bin"
+	
+WIN3XM:
+	.INCBIN "music/WIN3XM.bin"
+	
+MOVIEXM:
+	.INCBIN "music/MOVIEXM.bin"
+	
+BGM_5AXM:
+	.INCBIN "music/BGM_5AXM.bin"
+	
+BGM_5BXM:
+	.INCBIN "music/BGM_5BXM.bin"
+	
+BGM_5CXM:
+	.INCBIN "music/BGM_5CXM.bin"
+	
+BGM_4AXM:
+	.INCBIN "music/BGM_4AXM.bin"
+	
+BGM_4BXM:
+	.INCBIN "music/BGM_4BXM.bin"
+	
+BGM_4CXM:
+	.INCBIN "music/BGM_4CXM.bin"
+	
+DK01XM:
+	.INCBIN "music/DK01XM.bin"
+	
+DK02XM:
+	.INCBIN "music/DK02XM.bin"
+	
+BGM_MM_INTROXM:
+	.INCBIN "music/BGM_MM_INTROXM.bin"
+	
+DK03XM:
+	.INCBIN "music/DK03XM.bin"
+	
+DK04XM:
+	.INCBIN "music/DK04XM.bin"
+	
+DK05XM:
+	.INCBIN "music/DK05XM.bin"
+	
+DK06XM:
+	.INCBIN "music/DK06XM.bin"
+	
+DK07XM:
+	.INCBIN "music/DK07XM.bin"
+	
+DK08XM:
+	.INCBIN "music/DK08XM.bin"
+	
+DK_BOSS01XM:
+	.INCBIN "music/DK_BOSS01XM.bin"
+	
+BOSS2XM:
+	.INCBIN "music/BOSS2XM.bin"
+	
+MOVIE2XM:
+	.INCBIN "music/MOVIE2XM.bin"
+	
+MINIGAMEXM:
+	.INCBIN "music/MINIGAMEXM.bin"
+	
+MOVIE3XM:
+	.INCBIN "music/MOVIE3XM.bin"
+	
+MOVIE4XM:
+	.INCBIN "music/MOVIE4XM.bin"
+	
+MOVIE5XM:
+	.INCBIN "music/MOVIE5XM.bin"
+	
+MOVIE6XM:
+	.INCBIN "music/MOVIE6XM.bin"
+	
+CREDITSXM:
+	.INCBIN "music/CREDITSXM.bin"
+	
+EXPERT_1XM:
+	.INCBIN "music/EXPERT_1XM.bin"
+	
+EXPERT_2XM:
+	.INCBIN "music/EXPERT_2XM.bin"
+	
+EXPERT_3XM:
+	.INCBIN "music/EXPERT_3XM.bin"
+	
+EXPERT_4XM:
+	.INCBIN "music/EXPERT_4XM.bin"
+	
+EXPERT_5XM:
+	.INCBIN "music/EXPERT_5XM.bin"
+	
+EXPERT_6XM:
+	.INCBIN "music/EXPERT_6XM.bin"
+	
+EXPERT_7XM:
+	.INCBIN "music/EXPERT_7XM.bin"
+	
+EXPERT_8XM:
+	.INCBIN "music/EXPERT_8XM.bin"
+	
+EXPERT_9XM:
+	.INCBIN "music/EXPERT_9XM.bin"
+	
+EXPERT_10XM:
+	.INCBIN "music/EXPERT_10XM.bin"
+	
+EXPERT_11XM:
+	.INCBIN "music/EXPERT_11XM.bin"
+	
+EXPERT_12XM:
+	.INCBIN "music/EXPERT_12XM.bin"
+	
+INTRO_FINALBOSSXM:
+	.INCBIN "music/INTRO_FINALBOSSXM.bin"
+	
+MIDCREDITSXM:
+	.INCBIN "music/MIDCREDITSXM.bin"
+	
+MIDBOSS_ENDXM:
+	.INCBIN "music/MIDBOSS_ENDXM.bin"
+	
+FAIL_4XM:
+	.INCBIN "music/FAIL_4XM.bin"
+	
+INTRO_FINALBOSS2XM:
+	.INCBIN "music/INTRO_FINALBOSS2XM.bin"
+	
+WIN_FINALBOSSXM:
+	.INCBIN "music/WIN_FINALBOSSXM.bin"
+	
+BOSS3XM:
+	.INCBIN "music/BOSS3XM.bin"
+	
+DK_BOSS02XM:
+	.INCBIN "music/DK_BOSS02XM.bin"
+	
+INTRO_MINIGAMEXM:
+	.INCBIN "music/INTRO_MINIGAMEXM.bin"
+	
+OUTRO_MINIGAMEXM:
+	.INCBIN "music/OUTRO_MINIGAMEXM.bin"
+	.INCBIN "PADDING.bin"

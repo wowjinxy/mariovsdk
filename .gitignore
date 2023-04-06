@@ -10,3 +10,5 @@ src/*.s
 *.sav
 *.sgm
 Ghidra/
+tools/Bin2Img.py
+tools/yychr/
