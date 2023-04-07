@@ -242,7 +242,7 @@ extern u32 gUnknown_03001718;
 extern u16 gUnknown_0300171C;
 extern s16 gCurrentLevelWidth;
 extern s16 gSpriteHorizontalOffset;
-extern struct Struct30012D0 gUnknown_03001730;  // no idea what type this is
+extern struct Struct30012D0 gBGLayerOffset;  // no idea what type this is
 extern u8 gUnknown_03001740;
 extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
@@ -251,6 +251,7 @@ extern struct UnknownStruct9 gUnknown_03001770;
 extern u8 gUnknown_0300192C[];  // unknown type
 extern u8 gUnknown_03001930[];  // unknown type
 extern u32 gUnknown_03001938;
+extern u16 gMarioIdleTimer;
 extern u32 gUnknown_030019A0;
 extern u32 gUnknown_03001A1C;
 extern u8 gUnknown_03001A30[];  // unknown type

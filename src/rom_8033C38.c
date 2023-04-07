@@ -103,7 +103,7 @@ void sub_08033DCC(void)
         {
             sub_08033EC8();
             gUnknown_03001748 = 0;
-            CpuCopy16(&gUnknown_03001730, &gUnknown_030012D0, 16);
+            CpuCopy16(&gBGLayerOffset, &gUnknown_030012D0, 16);
             sub_0802BEEC(&gUnknown_030012D0);
             sub_0802BE74();
             gUnknown_030012C0();

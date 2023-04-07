@@ -1518,7 +1518,7 @@ expert_levels_init_callback: @ 0x08035388
 	and r2, r2, r3
 	orr r2, r2, r6
 	bl CpuSet
-	ldr r0, _08035498  @ =gUnknown_03001730
+	ldr r0, _08035498  @ =gBGLayerOffset
 	strh r4, [r0]
 	strh r4, [r0, #4]
 	strh r4, [r0, #8]
@@ -1575,7 +1575,7 @@ _08035490:
 _08035494:
 	.4byte 0x001FFFFF
 _08035498:
-	.4byte gUnknown_03001730
+	.4byte gBGLayerOffset
 	THUMB_FUNC_END expert_levels_init_callback
 
 	THUMB_FUNC_START sub_0803549C
@@ -2190,7 +2190,7 @@ _0803591A:
 	ldrh r0, [r1]
 	add r0, r0, #80
 	strh r0, [r1]
-	ldr r1, _08035948  @ =gUnknown_03001730
+	ldr r1, _08035948  @ =gBGLayerOffset
 	lsl r0, r0, #16
 	lsr r0, r0, #24
 	strh r0, [r1, #12]
@@ -2207,7 +2207,7 @@ _08035940:
 _08035944:
 	.4byte 0x030002D2
 _08035948:
-	.4byte gUnknown_03001730
+	.4byte gBGLayerOffset
 _0803594C:
 	.4byte gUnknown_03000B80
 _08035950:
@@ -5435,7 +5435,7 @@ _080371E6:
 	add r0, sp, #28
 	mov r1, #0
 	strh r1, [r0]
-	ldr r4, _08037220  @ =gUnknown_03001730
+	ldr r4, _08037220  @ =gBGLayerOffset
 	ldr r2, _08037224  @ =0x01000008
 	add r1, r4, #0
 	bl CpuSet
@@ -5455,7 +5455,7 @@ _08037218:
 _0803721C:
 	.4byte gWorldStartData
 _08037220:
-	.4byte gUnknown_03001730
+	.4byte gBGLayerOffset
 _08037224:
 	.4byte 0x01000008
 _08037228:
@@ -5733,7 +5733,7 @@ _08037420:
 	ldr r2, _0803745C  @ =0xFFFFCE00
 	add r0, r2, #0
 	strh r0, [r1]
-	ldr r1, _08037460  @ =gUnknown_03001730
+	ldr r1, _08037460  @ =gBGLayerOffset
 	lsl r0, r0, #16
 	asr r0, r0, #24
 	strh r0, [r1, #10]
@@ -5761,7 +5761,7 @@ _08037458:
 _0803745C:
 	.4byte 0xFFFFCE00
 _08037460:
-	.4byte gUnknown_03001730
+	.4byte gBGLayerOffset
 _08037464:
 	.4byte gUnknown_03000B80
 _08037468:
@@ -5815,7 +5815,7 @@ _080374B0:
 	mov r0, #4
 	strb r0, [r6]
 _080374C6:
-	ldr r1, _080374DC  @ =gUnknown_03001730
+	ldr r1, _080374DC  @ =gBGLayerOffset
 	ldrh r0, [r2]
 	lsl r0, r0, #16
 	asr r0, r0, #24
@@ -5828,7 +5828,7 @@ _080374D0:
 _080374D8:
 	.4byte 0x030002F8
 _080374DC:
-	.4byte gUnknown_03001730
+	.4byte gBGLayerOffset
 	THUMB_FUNC_END sub_080372A0
 
 	THUMB_FUNC_START world_start_main
@@ -8159,16 +8159,16 @@ _080385AA:
 	ldrb r0, [r4]
 	cmp r0, #0
 	beq _080385C0
-	ldr r1, _080385BC  @ =0x03001984
+	ldr r1, _080385BC  @ =gMarioIdleTimer
 	mov r0, #0
 	strh r0, [r1]
 	b _080385CE
 _080385B8:
 	.4byte 0x030019A4
 _080385BC:
-	.4byte 0x03001984
+	.4byte gMarioIdleTimer
 _080385C0:
-	ldr r0, _080385DC  @ =0x03001984
+	ldr r0, _080385DC  @ =gMarioIdleTimer
 	ldrh r1, [r0]
 	add r1, r1, #1
 	ldr r3, _080385E0  @ =0x00007FFF
@@ -8184,7 +8184,7 @@ _080385CE:
 	mov r0, #0
 	b _080385EE
 _080385DC:
-	.4byte 0x03001984
+	.4byte gMarioIdleTimer
 _080385E0:
 	.4byte 0x00007FFF
 _080385E4:
@@ -20463,7 +20463,7 @@ _0803E07A:
 	ldrh r1, [r4]
 	cmp r1, #0
 	bne _0803E084
-	ldr r0, _0803E0D8  @ =0x03001984
+	ldr r0, _0803E0D8  @ =gMarioIdleTimer
 	strh r1, [r0]
 _0803E084:
 	ldrb r1, [r4, #2]
@@ -20511,7 +20511,7 @@ _0803E0B6:
 	sub r1, r1, r0
 	b _0803E0F2
 _0803E0D8:
-	.4byte 0x03001984
+	.4byte gMarioIdleTimer
 _0803E0DC:
 	ldr r2, [r4, #32]
 	asr r2, r2, #8
@@ -42279,7 +42279,7 @@ sub_08047D30: @ 0x08047D30
 	ldr r2, _08047D6C  @ =0x030019A4
 	mov r0, #0
 	strb r0, [r2]
-	ldr r0, _08047D70  @ =0x03001984
+	ldr r0, _08047D70  @ =gMarioIdleTimer
 	ldrh r2, [r0]
 	mov r3, #12
 	ldrsh r0, [r1, r3]
@@ -42309,7 +42309,7 @@ _08047D60:
 _08047D6C:
 	.4byte 0x030019A4
 _08047D70:
-	.4byte 0x03001984
+	.4byte gMarioIdleTimer
 _08047D74:
 	.4byte gUnknown_03001A1C
 _08047D78:
