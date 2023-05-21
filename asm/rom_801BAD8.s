@@ -37854,62 +37854,62 @@ _0802D488:
 _0802D48C:
 	.4byte _0802D490
 _0802D490:
-	.4byte _0802D4B8
-	.4byte _0802D4C0
-	.4byte _0802D4C8
-	.4byte _0802D4F0
-	.4byte _0802D4D0
-	.4byte _0802D4D8
-	.4byte _0802D4E0
-	.4byte _0802D4E8
-	.4byte _0802D4F8
-	.4byte _0802D500
-_0802D4B8:
+	.4byte movie_0
+	.4byte movie_1
+	.4byte movie_2
+	.4byte movie_3
+	.4byte movie_4
+	.4byte movie_5
+	.4byte movie_6
+	.4byte movie_7
+	.4byte movie_8
+	.4byte movie_9
+movie_0:
 	ldr r0, _0802D4BC  @ =gUnknown_08B32118
 	b _0802D502
 _0802D4BC:
 	.4byte gUnknown_08B32118
-_0802D4C0:
+movie_1:
 	ldr r0, _0802D4C4  @ =gUnknown_08B30F94
 	b _0802D502
 _0802D4C4:
 	.4byte gUnknown_08B30F94
-_0802D4C8:
+movie_2:
 	ldr r0, _0802D4CC  @ =gUnknown_08B2FFDC
 	b _0802D502
 _0802D4CC:
 	.4byte gUnknown_08B2FFDC
-_0802D4D0:
+movie_4:
 	ldr r0, _0802D4D4  @ =gUnknown_08B30768
 	b _0802D502
 _0802D4D4:
 	.4byte gUnknown_08B30768
-_0802D4D8:
+movie_5:
 	ldr r0, _0802D4DC  @ =gUnknown_08B2F5B8
 	b _0802D502
 _0802D4DC:
 	.4byte gUnknown_08B2F5B8
-_0802D4E0:
+movie_6:
 	ldr r0, _0802D4E4  @ =gUnknown_08B2F070
 	b _0802D502
 _0802D4E4:
 	.4byte gUnknown_08B2F070
-_0802D4E8:
+movie_7:
 	ldr r0, _0802D4EC  @ =gUnknown_08B35FC0
 	b _0802D502
 _0802D4EC:
 	.4byte gUnknown_08B35FC0
-_0802D4F0:
+movie_3:
 	ldr r0, _0802D4F4  @ =gUnknown_08B37168
 	b _0802D502
 _0802D4F4:
 	.4byte gUnknown_08B37168
-_0802D4F8:
+movie_8:
 	ldr r0, _0802D4FC  @ =gUnknown_08B3732C
 	b _0802D502
 _0802D4FC:
 	.4byte gUnknown_08B3732C
-_0802D500:
+movie_9:
 	ldr r0, _0802D50C  @ =gUnknown_08B37424
 _0802D502:
 	str r0, [r3]

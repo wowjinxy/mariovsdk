@@ -3189,7 +3189,7 @@ _0802F34C:
 	ldrb r0, [r3]
 	add r0, r0, #1
 	strb r0, [r3]
-	ldr r1, _0802F37C  @ =gUnknown_0807CA9C
+	ldr r1, _0802F37C  @ = gPreloadedCardETable
 	ldrb r2, [r3]
 	lsl r0, r2, #3
 	add r0, r0, r1
@@ -3204,7 +3204,7 @@ _0802F34C:
 _0802F378:
 	.4byte 0x030001C9
 _0802F37C:
-	.4byte gUnknown_0807CA9C
+	.4byte  gPreloadedCardETable
 _0802F380:
 	str r4, [sp]
 	str r5, [sp, #4]
@@ -3251,7 +3251,7 @@ _0802F3B0:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r1, _0802F3F4  @ =gUnknown_0807CA9C
+	ldr r1, _0802F3F4  @ =gPreloadedCardETable
 	ldr r0, _0802F3F8  @ =0x030001C9
 	ldrb r0, [r0]
 	lsl r0, r0, #3
@@ -3265,7 +3265,7 @@ _0802F3EC:
 _0802F3F0:
 	.4byte gUnknown_0807CA94
 _0802F3F4:
-	.4byte gUnknown_0807CA9C
+	.4byte gPreloadedCardETable
 _0802F3F8:
 	.4byte 0x030001C9
 _0802F3FC:
@@ -3407,7 +3407,7 @@ _0802F4F4:
 	ldr r0, _0802F520  @ =0x030001CA
 	ldrb r4, [r0]
 	mov r6, #20
-	ldr r2, _0802F524  @ =gUnknown_0807CA9C
+	ldr r2, _0802F524  @ =gPreloadedCardETable
 	lsl r1, r4, #3
 	add r0, r1, r2
 	ldr r0, [r0]
@@ -3430,7 +3430,7 @@ _0802F510:
 _0802F520:
 	.4byte 0x030001CA
 _0802F524:
-	.4byte gUnknown_0807CA9C
+	.4byte gPreloadedCardETable
 _0802F528:
 	.4byte 0x030001C9
 _0802F52C:
@@ -3444,7 +3444,7 @@ _0802F52E:
 	bl sub_08034CCC
 	add r4, r4, #1
 	add r6, r6, #20
-	ldr r2, _0802F57C  @ =gUnknown_0807CA9C
+	ldr r2, _0802F57C  @ =gPreloadedCardETable
 	lsl r1, r4, #3
 	add r0, r1, r2
 	ldr r0, [r0]
@@ -3476,7 +3476,7 @@ _0802F556:
 	.byte 0x00
 	.byte 0x00
 _0802F57C:
-	.4byte gUnknown_0807CA9C
+	.4byte gPreloadedCardETable
 _0802F580:
 	.4byte 0x030001CA
 _0802F584:

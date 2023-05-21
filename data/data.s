@@ -56,27 +56,85 @@ gUnknown_080763F4:
 
 	.GLOBAL gUnknown_080763FC
 gUnknown_080763FC:
-	.INCBIN "baserom.gba", 0x763FC, 0x76800-0x763FC
+	.INCBIN "baserom.gba", 0x763FC, 0x76404-0x763FC
+
+	.GLOBAL gUnknown_08076404
+gUnknown_08076404:
+	.ASCII "No\0\0"	
+	.ASCII "Yes\0"
+	.ASCII "Theme Card already loaded!\n\nOverwrite existing theme?\0\0\0"
+	.ASCII "Theme Card\nDEACTIVATED!\0"
+	.ASCII "Press A to continue\0"
+	.ASCII "Theme Card\nACTIVATED!\0\0\0"
+	.ASCII "Erase old world\0"
+	.ASCII "Level does not belong\nto current world!\0"
+	.ASCII "Overwrite\0\0\0"
+	.ASCII "Level already exists!\0\0\0"
+	.ASCII "Connection lost!\0\0\0\0"
+	.ASCII "Time out!\0\0\0"
+	.ASCII "Cancel\0\0"	
+	.ASCII "Retry\0\0\0"
+	.ASCII "CRC check failed!\0\0\0\0\0\0\0"
+	.ASCII "Saving Level as\0"
+	.ASCII "Erasing levels\0\0"
+	.ASCII "Adding level\0\0\0\0"
+	.ASCII "ERROR\0\0\0"
+	.ASCII "Mario vs. Donkey Kong-e card\nRECEIVED!\n\nBut Level Already Exists as\0"
+	.ASCII "Mario vs. Donkey Kong-e card\nRECEIVED!\n\nNew level received:\0"
+	.ASCII "RECEIVING\nMario vs. Donkey Kong-e card...\0\0\0"
+	.ASCII "Mario vs. Donkey Kong-e card\nDETECTED!!\n\n\0\0\0"
+	.ASCII "WAITING FOR\nMario vs. Donkey Kong-e card...\0"
+	.ASCII "Please connect to GBA with\nan e-Reader and scan a\nMario vs. Donkey Kong-e card\ninto it.\n\0\0\0\0"
+	.ASCII "Press A Button to Retry\nPress B Button to Cancel\0\0\0\0"
+	.ASCII "Press A Button to continue\0\0"
+	.ASCII "Please DO NOT TURN OFF\nGame Boy Advance Systems\nor DISCONNECT Game Boy Advance\nGame Link cable\0\0"
+	.ASCII "Press A Button to Receive Level\nPress B Button to Cancel\0\0\0\0"
+	.ASCII "Press B Button to Cancel\0\0\0\0"
+	.ASCII "Press A Button when Ready\nPress B Button to Cancel\0\0"
 
 	.GLOBAL gUnknown_08076800
 gUnknown_08076800:
-	.INCBIN "baserom.gba", 0x76800, 0x7684C-0x76800
-
+	.ASCII "ERASE\nLEVEL e-\0\0"
+	.ASCII "Press A Button to ERASE LEVEL\0\0\0"
+	.ASCII "Press A Button to ADD LEVEL\0"
+	
 	.GLOBAL gUnknown_0807684C
 gUnknown_0807684C:
-	.INCBIN "baserom.gba", 0x7684C, 0x7689C-0x7684C
-
+	.ASCII "No Space for new\nMario vs. Donkey\nKong-e levels.\nPlease Erase a\nLevel first!\0\0\0\0"
+	
 	.GLOBAL gUnknown_0807689C
 gUnknown_0807689C:
-	.INCBIN "baserom.gba", 0x7689C, 0x76994-0x7689C
+	.ASCII "OK\0\0"
+	.ASCII "Card-E Level 13\0"
+	.ASCII "Card-E Level 12\0"
+	.ASCII "Card-E Level 11\0"
+	.ASCII "Card-E Level 10\0"
+	.ASCII "Card-E Level 9\0\0"
+	.ASCII "Card-E Level 8\0\0"
+	.ASCII "Card-E Level 7\0\0"
+	.ASCII "Card-E Level 6\0\0"
+	.ASCII "Card-E Level 5\0\0"
+	.ASCII "Card-E Level 4\0\0"
+	.ASCII "Card-E Level 3\0\0"
+	.ASCII "Card-E Level 2\0\0"
+	.ASCII "Card-E Level 1\0\0"
+	
+	.GLOBAL gUnknown_08076970
+gUnknown_08076970:
+	.ASCII "Scan Card-e\0"
+	
+	.GLOBAL gUnknown_0807697C
+gUnknown_0807697C:
+	.ASCII "Scan Preloaded Card-e\0\0\0"
 
 	.GLOBAL gUnknown_08076994
 gUnknown_08076994:
-	.INCBIN "baserom.gba", 0x76994, 0x7699C-0x76994
-
+	.4byte gUnknown_08076970
+	.4byte gUnknown_0807697C
+	
 	.GLOBAL gUnknown_0807699C
 gUnknown_0807699C:
-	.INCBIN "baserom.gba", 0x7699C, 0x769B0-0x7699C
+	.ASCII "Press B to return\0\0\0"
 
 	.GLOBAL gUnknown_080769B0
 gUnknown_080769B0:
@@ -84,11 +142,18 @@ gUnknown_080769B0:
 
 	.GLOBAL gUnknown_080769B8
 gUnknown_080769B8:
-	.INCBIN "baserom.gba", 0x769B8, 0x769F4-0x769B8
+	.ASCII "\0\0\0\0"
+	.ASCII "Erase\0\0\0"
+	.ASCII "Cancel\0\0"
+	.ASCII "Retry\0\0\0"
+	.ASCII "Data in memory\nis corrupted!\0\0\0\0"
 
 	.GLOBAL gUnknown_080769F4
 gUnknown_080769F4:
-	.INCBIN "baserom.gba", 0x769F4, 0x76AD8-0x769F4
+	.ASCII "Erasing...\0\0"
+	.ASCII "ERROR\nSaved Mario vs. Donkey Kong-e\nlevels have been erased due to\ncorruption of data.\0\0"
+	.ASCII "ERROR\nAll saved data has been erased\ndue to corruption of data\0\0"
+	.ASCII "ERROR\nFlash hardware could not\nbe detected.\nSaving is disabled.\0"
 
 	.GLOBAL gUnknown_08076AD8
 gUnknown_08076AD8:
@@ -930,8 +995,8 @@ gUnknown_0807CA94:
 gUnknown_0807CA98:
 	.INCBIN "baserom.gba", 0x7CA98, 0x7CA9C-0x7CA98
 
-	.GLOBAL gUnknown_0807CA9C
-gUnknown_0807CA9C:
+	.GLOBAL gPreloadedCardETable
+gPreloadedCardETable:
 	.INCBIN "baserom.gba", 0x7CA9C, 0x7CB68-0x7CA9C
 
 	.GLOBAL gUnknown_0807CB68
@@ -3568,7 +3633,59 @@ gUnknown_08B3732C:
 
 	.GLOBAL gUnknown_08B37424
 gUnknown_08B37424:
-	.INCBIN "baserom.gba", 0xB37424, 0xB3961C-0xB37424
+	.INCBIN "baserom.gba", 0xB37424, 0xB3742C-0xB37424
+	
+	.GLOBAL gUnknown_08B3742C
+gUnknown_08B3742C:
+	.INCBIN "assets/card-e/Revenge.bin"
+	
+	.GLOBAL gUnknown_08B37600
+gUnknown_08B37600:
+	.INCBIN "assets/card-e/The_Long_Way.bin"
+	
+	.GLOBAL gUnknown_08B37998
+gUnknown_08B37998:
+	.INCBIN "assets/card-e/One_Shot_Blue.bin"
+	
+	.GLOBAL gUnknown_08B37C88
+gUnknown_08B37C88:
+	.INCBIN "assets/card-e/Egg_Attack.bin"
+	
+	.GLOBAL gUnknown_08B37E50
+gUnknown_08B37E50:
+	.INCBIN "assets/card-e/Later_Gator.bin"
+	
+	.GLOBAL gUnknown_08B3808C
+gUnknown_08B3808C:
+	.INCBIN "assets/card-e/Hot_Feet.bin"
+	
+	.GLOBAL gUnknown_08B3835C
+gUnknown_08B3835C:
+	.INCBIN "assets/card-e/Boo_In_A_Box.bin"
+
+	.GLOBAL gUnknown_08B38588
+gUnknown_08B38588:
+	.INCBIN "assets/card-e/The_Thwamplet.bin"
+
+	.GLOBAL gUnknown_08B38888
+gUnknown_08B38888:
+	.INCBIN "assets/card-e/A_Tricky_Candle.bin"
+
+	.GLOBAL gUnknown_08B38ACC
+gUnknown_08B38ACC:
+	.INCBIN "assets/card-e/Key_To_The_Key.bin"
+
+	.GLOBAL gUnknown_08b38f60
+gUnknown_08b38f60:
+	.INCBIN "assets/card-e/Danger_Flowers.bin"
+
+	.GLOBAL gUnknown_08b39128
+gUnknown_08b39128:
+	.INCBIN "assets/card-e/Climb_And_Fall.bin"
+
+	.GLOBAL gUnknown_08b39570
+gUnknown_08b39570:
+	.INCBIN "assets/card-e/Dummy2.bin"
 
 	.GLOBAL gUnknown_08B3961C
 gUnknown_08B3961C:
@@ -3627,212 +3744,212 @@ gUnknown_08EBFE90:
 	.INCBIN "baserom.gba", 0xEBFE90, 0xECCA3C-0xEBFE90
 	
 BGM_1AXM:
-	.INCBIN "music/BGM_1AXM.bin"
+	.INCBIN "assets/music/BGM_1AXM.bin"
 	
 HAMMERXM:
-	.INCBIN "music/HAMMERXM.bin"
+	.INCBIN "assets/music/HAMMERXM.bin"
 	
 WINXM:
-	.INCBIN "music/WINXM.bin"
+	.INCBIN "assets/music/WINXM.bin"
 	
 FAIL_1XM:
-	.INCBIN "music/FAIL_1XM.bin"
+	.INCBIN "assets/music/FAIL_1XM.bin"
 	
 FAIL_2XM:
-	.INCBIN "music/FAIL_2XM.bin"
+	.INCBIN "assets/music/FAIL_2XM.bin"
 	
 FAIL_3XM:
-	.INCBIN "music/FAIL_3XM.bin"
+	.INCBIN "assets/music/FAIL_3XM.bin"
 	
 TIMEXM:
-	.INCBIN "music/TIMEXM.bin"
+	.INCBIN "assets/music/TIMEXM.bin"
 	
 INTRO_2XM:
-	.INCBIN "music/INTRO_2XM.bin"
+	.INCBIN "assets/music/INTRO_2XM.bin"
 	
 BGM_1CXM:
-	.INCBIN "music/BGM_1CXM.bin"
+	.INCBIN "assets/music/BGM_1CXM.bin"
 	
 BGM_1BXM:
-	.INCBIN "music/BGM_1BXM.bin"
+	.INCBIN "assets/music/BGM_1BXM.bin"
 	
 TITLEXM:
-	.INCBIN "music/TITLEXM.bin"
+	.INCBIN "assets/music/TITLEXM.bin"
 	
 RESULTSXM:
-	.INCBIN "music/RESULTSXM.bin"
+	.INCBIN "assets/music/RESULTSXM.bin"
 	
 BGM_MM1XM:
-	.INCBIN "music/BGM_MM1XM.bin"
+	.INCBIN "assets/music/BGM_MM1XM.bin"
 	
 BOSS1XM:
-	.INCBIN "music/BOSS1XM.bin"
+	.INCBIN "assets/music/BOSS1XM.bin"
 	
 MM_PROTECTXM:
-	.INCBIN "music/MM_PROTECTXM.bin"
+	.INCBIN "assets/music/MM_PROTECTXM.bin"
 	
 GAMEOVERXM:
-	.INCBIN "music/GAMEOVERXM.bin"
+	.INCBIN "assets/music/GAMEOVERXM.bin"
 	
 INTRO_1XM:
-	.INCBIN "music/INTRO_1XM.bin"
+	.INCBIN "assets/music/INTRO_1XM.bin"
 	
 INTRO_3XM:
-	.INCBIN "music/INTRO_3XM.bin"
+	.INCBIN "assets/music/INTRO_3XM.bin"
 	
 BGM_2AXM:
-	.INCBIN "music/BGM_2AXM.bin"
+	.INCBIN "assets/music/BGM_2AXM.bin"
 	
 BGM_2BXM:
-	.INCBIN "music/BGM_2BXM.bin"
+	.INCBIN "assets/music/BGM_2BXM.bin"
 	
 BGM_2CXM:
-	.INCBIN "music/BGM_2CXM.bin"
+	.INCBIN "assets/music/BGM_2CXM.bin"
 	
 WIN2XM:
-	.INCBIN "music/WIN2XM.bin"
+	.INCBIN "assets/music/WIN2XM.bin"
 	
 WIN3XM:
-	.INCBIN "music/WIN3XM.bin"
+	.INCBIN "assets/music/WIN3XM.bin"
 	
 MOVIEXM:
-	.INCBIN "music/MOVIEXM.bin"
+	.INCBIN "assets/music/MOVIEXM.bin"
 	
 BGM_5AXM:
-	.INCBIN "music/BGM_5AXM.bin"
+	.INCBIN "assets/music/BGM_5AXM.bin"
 	
 BGM_5BXM:
-	.INCBIN "music/BGM_5BXM.bin"
+	.INCBIN "assets/music/BGM_5BXM.bin"
 	
 BGM_5CXM:
-	.INCBIN "music/BGM_5CXM.bin"
+	.INCBIN "assets/music/BGM_5CXM.bin"
 	
 BGM_4AXM:
-	.INCBIN "music/BGM_4AXM.bin"
+	.INCBIN "assets/music/BGM_4AXM.bin"
 	
 BGM_4BXM:
-	.INCBIN "music/BGM_4BXM.bin"
+	.INCBIN "assets/music/BGM_4BXM.bin"
 	
 BGM_4CXM:
-	.INCBIN "music/BGM_4CXM.bin"
+	.INCBIN "assets/music/BGM_4CXM.bin"
 	
 DK01XM:
-	.INCBIN "music/DK01XM.bin"
+	.INCBIN "assets/music/DK01XM.bin"
 	
 DK02XM:
-	.INCBIN "music/DK02XM.bin"
+	.INCBIN "assets/music/DK02XM.bin"
 	
 BGM_MM_INTROXM:
-	.INCBIN "music/BGM_MM_INTROXM.bin"
+	.INCBIN "assets/music/BGM_MM_INTROXM.bin"
 	
 DK03XM:
-	.INCBIN "music/DK03XM.bin"
+	.INCBIN "assets/music/DK03XM.bin"
 	
 DK04XM:
-	.INCBIN "music/DK04XM.bin"
+	.INCBIN "assets/music/DK04XM.bin"
 	
 DK05XM:
-	.INCBIN "music/DK05XM.bin"
+	.INCBIN "assets/music/DK05XM.bin"
 	
 DK06XM:
-	.INCBIN "music/DK06XM.bin"
+	.INCBIN "assets/music/DK06XM.bin"
 	
 DK07XM:
-	.INCBIN "music/DK07XM.bin"
+	.INCBIN "assets/music/DK07XM.bin"
 	
 DK08XM:
-	.INCBIN "music/DK08XM.bin"
+	.INCBIN "assets/music/DK08XM.bin"
 	
 DK_BOSS01XM:
-	.INCBIN "music/DK_BOSS01XM.bin"
+	.INCBIN "assets/music/DK_BOSS01XM.bin"
 	
 BOSS2XM:
-	.INCBIN "music/BOSS2XM.bin"
+	.INCBIN "assets/music/BOSS2XM.bin"
 	
 MOVIE2XM:
-	.INCBIN "music/MOVIE2XM.bin"
+	.INCBIN "assets/music/MOVIE2XM.bin"
 	
 MINIGAMEXM:
-	.INCBIN "music/MINIGAMEXM.bin"
+	.INCBIN "assets/music/MINIGAMEXM.bin"
 	
 MOVIE3XM:
-	.INCBIN "music/MOVIE3XM.bin"
+	.INCBIN "assets/music/MOVIE3XM.bin"
 	
 MOVIE4XM:
-	.INCBIN "music/MOVIE4XM.bin"
+	.INCBIN "assets/music/MOVIE4XM.bin"
 	
 MOVIE5XM:
-	.INCBIN "music/MOVIE5XM.bin"
+	.INCBIN "assets/music/MOVIE5XM.bin"
 	
 MOVIE6XM:
-	.INCBIN "music/MOVIE6XM.bin"
+	.INCBIN "assets/music/MOVIE6XM.bin"
 	
 CREDITSXM:
-	.INCBIN "music/CREDITSXM.bin"
+	.INCBIN "assets/music/CREDITSXM.bin"
 	
 EXPERT_1XM:
-	.INCBIN "music/EXPERT_1XM.bin"
+	.INCBIN "assets/music/EXPERT_1XM.bin"
 	
 EXPERT_2XM:
-	.INCBIN "music/EXPERT_2XM.bin"
+	.INCBIN "assets/music/EXPERT_2XM.bin"
 	
 EXPERT_3XM:
-	.INCBIN "music/EXPERT_3XM.bin"
+	.INCBIN "assets/music/EXPERT_3XM.bin"
 	
 EXPERT_4XM:
-	.INCBIN "music/EXPERT_4XM.bin"
+	.INCBIN "assets/music/EXPERT_4XM.bin"
 	
 EXPERT_5XM:
-	.INCBIN "music/EXPERT_5XM.bin"
+	.INCBIN "assets/music/EXPERT_5XM.bin"
 	
 EXPERT_6XM:
-	.INCBIN "music/EXPERT_6XM.bin"
+	.INCBIN "assets/music/EXPERT_6XM.bin"
 	
 EXPERT_7XM:
-	.INCBIN "music/EXPERT_7XM.bin"
+	.INCBIN "assets/music/EXPERT_7XM.bin"
 	
 EXPERT_8XM:
-	.INCBIN "music/EXPERT_8XM.bin"
+	.INCBIN "assets/music/EXPERT_8XM.bin"
 	
 EXPERT_9XM:
-	.INCBIN "music/EXPERT_9XM.bin"
+	.INCBIN "assets/music/EXPERT_9XM.bin"
 	
 EXPERT_10XM:
-	.INCBIN "music/EXPERT_10XM.bin"
+	.INCBIN "assets/music/EXPERT_10XM.bin"
 	
 EXPERT_11XM:
-	.INCBIN "music/EXPERT_11XM.bin"
+	.INCBIN "assets/music/EXPERT_11XM.bin"
 	
 EXPERT_12XM:
-	.INCBIN "music/EXPERT_12XM.bin"
+	.INCBIN "assets/music/EXPERT_12XM.bin"
 	
 INTRO_FINALBOSSXM:
-	.INCBIN "music/INTRO_FINALBOSSXM.bin"
+	.INCBIN "assets/music/INTRO_FINALBOSSXM.bin"
 	
 MIDCREDITSXM:
-	.INCBIN "music/MIDCREDITSXM.bin"
+	.INCBIN "assets/music/MIDCREDITSXM.bin"
 	
 MIDBOSS_ENDXM:
-	.INCBIN "music/MIDBOSS_ENDXM.bin"
+	.INCBIN "assets/music/MIDBOSS_ENDXM.bin"
 	
 FAIL_4XM:
-	.INCBIN "music/FAIL_4XM.bin"
+	.INCBIN "assets/music/FAIL_4XM.bin"
 	
 INTRO_FINALBOSS2XM:
-	.INCBIN "music/INTRO_FINALBOSS2XM.bin"
+	.INCBIN "assets/music/INTRO_FINALBOSS2XM.bin"
 	
 WIN_FINALBOSSXM:
-	.INCBIN "music/WIN_FINALBOSSXM.bin"
+	.INCBIN "assets/music/WIN_FINALBOSSXM.bin"
 	
 BOSS3XM:
-	.INCBIN "music/BOSS3XM.bin"
+	.INCBIN "assets/music/BOSS3XM.bin"
 	
 DK_BOSS02XM:
-	.INCBIN "music/DK_BOSS02XM.bin"
+	.INCBIN "assets/music/DK_BOSS02XM.bin"
 	
 INTRO_MINIGAMEXM:
-	.INCBIN "music/INTRO_MINIGAMEXM.bin"
+	.INCBIN "assets/music/INTRO_MINIGAMEXM.bin"
 	
 OUTRO_MINIGAMEXM:
-	.INCBIN "music/OUTRO_MINIGAMEXM.bin"
+	.INCBIN "assets/music/OUTRO_MINIGAMEXM.bin"
 	
