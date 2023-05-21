@@ -105,18 +105,57 @@ gUnknown_0807684C:
 	.GLOBAL gUnknown_0807689C
 gUnknown_0807689C:
 	.ASCII "OK\0\0"
+	
+	.GLOBAL gTextCardEThirteen
+gTextCardEThirteen:
 	.ASCII "Card-E Level 13\0"
+	
+	.GLOBAL gTextCardETwelve
+gTextCardETwelve:
 	.ASCII "Card-E Level 12\0"
+	
+	.GLOBAL gTextCardEEleven
+gTextCardEEleven:
 	.ASCII "Card-E Level 11\0"
+	
+	.GLOBAL gTextCardETen
+gTextCardETen:
 	.ASCII "Card-E Level 10\0"
+	
+	.GLOBAL gTextCardENine
+gTextCardENine:
 	.ASCII "Card-E Level 9\0\0"
+	
+	.GLOBAL gTextCardEEight
+gTextCardEEight:
 	.ASCII "Card-E Level 8\0\0"
+	
+	.GLOBAL gTextCardESeven
+gTextCardESeven:
 	.ASCII "Card-E Level 7\0\0"
+	
+	.GLOBAL gTextCardESix
+gTextCardESix:
 	.ASCII "Card-E Level 6\0\0"
+	
+	.GLOBAL gTextCardEFive
+gTextCardEFive:
 	.ASCII "Card-E Level 5\0\0"
+	
+	.GLOBAL gTextCardEFour
+gTextCardEFour:
 	.ASCII "Card-E Level 4\0\0"
+	
+	.GLOBAL gTextCardEThree
+gTextCardEThree:	
 	.ASCII "Card-E Level 3\0\0"
+	
+	.GLOBAL gTextCardETwo
+gTextCardETwo:
 	.ASCII "Card-E Level 2\0\0"
+	
+	.GLOBAL gTextCardEOne
+gTextCardEOne:
 	.ASCII "Card-E Level 1\0\0"
 	
 	.GLOBAL gUnknown_08076970
@@ -251,8 +290,265 @@ gUnknown_08076FD0:
 
 	.GLOBAL gUnknown_08076FD4
 gUnknown_08076FD4:
-	.INCBIN "baserom.gba", 0x76FD4, 0x77FAC-0x76FD4
+	.INCBIN "baserom.gba", 0x76FD4, 0x77534-0x76FD4
 
+	.GLOBAL gUnknown_08077534
+gUnknown_08077534:
+	.ASCII "DK_FALL\0"
+	.ASCII "WON_TEXT\0\0\0\0"
+	.ASCII "RIBBON\0\0"
+	.ASCII "DK_GRUNT\0\0\0\0"
+	.ASCII "MM_WALK\0"
+	.ASCII "ROCK_BOUNCE\0"
+	.ASCII "BARREL_BOUNCE\0\0\0"
+	.ASCII "BOSS_DIE3\0\0\0"
+	.ASCII "SPIKE_APPEAR\0\0\0\0"
+	.ASCII "SPIKE_VANISH\0\0\0\0"
+	.ASCII "MM_MAMAMIAS\0"
+	.ASCII "MM_FREE\0"
+	.ASCII "MM_WAKEUP\0\0\0"
+	.ASCII "WORLD_START\0"
+	.ASCII "SCUFF2\0\0"
+	.ASCII "DK_WALK\0"
+	.ASCII "STAR\0\0\0\0"
+	.ASCII "YOU_WON3\0\0\0\0"
+	.ASCII "YOU_WON2\0\0\0\0"
+	.ASCII "YOU_WON1\0\0\0\0"
+	.ASCII "TITLE\0\0\0"
+	.ASCII "MOVIE_08\0\0\0\0"
+	.ASCII "MOVIE2_10\0\0\0"
+	.ASCII "MOVIE2_9\0\0\0\0"
+	.ASCII "MOVIE6_10\0\0\0"
+	.ASCII "MOVIE6_09\0\0\0"
+	.ASCII "MOVIE6_08\0\0\0"
+	.ASCII "MOVIE6_07\0\0\0"
+	.ASCII "MOVIE6_06\0\0\0"
+	.ASCII "MOVIE6_05\0\0\0"
+	.ASCII "MOVIE6_04\0\0\0"
+	.ASCII "MOVIE6_03\0\0\0"
+	.ASCII "MOVIE6_02\0\0\0"
+	.ASCII "MOVIE6_01\0\0\0"
+	.ASCII "MOVIE5_07\0\0\0"
+	.ASCII "MOVIE5_05\0\0\0"
+	.ASCII "MOVIE5_01\0\0\0"
+	.ASCII "MOVIE4_10\0\0\0"
+	.ASCII "MOVIE4_09\0\0\0"
+	.ASCII "MOVIE4_08\0\0\0"
+	.ASCII "MOVIE4_07\0\0\0"
+	.ASCII "MOVIE4_06\0\0\0"
+	.ASCII "MOVIE4_04\0\0\0"
+	.ASCII "MOVIE4_03\0\0\0"
+	.ASCII "MOVIE4_02\0\0\0"
+	.ASCII "MOVIE4_01\0\0\0"
+	.ASCII "MOVIE3_14\0\0\0"
+	.ASCII "MOVIE3_13\0\0\0"
+	.ASCII "MOVIE3_12\0\0\0"
+	.ASCII "MOVIE3_11\0\0\0"
+	.ASCII "MOVIE3_10\0\0\0"
+	.ASCII "MOVIE3_09\0\0\0"
+	.ASCII "MOVIE3_08\0\0\0"
+	.ASCII "MOVIE3_07\0\0\0"
+	.ASCII "MOVIE3_06\0\0\0"
+	.ASCII "MOVIE3_05\0\0\0"
+	.ASCII "MOVIE3_04\0\0\0"
+	.ASCII "MOVIE3_03\0\0\0"
+	.ASCII "MOVIE3_02\0\0\0"
+	.ASCII "MOVIE3_01\0\0\0"
+	.ASCII "TOADS_GRAB\0\0"
+	.ASCII "TOADS_JUMP\0\0"
+	.ASCII "BIGBARREL_FALL\0\0"
+	.ASCII "BIGBARREL_HIT\0\0\0"
+	.ASCII "SPIKE_HIT\0\0\0"
+	.ASCII "BARREL\0\0"
+	.ASCII "PLUS_MAIN\0\0\0"
+	.ASCII "BOSS_INTRO3\0"
+	.ASCII "BOSS_INTRO1\0"
+	.ASCII "BOSS_DIE2\0\0\0"
+	.ASCII "BOSS_DIE1\0\0\0"
+	.ASCII "CURSOR_UP_DN\0\0\0\0"
+	.ASCII "CURSOR_WORLD\0\0\0\0"
+	.ASCII "BOSS_SWITCH\0"
+	.ASCII "BOSS_ARM5\0\0\0"
+	.ASCII "BOSS_ARM4\0\0\0"
+	.ASCII "BOSS_ARM3\0\0\0"
+	.ASCII "BOSS_ARM2\0\0\0"
+	.ASCII "BOSS_ARM\0\0\0\0"
+	.ASCII "MOVIE2_8\0\0\0\0"
+	.ASCII "MOVIE2_7\0\0\0\0"
+	.ASCII "MOVIE2_6\0\0\0\0"
+	.ASCII "MOVIE2_5\0\0\0\0"
+	.ASCII "MOVIE2_4\0\0\0\0"
+	.ASCII "MOVIE2_3\0\0\0\0"
+	.ASCII "MOVIE2_2\0\0\0\0"
+	.ASCII "MOVIE2_1\0\0\0\0"
+	.ASCII "MINI_KEY\0\0\0\0"
+	.ASCII "MOVIE_01\0\0\0\0"
+	.ASCII "MOVIE_07\0\0\0\0"
+	.ASCII "SHUFFLE\0"
+	.ASCII "JUMP_D\0\0"
+	.ASCII "JUMP_C\0\0"
+	.ASCII "JUMP_B\0\0"
+	.ASCII "JUMP_A\0\0"
+	.ASCII "TOAD_SET\0\0\0\0"
+	.ASCII "TOAD_CARRY\0\0"
+	.ASCII "SHATTER\0"
+	.ASCII "KEY_TOAD\0\0\0\0"
+	.ASCII "TRASHCAN\0\0\0\0"
+	.ASCII "JUMP_8\0\0"
+	.ASCII "DK_JUMP\0"
+	.ASCII "LASER\0\0\0"
+	.ASCII "MM_BOINGUP\0\0"
+	.ASCII "BONE\0\0\0\0"
+	.ASCII "SPIKE\0\0\0"
+	.ASCII "YANK\0\0\0\0"
+	.ASCII "DK_BLUB\0"
+	.ASCII "SPARKY_LOOP\0"
+	.ASCII "BOX_FALL\0\0\0\0"
+	.ASCII "TOAD_TOSS\0\0\0"
+	.ASCII "TOAD_WALK\0\0\0"
+	.ASCII "GOTCHA\0\0"
+	.ASCII "DK_HEAD\0"
+	.ASCII "REACH\0\0\0"
+	.ASCII "SCATTER\0"
+	.ASCII "CROUCH\0\0"
+	.ASCII "CANNON\0\0"
+	.ASCII "BAT\0"
+	.ASCII "VAPORIZE\0\0\0\0"
+	.ASCII "BOMB_BLOW\0\0\0"
+	.ASCII "BOMB_FLASH\0\0"
+	.ASCII "BOMB_JUMP\0\0\0"
+	.ASCII "BOMB_PEEP\0\0\0"
+	.ASCII "SHY_RUN\0"
+	.ASCII "SHY_WAKE\0\0\0\0"
+	.ASCII "GHOST\0\0\0"
+	.ASCII "GROWL2\0\0"
+	.ASCII "GROWL\0\0\0"
+	.ASCII "POP\0"
+	.ASCII "SPIT\0\0\0\0"
+	.ASCII "BRICKMAN\0\0\0\0"
+	.ASCII "KICK\0\0\0\0"
+	.ASCII "SHWING\0\0"
+	.ASCII "METALROLL\0\0\0"
+	.ASCII "RESTART\0"
+	.ASCII "OUCH\0\0\0\0"
+	.ASCII "FOUNTAIN\0\0\0\0"
+	.ASCII "BUBBLE\0\0"
+	.ASCII "LAVA\0\0\0\0"
+	.ASCII "CRUMBLE\0"
+	.ASCII "NINJI\0\0\0"
+	.ASCII "SPITFIRE\0\0\0\0"
+	.ASCII "CRUSH\0\0\0"
+	.ASCII "GRAB_LADDER\0"
+	.ASCII "GRAB_ROPE\0\0\0"
+	.ASCII "GRAB_WIRE\0\0\0"
+	.ASCII "KEY3\0\0\0\0"
+	.ASCII "KEY2\0\0\0\0"
+	.ASCII "MOVIE_06\0\0\0\0"
+	.ASCII "MOVIE_05\0\0\0\0"
+	.ASCII "MOVIE_04\0\0\0\0"
+	.ASCII "MOVIE_03\0\0\0\0"
+	.ASCII "MOVIE_02\0\0\0\0"
+	.ASCII "DK_BLUBBER\0\0"
+	.ASCII "DK_EXIT1\0\0\0\0"
+	.ASCII "EGG_FALL\0\0\0\0"
+	.ASCII "ELEV_STOP\0\0\0"
+	.ASCII "ELEV_GO\0"
+	.ASCII "LEVEL_START\0"
+	.ASCII "JUMP_7\0\0"
+	.ASCII "MM_OH_NO\0\0\0\0"
+	.ASCII "LIFT\0\0\0\0"
+	.ASCII "GLASS\0\0\0"
+	.ASCII "SQUEEZE\0"
+	.ASCII "WARP_IN\0"
+	.ASCII "WARP_OUT\0\0\0\0"
+	.ASCII "TOYLAST\0"
+	.ASCII "TOY1\0\0\0\0"
+	.ASCII "EMPTY\0\0\0"
+	.ASCII "CHOOSE\0\0"
+	.ASCII "POINTER\0"
+	.ASCII "FRUIT_FALL\0\0"
+	.ASCII "SLAM2\0\0\0"
+	.ASCII "DK_BELLOW\0\0\0"
+	.ASCII "DK_HURT\0"
+	.ASCII "OOF\0"
+	.ASCII "CHEST_CLOSE\0"
+	.ASCII "CHEST_OPEN\0\0"
+	.ASCII "MM_PROTECT\0\0"
+	.ASCII "MM_BOING\0\0\0\0"
+	.ASCII "MM_DIE\0\0"
+	.ASCII "LOOK_UP\0"
+	.ASCII "BLANK\0\0\0"
+	.ASCII "RETURN\0\0"
+	.ASCII "SCROLL\0\0"
+	.ASCII "DOOR\0\0\0\0"
+	.ASCII "ROPE_DOWN\0\0\0"
+	.ASCII "ROPE_UP\0"
+	.ASCII "JUMP_6\0\0"
+	.ASCII "BOING\0\0\0"
+	.ASCII "SWITCH3\0"
+	.ASCII "SWITCH2\0"
+	.ASCII "SWITCH1\0"
+	.ASCII "SKIDSHORT\0\0\0"
+	.ASCII "SILENCE\0"
+	.ASCII "HELP\0\0\0\0"
+	.ASCII "ONE_UP\0\0"
+	.ASCII "SPIN_1\0\0"
+	.ASCII "WIREJUMP\0\0\0\0"
+	.ASCII "UNLOCK\0\0"
+	.ASCII "SQUEAK\0\0"
+	.ASCII "SPLAT\0\0\0"
+	.ASCII "SPIN\0\0\0\0"
+	.ASCII "KEY_DOOR\0\0\0\0"
+	.ASCII "SHOCK\0\0\0"
+	.ASCII "SCUFF\0\0\0"
+	.ASCII "POUND2\0\0"
+	.ASCII "ITEMLAST\0\0\0\0"
+	.ASCII "HURT\0\0\0\0"
+	.ASCII "EXIT\0\0\0\0"
+	.ASCII "BLOCK\0\0\0"
+	.ASCII "BURN2\0\0\0"
+	.ASCII "BEAM\0\0\0\0"
+	.ASCII "START\0\0\0"
+	.ASCII "STAMP\0\0\0"
+	.ASCII "SELECT_S\0\0\0\0"
+	.ASCII "SELECT_M\0\0\0\0"
+	.ASCII "ITEM\0\0\0\0"
+	.ASCII "GRID\0\0\0\0"
+	.ASCII "FIELD\0\0\0"
+	.ASCII "EXIT_ED\0"
+	.ASCII "ERROR\0\0\0"
+	.ASCII "ERASE\0\0\0"
+	.ASCII "CURSOR_S\0\0\0\0"
+	.ASCII "CURSOR_M\0\0\0\0"
+	.ASCII "CURSOR_E\0\0\0\0"
+	.ASCII "BACK\0\0\0\0"
+	.ASCII "LETS_GO\0"
+	.ASCII "HERE_WEGO\0\0\0"
+	.ASCII "PICKUP_CRYSTAL\0\0"
+	.ASCII "WALK\0\0\0\0"
+	.ASCII "THROW\0\0\0"
+	.ASCII "CRASH\0\0\0"
+	.ASCII "KEY1\0\0\0\0"
+	.ASCII "STEPS2\0\0"
+	.ASCII "ITEM1\0\0\0"
+	.ASCII "COUNTER\0"
+	.ASCII "JUMP_5\0\0"
+	.ASCII "PICKUP\0\0"
+	.ASCII "JUMP_3\0\0"
+	.ASCII "JUMP_4\0\0"
+	.ASCII "GRUNT2\0\0"
+	.ASCII "JUMP_1\0\0"
+	.ASCII "BURN1\0\0\0"
+	.ASCII "STUN\0\0\0\0"
+	.ASCII "TUMBLE1\0"
+	.ASCII "POUND\0\0\0"
+	.ASCII "SKID\0\0\0\0"
+	.ASCII "CLIMB\0\0\0"
+
+	.GLOBAL gUnknown_08077F2C
+gUnknown_08077F2C:
+	.INCBIN "baserom.gba", 0x77F2C, 0x77FAC-0x77F2C
+	
 	.GLOBAL sSetupInfos
 sSetupInfos:
 	.INCBIN "baserom.gba", 0x77FAC, 0x7820C-0x77FAC
@@ -293,7 +589,7 @@ gMainStateInitCallbacks:
 	.4byte title_init_callback @ sub_0801B55C		  (Mode 0x7)
 	.4byte level_select_init_callback @ sub_08015280 	  (Mode 0x8)
 	.4byte expert_levels_init_callback @ sub_08035388 	  (Mode 0x9)
-	.4byte unkown_0A_init_callback @ sub_08008C34 	          (Mode 0xA)
+	.4byte unknown_0A_init_callback @ sub_08008C34 	          (Mode 0xA)
 	.4byte level_editor_init_callback @ sub_08008C9C 	  (Mode 0xB)
 	.4byte after_tutorial_init_callback @ sub_08008A9C 	  (Mode 0xC)
 	.4byte level_play_init_callback @ sub_08008B14 	          (Mode 0xD)
@@ -997,8 +1293,39 @@ gUnknown_0807CA98:
 
 	.GLOBAL gPreloadedCardETable
 gPreloadedCardETable:
-	.INCBIN "baserom.gba", 0x7CA9C, 0x7CB68-0x7CA9C
+	.4byte gTextCardEOne
+	.4byte gCardEDataRevenge
+	.4byte gTextCardETwo
+	.4byte gCardEDataTheLongWay
+	.4byte gTextCardEThree
+	.4byte gCardEDataOneShotBlue
+	.4byte gTextCardEFour
+	.4byte gCardEDataEggAttack
+	.4byte gTextCardEFive
+	.4byte gCardEDataLaterGator
+	.4byte gTextCardESix
+	.4byte gCardEDataHotFeet
+	.4byte gTextCardESeven
+	.4byte gCardEDataBooInABox
+	.4byte gTextCardEEight
+	.4byte gCardEDataTheThwamplet
+	.4byte gTextCardENine
+	.4byte gCardEDataATrickyCandle
+	.4byte gTextCardETen
+	.4byte gCardEDataKeyToTheKey
+	.4byte gTextCardEEleven
+	.4byte gCardEDataDangerFlowers
+	.4byte gTextCardETwelve
+	.4byte gCardEDataClimbAndFall
+	.4byte gTextCardEThirteen
+	.4byte gCardEDataDummy2
+	.4byte 0x00000000
+	.4byte 0x00000000
 
+	.GLOBAL gUnknown_0807CB0C
+gUnknown_0807CB0C:
+	.INCBIN "baserom.gba", 0x7CB0C, 0x7CB68-0x7CB0C
+	
 	.GLOBAL gUnknown_0807CB68
 gUnknown_0807CB68:
 	.INCBIN "baserom.gba", 0x7CB68, 0x7D1F0-0x7CB68
@@ -3635,56 +3962,56 @@ gUnknown_08B3732C:
 gUnknown_08B37424:
 	.INCBIN "baserom.gba", 0xB37424, 0xB3742C-0xB37424
 	
-	.GLOBAL gUnknown_08B3742C
-gUnknown_08B3742C:
+	.GLOBAL gCardEDataRevenge
+gCardEDataRevenge:
 	.INCBIN "assets/card-e/Revenge.bin"
 	
-	.GLOBAL gUnknown_08B37600
-gUnknown_08B37600:
+	.GLOBAL gCardEDataTheLongWay
+gCardEDataTheLongWay:
 	.INCBIN "assets/card-e/The_Long_Way.bin"
 	
-	.GLOBAL gUnknown_08B37998
-gUnknown_08B37998:
+	.GLOBAL gCardEDataOneShotBlue
+gCardEDataOneShotBlue:
 	.INCBIN "assets/card-e/One_Shot_Blue.bin"
 	
-	.GLOBAL gUnknown_08B37C88
-gUnknown_08B37C88:
+	.GLOBAL gCardEDataEggAttack
+gCardEDataEggAttack:
 	.INCBIN "assets/card-e/Egg_Attack.bin"
 	
-	.GLOBAL gUnknown_08B37E50
-gUnknown_08B37E50:
+	.GLOBAL gCardEDataLaterGator
+gCardEDataLaterGator:
 	.INCBIN "assets/card-e/Later_Gator.bin"
 	
-	.GLOBAL gUnknown_08B3808C
-gUnknown_08B3808C:
+	.GLOBAL gCardEDataHotFeet
+gCardEDataHotFeet:
 	.INCBIN "assets/card-e/Hot_Feet.bin"
 	
-	.GLOBAL gUnknown_08B3835C
-gUnknown_08B3835C:
+	.GLOBAL gCardEDataBooInABox
+gCardEDataBooInABox:
 	.INCBIN "assets/card-e/Boo_In_A_Box.bin"
 
-	.GLOBAL gUnknown_08B38588
-gUnknown_08B38588:
+	.GLOBAL gCardEDataTheThwamplet
+gCardEDataTheThwamplet:
 	.INCBIN "assets/card-e/The_Thwamplet.bin"
 
-	.GLOBAL gUnknown_08B38888
-gUnknown_08B38888:
+	.GLOBAL gCardEDataATrickyCandle
+gCardEDataATrickyCandle:
 	.INCBIN "assets/card-e/A_Tricky_Candle.bin"
 
-	.GLOBAL gUnknown_08B38ACC
-gUnknown_08B38ACC:
+	.GLOBAL gCardEDataKeyToTheKey
+gCardEDataKeyToTheKey:
 	.INCBIN "assets/card-e/Key_To_The_Key.bin"
 
-	.GLOBAL gUnknown_08b38f60
-gUnknown_08b38f60:
+	.GLOBAL gCardEDataDangerFlowers
+gCardEDataDangerFlowers:
 	.INCBIN "assets/card-e/Danger_Flowers.bin"
 
-	.GLOBAL gUnknown_08b39128
-gUnknown_08b39128:
+	.GLOBAL gCardEDataClimbAndFall
+gCardEDataClimbAndFall:
 	.INCBIN "assets/card-e/Climb_And_Fall.bin"
 
-	.GLOBAL gUnknown_08b39570
-gUnknown_08b39570:
+	.GLOBAL gCardEDataDummy2
+gCardEDataDummy2:
 	.INCBIN "assets/card-e/Dummy2.bin"
 
 	.GLOBAL gUnknown_08B3961C

@@ -2224,8 +2224,8 @@ sub_08008C30: @ 0x08008C30
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START unkown_0A_init_callback
-unkown_0A_init_callback: @ 0x08008C34
+	THUMB_FUNC_START unknown_0A_init_callback
+unknown_0A_init_callback: @ 0x08008C34
 	push {r4,lr}
 	bl sub_08071BE0
 	ldr r1, _08008C90  @ =gUnknown_03000B60
@@ -2266,7 +2266,7 @@ _08008C94:
 	.4byte gUnknown_03000B90
 _08008C98:
 	.4byte 0x0000FF7F
-	THUMB_FUNC_END unkown_0A_init_callback
+	THUMB_FUNC_END unknown_0A_init_callback
 
 	THUMB_FUNC_START level_editor_init_callback
 level_editor_init_callback: @ 0x08008C9C
