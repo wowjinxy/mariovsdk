@@ -8492,7 +8492,7 @@ _08038808:
 	ldrsh r0, [r4, r2]
 	cmp r0, #0
 	bne _0803883A
-	ldr r1, _08038898  @ =gUnknown_08B2CFD0
+	ldr r1, _08038898  @ =gTitleDemoInputTable
 	ldr r0, _0803889C  @ =gAfterTutorialWorld
 	ldrb r0, [r0]
 	lsl r0, r0, #24
@@ -8558,7 +8558,7 @@ _08038878:
 _08038894:
 	.4byte gUnknown_030012F8
 _08038898:
-	.4byte gUnknown_08B2CFD0
+	.4byte gTitleDemoInputTable
 _0803889C:
 	.4byte gAfterTutorialWorld
 _080388A0:

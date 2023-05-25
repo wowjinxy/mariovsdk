@@ -3189,7 +3189,7 @@ _0802F34C:
 	ldrb r0, [r3]
 	add r0, r0, #1
 	strb r0, [r3]
-	ldr r1, _0802F37C  @ = gPreloadedCardETable
+	ldr r1, _0802F37C  @ =gPreloadedCardETable
 	ldrb r2, [r3]
 	lsl r0, r2, #3
 	add r0, r0, r1
