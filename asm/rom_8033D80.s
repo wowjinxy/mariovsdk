@@ -8442,7 +8442,7 @@ _08038780:
 	ldrsh r0, [r4, r1]
 	cmp r0, #0
 	bne _0803883A
-	ldr r2, _080387FC  @ =gUnknown_08B2D380
+	ldr r2, _080387FC  @ =gTutorialDemoInputTable
 	ldr r0, _08038800  @ =gAfterTutorialWorld
 	ldrb r0, [r0]
 	lsl r0, r0, #24
@@ -8479,7 +8479,7 @@ _080387F4:
 _080387F8:
 	.4byte gUnknown_030012F8
 _080387FC:
-	.4byte gUnknown_08B2D380
+	.4byte gTutorialDemoInputTable
 _08038800:
 	.4byte gAfterTutorialWorld
 _08038804:
@@ -8692,9 +8692,9 @@ _08038958:
 	strb r5, [r1]
 	ldr r2, _08038A24  @ =0x03001A24
 	strb r4, [r2]
-	ldr r0, _08038A28  @ =0x030019DC
+	ldr r0, _08038A28  @ =gPreviousSwitchState
 	strb r4, [r0]
-	ldr r1, _08038A2C  @ =0x0300196C
+	ldr r1, _08038A2C  @ =gCurrentSwitchState
 	strb r4, [r1]
 	mov r2, #1
 	neg r2, r2
@@ -8761,9 +8761,9 @@ _08038A20:
 _08038A24:
 	.4byte 0x03001A24
 _08038A28:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _08038A2C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08038A30:
 	.4byte 0x03001934
 _08038A34:
@@ -26488,7 +26488,7 @@ _08040C24:
 	cmp r0, #0
 	beq _08040CB8
 	strb r3, [r1]
-	ldr r1, _08040C84  @ =0x0300196C
+	ldr r1, _08040C84  @ =gCurrentSwitchState
 	mov r0, #1
 	strb r0, [r1]
 	ldr r1, _08040C88  @ =0x03000930
@@ -26519,7 +26519,7 @@ _08040C64:
 _08040C80:
 	.4byte 0x03001A24
 _08040C84:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08040C88:
 	.4byte 0x03000930
 _08040C8C:
@@ -26534,16 +26534,16 @@ _08040C98:
 _08040C9E:
 	bl sub_08040B28
 _08040CA2:
-	ldr r0, _08040CB0  @ =0x0300196C
+	ldr r0, _08040CB0  @ =gCurrentSwitchState
 	ldrb r0, [r0]
-	ldr r1, _08040CB4  @ =0x030019DC
+	ldr r1, _08040CB4  @ =gPreviousSwitchState
 	ldrb r1, [r1]
 	bl sub_080035C0
 	b _08040D36
 _08040CB0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08040CB4:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _08040CB8:
 	ldr r0, _08040D18  @ =gUnknown_03001A1C
 	ldr r0, [r0]
@@ -34731,7 +34731,7 @@ sub_080446E4: @ 0x080446E4
 	str r0, [sp]
 	add r0, sp, #32
 	str r0, [sp, #4]
-	ldr r0, _080447A4  @ =0x0300196C
+	ldr r0, _080447A4  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	str r0, [sp, #8]
 	add r0, r6, #0
@@ -34770,7 +34770,7 @@ _0804479C:
 _080447A0:
 	.4byte 0x03001990
 _080447A4:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080447A8:
 	.4byte 0xFFFFF800
 _080447AC:
@@ -34831,7 +34831,7 @@ sub_080447B8: @ 0x080447B8
 	str r4, [sp]
 	add r4, sp, #32
 	str r4, [sp, #4]
-	ldr r4, _08044864  @ =0x0300196C
+	ldr r4, _08044864  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_08002A04
@@ -34872,7 +34872,7 @@ _0804485C:
 _08044860:
 	.4byte 0x00003039
 _08044864:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08044868:
 	.4byte 0xFFFFF800
 _0804486C:
@@ -42963,7 +42963,7 @@ sub_08048144: @ 0x08048144
 	str r4, [sp]
 	add r4, sp, #16
 	str r4, [sp, #4]
-	ldr r4, _080481B4  @ =0x0300196C
+	ldr r4, _080481B4  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_08002A04
@@ -42990,7 +42990,7 @@ _080481AC:
 _080481B0:
 	.4byte 0xFFFFFF00
 _080481B4:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080481B8:
 	mov r0, #0
 _080481BA:
@@ -43031,7 +43031,7 @@ sub_080481C4: @ 0x080481C4
 	str r4, [sp]
 	add r4, sp, #16
 	str r4, [sp, #4]
-	ldr r4, _0804821C  @ =0x0300196C
+	ldr r4, _0804821C  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_08002A04
@@ -43048,7 +43048,7 @@ sub_080481C4: @ 0x080481C4
 _08048218:
 	.4byte 0x03001990
 _0804821C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08048220:
 	.4byte 0xFFFFFF00
 _08048224:
@@ -43157,7 +43157,7 @@ sub_080482A4: @ 0x080482A4
 	str r4, [sp]
 	add r4, sp, #16
 	str r4, [sp, #4]
-	ldr r4, _080482F0  @ =0x0300196C
+	ldr r4, _080482F0  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_08002A04
@@ -43169,7 +43169,7 @@ _080482EA:
 	.byte 0x00
 	.byte 0x00
 _080482F0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080482F4:
 	mov r6, #50
 	ldrsh r1, [r5, r6]
@@ -43221,7 +43221,7 @@ sub_08048308: @ 0x08048308
 	str r4, [sp]
 	add r4, sp, #16
 	str r4, [sp, #4]
-	ldr r4, _08048374  @ =0x0300196C
+	ldr r4, _08048374  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_08006B34
@@ -43240,7 +43240,7 @@ _0804836C:
 _08048370:
 	.4byte 0xFFFFFF00
 _08048374:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08048378:
 	mov r0, #0
 _0804837A:
@@ -43289,7 +43289,7 @@ sub_08048384: @ 0x08048384
 	str r4, [sp]
 	add r4, sp, #16
 	str r4, [sp, #4]
-	ldr r4, _080483F0  @ =0x0300196C
+	ldr r4, _080483F0  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_08006B34
@@ -43308,7 +43308,7 @@ _080483E8:
 _080483EC:
 	.4byte 0xFFFFFF00
 _080483F0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080483F4:
 	mov r0, #0
 _080483F6:
@@ -43349,7 +43349,7 @@ sub_08048400: @ 0x08048400
 	str r4, [sp]
 	add r4, sp, #16
 	str r4, [sp, #4]
-	ldr r4, _0804844C  @ =0x0300196C
+	ldr r4, _0804844C  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_0800686C
@@ -43360,7 +43360,7 @@ sub_08048400: @ 0x08048400
 _08048448:
 	.4byte 0x03001990
 _0804844C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08048450:
 	mov r0, #0
 _08048452:
@@ -43410,7 +43410,7 @@ sub_0804845C: @ 0x0804845C
 	str r4, [sp]
 	add r4, sp, #16
 	str r4, [sp, #4]
-	ldr r4, _080484C8  @ =0x0300196C
+	ldr r4, _080484C8  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_08002A04
@@ -43430,7 +43430,7 @@ _080484C0:
 _080484C4:
 	.4byte 0xFFFFFF00
 _080484C8:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080484CC:
 	ldr r0, [r5, #32]
 	ldr r1, [sp, #12]
@@ -43475,7 +43475,7 @@ sub_080484E4: @ 0x080484E4
 	str r4, [sp]
 	add r4, sp, #16
 	str r4, [sp, #4]
-	ldr r4, _08048524  @ =0x0300196C
+	ldr r4, _08048524  @ =gCurrentSwitchState
 	ldrb r4, [r4]
 	str r4, [sp, #8]
 	bl sub_08002A04
@@ -43487,7 +43487,7 @@ sub_080484E4: @ 0x080484E4
 	.byte 0x00
 	.byte 0x00
 _08048524:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08048528:
 	ldr r0, [r5, #36]
 	ldr r1, _0804853C  @ =0xFFFFFF00
@@ -46465,7 +46465,7 @@ _080497D8:
 	.4byte 0x03000938
 _080497DC:
 	mov r1, #0
-	ldr r0, _080497F0  @ =0x0300196C
+	ldr r0, _080497F0  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _080497E8
@@ -46478,7 +46478,7 @@ _080497EA:
 	.byte 0x00
 	.byte 0x00
 _080497F0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 	THUMB_FUNC_END sub_080497C8
 
 	THUMB_FUNC_START sub_080497F4
@@ -46496,7 +46496,7 @@ _08049804:
 	.4byte 0x03000938
 _08049808:
 	mov r1, #0
-	ldr r0, _0804981C  @ =0x0300196C
+	ldr r0, _0804981C  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #2
 	bne _08049814
@@ -46509,7 +46509,7 @@ _08049816:
 	.byte 0x00
 	.byte 0x00
 _0804981C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 	THUMB_FUNC_END sub_080497F4
 
 	THUMB_FUNC_START sub_08049820
@@ -46527,7 +46527,7 @@ _08049830:
 	.4byte 0x03000938
 _08049834:
 	mov r1, #0
-	ldr r0, _08049848  @ =0x0300196C
+	ldr r0, _08049848  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #3
 	bne _08049840
@@ -46540,12 +46540,12 @@ _08049842:
 	.byte 0x00
 	.byte 0x00
 _08049848:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 	THUMB_FUNC_END sub_08049820
 
 	THUMB_FUNC_START sub_0804984C
 sub_0804984C: @ 0x0804984C
-	ldr r0, _0804985C  @ =0x0300196C
+	ldr r0, _0804985C  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	mov r0, #1
 	eor r1, r1, r0
@@ -46554,12 +46554,12 @@ sub_0804984C: @ 0x0804984C
 	lsr r0, r0, #31
 	bx lr
 _0804985C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 	THUMB_FUNC_END sub_0804984C
 
 	THUMB_FUNC_START sub_08049860
 sub_08049860: @ 0x08049860
-	ldr r0, _08049870  @ =0x0300196C
+	ldr r0, _08049870  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	mov r0, #2
 	eor r1, r1, r0
@@ -46568,12 +46568,12 @@ sub_08049860: @ 0x08049860
 	lsr r0, r0, #31
 	bx lr
 _08049870:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 	THUMB_FUNC_END sub_08049860
 
 	THUMB_FUNC_START sub_08049874
 sub_08049874: @ 0x08049874
-	ldr r0, _08049884  @ =0x0300196C
+	ldr r0, _08049884  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	mov r0, #3
 	eor r1, r1, r0
@@ -46582,7 +46582,7 @@ sub_08049874: @ 0x08049874
 	lsr r0, r0, #31
 	bx lr
 _08049884:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 	THUMB_FUNC_END sub_08049874
 
 	THUMB_FUNC_START sub_08049888
@@ -46595,7 +46595,7 @@ sub_08049888: @ 0x08049888
 	and r0, r0, r1
 	cmp r0, #0
 	beq _080498AC
-	ldr r0, _080498A8  @ =0x0300196C
+	ldr r0, _080498A8  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _080498AC
@@ -46604,7 +46604,7 @@ sub_08049888: @ 0x08049888
 _080498A4:
 	.4byte gUnknown_030019A0
 _080498A8:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080498AC:
 	mov r0, #0
 _080498AE:
@@ -46624,7 +46624,7 @@ sub_080498B4: @ 0x080498B4
 	and r0, r0, r1
 	cmp r0, #0
 	beq _080498D8
-	ldr r0, _080498D4  @ =0x0300196C
+	ldr r0, _080498D4  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #2
 	bne _080498D8
@@ -46633,7 +46633,7 @@ sub_080498B4: @ 0x080498B4
 _080498D0:
 	.4byte gUnknown_030019A0
 _080498D4:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080498D8:
 	mov r0, #0
 _080498DA:
@@ -46653,7 +46653,7 @@ sub_080498E0: @ 0x080498E0
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08049904
-	ldr r0, _08049900  @ =0x0300196C
+	ldr r0, _08049900  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #3
 	bne _08049904
@@ -46662,7 +46662,7 @@ sub_080498E0: @ 0x080498E0
 _080498FC:
 	.4byte gUnknown_030019A0
 _08049900:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08049904:
 	mov r0, #0
 _08049906:
@@ -77654,7 +77654,7 @@ sub_080579B8: @ 0x080579B8
 	ldrsh r0, [r4, r1]
 	cmp r0, #5
 	bne _080579F4
-	ldr r0, _080579F0  @ =0x0300196C
+	ldr r0, _080579F0  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #2
 	beq _08057A1E
@@ -77662,11 +77662,11 @@ sub_080579B8: @ 0x080579B8
 	bl sub_08058350
 	b _08057A1E
 _080579F0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080579F4:
 	cmp r0, #7
 	bne _08057A0C
-	ldr r0, _08057A08  @ =0x0300196C
+	ldr r0, _08057A08  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #3
 	beq _08057A1E
@@ -77674,11 +77674,11 @@ _080579F4:
 	bl sub_08058350
 	b _08057A1E
 _08057A08:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08057A0C:
 	cmp r0, #6
 	bne _08057A1E
-	ldr r0, _08057A24  @ =0x0300196C
+	ldr r0, _08057A24  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #1
 	beq _08057A1E
@@ -77690,7 +77690,7 @@ _08057A1E:
 	.byte 0x00
 	.byte 0x00
 _08057A24:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08057A28:
 	ldrb r1, [r4, #12]
 	mov r0, #1
@@ -78803,7 +78803,7 @@ sub_0805824C: @ 0x0805824C
 	add r5, r3, #0
 	cmp r0, #5
 	bne _0805829C
-	ldr r0, _08058294  @ =0x0300196C
+	ldr r0, _08058294  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #2
 	bne _0805829C
@@ -78823,7 +78823,7 @@ _0805828C:
 _08058290:
 	.4byte 0x030003CB
 _08058294:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08058298:
 	.4byte 0x030003C0
 _0805829C:
@@ -78832,7 +78832,7 @@ _0805829C:
 	ldrb r1, [r4, #4]
 	cmp r0, #6
 	bne _080582B8
-	ldr r0, _080582B4  @ =0x0300196C
+	ldr r0, _080582B4  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _080582B8
@@ -78841,13 +78841,13 @@ _0805829C:
 	.byte 0x00
 	.byte 0x00
 _080582B4:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080582B8:
 	lsl r0, r1, #24
 	asr r0, r0, #24
 	cmp r0, #7
 	bne _080582EC
-	ldr r0, _080582E0  @ =0x0300196C
+	ldr r0, _080582E0  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #3
 	bne _080582EC
@@ -78866,7 +78866,7 @@ _080582D8:
 	.byte 0x00
 	.byte 0x00
 _080582E0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080582E4:
 	.4byte 0x030003C0
 _080582E8:
@@ -78951,8 +78951,8 @@ sub_08058350: @ 0x08058350
 	add r4, r4, #16
 	lsl r4, r4, #16
 	lsr r4, r4, #16
-	ldr r2, _080583E8  @ =0x030019DC
-	ldr r0, _080583EC  @ =0x0300196C
+	ldr r2, _080583E8  @ =gPreviousSwitchState
+	ldr r0, _080583EC  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	strb r1, [r2]
 	strb r5, [r0]
@@ -79002,9 +79002,9 @@ _080583E0:
 _080583E4:
 	.4byte gUnknown_08076F98
 _080583E8:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _080583EC:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080583F0:
 	.4byte gUnknown_03001C78
 	THUMB_FUNC_END sub_08058350
@@ -92940,7 +92940,7 @@ sub_0805EA4C: @ 0x0805EA4C
 	ldrsh r0, [r4, r1]
 	cmp r0, #5
 	bne _0805EA9A
-	ldr r0, _0805EA88  @ =0x0300196C
+	ldr r0, _0805EA88  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	cmp r1, #2
 	beq _0805EAF0
@@ -92951,7 +92951,7 @@ sub_0805EA4C: @ 0x0805EA4C
 	strb r1, [r2]
 	b _0805EA92
 _0805EA88:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805EA8C:
 	.4byte 0x030005CC
 _0805EA90:
@@ -92963,7 +92963,7 @@ _0805EA92:
 _0805EA9A:
 	cmp r0, #7
 	bne _0805EAC6
-	ldr r0, _0805EAB4  @ =0x0300196C
+	ldr r0, _0805EAB4  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	cmp r1, #3
 	beq _0805EAF0
@@ -92976,7 +92976,7 @@ _0805EA9A:
 	.byte 0x00
 	.byte 0x00
 _0805EAB4:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805EAB8:
 	.4byte 0x030005CC
 _0805EABC:
@@ -92988,7 +92988,7 @@ _0805EABE:
 _0805EAC6:
 	cmp r0, #6
 	bne _0805EAF0
-	ldr r0, _0805EAE0  @ =0x0300196C
+	ldr r0, _0805EAE0  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	cmp r1, #1
 	beq _0805EAF0
@@ -93001,7 +93001,7 @@ _0805EAC6:
 	.byte 0x00
 	.byte 0x00
 _0805EAE0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805EAE4:
 	.4byte 0x030005CC
 _0805EAE8:
@@ -93836,7 +93836,7 @@ sub_0805F0FC: @ 0x0805F0FC
 	add r5, r3, #0
 	cmp r0, #5
 	bne _0805F14A
-	ldr r0, _0805F13C  @ =0x0300196C
+	ldr r0, _0805F13C  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #2
 	bne _0805F14A
@@ -93854,7 +93854,7 @@ _0805F134:
 _0805F138:
 	.4byte 0x030005EA
 _0805F13C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805F140:
 	.4byte 0x030005E0
 _0805F144:
@@ -93868,7 +93868,7 @@ _0805F14A:
 	ldrb r1, [r4]
 	cmp r0, #6
 	bne _0805F178
-	ldr r0, _0805F170  @ =0x0300196C
+	ldr r0, _0805F170  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _0805F178
@@ -93884,7 +93884,7 @@ _0805F14A:
 	.byte 0x00
 	.byte 0x00
 _0805F170:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805F174:
 	.4byte 0x030005E0
 _0805F178:
@@ -93892,7 +93892,7 @@ _0805F178:
 	asr r0, r0, #24
 	cmp r0, #7
 	bne _0805F1AC
-	ldr r0, _0805F1A0  @ =0x0300196C
+	ldr r0, _0805F1A0  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #3
 	bne _0805F1AC
@@ -93911,7 +93911,7 @@ _0805F198:
 	.byte 0x00
 	.byte 0x00
 _0805F1A0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805F1A4:
 	.4byte 0x030005E0
 _0805F1A8:
@@ -93996,8 +93996,8 @@ sub_0805F210: @ 0x0805F210
 	add r4, r4, #16
 	lsl r4, r4, #16
 	lsr r4, r4, #16
-	ldr r2, _0805F2A8  @ =0x030019DC
-	ldr r0, _0805F2AC  @ =0x0300196C
+	ldr r2, _0805F2A8  @ =gPreviousSwitchState
+	ldr r0, _0805F2AC  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	strb r1, [r2]
 	strb r5, [r0]
@@ -94047,9 +94047,9 @@ _0805F2A0:
 _0805F2A4:
 	.4byte gUnknown_08076FBC
 _0805F2A8:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _0805F2AC:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805F2B0:
 	.4byte gUnknown_03001C78
 	THUMB_FUNC_END sub_0805F210
@@ -94234,7 +94234,7 @@ sub_0805F408: @ 0x0805F408
 	push {r4-r7,lr}
 	sub sp, sp, #4
 	add r4, r0, #0
-	ldr r0, _0805F470  @ =0x0300196C
+	ldr r0, _0805F470  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #1
 	beq _0805F418
@@ -94284,7 +94284,7 @@ _0805F418:
 	bl sub_0804A644
 	b _0805F496
 _0805F470:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805F474:
 	.4byte 0x03001D38
 _0805F478:
@@ -94491,7 +94491,7 @@ sub_0805F5EC: @ 0x0805F5EC
 	push {r4-r7,lr}
 	sub sp, sp, #4
 	add r4, r0, #0
-	ldr r0, _0805F654  @ =0x0300196C
+	ldr r0, _0805F654  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #2
 	beq _0805F5FC
@@ -94541,7 +94541,7 @@ _0805F5FC:
 	bl sub_0804A644
 	b _0805F67A
 _0805F654:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805F658:
 	.4byte 0x03001D38
 _0805F65C:
@@ -94748,7 +94748,7 @@ sub_0805F7D0: @ 0x0805F7D0
 	push {r4-r7,lr}
 	sub sp, sp, #4
 	add r4, r0, #0
-	ldr r0, _0805F838  @ =0x0300196C
+	ldr r0, _0805F838  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #3
 	beq _0805F7E0
@@ -94798,7 +94798,7 @@ _0805F7E0:
 	bl sub_0804A644
 	b _0805F85E
 _0805F838:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805F83C:
 	.4byte 0x03001D38
 _0805F840:
@@ -95166,7 +95166,7 @@ _0805FAE4:
 	THUMB_FUNC_START sub_0805FAE8
 sub_0805FAE8: @ 0x0805FAE8
 	push {r4,lr}
-	ldr r0, _0805FB3C  @ =0x0300196C
+	ldr r0, _0805FB3C  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	add r4, r0, #0
 	cmp r1, #1
@@ -95210,7 +95210,7 @@ _0805FB2C:
 	strh r0, [r1]
 	b _0805FB70
 _0805FB3C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0805FB40:
 	.4byte 0x03001D10
 _0805FB44:
@@ -102645,8 +102645,8 @@ sub_080631FC: @ 0x080631FC
 	add r4, r4, #16
 	lsl r4, r4, #16
 	lsr r4, r4, #16
-	ldr r2, _08063294  @ =0x030019DC
-	ldr r0, _08063298  @ =0x0300196C
+	ldr r2, _08063294  @ =gPreviousSwitchState
+	ldr r0, _08063298  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	strb r1, [r2]
 	strb r5, [r0]
@@ -102696,9 +102696,9 @@ _0806328C:
 _08063290:
 	.4byte gUnknown_08076FC8
 _08063294:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _08063298:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0806329C:
 	.4byte gUnknown_03001C78
 	THUMB_FUNC_END sub_080631FC
@@ -104734,7 +104734,7 @@ sub_08064164: @ 0x08064164
 	ldrsh r0, [r4, r1]
 	cmp r0, #5
 	bne _080641A0
-	ldr r0, _0806419C  @ =0x0300196C
+	ldr r0, _0806419C  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #2
 	beq _080641CA
@@ -104742,11 +104742,11 @@ sub_08064164: @ 0x08064164
 	bl sub_08064894
 	b _080641CA
 _0806419C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080641A0:
 	cmp r0, #7
 	bne _080641B8
-	ldr r0, _080641B4  @ =0x0300196C
+	ldr r0, _080641B4  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #3
 	beq _080641CA
@@ -104754,11 +104754,11 @@ _080641A0:
 	bl sub_08064894
 	b _080641CA
 _080641B4:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080641B8:
 	cmp r0, #6
 	bne _080641CA
-	ldr r0, _080641D0  @ =0x0300196C
+	ldr r0, _080641D0  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #1
 	beq _080641CA
@@ -104770,7 +104770,7 @@ _080641CA:
 	.byte 0x00
 	.byte 0x00
 _080641D0:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080641D4:
 	ldrb r1, [r4, #12]
 	mov r0, #1
@@ -105693,8 +105693,8 @@ sub_08064894: @ 0x08064894
 	add r4, r4, #16
 	lsl r4, r4, #16
 	lsr r4, r4, #16
-	ldr r2, _08064930  @ =0x030019DC
-	ldr r0, _08064934  @ =0x0300196C
+	ldr r2, _08064930  @ =gPreviousSwitchState
+	ldr r0, _08064934  @ =gCurrentSwitchState
 	ldrb r1, [r0]
 	strb r1, [r2]
 	strb r5, [r0]
@@ -105747,9 +105747,9 @@ _08064928:
 _0806492C:
 	.4byte gUnknown_08076FD4
 _08064930:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _08064934:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08064938:
 	.4byte 0x030006E0
 	THUMB_FUNC_END sub_08064894
@@ -105773,7 +105773,7 @@ sub_0806493C: @ 0x0806493C
 	add r6, r3, #0
 	cmp r0, #5
 	bne _08064980
-	ldr r0, _0806497C  @ =0x0300196C
+	ldr r0, _0806497C  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #2
 	bne _08064980
@@ -105791,14 +105791,14 @@ _08064966:
 _08064978:
 	.4byte 0x030006E0
 _0806497C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _08064980:
 	mov r0, #0
 	ldrsb r0, [r5, r0]
 	ldrb r1, [r5]
 	cmp r0, #6
 	bne _08064992
-	ldr r0, _080649B8  @ =0x0300196C
+	ldr r0, _080649B8  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #1
 	beq _08064966
@@ -105807,7 +105807,7 @@ _08064992:
 	asr r0, r0, #24
 	cmp r0, #7
 	bne _080649C0
-	ldr r0, _080649B8  @ =0x0300196C
+	ldr r0, _080649B8  @ =gCurrentSwitchState
 	ldrb r0, [r0]
 	cmp r0, #3
 	bne _080649C0
@@ -105825,7 +105825,7 @@ _080649B0:
 	.byte 0x00
 	.byte 0x00
 _080649B8:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _080649BC:
 	mov r0, #0
 _080649BE:

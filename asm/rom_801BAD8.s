@@ -32334,8 +32334,8 @@ _0802AD0A:
 	ldr r0, [r0, #12]
 	bl _call_via_r0
 _0802AD16:
-	ldr r2, _0802AD30  @ =0x0300196C
-	ldr r1, _0802AD34  @ =0x030019DC
+	ldr r2, _0802AD30  @ =gCurrentSwitchState
+	ldr r1, _0802AD34  @ =gPreviousSwitchState
 	mov r0, #1
 	strb r0, [r1]
 	strb r0, [r2]
@@ -32348,9 +32348,9 @@ _0802AD16:
 _0802AD2C:
 	.4byte gUnknown_03000B90
 _0802AD30:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0802AD34:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _0802AD38:
 	cmp r0, #0
 	bne _0802AD72
@@ -33788,7 +33788,7 @@ _0802B7A6:
 	and r0, r0, r1
 	cmp r0, #9
 	bne _0802B840
-	ldr r7, _0802B828  @ =0x0300196C
+	ldr r7, _0802B828  @ =gCurrentSwitchState
 	ldrb r6, [r7]
 	cmp r6, #1
 	bne _0802B7B8
@@ -33811,7 +33811,7 @@ _0802B7B8:
 	lsr r4, r4, #22
 	ldrb r5, [r2, #15]
 	lsl r5, r5, #3
-	ldr r3, _0802B834  @ =0x030019DC
+	ldr r3, _0802B834  @ =gPreviousSwitchState
 	strb r6, [r3]
 	mov r0, #1
 	strb r0, [r7]
@@ -33848,13 +33848,13 @@ _0802B7B8:
 	.byte 0x00
 	.byte 0x00
 _0802B828:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0802B82C:
 	.4byte gUnknown_0807820C
 _0802B830:
 	.4byte 0x0000600C
 _0802B834:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _0802B838:
 	.4byte gUnknown_030019A0
 _0802B83C:
@@ -33862,7 +33862,7 @@ _0802B83C:
 _0802B840:
 	cmp r0, #8
 	bne _0802B8E0
-	ldr r7, _0802B8C8  @ =0x0300196C
+	ldr r7, _0802B8C8  @ =gCurrentSwitchState
 	ldrb r6, [r7]
 	cmp r6, #2
 	bne _0802B84E
@@ -33885,7 +33885,7 @@ _0802B84E:
 	lsr r4, r4, #22
 	ldrb r5, [r2, #15]
 	lsl r5, r5, #3
-	ldr r3, _0802B8D4  @ =0x030019DC
+	ldr r3, _0802B8D4  @ =gPreviousSwitchState
 	strb r6, [r3]
 	mov r0, #2
 	strb r0, [r7]
@@ -33927,13 +33927,13 @@ _0802B8BA:
 	.byte 0x00
 	.byte 0x00
 _0802B8C8:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0802B8CC:
 	.4byte gUnknown_0807820C
 _0802B8D0:
 	.4byte 0x0000600C
 _0802B8D4:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _0802B8D8:
 	.4byte gUnknown_030019A0
 _0802B8DC:
@@ -33941,7 +33941,7 @@ _0802B8DC:
 _0802B8E0:
 	cmp r0, #10
 	bne _0802B962
-	ldr r7, _0802B96C  @ =0x0300196C
+	ldr r7, _0802B96C  @ =gCurrentSwitchState
 	ldrb r6, [r7]
 	cmp r6, #3
 	beq _0802B962
@@ -33962,7 +33962,7 @@ _0802B8E0:
 	lsr r4, r4, #22
 	ldrb r5, [r2, #15]
 	lsl r5, r5, #3
-	ldr r3, _0802B978  @ =0x030019DC
+	ldr r3, _0802B978  @ =gPreviousSwitchState
 	strb r6, [r3]
 	mov r0, #3
 	strb r0, [r7]
@@ -34007,13 +34007,13 @@ _0802B962:
 	.byte 0x00
 	.byte 0x00
 _0802B96C:
-	.4byte 0x0300196C
+	.4byte gCurrentSwitchState
 _0802B970:
 	.4byte gUnknown_0807820C
 _0802B974:
 	.4byte 0x0000600C
 _0802B978:
-	.4byte 0x030019DC
+	.4byte gPreviousSwitchState
 _0802B97C:
 	.4byte gUnknown_030019A0
 _0802B980:

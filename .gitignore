@@ -12,3 +12,5 @@ src/*.s
 Ghidra/
 tools/Bin2Img.py
 tools/yychr/
+*.ss*
+*.cheats

@@ -4490,8 +4490,8 @@ gTitleDemoInputTable:
 gUnknown_08B2D378:
 	.INCBIN "baserom.gba", 0xB2D378, 0xB2D380-0xB2D378
 
-	.GLOBAL gUnknown_08B2D380
-gUnknown_08B2D380:
+	.GLOBAL gTutorialDemoInputTable
+gTutorialDemoInputTable:
 	.INCBIN "baserom.gba", 0xB2D380, 0xB2D574-0xB2D380
 
 	.GLOBAL gUnknown_08B2D574

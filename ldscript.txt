@@ -153,8 +153,10 @@ SECTIONS
 		. = 0x192C;		gUnknown_0300192C = .;
 		. = 0x1930;		gUnknown_03001930 = .;
 		. = 0x1938;		gUnknown_03001938 = .;
+		. = 0x196C;     gCurrentSwitchState = .;
 		. = 0x1984;  	gMarioIdleTimer = .;
 		. = 0x19A0;		gUnknown_030019A0 = .;
+		. = 0x19DC;		gPreviousSwitchState = .;
 		. = 0x1A1C;		gUnknown_03001A1C = .;
 		. = 0x1A30;		gUnknown_03001A30 = .;
 		. = 0x1A38;		gUnknown_03001A38 = .;
