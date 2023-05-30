@@ -28378,8 +28378,8 @@ _080290A8:
 	.4byte gUnknown_080788FC
 	THUMB_FUNC_END sub_08029080
 
-	THUMB_FUNC_START sub_080290AC
-sub_080290AC: @ 0x080290AC
+	THUMB_FUNC_START options_menu_play_music
+options_menu_play_music: @ 0x080290AC
 	push {lr}
 	ldr r0, _080290D4  @ =0x030000FC
 	ldr r0, [r0]
@@ -28405,10 +28405,10 @@ _080290D8:
 	.4byte 0x00001130
 _080290DC:
 	.4byte 0x00001148
-	THUMB_FUNC_END sub_080290AC
+	THUMB_FUNC_END options_menu_play_music
 
-	THUMB_FUNC_START sub_080290E0
-sub_080290E0: @ 0x080290E0
+	THUMB_FUNC_START options_menu_play_sound_effect
+options_menu_play_sound_effect: @ 0x080290E0
 	push {lr}
 	sub sp, sp, #12
 	bl sub_08071C24
@@ -28443,10 +28443,10 @@ _08029120:
 	.4byte 0x00001132
 _08029124:
 	.4byte 0x00001144
-	THUMB_FUNC_END sub_080290E0
+	THUMB_FUNC_END options_menu_play_sound_effect
 
-	THUMB_FUNC_START sub_08029128
-sub_08029128: @ 0x08029128
+	THUMB_FUNC_START options_menu_play_movie
+options_menu_play_movie: @ 0x08029128
 	push {r4,r5,lr}
 	sub sp, sp, #12
 	ldr r1, _0802917C  @ =gUnknown_08079990
@@ -28496,7 +28496,7 @@ _08029188:
 	.4byte gUnknown_08079988
 _0802918C:
 	.4byte 0x03000100
-	THUMB_FUNC_END sub_08029128
+	THUMB_FUNC_END options_menu_play_movie
 
 	THUMB_FUNC_START sub_08029190
 sub_08029190: @ 0x08029190
