@@ -18734,37 +18734,37 @@ _0803D41C:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl world_1_boss_player_object
+	bl boss_1_player
 	b _0803D48E
 _0803D428:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl world_2_boss_player_object
+	bl boss_2_player
 	b _0803D48E
 _0803D434:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl world_3_boss_player_object
+	bl boss_3_player
 	b _0803D48E
 _0803D440:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl world_4_boss_player_object
+	bl boss_4_player
 	b _0803D48E
 _0803D44C:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl world_5_boss_player_object
+	bl boss_5_player
 	b _0803D48E
 _0803D458:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl world_6_boss_player_object
+	bl boss_6_player
 	b _0803D48E
 _0803D464:
 	ldr r0, _0803D47C  @ =gUnknown_03000B80
@@ -80250,8 +80250,8 @@ _08058D2C:
 	.4byte 0x03001978
 	THUMB_FUNC_END sub_08058998
 
-	THUMB_FUNC_START world_1_boss_player_object
-world_1_boss_player_object: @ 0x08058D30
+	THUMB_FUNC_START boss_1_player
+boss_1_player: @ 0x08058D30
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -80741,7 +80741,7 @@ _080590E4:
 	.4byte 0x030019AC
 _080590E8:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END world_1_boss_player_object
+	THUMB_FUNC_END boss_1_player
 
 	THUMB_FUNC_START sub_080590EC
 sub_080590EC: @ 0x080590EC
@@ -81157,8 +81157,8 @@ sub_080593A0: @ 0x080593A0
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START falling_objects_hit
-falling_objects_hit: @ 0x080593B4
+	THUMB_FUNC_START fall_objects_hit
+fall_objects_hit: @ 0x080593B4
 	push {lr}
 	add r2, r0, #0
 	add r0, r0, #84
@@ -81190,7 +81190,7 @@ _080593E6:
 	.byte 0x00
 _080593EC:
 	.4byte 0x030012E4
-	THUMB_FUNC_END falling_objects_hit
+	THUMB_FUNC_END fall_objects_hit
 
 	THUMB_FUNC_START sub_080593F0
 sub_080593F0: @ 0x080593F0
@@ -85138,8 +85138,8 @@ _0805B102:
 	bx r1
 	THUMB_FUNC_END sub_0805B09C
 
-	THUMB_FUNC_START world_2_boss_player_object
-world_2_boss_player_object: @ 0x0805B108
+	THUMB_FUNC_START boss_2_player
+boss_2_player: @ 0x0805B108
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -85326,7 +85326,7 @@ _0805B26C:
 	.4byte 0x030019AC
 _0805B270:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END world_2_boss_player_object
+	THUMB_FUNC_END boss_2_player
 
 	THUMB_FUNC_START sub_0805B274
 sub_0805B274: @ 0x0805B274
@@ -90860,8 +90860,8 @@ _0805DB3C:
 	bx r0
 	THUMB_FUNC_END sub_0805DAC8
 
-	THUMB_FUNC_START world_3_boss_player_object
-world_3_boss_player_object: @ 0x0805DB44
+	THUMB_FUNC_START boss_3_player
+boss_3_player: @ 0x0805DB44
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -91059,7 +91059,7 @@ _0805DCBC:
 	.4byte 0x030019AC
 _0805DCC0:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END world_3_boss_player_object
+	THUMB_FUNC_END boss_3_player
 
 	THUMB_FUNC_START sub_0805DCC4
 sub_0805DCC4: @ 0x0805DCC4
@@ -97161,8 +97161,8 @@ _08060982:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START world_4_boss_player_object
-world_4_boss_player_object: @ 0x080609B0
+	THUMB_FUNC_START boss_4_player
+boss_4_player: @ 0x080609B0
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -97360,7 +97360,7 @@ _08060B28:
 	.4byte 0x030019AC
 _08060B2C:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END world_4_boss_player_object
+	THUMB_FUNC_END boss_4_player
 
 	THUMB_FUNC_START sub_08060B30
 sub_08060B30: @ 0x08060B30
@@ -100304,8 +100304,8 @@ _080620D8:
 	.4byte 0x03001B54
 	THUMB_FUNC_END sub_08061F24
 
-	THUMB_FUNC_START world_5_boss_player_object
-world_5_boss_player_object: @ 0x080620DC
+	THUMB_FUNC_START boss_5_player
+boss_5_player: @ 0x080620DC
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -100503,7 +100503,7 @@ _08062254:
 	.4byte 0x030019AC
 _08062258:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END world_5_boss_player_object
+	THUMB_FUNC_END boss_5_player
 
 	THUMB_FUNC_START sub_0806225C
 sub_0806225C: @ 0x0806225C
@@ -102963,8 +102963,8 @@ _08063488:
 	.4byte 0x03001B54
 	THUMB_FUNC_END sub_080632A0
 
-	THUMB_FUNC_START world_6_boss_player_object
-world_6_boss_player_object: @ 0x0806348C
+	THUMB_FUNC_START boss_6_player
+boss_6_player: @ 0x0806348C
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -103162,7 +103162,7 @@ _08063604:
 	.4byte 0x030019AC
 _08063608:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END world_6_boss_player_object
+	THUMB_FUNC_END boss_6_player
 
 	THUMB_FUNC_START sub_0806360C
 sub_0806360C: @ 0x0806360C
@@ -122068,8 +122068,8 @@ sub_0806C2F8: @ 0x0806C2F8
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START falling_objects_hit_dk_boss_plus
-falling_objects_hit_dk_boss_plus: @ 0x0806C30C
+	THUMB_FUNC_START fall_objects_hit_2
+fall_objects_hit_2: @ 0x0806C30C
 	push {r4,r5,lr}
 	sub sp, sp, #8
 	add r4, r0, #0
@@ -122134,7 +122134,7 @@ _0806C384:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END falling_objects_hit_dk_boss_plus
+	THUMB_FUNC_END fall_objects_hit_2
 
 	THUMB_FUNC_START sub_0806C38C
 sub_0806C38C: @ 0x0806C38C
