@@ -66,6 +66,7 @@ SECTIONS
 		. = 0x34;		gUnknown_03000034 = .;
 		. = 0x38;		gUnknown_03000038 = .;
 		. = 0x3C;		gUnknown_0300003C = .;
+		. = 0x82;		gLevelSelectMode = .;
 		. = 0xA4;		gUnknown_030000A4 = .;
 		. = 0xA8;		gPressStartFadeDir = .;
 		. = 0xA9;		gTitleScreenFrameCounter = .;
@@ -118,6 +119,8 @@ SECTIONS
 		. = 0xBB8;		gUnknown_03000BB8 = .;
 		. = 0xBBC;		gUnknown_03000BBC = .;
 		. = 0xBD0;		gUnknown_03000BD0 = .;
+		. = 0xBD4;		gLevelSelectWorld = .;
+		. = 0xBD8;		gLevelSelectLevel = .;
 		. = 0xBE0;		gUnknown_03000BE0 = .;
 		. = 0xBE4;		gUnknown_03000BE4 = .;
 		. = 0xBE8;		gUnknown_03000BE8 = .;

@@ -28814,7 +28814,7 @@ _08015124:
 	str r0, [sp, #4]
 	str r0, [sp, #8]
 	ldr r1, _0801515C  @ =gUnknown_0807951C
-	ldr r4, _08015160  @ =0x03000BD4
+	ldr r4, _08015160  @ =gLevelSelectWorld
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	lsl r0, r0, #2
@@ -28838,7 +28838,7 @@ _08015124:
 _0801515C:
 	.4byte gUnknown_0807951C
 _08015160:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015164:
 	.4byte gUnknown_080794EC
 _08015168:
@@ -28849,7 +28849,7 @@ _0801516C:
 	str r0, [sp, #4]
 	str r0, [sp, #8]
 	ldr r1, _080151A0  @ =gUnknown_08079534
-	ldr r4, _080151A4  @ =0x03000BD4
+	ldr r4, _080151A4  @ =gLevelSelectWorld
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	sub r0, r0, #1
@@ -28872,7 +28872,7 @@ _0801516C:
 _080151A0:
 	.4byte gUnknown_08079534
 _080151A4:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080151A8:
 	.4byte gUnknown_08079504
 _080151AC:
@@ -29087,11 +29087,11 @@ _080152E4:
 	ldr r0, _08015424  @ =gUnknown_085E3590
 	ldrb r0, [r0, #1]
 	strb r0, [r1]
-	ldr r5, _08015428  @ =0x03000BD4
+	ldr r5, _08015428  @ =gLevelSelectWorld
 	ldr r0, _0801542C  @ =gAfterTutorialWorld
 	ldrb r3, [r0]
 	strb r3, [r5]
-	ldr r4, _08015430  @ =0x03000BD8
+	ldr r4, _08015430  @ =gLevelSelectLevel
 	ldr r0, _08015434  @ =gAfterTutorialLevel
 	ldrb r1, [r0]
 	strb r1, [r4]
@@ -29127,7 +29127,7 @@ _08015362:
 	strb r6, [r0]
 	cmp r2, #1
 	bne _0801546C
-	ldr r1, _0801545C  @ =0x03000082
+	ldr r1, _0801545C  @ =gLevelSelectMode
 	mov r0, #2
 	strb r0, [r1]
 	add r0, r3, #1
@@ -29206,11 +29206,11 @@ _08015420:
 _08015424:
 	.4byte gUnknown_085E3590
 _08015428:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801542C:
 	.4byte gAfterTutorialWorld
 _08015430:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015434:
 	.4byte gAfterTutorialLevel
 _08015438:
@@ -29232,7 +29232,7 @@ _08015454:
 _08015458:
 	.4byte 0x03000083
 _0801545C:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08015460:
 	.4byte gLevelSelectPlusData
 _08015464:
@@ -29244,7 +29244,7 @@ _0801546C:
 	bne _080154A4
 	mov r2, r12
 	strb r6, [r2]
-	ldr r0, _08015498  @ =0x03000082
+	ldr r0, _08015498  @ =gLevelSelectMode
 	mov r1, r9
 	strb r1, [r0]
 	mov r0, #6
@@ -29262,7 +29262,7 @@ _0801546C:
 	mov r0, #17
 	b _08015566
 _08015498:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801549C:
 	.4byte gLevelSelectData
 _080154A0:
@@ -29273,7 +29273,7 @@ _080154A4:
 	mov r0, r9
 	mov r2, r12
 	strb r0, [r2]
-	ldr r1, _080154D4  @ =0x03000082
+	ldr r1, _080154D4  @ =gLevelSelectMode
 	mov r0, #3
 	strb r0, [r1]
 	mov r0, #7
@@ -29293,7 +29293,7 @@ _080154A4:
 	.byte 0x00
 	.byte 0x00
 _080154D4:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _080154D8:
 	.4byte gLevelSelectPlusData
 _080154DC:
@@ -29302,18 +29302,18 @@ _080154E0:
 	cmp r2, #2
 	bne _080154F4
 	strb r6, [r4]
-	ldr r0, _080154F0  @ =0x03000082
+	ldr r0, _080154F0  @ =gLevelSelectMode
 	strb r6, [r0]
 	mov r1, r12
 	strb r6, [r1]
 	b _0801553C
 _080154F0:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _080154F4:
 	cmp r2, #3
 	bne _08015538
 	strb r6, [r4]
-	ldr r1, _08015528  @ =0x03000082
+	ldr r1, _08015528  @ =gLevelSelectMode
 	mov r0, #2
 	strb r0, [r1]
 	mov r0, r9
@@ -29336,7 +29336,7 @@ _080154F4:
 	ldr r1, _08015534  @ =gUnknown_08079504
 	b _0801555C
 _08015528:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801552C:
 	.4byte gLevelSelectPlusData
 _08015530:
@@ -29344,7 +29344,7 @@ _08015530:
 _08015534:
 	.4byte gUnknown_08079504
 _08015538:
-	ldr r0, _080155FC  @ =0x03000082
+	ldr r0, _080155FC  @ =gLevelSelectMode
 	strb r6, [r0]
 _0801553C:
 	ldr r4, _08015600  @ =gLevelSelectData
@@ -29440,7 +29440,7 @@ _080155CE:
 	.byte 0x00
 	.byte 0x00
 _080155FC:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08015600:
 	.4byte gLevelSelectData
 _08015604:
@@ -29479,13 +29479,13 @@ sub_0801562C: @ 0x0801562C
 	lsr r4, r0, #16
 	cmp r4, #0
 	beq _08015684
-	ldr r1, _08015668  @ =0x03000BD8
+	ldr r1, _08015668  @ =gLevelSelectLevel
 	ldrb r2, [r1]
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	cmp r0, #7
 	bgt _08015670
-	ldr r1, _0801566C  @ =0x03000082
+	ldr r1, _0801566C  @ =gLevelSelectMode
 	mov r0, #1
 	strb r0, [r1]
 	mov r1, #0
@@ -29498,9 +29498,9 @@ sub_0801562C: @ 0x0801562C
 _08015664:
 	.4byte gUnknown_030012E8
 _08015668:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801566C:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08015670:
 	add r0, r2, #0
 	sub r0, r0, #8
@@ -29518,7 +29518,7 @@ _08015684:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08015720
-	ldr r5, _080156C4  @ =0x03000BD8
+	ldr r5, _080156C4  @ =gLevelSelectLevel
 	mov r0, #0
 	ldrsb r0, [r5, r0]
 	cmp r0, #7
@@ -29527,7 +29527,7 @@ _08015684:
 	bne _080156D8
 	ldr r0, _080156C8  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _080156CC  @ =0x03000BD4
+	ldr r1, _080156CC  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	mov r2, #7
 	add r3, sp, #12
@@ -29546,11 +29546,11 @@ _08015684:
 	.byte 0x00
 	.byte 0x00
 _080156C4:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _080156C8:
 	.4byte gUnknown_03000B80
 _080156CC:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080156D0:
 	str r4, [sp]
 	str r7, [sp, #4]
@@ -29559,7 +29559,7 @@ _080156D0:
 _080156D8:
 	ldr r0, _08015708  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _0801570C  @ =0x03000BD4
+	ldr r1, _0801570C  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	mov r2, #0
 	ldrsb r2, [r5, r2]
@@ -29584,7 +29584,7 @@ _080156D8:
 _08015708:
 	.4byte gUnknown_03000B80
 _0801570C:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015710:
 	str r4, [sp]
 	str r7, [sp, #4]
@@ -29622,14 +29622,14 @@ _08015744:
 	bne _08015752
 	b _0801586C
 _08015752:
-	ldr r5, _08015788  @ =0x03000BD8
+	ldr r5, _08015788  @ =gLevelSelectLevel
 	mov r6, #0
 	ldrsb r6, [r5, r6]
 	cmp r6, #10
 	bgt _0801579C
 	ldr r0, _0801578C  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _08015790  @ =0x03000BD4
+	ldr r1, _08015790  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	add r2, r6, #0
 	add r2, r2, #2
@@ -29649,11 +29649,11 @@ _08015752:
 	mov r0, #23
 	b _08015A18
 _08015788:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801578C:
 	.4byte gUnknown_03000B80
 _08015790:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015794:
 	str r4, [sp]
 	str r7, [sp, #4]
@@ -29663,7 +29663,7 @@ _0801579C:
 	mov r3, #0
 	ldrsb r3, [r5, r3]
 	ldr r0, _08015818  @ =gUnknown_08B2CA5C
-	ldr r1, _0801581C  @ =0x03000BD4
+	ldr r1, _0801581C  @ =gLevelSelectWorld
 	mov r8, r1
 	ldrb r1, [r1]
 	lsl r1, r1, #24
@@ -29724,7 +29724,7 @@ _080157EE:
 _08015818:
 	.4byte gUnknown_08B2CA5C
 _0801581C:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015820:
 	.4byte gUnknown_03000B80
 _08015824:
@@ -29774,14 +29774,14 @@ _0801586C:
 	lsr r4, r0, #16
 	cmp r4, #0
 	beq _080158F4
-	ldr r4, _080158B0  @ =0x03000BD8
+	ldr r4, _080158B0  @ =gLevelSelectLevel
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	cmp r0, #0
 	ble _080158C4
 	ldr r0, _080158B4  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _080158B8  @ =0x03000BD4
+	ldr r1, _080158B8  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	mov r2, #0
 	ldrsb r2, [r4, r2]
@@ -29802,11 +29802,11 @@ _0801586C:
 	mov r0, #23
 	b _08015A18
 _080158B0:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _080158B4:
 	.4byte gUnknown_03000B80
 _080158B8:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080158BC:
 	str r5, [sp]
 	str r7, [sp, #4]
@@ -29815,7 +29815,7 @@ _080158BC:
 _080158C4:
 	ldr r0, _080158EC  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _080158F0  @ =0x03000BD4
+	ldr r1, _080158F0  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	mov r2, #7
 	bl sub_0800FA04
@@ -29837,7 +29837,7 @@ _080158DC:
 _080158EC:
 	.4byte gUnknown_03000B80
 _080158F0:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080158F4:
 	bl sub_08034004
 	lsl r0, r0, #24
@@ -29846,7 +29846,7 @@ _080158F4:
 	bne _08015902
 	b _08015A24
 _08015902:
-	ldr r5, _08015934  @ =0x03000BD4
+	ldr r5, _08015934  @ =gLevelSelectWorld
 	ldrb r1, [r5]
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -29860,7 +29860,7 @@ _08015902:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r2, _08015938  @ =0x03000BD8
+	ldr r2, _08015938  @ =gLevelSelectLevel
 	ldrb r1, [r2]
 	mov r0, #0
 	ldrsb r0, [r2, r0]
@@ -29872,9 +29872,9 @@ _08015902:
 	.byte 0x00
 	.byte 0x00
 _08015934:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015938:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801593C:
 	.4byte gUnknown_03000B80
 _08015940:
@@ -29904,7 +29904,7 @@ _0801594C:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r2, _080159B8  @ =0x03000BD8
+	ldr r2, _080159B8  @ =gLevelSelectLevel
 	ldrb r1, [r2]
 	mov r0, #0
 	ldrsb r0, [r2, r0]
@@ -29937,7 +29937,7 @@ _08015982:
 _080159B4:
 	.4byte gUnknown_03000B80
 _080159B8:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _080159BC:
 	.4byte gAfterTutorialLevel
 _080159C0:
@@ -30052,11 +30052,11 @@ _08015A7C:
 	b _08015C28
 _08015A92:
 	ldr r0, _08015AC0  @ =0x03000080
-	ldr r7, _08015AC4  @ =0x03000BD8
+	ldr r7, _08015AC4  @ =gLevelSelectLevel
 	mov r2, #0
 	strb r2, [r7]
 	strb r2, [r0]
-	ldr r5, _08015AC8  @ =0x03000BD4
+	ldr r5, _08015AC8  @ =gLevelSelectWorld
 	mov r1, #0
 	ldrsb r1, [r5, r1]
 	ldrb r3, [r4]
@@ -30064,7 +30064,7 @@ _08015A92:
 	ldrsb r0, [r4, r0]
 	cmp r1, r0
 	bne _08015AD0
-	ldr r0, _08015ACC  @ =0x03000082
+	ldr r0, _08015ACC  @ =gLevelSelectMode
 	strb r2, [r0]
 	mov r0, #0
 	str r0, [sp]
@@ -30077,11 +30077,11 @@ _08015ABC:
 _08015AC0:
 	.4byte 0x03000080
 _08015AC4:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015AC8:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015ACC:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08015AD0:
 	strb r3, [r5]
 	strb r2, [r7]
@@ -30164,13 +30164,13 @@ _08015B68:
 _08015B6C:
 	cmp r2, #7
 	bne _08015BB8
-	ldr r1, _08015BA4  @ =0x03000082
+	ldr r1, _08015BA4  @ =gLevelSelectMode
 	mov r0, #3
 	strb r0, [r1]
-	ldr r0, _08015BA8  @ =0x03000BD4
+	ldr r0, _08015BA8  @ =gLevelSelectWorld
 	strb r4, [r5]
 	strb r4, [r0]
-	ldr r1, _08015BAC  @ =0x03000BD8
+	ldr r1, _08015BAC  @ =gLevelSelectLevel
 	ldr r0, _08015BB0  @ =0x03000080
 	strb r4, [r0]
 	strb r4, [r1]
@@ -30190,11 +30190,11 @@ _08015B6C:
 	mov r0, #183
 	b _08015C30
 _08015BA4:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08015BA8:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015BAC:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015BB0:
 	.4byte 0x03000080
 _08015BB4:
@@ -30210,7 +30210,7 @@ _08015BB8:
 	lsr r0, r0, #24
 	cmp r0, #0
 	beq _08015C28
-	ldr r3, _08015BF4  @ =0x03000BD4
+	ldr r3, _08015BF4  @ =gLevelSelectWorld
 	mov r1, #0
 	ldrsb r1, [r3, r1]
 	ldrb r2, [r5]
@@ -30218,7 +30218,7 @@ _08015BB8:
 	ldrsb r0, [r5, r0]
 	cmp r1, r0
 	bne _08015BFC
-	ldr r0, _08015BF8  @ =0x03000082
+	ldr r0, _08015BF8  @ =gLevelSelectMode
 	strb r4, [r0]
 	str r4, [sp]
 	str r6, [sp, #4]
@@ -30230,12 +30230,12 @@ _08015BEC:
 _08015BF0:
 	.4byte 0x03000080
 _08015BF4:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015BF8:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08015BFC:
 	strb r2, [r3]
-	ldr r0, _08015C20  @ =0x03000BD8
+	ldr r0, _08015C20  @ =gLevelSelectLevel
 	strb r4, [r0]
 	mov r1, #1
 	ldr r0, _08015C24  @ =0x03000083
@@ -30254,7 +30254,7 @@ _08015BFC:
 	.byte 0x00
 	.byte 0x00
 _08015C20:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015C24:
 	.4byte 0x03000083
 _08015C28:
@@ -30307,13 +30307,13 @@ sub_08015C68: @ 0x08015C68
 	lsr r4, r0, #16
 	cmp r4, #0
 	beq _08015CC6
-	ldr r2, _08015CA4  @ =0x03000BD8
+	ldr r2, _08015CA4  @ =gLevelSelectLevel
 	ldrb r0, [r2]
 	mov r1, #0
 	ldrsb r1, [r2, r1]
 	cmp r1, #2
 	bgt _08015CAC
-	ldr r1, _08015CA8  @ =0x03000082
+	ldr r1, _08015CA8  @ =gLevelSelectMode
 	mov r0, #3
 	strb r0, [r1]
 	mov r1, #0
@@ -30326,9 +30326,9 @@ sub_08015C68: @ 0x08015C68
 _08015CA0:
 	.4byte gUnknown_030012E8
 _08015CA4:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015CA8:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08015CAC:
 	cmp r1, #6
 	bne _08015CB4
@@ -30353,7 +30353,7 @@ _08015CC6:
 	lsr r5, r0, #16
 	cmp r5, #0
 	beq _08015D2C
-	ldr r5, _08015D10  @ =0x03000BD8
+	ldr r5, _08015D10  @ =gLevelSelectLevel
 	ldrb r2, [r5]
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -30361,7 +30361,7 @@ _08015CC6:
 	bgt _08015D24
 	ldr r0, _08015D14  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _08015D18  @ =0x03000BD4
+	ldr r1, _08015D18  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	sub r1, r1, #1
 	lsl r1, r1, #24
@@ -30384,11 +30384,11 @@ _08015CC6:
 	.byte 0x00
 	.byte 0x00
 _08015D10:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015D14:
 	.4byte gUnknown_03000B80
 _08015D18:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015D1C:
 	str r4, [sp]
 	str r6, [sp, #4]
@@ -30406,11 +30406,11 @@ _08015D2C:
 	lsr r4, r0, #16
 	cmp r4, #0
 	beq _08015DAC
-	ldr r4, _08015D88  @ =0x03000BD8
+	ldr r4, _08015D88  @ =gLevelSelectLevel
 	mov r3, #0
 	ldrsb r3, [r4, r3]
 	ldr r0, _08015D8C  @ =gUnknown_08B2CDF4
-	ldr r7, _08015D90  @ =0x03000BD4
+	ldr r7, _08015D90  @ =gLevelSelectWorld
 	mov r1, #0
 	ldrsb r1, [r7, r1]
 	ldr r2, [r0, #4]
@@ -30446,11 +30446,11 @@ _08015D2C:
 	mov r0, #23
 	b _08015F3C
 _08015D88:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015D8C:
 	.4byte gUnknown_08B2CDF4
 _08015D90:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015D94:
 	.4byte gUnknown_03000B80
 _08015D98:
@@ -30470,7 +30470,7 @@ _08015DAC:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08015E38
-	ldr r5, _08015DF0  @ =0x03000BD8
+	ldr r5, _08015DF0  @ =gLevelSelectLevel
 	ldrb r2, [r5]
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -30478,7 +30478,7 @@ _08015DAC:
 	ble _08015E04
 	ldr r0, _08015DF4  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _08015DF8  @ =0x03000BD4
+	ldr r1, _08015DF8  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	sub r1, r1, #1
 	lsl r1, r1, #24
@@ -30501,11 +30501,11 @@ _08015DAC:
 	.byte 0x00
 	.byte 0x00
 _08015DF0:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015DF4:
 	.4byte gUnknown_03000B80
 _08015DF8:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015DFC:
 	str r4, [sp]
 	str r6, [sp, #4]
@@ -30514,7 +30514,7 @@ _08015DFC:
 _08015E04:
 	ldr r0, _08015E30  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _08015E34  @ =0x03000BD4
+	ldr r1, _08015E34  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	sub r1, r1, #1
 	lsl r1, r1, #24
@@ -30537,7 +30537,7 @@ _08015E22:
 _08015E30:
 	.4byte gUnknown_03000B80
 _08015E34:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015E38:
 	mov r0, #128
 	lsl r0, r0, #1
@@ -30562,7 +30562,7 @@ _08015E5C:
 	lsr r2, r0, #24
 	cmp r2, #0
 	beq _08015F48
-	ldr r7, _08015EA8  @ =0x03000BD4
+	ldr r7, _08015EA8  @ =gLevelSelectWorld
 	ldrb r1, [r7]
 	mov r2, #0
 	ldrsb r2, [r7, r2]
@@ -30579,7 +30579,7 @@ _08015E5C:
 	mov r3, #64
 	bl sub_08071990
 	ldr r1, _08015EB0  @ =gAfterTutorialLevel
-	ldr r2, _08015EB4  @ =0x03000BD8
+	ldr r2, _08015EB4  @ =gLevelSelectLevel
 	ldrb r0, [r2]
 	strb r0, [r1]
 	ldr r1, _08015EB8  @ =gAfterTutorialWorld
@@ -30595,13 +30595,13 @@ _08015E5C:
 	.byte 0x00
 	.byte 0x00
 _08015EA8:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08015EAC:
 	.4byte gUnknown_03000B80
 _08015EB0:
 	.4byte gAfterTutorialLevel
 _08015EB4:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015EB8:
 	.4byte gAfterTutorialWorld
 _08015EBC:
@@ -30611,7 +30611,7 @@ _08015EBC:
 	sub r1, r1, #1
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	ldr r5, _08015F24  @ =0x03000BD8
+	ldr r5, _08015F24  @ =gLevelSelectLevel
 	ldrb r2, [r5]
 	bl sub_0800FA04
 	lsl r0, r0, #24
@@ -30654,7 +30654,7 @@ _08015F08:
 _08015F20:
 	.4byte gUnknown_03000B80
 _08015F24:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015F28:
 	.4byte gAfterTutorialLevel
 _08015F2C:
@@ -30743,11 +30743,11 @@ _08015FAA:
 	b _0801616C
 _08015FC4:
 	ldr r0, _08015FF4  @ =0x03000080
-	ldr r7, _08015FF8  @ =0x03000BD8
+	ldr r7, _08015FF8  @ =gLevelSelectLevel
 	mov r2, #0
 	strb r2, [r7]
 	strb r2, [r0]
-	ldr r5, _08015FFC  @ =0x03000BD4
+	ldr r5, _08015FFC  @ =gLevelSelectWorld
 	mov r1, #0
 	ldrsb r1, [r5, r1]
 	ldrb r3, [r4]
@@ -30755,7 +30755,7 @@ _08015FC4:
 	ldrsb r0, [r4, r0]
 	cmp r1, r0
 	bne _08016004
-	ldr r0, _08016000  @ =0x03000082
+	ldr r0, _08016000  @ =gLevelSelectMode
 	mov r1, #2
 	strb r1, [r0]
 	mov r0, #0
@@ -30769,11 +30769,11 @@ _08015FF0:
 _08015FF4:
 	.4byte 0x03000080
 _08015FF8:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08015FFC:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016000:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016004:
 	strb r3, [r5]
 	strb r2, [r7]
@@ -30858,14 +30858,14 @@ _080160A0:
 _080160A4:
 	cmp r0, #0
 	bne _080160F4
-	ldr r1, _080160E0  @ =0x03000082
+	ldr r1, _080160E0  @ =gLevelSelectMode
 	mov r0, #1
 	strb r0, [r1]
-	ldr r1, _080160E4  @ =0x03000BD4
+	ldr r1, _080160E4  @ =gLevelSelectWorld
 	mov r0, #7
 	strb r0, [r5]
 	strb r0, [r1]
-	ldr r1, _080160E8  @ =0x03000BD8
+	ldr r1, _080160E8  @ =gLevelSelectLevel
 	ldr r0, _080160EC  @ =0x03000080
 	strb r4, [r0]
 	strb r4, [r1]
@@ -30886,11 +30886,11 @@ _080160A4:
 	mov r0, #183
 	b _08016174
 _080160E0:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _080160E4:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080160E8:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _080160EC:
 	.4byte 0x03000080
 _080160F0:
@@ -30908,7 +30908,7 @@ _080160F4:
 	lsr r0, r0, #24
 	cmp r0, #0
 	beq _0801616C
-	ldr r3, _08016138  @ =0x03000BD4
+	ldr r3, _08016138  @ =gLevelSelectWorld
 	mov r1, #0
 	ldrsb r1, [r3, r1]
 	ldrb r2, [r5]
@@ -30916,7 +30916,7 @@ _080160F4:
 	ldrsb r0, [r5, r0]
 	cmp r1, r0
 	bne _08016140
-	ldr r1, _0801613C  @ =0x03000082
+	ldr r1, _0801613C  @ =gLevelSelectMode
 	mov r0, #2
 	strb r0, [r1]
 	str r4, [sp]
@@ -30931,13 +30931,13 @@ _08016130:
 _08016134:
 	.4byte 0x03000080
 _08016138:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801613C:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016140:
 	sub r0, r2, #1
 	strb r0, [r3]
-	ldr r0, _08016164  @ =0x03000BD8
+	ldr r0, _08016164  @ =gLevelSelectLevel
 	strb r4, [r0]
 	mov r1, #4
 	ldr r0, _08016168  @ =0x03000083
@@ -30954,7 +30954,7 @@ _08016140:
 	mov r0, #35
 	b _08016174
 _08016164:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08016168:
 	.4byte 0x03000083
 _0801616C:
@@ -31035,9 +31035,9 @@ _080161F4:
 	ldrb r0, [r5]
 	sub r0, r0, #1
 	strb r0, [r5]
-	ldr r1, _08016234  @ =0x03000BD4
+	ldr r1, _08016234  @ =gLevelSelectWorld
 	strb r0, [r1]
-	ldr r2, _08016238  @ =0x03000BD8
+	ldr r2, _08016238  @ =gLevelSelectLevel
 	ldr r1, _0801623C  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31064,9 +31064,9 @@ _0801622C:
 _08016230:
 	.4byte 0x03000083
 _08016234:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016238:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801623C:
 	.4byte 0x03000080
 _08016240:
@@ -31109,9 +31109,9 @@ sub_08016260: @ 0x08016260
 	ldrb r0, [r4]
 	add r0, r0, #1
 	strb r0, [r4]
-	ldr r1, _080162CC  @ =0x03000BD4
+	ldr r1, _080162CC  @ =gLevelSelectWorld
 	strb r0, [r1]
-	ldr r2, _080162D0  @ =0x03000BD8
+	ldr r2, _080162D0  @ =gLevelSelectLevel
 	ldr r1, _080162D4  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31145,9 +31145,9 @@ _080162C4:
 _080162C8:
 	.4byte gUnknown_03000B80
 _080162CC:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080162D0:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _080162D4:
 	.4byte 0x03000080
 _080162D8:
@@ -31177,9 +31177,9 @@ _080162F0:
 	ldrb r0, [r4]
 	add r0, r0, #1
 	strb r0, [r4]
-	ldr r1, _0801634C  @ =0x03000BD4
+	ldr r1, _0801634C  @ =gLevelSelectWorld
 	strb r0, [r1]
-	ldr r2, _08016350  @ =0x03000BD8
+	ldr r2, _08016350  @ =gLevelSelectLevel
 	ldr r1, _08016354  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31211,9 +31211,9 @@ _080162F0:
 _08016348:
 	.4byte gUnknown_03000B80
 _0801634C:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016350:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08016354:
 	.4byte 0x03000080
 _08016358:
@@ -31235,14 +31235,14 @@ _08016370:
 	lsr r1, r0, #24
 	cmp r1, #0
 	beq _080163D8
-	ldr r1, _080163C4  @ =0x03000082
+	ldr r1, _080163C4  @ =gLevelSelectMode
 	mov r0, #3
 	strb r0, [r1]
-	ldr r1, _080163C8  @ =0x03000BD4
+	ldr r1, _080163C8  @ =gLevelSelectWorld
 	mov r0, #1
 	strb r0, [r4]
 	strb r0, [r1]
-	ldr r2, _080163CC  @ =0x03000BD8
+	ldr r2, _080163CC  @ =gLevelSelectLevel
 	ldr r1, _080163D0  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31271,11 +31271,11 @@ _080163B8:
 	bl sub_08071990
 	b _080163EC
 _080163C4:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _080163C8:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080163CC:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _080163D0:
 	.4byte 0x03000080
 _080163D4:
@@ -31310,13 +31310,13 @@ sub_080163F4: @ 0x080163F4
 _08016404:
 	cmp r1, #1
 	bne _0801645C
-	ldr r0, _08016448  @ =0x03000082
+	ldr r0, _08016448  @ =gLevelSelectMode
 	strb r1, [r0]
-	ldr r1, _0801644C  @ =0x03000BD4
+	ldr r1, _0801644C  @ =gLevelSelectWorld
 	mov r0, #6
 	strb r0, [r6]
 	strb r0, [r1]
-	ldr r2, _08016450  @ =0x03000BD8
+	ldr r2, _08016450  @ =gLevelSelectLevel
 	ldr r1, _08016454  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31342,11 +31342,11 @@ _08016404:
 _08016444:
 	.4byte 0x03000081
 _08016448:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801644C:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016450:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08016454:
 	.4byte 0x03000080
 _08016458:
@@ -31395,9 +31395,9 @@ _080164AA:
 	ldrb r0, [r6]
 	sub r0, r0, #1
 	strb r0, [r6]
-	ldr r1, _080164DC  @ =0x03000BD4
+	ldr r1, _080164DC  @ =gLevelSelectWorld
 	strb r0, [r1]
-	ldr r1, _080164E0  @ =0x03000BD8
+	ldr r1, _080164E0  @ =gLevelSelectLevel
 	ldr r0, _080164E4  @ =0x03000080
 	strb r5, [r0]
 	strb r5, [r1]
@@ -31419,9 +31419,9 @@ _080164D4:
 _080164D8:
 	.4byte 0x03000083
 _080164DC:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080164E0:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _080164E4:
 	.4byte 0x03000080
 _080164E8:
@@ -31433,11 +31433,11 @@ _080164E8:
 	lsr r5, r0, #24
 	cmp r5, #0
 	beq _08016554
-	ldr r1, _0801653C  @ =0x03000BD4
+	ldr r1, _0801653C  @ =gLevelSelectWorld
 	mov r0, #7
 	strb r0, [r6]
 	strb r0, [r1]
-	ldr r2, _08016540  @ =0x03000BD8
+	ldr r2, _08016540  @ =gLevelSelectLevel
 	ldr r1, _08016544  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31467,9 +31467,9 @@ _080164E8:
 	mov r0, #177
 	b _080165E6
 _0801653C:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016540:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08016544:
 	.4byte 0x03000080
 _08016548:
@@ -31487,11 +31487,11 @@ _08016554:
 	lsr r1, r0, #24
 	cmp r1, #0
 	beq _080165DC
-	ldr r1, _080165C0  @ =0x03000BD4
+	ldr r1, _080165C0  @ =gLevelSelectWorld
 	mov r0, #6
 	strb r0, [r6]
 	strb r0, [r1]
-	ldr r1, _080165C4  @ =0x03000BD8
+	ldr r1, _080165C4  @ =gLevelSelectLevel
 	ldr r0, _080165C8  @ =0x03000080
 	strb r5, [r0]
 	strb r5, [r1]
@@ -31534,9 +31534,9 @@ _08016554:
 	.byte 0x00
 	.byte 0x00
 _080165C0:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _080165C4:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _080165C8:
 	.4byte 0x03000080
 _080165CC:
@@ -31560,14 +31560,14 @@ _080165E6:
 	bl sub_08071990
 	b _08016638
 _080165F2:
-	ldr r1, _08016640  @ =0x03000082
+	ldr r1, _08016640  @ =gLevelSelectMode
 	mov r0, #1
 	strb r0, [r1]
-	ldr r1, _08016644  @ =0x03000BD4
+	ldr r1, _08016644  @ =gLevelSelectWorld
 	mov r0, #7
 	strb r0, [r6]
 	strb r0, [r1]
-	ldr r2, _08016648  @ =0x03000BD8
+	ldr r2, _08016648  @ =gLevelSelectLevel
 	ldr r1, _0801664C  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31599,11 +31599,11 @@ _08016638:
 	pop {r0}
 	bx r0
 _08016640:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016644:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016648:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801664C:
 	.4byte 0x03000080
 _08016650:
@@ -31629,9 +31629,9 @@ _08016668:
 	bne _080166A0
 	add r1, r1, #1
 	strb r1, [r4]
-	ldr r0, _08016694  @ =0x03000BD4
+	ldr r0, _08016694  @ =gLevelSelectWorld
 	strb r1, [r0]
-	ldr r1, _08016698  @ =0x03000BD8
+	ldr r1, _08016698  @ =gLevelSelectLevel
 	ldr r0, _0801669C  @ =0x03000080
 	strb r2, [r0]
 	strb r2, [r1]
@@ -31646,9 +31646,9 @@ _0801668C:
 _08016690:
 	.4byte gUnknown_08B2CDF4
 _08016694:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016698:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801669C:
 	.4byte 0x03000080
 _080166A0:
@@ -31669,9 +31669,9 @@ _080166BC:
 	ldrb r0, [r4]
 	add r0, r0, #1
 	strb r0, [r4]
-	ldr r1, _0801671C  @ =0x03000BD4
+	ldr r1, _0801671C  @ =gLevelSelectWorld
 	strb r0, [r1]
-	ldr r2, _08016720  @ =0x03000BD8
+	ldr r2, _08016720  @ =gLevelSelectLevel
 	ldr r1, _08016724  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31716,9 +31716,9 @@ _080166BC:
 _08016718:
 	.4byte gUnknown_03000B80
 _0801671C:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016720:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08016724:
 	.4byte 0x03000080
 _08016728:
@@ -31745,9 +31745,9 @@ _08016738:
 	bne _080167AC
 	add r1, r1, #1
 	strb r1, [r4]
-	ldr r0, _08016794  @ =0x03000BD4
+	ldr r0, _08016794  @ =gLevelSelectWorld
 	strb r1, [r0]
-	ldr r2, _08016798  @ =0x03000BD8
+	ldr r2, _08016798  @ =gLevelSelectLevel
 	ldr r1, _0801679C  @ =0x03000080
 	mov r0, #0
 	strb r0, [r1]
@@ -31777,9 +31777,9 @@ _08016738:
 	.byte 0x00
 	.byte 0x00
 _08016794:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016798:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801679C:
 	.4byte 0x03000080
 _080167A0:
@@ -31791,11 +31791,11 @@ _080167A8:
 _080167AC:
 	cmp r0, #7
 	bne _08016824
-	ldr r0, _08016808  @ =0x03000BD4
+	ldr r0, _08016808  @ =gLevelSelectWorld
 	mov r1, #0
 	strb r1, [r4]
 	strb r1, [r0]
-	ldr r2, _0801680C  @ =0x03000BD8
+	ldr r2, _0801680C  @ =gLevelSelectLevel
 	ldr r0, _08016810  @ =0x03000080
 	strb r1, [r0]
 	strb r1, [r2]
@@ -31837,9 +31837,9 @@ _080167AC:
 	.byte 0x00
 	.byte 0x00
 _08016808:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801680C:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08016810:
 	.4byte 0x03000080
 _08016814:
@@ -31897,7 +31897,7 @@ sub_0801685C: @ 0x0801685C
 	lsr r1, r0, #16
 	cmp r1, #0
 	beq _080168A4
-	ldr r1, _0801689C  @ =0x03000082
+	ldr r1, _0801689C  @ =gLevelSelectMode
 	mov r0, #4
 	strb r0, [r1]
 	mov r1, #11
@@ -31920,7 +31920,7 @@ sub_0801685C: @ 0x0801685C
 _08016898:
 	.4byte gUnknown_030012E8
 _0801689C:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _080168A0:
 	.4byte 0x03000083
 _080168A4:
@@ -31948,7 +31948,7 @@ _080168C4:
 	ldrb r0, [r1]
 	sub r0, r0, #1
 	strb r0, [r1]
-	ldr r1, _0801692C  @ =0x03000082
+	ldr r1, _0801692C  @ =gLevelSelectMode
 	mov r0, #1
 	strb r0, [r1]
 	str r3, [sp]
@@ -31966,7 +31966,7 @@ _080168EC:
 	and r1, r1, r2
 	cmp r1, #0
 	beq _08016938
-	ldr r1, _0801692C  @ =0x03000082
+	ldr r1, _0801692C  @ =gLevelSelectMode
 	mov r0, #4
 	strb r0, [r1]
 	mov r1, #11
@@ -31993,7 +31993,7 @@ _0801691C:
 _08016928:
 	.4byte 0x03000081
 _0801692C:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016930:
 	.4byte gUnknown_030012E8
 _08016934:
@@ -32034,7 +32034,7 @@ sub_08016964: @ 0x08016964
 	lsr r4, r0, #16
 	cmp r4, #0
 	beq _080169A0
-	ldr r1, _0801699C  @ =0x03000082
+	ldr r1, _0801699C  @ =gLevelSelectMode
 	mov r0, #1
 	strb r0, [r1]
 	mov r1, #0
@@ -32053,7 +32053,7 @@ sub_08016964: @ 0x08016964
 _08016998:
 	.4byte gUnknown_030012E8
 _0801699C:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _080169A0:
 	mov r2, #9
 	and r2, r2, r1
@@ -32133,7 +32133,7 @@ sub_08016A24: @ 0x08016A24
 	lsr r1, r0, #16
 	cmp r1, #0
 	beq _08016A6C
-	ldr r1, _08016A64  @ =0x03000082
+	ldr r1, _08016A64  @ =gLevelSelectMode
 	mov r0, #5
 	strb r0, [r1]
 	mov r1, #14
@@ -32156,7 +32156,7 @@ sub_08016A24: @ 0x08016A24
 _08016A60:
 	.4byte gUnknown_030012E8
 _08016A64:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016A68:
 	.4byte 0x03000083
 _08016A6C:
@@ -32184,7 +32184,7 @@ _08016A8C:
 	ldrb r0, [r1]
 	sub r0, r0, #1
 	strb r0, [r1]
-	ldr r1, _08016AF4  @ =0x03000082
+	ldr r1, _08016AF4  @ =gLevelSelectMode
 	mov r0, #3
 	strb r0, [r1]
 	str r3, [sp]
@@ -32202,7 +32202,7 @@ _08016AB4:
 	and r1, r1, r2
 	cmp r1, #0
 	beq _08016B00
-	ldr r1, _08016AF4  @ =0x03000082
+	ldr r1, _08016AF4  @ =gLevelSelectMode
 	mov r0, #5
 	strb r0, [r1]
 	mov r1, #14
@@ -32229,7 +32229,7 @@ _08016AE4:
 _08016AF0:
 	.4byte 0x03000081
 _08016AF4:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016AF8:
 	.4byte gUnknown_030012E8
 _08016AFC:
@@ -32270,7 +32270,7 @@ sub_08016B2C: @ 0x08016B2C
 	lsr r4, r0, #16
 	cmp r4, #0
 	beq _08016B68
-	ldr r1, _08016B64  @ =0x03000082
+	ldr r1, _08016B64  @ =gLevelSelectMode
 	mov r0, #3
 	strb r0, [r1]
 	mov r1, #0
@@ -32289,7 +32289,7 @@ sub_08016B2C: @ 0x08016B2C
 _08016B60:
 	.4byte gUnknown_030012E8
 _08016B64:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016B68:
 	mov r2, #9
 	and r2, r2, r1
@@ -32434,7 +32434,7 @@ _08016C94:
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08016CBC
-	ldr r1, _08016CB4  @ =0x03000082
+	ldr r1, _08016CB4  @ =gLevelSelectMode
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	cmp r0, #1
@@ -32446,7 +32446,7 @@ _08016CAC:
 	mov r0, #0
 	b _08016F90
 _08016CB4:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016CB8:
 	.4byte 0x03000083
 _08016CBC:
@@ -32511,7 +32511,7 @@ _08016D24:
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08016D4C
-	ldr r1, _08016D44  @ =0x03000082
+	ldr r1, _08016D44  @ =gLevelSelectMode
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	cmp r0, #3
@@ -32523,7 +32523,7 @@ _08016D3C:
 	mov r0, #0
 	b _08016F90
 _08016D44:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016D48:
 	.4byte 0x03000083
 _08016D4C:
@@ -32593,7 +32593,7 @@ _08016DB8:
 	bne _08016DC6
 	b _0801706A
 _08016DC6:
-	ldr r1, _08016DD4  @ =0x03000082
+	ldr r1, _08016DD4  @ =gLevelSelectMode
 	mov r0, #1
 	strb r0, [r1]
 	ldr r1, _08016DD8  @ =0x03000083
@@ -32602,7 +32602,7 @@ _08016DC6:
 	.byte 0x00
 	.byte 0x00
 _08016DD4:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016DD8:
 	.4byte 0x03000083
 _08016DDC:
@@ -32640,7 +32640,7 @@ _08016E0C:
 	bne _08016E1A
 	b _0801706A
 _08016E1A:
-	ldr r1, _08016E28  @ =0x03000082
+	ldr r1, _08016E28  @ =gLevelSelectMode
 	mov r0, #3
 	strb r0, [r1]
 	ldr r1, _08016E2C  @ =0x03000083
@@ -32649,7 +32649,7 @@ _08016E1A:
 	.byte 0x00
 	.byte 0x00
 _08016E28:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016E2C:
 	.4byte 0x03000083
 _08016E30:
@@ -32675,7 +32675,7 @@ _08016E50:
 	str r5, [sp, #4]
 	str r5, [sp, #8]
 	ldr r1, _08016EB4  @ =gUnknown_08079534
-	ldr r4, _08016EB8  @ =0x03000BD4
+	ldr r4, _08016EB8  @ =gLevelSelectWorld
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	sub r0, r0, #1
@@ -32719,7 +32719,7 @@ _08016EB0:
 _08016EB4:
 	.4byte gUnknown_08079534
 _08016EB8:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08016EBC:
 	.4byte gUnknown_08079504
 _08016EC0:
@@ -32742,7 +32742,7 @@ _08016EDA:
 	strb r0, [r1]
 	ldr r0, _08016EF4  @ =0x03000083
 	strb r2, [r0]
-	ldr r1, _08016EF8  @ =0x03000082
+	ldr r1, _08016EF8  @ =gLevelSelectMode
 	mov r0, #3
 	b _08016F90
 	.byte 0x00
@@ -32754,7 +32754,7 @@ _08016EF0:
 _08016EF4:
 	.4byte 0x03000083
 _08016EF8:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016EFC:
 	bl sub_08029F7C
 	lsl r0, r0, #24
@@ -32826,7 +32826,7 @@ _08016F7C:
 	strb r1, [r0]
 	ldr r0, _08016FA8  @ =0x03000083
 	strb r1, [r0]
-	ldr r1, _08016FAC  @ =0x03000082
+	ldr r1, _08016FAC  @ =gLevelSelectMode
 	mov r0, #1
 _08016F90:
 	strb r0, [r1]
@@ -32844,7 +32844,7 @@ _08016FA4:
 _08016FA8:
 	.4byte 0x03000083
 _08016FAC:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08016FB0:
 	ldr r0, _08016FCC  @ =gUnknown_03000B80
 	ldrb r0, [r0]
@@ -32896,7 +32896,7 @@ _08017000:
 	strh r2, [r1, #4]
 	strh r2, [r0, #12]
 _0801700A:
-	ldr r0, _08017028  @ =0x03000082
+	ldr r0, _08017028  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -32912,7 +32912,7 @@ _08017020:
 _08017024:
 	.4byte 0x03000094
 _08017028:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801702C:
 	.4byte _08017030
 _08017030:
@@ -33035,14 +33035,14 @@ sub_0801711C: @ 0x0801711C
 	ldr r2, _08017170  @ =0x01000010
 	mov r0, sp
 	bl CpuSet
-	ldr r0, _08017174  @ =0x03000082
+	ldr r0, _08017174  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	cmp r0, #1
 	bhi _0801717C
 	mov r3, #0
 	add r6, r4, #0
 _0801713E:
-	ldr r0, _08017178  @ =0x03000BD4
+	ldr r0, _08017178  @ =gLevelSelectWorld
 	ldrb r1, [r0]
 	lsl r2, r3, #24
 	lsr r2, r2, #24
@@ -33069,9 +33069,9 @@ _0801716C:
 _08017170:
 	.4byte 0x01000010
 _08017174:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08017178:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801717C:
 	sub r0, r0, #2
 	lsl r0, r0, #24
@@ -33081,7 +33081,7 @@ _0801717C:
 	mov r3, #0
 	add r6, r4, #0
 _0801718A:
-	ldr r0, _080171C4  @ =0x03000BD4
+	ldr r0, _080171C4  @ =gLevelSelectWorld
 	ldrb r1, [r0]
 	sub r1, r1, #1
 	lsl r1, r1, #24
@@ -33111,7 +33111,7 @@ _080171BC:
 	pop {r0}
 	bx r0
 _080171C4:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 	THUMB_FUNC_END sub_0801711C
 
 	THUMB_FUNC_START sub_080171C8
@@ -33144,7 +33144,7 @@ _080171F4:
 	beq _080171FE
 	b _080174DA
 _080171FE:
-	ldr r0, _08017248  @ =0x03000082
+	ldr r0, _08017248  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -33183,7 +33183,7 @@ _08017240:
 _08017244:
 	.4byte gUnknown_03000C28
 _08017248:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801724C:
 	.4byte gUnknown_085C7A78
 _08017250:
@@ -33703,7 +33703,7 @@ _0801762C:
 	beq _08017636
 	b _08017922
 _08017636:
-	ldr r0, _0801768C  @ =0x03000082
+	ldr r0, _0801768C  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -33750,7 +33750,7 @@ _08017684:
 _08017688:
 	.4byte gUnknown_03000C28
 _0801768C:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08017690:
 	.4byte gUnknown_085C7A78
 _08017694:
@@ -35232,20 +35232,20 @@ _080181B8:
 sub_080181BC: @ 0x080181BC
 	push {lr}
 	sub sp, sp, #4
-	ldr r0, _08018210  @ =0x03000082
+	ldr r0, _08018210  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
 	cmp r0, #2
 	bne _08018224
-	ldr r0, _08018214  @ =0x03000BD4
+	ldr r0, _08018214  @ =gLevelSelectWorld
 	ldrb r0, [r0]
 	sub r0, r0, #1
 	lsl r0, r0, #24
 	lsr r2, r0, #24
 	cmp r2, #5
 	bhi _08018264
-	ldr r0, _08018218  @ =0x03000BD8
+	ldr r0, _08018218  @ =gLevelSelectLevel
 	ldrb r1, [r0]
 	add r0, r2, #0
 	mov r2, #1
@@ -35272,11 +35272,11 @@ sub_080181BC: @ 0x080181BC
 	.byte 0x00
 	.byte 0x00
 _08018210:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08018214:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08018218:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801821C:
 	.4byte 0x03000080
 _08018220:
@@ -35284,13 +35284,13 @@ _08018220:
 _08018224:
 	cmp r0, #0
 	bne _08018264
-	ldr r1, _0801826C  @ =0x03000BD4
+	ldr r1, _0801826C  @ =gLevelSelectWorld
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	cmp r0, #5
 	bgt _08018264
 	ldrb r0, [r1]
-	ldr r1, _08018270  @ =0x03000BD8
+	ldr r1, _08018270  @ =gLevelSelectLevel
 	ldrb r1, [r1]
 	mov r2, #0
 	bl sub_0801095C
@@ -35319,9 +35319,9 @@ _08018264:
 	.byte 0x00
 	.byte 0x00
 _0801826C:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _08018270:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _08018274:
 	.4byte 0x03000080
 _08018278:
@@ -37781,7 +37781,7 @@ sub_080194E4: @ 0x080194E4
 	lsl r2, r2, #24
 	cmp r0, r2
 	bne _0801950A
-	ldr r0, _08019538  @ =0x03000082
+	ldr r0, _08019538  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -37816,7 +37816,7 @@ _08019526:
 	.byte 0x00
 	.byte 0x00
 _08019538:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801953C:
 	.4byte gUnknown_08079354
 _08019540:
@@ -38056,7 +38056,7 @@ sub_080196CC: @ 0x080196CC
 	lsl r2, r2, #24
 	cmp r0, r2
 	bne _08019700
-	ldr r0, _08019768  @ =0x03000082
+	ldr r0, _08019768  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -38118,7 +38118,7 @@ _08019714:
 	.byte 0x00
 	.byte 0x00
 _08019768:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801976C:
 	.4byte gUnknown_0807930C
 _08019770:
@@ -38618,7 +38618,7 @@ _08019B24:
 	asr r7, r2, #24
 	cmp r2, r3
 	bne _08019B48
-	ldr r0, _08019B80  @ =0x03000082
+	ldr r0, _08019B80  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -38654,7 +38654,7 @@ _08019B78:
 _08019B7C:
 	.4byte 0x0300007C
 _08019B80:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08019B84:
 	.4byte gUnknown_08079354
 _08019B88:
@@ -38696,7 +38696,7 @@ _08019BBC:
 	asr r3, r2, #24
 	cmp r2, r8
 	bne _08019BE0
-	ldr r0, _08019C1C  @ =0x03000082
+	ldr r0, _08019C1C  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -38735,7 +38735,7 @@ _08019C14:
 _08019C18:
 	.4byte 0x0300007C
 _08019C1C:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08019C20:
 	.4byte gUnknown_08079354
 _08019C24:
@@ -38783,7 +38783,7 @@ _08019C64:
 	mov r4, #0
 	cmp r2, r8
 	bne _08019C88
-	ldr r0, _08019CC4  @ =0x03000082
+	ldr r0, _08019CC4  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -38822,7 +38822,7 @@ _08019CBC:
 _08019CC0:
 	.4byte 0x0300007C
 _08019CC4:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08019CC8:
 	.4byte gUnknown_08079354
 _08019CCC:
@@ -38883,7 +38883,7 @@ sub_08019D0C: @ 0x08019D0C
 	lsl r2, r2, #24
 	cmp r0, r2
 	bne _08019D42
-	ldr r0, _08019D70  @ =0x03000082
+	ldr r0, _08019D70  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -38916,7 +38916,7 @@ _08019D42:
 	.byte 0x00
 	.byte 0x00
 _08019D70:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _08019D74:
 	.4byte gUnknown_0807933C
 _08019D78:
@@ -39312,7 +39312,7 @@ _0801A042:
 	ldrb r0, [r4]
 	cmp r0, #0
 	beq _0801A12C
-	ldr r0, _0801A0A4  @ =0x03000082
+	ldr r0, _0801A0A4  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -39339,7 +39339,7 @@ _0801A09C:
 _0801A0A0:
 	.4byte 0x0300007C
 _0801A0A4:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801A0A8:
 	.4byte gUnknown_08078FF4
 _0801A0AC:
@@ -39413,7 +39413,7 @@ _0801A128:
 _0801A12C:
 	cmp r8, r6
 	bne _0801A17C
-	ldr r0, _0801A158  @ =0x03000082
+	ldr r0, _0801A158  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -39434,7 +39434,7 @@ _0801A12C:
 	.byte 0x00
 	.byte 0x00
 _0801A158:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801A15C:
 	.4byte gUnknown_0807915C
 _0801A160:
@@ -39741,7 +39741,7 @@ _0801A380:
 	ldrb r0, [r4]
 	cmp r0, #0
 	beq _0801A46C
-	ldr r0, _0801A3E0  @ =0x03000082
+	ldr r0, _0801A3E0  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -39766,7 +39766,7 @@ _0801A3D8:
 _0801A3DC:
 	.4byte 0x0300007C
 _0801A3E0:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801A3E4:
 	.4byte gUnknown_080790B4
 _0801A3E8:
@@ -39842,7 +39842,7 @@ _0801A468:
 _0801A46C:
 	cmp r8, r6
 	bne _0801A4BC
-	ldr r0, _0801A498  @ =0x03000082
+	ldr r0, _0801A498  @ =gLevelSelectMode
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -39863,7 +39863,7 @@ _0801A46C:
 	.byte 0x00
 	.byte 0x00
 _0801A498:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801A49C:
 	.4byte gUnknown_0807921C
 _0801A4A0:
@@ -40749,7 +40749,7 @@ sub_0801A7D8: @ 0x0801A7D8
 	ldrh r2, [r3]
 	add r0, r0, r2
 	strh r0, [r3]
-	ldr r0, _0801AC48  @ =0x03000082
+	ldr r0, _0801AC48  @ =gLevelSelectMode
 	ldrb r1, [r0]
 	sub r0, r1, #2
 	lsl r0, r0, #24
@@ -40868,7 +40868,7 @@ _0801AC40:
 _0801AC44:
 	.4byte gUnknown_08079444
 _0801AC48:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801AC4C:
 	.4byte 0x03000081
 _0801AC50:
@@ -41094,7 +41094,7 @@ level_select_loop: @ 0x0801ADBC
 	cmp r0, #0
 	bne _0801AE30
 	ldr r1, _0801AE28  @ =0x03000080
-	ldr r0, _0801AE2C  @ =0x03000BD8
+	ldr r0, _0801AE2C  @ =gLevelSelectLevel
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -41121,17 +41121,17 @@ _0801AE24:
 _0801AE28:
 	.4byte 0x03000080
 _0801AE2C:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801AE30:
 	ldr r0, _0801AE80  @ =0x03000080
-	ldr r1, _0801AE84  @ =0x03000BD8
+	ldr r1, _0801AE84  @ =gLevelSelectLevel
 	ldrb r1, [r1]
 	strb r1, [r0]
 _0801AE38:
 	bl sub_0801A7D8
 	bl sub_08017FB8
 	bl sub_080180BC
-	ldr r0, _0801AE88  @ =0x03000082
+	ldr r0, _0801AE88  @ =gLevelSelectMode
 	ldrb r1, [r0]
 	sub r0, r1, #2
 	lsl r0, r0, #24
@@ -41144,7 +41144,7 @@ _0801AE56:
 	ldr r4, _0801AE80  @ =0x03000080
 	mov r0, #0
 	ldrsb r0, [r4, r0]
-	ldr r1, _0801AE8C  @ =0x03000BD4
+	ldr r1, _0801AE8C  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	sub r1, r1, #1
 	lsl r1, r1, #24
@@ -41164,18 +41164,18 @@ _0801AE56:
 _0801AE80:
 	.4byte 0x03000080
 _0801AE84:
-	.4byte 0x03000BD8
+	.4byte gLevelSelectLevel
 _0801AE88:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801AE8C:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801AE90:
 	.4byte 0x03000081
 _0801AE94:
 	ldr r4, _0801AEE0  @ =0x03000080
 	mov r0, #0
 	ldrsb r0, [r4, r0]
-	ldr r1, _0801AEE4  @ =0x03000BD4
+	ldr r1, _0801AEE4  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -41188,12 +41188,12 @@ _0801AE94:
 	asr r1, r1, #24
 	bl sub_080171C8
 _0801AEB6:
-	ldr r0, _0801AEEC  @ =0x03000082
+	ldr r0, _0801AEEC  @ =gLevelSelectMode
 	ldrb r2, [r0]
 	add r1, r0, #0
 	cmp r2, #1
 	bhi _0801AEF0
-	ldr r1, _0801AEE4  @ =0x03000BD4
+	ldr r1, _0801AEE4  @ =gLevelSelectWorld
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	cmp r0, #6
@@ -41212,18 +41212,18 @@ _0801AEB6:
 _0801AEE0:
 	.4byte 0x03000080
 _0801AEE4:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801AEE8:
 	.4byte 0x03000081
 _0801AEEC:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801AEF0:
 	sub r0, r2, #2
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #1
 	bhi _0801AF28
-	ldr r0, _0801AF90  @ =0x03000BD4
+	ldr r0, _0801AF90  @ =gLevelSelectWorld
 	ldrb r1, [r0]
 	ldrb r0, [r0]
 	lsl r0, r0, #24
@@ -41239,7 +41239,7 @@ _0801AEF0:
 	asr r1, r1, #24
 	bl sub_0801A2B8
 _0801AF1A:
-	ldr r1, _0801AF98  @ =0x03000082
+	ldr r1, _0801AF98  @ =gLevelSelectMode
 	ldrb r0, [r1]
 	sub r0, r0, #2
 	lsl r0, r0, #24
@@ -41258,7 +41258,7 @@ _0801AF32:
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
-	ldr r1, _0801AF90  @ =0x03000BD4
+	ldr r1, _0801AF90  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -41299,11 +41299,11 @@ _0801AF58:
 	.byte 0x00
 	.byte 0x00
 _0801AF90:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801AF94:
 	.4byte 0x03000080
 _0801AF98:
-	.4byte 0x03000082
+	.4byte gLevelSelectMode
 _0801AF9C:
 	.4byte 0x03000081
 _0801AFA0:
@@ -41382,7 +41382,7 @@ _0801B014:
 	ldr r0, _0801B060  @ =gUnknown_080794BC
 	bl sub_08018A3C
 _0801B038:
-	ldr r0, _0801B064  @ =0x03000BD4
+	ldr r0, _0801B064  @ =gLevelSelectWorld
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -41405,14 +41405,14 @@ _0801B05C:
 _0801B060:
 	.4byte gUnknown_080794BC
 _0801B064:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801B068:
 	bl sub_080179F8
 	ldr r0, _0801B0F8  @ =0x03000080
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
-	ldr r1, _0801B0FC  @ =0x03000BD4
+	ldr r1, _0801B0FC  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -41477,7 +41477,7 @@ _0801B0D8:
 _0801B0F8:
 	.4byte 0x03000080
 _0801B0FC:
-	.4byte 0x03000BD4
+	.4byte gLevelSelectWorld
 _0801B100:
 	.4byte 0x03000081
 _0801B104:
