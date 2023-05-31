@@ -213,7 +213,7 @@ extern s8 gUnknown_03000B80;
 extern struct UnknownStruct4 gUnknown_03000B90;
 extern s8 gLevelEWorldFlag;
 extern u32 gUnknown_03000BB8;
-extern s8 gUnknown_03000BBC;
+extern s8 gLivesCount;
 extern u8 gUnknown_03000BD0;
 extern u32 gUnknown_03000BE0;
 extern u16 gUnknown_03000BE4;

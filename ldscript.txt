@@ -66,6 +66,8 @@ SECTIONS
 		. = 0x34;		gUnknown_03000034 = .;
 		. = 0x38;		gUnknown_03000038 = .;
 		. = 0x3C;		gUnknown_0300003C = .;
+		. = 0x80;		gLevelSelectLevelCursor = .;
+		. = 0x81;		gLevelSelectWorldCursor = .;
 		. = 0x82;		gLevelSelectMode = .;
 		. = 0xA4;		gUnknown_030000A4 = .;
 		. = 0xA8;		gPressStartFadeDir = .;
@@ -73,6 +75,7 @@ SECTIONS
 		. = 0xAA;		gPressStartOpacity = .;
 		. = 0xAC;		gUnknown_030000AC = .;
 		. = 0xB0;		gUnknown_030000B0 = .;
+		. = 0x100;		gPreviousMovieOption = .;
 		. = 0x29C;		gUnknown_0300029C = .;
 		. = 0x2A0;		gUnknown_030002A0 = .;
 		. = 0x2AA;		gUnknown_030002AA = .;
@@ -117,7 +120,7 @@ SECTIONS
 		. = 0xB90;		gUnknown_03000B90 = .;
 		. = 0xBB4;		gLevelEWorldFlag = .;
 		. = 0xBB8;		gUnknown_03000BB8 = .;
-		. = 0xBBC;		gUnknown_03000BBC = .;
+		. = 0xBBC;		gLivesCount = .;
 		. = 0xBD0;		gUnknown_03000BD0 = .;
 		. = 0xBD4;		gLevelSelectWorld = .;
 		. = 0xBD8;		gLevelSelectLevel = .;

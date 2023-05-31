@@ -1798,7 +1798,7 @@ _080355EC:
 	mov r1, #0
 	bl sub_0800F6EC
 	bl sub_08014A34
-	ldr r1, _0803565C  @ =gUnknown_03000BBC
+	ldr r1, _0803565C  @ =gLivesCount
 	strb r0, [r1]
 	ldr r0, _08035660  @ =gUnknown_03000B90
 	ldr r0, [r0]
@@ -1817,7 +1817,7 @@ _08035654:
 _08035658:
 	.4byte gAfterTutorialLevel
 _0803565C:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08035660:
 	.4byte gUnknown_03000B90
 _08035664:
@@ -2109,7 +2109,7 @@ _08035838:
 	mov r1, #0
 	bl sub_0800F6EC
 	bl sub_08014A34
-	ldr r1, _080358AC  @ =gUnknown_03000BBC
+	ldr r1, _080358AC  @ =gLivesCount
 	strb r0, [r1]
 	ldr r0, _080358B0  @ =gUnknown_03000B90
 	ldr r0, [r0]
@@ -2126,7 +2126,7 @@ _080358A4:
 _080358A8:
 	.4byte gAfterTutorialLevel
 _080358AC:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _080358B0:
 	.4byte gUnknown_03000B90
 _080358B4:
@@ -9632,7 +9632,7 @@ _08039040:
 	add r1, r6, #0
 	mov r2, #155
 	mov r3, r9
-	bl sub_08067AB8
+	bl falling_brick_spawn_2
 	b _08039218
 	.byte 0x00
 	.byte 0x00
@@ -9645,7 +9645,7 @@ _08039068:
 	add r1, r6, #0
 	mov r2, #155
 	mov r3, r9
-	bl sub_080584BC
+	bl falling_brick_spawn
 	b _08039218
 _0803907A:
 	cmp r7, #156
@@ -9662,7 +9662,7 @@ _0803907A:
 	add r1, r6, #0
 	mov r2, #156
 	mov r3, r9
-	bl sub_080677CC
+	bl falling_dumbell_spawn_2
 	b _08039218
 _0803909C:
 	.4byte gUnknown_03000B80
@@ -9673,7 +9673,7 @@ _080390A0:
 	add r1, r6, #0
 	mov r2, #156
 	mov r3, r9
-	bl sub_08058610
+	bl falling_dumbell_spawn
 	b _08039218
 _080390B2:
 	cmp r7, #201
@@ -9684,7 +9684,7 @@ _080390B2:
 	add r1, r6, #0
 	mov r2, #201
 	mov r3, r9
-	bl sub_08067614
+	bl falling_barrel_spawn
 	b _08039218
 _080390C8:
 	cmp r7, #157
@@ -9701,7 +9701,7 @@ _080390C8:
 	add r1, r6, #0
 	mov r2, #157
 	mov r3, r9
-	bl sub_08067938
+	bl falling_barrel_spawn_2
 	b _08039218
 	.byte 0x00
 	.byte 0x00
@@ -18734,37 +18734,37 @@ _0803D41C:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl sub_08058D30
+	bl world_1_boss_player_object
 	b _0803D48E
 _0803D428:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl sub_0805B108
+	bl world_2_boss_player_object
 	b _0803D48E
 _0803D434:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl sub_0805DB44
+	bl world_3_boss_player_object
 	b _0803D48E
 _0803D440:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl sub_080609B0
+	bl world_4_boss_player_object
 	b _0803D48E
 _0803D44C:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl sub_080620DC
+	bl world_5_boss_player_object
 	b _0803D48E
 _0803D458:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl sub_0806348C
+	bl world_6_boss_player_object
 	b _0803D48E
 _0803D464:
 	ldr r0, _0803D47C  @ =gUnknown_03000B80
@@ -79115,8 +79115,8 @@ _080584B8:
 	.4byte 0xFFFFFF00
 	THUMB_FUNC_END sub_080583F4
 
-	THUMB_FUNC_START sub_080584BC
-sub_080584BC: @ 0x080584BC
+	THUMB_FUNC_START falling_brick_spawn
+falling_brick_spawn: @ 0x080584BC
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -79287,10 +79287,10 @@ _08058608:
 	.4byte 0x030003CA
 _0805860C:
 	.4byte 0x030003F8
-	THUMB_FUNC_END sub_080584BC
+	THUMB_FUNC_END falling_brick_spawn
 
-	THUMB_FUNC_START sub_08058610
-sub_08058610: @ 0x08058610
+	THUMB_FUNC_START falling_dumbell_spawn
+falling_dumbell_spawn: @ 0x08058610
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -79461,7 +79461,7 @@ _0805875C:
 	.4byte 0x030003CA
 _08058760:
 	.4byte 0x030003F8
-	THUMB_FUNC_END sub_08058610
+	THUMB_FUNC_END falling_dumbell_spawn
 
 	THUMB_FUNC_START sub_08058764
 sub_08058764: @ 0x08058764
@@ -80250,8 +80250,8 @@ _08058D2C:
 	.4byte 0x03001978
 	THUMB_FUNC_END sub_08058998
 
-	THUMB_FUNC_START sub_08058D30
-sub_08058D30: @ 0x08058D30
+	THUMB_FUNC_START world_1_boss_player_object
+world_1_boss_player_object: @ 0x08058D30
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -80741,7 +80741,7 @@ _080590E4:
 	.4byte 0x030019AC
 _080590E8:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END sub_08058D30
+	THUMB_FUNC_END world_1_boss_player_object
 
 	THUMB_FUNC_START sub_080590EC
 sub_080590EC: @ 0x080590EC
@@ -81157,8 +81157,8 @@ sub_080593A0: @ 0x080593A0
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_080593B4
-sub_080593B4: @ 0x080593B4
+	THUMB_FUNC_START falling_objects_hit
+falling_objects_hit: @ 0x080593B4
 	push {lr}
 	add r2, r0, #0
 	add r0, r0, #84
@@ -81190,7 +81190,7 @@ _080593E6:
 	.byte 0x00
 _080593EC:
 	.4byte 0x030012E4
-	THUMB_FUNC_END sub_080593B4
+	THUMB_FUNC_END falling_objects_hit
 
 	THUMB_FUNC_START sub_080593F0
 sub_080593F0: @ 0x080593F0
@@ -85138,8 +85138,8 @@ _0805B102:
 	bx r1
 	THUMB_FUNC_END sub_0805B09C
 
-	THUMB_FUNC_START sub_0805B108
-sub_0805B108: @ 0x0805B108
+	THUMB_FUNC_START world_2_boss_player_object
+world_2_boss_player_object: @ 0x0805B108
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -85326,7 +85326,7 @@ _0805B26C:
 	.4byte 0x030019AC
 _0805B270:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END sub_0805B108
+	THUMB_FUNC_END world_2_boss_player_object
 
 	THUMB_FUNC_START sub_0805B274
 sub_0805B274: @ 0x0805B274
@@ -85424,8 +85424,8 @@ sub_0805B304: @ 0x0805B304
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0805B308
-sub_0805B308: @ 0x0805B308
+	THUMB_FUNC_START world_2_dk_spawn
+world_2_dk_spawn: @ 0x0805B308
 	push {r4,lr}
 	sub sp, sp, #12
 	ldr r1, _0805B354  @ =0x03001940
@@ -85475,7 +85475,7 @@ _0805B364:
 	.4byte 0x0300042F
 _0805B368:
 	.4byte gUnknown_08660EA8
-	THUMB_FUNC_END sub_0805B308
+	THUMB_FUNC_END world_2_dk_spawn
 
 	THUMB_FUNC_START sub_0805B36C
 sub_0805B36C: @ 0x0805B36C
@@ -90860,8 +90860,8 @@ _0805DB3C:
 	bx r0
 	THUMB_FUNC_END sub_0805DAC8
 
-	THUMB_FUNC_START sub_0805DB44
-sub_0805DB44: @ 0x0805DB44
+	THUMB_FUNC_START world_3_boss_player_object
+world_3_boss_player_object: @ 0x0805DB44
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -91059,7 +91059,7 @@ _0805DCBC:
 	.4byte 0x030019AC
 _0805DCC0:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END sub_0805DB44
+	THUMB_FUNC_END world_3_boss_player_object
 
 	THUMB_FUNC_START sub_0805DCC4
 sub_0805DCC4: @ 0x0805DCC4
@@ -97161,8 +97161,8 @@ _08060982:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_080609B0
-sub_080609B0: @ 0x080609B0
+	THUMB_FUNC_START world_4_boss_player_object
+world_4_boss_player_object: @ 0x080609B0
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -97360,7 +97360,7 @@ _08060B28:
 	.4byte 0x030019AC
 _08060B2C:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END sub_080609B0
+	THUMB_FUNC_END world_4_boss_player_object
 
 	THUMB_FUNC_START sub_08060B30
 sub_08060B30: @ 0x08060B30
@@ -100304,8 +100304,8 @@ _080620D8:
 	.4byte 0x03001B54
 	THUMB_FUNC_END sub_08061F24
 
-	THUMB_FUNC_START sub_080620DC
-sub_080620DC: @ 0x080620DC
+	THUMB_FUNC_START world_5_boss_player_object
+world_5_boss_player_object: @ 0x080620DC
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -100503,7 +100503,7 @@ _08062254:
 	.4byte 0x030019AC
 _08062258:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END sub_080620DC
+	THUMB_FUNC_END world_5_boss_player_object
 
 	THUMB_FUNC_START sub_0806225C
 sub_0806225C: @ 0x0806225C
@@ -102963,8 +102963,8 @@ _08063488:
 	.4byte 0x03001B54
 	THUMB_FUNC_END sub_080632A0
 
-	THUMB_FUNC_START sub_0806348C
-sub_0806348C: @ 0x0806348C
+	THUMB_FUNC_START world_6_boss_player_object
+world_6_boss_player_object: @ 0x0806348C
 	push {r4-r7,lr}
 	add r5, r0, #0
 	add r6, r1, #0
@@ -103162,7 +103162,7 @@ _08063604:
 	.4byte 0x030019AC
 _08063608:
 	.4byte gCameraVerticalOffset
-	THUMB_FUNC_END sub_0806348C
+	THUMB_FUNC_END world_6_boss_player_object
 
 	THUMB_FUNC_START sub_0806360C
 sub_0806360C: @ 0x0806360C
@@ -111824,8 +111824,8 @@ _08067610:
 	.4byte 0x000001AD
 	THUMB_FUNC_END sub_08067254
 
-	THUMB_FUNC_START sub_08067614
-sub_08067614: @ 0x08067614
+	THUMB_FUNC_START falling_barrel_spawn
+falling_barrel_spawn: @ 0x08067614
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -112049,10 +112049,10 @@ _080677C4:
 	.4byte 0xFFFFFE00
 _080677C8:
 	.4byte 0x00000113
-	THUMB_FUNC_END sub_08067614
+	THUMB_FUNC_END falling_barrel_spawn
 
-	THUMB_FUNC_START sub_080677CC
-sub_080677CC: @ 0x080677CC
+	THUMB_FUNC_START falling_dumbell_spawn_2
+falling_dumbell_spawn_2: @ 0x080677CC
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -112234,10 +112234,10 @@ _08067930:
 	.4byte 0xFFFFFE00
 _08067934:
 	.4byte 0x00000113
-	THUMB_FUNC_END sub_080677CC
+	THUMB_FUNC_END falling_dumbell_spawn_2
 
-	THUMB_FUNC_START sub_08067938
-sub_08067938: @ 0x08067938
+	THUMB_FUNC_START falling_barrel_spawn_2
+falling_barrel_spawn_2: @ 0x08067938
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -112430,10 +112430,10 @@ _08067AB0:
 	.4byte 0xFFFFFE00
 _08067AB4:
 	.4byte 0x00000113
-	THUMB_FUNC_END sub_08067938
+	THUMB_FUNC_END falling_barrel_spawn_2
 
-	THUMB_FUNC_START sub_08067AB8
-sub_08067AB8: @ 0x08067AB8
+	THUMB_FUNC_START falling_brick_spawn_2
+falling_brick_spawn_2: @ 0x08067AB8
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -112622,7 +112622,7 @@ _08067C28:
 	.4byte 0xFFFFFE00
 _08067C2C:
 	.4byte 0x00000113
-	THUMB_FUNC_END sub_08067AB8
+	THUMB_FUNC_END falling_brick_spawn_2
 
 	THUMB_FUNC_START sub_08067C30
 sub_08067C30: @ 0x08067C30
@@ -112902,8 +112902,8 @@ _08067E24:
 	.4byte 0x03001940
 	THUMB_FUNC_END sub_08067CB4
 
-	THUMB_FUNC_START sub_08067E28
-sub_08067E28: @ 0x08067E28
+	THUMB_FUNC_START falling_objects_dk_boss_plus
+falling_objects_dk_boss_plus: @ 0x08067E28
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -113336,7 +113336,7 @@ _08068150:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_08067E28
+	THUMB_FUNC_END falling_objects_dk_boss_plus
 
 	THUMB_FUNC_START sub_08068160
 sub_08068160: @ 0x08068160
@@ -122068,8 +122068,8 @@ sub_0806C2F8: @ 0x0806C2F8
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0806C30C
-sub_0806C30C: @ 0x0806C30C
+	THUMB_FUNC_START falling_objects_hit_dk_boss_plus
+falling_objects_hit_dk_boss_plus: @ 0x0806C30C
 	push {r4,r5,lr}
 	sub sp, sp, #8
 	add r4, r0, #0
@@ -122134,7 +122134,7 @@ _0806C384:
 	pop {r4,r5}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0806C30C
+	THUMB_FUNC_END falling_objects_hit_dk_boss_plus
 
 	THUMB_FUNC_START sub_0806C38C
 sub_0806C38C: @ 0x0806C38C

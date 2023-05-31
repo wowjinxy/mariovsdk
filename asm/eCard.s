@@ -837,7 +837,7 @@ _0802E228:
 	mov r0, #27
 	b _0802E420
 _0802E236:
-	ldr r1, _0802E264  @ =gUnknown_03000BBC
+	ldr r1, _0802E264  @ =gLivesCount
 	mov r0, #5
 	strb r0, [r1]
 	mov r4, #0
@@ -859,7 +859,7 @@ _0802E236:
 	add r0, r0, #204
 	b _0802E75E
 _0802E264:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0802E268:
 	.4byte gAfterTutorialLevel
 _0802E26C:
@@ -1335,7 +1335,7 @@ _0802E5CC:
 	ldr r0, _0802E60C  @ =gUnknown_03000B80
 	mov r1, r8
 	strb r1, [r0]
-	ldr r1, _0802E610  @ =gUnknown_03000BBC
+	ldr r1, _0802E610  @ =gLivesCount
 	mov r0, #5
 	strb r0, [r1]
 	mov r0, #12
@@ -1363,7 +1363,7 @@ _0802E608:
 _0802E60C:
 	.4byte gUnknown_03000B80
 _0802E610:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0802E614:
 	mov r0, #2
 	and r0, r0, r2

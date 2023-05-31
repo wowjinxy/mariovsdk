@@ -2990,7 +2990,7 @@ _080030BA:
 	bne _080030F2
 	b _08003228
 _080030F2:
-	ldr r0, _08003118  @ =gUnknown_03000BBC
+	ldr r0, _08003118  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -3010,7 +3010,7 @@ _08003110:
 _08003114:
 	.4byte 0x030009C0
 _08003118:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0800311C:
 	ldr r2, _08003164  @ =gUnknown_03001A30
 	ldrb r0, [r4, #4]
@@ -3268,7 +3268,7 @@ _080032CE:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r0, _08003318  @ =gUnknown_03000BBC
+	ldr r0, _08003318  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -3282,7 +3282,7 @@ _0800330C:
 _08003314:
 	.4byte gUnknown_030009EC
 _08003318:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0800331C:
 	ldr r2, _0800334C  @ =gUnknown_03001A30
 	ldrb r0, [r4, #4]

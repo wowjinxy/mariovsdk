@@ -212,7 +212,7 @@ void sub_08007544(void)
     if ((gUnknown_03001A1C & 0x800) && sub_08072144() != 0)
     {
         gUnknown_030009D8++;
-        if (gUnknown_03000BBC > 1)
+        if (gLivesCount > 1)
         {
             asm(""::"r"(gGeneralTimer));  // Why is this variable read? Is it volatile?
             sub_08014A58(-1);

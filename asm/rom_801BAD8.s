@@ -190,7 +190,7 @@ _0801BC20:
 	mov r0, #1
 	neg r0, r0
 	bl sub_08014A58
-	ldr r0, _0801BC5C  @ =gUnknown_03000BBC
+	ldr r0, _0801BC5C  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -206,7 +206,7 @@ _0801BC20:
 	strb r1, [r0]
 	b _0801BC96
 _0801BC5C:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0801BC60:
 	.4byte 0x03000BEC
 _0801BC64:
@@ -351,7 +351,7 @@ _0801BD5E:
 	mov r0, #1
 	neg r0, r0
 	bl sub_08014A58
-	ldr r0, _0801BD9C  @ =gUnknown_03000BBC
+	ldr r0, _0801BD9C  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -369,7 +369,7 @@ _0801BD5E:
 	.byte 0x00
 	.byte 0x00
 _0801BD9C:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0801BDA0:
 	.4byte 0x03000BEC
 _0801BDA4:
@@ -598,7 +598,7 @@ boss_clear_init_callback: @ 0x0801BF14
 	ldr r0, _0801BFC0  @ =0x030000C5
 	strb r5, [r0]
 	strb r5, [r6]
-	ldr r4, _0801BFC4  @ =gUnknown_03000BBC
+	ldr r4, _0801BFC4  @ =gLivesCount
 	bl sub_08014A34
 	strb r0, [r4]
 	lsl r0, r0, #24
@@ -665,7 +665,7 @@ _0801BFBC:
 _0801BFC0:
 	.4byte 0x030000C5
 _0801BFC4:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0801BFC8:
 	.4byte gLevelEWorldFlag
 _0801BFCC:
@@ -952,7 +952,7 @@ _0801C1EC:
 	THUMB_FUNC_START sub_0801C1F0
 sub_0801C1F0: @ 0x0801C1F0
 	push {r4,r5,lr}
-	ldr r1, _0801C264  @ =gUnknown_03000BBC
+	ldr r1, _0801C264  @ =gLivesCount
 	mov r0, #5
 	strb r0, [r1]
 	mov r0, #5
@@ -1008,7 +1008,7 @@ _0801C25E:
 	pop {r0}
 	bx r0
 _0801C264:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0801C268:
 	.4byte gUnknown_03000B80
 _0801C26C:
@@ -11461,7 +11461,7 @@ _08021176:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _080211CC  @ =gUnknown_03000BBC
+	ldr r0, _080211CC  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -11481,7 +11481,7 @@ _080211C4:
 _080211C8:
 	.4byte 0x030000D8
 _080211CC:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _080211D0:
 	ldrb r0, [r2, #4]
 	str r0, [sp, #12]
@@ -11594,7 +11594,7 @@ _08021280:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08021520  @ =gUnknown_03000BBC
+	ldr r0, _08021520  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -11685,7 +11685,7 @@ _0802131A:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08021520  @ =gUnknown_03000BBC
+	ldr r0, _08021520  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -11769,7 +11769,7 @@ _080213CE:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08021520  @ =gUnknown_03000BBC
+	ldr r0, _08021520  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -11853,7 +11853,7 @@ _0802147A:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08021520  @ =gUnknown_03000BBC
+	ldr r0, _08021520  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -11903,7 +11903,7 @@ _08021518:
 _0802151C:
 	.4byte 0x030000D8
 _08021520:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08021524:
 	.4byte 0x030000DC
 _08021528:
@@ -12424,7 +12424,7 @@ _08021920:
 bonus_stoparrow_main: @ 0x08021924
 	push {r4,r5,lr}
 	sub sp, sp, #4
-	ldr r0, _08021990  @ =gUnknown_03000BBC
+	ldr r0, _08021990  @ =gLivesCount
 	ldrb r4, [r0]
 	bl sub_08029C20
 	bl sub_0800881C
@@ -12473,7 +12473,7 @@ _08021970:
 	pop {r0}
 	bx r0
 _08021990:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08021994:
 	.4byte 0x030000D4
 _08021998:
@@ -23456,7 +23456,7 @@ _08026C36:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08026C88  @ =gUnknown_03000BBC
+	ldr r0, _08026C88  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -23476,7 +23476,7 @@ _08026C80:
 _08026C84:
 	.4byte 0x030000F8
 _08026C88:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08026C8C:
 	mov r0, #12
 	str r0, [sp, #12]
@@ -23585,7 +23585,7 @@ _08026D38:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08026FD4  @ =gUnknown_03000BBC
+	ldr r0, _08026FD4  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -23676,7 +23676,7 @@ _08026DCE:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08026FD4  @ =gUnknown_03000BBC
+	ldr r0, _08026FD4  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -23760,7 +23760,7 @@ _08026E82:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08026FD4  @ =gUnknown_03000BBC
+	ldr r0, _08026FD4  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -23844,7 +23844,7 @@ _08026F2E:
 	str r0, [sp, #4]
 	add r0, sp, #12
 	bl sub_080065F4
-	ldr r0, _08026FD4  @ =gUnknown_03000BBC
+	ldr r0, _08026FD4  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -23894,7 +23894,7 @@ _08026FCC:
 _08026FD0:
 	.4byte 0x030000F8
 _08026FD4:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08026FD8:
 	.4byte 0x03000C10
 _08026FDC:
@@ -25154,7 +25154,7 @@ _080278FC:
 bonus_swapboxes_main: @ 0x08027900
 	push {r4,r5,lr}
 	sub sp, sp, #4
-	ldr r0, _0802797C  @ =gUnknown_03000BBC
+	ldr r0, _0802797C  @ =gLivesCount
 	ldrb r4, [r0]
 	bl sub_08029C20
 	bl sub_080088C4
@@ -25212,7 +25212,7 @@ _08027958:
 	.byte 0x00
 	.byte 0x00
 _0802797C:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08027980:
 	.4byte 0x030000F4
 _08027984:
@@ -27470,7 +27470,7 @@ options_init_callback: @ 0x0802895C
 	add r2, r1, r5
 	mov r0, #2
 	str r0, [r2]
-	ldr r0, _080289EC  @ =0x03000100
+	ldr r0, _080289EC  @ =gPreviousMovieOption
 	ldrh r0, [r0]
 	ldr r2, _080289F0  @ =0x00001134
 	add r1, r1, r2
@@ -27491,11 +27491,11 @@ _080289E4:
 _080289E8:
 	.4byte gPreviousMainState
 _080289EC:
-	.4byte 0x03000100
+	.4byte gPreviousMovieOption
 _080289F0:
 	.4byte 0x00001134
 _080289F4:
-	ldr r0, _08028BAC  @ =0x03000100
+	ldr r0, _08028BAC  @ =gPreviousMovieOption
 	strh r5, [r0]
 _080289F8:
 	ldr r4, _08028BB0  @ =0x030000FC
@@ -27717,7 +27717,7 @@ _08028B7A:
 	pop {r0}
 	bx r0
 _08028BAC:
-	.4byte 0x03000100
+	.4byte gPreviousMovieOption
 _08028BB0:
 	.4byte 0x030000FC
 _08028BB4:
@@ -28467,7 +28467,7 @@ options_menu_play_movie: @ 0x08029128
 	mov r0, #30
 	mov r1, #1
 	bl sub_080070E8
-	ldr r1, _0802918C  @ =0x03000100
+	ldr r1, _0802918C  @ =gPreviousMovieOption
 	ldr r0, [r5]
 	add r0, r0, r4
 	ldrh r0, [r0]
@@ -28495,7 +28495,7 @@ _08029184:
 _08029188:
 	.4byte gUnknown_08079988
 _0802918C:
-	.4byte 0x03000100
+	.4byte gPreviousMovieOption
 	THUMB_FUNC_END options_menu_play_movie
 
 	THUMB_FUNC_START sub_08029190
@@ -29047,7 +29047,7 @@ _08029558:
 	neg r0, r0
 	str r0, [r1]
 	bl sub_0802FCA4
-	ldr r0, _08029600  @ =gUnknown_03000BBC
+	ldr r0, _08029600  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -29085,7 +29085,7 @@ _080295F8:
 _080295FC:
 	.4byte 0x03000108
 _08029600:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08029604:
 	.4byte 0x0300010F
 _08029608:

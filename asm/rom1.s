@@ -265,7 +265,7 @@ _08007D50:
 	ldrsb r1, [r6, r1]
 	cmp r1, #4
 	bne _08007DE0
-	ldr r0, _08007DCC  @ =gUnknown_03000BBC
+	ldr r0, _08007DCC  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -317,7 +317,7 @@ _08007DA6:
 _08007DC8:
 	.4byte gUnknown_03000B80
 _08007DCC:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08007DD0:
 	.4byte gUnknown_03001A30
 _08007DD4:
@@ -329,7 +329,7 @@ _08007DDC:
 _08007DE0:
 	cmp r1, #5
 	bne _08007E64
-	ldr r0, _08007E50  @ =gUnknown_03000BBC
+	ldr r0, _08007E50  @ =gLivesCount
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -379,7 +379,7 @@ _08007E2E:
 	.byte 0x00
 	.byte 0x00
 _08007E50:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08007E54:
 	.4byte gUnknown_03001A30
 _08007E58:
@@ -3940,7 +3940,7 @@ sub_0800991C: @ 0x0800991C
 	ldr r0, [r1]
 	add r2, r2, r0
 	mov r8, r2
-	ldr r0, _08009A38  @ =gUnknown_03000BBC
+	ldr r0, _08009A38  @ =gLivesCount
 	ldrb r0, [r0]
 	mov r9, r0
 	ldr r0, _08009A3C  @ =gGeneralTimer
@@ -4067,7 +4067,7 @@ _08009A30:
 _08009A34:
 	.4byte gUnknown_03000B6C
 _08009A38:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08009A3C:
 	.4byte gGeneralTimer
 _08009A40:
@@ -10814,7 +10814,7 @@ _0800CC68:
 	THUMB_FUNC_START sub_0800CC6C
 sub_0800CC6C: @ 0x0800CC6C
 	push {r4-r6,lr}
-	ldr r0, _0800CCDC  @ =gUnknown_03000BBC
+	ldr r0, _0800CCDC  @ =gLivesCount
 	ldrb r5, [r0]
 	ldr r0, _0800CCE0  @ =gAfterTutorialLevel
 	mov r2, #0
@@ -10870,7 +10870,7 @@ _0800CC94:
 	strb r1, [r3]
 	b _0800CD00
 _0800CCDC:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0800CCE0:
 	.4byte gAfterTutorialLevel
 _0800CCE4:
@@ -15248,7 +15248,7 @@ _0800EE6C:
 	THUMB_FUNC_START sub_0800EE70
 sub_0800EE70: @ 0x0800EE70
 	push {r4,r5,lr}
-	ldr r0, _0800EEB4  @ =gUnknown_03000BBC
+	ldr r0, _0800EEB4  @ =gLivesCount
 	ldrb r5, [r0]
 	ldr r4, _0800EEB8  @ =0x03000A10
 	add r0, r4, #0
@@ -15284,7 +15284,7 @@ _0800EEAC:
 	.byte 0x00
 	.byte 0x00
 _0800EEB4:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _0800EEB8:
 	.4byte 0x03000A10
 _0800EEBC:
@@ -21206,7 +21206,7 @@ _08011872:
 	add r3, r3, r0
 	mov r1, #0
 	ldrsb r1, [r3, r1]
-	ldr r0, _0801191C  @ =gUnknown_03000BBC
+	ldr r0, _0801191C  @ =gLivesCount
 	strb r1, [r0]
 	lsl r2, r2, #24
 	cmp r2, #0
@@ -21236,7 +21236,7 @@ _08011914:
 _08011918:
 	.4byte gUnknown_08078900
 _0801191C:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _08011920:
 	mov r0, #3
 	mov r1, #41
@@ -27808,7 +27808,7 @@ sub_08014A58: @ 0x08014A58
 	asr r0, r0, #24
 	cmp r0, #0
 	bne _08014AA2
-	ldr r2, _08014AB4  @ =gUnknown_03000BBC
+	ldr r2, _08014AB4  @ =gLivesCount
 	ldrb r1, [r2]
 	mov r0, #0
 	ldrsb r0, [r2, r0]
@@ -27836,7 +27836,7 @@ _08014AAC:
 _08014AB0:
 	.4byte gLevelEWorldFlag
 _08014AB4:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 	THUMB_FUNC_END sub_08014A58
 
 	THUMB_FUNC_START sub_08014AB8
@@ -29035,7 +29035,7 @@ _080152C4:
 	strh r2, [r0]
 	ldr r0, _080153D0  @ =gUnknown_03001740
 	strb r6, [r0]
-	ldr r1, _080153D4  @ =gUnknown_03000BBC
+	ldr r1, _080153D4  @ =gLivesCount
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	cmp r0, #0
@@ -29107,10 +29107,10 @@ _080152E4:
 	and r0, r0, r1
 	strb r0, [r4]
 _08015362:
-	ldr r1, _0801543C  @ =0x03000080
+	ldr r1, _0801543C  @ =gLevelSelectLevelCursor
 	ldrb r0, [r4]
 	strb r0, [r1]
-	ldr r7, _08015440  @ =0x03000081
+	ldr r7, _08015440  @ =gLevelSelectWorldCursor
 	strb r3, [r7]
 	ldr r0, _08015444  @ =gUnknown_030012A0
 	mov r1, r8
@@ -29164,7 +29164,7 @@ _080153CC:
 _080153D0:
 	.4byte gUnknown_03001740
 _080153D4:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 _080153D8:
 	.4byte 0x03000085
 _080153DC:
@@ -29216,9 +29216,9 @@ _08015434:
 _08015438:
 	.4byte gUnknown_03000B80
 _0801543C:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08015440:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08015444:
 	.4byte gUnknown_030012A0
 _08015448:
@@ -30028,7 +30028,7 @@ sub_08015A54: @ 0x08015A54
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08015AF8
-	ldr r4, _08015A78  @ =0x03000081
+	ldr r4, _08015A78  @ =gLevelSelectWorldCursor
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	cmp r0, #5
@@ -30038,7 +30038,7 @@ sub_08015A54: @ 0x08015A54
 _08015A74:
 	.4byte gUnknown_030012E8
 _08015A78:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08015A7C:
 	ldr r0, _08015ABC  @ =gUnknown_03000B80
 	ldrb r0, [r0]
@@ -30051,7 +30051,7 @@ _08015A7C:
 	bne _08015A92
 	b _08015C28
 _08015A92:
-	ldr r0, _08015AC0  @ =0x03000080
+	ldr r0, _08015AC0  @ =gLevelSelectLevelCursor
 	ldr r7, _08015AC4  @ =gLevelSelectLevel
 	mov r2, #0
 	strb r2, [r7]
@@ -30075,7 +30075,7 @@ _08015A92:
 _08015ABC:
 	.4byte gUnknown_03000B80
 _08015AC0:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08015AC4:
 	.4byte gLevelSelectLevel
 _08015AC8:
@@ -30118,7 +30118,7 @@ _08015B04:
 	bne _08015B10
 	b _08015C3C
 _08015B10:
-	ldr r5, _08015B58  @ =0x03000081
+	ldr r5, _08015B58  @ =gLevelSelectWorldCursor
 	mov r2, #0
 	ldrsb r2, [r5, r2]
 	cmp r2, #6
@@ -30152,7 +30152,7 @@ _08015B10:
 	.byte 0x00
 	.byte 0x00
 _08015B58:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08015B5C:
 	.4byte gUnknown_03000B80
 _08015B60:
@@ -30171,7 +30171,7 @@ _08015B6C:
 	strb r4, [r5]
 	strb r4, [r0]
 	ldr r1, _08015BAC  @ =gLevelSelectLevel
-	ldr r0, _08015BB0  @ =0x03000080
+	ldr r0, _08015BB0  @ =gLevelSelectLevelCursor
 	strb r4, [r0]
 	strb r4, [r1]
 	ldr r0, _08015BB4  @ =0x03000083
@@ -30196,14 +30196,14 @@ _08015BA8:
 _08015BAC:
 	.4byte gLevelSelectLevel
 _08015BB0:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08015BB4:
 	.4byte 0x03000083
 _08015BB8:
 	ldr r0, _08015BEC  @ =gUnknown_03000B80
 	ldrb r0, [r0]
 	ldrb r1, [r5]
-	ldr r2, _08015BF0  @ =0x03000080
+	ldr r2, _08015BF0  @ =gLevelSelectLevelCursor
 	ldrb r2, [r2]
 	bl sub_0800FA04
 	lsl r0, r0, #24
@@ -30228,7 +30228,7 @@ _08015BB8:
 _08015BEC:
 	.4byte gUnknown_03000B80
 _08015BF0:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08015BF4:
 	.4byte gLevelSelectWorld
 _08015BF8:
@@ -30710,7 +30710,7 @@ sub_08015F78: @ 0x08015F78
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0801602C
-	ldr r4, _08015FA0  @ =0x03000081
+	ldr r4, _08015FA0  @ =gLevelSelectWorldCursor
 	ldrb r1, [r4]
 	mov r0, #0
 	ldrsb r0, [r4, r0]
@@ -30723,7 +30723,7 @@ sub_08015F78: @ 0x08015F78
 _08015F9C:
 	.4byte gUnknown_030012E8
 _08015FA0:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08015FA4:
 	cmp r0, #0
 	bne _08015FAA
@@ -30742,7 +30742,7 @@ _08015FAA:
 	bne _08015FC4
 	b _0801616C
 _08015FC4:
-	ldr r0, _08015FF4  @ =0x03000080
+	ldr r0, _08015FF4  @ =gLevelSelectLevelCursor
 	ldr r7, _08015FF8  @ =gLevelSelectLevel
 	mov r2, #0
 	strb r2, [r7]
@@ -30767,7 +30767,7 @@ _08015FC4:
 _08015FF0:
 	.4byte gUnknown_03000B80
 _08015FF4:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08015FF8:
 	.4byte gLevelSelectLevel
 _08015FFC:
@@ -30810,7 +30810,7 @@ _08016038:
 	bne _08016044
 	b _08016180
 _08016044:
-	ldr r5, _08016090  @ =0x03000081
+	ldr r5, _08016090  @ =gLevelSelectWorldCursor
 	ldrb r1, [r5]
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -30846,7 +30846,7 @@ _08016044:
 	.byte 0x00
 	.byte 0x00
 _08016090:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08016094:
 	.4byte gUnknown_03000B80
 _08016098:
@@ -30866,7 +30866,7 @@ _080160A4:
 	strb r0, [r5]
 	strb r0, [r1]
 	ldr r1, _080160E8  @ =gLevelSelectLevel
-	ldr r0, _080160EC  @ =0x03000080
+	ldr r0, _080160EC  @ =gLevelSelectLevelCursor
 	strb r4, [r0]
 	strb r4, [r1]
 	ldr r1, _080160F0  @ =0x03000083
@@ -30892,7 +30892,7 @@ _080160E4:
 _080160E8:
 	.4byte gLevelSelectLevel
 _080160EC:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _080160F0:
 	.4byte 0x03000083
 _080160F4:
@@ -30901,7 +30901,7 @@ _080160F4:
 	sub r1, r1, #1
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	ldr r2, _08016134  @ =0x03000080
+	ldr r2, _08016134  @ =gLevelSelectLevelCursor
 	ldrb r2, [r2]
 	bl sub_0800FA04
 	lsl r0, r0, #24
@@ -30929,7 +30929,7 @@ _080160F4:
 _08016130:
 	.4byte gUnknown_03000B80
 _08016134:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08016138:
 	.4byte gLevelSelectWorld
 _0801613C:
@@ -30997,7 +30997,7 @@ _080161A2:
 sub_080161AC: @ 0x080161AC
 	push {r4-r6,lr}
 	sub sp, sp, #12
-	ldr r5, _08016220  @ =0x03000081
+	ldr r5, _08016220  @ =gLevelSelectWorldCursor
 	mov r0, #0
 	ldrsb r0, [r5, r0]
 	cmp r0, #0
@@ -31038,7 +31038,7 @@ _080161F4:
 	ldr r1, _08016234  @ =gLevelSelectWorld
 	strb r0, [r1]
 	ldr r2, _08016238  @ =gLevelSelectLevel
-	ldr r1, _0801623C  @ =0x03000080
+	ldr r1, _0801623C  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31054,7 +31054,7 @@ _080161F4:
 	bl sub_08071990
 	b _08016256
 _08016220:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08016224:
 	.4byte 0x03000094
 _08016228:
@@ -31068,7 +31068,7 @@ _08016234:
 _08016238:
 	.4byte gLevelSelectLevel
 _0801623C:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08016240:
 	mov r1, #0
 	str r1, [sp]
@@ -31093,7 +31093,7 @@ _08016256:
 sub_08016260: @ 0x08016260
 	push {r4,lr}
 	sub sp, sp, #12
-	ldr r4, _080162C4  @ =0x03000081
+	ldr r4, _080162C4  @ =gLevelSelectWorldCursor
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	cmp r0, #4
@@ -31112,7 +31112,7 @@ sub_08016260: @ 0x08016260
 	ldr r1, _080162CC  @ =gLevelSelectWorld
 	strb r0, [r1]
 	ldr r2, _080162D0  @ =gLevelSelectLevel
-	ldr r1, _080162D4  @ =0x03000080
+	ldr r1, _080162D4  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31141,7 +31141,7 @@ sub_08016260: @ 0x08016260
 	mov r0, #177
 	b _080163B8
 _080162C4:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _080162C8:
 	.4byte gUnknown_03000B80
 _080162CC:
@@ -31149,7 +31149,7 @@ _080162CC:
 _080162D0:
 	.4byte gLevelSelectLevel
 _080162D4:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _080162D8:
 	.4byte 0x03000094
 _080162DC:
@@ -31180,7 +31180,7 @@ _080162F0:
 	ldr r1, _0801634C  @ =gLevelSelectWorld
 	strb r0, [r1]
 	ldr r2, _08016350  @ =gLevelSelectLevel
-	ldr r1, _08016354  @ =0x03000080
+	ldr r1, _08016354  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31215,7 +31215,7 @@ _0801634C:
 _08016350:
 	.4byte gLevelSelectLevel
 _08016354:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08016358:
 	.4byte 0x03000083
 _0801635C:
@@ -31243,7 +31243,7 @@ _08016370:
 	strb r0, [r4]
 	strb r0, [r1]
 	ldr r2, _080163CC  @ =gLevelSelectLevel
-	ldr r1, _080163D0  @ =0x03000080
+	ldr r1, _080163D0  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31277,7 +31277,7 @@ _080163C8:
 _080163CC:
 	.4byte gLevelSelectLevel
 _080163D0:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _080163D4:
 	.4byte 0x03000083
 _080163D8:
@@ -31301,7 +31301,7 @@ _080163EC:
 sub_080163F4: @ 0x080163F4
 	push {r4-r7,lr}
 	sub sp, sp, #12
-	ldr r6, _08016444  @ =0x03000081
+	ldr r6, _08016444  @ =gLevelSelectWorldCursor
 	mov r1, #0
 	ldrsb r1, [r6, r1]
 	cmp r1, #0
@@ -31317,7 +31317,7 @@ _08016404:
 	strb r0, [r6]
 	strb r0, [r1]
 	ldr r2, _08016450  @ =gLevelSelectLevel
-	ldr r1, _08016454  @ =0x03000080
+	ldr r1, _08016454  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31340,7 +31340,7 @@ _08016404:
 	mov r0, #183
 	b _080165E6
 _08016444:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08016448:
 	.4byte gLevelSelectMode
 _0801644C:
@@ -31348,7 +31348,7 @@ _0801644C:
 _08016450:
 	.4byte gLevelSelectLevel
 _08016454:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08016458:
 	.4byte 0x03000083
 _0801645C:
@@ -31398,7 +31398,7 @@ _080164AA:
 	ldr r1, _080164DC  @ =gLevelSelectWorld
 	strb r0, [r1]
 	ldr r1, _080164E0  @ =gLevelSelectLevel
-	ldr r0, _080164E4  @ =0x03000080
+	ldr r0, _080164E4  @ =gLevelSelectLevelCursor
 	strb r5, [r0]
 	strb r5, [r1]
 	mov r7, r12
@@ -31423,7 +31423,7 @@ _080164DC:
 _080164E0:
 	.4byte gLevelSelectLevel
 _080164E4:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _080164E8:
 	mov r0, #5
 	mov r1, #0
@@ -31438,7 +31438,7 @@ _080164E8:
 	strb r0, [r6]
 	strb r0, [r1]
 	ldr r2, _08016540  @ =gLevelSelectLevel
-	ldr r1, _08016544  @ =0x03000080
+	ldr r1, _08016544  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31471,7 +31471,7 @@ _0801653C:
 _08016540:
 	.4byte gLevelSelectLevel
 _08016544:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08016548:
 	.4byte 0x03000083
 _0801654C:
@@ -31492,7 +31492,7 @@ _08016554:
 	strb r0, [r6]
 	strb r0, [r1]
 	ldr r1, _080165C4  @ =gLevelSelectLevel
-	ldr r0, _080165C8  @ =0x03000080
+	ldr r0, _080165C8  @ =gLevelSelectLevelCursor
 	strb r5, [r0]
 	strb r5, [r1]
 	ldr r0, _080165CC  @ =0x03000094
@@ -31538,7 +31538,7 @@ _080165C0:
 _080165C4:
 	.4byte gLevelSelectLevel
 _080165C8:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _080165CC:
 	.4byte 0x03000094
 _080165D0:
@@ -31568,7 +31568,7 @@ _080165F2:
 	strb r0, [r6]
 	strb r0, [r1]
 	ldr r2, _08016648  @ =gLevelSelectLevel
-	ldr r1, _0801664C  @ =0x03000080
+	ldr r1, _0801664C  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31605,7 +31605,7 @@ _08016644:
 _08016648:
 	.4byte gLevelSelectLevel
 _0801664C:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08016650:
 	.4byte 0x03000083
 	THUMB_FUNC_END sub_080163F4
@@ -31614,7 +31614,7 @@ _08016650:
 sub_08016654: @ 0x08016654
 	push {r4-r6,lr}
 	sub sp, sp, #12
-	ldr r4, _0801668C  @ =0x03000081
+	ldr r4, _0801668C  @ =gLevelSelectWorldCursor
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	ldr r1, _08016690  @ =gUnknown_08B2CDF4
@@ -31632,7 +31632,7 @@ _08016668:
 	ldr r0, _08016694  @ =gLevelSelectWorld
 	strb r1, [r0]
 	ldr r1, _08016698  @ =gLevelSelectLevel
-	ldr r0, _0801669C  @ =0x03000080
+	ldr r0, _0801669C  @ =gLevelSelectLevelCursor
 	strb r2, [r0]
 	strb r2, [r1]
 	str r2, [sp]
@@ -31642,7 +31642,7 @@ _08016668:
 	mov r0, #177
 	b _08016830
 _0801668C:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08016690:
 	.4byte gUnknown_08B2CDF4
 _08016694:
@@ -31650,7 +31650,7 @@ _08016694:
 _08016698:
 	.4byte gLevelSelectLevel
 _0801669C:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _080166A0:
 	cmp r2, #5
 	bgt _08016738
@@ -31672,7 +31672,7 @@ _080166BC:
 	ldr r1, _0801671C  @ =gLevelSelectWorld
 	strb r0, [r1]
 	ldr r2, _08016720  @ =gLevelSelectLevel
-	ldr r1, _08016724  @ =0x03000080
+	ldr r1, _08016724  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31720,7 +31720,7 @@ _0801671C:
 _08016720:
 	.4byte gLevelSelectLevel
 _08016724:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08016728:
 	.4byte 0x03000094
 _0801672C:
@@ -31748,7 +31748,7 @@ _08016738:
 	ldr r0, _08016794  @ =gLevelSelectWorld
 	strb r1, [r0]
 	ldr r2, _08016798  @ =gLevelSelectLevel
-	ldr r1, _0801679C  @ =0x03000080
+	ldr r1, _0801679C  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	strb r0, [r1]
 	strb r0, [r2]
@@ -31781,7 +31781,7 @@ _08016794:
 _08016798:
 	.4byte gLevelSelectLevel
 _0801679C:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _080167A0:
 	.4byte 0x03000083
 _080167A4:
@@ -31796,7 +31796,7 @@ _080167AC:
 	strb r1, [r4]
 	strb r1, [r0]
 	ldr r2, _0801680C  @ =gLevelSelectLevel
-	ldr r0, _08016810  @ =0x03000080
+	ldr r0, _08016810  @ =gLevelSelectLevelCursor
 	strb r1, [r0]
 	strb r1, [r2]
 	ldr r0, _08016814  @ =0x03000094
@@ -31841,7 +31841,7 @@ _08016808:
 _0801680C:
 	.4byte gLevelSelectLevel
 _08016810:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08016814:
 	.4byte 0x03000094
 _08016818:
@@ -31944,7 +31944,7 @@ _080168C4:
 	and r0, r0, r2
 	cmp r0, #0
 	beq _080168EC
-	ldr r1, _08016928  @ =0x03000081
+	ldr r1, _08016928  @ =gLevelSelectWorldCursor
 	ldrb r0, [r1]
 	sub r0, r0, #1
 	strb r0, [r1]
@@ -31991,7 +31991,7 @@ _0801691C:
 	bl sub_08071990
 	b _0801695C
 _08016928:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801692C:
 	.4byte gLevelSelectMode
 _08016930:
@@ -32180,7 +32180,7 @@ _08016A8C:
 	and r0, r0, r2
 	cmp r0, #0
 	beq _08016AB4
-	ldr r1, _08016AF0  @ =0x03000081
+	ldr r1, _08016AF0  @ =gLevelSelectWorldCursor
 	ldrb r0, [r1]
 	sub r0, r0, #1
 	strb r0, [r1]
@@ -32227,7 +32227,7 @@ _08016AE4:
 	bl sub_08071990
 	b _08016B24
 _08016AF0:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08016AF4:
 	.4byte gLevelSelectMode
 _08016AF8:
@@ -32852,7 +32852,7 @@ _08016FB0:
 	asr r0, r0, #24
 	cmp r0, #0
 	bne _08016FD4
-	ldr r0, _08016FD0  @ =0x03000081
+	ldr r0, _08016FD0  @ =gLevelSelectWorldCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -32864,9 +32864,9 @@ _08016FB0:
 _08016FCC:
 	.4byte gUnknown_03000B80
 _08016FD0:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08016FD4:
-	ldr r0, _08016FF4  @ =0x03000081
+	ldr r0, _08016FF4  @ =gLevelSelectWorldCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -32884,7 +32884,7 @@ _08016FE0:
 	strh r0, [r1, #12]
 	b _0801700A
 _08016FF4:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08016FF8:
 	.4byte 0x03000094
 _08016FFC:
@@ -34117,7 +34117,7 @@ _08017940:
 sub_08017944: @ 0x08017944
 	push {r4-r7,lr}
 	mov r1, #0
-	ldr r0, _080179D4  @ =0x03000081
+	ldr r0, _080179D4  @ =gLevelSelectWorldCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -34190,7 +34190,7 @@ _08017956:
 	.byte 0x00
 	.byte 0x00
 _080179D4:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _080179D8:
 	.4byte 0x040000D4
 _080179DC:
@@ -34213,7 +34213,7 @@ _080179F4:
 sub_080179F8: @ 0x080179F8
 	push {r4-r7,lr}
 	mov r4, #0
-	ldr r0, _08017A98  @ =0x03000081
+	ldr r0, _08017A98  @ =gLevelSelectWorldCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -34294,7 +34294,7 @@ _08017A90:
 	.byte 0x00
 	.byte 0x00
 _08017A98:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _08017A9C:
 	.4byte 0x040000D4
 _08017AA0:
@@ -35050,7 +35050,7 @@ sub_08017FB8: @ 0x08017FB8
 	ldrh r0, [r1, #2]
 	add r0, r0, #1
 	strh r0, [r1, #2]
-	ldr r0, _080180B8  @ =gUnknown_03000BBC
+	ldr r0, _080180B8  @ =gLivesCount
 	mov r3, #0
 	ldrsb r3, [r0, r3]
 	lsl r3, r3, #16
@@ -35094,7 +35094,7 @@ _080180B0:
 _080180B4:
 	.4byte 0xFFFFFE00
 _080180B8:
-	.4byte gUnknown_03000BBC
+	.4byte gLivesCount
 	THUMB_FUNC_END sub_08017FB8
 
 	THUMB_FUNC_START sub_080180BC
@@ -35253,7 +35253,7 @@ sub_080181BC: @ 0x080181BC
 	add r3, r0, #0
 	lsl r3, r3, #16
 	lsr r3, r3, #16
-	ldr r0, _0801821C  @ =0x03000080
+	ldr r0, _0801821C  @ =gLevelSelectLevelCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -35278,7 +35278,7 @@ _08018214:
 _08018218:
 	.4byte gLevelSelectLevel
 _0801821C:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08018220:
 	.4byte 0x0300007C
 _08018224:
@@ -35297,7 +35297,7 @@ _08018224:
 	add r3, r0, #0
 	lsl r3, r3, #16
 	lsr r3, r3, #16
-	ldr r0, _08018274  @ =0x03000080
+	ldr r0, _08018274  @ =gLevelSelectLevelCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -35323,7 +35323,7 @@ _0801826C:
 _08018270:
 	.4byte gLevelSelectLevel
 _08018274:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _08018278:
 	.4byte 0x0300007C
 	THUMB_FUNC_END sub_080181BC
@@ -40050,7 +40050,7 @@ _0801A5EC:
 sub_0801A5FC: @ 0x0801A5FC
 	push {r4,lr}
 	sub sp, sp, #4
-	ldr r0, _0801A640  @ =0x03000081
+	ldr r0, _0801A640  @ =gLevelSelectWorldCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -40060,7 +40060,7 @@ sub_0801A5FC: @ 0x0801A5FC
 _0801A60E:
 	cmp r4, #7
 	bhi _0801A648
-	ldr r0, _0801A640  @ =0x03000081
+	ldr r0, _0801A640  @ =gLevelSelectWorldCursor
 	ldrb r1, [r0]
 	mov r0, #0
 	add r2, r4, #0
@@ -40083,7 +40083,7 @@ _0801A60E:
 	.byte 0x00
 	.byte 0x00
 _0801A640:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801A644:
 	.4byte gUnknown_08078D24
 _0801A648:
@@ -40093,7 +40093,7 @@ _0801A648:
 	bne _0801A680
 	ldr r0, _0801A674  @ =gUnknown_03000B80
 	ldrb r0, [r0]
-	ldr r1, _0801A678  @ =0x03000081
+	ldr r1, _0801A678  @ =gLevelSelectWorldCursor
 	ldrb r1, [r1]
 	mov r3, sp
 	add r3, r3, #1
@@ -40110,7 +40110,7 @@ _0801A648:
 _0801A674:
 	.4byte gUnknown_03000B80
 _0801A678:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801A67C:
 	.4byte gUnknown_08078D24
 _0801A680:
@@ -40762,7 +40762,7 @@ sub_0801A7D8: @ 0x0801A7D8
 	b _0801ACB4
 _0801AB7A:
 	mov r1, #0
-	ldr r0, _0801AC4C  @ =0x03000081
+	ldr r0, _0801AC4C  @ =gLevelSelectWorldCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -40870,7 +40870,7 @@ _0801AC44:
 _0801AC48:
 	.4byte gLevelSelectMode
 _0801AC4C:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801AC50:
 	.4byte gUnknown_08078C1C
 _0801AC54:
@@ -40926,7 +40926,7 @@ _0801ACB0:
 	.4byte gUnknown_08078CF4
 _0801ACB4:
 	mov r1, #0
-	ldr r0, _0801ADA4  @ =0x03000081
+	ldr r0, _0801ADA4  @ =gLevelSelectWorldCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -41049,7 +41049,7 @@ _0801AD44:
 	pop {r0}
 	bx r0
 _0801ADA4:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801ADA8:
 	.4byte gUnknown_08078B74
 _0801ADAC:
@@ -41093,7 +41093,7 @@ level_select_loop: @ 0x0801ADBC
 	asr r0, r0, #24
 	cmp r0, #0
 	bne _0801AE30
-	ldr r1, _0801AE28  @ =0x03000080
+	ldr r1, _0801AE28  @ =gLevelSelectLevelCursor
 	ldr r0, _0801AE2C  @ =gLevelSelectLevel
 	ldrb r0, [r0]
 	lsl r0, r0, #24
@@ -41119,11 +41119,11 @@ _0801AE20:
 _0801AE24:
 	.4byte gUnknown_03000B80
 _0801AE28:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _0801AE2C:
 	.4byte gLevelSelectLevel
 _0801AE30:
-	ldr r0, _0801AE80  @ =0x03000080
+	ldr r0, _0801AE80  @ =gLevelSelectLevelCursor
 	ldr r1, _0801AE84  @ =gLevelSelectLevel
 	ldrb r1, [r1]
 	strb r1, [r0]
@@ -41141,7 +41141,7 @@ _0801AE38:
 	cmp r1, #5
 	bne _0801AE94
 _0801AE56:
-	ldr r4, _0801AE80  @ =0x03000080
+	ldr r4, _0801AE80  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	ldr r1, _0801AE8C  @ =gLevelSelectWorld
@@ -41152,7 +41152,7 @@ _0801AE56:
 	bl sub_08019AF4
 	mov r0, #0
 	ldrsb r0, [r4, r0]
-	ldr r1, _0801AE90  @ =0x03000081
+	ldr r1, _0801AE90  @ =gLevelSelectWorldCursor
 	ldrb r1, [r1]
 	sub r1, r1, #1
 	lsl r1, r1, #24
@@ -41162,7 +41162,7 @@ _0801AE56:
 	.byte 0x00
 	.byte 0x00
 _0801AE80:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _0801AE84:
 	.4byte gLevelSelectLevel
 _0801AE88:
@@ -41170,9 +41170,9 @@ _0801AE88:
 _0801AE8C:
 	.4byte gLevelSelectWorld
 _0801AE90:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801AE94:
-	ldr r4, _0801AEE0  @ =0x03000080
+	ldr r4, _0801AEE0  @ =gLevelSelectLevelCursor
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	ldr r1, _0801AEE4  @ =gLevelSelectWorld
@@ -41182,7 +41182,7 @@ _0801AE94:
 	bl sub_08019630
 	mov r0, #0
 	ldrsb r0, [r4, r0]
-	ldr r1, _0801AEE8  @ =0x03000081
+	ldr r1, _0801AEE8  @ =gLevelSelectWorldCursor
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -41198,7 +41198,7 @@ _0801AEB6:
 	ldrsb r0, [r1, r0]
 	cmp r0, #6
 	beq _0801AF1A
-	ldr r0, _0801AEE0  @ =0x03000080
+	ldr r0, _0801AEE0  @ =gLevelSelectLevelCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -41210,11 +41210,11 @@ _0801AEB6:
 	.byte 0x00
 	.byte 0x00
 _0801AEE0:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _0801AEE4:
 	.4byte gLevelSelectWorld
 _0801AEE8:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801AEEC:
 	.4byte gLevelSelectMode
 _0801AEF0:
@@ -41230,7 +41230,7 @@ _0801AEF0:
 	asr r0, r0, #24
 	cmp r0, #7
 	beq _0801AF1A
-	ldr r0, _0801AF94  @ =0x03000080
+	ldr r0, _0801AF94  @ =gLevelSelectLevelCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -41254,7 +41254,7 @@ _0801AF28:
 	b _0801B068
 _0801AF32:
 	bl sub_08017944
-	ldr r0, _0801AF94  @ =0x03000080
+	ldr r0, _0801AF94  @ =gLevelSelectLevelCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -41263,7 +41263,7 @@ _0801AF32:
 	lsl r1, r1, #24
 	asr r1, r1, #24
 	bl sub_08017ABC
-	ldr r0, _0801AF9C  @ =0x03000081
+	ldr r0, _0801AF9C  @ =gLevelSelectWorldCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -41273,7 +41273,7 @@ _0801AF32:
 _0801AF58:
 	cmp r4, #6
 	bhi _0801AFA4
-	ldr r0, _0801AF9C  @ =0x03000081
+	ldr r0, _0801AF9C  @ =gLevelSelectWorldCursor
 	ldrb r1, [r0]
 	sub r1, r1, #1
 	lsl r1, r1, #24
@@ -41301,11 +41301,11 @@ _0801AF58:
 _0801AF90:
 	.4byte gLevelSelectWorld
 _0801AF94:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _0801AF98:
 	.4byte gLevelSelectMode
 _0801AF9C:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801AFA0:
 	.4byte gUnknown_08078DE4
 _0801AFA4:
@@ -41326,7 +41326,7 @@ _0801AFBE:
 _0801AFC0:
 	lsl r0, r1, #24
 	asr r4, r0, #24
-	ldr r1, _0801B050  @ =0x03000081
+	ldr r1, _0801B050  @ =gLevelSelectWorldCursor
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -41357,7 +41357,7 @@ _0801AFF6:
 	asr r0, r0, #24
 	cmp r0, #6
 	ble _0801AFC0
-	ldr r4, _0801B050  @ =0x03000081
+	ldr r4, _0801B050  @ =gLevelSelectWorldCursor
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	cmp r0, #0
@@ -41395,7 +41395,7 @@ _0801B038:
 _0801B04C:
 	.4byte gUnknown_08078DE4
 _0801B050:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801B054:
 	.4byte gUnknown_08078C1C
 _0801B058:
@@ -41408,7 +41408,7 @@ _0801B064:
 	.4byte gLevelSelectWorld
 _0801B068:
 	bl sub_080179F8
-	ldr r0, _0801B0F8  @ =0x03000080
+	ldr r0, _0801B0F8  @ =gLevelSelectLevelCursor
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -41420,7 +41420,7 @@ _0801B068:
 	bl sub_0801A5FC
 	mov r1, #1
 _0801B086:
-	ldr r0, _0801B100  @ =0x03000081
+	ldr r0, _0801B100  @ =gLevelSelectWorldCursor
 	lsl r1, r1, #24
 	asr r4, r1, #24
 	ldrb r0, [r0]
@@ -41452,7 +41452,7 @@ _0801B0BA:
 	asr r0, r0, #24
 	cmp r0, #6
 	ble _0801B086
-	ldr r4, _0801B100  @ =0x03000081
+	ldr r4, _0801B100  @ =gLevelSelectWorldCursor
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	cmp r0, #0
@@ -41475,11 +41475,11 @@ _0801B0D8:
 	bl sub_08018A3C
 	b _0801B11A
 _0801B0F8:
-	.4byte 0x03000080
+	.4byte gLevelSelectLevelCursor
 _0801B0FC:
 	.4byte gLevelSelectWorld
 _0801B100:
-	.4byte 0x03000081
+	.4byte gLevelSelectWorldCursor
 _0801B104:
 	.4byte gUnknown_08078B74
 _0801B108:
