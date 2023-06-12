@@ -129,7 +129,7 @@ static inline bool32 inline_2(void)
         sub_080070E8(7, 1);
         gUnknown_03000B80 = 0;
         gAfterTutorialWorld = 0;
-        gAfterTutorialLevel = 0;
+        gNextLevelID = 0;
         gLevelEWorldFlag = 0;
         sub_080720AC();
         sub_08071C24();

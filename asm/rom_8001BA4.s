@@ -6562,7 +6562,7 @@ _08004B80:
 	ldrb r2, [r2, #14]
 	lsr r2, r2, #7
 	bl sub_0805B5DC
-	ldr r0, _08004C30  @ =gUnknown_03000B90
+	ldr r0, _08004C30  @ =gNextLevelInLevelTable
 	mov r1, #18
 	ldrsh r0, [r0, r1]
 	mov r2, #1
@@ -6649,7 +6649,7 @@ _08004C22:
 _08004C2C:
 	.4byte 0x030019E8
 _08004C30:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _08004C34:
 	.4byte gUnknown_0807820C
 _08004C38:
@@ -6710,7 +6710,7 @@ _08004C98:
 	beq _08004CA6
 	b _08004F90
 _08004CA6:
-	ldr r0, _08004CD4  @ =gUnknown_03000B90
+	ldr r0, _08004CD4  @ =gNextLevelInLevelTable
 	ldrh r2, [r0, #18]
 	mov r6, #18
 	ldrsh r3, [r0, r6]
@@ -6733,7 +6733,7 @@ _08004CA6:
 	bl sub_08038DF4
 	b _08004F90
 _08004CD4:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _08004CD8:
 	sub r0, r2, #4
 	lsl r0, r0, #16
@@ -6831,7 +6831,7 @@ _08004D80:
 	beq _08004D8E
 	b _08004F90
 _08004D8E:
-	ldr r0, _08004DB8  @ =gUnknown_03000B90
+	ldr r0, _08004DB8  @ =gNextLevelInLevelTable
 	mov r2, #18
 	ldrsh r0, [r0, r2]
 	cmp r0, #1
@@ -6853,7 +6853,7 @@ _08004D8E:
 	.byte 0x00
 	.byte 0x00
 _08004DB8:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _08004DBC:
 	mov r2, #1
 	neg r2, r2

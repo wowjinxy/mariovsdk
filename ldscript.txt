@@ -58,7 +58,7 @@ SECTIONS
 		. = 0x24;		gUnknown_03000024 = .;
 		. = 0x28;		gUnknown_03000028 = .;
 		. = 0x29;		gUnknown_03000029 = .;
-		. = 0x2C;		gUnknown_0300002C = .;
+		. = 0x2C;		gLevelEndTimer = .;
 		. = 0x30;		gUnknown_03000030 = .;
 		. = 0x31;		gUnknown_03000031 = .;
 		. = 0x32;		gUnknown_03000032 = .;
@@ -114,10 +114,10 @@ SECTIONS
 		. = 0xB68;		gUnknown_03000B68 = .;
 		. = 0xB6C;		gUnknown_03000B6C = .;
 		. = 0xB70;		gUnknown_03000B70 = .;
-		. = 0xB74;		gAfterTutorialLevel = .;
+		. = 0xB74;		gNextLevelID = .;
 		. = 0xB78;		gUnknown_03000B78 = .;
 		. = 0xB80;		gUnknown_03000B80 = .;
-		. = 0xB90;		gUnknown_03000B90 = .;
+		. = 0xB90;		gNextLevelInLevelTable = .;
 		. = 0xBB4;		gLevelEWorldFlag = .;
 		. = 0xBB8;		gUnknown_03000BB8 = .;
 		. = 0xBBC;		gLivesCount = .;

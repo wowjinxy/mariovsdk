@@ -363,7 +363,7 @@ _08032ACA:
 	ldr r4, [r0]
 	cmp r4, #0
 	beq _08032B1E
-	ldr r0, _08032B08  @ =gUnknown_03000B90
+	ldr r0, _08032B08  @ =gNextLevelInLevelTable
 	mov r1, #18
 	ldrsh r0, [r0, r1]
 	cmp r0, #2
@@ -381,7 +381,7 @@ _08032AFC:
 	bl sub_08029CDC
 	b _08032B1E
 _08032B08:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _08032B0C:
 	.4byte gUnknown_030009D0
 _08032B10:
@@ -658,7 +658,7 @@ _08032CF6:
 	add r0, r0, #1
 	strb r1, [r0]
 	mov r1, #0
-	ldr r0, _08032D4C  @ =gUnknown_03000B90
+	ldr r0, _08032D4C  @ =gNextLevelInLevelTable
 	mov r2, #18
 	ldrsh r0, [r0, r2]
 	cmp r0, #2
@@ -692,7 +692,7 @@ _08032D12:
 _08032D48:
 	.4byte gUnknown_030009D0
 _08032D4C:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 	THUMB_FUNC_END sub_08032C44
 
 	THUMB_FUNC_START sub_08032D50

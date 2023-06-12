@@ -84,7 +84,7 @@ void title_main(void)
             gUnknown_03000B80 = 0;
             gAfterTutorialWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
             sub_0800F744(gAfterTutorialWorld);
-            sub_08004428(gUnknown_03000B90.unk0->unk4);
+            sub_08004428(gNextLevelInLevelTable.unk0->unk4);
             sub_080070E8(2, 1);
             gUnknown_030012F8 = 0;
         }

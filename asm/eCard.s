@@ -850,7 +850,7 @@ _0802E236:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r0, _0802E268  @ =gAfterTutorialLevel
+	ldr r0, _0802E268  @ =gNextLevelID
 	strb r4, [r0]
 	mov r0, #12
 	mov r1, #1
@@ -861,7 +861,7 @@ _0802E236:
 _0802E264:
 	.4byte gLivesCount
 _0802E268:
-	.4byte gAfterTutorialLevel
+	.4byte gNextLevelID
 _0802E26C:
 	mov r0, #2
 	and r0, r0, r1
@@ -1327,7 +1327,7 @@ _0802E5C4:
 _0802E5C8:
 	.4byte gUnknown_08076800
 _0802E5CC:
-	ldr r0, _0802E604  @ =gAfterTutorialLevel
+	ldr r0, _0802E604  @ =gNextLevelID
 	strb r1, [r0]
 	ldr r1, _0802E608  @ =gLevelEWorldFlag
 	mov r0, #1
@@ -1357,7 +1357,7 @@ _0802E5F6:
 	.byte 0x00
 	.byte 0x00
 _0802E604:
-	.4byte gAfterTutorialLevel
+	.4byte gNextLevelID
 _0802E608:
 	.4byte gLevelEWorldFlag
 _0802E60C:
@@ -2382,7 +2382,7 @@ sub_0802EDAC: @ 0x0802EDAC
 	ldrb r0, [r5, #8]
 	ldrb r1, [r5, #9]
 	bl sub_0800F6EC
-	ldr r6, _0802EE10  @ =gUnknown_03000B90
+	ldr r6, _0802EE10  @ =gNextLevelInLevelTable
 	ldr r0, [r6]
 	ldr r1, [r7]
 	add r1, r1, #52
@@ -2422,7 +2422,7 @@ sub_0802EDAC: @ 0x0802EDAC
 _0802EE0C:
 	.4byte gUnknown_0807CA98
 _0802EE10:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _0802EE14:
 	ldrb r0, [r5, #11]
 	sub r0, r0, #1
@@ -2446,7 +2446,7 @@ _0802EE2E:
 	ldrb r0, [r5, #11]
 	sub r0, r0, #1
 	bl sub_08071F64
-	ldr r1, _0802EE50  @ =gUnknown_03000B90
+	ldr r1, _0802EE50  @ =gNextLevelInLevelTable
 	str r0, [r1, #24]
 _0802EE48:
 	pop {r4-r7}
@@ -2455,7 +2455,7 @@ _0802EE48:
 	.byte 0x00
 	.byte 0x00
 _0802EE50:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 	THUMB_FUNC_END sub_0802EDAC
 
 	THUMB_FUNC_START sub_0802EE54
@@ -5069,7 +5069,7 @@ _080300EE:
 	cmp r1, #0
 	bne _08030108
 	asr r6, r6, #1
-	ldr r0, _080301B0  @ =gUnknown_03000B90
+	ldr r0, _080301B0  @ =gNextLevelInLevelTable
 	ldr r0, [r0, #32]
 	mov r1, #2
 	and r0, r0, r1
@@ -5166,7 +5166,7 @@ _080301A8:
 _080301AC:
 	.4byte gUnknown_03000B80
 _080301B0:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _080301B4:
 	.4byte 0x030001D0
 _080301B8:
@@ -5266,7 +5266,7 @@ _08030260:
 	THUMB_FUNC_START sub_08030264
 sub_08030264: @ 0x08030264
 	push {r4,r5,lr}
-	ldr r0, _080302E0  @ =gUnknown_03000B90
+	ldr r0, _080302E0  @ =gNextLevelInLevelTable
 	ldr r0, [r0, #32]
 	mov r1, #3
 	and r0, r0, r1
@@ -5330,7 +5330,7 @@ _080302D8:
 	.byte 0x00
 	.byte 0x00
 _080302E0:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _080302E4:
 	.4byte gLevelEWorldFlag
 _080302E8:
@@ -5378,7 +5378,7 @@ sub_080302FC: @ 0x080302FC
 	mov r0, r8
 	asr r0, r0, #1
 	mov r8, r0
-	ldr r0, _08030398  @ =gUnknown_03000B90
+	ldr r0, _08030398  @ =gNextLevelInLevelTable
 	ldr r0, [r0, #32]
 	mov r1, #2
 	and r0, r0, r1
@@ -5429,7 +5429,7 @@ _08030390:
 _08030394:
 	.4byte 0x03000DD0
 _08030398:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _0803039C:
 	.4byte 0x030001D8
 _080303A0:
@@ -8179,7 +8179,7 @@ _08031780:
 	ldr r5, _080317C0  @ =0x0000400C
 	add r0, r0, r5
 	add r1, r0, r1
-	ldr r5, _080317C4  @ =gUnknown_03000B90
+	ldr r5, _080317C4  @ =gNextLevelInLevelTable
 	mov r6, #2
 	mov r7, #1
 _080317A2:
@@ -8202,7 +8202,7 @@ _080317BC:
 _080317C0:
 	.4byte 0x0000400C
 _080317C4:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _080317C8:
 	mov r0, #1
 	b _080317DC
@@ -9711,7 +9711,7 @@ _08032264:
 	mov r1, #0
 	bl sub_080070E8
 _08032280:
-	ldr r4, _08032298  @ =gUnknown_03000B90
+	ldr r4, _08032298  @ =gNextLevelInLevelTable
 	ldr r0, [r4, #12]
 	bl _call_via_r0
 	mov r1, #18
@@ -9722,7 +9722,7 @@ _08032280:
 	bl sub_0802BEA4
 	b _080322A0
 _08032298:
-	.4byte gUnknown_03000B90
+	.4byte gNextLevelInLevelTable
 _0803229C:
 	bl sub_0802BE50
 _080322A0:
