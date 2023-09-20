@@ -4,11 +4,11 @@
 sub_0801BAD8: @ 0x0801BAD8
 	push {r4-r7,lr}
 	sub sp, sp, #16
-	ldr r0, _0801BB04  @ =0x03000BEC
+	ldr r0, _0801BB04  @ =gUnknown_03000BEC
 	ldrb r3, [r0]
 	cmp r3, #0
 	beq _0801BB44
-	ldr r0, _0801BB08  @ =0x030000B6
+	ldr r0, _0801BB08  @ =gUnknown_030000B6
 	ldrh r0, [r0]
 	cmp r0, #60
 	bls _0801BB34
@@ -25,9 +25,9 @@ sub_0801BAD8: @ 0x0801BAD8
 	.byte 0x00
 	.byte 0x00
 _0801BB04:
-	.4byte 0x03000BEC
+	.4byte gUnknown_03000BEC
 _0801BB08:
-	.4byte 0x030000B6
+	.4byte gUnknown_030000B6
 _0801BB0C:
 	.4byte 0x03000BF4
 _0801BB10:
@@ -49,7 +49,7 @@ _0801BB2C:
 	mov r1, #1
 	bl sub_080070E8
 _0801BB34:
-	ldr r1, _0801BB40  @ =0x030000B6
+	ldr r1, _0801BB40  @ =gUnknown_030000B6
 	ldrh r0, [r1]
 	add r0, r0, #1
 	strh r0, [r1]
@@ -57,7 +57,7 @@ _0801BB34:
 	.byte 0x00
 	.byte 0x00
 _0801BB40:
-	.4byte 0x030000B6
+	.4byte gUnknown_030000B6
 _0801BB44:
 	ldr r2, _0801BB74  @ =gUnknown_030012E8
 	ldrh r1, [r2]
@@ -75,7 +75,7 @@ _0801BB44:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r1, _0801BB78  @ =0x030000B4
+	ldr r1, _0801BB78  @ =gUnknown_030000B4
 	ldrb r0, [r1]
 	cmp r0, #0
 	beq _0801BB7C
@@ -86,7 +86,7 @@ _0801BB44:
 _0801BB74:
 	.4byte gUnknown_030012E8
 _0801BB78:
-	.4byte 0x030000B4
+	.4byte gUnknown_030000B4
 _0801BB7C:
 	mov r0, #2
 _0801BB7E:
@@ -107,7 +107,7 @@ _0801BB80:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r1, _0801BBB0  @ =0x030000B4
+	ldr r1, _0801BBB0  @ =gUnknown_030000B4
 	ldrb r0, [r1]
 	cmp r0, #1
 	bhi _0801BBB4
@@ -117,7 +117,7 @@ _0801BB80:
 	.byte 0x00
 	.byte 0x00
 _0801BBB0:
-	.4byte 0x030000B4
+	.4byte gUnknown_030000B4
 _0801BBB4:
 	strb r4, [r1]
 _0801BBB6:
@@ -129,7 +129,7 @@ _0801BBB6:
 	bne _0801BBC4
 	b _0801BDE8
 _0801BBC4:
-	ldr r0, _0801BBD8  @ =0x030000B4
+	ldr r0, _0801BBD8  @ =gUnknown_030000B4
 	ldrb r5, [r0]
 	cmp r5, #1
 	beq _0801BBEC
@@ -141,7 +141,7 @@ _0801BBC4:
 	.byte 0x00
 	.byte 0x00
 _0801BBD8:
-	.4byte 0x030000B4
+	.4byte gUnknown_030000B4
 _0801BBDC:
 	cmp r5, #2
 	beq _0801BCB4
@@ -197,9 +197,9 @@ _0801BC20:
 	cmp r0, #0
 	ble _0801BC6C
 	bl sub_0800F010
-	ldr r0, _0801BC60  @ =0x03000BEC
+	ldr r0, _0801BC60  @ =gUnknown_03000BEC
 	strb r5, [r0]
-	ldr r0, _0801BC64  @ =0x030000B6
+	ldr r0, _0801BC64  @ =gUnknown_030000B6
 	mov r1, #0
 	strh r4, [r0]
 	ldr r0, _0801BC68  @ =0x03000BF4
@@ -208,9 +208,9 @@ _0801BC20:
 _0801BC5C:
 	.4byte gLivesCount
 _0801BC60:
-	.4byte 0x03000BEC
+	.4byte gUnknown_03000BEC
 _0801BC64:
-	.4byte 0x030000B6
+	.4byte gUnknown_030000B6
 _0801BC68:
 	.4byte 0x03000BF4
 _0801BC6C:
@@ -358,10 +358,10 @@ _0801BD5E:
 	cmp r0, #0
 	ble _0801BDAC
 	bl sub_0800F010
-	ldr r0, _0801BDA0  @ =0x03000BEC
+	ldr r0, _0801BDA0  @ =gUnknown_03000BEC
 	mov r1, #1
 	strb r1, [r0]
-	ldr r0, _0801BDA4  @ =0x030000B6
+	ldr r0, _0801BDA4  @ =gUnknown_030000B6
 	strh r4, [r0]
 	ldr r0, _0801BDA8  @ =0x03000BF4
 	strb r1, [r0]
@@ -371,9 +371,9 @@ _0801BD5E:
 _0801BD9C:
 	.4byte gLivesCount
 _0801BDA0:
-	.4byte 0x03000BEC
+	.4byte gUnknown_03000BEC
 _0801BDA4:
-	.4byte 0x030000B6
+	.4byte gUnknown_030000B6
 _0801BDA8:
 	.4byte 0x03000BF4
 _0801BDAC:
@@ -433,7 +433,7 @@ _0801BE04:
 	bl sub_080070E8
 	bl sub_08072118
 _0801BE1C:
-	ldr r0, _0801BE30  @ =0x030000B4
+	ldr r0, _0801BE30  @ =gUnknown_030000B4
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -444,26 +444,26 @@ _0801BE1C:
 _0801BE2C:
 	.4byte gUnknown_030012E0
 _0801BE30:
-	.4byte 0x030000B4
+	.4byte gUnknown_030000B4
 	THUMB_FUNC_END sub_0801BAD8
 
 	THUMB_FUNC_START pause_menu_init_callback
 pause_menu_init_callback: @ 0x0801BE34
 	push {lr}
-	ldr r0, _0801BE60  @ =0x030000B4
+	ldr r0, _0801BE60  @ =gUnknown_030000B4
 	mov r2, #0
 	strb r2, [r0]
-	ldr r1, _0801BE64  @ =0x03000BF0
+	ldr r1, _0801BE64  @ =gUnknown_03000BF0
 	ldr r0, _0801BE68  @ =gAfterTutorialWorld
 	ldrb r0, [r0]
 	strb r0, [r1]
-	ldr r1, _0801BE6C  @ =0x03000BF8
+	ldr r1, _0801BE6C  @ =gUnknown_03000BF8
 	ldr r0, _0801BE70  @ =gNextLevelID
 	ldrb r0, [r0]
 	strb r0, [r1]
-	ldr r0, _0801BE74  @ =0x03000BEC
+	ldr r0, _0801BE74  @ =gUnknown_03000BEC
 	strb r2, [r0]
-	ldr r1, _0801BE78  @ =0x030000B6
+	ldr r1, _0801BE78  @ =gUnknown_030000B6
 	mov r0, #0
 	strh r0, [r1]
 	bl sub_0800F02C
@@ -472,19 +472,19 @@ pause_menu_init_callback: @ 0x0801BE34
 	.byte 0x00
 	.byte 0x00
 _0801BE60:
-	.4byte 0x030000B4
+	.4byte gUnknown_030000B4
 _0801BE64:
-	.4byte 0x03000BF0
+	.4byte gUnknown_03000BF0
 _0801BE68:
 	.4byte gAfterTutorialWorld
 _0801BE6C:
-	.4byte 0x03000BF8
+	.4byte gUnknown_03000BF8
 _0801BE70:
 	.4byte gNextLevelID
 _0801BE74:
-	.4byte 0x03000BEC
+	.4byte gUnknown_03000BEC
 _0801BE78:
-	.4byte 0x030000B6
+	.4byte gUnknown_030000B6
 	THUMB_FUNC_END pause_menu_init_callback
 
 	THUMB_FUNC_START pause_menu_main
@@ -544,39 +544,39 @@ pause_menu_end: @ 0x0801BEC8
 	.byte 0x00
 	THUMB_FUNC_START sub_0801BED4
 sub_0801BED4: @ 0x0801BED4
-	ldr r0, _0801BEF8  @ =0x030000B4
+	ldr r0, _0801BEF8  @ =gUnknown_030000B4
 	mov r2, #0
 	strb r2, [r0]
-	ldr r1, _0801BEFC  @ =0x03000BF0
+	ldr r1, _0801BEFC  @ =gUnknown_03000BF0
 	ldr r0, _0801BF00  @ =gAfterTutorialWorld
 	ldrb r0, [r0]
 	strb r0, [r1]
-	ldr r1, _0801BF04  @ =0x03000BF8
+	ldr r1, _0801BF04  @ =gUnknown_03000BF8
 	ldr r0, _0801BF08  @ =gNextLevelID
 	ldrb r0, [r0]
 	strb r0, [r1]
-	ldr r0, _0801BF0C  @ =0x03000BEC
+	ldr r0, _0801BF0C  @ =gUnknown_03000BEC
 	strb r2, [r0]
-	ldr r1, _0801BF10  @ =0x030000B6
+	ldr r1, _0801BF10  @ =gUnknown_030000B6
 	mov r0, #0
 	strh r0, [r1]
 	bx lr
 	.byte 0x00
 	.byte 0x00
 _0801BEF8:
-	.4byte 0x030000B4
+	.4byte gUnknown_030000B4
 _0801BEFC:
-	.4byte 0x03000BF0
+	.4byte gUnknown_03000BF0
 _0801BF00:
 	.4byte gAfterTutorialWorld
 _0801BF04:
-	.4byte 0x03000BF8
+	.4byte gUnknown_03000BF8
 _0801BF08:
 	.4byte gNextLevelID
 _0801BF0C:
-	.4byte 0x03000BEC
+	.4byte gUnknown_03000BEC
 _0801BF10:
-	.4byte 0x030000B6
+	.4byte gUnknown_030000B6
 	THUMB_FUNC_END sub_0801BED4
 
 	THUMB_FUNC_START boss_clear_init_callback

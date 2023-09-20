@@ -13083,12 +13083,12 @@ _0800DDCC:
 	lsr r0, r0, #24
 	cmp r0, #1
 	bhi _0800DDE0
-	ldr r0, _0800DDDC  @ =0x03000BF0
+	ldr r0, _0800DDDC  @ =gUnknown_03000BF0
 	mov r1, #0
 	ldrsb r1, [r0, r1]
 	b _0800DDE2
 _0800DDDC:
-	.4byte 0x03000BF0
+	.4byte gUnknown_03000BF0
 _0800DDE0:
 	mov r1, #6
 _0800DDE2:
@@ -13178,7 +13178,7 @@ _0800DDE2:
 	ldrsb r0, [r3, r0]
 	cmp r0, #0
 	beq _0800DF6C
-	ldr r1, _0800DEEC  @ =0x03000BF8
+	ldr r1, _0800DEEC  @ =gUnknown_03000BF8
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	add r0, r0, #1
@@ -13227,7 +13227,7 @@ _0800DEE4:
 _0800DEE8:
 	.4byte gLevelEWorldFlag
 _0800DEEC:
-	.4byte 0x03000BF8
+	.4byte gUnknown_03000BF8
 _0800DEF0:
 	.4byte gUnknown_082F0944
 _0800DEF4:
@@ -13460,7 +13460,7 @@ _0800E0AC:
 	ldrsb r0, [r3, r0]
 	cmp r0, #0
 	bne _0800E168
-	ldr r1, _0800E148  @ =0x03000BF8
+	ldr r1, _0800E148  @ =gUnknown_03000BF8
 	ldrb r0, [r1]
 	lsl r0, r0, #24
 	asr r0, r0, #25
@@ -13535,7 +13535,7 @@ _0800E0AC:
 _0800E144:
 	.4byte gUnknown_03000B80
 _0800E148:
-	.4byte 0x03000BF8
+	.4byte gUnknown_03000BF8
 _0800E14C:
 	.4byte gUnknown_082ED5C4
 _0800E150:
@@ -13553,7 +13553,7 @@ _0800E164:
 _0800E168:
 	cmp r0, #1
 	bne _0800E210
-	ldr r0, _0800E1F0  @ =0x03000BF8
+	ldr r0, _0800E1F0  @ =gUnknown_03000BF8
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -13621,7 +13621,7 @@ _0800E168:
 	.byte 0x00
 	.byte 0x00
 _0800E1F0:
-	.4byte 0x03000BF8
+	.4byte gUnknown_03000BF8
 _0800E1F4:
 	.4byte gUnknown_082EFF2C
 _0800E1F8:
@@ -13639,16 +13639,16 @@ _0800E20C:
 _0800E210:
 	cmp r0, #2
 	bne _0800E224
-	ldr r0, _0800E220  @ =0x03000BF0
+	ldr r0, _0800E220  @ =gUnknown_03000BF0
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
 	add r0, r0, #1
 	b _0800E230
 _0800E220:
-	.4byte 0x03000BF0
+	.4byte gUnknown_03000BF0
 _0800E224:
-	ldr r1, _0800E2A4  @ =0x03000BF0
+	ldr r1, _0800E2A4  @ =gUnknown_03000BF0
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	add r0, r0, #7
@@ -13716,7 +13716,7 @@ _0800E286:
 	ldr r4, _0800E2C0  @ =gUnknown_082ECF94
 	b _0800E360
 _0800E2A4:
-	.4byte 0x03000BF0
+	.4byte gUnknown_03000BF0
 _0800E2A8:
 	.4byte gUnknown_082F0944
 _0800E2AC:

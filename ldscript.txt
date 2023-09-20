@@ -75,6 +75,8 @@ SECTIONS
 		. = 0xAA;		gPressStartOpacity = .;
 		. = 0xAC;		gUnknown_030000AC = .;
 		. = 0xB0;		gUnknown_030000B0 = .;
+		. = 0xB4;		gUnknown_030000B4 = .;
+		. = 0xB6;		gUnknown_030000B6 = .;
 		. = 0x100;		gPreviousMovieOption = .;
 		. = 0x29C;		gUnknown_0300029C = .;
 		. = 0x2A0;		gUnknown_030002A0 = .;
@@ -127,6 +129,9 @@ SECTIONS
 		. = 0xBE0;		gUnknown_03000BE0 = .;
 		. = 0xBE4;		gUnknown_03000BE4 = .;
 		. = 0xBE8;		gUnknown_03000BE8 = .;
+		. = 0xBEC;		gUnknown_03000BEC = .;
+		. = 0xBF0;		gUnknown_03000BF0 = .;
+		. = 0xBF8;		gUnknown_03000BF8 = .;
 		. = 0xC28;		gUnknown_03000C28 = .;
 		. = 0xEA0;		gOamData = .;
 		. = 0x12A0;		gUnknown_030012A0 = .;
