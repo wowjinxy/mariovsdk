@@ -43,13 +43,13 @@ void sub_08007170(void)
     sub_08031BF0(gUnknown_0300192C, gUnknown_03001930);
     if (gNextLevelInLevelTable.unk20 & 8)
     {
-        gUnknown_03000B4C = gUnknown_03000B48;
-        gUnknown_03000B6C = gUnknown_03000BB8;
-        CpuCopy16(gUnknown_030009E4, gUnknown_03001A30, 4);
+        gCurrentPresentScore = gPreviousPresentScore;
+        gCurrentEnemyScore = gUnknown_03000BB8;
+        CpuCopy16(gUnknown_030009E4, gRedPresentFlag, 4);
     }
     else
     {
-        gUnknown_03000B4C = 0;
+        gCurrentPresentScore = 0;
     }
     gUnknown_03000033 = 0;
 }

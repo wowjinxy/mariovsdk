@@ -29060,7 +29060,7 @@ _08029558:
 	beq _08029610
 	ldr r0, _08029608  @ =0x03000DF8
 	ldrb r1, [r0]
-	ldr r2, _0802960C  @ =gUnknown_03001A30
+	ldr r2, _0802960C  @ =gRedPresentFlag
 	mov r0, #5
 	bl sub_08010534
 	b _0802961E
@@ -29091,13 +29091,13 @@ _08029604:
 _08029608:
 	.4byte 0x03000DF8
 _0802960C:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08029610:
 	ldr r0, _08029648  @ =0x03000DD0
 	ldrb r0, [r0]
 	ldr r1, _0802964C  @ =0x03000DF8
 	ldrb r1, [r1]
-	ldr r2, _08029650  @ =gUnknown_03001A30
+	ldr r2, _08029650  @ =gRedPresentFlag
 	bl sub_08010534
 _0802961E:
 	ldr r0, _08029654  @ =gNextLevelInLevelTable
@@ -29126,7 +29126,7 @@ _08029648:
 _0802964C:
 	.4byte 0x03000DF8
 _08029650:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08029654:
 	.4byte gNextLevelInLevelTable
 _08029658:
@@ -29204,7 +29204,7 @@ _080296CC:
 	and r0, r0, r1
 	cmp r0, #0
 	bne _080296F8
-	ldr r1, _08029784  @ =gUnknown_03001A30
+	ldr r1, _08029784  @ =gRedPresentFlag
 	ldrb r0, [r1]
 	cmp r0, #0
 	beq _080296F8
@@ -29256,7 +29256,7 @@ _0802973C:
 	and r1, r1, r0
 	cmp r1, #0
 	bne _080297DE
-	ldr r2, _08029784  @ =gUnknown_03001A30
+	ldr r2, _08029784  @ =gRedPresentFlag
 	ldrb r0, [r2]
 	cmp r0, #0
 	beq _080297DE
@@ -29287,7 +29287,7 @@ _0802977C:
 _08029780:
 	.4byte gNextLevelInLevelTable
 _08029784:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08029788:
 	.4byte 0x000F423F
 _0802978C:
@@ -29597,7 +29597,7 @@ _080299DC:
 _080299E0:
 	.4byte gNextLevelID
 _080299E4:
-	ldr r1, _08029A30  @ =gUnknown_03001A30
+	ldr r1, _08029A30  @ =gRedPresentFlag
 	ldrb r0, [r1]
 	cmp r0, #0
 	beq _08029A5A
@@ -29636,7 +29636,7 @@ _08029A1A:
 	.byte 0x00
 	.byte 0x00
 _08029A30:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08029A34:
 	.4byte gGeneralTimer
 _08029A38:
@@ -35814,7 +35814,7 @@ _0802C5BC:
 	bcc _0802C5CA
 	b _0802C6EC
 _0802C5CA:
-	ldr r1, _0802C688  @ =gUnknown_03001A30
+	ldr r1, _0802C688  @ =gRedPresentFlag
 	ldrb r7, [r1]
 	ldrb r0, [r1, #1]
 	mov r8, r0
@@ -35918,7 +35918,7 @@ _0802C680:
 _0802C684:
 	.4byte 0x03000164
 _0802C688:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _0802C68C:
 	.4byte 0x03000168
 _0802C690:

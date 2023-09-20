@@ -103,8 +103,8 @@ SECTIONS
 		. = 0x9E8;		gLevelTimerOnOffFlag = .;
 		. = 0x9EC;		gUnknown_030009EC = .;
 		. = 0xB44;		gUnknown_03000B44 = .;
-		. = 0xB48;		gUnknown_03000B48 = .;
-		. = 0xB4C;		gUnknown_03000B4C = .;
+		. = 0xB48;		gPreviousPresentScore = .;
+		. = 0xB4C;		gCurrentPresentScore = .;
 		. = 0xB50;		gUnknown_03000B50 = .;
 		. = 0xB54;		gGeneralTimer = .;
 		. = 0xB58;		gAfterTutorialWorld = .;
@@ -112,7 +112,7 @@ SECTIONS
 		. = 0xB60;		gUnknown_03000B60 = .;
 		. = 0xB64;		gUnknown_03000B64 = .;
 		. = 0xB68;		gUnknown_03000B68 = .;
-		. = 0xB6C;		gUnknown_03000B6C = .;
+		. = 0xB6C;		gCurrentEnemyScore = .;
 		. = 0xB70;		gUnknown_03000B70 = .;
 		. = 0xB74;		gNextLevelID = .;
 		. = 0xB78;		gUnknown_03000B78 = .;
@@ -164,7 +164,12 @@ SECTIONS
 		. = 0x19A0;		gUnknown_030019A0 = .;
 		. = 0x19DC;		gPreviousSwitchState = .;
 		. = 0x1A1C;		gUnknown_03001A1C = .;
-		. = 0x1A30;		gUnknown_03001A30 = .;
+		. = 0x1A30;		gRedPresentFlag = .;
+		. = 0x1A31;		gBluePresentFlag = .;
+		. = 0x1A32;		gBluePresentFlag = .;
+		. = 0x1A33;		gLetterTFlag = .;
+		. = 0x1A34;		gLetterOFlag = .;
+		. = 0x1A35;		gLetterYFlag = .;
 		. = 0x1A38;		gUnknown_03001A38 = .;
 		. = 0x1B30;		gUnknown_03001B30 = .;
 		. = 0x1BDC;		gUnknown_03001BDC = .;

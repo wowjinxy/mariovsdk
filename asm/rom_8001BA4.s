@@ -3012,7 +3012,7 @@ _08003114:
 _08003118:
 	.4byte gLivesCount
 _0800311C:
-	ldr r2, _08003164  @ =gUnknown_03001A30
+	ldr r2, _08003164  @ =gRedPresentFlag
 	ldrb r0, [r4, #4]
 	sub r0, r0, #28
 	add r0, r0, r2
@@ -3050,7 +3050,7 @@ _08003146:
 	mov r0, #41
 	b _080031A6
 _08003164:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08003168:
 	.4byte 0x030008E4
 _0800316C:
@@ -3109,7 +3109,7 @@ _080031C6:
 	lsr r0, r0, #24
 	cmp r0, #5
 	bhi _080031FC
-	ldr r2, _08003268  @ =gUnknown_03000B4C
+	ldr r2, _08003268  @ =gCurrentPresentScore
 	ldrb r0, [r4, #4]
 	sub r0, r0, #28
 	lsl r0, r0, #2
@@ -3187,7 +3187,7 @@ _08003256:
 	.byte 0x00
 	.byte 0x00
 _08003268:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _0800326C:
 	.4byte gUnknown_08078216
 _08003270:
@@ -3284,7 +3284,7 @@ _08003314:
 _08003318:
 	.4byte gLivesCount
 _0800331C:
-	ldr r2, _0800334C  @ =gUnknown_03001A30
+	ldr r2, _0800334C  @ =gRedPresentFlag
 	ldrb r0, [r4, #4]
 	sub r0, r0, #28
 	add r0, r0, r2
@@ -3310,7 +3310,7 @@ _0800331C:
 	.byte 0x00
 	.byte 0x00
 _0800334C:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08003350:
 	ldrb r0, [r2, #3]
 	cmp r0, #0
@@ -3368,7 +3368,7 @@ _080033AC:
 	lsr r0, r0, #24
 	cmp r0, #5
 	bhi _080033E4
-	ldr r2, _0800344C  @ =gUnknown_03000B4C
+	ldr r2, _0800344C  @ =gCurrentPresentScore
 	ldrb r0, [r4, #4]
 	sub r0, r0, #28
 	lsl r0, r0, #2
@@ -3444,7 +3444,7 @@ _08003444:
 _08003448:
 	.4byte 0x030008E4
 _0800344C:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _08003450:
 	.4byte gUnknown_08078214
 _08003454:

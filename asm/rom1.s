@@ -274,7 +274,7 @@ _08007D50:
 	ldrsh r0, [r4, r2]
 	mov r2, #16
 	ldrsh r1, [r4, r2]
-	ldr r2, _08007DD0  @ =gUnknown_03001A30
+	ldr r2, _08007DD0  @ =gRedPresentFlag
 	bl sub_08010534
 	mov r1, #18
 	ldrsh r0, [r4, r1]
@@ -319,7 +319,7 @@ _08007DC8:
 _08007DCC:
 	.4byte gLivesCount
 _08007DD0:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08007DD4:
 	.4byte gAfterTutorialWorld
 _08007DD8:
@@ -343,7 +343,7 @@ _08007DE0:
 	ldrsh r0, [r4, r1]
 	mov r2, #16
 	ldrsh r1, [r4, r2]
-	ldr r2, _08007E54  @ =gUnknown_03001A30
+	ldr r2, _08007E54  @ =gRedPresentFlag
 	bl sub_08010534
 	mov r0, #32
 	bl sub_080148F0
@@ -381,7 +381,7 @@ _08007E2E:
 _08007E50:
 	.4byte gLivesCount
 _08007E54:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08007E58:
 	.4byte gAfterTutorialWorld
 _08007E5C:
@@ -509,11 +509,11 @@ _08007F24:
 	strb r5, [r3]
 _08007F42:
 	ldr r1, _08007FD4  @ =gUnknown_03000BB8
-	ldr r2, _08007FD8  @ =gUnknown_03000B6C
+	ldr r2, _08007FD8  @ =gCurrentEnemyScore
 	ldr r0, [r2]
 	str r0, [r1]
-	ldr r1, _08007FDC  @ =gUnknown_03000B48
-	ldr r0, _08007FE0  @ =gUnknown_03000B4C
+	ldr r1, _08007FDC  @ =gPreviousPresentScore
+	ldr r0, _08007FE0  @ =gCurrentPresentScore
 	ldr r0, [r0]
 	str r0, [r1]
 	str r5, [r2]
@@ -521,7 +521,7 @@ _08007F42:
 	ldr r0, _08007FE8  @ =gGeneralTimer
 	ldr r0, [r0]
 	str r0, [r1]
-	ldr r0, _08007FEC  @ =gUnknown_03001A30
+	ldr r0, _08007FEC  @ =gRedPresentFlag
 	ldr r1, _08007FF0  @ =gUnknown_030009E4
 	mov r2, #2
 	bl CpuSet
@@ -576,17 +576,17 @@ _08007FD0:
 _08007FD4:
 	.4byte gUnknown_03000BB8
 _08007FD8:
-	.4byte gUnknown_03000B6C
+	.4byte gCurrentEnemyScore
 _08007FDC:
-	.4byte gUnknown_03000B48
+	.4byte gPreviousPresentScore
 _08007FE0:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _08007FE4:
 	.4byte gUnknown_03000B44
 _08007FE8:
 	.4byte gGeneralTimer
 _08007FEC:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08007FF0:
 	.4byte gUnknown_030009E4
 _08007FF4:
@@ -2425,7 +2425,7 @@ sub_08008DA0: @ 0x08008DA0
 	mov r0, #128
 	lsl r0, r0, #1
 	mov r12, r0
-	ldr r7, _08008E50  @ =gUnknown_03000B6C
+	ldr r7, _08008E50  @ =gCurrentEnemyScore
 	ldr r1, _08008E54  @ =gUnknown_03001A1C
 	mov r10, r1
 _08008DD2:
@@ -2494,7 +2494,7 @@ _08008E48:
 _08008E4C:
 	.4byte 0x03000A10
 _08008E50:
-	.4byte gUnknown_03000B6C
+	.4byte gCurrentEnemyScore
 _08008E54:
 	.4byte gUnknown_03001A1C
 _08008E58:
@@ -3846,7 +3846,7 @@ sub_08009878: @ 0x08009878
 	mov r12, r0
 	cmp r6, #0
 	beq _08009910
-	ldr r1, _080098D0  @ =gUnknown_03001A30
+	ldr r1, _080098D0  @ =gRedPresentFlag
 	ldrb r0, [r1]
 	cmp r0, #0
 	beq _08009910
@@ -3880,7 +3880,7 @@ sub_08009878: @ 0x08009878
 _080098CC:
 	.4byte 0x03000A10
 _080098D0:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _080098D4:
 	.4byte gUnknown_082EAF00
 _080098D8:
@@ -3934,8 +3934,8 @@ sub_0800991C: @ 0x0800991C
 	mov r5, r8
 	push {r5-r7}
 	sub sp, sp, #20
-	ldr r0, _08009A30  @ =gUnknown_03000B4C
-	ldr r1, _08009A34  @ =gUnknown_03000B6C
+	ldr r0, _08009A30  @ =gCurrentPresentScore
+	ldr r1, _08009A34  @ =gCurrentEnemyScore
 	ldr r2, [r0]
 	ldr r0, [r1]
 	add r2, r2, r0
@@ -4063,9 +4063,9 @@ _08009A1E:
 	mov r0, #6
 	b _08009ADA
 _08009A30:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _08009A34:
-	.4byte gUnknown_03000B6C
+	.4byte gCurrentEnemyScore
 _08009A38:
 	.4byte gLivesCount
 _08009A3C:
@@ -4546,7 +4546,7 @@ _08009D9A:
 	ldrb r0, [r7]
 	cmp r0, #0
 	bne _08009DEA
-	ldr r1, _08009E28  @ =gUnknown_03001A30
+	ldr r1, _08009E28  @ =gRedPresentFlag
 	ldrb r0, [r1, #3]
 	cmp r0, #0
 	beq _08009DEA
@@ -4612,7 +4612,7 @@ _08009DF6:
 _08009E24:
 	.4byte gUnknown_082F1B48
 _08009E28:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _08009E2C:
 	.4byte gUnknown_03001A1C
 _08009E30:
@@ -5581,7 +5581,7 @@ _0800A526:
 	str r1, [sp, #8]
 	mov r10, sp
 _0800A546:
-	ldr r0, _0800A5E0  @ =gUnknown_03001A30
+	ldr r0, _0800A5E0  @ =gRedPresentFlag
 	add r0, r0, r8
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -5660,7 +5660,7 @@ _0800A5D8:
 _0800A5DC:
 	.4byte 0x03000A10
 _0800A5E0:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _0800A5E4:
 	.4byte 0x06010000
 _0800A5E8:
@@ -6939,7 +6939,7 @@ _0800AF50:
 _0800AF62:
 	mov r0, r12
 	add r0, r0, #3
-	ldr r1, _0800AF98  @ =gUnknown_03001A30
+	ldr r1, _0800AF98  @ =gRedPresentFlag
 	add r0, r0, r1
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -6966,7 +6966,7 @@ _0800AF90:
 _0800AF94:
 	.4byte 0xFFFFFC00
 _0800AF98:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _0800AF9C:
 	.4byte 0x03000AD0
 _0800AFA0:
@@ -18929,7 +18929,7 @@ _08010834:
 _08010838:
 	.4byte gLevelEWorldFlag
 _0801083C:
-	ldr r0, _08010868  @ =gUnknown_03000B6C
+	ldr r0, _08010868  @ =gCurrentEnemyScore
 	str r3, [r0]
 	ldr r0, _0801086C  @ =gUnknown_03000B80
 	ldrb r0, [r0]
@@ -18953,7 +18953,7 @@ _0801085C:
 	bls _08010894
 	b _080108FC
 _08010868:
-	.4byte gUnknown_03000B6C
+	.4byte gCurrentEnemyScore
 _0801086C:
 	.4byte gUnknown_03000B80
 _08010870:
@@ -18977,7 +18977,7 @@ _08010882:
 	cmp r0, r4
 	bhi _080108FC
 _08010894:
-	ldr r0, _080108A4  @ =gUnknown_03000B4C
+	ldr r0, _080108A4  @ =gCurrentPresentScore
 	strh r4, [r2, #12]
 	str r4, [r0]
 	ldrb r1, [r2, #19]
@@ -18986,7 +18986,7 @@ _08010894:
 	strb r0, [r2, #19]
 	b _0801094C
 _080108A4:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _080108A8:
 	cmp r0, #1
 	bne _080108D4
@@ -19000,14 +19000,14 @@ _080108A8:
 	ldrh r0, [r1]
 	cmp r0, r4
 	bhi _080108FC
-	ldr r0, _080108CC  @ =gUnknown_03000B4C
+	ldr r0, _080108CC  @ =gCurrentPresentScore
 	strh r4, [r1]
 	str r4, [r0]
 	ldr r1, _080108D0  @ =0x00000193
 	add r2, r2, r1
 	b _08010928
 _080108CC:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _080108D0:
 	.4byte 0x00000193
 _080108D4:
@@ -19021,7 +19021,7 @@ _080108D4:
 	ldrh r0, [r3]
 	cmp r0, r4
 	bhi _080108FC
-	ldr r0, _080108F4  @ =gUnknown_03000B4C
+	ldr r0, _080108F4  @ =gCurrentPresentScore
 	strh r4, [r3]
 	str r4, [r0]
 	ldr r0, _080108F8  @ =0x00000323
@@ -19029,17 +19029,17 @@ _080108D4:
 	.byte 0x00
 	.byte 0x00
 _080108F4:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _080108F8:
 	.4byte 0x00000323
 _080108FC:
-	ldr r0, _08010904  @ =gUnknown_03000B4C
+	ldr r0, _08010904  @ =gCurrentPresentScore
 	str r4, [r0]
 	b _0801094C
 	.byte 0x00
 	.byte 0x00
 _08010904:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _08010908:
 	cmp r0, #3
 	bne _08010948
@@ -19052,7 +19052,7 @@ _08010908:
 	ldrh r0, [r3]
 	cmp r0, r4
 	bhi _0801093C
-	ldr r0, _08010934  @ =gUnknown_03000B4C
+	ldr r0, _08010934  @ =gCurrentPresentScore
 	strh r4, [r3]
 	str r4, [r0]
 	ldr r0, _08010938  @ =0x00000353
@@ -19067,18 +19067,18 @@ _08010928:
 	.byte 0x00
 	.byte 0x00
 _08010934:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _08010938:
 	.4byte 0x00000353
 _0801093C:
-	ldr r0, _08010944  @ =gUnknown_03000B4C
+	ldr r0, _08010944  @ =gCurrentPresentScore
 	mov r1, r9
 	str r1, [r0]
 	b _0801094C
 _08010944:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _08010948:
-	ldr r0, _08010958  @ =gUnknown_03000B4C
+	ldr r0, _08010958  @ =gCurrentPresentScore
 	str r3, [r0]
 _0801094C:
 	pop {r3,r4}
@@ -19088,7 +19088,7 @@ _0801094C:
 	pop {r0}
 	bx r0
 _08010958:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 	THUMB_FUNC_END sub_080107E8
 
 	THUMB_FUNC_START sub_0801095C
@@ -27880,7 +27880,7 @@ sub_08014ADC: @ 0x08014ADC
 	ldr r4, [r5]
 	add r4, r4, r3
 	lsr r1, r1, #25
-	ldr r3, _08014B24  @ =gUnknown_03000B4C
+	ldr r3, _08014B24  @ =gCurrentPresentScore
 	lsr r0, r0, #21
 	add r0, r0, r1
 	lsl r0, r0, #3
@@ -27902,7 +27902,7 @@ _08014B1C:
 _08014B20:
 	.4byte gUnknown_080788F4
 _08014B24:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 	THUMB_FUNC_END sub_08014ADC
 
 	THUMB_FUNC_START sub_08014B28

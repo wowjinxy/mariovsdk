@@ -196,8 +196,8 @@ extern u8 gUnknown_030009E4[];  // unknown type
 extern u8 gLevelTimerOnOffFlag;
 extern u8 gUnknown_030009EC;
 extern s32 gUnknown_03000B44;
-extern u32 gUnknown_03000B48;
-extern u32 gUnknown_03000B4C;
+extern u32 gPreviousPresentScore;
+extern u32 gCurrentPresentScore;
 extern u8 gUnknown_03000B50;
 extern s32 gGeneralTimer;
 extern s8 gAfterTutorialWorld;
@@ -205,7 +205,7 @@ extern u8 gUnknown_03000B5C;
 extern u8 gUnknown_03000B60;
 extern s8 gUnknown_03000B64;
 extern u8 gUnknown_03000B68;
-extern u32 gUnknown_03000B6C;
+extern u32 gCurrentEnemyScore;
 extern u32 gUnknown_03000B70;
 extern s8 gNextLevelID;
 extern u8 gUnknown_03000B78;
@@ -254,7 +254,12 @@ extern u32 gUnknown_03001938;
 extern u16 gMarioIdleTimer;
 extern u32 gUnknown_030019A0;
 extern u32 gUnknown_03001A1C;
-extern u8 gUnknown_03001A30[];  // unknown type
+extern u8 gRedPresentFlag[];  // implied by assembly
+extern u8 gYellowPresentFlag[];  // implied by assembly
+extern u8 gBluePresentFlag[];  // implied by assembly
+extern u8 gLetterTFlag[];  // implied by assembly
+extern u8 gLetterOFlag[];  // implied by assembly
+extern u8 gLetterYFlag[];  // implied by assembly
 extern u8 gUnknown_03001A38;
 extern struct UnknownStruct8 gUnknown_03001B30;
 extern u8 gUnknown_03001BDC;

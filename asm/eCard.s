@@ -3716,8 +3716,8 @@ _0802F72C:
 	ldr r0, _0802F740  @ =0x03000DD8
 	add r5, r4, #0
 	str r5, [r0]
-	ldr r0, _0802F744  @ =gUnknown_03000B4C
-	ldr r1, _0802F748  @ =gUnknown_03000B6C
+	ldr r0, _0802F744  @ =gCurrentPresentScore
+	ldr r1, _0802F748  @ =gCurrentEnemyScore
 	ldr r0, [r0]
 	ldr r1, [r1]
 	add r0, r0, r1
@@ -3726,9 +3726,9 @@ _0802F72C:
 _0802F740:
 	.4byte 0x03000DD8
 _0802F744:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _0802F748:
-	.4byte gUnknown_03000B6C
+	.4byte gCurrentEnemyScore
 _0802F74C:
 	ldr r0, _0802F7A8  @ =0x03000E54
 	str r4, [r0]
@@ -4846,7 +4846,7 @@ _0802FF54:
 	mov r5, #0
 	ldr r7, _0802FF90  @ =0x030001E0
 	ldr r4, _0802FF94  @ =0x030001D0
-	ldr r3, _0802FF98  @ =gUnknown_03001A30
+	ldr r3, _0802FF98  @ =gRedPresentFlag
 	add r2, r1, #0
 _0802FF64:
 	add r0, r5, r3
@@ -4878,7 +4878,7 @@ _0802FF90:
 _0802FF94:
 	.4byte 0x030001D0
 _0802FF98:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _0802FF9C:
 	mov r0, #0
 _0802FF9E:
@@ -5286,7 +5286,7 @@ sub_08030264: @ 0x08030264
 	cmp r0, #1
 	bls _080302D8
 	mov r1, #0
-	ldr r2, _080302EC  @ =gUnknown_03001A30
+	ldr r2, _080302EC  @ =gRedPresentFlag
 _08030290:
 	add r0, r1, r2
 	ldrb r0, [r0]
@@ -5336,7 +5336,7 @@ _080302E4:
 _080302E8:
 	.4byte gUnknown_03000B80
 _080302EC:
-	.4byte gUnknown_03001A30
+	.4byte gRedPresentFlag
 _080302F0:
 	.4byte 0x030001D8
 _080302F4:
@@ -6928,7 +6928,7 @@ _08030E8A:
 	add r2, r2, #84
 	cmp r4, r2
 	bcs _08030F16
-	ldr r6, _08030F0C  @ =gUnknown_03000B4C
+	ldr r6, _08030F0C  @ =gCurrentPresentScore
 _08030EBE:
 	ldr r1, [r4]
 	mov r0, #1
@@ -6969,7 +6969,7 @@ _08030F04:
 _08030F08:
 	.4byte 0x030001E8
 _08030F0C:
-	.4byte gUnknown_03000B4C
+	.4byte gCurrentPresentScore
 _08030F10:
 	add r4, r4, #12
 	cmp r4, r2
