@@ -24,6 +24,7 @@ CFILES   := \
 	src/rom1.c \
 	src/title.c \
 	src/intro.c \
+	src/pause_menu.c \
 	src/rom_8032408.c \
 	src/rom_8032FB0.c \
 	src/rom_8033C38.c \
@@ -38,6 +39,7 @@ SFILES   := \
 	asm/rom_80066FC.s \
 	asm/rom1.s \
 	asm/rom_801BAD8.s \
+	asm/rom_801BEBC.s \
 	asm/eCard.s \
 	asm/rom_8032408.s \
 	asm/rom_8032FB0.s \

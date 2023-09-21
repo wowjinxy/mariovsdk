@@ -1,0 +1,38 @@
+#include "gba/gba.h"
+#include "global.h"
+
+void sub_080331FC(void);
+s8 sub_0801BAD8(void);
+void sub_0800F070();
+void sub_0800CC6C(void);
+
+void pause_menu_init_callback(void) 
+{
+  gUnknown_030000B4 = 0;
+  gUnknown_03000BF0 = gAfterTutorialWorld;
+  gUnknown_03000BF8 = gNextLevelID;
+  gUnknown_03000BEC = 0;
+  gUnknown_030000B6 = 0;
+  sub_0800F02C();
+}
+
+void pause_menu_main(void) 
+{
+
+    sub_080331FC();
+    
+    switch(sub_0801BAD8()) {
+        case 0:
+            sub_0800F070(0);
+            break;
+        case 1:
+            sub_0800F070(1);
+            break;
+        case 2:
+            sub_0800F070(2);
+            break;
+    }
+    
+    sub_0800CC6C();
+    return;
+}
