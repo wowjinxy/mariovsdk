@@ -1,25 +1,5 @@
 	.INCLUDE "macro.inc"
 
-	THUMB_FUNC_START pause_menu_loop
-pause_menu_loop: @ 0x0801BEBC
-	push {lr}
-	bl level_play_loop
-	pop {r0}
-	bx r0
-	THUMB_FUNC_END pause_menu_loop
-
-	.byte 0x00
-	.byte 0x00
-	THUMB_FUNC_START pause_menu_end
-pause_menu_end: @ 0x0801BEC8
-	push {lr}
-	bl sub_0800F060
-	pop {r0}
-	bx r0
-	THUMB_FUNC_END pause_menu_end
-
-	.byte 0x00
-	.byte 0x00
 	THUMB_FUNC_START sub_0801BED4
 sub_0801BED4: @ 0x0801BED4
 	ldr r0, _0801BEF8  @ =gUnknown_030000B4
