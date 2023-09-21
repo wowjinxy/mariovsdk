@@ -1,42 +1,5 @@
 	.INCLUDE "macro.inc"
 
-	THUMB_FUNC_START sub_0801BED4
-sub_0801BED4: @ 0x0801BED4
-	ldr r0, _0801BEF8  @ =gUnknown_030000B4
-	mov r2, #0
-	strb r2, [r0]
-	ldr r1, _0801BEFC  @ =gUnknown_03000BF0
-	ldr r0, _0801BF00  @ =gAfterTutorialWorld
-	ldrb r0, [r0]
-	strb r0, [r1]
-	ldr r1, _0801BF04  @ =gUnknown_03000BF8
-	ldr r0, _0801BF08  @ =gNextLevelID
-	ldrb r0, [r0]
-	strb r0, [r1]
-	ldr r0, _0801BF0C  @ =gUnknown_03000BEC
-	strb r2, [r0]
-	ldr r1, _0801BF10  @ =gUnknown_030000B6
-	mov r0, #0
-	strh r0, [r1]
-	bx lr
-	.byte 0x00
-	.byte 0x00
-_0801BEF8:
-	.4byte gUnknown_030000B4
-_0801BEFC:
-	.4byte gUnknown_03000BF0
-_0801BF00:
-	.4byte gAfterTutorialWorld
-_0801BF04:
-	.4byte gUnknown_03000BF8
-_0801BF08:
-	.4byte gNextLevelID
-_0801BF0C:
-	.4byte gUnknown_03000BEC
-_0801BF10:
-	.4byte gUnknown_030000B6
-	THUMB_FUNC_END sub_0801BED4
-
 	THUMB_FUNC_START boss_clear_init_callback
 boss_clear_init_callback: @ 0x0801BF14
 	push {r4-r6,lr}

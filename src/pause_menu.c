@@ -49,3 +49,14 @@ void pause_menu_end(void)
 }
 
 asm(".short 0x0000"); // padding
+
+// inlined code below -- seems to be from the game being compiled with -O3, is just in here to match until this can build with -O3
+
+void sub_0801BED4(void) 
+{
+  gUnknown_030000B4 = 0;
+  gUnknown_03000BF0 = gAfterTutorialWorld;
+  gUnknown_03000BF8 = gNextLevelID;
+  gUnknown_03000BEC = 0;
+  gUnknown_030000B6 = 0;
+}
