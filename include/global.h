@@ -226,7 +226,7 @@ extern u8 gUnknown_03000BF8;
 extern u8 gUnknown_03000C28;
 extern u32 gUnknown_030009DC;
 extern struct OamData gOamData[];
-extern s16 gUnknown_030012A0;
+extern s16 gCameraHorizontalOffset;
 extern void (*gUnknown_030012A8)(void);
 extern u8 gUnknown_030012B0[];
 extern void (*gUnknown_030012C0)(void);

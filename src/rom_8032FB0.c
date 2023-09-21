@@ -231,17 +231,17 @@ void sub_080331FC(void)
 
 void sub_08033440(void)
 {
-    if (gUnknown_030012A0 < 0)
-        gUnknown_030012A0 = 0;
-    if ((gUnknown_030012A0 >> 1) + 240 >= gCurrentLevelWidth)
-        gUnknown_030012A0 = ((u16)gCurrentLevelWidth - 240) * 2;
+    if (gCameraHorizontalOffset < 0)
+        gCameraHorizontalOffset = 0;
+    if ((gCameraHorizontalOffset >> 1) + 240 >= gCurrentLevelWidth)
+        gCameraHorizontalOffset = ((u16)gCurrentLevelWidth - 240) * 2;
     
     if (gCameraVerticalOffset < 0)
         gCameraVerticalOffset = 0;
     if ((gCameraVerticalOffset >> 1) + 160 >= gCurrentLevelHeight)
         gCameraVerticalOffset = ((u16)gCurrentLevelHeight - 160) * 2;
     
-    gSpriteHorizontalOffset = gUnknown_030012A0 >> 1;
+    gSpriteHorizontalOffset = gCameraHorizontalOffset >> 1;
     gUnknown_030012F4 = gCameraVerticalOffset >> 1;
 }
 

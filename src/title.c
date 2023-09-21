@@ -20,7 +20,7 @@ void title_init_callback(void)
     gUnknown_03001740 = 0;
     gUnknown_03000BE0 = 0;
     gUnknown_030000B0 = -1;
-    gUnknown_030012A0 = 0;
+    gCameraHorizontalOffset = 0;
     gCameraVerticalOffset = 0;
     arr[0] = &gTitleScreenLeftData;
     arr[1] = gTitleScreenRightData;

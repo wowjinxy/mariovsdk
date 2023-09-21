@@ -191,14 +191,14 @@ void sub_08033F6C(void)
 
 void sub_08033F80(s16 a, s16 b)
 {
-    gUnknown_030012A0 += a;
+    gCameraHorizontalOffset += a;
     gCameraVerticalOffset += b;
     sub_08033440();
 }
 
 void sub_08033FAC(s16 a, s16 b)
 {
-    gUnknown_030012A0 = a;
+    gCameraHorizontalOffset = a;
     gCameraVerticalOffset = b;
     sub_08033440();
 }
@@ -364,7 +364,7 @@ int sub_080341E8(u16 a)
 
 void sub_08034238(void)
 {
-    gUnknown_030002B0.unk0 = gUnknown_030012A0 * 128;
+    gUnknown_030002B0.unk0 = gCameraHorizontalOffset * 128;
     gUnknown_030002B0.unk4 = gCameraVerticalOffset * 128;
 }
 
@@ -407,7 +407,7 @@ void sub_0803430C(void)
 
 void sub_0803432C(void)
 {
-    gUnknown_030002C0.unk0 = gUnknown_030012A0 * 128;
+    gUnknown_030002C0.unk0 = gCameraHorizontalOffset * 128;
     gUnknown_030002C0.unk4 = gCameraVerticalOffset * 128;
 }
 
@@ -480,7 +480,7 @@ void sub_0803446C(int a, int b)
 
 int sub_080344F8(s32 a)
 {
-    s32 r2 = gUnknown_030012A0 >> 1;
+    s32 r2 = gCameraHorizontalOffset >> 1;
     
     a >>= 8;
     if (a < r2 + 64)

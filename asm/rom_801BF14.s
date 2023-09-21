@@ -6,7 +6,7 @@ boss_clear_init_callback: @ 0x0801BF14
 	sub sp, sp, #36
 	mov r0, #0
 	bl sub_08034898
-	ldr r0, _0801BFAC  @ =gUnknown_030012A0
+	ldr r0, _0801BFAC  @ =gCameraHorizontalOffset
 	mov r5, #0
 	strh r5, [r0]
 	ldr r0, _0801BFB0  @ =gCameraVerticalOffset
@@ -74,7 +74,7 @@ _0801BF64:
 	.byte 0x00
 	.byte 0x00
 _0801BFAC:
-	.4byte gUnknown_030012A0
+	.4byte gCameraHorizontalOffset
 _0801BFB0:
 	.4byte gCameraVerticalOffset
 _0801BFB4:
@@ -11432,7 +11432,7 @@ bonus_stoparrow_init_callback: @ 0x080215B4
 	ldr r0, [r5]
 	mov r1, #0
 	strh r1, [r0, #20]
-	ldr r0, _08021654  @ =gUnknown_030012A0
+	ldr r0, _08021654  @ =gCameraHorizontalOffset
 	strh r1, [r0]
 	ldr r0, _08021658  @ =gCameraVerticalOffset
 	strh r1, [r0]
@@ -11480,7 +11480,7 @@ _0802164C:
 _08021650:
 	.4byte 0x030000D8
 _08021654:
-	.4byte gUnknown_030012A0
+	.4byte gCameraHorizontalOffset
 _08021658:
 	.4byte gCameraVerticalOffset
 _0802165C:
@@ -23433,7 +23433,7 @@ bonus_swapboxes_init_callback: @ 0x08027068
 	ldr r0, [r5]
 	mov r1, #0
 	strh r1, [r0, #40]
-	ldr r0, _08027124  @ =gUnknown_030012A0
+	ldr r0, _08027124  @ =gCameraHorizontalOffset
 	strh r1, [r0]
 	ldr r0, _08027128  @ =gCameraVerticalOffset
 	strh r1, [r0]
@@ -23483,7 +23483,7 @@ _0802711C:
 _08027120:
 	.4byte 0x030000F8
 _08027124:
-	.4byte gUnknown_030012A0
+	.4byte gCameraHorizontalOffset
 _08027128:
 	.4byte gCameraVerticalOffset
 _0802712C:
@@ -26851,7 +26851,7 @@ options_init_callback: @ 0x0802895C
 	sub sp, sp, #4
 	mov r0, #0
 	bl sub_08034898
-	ldr r0, _080289D0  @ =gUnknown_030012A0
+	ldr r0, _080289D0  @ =gCameraHorizontalOffset
 	mov r5, #0
 	strh r5, [r0]
 	ldr r0, _080289D4  @ =gCameraVerticalOffset
@@ -26898,7 +26898,7 @@ options_init_callback: @ 0x0802895C
 	strh r0, [r1]
 	b _080289F8
 _080289D0:
-	.4byte gUnknown_030012A0
+	.4byte gCameraHorizontalOffset
 _080289D4:
 	.4byte gCameraVerticalOffset
 _080289D8:
@@ -28214,7 +28214,7 @@ _08029390:
 	ldr r0, _08029410  @ =gUnknown_030009D8
 	mov r1, #0
 	strh r1, [r0]
-	ldr r0, _08029414  @ =gUnknown_030012A0
+	ldr r0, _08029414  @ =gCameraHorizontalOffset
 	strh r1, [r0]
 	ldr r0, _08029418  @ =gCameraVerticalOffset
 	strh r1, [r0]
@@ -28268,7 +28268,7 @@ _0802940C:
 _08029410:
 	.4byte gUnknown_030009D8
 _08029414:
-	.4byte gUnknown_030012A0
+	.4byte gCameraHorizontalOffset
 _08029418:
 	.4byte gCameraVerticalOffset
 _0802941C:

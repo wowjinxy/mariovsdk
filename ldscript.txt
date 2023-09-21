@@ -136,7 +136,7 @@ SECTIONS
 		. = 0xBF8;		gUnknown_03000BF8 = .;
 		. = 0xC28;		gUnknown_03000C28 = .;
 		. = 0xEA0;		gOamData = .;
-		. = 0x12A0;		gUnknown_030012A0 = .;
+		. = 0x12A0;		gCameraHorizontalOffset = .;
 		. = 0x12A8;		gUnknown_030012A8 = .;
 		. = 0x12B0;		gUnknown_030012B0 = .;
 		. = 0x12C0;		gUnknown_030012C0 = .;

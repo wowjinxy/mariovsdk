@@ -8,7 +8,7 @@ void intro_init_callback(void)
 
     gUnknown_03000BE0 = 0;
     gUnknown_03000BD0 = 0;
-    gUnknown_030012A0 = 0;
+    gCameraHorizontalOffset = 0;
     gCameraVerticalOffset = 0;
     arr[0] = &gNintendoSoftwareTechnologyLogo;
     arr[1] = NULL;

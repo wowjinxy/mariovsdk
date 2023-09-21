@@ -294,7 +294,7 @@ e_world_return_init_callback: @ 0x0802DE08
 	add r0, r0, #200
 	ldrh r5, [r0]
 	ldr r4, _0802DF18  @ =gEWorldMenuData2
-	ldr r3, _0802DF1C  @ =gUnknown_030012A0
+	ldr r3, _0802DF1C  @ =gCameraHorizontalOffset
 	ldr r2, _0802DF20  @ =gCameraVerticalOffset
 	mov r0, #0
 	strh r0, [r2]
@@ -425,7 +425,7 @@ _0802DF14:
 _0802DF18:
 	.4byte gEWorldMenuData2
 _0802DF1C:
-	.4byte gUnknown_030012A0
+	.4byte gCameraHorizontalOffset
 _0802DF20:
 	.4byte gCameraVerticalOffset
 _0802DF24:
