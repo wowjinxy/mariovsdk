@@ -220,7 +220,7 @@ sub_08006968: @ 0x08006968
 	ldr r5, _080069B8  @ =gUnknown_08078210
 	ldr r1, [r5]
 	mov r2, #0
-	bl sub_08034790
+	bl load_compressed_data
 	mov r4, #0
 	ldr r0, [r5]
 	ldr r0, [r0, #4]

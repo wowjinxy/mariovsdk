@@ -27128,7 +27128,7 @@ _08028B7A:
 	str r0, [r1]
 	mov r0, r8
 	strh r3, [r0]
-	ldr r1, _08028C00  @ =gBGLayerOffset
+	ldr r1, _08028C00  @ =gBGLayerOffsets 
 	ldr r2, _08028C04  @ =0x01000008
 	bl CpuSet
 	add sp, sp, #4
@@ -27180,7 +27180,7 @@ _08028BF8:
 _08028BFC:
 	.4byte 0x0000114C
 _08028C00:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _08028C04:
 	.4byte 0x01000008
 	THUMB_FUNC_END options_init_callback
@@ -27418,7 +27418,7 @@ _08028DC2:
 	add r0, r0, #80
 	mov r6, #0
 	strh r0, [r1]
-	ldr r1, _08028E38  @ =gBGLayerOffset
+	ldr r1, _08028E38  @ =gBGLayerOffsets 
 	lsl r0, r0, #16
 	lsr r0, r0, #24
 	strh r0, [r1, #12]
@@ -27470,7 +27470,7 @@ _08028E30:
 _08028E34:
 	.4byte 0x0000113C
 _08028E38:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _08028E3C:
 	.4byte 0x0000112C
 _08028E40:
@@ -28323,7 +28323,7 @@ _0802947E:
 	mov r4, #0
 	mov r0, sp
 	strh r4, [r0]
-	ldr r1, _080294B4  @ =gBGLayerOffset
+	ldr r1, _080294B4  @ =gBGLayerOffsets 
 	ldr r2, _080294B8  @ =0x01000008
 	bl CpuSet
 	ldr r0, _080294BC  @ =gNextLevelInLevelTable
@@ -28344,7 +28344,7 @@ _080294AC:
 _080294B0:
 	.4byte gLevelResultsData
 _080294B4:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _080294B8:
 	.4byte 0x01000008
 _080294BC:
@@ -34052,7 +34052,7 @@ _0802BD96:
 	mov r0, #0
 	mov r1, r8
 	strh r0, [r1]
-	ldr r5, _0802BE0C  @ =gBGLayerOffset
+	ldr r5, _0802BE0C  @ =gBGLayerOffsets 
 	ldr r2, _0802BE10  @ =0x01000008
 	mov r0, r8
 	add r1, r5, #0
@@ -34096,7 +34096,7 @@ _0802BE04:
 _0802BE08:
 	.4byte gUnknown_0807BB30
 _0802BE0C:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _0802BE10:
 	.4byte 0x01000008
 _0802BE14:

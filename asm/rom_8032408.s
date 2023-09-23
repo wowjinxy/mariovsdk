@@ -13,10 +13,10 @@ sub_08032814: @ 0x08032814
 	mov r0, #130
 	lsl r0, r0, #5
 	str r0, [sp, #4]
-	ldr r0, _08032A5C  @ =0x030012A4
+	ldr r0, _08032A5C  @ =gBGHorizontalOffset
 	mov r1, #0
 	strh r1, [r0]
-	ldr r0, _08032A60  @ =0x030012EC
+	ldr r0, _08032A60  @ =gBGVerticalOffset
 	strh r1, [r0]
 	bl sub_0801B3C0
 	mov r1, #0
@@ -153,7 +153,7 @@ _0803291E:
 	ldr r1, [r1]
 	add r1, r1, r2
 	mov r2, #1
-	bl sub_08034790
+	bl load_compressed_data
 	ldrh r0, [r6]
 	ldr r1, _08032A74  @ =0x0000FF7F
 	add r2, r1, #0
@@ -201,7 +201,7 @@ _08032978:
 	ldr r2, [r4]
 	cmp r2, #0
 	beq _080329DC
-	ldr r1, _08032A78  @ =0x030012E4
+	ldr r1, _08032A78  @ =gUnknown_030012E4
 	ldrh r0, [r2, #46]
 	strh r0, [r1]
 	ldr r4, [sp, #24]
@@ -222,13 +222,13 @@ _08032978:
 	ldr r1, _08032A80  @ =gCurrentLevelHeight
 	ldrh r0, [r2, #6]
 	strh r0, [r1]
-	ldr r1, _08032A5C  @ =0x030012A4
+	ldr r1, _08032A5C  @ =gBGHorizontalOffset
 	ldr r0, _08032A84  @ =0x03000E70
 	ldr r2, [r0, #4]
 	mov r0, #8
 	ldrsb r0, [r2, r0]
 	strh r0, [r1]
-	ldr r1, _08032A60  @ =0x030012EC
+	ldr r1, _08032A60  @ =gBGVerticalOffset
 	mov r0, #12
 	ldrsb r0, [r2, r0]
 	strh r0, [r1]
@@ -296,9 +296,9 @@ _08032A34:
 	.byte 0x00
 	.byte 0x00
 _08032A5C:
-	.4byte 0x030012A4
+	.4byte gBGHorizontalOffset
 _08032A60:
-	.4byte 0x030012EC
+	.4byte gBGVerticalOffset
 _08032A64:
 	.4byte 0x04000008
 _08032A68:
@@ -310,7 +310,7 @@ _08032A70:
 _08032A74:
 	.4byte 0x0000FF7F
 _08032A78:
-	.4byte 0x030012E4
+	.4byte gUnknown_030012E4
 _08032A7C:
 	.4byte gCurrentLevelWidth
 _08032A80:
@@ -847,7 +847,7 @@ _08032E3A:
 	add r1, r1, r2
 	ldr r1, [r1]
 	mov r2, #1
-	bl sub_08034790
+	bl load_compressed_data
 _08032E68:
 	add r4, r4, #1
 	cmp r4, r9

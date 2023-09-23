@@ -103,7 +103,7 @@ void sub_08033DCC(void)
         {
             sub_08033EC8();
             gUnknown_03001748 = 0;
-            CpuCopy16(&gBGLayerOffset, &gUnknown_030012D0, 16);
+            CpuCopy16(&gBGLayerOffsets , &gUnknown_030012D0, 16);
             sub_0802BEEC(&gUnknown_030012D0);
             sub_0802BE74();
             gUnknown_030012C0();
@@ -913,7 +913,7 @@ _08034782:\n\
 	bx r0");
 }
 
-void *sub_08034790(struct UnknownStruct2 *a, u16 *b, int c)
+void *load_compressed_data(struct UnknownStruct2 *a, u16 *b, int c)
 {
     struct CompressionHeader header = a->header;
     
@@ -941,7 +941,7 @@ void goto_credits_init_callback(void)
     
     sub_08034898(0);
     if (gUnknown_03000B80 == 1)
-        sub_0802D468(3, 61, 8, 3);
+        sub_0802D468(3, 61, 8, 3); // ??, ??, ??, Movie ID
     else
         sub_0802D468(3, 47, 7, 7);
     sub_080070E8(30, 1);

@@ -41,6 +41,32 @@ struct Struct30009B0
     s16 unk12;
 };
 
+struct Struct3000A10 {
+    u32 *base;
+    u8 unk4;
+    u8 unk5;
+    u8 unk6;
+    u8 unk7;
+    u8 pad1[0x32];
+    u32 unk3C;
+    u32 unk40;
+    u8 unk44;
+    u8 pad2[0x35];
+    u8 unk7A;
+    u8 unk7B;
+    u8 unk7C;
+    u8 unk7D;
+    u8 pad3[0x58];
+    u8 unkD6;
+    u16 pad4[0x24];
+    u8 unk120;
+    u8 unk121;
+    u8 unk122;
+    u8 unk123;
+    u8 unk124;
+    u8 unk125;
+} unk1;
+
 struct UnknownStruct3
 {
     void *unk0;
@@ -197,6 +223,7 @@ extern u16 gUnknown_030009D8;
 extern u8 gUnknown_030009E4[];  // unknown type
 extern u8 gLevelTimerOnOffFlag;
 extern u8 gUnknown_030009EC;
+extern struct Struct3000A10 gUnknown_03000A10;
 extern s32 gUnknown_03000B44;
 extern u32 gPreviousPresentScore;
 extern u32 gCurrentPresentScore;
@@ -227,12 +254,15 @@ extern u8 gUnknown_03000C28;
 extern u32 gUnknown_030009DC;
 extern struct OamData gOamData[];
 extern s16 gCameraHorizontalOffset;
+extern s16 gBGHorizontalOffset;
 extern void (*gUnknown_030012A8)(void);
 extern u8 gUnknown_030012B0[];
 extern void (*gUnknown_030012C0)(void);
 extern struct Struct30012D0 gUnknown_030012D0;
 extern u16 gUnknown_030012E0;
+extern u16 gUnknown_030012E4;
 extern u16 gUnknown_030012E8;
+extern u16 gBGVerticalOffset;
 extern s16 gUnknown_030012F4;
 extern s16 gUnknown_030012F8;
 extern void (*gUnknown_030012FC)(void);
@@ -247,7 +277,7 @@ extern u32 gUnknown_03001718;
 extern u16 gUnknown_0300171C;
 extern s16 gCurrentLevelWidth;
 extern s16 gSpriteHorizontalOffset;
-extern struct Struct30012D0 gBGLayerOffset;  // no idea what type this is
+extern struct Struct30012D0 gBGLayerOffsets;  // no idea what type this is
 extern u8 gUnknown_03001740;
 extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
@@ -332,7 +362,7 @@ void sub_0802C7A4(void);
 void sub_0802C938(void);
 void sub_0802CF08(void);
 void sub_0802D1D0(void);
-void sub_0802D468();
+void sub_0802D468(u8, u8, u8, u8);
 void sub_0802F060(void);
 void sub_0802F1D4(void);
 int sub_0802F5C0();

@@ -408,7 +408,7 @@ _0802DED8:
 	orr r0, r0, r1
 	strh r0, [r2]
 	strh r4, [r7]
-	ldr r1, _0802DF48  @ =gBGLayerOffset
+	ldr r1, _0802DF48  @ =gBGLayerOffsets 
 	ldr r2, _0802DF4C  @ =0x01000008
 	add r0, r7, #0
 	bl CpuSet
@@ -447,7 +447,7 @@ _0802DF40:
 _0802DF44:
 	.4byte gUnknown_0807CA08
 _0802DF48:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _0802DF4C:
 	.4byte 0x01000008
 	THUMB_FUNC_END e_world_return_init_callback
@@ -532,7 +532,7 @@ _0802DFC2:
 	ldr r4, _0802E010  @ =0x00000A0A
 	add r0, r4, #0
 	strh r0, [r1]
-	ldr r1, _0802E014  @ =gBGLayerOffset
+	ldr r1, _0802E014  @ =gBGLayerOffsets 
 	mov r0, #0
 	strh r0, [r1]
 	strh r0, [r1, #2]
@@ -551,7 +551,7 @@ _0802E00C:
 _0802E010:
 	.4byte 0x00000A0A
 _0802E014:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _0802E018:
 	cmp r0, #6
 	bne _0802E024
@@ -1434,7 +1434,7 @@ _0802E67E:
 	asr r7, r1, #2
 	mov r0, #3
 	and r1, r1, r0
-	ldr r3, _0802E6D8  @ =gBGLayerOffset
+	ldr r3, _0802E6D8  @ =gBGLayerOffsets 
 	neg r2, r7
 	lsl r0, r2, #2
 	add r0, r0, r2
@@ -1468,7 +1468,7 @@ _0802E6AE:
 _0802E6D4:
 	.4byte 0x030001C4
 _0802E6D8:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _0802E6DC:
 	.4byte gUnknown_0807CA2C
 _0802E6E0:
@@ -2251,7 +2251,7 @@ sub_0802ECC8: @ 0x0802ECC8
 	ldrh r0, [r1]
 	add r0, r0, #80
 	strh r0, [r1]
-	ldr r1, _0802ECEC  @ =gBGLayerOffset
+	ldr r1, _0802ECEC  @ =gBGLayerOffsets 
 	lsl r0, r0, #16
 	lsr r0, r0, #24
 	strh r0, [r1, #12]
@@ -2263,7 +2263,7 @@ sub_0802ECC8: @ 0x0802ECC8
 _0802ECE8:
 	.4byte 0x030001C4
 _0802ECEC:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 	THUMB_FUNC_END sub_0802ECC8
 
 	THUMB_FUNC_START e_world_end
@@ -2407,7 +2407,7 @@ sub_0802EDAC: @ 0x0802EDAC
 	add r0, r5, r0
 	add r1, r1, #20
 	mov r2, #0
-	bl sub_08034790
+	bl load_compressed_data
 	ldr r0, [r7]
 	add r0, r0, #72
 	str r0, [r6, #20]
@@ -3955,7 +3955,7 @@ _0802F8CC:
 	strb r0, [r2]
 	cmp r0, #1
 	bne _0802F91C
-	ldr r1, _0802F918  @ =gBGLayerOffset
+	ldr r1, _0802F918  @ =gBGLayerOffsets 
 	mov r2, #0
 	mov r0, #128
 	lsl r0, r0, #1
@@ -3977,14 +3977,14 @@ _0802F910:
 _0802F914:
 	.4byte 0x03000DEC
 _0802F918:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _0802F91C:
-	ldr r1, _0802F924  @ =gBGLayerOffset
+	ldr r1, _0802F924  @ =gBGLayerOffsets 
 	mov r0, #0
 	strh r0, [r1, #4]
 	b _0802F936
 _0802F924:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _0802F928:
 	ldr r0, _0802F9C8  @ =0x03000DDC
 	mov r1, #0
@@ -8488,7 +8488,7 @@ _0803198C:
 	ldr r1, [r4]
 	add r1, r1, #40
 	mov r2, #0
-	bl sub_08034790
+	bl load_compressed_data
 _080319AC:
 	pop {r4,r5}
 	pop {r0}
@@ -9622,7 +9622,7 @@ _080321C8:
 	strb r4, [r0]
 	mov r0, sp
 	strh r1, [r0]
-	ldr r1, _08032204  @ =gBGLayerOffset
+	ldr r1, _08032204  @ =gBGLayerOffsets 
 	ldr r2, _08032208  @ =0x01000008
 	bl CpuSet
 	add sp, sp, #4
@@ -9644,7 +9644,7 @@ _080321FC:
 _08032200:
 	.4byte 0x03000290
 _08032204:
-	.4byte gBGLayerOffset
+	.4byte gBGLayerOffsets 
 _08032208:
 	.4byte 0x01000008
 	THUMB_FUNC_END e_world_from_menu_init_callback

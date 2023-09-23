@@ -3665,13 +3665,13 @@ sub_080035C0: @ 0x080035C0
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	str r0, [sp, #16]
-	ldr r0, _08003690  @ =0x03001720
+	ldr r0, _08003690  @ =gCurrentLevelWidth
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r0, r0, #19
 	lsl r0, r0, #16
 	lsr r5, r0, #16
-	ldr r0, _08003694  @ =0x0300170C
+	ldr r0, _08003694  @ =gCurrentLevelHeight
 	ldrh r4, [r0]
 	lsl r4, r4, #16
 	asr r4, r4, #19
@@ -3767,9 +3767,9 @@ _08003678:
 	str r0, [sp, #24]
 	b _080036C0
 _08003690:
-	.4byte 0x03001720
+	.4byte gCurrentLevelWidth
 _08003694:
-	.4byte 0x0300170C
+	.4byte gCurrentLevelHeight
 _08003698:
 	.4byte gUnknown_0807820C
 _0800369C:
@@ -4443,13 +4443,13 @@ sub_08003B78: @ 0x08003B78
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	str r0, [sp, #8]
-	ldr r0, _08003C28  @ =0x03001720
+	ldr r0, _08003C28  @ =gCurrentLevelWidth
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r0, r0, #19
 	lsl r0, r0, #16
 	lsr r2, r0, #16
-	ldr r0, _08003C2C  @ =0x0300170C
+	ldr r0, _08003C2C  @ =gCurrentLevelHeight
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r0, r0, #19
@@ -4530,9 +4530,9 @@ _08003C08:
 	.byte 0x00
 	.byte 0x00
 _08003C28:
-	.4byte 0x03001720
+	.4byte gCurrentLevelWidth
 _08003C2C:
-	.4byte 0x0300170C
+	.4byte gCurrentLevelHeight
 _08003C30:
 	.4byte gUnknown_0807820C
 _08003C34:
@@ -4892,13 +4892,13 @@ sub_08003EBC: @ 0x08003EBC
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	str r0, [sp, #8]
-	ldr r0, _08003F70  @ =0x03001720
+	ldr r0, _08003F70  @ =gCurrentLevelWidth
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r0, r0, #19
 	lsl r0, r0, #16
 	lsr r2, r0, #16
-	ldr r0, _08003F74  @ =0x0300170C
+	ldr r0, _08003F74  @ =gCurrentLevelHeight
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r0, r0, #19
@@ -4980,9 +4980,9 @@ _08003F4C:
 	ldr r5, [r0]
 	b _08003F86
 _08003F70:
-	.4byte 0x03001720
+	.4byte gCurrentLevelWidth
 _08003F74:
-	.4byte 0x0300170C
+	.4byte gCurrentLevelHeight
 _08003F78:
 	.4byte gUnknown_0807820C
 _08003F7C:
@@ -5309,7 +5309,7 @@ sub_080041B8: @ 0x080041B8
 	ldr r4, _080043D0  @ =gUnknown_08078210
 	ldr r1, [r4]
 	mov r2, #0
-	bl sub_08034790
+	bl load_compressed_data
 	mov r3, #0
 	ldr r0, [r4]
 	ldr r0, [r0, #4]
@@ -5346,7 +5346,7 @@ _080041FC:
 	bcc _080041FC
 _08004218:
 	ldr r1, _080043D4  @ =0x030008C8
-	ldr r0, _080043D8  @ =0x03001720
+	ldr r0, _080043D8  @ =gCurrentLevelWidth
 	mov r2, #0
 	ldrsh r0, [r0, r2]
 	cmp r0, #0
@@ -5355,7 +5355,7 @@ _08004218:
 _08004226:
 	asr r0, r0, #4
 	str r0, [r1]
-	ldr r0, _080043DC  @ =0x0300170C
+	ldr r0, _080043DC  @ =gCurrentLevelHeight
 	mov r4, #0
 	ldrsh r0, [r0, r4]
 	cmp r0, #0
@@ -5531,13 +5531,13 @@ _08004386:
 	ldr r2, [r0]
 	ldr r5, _08004420  @ =0x0000C00C
 	add r2, r2, r5
-	ldr r3, _080043D8  @ =0x03001720
+	ldr r3, _080043D8  @ =gCurrentLevelWidth
 	mov r0, #0
 	ldrsh r1, [r3, r0]
 	add r1, r1, #255
 	asr r1, r1, #8
 	lsl r1, r1, #5
-	ldr r0, _080043DC  @ =0x0300170C
+	ldr r0, _080043DC  @ =gCurrentLevelHeight
 	mov r4, #0
 	ldrsh r0, [r0, r4]
 	add r0, r0, #255
@@ -5570,9 +5570,9 @@ _080043D0:
 _080043D4:
 	.4byte 0x030008C8
 _080043D8:
-	.4byte 0x03001720
+	.4byte gCurrentLevelWidth
 _080043DC:
-	.4byte 0x0300170C
+	.4byte gCurrentLevelHeight
 _080043E0:
 	.4byte 0x0300092C
 _080043E4:
@@ -5626,7 +5626,7 @@ sub_08004428: @ 0x08004428
 	bl CpuSet
 	cmp r4, #0
 	beq _080044AC
-	ldr r0, _08004460  @ =0x03000BB4
+	ldr r0, _08004460  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -5642,7 +5642,7 @@ _08004458:
 _0800445C:
 	.4byte 0x01002006
 _08004460:
-	.4byte 0x03000BB4
+	.4byte gLevelEWorldFlag
 _08004464:
 	ldr r2, [r4]
 	cmp r2, #0
@@ -5651,7 +5651,7 @@ _08004464:
 	ldr r1, [r5]
 _0800446E:
 	mov r2, #0
-	bl sub_08034790
+	bl load_compressed_data
 	b _08004482
 _08004476:
 	add r0, r4, #4
@@ -5666,19 +5666,19 @@ _08004482:
 	ldrsh r0, [r2, r1]
 	cmp r0, #0
 	beq _080044AC
-	ldr r1, _080044B8  @ =0x03001720
+	ldr r1, _080044B8  @ =gCurrentLevelWidth
 	ldrh r0, [r2, #4]
 	strh r0, [r1]
-	ldr r1, _080044BC  @ =0x0300170C
+	ldr r1, _080044BC  @ =gCurrentLevelHeight
 	ldrh r0, [r2, #6]
 	strh r0, [r1]
-	ldr r1, _080044C0  @ =0x030012A4
+	ldr r1, _080044C0  @ =gBGHorizontalOffset
 	ldrh r0, [r2]
 	strh r0, [r1]
-	ldr r1, _080044C4  @ =0x030012EC
+	ldr r1, _080044C4  @ =gBGVerticalOffset
 	ldrh r0, [r2, #2]
 	strh r0, [r1]
-	ldr r1, _080044C8  @ =0x030012E4
+	ldr r1, _080044C8  @ =gUnknown_030012E4
 	ldrh r0, [r2, #8]
 	strh r0, [r1]
 _080044AC:
@@ -5689,15 +5689,15 @@ _080044AC:
 _080044B4:
 	.4byte gUnknown_0807820C
 _080044B8:
-	.4byte 0x03001720
+	.4byte gCurrentLevelWidth
 _080044BC:
-	.4byte 0x0300170C
+	.4byte gCurrentLevelHeight
 _080044C0:
-	.4byte 0x030012A4
+	.4byte gBGHorizontalOffset
 _080044C4:
-	.4byte 0x030012EC
+	.4byte gBGVerticalOffset
 _080044C8:
-	.4byte 0x030012E4
+	.4byte gUnknown_030012E4
 	THUMB_FUNC_END sub_08004428
 
 	THUMB_FUNC_START sub_080044CC
@@ -7661,7 +7661,7 @@ _080053B6:
 _080053BA:
 	ldr r1, [r3]
 	add r1, r1, r8
-	ldr r0, _08005424  @ =0x03001720
+	ldr r0, _08005424  @ =gCurrentLevelWidth
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r2, r0, #19
@@ -7682,7 +7682,7 @@ _080053DE:
 	ldr r3, _08005420  @ =0x030008C8
 	ldr r1, [r3, #4]
 	add r1, r1, r9
-	ldr r0, _08005428  @ =0x0300170C
+	ldr r0, _08005428  @ =gCurrentLevelHeight
 	ldrh r0, [r0]
 	lsl r0, r0, #16
 	asr r2, r0, #19
@@ -7716,9 +7716,9 @@ _08005404:
 _08005420:
 	.4byte 0x030008C8
 _08005424:
-	.4byte 0x03001720
+	.4byte gCurrentLevelWidth
 _08005428:
-	.4byte 0x0300170C
+	.4byte gCurrentLevelHeight
 _0800542C:
 	cmp r6, #3
 	bne _0800543A
@@ -9793,19 +9793,19 @@ sub_08006388: @ 0x08006388
 	ldrsh r0, [r2, r1]
 	cmp r0, #0
 	beq _080063B4
-	ldr r1, _080063BC  @ =0x03001720
+	ldr r1, _080063BC  @ =gCurrentLevelWidth
 	ldrh r0, [r2, #4]
 	strh r0, [r1]
-	ldr r1, _080063C0  @ =0x0300170C
+	ldr r1, _080063C0  @ =gCurrentLevelHeight
 	ldrh r0, [r2, #6]
 	strh r0, [r1]
-	ldr r1, _080063C4  @ =0x030012A4
+	ldr r1, _080063C4  @ =gBGHorizontalOffset
 	ldrh r0, [r2]
 	strh r0, [r1]
-	ldr r1, _080063C8  @ =0x030012EC
+	ldr r1, _080063C8  @ =gBGVerticalOffset
 	ldrh r0, [r2, #2]
 	strh r0, [r1]
-	ldr r1, _080063CC  @ =0x030012E4
+	ldr r1, _080063CC  @ =gUnknown_030012E4
 	ldrh r0, [r2, #8]
 	strh r0, [r1]
 _080063B4:
@@ -9814,15 +9814,15 @@ _080063B4:
 _080063B8:
 	.4byte gUnknown_0807820C
 _080063BC:
-	.4byte 0x03001720
+	.4byte gCurrentLevelWidth
 _080063C0:
-	.4byte 0x0300170C
+	.4byte gCurrentLevelHeight
 _080063C4:
-	.4byte 0x030012A4
+	.4byte gBGHorizontalOffset
 _080063C8:
-	.4byte 0x030012EC
+	.4byte gBGVerticalOffset
 _080063CC:
-	.4byte 0x030012E4
+	.4byte gUnknown_030012E4
 	THUMB_FUNC_END sub_08006388
 
 	THUMB_FUNC_START sub_080063D0

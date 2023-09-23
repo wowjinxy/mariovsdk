@@ -13,6 +13,8 @@ SECTIONS
 		src/main.o(.text);
 		src/rom1.o(.text);
 		asm/rom1.o(.text);
+		src/rom_800EFD8.o(.text);
+		asm/rom_800F070.o(.text);
 		src/title.o(.text);
 		src/intro.o(.text);
 		asm/rom_801BAD8.o(.text);
@@ -106,6 +108,7 @@ SECTIONS
 		. = 0x9E4;		gUnknown_030009E4 = .;
 		. = 0x9E8;		gLevelTimerOnOffFlag = .;
 		. = 0x9EC;		gUnknown_030009EC = .;
+		. = 0xA10;		gUnknown_03000A10 = .;
 		. = 0xB44;		gUnknown_03000B44 = .;
 		. = 0xB48;		gPreviousPresentScore = .;
 		. = 0xB4C;		gCurrentPresentScore = .;
@@ -137,12 +140,15 @@ SECTIONS
 		. = 0xC28;		gUnknown_03000C28 = .;
 		. = 0xEA0;		gOamData = .;
 		. = 0x12A0;		gCameraHorizontalOffset = .;
+		. = 0x12A4;		gBGHorizontalOffset = .;
 		. = 0x12A8;		gUnknown_030012A8 = .;
 		. = 0x12B0;		gUnknown_030012B0 = .;
 		. = 0x12C0;		gUnknown_030012C0 = .;
 		. = 0x12D0;		gUnknown_030012D0 = .;
 		. = 0x12E0;		gUnknown_030012E0 = .;
+		. = 0x12E4;		gUnknown_030012E4 = .;
 		. = 0x12E8;		gUnknown_030012E8 = .;
+		. = 0x12EC;		gBGVerticalOffset = .;
 		. = 0x12F4;		gUnknown_030012F4 = .;
 		. = 0x12F8;		gUnknown_030012F8 = .;
 		. = 0x12FC;		gUnknown_030012FC = .;
@@ -157,7 +163,7 @@ SECTIONS
 		. = 0x171C;		gUnknown_0300171C = .;
 		. = 0x1720;		gCurrentLevelWidth = .;
 		. = 0x1724;		gSpriteHorizontalOffset = .;
-		. = 0x1730;		gBGLayerOffset = .;
+		. = 0x1730;		gBGLayerOffsets  = .;
 		. = 0x1740;		gUnknown_03001740 = .;
 		. = 0x1744;		gUnknown_03001744 = .;
 		. = 0x1748;		gUnknown_03001748 = .;
