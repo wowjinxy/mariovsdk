@@ -26,6 +26,7 @@ CFILES   := \
 	src/title.c \
 	src/intro.c \
 	src/pause_menu.c \
+	src/movie_player.c \
 	src/rom_8032408.c \
 	src/rom_8032FB0.c \
 	src/rom_8033C38.c \
@@ -37,13 +38,14 @@ SFILES   := \
 	asm/crt0.s \
 	asm/rom_800023C.s \
 	asm/rom_8001BA4.s \
-	asm/rom_80066FC.s \
+	asm/rom_80067F0.s \
 	asm/rom1.s \
 	asm/rom_800F070.s \
 	asm/rom_801BAD8.s \
 	asm/rom_801BF14.s \
+	asm/rom_802D608.s \
 	asm/eCard.s \
-	asm/rom_8032408.s \
+	asm/rom_8032814.s \
 	asm/rom_8032FB0.s \
 	asm/rom_8033D80.s \
 	asm/syscall.s \

@@ -76,7 +76,7 @@ void title_main(void)
         sub_08071E14(229);
         if (gUnknown_0807954C[gUnknown_03000B64].unk0 != 0)
         {
-            sub_0802D468(3, 23, 7, 0);
+            movie_player_setup_data(3, 23, 7, 0);
             sub_080070E8(30, 1);
         }
         else

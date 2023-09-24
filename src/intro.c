@@ -37,7 +37,7 @@ void intro_main(void)
     gUnknown_03000BE0++;
     if (gUnknown_03000BE0 > 180)
     {
-        sub_0802D468(3, 23, 7, 0);
+        movie_player_setup_data(3, 23, 7, 0);
         gNextMainState = MAIN_STATE_MOVIE;
     }
     sub_08008238();

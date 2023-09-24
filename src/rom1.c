@@ -40,7 +40,7 @@ void sub_08007170(void)
     gLevelEndTimer = -1;
     gUnknown_03000B60 = 0;
     sub_080386DC();
-    sub_08031BF0(gUnknown_0300192C, gUnknown_03001930);
+    sub_08031BF0(&gUnknown_0300192C, &gUnknown_03001930);
     if (gNextLevelInLevelTable.unk20 & 8)
     {
         gCurrentPresentScore = gPreviousPresentScore;

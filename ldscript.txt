@@ -9,7 +9,7 @@ SECTIONS
 		asm/rom_800023C.o(.text);
 		asm/rom_8001BA4.o(.text);
 		src/rom_80066FC.o(.text);
-		asm/rom_80066FC.o(.text);
+		asm/rom_80067F0.o(.text);
 		src/main.o(.text);
 		src/rom1.o(.text);
 		asm/rom1.o(.text);
@@ -20,9 +20,11 @@ SECTIONS
 		asm/rom_801BAD8.o(.text);
 		src/pause_menu.o(.text);
 		asm/rom_801BF14.o(.text);
+		src/movie_player.o(.text);
+		asm/rom_802D608.o(.text);
 		asm/eCard.o(.text);
 		src/rom_8032408.o(.text);
-		asm/rom_8032408.o(.text);
+		asm/rom_8032814.o(.text);
 		src/rom_8032FB0.o(.text);
 		asm/rom_8032FB0.o(.text);
 		src/rom_8033C38.o(.text);
@@ -82,6 +84,7 @@ SECTIONS
 		. = 0xB4;		gUnknown_030000B4 = .;
 		. = 0xB6;		gUnknown_030000B6 = .;
 		. = 0x100;		gPreviousMovieOption = .;
+		. = 0x1A0;		gUnknown_030001A0 = .;
 		. = 0x29C;		gUnknown_0300029C = .;
 		. = 0x2A0;		gUnknown_030002A0 = .;
 		. = 0x2AA;		gUnknown_030002AA = .;
@@ -108,6 +111,7 @@ SECTIONS
 		. = 0x9E4;		gUnknown_030009E4 = .;
 		. = 0x9E8;		gLevelTimerOnOffFlag = .;
 		. = 0x9EC;		gUnknown_030009EC = .;
+		. = 0xA00;		gUnknown_03000A00 = .;
 		. = 0xA10;		gUnknown_03000A10 = .;
 		. = 0xB44;		gUnknown_03000B44 = .;
 		. = 0xB48;		gPreviousPresentScore = .;
@@ -138,6 +142,7 @@ SECTIONS
 		. = 0xBF0;		gUnknown_03000BF0 = .;
 		. = 0xBF8;		gUnknown_03000BF8 = .;
 		. = 0xC28;		gUnknown_03000C28 = .;
+		. = 0xDCC;		gUnknown_03000DCC = .;
 		. = 0xEA0;		gOamData = .;
 		. = 0x12A0;		gCameraHorizontalOffset = .;
 		. = 0x12A4;		gBGHorizontalOffset = .;

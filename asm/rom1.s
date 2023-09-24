@@ -309,7 +309,7 @@ _08007DA6:
 	mov r1, #62
 	mov r2, #1
 	mov r3, #8
-	bl sub_0802D468
+	bl movie_player_setup_data
 	mov r0, #30
 	b _08007EBA
 	.byte 0x00
@@ -373,7 +373,7 @@ _08007E2E:
 	mov r1, #46
 	mov r2, #1
 	mov r3, #6
-	bl sub_0802D468
+	bl movie_player_setup_data
 	mov r0, #30
 	b _08007EBA
 	.byte 0x00

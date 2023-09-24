@@ -941,9 +941,9 @@ void goto_credits_init_callback(void)
     
     sub_08034898(0);
     if (gUnknown_03000B80 == 1)
-        sub_0802D468(3, 61, 8, 3); // ??, ??, ??, Movie ID
+        movie_player_setup_data(3, 61, 8, 3); // ??, ??, ??, Movie ID
     else
-        sub_0802D468(3, 47, 7, 7);
+        movie_player_setup_data(3, 47, 7, 7);
     sub_080070E8(30, 1);
 }
 

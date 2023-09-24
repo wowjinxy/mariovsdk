@@ -47,18 +47,18 @@ struct Struct3000A10 {
     u8 unk5;
     u8 unk6;
     u8 unk7;
-    u8 pad1[0x32];
+    u8 pad4[0x32];
     u32 unk3C;
     u32 unk40;
     u8 unk44;
-    u8 pad2[0x35];
+    u8 pad5[0x35];
     u8 unk7A;
     u8 unk7B;
     u8 unk7C;
     u8 unk7D;
-    u8 pad3[0x58];
+    u8 pad2[0x58];
     u8 unkD6;
-    u16 pad4[0x24];
+    u16 pad3[0x24];
     u8 unk120;
     u8 unk121;
     u8 unk122;
@@ -182,6 +182,15 @@ struct UnknownStruct17
     u8 unk1;
 };
 
+struct UnknownStruct18
+{
+    const u8 *unk0;
+    u8 unk4;
+    u8 unk5;
+	u8 unk6;
+	u8 unk7;
+};
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -206,6 +215,7 @@ extern u8 gUnknown_030000AC;
 extern s32 gUnknown_030000B0;
 extern s8 gUnknown_030000B4;
 extern s16 gUnknown_030000B6;
+extern struct UnknownStruct18 gUnknown_030001A0;
 extern u8 gUnknown_030002A0[];
 extern u16 gUnknown_030002AA;
 extern struct Struct30002B8 gUnknown_030002B0;
@@ -223,6 +233,7 @@ extern u16 gUnknown_030009D8;
 extern u8 gUnknown_030009E4[];  // unknown type
 extern u8 gLevelTimerOnOffFlag;
 extern u8 gUnknown_030009EC;
+extern u32 gUnknown_03000A00;
 extern struct Struct3000A10 gUnknown_03000A10;
 extern s32 gUnknown_03000B44;
 extern u32 gPreviousPresentScore;
@@ -252,6 +263,7 @@ extern u8 gUnknown_03000BF0;
 extern u8 gUnknown_03000BF8;
 extern u8 gUnknown_03000C28;
 extern u32 gUnknown_030009DC;
+extern u8 gUnknown_03000DCC;
 extern struct OamData gOamData[];
 extern s16 gCameraHorizontalOffset;
 extern s16 gBGHorizontalOffset;
@@ -283,8 +295,8 @@ extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
 extern struct UnknownStruct3 gUnknown_03001750;
 extern struct UnknownStruct9 gUnknown_03001770;
-extern u8 gUnknown_0300192C[];  // unknown type
-extern u8 gUnknown_03001930[];  // unknown type
+extern u16 gUnknown_0300192C;  // unknown type
+extern u16 gUnknown_03001930; // unknown type
 extern u32 gUnknown_03001938;
 extern u16 gMarioIdleTimer;
 extern u32 gUnknown_030019A0;
@@ -302,7 +314,7 @@ extern struct UnknownStruct7 *gUnknown_03001C78;
 extern void *gUnknown_03007FFC;
 
 extern const u8 gUnknown_08076D94[];
-extern u8 *const gUnknown_0807820C;
+
 extern void (*const gMainStateInitCallbacks[])(void);
 extern void (*const gMainStateMainCallbacks[])(void);
 extern void (*const gMainStateLoopCallbacks[])(void);
@@ -316,6 +328,17 @@ extern const struct UnknownStruct14 gNintendoSoftwareTechnologyLogo;
 extern const struct UnknownStruct14 gTitleScreenLeftData;
 extern const u8 gTitleScreenRightData[];
 extern struct UnknownStruct16 gTitleMarioDKEyes;  // non-const (likely in .data instead of .rodata)
+extern const u8 gUnknown_08B30768[]; // Movie player uses the below
+extern const u8 gUnknown_08B32118[];
+extern const u8 gUnknown_08B30F94[];
+extern const u8 gUnknown_08B2FFDC[];
+extern const u8 gUnknown_08B37168[];
+extern const u8 gUnknown_08B30768[];
+extern const u8 gUnknown_08B2F5B8[];
+extern const u8 gUnknown_08B2F070[];
+extern const u8 gUnknown_08B35FC0[];
+extern const u8 gUnknown_08B3732C[];
+extern const u8 gUnknown_08B37424[];
 
 //------------------------------------------------------------------------------
 // Functions
@@ -362,7 +385,7 @@ void sub_0802C7A4(void);
 void sub_0802C938(void);
 void sub_0802CF08(void);
 void sub_0802D1D0(void);
-void sub_0802D468(u8, u8, u8, u8);
+void movie_player_setup_data(u8, u8, u8, u8);
 void sub_0802F060(void);
 void sub_0802F1D4(void);
 int sub_0802F5C0();
@@ -420,5 +443,22 @@ void sub_080720AC(void);
 int sub_08072144(void);
 int sub_080721A8();
 void sub_0807220C();
+
+// Sort these later - Movie player uses these.
+
+u8 sub_0805727C();
+u8 sub_080573FC();
+u8 sub_08057420(u32);
+u8 sub_08038B18();
+u32 sub_0802D608();
+
+u8 sub_0805739C(const u8 *);
+u8 sub_0802BE50();
+u8 sub_080082C8();
+u8 sub_0801B310();
+u8 sub_08029EB4();
+u8 sub_080148A4(u32, u8);
+s32 sub_08014BB4();
+s32 sub_080148F0(u32);
 
 #endif  // GUARD_GLOBAL_H

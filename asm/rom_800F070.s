@@ -5677,7 +5677,7 @@ _08011920:
 	mov r1, #41
 	mov r2, #8
 	mov r3, #1
-	bl sub_0802D468
+	bl movie_player_setup_data
 	mov r0, #30
 	mov r1, #1
 	bl sub_080070E8
