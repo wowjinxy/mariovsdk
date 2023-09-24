@@ -42,12 +42,16 @@ SFILES   := \
 	asm/rom1.s \
 	asm/rom_800F070.s \
 	asm/rom_801BAD8.s \
-	asm/rom_801BF14.s \
+	asm/boss_clear.s \
+	asm/rom_801CB9C.s \
 	asm/rom_802D608.s \
 	asm/eCard.s \
+	asm/level_view.s \
 	asm/rom_8032814.s \
 	asm/rom_8032FB0.s \
-	asm/rom_8033D80.s \
+	asm/rom_8034928.s \
+	asm/world_start.s \
+	asm/rom_80379BC.s \
 	asm/syscall.s \
 	asm/rom_80747B8.s \
 	data/data.s
