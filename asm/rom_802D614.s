@@ -1,15 +1,5 @@
 	.INCLUDE "macro.inc"
 
-	THUMB_FUNC_START sub_0802D608
-sub_0802D608: @ 0x0802D608
-	ldr r1, _0802D610  @ =0x030001A0
-	mov r0, #0
-	strb r0, [r1, #4]
-	bx lr
-_0802D610:
-	.4byte 0x030001A0
-	THUMB_FUNC_END sub_0802D608
-
 	THUMB_FUNC_START sub_0802D614
 sub_0802D614: @ 0x0802D614
 	push {r4,lr}

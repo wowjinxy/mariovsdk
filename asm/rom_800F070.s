@@ -12776,7 +12776,7 @@ _08014DF8:
 	.4byte gUnknown_08078900
 	THUMB_FUNC_END sub_08014DDC
 
-	THUMB_FUNC_START sub_08014DFC
+	THUMB_FUNC_START sub_08014DFC @ unused -- seems to be able to to set the current mode to the level editor
 sub_08014DFC: @ 0x08014DFC
 	push {r4,r5,lr}
 	ldr r0, _08014E24  @ =0x04000150
@@ -12874,7 +12874,7 @@ _08014E9C:
 	add r4, r2, #0
 	str r1, [r3]
 	bl sub_08006A0C
-	mov r0, #11
+	mov r0, #11 @ 0xb -- level editor 
 	mov r1, #0
 	bl sub_080070E8
 	b _08014ED0

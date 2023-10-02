@@ -205,4 +205,6 @@ void movie_player_end(void) {
 	sub_08071C24();
 }
 
-asm(".short 0x0000"); //Padding
+void sub_0802D608(void) {
+	gUnknown_030001A0.unk4 = 0;	
+}
