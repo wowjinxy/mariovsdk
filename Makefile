@@ -1,4 +1,4 @@
-#### Tools ####
+  #### Tools ####
 
 CC1      := tools/agbcc/bin/agbcc
 CC1_OLD  := tools/agbcc/bin/old_agbcc
@@ -31,6 +31,7 @@ CFILES   := \
 	src/rom_8032408.c \
 	src/rom_8032FB0.c \
 	src/rom_8033C38.c \
+	src/rom_8038414.c \
 	src/agb_flash.c \
 	src/agb_flash_1m.c \
 	src/agb_flash_mx.c \
@@ -40,7 +41,7 @@ SFILES   := \
 	asm/rom_800023C.s \
 	asm/rom_8001BA4.s \
 	asm/rom_80067F0.s \
-	asm/rom1.s \
+	asm/rom_8007B58.s \
 	asm/rom_80088F0.s \
 	asm/rom_800F070.s \
 	asm/rom_801BAD8.s \
@@ -50,10 +51,11 @@ SFILES   := \
 	asm/eCard.s \
 	asm/level_view.s \
 	asm/rom_8032814.s \
-	asm/rom_8032FB0.s \
+	asm/rom_8033658.s \
 	asm/rom_8034928.s \
 	asm/world_start.s \
 	asm/rom_80379BC.s \
+	asm/rom_8038600.s \
 	asm/syscall.s \
 	asm/rom_80747B8.s \
 	data/data.s

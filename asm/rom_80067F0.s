@@ -289,7 +289,7 @@ _080069E4:
 	THUMB_FUNC_START sub_080069E8
 sub_080069E8: @ 0x080069E8
 	push {r4,lr}
-	ldr r4, _080069FC  @ =0x03000924
+	ldr r4, _080069FC  @ =gUnknown_03000924
 	mov r0, #135
 	lsl r0, r0, #3
 	bl sub_08034854
@@ -298,17 +298,17 @@ sub_080069E8: @ 0x080069E8
 	pop {r0}
 	bx r0
 _080069FC:
-	.4byte 0x03000924
+	.4byte gUnknown_03000924
 	THUMB_FUNC_END sub_080069E8
 
 	THUMB_FUNC_START sub_08006A00
 sub_08006A00: @ 0x08006A00
-	ldr r1, _08006A08  @ =0x03000924
+	ldr r1, _08006A08  @ =gUnknown_03000924
 	mov r0, #0
 	str r0, [r1]
 	bx lr
 _08006A08:
-	.4byte 0x03000924
+	.4byte gUnknown_03000924
 	THUMB_FUNC_END sub_08006A00
 
 	THUMB_FUNC_START sub_08006A0C
@@ -341,7 +341,7 @@ sub_08006A34: @ 0x08006A34
 	push {r4,lr}
 	mov r4, #0
 _08006A38:
-	ldr r0, _08006A68  @ =0x03000924
+	ldr r0, _08006A68  @ =gUnknown_03000924
 	ldr r1, [r0]
 	lsl r0, r4, #2
 	add r0, r0, r1
@@ -366,7 +366,7 @@ _08006A38:
 	.byte 0x00
 	.byte 0x00
 _08006A68:
-	.4byte 0x03000924
+	.4byte gUnknown_03000924
 	THUMB_FUNC_END sub_08006A34
 
 	THUMB_FUNC_START sub_08006A6C

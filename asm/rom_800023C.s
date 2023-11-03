@@ -596,7 +596,7 @@ _080009F8:
 	tst r3, r12
 	movne r0, #0
 	bxne lr
-	ldr r12, _08001688  @ =0x03001940
+	ldr r12, _08001688  @ =gUnknown_03001940
 	ldr r12, [r12]
 	mov r3, #176
 	mla r1, r3, r1, r12
@@ -1498,7 +1498,7 @@ _08001680:
 _08001684:
 	.4byte gUnknown_03001A1C
 _08001688:
-	.4byte 0x03001940
+	.4byte gUnknown_03001940
 _0800168C:
 	.4byte gUnknown_0807AA58
 _08001690:

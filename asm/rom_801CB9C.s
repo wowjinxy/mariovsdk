@@ -26518,7 +26518,7 @@ level_results_init_callback: @ 0x0802935C
 	ldr r1, _0802937C  @ =0x0300010F
 	mov r0, #0
 	strb r0, [r1]
-	ldr r0, _08029380  @ =0x03001940
+	ldr r0, _08029380  @ =gUnknown_03001940
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0802938C
@@ -26533,7 +26533,7 @@ level_results_init_callback: @ 0x0802935C
 _0802937C:
 	.4byte 0x0300010F
 _08029380:
-	.4byte 0x03001940
+	.4byte gUnknown_03001940
 _08029384:
 	.4byte 0x03000C20
 _08029388:
@@ -34092,7 +34092,7 @@ _0802C954:
 	lsr r1, r0, #24
 	lsl r2, r5, #2
 	add r2, r2, r6
-	ldr r3, _0802C9D4  @ =0x03001940
+	ldr r3, _0802C9D4  @ =gUnknown_03001940
 	mov r0, #176
 	mul r1, r0, r1
 	ldr r0, [r3]
@@ -34128,7 +34128,7 @@ _0802C9CC:
 _0802C9D0:
 	.4byte gUnknown_030009E0
 _0802C9D4:
-	.4byte 0x03001940
+	.4byte gUnknown_03001940
 	THUMB_FUNC_END sub_0802C938
 
 	THUMB_FUNC_START sub_0802C9D8

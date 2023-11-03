@@ -250,6 +250,7 @@ extern struct Struct30002B8 gUnknown_030002B0;
 extern struct Struct30002B8 gUnknown_030002B8;
 extern struct Struct30002B8 gUnknown_030002C0;
 extern struct Struct30002B8 gUnknown_030002C8;
+extern u8 gUnknown_03000924;
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
 extern struct Struct30009B0 gUnknown_030009B0;
 extern u32 gNextMainState;
@@ -258,9 +259,10 @@ extern u32 gUnknown_030009CC;
 extern u8 gUnknown_030009D0;
 extern u8 gUnknown_030009D4;
 extern u16 gUnknown_030009D8;
+extern u32 gUnknown_030009DC;
+extern u16 gUnknown_030009E0;
 extern u8 gUnknown_030009E4[];  // unknown type
 extern u8 gLevelTimerOnOffFlag;
-extern u16 gUnknown_030009E0;
 extern u8 gUnknown_030009EC;
 extern u32 gUnknown_03000A00;
 extern struct Struct3000A10 gUnknown_03000A10;
@@ -295,7 +297,6 @@ extern s8 gUnknown_03000C00;
 extern u16 gUnknown_03000C04;
 extern u16 gUnknown_03000C0C;
 extern u8 gUnknown_03000C28;
-extern u32 gUnknown_030009DC;
 extern u16 gUnknown_03000D38;
 extern s32 gUnknown_03000D60;
 extern s32 gUnknown_03000D64;
@@ -361,6 +362,16 @@ extern u16 gUnknown_03001C48;
 extern s8 gUnknown_03001C80;
 extern s8 gUnknown_03001C84;
 extern s16 gUnknown_03001D60;
+
+extern u16 gUnknown_03001A3C; 
+extern u8 gUnknown_03001A4C;
+extern u8 gUnknown_03001A10[];
+extern u8 gUnknown_03001990; // current input? no clue on this but it does stuff relating to inputs looking at memory
+extern u8 gUnknown_030019C0[];
+extern s8 gUnknown_030019D8;
+extern u8 gUnknown_03001944;
+extern u8 gUnknown_030019F4;
+extern u8 gUnknown_030019A4;
 
 extern struct UnknownStruct7 *gUnknown_03001C78;
 extern void *gUnknown_03007FFC;

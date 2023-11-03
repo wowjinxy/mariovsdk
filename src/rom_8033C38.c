@@ -504,65 +504,67 @@ int sub_08034528(s32 a)
 
 struct UnknownStruct1
 {
-    u32 unk0;
-    u8 unk4[1];  // unknown length
+    u32 size1;
+    u8 data[1];  // unknown length
 };
 
-void sub_0803455C(struct UnknownStruct1 *a, u16 *b)
+void sub_0803455C(struct UnknownStruct1 *a, u16 *vramPos)
 {
-    u8 *r3 = a->unk4;
-    u32 r8 = a->unk0 >> 8;
-    u32 r5 = 0;
-    u8 r2;
-    u8 r6;
-    u16 r4;
+    u8 *romPos = a->data; 
+    u32 dataSize = a->size1 >> 8;
+    u32 uncSize = 0;
+    u8 dataLeft;
+    u8 uncData2;
+    u16 uncData;
     
-    while (r5 < r8)
+    while (uncSize < dataSize)
     {
-        r2 = *r3++;
-        if (r2 & 0x80)
+        dataLeft = *romPos++;
+        if (dataLeft & 0x80)
         {
-            r2 &= ~0x80;
-            r2 += 3;
-            r6 = *r3++;
-            while (r2 != 0)
+            dataLeft &= ~0x80;
+            dataLeft += 3;
+            uncData2 = *romPos++;
+            while (dataLeft != 0)
             {
-                if (r5 & 1)
+                if (uncSize & 1)
                 {
-                    r4 |= r6 << 8;
-                    *b++ = r4;
-                    r4 = 0;
+                    uncData |= uncData2 << 8;
+                    *vramPos++ = uncData;
+                    uncData = 0;
                 }
                 else
                 {
-                    r4 = r6;
+                    uncData = uncData2;
                 }
-                r2--;
-                r5++;
+                dataLeft--;
+                uncSize++;
             }
         }
         else
         {
-            r2++;
-            while (r2 != 0)
+            dataLeft++;
+			
+            while (dataLeft != 0) 
             {
-                if (r5 & 1)
+                if (uncSize & 1)
                 {
-                    r4 |= *r3++ << 8;
-                    *b++ = r4;
-                    r4 = 0;
+                    uncData |= *romPos++ << 8;
+                    *vramPos++ = uncData;
+                    uncData = 0;
                 }
+				
                 else
                 {
-                    r4 = *r3++;
+                    uncData = *romPos++;
                 }
-                r2--;
-                r5++;
+                dataLeft--;
+                uncSize++;
             }
         }
     }
-    if (r5 & 1)
-        *b = r4;
+    if (uncSize & 1)
+        *vramPos = uncData;
 }
 
 // TODO: This function is crazy. Fix later.

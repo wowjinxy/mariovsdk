@@ -162,10 +162,10 @@ void movie_player_setup_data(u8 param_1, u8 param_2, u8 param_3, u8 movieID) {
   case 3: //Movie ID 3 (Credits 1)
     (u32)gUnknown_030001A0.unk0 = (u32*)&gUnknown_08B37168;
     break;
-  case 8: //Movie ID 8 (Unused)
+  case 8: //Movie ID 8 (Unused -- DK Falling)
     (u32)gUnknown_030001A0.unk0 = (u32*)&gUnknown_08B3732C;
     break;
-  case 9: //Movie ID 9 (Unused)
+  case 9: //Movie ID 9 (Unused -- "Plus Worlds Unlocked!" message)
     (u32)gUnknown_030001A0.unk0 = (u32*)&gUnknown_08B37424;
   }
     
