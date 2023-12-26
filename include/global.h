@@ -182,13 +182,13 @@ struct UnknownStruct17
     u8 unk1;
 };
 
-struct UnknownStruct18
+struct MoviePlayerParamaters
 {
-    const u8 *unk0;
+    const u32 *movieData;
     u8 unk4;
-    u8 unk5;
+    u8 songID;
 	u8 unk6;
-	u8 unk7;
+	u8 movieID;
 };
 
 struct backgroundLayerOffset
@@ -223,6 +223,7 @@ struct struct_03000E70 {
 // Variables
 //------------------------------------------------------------------------------
 
+extern u32 gUnknown_03000004;
 extern u32 gUnknown_03000020;
 extern u32 gUnknown_03000024;
 extern u8 gUnknown_03000028;
@@ -243,13 +244,33 @@ extern u8 gUnknown_030000AC;
 extern s32 gUnknown_030000B0;
 extern s8 gUnknown_030000B4;
 extern s16 gUnknown_030000B6;
-extern struct UnknownStruct18 gUnknown_030001A0;
+extern struct MoviePlayerParamaters gMoviePlayerParams;
 extern u8 gUnknown_030002A0[];
 extern u16 gUnknown_030002AA;
 extern struct Struct30002B8 gUnknown_030002B0;
 extern struct Struct30002B8 gUnknown_030002B8;
 extern struct Struct30002B8 gUnknown_030002C0;
 extern struct Struct30002B8 gUnknown_030002C8;
+
+//new -- unknown type
+extern u8 gUnknown_03000368;
+extern u8 gUnknown_03000374;
+extern u8 gUnknown_03000378;
+extern u8 gUnknown_03000380;
+extern u8 gUnknown_03000387;
+extern u8 gUnknown_03000389;
+extern u8 gUnknown_0300038A;
+extern u8 gUnknown_0300038B;
+extern u8 gUnknown_0300038C;
+extern u8 gUnknown_03000394;
+extern u8 gUnknown_03000395;
+extern u8 gUnknown_03000396;
+
+extern u8 gUnknown_030008C4;
+extern u8 gUnknown_030008D4;
+extern u8 gUnknown_030008D8;
+extern u8 gUnknown_030008E8;
+
 extern u8 gUnknown_03000924;
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
 extern struct Struct30009B0 gUnknown_030009B0;
@@ -301,6 +322,9 @@ extern u16 gUnknown_03000D38;
 extern s32 gUnknown_03000D60;
 extern s32 gUnknown_03000D64;
 extern u8 gUnknown_03000DCC;
+
+extern u8 gUnknown_03000E60;
+
 extern struct struct_03000E70 gUnknown_03000E70;
 extern struct OamData gOamData[];
 extern s16 gCameraHorizontalOffset;
@@ -337,16 +361,40 @@ extern u16 gUnknown_0300192C;  // unknown type
 extern u16 gUnknown_03001930; // unknown type
 extern u32 gUnknown_03001938;
 extern u16 gMarioIdleTimer;
+
+extern u8 gUnknown_03001994;
+extern u8 gUnknown_0300199C;
+
 extern u32 gUnknown_030019A0;
+
+extern u8 gUnknown_030019B0;
+extern u8 gUnknown_030019E8;
+
 extern u32 gUnknown_03001A1C;
-extern u8 gRedPresentFlag[];  // implied by assembly
-extern u8 gYellowPresentFlag[];  // implied by assembly
-extern u8 gBluePresentFlag[];  // implied by assembly
-extern u8 gLetterTFlag[];  // implied by assembly
-extern u8 gLetterOFlag[];  // implied by assembly
-extern u8 gLetterYFlag[];  // implied by assembly
+
+//these probably dont exist, part of a struct
+extern u8 gRedPresentFlag[];  // implied by ghidra
+extern u8 gYellowPresentFlag[];  // implied by ghidra
+extern u8 gBluePresentFlag[];  // implied by ghidra
+extern u8 gLetterTFlag[];  // implied by ghidra
+extern u8 gLetterOFlag[];  // implied by ghidra
+extern u8 gLetterYFlag[];  // implied by ghidra
+
+
 extern u8 gUnknown_03001A38;
 extern struct UnknownStruct8 gUnknown_03001B30;
+
+//new -- unknown type
+extern u8 gUnknown_03001B80;
+extern u8 gUnknown_03001B84;
+extern u8 gUnknown_03001B88;
+extern u8 gUnknown_03001B90;
+extern u8 gUnknown_03001BA0;
+extern u8 gUnknown_03001BA4;
+extern u8 gUnknown_03001BB0;
+extern u8 gUnknown_03001BC8;
+extern u8 gUnknown_03001BCC;
+extern u8 gUnknown_03001BD0;
 
 extern u8 gUnknown_03001BDC;
 extern s32 gUnknown_03001BE4;
@@ -374,6 +422,10 @@ extern u8 gUnknown_030019F4;
 extern u8 gUnknown_030019A4;
 
 extern struct UnknownStruct7 *gUnknown_03001C78;
+
+extern u8 gUnknown_03001E38;
+extern u8 gUnknown_03001E3C;
+
 extern void *gUnknown_03007FFC;
 
 extern const u8 gUnknown_08076D94[];

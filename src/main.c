@@ -144,19 +144,19 @@ static void main_loop(void)
     }
 }
 
-void sub_080070E8(s32 a, s32 b)
+void sub_080070E8(s32 mainState, s32 useFadeInOut)
 {
     if (gNextMainState != MAIN_STATE_FADETRANSITION)
     {
-        if (gLevelEWorldFlag != MAIN_STATE_INTRO && a == MAIN_STATE_LEVEL_SELECT)
-            a = MAIN_STATE_EWORLD_LEVEL_SELECT;
-        if (b == 0)
+        if (gLevelEWorldFlag != 0 && mainState == MAIN_STATE_LEVEL_SELECT)
+            mainState = MAIN_STATE_EWORLD_LEVEL_SELECT;
+        if (useFadeInOut == 0)
         {
-            gNextMainState = a;
+            gNextMainState = mainState;
         }
         else
         {
-            gUnknown_030009CC = a;
+            gUnknown_030009CC = mainState;
             gPreviousMainState = gNextMainState;
             gNextMainState = MAIN_STATE_FADETRANSITION;
         }

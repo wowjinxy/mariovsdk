@@ -26523,7 +26523,7 @@ level_results_init_callback: @ 0x0802935C
 	cmp r0, #0
 	beq _0802938C
 	ldr r1, _08029384  @ =0x03000C20
-	ldr r0, _08029388  @ =0x030019AC
+	ldr r0, _08029388  @ =gUnknown_030019AC
 	ldr r0, [r0]
 	add r0, r0, #52
 	ldrb r0, [r0]
@@ -26537,7 +26537,7 @@ _08029380:
 _08029384:
 	.4byte 0x03000C20
 _08029388:
-	.4byte 0x030019AC
+	.4byte gUnknown_030019AC
 _0802938C:
 	ldr r1, _08029408  @ =0x03000C20
 	mov r0, #6
@@ -26742,7 +26742,7 @@ _08029522:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08029558
-	ldr r1, _08029550  @ =0x03001BA0
+	ldr r1, _08029550  @ =gUnknown_03001BA0
 	ldrb r0, [r1]
 	cmp r0, #5
 	bhi _08029554
@@ -26760,7 +26760,7 @@ _08029548:
 _0802954C:
 	.4byte gNextLevelInLevelTable
 _08029550:
-	.4byte 0x03001BA0
+	.4byte gUnknown_03001BA0
 _08029554:
 	ldr r0, _080295D8  @ =0x00002710
 _08029556:
@@ -34294,7 +34294,7 @@ _0802CAC4:
 	ldr r0, [r0, #36]
 	str r0, [r1]
 	ldr r1, _0802CB3C  @ =0x03000D6C
-	ldr r0, _0802CB40  @ =0x030019AC
+	ldr r0, _0802CB40  @ =gUnknown_030019AC
 	ldr r0, [r0]
 	ldr r0, [r0, #36]
 	str r0, [r1]
@@ -34320,7 +34320,7 @@ _0802CB38:
 _0802CB3C:
 	.4byte 0x03000D6C
 _0802CB40:
-	.4byte 0x030019AC
+	.4byte gUnknown_030019AC
 _0802CB44:
 	ldr r3, _0802CB88  @ =gUnknown_03000D64
 	ldr r0, _0802CB8C  @ =0x03000D80
@@ -34739,7 +34739,7 @@ _0802CDDA:
 	ldr r3, [r6, #36]
 	str r3, [r0]
 	ldr r1, _0802CEA0  @ =0x03000D6C
-	ldr r0, _0802CEA4  @ =0x030019AC
+	ldr r0, _0802CEA4  @ =gUnknown_030019AC
 	ldr r0, [r0]
 	ldr r0, [r0, #36]
 	str r0, [r1]
@@ -34781,7 +34781,7 @@ _0802CE9C:
 _0802CEA0:
 	.4byte 0x03000D6C
 _0802CEA4:
-	.4byte 0x030019AC
+	.4byte gUnknown_030019AC
 _0802CEA8:
 	ldr r0, _0802CEB8  @ =0x03000D58
 	add r3, r3, r0
@@ -34866,7 +34866,7 @@ sub_0802CF20: @ 0x0802CF20
 	add r0, r4, #0
 	add r0, r0, #61
 	ldrb r0, [r0]
-	ldr r1, _0802CF64  @ =0x030019AC
+	ldr r1, _0802CF64  @ =gUnknown_030019AC
 	ldr r2, [r1]
 	add r3, r2, #0
 	add r3, r3, #67
@@ -34894,7 +34894,7 @@ _0802CF54:
 _0802CF60:
 	.4byte 0x03000D84
 _0802CF64:
-	.4byte 0x030019AC
+	.4byte gUnknown_030019AC
 _0802CF68:
 	.4byte 0xFFFFFF00
 _0802CF6C:

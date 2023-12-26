@@ -68,6 +68,7 @@ SECTIONS
 	ALIGN(4)
 	{
 		. = 0x0; 		gUnknown_03000000 = .;
+		. = 0x4; 		gUnknown_03000004 = .;
 		. = 0x20;		gUnknown_03000020 = .;
 		. = 0x24;		gUnknown_03000024 = .;
 		. = 0x28;		gUnknown_03000028 = .;
@@ -92,7 +93,7 @@ SECTIONS
 		. = 0xB4;		gUnknown_030000B4 = .;
 		. = 0xB6;		gUnknown_030000B6 = .;
 		. = 0x100;		gPreviousMovieOption = .;
-		. = 0x1A0;		gUnknown_030001A0 = .;
+		. = 0x1A0;		gMoviePlayerParams = .;
 		. = 0x29C;		gUnknown_0300029C = .;
 		. = 0x2A0;		gUnknown_030002A0 = .;
 		. = 0x2AA;		gUnknown_030002AA = .;
@@ -100,12 +101,32 @@ SECTIONS
 		. = 0x2B8;		gUnknown_030002B8 = .;
 		. = 0x2C0;		gUnknown_030002C0 = .;
 		. = 0x2C8;		gUnknown_030002C8 = .;
+		
+		. = 0x368;		gUnknown_03000368 = .;
+		. = 0x374;		gUnknown_03000374 = .;
+		. = 0x378;		gUnknown_03000378 = .;
+		. = 0x380;		gUnknown_03000380 = .;
+		. = 0x387;		gUnknown_03000387 = .;
+		. = 0x389;		gUnknown_03000389 = .;
+		. = 0x38A;		gUnknown_0300038A = .;
+		. = 0x38B;		gUnknown_0300038B = .;
+		. = 0x38C;		gUnknown_0300038C = .;
+		. = 0x394;		gUnknown_03000394 = .;
+		. = 0x395;		gUnknown_03000395 = .;
+		. = 0x396;		gUnknown_03000396 = .;
+		
+		
+		
 
 		. = 0x880;
 		src/agb_flash.o(.bss);
 		tools/agbcc/lib/libgcc.a:dp-bit.o(.bss);
 		tools/agbcc/lib/libgcc.a:fp-bit.o(.bss);
 
+		. = 0x8C4;		gUnknown_030008C4 = .;
+		. = 0x8D4;		gUnknown_030008D4 = .;
+		. = 0x8D8;		gUnknown_030008D8 = .;
+		. = 0x8E8;		gUnknown_030008E8 = .;
 		. = 0x924;      gUnknown_03000924 = .;
 		. = 0x964;		gUnknown_03000964 = .;
 		. = 0x9B0;		gUnknown_030009B0 = .;
@@ -160,6 +181,7 @@ SECTIONS
 		. = 0xD60;		gUnknown_03000D60 = .;
 		. = 0xD64;		gUnknown_03000D64 = .;
 		. = 0xDCC;		gUnknown_03000DCC = .;
+		. = 0xE60;		gUnknown_03000E60 = .;
 		. = 0xE70;		gUnknown_03000E70 = .;
 		. = 0xEA0;		gOamData = .;
 		. = 0x12A0;		gCameraHorizontalOffset = .;
@@ -200,11 +222,16 @@ SECTIONS
 		. = 0x196C;     gCurrentSwitchState = .;
 		. = 0x1984;  	gMarioIdleTimer = .;
 		. = 0x1990;  	gUnknown_03001990 = .;
+		. = 0x1994;  	gUnknown_03001994 = .;
+		. = 0x199C;  	gUnknown_0300199C = .;
 		. = 0x19A0;		gUnknown_030019A0 = .;
 		. = 0x19A4;		gUnknown_030019A4 = .;
+		. = 0x19AC;		gUnknown_030019AC = .;
+		. = 0x19B0;		gUnknown_030019B0 = .;
 		. = 0x19C0;		gUnknown_030019C0 = .;
 		. = 0x19D8;		gUnknown_030019D8 = .;
 		. = 0x19DC;		gPreviousSwitchState = .;
+		. = 0x19E8;		gUnknown_030019E8 = .;
 		. = 0x19F4;		gUnknown_030019F4 = .;
 		. = 0x1A10;		gUnknown_03001A10 = .;
 		. = 0x1A1C;		gUnknown_03001A1C = .;
@@ -218,6 +245,19 @@ SECTIONS
 		. = 0x1A3C;		gUnknown_03001A3C = .;
 		. = 0x1A4C;		gUnknown_03001A4C = .;
 		. = 0x1B30;		gUnknown_03001B30 = .;
+		
+		. = 0x1B80;		gUnknown_03001B80 = .;
+		. = 0x1B84;		gUnknown_03001B84 = .;
+		. = 0x1B88;		gUnknown_03001B88 = .;
+		. = 0x1B8C;		gUnknown_03001B8C = .;
+		. = 0x1B90;		gUnknown_03001B90 = .;
+		. = 0x1BA0;		gUnknown_03001BA0 = .;
+		. = 0x1BA4;		gUnknown_03001BA4 = .;
+		. = 0x1BB0;		gUnknown_03001BB0 = .;
+		. = 0x1BC8;		gUnknown_03001BC8 = .;
+		. = 0x1BCC;		gUnknown_03001BCC = .;
+		. = 0x1BD0;		gUnknown_03001BD0 = .;
+		
 		. = 0x1BDC;		gUnknown_03001BDC = .;
 		. = 0x1BE4;		gUnknown_03001BE4 = .;
 		. = 0x1BEC;		gUnknown_03001BEC = .;
@@ -233,6 +273,8 @@ SECTIONS
 		. = 0x1C80;		gUnknown_03001C80 = .;
 		. = 0x1C84;		gUnknown_03001C84 = .;
 		. = 0x1D60;		gUnknown_03001D60 = .;
+		. = 0x1E38;		gUnknown_03001E38 = .;
+		. = 0x1E3C;		gUnknown_03001E3C = .;
 		. = 0x1F2C;		gFlashTimeoutFlag = .;
 		. = 0x1F30;		PollFlashStatus = .;
 		. = 0x1F34;		WaitForFlashWrite = .;

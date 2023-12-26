@@ -3003,14 +3003,14 @@ _08010578:
 	mov r0, #248
 	and r0, r0, r1
 	strb r0, [r2, #19]
-	ldr r1, _080105B4  @ =0x03001BA0
+	ldr r1, _080105B4  @ =gUnknown_03001BA0
 	b _080105DA
 _080105AC:
 	.4byte gUnknown_03000B80
 _080105B0:
 	.4byte gNextLevelInLevelTable
 _080105B4:
-	.4byte 0x03001BA0
+	.4byte gUnknown_03001BA0
 _080105B8:
 	mov r0, #2
 	and r1, r1, r0
@@ -14382,7 +14382,7 @@ _080159C4:
 _080159C8:
 	.4byte gUnknown_030012F8
 _080159CC:
-	ldr r0, _08015A00  @ =0x03001BA0
+	ldr r0, _08015A00  @ =gUnknown_03001BA0
 	strb r4, [r0]
 	strb r4, [r6]
 _080159D2:
@@ -14407,7 +14407,7 @@ _080159D2:
 	bl sub_080070E8
 	b _08015A48
 _08015A00:
-	.4byte 0x03001BA0
+	.4byte gUnknown_03001BA0
 _08015A04:
 	.4byte gNextLevelID
 _08015A08:

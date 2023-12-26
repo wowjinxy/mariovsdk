@@ -266,7 +266,7 @@ _080329DC:
 	add r2, r2, r0
 	ldr r0, [r2]
 	str r0, [r1]
-	ldr r2, _08032A90  @ =0x03000E60
+	ldr r2, _08032A90  @ =gUnknown_03000E60
 	ldrh r0, [r5, #44]
 	strh r0, [r2]
 	ldrh r1, [r5, #56]
@@ -322,7 +322,7 @@ _08032A88:
 _08032A8C:
 	.4byte 0x03000E90
 _08032A90:
-	.4byte 0x03000E60
+	.4byte gUnknown_03000E60
 _08032A94:
 	bl sub_08006388
 _08032A98:

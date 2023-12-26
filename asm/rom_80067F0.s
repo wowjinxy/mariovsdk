@@ -402,7 +402,7 @@ sub_08006A6C: @ 0x08006A6C
 	bcs _08006AE4
 	mov r6, #31
 	mov r12, r2
-	ldr r7, _08006B00  @ =0x030008E8
+	ldr r7, _08006B00  @ =gUnknown_030008E8
 	mov r9, r7
 	mov r10, r3
 _08006AB0:
@@ -448,7 +448,7 @@ _08006AF8:
 _08006AFC:
 	.4byte 0x0000800C
 _08006B00:
-	.4byte 0x030008E8
+	.4byte gUnknown_030008E8
 	THUMB_FUNC_END sub_08006A6C
 
 	THUMB_FUNC_START sub_08006B04
