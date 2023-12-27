@@ -45,7 +45,7 @@ void sub_08007170(void)
     {
         gCurrentPresentScore = gPreviousPresentScore;
         gCurrentEnemyScore = gUnknown_03000BB8;
-        CpuCopy16(gUnknown_030009E4, gRedPresentFlag, 4);
+        CpuCopy16(gUnknown_030009E4, &gLevelCollectableFlags, 4);
     }
     else
     {
@@ -216,12 +216,12 @@ void sub_08007544(void)
         {
             asm(""::"r"(gGeneralTimer));  // Why is this variable read? Is it volatile?
             sub_08014A58(-1);
-            sub_080070E8(14, 0);
+            sub_080070E8(MAIN_STATE_RESPAWN, NO_FADE);
         }
         else
         {
             sub_08014A58(-1);
-            sub_080070E8(20, 1);
+            sub_080070E8(MAIN_STATE_CLEAR_GAMEOVER, USE_FADE);
         }
     }
 
@@ -236,7 +236,7 @@ void sub_08007544(void)
     else
     {
         if ((gUnknown_03001A1C & 0x80) && sub_08072144() != 0)
-            sub_080070E8(13, 1);
+            sub_080070E8(MAIN_STATE_LEVEL_PLAY, USE_FADE);
     }
 
     if (gUnknown_03000038 & 0x2000)

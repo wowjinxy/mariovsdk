@@ -47,7 +47,12 @@ struct Struct3000A10 {
     u8 unk5;
     u8 unk6;
     u8 unk7;
-    u8 pad4[0x32];
+    u8 pad4[0x2C];
+    u8 unk2C;
+    u8 padA[0x4];
+    u8 unk39;
+    u8 unk3A;
+    u8 unk3B;
     u32 unk3C;
     u32 unk40;
     u8 unk44;
@@ -187,7 +192,7 @@ struct MoviePlayerParamaters
     const u32 *movieData;
     u8 unk4;
     u8 songID;
-	u8 unk6;
+	u8 nextMode;
 	u8 movieID;
 };
 
@@ -217,6 +222,90 @@ struct struct_03000E70 {
     s32 unk4; // probably struct struct_03000E70_sub * too
     struct struct_03000E70_sub *unk8;
     struct struct_03000E70_sub *unkC;
+};
+
+
+typedef struct test {
+    s16 unk0;
+    s16 unk2;
+    s16 unk4;
+    s16 unk6;
+    s16 unk8;
+    s16 unkA;
+    s32 unkC;
+} test;
+
+typedef struct struct_030019AC {
+    s32 unk0;
+    s32 unk4;
+    s32 unk8;
+    s32 unkC;
+    s32 unk10;
+    s32 unk14;
+    s32 unk18;
+    s32 unk1C;
+    s32 unk20;
+    s32 unk24;
+    s32 unk28;
+    s32 unk2C;
+    s32 unk30;
+    s32 unk34;
+    s32 unk38;
+    s32 unk3C;
+    s32 unk40;
+    s32 unk44;
+    s32 unk48;
+    s32 unk4C;
+    s32 unk50;
+    s16 unk54;
+    s16 unk56;
+    s32 unk58;
+    s32 unk5C;
+    s32 unk60;
+    s32 unk64;
+    s32 unk68;
+    s32 unk6C;
+    s32 unk70;
+    s32 unk74;
+    s32 unk78;
+    s32 unk7C;
+    s32 unk80;
+    test* unk84;
+} struct_030019AC;
+
+typedef struct struct_03001BD0 {
+    s16 unk0[4];
+    s32 unk8;
+    s32 unkC;
+    s32 unk10;
+    s32 unk14;
+    s32 unk18;
+    s32 unk1C;
+    s32 unk20;
+    s32 unk24;
+    s32 unk28;
+    s32 unk2C;
+    s32 unk30;
+    s32 unk34;
+    s32 unk38;
+    u8 unk3C;
+    u8 unk3D;
+} struct_03001BD0;
+
+typedef struct unkst24 {
+    u8 pad[0x24];
+} unkst24;
+
+struct levelCollectableFlags
+{
+	u8 redPresent;
+	u8 yellowPresent;
+	u8 bluePresent;
+	u8 letterT;
+	u8 letterO;
+	u8 letterY;
+	u8 unk6;
+	u8 unk7;
 };
 
 //------------------------------------------------------------------------------
@@ -252,16 +341,13 @@ extern struct Struct30002B8 gUnknown_030002B8;
 extern struct Struct30002B8 gUnknown_030002C0;
 extern struct Struct30002B8 gUnknown_030002C8;
 
-//new -- unknown type
+
+//new for sub_0804A794
 extern u8 gUnknown_03000368;
 extern u8 gUnknown_03000374;
 extern u8 gUnknown_03000378;
 extern u8 gUnknown_03000380;
-extern u8 gUnknown_03000387;
-extern u8 gUnknown_03000389;
-extern u8 gUnknown_0300038A;
-extern u8 gUnknown_0300038B;
-extern u8 gUnknown_0300038C;
+
 extern u8 gUnknown_03000394;
 extern u8 gUnknown_03000395;
 extern u8 gUnknown_03000396;
@@ -365,36 +451,40 @@ extern u16 gMarioIdleTimer;
 extern u8 gUnknown_03001994;
 extern u8 gUnknown_0300199C;
 
-extern u32 gUnknown_030019A0;
+//extern u32 gUnknown_030019A0;
 
 extern u8 gUnknown_030019B0;
 extern u8 gUnknown_030019E8;
 
-extern u32 gUnknown_03001A1C;
+// extern u32 gUnknown_03001A1C;
 
-//these probably dont exist, part of a struct
-extern u8 gRedPresentFlag[];  // implied by ghidra
-extern u8 gYellowPresentFlag[];  // implied by ghidra
-extern u8 gBluePresentFlag[];  // implied by ghidra
-extern u8 gLetterTFlag[];  // implied by ghidra
-extern u8 gLetterOFlag[];  // implied by ghidra
-extern u8 gLetterYFlag[];  // implied by ghidra
-
+extern struct levelCollectableFlags gLevelCollectableFlags;
 
 extern u8 gUnknown_03001A38;
 extern struct UnknownStruct8 gUnknown_03001B30;
 
 //new -- unknown type
-extern u8 gUnknown_03001B80;
+
+
+extern u8 gUnknown_03000387;
+
+extern struct_030019AC* gUnknown_030019AC;
+extern s32 gUnknown_03001B88;
+extern s32 gUnknown_03001BA4;
+extern struct_03001BD0* gUnknown_03001BD0;
+extern u8 gUnknown_0300038B;
+extern u8 gUnknown_0300038C;
+extern u8 gUnknown_03001B8C;
 extern u8 gUnknown_03001B84;
-extern u8 gUnknown_03001B88;
-extern u8 gUnknown_03001B90;
+extern u8 gUnknown_03001B80;
 extern u8 gUnknown_03001BA0;
-extern u8 gUnknown_03001BA4;
+extern u8 gUnknown_03000389;
+extern u8 gUnknown_0300038A;
+extern u8 gUnknown_03001B90;
 extern u8 gUnknown_03001BB0;
 extern u8 gUnknown_03001BC8;
 extern u8 gUnknown_03001BCC;
-extern u8 gUnknown_03001BD0;
+
 
 extern u8 gUnknown_03001BDC;
 extern s32 gUnknown_03001BE4;
@@ -411,10 +501,13 @@ extern s8 gUnknown_03001C80;
 extern s8 gUnknown_03001C84;
 extern s16 gUnknown_03001D60;
 
+
+extern u32 gUnknown_03001A1C;
 extern u16 gUnknown_03001A3C; 
 extern u8 gUnknown_03001A4C;
 extern u8 gUnknown_03001A10[];
 extern u8 gUnknown_03001990; // current input? no clue on this but it does stuff relating to inputs looking at memory
+extern u32 gUnknown_030019A0;
 extern u8 gUnknown_030019C0[];
 extern s8 gUnknown_030019D8;
 extern u8 gUnknown_03001944;
@@ -443,12 +536,11 @@ extern const struct UnknownStruct14 gNintendoSoftwareTechnologyLogo;
 extern const struct UnknownStruct14 gTitleScreenLeftData;
 extern const u8 gTitleScreenRightData[];
 extern struct UnknownStruct16 gTitleMarioDKEyes;  // non-const (likely in .data instead of .rodata)
-extern const u8 gUnknown_08B30768[]; // Movie player uses the below
+extern const u32 gUnknown_08B30768[]; // Movie player uses the below
 extern const u8 gUnknown_08B32118[];
 extern const u8 gUnknown_08B30F94[];
 extern const u8 gUnknown_08B2FFDC[];
 extern const u8 gUnknown_08B37168[];
-extern const u8 gUnknown_08B30768[];
 extern const u8 gUnknown_08B2F5B8[];
 extern const u8 gUnknown_08B2F070[];
 extern const u8 gUnknown_08B35FC0[];
@@ -456,6 +548,8 @@ extern const u8 gUnknown_08B3732C[];
 extern const u8 gUnknown_08B37424[];
 
 extern const s16 gUnknown_0807C118[][2];
+extern unkst24 gUnknown_0812E128[1]; 
+
 
 //------------------------------------------------------------------------------
 // Functions
@@ -560,6 +654,7 @@ void sub_080720AC(void);
 int sub_08072144(void);
 int sub_080721A8();
 void sub_0807220C();
+void sub_080082C8();
 
 // Sort these later - Movie player uses these.
 
@@ -569,12 +664,15 @@ u8 sub_08057420(u32);
 u8 sub_08038B18();
 void sub_0802D608(void);
 
-u8 sub_0805739C(const u8 *);
+u8 sub_0805739C(const u32 *);
 u8 sub_0802BE50();
 u8 sub_0801B310();
 u8 sub_08029EB4();
 u8 sub_080148A4(u32, u8);
 s32 sub_08014BB4();
 s32 sub_080148F0(u32);
+
+
+void sub_080410B4(u8, u8,u8);
 
 #endif  // GUARD_GLOBAL_H

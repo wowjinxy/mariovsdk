@@ -34,7 +34,7 @@ void sub_08033024(void)
 {
     if (gUnknown_030012E8 == 8 || gUnknown_030012E8 == 2)
     {
-        sub_080070E8(12, 1);
+        sub_080070E8(MAIN_STATE_UKNOWN_12, USE_FADE);
         gUnknown_030012F8 = 0;
         gUnknown_030012E0 = 0;
         gUnknown_030012E8 = 0;
@@ -50,7 +50,7 @@ void sub_08033024(void)
             gUnknown_030012E0 = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 1];
             if ((gUnknown_030012E0 & 0x200) && (gUnknown_030012E8 & 0x40))
             {
-                sub_080070E8(18, 0);
+                sub_080070E8(MAIN_STATE_UNKNOWN_18, NO_FADE);
                 gUnknown_030012F8 = 0;
                 gUnknown_030012E0 = 0;
                 gUnknown_030012E8 = 0;
@@ -72,7 +72,7 @@ void sub_08033024(void)
         }
         else
         {
-            sub_080070E8(6, 0);
+            sub_080070E8(MAIN_STATE_TUTORIAL_SETUP, NO_FADE);
             gUnknown_030012F8 = 0;
             gUnknown_030012E0 = 0;
             gUnknown_030012E8 = 0;
@@ -84,7 +84,7 @@ void sub_08033148(void)
 {
     if (gUnknown_030012E8 == 8 || gUnknown_030012E8 == 2)
     {
-        sub_080070E8(7, 1);
+        sub_080070E8(MAIN_STATE_TITLE_SCREEN, USE_FADE);
         gUnknown_030012F8 = 0;
         gUnknown_030012E0 = 0;
         gUnknown_030012E8 = 0;
@@ -102,7 +102,7 @@ void sub_08033148(void)
         }
         else
         {
-            sub_080070E8(7, 1);
+            sub_080070E8(MAIN_STATE_TITLE_SCREEN, USE_FADE);
             gUnknown_030012F8 = 0;
             gUnknown_030012E0 = 0;
             gUnknown_030012E8 = 0;
@@ -126,7 +126,7 @@ static inline bool32 inline_2(void)
     if ((gUnknown_030012E0 & START_BUTTON) &&  (gUnknown_030012E0 & SELECT_BUTTON) && (gUnknown_030012E0 & A_BUTTON) && (gUnknown_030012E0 & B_BUTTON)
      && gMainState != MAIN_STATE_TITLE_SCREEN && gMainState != MAIN_STATE_INIT)
     {
-        sub_080070E8(7, 1);
+        sub_080070E8(MAIN_STATE_TITLE_SCREEN, USE_FADE);
         gUnknown_03000B80 = 0;
         gAfterTutorialWorld = 0;
         gNextLevelID = 0;

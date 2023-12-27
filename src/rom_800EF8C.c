@@ -1,5 +1,24 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "main.h"
+
+u8 sub_0800EF8C() {
+    // ...
+    u8 var1;
+    
+    gUnknown_03000A10.unk39 = 0;
+    
+    sub_0801B310();
+    gUnknown_03000A10.unk2C++;
+    if (gUnknown_03000A10.unk2C < 0xF) {
+        var1 = 3;
+    }
+    else {
+        sub_08071990(0x23,8,1,0x40,0,0x80,0);
+        var1 = 0;
+    }
+    return var1;
+}
 
 void sub_0800EFD8(u32 param_1, u32 param_2, u8 param_3) {
     // ...

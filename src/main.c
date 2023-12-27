@@ -144,13 +144,13 @@ static void main_loop(void)
     }
 }
 
-void sub_080070E8(s32 mainState, s32 useFadeInOut)
+void sub_080070E8(s32 mainState, s32 useFadeFlag)
 {
     if (gNextMainState != MAIN_STATE_FADETRANSITION)
     {
         if (gLevelEWorldFlag != 0 && mainState == MAIN_STATE_LEVEL_SELECT)
             mainState = MAIN_STATE_EWORLD_LEVEL_SELECT;
-        if (useFadeInOut == 0)
+        if (useFadeFlag == 0)
         {
             gNextMainState = mainState;
         }

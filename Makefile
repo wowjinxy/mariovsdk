@@ -23,7 +23,7 @@ CFILES   := \
 	src/main.c \
 	src/rom1.c \
 	src/rom_8008238.c \
-	src/rom_800EFD8.c \
+	src/rom_800EF8C.c \
 	src/title.c \
 	src/intro.c \
 	src/pause_menu.c \
@@ -32,6 +32,7 @@ CFILES   := \
 	src/rom_8032FB0.c \
 	src/rom_8033C38.c \
 	src/rom_8038414.c \
+	src/rom_804A8E8.c \
 	src/agb_flash.c \
 	src/agb_flash_1m.c \
 	src/agb_flash_mx.c \
@@ -56,6 +57,7 @@ SFILES   := \
 	asm/world_start.s \
 	asm/rom_80379BC.s \
 	asm/rom_8038600.s \
+	asm/rom_804AAB8.s \
 	asm/syscall.s \
 	asm/rom_80747B8.s \
 	data/data.s

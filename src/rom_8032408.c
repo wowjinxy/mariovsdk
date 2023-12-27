@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "main.h"
 
 struct Foo
 {
@@ -117,7 +118,7 @@ void game_init_main(void)
         }
         break;
       case 3:
-        sub_080070E8(0, 0);
+        sub_080070E8(MAIN_STATE_INTRO, NO_FADE);
         sub_0807220C(gUnknown_080788FC->unk0_5);
         break;
       case 4:

@@ -3012,7 +3012,7 @@ _08003114:
 _08003118:
 	.4byte gLivesCount
 _0800311C:
-	ldr r2, _08003164  @ =gRedPresentFlag
+	ldr r2, _08003164  @ =gLevelCollectableFlags
 	ldrb r0, [r4, #4]
 	sub r0, r0, #28
 	add r0, r0, r2
@@ -3050,7 +3050,7 @@ _08003146:
 	mov r0, #41
 	b _080031A6
 _08003164:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _08003168:
 	.4byte 0x030008E4
 _0800316C:
@@ -3284,7 +3284,7 @@ _08003314:
 _08003318:
 	.4byte gLivesCount
 _0800331C:
-	ldr r2, _0800334C  @ =gRedPresentFlag
+	ldr r2, _0800334C  @ =gLevelCollectableFlags
 	ldrb r0, [r4, #4]
 	sub r0, r0, #28
 	add r0, r0, r2
@@ -3310,7 +3310,7 @@ _0800331C:
 	.byte 0x00
 	.byte 0x00
 _0800334C:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _08003350:
 	ldrb r0, [r2, #3]
 	cmp r0, #0

@@ -3,6 +3,7 @@
 
 enum
 {
+	//Game modes/states
     MAIN_STATE_INTRO = 0,  // "Nintendo Software Technology" screen
     MAIN_STATE_GOTO_CREDITS = 1,
     MAIN_STATE_DEMO = 2,
@@ -38,6 +39,22 @@ enum
     MAIN_STATE_WORLD_INTRO = 32,
     MAIN_STATE_LEVEL_SCROLL = 33,
     MAIN_STATE_INIT = 34,
+	
+	//Fade Flag for sub_080070E8
+	NO_FADE = 0,
+	USE_FADE = 1,
+	
+	//Movies
+	MOVIE_INTRO = 0,
+	MOVIE_INTRO2 = 1,
+	MOVIE_DK_BOSS_1 = 2,
+	MOVIE_CREDITS_1 = 3,
+	MOVIE_DK_BOSS_1_END = 4,
+	MOVIE_DK_BOSS_2 = 5,
+	MOVIE_DK_BOSS_2_END = 6,
+	MOVIE_CREDITS_2 = 7,
+	MOVIE_UNUSED_1 = 8,
+	MOVIE_UNUSED_2 = 9,
 };
 
 extern u32 gMainState;

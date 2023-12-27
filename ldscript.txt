@@ -15,7 +15,7 @@ SECTIONS
 		asm/rom_8007B58.o(.text);
 		src/rom_8008238.o(.text);
 		asm/rom_80088F0.o(.text);
-		src/rom_800EFD8.o(.text);
+		src/rom_800EF8C.o(.text);
 		asm/rom_800F070.o(.text);
 		src/title.o(.text);
 		src/intro.o(.text);
@@ -37,6 +37,8 @@ SECTIONS
 		asm/rom_80379BC.o(.text);
 		src/rom_8038414.o(.text);
 		asm/rom_8038600.o(.text);
+		src/rom_804A8E8.o(.text);
+		asm/rom_804AAB8.o(.text);
 		asm/syscall.o(.text);
 		src/agb_flash.o(.text);
 		src/agb_flash_1m.o(.text);
@@ -235,7 +237,7 @@ SECTIONS
 		. = 0x19F4;		gUnknown_030019F4 = .;
 		. = 0x1A10;		gUnknown_03001A10 = .;
 		. = 0x1A1C;		gUnknown_03001A1C = .;
-		. = 0x1A30;		gRedPresentFlag = .;
+		. = 0x1A30;		gLevelCollectableFlags = .;
 		. = 0x1A31;		gBluePresentFlag = .;
 		. = 0x1A32;		gBluePresentFlag = .;
 		. = 0x1A33;		gLetterTFlag = .;

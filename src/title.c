@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "main.h"
 
 extern const u8 gUnknown_085F49D0[];
 extern const u8 gUnknown_085F49D8[];
@@ -76,8 +77,8 @@ void title_main(void)
         sub_08071E14(229);
         if (gUnknown_0807954C[gUnknown_03000B64].unk0 != 0)
         {
-            movie_player_setup_data(3, 23, 7, 0);
-            sub_080070E8(30, 1);
+            movie_player_setup_data(3, 23, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
+            sub_080070E8(MAIN_STATE_MOVIE, USE_FADE);
         }
         else
         {
@@ -85,7 +86,7 @@ void title_main(void)
             gAfterTutorialWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
             sub_0800F744(gAfterTutorialWorld);
             sub_08004428(gNextLevelInLevelTable.unk0->unk4);
-            sub_080070E8(2, 1);
+            sub_080070E8(MAIN_STATE_DEMO, USE_FADE);
             gUnknown_030012F8 = 0;
         }
         gUnknown_03000B64++;
@@ -96,7 +97,7 @@ void title_main(void)
         if (sub_08034004() != 0 && !(gUnknown_030012E8 & 2) && !(gUnknown_030012E0 & 2))
         {
             sub_08071990(35, 8, 16, 64, 0, 128, 0);
-            sub_080070E8(3, 1);
+            sub_080070E8(MAIN_STATE_FILE_SELECT, USE_FADE);
             gUnknown_03000BD0 = 1;
         }
         sub_0801B88C();

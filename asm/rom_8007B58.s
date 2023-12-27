@@ -274,7 +274,7 @@ _08007D50:
 	ldrsh r0, [r4, r2]
 	mov r2, #16
 	ldrsh r1, [r4, r2]
-	ldr r2, _08007DD0  @ =gRedPresentFlag
+	ldr r2, _08007DD0  @ =gLevelCollectableFlags
 	bl sub_08010534
 	mov r1, #18
 	ldrsh r0, [r4, r1]
@@ -319,7 +319,7 @@ _08007DC8:
 _08007DCC:
 	.4byte gLivesCount
 _08007DD0:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _08007DD4:
 	.4byte gAfterTutorialWorld
 _08007DD8:
@@ -343,7 +343,7 @@ _08007DE0:
 	ldrsh r0, [r4, r1]
 	mov r2, #16
 	ldrsh r1, [r4, r2]
-	ldr r2, _08007E54  @ =gRedPresentFlag
+	ldr r2, _08007E54  @ =gLevelCollectableFlags
 	bl sub_08010534
 	mov r0, #32
 	bl sub_080148F0
@@ -381,7 +381,7 @@ _08007E2E:
 _08007E50:
 	.4byte gLivesCount
 _08007E54:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _08007E58:
 	.4byte gAfterTutorialWorld
 _08007E5C:
@@ -521,7 +521,7 @@ _08007F42:
 	ldr r0, _08007FE8  @ =gGeneralTimer
 	ldr r0, [r0]
 	str r0, [r1]
-	ldr r0, _08007FEC  @ =gRedPresentFlag
+	ldr r0, _08007FEC  @ =gLevelCollectableFlags
 	ldr r1, _08007FF0  @ =gUnknown_030009E4
 	mov r2, #2
 	bl CpuSet
@@ -586,7 +586,7 @@ _08007FE4:
 _08007FE8:
 	.4byte gGeneralTimer
 _08007FEC:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _08007FF0:
 	.4byte gUnknown_030009E4
 _08007FF4:

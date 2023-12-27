@@ -2050,7 +2050,7 @@ sub_08009878: @ 0x08009878
 	mov r12, r0
 	cmp r6, #0
 	beq _08009910
-	ldr r1, _080098D0  @ =gRedPresentFlag
+	ldr r1, _080098D0  @ =gLevelCollectableFlags
 	ldrb r0, [r1]
 	cmp r0, #0
 	beq _08009910
@@ -2084,7 +2084,7 @@ sub_08009878: @ 0x08009878
 _080098CC:
 	.4byte gUnknown_03000A10
 _080098D0:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _080098D4:
 	.4byte gUnknown_082EAF00
 _080098D8:
@@ -2750,7 +2750,7 @@ _08009D9A:
 	ldrb r0, [r7]
 	cmp r0, #0
 	bne _08009DEA
-	ldr r1, _08009E28  @ =gRedPresentFlag
+	ldr r1, _08009E28  @ =gLevelCollectableFlags
 	ldrb r0, [r1, #3]
 	cmp r0, #0
 	beq _08009DEA
@@ -2816,7 +2816,7 @@ _08009DF6:
 _08009E24:
 	.4byte gUnknown_082F1B48
 _08009E28:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _08009E2C:
 	.4byte gUnknown_03001A1C
 _08009E30:
@@ -3785,7 +3785,7 @@ _0800A526:
 	str r1, [sp, #8]
 	mov r10, sp
 _0800A546:
-	ldr r0, _0800A5E0  @ =gRedPresentFlag
+	ldr r0, _0800A5E0  @ =gLevelCollectableFlags
 	add r0, r0, r8
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -3864,7 +3864,7 @@ _0800A5D8:
 _0800A5DC:
 	.4byte gUnknown_03000A10
 _0800A5E0:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _0800A5E4:
 	.4byte 0x06010000
 _0800A5E8:
@@ -5143,7 +5143,7 @@ _0800AF50:
 _0800AF62:
 	mov r0, r12
 	add r0, r0, #3
-	ldr r1, _0800AF98  @ =gRedPresentFlag
+	ldr r1, _0800AF98  @ =gLevelCollectableFlags
 	add r0, r0, r1
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -5170,7 +5170,7 @@ _0800AF90:
 _0800AF94:
 	.4byte 0xFFFFFC00
 _0800AF98:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _0800AF9C:
 	.4byte 0x03000AD0
 _0800AFA0:
@@ -13625,47 +13625,5 @@ _0800EF82:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0800EF8C
-sub_0800EF8C: @ 0x0800EF8C
-	push {r4,r5,lr}
-	sub sp, sp, #12
-	ldr r4, _0800EFB4  @ =gUnknown_03000A10
-	add r0, r4, #0
-	add r0, r0, #57
-	mov r5, #0
-	strb r5, [r0]
-	bl sub_0801B310
-	add r4, r4, #52
-	ldrb r0, [r4]
-	add r0, r0, #1
-	strb r0, [r4]
-	lsl r0, r0, #24
-	lsr r0, r0, #24
-	cmp r0, #14
-	bhi _0800EFB8
-	mov r0, #3
-	b _0800EFCE
-	.byte 0x00
-	.byte 0x00
-_0800EFB4:
-	.4byte gUnknown_03000A10
-_0800EFB8:
-	str r5, [sp]
-	mov r0, #128
-	str r0, [sp, #4]
-	str r5, [sp, #8]
-	mov r0, #35
-	mov r1, #8
-	mov r2, #1
-	mov r3, #64
-	bl sub_08071990
-	mov r0, #0
-_0800EFCE:
-	add sp, sp, #12
-	pop {r4,r5}
-	pop {r1}
-	bx r1
-	THUMB_FUNC_END sub_0800EF8C
+	
 
-	.byte 0x00
-	.byte 0x00

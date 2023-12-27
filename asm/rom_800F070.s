@@ -213,7 +213,7 @@ sub_0800F1E4: @ 0x0800F1E4
 	add r6, r0, #0
 	add r5, r1, #0
 	ldr r4, _0800F250  @ =gNextLevelInLevelTable
-	ldr r0, _0800F254  @ =gUnknown_08B2CA5C
+	ldr r0, _0800F254  @ =gUnknown_08B2CA5C	
 	ldr r0, [r0, #4]
 	lsl r1, r6, #1
 	add r1, r1, r6

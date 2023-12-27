@@ -5512,7 +5512,7 @@ _0802FF54:
 	mov r5, #0
 	ldr r7, _0802FF90  @ =0x030001E0
 	ldr r4, _0802FF94  @ =0x030001D0
-	ldr r3, _0802FF98  @ =gRedPresentFlag
+	ldr r3, _0802FF98  @ =gLevelCollectableFlags
 	add r2, r1, #0
 _0802FF64:
 	add r0, r5, r3
@@ -5544,7 +5544,7 @@ _0802FF90:
 _0802FF94:
 	.4byte 0x030001D0
 _0802FF98:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _0802FF9C:
 	mov r0, #0
 _0802FF9E:
@@ -5952,7 +5952,7 @@ sub_08030264: @ 0x08030264
 	cmp r0, #1
 	bls _080302D8
 	mov r1, #0
-	ldr r2, _080302EC  @ =gRedPresentFlag
+	ldr r2, _080302EC  @ =gLevelCollectableFlags
 _08030290:
 	add r0, r1, r2
 	ldrb r0, [r0]
@@ -6002,7 +6002,7 @@ _080302E4:
 _080302E8:
 	.4byte gUnknown_03000B80
 _080302EC:
-	.4byte gRedPresentFlag
+	.4byte gLevelCollectableFlags
 _080302F0:
 	.4byte 0x030001D8
 _080302F4:
