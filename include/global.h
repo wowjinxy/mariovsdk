@@ -72,6 +72,7 @@ struct Struct3000A10 {
     u8 unk125;
 } unk1;
 
+
 struct UnknownStruct3
 {
     void *unk0;
@@ -642,10 +643,10 @@ void sub_080714A8(void);
 void sub_0807166C();
 void sub_08071800(void);
 void sub_0807194C(void);
-int sub_08071990();
+int sub_08071990(u8, u8, u8, u8, u8, u8, u8);
 void sub_08071C24(void);
 void sub_08071CD4(void);
-void sub_08071E14();
+void sub_08071E14(u8);
 void sub_08071FA0();
 int sub_08071FE4(void);
 int sub_08072038(void);
@@ -674,5 +675,11 @@ s32 sub_080148F0(u32);
 
 
 void sub_080410B4(u8, u8,u8);
+
+u32 sub_08033658();
+void sub_08071E14(u8);
+
+u8 sub_0800EF30();
+u8 sub_0800EF8C();
 
 #endif  // GUARD_GLOBAL_H

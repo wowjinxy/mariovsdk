@@ -23,7 +23,7 @@ CFILES   := \
 	src/main.c \
 	src/rom1.c \
 	src/rom_8008238.c \
-	src/rom_800EF8C.c \
+	src/rom_800EEC0.c \
 	src/title.c \
 	src/intro.c \
 	src/pause_menu.c \

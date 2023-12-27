@@ -15,7 +15,7 @@ SECTIONS
 		asm/rom_8007B58.o(.text);
 		src/rom_8008238.o(.text);
 		asm/rom_80088F0.o(.text);
-		src/rom_800EF8C.o(.text);
+		src/rom_800EEC0.o(.text);
 		asm/rom_800F070.o(.text);
 		src/title.o(.text);
 		src/intro.o(.text);
