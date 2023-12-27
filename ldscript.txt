@@ -27,6 +27,7 @@ SECTIONS
 		asm/rom_802D614.o(.text);
 		asm/eCard.o(.text);
 		asm/level_view.o(.text);
+		src/level_view.o(.text);
 		src/rom_8032408.o(.text);
 		asm/rom_8032814.o(.text);
 		src/rom_8032FB0.o(.text);
@@ -235,6 +236,7 @@ SECTIONS
 		. = 0x19DC;		gPreviousSwitchState = .;
 		. = 0x19E8;		gUnknown_030019E8 = .;
 		. = 0x19F4;		gUnknown_030019F4 = .;
+		. = 0x1A00;		gUnknown_03001A00 = .;
 		. = 0x1A10;		gUnknown_03001A10 = .;
 		. = 0x1A1C;		gUnknown_03001A1C = .;
 		. = 0x1A30;		gLevelCollectableFlags = .;

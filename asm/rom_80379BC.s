@@ -1,4 +1,5 @@
 	.INCLUDE "macro.inc"
+	.INCLUDE "gba.inc"
 
 	THUMB_FUNC_START sub_080379BC
 sub_080379BC: @ 0x080379BC
@@ -88,7 +89,7 @@ sub_08037A04: @ 0x08037A04
 	strh r5, [r0]
 	mov r0, #160
 	str r0, [sp, #8]
-	ldr r4, _08037AE4  @ =0x040000D4
+	ldr r4, _08037AE4  @ =REG_DMA3SAD
 	str r1, [r4]
 	ldr r1, _08037AE8  @ =gOamData
 	mov r8, r1
@@ -116,14 +117,14 @@ sub_08037A04: @ 0x08037A04
 	ldr r0, [r4, #8]
 	ldr r0, _08037AF8  @ =0x04000200
 	strh r5, [r0]
-	ldr r1, _08037AFC  @ =0x04000004
+	ldr r1, _08037AFC  @ =REG_DISPSTAT
 	mov r0, #8
 	strh r0, [r1]
 	mov r1, #138
 	lsl r1, r1, #5
 	add r0, r1, #0
 	strh r0, [r7]
-	ldr r0, _08037B00  @ =0x04000050
+	ldr r0, _08037B00  @ =REG_BLDCNT
 	strh r5, [r0]
 	add r0, r0, #2
 	strh r5, [r0]
@@ -147,7 +148,7 @@ _08037ADC:
 _08037AE0:
 	.4byte 0x03000308
 _08037AE4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08037AE8:
 	.4byte gOamData
 _08037AEC:
@@ -159,9 +160,9 @@ _08037AF4:
 _08037AF8:
 	.4byte 0x04000200
 _08037AFC:
-	.4byte 0x04000004
+	.4byte REG_DISPSTAT
 _08037B00:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 
 		THUMB_FUNC_START sub_08037B04
 sub_08037B04: @ 0x08037B04
@@ -172,7 +173,7 @@ sub_08037B04: @ 0x08037B04
 	strh r0, [r6]
 	mov r0, #160
 	str r0, [sp, #4]
-	ldr r4, _08037B58  @ =0x040000D4
+	ldr r4, _08037B58  @ =REG_DMA3SAD
 	add r0, sp, #4
 	str r0, [r4]
 	ldr r5, _08037B5C  @ =gOamData
@@ -206,7 +207,7 @@ sub_08037B04: @ 0x08037B04
 	.byte 0x00
 	.byte 0x00
 _08037B58:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08037B5C:
 	.4byte gOamData
 _08037B60:
@@ -518,7 +519,7 @@ sub_08037D7C: @ 0x08037D7C
 	strh r5, [r1, #2]
 	ldr r1, [r4, #40]
 	add r1, r1, #4
-	ldr r2, _08037DE8  @ =0x04000004
+	ldr r2, _08037DE8  @ =REG_DISPSTAT
 	bl CpuSet
 	mov r2, #0
 	ldr r1, [r4, #40]
@@ -560,7 +561,7 @@ _08037DDE:
 _08037DE4:
 	.4byte 0x030017A0
 _08037DE8:
-	.4byte 0x04000004
+	.4byte REG_DISPSTAT
 _08037DEC:
 	.4byte 0x0400010E
 	THUMB_FUNC_END sub_08037D7C
@@ -638,7 +639,7 @@ _08037E4A:
 	lsl r1, r4, #4
 	ldr r2, [sp, #12]
 	add r1, r2, r1
-	ldr r2, _08037EC8  @ =0x04000004
+	ldr r2, _08037EC8  @ =REG_DISPSTAT
 	bl CpuSet
 	mov r0, #1
 	lsl r0, r0, r4
@@ -679,7 +680,7 @@ _08037EC0:
 _08037EC4:
 	.4byte 0x030017A4
 _08037EC8:
-	.4byte 0x04000004
+	.4byte REG_DISPSTAT
 _08037ECC:
 	.4byte 0x05000004
 _08037ED0:

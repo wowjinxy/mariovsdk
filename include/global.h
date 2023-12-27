@@ -114,9 +114,10 @@ struct UnknownStruct4
 {
     struct UnknownStruct5 *unk0;
     u32 unk4;
-    u8 filler8[0x10-0x8];
+    u32 unk8;
+    u32 unkC;    
     s16 unk10;
-    u8 filler12[2];
+    s16 unk12;
     u32 unk14;
     u32 unk18;
     u8 filler1C[1];
@@ -502,6 +503,8 @@ extern s8 gUnknown_03001C80;
 extern s8 gUnknown_03001C84;
 extern s16 gUnknown_03001D60;
 
+extern u8 gUnknown_03001A00;
+extern u8 gUnknown_03000B78;
 
 extern u32 gUnknown_03001A1C;
 extern u16 gUnknown_03001A3C; 
@@ -681,5 +684,18 @@ void sub_08071E14(u8);
 
 u8 sub_0800EF30();
 u8 sub_0800EF8C();
+
+void level_play_loop();
+void sub_0800F060(void);
+void sub_08040F54();
+void sub_080720E4();
+
+void sub_0800CC6C();
+void sub_08041F70();
+u8 _call_via_r0(u32);
+u8 sub_0800C5A4();
+u8 sub_08072118();
+u8 sub_0802BEA4(u8);
+
 
 #endif  // GUARD_GLOBAL_H

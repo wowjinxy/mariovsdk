@@ -2,8 +2,6 @@
 #include "global.h"
 #include "main.h"
 
-
-
 void sub_0800EEC0(void) {
 	
 	return;

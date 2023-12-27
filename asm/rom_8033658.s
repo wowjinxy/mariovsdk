@@ -1,4 +1,5 @@
 	.INCLUDE "macro.inc"
+	.INCLUDE "gba.inc"
 
 	THUMB_FUNC_START sub_08033658
 sub_08033658: @ 0x08033658

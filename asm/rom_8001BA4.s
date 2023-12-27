@@ -1,4 +1,5 @@
 	.INCLUDE "macro.inc"
+	.INCLUDE "gba.inc"
 
 	THUMB_FUNC_START sub_08001BA4
 sub_08001BA4: @ 0x08001BA4
@@ -7450,7 +7451,7 @@ _08005204:
 	ldr r0, [r0, #4]
 	add r0, r1, r0
 	str r0, [r3]
-	ldr r1, _0800525C  @ =0x0400000A
+	ldr r1, _0800525C  @ =REG_BG1CNT
 	ldr r0, _08005260  @ =0x03000A0C
 	ldrh r0, [r0]
 	strh r0, [r1]
@@ -7468,11 +7469,11 @@ _08005254:
 _08005258:
 	.4byte gUnknown_08078210
 _0800525C:
-	.4byte 0x0400000A
+	.4byte REG_BG1CNT
 _08005260:
 	.4byte 0x03000A0C
 _08005264:
-	ldr r2, _080052E8  @ =0x0400000A
+	ldr r2, _080052E8  @ =REG_BG1CNT
 	ldrh r1, [r2]
 	ldr r0, _080052EC  @ =0x0000FFFC
 	and r0, r0, r1
@@ -7546,7 +7547,7 @@ _080052CC:
 	orr r0, r0, r2
 	b _08005300
 _080052E8:
-	.4byte 0x0400000A
+	.4byte REG_BG1CNT
 _080052EC:
 	.4byte 0x0000FFFC
 _080052F0:

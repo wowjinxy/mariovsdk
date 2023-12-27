@@ -1,4 +1,5 @@
 	.INCLUDE "macro.inc"
+	.INCLUDE "gba.inc"
 
 	THUMB_FUNC_START sub_08032814
 sub_08032814: @ 0x08032814
@@ -47,7 +48,7 @@ _08032842:
 	str r0, [sp, #4]
 	mov r0, r9
 	lsl r1, r0, #1
-	ldr r2, _08032A64  @ =0x04000008
+	ldr r2, _08032A64  @ =REG_BG0CNT
 	add r3, r1, r2
 	ldr r0, [r4]
 	add r0, r0, #56
@@ -111,7 +112,7 @@ _080328CE:
 	mov r2, r8
 	add r5, r2, r0
 	lsl r1, r1, #1
-	ldr r0, _08032A64  @ =0x04000008
+	ldr r0, _08032A64  @ =REG_BG0CNT
 	add r6, r1, r0
 	ldr r0, [r5]
 	cmp r0, #0
@@ -300,7 +301,7 @@ _08032A5C:
 _08032A60:
 	.4byte gBGVerticalOffset
 _08032A64:
-	.4byte 0x04000008
+	.4byte REG_BG0CNT
 _08032A68:
 	.4byte 0x0000FFFC
 _08032A6C:
@@ -708,7 +709,7 @@ sub_08032D50: @ 0x08032D50
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08032D70
-	ldr r0, _08032E08  @ =0x04000008
+	ldr r0, _08032E08  @ =REG_BG0CNT
 	add r1, r3, #0
 	add r1, r1, #80
 	ldrh r1, [r1]
@@ -721,7 +722,7 @@ _08032D70:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08032D98
-	ldr r2, _08032E0C  @ =0x0400000A
+	ldr r2, _08032E0C  @ =REG_BG1CNT
 	add r0, r3, #0
 	add r0, r0, #82
 	ldrh r0, [r0]
@@ -742,7 +743,7 @@ _08032D98:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08032DC2
-	ldr r2, _08032E14  @ =0x0400000C
+	ldr r2, _08032E14  @ =REG_BG2CNT
 	add r0, r3, #0
 	add r0, r0, #84
 	ldrh r0, [r0]
@@ -764,7 +765,7 @@ _08032DC2:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08032DDA
-	ldr r1, _08032E1C  @ =0x0400000E
+	ldr r1, _08032E1C  @ =REG_BG3CNT
 	add r0, r3, #0
 	add r0, r0, #86
 	ldrh r0, [r0]
@@ -797,17 +798,17 @@ _08032E00:
 	.byte 0x00
 	.byte 0x00
 _08032E08:
-	.4byte 0x04000008
+	.4byte REG_BG0CNT
 _08032E0C:
-	.4byte 0x0400000A
+	.4byte REG_BG1CNT
 _08032E10:
 	.4byte 0x0000FFFC
 _08032E14:
-	.4byte 0x0400000C
+	.4byte REG_BG2CNT
 _08032E18:
 	.4byte 0x00002001
 _08032E1C:
-	.4byte 0x0400000E
+	.4byte REG_BG3CNT
 _08032E20:
 	.4byte 0x03000E94
 	THUMB_FUNC_END sub_08032D50
@@ -1008,7 +1009,7 @@ sub_08032F68: @ 0x08032F68
 	mov r5, #1
 	strh r5, [r4]
 	bl sub_0802BF28
-	ldr r2, _08032FA8  @ =0x04000004
+	ldr r2, _08032FA8  @ =REG_DISPSTAT
 	mov r0, #8
 	strh r0, [r2]
 	ldrh r0, [r4]
@@ -1027,7 +1028,7 @@ sub_08032F68: @ 0x08032F68
 _08032FA4:
 	.4byte 0x04000200
 _08032FA8:
-	.4byte 0x04000004
+	.4byte REG_DISPSTAT
 _08032FAC:
 	.4byte 0x04000208
 THUMB_FUNC_END sub_08032F68

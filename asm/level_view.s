@@ -1,4 +1,5 @@
 	.INCLUDE "macro.inc"
+	.INCLUDE "gba.inc"
 
 	THUMB_FUNC_START level_view_main
 level_view_main: @ 0x08032210
@@ -83,15 +84,15 @@ sub_080322A8: @ 0x080322A8
 	add r6, r0, #0
 	add r7, r1, #0
 	mov r12, r2
-	ldr r1, _08032344  @ =0x03000B78
+	ldr r1, _08032344  @ =gUnknown_03000B78
 	ldrb r1, [r1]
 	cmp r1, #0
 	beq _0803233E
-	ldr r3, _08032348  @ =0x040000D4
+	ldr r3, _08032348  @ =REG_DMA3SAD
 	ldr r1, _0803234C  @ =gUnknown_082E8908
 	str r1, [r3]
 	ldrh r1, [r2]
-	ldr r2, _08032350  @ =0x06010000
+	ldr r2, _08032350  @ =OBJ_VRAM0
 	add r1, r1, r2
 	str r1, [r3, #4]
 	ldr r1, _08032354  @ =0x84000040
@@ -159,13 +160,13 @@ _0803233E:
 	pop {r1}
 	bx r1
 _08032344:
-	.4byte 0x03000B78
+	.4byte gUnknown_03000B78
 _08032348:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0803234C:
 	.4byte gUnknown_082E8908
 _08032350:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08032354:
 	.4byte 0x84000040
 _08032358:
@@ -182,87 +183,5 @@ _0803236C:
 	.4byte 0xFFFFFE00
 	THUMB_FUNC_END sub_080322A8
 
-	THUMB_FUNC_START level_view_init_callback
-level_view_init_callback: @ 0x08032370
-	push {r4,r5,lr}
-	sub sp, sp, #12
-	bl sub_080720E4
-	bl sub_08040F54
-	ldr r0, _080323B8  @ =gUnknown_03001A38
-	mov r5, #1
-	strb r5, [r0]
-	bl sub_08071C24
-	mov r4, #0
-	str r4, [sp]
-	mov r0, #128
-	str r0, [sp, #4]
-	str r4, [sp, #8]
-	mov r0, #26
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl sub_08071990
-	ldr r2, _080323BC  @ =gUnknown_030019A0
-	ldr r0, [r2]
-	ldr r1, _080323C0  @ =0xBFFFFFFF
-	and r0, r0, r1
-	str r0, [r2]
-	ldr r0, _080323C4  @ =0x03000B78
-	strb r5, [r0]
-	ldr r0, _080323C8  @ =0x03001A00
-	strb r4, [r0]
-	add sp, sp, #12
-	pop {r4,r5}
-	pop {r0}
-	bx r0
-	.byte 0x00
-	.byte 0x00
-_080323B8:
-	.4byte gUnknown_03001A38
-_080323BC:
-	.4byte gUnknown_030019A0
-_080323C0:
-	.4byte 0xBFFFFFFF
-_080323C4:
-	.4byte 0x03000B78
-_080323C8:
-	.4byte 0x03001A00
-	THUMB_FUNC_END level_view_init_callback
 
-	THUMB_FUNC_START level_view_loop
-level_view_loop: @ 0x080323CC
-	push {r4,r5,lr}
-	ldr r4, _080323E4  @ =gMainState
-	ldr r5, [r4]
-	mov r0, #13
-	str r0, [r4]
-	bl level_play_loop
-	str r5, [r4]
-	pop {r4,r5}
-	pop {r0}
-	bx r0
-	.byte 0x00
-	.byte 0x00
-_080323E4:
-	.4byte gMainState
-	THUMB_FUNC_END level_view_loop
 
-	THUMB_FUNC_START level_view_end
-level_view_end: @ 0x080323E8
-	push {lr}
-	ldr r1, _08032400  @ =0x03000B78
-	mov r0, #0
-	strb r0, [r1]
-	ldr r1, _08032404  @ =0x03001A00
-	mov r0, #1
-	strb r0, [r1]
-	bl sub_0800F060
-	pop {r0}
-	bx r0
-	.byte 0x00
-	.byte 0x00
-_08032400:
-	.4byte 0x03000B78
-_08032404:
-	.4byte 0x03001A00
-	THUMB_FUNC_END level_view_end

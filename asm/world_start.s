@@ -1,4 +1,5 @@
 	.INCLUDE "macro.inc"
+	.INCLUDE "gba.inc"
 	
 	THUMB_FUNC_START world_start_init_callback
 world_start_init_callback: @ 0x08037050
@@ -805,7 +806,7 @@ _0803765E:
 	lsl r0, r0, #16
 	lsr r4, r0, #16
 	mov r8, r1
-	ldr r3, _08037820  @ =0x040000D4
+	ldr r3, _08037820  @ =REG_DMA3SAD
 	mov r2, r12
 	mov r0, #12
 	ldrsh r1, [r2, r0]
@@ -824,7 +825,7 @@ _0803765E:
 	str r0, [r3]
 	ldr r2, _08037824  @ =gUnknown_0300192C
 	ldrh r0, [r2]
-	ldr r1, _08037828  @ =0x06010000
+	ldr r1, _08037828  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r3, #4]
 	mov r1, r8
@@ -917,7 +918,7 @@ _0803769C:
 	add r0, r0, #1
 	strh r0, [r4]
 _08037740:
-	ldr r2, _08037820  @ =0x040000D4
+	ldr r2, _08037820  @ =REG_DMA3SAD
 	mov r3, r12
 	mov r0, #12
 	ldrsh r1, [r3, r0]
@@ -935,7 +936,7 @@ _08037740:
 	str r0, [r2]
 	mov r1, r10
 	ldrh r0, [r1]
-	ldr r1, _08037828  @ =0x06010000
+	ldr r1, _08037828  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r2, #4]
 	ldrh r0, [r7, #2]
@@ -1030,11 +1031,11 @@ _08037740:
 	pop {r0}
 	bx r0
 _08037820:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08037824:
 	.4byte gUnknown_0300192C
 _08037828:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0803782C:
 	.4byte 0x030002F6
 _08037830:
@@ -1062,7 +1063,7 @@ world_start_loop: @ 0x08037848
 	add r1, sp, #4
 	mov r0, #160
 	strh r0, [r1]
-	ldr r1, _080378A4  @ =0x040000D4
+	ldr r1, _080378A4  @ =REG_DMA3SAD
 	add r0, sp, #4
 	str r0, [r1]
 	mov r0, #224
@@ -1100,7 +1101,7 @@ world_start_loop: @ 0x08037848
 _080378A0:
 	.4byte 0xFFFFF470
 _080378A4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080378A8:
 	.4byte 0x81000100
 _080378AC:
@@ -1197,7 +1198,7 @@ _08037930:
 _08037964:
 	bl sub_080375EC
 _08037968:
-	ldr r1, _080379A8  @ =0x040000D4
+	ldr r1, _080379A8  @ =REG_DMA3SAD
 	ldr r0, _080379AC  @ =gOamData
 	str r0, [r1]
 	mov r0, #224
@@ -1230,7 +1231,7 @@ _080379A0:
 _080379A4:
 	.4byte 0x03000300
 _080379A8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080379AC:
 	.4byte gOamData
 _080379B0:

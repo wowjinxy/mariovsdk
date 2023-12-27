@@ -1,4 +1,5 @@
 	.INCLUDE "macro.inc"
+	.INCLUDE "gba.inc"
 
 	THUMB_FUNC_START sub_0801CB9C
 sub_0801CB9C: @ 0x0801CB9C
@@ -63,11 +64,11 @@ sub_0801CBD8: @ 0x0801CBD8
 	ldrb r0, [r0, #3]
 	mov r3, r9
 	str r0, [r3]
-	ldr r4, _0801CEB4  @ =0x040000D4
+	ldr r4, _0801CEB4  @ =REG_DMA3SAD
 	ldr r0, _0801CEB8  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801CEBC  @ =0x06010000
+	ldr r1, _0801CEBC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801CEC0  @ =0x84000200
@@ -177,11 +178,11 @@ _0801CCCE:
 	ldrb r0, [r0, #3]
 	mov r2, r9
 	str r0, [r2]
-	ldr r4, _0801CEB4  @ =0x040000D4
+	ldr r4, _0801CEB4  @ =REG_DMA3SAD
 	ldr r0, _0801CEB8  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801CEBC  @ =0x06010000
+	ldr r1, _0801CEBC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801CEC0  @ =0x84000200
@@ -291,11 +292,11 @@ _0801CDB0:
 	ldrb r0, [r0, #3]
 	mov r2, r9
 	str r0, [r2]
-	ldr r4, _0801CEB4  @ =0x040000D4
+	ldr r4, _0801CEB4  @ =REG_DMA3SAD
 	ldr r0, _0801CEB8  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801CEBC  @ =0x06010000
+	ldr r1, _0801CEBC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801CEC0  @ =0x84000200
@@ -407,11 +408,11 @@ _0801CEAC:
 _0801CEB0:
 	.4byte 0x030000D4
 _0801CEB4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801CEB8:
 	.4byte gUnknown_082AEF7C
 _0801CEBC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801CEC0:
 	.4byte 0x84000200
 _0801CEC4:
@@ -460,11 +461,11 @@ sub_0801CEE4: @ 0x0801CEE4
 	ldrb r0, [r0, #3]
 	mov r3, r9
 	str r0, [r3]
-	ldr r4, _0801D1C0  @ =0x040000D4
+	ldr r4, _0801D1C0  @ =REG_DMA3SAD
 	ldr r0, _0801D1C4  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801D1C8  @ =0x06010000
+	ldr r1, _0801D1C8  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D1CC  @ =0x84000200
@@ -574,11 +575,11 @@ _0801CFDA:
 	ldrb r0, [r0, #3]
 	mov r2, r9
 	str r0, [r2]
-	ldr r4, _0801D1C0  @ =0x040000D4
+	ldr r4, _0801D1C0  @ =REG_DMA3SAD
 	ldr r0, _0801D1C4  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801D1C8  @ =0x06010000
+	ldr r1, _0801D1C8  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D1CC  @ =0x84000200
@@ -688,11 +689,11 @@ _0801D0BC:
 	ldrb r0, [r0, #3]
 	mov r2, r9
 	str r0, [r2]
-	ldr r4, _0801D1C0  @ =0x040000D4
+	ldr r4, _0801D1C0  @ =REG_DMA3SAD
 	ldr r0, _0801D1C4  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801D1C8  @ =0x06010000
+	ldr r1, _0801D1C8  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D1CC  @ =0x84000200
@@ -804,11 +805,11 @@ _0801D1B8:
 _0801D1BC:
 	.4byte 0x030000D4
 _0801D1C0:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D1C4:
 	.4byte gUnknown_082AEF7C
 _0801D1C8:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D1CC:
 	.4byte 0x84000200
 _0801D1D0:
@@ -856,11 +857,11 @@ sub_0801D1F0: @ 0x0801D1F0
 	mov r10, r2
 	cmp r0, #1
 	bne _0801D278
-	ldr r4, _0801D25C  @ =0x040000D4
+	ldr r4, _0801D25C  @ =REG_DMA3SAD
 	ldr r0, _0801D260  @ =gUnknown_0811BCB8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D264  @ =0x06010000
+	ldr r1, _0801D264  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D268  @ =0x84000020
@@ -887,11 +888,11 @@ _0801D254:
 _0801D258:
 	.4byte 0x030000D8
 _0801D25C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D260:
 	.4byte gUnknown_0811BCB8
 _0801D264:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D268:
 	.4byte 0x84000020
 _0801D26C:
@@ -903,11 +904,11 @@ _0801D274:
 _0801D278:
 	cmp r0, #2
 	bne _0801D2A8
-	ldr r4, _0801D294  @ =0x040000D4
+	ldr r4, _0801D294  @ =REG_DMA3SAD
 	ldr r0, _0801D298  @ =gUnknown_0811BD64
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D29C  @ =0x06010000
+	ldr r1, _0801D29C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D2A0  @ =0x84000020
@@ -916,11 +917,11 @@ _0801D278:
 	ldr r0, _0801D2A4  @ =gUnknown_0811BD5C
 	b _0801D322
 _0801D294:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D298:
 	.4byte gUnknown_0811BD64
 _0801D29C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D2A0:
 	.4byte 0x84000020
 _0801D2A4:
@@ -928,11 +929,11 @@ _0801D2A4:
 _0801D2A8:
 	cmp r0, #3
 	bne _0801D2D8
-	ldr r4, _0801D2C4  @ =0x040000D4
+	ldr r4, _0801D2C4  @ =REG_DMA3SAD
 	ldr r0, _0801D2C8  @ =gUnknown_0811BC0C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D2CC  @ =0x06010000
+	ldr r1, _0801D2CC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D2D0  @ =0x84000020
@@ -941,11 +942,11 @@ _0801D2A8:
 	ldr r0, _0801D2D4  @ =gUnknown_0811BC04
 	b _0801D322
 _0801D2C4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D2C8:
 	.4byte gUnknown_0811BC0C
 _0801D2CC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D2D0:
 	.4byte 0x84000020
 _0801D2D4:
@@ -953,11 +954,11 @@ _0801D2D4:
 _0801D2D8:
 	cmp r0, #4
 	bne _0801D308
-	ldr r4, _0801D2F4  @ =0x040000D4
+	ldr r4, _0801D2F4  @ =REG_DMA3SAD
 	ldr r0, _0801D2F8  @ =gUnknown_081257D8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D2FC  @ =0x06010000
+	ldr r1, _0801D2FC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D300  @ =0x84000020
@@ -966,11 +967,11 @@ _0801D2D8:
 	ldr r0, _0801D304  @ =gUnknown_081257D0
 	b _0801D322
 _0801D2F4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D2F8:
 	.4byte gUnknown_081257D8
 _0801D2FC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D300:
 	.4byte 0x84000020
 _0801D304:
@@ -978,11 +979,11 @@ _0801D304:
 _0801D308:
 	cmp r0, #5
 	bne _0801D3B0
-	ldr r4, _0801D3E4  @ =0x040000D4
+	ldr r4, _0801D3E4  @ =REG_DMA3SAD
 	ldr r0, _0801D3E8  @ =gUnknown_08125930
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D3EC  @ =0x06010000
+	ldr r1, _0801D3EC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D3F0  @ =0x84000020
@@ -1077,11 +1078,11 @@ _0801D3B0:
 	ldrb r0, [r0, #8]
 	cmp r0, #1
 	bne _0801D420
-	ldr r4, _0801D3E4  @ =0x040000D4
+	ldr r4, _0801D3E4  @ =REG_DMA3SAD
 	ldr r0, _0801D418  @ =gUnknown_0811BCB8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D3EC  @ =0x06010000
+	ldr r1, _0801D3EC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D3F0  @ =0x84000020
@@ -1090,11 +1091,11 @@ _0801D3B0:
 	ldr r0, _0801D41C  @ =gUnknown_0811BCB0
 	b _0801D4CA
 _0801D3E4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D3E8:
 	.4byte gUnknown_08125930
 _0801D3EC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D3F0:
 	.4byte 0x84000020
 _0801D3F4:
@@ -1122,11 +1123,11 @@ _0801D41C:
 _0801D420:
 	cmp r0, #2
 	bne _0801D450
-	ldr r4, _0801D43C  @ =0x040000D4
+	ldr r4, _0801D43C  @ =REG_DMA3SAD
 	ldr r0, _0801D440  @ =gUnknown_0811BD64
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D444  @ =0x06010000
+	ldr r1, _0801D444  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D448  @ =0x84000020
@@ -1135,11 +1136,11 @@ _0801D420:
 	ldr r0, _0801D44C  @ =gUnknown_0811BD5C
 	b _0801D4CA
 _0801D43C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D440:
 	.4byte gUnknown_0811BD64
 _0801D444:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D448:
 	.4byte 0x84000020
 _0801D44C:
@@ -1147,11 +1148,11 @@ _0801D44C:
 _0801D450:
 	cmp r0, #3
 	bne _0801D480
-	ldr r4, _0801D46C  @ =0x040000D4
+	ldr r4, _0801D46C  @ =REG_DMA3SAD
 	ldr r0, _0801D470  @ =gUnknown_0811BC0C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D474  @ =0x06010000
+	ldr r1, _0801D474  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D478  @ =0x84000020
@@ -1160,11 +1161,11 @@ _0801D450:
 	ldr r0, _0801D47C  @ =gUnknown_0811BC04
 	b _0801D4CA
 _0801D46C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D470:
 	.4byte gUnknown_0811BC0C
 _0801D474:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D478:
 	.4byte 0x84000020
 _0801D47C:
@@ -1172,11 +1173,11 @@ _0801D47C:
 _0801D480:
 	cmp r0, #4
 	bne _0801D4B0
-	ldr r4, _0801D49C  @ =0x040000D4
+	ldr r4, _0801D49C  @ =REG_DMA3SAD
 	ldr r0, _0801D4A0  @ =gUnknown_081257D8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D4A4  @ =0x06010000
+	ldr r1, _0801D4A4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D4A8  @ =0x84000020
@@ -1185,11 +1186,11 @@ _0801D480:
 	ldr r0, _0801D4AC  @ =gUnknown_081257D0
 	b _0801D4CA
 _0801D49C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D4A0:
 	.4byte gUnknown_081257D8
 _0801D4A4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D4A8:
 	.4byte 0x84000020
 _0801D4AC:
@@ -1197,11 +1198,11 @@ _0801D4AC:
 _0801D4B0:
 	cmp r0, #5
 	bne _0801D558
-	ldr r4, _0801D58C  @ =0x040000D4
+	ldr r4, _0801D58C  @ =REG_DMA3SAD
 	ldr r0, _0801D590  @ =gUnknown_08125930
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D594  @ =0x06010000
+	ldr r1, _0801D594  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D598  @ =0x84000020
@@ -1295,11 +1296,11 @@ _0801D558:
 	ldrb r0, [r0, #16]
 	cmp r0, #1
 	bne _0801D5C8
-	ldr r4, _0801D58C  @ =0x040000D4
+	ldr r4, _0801D58C  @ =REG_DMA3SAD
 	ldr r0, _0801D5C0  @ =gUnknown_0811BCB8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D594  @ =0x06010000
+	ldr r1, _0801D594  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D598  @ =0x84000020
@@ -1308,11 +1309,11 @@ _0801D558:
 	ldr r0, _0801D5C4  @ =gUnknown_0811BCB0
 	b _0801D672
 _0801D58C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D590:
 	.4byte gUnknown_08125930
 _0801D594:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D598:
 	.4byte 0x84000020
 _0801D59C:
@@ -1340,11 +1341,11 @@ _0801D5C4:
 _0801D5C8:
 	cmp r0, #2
 	bne _0801D5F8
-	ldr r4, _0801D5E4  @ =0x040000D4
+	ldr r4, _0801D5E4  @ =REG_DMA3SAD
 	ldr r0, _0801D5E8  @ =gUnknown_0811BD64
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D5EC  @ =0x06010000
+	ldr r1, _0801D5EC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D5F0  @ =0x84000020
@@ -1353,11 +1354,11 @@ _0801D5C8:
 	ldr r0, _0801D5F4  @ =gUnknown_0811BD5C
 	b _0801D672
 _0801D5E4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D5E8:
 	.4byte gUnknown_0811BD64
 _0801D5EC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D5F0:
 	.4byte 0x84000020
 _0801D5F4:
@@ -1365,11 +1366,11 @@ _0801D5F4:
 _0801D5F8:
 	cmp r0, #3
 	bne _0801D628
-	ldr r4, _0801D614  @ =0x040000D4
+	ldr r4, _0801D614  @ =REG_DMA3SAD
 	ldr r0, _0801D618  @ =gUnknown_0811BC0C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D61C  @ =0x06010000
+	ldr r1, _0801D61C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D620  @ =0x84000020
@@ -1378,11 +1379,11 @@ _0801D5F8:
 	ldr r0, _0801D624  @ =gUnknown_0811BC04
 	b _0801D672
 _0801D614:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D618:
 	.4byte gUnknown_0811BC0C
 _0801D61C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D620:
 	.4byte 0x84000020
 _0801D624:
@@ -1390,11 +1391,11 @@ _0801D624:
 _0801D628:
 	cmp r0, #4
 	bne _0801D658
-	ldr r4, _0801D644  @ =0x040000D4
+	ldr r4, _0801D644  @ =REG_DMA3SAD
 	ldr r0, _0801D648  @ =gUnknown_081257D8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D64C  @ =0x06010000
+	ldr r1, _0801D64C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D650  @ =0x84000020
@@ -1403,11 +1404,11 @@ _0801D628:
 	ldr r0, _0801D654  @ =gUnknown_081257D0
 	b _0801D672
 _0801D644:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D648:
 	.4byte gUnknown_081257D8
 _0801D64C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D650:
 	.4byte 0x84000020
 _0801D654:
@@ -1415,11 +1416,11 @@ _0801D654:
 _0801D658:
 	cmp r0, #5
 	bne _0801D708
-	ldr r4, _0801D718  @ =0x040000D4
+	ldr r4, _0801D718  @ =REG_DMA3SAD
 	ldr r0, _0801D71C  @ =gUnknown_08125930
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D720  @ =0x06010000
+	ldr r1, _0801D720  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D724  @ =0x84000020
@@ -1513,11 +1514,11 @@ _0801D708:
 	.byte 0x00
 	.byte 0x00
 _0801D718:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D71C:
 	.4byte gUnknown_08125930
 _0801D720:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D724:
 	.4byte 0x84000020
 _0801D728:
@@ -1564,7 +1565,7 @@ sub_0801D748: @ 0x0801D748
 	beq _0801D776
 	b _0801D878
 _0801D776:
-	ldr r4, _0801D848  @ =0x040000D4
+	ldr r4, _0801D848  @ =REG_DMA3SAD
 	ldr r2, _0801D84C  @ =gUnknown_0811C010
 	mov r3, r10
 	ldr r0, [r3]
@@ -1579,7 +1580,7 @@ _0801D776:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D854  @ =0x06010000
+	ldr r1, _0801D854  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D858  @ =0x84000200
@@ -1670,13 +1671,13 @@ _0801D840:
 _0801D844:
 	.4byte 0x030000D8
 _0801D848:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D84C:
 	.4byte gUnknown_0811C010
 _0801D850:
 	.4byte gUnknown_0811C1C8
 _0801D854:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D858:
 	.4byte 0x84000200
 _0801D85C:
@@ -1696,7 +1697,7 @@ _0801D874:
 _0801D878:
 	cmp r0, #2
 	bne _0801D8E8
-	ldr r4, _0801D8C8  @ =0x040000D4
+	ldr r4, _0801D8C8  @ =REG_DMA3SAD
 	ldr r2, _0801D8CC  @ =gUnknown_0811C010
 	mov r1, r10
 	ldr r0, [r1]
@@ -1711,7 +1712,7 @@ _0801D878:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D8D4  @ =0x06010000
+	ldr r1, _0801D8D4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D8D8  @ =0x84000200
@@ -1736,13 +1737,13 @@ _0801D878:
 	.byte 0x00
 	.byte 0x00
 _0801D8C8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D8CC:
 	.4byte gUnknown_0811C010
 _0801D8D0:
 	.4byte gUnknown_0811C1C8
 _0801D8D4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D8D8:
 	.4byte 0x84000200
 _0801D8DC:
@@ -1754,7 +1755,7 @@ _0801D8E4:
 _0801D8E8:
 	cmp r0, #3
 	bne _0801D9D4
-	ldr r4, _0801D9A4  @ =0x040000D4
+	ldr r4, _0801D9A4  @ =REG_DMA3SAD
 	ldr r2, _0801D9A8  @ =gUnknown_0811F5F4
 	mov r3, r10
 	ldr r0, [r3]
@@ -1769,7 +1770,7 @@ _0801D8E8:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801D9B0  @ =0x06010000
+	ldr r1, _0801D9B0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801D9B4  @ =0x84000400
@@ -1847,13 +1848,13 @@ _0801D8E8:
 	strh r0, [r3]
 	b _0801DB16
 _0801D9A4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801D9A8:
 	.4byte gUnknown_0811F5F4
 _0801D9AC:
 	.4byte gUnknown_0811F7AC
 _0801D9B0:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801D9B4:
 	.4byte 0x84000400
 _0801D9B8:
@@ -1873,7 +1874,7 @@ _0801D9D0:
 _0801D9D4:
 	cmp r0, #4
 	bne _0801DA44
-	ldr r4, _0801DA24  @ =0x040000D4
+	ldr r4, _0801DA24  @ =REG_DMA3SAD
 	ldr r2, _0801DA28  @ =gUnknown_0811C010
 	mov r1, r10
 	ldr r0, [r1]
@@ -1888,7 +1889,7 @@ _0801D9D4:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801DA30  @ =0x06010000
+	ldr r1, _0801DA30  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801DA34  @ =0x84000200
@@ -1913,13 +1914,13 @@ _0801D9D4:
 	.byte 0x00
 	.byte 0x00
 _0801DA24:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801DA28:
 	.4byte gUnknown_0811C010
 _0801DA2C:
 	.4byte gUnknown_0811C1C8
 _0801DA30:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801DA34:
 	.4byte 0x84000200
 _0801DA38:
@@ -1931,7 +1932,7 @@ _0801DA40:
 _0801DA44:
 	cmp r0, #5
 	bne _0801DB24
-	ldr r4, _0801DC08  @ =0x040000D4
+	ldr r4, _0801DC08  @ =REG_DMA3SAD
 	ldr r2, _0801DC0C  @ =gUnknown_0811C010
 	mov r3, r10
 	ldr r0, [r3]
@@ -1946,7 +1947,7 @@ _0801DA44:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801DC14  @ =0x06010000
+	ldr r1, _0801DC14  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801DC18  @ =0x84000200
@@ -2059,7 +2060,7 @@ _0801DB24:
 	beq _0801DB40
 	b _0801DC40
 _0801DB40:
-	ldr r4, _0801DC08  @ =0x040000D4
+	ldr r4, _0801DC08  @ =REG_DMA3SAD
 	ldr r2, _0801DC0C  @ =gUnknown_0811C010
 	ldr r0, [r3]
 	ldrb r1, [r0, #3]
@@ -2073,7 +2074,7 @@ _0801DB40:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801DC14  @ =0x06010000
+	ldr r1, _0801DC14  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801DC18  @ =0x84000200
@@ -2160,13 +2161,13 @@ _0801DB40:
 	strh r0, [r3]
 	b _0801DEDE
 _0801DC08:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801DC0C:
 	.4byte gUnknown_0811C010
 _0801DC10:
 	.4byte gUnknown_0811C1C8
 _0801DC14:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801DC18:
 	.4byte 0x84000200
 _0801DC1C:
@@ -2190,7 +2191,7 @@ _0801DC3C:
 _0801DC40:
 	cmp r0, #2
 	bne _0801DCB0
-	ldr r4, _0801DC90  @ =0x040000D4
+	ldr r4, _0801DC90  @ =REG_DMA3SAD
 	ldr r2, _0801DC94  @ =gUnknown_0811C010
 	mov r1, r10
 	ldr r0, [r1]
@@ -2205,7 +2206,7 @@ _0801DC40:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801DC9C  @ =0x06010000
+	ldr r1, _0801DC9C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801DCA0  @ =0x84000200
@@ -2230,13 +2231,13 @@ _0801DC40:
 	.byte 0x00
 	.byte 0x00
 _0801DC90:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801DC94:
 	.4byte gUnknown_0811C010
 _0801DC98:
 	.4byte gUnknown_0811C1C8
 _0801DC9C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801DCA0:
 	.4byte 0x84000200
 _0801DCA4:
@@ -2248,7 +2249,7 @@ _0801DCAC:
 _0801DCB0:
 	cmp r0, #3
 	bne _0801DD9C
-	ldr r4, _0801DD6C  @ =0x040000D4
+	ldr r4, _0801DD6C  @ =REG_DMA3SAD
 	ldr r2, _0801DD70  @ =gUnknown_0811F5F4
 	mov r3, r10
 	ldr r0, [r3]
@@ -2263,7 +2264,7 @@ _0801DCB0:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801DD78  @ =0x06010000
+	ldr r1, _0801DD78  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801DD7C  @ =0x84000400
@@ -2341,13 +2342,13 @@ _0801DCB0:
 	strh r0, [r3]
 	b _0801DEDE
 _0801DD6C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801DD70:
 	.4byte gUnknown_0811F5F4
 _0801DD74:
 	.4byte gUnknown_0811F7AC
 _0801DD78:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801DD7C:
 	.4byte 0x84000400
 _0801DD80:
@@ -2367,7 +2368,7 @@ _0801DD98:
 _0801DD9C:
 	cmp r0, #4
 	bne _0801DE0C
-	ldr r4, _0801DDEC  @ =0x040000D4
+	ldr r4, _0801DDEC  @ =REG_DMA3SAD
 	ldr r2, _0801DDF0  @ =gUnknown_0811C010
 	mov r1, r10
 	ldr r0, [r1]
@@ -2382,7 +2383,7 @@ _0801DD9C:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801DDF8  @ =0x06010000
+	ldr r1, _0801DDF8  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801DDFC  @ =0x84000200
@@ -2407,13 +2408,13 @@ _0801DD9C:
 	.byte 0x00
 	.byte 0x00
 _0801DDEC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801DDF0:
 	.4byte gUnknown_0811C010
 _0801DDF4:
 	.4byte gUnknown_0811C1C8
 _0801DDF8:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801DDFC:
 	.4byte 0x84000200
 _0801DE00:
@@ -2425,7 +2426,7 @@ _0801DE08:
 _0801DE0C:
 	cmp r0, #5
 	bne _0801DEEC
-	ldr r4, _0801DFD8  @ =0x040000D4
+	ldr r4, _0801DFD8  @ =REG_DMA3SAD
 	ldr r2, _0801DFDC  @ =gUnknown_0811C010
 	mov r3, r10
 	ldr r0, [r3]
@@ -2440,7 +2441,7 @@ _0801DE0C:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801DFE4  @ =0x06010000
+	ldr r1, _0801DFE4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801DFE8  @ =0x84000200
@@ -2554,7 +2555,7 @@ _0801DEEC:
 	beq _0801DF0A
 	b _0801E010
 _0801DF0A:
-	ldr r4, _0801DFD8  @ =0x040000D4
+	ldr r4, _0801DFD8  @ =REG_DMA3SAD
 	ldr r2, _0801DFDC  @ =gUnknown_0811C010
 	ldr r0, [r3]
 	ldrb r1, [r0, #3]
@@ -2568,7 +2569,7 @@ _0801DF0A:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801DFE4  @ =0x06010000
+	ldr r1, _0801DFE4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801DFE8  @ =0x84000200
@@ -2659,13 +2660,13 @@ _0801DF0A:
 	.byte 0x00
 	.byte 0x00
 _0801DFD8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801DFDC:
 	.4byte gUnknown_0811C010
 _0801DFE0:
 	.4byte gUnknown_0811C1C8
 _0801DFE4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801DFE8:
 	.4byte 0x84000200
 _0801DFEC:
@@ -2689,7 +2690,7 @@ _0801E00C:
 _0801E010:
 	cmp r0, #2
 	bne _0801E0F0
-	ldr r4, _0801E0C0  @ =0x040000D4
+	ldr r4, _0801E0C0  @ =REG_DMA3SAD
 	ldr r2, _0801E0C4  @ =gUnknown_0811C010
 	mov r1, r8
 	ldr r0, [r1]
@@ -2704,7 +2705,7 @@ _0801E010:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E0CC  @ =0x06010000
+	ldr r1, _0801E0CC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E0D0  @ =0x84000200
@@ -2777,13 +2778,13 @@ _0801E010:
 	.byte 0x00
 	.byte 0x00
 _0801E0C0:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801E0C4:
 	.4byte gUnknown_0811C010
 _0801E0C8:
 	.4byte gUnknown_0811C1C8
 _0801E0CC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801E0D0:
 	.4byte 0x84000200
 _0801E0D4:
@@ -2803,7 +2804,7 @@ _0801E0EC:
 _0801E0F0:
 	cmp r0, #3
 	bne _0801E1E0
-	ldr r4, _0801E1B0  @ =0x040000D4
+	ldr r4, _0801E1B0  @ =REG_DMA3SAD
 	ldr r2, _0801E1B4  @ =gUnknown_0811F5F4
 	mov r3, r8
 	ldr r0, [r3]
@@ -2818,7 +2819,7 @@ _0801E0F0:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E1BC  @ =0x06010000
+	ldr r1, _0801E1BC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E1C0  @ =0x84000400
@@ -2898,13 +2899,13 @@ _0801E0F0:
 	strh r0, [r3]
 	b _0801E396
 _0801E1B0:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801E1B4:
 	.4byte gUnknown_0811F5F4
 _0801E1B8:
 	.4byte gUnknown_0811F7AC
 _0801E1BC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801E1C0:
 	.4byte 0x84000400
 _0801E1C4:
@@ -2924,7 +2925,7 @@ _0801E1DC:
 _0801E1E0:
 	cmp r0, #4
 	bne _0801E2C0
-	ldr r4, _0801E290  @ =0x040000D4
+	ldr r4, _0801E290  @ =REG_DMA3SAD
 	ldr r2, _0801E294  @ =gUnknown_0811C010
 	mov r1, r8
 	ldr r0, [r1]
@@ -2939,7 +2940,7 @@ _0801E1E0:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E29C  @ =0x06010000
+	ldr r1, _0801E29C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E2A0  @ =0x84000200
@@ -3012,13 +3013,13 @@ _0801E1E0:
 	.byte 0x00
 	.byte 0x00
 _0801E290:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801E294:
 	.4byte gUnknown_0811C010
 _0801E298:
 	.4byte gUnknown_0811C1C8
 _0801E29C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801E2A0:
 	.4byte 0x84000200
 _0801E2A4:
@@ -3038,7 +3039,7 @@ _0801E2BC:
 _0801E2C0:
 	cmp r0, #5
 	bne _0801E3A4
-	ldr r4, _0801E3B4  @ =0x040000D4
+	ldr r4, _0801E3B4  @ =REG_DMA3SAD
 	ldr r2, _0801E3B8  @ =gUnknown_0811C010
 	mov r3, r10
 	ldr r0, [r3]
@@ -3053,7 +3054,7 @@ _0801E2C0:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E3C0  @ =0x06010000
+	ldr r1, _0801E3C0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E3C4  @ =0x84000200
@@ -3163,13 +3164,13 @@ _0801E3A4:
 	.byte 0x00
 	.byte 0x00
 _0801E3B4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801E3B8:
 	.4byte gUnknown_0811C010
 _0801E3BC:
 	.4byte gUnknown_0811C1C8
 _0801E3C0:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801E3C4:
 	.4byte 0x84000200
 _0801E3C8:
@@ -3251,7 +3252,7 @@ _0801E426:
 	add r0, r0, r3
 	mov r3, r10
 	str r0, [r3]
-	ldr r4, _0801E810  @ =0x040000D4
+	ldr r4, _0801E810  @ =REG_DMA3SAD
 	mov r1, r9
 	ldr r0, [r1]
 	ldrb r1, [r0, #3]
@@ -3265,7 +3266,7 @@ _0801E426:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E818  @ =0x06010000
+	ldr r1, _0801E818  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E81C  @ =0x84000200
@@ -3382,7 +3383,7 @@ _0801E52C:
 	add r0, r0, r3
 	mov r3, r10
 	str r0, [r3]
-	ldr r4, _0801E810  @ =0x040000D4
+	ldr r4, _0801E810  @ =REG_DMA3SAD
 	mov r1, r9
 	ldr r0, [r1]
 	ldrb r1, [r0, #3]
@@ -3396,7 +3397,7 @@ _0801E52C:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E818  @ =0x06010000
+	ldr r1, _0801E818  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E81C  @ =0x84000200
@@ -3513,7 +3514,7 @@ _0801E630:
 	add r0, r0, r3
 	mov r3, r10
 	str r0, [r3]
-	ldr r4, _0801E810  @ =0x040000D4
+	ldr r4, _0801E810  @ =REG_DMA3SAD
 	mov r1, r9
 	ldr r0, [r1]
 	ldrb r1, [r0, #3]
@@ -3527,7 +3528,7 @@ _0801E630:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E818  @ =0x06010000
+	ldr r1, _0801E818  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E81C  @ =0x84000200
@@ -3643,7 +3644,7 @@ _0801E744:
 	add r0, r0, r3
 	mov r3, r10
 	str r0, [r3]
-	ldr r4, _0801E810  @ =0x040000D4
+	ldr r4, _0801E810  @ =REG_DMA3SAD
 	mov r1, r9
 	ldr r0, [r1]
 	ldrb r1, [r0, #3]
@@ -3657,7 +3658,7 @@ _0801E744:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E818  @ =0x06010000
+	ldr r1, _0801E818  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E848  @ =0x84000400
@@ -3733,11 +3734,11 @@ _0801E808:
 _0801E80C:
 	.4byte gUnknown_0811C010
 _0801E810:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801E814:
 	.4byte gUnknown_0811C1C8
 _0801E818:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801E81C:
 	.4byte 0x84000200
 _0801E820:
@@ -3804,7 +3805,7 @@ _0801E86E:
 	add r0, r0, r3
 	mov r3, r10
 	str r0, [r3]
-	ldr r4, _0801E998  @ =0x040000D4
+	ldr r4, _0801E998  @ =REG_DMA3SAD
 	ldr r1, _0801E98C  @ =0x030000D0
 	ldr r0, [r1]
 	ldrb r1, [r0, #3]
@@ -3818,7 +3819,7 @@ _0801E86E:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801E9A0  @ =0x06010000
+	ldr r1, _0801E9A0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801E9A4  @ =0x84000200
@@ -3932,11 +3933,11 @@ _0801E990:
 _0801E994:
 	.4byte gUnknown_0811C010
 _0801E998:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801E99C:
 	.4byte gUnknown_0811C1C8
 _0801E9A0:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801E9A4:
 	.4byte 0x84000200
 _0801E9A8:
@@ -4006,11 +4007,11 @@ _0801EA02:
 	ldrb r0, [r2]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _0801EDE4  @ =0x040000D4
+	ldr r4, _0801EDE4  @ =REG_DMA3SAD
 	ldr r0, _0801EDE8  @ =gUnknown_0811C1C8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801EDEC  @ =0x06010000
+	ldr r1, _0801EDEC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801EDF0  @ =0x84000200
@@ -4117,11 +4118,11 @@ _0801EAE0:
 	ldrb r0, [r2]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _0801EDE4  @ =0x040000D4
+	ldr r4, _0801EDE4  @ =REG_DMA3SAD
 	ldr r0, _0801EDE8  @ =gUnknown_0811C1C8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801EDEC  @ =0x06010000
+	ldr r1, _0801EDEC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801EDF0  @ =0x84000200
@@ -4228,11 +4229,11 @@ _0801EBBC:
 	ldrb r0, [r2]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _0801EDE4  @ =0x040000D4
+	ldr r4, _0801EDE4  @ =REG_DMA3SAD
 	ldr r0, _0801EDE8  @ =gUnknown_0811C1C8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801EDEC  @ =0x06010000
+	ldr r1, _0801EDEC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801EDF0  @ =0x84000200
@@ -4336,11 +4337,11 @@ _0801EC92:
 	ldrb r0, [r2]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _0801EDE4  @ =0x040000D4
+	ldr r4, _0801EDE4  @ =REG_DMA3SAD
 	ldr r0, _0801EE14  @ =gUnknown_0811F7AC
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801EDEC  @ =0x06010000
+	ldr r1, _0801EDEC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801EE18  @ =0x84000400
@@ -4439,11 +4440,11 @@ _0801ED70:
 	ldrb r0, [r2]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _0801EDE4  @ =0x040000D4
+	ldr r4, _0801EDE4  @ =REG_DMA3SAD
 	ldr r0, _0801EDE8  @ =gUnknown_0811C1C8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801EDEC  @ =0x06010000
+	ldr r1, _0801EDEC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801EDF0  @ =0x84000200
@@ -4496,11 +4497,11 @@ _0801EDDC:
 _0801EDE0:
 	.4byte 0x030000D8
 _0801EDE4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801EDE8:
 	.4byte gUnknown_0811C1C8
 _0801EDEC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801EDF0:
 	.4byte 0x84000200
 _0801EDF4:
@@ -4643,11 +4644,11 @@ _0801EEF4:
 	mov r1, r8
 	str r0, [r1]
 _0801EEFA:
-	ldr r4, _0801EFE4  @ =0x040000D4
+	ldr r4, _0801EFE4  @ =REG_DMA3SAD
 	ldr r0, _0801EFE8  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801EFEC  @ =0x06010000
+	ldr r1, _0801EFEC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801EFF0  @ =0x84000100
@@ -4764,11 +4765,11 @@ _0801EFC4:
 	.byte 0x00
 	.byte 0x00
 _0801EFE4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801EFE8:
 	.4byte gUnknown_082B30B4
 _0801EFEC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801EFF0:
 	.4byte 0x84000100
 _0801EFF4:
@@ -4796,11 +4797,11 @@ _0801F01C:
 	mov r2, r8
 	str r0, [r2]
 _0801F022:
-	ldr r4, _0801F10C  @ =0x040000D4
+	ldr r4, _0801F10C  @ =REG_DMA3SAD
 	ldr r0, _0801F110  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801F114  @ =0x06010000
+	ldr r1, _0801F114  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801F118  @ =0x84000100
@@ -4917,11 +4918,11 @@ _0801F0EC:
 	.byte 0x00
 	.byte 0x00
 _0801F10C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801F110:
 	.4byte gUnknown_082B30B4
 _0801F114:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801F118:
 	.4byte 0x84000100
 _0801F11C:
@@ -4949,11 +4950,11 @@ _0801F144:
 	mov r2, r8
 	str r0, [r2]
 _0801F14A:
-	ldr r4, _0801F220  @ =0x040000D4
+	ldr r4, _0801F220  @ =REG_DMA3SAD
 	ldr r0, _0801F224  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0801F228  @ =0x06010000
+	ldr r1, _0801F228  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801F22C  @ =0x84000100
@@ -5059,11 +5060,11 @@ _0801F210:
 	.byte 0x00
 	.byte 0x00
 _0801F220:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801F224:
 	.4byte gUnknown_082B30B4
 _0801F228:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801F22C:
 	.4byte 0x84000100
 _0801F230:
@@ -5114,11 +5115,11 @@ sub_0801F254: @ 0x0801F254
 	ldrb r0, [r0, #2]
 	mov r3, r9
 	str r0, [r3]
-	ldr r4, _0801F524  @ =0x040000D4
+	ldr r4, _0801F524  @ =REG_DMA3SAD
 	ldr r0, _0801F528  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801F52C  @ =0x06010000
+	ldr r1, _0801F52C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801F530  @ =0x84000100
@@ -5226,11 +5227,11 @@ _0801F346:
 	ldrb r0, [r0, #2]
 	mov r2, r9
 	str r0, [r2]
-	ldr r4, _0801F524  @ =0x040000D4
+	ldr r4, _0801F524  @ =REG_DMA3SAD
 	ldr r0, _0801F528  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801F52C  @ =0x06010000
+	ldr r1, _0801F52C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801F530  @ =0x84000100
@@ -5338,11 +5339,11 @@ _0801F424:
 	ldrb r0, [r0, #2]
 	mov r2, r9
 	str r0, [r2]
-	ldr r4, _0801F524  @ =0x040000D4
+	ldr r4, _0801F524  @ =REG_DMA3SAD
 	ldr r0, _0801F528  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801F52C  @ =0x06010000
+	ldr r1, _0801F52C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801F530  @ =0x84000100
@@ -5452,11 +5453,11 @@ _0801F51C:
 _0801F520:
 	.4byte 0x030000D4
 _0801F524:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801F528:
 	.4byte gUnknown_082B30B4
 _0801F52C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801F530:
 	.4byte 0x84000100
 _0801F534:
@@ -5493,12 +5494,12 @@ sub_0801F554: @ 0x0801F554
 	ldrb r4, [r4, #4]
 	ldr r5, [sp, #40]
 	str r4, [r5]
-	ldr r6, _0801F808  @ =0x040000D4
+	ldr r6, _0801F808  @ =REG_DMA3SAD
 	mov r9, r6
 	ldr r4, _0801F80C  @ =gUnknown_082AF7A8
 	str r4, [r6]
 	ldrh r4, [r2]
-	ldr r5, _0801F810  @ =0x06010000
+	ldr r5, _0801F810  @ =OBJ_VRAM0
 	add r4, r4, r5
 	str r4, [r6, #4]
 	ldr r4, _0801F814  @ =0x84000200
@@ -5614,7 +5615,7 @@ sub_0801F554: @ 0x0801F554
 	mov r4, r9
 	str r6, [r4]
 	ldrh r4, [r2]
-	ldr r5, _0801F810  @ =0x06010000
+	ldr r5, _0801F810  @ =OBJ_VRAM0
 	add r4, r4, r5
 	mov r6, r9
 	str r4, [r6, #4]
@@ -5727,7 +5728,7 @@ sub_0801F554: @ 0x0801F554
 	mov r4, r9
 	str r6, [r4]
 	ldrh r4, [r2]
-	ldr r5, _0801F810  @ =0x06010000
+	ldr r5, _0801F810  @ =OBJ_VRAM0
 	add r4, r4, r5
 	mov r6, r9
 	str r4, [r6, #4]
@@ -5826,11 +5827,11 @@ sub_0801F554: @ 0x0801F554
 _0801F804:
 	.4byte 0x030000D8
 _0801F808:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801F80C:
 	.4byte gUnknown_082AF7A8
 _0801F810:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801F814:
 	.4byte 0x84000200
 _0801F818:
@@ -5878,11 +5879,11 @@ sub_0801F838: @ 0x0801F838
 	ldrb r0, [r0, #4]
 	mov r3, r10
 	str r0, [r3]
-	ldr r4, _0801FB0C  @ =0x040000D4
+	ldr r4, _0801FB0C  @ =REG_DMA3SAD
 	ldr r0, _0801FB10  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801FB14  @ =0x06010000
+	ldr r1, _0801FB14  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801FB18  @ =0x84000200
@@ -5991,11 +5992,11 @@ _0801F92C:
 	ldrb r0, [r0, #12]
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _0801FB0C  @ =0x040000D4
+	ldr r4, _0801FB0C  @ =REG_DMA3SAD
 	ldr r0, _0801FB10  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801FB14  @ =0x06010000
+	ldr r1, _0801FB14  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801FB18  @ =0x84000200
@@ -6104,11 +6105,11 @@ _0801FA0C:
 	ldrb r0, [r0, #20]
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _0801FB0C  @ =0x040000D4
+	ldr r4, _0801FB0C  @ =REG_DMA3SAD
 	ldr r0, _0801FB10  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801FB14  @ =0x06010000
+	ldr r1, _0801FB14  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801FB18  @ =0x84000200
@@ -6220,11 +6221,11 @@ _0801FB04:
 _0801FB08:
 	.4byte 0x030000D8
 _0801FB0C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801FB10:
 	.4byte gUnknown_082AF7A8
 _0801FB14:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801FB18:
 	.4byte 0x84000200
 _0801FB1C:
@@ -6280,7 +6281,7 @@ _0801FB5E:
 	sub r0, r0, #16
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _0801FF38  @ =0x040000D4
+	ldr r4, _0801FF38  @ =REG_DMA3SAD
 	ldr r2, _0801FF3C  @ =gUnknown_082B34B4
 	ldr r3, _0801FF2C  @ =0x030000D0
 	ldr r0, [r3]
@@ -6295,7 +6296,7 @@ _0801FB5E:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801FF44  @ =0x06010000
+	ldr r1, _0801FF44  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801FF48  @ =0x84000100
@@ -6407,7 +6408,7 @@ _0801FC54:
 	sub r0, r0, #16
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _0801FF38  @ =0x040000D4
+	ldr r4, _0801FF38  @ =REG_DMA3SAD
 	ldr r2, _0801FF3C  @ =gUnknown_082B34B4
 	ldr r3, _0801FF2C  @ =0x030000D0
 	ldr r0, [r3]
@@ -6422,7 +6423,7 @@ _0801FC54:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801FF44  @ =0x06010000
+	ldr r1, _0801FF44  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801FF48  @ =0x84000100
@@ -6534,7 +6535,7 @@ _0801FD50:
 	sub r0, r0, #16
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _0801FF38  @ =0x040000D4
+	ldr r4, _0801FF38  @ =REG_DMA3SAD
 	ldr r2, _0801FF3C  @ =gUnknown_082B34B4
 	ldr r3, _0801FF2C  @ =0x030000D0
 	ldr r0, [r3]
@@ -6549,7 +6550,7 @@ _0801FD50:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801FF44  @ =0x06010000
+	ldr r1, _0801FF44  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801FF48  @ =0x84000100
@@ -6667,7 +6668,7 @@ _0801FE62:
 	sub r0, r0, #10
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _0801FF38  @ =0x040000D4
+	ldr r4, _0801FF38  @ =REG_DMA3SAD
 	ldr r2, _0801FF6C  @ =gUnknown_082B55E4
 	mov r3, r9
 	ldr r0, [r3]
@@ -6682,7 +6683,7 @@ _0801FE62:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0801FF44  @ =0x06010000
+	ldr r1, _0801FF44  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0801FF48  @ =0x84000100
@@ -6765,13 +6766,13 @@ _0801FF30:
 _0801FF34:
 	.4byte 0x030000D4
 _0801FF38:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0801FF3C:
 	.4byte gUnknown_082B34B4
 _0801FF40:
 	.4byte gUnknown_082B354C
 _0801FF44:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0801FF48:
 	.4byte 0x84000100
 _0801FF4C:
@@ -6834,7 +6835,7 @@ _0801FFA0:
 	sub r0, r0, #10
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _080201B8  @ =0x040000D4
+	ldr r4, _080201B8  @ =REG_DMA3SAD
 	ldr r2, _080201BC  @ =gUnknown_082B55E4
 	mov r3, r9
 	ldr r0, [r3]
@@ -6849,7 +6850,7 @@ _0801FFA0:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080201C4  @ =0x06010000
+	ldr r1, _080201C4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080201C8  @ =0x84000100
@@ -6962,7 +6963,7 @@ _0802009C:
 	sub r0, r0, #10
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _080201B8  @ =0x040000D4
+	ldr r4, _080201B8  @ =REG_DMA3SAD
 	ldr r2, _080201BC  @ =gUnknown_082B55E4
 	ldr r3, _080201E8  @ =0x030000D0
 	ldr r0, [r3]
@@ -6977,7 +6978,7 @@ _0802009C:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080201C4  @ =0x06010000
+	ldr r1, _080201C4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080201C8  @ =0x84000100
@@ -7089,13 +7090,13 @@ _080201B0:
 _080201B4:
 	.4byte 0x030000D4
 _080201B8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080201BC:
 	.4byte gUnknown_082B55E4
 _080201C0:
 	.4byte gUnknown_082B567C
 _080201C4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080201C8:
 	.4byte 0x84000100
 _080201CC:
@@ -7151,7 +7152,7 @@ _0802020E:
 	sub r0, r0, #16
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _080205E8  @ =0x040000D4
+	ldr r4, _080205E8  @ =REG_DMA3SAD
 	ldr r2, _080205EC  @ =gUnknown_082B34B4
 	ldr r3, _080205DC  @ =0x030000D0
 	ldr r0, [r3]
@@ -7166,7 +7167,7 @@ _0802020E:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080205F4  @ =0x06010000
+	ldr r1, _080205F4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080205F8  @ =0x84000100
@@ -7278,7 +7279,7 @@ _08020304:
 	sub r0, r0, #16
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _080205E8  @ =0x040000D4
+	ldr r4, _080205E8  @ =REG_DMA3SAD
 	ldr r2, _080205EC  @ =gUnknown_082B34B4
 	ldr r3, _080205DC  @ =0x030000D0
 	ldr r0, [r3]
@@ -7293,7 +7294,7 @@ _08020304:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080205F4  @ =0x06010000
+	ldr r1, _080205F4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080205F8  @ =0x84000100
@@ -7405,7 +7406,7 @@ _08020400:
 	sub r0, r0, #16
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _080205E8  @ =0x040000D4
+	ldr r4, _080205E8  @ =REG_DMA3SAD
 	ldr r2, _080205EC  @ =gUnknown_082B34B4
 	ldr r3, _080205DC  @ =0x030000D0
 	ldr r0, [r3]
@@ -7420,7 +7421,7 @@ _08020400:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080205F4  @ =0x06010000
+	ldr r1, _080205F4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080205F8  @ =0x84000100
@@ -7538,7 +7539,7 @@ _08020512:
 	sub r0, r0, #10
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _080205E8  @ =0x040000D4
+	ldr r4, _080205E8  @ =REG_DMA3SAD
 	ldr r2, _0802061C  @ =gUnknown_082B55E4
 	mov r3, r9
 	ldr r0, [r3]
@@ -7553,7 +7554,7 @@ _08020512:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080205F4  @ =0x06010000
+	ldr r1, _080205F4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080205F8  @ =0x84000100
@@ -7636,13 +7637,13 @@ _080205E0:
 _080205E4:
 	.4byte 0x030000D4
 _080205E8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080205EC:
 	.4byte gUnknown_082B34B4
 _080205F0:
 	.4byte gUnknown_082B354C
 _080205F4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080205F8:
 	.4byte 0x84000100
 _080205FC:
@@ -7705,7 +7706,7 @@ _08020650:
 	sub r0, r0, #10
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _08020868  @ =0x040000D4
+	ldr r4, _08020868  @ =REG_DMA3SAD
 	ldr r2, _0802086C  @ =gUnknown_082B55E4
 	mov r3, r9
 	ldr r0, [r3]
@@ -7720,7 +7721,7 @@ _08020650:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _08020874  @ =0x06010000
+	ldr r1, _08020874  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08020878  @ =0x84000100
@@ -7833,7 +7834,7 @@ _0802074C:
 	sub r0, r0, #10
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _08020868  @ =0x040000D4
+	ldr r4, _08020868  @ =REG_DMA3SAD
 	ldr r2, _0802086C  @ =gUnknown_082B55E4
 	ldr r3, _08020898  @ =0x030000D0
 	ldr r0, [r3]
@@ -7848,7 +7849,7 @@ _0802074C:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _08020874  @ =0x06010000
+	ldr r1, _08020874  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08020878  @ =0x84000100
@@ -7960,13 +7961,13 @@ _08020860:
 _08020864:
 	.4byte 0x030000D4
 _08020868:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802086C:
 	.4byte gUnknown_082B55E4
 _08020870:
 	.4byte gUnknown_082B567C
 _08020874:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08020878:
 	.4byte 0x84000100
 _0802087C:
@@ -9994,7 +9995,7 @@ _0802177E:
 	add r5, sp, #16
 	mov r0, #160
 	strh r0, [r5]
-	ldr r1, _080218F8  @ =0x040000D4
+	ldr r1, _080218F8  @ =REG_DMA3SAD
 	str r5, [r1]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -10155,7 +10156,7 @@ _080218F0:
 _080218F4:
 	.4byte 0x030000CC
 _080218F8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080218FC:
 	.4byte 0x81000100
 _08021900:
@@ -10266,7 +10267,7 @@ bonus_stoparrow_loop: @ 0x080219A4
 	strh r0, [r2]
 	mov r0, #160
 	str r0, [sp, #4]
-	ldr r6, _08021B6C  @ =0x040000D4
+	ldr r6, _08021B6C  @ =REG_DMA3SAD
 	add r0, sp, #4
 	str r0, [r6]
 	ldr r7, _08021B70  @ =gOamData
@@ -10473,7 +10474,7 @@ _08021B64:
 _08021B68:
 	.4byte gUnknown_0300192C
 _08021B6C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08021B70:
 	.4byte gOamData
 _08021B74:
@@ -11145,11 +11146,11 @@ sub_0802200C: @ 0x0802200C
 	ldrb r0, [r0, #25]
 	mov r3, r9
 	str r0, [r3]
-	ldr r4, _08022310  @ =0x040000D4
+	ldr r4, _08022310  @ =REG_DMA3SAD
 	ldr r0, _08022314  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022318  @ =0x06010000
+	ldr r1, _08022318  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802231C  @ =0x84000200
@@ -11266,11 +11267,11 @@ _08022112:
 	ldrb r0, [r0, #25]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _08022310  @ =0x040000D4
+	ldr r4, _08022310  @ =REG_DMA3SAD
 	ldr r0, _08022314  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022318  @ =0x06010000
+	ldr r1, _08022318  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802231C  @ =0x84000200
@@ -11386,11 +11387,11 @@ _08022200:
 	ldrb r0, [r0, #25]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _08022310  @ =0x040000D4
+	ldr r4, _08022310  @ =REG_DMA3SAD
 	ldr r0, _08022314  @ =gUnknown_082AEF7C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022318  @ =0x06010000
+	ldr r1, _08022318  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802231C  @ =0x84000200
@@ -11506,11 +11507,11 @@ _08022308:
 _0802230C:
 	.4byte 0x030000F4
 _08022310:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022314:
 	.4byte gUnknown_082AEF7C
 _08022318:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802231C:
 	.4byte 0x84000200
 _08022320:
@@ -11562,11 +11563,11 @@ sub_08022340: @ 0x08022340
 	mov r10, r2
 	cmp r0, #1
 	bne _080223B0
-	ldr r4, _0802239C  @ =0x040000D4
+	ldr r4, _0802239C  @ =REG_DMA3SAD
 	ldr r0, _080223A0  @ =gUnknown_0811BCB8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080223A4  @ =0x06010000
+	ldr r1, _080223A4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080223A8  @ =0x84000020
@@ -11581,11 +11582,11 @@ _08022394:
 _08022398:
 	.4byte 0x030000F8
 _0802239C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080223A0:
 	.4byte gUnknown_0811BCB8
 _080223A4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080223A8:
 	.4byte 0x84000020
 _080223AC:
@@ -11593,11 +11594,11 @@ _080223AC:
 _080223B0:
 	cmp r0, #2
 	bne _080223E0
-	ldr r4, _080223CC  @ =0x040000D4
+	ldr r4, _080223CC  @ =REG_DMA3SAD
 	ldr r0, _080223D0  @ =gUnknown_0811BD64
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080223D4  @ =0x06010000
+	ldr r1, _080223D4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080223D8  @ =0x84000020
@@ -11606,11 +11607,11 @@ _080223B0:
 	ldr r0, _080223DC  @ =gUnknown_0811BD5C
 	b _0802245A
 _080223CC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080223D0:
 	.4byte gUnknown_0811BD64
 _080223D4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080223D8:
 	.4byte 0x84000020
 _080223DC:
@@ -11618,11 +11619,11 @@ _080223DC:
 _080223E0:
 	cmp r0, #3
 	bne _08022410
-	ldr r4, _080223FC  @ =0x040000D4
+	ldr r4, _080223FC  @ =REG_DMA3SAD
 	ldr r0, _08022400  @ =gUnknown_0811BC0C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022404  @ =0x06010000
+	ldr r1, _08022404  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022408  @ =0x84000020
@@ -11631,11 +11632,11 @@ _080223E0:
 	ldr r0, _0802240C  @ =gUnknown_0811BC04
 	b _0802245A
 _080223FC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022400:
 	.4byte gUnknown_0811BC0C
 _08022404:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022408:
 	.4byte 0x84000020
 _0802240C:
@@ -11643,11 +11644,11 @@ _0802240C:
 _08022410:
 	cmp r0, #4
 	bne _08022440
-	ldr r4, _0802242C  @ =0x040000D4
+	ldr r4, _0802242C  @ =REG_DMA3SAD
 	ldr r0, _08022430  @ =gUnknown_081257D8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022434  @ =0x06010000
+	ldr r1, _08022434  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022438  @ =0x84000020
@@ -11656,11 +11657,11 @@ _08022410:
 	ldr r0, _0802243C  @ =gUnknown_081257D0
 	b _0802245A
 _0802242C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022430:
 	.4byte gUnknown_081257D8
 _08022434:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022438:
 	.4byte 0x84000020
 _0802243C:
@@ -11668,11 +11669,11 @@ _0802243C:
 _08022440:
 	cmp r0, #5
 	bne _080224E8
-	ldr r4, _08022524  @ =0x040000D4
+	ldr r4, _08022524  @ =REG_DMA3SAD
 	ldr r0, _08022528  @ =gUnknown_08125930
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0802252C  @ =0x06010000
+	ldr r1, _0802252C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022530  @ =0x84000020
@@ -11770,11 +11771,11 @@ _080224E8:
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _08022560
-	ldr r4, _08022524  @ =0x040000D4
+	ldr r4, _08022524  @ =REG_DMA3SAD
 	ldr r0, _08022558  @ =gUnknown_0811BCB8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0802252C  @ =0x06010000
+	ldr r1, _0802252C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022530  @ =0x84000020
@@ -11783,11 +11784,11 @@ _080224E8:
 	ldr r0, _0802255C  @ =gUnknown_0811BCB0
 	b _0802260A
 _08022524:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022528:
 	.4byte gUnknown_08125930
 _0802252C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022530:
 	.4byte 0x84000020
 _08022534:
@@ -11815,11 +11816,11 @@ _0802255C:
 _08022560:
 	cmp r0, #2
 	bne _08022590
-	ldr r4, _0802257C  @ =0x040000D4
+	ldr r4, _0802257C  @ =REG_DMA3SAD
 	ldr r0, _08022580  @ =gUnknown_0811BD64
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022584  @ =0x06010000
+	ldr r1, _08022584  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022588  @ =0x84000020
@@ -11828,11 +11829,11 @@ _08022560:
 	ldr r0, _0802258C  @ =gUnknown_0811BD5C
 	b _0802260A
 _0802257C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022580:
 	.4byte gUnknown_0811BD64
 _08022584:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022588:
 	.4byte 0x84000020
 _0802258C:
@@ -11840,11 +11841,11 @@ _0802258C:
 _08022590:
 	cmp r0, #3
 	bne _080225C0
-	ldr r4, _080225AC  @ =0x040000D4
+	ldr r4, _080225AC  @ =REG_DMA3SAD
 	ldr r0, _080225B0  @ =gUnknown_0811BC0C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080225B4  @ =0x06010000
+	ldr r1, _080225B4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080225B8  @ =0x84000020
@@ -11853,11 +11854,11 @@ _08022590:
 	ldr r0, _080225BC  @ =gUnknown_0811BC04
 	b _0802260A
 _080225AC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080225B0:
 	.4byte gUnknown_0811BC0C
 _080225B4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080225B8:
 	.4byte 0x84000020
 _080225BC:
@@ -11865,11 +11866,11 @@ _080225BC:
 _080225C0:
 	cmp r0, #4
 	bne _080225F0
-	ldr r4, _080225DC  @ =0x040000D4
+	ldr r4, _080225DC  @ =REG_DMA3SAD
 	ldr r0, _080225E0  @ =gUnknown_081257D8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080225E4  @ =0x06010000
+	ldr r1, _080225E4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080225E8  @ =0x84000020
@@ -11878,11 +11879,11 @@ _080225C0:
 	ldr r0, _080225EC  @ =gUnknown_081257D0
 	b _0802260A
 _080225DC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080225E0:
 	.4byte gUnknown_081257D8
 _080225E4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080225E8:
 	.4byte 0x84000020
 _080225EC:
@@ -11890,11 +11891,11 @@ _080225EC:
 _080225F0:
 	cmp r0, #5
 	bne _08022698
-	ldr r4, _080226D4  @ =0x040000D4
+	ldr r4, _080226D4  @ =REG_DMA3SAD
 	ldr r0, _080226D8  @ =gUnknown_08125930
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080226DC  @ =0x06010000
+	ldr r1, _080226DC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080226E0  @ =0x84000020
@@ -11992,11 +11993,11 @@ _08022698:
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _08022710
-	ldr r4, _080226D4  @ =0x040000D4
+	ldr r4, _080226D4  @ =REG_DMA3SAD
 	ldr r0, _08022708  @ =gUnknown_0811BCB8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080226DC  @ =0x06010000
+	ldr r1, _080226DC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080226E0  @ =0x84000020
@@ -12005,11 +12006,11 @@ _08022698:
 	ldr r0, _0802270C  @ =gUnknown_0811BCB0
 	b _080227BA
 _080226D4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080226D8:
 	.4byte gUnknown_08125930
 _080226DC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080226E0:
 	.4byte 0x84000020
 _080226E4:
@@ -12037,11 +12038,11 @@ _0802270C:
 _08022710:
 	cmp r0, #2
 	bne _08022740
-	ldr r4, _0802272C  @ =0x040000D4
+	ldr r4, _0802272C  @ =REG_DMA3SAD
 	ldr r0, _08022730  @ =gUnknown_0811BD64
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022734  @ =0x06010000
+	ldr r1, _08022734  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022738  @ =0x84000020
@@ -12050,11 +12051,11 @@ _08022710:
 	ldr r0, _0802273C  @ =gUnknown_0811BD5C
 	b _080227BA
 _0802272C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022730:
 	.4byte gUnknown_0811BD64
 _08022734:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022738:
 	.4byte 0x84000020
 _0802273C:
@@ -12062,11 +12063,11 @@ _0802273C:
 _08022740:
 	cmp r0, #3
 	bne _08022770
-	ldr r4, _0802275C  @ =0x040000D4
+	ldr r4, _0802275C  @ =REG_DMA3SAD
 	ldr r0, _08022760  @ =gUnknown_0811BC0C
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022764  @ =0x06010000
+	ldr r1, _08022764  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022768  @ =0x84000020
@@ -12075,11 +12076,11 @@ _08022740:
 	ldr r0, _0802276C  @ =gUnknown_0811BC04
 	b _080227BA
 _0802275C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022760:
 	.4byte gUnknown_0811BC0C
 _08022764:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022768:
 	.4byte 0x84000020
 _0802276C:
@@ -12087,11 +12088,11 @@ _0802276C:
 _08022770:
 	cmp r0, #4
 	bne _080227A0
-	ldr r4, _0802278C  @ =0x040000D4
+	ldr r4, _0802278C  @ =REG_DMA3SAD
 	ldr r0, _08022790  @ =gUnknown_081257D8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022794  @ =0x06010000
+	ldr r1, _08022794  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022798  @ =0x84000020
@@ -12100,11 +12101,11 @@ _08022770:
 	ldr r0, _0802279C  @ =gUnknown_081257D0
 	b _080227BA
 _0802278C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022790:
 	.4byte gUnknown_081257D8
 _08022794:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022798:
 	.4byte 0x84000020
 _0802279C:
@@ -12112,11 +12113,11 @@ _0802279C:
 _080227A0:
 	cmp r0, #5
 	bne _08022850
-	ldr r4, _08022860  @ =0x040000D4
+	ldr r4, _08022860  @ =REG_DMA3SAD
 	ldr r0, _08022864  @ =gUnknown_08125930
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022868  @ =0x06010000
+	ldr r1, _08022868  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802286C  @ =0x84000020
@@ -12210,11 +12211,11 @@ _08022850:
 	.byte 0x00
 	.byte 0x00
 _08022860:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022864:
 	.4byte gUnknown_08125930
 _08022868:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802286C:
 	.4byte 0x84000020
 _08022870:
@@ -12265,7 +12266,7 @@ sub_08022890: @ 0x08022890
 	mov r10, r2
 	cmp r0, #1
 	bne _080229A4
-	ldr r4, _08022974  @ =0x040000D4
+	ldr r4, _08022974  @ =REG_DMA3SAD
 	ldr r2, _08022978  @ =gUnknown_0811C010
 	ldrb r1, [r5, #10]
 	lsl r0, r1, #3
@@ -12278,7 +12279,7 @@ sub_08022890: @ 0x08022890
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022980  @ =0x06010000
+	ldr r1, _08022980  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022984  @ =0x84000200
@@ -12352,13 +12353,13 @@ _0802296C:
 _08022970:
 	.4byte 0x030000F8
 _08022974:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022978:
 	.4byte gUnknown_0811C010
 _0802297C:
 	.4byte gUnknown_0811C1C8
 _08022980:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022984:
 	.4byte 0x84000200
 _08022988:
@@ -12378,7 +12379,7 @@ _080229A0:
 _080229A4:
 	cmp r0, #2
 	bne _08022A7C
-	ldr r4, _08022A4C  @ =0x040000D4
+	ldr r4, _08022A4C  @ =REG_DMA3SAD
 	ldr r2, _08022A50  @ =gUnknown_0811C010
 	ldrb r1, [r5, #10]
 	lsl r0, r1, #3
@@ -12391,7 +12392,7 @@ _080229A4:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022A58  @ =0x06010000
+	ldr r1, _08022A58  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022A5C  @ =0x84000200
@@ -12461,13 +12462,13 @@ _080229A4:
 	mov r1, #80
 	b _08022CDE
 _08022A4C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022A50:
 	.4byte gUnknown_0811C010
 _08022A54:
 	.4byte gUnknown_0811C1C8
 _08022A58:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022A5C:
 	.4byte 0x84000200
 _08022A60:
@@ -12487,7 +12488,7 @@ _08022A78:
 _08022A7C:
 	cmp r0, #3
 	bne _08022B60
-	ldr r4, _08022B30  @ =0x040000D4
+	ldr r4, _08022B30  @ =REG_DMA3SAD
 	ldr r2, _08022B34  @ =gUnknown_0811F5F4
 	ldrb r1, [r5, #10]
 	lsl r0, r1, #3
@@ -12500,7 +12501,7 @@ _08022A7C:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022B3C  @ =0x06010000
+	ldr r1, _08022B3C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022B40  @ =0x84000400
@@ -12577,13 +12578,13 @@ _08022A7C:
 	.byte 0x00
 	.byte 0x00
 _08022B30:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022B34:
 	.4byte gUnknown_0811F5F4
 _08022B38:
 	.4byte gUnknown_0811F7AC
 _08022B3C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022B40:
 	.4byte 0x84000400
 _08022B44:
@@ -12603,7 +12604,7 @@ _08022B5C:
 _08022B60:
 	cmp r0, #4
 	bne _08022C38
-	ldr r4, _08022C08  @ =0x040000D4
+	ldr r4, _08022C08  @ =REG_DMA3SAD
 	ldr r2, _08022C0C  @ =gUnknown_0811C010
 	ldrb r1, [r5, #10]
 	lsl r0, r1, #3
@@ -12616,7 +12617,7 @@ _08022B60:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022C14  @ =0x06010000
+	ldr r1, _08022C14  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022C18  @ =0x84000200
@@ -12686,13 +12687,13 @@ _08022B60:
 	mov r1, #192
 	b _08022CDE
 _08022C08:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022C0C:
 	.4byte gUnknown_0811C010
 _08022C10:
 	.4byte gUnknown_0811C1C8
 _08022C14:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022C18:
 	.4byte 0x84000200
 _08022C1C:
@@ -12712,7 +12713,7 @@ _08022C34:
 _08022C38:
 	cmp r0, #5
 	bne _08022D0A
-	ldr r4, _08022DD0  @ =0x040000D4
+	ldr r4, _08022DD0  @ =REG_DMA3SAD
 	ldr r2, _08022DD4  @ =gUnknown_0811C010
 	ldrb r1, [r5, #10]
 	lsl r0, r1, #3
@@ -12725,7 +12726,7 @@ _08022C38:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022DDC  @ =0x06010000
+	ldr r1, _08022DDC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022DE0  @ =0x84000200
@@ -12835,7 +12836,7 @@ _08022D0A:
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _08022E08
-	ldr r4, _08022DD0  @ =0x040000D4
+	ldr r4, _08022DD0  @ =REG_DMA3SAD
 	ldr r2, _08022DD4  @ =gUnknown_0811C010
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -12848,7 +12849,7 @@ _08022D0A:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022DDC  @ =0x06010000
+	ldr r1, _08022DDC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022DE0  @ =0x84000200
@@ -12918,13 +12919,13 @@ _08022D0A:
 	mov r1, #64
 	b _08023142
 _08022DD0:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022DD4:
 	.4byte gUnknown_0811C010
 _08022DD8:
 	.4byte gUnknown_0811C1C8
 _08022DDC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022DE0:
 	.4byte 0x84000200
 _08022DE4:
@@ -12948,7 +12949,7 @@ _08022E04:
 _08022E08:
 	cmp r0, #2
 	bne _08022EE0
-	ldr r4, _08022EB0  @ =0x040000D4
+	ldr r4, _08022EB0  @ =REG_DMA3SAD
 	ldr r2, _08022EB4  @ =gUnknown_0811C010
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -12961,7 +12962,7 @@ _08022E08:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022EBC  @ =0x06010000
+	ldr r1, _08022EBC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022EC0  @ =0x84000200
@@ -13031,13 +13032,13 @@ _08022E08:
 	mov r1, #80
 	b _08023142
 _08022EB0:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022EB4:
 	.4byte gUnknown_0811C010
 _08022EB8:
 	.4byte gUnknown_0811C1C8
 _08022EBC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022EC0:
 	.4byte 0x84000200
 _08022EC4:
@@ -13057,7 +13058,7 @@ _08022EDC:
 _08022EE0:
 	cmp r0, #3
 	bne _08022FC4
-	ldr r4, _08022F94  @ =0x040000D4
+	ldr r4, _08022F94  @ =REG_DMA3SAD
 	ldr r2, _08022F98  @ =gUnknown_0811F5F4
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -13070,7 +13071,7 @@ _08022EE0:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08022FA0  @ =0x06010000
+	ldr r1, _08022FA0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08022FA4  @ =0x84000400
@@ -13147,13 +13148,13 @@ _08022EE0:
 	.byte 0x00
 	.byte 0x00
 _08022F94:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08022F98:
 	.4byte gUnknown_0811F5F4
 _08022F9C:
 	.4byte gUnknown_0811F7AC
 _08022FA0:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08022FA4:
 	.4byte 0x84000400
 _08022FA8:
@@ -13173,7 +13174,7 @@ _08022FC0:
 _08022FC4:
 	cmp r0, #4
 	bne _0802309C
-	ldr r4, _0802306C  @ =0x040000D4
+	ldr r4, _0802306C  @ =REG_DMA3SAD
 	ldr r2, _08023070  @ =gUnknown_0811C010
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -13186,7 +13187,7 @@ _08022FC4:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023078  @ =0x06010000
+	ldr r1, _08023078  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802307C  @ =0x84000200
@@ -13256,13 +13257,13 @@ _08022FC4:
 	mov r1, #192
 	b _08023142
 _0802306C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08023070:
 	.4byte gUnknown_0811C010
 _08023074:
 	.4byte gUnknown_0811C1C8
 _08023078:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802307C:
 	.4byte 0x84000200
 _08023080:
@@ -13282,7 +13283,7 @@ _08023098:
 _0802309C:
 	cmp r0, #5
 	bne _0802316E
-	ldr r4, _0802323C  @ =0x040000D4
+	ldr r4, _0802323C  @ =REG_DMA3SAD
 	ldr r2, _08023240  @ =gUnknown_0811C010
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -13295,7 +13296,7 @@ _0802309C:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023248  @ =0x06010000
+	ldr r1, _08023248  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802324C  @ =0x84000200
@@ -13405,7 +13406,7 @@ _0802316E:
 	ldrb r1, [r0]
 	cmp r1, #1
 	bne _08023274
-	ldr r4, _0802323C  @ =0x040000D4
+	ldr r4, _0802323C  @ =REG_DMA3SAD
 	ldr r2, _08023240  @ =gUnknown_0811C010
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -13418,7 +13419,7 @@ _0802316E:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023248  @ =0x06010000
+	ldr r1, _08023248  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802324C  @ =0x84000200
@@ -13492,13 +13493,13 @@ _0802316E:
 	mov r1, #64
 	b _080235CE
 _0802323C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08023240:
 	.4byte gUnknown_0811C010
 _08023244:
 	.4byte gUnknown_0811C1C8
 _08023248:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802324C:
 	.4byte 0x84000200
 _08023250:
@@ -13522,7 +13523,7 @@ _08023270:
 _08023274:
 	cmp r1, #2
 	bne _08023354
-	ldr r4, _08023324  @ =0x040000D4
+	ldr r4, _08023324  @ =REG_DMA3SAD
 	ldr r2, _08023328  @ =gUnknown_0811C010
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -13535,7 +13536,7 @@ _08023274:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023330  @ =0x06010000
+	ldr r1, _08023330  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023334  @ =0x84000200
@@ -13609,13 +13610,13 @@ _08023274:
 	mov r1, #80
 	b _080235CE
 _08023324:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08023328:
 	.4byte gUnknown_0811C010
 _0802332C:
 	.4byte gUnknown_0811C1C8
 _08023330:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08023334:
 	.4byte 0x84000200
 _08023338:
@@ -13635,7 +13636,7 @@ _08023350:
 _08023354:
 	cmp r1, #3
 	bne _08023440
-	ldr r4, _08023410  @ =0x040000D4
+	ldr r4, _08023410  @ =REG_DMA3SAD
 	ldr r2, _08023414  @ =gUnknown_0811F5F4
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -13648,7 +13649,7 @@ _08023354:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _0802341C  @ =0x06010000
+	ldr r1, _0802341C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023420  @ =0x84000400
@@ -13729,13 +13730,13 @@ _08023354:
 	.byte 0x00
 	.byte 0x00
 _08023410:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08023414:
 	.4byte gUnknown_0811F5F4
 _08023418:
 	.4byte gUnknown_0811F7AC
 _0802341C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08023420:
 	.4byte 0x84000400
 _08023424:
@@ -13755,7 +13756,7 @@ _0802343C:
 _08023440:
 	cmp r1, #4
 	bne _08023520
-	ldr r4, _080234F0  @ =0x040000D4
+	ldr r4, _080234F0  @ =REG_DMA3SAD
 	ldr r2, _080234F4  @ =gUnknown_0811C010
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -13768,7 +13769,7 @@ _08023440:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080234FC  @ =0x06010000
+	ldr r1, _080234FC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023500  @ =0x84000200
@@ -13842,13 +13843,13 @@ _08023440:
 	mov r1, #192
 	b _080235CE
 _080234F0:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080234F4:
 	.4byte gUnknown_0811C010
 _080234F8:
 	.4byte gUnknown_0811C1C8
 _080234FC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08023500:
 	.4byte 0x84000200
 _08023504:
@@ -13868,7 +13869,7 @@ _0802351C:
 _08023520:
 	cmp r1, #5
 	bne _080235FA
-	ldr r4, _08023608  @ =0x040000D4
+	ldr r4, _08023608  @ =REG_DMA3SAD
 	ldr r2, _0802360C  @ =gUnknown_0811C010
 	ldrb r1, [r3, #10]
 	lsl r0, r1, #3
@@ -13881,7 +13882,7 @@ _08023520:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023614  @ =0x06010000
+	ldr r1, _08023614  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023618  @ =0x84000200
@@ -13986,13 +13987,13 @@ _080235FA:
 	pop {r0}
 	bx r0
 _08023608:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802360C:
 	.4byte gUnknown_0811C010
 _08023610:
 	.4byte gUnknown_0811C1C8
 _08023614:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08023618:
 	.4byte 0x84000200
 _0802361C:
@@ -14054,7 +14055,7 @@ sub_0802363C: @ 0x0802363C
 	add r0, r0, r2
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _08023A3C  @ =0x040000D4
+	ldr r4, _08023A3C  @ =REG_DMA3SAD
 	mov r2, r8
 	ldr r0, [r2]
 	ldrb r1, [r0, #10]
@@ -14068,7 +14069,7 @@ sub_0802363C: @ 0x0802363C
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023A44  @ =0x06010000
+	ldr r1, _08023A44  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023A48  @ =0x84000200
@@ -14187,7 +14188,7 @@ _0802375A:
 	add r0, r0, r2
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _08023A3C  @ =0x040000D4
+	ldr r4, _08023A3C  @ =REG_DMA3SAD
 	mov r2, r8
 	ldr r0, [r2]
 	ldrb r1, [r0, #10]
@@ -14201,7 +14202,7 @@ _0802375A:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023A44  @ =0x06010000
+	ldr r1, _08023A44  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023A48  @ =0x84000200
@@ -14320,7 +14321,7 @@ _08023862:
 	add r0, r0, r2
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _08023A3C  @ =0x040000D4
+	ldr r4, _08023A3C  @ =REG_DMA3SAD
 	mov r2, r8
 	ldr r0, [r2]
 	ldrb r1, [r0, #10]
@@ -14334,7 +14335,7 @@ _08023862:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023A44  @ =0x06010000
+	ldr r1, _08023A44  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023A48  @ =0x84000200
@@ -14455,7 +14456,7 @@ _08023980:
 	add r0, r0, r2
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _08023A3C  @ =0x040000D4
+	ldr r4, _08023A3C  @ =REG_DMA3SAD
 	mov r2, r8
 	ldr r0, [r2]
 	ldrb r1, [r0, #10]
@@ -14469,7 +14470,7 @@ _08023980:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023A44  @ =0x06010000
+	ldr r1, _08023A44  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023A74  @ =0x84000400
@@ -14533,11 +14534,11 @@ _08023A34:
 _08023A38:
 	.4byte gUnknown_0811C010
 _08023A3C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08023A40:
 	.4byte gUnknown_0811C1C8
 _08023A44:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08023A48:
 	.4byte 0x84000200
 _08023A4C:
@@ -14621,7 +14622,7 @@ _08023AB2:
 	add r0, r0, r2
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _08023BDC  @ =0x040000D4
+	ldr r4, _08023BDC  @ =REG_DMA3SAD
 	mov r2, r8
 	ldr r0, [r2]
 	ldrb r1, [r0, #10]
@@ -14635,7 +14636,7 @@ _08023AB2:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08023BE4  @ =0x06010000
+	ldr r1, _08023BE4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08023BE8  @ =0x84000200
@@ -14744,11 +14745,11 @@ _08023BD4:
 _08023BD8:
 	.4byte gUnknown_0811C010
 _08023BDC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08023BE0:
 	.4byte gUnknown_0811C1C8
 _08023BE4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08023BE8:
 	.4byte 0x84000200
 _08023BEC:
@@ -14798,11 +14799,11 @@ sub_08023C08: @ 0x08023C08
 	ldrb r0, [r0]
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _08024000  @ =0x040000D4
+	ldr r4, _08024000  @ =REG_DMA3SAD
 	ldr r0, _08024004  @ =gUnknown_0811C1C8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08024008  @ =0x06010000
+	ldr r1, _08024008  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802400C  @ =0x84000200
@@ -14911,11 +14912,11 @@ _08023CFE:
 	ldrb r0, [r0]
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _08024000  @ =0x040000D4
+	ldr r4, _08024000  @ =REG_DMA3SAD
 	ldr r0, _08024004  @ =gUnknown_0811C1C8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08024008  @ =0x06010000
+	ldr r1, _08024008  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802400C  @ =0x84000200
@@ -15023,11 +15024,11 @@ _08023DDC:
 	ldrb r0, [r0]
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _08024000  @ =0x040000D4
+	ldr r4, _08024000  @ =REG_DMA3SAD
 	ldr r0, _08024004  @ =gUnknown_0811C1C8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08024008  @ =0x06010000
+	ldr r1, _08024008  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802400C  @ =0x84000200
@@ -15135,11 +15136,11 @@ _08023EBA:
 	ldrb r0, [r0]
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _08024000  @ =0x040000D4
+	ldr r4, _08024000  @ =REG_DMA3SAD
 	ldr r0, _08024030  @ =gUnknown_0811F7AC
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08024008  @ =0x06010000
+	ldr r1, _08024008  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08024034  @ =0x84000400
@@ -15240,11 +15241,11 @@ _08023F9C:
 	ldrb r0, [r0]
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _08024000  @ =0x040000D4
+	ldr r4, _08024000  @ =REG_DMA3SAD
 	ldr r0, _08024004  @ =gUnknown_0811C1C8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08024008  @ =0x06010000
+	ldr r1, _08024008  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802400C  @ =0x84000200
@@ -15284,11 +15285,11 @@ _08023FF8:
 _08023FFC:
 	.4byte 0x030000F8
 _08024000:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08024004:
 	.4byte gUnknown_0811C1C8
 _08024008:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802400C:
 	.4byte 0x84000200
 _08024010:
@@ -15422,11 +15423,11 @@ sub_080240D0: @ 0x080240D0
 	ldrb r0, [r0, #24]
 	mov r3, r9
 	str r0, [r3]
-	ldr r4, _080243D4  @ =0x040000D4
+	ldr r4, _080243D4  @ =REG_DMA3SAD
 	ldr r0, _080243D8  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080243DC  @ =0x06010000
+	ldr r1, _080243DC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080243E0  @ =0x84000100
@@ -15543,11 +15544,11 @@ _080241D6:
 	ldrb r0, [r0, #24]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _080243D4  @ =0x040000D4
+	ldr r4, _080243D4  @ =REG_DMA3SAD
 	ldr r0, _080243D8  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080243DC  @ =0x06010000
+	ldr r1, _080243DC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080243E0  @ =0x84000100
@@ -15663,11 +15664,11 @@ _080242C4:
 	ldrb r0, [r0, #24]
 	mov r1, r9
 	str r0, [r1]
-	ldr r4, _080243D4  @ =0x040000D4
+	ldr r4, _080243D4  @ =REG_DMA3SAD
 	ldr r0, _080243D8  @ =gUnknown_082B30B4
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080243DC  @ =0x06010000
+	ldr r1, _080243DC  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080243E0  @ =0x84000100
@@ -15783,11 +15784,11 @@ _080243CC:
 _080243D0:
 	.4byte 0x030000F4
 _080243D4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080243D8:
 	.4byte gUnknown_082B30B4
 _080243DC:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080243E0:
 	.4byte 0x84000100
 _080243E4:
@@ -15847,7 +15848,7 @@ _08024422:
 	ldrb r0, [r0, #4]
 	ldr r1, [sp, #32]
 	str r0, [r1]
-	ldr r4, _0802453C  @ =0x040000D4
+	ldr r4, _0802453C  @ =REG_DMA3SAD
 	ldr r2, _08024540  @ =gUnknown_082AFFA8
 	mov r3, r10
 	ldr r0, [r3]
@@ -15862,7 +15863,7 @@ _08024422:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _08024548  @ =0x06010000
+	ldr r1, _08024548  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802454C  @ =0x84000200
@@ -15968,13 +15969,13 @@ _08024534:
 _08024538:
 	.4byte 0x030000F8
 _0802453C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08024540:
 	.4byte gUnknown_082AFFA8
 _08024544:
 	.4byte gUnknown_082B0088
 _08024548:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802454C:
 	.4byte 0x84000200
 _08024550:
@@ -16016,11 +16017,11 @@ _08024570:
 	ldrb r0, [r0, #4]
 	ldr r3, [sp, #32]
 	str r0, [r3]
-	ldr r4, _080246E8  @ =0x040000D4
+	ldr r4, _080246E8  @ =REG_DMA3SAD
 	ldr r0, _080246EC  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080246F0  @ =0x06010000
+	ldr r1, _080246F0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080246F4  @ =0x84000200
@@ -16143,7 +16144,7 @@ _0802466A:
 	ldrb r0, [r0, #4]
 	ldr r2, [sp, #32]
 	str r0, [r2]
-	ldr r4, _080246E8  @ =0x040000D4
+	ldr r4, _080246E8  @ =REG_DMA3SAD
 	ldr r2, _0802471C  @ =gUnknown_082AFFA8
 	ldr r3, _080246E0  @ =0x030000E8
 	ldr r0, [r3]
@@ -16158,7 +16159,7 @@ _0802466A:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080246F0  @ =0x06010000
+	ldr r1, _080246F0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080246F4  @ =0x84000200
@@ -16184,11 +16185,11 @@ _080246E0:
 _080246E4:
 	.4byte 0x030000F8
 _080246E8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080246EC:
 	.4byte gUnknown_082AF7A8
 _080246F0:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080246F4:
 	.4byte 0x84000200
 _080246F8:
@@ -16235,11 +16236,11 @@ _08024728:
 	ldrb r0, [r0, #4]
 	ldr r2, [sp, #32]
 	str r0, [r2]
-	ldr r4, _08024894  @ =0x040000D4
+	ldr r4, _08024894  @ =REG_DMA3SAD
 	ldr r0, _08024898  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0802489C  @ =0x06010000
+	ldr r1, _0802489C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080248A0  @ =0x84000200
@@ -16361,7 +16362,7 @@ _0802477C:
 	ldrb r0, [r0, #4]
 	ldr r2, [sp, #32]
 	str r0, [r2]
-	ldr r4, _08024894  @ =0x040000D4
+	ldr r4, _08024894  @ =REG_DMA3SAD
 	ldr r2, _080248C4  @ =gUnknown_082AFFA8
 	ldr r3, _08024890  @ =0x030000E8
 	ldr r0, [r3]
@@ -16376,7 +16377,7 @@ _0802477C:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _0802489C  @ =0x06010000
+	ldr r1, _0802489C  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080248A0  @ =0x84000200
@@ -16400,11 +16401,11 @@ _0802477C:
 _08024890:
 	.4byte 0x030000E8
 _08024894:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08024898:
 	.4byte gUnknown_082AF7A8
 _0802489C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080248A0:
 	.4byte 0x84000200
 _080248A4:
@@ -16449,11 +16450,11 @@ _080248D0:
 	ldrb r0, [r0, #4]
 	ldr r2, [sp, #32]
 	str r0, [r2]
-	ldr r4, _080249D8  @ =0x040000D4
+	ldr r4, _080249D8  @ =REG_DMA3SAD
 	ldr r0, _080249DC  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _080249E0  @ =0x06010000
+	ldr r1, _080249E0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080249E4  @ =0x84000200
@@ -16564,11 +16565,11 @@ _08024924:
 _080249D4:
 	.4byte 0x030000E8
 _080249D8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080249DC:
 	.4byte gUnknown_082AF7A8
 _080249E0:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080249E4:
 	.4byte 0x84000200
 _080249E8:
@@ -16626,7 +16627,7 @@ _08024A22:
 	ldrb r0, [r0, #4]
 	ldr r1, [sp, #32]
 	str r0, [r1]
-	ldr r4, _08024B3C  @ =0x040000D4
+	ldr r4, _08024B3C  @ =REG_DMA3SAD
 	ldr r2, _08024B40  @ =gUnknown_082AFFA8
 	mov r3, r10
 	ldr r0, [r3]
@@ -16641,7 +16642,7 @@ _08024A22:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _08024B48  @ =0x06010000
+	ldr r1, _08024B48  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08024B4C  @ =0x84000200
@@ -16747,13 +16748,13 @@ _08024B34:
 _08024B38:
 	.4byte 0x030000F8
 _08024B3C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08024B40:
 	.4byte gUnknown_082AFFA8
 _08024B44:
 	.4byte gUnknown_082B0088
 _08024B48:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08024B4C:
 	.4byte 0x84000200
 _08024B50:
@@ -16795,11 +16796,11 @@ _08024B70:
 	ldrb r0, [r0, #4]
 	ldr r3, [sp, #32]
 	str r0, [r3]
-	ldr r4, _08024CE8  @ =0x040000D4
+	ldr r4, _08024CE8  @ =REG_DMA3SAD
 	ldr r0, _08024CEC  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _08024CF0  @ =0x06010000
+	ldr r1, _08024CF0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08024CF4  @ =0x84000200
@@ -16922,7 +16923,7 @@ _08024C6A:
 	ldrb r0, [r0, #4]
 	ldr r2, [sp, #32]
 	str r0, [r2]
-	ldr r4, _08024CE8  @ =0x040000D4
+	ldr r4, _08024CE8  @ =REG_DMA3SAD
 	ldr r2, _08024D1C  @ =gUnknown_082AFFA8
 	ldr r3, _08024CE0  @ =0x030000E8
 	ldr r0, [r3]
@@ -16937,7 +16938,7 @@ _08024C6A:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _08024CF0  @ =0x06010000
+	ldr r1, _08024CF0  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08024CF4  @ =0x84000200
@@ -16963,11 +16964,11 @@ _08024CE0:
 _08024CE4:
 	.4byte 0x030000F8
 _08024CE8:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08024CEC:
 	.4byte gUnknown_082AF7A8
 _08024CF0:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08024CF4:
 	.4byte 0x84000200
 _08024CF8:
@@ -17014,11 +17015,11 @@ _08024D28:
 	ldrb r0, [r0, #4]
 	ldr r2, [sp, #32]
 	str r0, [r2]
-	ldr r4, _08024E30  @ =0x040000D4
+	ldr r4, _08024E30  @ =REG_DMA3SAD
 	ldr r0, _08024E34  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r6]
-	ldr r1, _08024E38  @ =0x06010000
+	ldr r1, _08024E38  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08024E3C  @ =0x84000200
@@ -17129,11 +17130,11 @@ _08024D7C:
 _08024E2C:
 	.4byte 0x030000E8
 _08024E30:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08024E34:
 	.4byte gUnknown_082AF7A8
 _08024E38:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08024E3C:
 	.4byte 0x84000200
 _08024E40:
@@ -17187,11 +17188,11 @@ sub_08024E5C: @ 0x08024E5C
 	ldrb r0, [r0, #4]
 	ldr r1, [sp, #32]
 	str r0, [r1]
-	ldr r4, _08025170  @ =0x040000D4
+	ldr r4, _08025170  @ =REG_DMA3SAD
 	ldr r0, _08025174  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08025178  @ =0x06010000
+	ldr r1, _08025178  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802517C  @ =0x84000200
@@ -17312,11 +17313,11 @@ _08024F6A:
 	ldrb r0, [r0, #4]
 	ldr r2, [sp, #32]
 	str r0, [r2]
-	ldr r4, _08025170  @ =0x040000D4
+	ldr r4, _08025170  @ =REG_DMA3SAD
 	ldr r0, _08025174  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08025178  @ =0x06010000
+	ldr r1, _08025178  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802517C  @ =0x84000200
@@ -17436,11 +17437,11 @@ _08025060:
 	ldrb r0, [r0, #4]
 	ldr r2, [sp, #32]
 	str r0, [r2]
-	ldr r4, _08025170  @ =0x040000D4
+	ldr r4, _08025170  @ =REG_DMA3SAD
 	ldr r0, _08025174  @ =gUnknown_082AF7A8
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08025178  @ =0x06010000
+	ldr r1, _08025178  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _0802517C  @ =0x84000200
@@ -17552,11 +17553,11 @@ _08025168:
 _0802516C:
 	.4byte 0x030000F8
 _08025170:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08025174:
 	.4byte gUnknown_082AF7A8
 _08025178:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802517C:
 	.4byte 0x84000200
 _08025180:
@@ -17615,7 +17616,7 @@ _080251C2:
 	sub r0, r0, #16
 	mov r2, r10
 	str r0, [r2]
-	ldr r4, _0802559C  @ =0x040000D4
+	ldr r4, _0802559C  @ =REG_DMA3SAD
 	ldr r2, _080255A0  @ =gUnknown_082B34B4
 	ldr r3, _08025590  @ =0x030000E8
 	ldr r0, [r3]
@@ -17630,7 +17631,7 @@ _080251C2:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080255A8  @ =0x06010000
+	ldr r1, _080255A8  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080255AC  @ =0x84000100
@@ -17749,7 +17750,7 @@ _080252C8:
 	sub r0, r0, #16
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _0802559C  @ =0x040000D4
+	ldr r4, _0802559C  @ =REG_DMA3SAD
 	ldr r2, _080255A0  @ =gUnknown_082B34B4
 	ldr r3, _08025590  @ =0x030000E8
 	ldr r0, [r3]
@@ -17764,7 +17765,7 @@ _080252C8:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080255A8  @ =0x06010000
+	ldr r1, _080255A8  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080255AC  @ =0x84000100
@@ -17883,7 +17884,7 @@ _080253D2:
 	sub r0, r0, #16
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _0802559C  @ =0x040000D4
+	ldr r4, _0802559C  @ =REG_DMA3SAD
 	ldr r2, _080255A0  @ =gUnknown_082B34B4
 	ldr r3, _08025590  @ =0x030000E8
 	ldr r0, [r3]
@@ -17898,7 +17899,7 @@ _080253D2:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080255A8  @ =0x06010000
+	ldr r1, _080255A8  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080255AC  @ =0x84000100
@@ -18024,7 +18025,7 @@ _080254FC:
 	sub r0, r0, #10
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _0802559C  @ =0x040000D4
+	ldr r4, _0802559C  @ =REG_DMA3SAD
 	ldr r2, _080255D0  @ =gUnknown_082B55E4
 	mov r3, r9
 	ldr r0, [r3]
@@ -18039,7 +18040,7 @@ _080254FC:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _080255A8  @ =0x06010000
+	ldr r1, _080255A8  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _080255AC  @ =0x84000100
@@ -18097,13 +18098,13 @@ _08025594:
 _08025598:
 	.4byte 0x030000F4
 _0802559C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080255A0:
 	.4byte gUnknown_082B34B4
 _080255A4:
 	.4byte gUnknown_082B354C
 _080255A8:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080255AC:
 	.4byte 0x84000100
 _080255B0:
@@ -18199,7 +18200,7 @@ _08025640:
 	sub r0, r0, #10
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _08025874  @ =0x040000D4
+	ldr r4, _08025874  @ =REG_DMA3SAD
 	ldr r2, _08025878  @ =gUnknown_082B55E4
 	mov r3, r9
 	ldr r0, [r3]
@@ -18214,7 +18215,7 @@ _08025640:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08025880  @ =0x06010000
+	ldr r1, _08025880  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08025884  @ =0x84000100
@@ -18332,7 +18333,7 @@ _08025748:
 	sub r0, r0, #10
 	mov r1, r10
 	str r0, [r1]
-	ldr r4, _08025874  @ =0x040000D4
+	ldr r4, _08025874  @ =REG_DMA3SAD
 	ldr r2, _08025878  @ =gUnknown_082B55E4
 	ldr r3, _080258A4  @ =0x030000E8
 	ldr r0, [r3]
@@ -18347,7 +18348,7 @@ _08025748:
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r7]
-	ldr r1, _08025880  @ =0x06010000
+	ldr r1, _08025880  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, _08025884  @ =0x84000100
@@ -18466,13 +18467,13 @@ _0802586C:
 _08025870:
 	.4byte 0x030000F4
 _08025874:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08025878:
 	.4byte gUnknown_082B55E4
 _0802587C:
 	.4byte gUnknown_082B567C
 _08025880:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08025884:
 	.4byte 0x84000100
 _08025888:
@@ -22597,7 +22598,7 @@ _08027664:
 	add r5, sp, #20
 	mov r0, #160
 	strh r0, [r5]
-	ldr r1, _080278C4  @ =0x040000D4
+	ldr r1, _080278C4  @ =REG_DMA3SAD
 	str r5, [r1]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -22877,7 +22878,7 @@ _080278BC:
 _080278C0:
 	.4byte 0x030000E4
 _080278C4:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080278C8:
 	.4byte 0x81000100
 _080278CC:
@@ -23005,7 +23006,7 @@ bonus_swapboxes_loop: @ 0x08027990
 	strh r0, [r2]
 	mov r0, #160
 	str r0, [sp, #4]
-	ldr r6, _08027B64  @ =0x040000D4
+	ldr r6, _08027B64  @ =REG_DMA3SAD
 	add r0, sp, #4
 	str r0, [r6]
 	ldr r7, _08027B68  @ =gOamData
@@ -23219,7 +23220,7 @@ _08027B5C:
 _08027B60:
 	.4byte gUnknown_0300192C
 _08027B64:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08027B68:
 	.4byte gOamData
 _08027B6C:
@@ -24054,7 +24055,7 @@ sub_08028128: @ 0x08028128
 	ldrb r0, [r5, #13]
 	cmp r0, #0
 	bne _08028174
-	ldr r4, _0802816C  @ =0x040000D4
+	ldr r4, _0802816C  @ =REG_DMA3SAD
 	ldr r2, [r5]
 	mov r0, #10
 	ldrsh r1, [r5, r0]
@@ -24071,7 +24072,7 @@ sub_08028128: @ 0x08028128
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r5, #4]
-	ldr r1, _08028170  @ =0x06010000
+	ldr r1, _08028170  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r4, #4]
 	ldrh r0, [r2, #2]
@@ -24085,16 +24086,16 @@ sub_08028128: @ 0x08028128
 	.byte 0x00
 	.byte 0x00
 _0802816C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08028170:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _08028174:
 	mov r4, #0
 	ldr r2, [r5]
 	ldrh r1, [r2]
 	cmp r4, r1
 	bge _080281BA
-	ldr r3, _080281C0  @ =0x040000D4
+	ldr r3, _080281C0  @ =REG_DMA3SAD
 	mov r6, #0
 _08028182:
 	ldr r0, [r2, #12]
@@ -24108,7 +24109,7 @@ _08028182:
 	str r0, [r3]
 	ldrh r0, [r2, #2]
 	mul r0, r4, r0
-	ldr r1, _080281C4  @ =0x06010000
+	ldr r1, _080281C4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	ldrh r1, [r5, #4]
 	add r0, r0, r1
@@ -24130,9 +24131,9 @@ _080281BA:
 	pop {r0}
 	bx r0
 _080281C0:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080281C4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 	THUMB_FUNC_END sub_08028128
 
 	THUMB_FUNC_START sub_080281C8
@@ -24162,7 +24163,7 @@ sub_080281C8: @ 0x080281C8
 	blt _080281F8
 	b _08028324
 _080281F8:
-	ldr r7, _08028294  @ =0x040000D4
+	ldr r7, _08028294  @ =REG_DMA3SAD
 	mov r0, #13
 	neg r0, r0
 	mov r9, r0
@@ -24244,7 +24245,7 @@ _08028264:
 _08028290:
 	.4byte gOamData
 _08028294:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08028298:
 	.4byte 0x84000002
 _0802829C:
@@ -24256,7 +24257,7 @@ _080282A4:
 _080282A8:
 	.4byte 0xFFFFFC00
 _080282AC:
-	ldr r1, _08028334  @ =0x040000D4
+	ldr r1, _08028334  @ =REG_DMA3SAD
 	ldr r0, [r4]
 	ldr r0, [r0, #16]
 	str r0, [r1]
@@ -24329,7 +24330,7 @@ _08028324:
 	.byte 0x00
 	.byte 0x00
 _08028334:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08028338:
 	.4byte 0x84000002
 _0802833C:
@@ -25863,7 +25864,7 @@ _08028E80:
 _08028E9E:
 	mov r0, #160
 	str r0, [sp, #4]
-	ldr r1, _08028FEC  @ =0x040000D4
+	ldr r1, _08028FEC  @ =REG_DMA3SAD
 	add r3, sp, #4
 	str r3, [r1]
 	ldr r0, _08028FF0  @ =gOamData
@@ -25919,7 +25920,7 @@ _08028EFE:
 	mov r0, #0
 	strh r0, [r1]
 	mov r5, #0
-	ldr r2, _08028FEC  @ =0x040000D4
+	ldr r2, _08028FEC  @ =REG_DMA3SAD
 	add r7, r3, #0
 	mov r3, #140
 	lsl r3, r3, #1
@@ -26029,7 +26030,7 @@ _08028FE4:
 _08028FE8:
 	.4byte 0x00001124
 _08028FEC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08028FF0:
 	.4byte gOamData
 _08028FF4:
@@ -26053,7 +26054,7 @@ _08029004:
 	bl sub_080281C8
 _0802901A:
 	bl sub_0801B4BC
-	ldr r1, _08029040  @ =0x040000D4
+	ldr r1, _08029040  @ =REG_DMA3SAD
 	ldr r0, _08029044  @ =gOamData
 	str r0, [r1]
 	mov r0, #224
@@ -26071,7 +26072,7 @@ _0802901A:
 	pop {r0}
 	bx r0
 _08029040:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08029044:
 	.4byte gOamData
 _08029048:
@@ -26568,7 +26569,7 @@ _08029390:
 	mov r1, sp
 	mov r0, #160
 	strh r0, [r1]
-	ldr r1, _08029424  @ =0x040000D4
+	ldr r1, _08029424  @ =REG_DMA3SAD
 	mov r0, sp
 	str r0, [r1]
 	mov r0, #224
@@ -26613,7 +26614,7 @@ _0802941C:
 _08029420:
 	.4byte 0x03000104
 _08029424:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08029428:
 	.4byte 0x81000100
 _0802942C:
@@ -26769,10 +26770,10 @@ _08029558:
 	add r0, r4, #0
 	mov r1, #1
 	bl sub_0802FC24
-	ldr r1, _080295DC  @ =0x040000D4
+	ldr r1, _080295DC  @ =REG_DMA3SAD
 	ldr r0, _080295E0  @ =gUnknown_082EC750
 	str r0, [r1]
-	ldr r0, _080295E4  @ =0x06010000
+	ldr r0, _080295E4  @ =OBJ_VRAM0
 	str r0, [r1, #4]
 	ldr r0, _080295E8  @ =0x840000A0
 	str r0, [r1, #8]
@@ -26825,11 +26826,11 @@ _08029558:
 _080295D8:
 	.4byte 0x00002710
 _080295DC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _080295E0:
 	.4byte gUnknown_082EC750
 _080295E4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _080295E8:
 	.4byte 0x840000A0
 _080295EC:
@@ -27595,7 +27596,7 @@ level_results_loop: @ 0x08029B84
 	bne _08029BEE
 	mov r0, #160
 	str r0, [sp]
-	ldr r4, _08029C08  @ =0x040000D4
+	ldr r4, _08029C08  @ =REG_DMA3SAD
 	mov r0, sp
 	str r0, [r4]
 	ldr r0, _08029C0C  @ =gOamData
@@ -27639,7 +27640,7 @@ _08029C00:
 _08029C04:
 	.4byte 0x03000C1C
 _08029C08:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _08029C0C:
 	.4byte gOamData
 _08029C10:
@@ -27688,7 +27689,7 @@ _08029C48:
 	lsl r0, r0, #24
 	cmp r0, #0
 	ble _08029C6C
-	ldr r1, _08029C68  @ =0x04000054
+	ldr r1, _08029C68  @ =REG_BLDY
 	mov r0, #0
 	ldrsb r0, [r3, r0]
 	strh r0, [r1]
@@ -27699,11 +27700,11 @@ _08029C48:
 _08029C64:
 	.4byte 0x03000110
 _08029C68:
-	.4byte 0x04000054
+	.4byte REG_BLDY
 _08029C6C:
 	strb r2, [r4]
 	strb r2, [r3]
-	ldr r1, _08029C8C  @ =0x04000050
+	ldr r1, _08029C8C  @ =REG_BLDCNT
 	ldr r0, _08029C90  @ =0x03000112
 	ldrh r0, [r0]
 	strh r0, [r1]
@@ -27711,7 +27712,7 @@ _08029C6C:
 	ldr r0, _08029C94  @ =0x03000114
 	ldrh r0, [r0]
 	strh r0, [r1]
-	ldr r0, _08029C98  @ =0x04000054
+	ldr r0, _08029C98  @ =REG_BLDY
 	strh r2, [r0]
 _08029C84:
 	mov r0, #0
@@ -27720,13 +27721,13 @@ _08029C86:
 	pop {r1}
 	bx r1
 _08029C8C:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 _08029C90:
 	.4byte 0x03000112
 _08029C94:
 	.4byte 0x03000114
 _08029C98:
-	.4byte 0x04000054
+	.4byte REG_BLDY
 	THUMB_FUNC_END sub_08029C20
 
 	THUMB_FUNC_START sub_08029C9C
@@ -27751,7 +27752,7 @@ sub_08029CB0: @ 0x08029CB0
 	ldr r1, _08029CD4  @ =gUnknown_03000C28
 	mov r0, #1
 	strb r0, [r1]
-	ldr r1, _08029CD8  @ =0x04000050
+	ldr r1, _08029CD8  @ =REG_BLDCNT
 	mov r0, #255
 	strh r0, [r1]
 	add r1, r1, #2
@@ -27766,13 +27767,13 @@ _08029CD0:
 _08029CD4:
 	.4byte gUnknown_03000C28
 _08029CD8:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 	THUMB_FUNC_END sub_08029CB0
 
 	THUMB_FUNC_START sub_08029CDC
 sub_08029CDC: @ 0x08029CDC
 	push {r4,r5,lr}
-	ldr r4, _08029D24  @ =0x04000048
+	ldr r4, _08029D24  @ =REG_WININ 
 	ldr r5, _08029D28  @ =0x00001010
 	add r3, r5, #0
 	strh r3, [r4]
@@ -27795,7 +27796,7 @@ sub_08029CDC: @ 0x08029CDC
 	strh r1, [r0]
 	ldr r0, _08029D40  @ =0x03000116
 	strh r2, [r0]
-	ldr r1, _08029D44  @ =0x04000050
+	ldr r1, _08029D44  @ =REG_BLDCNT
 	mov r0, #255
 	strh r0, [r1]
 	add r1, r1, #2
@@ -27808,7 +27809,7 @@ sub_08029CDC: @ 0x08029CDC
 	pop {r0}
 	bx r0
 _08029D24:
-	.4byte 0x04000048
+	.4byte REG_WININ 
 _08029D28:
 	.4byte 0x00001010
 _08029D2C:
@@ -27824,7 +27825,7 @@ _08029D3C:
 _08029D40:
 	.4byte 0x03000116
 _08029D44:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 	THUMB_FUNC_END sub_08029CDC
 
 	THUMB_FUNC_START fade_transition_init_callback
@@ -27841,7 +27842,7 @@ fade_transition_init_callback: @ 0x08029D48
 	ldr r0, _08029D78  @ =0x00007FFF
 	and r0, r0, r1
 	strh r0, [r2]
-	ldr r1, _08029D7C  @ =0x04000050
+	ldr r1, _08029D7C  @ =REG_BLDCNT
 	mov r0, #255
 	strh r0, [r1]
 	add r1, r1, #4
@@ -27857,7 +27858,7 @@ _08029D74:
 _08029D78:
 	.4byte 0x00007FFF
 _08029D7C:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 	THUMB_FUNC_END fade_transition_init_callback
 
 	THUMB_FUNC_START sub_08029D80
@@ -27874,7 +27875,7 @@ sub_08029D80: @ 0x08029D80
 	ldr r0, _08029DB0  @ =0x00007FFF
 	and r0, r0, r1
 	strh r0, [r2]
-	ldr r1, _08029DB4  @ =0x04000050
+	ldr r1, _08029DB4  @ =REG_BLDCNT
 	mov r0, #255
 	strh r0, [r1]
 	add r1, r1, #4
@@ -27890,7 +27891,7 @@ _08029DAC:
 _08029DB0:
 	.4byte 0x00007FFF
 _08029DB4:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 	THUMB_FUNC_END sub_08029D80
 
 	THUMB_FUNC_START sub_08029DB8
@@ -27903,7 +27904,7 @@ sub_08029DB8: @ 0x08029DB8
 	add r1, r3, #0
 	orr r0, r0, r1
 	strh r0, [r2]
-	ldr r1, _08029DF8  @ =0x04000048
+	ldr r1, _08029DF8  @ =REG_WININ 
 	ldr r2, _08029DFC  @ =0x00001010
 	add r0, r2, #0
 	strh r0, [r1]
@@ -27914,13 +27915,13 @@ sub_08029DB8: @ 0x08029DB8
 	add r1, r1, #6
 	mov r0, #255
 	strh r0, [r1]
-	ldr r0, _08029E04  @ =0x04000052
+	ldr r0, _08029E04  @ =REG_BLDALPHA
 	mov r2, #0
 	strh r2, [r0]
 	ldr r1, _08029E08  @ =0x03000110
 	mov r0, #31
 	strb r0, [r1]
-	ldr r1, _08029E0C  @ =0x04000054
+	ldr r1, _08029E0C  @ =REG_BLDY
 	mov r0, #31
 	strh r0, [r1]
 	ldr r0, _08029E10  @ =gUnknown_03000C28
@@ -27929,17 +27930,17 @@ sub_08029DB8: @ 0x08029DB8
 	.byte 0x00
 	.byte 0x00
 _08029DF8:
-	.4byte 0x04000048
+	.4byte REG_WININ 
 _08029DFC:
 	.4byte 0x00001010
 _08029E00:
 	.4byte 0x0000103F
 _08029E04:
-	.4byte 0x04000052
+	.4byte REG_BLDALPHA
 _08029E08:
 	.4byte 0x03000110
 _08029E0C:
-	.4byte 0x04000054
+	.4byte REG_BLDY
 _08029E10:
 	.4byte gUnknown_03000C28
 	THUMB_FUNC_END sub_08029DB8
@@ -27955,7 +27956,7 @@ sub_08029E14: @ 0x08029E14
 	ldr r1, _08029E44  @ =0x03000111
 	mov r0, #5
 	strb r0, [r1]
-	ldr r1, _08029E48  @ =0x04000050
+	ldr r1, _08029E48  @ =REG_BLDCNT
 	mov r0, #255
 	strh r0, [r1]
 	add r1, r1, #2
@@ -27974,7 +27975,7 @@ _08029E40:
 _08029E44:
 	.4byte 0x03000111
 _08029E48:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 	THUMB_FUNC_END sub_08029E14
 
 	THUMB_FUNC_START sub_08029E4C
@@ -27982,7 +27983,7 @@ sub_08029E4C: @ 0x08029E4C
 	ldr r1, _08029E64  @ =0x03000110
 	mov r0, #0
 	strb r0, [r1]
-	ldr r1, _08029E68  @ =0x04000054
+	ldr r1, _08029E68  @ =REG_BLDY
 	mov r0, #0
 	strh r0, [r1]
 	sub r1, r1, #4
@@ -27995,7 +27996,7 @@ sub_08029E4C: @ 0x08029E4C
 _08029E64:
 	.4byte 0x03000110
 _08029E68:
-	.4byte 0x04000054
+	.4byte REG_BLDY
 _08029E6C:
 	.4byte 0x03000112
 	THUMB_FUNC_END sub_08029E4C
@@ -28017,7 +28018,7 @@ sub_08029E7C: @ 0x08029E7C
 	strb r1, [r0]
 	ldr r0, _08029EA4  @ =0x03000110
 	strb r1, [r0]
-	ldr r1, _08029EA8  @ =0x04000050
+	ldr r1, _08029EA8  @ =REG_BLDCNT
 	ldr r0, _08029EAC  @ =0x03000112
 	ldrh r0, [r0]
 	strh r0, [r1]
@@ -28036,7 +28037,7 @@ _08029EA0:
 _08029EA4:
 	.4byte 0x03000110
 _08029EA8:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 _08029EAC:
 	.4byte 0x03000112
 _08029EB0:
@@ -28059,7 +28060,7 @@ sub_08029EB4: @ 0x08029EB4
 	mov r0, #0
 	strb r0, [r3]
 	strb r0, [r2]
-	ldr r1, _08029EF0  @ =0x04000050
+	ldr r1, _08029EF0  @ =REG_BLDCNT
 	ldr r0, _08029EF4  @ =0x03000112
 	ldrh r0, [r0]
 	strh r0, [r1]
@@ -28076,7 +28077,7 @@ _08029EE8:
 _08029EEC:
 	.4byte 0x03000110
 _08029EF0:
-	.4byte 0x04000050
+	.4byte REG_BLDCNT
 _08029EF4:
 	.4byte 0x03000112
 _08029EF8:
@@ -28090,7 +28091,7 @@ _08029EFC:
 	mov r0, #0
 	strb r0, [r2]
 _08029F0A:
-	ldr r1, _08029F18  @ =0x04000054
+	ldr r1, _08029F18  @ =REG_BLDY
 	mov r0, #0
 	ldrsb r0, [r2, r0]
 	strh r0, [r1]
@@ -28099,7 +28100,7 @@ _08029F0A:
 	.byte 0x00
 	.byte 0x00
 _08029F18:
-	.4byte 0x04000054
+	.4byte REG_BLDY
 _08029F1C:
 	mov r0, #0
 _08029F1E:
@@ -28145,7 +28146,7 @@ _08029F54:
 	strh r2, [r0]
 	bl sub_08007154
 _08029F62:
-	ldr r0, _08029F74  @ =0x04000054
+	ldr r0, _08029F74  @ =REG_BLDY
 	ldr r1, _08029F78  @ =0x03000110
 	ldrb r1, [r1]
 	lsl r1, r1, #24
@@ -28156,7 +28157,7 @@ _08029F62:
 	.byte 0x00
 	.byte 0x00
 _08029F74:
-	.4byte 0x04000054
+	.4byte REG_BLDY
 _08029F78:
 	.4byte 0x03000110
 	THUMB_FUNC_END fade_transition_main
@@ -28195,7 +28196,7 @@ _08029FB0:
 	sub r0, r2, #1
 	strb r0, [r1]
 _08029FB4:
-	ldr r1, _08029FC4  @ =0x04000054
+	ldr r1, _08029FC4  @ =REG_BLDY
 	mov r0, #0
 	ldrsb r0, [r3, r0]
 	strh r0, [r1]
@@ -28206,7 +28207,7 @@ _08029FBE:
 	.byte 0x00
 	.byte 0x00
 _08029FC4:
-	.4byte 0x04000054
+	.4byte REG_BLDY
 	THUMB_FUNC_END sub_08029F7C
 
 	THUMB_FUNC_START sub_08029FC8
@@ -29181,11 +29182,11 @@ sub_0802A648: @ 0x0802A648
 	push {r5-r7}
 	sub sp, sp, #12
 	add r5, r0, #0
-	ldr r4, _0802A76C  @ =0x040000D4
+	ldr r4, _0802A76C  @ =REG_DMA3SAD
 	ldr r0, _0802A770  @ =gUnknown_082E4C4C
 	str r0, [r4]
 	ldrh r0, [r2]
-	ldr r3, _0802A774  @ =0x06010000
+	ldr r3, _0802A774  @ =OBJ_VRAM0
 	add r0, r0, r3
 	str r0, [r4, #4]
 	ldr r0, _0802A778  @ =0x84000080
@@ -29230,7 +29231,7 @@ _0802A6A6:
 	ldrb r2, [r2]
 	cmp r6, r2
 	bcs _0802A74C
-	ldr r7, _0802A76C  @ =0x040000D4
+	ldr r7, _0802A76C  @ =REG_DMA3SAD
 	ldr r4, _0802A784  @ =gOamData
 	ldr r3, _0802A788  @ =0x000003FF
 	ldr r0, [sp]
@@ -29325,11 +29326,11 @@ _0802A75C:
 	pop {r0}
 	bx r0
 _0802A76C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802A770:
 	.4byte gUnknown_082E4C4C
 _0802A774:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802A778:
 	.4byte 0x84000080
 _0802A77C:
@@ -29369,14 +29370,14 @@ sub_0802A7A0: @ 0x0802A7A0
 	ldr r3, [r0]
 	mov r1, #0
 	mov r12, r1
-	ldr r5, _0802A8CC  @ =0x040000D4
+	ldr r5, _0802A8CC  @ =REG_DMA3SAD
 	ldr r2, _0802A8D0  @ =0x03000138
 	mov r9, r2
 _0802A7C4:
 	ldr r0, [r3, #20]
 	str r0, [r5]
 	ldrh r0, [r6]
-	ldr r1, _0802A8D4  @ =0x06010000
+	ldr r1, _0802A8D4  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r5, #4]
 	ldrh r0, [r3, #8]
@@ -29411,7 +29412,7 @@ _0802A7C4:
 	ble _0802A7C4
 	mov r1, #0
 	str r1, [sp]
-	ldr r6, _0802A8CC  @ =0x040000D4
+	ldr r6, _0802A8CC  @ =REG_DMA3SAD
 	ldr r5, _0802A8D8  @ =gOamData
 	ldr r2, _0802A8D0  @ =0x03000138
 	mov r12, r2
@@ -29508,11 +29509,11 @@ _0802A8C4:
 _0802A8C8:
 	.4byte gUnknown_08079ED0
 _0802A8CC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802A8D0:
 	.4byte 0x03000138
 _0802A8D4:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802A8D8:
 	.4byte gOamData
 _0802A8DC:
@@ -29548,7 +29549,7 @@ sub_0802A8F0: @ 0x0802A8F0
 	cmp r2, r0
 	bge _0802A9E6
 	mov r10, r3
-	ldr r7, _0802A9FC  @ =0x040000D4
+	ldr r7, _0802A9FC  @ =REG_DMA3SAD
 	ldr r0, _0802AA00  @ =gOamData
 	mov r12, r0
 _0802A91C:
@@ -29568,7 +29569,7 @@ _0802A91C:
 	str r0, [r7]
 	mov r1, r8
 	ldrh r0, [r1]
-	ldr r1, _0802AA04  @ =0x06010000
+	ldr r1, _0802AA04  @ =OBJ_VRAM0
 	add r0, r0, r1
 	str r0, [r7, #4]
 	ldrh r0, [r4, #8]
@@ -29666,11 +29667,11 @@ _0802A9F4:
 _0802A9F8:
 	.4byte 0x03000133
 _0802A9FC:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802AA00:
 	.4byte gOamData
 _0802AA04:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802AA08:
 	.4byte 0x84000002
 _0802AA0C:
@@ -30393,11 +30394,11 @@ sub_0802AF24: @ 0x0802AF24
 	push {r5-r7}
 	sub sp, sp, #4
 	add r5, r0, #0
-	ldr r4, _0802B03C  @ =0x040000D4
+	ldr r4, _0802B03C  @ =REG_DMA3SAD
 	ldr r0, _0802B040  @ =gUnknown_08342EB4
 	str r0, [r4]
 	ldrh r0, [r2]
-	ldr r3, _0802B044  @ =0x06010000
+	ldr r3, _0802B044  @ =OBJ_VRAM0
 	add r0, r0, r3
 	str r0, [r4, #4]
 	ldr r0, _0802B048  @ =0x84000040
@@ -30437,7 +30438,7 @@ _0802AF70:
 	mov r10, r3
 	cmp r4, r0
 	bge _0802B01A
-	ldr r0, _0802B03C  @ =0x040000D4
+	ldr r0, _0802B03C  @ =REG_DMA3SAD
 	mov r12, r0
 	ldr r6, _0802B05C  @ =gOamData
 	ldr r1, _0802B060  @ =0x000003FF
@@ -30532,11 +30533,11 @@ _0802B02A:
 	.byte 0x00
 	.byte 0x00
 _0802B03C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802B040:
 	.4byte gUnknown_08342EB4
 _0802B044:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802B048:
 	.4byte 0x84000040
 _0802B04C:
@@ -30572,11 +30573,11 @@ sub_0802B078: @ 0x0802B078
 	push {r5-r7}
 	sub sp, sp, #4
 	add r5, r0, #0
-	ldr r4, _0802B190  @ =0x040000D4
+	ldr r4, _0802B190  @ =REG_DMA3SAD
 	ldr r0, _0802B194  @ =gUnknown_08342EB4
 	str r0, [r4]
 	ldrh r0, [r2]
-	ldr r3, _0802B198  @ =0x06010000
+	ldr r3, _0802B198  @ =OBJ_VRAM0
 	add r0, r0, r3
 	str r0, [r4, #4]
 	ldr r0, _0802B19C  @ =0x84000040
@@ -30616,7 +30617,7 @@ _0802B0C4:
 	mov r10, r3
 	cmp r4, r0
 	bge _0802B16E
-	ldr r0, _0802B190  @ =0x040000D4
+	ldr r0, _0802B190  @ =REG_DMA3SAD
 	mov r12, r0
 	ldr r6, _0802B1B0  @ =gOamData
 	ldr r1, _0802B1B4  @ =0x000003FF
@@ -30711,11 +30712,11 @@ _0802B17E:
 	.byte 0x00
 	.byte 0x00
 _0802B190:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802B194:
 	.4byte gUnknown_08342EB4
 _0802B198:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802B19C:
 	.4byte 0x84000040
 _0802B1A0:
@@ -30751,11 +30752,11 @@ sub_0802B1CC: @ 0x0802B1CC
 	push {r5-r7}
 	sub sp, sp, #4
 	add r5, r0, #0
-	ldr r4, _0802B2E0  @ =0x040000D4
+	ldr r4, _0802B2E0  @ =REG_DMA3SAD
 	ldr r0, _0802B2E4  @ =gUnknown_08342EB4
 	str r0, [r4]
 	ldrh r0, [r2]
-	ldr r3, _0802B2E8  @ =0x06010000
+	ldr r3, _0802B2E8  @ =OBJ_VRAM0
 	add r0, r0, r3
 	str r0, [r4, #4]
 	ldr r0, _0802B2EC  @ =0x84000040
@@ -30795,7 +30796,7 @@ _0802B218:
 	mov r10, r3
 	cmp r4, r0
 	bge _0802B2BE
-	ldr r0, _0802B2E0  @ =0x040000D4
+	ldr r0, _0802B2E0  @ =REG_DMA3SAD
 	mov r12, r0
 	ldr r6, _0802B300  @ =gOamData
 	ldr r1, _0802B304  @ =0x000003FF
@@ -30888,11 +30889,11 @@ _0802B2CE:
 	.byte 0x00
 	.byte 0x00
 _0802B2E0:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802B2E4:
 	.4byte gUnknown_08342EB4
 _0802B2E8:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802B2EC:
 	.4byte 0x84000040
 _0802B2F0:
@@ -30928,11 +30929,11 @@ sub_0802B31C: @ 0x0802B31C
 	push {r5-r7}
 	sub sp, sp, #4
 	add r5, r0, #0
-	ldr r4, _0802B434  @ =0x040000D4
+	ldr r4, _0802B434  @ =REG_DMA3SAD
 	ldr r0, _0802B438  @ =gUnknown_08342EB4
 	str r0, [r4]
 	ldrh r0, [r2]
-	ldr r3, _0802B43C  @ =0x06010000
+	ldr r3, _0802B43C  @ =OBJ_VRAM0
 	add r0, r0, r3
 	str r0, [r4, #4]
 	ldr r0, _0802B440  @ =0x84000040
@@ -30972,7 +30973,7 @@ _0802B368:
 	mov r10, r3
 	cmp r4, r0
 	bge _0802B412
-	ldr r0, _0802B434  @ =0x040000D4
+	ldr r0, _0802B434  @ =REG_DMA3SAD
 	mov r12, r0
 	ldr r6, _0802B454  @ =gOamData
 	ldr r1, _0802B458  @ =0x000003FF
@@ -31067,11 +31068,11 @@ _0802B422:
 	.byte 0x00
 	.byte 0x00
 _0802B434:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802B438:
 	.4byte gUnknown_08342EB4
 _0802B43C:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802B440:
 	.4byte 0x84000040
 _0802B444:
@@ -31203,11 +31204,11 @@ sub_0802B518: @ 0x0802B518
 	push {r5-r7}
 	sub sp, sp, #12
 	add r5, r0, #0
-	ldr r4, _0802B640  @ =0x040000D4
+	ldr r4, _0802B640  @ =REG_DMA3SAD
 	ldr r0, _0802B644  @ =gUnknown_082E29F4
 	str r0, [r4]
 	ldrh r0, [r2]
-	ldr r3, _0802B648  @ =0x06010000
+	ldr r3, _0802B648  @ =OBJ_VRAM0
 	add r0, r0, r3
 	str r0, [r4, #4]
 	ldr r0, _0802B64C  @ =0x84000100
@@ -31253,7 +31254,7 @@ _0802B578:
 	mov r10, r3
 	cmp r6, r0
 	bge _0802B61E
-	ldr r7, _0802B640  @ =0x040000D4
+	ldr r7, _0802B640  @ =REG_DMA3SAD
 	ldr r4, _0802B658  @ =gOamData
 	ldr r0, _0802B65C  @ =0x000003FF
 	ldr r2, [sp]
@@ -31350,11 +31351,11 @@ _0802B62E:
 	.byte 0x00
 	.byte 0x00
 _0802B640:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802B644:
 	.4byte gUnknown_082E29F4
 _0802B648:
-	.4byte 0x06010000
+	.4byte OBJ_VRAM0
 _0802B64C:
 	.4byte 0x84000100
 _0802B650:
@@ -32576,7 +32577,7 @@ _0802BEE8:
 	THUMB_FUNC_START sub_0802BEEC
 sub_0802BEEC: @ 0x0802BEEC
 	push {lr}
-	ldr r1, _0802BF14  @ =0x04000010
+	ldr r1, _0802BF14  @ =REG_BG0HOFS
 	mov r2, #8
 	bl CpuSet
 	ldr r1, _0802BF18  @ =0x03000C90
@@ -32596,7 +32597,7 @@ _0802BF0E:
 	.byte 0x00
 	.byte 0x00
 _0802BF14:
-	.4byte 0x04000010
+	.4byte REG_BG0HOFS
 _0802BF18:
 	.4byte 0x03000C90
 	THUMB_FUNC_END sub_0802BEEC
@@ -32621,12 +32622,12 @@ sub_0802BF28: @ 0x0802BF28
 	ldr r1, _0802BF5C  @ =0x04000005
 	mov r0, #0
 	strb r0, [r1]
-	ldr r2, _0802BF60  @ =0x04000004
+	ldr r2, _0802BF60  @ =REG_DISPSTAT
 	ldrh r0, [r2]
 	mov r1, #32
 	orr r0, r0, r1
 	strh r0, [r2]
-	ldr r1, _0802BF64  @ =0x040000BA
+	ldr r1, _0802BF64  @ =REG_DMA0CNT_H
 	mov r0, #0
 	strh r0, [r1]
 	ldr r0, _0802BF68  @ =0x03000CB0
@@ -32643,9 +32644,9 @@ _0802BF58:
 _0802BF5C:
 	.4byte 0x04000005
 _0802BF60:
-	.4byte 0x04000004
+	.4byte REG_DISPSTAT
 _0802BF64:
-	.4byte 0x040000BA
+	.4byte REG_DMA0CNT_H
 _0802BF68:
 	.4byte 0x03000CB0
 _0802BF6C:
@@ -32685,7 +32686,7 @@ _0802BFA0:
 
 	THUMB_FUNC_START sub_0802BFA4
 sub_0802BFA4: @ 0x0802BFA4
-	ldr r1, _0802BFB8  @ =0x040000BA
+	ldr r1, _0802BFB8  @ =REG_DMA0CNT_H
 	mov r0, #0
 	strh r0, [r1]
 	ldr r0, _0802BFBC  @ =0x03000CB0
@@ -32697,7 +32698,7 @@ sub_0802BFA4: @ 0x0802BFA4
 	.byte 0x00
 	.byte 0x00
 _0802BFB8:
-	.4byte 0x040000BA
+	.4byte REG_DMA0CNT_H
 _0802BFBC:
 	.4byte 0x03000CB0
 	THUMB_FUNC_END sub_0802BFA4
@@ -32822,8 +32823,8 @@ _0802C07C:
 	THUMB_FUNC_START sub_0802C080
 sub_0802C080: @ 0x0802C080
 	push {lr}
-	ldr r2, _0802C0A8  @ =0x040000B0
-	ldr r0, _0802C0AC  @ =0x040000BA
+	ldr r2, _0802C0A8  @ =REG_DMA0SAD
+	ldr r0, _0802C0AC  @ =REG_DMA0CNT_H
 	mov r1, #0
 	strh r1, [r0]
 	ldr r1, _0802C0B0  @ =0x03000C90
@@ -32844,9 +32845,9 @@ _0802C0A2:
 	.byte 0x00
 	.byte 0x00
 _0802C0A8:
-	.4byte 0x040000B0
+	.4byte REG_DMA0SAD
 _0802C0AC:
-	.4byte 0x040000BA
+	.4byte REG_DMA0CNT_H
 _0802C0B0:
 	.4byte 0x03000C90
 _0802C0B4:
@@ -32961,7 +32962,7 @@ sub_0802C144: @ 0x0802C144
 	ldr r3, [r4, #4]
 	cmp r3, #0
 	beq _0802C192
-	ldr r0, _0802C19C  @ =0x040000D4
+	ldr r0, _0802C19C  @ =REG_DMA3SAD
 	str r1, [r0]
 	mov r1, #160
 	lsl r1, r1, #19
@@ -32993,7 +32994,7 @@ _0802C192:
 _0802C198:
 	.4byte 0x03000D20
 _0802C19C:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802C1A0:
 	.4byte 0x80000100
 _0802C1A4:
@@ -33027,7 +33028,7 @@ sub_0802C1C0: @ 0x0802C1C0
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0802C1E2
-	ldr r1, _0802C200  @ =0x040000D4
+	ldr r1, _0802C200  @ =REG_DMA3SAD
 	ldr r0, [r2, #8]
 	str r0, [r1]
 	mov r0, #160
@@ -33042,7 +33043,7 @@ _0802C1E2:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0802C1FC
-	ldr r1, _0802C200  @ =0x040000D4
+	ldr r1, _0802C200  @ =REG_DMA3SAD
 	ldr r0, [r3, #12]
 	str r0, [r1]
 	ldr r0, _0802C208  @ =0x05000200
@@ -33054,7 +33055,7 @@ _0802C1FC:
 	pop {r0}
 	bx r0
 _0802C200:
-	.4byte 0x040000D4
+	.4byte REG_DMA3SAD
 _0802C204:
 	.4byte 0x84000080
 _0802C208:

@@ -29,6 +29,7 @@ CFILES   := \
 	src/pause_menu.c \
 	src/movie_player.c \
 	src/rom_8032408.c \
+	src/level_view.c \
 	src/rom_8032FB0.c \
 	src/rom_8033C38.c \
 	src/rom_8038414.c \

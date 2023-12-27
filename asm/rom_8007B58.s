@@ -1,4 +1,5 @@
 	.INCLUDE "macro.inc"
+	.INCLUDE "gba.inc"
 
 	THUMB_FUNC_START level_play_main
 level_play_main: @ 0x08007B58
@@ -26,7 +27,7 @@ level_play_main: @ 0x08007B58
 	mov r1, #1
 	mov r9, r1
 _08007B8E:
-	ldr r0, _08007BC8  @ =0x03001A00
+	ldr r0, _08007BC8  @ =gUnknown_03001A00
 	mov r2, r9
 	strb r2, [r0]
 	ldr r1, _08007BCC  @ =gUnknown_03000038
@@ -56,7 +57,7 @@ _08007BC0:
 _08007BC4:
 	.4byte 0x00001B08
 _08007BC8:
-	.4byte 0x03001A00
+	.4byte gUnknown_03001A00
 _08007BCC:
 	.4byte gUnknown_03000038
 _08007BD0:
@@ -533,7 +534,7 @@ _08007F6E:
 	ldr r0, _08007FF8  @ =gUnknown_03001A1C
 	ldr r0, [r0]
 	str r0, [r1]
-	ldr r0, _08007FFC  @ =0x03001A00
+	ldr r0, _08007FFC  @ =gUnknown_03001A00
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08007FAA
@@ -563,7 +564,7 @@ _08007FAA:
 	ldrsh r0, [r4, r2]
 	cmp r0, #2
 	bne _0800800C
-	ldr r0, _08007FFC  @ =0x03001A00
+	ldr r0, _08007FFC  @ =gUnknown_03001A00
 	ldrb r0, [r0]
 	bl sub_0802BEA4
 	b _08008016
@@ -594,7 +595,7 @@ _08007FF4:
 _08007FF8:
 	.4byte gUnknown_03001A1C
 _08007FFC:
-	.4byte 0x03001A00
+	.4byte gUnknown_03001A00
 _08008000:
 	.4byte gUnknown_030009D0
 _08008004:
@@ -607,7 +608,7 @@ _0800800C:
 	beq _08008016
 	bl sub_0802BE50
 _08008016:
-	ldr r0, _080080D4  @ =0x03001A00
+	ldr r0, _080080D4  @ =gUnknown_03001A00
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08008022
@@ -699,7 +700,7 @@ _080080C6:
 	pop {r0}
 	bx r0
 _080080D4:
-	.4byte 0x03001A00
+	.4byte gUnknown_03001A00
 _080080D8:
 	.4byte gLevelEndTimer
 _080080DC:
@@ -752,7 +753,7 @@ _0800812A:
 	bne _0800813C
 	mov r5, #1
 _0800813C:
-	ldr r0, _08008188  @ =0x03001A00
+	ldr r0, _08008188  @ =gUnknown_03001A00
 	strb r5, [r0]
 	ldr r2, _0800818C  @ =gUnknown_03000038
 	ldr r0, _08008190  @ =gUnknown_03000034
@@ -790,7 +791,7 @@ _08008180:
 _08008184:
 	.4byte gUnknown_03001A1C
 _08008188:
-	.4byte 0x03001A00
+	.4byte gUnknown_03001A00
 _0800818C:
 	.4byte gUnknown_03000038
 _08008190:
@@ -848,7 +849,7 @@ _080081F6:
 	ldrsh r0, [r4, r1]
 	cmp r0, #2
 	bne _08008224
-	ldr r0, _08008220  @ =0x03001A00
+	ldr r0, _08008220  @ =gUnknown_03001A00
 	ldrb r0, [r0]
 	bl sub_0802BEA4
 	b _0800822C
@@ -861,7 +862,7 @@ _08008218:
 _0800821C:
 	.4byte gNextLevelInLevelTable
 _08008220:
-	.4byte 0x03001A00
+	.4byte gUnknown_03001A00
 _08008224:
 	cmp r5, #0
 	beq _0800822C
