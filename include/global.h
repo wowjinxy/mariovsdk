@@ -554,6 +554,10 @@ extern const u8 gUnknown_08B37424[];
 extern const s16 gUnknown_0807C118[][2];
 extern unkst24 gUnknown_0812E128[1]; 
 
+u8 gUnknown_03000EA0[30];
+extern u8 gUnknown_082E8908[];
+extern u8 gUnknown_082E8900[];
+
 
 //------------------------------------------------------------------------------
 // Functions

@@ -51,7 +51,6 @@ SFILES   := \
 	asm/rom_801CB9C.s \
 	asm/rom_802D614.s \
 	asm/eCard.s \
-	asm/level_view.s \
 	asm/rom_8032814.s \
 	asm/rom_8033658.s \
 	asm/rom_8034928.s \

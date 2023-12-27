@@ -26,7 +26,6 @@ SECTIONS
 		src/movie_player.o(.text);
 		asm/rom_802D614.o(.text);
 		asm/eCard.o(.text);
-		asm/level_view.o(.text);
 		src/level_view.o(.text);
 		src/rom_8032408.o(.text);
 		asm/rom_8032814.o(.text);
