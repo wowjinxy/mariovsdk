@@ -20,7 +20,7 @@ void sub_08007170(void)
     gUnknown_030009EC = 1;
     sub_0802BF1C();
     gGeneralTimer = gNextLevelInLevelTable.unk0->unk8 * 60 + 60;
-    if (gUnknown_03000B80 == 0 && (gNextLevelInLevelTable.unk20 & 8))
+    if (gUnknown_03000B80 == 0 && (gNextLevelInLevelTable.levelType & 8))
     {
         u32 var;
         
@@ -41,7 +41,7 @@ void sub_08007170(void)
     gUnknown_03000B60 = 0;
     sub_080386DC();
     sub_08031BF0(&gUnknown_0300192C, &gUnknown_03001930);
-    if (gNextLevelInLevelTable.unk20 & 8)
+    if (gNextLevelInLevelTable.levelType & 8)
     {
         gCurrentPresentScore = gPreviousPresentScore;
         gCurrentEnemyScore = gUnknown_03000BB8;
@@ -78,7 +78,7 @@ void sub_080072A4(void)
         sub_0802C938();
     gUnknown_03000028 = 0;
     gLevelTimerOnOffFlag = 0;
-    if ((!(gUnknown_03000B68 & 2) || (gNextLevelInLevelTable.unk20 & 32))
+    if ((!(gUnknown_03000B68 & 2) || (gNextLevelInLevelTable.levelType & 32))
      && gMainState != MAIN_STATE_TUTORIAL)
     {
         sub_080720AC();
@@ -89,7 +89,7 @@ void sub_080072A4(void)
         }
         else
         {
-            if (!(gNextLevelInLevelTable.unk20 & 3) && gUnknown_03000B80 != 4 && gUnknown_03000B80 != 5)
+            if (!(gNextLevelInLevelTable.levelType & 3) && gUnknown_03000B80 != 4 && gUnknown_03000B80 != 5)
             {
                 if (gNextLevelInLevelTable.unk10 > 0)
                     gUnknown_03001BDC = 1;
@@ -98,12 +98,12 @@ void sub_080072A4(void)
                 else
                     sub_0807204C(17, 128, 0);
             }
-            else if (gNextLevelInLevelTable.unk20 & 1)
+            else if (gNextLevelInLevelTable.levelType & 1)
             {
                 sub_0807204C(32, 128, 1);
             }
         }
-        if ((gNextLevelInLevelTable.unk20 & 2) || gUnknown_03000B80 == 4)
+        if ((gNextLevelInLevelTable.levelType & 2) || gUnknown_03000B80 == 4)
             sub_0807204C(16, 128, 0);
     }
     sub_08033FC8();
@@ -155,7 +155,7 @@ void sub_08007544(void)
     {
         if (!(gUnknown_03001A1C & 0x901000) && gUnknown_03001A38 == 0)
         {
-            if ((gNextLevelInLevelTable.unk20 & 2) && gUnknown_03001C78->unk34 == 0)
+            if ((gNextLevelInLevelTable.levelType & 2) && gUnknown_03001C78->unk34 == 0)
             {
                 if (gUnknown_03000033 == 0)
                 {
@@ -243,7 +243,7 @@ void sub_08007544(void)
     {
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
-            if (gNextLevelInLevelTable.unk20 & 2)
+            if (gNextLevelInLevelTable.levelType & 2)
             {
                 gUnknown_03000029 = 0;
             }
@@ -264,7 +264,7 @@ void sub_08007544(void)
         gLevelTimerOnOffFlag = 1;
     }
 
-    if (gUnknown_03000B5C == 0 && (gNextLevelInLevelTable.unk20 & 2) && gUnknown_03000029 == 0
+    if (gUnknown_03000B5C == 0 && (gNextLevelInLevelTable.levelType & 2) && gUnknown_03000029 == 0
      && gLevelTimerOnOffFlag != 0 && sub_08072144() != 0)
     {
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
@@ -320,9 +320,9 @@ void sub_08007544(void)
         if (gUnknown_03000B80 != 5)
             sub_08071CD4();
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO
-         && !(gNextLevelInLevelTable.unk20 & 2))
+         && !(gNextLevelInLevelTable.levelType & 2))
         {
-            if (gNextLevelInLevelTable.unk20 & 8)
+            if (gNextLevelInLevelTable.levelType & 8)
             {
                 sub_080720AC();
                 sub_0807204C(21, 128, 0);
@@ -332,7 +332,7 @@ void sub_08007544(void)
                 sub_080720AC();
                 sub_0807204C(65, 128, 0);
             }
-            else if (!(gNextLevelInLevelTable.unk20 & 1))
+            else if (!(gNextLevelInLevelTable.levelType & 1))
             {
                 sub_080720AC();
                 sub_0807204C(2, 128, 0);
@@ -384,11 +384,11 @@ void sub_08007544(void)
 
     if (gUnknown_03000038 & 0x4000)
     {
-        if (gNextLevelInLevelTable.unk20 & 2)
+        if (gNextLevelInLevelTable.levelType & 2)
             gLevelEndTimer = 30;
-        else if (gNextLevelInLevelTable.unk20 & 8)
+        else if (gNextLevelInLevelTable.levelType & 8)
             gLevelEndTimer = 240;
-        else if (gNextLevelInLevelTable.unk20 & 1)
+        else if (gNextLevelInLevelTable.levelType & 1)
             gLevelEndTimer = 30;
         else if (gUnknown_03000B80 == 5)
             gLevelEndTimer = 269;

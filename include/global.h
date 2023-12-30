@@ -104,9 +104,13 @@ struct UnknownStruct6
 
 struct UnknownStruct5
 {
-    u8 filler0[4];
-    u32 unk4;
+    u32 *levelTableData;
+    u32 worldData;
     u16 unk8;
+    u8 unkA;
+    u8 unkB;
+    u32 *unkC;
+    u32 unk10;
 };
 
 // These may be the same. Don't know yet.
@@ -115,15 +119,16 @@ struct UnknownStruct4
     struct UnknownStruct5 *unk0;
     u32 unk4;
     u32 unk8;
-    u32 unkC;    
+    u32 (*unkC)();    
     s16 unk10;
     s16 unk12;
     u32 unk14;
     u32 unk18;
-    u8 filler1C[1];
+    u8 filler1C;
     u8 unk1D[3];
-    u32 unk20;
+    u32 levelType;
 };
+
 
 struct UnknownStruct7
 {
@@ -309,6 +314,18 @@ struct levelCollectableFlags
 	u8 unk6;
 	u8 unk7;
 };
+
+struct worldTableStruct_unk_size_c {
+    s32 unk0;
+    struct UnknownStruct5* unk4;
+    s32 unk8;
+};
+
+struct worldTableStruct {
+    s32 unk0;
+    struct worldTableStruct_unk_size_c *unk4;
+};
+
 
 //------------------------------------------------------------------------------
 // Variables
@@ -558,6 +575,18 @@ u8 gUnknown_03000EA0[30];
 extern u8 gUnknown_082E8908[];
 extern u8 gUnknown_082E8900[];
 
+struct worldTableStruct gUnknown_08B2CFC0[0];
+struct worldTableStruct gUnknown_08B2CF84[0];
+struct worldTableStruct gUnknown_08B2CEBC[0];
+struct worldTableStruct gUnknown_0807C0D0[0];
+struct worldTableStruct gUnknown_0807C098[0];
+struct worldTableStruct gUnknown_08B2CDF4[0];
+struct worldTableStruct gUnknown_0807C028[0];
+struct worldTableStruct gUnknown_08B2CA5C[0];
+struct worldTableStruct gUnknown_0807C0E0[0];
+struct worldTableStruct gUnknown_08B2D378[0];
+
+u8 gUnknown_0807C0D8;
 
 //------------------------------------------------------------------------------
 // Functions
@@ -700,6 +729,16 @@ u8 _call_via_r0(u32);
 u8 sub_0800C5A4();
 u8 sub_08072118();
 u8 sub_0802BEA4(u8);
+u32 sub_080322A8(u16 *param1, u16 *param2, u16 *param3);
 
+void sub_08008764();
+
+u32 sub_08071F64(u32);
+u32 sub_08071F78(u32);
+u32 sub_08071F8C(u32);	
+void sub_080084A4();
+void sub_08008330();
+void sub_08008600();
+void sub_080086A4();
 
 #endif  // GUARD_GLOBAL_H

@@ -24,6 +24,7 @@ CFILES   := \
 	src/rom1.c \
 	src/rom_8008238.c \
 	src/rom_800EEC0.c \
+	src/rom_800F1E4.c \
 	src/title.c \
 	src/intro.c \
 	src/pause_menu.c \
@@ -46,6 +47,7 @@ SFILES   := \
 	asm/rom_8007B58.s \
 	asm/rom_80088F0.s \
 	asm/rom_800F070.s \
+	asm/rom_800F6EC.s \
 	asm/rom_801BAD8.s \
 	asm/boss_clear.s \
 	asm/rom_801CB9C.s \

@@ -2,9 +2,6 @@
 #include "global.h"
 #include "main.h"
 
-
-//todo: uncomment this when `sub_080322A8` in asm/level_view.s gets decompiled
-
 void level_view_main(void) {
 
     u8 temp1;
@@ -25,7 +22,7 @@ void level_view_main(void) {
             sub_080070E8(0x13, 0);
         }
     }
-    _call_via_r0(gNextLevelInLevelTable.unkC);
+    gNextLevelInLevelTable.unkC();
     if (gNextLevelInLevelTable.unk12 == 2) {
         sub_0802BEA4(0);
     }

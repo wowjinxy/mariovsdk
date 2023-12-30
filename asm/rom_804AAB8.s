@@ -84173,7 +84173,7 @@ _0807167E:
 	ldr r1, _080717D4  @ =REG_SOUNDCNT_X
 	mov r0, #128
 	strh r0, [r1]
-	ldr r0, _080717D8  @ =REG_NR50
+	ldr r0, _080717D8  @ =REG_SOUNDCNT_L
 	mov r1, r8
 	strh r1, [r0]
 	ldr r1, _080717DC  @ =REG_SOUNDCNT_H
@@ -84265,7 +84265,7 @@ _080717D0:
 _080717D4:
 	.4byte REG_SOUNDCNT_X
 _080717D8:
-	.4byte REG_NR50
+	.4byte REG_SOUNDCNT_L
 _080717DC:
 	.4byte REG_SOUNDCNT_H
 _080717E0:
@@ -89300,7 +89300,7 @@ _08073B14:
 	THUMB_FUNC_START sub_08073B18
 sub_08073B18: @ 0x08073B18
 	push {r4,lr}
-	ldr r2, _08073B78  @ =REG_NR50
+	ldr r2, _08073B78  @ =REG_SOUNDCNT_L
 	ldrh r0, [r2]
 	mov r3, #204
 	lsl r3, r3, #8
@@ -89350,7 +89350,7 @@ _08073B44:
 	.byte 0x00
 	.byte 0x00
 _08073B78:
-	.4byte REG_NR50
+	.4byte REG_SOUNDCNT_L
 _08073B7C:
 	.4byte 0x03000840
 _08073B80:
@@ -89652,7 +89652,7 @@ _08073D7E:
 	sub r3, r3, #1
 	cmp r3, #0
 	bge _08073D7E
-	ldr r2, _08073DC0  @ =REG_NR50
+	ldr r2, _08073DC0  @ =REG_SOUNDCNT_L
 	ldrh r1, [r2]
 	mov r0, #255
 	lsl r0, r0, #8
@@ -89677,7 +89677,7 @@ _08073DB8:
 _08073DBC:
 	.4byte REG_WAVE_RAM0
 _08073DC0:
-	.4byte REG_NR50
+	.4byte REG_SOUNDCNT_L
 	THUMB_FUNC_END sub_08073CE8
 
 	THUMB_FUNC_START sub_08073DC4
@@ -89690,7 +89690,7 @@ sub_08073DC4: @ 0x08073DC4
 	ldrb r0, [r1]
 	mov r0, #1
 	strb r0, [r1]
-	ldr r2, _08073DE8  @ =REG_NR50
+	ldr r2, _08073DE8  @ =REG_SOUNDCNT_L
 	ldrh r1, [r2]
 	mov r0, #255
 	lsl r0, r0, #8
@@ -89702,7 +89702,7 @@ _08073DE0:
 _08073DE4:
 	.4byte 0x03000840
 _08073DE8:
-	.4byte REG_NR50
+	.4byte REG_SOUNDCNT_L
 	THUMB_FUNC_END sub_08073DC4
 
 	THUMB_FUNC_START sub_08073DEC
@@ -89715,7 +89715,7 @@ sub_08073DEC: @ 0x08073DEC
 	ldrb r0, [r3]
 	mov r0, #2
 	strb r0, [r3]
-	ldr r2, _08073E18  @ =REG_NR50
+	ldr r2, _08073E18  @ =REG_SOUNDCNT_L
 	ldrh r1, [r2]
 	mov r0, #255
 	lsl r0, r0, #8
@@ -89731,7 +89731,7 @@ _08073E10:
 _08073E14:
 	.4byte 0x03000840
 _08073E18:
-	.4byte REG_NR50
+	.4byte REG_SOUNDCNT_L
 	THUMB_FUNC_END sub_08073DEC
 
 	THUMB_FUNC_START sub_08073E1C
@@ -89740,7 +89740,7 @@ sub_08073E1C: @ 0x08073E1C
 	ldrb r0, [r1]
 	mov r0, #0
 	strb r0, [r1]
-	ldr r2, _08073E38  @ =REG_NR50
+	ldr r2, _08073E38  @ =REG_SOUNDCNT_L
 	ldrh r1, [r2]
 	mov r0, #255
 	lsl r0, r0, #8
@@ -89752,5 +89752,5 @@ sub_08073E1C: @ 0x08073E1C
 _08073E34:
 	.4byte 0x03000840
 _08073E38:
-	.4byte REG_NR50
+	.4byte REG_SOUNDCNT_L
 	THUMB_FUNC_END sub_08073E1C
