@@ -44,7 +44,7 @@ void game_init_callback(void)
 {
     gUnknown_03000B50 = 0;
     gUnknown_03001704 = 0;
-    gUnknown_03000B80 = 0;
+    gLevelType = 0;
     sub_08032F68();
     sub_0803482C(gUnknown_03001F50, gUnknown_03007AB0);
     sub_0802F060();
@@ -118,7 +118,7 @@ void game_init_main(void)
         }
         break;
       case 3:
-        sub_080070E8(MAIN_STATE_INTRO, NO_FADE);
+        change_main_state(MAIN_STATE_INTRO, NO_FADE);
         sub_0807220C(gUnknown_080788FC->unk0_5);
         break;
       case 4:

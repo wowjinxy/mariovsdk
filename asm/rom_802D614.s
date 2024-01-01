@@ -7,7 +7,7 @@ sub_0802D614: @ 0x0802D614
 	add r4, r0, #0
 	mov r0, #26
 	mov r1, #0
-	bl sub_080070E8
+	bl change_main_state
 	ldr r2, _0802D648  @ =0x030001C0
 	str r4, [r2]
 	ldr r1, _0802D64C  @ =0x030001B4

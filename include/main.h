@@ -40,7 +40,7 @@ enum
     MAIN_STATE_LEVEL_SCROLL = 33,
     MAIN_STATE_INIT = 34,
 	
-	//Fade Flag for sub_080070E8
+	//Fade Flag for change_main_state
 	NO_FADE = 0,
 	USE_FADE = 1,
 	

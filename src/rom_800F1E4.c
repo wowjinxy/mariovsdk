@@ -270,3 +270,30 @@ void tutorial_level_setup(u32 worldID, u32 levelID) {
         (u32*)gNextLevelInLevelTable.unkC = sub_08008330;
     }
 }
+
+void sub_0800F6EC(u32 worldID, u32 levelID) {
+   if (gLevelType == 0x0) {
+        normal_world_level_setup(worldID, levelID);
+   } 
+   else if (gLevelType == 0x1) {
+        plus_world_level_setup(worldID, levelID);    
+   }
+   else if (gLevelType == 0x2) {
+        expert_1_6_level_setup(worldID, levelID);
+   }
+   else if (gLevelType == 0x3) {
+        expert_7_12_level_setup(worldID, levelID);
+   }
+   else if (gLevelType == 0x4) {
+        dk_boss_level_setup(worldID, levelID);
+   } 
+   else {
+       dk_boss_plus_level_setup(worldID, levelID);
+   }
+}
+void title_demo_setup(u32 titleDemoID) {
+  
+    normal_world_level_setup(titleDemoID, *(u8*)&gUnknown_08B2CFC8[titleDemoID]);
+    gNextLevelID = gNextLevelInLevelTable.unk10 = *(u8*)&gUnknown_08B2CFC8[titleDemoID];
+
+}

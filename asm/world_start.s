@@ -24,7 +24,7 @@ _0803706C:
 	str r0, [r1]
 	str r0, [sp, #12]
 	str r0, [sp, #16]
-	ldr r0, _0803709C  @ =gUnknown_03000B80
+	ldr r0, _0803709C  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -40,13 +40,13 @@ _08037094:
 _08037098:
 	.4byte gUnknown_03000BE0
 _0803709C:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _080370A0:
 	.4byte gUnknown_080A86A4
 _080370A4:
 	ldr r2, _08037114  @ =gUnknown_080A86BC
 _080370A6:
-	ldr r1, _08037118  @ =gAfterTutorialWorld
+	ldr r1, _08037118  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	lsl r0, r0, #2
@@ -69,7 +69,7 @@ _080370A6:
 	lsl r2, r2, #5
 	add r1, r2, #0
 	strh r1, [r0]
-	ldr r0, _0803711C  @ =gUnknown_03000B80
+	ldr r0, _0803711C  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -79,7 +79,7 @@ _080370A6:
 	bne _0803712C
 _080370E8:
 	ldr r1, _08037120  @ =gUnknown_080A86A4
-	ldr r4, _08037118  @ =gAfterTutorialWorld
+	ldr r4, _08037118  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	lsl r0, r0, #2
@@ -102,9 +102,9 @@ _080370E8:
 _08037114:
 	.4byte gUnknown_080A86BC
 _08037118:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _0803711C:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08037120:
 	.4byte gUnknown_080A86A4
 _08037124:
@@ -113,7 +113,7 @@ _08037128:
 	.4byte gUnknown_080A8674
 _0803712C:
 	ldr r1, _080371B4  @ =gUnknown_080A86BC
-	ldr r4, _080371B8  @ =gAfterTutorialWorld
+	ldr r4, _080371B8  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	lsl r0, r0, #2
@@ -139,7 +139,7 @@ _0803712C:
 	mov r1, #2
 	bl sub_08032788
 _08037166:
-	ldr r0, _080371B8  @ =gAfterTutorialWorld
+	ldr r0, _080371B8  @ =gCurrentWorld
 	mov r5, #0
 	ldrsb r5, [r0, r5]
 	cmp r5, #0
@@ -178,7 +178,7 @@ _08037166:
 _080371B4:
 	.4byte gUnknown_080A86BC
 _080371B8:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _080371BC:
 	.4byte 0x030002F0
 _080371C0:
@@ -514,7 +514,7 @@ _08037420:
 	strb r0, [r6]
 	mov r0, #18
 	bl sub_08071E14
-	ldr r0, _08037464  @ =gUnknown_03000B80
+	ldr r0, _08037464  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -536,13 +536,13 @@ _0803745C:
 _08037460:
 	.4byte gBGLayerOffsets 
 _08037464:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08037468:
 	mov r1, #1
 _0803746A:
 	ldr r2, _080374A8  @ =gUnknown_080A86D4
 	lsl r1, r1, #1
-	ldr r0, _080374AC  @ =gAfterTutorialWorld
+	ldr r0, _080374AC  @ =gCurrentWorld
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -574,7 +574,7 @@ _0803746A:
 _080374A8:
 	.4byte gUnknown_080A86D4
 _080374AC:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _080374B0:
 	ldr r2, _080374D8  @ =0x030002F8
 	ldrh r0, [r2]
@@ -641,7 +641,7 @@ world_start_main: @ 0x080374E0
 	bl movie_player_setup_data
 	mov r0, #30
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 	mov r0, #1
 	mov r1, #1
 	bl sub_080148A4
@@ -655,7 +655,7 @@ _08037544:
 _08037548:
 	mov r0, #8
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 _08037550:
 	ldr r0, _080375E0  @ =0x03000304
 	ldr r3, [r0]

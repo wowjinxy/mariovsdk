@@ -12,7 +12,7 @@ void level_play_loop(void);
 void pause_menu_init_callback(void) 
 {
   gUnknown_030000B4 = 0;
-  gUnknown_03000BF0 = gAfterTutorialWorld;
+  gUnknown_03000BF0 = gCurrentWorld;
   gUnknown_03000BF8 = gNextLevelID;
   gUnknown_03000BEC = 0;
   gUnknown_030000B6 = 0;
@@ -56,7 +56,7 @@ asm(".short 0x0000"); // padding
 void sub_0801BED4(void) 
 {
   gUnknown_030000B4 = 0;
-  gUnknown_03000BF0 = gAfterTutorialWorld;
+  gUnknown_03000BF0 = gCurrentWorld;
   gUnknown_03000BF8 = gNextLevelID;
   gUnknown_03000BEC = 0;
   gUnknown_030000B6 = 0;

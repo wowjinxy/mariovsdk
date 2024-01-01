@@ -153,7 +153,7 @@ SECTIONS
 		. = 0xB4C;		gCurrentPresentScore = .;
 		. = 0xB50;		gUnknown_03000B50 = .;
 		. = 0xB54;		gGeneralTimer = .;
-		. = 0xB58;		gAfterTutorialWorld = .;
+		. = 0xB58;		gCurrentWorld = .;
 		. = 0xB5C;		gUnknown_03000B5C = .;
 		. = 0xB60;		gUnknown_03000B60 = .;
 		. = 0xB64;		gUnknown_03000B64 = .;
@@ -162,7 +162,7 @@ SECTIONS
 		. = 0xB70;		gUnknown_03000B70 = .;
 		. = 0xB74;		gNextLevelID = .;
 		. = 0xB78;		gUnknown_03000B78 = .;
-		. = 0xB80;		gUnknown_03000B80 = .;
+		. = 0xB80;		gLevelType = .;
 		. = 0xB90;		gNextLevelInLevelTable = .;
 		. = 0xBB4;		gLevelEWorldFlag = .;
 		. = 0xBB8;		gUnknown_03000BB8 = .;
@@ -241,11 +241,6 @@ SECTIONS
 		. = 0x1A10;		gUnknown_03001A10 = .;
 		. = 0x1A1C;		gUnknown_03001A1C = .;
 		. = 0x1A30;		gLevelCollectableFlags = .;
-		. = 0x1A31;		gBluePresentFlag = .;
-		. = 0x1A32;		gBluePresentFlag = .;
-		. = 0x1A33;		gLetterTFlag = .;
-		. = 0x1A34;		gLetterOFlag = .;
-		. = 0x1A35;		gLetterYFlag = .;
 		. = 0x1A38;		gUnknown_03001A38 = .;
 		. = 0x1A3C;		gUnknown_03001A3C = .;
 		. = 0x1A4C;		gUnknown_03001A4C = .;

@@ -144,7 +144,7 @@ static void main_loop(void)
     }
 }
 
-void sub_080070E8(s32 mainState, s32 useFadeFlag)
+void change_main_state(s32 mainState, s32 useFadeFlag)
 {
     if (gNextMainState != MAIN_STATE_FADETRANSITION)
     {

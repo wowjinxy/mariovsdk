@@ -131,7 +131,7 @@ _080089D4:
 	ldr r0, [r3, #8]
 	cmp r6, #0
 	bne _08008A1C
-	ldr r7, _08008A94  @ =gAfterTutorialWorld
+	ldr r7, _08008A94  @ =gCurrentWorld
 	mov r1, #0
 	ldrsb r1, [r7, r1]
 	cmp r1, #2
@@ -217,7 +217,7 @@ _08008A8C:
 _08008A90:
 	.4byte 0x80000400
 _08008A94:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08008A98:
 	.4byte 0x0000A00C
 	THUMB_FUNC_END level_play_loop
@@ -231,7 +231,7 @@ after_tutorial_init_callback: @ 0x08008A9C
 	asr r0, r0, #24
 	cmp r0, #0
 	bne _08008ACC
-	ldr r0, _08008AC4  @ =gAfterTutorialWorld
+	ldr r0, _08008AC4  @ =gCurrentWorld
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -244,7 +244,7 @@ after_tutorial_init_callback: @ 0x08008A9C
 _08008AC0:
 	.4byte gLevelEWorldFlag
 _08008AC4:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08008AC8:
 	.4byte gNextLevelID
 _08008ACC:
@@ -268,7 +268,7 @@ _08008AEC:
 _08008AF0:
 	mov r0, #24
 	mov r1, #0
-	bl sub_080070E8
+	bl change_main_state
 	b _08008B0C
 _08008AFA:
 	ldr r0, _08008B10  @ =gNextLevelInLevelTable
@@ -277,7 +277,7 @@ _08008AFA:
 	bl sub_08004428
 	mov r0, #13
 	mov r1, #0
-	bl sub_080070E8
+	bl change_main_state
 _08008B0C:
 	pop {r0}
 	bx r0
@@ -565,7 +565,7 @@ _08008D30:
 	bne _08008D68
 	mov r0, #13
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 	ldr r1, _08008D78  @ =gNextLevelInLevelTable
 	mov r2, #18
 	ldrsh r0, [r1, r2]
@@ -791,7 +791,7 @@ _08008EE8:
 	bgt _08008EF4
 	b _08009050
 _08008EF4:
-	ldr r0, _08008F78  @ =gUnknown_03000B80
+	ldr r0, _08008F78  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -859,7 +859,7 @@ _08008F70:
 _08008F74:
 	.4byte gCurrentLevelHeight
 _08008F78:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08008F7C:
 	.4byte REG_DMA3SAD
 _08008F80:
@@ -1642,7 +1642,7 @@ sub_080091A8: @ 0x080091A8
 	add r1, r1, #224
 	ldr r0, _08009610  @ =gUnknown_082EB118
 	str r0, [r1]
-	ldr r0, _08009614  @ =gUnknown_03000B80
+	ldr r0, _08009614  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -1722,7 +1722,7 @@ _0800960C:
 _08009610:
 	.4byte gUnknown_082EB118
 _08009614:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08009618:
 	strh r3, [r0]
 	add r0, r0, #2
@@ -2191,7 +2191,7 @@ _0800995A:
 	mov r1, r8
 	bl sub_0802FB18
 	add r4, r6, #6
-	ldr r0, _08009A4C  @ =gAfterTutorialWorld
+	ldr r0, _08009A4C  @ =gCurrentWorld
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -2199,7 +2199,7 @@ _0800995A:
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
-	ldr r2, _08009A54  @ =gUnknown_03000B80
+	ldr r2, _08009A54  @ =gLevelType
 	ldrb r2, [r2]
 	lsl r2, r2, #24
 	asr r2, r2, #24
@@ -2282,11 +2282,11 @@ _08009A44:
 _08009A48:
 	.4byte 0x01000001
 _08009A4C:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08009A50:
 	.4byte gNextLevelID
 _08009A54:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08009A58:
 	.4byte 0x0000199A
 _08009A5C:
@@ -2385,7 +2385,7 @@ _08009ADC:
 	strb r0, [r6, #12]
 _08009B04:
 	strb r3, [r6, #13]
-	ldr r0, _08009B64  @ =gUnknown_03000B80
+	ldr r0, _08009B64  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -2432,7 +2432,7 @@ _08009B5C:
 _08009B60:
 	.4byte 0x0000199A
 _08009B64:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08009B68:
 	.4byte gUnknown_082E9574
 _08009B6C:
@@ -3724,7 +3724,7 @@ sub_0800A4B4: @ 0x0800A4B4
 	mov r2, #3
 	bl memcpy
 	mov r3, #0
-	ldr r0, _0800A4FC  @ =gUnknown_03000B80
+	ldr r0, _0800A4FC  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -3745,7 +3745,7 @@ _0800A4E6:
 _0800A4F8:
 	.4byte gUnknown_08076387
 _0800A4FC:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800A500:
 	.4byte gNextLevelInLevelTable
 _0800A504:
@@ -4713,7 +4713,7 @@ _0800ABF4:
 	add r0, r0, #1
 	strh r0, [r7]
 _0800AC1E:
-	ldr r0, _0800AD6C  @ =gUnknown_03000B80
+	ldr r0, _0800AD6C  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -4885,7 +4885,7 @@ _0800AD64:
 _0800AD68:
 	.4byte 0xFFFFFC00
 _0800AD6C:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800AD70:
 	.4byte REG_DMA3SAD
 _0800AD74:
@@ -5314,7 +5314,7 @@ _0800B048:
 	and r0, r0, r3
 	orr r0, r0, r1
 	strh r0, [r2, #4]
-	ldr r1, _0800B0E4  @ =gAfterTutorialWorld
+	ldr r1, _0800B0E4  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	cmp r0, #3
@@ -5343,7 +5343,7 @@ _0800B0DC:
 _0800B0E0:
 	.4byte 0x000003FF
 _0800B0E4:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _0800B0E8:
 	.4byte gOamData
 _0800B0EC:
@@ -8219,7 +8219,7 @@ _0800C674:
 	sub r1, r1, #120
 	cmp r1, #0
 	blt _0800C6A0
-	ldr r0, _0800C6E4  @ =gUnknown_03000B80
+	ldr r0, _0800C6E4  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -8261,7 +8261,7 @@ _0800C6DC:
 _0800C6E0:
 	.4byte 0x030008C8
 _0800C6E4:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800C6E8:
 	lsl r0, r1, #17
 	asr r0, r0, #16
@@ -8284,7 +8284,7 @@ _0800C6FC:
 	add r7, r1, #0
 	cmp r0, #0
 	blt _0800C71A
-	ldr r0, _0800C750  @ =gUnknown_03000B80
+	ldr r0, _0800C750  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -8320,7 +8320,7 @@ _0800C746:
 _0800C74C:
 	.4byte 0x030008C8
 _0800C750:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800C754:
 	mov r3, #16
 	add r0, r3, #0
@@ -8353,7 +8353,7 @@ _0800C768:
 	ldrsh r0, [r1, r7]
 	cmp r12, r0
 	bgt _0800C79C
-	ldr r0, _0800C7D0  @ =gUnknown_03000B80
+	ldr r0, _0800C7D0  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -8387,7 +8387,7 @@ _0800C7C4:
 _0800C7CC:
 	.4byte 0x030008C8
 _0800C7D0:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800C7D4:
 	add r0, r2, #0
 	sub r0, r0, #120
@@ -8431,7 +8431,7 @@ _0800C80C:
 	add r7, r0, #0
 	cmp r1, r2
 	bgt _0800C830
-	ldr r0, _0800C8F8  @ =gUnknown_03000B80
+	ldr r0, _0800C8F8  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -8474,7 +8474,7 @@ _0800C862:
 	bgt _0800C870
 	b _0800CA66
 _0800C870:
-	ldr r0, _0800C8F8  @ =gUnknown_03000B80
+	ldr r0, _0800C8F8  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -8546,7 +8546,7 @@ _0800C8EC:
 _0800C8F4:
 	.4byte 0x030008C8
 _0800C8F8:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800C8FC:
 	.4byte gCurrentLevelHeight
 _0800C900:
@@ -9024,7 +9024,7 @@ sub_0800CC6C: @ 0x0800CC6C
 	ldr r0, _0800CCE0  @ =gNextLevelID
 	mov r2, #0
 	ldrsb r2, [r0, r2]
-	ldr r0, _0800CCE4  @ =gUnknown_03000B80
+	ldr r0, _0800CCE4  @ =gLevelType
 	mov r1, #0
 	ldrsb r1, [r0, r1]
 	add r3, r0, #0
@@ -9041,7 +9041,7 @@ sub_0800CC6C: @ 0x0800CC6C
 _0800CC94:
 	mov r0, #0
 	ldrsb r0, [r3, r0]
-	ldr r1, _0800CCEC  @ =gAfterTutorialWorld
+	ldr r1, _0800CCEC  @ =gCurrentWorld
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -9079,11 +9079,11 @@ _0800CCDC:
 _0800CCE0:
 	.4byte gNextLevelID
 _0800CCE4:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800CCE8:
 	.4byte gNextLevelInLevelTable
 _0800CCEC:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _0800CCF0:
 	.4byte gUnknown_03000A10
 _0800CCF4:
@@ -9427,7 +9427,7 @@ _0800CF64:
 	ldr r0, _0800D330  @ =gNextLevelID
 	mov r2, #0
 	ldrsb r2, [r0, r2]
-	ldr r0, _0800D334  @ =gUnknown_03000B80
+	ldr r0, _0800D334  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -9442,10 +9442,10 @@ _0800CF64:
 	beq _0800CF86
 	mov r2, #7
 _0800CF86:
-	ldr r1, _0800D334  @ =gUnknown_03000B80
+	ldr r1, _0800D334  @ =gLevelType
 	mov r0, #0
 	ldrsb r0, [r1, r0]
-	ldr r1, _0800D33C  @ =gAfterTutorialWorld
+	ldr r1, _0800D33C  @ =gCurrentWorld
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -9916,11 +9916,11 @@ _0800D32C:
 _0800D330:
 	.4byte gNextLevelID
 _0800D334:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800D338:
 	.4byte gNextLevelInLevelTable
 _0800D33C:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _0800D340:
 	.4byte REG_DMA3SAD
 _0800D344:
@@ -10204,7 +10204,7 @@ _0800D430:
 	add r0, r0, #1
 	strh r0, [r7]
 	mov r4, #72
-	ldr r1, _0800D640  @ =gUnknown_03000B80
+	ldr r1, _0800D640  @ =gLevelType
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	cmp r0, #1
@@ -10309,7 +10309,7 @@ _0800D638:
 _0800D63C:
 	.4byte gUnknown_082EFBFC
 _0800D640:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800D644:
 	.4byte gNextLevelInLevelTable
 _0800D648:
@@ -11100,7 +11100,7 @@ _0800DBD8:
 	mov r10, r0
 	cmp r0, #5
 	bls _0800DBD8
-	ldr r4, _0800DD9C  @ =gUnknown_03000B80
+	ldr r4, _0800DD9C  @ =gLevelType
 	ldrb r2, [r4]
 	sub r0, r2, #4
 	lsl r0, r0, #24
@@ -11258,7 +11258,7 @@ _0800DD94:
 _0800DD98:
 	.4byte 0xFFFFFC00
 _0800DD9C:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800DDA0:
 	.4byte REG_DMA3SAD
 _0800DDA4:
@@ -11660,7 +11660,7 @@ _0800E0A4:
 _0800E0A8:
 	.4byte 0xFFFFFC00
 _0800E0AC:
-	ldr r3, _0800E144  @ =gUnknown_03000B80
+	ldr r3, _0800E144  @ =gLevelType
 	mov r0, #0
 	ldrsb r0, [r3, r0]
 	cmp r0, #0
@@ -11738,7 +11738,7 @@ _0800E0AC:
 	.byte 0x00
 	.byte 0x00
 _0800E144:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0800E148:
 	.4byte gUnknown_03000BF8
 _0800E14C:

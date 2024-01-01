@@ -1595,7 +1595,7 @@ sub_0803549C: @ 0x0803549C
 	lsr r2, r0, #16
 	cmp r2, #0
 	beq _080354EC
-	ldr r1, _080354E8  @ =gAfterTutorialWorld
+	ldr r1, _080354E8  @ =gCurrentWorld
 	ldrb r2, [r1]
 	mov r0, #0
 	ldrsb r0, [r1, r0]
@@ -1622,7 +1622,7 @@ _080354D0:
 _080354E4:
 	.4byte gUnknown_030012E8
 _080354E8:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _080354EC:
 	mov r0, #16
 	and r0, r0, r3
@@ -1630,7 +1630,7 @@ _080354EC:
 	lsr r1, r0, #16
 	cmp r1, #0
 	beq _08035552
-	ldr r3, _0803551C  @ =gAfterTutorialWorld
+	ldr r3, _0803551C  @ =gCurrentWorld
 	ldrb r1, [r3]
 	mov r0, #0
 	ldrsb r0, [r3, r0]
@@ -1650,7 +1650,7 @@ _080354EC:
 	.byte 0x00
 	.byte 0x00
 _0803551C:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08035520:
 	str r2, [sp]
 	mov r0, #128
@@ -1660,7 +1660,7 @@ _08035520:
 _0803552A:
 	cmp r4, #6
 	bls _08035548
-	ldr r0, _08035544  @ =gUnknown_03000B80
+	ldr r0, _08035544  @ =gLevelType
 	mov r1, #3
 	strb r1, [r0]
 	strb r2, [r3]
@@ -1673,7 +1673,7 @@ _0803552A:
 	.byte 0x00
 	.byte 0x00
 _08035544:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08035548:
 	str r2, [sp]
 	mov r0, #128
@@ -1687,7 +1687,7 @@ _08035552:
 	lsr r2, r0, #16
 	cmp r2, #0
 	beq _08035588
-	ldr r2, _08035584  @ =gAfterTutorialWorld
+	ldr r2, _08035584  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r2, r0]
 	sub r0, r0, #4
@@ -1709,7 +1709,7 @@ _08035572:
 	mov r0, #23
 	b _08035670
 _08035584:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08035588:
 	mov r6, #128
 	add r0, r6, #0
@@ -1718,7 +1718,7 @@ _08035588:
 	lsr r5, r0, #16
 	cmp r5, #0
 	beq _080355EC
-	ldr r3, _080355B8  @ =gAfterTutorialWorld
+	ldr r3, _080355B8  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r3, r0]
 	add r0, r0, #4
@@ -1737,7 +1737,7 @@ _08035588:
 	.byte 0x00
 	.byte 0x00
 _080355B8:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _080355BC:
 	str r2, [sp]
 	str r6, [sp, #4]
@@ -1746,7 +1746,7 @@ _080355BC:
 _080355C4:
 	cmp r7, r0
 	ble _080355E4
-	ldr r1, _080355E0  @ =gUnknown_03000B80
+	ldr r1, _080355E0  @ =gLevelType
 	mov r0, #3
 	strb r0, [r1]
 	ldrb r0, [r3]
@@ -1760,7 +1760,7 @@ _080355C4:
 	.byte 0x00
 	.byte 0x00
 _080355E0:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _080355E4:
 	str r2, [sp]
 	str r6, [sp, #4]
@@ -1775,7 +1775,7 @@ _080355EC:
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08035664
-	ldr r4, _08035650  @ =gAfterTutorialWorld
+	ldr r4, _08035650  @ =gCurrentWorld
 	ldrb r0, [r4]
 	bl sub_08014C18
 	lsl r0, r0, #24
@@ -1789,7 +1789,7 @@ _080355EC:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r1, _08035654  @ =gUnknown_03000B80
+	ldr r1, _08035654  @ =gLevelType
 	mov r0, #2
 	strb r0, [r1]
 	ldr r0, _08035658  @ =gNextLevelID
@@ -1807,14 +1807,14 @@ _080355EC:
 	bl sub_08004428
 	mov r0, #13
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 	b _080356A8
 	.byte 0x00
 	.byte 0x00
 _08035650:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08035654:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08035658:
 	.4byte gNextLevelID
 _0803565C:
@@ -1849,21 +1849,21 @@ _0803567C:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r0, _080356B0  @ =gUnknown_03000B80
+	ldr r0, _080356B0  @ =gLevelType
 	mov r1, #2
 	strb r1, [r0]
 	ldr r0, _080356B4  @ =gNextLevelID
 	strb r4, [r0]
 	mov r0, #3
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 _080356A8:
 	add sp, sp, #12
 	pop {r4-r7}
 	pop {r0}
 	bx r0
 _080356B0:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _080356B4:
 	.4byte gNextLevelID
 	THUMB_FUNC_END sub_0803549C
@@ -1884,7 +1884,7 @@ sub_080356B8: @ 0x080356B8
 	lsr r4, r0, #16
 	cmp r4, #0
 	beq _08035720
-	ldr r2, _08035700  @ =gAfterTutorialWorld
+	ldr r2, _08035700  @ =gCurrentWorld
 	ldrb r1, [r2]
 	mov r0, #0
 	ldrsb r0, [r2, r0]
@@ -1907,9 +1907,9 @@ _080356EA:
 _080356FC:
 	.4byte gUnknown_030012E8
 _08035700:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08035704:
-	ldr r1, _0803571C  @ =gUnknown_03000B80
+	ldr r1, _0803571C  @ =gLevelType
 	mov r0, #2
 	strb r0, [r1]
 	mov r0, #5
@@ -1922,7 +1922,7 @@ _08035704:
 	mov r0, #23
 	b _080358C0
 _0803571C:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08035720:
 	mov r0, #16
 	and r0, r0, r1
@@ -1930,7 +1930,7 @@ _08035720:
 	lsr r2, r0, #16
 	cmp r2, #0
 	beq _08035794
-	ldr r5, _08035758  @ =gAfterTutorialWorld
+	ldr r5, _08035758  @ =gCurrentWorld
 	ldrb r1, [r5]
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -1952,7 +1952,7 @@ _08035720:
 	mov r0, #23
 	b _080358C0
 _08035758:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _0803575C:
 	str r4, [sp]
 	mov r0, #128
@@ -1992,7 +1992,7 @@ _08035794:
 	lsr r4, r0, #16
 	cmp r4, #0
 	beq _080357F0
-	ldr r3, _080357C4  @ =gAfterTutorialWorld
+	ldr r3, _080357C4  @ =gCurrentWorld
 	mov r1, #0
 	ldrsb r1, [r3, r1]
 	sub r0, r1, #4
@@ -2011,7 +2011,7 @@ _08035794:
 	mov r0, #23
 	b _080358C0
 _080357C4:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _080357C8:
 	str r2, [sp]
 	mov r0, #128
@@ -2019,7 +2019,7 @@ _080357C8:
 	str r2, [sp, #8]
 	b _080358BE
 _080357D2:
-	ldr r1, _080357EC  @ =gUnknown_03000B80
+	ldr r1, _080357EC  @ =gLevelType
 	mov r0, #2
 	strb r0, [r1]
 	ldrb r0, [r3]
@@ -2034,7 +2034,7 @@ _080357D2:
 	.byte 0x00
 	.byte 0x00
 _080357EC:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _080357F0:
 	mov r6, #128
 	add r0, r6, #0
@@ -2043,7 +2043,7 @@ _080357F0:
 	lsr r5, r0, #16
 	cmp r5, #0
 	beq _08035838
-	ldr r5, _08035824  @ =gAfterTutorialWorld
+	ldr r5, _08035824  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r5, r0]
 	cmp r0, #1
@@ -2063,7 +2063,7 @@ _080357F0:
 	.byte 0x00
 	.byte 0x00
 _08035824:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08035828:
 	str r4, [sp]
 	str r6, [sp, #4]
@@ -2083,7 +2083,7 @@ _08035838:
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _080358B4
-	ldr r4, _080358A0  @ =gAfterTutorialWorld
+	ldr r4, _080358A0  @ =gCurrentWorld
 	ldrb r0, [r4]
 	add r0, r0, #6
 	lsl r0, r0, #24
@@ -2100,7 +2100,7 @@ _08035838:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r1, _080358A4  @ =gUnknown_03000B80
+	ldr r1, _080358A4  @ =gLevelType
 	mov r0, #3
 	strb r0, [r1]
 	ldr r0, _080358A8  @ =gNextLevelID
@@ -2118,12 +2118,12 @@ _08035838:
 	bl sub_08004428
 	mov r0, #13
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 	b _080358F8
 _080358A0:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _080358A4:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _080358A8:
 	.4byte gNextLevelID
 _080358AC:
@@ -2157,21 +2157,21 @@ _080358CC:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r0, _08035900  @ =gUnknown_03000B80
+	ldr r0, _08035900  @ =gLevelType
 	mov r1, #3
 	strb r1, [r0]
 	ldr r0, _08035904  @ =gNextLevelID
 	strb r4, [r0]
 	mov r0, #3
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 _080358F8:
 	add sp, sp, #12
 	pop {r4-r6}
 	pop {r0}
 	bx r0
 _08035900:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08035904:
 	.4byte gNextLevelID
 	THUMB_FUNC_END sub_080356B8
@@ -2195,7 +2195,7 @@ _0803591A:
 	lsl r0, r0, #16
 	lsr r0, r0, #24
 	strh r0, [r1, #12]
-	ldr r0, _0803594C  @ =gUnknown_03000B80
+	ldr r0, _0803594C  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -2210,7 +2210,7 @@ _08035944:
 _08035948:
 	.4byte gBGLayerOffsets 
 _0803594C:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08035950:
 	cmp r0, #3
 	bne _08035958
@@ -4118,13 +4118,13 @@ _080367BC:
 sub_080367C0: @ 0x080367C0
 	push {r4,r5,lr}
 	sub sp, sp, #8
-	ldr r0, _08036804  @ =gUnknown_03000B80
+	ldr r0, _08036804  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
 	cmp r0, #2
 	bne _08036810
-	ldr r5, _08036808  @ =gAfterTutorialWorld
+	ldr r5, _08036808  @ =gCurrentWorld
 	ldrb r1, [r5]
 	ldr r4, _0803680C  @ =gNextLevelID
 	ldrb r2, [r4]
@@ -4148,15 +4148,15 @@ sub_080367C0: @ 0x080367C0
 	bl sub_08035A5C
 	b _08036846
 _08036804:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08036808:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _0803680C:
 	.4byte gNextLevelID
 _08036810:
 	cmp r0, #3
 	bne _08036846
-	ldr r5, _08036850  @ =gAfterTutorialWorld
+	ldr r5, _08036850  @ =gCurrentWorld
 	ldrb r1, [r5]
 	ldr r4, _08036854  @ =gNextLevelID
 	ldrb r2, [r4]
@@ -4186,7 +4186,7 @@ _08036846:
 	.byte 0x00
 	.byte 0x00
 _08036850:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08036854:
 	.4byte gNextLevelID
 	THUMB_FUNC_END sub_080367C0
@@ -5080,23 +5080,23 @@ _08036F24:
 expert_levels_loop: @ 0x08036F28
 	push {r4-r7,lr}
 	sub sp, sp, #8
-	ldr r0, _08036F40  @ =gUnknown_03000B80
+	ldr r0, _08036F40  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
 	cmp r0, #2
 	bne _08036F48
-	ldr r0, _08036F44  @ =gAfterTutorialWorld
+	ldr r0, _08036F44  @ =gCurrentWorld
 	ldrb r7, [r0]
 	b _08036F52
 	.byte 0x00
 	.byte 0x00
 _08036F40:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08036F44:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08036F48:
-	ldr r0, _0803702C  @ =gAfterTutorialWorld
+	ldr r0, _0803702C  @ =gCurrentWorld
 	ldrb r0, [r0]
 	add r0, r0, #6
 	lsl r0, r0, #24
@@ -5171,7 +5171,7 @@ _08036FD2:
 	bls _08036FB0
 _08036FDC:
 	asr r0, r5, #24
-	ldr r1, _0803702C  @ =gAfterTutorialWorld
+	ldr r1, _0803702C  @ =gCurrentWorld
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -5205,7 +5205,7 @@ _08036FDC:
 	.byte 0x00
 	.byte 0x00
 _0803702C:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _08037030:
 	.4byte 0x030002D0
 _08037034:

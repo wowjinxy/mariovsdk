@@ -78,15 +78,15 @@ void title_main(void)
         if (gUnknown_0807954C[gUnknown_03000B64].unk0 != 0)
         {
             movie_player_setup_data(3, 23, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
-            sub_080070E8(MAIN_STATE_MOVIE, USE_FADE);
+            change_main_state(MAIN_STATE_MOVIE, USE_FADE);
         }
         else
         {
-            gUnknown_03000B80 = 0;
-            gAfterTutorialWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
-            sub_0800F744(gAfterTutorialWorld);
+            gLevelType = 0;
+            gCurrentWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
+            title_demo_setup(gCurrentWorld);
             sub_08004428(gNextLevelInLevelTable.unk0->worldData);
-            sub_080070E8(MAIN_STATE_DEMO, USE_FADE);
+            change_main_state(MAIN_STATE_DEMO, USE_FADE);
             gUnknown_030012F8 = 0;
         }
         gUnknown_03000B64++;
@@ -97,7 +97,7 @@ void title_main(void)
         if (sub_08034004() != 0 && !(gUnknown_030012E8 & 2) && !(gUnknown_030012E0 & 2))
         {
             sub_08071990(35, 8, 16, 64, 0, 128, 0);
-            sub_080070E8(MAIN_STATE_FILE_SELECT, USE_FADE);
+            change_main_state(MAIN_STATE_FILE_SELECT, USE_FADE);
             gUnknown_03000BD0 = 1;
         }
         sub_0801B88C();

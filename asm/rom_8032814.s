@@ -413,7 +413,7 @@ sub_08032B30: @ 0x08032B30
 	lsl r1, r1, #16
 	lsr r1, r1, #16
 	add r4, r1, #0
-	ldr r0, _08032B68  @ =gUnknown_03000B80
+	ldr r0, _08032B68  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
 	asr r0, r0, #24
@@ -436,7 +436,7 @@ sub_08032B30: @ 0x08032B30
 	.byte 0x00
 	.byte 0x00
 _08032B68:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _08032B6C:
 	.4byte gMainState
 _08032B70:

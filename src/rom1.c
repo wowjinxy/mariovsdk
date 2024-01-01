@@ -20,7 +20,7 @@ void sub_08007170(void)
     gUnknown_030009EC = 1;
     sub_0802BF1C();
     gGeneralTimer = gNextLevelInLevelTable.unk0->unk8 * 60 + 60;
-    if (gUnknown_03000B80 == 0 && (gNextLevelInLevelTable.levelType & 8))
+    if (gLevelType == 0 && (gNextLevelInLevelTable.levelType & 8))
     {
         u32 var;
         
@@ -68,9 +68,9 @@ void sub_080072A4(void)
     r1 = sub_08040F30(sub_08040EE8(2));
     if (r1 == NULL)
         r1 = sub_08040F30(sub_08040EE8(0));
-    if (gUnknown_03000B80 == 4)
+    if (gLevelType == 4)
         sub_08033FAC(0, 0);
-    else if (gUnknown_03000B80 == 5)
+    else if (gLevelType == 5)
         sub_08033FAC(0, 16);
     else if (r1 != NULL)
         sub_08033FAC((r1->unk20 >> 7) - DISPLAY_WIDTH, (r1->unk24 >> 7) - DISPLAY_HEIGHT);
@@ -82,14 +82,14 @@ void sub_080072A4(void)
      && gMainState != MAIN_STATE_TUTORIAL)
     {
         sub_080720AC();
-        if (gUnknown_03000B80 == 2 || gUnknown_03000B80 == 3 || gLevelEWorldFlag != 0)
+        if (gLevelType == 2 || gLevelType == 3 || gLevelEWorldFlag != 0)
         {
             gUnknown_03001BDC = 1;
             sub_0807204C(17, 128, 0);
         }
         else
         {
-            if (!(gNextLevelInLevelTable.levelType & 3) && gUnknown_03000B80 != 4 && gUnknown_03000B80 != 5)
+            if (!(gNextLevelInLevelTable.levelType & 3) && gLevelType != 4 && gLevelType != 5)
             {
                 if (gNextLevelInLevelTable.unk10 > 0)
                     gUnknown_03001BDC = 1;
@@ -103,7 +103,7 @@ void sub_080072A4(void)
                 sub_0807204C(32, 128, 1);
             }
         }
-        if ((gNextLevelInLevelTable.levelType & 2) || gUnknown_03000B80 == 4)
+        if ((gNextLevelInLevelTable.levelType & 2) || gLevelType == 4)
             sub_0807204C(16, 128, 0);
     }
     sub_08033FC8();
@@ -112,7 +112,7 @@ void sub_080072A4(void)
     gUnknown_03000032 = 0;
     gUnknown_03000030 = 0;
     gUnknown_03000031 = 0;
-    sub_0802919C(gAfterTutorialWorld, gNextLevelID);
+    sub_0802919C(gCurrentWorld, gNextLevelID);
 }
 
 void level_demo_reset_init_callback(void)
@@ -216,12 +216,12 @@ void sub_08007544(void)
         {
             asm(""::"r"(gGeneralTimer));  // Why is this variable read? Is it volatile?
             sub_08014A58(-1);
-            sub_080070E8(MAIN_STATE_RESPAWN, NO_FADE);
+            change_main_state(MAIN_STATE_RESPAWN, NO_FADE);
         }
         else
         {
             sub_08014A58(-1);
-            sub_080070E8(MAIN_STATE_CLEAR_GAMEOVER, USE_FADE);
+            change_main_state(MAIN_STATE_CLEAR_GAMEOVER, USE_FADE);
         }
     }
 
@@ -236,7 +236,7 @@ void sub_08007544(void)
     else
     {
         if ((gUnknown_03001A1C & 0x80) && sub_08072144() != 0)
-            sub_080070E8(MAIN_STATE_LEVEL_PLAY, USE_FADE);
+            change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
     }
 
     if (gUnknown_03000038 & 0x2000)
@@ -249,7 +249,7 @@ void sub_08007544(void)
             }
             else
             {
-                if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO && gUnknown_03000B80 != 5)
+                if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO && gLevelType != 5)
                 {
                     sub_080720AC();
                     sub_08071FA0(gNextLevelInLevelTable.unk14, gNextLevelInLevelTable.unk18, 1, gNextLevelInLevelTable.unk1D);
@@ -317,7 +317,7 @@ void sub_08007544(void)
     {
         gUnknown_03000029 = 0;
         gLevelTimerOnOffFlag = 0;
-        if (gUnknown_03000B80 != 5)
+        if (gLevelType != 5)
             sub_08071CD4();
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO
          && !(gNextLevelInLevelTable.levelType & 2))
@@ -327,7 +327,7 @@ void sub_08007544(void)
                 sub_080720AC();
                 sub_0807204C(21, 128, 0);
             }
-            else if (gUnknown_03000B80 == 5)
+            else if (gLevelType == 5)
             {
                 sub_080720AC();
                 sub_0807204C(65, 128, 0);
@@ -390,10 +390,190 @@ void sub_08007544(void)
             gLevelEndTimer = 240;
         else if (gNextLevelInLevelTable.levelType & 1)
             gLevelEndTimer = 30;
-        else if (gUnknown_03000B80 == 5)
+        else if (gLevelType == 5)
             gLevelEndTimer = 269;
         else
             gLevelEndTimer = 150;
     }
     sub_08006D44();
+}
+
+void level_play_main(void) {
+    u32 var1;
+    u8 modeNext;
+    u32 var3;
+    
+    sub_08029C20();
+    sub_080331FC();
+    sub_08038414(gUnknown_030012E8, gUnknown_030012E0);
+    sub_08039C44();
+    var1 = (gUnknown_03001A1C & 0x1b08) == 0;
+    gUnknown_03001A00 = var1;
+    gUnknown_03000038 = gUnknown_03001A1C & (gUnknown_03000034 ^ gUnknown_03001A1C);
+    gUnknown_0300003C = (gUnknown_03000034 ^ gUnknown_03001A1C) & gUnknown_03000034;
+    
+    if (gLevelEndTimer < 0){
+        sub_08007544();
+    }
+    else if (0 < gLevelEndTimer) {
+        gLevelEndTimer--;
+    }
+    else if (((gUnknown_03000B68 & 2) != 0) && ((gNextLevelInLevelTable.levelType & 4) == 0)) {
+        gNextLevelID++;
+        change_main_state(0xC, 1);
+    }
+    else if ((gNextLevelInLevelTable.levelType & 2) != 0) {
+        gUnknown_030009D8++;
+        if (0x3C < gUnknown_030009D8) {
+            if (gLevelType == 0x0) {
+                if ((gCurrentWorld == 0x5) && (sub_080148F0(2) == 0)) {
+                    sub_080148A4(2, 1);
+                }
+            }
+            else if (((gLevelType == 0x1) && (gCurrentWorld == 0x5)) && (sub_080148F0(0x10) == 0)) {
+                sub_080148A4(0x10, 1);
+            }
+            change_main_state(0x14, 1);
+            gUnknown_030019A0 |= (gNextLevelInLevelTable.levelType & 0xF) | 0x80 << 0x15 | (gNextLevelInLevelTable.unk12 << 0x8);
+            gNextLevelID++;
+            gUnknown_03000BD0 = 0x0;
+            
+            if ((gNextLevelInLevelTable.levelType & 4) != 0) {
+                if (gCurrentWorld > 0x4) {
+                    gCurrentWorld = 0x0;
+                }
+                else {
+                    gCurrentWorld++;
+                }
+                gNextLevelID = 0x0;
+            }
+            
+        }  
+    }
+    else if ((gNextLevelInLevelTable.levelType & 1) != 0) {
+        change_main_state(0x15, 1);
+        gUnknown_030019A0 |= (gNextLevelInLevelTable.levelType & 0xF) | 0x80 << 0x15 | (gNextLevelInLevelTable.unk12 << 0x8);
+        gNextLevelID++;
+        gUnknown_03000BD0 = 0x0;
+    }
+    else if (gLevelType == 4) {
+        sub_080149F8(gLivesCount);
+        sub_08010534(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10, &gLevelCollectableFlags.redPresent);
+        sub_08010BE0(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10);
+        if (sub_080148F0(8) == 0) {
+            sub_080148A4(8,1);
+        }
+        if (sub_080148F0(4) == 0) {
+            sub_080148A4(4,1);
+        }
+        gLevelType = 0x1;
+        gCurrentWorld = gNextLevelID = 0x00;
+        gUnknown_03000BD0 = 0x00;
+        movie_player_setup_data(3, 0x3e, 1, 8);
+        change_main_state(0x1E, 1);
+    }
+    else if (gLevelType == '\x05') {
+        sub_080149F8(gLivesCount);
+        sub_08010BE0(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10);
+        sub_08010534(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10, &gLevelCollectableFlags.redPresent);
+        if (sub_080148F0(0x20) == 0) {
+            sub_080148A4(0x20, 1);
+        }
+        if (sub_080148F0(0x40) == 0) {
+            sub_080148A4(0x40, 1);
+        }
+        gLevelType = 0x00;
+        gCurrentWorld = gNextLevelID = 0x00;
+        gUnknown_03000BD0 = 0x01;
+        movie_player_setup_data(3, 0x2e, 1, 6);
+        change_main_state(0x1E, 1);
+    } else if (gLevelType == 0x1) {
+        gNextLevelID++;
+        gUnknown_03000BD0 = 0;
+        if ((gNextLevelInLevelTable.levelType & 4) != 0) {
+            if (gCurrentWorld > 0x4) {
+                gCurrentWorld = 0;
+            }
+            else {
+                gCurrentWorld++;
+            }
+            gNextLevelID = 0;
+            change_main_state(0x14, 1);
+        } else {
+            change_main_state(0x15, 1);
+        }
+    }
+    else if (((gLevelType == 2) || gLevelType == 3) || (gLevelEWorldFlag != 0)) {
+        change_main_state(0x15, 1);
+    }
+    else if ((gNextLevelInLevelTable.levelType & 8) != 0) {
+        if ((gNextLevelInLevelTable.levelType & 0x14) == 0x14) {
+            change_main_state(0x14, 1);
+            gNextLevelID++;
+        } else {
+            change_main_state(0x15, 1);
+            gNextLevelID++;
+            gUnknown_03000BD0 = 0;
+            if ((gNextLevelInLevelTable.levelType & 4) != 0) {
+                gCurrentWorld++;
+                gNextLevelID = 0;
+            }
+        }
+    }
+    else {
+        gNextLevelID++;
+        gUnknown_03000BD0 = 0;
+        if ((gNextLevelInLevelTable.levelType & 4) != 0) {
+            gCurrentWorld++;
+            gNextLevelID = 0;
+        }
+        gUnknown_03000BB8 = gCurrentEnemyScore;
+        gPreviousPresentScore = gCurrentPresentScore;
+        gCurrentEnemyScore = 0;
+        gUnknown_03000B44 = gGeneralTimer;
+        CpuSet(&gLevelCollectableFlags.redPresent,&gUnknown_030009E4,2);
+        change_main_state(0xc, 1);
+        
+    }
+    
+    gUnknown_03000034 = gUnknown_03001A1C;
+    if (gUnknown_03001A00 != 0x0) {
+        sub_0802C540();
+        if ((gUnknown_030009D0 & 0x18) != 0) {
+            sub_0802C9D8();
+        }
+        sub_0802BAA0();
+        sub_0802CF78();
+        sub_08030F50();
+        if (gLevelTimerOnOffFlag != 0x0) {
+            sub_080315A4();
+        }
+    }
+    sub_08031C1C();
+    gNextLevelInLevelTable.unkC();
+    
+    if (gNextLevelInLevelTable.unk12 == 2) {
+        sub_0802BEA4(gUnknown_03001A00);
+    }
+    else if (var1) {
+        sub_0802BE50();
+    }
+    if (gUnknown_03001A00 != 0x0) {
+        sub_0801B310();
+    }
+    if (gLevelEndTimer < 0) {
+        if ((((gUnknown_030012E8 == 8) && (0 < gGeneralTimer)) && (gUnknown_03000B5C == 0x0)) &&
+        (((gUnknown_03001A1C & 0x2000) != 0 && ((gUnknown_030019A0 & 0x20000000) == 0)))) {
+            change_main_state(0x10, 0);
+            sub_08071C24();
+            sub_08071990(0x18, 8, 0x10, 0x40, 0, 0x80, 0);
+        }
+        if ((((gUnknown_03001A1C & 0x800) == 0) && ((gUnknown_03001938 & 1) == 0)) &&
+        ((gUnknown_03001938 & 0x50fe) != 0)) {
+            gUnknown_03001938 = gUnknown_03001938 | 1;
+            change_main_state(0x11, 0);
+            sub_08071C24();
+            sub_08071990(0x18, 8, 0x10, 0x40, 0, 0x80, 0);
+        }
+    }
 }

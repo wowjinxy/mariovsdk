@@ -34,7 +34,7 @@ void sub_08033024(void)
 {
     if (gUnknown_030012E8 == 8 || gUnknown_030012E8 == 2)
     {
-        sub_080070E8(MAIN_STATE_UKNOWN_12, USE_FADE);
+        change_main_state(MAIN_STATE_UKNOWN_12, USE_FADE);
         gUnknown_030012F8 = 0;
         gUnknown_030012E0 = 0;
         gUnknown_030012E8 = 0;
@@ -50,7 +50,7 @@ void sub_08033024(void)
             gUnknown_030012E0 = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 1];
             if ((gUnknown_030012E0 & 0x200) && (gUnknown_030012E8 & 0x40))
             {
-                sub_080070E8(MAIN_STATE_UNKNOWN_18, NO_FADE);
+                change_main_state(MAIN_STATE_UNKNOWN_18, NO_FADE);
                 gUnknown_030012F8 = 0;
                 gUnknown_030012E0 = 0;
                 gUnknown_030012E8 = 0;
@@ -72,7 +72,7 @@ void sub_08033024(void)
         }
         else
         {
-            sub_080070E8(MAIN_STATE_TUTORIAL_SETUP, NO_FADE);
+            change_main_state(MAIN_STATE_TUTORIAL_SETUP, NO_FADE);
             gUnknown_030012F8 = 0;
             gUnknown_030012E0 = 0;
             gUnknown_030012E8 = 0;
@@ -84,7 +84,7 @@ void sub_08033148(void)
 {
     if (gUnknown_030012E8 == 8 || gUnknown_030012E8 == 2)
     {
-        sub_080070E8(MAIN_STATE_TITLE_SCREEN, USE_FADE);
+        change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
         gUnknown_030012F8 = 0;
         gUnknown_030012E0 = 0;
         gUnknown_030012E8 = 0;
@@ -102,7 +102,7 @@ void sub_08033148(void)
         }
         else
         {
-            sub_080070E8(MAIN_STATE_TITLE_SCREEN, USE_FADE);
+            change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
             gUnknown_030012F8 = 0;
             gUnknown_030012E0 = 0;
             gUnknown_030012E8 = 0;
@@ -114,7 +114,7 @@ void sub_08033148(void)
 // possibly sub_08034154
 static inline u16 inline_1(void)
 {
-    if (gUnknown_03000B80 == 5)
+    if (gLevelType == 5)
         return sub_0806C2C4();
     else
         return 0;
@@ -126,9 +126,9 @@ static inline bool32 inline_2(void)
     if ((gUnknown_030012E0 & START_BUTTON) &&  (gUnknown_030012E0 & SELECT_BUTTON) && (gUnknown_030012E0 & A_BUTTON) && (gUnknown_030012E0 & B_BUTTON)
      && gMainState != MAIN_STATE_TITLE_SCREEN && gMainState != MAIN_STATE_INIT)
     {
-        sub_080070E8(MAIN_STATE_TITLE_SCREEN, USE_FADE);
-        gUnknown_03000B80 = 0;
-        gAfterTutorialWorld = 0;
+        change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
+        gLevelType = 0;
+        gCurrentWorld = 0;
         gNextLevelID = 0;
         gLevelEWorldFlag = 0;
         sub_080720AC();

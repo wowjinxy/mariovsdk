@@ -21,7 +21,7 @@ sub_0801BAD8: @ 0x0801BAD8
 	bne _0801BB10
 	mov r0, #14
 	mov r1, #0
-	bl sub_080070E8
+	bl change_main_state
 	b _0801BB34
 	.byte 0x00
 	.byte 0x00
@@ -32,7 +32,7 @@ _0801BB08:
 _0801BB0C:
 	.4byte 0x03000BF4
 _0801BB10:
-	ldr r0, _0801BB28  @ =gUnknown_03000B80
+	ldr r0, _0801BB28  @ =gLevelType
 	ldrb r0, [r0]
 	sub r0, r0, #2
 	lsl r0, r0, #24
@@ -41,14 +41,14 @@ _0801BB10:
 	bhi _0801BB2C
 	mov r0, #9
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 	b _0801BB34
 _0801BB28:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0801BB2C:
 	mov r0, #8
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 _0801BB34:
 	ldr r1, _0801BB40  @ =gUnknown_030000B6
 	ldrh r0, [r1]
@@ -172,7 +172,7 @@ _0801BBEC:
 	bl sub_080720AC
 	mov r0, #14
 	mov r1, #0
-	bl sub_080070E8
+	bl change_main_state
 	b _0801BE1C
 	.byte 0x00
 	.byte 0x00
@@ -232,7 +232,7 @@ _0801BC6C:
 	str r0, [r3]
 	mov r0, #20
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 	ldr r0, _0801BCB0  @ =gUnknown_03000BD0
 	str r5, [r0]
 _0801BC96:
@@ -270,7 +270,7 @@ _0801BCB4:
 	ldr r0, [r3]
 	orr r0, r0, r2
 	str r0, [r3]
-	ldr r0, _0801BD48  @ =gUnknown_03000B80
+	ldr r0, _0801BD48  @ =gLevelType
 	mov r1, #0
 	ldrsb r1, [r0, r1]
 	add r7, r0, #0
@@ -284,7 +284,7 @@ _0801BCB4:
 _0801BCEE:
 	mov r0, #0
 	ldrsb r0, [r7, r0]
-	ldr r1, _0801BD4C  @ =gAfterTutorialWorld
+	ldr r1, _0801BD4C  @ =gCurrentWorld
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
@@ -328,16 +328,16 @@ _0801BD40:
 _0801BD44:
 	.4byte gNextLevelInLevelTable
 _0801BD48:
-	.4byte gUnknown_03000B80
+	.4byte gLevelType
 _0801BD4C:
-	.4byte gAfterTutorialWorld
+	.4byte gCurrentWorld
 _0801BD50:
 	.4byte gLevelEWorldFlag
 _0801BD54:
 	mov r0, #8
 _0801BD56:
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 	b _0801BCA2
 _0801BD5E:
 	str r4, [sp]
@@ -395,7 +395,7 @@ _0801BDAC:
 	str r0, [r3]
 	mov r0, #20
 	mov r1, #1
-	bl sub_080070E8
+	bl change_main_state
 	ldr r1, _0801BDE4  @ =gUnknown_03000BD0
 	mov r0, #1
 	str r0, [r1]
@@ -431,7 +431,7 @@ _0801BE04:
 	bl sub_08071990
 	mov r0, #19
 	mov r1, #0
-	bl sub_080070E8
+	bl change_main_state
 	bl sub_08072118
 _0801BE1C:
 	ldr r0, _0801BE30  @ =gUnknown_030000B4

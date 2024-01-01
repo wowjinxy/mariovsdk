@@ -397,7 +397,7 @@ extern u32 gPreviousPresentScore;
 extern u32 gCurrentPresentScore;
 extern u8 gUnknown_03000B50;
 extern s32 gGeneralTimer;
-extern s8 gAfterTutorialWorld;
+extern s8 gCurrentWorld;
 extern u8 gUnknown_03000B5C;
 extern u8 gUnknown_03000B60;
 extern s8 gUnknown_03000B64;
@@ -406,7 +406,7 @@ extern u32 gCurrentEnemyScore;
 extern u32 gUnknown_03000B70;
 extern s8 gNextLevelID;
 extern u8 gUnknown_03000B78;
-extern s8 gUnknown_03000B80;
+extern s8 gLevelType;
 extern struct UnknownStruct4 gNextLevelInLevelTable;
 extern s8 gLevelEWorldFlag;
 extern u32 gUnknown_03000BB8;
@@ -585,6 +585,7 @@ struct worldTableStruct gUnknown_0807C028[0];
 struct worldTableStruct gUnknown_08B2CA5C[0];
 struct worldTableStruct gUnknown_0807C0E0[0];
 struct worldTableStruct gUnknown_08B2D378[0];
+u8 gUnknown_08B2CFC8[0];
 
 u8 gUnknown_0807C0D8;
 
@@ -603,11 +604,11 @@ void sub_080064D4();
 int sub_080066FC(u32 *, int, int, int);
 struct UnknownStruct15 *sub_08006968();
 void sub_08006D44(void);
-void sub_080070E8(s32, s32);
+void change_main_state(s32, s32);
 void sub_08007170(void);
 void sub_08008238(void);
 void sub_0800EE70(void);
-void sub_0800F744();
+void title_demo_setup(u32 titleDemoID);
 void sub_08011428();
 void sub_08014A58();
 void sub_0801500C();
@@ -725,7 +726,6 @@ void sub_080720E4();
 
 void sub_0800CC6C();
 void sub_08041F70();
-u8 _call_via_r0(u32);
 u8 sub_0800C5A4();
 u8 sub_08072118();
 u8 sub_0802BEA4(u8);
@@ -741,4 +741,19 @@ void sub_08008330();
 void sub_08008600();
 void sub_080086A4();
 
+
+void sub_08039C44();
+void sub_08038414(u16, u16);
+void sub_08007544();
+void sub_080149F8(u32);
+void sub_08010534(u32, u32, u8*);
+void sub_08010BE0(u32, u32);
+
+void sub_0802BAA0();
+void sub_0802CF78();
+void sub_08030F50();
+void sub_0802C540();
+void sub_0802C9D8();
+void sub_080315A4();
+void sub_08031C1C();
 #endif  // GUARD_GLOBAL_H

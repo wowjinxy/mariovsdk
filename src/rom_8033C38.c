@@ -312,7 +312,7 @@ void sub_0803413C(void)
 // probably an inline function
 u16 sub_08034154(void)
 {
-    if (gUnknown_03000B80 == 5)
+    if (gLevelType == 5)
         return sub_0806C2C4();
     else
         return 0;
@@ -324,9 +324,9 @@ bool32 sub_08034178(void)
     if ((gUnknown_030012E0 & START_BUTTON) &&  (gUnknown_030012E0 & SELECT_BUTTON) && (gUnknown_030012E0 & A_BUTTON) && (gUnknown_030012E0 & B_BUTTON)
      && gMainState != MAIN_STATE_TITLE_SCREEN && gMainState != MAIN_STATE_INIT)
     {
-        sub_080070E8(MAIN_STATE_TITLE_SCREEN, USE_FADE);
-        gUnknown_03000B80 = 0;
-        gAfterTutorialWorld = 0;
+        change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
+        gLevelType = 0;
+        gCurrentWorld = 0;
         gNextLevelID = 0;
         gLevelEWorldFlag = 0;
         sub_080720AC();
@@ -942,11 +942,11 @@ void goto_credits_init_callback(void)
     u8 arr[16];  // Needed to match. Probably some unused variable
     
     sub_08034898(0);
-    if (gUnknown_03000B80 == 1)
+    if (gLevelType == 1)
         movie_player_setup_data(3, 61, MAIN_STATE_LEVEL_SELECT, MOVIE_CREDITS_1); // ??, Song ID, Mode after movie finishes, Movie ID
     else
         movie_player_setup_data(3, 47, MAIN_STATE_TITLE_SCREEN, MOVIE_CREDITS_2);
-    sub_080070E8(MAIN_STATE_MOVIE, USE_FADE);
+    change_main_state(MAIN_STATE_MOVIE, USE_FADE);
 }
 
 void goto_credits_main(void)
