@@ -7452,7 +7452,7 @@ _08005204:
 	add r0, r1, r0
 	str r0, [r3]
 	ldr r1, _0800525C  @ =REG_BG1CNT
-	ldr r0, _08005260  @ =0x03000A0C
+	ldr r0, _08005260  @ =gUnknown_03000A0C
 	ldrh r0, [r0]
 	strh r0, [r1]
 	b _0800526E
@@ -7471,7 +7471,7 @@ _08005258:
 _0800525C:
 	.4byte REG_BG1CNT
 _08005260:
-	.4byte 0x03000A0C
+	.4byte gUnknown_03000A0C
 _08005264:
 	ldr r2, _080052E8  @ =REG_BG1CNT
 	ldrh r1, [r2]

@@ -254,13 +254,13 @@ _080329DC:
 	lsl r0, r0, #3
 	add r0, r0, r8
 	ldr r5, [r0]
-	ldr r3, _08032A88  @ =0x03000E80
+	ldr r3, _08032A88  @ =gUnknown_03000E80
 	lsl r1, r1, #2
 	add r2, r2, #64
 	add r1, r2, r1
 	ldr r0, [r1]
 	str r0, [r3]
-	ldr r1, _08032A8C  @ =0x03000E90
+	ldr r1, _08032A8C  @ =gUnknown_03000E90
 	ldrb r0, [r4]
 	sub r0, r0, #1
 	lsl r0, r0, #2
@@ -319,9 +319,9 @@ _08032A80:
 _08032A84:
 	.4byte 0x03000E70
 _08032A88:
-	.4byte 0x03000E80
+	.4byte gUnknown_03000E80
 _08032A8C:
-	.4byte 0x03000E90
+	.4byte gUnknown_03000E90
 _08032A90:
 	.4byte gUnknown_03000E60
 _08032A94:

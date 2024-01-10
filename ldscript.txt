@@ -12,9 +12,8 @@ SECTIONS
 		asm/rom_80067F0.o(.text);
 		src/main.o(.text);
 		src/rom1.o(.text);
-		asm/rom_8007B58.o(.text);
-		src/rom_8008238.o(.text);
-		asm/rom_80088F0.o(.text);
+		src/rom_80088F0.o(.text);
+		asm/rom_8008DA0.o(.text);
 		src/rom_800EEC0.o(.text);
 		asm/rom_800F070.o(.text);
 		src/rom_800F1E4.o(.text);
@@ -28,6 +27,7 @@ SECTIONS
 		src/movie_player.o(.text);
 		asm/rom_802D614.o(.text);
 		asm/eCard.o(.text);
+		src/eCard.o(.text);
 		src/level_view.o(.text);
 		src/rom_8032408.o(.text);
 		asm/rom_8032814.o(.text);
@@ -98,6 +98,10 @@ SECTIONS
 		. = 0xB6;		gUnknown_030000B6 = .;
 		. = 0x100;		gPreviousMovieOption = .;
 		. = 0x1A0;		gMoviePlayerParams = .;
+		. = 0x1C4;		gUnknown_030001C4 = .;
+		. = 0x288; 		gUnknown_03000288 = .;
+		. = 0x28C; 		gUnknown_0300028C = .;
+		. = 0x290;		gUnknown_03000290 = .;
 		. = 0x29C;		gUnknown_0300029C = .;
 		. = 0x2A0;		gUnknown_030002A0 = .;
 		. = 0x2AA;		gUnknown_030002AA = .;
@@ -146,8 +150,11 @@ SECTIONS
 		. = 0x9E4;		gUnknown_030009E4 = .;
 		. = 0x9E8;		gLevelTimerOnOffFlag = .;
 		. = 0x9EC;		gUnknown_030009EC = .;
+		. = 0x9FC;		gUnknown_030009FC = .;
 		. = 0xA00;		gUnknown_03000A00 = .;
+		. = 0xA0C;		gUnknown_03000A0C = .;
 		. = 0xA10;		gUnknown_03000A10 = .;
+		. = 0xA9E; 		gUnknown_03000A9E = .;
 		. = 0xB44;		gUnknown_03000B44 = .;
 		. = 0xB48;		gPreviousPresentScore = .;
 		. = 0xB4C;		gCurrentPresentScore = .;
@@ -181,12 +188,15 @@ SECTIONS
 		. = 0xC04;		gUnknown_03000C04 = .;
 		. = 0xC0C;		gUnknown_03000C0C = .;
 		. = 0xC28;		gUnknown_03000C28 = .;
+		. = 0xD20;		gCurrentPalette = .;
 		. = 0xD38;		gUnknown_03000D38 = .;
 		. = 0xD60;		gUnknown_03000D60 = .;
 		. = 0xD64;		gUnknown_03000D64 = .;
 		. = 0xDCC;		gUnknown_03000DCC = .;
 		. = 0xE60;		gUnknown_03000E60 = .;
 		. = 0xE70;		gUnknown_03000E70 = .;
+		. = 0xE80;		gUnknown_03000E80 = .;
+		. = 0xE90;		gUnknown_03000E90 = .;
 		. = 0xEA0;		gOamData = .;
 		. = 0x12A0;		gCameraHorizontalOffset = .;
 		. = 0x12A4;		gBGHorizontalOffset = .;
@@ -245,12 +255,13 @@ SECTIONS
 		. = 0x1A3C;		gUnknown_03001A3C = .;
 		. = 0x1A4C;		gUnknown_03001A4C = .;
 		. = 0x1B30;		gUnknown_03001B30 = .;
-		
+
 		. = 0x1B80;		gUnknown_03001B80 = .;
 		. = 0x1B84;		gUnknown_03001B84 = .;
 		. = 0x1B88;		gUnknown_03001B88 = .;
 		. = 0x1B8C;		gUnknown_03001B8C = .;
 		. = 0x1B90;		gUnknown_03001B90 = .;
+		. = 0X1B98;		gUnknown_03001B98 = .;
 		. = 0x1BA0;		gUnknown_03001BA0 = .;
 		. = 0x1BA4;		gUnknown_03001BA4 = .;
 		. = 0x1BB0;		gUnknown_03001BB0 = .;

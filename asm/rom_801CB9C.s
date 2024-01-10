@@ -30119,7 +30119,7 @@ _0802AD38:
 	ldr r0, _0802AD5C  @ =0x00007FFF
 	and r0, r0, r1
 	strh r0, [r2]
-	ldr r1, _0802AD60  @ =0x03001B98
+	ldr r1, _0802AD60  @ =gUnknown_03001B98 
 	mov r0, #1
 	strb r0, [r1]
 	ldr r0, _0802AD64  @ =gMainState
@@ -30133,7 +30133,7 @@ _0802AD38:
 _0802AD5C:
 	.4byte 0x00007FFF
 _0802AD60:
-	.4byte 0x03001B98
+	.4byte gUnknown_03001B98 
 _0802AD64:
 	.4byte gMainState
 _0802AD68:

@@ -96,6 +96,9 @@ gUnknown_08076404:
 gUnknown_08076800:
 	.ASCII "ERASE\nLEVEL e-\0\0"
 	.ASCII "Press A Button to ERASE LEVEL\0\0\0"
+
+	.GLOBAL gUnknown_08076830
+gUnknown_08076830:
 	.ASCII "Press A Button to ADD LEVEL\0"
 	
 	.GLOBAL gUnknown_0807684C
@@ -1277,7 +1280,8 @@ gUnknown_0807CA40:
 
 	.GLOBAL gUnknown_0807CA88
 gUnknown_0807CA88:
-	.INCBIN "baserom.gba", 0x7CA88, 0x7CA90-0x7CA88
+	.4byte gUnknown_08076830
+	.4byte 0x08076810
 
 	.GLOBAL gUnknown_0807CA90
 gUnknown_0807CA90:
@@ -1285,11 +1289,11 @@ gUnknown_0807CA90:
 
 	.GLOBAL gUnknown_0807CA94
 gUnknown_0807CA94:
-	.INCBIN "baserom.gba", 0x7CA94, 0x7CA98-0x7CA94
+	.4byte 0x02012C00
 
 	.GLOBAL gUnknown_0807CA98
 gUnknown_0807CA98:
-	.INCBIN "baserom.gba", 0x7CA98, 0x7CA9C-0x7CA98
+	.4byte 0x0201BC68
 
 	.GLOBAL gPreloadedCardETable
 gPreloadedCardETable:

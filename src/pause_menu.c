@@ -1,14 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
 
-void sub_080331FC(void);
-s8 sub_0801BAD8(void);
-void sub_0800F02C();
-void sub_0800F060();
-void sub_0800F070();
-void sub_0800CC6C(void);
-void level_play_loop(void);
-
 void pause_menu_init_callback(void) 
 {
   gUnknown_030000B4 = 0;
@@ -48,8 +40,6 @@ void pause_menu_end(void)
 {
     sub_0800F060();
 }
-
-asm(".short 0x0000"); // padding
 
 // inlined code below -- seems to be from the game being compiled with -O3, is just in here to match until this can build with -O3
 

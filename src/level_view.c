@@ -19,7 +19,7 @@ void level_view_main(void) {
          gUnknown_03001A38 = sub_0800EF8C();
         if (gUnknown_03001A38 == 0x0) {
            sub_08072118();
-            change_main_state(0x13, 0);
+            change_main_state(MAIN_STATE_UNKNOWN_19, NO_FADE);
         }
     }
     gNextLevelInLevelTable.unkC();

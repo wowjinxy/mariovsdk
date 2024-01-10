@@ -22,13 +22,14 @@ CFILES   := \
 	src/rom_80066FC.c \
 	src/main.c \
 	src/rom1.c \
-	src/rom_8008238.c \
+	src/rom_80088F0.c \
 	src/rom_800EEC0.c \
 	src/rom_800F1E4.c \
 	src/title.c \
 	src/intro.c \
 	src/pause_menu.c \
 	src/movie_player.c \
+	src/eCard.c \
 	src/rom_8032408.c \
 	src/level_view.c \
 	src/rom_8032FB0.c \
@@ -44,8 +45,7 @@ SFILES   := \
 	asm/rom_800023C.s \
 	asm/rom_8001BA4.s \
 	asm/rom_80067F0.s \
-	asm/rom_8007B58.s \
-	asm/rom_80088F0.s \
+	asm/rom_8008DA0.s \
 	asm/rom_800F070.s \
 	asm/rom_800F6EC.s \
 	asm/rom_801BAD8.s \

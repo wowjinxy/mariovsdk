@@ -326,6 +326,15 @@ struct worldTableStruct {
     struct worldTableStruct_unk_size_c *unk4;
 };
 
+struct iwRAMBase {
+u32 base[0];
+};
+
+struct struct_0807820C {
+    u8 bigpad[0x800c];
+    u16 unk800C[0x2000];
+    u32 unkC00C;
+};
 
 //------------------------------------------------------------------------------
 // Variables
@@ -571,7 +580,8 @@ extern const u8 gUnknown_08B37424[];
 extern const s16 gUnknown_0807C118[][2];
 extern unkst24 gUnknown_0812E128[1]; 
 
-u8 gUnknown_03000EA0[30];
+extern u8 gUnknown_03000EA0[30];
+extern u8 gUnknown_03000EA0[30];
 extern u8 gUnknown_082E8908[];
 extern u8 gUnknown_082E8900[];
 
@@ -585,9 +595,26 @@ struct worldTableStruct gUnknown_0807C028[0];
 struct worldTableStruct gUnknown_08B2CA5C[0];
 struct worldTableStruct gUnknown_0807C0E0[0];
 struct worldTableStruct gUnknown_08B2D378[0];
-u8 gUnknown_08B2CFC8[0];
+extern u8 gUnknown_08B2CFC8[0];
 
-u8 gUnknown_0807C0D8;
+extern u8 gUnknown_0807C0D8;
+
+extern u8 gUnknown_03001B98;
+extern u16 gUnknown_03000A0C;
+extern u8 gUnknown_030009FC;
+
+extern const struct iwRAMBase *gUnknown_0807CA98;
+
+extern struct UnknownStruct16 gEWorldMenuData1;
+u32 gUnknown_03000288;
+u32 gUnknown_0300028C;
+u8 gUnknown_03000290;
+
+extern struct struct_0807820C *gUnknown_0807820C;
+u32 gMainState;
+
+u16 *gUnknown_03000E90;
+u16 *gUnknown_03000E80;
 
 //------------------------------------------------------------------------------
 // Functions
@@ -756,4 +783,41 @@ void sub_0802C540();
 void sub_0802C9D8();
 void sub_080315A4();
 void sub_08031C1C();
+
+s8 sub_0801BAD8(void);
+void sub_0800F02C();
+void sub_0800F070();
+void sub_0800F6EC();
+void sub_0802EDAC();
+void sub_08040D50();
+void sub_0802B998();
+void sub_080069BC();
+void sub_08032C44();
+void sub_080041B8();
+void sub_080072A4();
+void level_demo_reset_init_callback();
+void level_editor_init_callback();
+void sub_08071BE0();
+void sub_08071C00();
+void sub_08033F80(s16, s16);
+void sub_08071C6C();
+void sub_08008CE4();
+void sub_080069E8();
+void sub_080040D8();
+void sub_0800EF0C();
+void sub_08004FBC();
+void sub_08005FA0();
+u32 sub_08006A34();
+void sub_080107E8();
+void e_world_init_callback();
+u32 sub_0802A458();
+void sub_0802F06C();
+void sub_080062D0();
+void sub_08006A00();
+void sub_0801B4BC();
+void sub_08031AD4();
+void sub_0802BA38();
+void sub_0801B4BC();
+void sub_0803D248();
+
 #endif  // GUARD_GLOBAL_H

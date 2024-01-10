@@ -7,7 +7,7 @@ struct Struct2004000
     u16 unkC[0];
 };
 
-extern u8 *const gUnknown_0807820C;
+
 
 int sub_080066FC(u32 *a, int b, int c, int d)
 {

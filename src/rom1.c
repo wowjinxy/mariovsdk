@@ -143,7 +143,7 @@ void level_demo_reset_init_callback(void)
         sub_0807204C(11, 128, 1);
 }
 
-void sub_08007544(void)
+void sub_08007544()
 {
     bool32 r7 = FALSE;
     s32 *r3 = &gGeneralTimer;
@@ -420,7 +420,7 @@ void level_play_main(void) {
     }
     else if (((gUnknown_03000B68 & 2) != 0) && ((gNextLevelInLevelTable.levelType & 4) == 0)) {
         gNextLevelID++;
-        change_main_state(0xC, 1);
+        change_main_state(MAIN_STATE_UKNOWN_12, USE_FADE);
     }
     else if ((gNextLevelInLevelTable.levelType & 2) != 0) {
         gUnknown_030009D8++;
@@ -433,7 +433,7 @@ void level_play_main(void) {
             else if (((gLevelType == 0x1) && (gCurrentWorld == 0x5)) && (sub_080148F0(0x10) == 0)) {
                 sub_080148A4(0x10, 1);
             }
-            change_main_state(0x14, 1);
+            change_main_state(MAIN_STATE_CLEAR_GAMEOVER, USE_FADE);
             gUnknown_030019A0 |= (gNextLevelInLevelTable.levelType & 0xF) | 0x80 << 0x15 | (gNextLevelInLevelTable.unk12 << 0x8);
             gNextLevelID++;
             gUnknown_03000BD0 = 0x0;
@@ -451,7 +451,7 @@ void level_play_main(void) {
         }  
     }
     else if ((gNextLevelInLevelTable.levelType & 1) != 0) {
-        change_main_state(0x15, 1);
+        change_main_state(MAIN_STATE_LEVEL_RESULTS, USE_FADE);
         gUnknown_030019A0 |= (gNextLevelInLevelTable.levelType & 0xF) | 0x80 << 0x15 | (gNextLevelInLevelTable.unk12 << 0x8);
         gNextLevelID++;
         gUnknown_03000BD0 = 0x0;
@@ -470,7 +470,7 @@ void level_play_main(void) {
         gCurrentWorld = gNextLevelID = 0x00;
         gUnknown_03000BD0 = 0x00;
         movie_player_setup_data(3, 0x3e, 1, 8);
-        change_main_state(0x1E, 1);
+        change_main_state(MAIN_STATE_MOVIE, USE_FADE);
     }
     else if (gLevelType == '\x05') {
         sub_080149F8(gLivesCount);
@@ -486,7 +486,7 @@ void level_play_main(void) {
         gCurrentWorld = gNextLevelID = 0x00;
         gUnknown_03000BD0 = 0x01;
         movie_player_setup_data(3, 0x2e, 1, 6);
-        change_main_state(0x1E, 1);
+        change_main_state(MAIN_STATE_MOVIE, USE_FADE);
     } else if (gLevelType == 0x1) {
         gNextLevelID++;
         gUnknown_03000BD0 = 0;
@@ -498,20 +498,20 @@ void level_play_main(void) {
                 gCurrentWorld++;
             }
             gNextLevelID = 0;
-            change_main_state(0x14, 1);
+            change_main_state(MAIN_STATE_CLEAR_GAMEOVER, USE_FADE);
         } else {
-            change_main_state(0x15, 1);
+            change_main_state(MAIN_STATE_LEVEL_RESULTS, USE_FADE);
         }
     }
     else if (((gLevelType == 2) || gLevelType == 3) || (gLevelEWorldFlag != 0)) {
-        change_main_state(0x15, 1);
+        change_main_state(MAIN_STATE_LEVEL_RESULTS, USE_FADE);
     }
     else if ((gNextLevelInLevelTable.levelType & 8) != 0) {
         if ((gNextLevelInLevelTable.levelType & 0x14) == 0x14) {
-            change_main_state(0x14, 1);
+            change_main_state(MAIN_STATE_CLEAR_GAMEOVER, USE_FADE);
             gNextLevelID++;
         } else {
-            change_main_state(0x15, 1);
+            change_main_state(MAIN_STATE_LEVEL_RESULTS, USE_FADE);
             gNextLevelID++;
             gUnknown_03000BD0 = 0;
             if ((gNextLevelInLevelTable.levelType & 4) != 0) {
@@ -532,7 +532,7 @@ void level_play_main(void) {
         gCurrentEnemyScore = 0;
         gUnknown_03000B44 = gGeneralTimer;
         CpuSet(&gLevelCollectableFlags.redPresent,&gUnknown_030009E4,2);
-        change_main_state(0xc, 1);
+        change_main_state(MAIN_STATE_UKNOWN_12, USE_FADE);
         
     }
     
@@ -564,16 +564,324 @@ void level_play_main(void) {
     if (gLevelEndTimer < 0) {
         if ((((gUnknown_030012E8 == 8) && (0 < gGeneralTimer)) && (gUnknown_03000B5C == 0x0)) &&
         (((gUnknown_03001A1C & 0x2000) != 0 && ((gUnknown_030019A0 & 0x20000000) == 0)))) {
-            change_main_state(0x10, 0);
+            change_main_state(MAIN_STATE_PAUSE, NO_FADE);
             sub_08071C24();
             sub_08071990(0x18, 8, 0x10, 0x40, 0, 0x80, 0);
         }
         if ((((gUnknown_03001A1C & 0x800) == 0) && ((gUnknown_03001938 & 1) == 0)) &&
         ((gUnknown_03001938 & 0x50fe) != 0)) {
             gUnknown_03001938 = gUnknown_03001938 | 1;
-            change_main_state(0x11, 0);
+            change_main_state(MAIN_STATE_HELP, NO_FADE);
             sub_08071C24();
             sub_08071990(0x18, 8, 0x10, 0x40, 0, 0x80, 0);
         }
     }
+}
+
+void level_demo_main(void) {
+
+    u8 bVar1;
+
+    sub_08029C20();
+    sub_080331FC();
+    if (0 == (gUnknown_03001938 & 0x800) != 0) {
+        sub_08038414(gUnknown_030012E8, gUnknown_030012E0);
+        sub_08039C44();
+        if (gNextMainState == 0x21) {
+            return;
+        }
+    }
+
+    bVar1 = 0;
+    if ((gUnknown_03001A1C & 0x1B00) == 0) {
+        bVar1 = 1;
+    }
+
+    gUnknown_03001A00 = bVar1;
+    gUnknown_03000038 = (gUnknown_03000034 ^ gUnknown_03001A1C) & gUnknown_03001A1C;
+    gUnknown_0300003C = (gUnknown_03000034 ^ gUnknown_03001A1C) & gUnknown_03000034;
+    if ((gUnknown_03000038 & 0x40000000) != 0) {
+        gCurrentWorld = gNextLevelID = 0;
+        change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
+    } else if (gLevelEndTimer < 0) {
+        sub_08007544(gLevelEndTimer);
+    } else if (gLevelEndTimer > 0) {
+        gLevelEndTimer--;
+    } else {
+        change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
+    }
+    gUnknown_03000034 = gUnknown_03001A1C;
+    sub_0802BAA0();
+    sub_0802CF78();
+    sub_08030F50();
+    sub_08031C1C();
+    sub_080315A4();
+    sub_0802C540();
+    if ((gUnknown_030009D0 & 0x18) != 0) {
+        sub_0802C9D8();
+    }
+    gNextLevelInLevelTable.unkC();
+    if (gNextLevelInLevelTable.unk12 == 2) {
+        sub_0802BEA4(gUnknown_03001A00);
+
+    } else if (bVar1) {
+        sub_0802BE50();
+    }
+    sub_0801B310();
+}
+
+void sub_08008238(void) {
+
+    s32 hOff = gCameraHorizontalOffset >> 1; // gCameraHorizontalOffset / 2
+    s32 vOff = gCameraVerticalOffset >> 1; // gCameraVerticalOffset / 2
+    
+    gBGLayerOffsets.bg1_x = hOff;
+    gBGLayerOffsets.bg0_x = hOff;
+    hOff += gBGHorizontalOffset;
+    // >> 8 probably fixed point?
+    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8;
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8;
+
+    gBGLayerOffsets.bg1_y = vOff;
+    gBGLayerOffsets.bg0_y = vOff;
+    vOff += gBGVerticalOffset;
+    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + gUnknown_03000E70.unk8->unkC;
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+}
+
+void sub_080082C8(void) {
+    gBGLayerOffsets.bg0_x = gUnknown_03001C04 >> 8;
+    gBGLayerOffsets.bg1_x = gUnknown_03001BE4 >> 8;
+    gBGLayerOffsets.bg2_x = gUnknown_03001BEC >> 8;
+    gBGLayerOffsets.bg3_x = gUnknown_03001C0C >> 8;
+    gBGLayerOffsets.bg0_y = gUnknown_03001C08 >> 8;
+    gBGLayerOffsets.bg1_y = gUnknown_03001C1C >> 8;
+    gBGLayerOffsets.bg2_y = gUnknown_03001C20 >> 8;
+    gBGLayerOffsets.bg3_y = gUnknown_03001BF4 >> 8;
+}
+
+void sub_08008330(void) {
+
+    s16 var1;
+    s32 var2;
+    s32 hOff = (gCameraHorizontalOffset >> 1); // gCameraHorizontalOffset / 2
+    s32 vOff = (gCameraVerticalOffset >> 1); // gCameraVerticalOffset / 2
+
+      if (gUnknown_03000D38 != 0x5a) {
+        hOff += gUnknown_0807C118[gUnknown_03000D38][0];
+        vOff += gUnknown_0807C118[gUnknown_03000D38][1];
+        gUnknown_03000D38++;
+        
+        if (gUnknown_03000D38 == 0x5a) {
+            gUnknown_030019A0 = gUnknown_030019A0 & 0xdfffffff;
+        }
+          if (hOff < 0) {
+            hOff = 0;
+        }
+        if ((hOff + 0xf0) >= gCurrentLevelWidth) {
+            hOff = gCurrentLevelWidth - 0xf0;
+        }
+        if (vOff < 0) {
+            vOff = 0;
+        }
+        if (((vOff >> 1) + 0xa0) >= gCurrentLevelHeight) {
+            vOff = gCurrentLevelHeight - 0xa0;
+        }
+    }
+    
+
+    if ((gUnknown_030009D0 & 0x18) != 0) {
+        gBGLayerOffsets.bg0_x = gSpriteHorizontalOffset - (gUnknown_03000D60 >> 8);
+        var2 = vOff - (gUnknown_03000D64 >> 8);
+        if (var2 < -0xa0) {
+            gBGLayerOffsets.bg0_y = -0xa0;
+        }
+        else {
+            gBGLayerOffsets.bg0_y = var2;
+        }
+    } else {
+        gBGLayerOffsets.bg0_x = hOff;
+        gBGLayerOffsets.bg0_y = vOff;
+    }
+    gBGLayerOffsets.bg1_x = hOff;
+    gBGLayerOffsets.bg1_y = vOff;
+
+    hOff += gBGHorizontalOffset;
+
+    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8;
+
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8;
+
+    var1 = vOff - (gUnknown_030009E0 - 0xa0);
+    if (var1 < 1) { gBGLayerOffsets.bg2_y = 0; }
+    
+    else if (var1 > 0xb0) { 
+        gBGLayerOffsets.bg2_y = 0xb0; 
+    }  
+    else {
+        gBGLayerOffsets.bg2_y = (vOff + 0xa0) - gUnknown_030009E0;
+    }
+    
+    vOff += gBGVerticalOffset;
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+}
+
+void sub_080084A4(void) {
+
+    s16 var1;
+    s32 hOff = (gCameraHorizontalOffset >> 1); // gCameraHorizontalOffset / 2
+    s32 vOff = (gCameraVerticalOffset >> 1); // gCameraVerticalOffset / 2
+
+      if (gUnknown_03000D38 != 0x5a) {
+        hOff += gUnknown_0807C118[gUnknown_03000D38][0];
+        vOff += gUnknown_0807C118[gUnknown_03000D38][1];
+        gUnknown_03000D38++;
+        
+        if (gUnknown_03000D38 == 0x5a) {
+            gUnknown_030019A0 = gUnknown_030019A0 & 0xdfffffff;
+        }
+          if (hOff < 0) {
+            hOff = 0;
+        }
+        if ((hOff + 0xf0) >= gCurrentLevelWidth) {
+            hOff = gCurrentLevelWidth - 0xf0;
+        }
+        if (vOff < 0) {
+            vOff = 0;
+        }
+        if (((vOff >> 1) + 0xa0) >= gCurrentLevelHeight) {
+            vOff = gCurrentLevelHeight - 0xa0;
+        }
+    }
+
+    gBGLayerOffsets.bg1_x = hOff;
+    gBGLayerOffsets.bg1_y = vOff;
+    hOff += gBGHorizontalOffset;
+    gBGLayerOffsets.bg0_x = ((hOff * gUnknown_03000E70.unk0->unk22) >> 8) + gUnknown_03000E70.unk0->unk8; 
+
+    
+    gBGLayerOffsets.bg2_x = (((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8) - gUnknown_03001C48; 
+    
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8; 
+
+    var1 = vOff - (gUnknown_030009E0 - 0xa0);
+    if (var1 < 1) { gBGLayerOffsets.bg0_y = 0; }
+    
+    else if (var1 > 0xa0) { 
+        gBGLayerOffsets.bg0_y = 0xa0; 
+    }  
+    else {
+        gBGLayerOffsets.bg0_y = (vOff + 0xa0) - gUnknown_030009E0;
+    }
+    
+    vOff += gBGVerticalOffset;
+    
+    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + 
+        (gUnknown_03000E70.unk8->unkC - 0x38) + gUnknown_03001C40; 
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+}
+
+void sub_08008600(void) {
+	
+    s32 hOff = (gCameraHorizontalOffset >> 1); // gCameraHorizontalOffset / 2
+    s32 vOff = (gCameraVerticalOffset >> 1); // gCameraVerticalOffset / 2
+
+    gBGLayerOffsets.bg1_x = hOff;
+    gBGLayerOffsets.bg0_x = hOff;
+    hOff += gBGHorizontalOffset;
+    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8 - gUnknown_03001C48;  // couple extra things here
+
+    
+    
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8; 
+    gBGLayerOffsets.bg1_y = vOff;
+    gBGLayerOffsets.bg0_y = vOff;
+    vOff += gBGVerticalOffset;
+    
+    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + 
+        (gUnknown_03000E70.unk8->unkC - 0x38) + gUnknown_03001C40; 
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+}
+
+void sub_080086A4(void) {
+
+    s32 hOff = (gCameraHorizontalOffset >> 1); // gCameraHorizontalOffset / 2
+    s32 vOff = (gCameraVerticalOffset >> 1); // gCameraVerticalOffset / 2
+
+    gBGLayerOffsets.bg1_x = hOff;
+    gBGLayerOffsets.bg0_x = hOff;
+    hOff += gBGHorizontalOffset;
+    gBGLayerOffsets.bg2_x = (((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8 
+        + gUnknown_03001C80) - gUnknown_03001C48; 
+
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8; 
+    gBGLayerOffsets.bg1_y = vOff;
+    gBGLayerOffsets.bg0_y = vOff;
+    vOff += gBGVerticalOffset;
+    
+    gBGLayerOffsets.bg2_y = (((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + gUnknown_03000E70.unk8->unkC
+        + (gUnknown_03001C84 - 8)) + gUnknown_03001C40; 
+    
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+}	
+
+void sub_08008764(void) {
+
+    s32 hOff = (gCameraHorizontalOffset >> 1); // gCameraHorizontalOffset / 2
+    
+    s32 vOff = (gCameraVerticalOffset >> 1);
+        
+    vOff += gUnknown_03001D60; // gCameraVerticalOffset / 2
+    
+  if (vOff < 0) {
+    vOff = 0;
+  }
+if ((vOff >> 1) + 0xA0 >= gCurrentLevelHeight) {
+    vOff = gCurrentLevelHeight - 0xA0;
+}
+
+    gBGLayerOffsets.bg1_x = hOff;
+    gBGLayerOffsets.bg0_x = hOff;
+    
+    hOff += gBGHorizontalOffset;
+    gBGLayerOffsets.bg2_x = ((( hOff * gUnknown_03000E70.unk8->unk22) >> 8)+ gUnknown_03000E70.unk8->unk8); 
+    
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8;  
+    gBGLayerOffsets.bg1_y = vOff;
+    gBGLayerOffsets.bg0_y = vOff;
+    vOff += gBGVerticalOffset;
+    
+    gBGLayerOffsets.bg2_y = (((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + gUnknown_03000E70.unk8->unkC); 
+    
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+}
+
+void sub_0800881C(void) {
+    
+    s32 hOff = gCameraHorizontalOffset >> 1; // gCameraHorizontalOffset / 2
+    s32 vOff = gCameraVerticalOffset >> 1; // gCameraVerticalOffset / 2
+    
+    gBGLayerOffsets.bg1_x = hOff;
+    gBGLayerOffsets.bg0_x = hOff;
+    hOff += gBGHorizontalOffset;
+
+    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8;
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8;
+
+    gBGLayerOffsets.bg1_y = vOff;
+    gBGLayerOffsets.bg0_y = vOff+ gUnknown_03000C00;
+    vOff += gBGVerticalOffset;
+    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + gUnknown_03000BFC;
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+}
+
+void sub_080088C4(void) {
+  gBGLayerOffsets.bg1_x = 0;
+  gBGLayerOffsets.bg0_x = 0;
+  gBGLayerOffsets.bg2_x = gUnknown_03000C04;
+  gBGLayerOffsets.bg3_x = 0;
+  gBGLayerOffsets.bg1_y = 0;
+  gBGLayerOffsets.bg0_y = 0;
+  gBGLayerOffsets.bg2_y = gUnknown_03000C0C;
+  gBGLayerOffsets.bg3_y = 0;
 }
