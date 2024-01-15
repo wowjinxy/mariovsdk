@@ -1126,9 +1126,16 @@ gUnknown_080798E8:
 gUnknown_08079938:
 	.INCBIN "baserom.gba", 0x79938, 0x79988-0x79938
 
-	.GLOBAL gUnknown_08079988
-gUnknown_08079988:
-	.INCBIN "baserom.gba", 0x79988, 0x79990-0x79988
+	.GLOBAL gOptionsMenuMovieIDTable
+gOptionsMenuMovieIDTable:
+	.byte 0x0
+	.byte 0x1
+	.byte 0x2
+	.byte 0x3
+	.byte 0x4
+	.byte 0x5
+	.byte 0x6
+	.byte 0x7
 
 	.GLOBAL gUnknown_08079990
 gUnknown_08079990:

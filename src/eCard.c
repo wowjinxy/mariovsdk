@@ -2,6 +2,28 @@
 #include "global.h"
 #include "main.h"
 
+void e_world_from_menu_loop(void) {
+	
+    s32 temp1;
+    u16 temp2 = 0;
+
+DmaFill32(3, 0xa0, gOamData, 0x400); 
+    
+    sub_080351E0();
+
+      if (gUnknown_03000288 == 1) {
+    sub_08031D44(gUnknown_03000294,gUnknown_03000298,0x14,0);
+  }
+      else if (gUnknown_03000288 >= (temp1 = 1)) { 
+           if (6 > gUnknown_03000288) {
+           if ((gUnknown_03000288 >= (temp1 = 3))){ 
+    sub_08034CCC(gUnknown_080769F4,0xffff8001,0x14,0xffffffff,2);
+  }}}
+    
+    sub_08035108(&temp2);
+DmaCopy16(3, gOamData, 0x7000000, 0x400);
+}
+
 void e_world_from_menu_init_callback(void) {
 
     u32 var1;

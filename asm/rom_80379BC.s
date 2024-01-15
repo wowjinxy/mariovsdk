@@ -77,7 +77,7 @@ sub_08037A04: @ 0x08037A04
 	ldr r2, _08037AD4  @ =0x01000100
 	bl CpuSet
 	ldr r0, _08037AD8  @ =gUnknown_080A86EC
-	ldr r1, _08037ADC  @ =0x05000200
+	ldr r1, _08037ADC  @ =OBJ_PLTT
 	mov r2, #3
 	bl CpuSet
 	ldr r6, _08037AE0  @ =0x03000308
@@ -144,7 +144,7 @@ _08037AD4:
 _08037AD8:
 	.4byte gUnknown_080A86EC
 _08037ADC:
-	.4byte 0x05000200
+	.4byte OBJ_PLTT
 _08037AE0:
 	.4byte 0x03000308
 _08037AE4:

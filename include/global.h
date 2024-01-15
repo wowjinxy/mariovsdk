@@ -606,7 +606,7 @@ extern u8 gUnknown_030009FC;
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
 extern struct UnknownStruct16 gEWorldMenuData1;
-u32 gUnknown_03000288;
+s32 gUnknown_03000288;
 u32 gUnknown_0300028C;
 u8 gUnknown_03000290;
 
@@ -615,6 +615,11 @@ u32 gMainState;
 
 u16 *gUnknown_03000E90;
 u16 *gUnknown_03000E80;
+
+extern u32 gUnknown_03000294;
+extern u32 gUnknown_03000298;
+extern s32 gUnknown_03000288;
+extern const gUnknown_080769F4[];
 
 //------------------------------------------------------------------------------
 // Functions
@@ -696,7 +701,7 @@ void sub_08034898();
 void sub_080348C8(const struct UnknownStruct10 *, u32, u32, u32);
 void sub_08034CCC();
 void sub_08035108();
-void sub_080351E0(void);
+void sub_080351E0();
 void sub_08037A04();
 void sub_080386DC(void);
 s8 sub_08040EE8();
@@ -819,5 +824,6 @@ void sub_08031AD4();
 void sub_0802BA38();
 void sub_0801B4BC();
 void sub_0803D248();
+void sub_08031D44();
 
 #endif  // GUARD_GLOBAL_H

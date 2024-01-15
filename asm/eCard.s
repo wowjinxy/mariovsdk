@@ -9997,7 +9997,7 @@ _08031F96:
 	ldr r1, _08031FB8  @ =gUnknown_0300028C
 	mov r0, #1
 	str r0, [r1]
-	ldr r1, _08031FBC  @ =0x03000298
+	ldr r1, _08031FBC  @ =gUnknown_03000298
 	ldr r0, _08031FC0  @ =gUnknown_0807DC9C
 	b _080320D0
 _08031FB0:
@@ -10007,7 +10007,7 @@ _08031FB4:
 _08031FB8:
 	.4byte gUnknown_0300028C
 _08031FBC:
-	.4byte 0x03000298
+	.4byte gUnknown_03000298
 _08031FC0:
 	.4byte gUnknown_0807DC9C
 _08031FC4:
@@ -10069,7 +10069,7 @@ _08032024:
 	ldr r1, _08032038  @ =gUnknown_0300028C
 	mov r0, #1
 	str r0, [r1]
-	ldr r1, _0803203C  @ =0x03000298
+	ldr r1, _0803203C  @ =gUnknown_03000298
 	ldr r0, _08032040  @ =gUnknown_0807DC9C
 	b _080320D0
 	.byte 0x00
@@ -10077,12 +10077,12 @@ _08032024:
 _08032038:
 	.4byte gUnknown_0300028C
 _0803203C:
-	.4byte 0x03000298
+	.4byte gUnknown_03000298
 _08032040:
 	.4byte gUnknown_0807DC9C
 _08032044:
-	ldr r0, _08032060  @ =0x03000294
-	ldr r1, _08032064  @ =0x03000298
+	ldr r0, _08032060  @ =gUnknown_03000294
+	ldr r1, _08032064  @ =gUnknown_03000298
 	ldr r1, [r1]
 	bl sub_08031C54
 	str r0, [r4]
@@ -10095,9 +10095,9 @@ _08032044:
 	str r0, [r4]
 	b _080320D2
 _08032060:
-	.4byte 0x03000294
+	.4byte gUnknown_03000294
 _08032064:
-	.4byte 0x03000298
+	.4byte gUnknown_03000298
 _08032068:
 	.4byte gUnknown_03000288
 _0803206C:
@@ -10166,89 +10166,3 @@ _080320E0:
 	.4byte gUnknown_0300028C
 	THUMB_FUNC_END e_world_from_menu_main
 
-	THUMB_FUNC_START e_world_from_menu_loop
-e_world_from_menu_loop: @ 0x080320E4
-	push {r4,lr}
-	sub sp, sp, #12
-	add r4, sp, #8
-	mov r0, #0
-	strh r0, [r4]
-	mov r0, #160
-	str r0, [sp, #4]
-	ldr r1, _08032120  @ =REG_DMA3SAD
-	add r0, sp, #4
-	str r0, [r1]
-	ldr r0, _08032124  @ =gOamData
-	str r0, [r1, #4]
-	ldr r0, _08032128  @ =0x85000100
-	str r0, [r1, #8]
-	ldr r0, [r1, #8]
-	bl sub_080351E0
-	ldr r0, _0803212C  @ =gUnknown_03000288
-	ldr r0, [r0]
-	cmp r0, #1
-	bne _08032138
-	ldr r0, _08032130  @ =0x03000294
-	ldr r0, [r0]
-	ldr r1, _08032134  @ =0x03000298
-	ldr r1, [r1]
-	mov r2, #20
-	mov r3, #0
-	bl sub_08031D44
-	b _08032156
-_08032120:
-	.4byte REG_DMA3SAD
-_08032124:
-	.4byte gOamData
-_08032128:
-	.4byte 0x85000100
-_0803212C:
-	.4byte gUnknown_03000288
-_08032130:
-	.4byte 0x03000294
-_08032134:
-	.4byte 0x03000298
-_08032138:
-	cmp r0, #1
-	blt _08032156
-	cmp r0, #5
-	bgt _08032156
-	cmp r0, #3
-	blt _08032156
-	ldr r0, _08032178  @ =gUnknown_080769F4
-	ldr r1, _0803217C  @ =0xFFFF8001
-	mov r3, #1
-	neg r3, r3
-	mov r2, #2
-	str r2, [sp]
-	mov r2, #20
-	bl sub_08034CCC
-_08032156:
-	add r0, r4, #0
-	bl sub_08035108
-	ldr r1, _08032180  @ =REG_DMA3SAD
-	ldr r0, _08032184  @ =gOamData
-	str r0, [r1]
-	mov r0, #224
-	lsl r0, r0, #19
-	str r0, [r1, #4]
-	ldr r0, _08032188  @ =0x80000200
-	str r0, [r1, #8]
-	ldr r0, [r1, #8]
-	add sp, sp, #12
-	pop {r4}
-	pop {r0}
-	bx r0
-	.byte 0x00
-	.byte 0x00
-_08032178:
-	.4byte gUnknown_080769F4
-_0803217C:
-	.4byte 0xFFFF8001
-_08032180:
-	.4byte REG_DMA3SAD
-_08032184:
-	.4byte gOamData
-_08032188:
-	.4byte 0x80000200
-	THUMB_FUNC_END e_world_from_menu_loop

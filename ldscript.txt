@@ -102,6 +102,8 @@ SECTIONS
 		. = 0x288; 		gUnknown_03000288 = .;
 		. = 0x28C; 		gUnknown_0300028C = .;
 		. = 0x290;		gUnknown_03000290 = .;
+		. = 0x294;		gUnknown_03000294 = .;
+		. = 0x298;		gUnknown_03000298 = .;
 		. = 0x29C;		gUnknown_0300029C = .;
 		. = 0x2A0;		gUnknown_030002A0 = .;
 		. = 0x2AA;		gUnknown_030002AA = .;

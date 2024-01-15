@@ -26217,7 +26217,7 @@ options_menu_play_movie: @ 0x08029128
 	ldrsh r0, [r0, r2]
 	add r1, r0, r1
 	ldrb r1, [r1]
-	ldr r2, _08029188  @ =gUnknown_08079988
+	ldr r2, _08029188  @ =gOptionsMenuMovieIDTable
 	add r0, r0, r2
 	ldrb r3, [r0]
 	mov r0, #3
@@ -26252,7 +26252,7 @@ _08029180:
 _08029184:
 	.4byte 0x00001134
 _08029188:
-	.4byte gUnknown_08079988
+	.4byte gOptionsMenuMovieIDTable
 _0802918C:
 	.4byte gPreviousMovieOption
 	THUMB_FUNC_END options_menu_play_movie
@@ -32858,7 +32858,7 @@ _0802C0B4:
 sub_0802C0B8: @ 0x0802C0B8
 	push {lr}
 	add r1, r0, #0
-	ldr r3, _0802C0E0  @ =0x03000D20
+	ldr r3, _0802C0E0  @ =gCurrentPalette
 	cmp r1, #0
 	beq _0802C0D6
 	ldr r2, [r1]
@@ -32879,7 +32879,7 @@ _0802C0D6:
 	.byte 0x00
 	.byte 0x00
 _0802C0E0:
-	.4byte 0x03000D20
+	.4byte gCurrentPalette
 _0802C0E4:
 	.4byte 0x7FFFFFFF
 _0802C0E8:
@@ -32903,7 +32903,7 @@ _0802C0FE:
 	.byte 0x00
 	THUMB_FUNC_START sub_0802C104
 sub_0802C104: @ 0x0802C104
-	ldr r3, _0802C114  @ =0x03000D20
+	ldr r3, _0802C114  @ =gCurrentPalette
 	lsl r1, r1, #2
 	lsl r0, r0, #3
 	add r1, r1, r0
@@ -32913,7 +32913,7 @@ sub_0802C104: @ 0x0802C104
 	.byte 0x00
 	.byte 0x00
 _0802C114:
-	.4byte 0x03000D20
+	.4byte gCurrentPalette
 	THUMB_FUNC_END sub_0802C104
 
 	THUMB_FUNC_START sub_0802C118
@@ -32950,7 +32950,7 @@ _0802C13E:
 sub_0802C144: @ 0x0802C144
 	push {r4,lr}
 	add r2, r0, #0
-	ldr r4, _0802C198  @ =0x03000D20
+	ldr r4, _0802C198  @ =gCurrentPalette
 	ldrh r1, [r4, #16]
 	mov r0, #128
 	lsl r0, r0, #3
@@ -32992,7 +32992,7 @@ _0802C192:
 	pop {r0}
 	bx r0
 _0802C198:
-	.4byte 0x03000D20
+	.4byte gCurrentPalette
 _0802C19C:
 	.4byte REG_DMA3SAD
 _0802C1A0:
@@ -33007,7 +33007,7 @@ _0802C1AC:
 
 	THUMB_FUNC_START sub_0802C1B0
 sub_0802C1B0: @ 0x0802C1B0
-	ldr r1, _0802C1BC  @ =0x03000D20
+	ldr r1, _0802C1BC  @ =gCurrentPalette
 	mov r0, #128
 	lsl r0, r0, #3
 	strh r0, [r1, #16]
@@ -33015,7 +33015,7 @@ sub_0802C1B0: @ 0x0802C1B0
 	.byte 0x00
 	.byte 0x00
 _0802C1BC:
-	.4byte 0x03000D20
+	.4byte gCurrentPalette
 	THUMB_FUNC_END sub_0802C1B0
 
 	THUMB_FUNC_START sub_0802C1C0
