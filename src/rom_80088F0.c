@@ -46,7 +46,7 @@ void after_tutorial_init_callback(void) {
             return;
         }
     }
-    sub_08004428(gNextLevelInLevelTable.unk0->worldData);
+    sub_08004428(gNextLevelInLevelTable.unk0->levelData);
     change_main_state(MAIN_STATE_LEVEL_PLAY, NO_FADE);
 }
 
@@ -59,7 +59,7 @@ void level_play_init_callback(void) {
     sub_08038B18();
     sub_0802B998();
     sub_080069BC();
-    gUnknown_030009D0 = (u32)gNextLevelInLevelTable.unk0->unkC;
+    gUnknown_030009D0 = (u32)gNextLevelInLevelTable.unk0->levelFlags;
     gUnknown_030009D8 = 0;
     gUnknown_03000B60 = 0;
     sub_08032C44(&gNextLevelInLevelTable.unk0);
@@ -79,7 +79,7 @@ void level_demo_init_callback(void) {
     sub_08038B18();
     sub_0802B998();
     sub_080069BC();
-    gUnknown_030009D0 = (u32)gNextLevelInLevelTable.unk0->unkC;
+    gUnknown_030009D0 = (u32)gNextLevelInLevelTable.unk0->levelFlags;
     gUnknown_030009D8 = 0;
     gUnknown_03000B60 = 0;
     sub_08032C44(&gNextLevelInLevelTable.unk0);
@@ -120,7 +120,7 @@ void unknown_0A_init_callback(void) {
     sub_08071C00();
     REG_DISPCNT &= 0xff7f;
     sub_08033F80(0,0);
-    sub_08004428(gNextLevelInLevelTable.unk0->worldData);
+    sub_08004428(gNextLevelInLevelTable.unk0->levelData);
     sub_08034884(2);
     level_editor_init_callback();
 }

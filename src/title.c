@@ -85,7 +85,7 @@ void title_main(void)
             gLevelType = 0;
             gCurrentWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
             title_demo_setup(gCurrentWorld);
-            sub_08004428(gNextLevelInLevelTable.unk0->worldData);
+            sub_08004428(gNextLevelInLevelTable.unk0->levelData);
             change_main_state(MAIN_STATE_DEMO, USE_FADE);
             gUnknown_030012F8 = 0;
         }

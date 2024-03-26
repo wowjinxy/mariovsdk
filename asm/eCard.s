@@ -960,7 +960,7 @@ e_world_return_init_callback: @ 0x0802DE08
 	add r0, r1, #0
 	add r0, r0, #200
 	ldrh r5, [r0]
-	ldr r4, _0802DF18  @ =gEWorldMenuData2
+	ldr r4, _0802DF18  @ =gEWorldMenuData1
 	ldr r3, _0802DF1C  @ =gCameraHorizontalOffset
 	ldr r2, _0802DF20  @ =gCameraVerticalOffset
 	mov r0, #0
@@ -1090,7 +1090,7 @@ _0802DED8:
 _0802DF14:
 	.4byte gUnknown_030001C4
 _0802DF18:
-	.4byte gEWorldMenuData2
+	.4byte gEWorldMenuData1
 _0802DF1C:
 	.4byte gCameraHorizontalOffset
 _0802DF20:
@@ -2437,7 +2437,7 @@ _0802E90C:
 	ldr r0, [r0, #8]
 	bl sub_0801B2CC
 _0802E926:
-	ldr r0, _0802E964  @ =gEWorldMenuData2
+	ldr r0, _0802E964  @ =gEWorldMenuData1
 	ldr r0, [r0, #68]
 	str r0, [sp, #12]
 	bl sub_080351E0
@@ -2469,7 +2469,7 @@ _0802E938:
 	.byte 0x00
 	.byte 0x00
 _0802E964:
-	.4byte gEWorldMenuData2
+	.4byte gEWorldMenuData1
 _0802E968:
 	.4byte gUnknown_030001C4
 _0802E96C:
@@ -2845,7 +2845,7 @@ e_world_init_callback: @ 0x0802EC34
 	mov r0, #0
 	bl sub_08034898
 	bl sub_08038B18
-	ldr r4, _0802ECAC  @ =gEWorldMenuData2
+	ldr r4, _0802ECAC  @ =gEWorldMenuData1
 	add r0, r4, #0
 	bl sub_08032EB8
 	mov r2, #128
@@ -2894,7 +2894,7 @@ _0802EC9A:
 	.byte 0x00
 	.byte 0x00
 _0802ECAC:
-	.4byte gEWorldMenuData2
+	.4byte gEWorldMenuData1
 _0802ECB0:
 	.4byte 0x0000FEFF
 _0802ECB4:

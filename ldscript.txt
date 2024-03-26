@@ -85,9 +85,11 @@ SECTIONS
 		. = 0x34;		gUnknown_03000034 = .;
 		. = 0x38;		gUnknown_03000038 = .;
 		. = 0x3C;		gUnknown_0300003C = .;
+		. = 0x70;		gUnknown_03000070 = .;
 		. = 0x80;		gLevelSelectLevelCursor = .;
 		. = 0x81;		gLevelSelectWorldCursor = .;
 		. = 0x82;		gLevelSelectMode = .;
+		. = 0x83;		gLevelSelect_03000083 = .;
 		. = 0xA4;		gUnknown_030000A4 = .;
 		. = 0xA8;		gPressStartFadeDir = .;
 		. = 0xA9;		gTitleScreenFrameCounter = .;

@@ -19,7 +19,7 @@ void sub_08007170(void)
     sub_080317F8();
     gUnknown_030009EC = 1;
     sub_0802BF1C();
-    gGeneralTimer = gNextLevelInLevelTable.unk0->unk8 * 60 + 60;
+    gGeneralTimer = gNextLevelInLevelTable.unk0->levelTimer * 60 + 60;
     if (gLevelType == 0 && (gNextLevelInLevelTable.levelType & 8))
     {
         u32 var;

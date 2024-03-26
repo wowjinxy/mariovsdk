@@ -33,7 +33,7 @@ _0803706C:
 	cmp r0, #4
 	bne _080370A4
 _08037090:
-	ldr r2, _080370A0  @ =gUnknown_080A86A4
+	ldr r2, _080370A0  @ =gWorldStartTable
 	b _080370A6
 _08037094:
 	.4byte 0x030002FC
@@ -42,9 +42,9 @@ _08037098:
 _0803709C:
 	.4byte gLevelType
 _080370A0:
-	.4byte gUnknown_080A86A4
+	.4byte gWorldStartTable
 _080370A4:
-	ldr r2, _08037114  @ =gUnknown_080A86BC
+	ldr r2, _08037114  @ =gWorldPlusStartTable
 _080370A6:
 	ldr r1, _08037118  @ =gCurrentWorld
 	mov r0, #0
@@ -78,7 +78,7 @@ _080370A6:
 	cmp r0, #4
 	bne _0803712C
 _080370E8:
-	ldr r1, _08037120  @ =gUnknown_080A86A4
+	ldr r1, _08037120  @ =gWorldStartTable
 	ldr r4, _08037118  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r4, r0]
@@ -100,19 +100,19 @@ _080370E8:
 	.byte 0x00
 	.byte 0x00
 _08037114:
-	.4byte gUnknown_080A86BC
+	.4byte gWorldPlusStartTable
 _08037118:
 	.4byte gCurrentWorld
 _0803711C:
 	.4byte gLevelType
 _08037120:
-	.4byte gUnknown_080A86A4
+	.4byte gWorldStartTable
 _08037124:
 	.4byte 0x030002F0
 _08037128:
 	.4byte gUnknown_080A8674
 _0803712C:
-	ldr r1, _080371B4  @ =gUnknown_080A86BC
+	ldr r1, _080371B4  @ =gWorldPlusStartTable
 	ldr r4, _080371B8  @ =gCurrentWorld
 	mov r0, #0
 	ldrsb r0, [r4, r0]
@@ -176,7 +176,7 @@ _08037166:
 	.byte 0x00
 	.byte 0x00
 _080371B4:
-	.4byte gUnknown_080A86BC
+	.4byte gWorldPlusStartTable
 _080371B8:
 	.4byte gCurrentWorld
 _080371BC:
@@ -200,7 +200,7 @@ _080371D0:
 	mov r1, #22
 	bl sub_080379BC
 _080371E6:
-	ldr r2, _0803721C  @ =gWorldStartData
+	ldr r2, _0803721C  @ =gWorldOneStartData
 	ldrh r0, [r2, #48]
 	ldrh r1, [r2, #50]
 	ldrh r2, [r2, #52]
@@ -226,7 +226,7 @@ _080371E6:
 _08037218:
 	.4byte 0x030002F4
 _0803721C:
-	.4byte gWorldStartData
+	.4byte gWorldOneStartData
 _08037220:
 	.4byte gBGLayerOffsets 
 _08037224:
@@ -1137,7 +1137,7 @@ _080378C8:
 	add r4, r4, r3
 	add r4, r4, r2
 	ldr r2, [r4]
-	ldr r6, _0803792C  @ =gWorldStartData
+	ldr r6, _0803792C  @ =gWorldOneStartData
 	ldr r3, [r6, #76]
 	mov r5, #5
 	str r5, [sp]
@@ -1168,7 +1168,7 @@ _08037924:
 _08037928:
 	.4byte 0x030002F0
 _0803792C:
-	.4byte gWorldStartData
+	.4byte gWorldOneStartData
 _08037930:
 	ldr r0, _08037998  @ =0x030002FC
 	ldr r5, [r0]
@@ -1187,7 +1187,7 @@ _08037930:
 	add r4, r4, r7
 	add r4, r4, r2
 	ldr r2, [r4]
-	ldr r3, _080379A0  @ =gWorldStartData
+	ldr r3, _080379A0  @ =gWorldOneStartData
 	ldr r3, [r3, #76]
 	mov r4, #5
 	str r4, [sp]
@@ -1227,7 +1227,7 @@ _08037998:
 _0803799C:
 	.4byte 0x030002F0
 _080379A0:
-	.4byte gWorldStartData
+	.4byte gWorldOneStartData
 _080379A4:
 	.4byte 0x03000300
 _080379A8:

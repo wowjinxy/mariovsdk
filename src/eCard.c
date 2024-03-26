@@ -31,7 +31,7 @@ void e_world_from_menu_init_callback(void) {
     sub_08034898(0);
     gUnknown_03001930 = gUnknown_0300192C = 0;
     e_world_init_callback();
-    sub_08006968(&gEWorldMenuData1);
+    sub_08006968(&gEWorldMenuData2);
     var1 = sub_0802A458();
     if (var1 != 0) {
         sub_0802F06C();

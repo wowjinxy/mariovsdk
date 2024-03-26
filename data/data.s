@@ -562,23 +562,35 @@ gUnknown_0807820C:
 
 	.GLOBAL gUnknown_08078210
 gUnknown_08078210:
-	.INCBIN "baserom.gba", 0x78210, 0x78214-0x78210
+	.4byte 0x0200C010
 
 	.GLOBAL gUnknown_08078214
 gUnknown_08078214:
-	.INCBIN "baserom.gba", 0x78214, 0x78216-0x78214
+	.2byte 0x7D0
 
 	.GLOBAL gUnknown_08078216
 gUnknown_08078216:
-	.INCBIN "baserom.gba", 0x78216, 0x7822C-0x78216
+.2byte 0x7D0
+.2byte 0xBB8
+.2byte 0xBB8
+.2byte 0x1388
+.2byte 0x1388
+.2byte 0x1F4
+.2byte 0x1F4
+.2byte 0x1F4
+.2byte 0x1F4
+.2byte 0x1F4
+.2byte 0x1F4
 
 	.GLOBAL gUnknown_0807822C
 gUnknown_0807822C:
-	.INCBIN "baserom.gba", 0x7822C, 0x78234-0x7822C
+	.4byte 0x00000000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_08078234
 gUnknown_08078234:
-	.INCBIN "baserom.gba", 0x78234, 0x7823C-0x78234
+	.4byte 0x00000000
+	.4byte 0x00000000
 
 	.GLOBAL gMainStateInitCallbacks
 gMainStateInitCallbacks:
@@ -1054,13 +1066,27 @@ gUnknown_080794EC:
 gUnknown_08079504:
 	.INCBIN "baserom.gba", 0x79504, 0x7951C-0x79504
 
-	.GLOBAL gUnknown_0807951C
-gUnknown_0807951C:
-	.INCBIN "baserom.gba", 0x7951C, 0x79534-0x7951C
+	.GLOBAL gLevelSelectBackgrounds
+gLevelSelectBackgrounds:
+	.4byte gLevelSelectWorldOneBG
+	.4byte gLevelSelectWorldTwoBG
+	.4byte gLevelSelectWorldThreeBG
+	.4byte gLevelSelectWorldFourBG
+	.4byte gLevelSelectWorldFiveBG
+	.4byte gLevelSelectWorldSixBG
 
-	.GLOBAL gUnknown_08079534
-gUnknown_08079534:
-	.INCBIN "baserom.gba", 0x79534, 0x7954C-0x79534
+	@ .INCBIN "baserom.gba", 0x7951C, 0x79534-0x7951C
+
+	.GLOBAL gLevelSelectPlusBackgrounds
+gLevelSelectPlusBackgrounds:
+	.4byte gLevelSelectWorldOnePlusBG
+	.4byte gLevelSelectWorldTwoPlusBG
+	.4byte gLevelSelectWorldThreePlusBG
+	.4byte gLevelSelectWorldFourPlusBG
+	.4byte gLevelSelectWorldFivePlusBG
+	.4byte gLevelSelectWorldSixPlusBG
+	
+	@ .INCBIN "baserom.gba", 0x79534, 0x7954C-0x79534
 
 	.GLOBAL gUnknown_0807954C
 gUnknown_0807954C:
@@ -1481,13 +1507,23 @@ gUnknown_080A8674:
 gUnknown_080A868C:
 	.INCBIN "baserom.gba", 0xA868C, 0xA86A4-0xA868C
 
-	.GLOBAL gUnknown_080A86A4
-gUnknown_080A86A4:
-	.INCBIN "baserom.gba", 0xA86A4, 0xA86BC-0xA86A4
+	.GLOBAL gWorldStartTable
+gWorldStartTable:
+	.4byte gWorldOneStartData
+	.4byte gWorldTwoStartData
+	.4byte gWorldThreeStartData
+	.4byte gWorldFourStartData
+	.4byte gWorldFiveStartData
+	.4byte gWorldSixStartData
 
-	.GLOBAL gUnknown_080A86BC
-gUnknown_080A86BC:
-	.INCBIN "baserom.gba", 0xA86BC, 0xA86D4-0xA86BC
+	.GLOBAL gWorldPlusStartTable
+gWorldPlusStartTable:
+	.4byte gWorldOnePlusStartData
+	.4byte gWorldTwoPlusStartData
+	.4byte gWorldThreePlusStartData
+	.4byte gWorldFourPlusStartData
+	.4byte gWorldFivePlusStartData
+	.4byte gWorldSixPlusStartData
 
 	.GLOBAL gUnknown_080A86D4
 gUnknown_080A86D4:
@@ -3699,35 +3735,87 @@ gUnknown_08706FC8:
 
 	.GLOBAL gUnknown_08707E30
 gUnknown_08707E30:
-	.INCBIN "baserom.gba", 0x707E30, 0x7B2FF8-0x707E30
-
+	.INCBIN "baserom.gba", 0x707E30, 0x7AFC08-0x707E30
+	
+	.GLOBAL gDKPlusLeftovers
+gDKPlusLeftovers:
+	.INCBIN "assets/unused/DKPlusLeftoverData.bin"
+	
 	.GLOBAL gMainMenuData
 gMainMenuData:
-	.INCBIN "baserom.gba", 0x7B2FF8, 0x7B8A08-0x7B2FF8
+	.INCBIN "assets/menu/MainMenuData.bin"
 
 	.GLOBAL gLevelSelectData
 gLevelSelectData:
-	.INCBIN "baserom.gba", 0x7B8A08, 0x7C81C8-0x7B8A08
+	.INCBIN "assets/level_select/LevelSelectData.bin"
+	
+	.GLOBAL gLevelSelectWorldOneBG 	
+gLevelSelectWorldOneBG:
+	.INCBIN "assets/level_select/LevelSelectWorldOneBG.bin"
 
-	.GLOBAL gLevelSelectDKBossData
-gLevelSelectDKBossData:
-	.INCBIN "baserom.gba", 0x7C81C8, 0x7CB20C-0x7C81C8
+	.GLOBAL gLevelSelectWorldTwoBG 	
+gLevelSelectWorldTwoBG:
+	.INCBIN "assets/level_select/LevelSelectWorldTwoBG.bin"	
+	
+	.GLOBAL gLevelSelectWorldThreeBG 	
+gLevelSelectWorldThreeBG:
+	.INCBIN "assets/level_select/LevelSelectWorldThreeBG.bin"
+
+	.GLOBAL gLevelSelectWorldFourBG 	
+gLevelSelectWorldFourBG:
+	.INCBIN "assets/level_select/LevelSelectWorldFourBG.bin"
+
+	.GLOBAL gLevelSelectWorldFiveBG 	
+gLevelSelectWorldFiveBG:
+	.INCBIN "assets/level_select/LevelSelectWorldFiveBG.bin"
+
+	.GLOBAL gLevelSelectWorldSixBG 	
+gLevelSelectWorldSixBG:
+	.INCBIN "assets/level_select/LevelSelectWorldSixBG.bin"
+	
+	.GLOBAL gLevelSelectDKBossBG
+gLevelSelectDKBossBG:
+	.INCBIN "assets/level_select/LevelSelectDKBossBG.bin"
 
 	.GLOBAL gLevelSelectPlusData
 gLevelSelectPlusData:
-	.INCBIN "baserom.gba", 0x7CB20C, 0x7D9894-0x7CB20C
+	.INCBIN "assets/level_select_plus/LevelSelectPlusData.bin"
+	
+	.GLOBAL gLevelSelectWorldOnePlusBG
+gLevelSelectWorldOnePlusBG:
+	.INCBIN "assets/level_select_plus/LevelSelectWorldOnePlusBG.bin"
+	
+	.GLOBAL gLevelSelectWorldTwoPlusBG
+gLevelSelectWorldTwoPlusBG:
+	.INCBIN "assets/level_select_plus/LevelSelectWorldTwoPlusBG.bin"
+	
+	.GLOBAL gLevelSelectWorldThreePlusBG
+gLevelSelectWorldThreePlusBG:
+	.INCBIN "assets/level_select_plus/LevelSelectWorldThreePlusBG.bin"
+	
+	.GLOBAL gLevelSelectWorldFourPlusBG
+gLevelSelectWorldFourPlusBG:
+	.INCBIN "assets/level_select_plus/LevelSelectWorldFourPlusBG.bin"
+	
+	.GLOBAL gLevelSelectWorldFivePlusBG
+gLevelSelectWorldFivePlusBG:
+	.INCBIN "assets/level_select_plus/LevelSelectWorldFivePlusBG.bin"
+	
+	.GLOBAL gLevelSelectWorldSixPlusBG
+gLevelSelectWorldSixPlusBG:
+	.INCBIN "assets/level_select_plus/LevelSelectWorldSixPlusBG.bin"
 
-	.GLOBAL gLevelSelectDKPlusBossData
-gLevelSelectDKPlusBossData:
-	.INCBIN "baserom.gba", 0x7D9894, 0x7DCC50-0x7D9894
+	.GLOBAL gLevelSelectDKPlusBossBG
+gLevelSelectDKPlusBossBG:
+	.INCBIN "assets/level_select_plus/LevelSelectDKPlusBossBG.bin"
 
 	.GLOBAL gExpertLevelMenuData
 gExpertLevelMenuData:
-	.INCBIN "baserom.gba", 0x7DCC50, 0x7DED6C-0x7DCC50
+	.INCBIN "assets/menu/ExpertLevelMenuData.bin"
 
-	.GLOBAL gEWorldMenuData2
-gEWorldMenuData2:
-	.INCBIN "baserom.gba", 0x7DED6C, 0x7E21D0-0x7DED6C
+	.GLOBAL gEWorldMenuData1
+gEWorldMenuData1:
+	.INCBIN "assets/menu/EWorldMenuData1.bin"
 
 	.GLOBAL gWorldOneBossClearData1
 gWorldOneBossClearData1:
@@ -3827,11 +3915,55 @@ gWorldSixPlusBossClearData2:
 
 	.GLOBAL gGameOverData
 gGameOverData:
-	.INCBIN "baserom.gba", 0x829B18, 0x82B4C4-0x829B18
+	.INCBIN "assets/menu/GameOverData.bin"
 
-	.GLOBAL gWorldStartData
-gWorldStartData:
-	.INCBIN "baserom.gba", 0x82B4C4, 0x85A088-0x82B4C4
+	.GLOBAL gWorldOneStartData
+gWorldOneStartData:
+	.INCBIN "baserom.gba", 0x82B4C4, 0x82EF0C-0x82B4C4
+
+	.GLOBAL gWorldTwoStartData
+gWorldTwoStartData:
+	.INCBIN "baserom.gba", 0x82EF0C, 0x832F40-0x82EF0C
+	
+	.GLOBAL gWorldThreeStartData
+gWorldThreeStartData:
+	.INCBIN "baserom.gba", 0x832F40, 0x8369B4-0x832F40
+	
+	.GLOBAL gWorldFourStartData
+gWorldFourStartData:
+	.INCBIN "baserom.gba", 0x8369B4, 0x83A2FC-0x8369B4
+	
+	.GLOBAL gWorldFiveStartData
+gWorldFiveStartData:
+	.INCBIN "baserom.gba", 0x83A2FC, 0x83E274-0x83A2FC
+	
+	.GLOBAL gWorldSixStartData
+gWorldSixStartData:
+	.INCBIN "baserom.gba", 0x83E274, 0x841e1c-0x83E274
+
+	.GLOBAL gWorldOnePlusStartData
+gWorldOnePlusStartData:
+	.INCBIN "baserom.gba", 0x841e1c, 0x84585c-0x841e1c
+
+	.GLOBAL gWorldTwoPlusStartData
+gWorldTwoPlusStartData:
+	.INCBIN "baserom.gba", 0x84585c, 0x849a84-0x84585c
+	
+	.GLOBAL gWorldThreePlusStartData
+gWorldThreePlusStartData:
+	.INCBIN "baserom.gba", 0x849a84, 0x84dcec-0x849a84
+	
+	.GLOBAL gWorldFourPlusStartData
+gWorldFourPlusStartData:
+	.INCBIN "baserom.gba", 0x84dcec, 0x851c58-0x84dcec
+	
+	.GLOBAL gWorldFivePlusStartData
+gWorldFivePlusStartData:
+	.INCBIN "baserom.gba", 0x851c58, 0x855fe0-0x851c58
+	
+	.GLOBAL gWorldSixPlusStartData
+gWorldSixPlusStartData:
+	.INCBIN "baserom.gba", 0x855fe0, 0x85A088-0x855fe0
 
 	.GLOBAL gLevelResultsData
 gLevelResultsData:
@@ -3839,39 +3971,39 @@ gLevelResultsData:
 
 	.GLOBAL gBonusStopArrowData
 gBonusStopArrowData:
-	.INCBIN "baserom.gba", 0x85C4C4, 0x85D720-0x85C4C4
+	.INCBIN "assets/bonus/BonusStopArrowData.bin"
 
 	.GLOBAL gBonusStopArrowBackgroundData
 gBonusStopArrowBackgroundData:
-	.INCBIN "baserom.gba", 0x85D720, 0x86022C-0x85D720
+	.INCBIN "assets/bonus/BonusStopArrowBackground.bin"
 
 	.GLOBAL gBonusSwapBoxesData
 gBonusSwapBoxesData:
-	.INCBIN "baserom.gba", 0x86022C, 0x8637E8-0x86022C
+	.INCBIN "assets/bonus/BonusSwapBoxesData.bin"
 
 	.GLOBAL gBonusSwapBoxesBackgroundData
 gBonusSwapBoxesBackgroundData:
-	.INCBIN "baserom.gba", 0x8637E8, 0x866A48-0x8637E8
+	.INCBIN "assets/bonus/BonusSwapBoxesBackground.bin"
 
 	.GLOBAL gNintendoSoftwareTechnologyLogo
 gNintendoSoftwareTechnologyLogo:
-	.INCBIN "baserom.gba", 0x866A48, 0x867560-0x866A48
+	.INCBIN "assets/NSTLogo.bin"
 
 	.GLOBAL gTitleScreenLeftData
 gTitleScreenLeftData:
-	.INCBIN "baserom.gba", 0x867560, 0x86A328-0x867560
+	.INCBIN "assets/title/TitleScreenLeft.bin"
 
 	.GLOBAL gTitleScreenRightData
 gTitleScreenRightData:
-	.INCBIN "baserom.gba", 0x86A328, 0x86CFCC-0x86A328
+	.INCBIN "assets/title/TitleScreenRight.bin"
 
 	.GLOBAL gTitleMarioDKEyes
 gTitleMarioDKEyes:
-	.INCBIN "baserom.gba", 0x86CFCC, 0x8754F8-0x86CFCC
+	.INCBIN "assets/title/TitleMarioDKEyes.bin"
 
 	.GLOBAL gOptionsMenuData
 gOptionsMenuData:
-	.INCBIN "baserom.gba", 0x8754F8, 0x879AB4-0x8754F8
+	.INCBIN "assets/menu/OptionsMenuData.bin"
 
 	.GLOBAL gUnusedToadDKCutscene
 gUnusedToadDKCutscene:
@@ -4057,453 +4189,3219 @@ gUnknown_089C4B54:
 gUnknown_089C51F4:
 	.INCBIN "baserom.gba", 0x9C51F4, 0x9C605C-0x9C51F4
 	
-	.GLOBAL gUnknown_089C605C
-gUnknown_089C605C:
+@ Credits 2
+	
+	.GLOBAL gCredits2ProducerExecAdvisor
+gCredits2ProducerExecAdvisor:
 	.INCBIN "baserom.gba", 0x9C605C, 0x9C9258-0x9C605C
 	
-	.GLOBAL gUnknown_089C9258
-gUnknown_089C9258:
+	.GLOBAL gCredits2GameDirector
+gCredits2GameDirector:
 	.INCBIN "baserom.gba", 0x9C9258, 0x9CB340-0x9C9258
 	
-	.GLOBAL gUnknown_089CB340
-gUnknown_089CB340:
+	.GLOBAL gCredits2GameDesignSupport
+gCredits2GameDesignSupport:
 	.INCBIN "baserom.gba", 0x9CB340, 0x9CDCC0-0x9CB340
 	
-	.GLOBAL gUnknown_089CDCC0
-gUnknown_089CDCC0:
+	.GLOBAL gCredits2EngineeringDirector
+gCredits2EngineeringDirector:
 	.INCBIN "baserom.gba", 0x9CDCC0, 0x9D1128-0x9CDCC0
 	
-	.GLOBAL gUnknown_089D1128
-gUnknown_089D1128:
+	.GLOBAL gCredits2Engineers
+gCredits2Engineers:
 	.INCBIN "baserom.gba", 0x9D1128, 0x9D44B0-0x9D1128
 	
-	.GLOBAL gUnknown_089D44B0
-gUnknown_089D44B0:
+	.GLOBAL gCredits2EngineeringSpecialistManager
+gCredits2EngineeringSpecialistManager:
 	.INCBIN "baserom.gba", 0x9D44B0, 0x9D7414-0x9D44B0
 	
-	.GLOBAL gUnknown_089D7414
-gUnknown_089D7414:
+	.GLOBAL gCredits2ArtDirector
+gCredits2ArtDirector:
 	.INCBIN "baserom.gba", 0x9D7414, 0x9D9780-0x9D7414
 	
-	.GLOBAL gUnknown_089D9780
-gUnknown_089D9780:
+	.GLOBAL gCredits2ArtSupport
+gCredits2ArtSupport:
 	.INCBIN "baserom.gba", 0x9D9780, 0x9DC310-0x9D9780
 	
-	.GLOBAL gUnknown_089DC310
-gUnknown_089DC310:
+	.GLOBAL gCredits2AudioDirectorSupport
+gCredits2AudioDirectorSupport:
 	.INCBIN "baserom.gba", 0x9DC310, 0x9DF098-0x9DC310
 	
-	.GLOBAL gUnknown_089DF098
-gUnknown_089DF098:
+	.GLOBAL gCredits2NetworkOfficeManagerAssistant
+gCredits2NetworkOfficeManagerAssistant:
 	.INCBIN "baserom.gba", 0x9DF098, 0x9E2730-0x9DF098
 	
-	.GLOBAL gUnknown_089E2730
-gUnknown_089E2730:
+	.GLOBAL gCredits2GameDesignAssociate
+gCredits2GameDesignAssociate:
 	.INCBIN "baserom.gba", 0x9E2730, 0x9E45A0-0x9E2730
 	
-	.GLOBAL gUnknown_089E45A0
-gUnknown_089E45A0:
+	.GLOBAL gCredits2NintendoCoLtd
+gCredits2NintendoCoLtd:
 	.INCBIN "baserom.gba", 0x9E45A0, 0x9E4F74-0x9E45A0
 	
-	.GLOBAL gUnknown_089E4F74
-gUnknown_089E4F74:
+	.GLOBAL gCredits2ExecutiveProducer
+gCredits2ExecutiveProducer:
 	.INCBIN "baserom.gba", 0x9E4F74, 0x9E7DB4-0x9E4F74
 	
-	.GLOBAL gUnknown_089E7DB4
-gUnknown_089E7DB4:
+	.GLOBAL gCredits2AssociateProducers
+gCredits2AssociateProducers:
 	.INCBIN "baserom.gba", 0x9E7DB4, 0x9EA140-0x9E7DB4
 	
-	.GLOBAL gUnknown_089EA140
-gUnknown_089EA140:
+	.GLOBAL gCredits2ArtSupervisor
+gCredits2ArtSupervisor:
 	.INCBIN "baserom.gba", 0x9EA140, 0x9EC068-0x9EA140
 	
-	.GLOBAL gUnknown_089EC068
-gUnknown_089EC068:
+	.GLOBAL gCredits2Advisors
+gCredits2Advisors:
 	.INCBIN "baserom.gba", 0x9EC068, 0x9EEDC4-0x9EC068
 	
-	.GLOBAL gUnknown_089EEDC4
-gUnknown_089EEDC4:
+	.GLOBAL gCredits2NOAInc
+gCredits2NOA:
 	.INCBIN "baserom.gba", 0x9EEDC4, 0x9EF814-0x9EEDC4
 	
-	.GLOBAL gUnknown_089EF814
-gUnknown_089EF814:
+	.GLOBAL gCredits2ProductCoordinators
+gCredits2ProductCoordinators:
 	.INCBIN "baserom.gba", 0x9EF814, 0x9F20A8-0x9EF814
 	
-	.GLOBAL gUnknown_089F20A8
-gUnknown_089F20A8:
+	.GLOBAL gCredits2PackagingManualArt
+gCredits2PackagingManualArt:
 	.INCBIN "baserom.gba", 0x9F20A8, 0x9F4F24-0x9F20A8
 	
-	.GLOBAL gUnknown_089F4F24
-gUnknown_089F4F24:
+	.GLOBAL gCredits2NOAProductTesting
+gCredits2NOAProductTesting:
 	.INCBIN "baserom.gba", 0x9F4F24, 0x9F89F0-0x9F4F24
 	
-	.GLOBAL gUnknown_089F89F0
-gUnknown_089F89F0:
+	.GLOBAL gCredits2SpecialThanks1
+gCredits2SpecialThanks1:
 	.INCBIN "baserom.gba", 0x9F89F0, 0x9FB964-0x9F89F0
 	
-	.GLOBAL gUnknown_089FB964
-gUnknown_089FB964:
+	.GLOBAL gCredits2SpecialThanks2
+gCredits2SpecialThanks2:
 	.INCBIN "baserom.gba", 0x9FB964, 0x9FEBEC-0x9FB964
 	
-	.GLOBAL gUnknown_089FEBEC
-gUnknown_089FEBEC:
+	.GLOBAL gCredits2SpecialThanks3
+gCredits2SpecialThanks3:
 	.INCBIN "baserom.gba", 0x9FEBEC, 0xA0287C-0x9FEBEC
 	
-	.GLOBAL gUnknown_08A0287C
-gUnknown_08A0287C:
+	.GLOBAL gCredits2VoiceOfMario
+gCredits2VoiceOfMario:
 	.INCBIN "baserom.gba", 0xA0287C, 0xA056A4-0xA0287C
 	
-	.GLOBAL gUnknown_08A056A4
-gUnknown_08A056A4:
+	.GLOBAL gCredits2ThanksForPlaying
+gCredits2ThanksForPlaying:
 	.INCBIN "baserom.gba", 0xA056A4, 0xA0C18C-0xA056A4
 	
-	.GLOBAL gUnknown_08A0C18C
-gUnknown_08A0C18C:
+	.GLOBAL gCredits2EndAllRightsReserved
+gCredits2EndAllRightsReserved:
 	.INCBIN "baserom.gba", 0xA0C18C, 0xA0D0B4-0xA0C18C
 	
-	.GLOBAL gUnknown_08A0D0B4
-gUnknown_08A0D0B4:
+@ Credits 1
+	
+	.GLOBAL gCreditsNSTCorp
+gCreditsNSTCorp:
 	.INCBIN "baserom.gba", 0xA0D0B4, 0xA0DD50-0xA0D0B4
 	
-	.GLOBAL gUnknown_08A0DD50
-gUnknown_08A0DD50:
+	.GLOBAL gCreditsProducerExecAdvisor
+gCreditsProducerExecAdvisor:
 	.INCBIN "baserom.gba", 0xA0DD50, 0xA0ED38-0xA0DD50
 	
-	.GLOBAL gUnknown_08A0ED38
-gUnknown_08A0ED38:
+	.GLOBAL gCreditsGameDirector
+gCreditsGameDirector:
 	.INCBIN "baserom.gba", 0xA0ED38, 0xA0FA50-0xA0ED38
 	
-	.GLOBAL gUnknown_08A0FA50
-gUnknown_08A0FA50:
+	.GLOBAL gCreditsGameDesignSupport
+gCreditsGameDesignSupport:
 	.INCBIN "baserom.gba", 0xA0FA50, 0xA10B78-0xA0FA50
 	
-	.GLOBAL gUnknown_08A10B78
-gUnknown_08A10B78:
+	.GLOBAL gCreditsEngineeringDirector
+gCreditsEngineeringDirector:
 	.INCBIN "baserom.gba", 0xA10B78, 0xA118C0-0xA10B78
 	
-	.GLOBAL gUnknown_08A118C0
-gUnknown_08A118C0:
+	.GLOBAL gCreditsEngineers
+gCreditsEngineers:
 	.INCBIN "baserom.gba", 0xA118C0, 0xA125F0-0xA118C0
 
-	.GLOBAL gUnknown_08A125F0
-gUnknown_08A125F0:
+	.GLOBAL gCreditsEngineeringSpecialistManager
+gCreditsEngineeringSpecialistManager:
 	.INCBIN "baserom.gba", 0xA125F0, 0xA13688-0xA125F0
 
-	.GLOBAL gUnknown_08A13688
-gUnknown_08A13688:
+	.GLOBAL gCreditsArtDirector
+gCreditsArtDirector:
 	.INCBIN "baserom.gba", 0xA13688, 0xA14340-0xA13688
 
-	.GLOBAL gUnknown_08A14340
-gUnknown_08A14340:
+	.GLOBAL gCreditsArtSupport
+gCreditsArtSupport:
 	.INCBIN "baserom.gba", 0xA14340, 0xA15554-0xA14340
 
-	.GLOBAL gUnknown_08A15554
-gUnknown_08A15554:
+	.GLOBAL gCreditsAudioDirectorSupport
+gCreditsAudioDirectorSupport:
 	.INCBIN "baserom.gba", 0xA15554, 0xA166E8-0xA15554
 
-	.GLOBAL gUnknown_08A166E8
-gUnknown_08A166E8:
+	.GLOBAL gCreditsNetworkOfficeManagerAssistant
+gCreditsNetworkOfficeManagerAssistant:
 	.INCBIN "baserom.gba", 0xA166E8, 0xA179FC-0xA166E8
 
-	.GLOBAL gUnknown_08A179FC
-gUnknown_08A179FC:
+	.GLOBAL gCreditsGameDesignAssociate
+gCreditsGameDesignAssociate:
 	.INCBIN "baserom.gba", 0xA179FC, 0xA187B0-0xA179FC
 
-	.GLOBAL gUnknown_08A187B0
-gUnknown_08A187B0:
+	.GLOBAL gCreditsNintendoCoLtd
+gCreditsNintendoCoLtd:
 	.INCBIN "baserom.gba", 0xA187B0, 0xA190EC-0xA187B0
 
-	.GLOBAL gUnknown_08A190EC
-gUnknown_08A190EC:
+	.GLOBAL gCreditsExecutiveProducer
+gCreditsExecutiveProducer:
 	.INCBIN "baserom.gba", 0xA190EC, 0xA1A0A0-0xA190EC
 
-	.GLOBAL gUnknown_08A1A0A0
-gUnknown_08A1A0A0:
+	.GLOBAL gCreditsAssociateProducers
+gCreditsAssociateProducers:
 	.INCBIN "baserom.gba", 0xA1A0A0, 0xA1AFF4-0xA1A0A0
 
-	.GLOBAL gUnknown_08A1AFF4
-gUnknown_08A1AFF4:
+	.GLOBAL gCreditsArtSupervisor
+gCreditsArtSupervisor:
 	.INCBIN "baserom.gba", 0xA1AFF4, 0xA1BC60-0xA1AFF4
 
-	.GLOBAL gUnknown_08A1BC60
-gUnknown_08A1BC60:
+	.GLOBAL gCreditsAdvisors
+gCreditsAdvisors:
 	.INCBIN "baserom.gba", 0xA1BC60, 0xA1CA4C-0xA1BC60
 
-	.GLOBAL gUnknown_08A1CA4C
-gUnknown_08A1CA4C:
+	.GLOBAL gCreditsNOAInc
+gCreditsNOA:
 	.INCBIN "baserom.gba", 0xA1CA4C, 0xA1D3C8-0xA1CA4C
 
-	.GLOBAL gUnknown_08A1D3C8
-gUnknown_08A1D3C8:
+	.GLOBAL gCreditsProductCoordinators
+gCreditsProductCoordinators:
 	.INCBIN "baserom.gba", 0xA1D3C8, 0xA1E78C-0xA1D3C8
 
-	.GLOBAL gUnknown_08A1E78C
-gUnknown_08A1E78C:
+	.GLOBAL gCreditsPackagingManualArt
+gCreditsPackagingManualArt:
 	.INCBIN "baserom.gba", 0xA1E78C, 0xA1F8CC-0xA1E78C
 
-	.GLOBAL gUnknown_08A1F8CC
-gUnknown_08A1F8CC:
+	.GLOBAL gCreditsNOAProductTesting
+gCreditsNOAProductTesting:
 	.INCBIN "baserom.gba", 0xA1F8CC, 0xA21124-0xA1F8CC
 
-	.GLOBAL gUnknown_08A21124
-gUnknown_08A21124:
+	.GLOBAL gCreditsSpecialThanks1
+gCreditsSpecialThanks1:
 	.INCBIN "baserom.gba", 0xA21124, 0xA22BCC-0xA21124
 
-	.GLOBAL gUnknown_08A22BCC
-gUnknown_08A22BCC:
+	.GLOBAL gCreditsSpecialThanks2
+gCreditsSpecialThanks2:
 	.INCBIN "baserom.gba", 0xA22BCC, 0xA24620-0xA22BCC
 
-	.GLOBAL gUnknown_08A24620
-gUnknown_08A24620:
+	.GLOBAL gCreditsSpecialThanks3
+gCreditsSpecialThanks3:
 	.INCBIN "baserom.gba", 0xA24620, 0xA2603C-0xA24620
 
-	.GLOBAL gUnknown_08A2603C
-gUnknown_08A2603C:
+	.GLOBAL gCreditsVoiceOfMario
+gCreditsVoiceOfMario:
 	.INCBIN "baserom.gba", 0xA2603C, 0xA26F88-0xA2603C
 
-	.GLOBAL gUnknown_08A26F88
-gUnknown_08A26F88:
+	.GLOBAL gCreditsThanksForPlaying
+gCreditsThanksForPlaying:
 	.INCBIN "baserom.gba", 0xA26F88, 0xA27880-0xA26F88
 
-	.GLOBAL gUnknown_08A27880
-gUnknown_08A27880:
+	.GLOBAL gCreditsAllRightsReserved
+gCreditsAllRightsReserved:
 	.INCBIN "baserom.gba", 0xA27880, 0xA28710-0xA27880
+	
+@ Unused Plus Worlds Unlocked Screen	
 
-	.GLOBAL gUnknown_08A28710
-gUnknown_08A28710:
+	.GLOBAL gUnusedPlusWorldsUnlocked
+gUnusedPlusWorldsUnlocked:
 	.INCBIN "baserom.gba", 0xA28710, 0xA294C0-0xA28710
 
-	.GLOBAL gUnknown_08A294C0
-gUnknown_08A294C0:
-	.INCBIN "baserom.gba", 0xA294C0, 0xA2D9A8-0xA294C0
+@ World Data
 
-	.GLOBAL gUnknown_08A2D9A8
-gUnknown_08A2D9A8:
-	.INCBIN "baserom.gba", 0xA2D9A8, 0xA31EF0-0xA2D9A8
+	.GLOBAL gWorldOneData
+gWorldOneData:
+	.INCBIN "assets/level/data/WorldOneData.bin"
 
-	.GLOBAL gUnknown_08A31EF0
-gUnknown_08A31EF0:
-	.INCBIN "baserom.gba", 0xA31EF0, 0xA38DA4-0xA31EF0
+	.GLOBAL gWorldTwoData
+gWorldTwoData:
+	.INCBIN "assets/level/data/WorldTwoData.bin"
 
-	.GLOBAL gUnknown_08A38DA4
-gUnknown_08A38DA4:
-	.INCBIN "baserom.gba", 0xA38DA4, 0xA3F2CC-0xA38DA4
+	.GLOBAL gWorldThreeData
+gWorldThreeData:
+	.INCBIN "assets/level/data/WorldThreeData.bin"
 
-	.GLOBAL gUnknown_08A3F2CC
-gUnknown_08A3F2CC:
-	.INCBIN "baserom.gba", 0xA3F2CC, 0xA44E38-0xA3F2CC
+	.GLOBAL gWorldFourData
+gWorldFourData:
+	.INCBIN "assets/level/data/WorldFourData.bin"
 
-	.GLOBAL gUnknown_08A44E38
-gUnknown_08A44E38:
-	.INCBIN "baserom.gba", 0xA44E38, 0xA4B028-0xA44E38
+	.GLOBAL gWorldFiveData
+gWorldFiveData:
+	.INCBIN "assets/level/data/WorldFiveData.bin"
 
-	.GLOBAL gUnknown_08A4B028
-gUnknown_08A4B028:
-	.INCBIN "baserom.gba", 0xA4B028, 0xA5078C-0xA4B028
+	.GLOBAL gWorldSixData
+gWorldSixData:
+	.INCBIN "assets/level/data/WorldSixData.bin"
 
-	.GLOBAL gUnknown_08A5078C
-gUnknown_08A5078C:
-	.INCBIN "baserom.gba", 0xA5078C, 0xA55BE4-0xA5078C
+	.GLOBAL gBossLevelData
+gBossLevelData:
+	.INCBIN "assets/level/data/BossLevelData.bin"
+	
+@ Level Backgrounds
 
-	.GLOBAL gUnknown_08A55BE4
-gUnknown_08A55BE4:
-	.INCBIN "baserom.gba", 0xA55BE4, 0xA5AE90-0xA55BE4
+	.GLOBAL gWorldOneHorizontalBG
+gWorldOneHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_one/world_one_horizontal.bin"
 
-	.GLOBAL gUnknown_08A5AE90
-gUnknown_08A5AE90:
-	.INCBIN "baserom.gba", 0xA5AE90, 0xA5EF58-0xA5AE90
+	.GLOBAL gWorldOneVerticalBG
+gWorldOneVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_one/world_one_vertical.bin"
 
-	.GLOBAL gUnknown_08A5EF58
-gUnknown_08A5EF58:
-	.INCBIN "baserom.gba", 0xA5EF58, 0xA60FC0-0xA5EF58
+	.GLOBAL gWorldOneMiniMarioBG
+gWorldOneMiniMarioBG:
+	.INCBIN  "assets/level/backgrounds/world_one/world_one_mini_mario.bin"
 
-	.GLOBAL gUnknown_08A60FC0
-gUnknown_08A60FC0:
-	.INCBIN "baserom.gba", 0xA60FC0, 0xA65698-0xA60FC0
+	.GLOBAL gWorldOneBossBG
+gWorldOneBossBG:
+	.INCBIN "assets/level/backgrounds/world_one/world_one_boss.bin"
 
-	.GLOBAL gUnknown_08A65698
-gUnknown_08A65698:
-	.INCBIN "baserom.gba", 0xA65698, 0xA69BF8-0xA65698
+	.GLOBAL gWorldTwoHorizontalBG
+gWorldTwoHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_two/world_two_horizontal.bin"
 
-	.GLOBAL gUnknown_08A69BF8
-gUnknown_08A69BF8:
-	.INCBIN "baserom.gba", 0xA69BF8, 0xA6E47C-0xA69BF8
+	.GLOBAL gWorldTwoVerticalBG
+gWorldTwoVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_two/world_two_vertical.bin"
 
-	.GLOBAL gUnknown_08A6E47C
-gUnknown_08A6E47C:
-	.INCBIN "baserom.gba", 0xA6E47C, 0xA71B8C-0xA6E47C
+	.GLOBAL gWorldTwoMiniMarioBG
+gWorldTwoMiniMarioBG:
+	.INCBIN "assets/level/backgrounds/world_two/world_two_mini_mario.bin"
 
-	.GLOBAL gUnknown_08A71B8C
-gUnknown_08A71B8C:
-	.INCBIN "baserom.gba", 0xA71B8C, 0xA76B6C-0xA71B8C
+	.GLOBAL gWorldTwoBossBG
+gWorldTwoBossBG:
+	.INCBIN "assets/level/backgrounds/world_two/world_two_boss.bin"
 
-	.GLOBAL gUnknown_08A76B6C
-gUnknown_08A76B6C:
-	.INCBIN "baserom.gba", 0xA76B6C, 0xA7BB1C-0xA76B6C
+	.GLOBAL gWorldThreeHorizontalBG
+gWorldThreeHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_three/world_three_horizontal.bin"
 
-	.GLOBAL gUnknown_08A7BB1C
-gUnknown_08A7BB1C:
-	.INCBIN "baserom.gba", 0xA7BB1C, 0xA7FB14-0xA7BB1C
+	.GLOBAL gWorldThreeVerticalBG
+gWorldThreeVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_three/world_three_vertical.bin"
 
-	.GLOBAL gUnknown_08A7FB14
-gUnknown_08A7FB14:
-	.INCBIN "baserom.gba", 0xA7FB14, 0xA82E84-0xA7FB14
+	.GLOBAL gWorldThreeMiniMarioBG
+gWorldThreeMiniMarioBG:
+	.INCBIN "assets/level/backgrounds/world_three/world_three_mini_mario.bin"
 
-	.GLOBAL gUnknown_08A82E84
-gUnknown_08A82E84:
-	.INCBIN "baserom.gba", 0xA82E84, 0xA86D04-0xA82E84
+	.GLOBAL gWorldThreeBossBG
+gWorldThreeBossBG:
+	.INCBIN "assets/level/backgrounds/world_three/world_three_boss.bin"
 
-	.GLOBAL gUnknown_08A86D04
-gUnknown_08A86D04:
-	.INCBIN "baserom.gba", 0xA86D04, 0xA8C9F4-0xA86D04
+	.GLOBAL gWorldFourHorizontalBG
+gWorldFourHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_four/world_four_horizontal.bin"
 
-	.GLOBAL gUnknown_08A8C9F4
-gUnknown_08A8C9F4:
-	.INCBIN "baserom.gba", 0xA8C9F4, 0xA8FEE4-0xA8C9F4
+	.GLOBAL gWorldFourVerticalBG
+gWorldFourVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_four/world_four_vertical.bin"
 
-	.GLOBAL gUnknown_08A8FEE4
-gUnknown_08A8FEE4:
-	.INCBIN "baserom.gba", 0xA8FEE4, 0xA91F1C-0xA8FEE4
+	.GLOBAL gWorldFourMiniMarioBG
+gWorldFourMiniMarioBG:
+	.INCBIN "assets/level/backgrounds/world_four/world_four_mini_mario.bin"
 
-	.GLOBAL gUnknown_08A91F1C
-gUnknown_08A91F1C:
-	.INCBIN "baserom.gba", 0xA91F1C, 0xA972F4-0xA91F1C
+	.GLOBAL gWorldFourBossBG
+gWorldFourBossBG:
+	.INCBIN "assets/level/backgrounds/world_four/world_four_boss.bin"
 
-	.GLOBAL gUnknown_08A972F4
-gUnknown_08A972F4:
-	.INCBIN "baserom.gba", 0xA972F4, 0xA9CB3C-0xA972F4
+	.GLOBAL gWorldFiveHorizontalBG
+gWorldFiveHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_five/world_five_horizontal.bin"
 
-	.GLOBAL gUnknown_08A9CB3C
-gUnknown_08A9CB3C:
-	.INCBIN "baserom.gba", 0xA9CB3C, 0xAA0D7C-0xA9CB3C
+	.GLOBAL gWorldFiveVerticalBG
+gWorldFiveVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_five/world_five_vertical.bin"
 
-	.GLOBAL gUnknown_08AA0D7C
-gUnknown_08AA0D7C:
-	.INCBIN "baserom.gba", 0xAA0D7C, 0xAA35F8-0xAA0D7C
+	.GLOBAL gWorldFiveMiniMarioBG
+gWorldFiveMiniMarioBG:
+	.INCBIN "assets/level/backgrounds/world_five/world_five_mini_mario.bin"
 
-	.GLOBAL gUnknown_08AA35F8
-gUnknown_08AA35F8:
-	.INCBIN "baserom.gba", 0xAA35F8, 0xAA84CC-0xAA35F8
+	.GLOBAL gWorldFiveBossBG
+gWorldFiveBossBG:
+	.INCBIN "assets/level/backgrounds/world_five/world_five_boss.bin"
 
-	.GLOBAL gUnknown_08AA84CC
-gUnknown_08AA84CC:
-	.INCBIN "baserom.gba", 0xAA84CC, 0xAAD5AC-0xAA84CC
+	.GLOBAL gWorldSixHorizontalBG
+gWorldSixHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_six/world_six_horizontal.bin"
 
-	.GLOBAL gUnknown_08AAD5AC
-gUnknown_08AAD5AC:
-	.INCBIN "baserom.gba", 0xAAD5AC, 0xAAFF64-0xAAD5AC
+	.GLOBAL gWorldSixVerticalBG
+gWorldSixVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_six/world_six_vertical.bin"
 
-	.GLOBAL gUnknown_08AAFF64
-gUnknown_08AAFF64:
-	.INCBIN "baserom.gba", 0xAAFF64, 0xAB3924-0xAAFF64
+	.GLOBAL gWorldSixMiniMarioBG
+gWorldSixMiniMarioBG:
+	.INCBIN "assets/level/backgrounds/world_six/world_six_mini_mario.bin"
 
-	.GLOBAL gUnknown_08AB3924
-gUnknown_08AB3924:
-	.INCBIN "baserom.gba", 0xAB3924, 0xAB6A8C-0xAB3924
+	.GLOBAL gWorldSixBossBG
+gWorldSixBossBG:
+	.INCBIN "assets/level/backgrounds/world_six/world_six_boss.bin"
 
-	.GLOBAL gUnknown_08AB6A8C
-gUnknown_08AB6A8C:
-	.INCBIN "baserom.gba", 0xAB6A8C, 0xAB9BF4-0xAB6A8C
+	.GLOBAL gDKBossBG
+gDKBossBG:
+	.INCBIN "assets/level/backgrounds/boss/DK_boss.bin"
 
-	.GLOBAL gUnknown_08AB9BF4
-gUnknown_08AB9BF4:
-	.INCBIN "baserom.gba", 0xAB9BF4, 0xABFBD0-0xAB9BF4
+	.GLOBAL gDKBossPlusBG
+gDKBossPlusBG:
+	.INCBIN "assets/level/backgrounds/boss/DK_boss_plus.bin"
 
-	.GLOBAL gUnknown_08ABFBD0
-gUnknown_08ABFBD0:
-	.INCBIN "baserom.gba", 0xABFBD0, 0xAC5800-0xABFBD0
+	.GLOBAL gWorldOnePlusHorizontalBG
+gWorldOnePlusHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_one/world_one_plus_horizontal.bin"
 
-	.GLOBAL gUnknown_08AC5800
-gUnknown_08AC5800:
-	.INCBIN "baserom.gba", 0xAC5800, 0xAC9ED8-0xAC5800
+	.GLOBAL gWorldOnePlusVerticalBG
+gWorldOnePlusVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_one/world_one_plus_vertical.bin"
 
-	.GLOBAL gUnknown_08AC9ED8
-gUnknown_08AC9ED8:
-	.INCBIN "baserom.gba", 0xAC9ED8, 0xACE438-0xAC9ED8
+	.GLOBAL gWorldTwoPlusHorizontalBG
+gWorldTwoPlusHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_two/world_two_plus_horizontal.bin"
 
-	.GLOBAL gUnknown_08ACE438
-gUnknown_08ACE438:
-	.INCBIN "baserom.gba", 0xACE438, 0xAD2DD4-0xACE438
+	.GLOBAL gWorldTwoPlusVerticalBG
+gWorldTwoPlusVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_two/world_two_plus_vertical.bin"
 
-	.GLOBAL gUnknown_08AD2DD4
-gUnknown_08AD2DD4:
-	.INCBIN "baserom.gba", 0xAD2DD4, 0xAD78A0-0xAD2DD4
+	.GLOBAL gWorldThreePlusHorizontalBG
+gWorldThreePlusHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_three/world_three_plus_horizontal.bin"
 
-	.GLOBAL gUnknown_08AD78A0
-gUnknown_08AD78A0:
-	.INCBIN "baserom.gba", 0xAD78A0, 0xADB0CC-0xAD78A0
+	.GLOBAL gWorldThreePlusVerticalBG
+gWorldThreePlusVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_three/world_three_plus_vertical.bin"
 
-	.GLOBAL gUnknown_08ADB0CC
-gUnknown_08ADB0CC:
-	.INCBIN "baserom.gba", 0xADB0CC, 0xADE300-0xADB0CC
+	.GLOBAL gWorldThreePlusBossBG
+gWorldThreePlusBossBG:
+	.INCBIN "assets/level/backgrounds/world_three/world_three_plus_boss.bin"
 
-	.GLOBAL gUnknown_08ADE300
-gUnknown_08ADE300:
-	.INCBIN "baserom.gba", 0xADE300, 0xAE1738-0xADE300
+	.GLOBAL gWorldFourPlusHorizontalBG
+gWorldFourPlusHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_four/world_four_plus_horizontal.bin"
 
-	.GLOBAL gUnknown_08AE1738
-gUnknown_08AE1738:
-	.INCBIN "baserom.gba", 0xAE1738, 0xAE67A8-0xAE1738
+	.GLOBAL gWorldFourPlusVerticalBG
+gWorldFourPlusVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_four/world_four_plus_vertical.bin"
 
-	.GLOBAL gUnknown_08AE67A8
-gUnknown_08AE67A8:
-	.INCBIN "baserom.gba", 0xAE67A8, 0xAEB800-0xAE67A8
+	.GLOBAL gWorldFivePlusHorizontalBG
+gWorldFivePlusHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_five/world_five_plus_horizontal.bin"
 
-	.GLOBAL gUnknown_08AEB800
-gUnknown_08AEB800:
-	.INCBIN "baserom.gba", 0xAEB800, 0xAEFCB4-0xAEB800
+	.GLOBAL gWorldFivePlusVerticalBG
+gWorldFivePlusVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_five/world_five_plus_vertical.bin"
 
-	.GLOBAL gUnknown_08AEFCB4
-gUnknown_08AEFCB4:
-	.INCBIN "baserom.gba", 0xAEFCB4, 0xAF43E4-0xAEFCB4
+	.GLOBAL gWorldSixPlusHorizontalBG
+gWorldSixPlusHorizontalBG:
+	.INCBIN "assets/level/backgrounds/world_six/world_six_plus_horizontal.bin"
+
+	.GLOBAL gWorldSixPlusVerticalBG
+gWorldSixPlusVerticalBG:
+	.INCBIN "assets/level/backgrounds/world_six/world_six_plus_vertical.bin"
+	
+@ unknown data
 
 	.GLOBAL gUnknown_08AF43E4
 gUnknown_08AF43E4:
-	.INCBIN "baserom.gba", 0xAF43E4, 0xB29054-0xAF43E4
+	.INCBIN "baserom.gba", 0xAF43E4, 0xAF63E8-0xAF43E4
+	
+@ Levels
 
-	.GLOBAL gEWorldMenuData1
-gEWorldMenuData1:
+	.GLOBAL gLevel11A
+gLevel11A:
+	.INCBIN "assets/level/level_data/world_one/1_1A.bin"
+	
+	.GLOBAL gLevel11B
+gLevel11B:
+	.INCBIN "assets/level/level_data/world_one/1_1B.bin"
+	
+	.GLOBAL gLevel11Tutorial
+gLevel11Tutorial:
+	.INCBIN "assets/level/level_data/world_one/1_1_tutorial.bin"
+	
+	
+	.GLOBAL gLevel12A
+gLevel12A:
+	.INCBIN "assets/level/level_data/world_one/1_2A.bin"
+	
+	.GLOBAL gLevel12B
+gLevel12B:
+	.INCBIN "assets/level/level_data/world_one/1_2B.bin"
+	
+	.GLOBAL gLevel12Tutorial
+gLevel12Tutorial:
+	.INCBIN "assets/level/level_data/world_one/1_2_tutorial.bin"
+	
+
+	.GLOBAL gLevel13A
+gLevel13A:
+	.INCBIN "assets/level/level_data/world_one/1_3A.bin"
+	
+	.GLOBAL gLevel13B
+gLevel13B:
+	.INCBIN "assets/level/level_data/world_one/1_3B.bin"
+	
+	.GLOBAL gLevel13Tutorial
+gLevel13Tutorial:
+	.INCBIN "assets/level/level_data/world_one/1_3_tutorial.bin"
+	
+	
+	.GLOBAL gLevel14A
+gLevel14A:
+	.INCBIN "assets/level/level_data/world_one/1_4A.bin"
+	
+	.GLOBAL gLevel14B
+gLevel14B:
+	.INCBIN "assets/level/level_data/world_one/1_4B.bin"
+	
+	.GLOBAL gLevel14Tutorial
+gLevel14Tutorial:
+	.INCBIN "assets/level/level_data/world_one/1_4_tutorial.bin"
+	
+	
+	.GLOBAL gLevel15A
+gLevel15A:
+	.INCBIN "assets/level/level_data/world_one/1_5A.bin"
+	
+	.GLOBAL gLevel15B
+gLevel15B:
+	.INCBIN "assets/level/level_data/world_one/1_5B.bin"
+	
+	.GLOBAL gLevel15Tutorial
+gLevel15Tutorial:
+	.INCBIN "assets/level/level_data/world_one/1_5_tutorial.bin"
+	
+	
+	.GLOBAL gLevel16A
+gLevel16A:
+	.INCBIN "assets/level/level_data/world_one/1_6A.bin"
+	
+	.GLOBAL gLevel16B
+gLevel16B:
+	.INCBIN "assets/level/level_data/world_one/1_6B.bin"
+
+	.GLOBAL gLevel16Tutorial
+gLevel16Tutorial:
+	.INCBIN "assets/level/level_data/world_one/1_6_tutorial.bin"
+
+
+	.GLOBAL gLevel1MM
+gLevel1MM:
+	.INCBIN "assets/level/level_data/world_one/1_mm.bin"
+	
+	.GLOBAL gLevel1DK
+gLevel1DK:
+	.INCBIN "assets/level/level_data/world_one/1_DK.bin"
+
+	.GLOBAL gLevel1MMTutorial
+gLevel1MMTutorial:
+	.INCBIN "assets/level/level_data/world_one/1_mm_tutorial.bin"
+	
+@ World 2
+	
+	.GLOBAL gLevel21A
+gLevel21A:
+	.INCBIN "assets/level/level_data/world_two/2_1A.bin"
+
+	.GLOBAL gLevel21B
+gLevel21B:
+	.INCBIN "assets/level/level_data/world_two/2_1B.bin"
+	
+	.GLOBAL gLevel21Tutorial
+gLevel21Tutorial:
+	.INCBIN "assets/level/level_data/world_two/2_1_tutorial.bin"
+
+
+	.GLOBAL gLevel22A
+gLevel22A:
+	.INCBIN "assets/level/level_data/world_two/2_2A.bin"
+	
+	.GLOBAL gLevel22B
+gLevel22B:
+	.INCBIN "assets/level/level_data/world_two/2_2B.bin"
+
+	.GLOBAL gLevel22Tutorial
+gLevel22Tutorial:
+	.INCBIN "assets/level/level_data/world_two/2_2_tutorial.bin"
+	
+
+	.GLOBAL gLevel23A
+gLevel23A:
+	.INCBIN "assets/level/level_data/world_two/2_3A.bin"
+	
+	.GLOBAL gLevel23B
+gLevel23B:
+	.INCBIN "assets/level/level_data/world_two/2_3B.bin"
+
+	.GLOBAL gLevel23Tutorial
+gLevel23Tutorial:
+	.INCBIN "assets/level/level_data/world_two/2_3_tutorial.bin"
+	
+	
+	.GLOBAL gLevel24A
+gLevel24A:
+	.INCBIN "assets/level/level_data/world_two/2_4A.bin"
+	
+	.GLOBAL gLevel24B
+gLevel24B:
+	.INCBIN "assets/level/level_data/world_two/2_4B.bin"
+
+	.GLOBAL gLevel24Tutorial
+gLevel24Tutorial:
+	.INCBIN "assets/level/level_data/world_two/2_4_tutorial.bin"
+	
+	
+	.GLOBAL gLevel25A
+gLevel25A:
+	.INCBIN "assets/level/level_data/world_two/2_5A.bin"
+	
+	.GLOBAL gLevel25B
+gLevel25B:
+	.INCBIN "assets/level/level_data/world_two/2_5B.bin"
+
+	.GLOBAL gLevel25Tutorial
+gLevel25Tutorial:
+	.INCBIN "assets/level/level_data/world_two/2_5_tutorial.bin"
+
+
+	.GLOBAL gLevel26A
+gLevel26A:
+	.INCBIN "assets/level/level_data/world_two/2_6A.bin"
+	
+	.GLOBAL gLevel26B
+gLevel26B:
+	.INCBIN "assets/level/level_data/world_two/2_6B.bin"
+
+	.GLOBAL gLevel26Tutorial
+gLevel26Tutorial:
+	.INCBIN "assets/level/level_data/world_two/2_6_tutorial.bin"
+	
+	
+	.GLOBAL gLevel2MM
+gLevel2MM:
+	.INCBIN "assets/level/level_data/world_two/2_mm.bin"
+	
+	.GLOBAL gLevel2DK
+gLevel2DK:
+	.INCBIN "assets/level/level_data/world_two/2_DK.bin"
+
+	.GLOBAL gLevel2MMTutorial
+gLevel2MMTutorial:
+	.INCBIN "assets/level/level_data/world_two/2_mm_tutorial.bin"
+	
+@ World 3
+
+	.GLOBAL gLevel31A
+gLevel31A:
+	.INCBIN "assets/level/level_data/world_three/3_1A.bin"
+	
+	.GLOBAL gLevel31B
+gLevel31B:
+	.INCBIN "assets/level/level_data/world_three/3_1B.bin"
+
+	.GLOBAL gLevel31Tutorial
+gLevel31Tutorial:
+	.INCBIN "assets/level/level_data/world_three/3_1_tutorial.bin"
+	
+
+	.GLOBAL gLevel32A
+gLevel32A:
+	.INCBIN "assets/level/level_data/world_three/3_2A.bin"
+	
+	.GLOBAL gLevel32B
+gLevel32B:
+	.INCBIN "assets/level/level_data/world_three/3_2B.bin"
+
+	.GLOBAL gLevel32Tutorial
+gLevel32Tutorial:
+	.INCBIN "assets/level/level_data/world_three/3_2_tutorial.bin"
+	
+
+	.GLOBAL gLevel33A
+gLevel33A:
+	.INCBIN "assets/level/level_data/world_three/3_3A.bin"
+	
+	.GLOBAL gLevel33B
+gLevel33B:
+	.INCBIN "assets/level/level_data/world_three/3_3B.bin"
+
+	.GLOBAL gLevel33Tutorial
+gLevel33Tutorial:
+	.INCBIN "assets/level/level_data/world_three/3_3_tutorial.bin"
+	
+	
+	.GLOBAL gLevel34A
+gLevel34A:
+	.INCBIN "assets/level/level_data/world_three/3_4A.bin"
+	
+	.GLOBAL gLevel34B
+gLevel34B:
+	.INCBIN "assets/level/level_data/world_three/3_4B.bin"
+
+	.GLOBAL gLevel34Tutorial
+gLevel34Tutorial:
+	.INCBIN "assets/level/level_data/world_three/3_4_tutorial.bin"
+
+	
+	.GLOBAL gLevel35A
+gLevel35A:
+	.INCBIN "assets/level/level_data/world_three/3_5A.bin"
+	
+	.GLOBAL gLevel35B
+gLevel35B:
+	.INCBIN "assets/level/level_data/world_three/3_5B.bin"
+
+	.GLOBAL gLevel35Tutorial
+gLevel35Tutorial:
+	.INCBIN "assets/level/level_data/world_three/3_5_tutorial.bin"
+	
+
+	.GLOBAL gLevel36A
+gLevel36A:
+	.INCBIN "assets/level/level_data/world_three/3_6A.bin"
+	
+	.GLOBAL gLevel36B
+gLevel36B:
+	.INCBIN "assets/level/level_data/world_three/3_6B.bin"
+
+	.GLOBAL gLevel36Tutorial
+gLevel36Tutorial:
+	.INCBIN "assets/level/level_data/world_three/3_6_tutorial.bin"
+
+
+	.GLOBAL gLevel3MM
+gLevel3MM:
+	.INCBIN "assets/level/level_data/world_three/3_mm.bin"
+	
+	.GLOBAL gLevel3DK
+gLevel3DK:
+	.INCBIN "assets/level/level_data/world_three/3_DK.bin"
+
+	.GLOBAL gLevel3MMTutorial
+gLevel3MMTutorial:
+	.INCBIN "assets/level/level_data/world_three/3_mm_tutorial.bin"
+	
+@ World 4	
+
+	.GLOBAL gLevel41A
+gLevel41A:
+	.INCBIN "assets/level/level_data/world_four/4_1A.bin"
+	
+	.GLOBAL gLevel41B
+gLevel41B:
+	.INCBIN "assets/level/level_data/world_four/4_1B.bin"
+
+	.GLOBAL gLevel41Tutorial
+gLevel41Tutorial:
+	.INCBIN "assets/level/level_data/world_four/4_1_tutorial.bin"
+	
+
+	.GLOBAL gLevel42A
+gLevel42A:
+	.INCBIN "assets/level/level_data/world_four/4_2A.bin"
+	
+	.GLOBAL gLevel42B
+gLevel42B:
+	.INCBIN "assets/level/level_data/world_four/4_2B.bin"
+
+	.GLOBAL gLevel42Tutorial
+gLevel42Tutorial:
+	.INCBIN "assets/level/level_data/world_four/4_2_tutorial.bin"
+	
+
+	.GLOBAL gLevel43A
+gLevel43A:
+	.INCBIN "assets/level/level_data/world_four/4_3A.bin"
+	
+	.GLOBAL gLevel43B
+gLevel43B:
+	.INCBIN "assets/level/level_data/world_four/4_3B.bin"
+
+	.GLOBAL gLevel43Tutorial
+gLevel43Tutorial:
+	.INCBIN "assets/level/level_data/world_four/4_3_tutorial.bin"
+	
+	
+	.GLOBAL gLevel44A
+gLevel44A:
+	.INCBIN "assets/level/level_data/world_four/4_4A.bin"
+	
+	.GLOBAL gLevel44B
+gLevel44B:
+	.INCBIN "assets/level/level_data/world_four/4_4B.bin"
+
+	.GLOBAL gLevel44Tutorial
+gLevel44Tutorial:
+	.INCBIN "assets/level/level_data/world_four/4_4_tutorial.bin"
+
+	
+	.GLOBAL gLevel45A
+gLevel45A:
+	.INCBIN "assets/level/level_data/world_four/4_5A.bin"
+	
+	.GLOBAL gLevel45B
+gLevel45B:
+	.INCBIN "assets/level/level_data/world_four/4_5B.bin"
+
+	.GLOBAL gLevel45Tutorial
+gLevel45Tutorial:
+	.INCBIN "assets/level/level_data/world_four/4_5_tutorial.bin"
+	
+
+	.GLOBAL gLevel46A
+gLevel46A:
+	.INCBIN "assets/level/level_data/world_four/4_6A.bin"
+	
+	.GLOBAL gLevel46B
+gLevel46B:
+	.INCBIN "assets/level/level_data/world_four/4_6B.bin"
+
+	.GLOBAL gLevel46Tutorial
+gLevel46Tutorial:
+	.INCBIN "assets/level/level_data/world_four/4_6_tutorial.bin"
+
+
+	.GLOBAL gLevel4MM
+gLevel4MM:
+	.INCBIN "assets/level/level_data/world_four/4_MM.bin"
+	
+	.GLOBAL gLevel4DK
+gLevel4DK:
+	.INCBIN "assets/level/level_data/world_four/4_DK.bin"
+
+	.GLOBAL gLevel4MMTutorial
+gLevel4MMTutorial:
+	.INCBIN "assets/level/level_data/world_four/4_mm_tutorial.bin"
+	
+@ World 5
+
+	.GLOBAL gLevel51A
+gLevel51A:
+	.INCBIN "assets/level/level_data/world_five/5_1A.bin"
+	
+	.GLOBAL gLevel51B
+gLevel51B:
+	.INCBIN "assets/level/level_data/world_five/5_1B.bin"
+
+	.GLOBAL gLevel51Tutorial
+gLevel51Tutorial:
+	.INCBIN "assets/level/level_data/world_five/5_1_tutorial.bin"
+	
+
+	.GLOBAL gLevel52A
+gLevel52A:
+	.INCBIN "assets/level/level_data/world_five/5_2A.bin"
+	
+	.GLOBAL gLevel52B
+gLevel52B:
+	.INCBIN "assets/level/level_data/world_five/5_2B.bin"
+
+	.GLOBAL gLevel52Tutorial
+gLevel52Tutorial:
+	.INCBIN "assets/level/level_data/world_five/5_2_tutorial.bin"
+	
+
+	.GLOBAL gLevel53A
+gLevel53A:
+	.INCBIN "assets/level/level_data/world_five/5_3A.bin"
+	
+	.GLOBAL gLevel53B
+gLevel53B:
+	.INCBIN "assets/level/level_data/world_five/5_3B.bin"
+
+	.GLOBAL gLevel53Tutorial
+gLevel53Tutorial:
+	.INCBIN "assets/level/level_data/world_five/5_3_tutorial.bin"
+	
+	
+	.GLOBAL gLevel54A
+gLevel54A:
+	.INCBIN "assets/level/level_data/world_five/5_4A.bin"
+	
+	.GLOBAL gLevel54B
+gLevel54B:
+	.INCBIN "assets/level/level_data/world_five/5_4B.bin"
+
+	.GLOBAL gLevel54Tutorial
+gLevel54Tutorial:
+	.INCBIN "assets/level/level_data/world_five/5_4_tutorial.bin"
+
+	
+	.GLOBAL gLevel55A
+gLevel55A:
+	.INCBIN "assets/level/level_data/world_five/5_5A.bin"
+	
+	.GLOBAL gLevel55B
+gLevel55B:
+	.INCBIN "assets/level/level_data/world_five/5_5B.bin"
+
+	.GLOBAL gLevel55Tutorial
+gLevel55Tutorial:
+	.INCBIN "assets/level/level_data/world_five/5_5_tutorial.bin"
+	
+
+	.GLOBAL gLevel56A
+gLevel56A:
+	.INCBIN "assets/level/level_data/world_five/5_6A.bin"
+	
+	.GLOBAL gLevel56B
+gLevel56B:
+	.INCBIN "assets/level/level_data/world_five/5_6B.bin"
+
+	.GLOBAL gLevel56Tutorial
+gLevel56Tutorial:
+	.INCBIN "assets/level/level_data/world_five/5_6_tutorial.bin"
+
+
+	.GLOBAL gLevel5MM
+gLevel5MM:
+	.INCBIN "assets/level/level_data/world_five/5_mm.bin"
+	
+	.GLOBAL gLevel5DK
+gLevel5DK:
+	.INCBIN "assets/level/level_data/world_five/5_DK.bin"
+
+	.GLOBAL gLevel5MMTutorial
+gLevel5MMTutorial:
+	.INCBIN "assets/level/level_data/world_five/5_mm_tutorial.bin"
+	
+@ World 6
+	
+	.GLOBAL gLevel61A
+gLevel61A:
+	.INCBIN "assets/level/level_data/world_six/6_1A.bin"
+
+	.GLOBAL gLevel61B
+gLevel61B:
+	.INCBIN "assets/level/level_data/world_six/6_1B.bin"
+
+	.GLOBAL gLevel61Tutorial
+gLevel61Tutorial:
+	.INCBIN "assets/level/level_data/world_six/6_1_tutorial.bin"
+
+
+	.GLOBAL gLevel62A
+gLevel62A:
+	.INCBIN "assets/level/level_data/world_six/6_2A.bin"
+
+	.GLOBAL gLevel62B
+gLevel62B:
+	.INCBIN "assets/level/level_data/world_six/6_2B.bin"
+
+	.GLOBAL gLevel62Tutorial
+gLevel62Tutorial:
+	.INCBIN "assets/level/level_data/world_six/6_2_tutorial.bin"
+	
+	
+	.GLOBAL gLevel63A
+gLevel63A:
+	.INCBIN "assets/level/level_data/world_six/6_3A.bin"
+
+	.GLOBAL gLevel63B
+gLevel63B:
+	.INCBIN "assets/level/level_data/world_six/6_3B.bin"
+
+	.GLOBAL gLevel63Tutorial 
+gLevel63Tutorial:
+	.INCBIN "assets/level/level_data/world_six/6_3_tutorial.bin"
+
+
+	.GLOBAL gLevel64A
+gLevel64A:
+	.INCBIN "assets/level/level_data/world_six/6_4A.bin"
+	
+	.GLOBAL gLevel64B
+gLevel64B:
+	.INCBIN "assets/level/level_data/world_six/6_4B.bin"
+	
+	.GLOBAL gLevel64Tutorial
+gLevel64Tutorial:
+	.INCBIN "assets/level/level_data/world_six/6_4_tutorial.bin"
+
+
+	.GLOBAL gLevel65A
+gLevel65A:
+	.INCBIN "assets/level/level_data/world_six/6_5A.bin"
+	
+	.GLOBAL gLevel65B
+gLevel65B:
+	.INCBIN "assets/level/level_data/world_six/6_5B.bin"
+	
+	.GLOBAL gLevel65Tutorial
+gLevel65Tutorial:
+	.INCBIN "assets/level/level_data/world_six/6_5_tutorial.bin"
+	
+	
+	.GLOBAL gLevel66A
+gLevel66A:
+	.INCBIN "assets/level/level_data/world_six/6_6A.bin"
+	
+	.GLOBAL gLevel66B
+gLevel66B:
+	.INCBIN "assets/level/level_data/world_six/6_6B.bin"
+	
+	.GLOBAL gLevel66Tutorial
+gLevel66Tutorial:
+	.INCBIN "assets/level/level_data/world_six/6_6_tutorial.bin"
+	
+	
+	.GLOBAL gLevel6MM
+gLevel6MM:
+	.INCBIN "assets/level/level_data/world_six/6_mm.bin"
+	
+	.GLOBAL gLevel6DK
+gLevel6DK:
+	.INCBIN "assets/level/level_data/world_six/6_DK.bin"
+	
+	.GLOBAL gLevel6MMTutorial
+gLevel6MMTutorial:
+	.INCBIN "assets/level/level_data/world_six/6_mm_tutorial.bin"
+
+@ World 1+
+	
+	.GLOBAL gLevel11Plus
+gLevel11Plus:
+	.INCBIN "assets/level/level_data/world_one_plus/1_1_plus.bin"
+		
+	.GLOBAL gLevelExpert1
+gLevelExpert1:
+	.INCBIN "assets/level/level_data/expert/expert_1.bin"
+		
+		
+	.GLOBAL gLevel12Plus
+gLevel12Plus:
+	.INCBIN "assets/level/level_data/world_one_plus/1_2_plus.bin"
+		
+	.GLOBAL gLevelExpert7
+gLevelExpert7:
+	.INCBIN "assets/level/level_data/expert/expert_7.bin"
+		
+				
+	.GLOBAL gLevel13Plus
+gLevel13Plus:
+	.INCBIN "assets/level/level_data/world_one_plus/1_3_plus.bin"
+		
+	.GLOBAL gLevelUnusedRevenge
+gLevelUnusedRevenge:
+	.INCBIN "assets/level/level_data/world_one_plus/1_unused_revenge.bin"
+	
+	
+	.GLOBAL gLevel14Plus
+gLevel14Plus:
+	.INCBIN "assets/level/level_data/world_one_plus/1_4_plus.bin"
+		
+	.GLOBAL gLevelUnusedTheLongWay
+gLevelUnusedTheLongWay:
+	.INCBIN "assets/level/level_data/world_one_plus/1_unused_the_long_way.bin"	
+	
+	
+	.GLOBAL gLevel15Plus
+gLevel15Plus:
+	.INCBIN "assets/level/level_data/world_one_plus/1_5_plus.bin"
+		
+	.GLOBAL gLevelUnused1
+gLevelUnused1:
+	.INCBIN "assets/level/level_data/world_one_plus/1_unused_1.bin"	
+	
+	
+	.GLOBAL gLevel16Plus
+gLevel16Plus:
+	.INCBIN "assets/level/level_data/world_one_plus/1_6_plus.bin"
+		
+	.GLOBAL gLevelUnused2
+gLevelUnused2:
+	.INCBIN "assets/level/level_data/world_one_plus/1_unused_2.bin"
+		
+
+	.GLOBAL gLevel1DKPlus
+gLevel1DKPlus:
+	.INCBIN "assets/level/level_data/world_one_plus/1_DK_plus.bin"
+		
+	.GLOBAL gLevelUnusedDK1
+gLevelUnusedDK1:
+	.INCBIN "assets/level/level_data/world_one_plus/1_unused_DK.bin"
+	
+@ World 2+
+	
+	.GLOBAL gLevel21Plus
+gLevel21Plus:
+	.INCBIN "assets/level/level_data/world_two_plus/2_1_plus.bin"
+		
+	.GLOBAL gLevelExpert2
+gLevelExpert2:
+	.INCBIN "assets/level/level_data/expert/expert_2.bin"
+		
+		
+	.GLOBAL gLevel22Plus
+gLevel22Plus:
+	.INCBIN "assets/level/level_data/world_two_plus/2_2_plus.bin"
+		
+	.GLOBAL gLevelExpert8
+gLevelExpert8:
+	.INCBIN "assets/level/level_data/expert/expert_8.bin"
+		
+				
+	.GLOBAL gLevel23Plus
+gLevel23Plus:
+	.INCBIN "assets/level/level_data/world_two_plus/2_3_plus.bin"
+										
+	.GLOBAL gLevelUnusedOneShotBlue
+gLevelUnusedOneShotBlue:
+	.INCBIN "assets/level/level_data/world_two_plus/2_unused_one_shot_blue.bin"
+										
+										
+	.GLOBAL gLevel24Plus 
+gLevel24Plus: 
+	.INCBIN "assets/level/level_data/world_two_plus/2_4_plus.bin"
+										
+	.GLOBAL gLevelUnusedEggAttack
+gLevelUnusedEggAttack:
+	.INCBIN "assets/level/level_data/world_two_plus/2_unused_egg_attack.bin"	
+										
+										
+	.GLOBAL gLevel25Plus 
+gLevel25Plus: 
+	.INCBIN "assets/level/level_data/world_two_plus/2_5_plus.bin"
+										
+	.GLOBAL gLevelUnusedDangerFlowersW2
+gLevelUnusedDangerFlowersW2:
+	.INCBIN "assets/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin"	
+										
+										
+	.GLOBAL gLevel26Plus 
+gLevel26Plus: 
+	.INCBIN "assets/level/level_data/world_two_plus/2_6_plus.bin"
+										
+	.GLOBAL gLevelUnusedLaterGator
+gLevelUnusedLaterGator:
+	.INCBIN "assets/level/level_data/world_two_plus/2_unused_later_gator.bin"
+										
+										
+	.GLOBAL gLevel2DKPlus
+gLevel2DKPlus:
+	.INCBIN "assets/level/level_data/world_two_plus/2_DK_plus.bin"
+										
+	.GLOBAL gLevelUnusedDK2
+gLevelUnusedDK2:
+	.INCBIN "assets/level/level_data/world_two_plus/2_unused_DK.bin"	
+	
+@ World 3+
+
+	.GLOBAL gLevel31Plus
+gLevel31Plus:
+	.INCBIN "assets/level/level_data/world_three_plus/3_1_plus.bin"	
+	
+	.GLOBAL gLevelExpert3
+gLevelExpert3:
+	.INCBIN "assets/level/level_data/expert/expert_3.bin"	
+	
+	
+	.GLOBAL gLevel32Plus
+gLevel32Plus:
+	.INCBIN "assets/level/level_data/world_three_plus/3_2_plus.bin"	
+	
+	.GLOBAL gLevelExpert9
+gLevelExpert9:
+	.INCBIN "assets/level/level_data/expert/expert_9.bin"	
+
+
+	.GLOBAL gLevel33Plus
+gLevel33Plus:
+	.INCBIN "assets/level/level_data/world_three_plus/3_3_plus.bin"	
+	
+	.GLOBAL gLevelUnusedHotFeet
+gLevelUnusedHotFeet:
+	.INCBIN "assets/level/level_data/world_three_plus/3_unused_hot_feet.bin"
+	
+
+	.GLOBAL gLevel34Plus
+gLevel34Plus:
+	.INCBIN "assets/level/level_data/world_three_plus/3_4_plus.bin"	
+	
+	.GLOBAL gLevelUnused3
+gLevelUnused3:
+	.INCBIN "assets/level/level_data/world_three_plus/3_unused_1.bin"
+	
+
+	.GLOBAL gLevel35Plus
+gLevel35Plus:
+	.INCBIN "assets/level/level_data/world_three_plus/3_5_plus.bin"	
+	
+	.GLOBAL gLevelUnused4
+gLevelUnused4:
+	.INCBIN "assets/level/level_data/world_three_plus/3_unused_2.bin"
+	
+	
+	.GLOBAL gLevel36Plus
+gLevel36Plus:
+	.INCBIN "assets/level/level_data/world_three_plus/3_6_plus.bin"	
+	
+	.GLOBAL gLevelUnused5
+gLevelUnused5:
+	.INCBIN "assets/level/level_data/world_three_plus/3_unused_3.bin"
+	
+	
+	.GLOBAL gLevel3DKPlus
+gLevel3DKPlus:
+	.INCBIN "assets/level/level_data/world_three_plus/3_DK_plus.bin"
+										
+	.GLOBAL gLevelUnusedDK3
+gLevelUnusedDK3:
+	.INCBIN "assets/level/level_data/world_three_plus/3_unused_DK.bin"	
+	
+@ World 4+
+
+	.GLOBAL gLevel41Plus
+gLevel41Plus:
+	.INCBIN "assets/level/level_data/world_four_plus/4_1_plus.bin"
+	
+	.GLOBAL gLevelExpert4
+gLevelExpert4:
+	.INCBIN "assets/level/level_data/expert/expert_4.bin"	
+	
+	
+	.GLOBAL gLevel42Plus
+gLevel42Plus:
+	.INCBIN "assets/level/level_data/world_four_plus/4_2_plus.bin"
+	
+	.GLOBAL gLevelExpert10
+gLevelExpert10:
+	.INCBIN "assets/level/level_data/expert/expert_10.bin"	
+	
+	
+	.GLOBAL gLevel43Plus
+gLevel43Plus:
+	.INCBIN "assets/level/level_data/world_four_plus/4_3_plus.bin"
+	
+	.GLOBAL gLevelUnusedBooInABox
+gLevelUnusedBooInABox:
+	.INCBIN "assets/level/level_data/world_four_plus/4_unused_boo_in_a_box.bin"
+	
+	
+	.GLOBAL gLevel44Plus
+gLevel44Plus:
+	.INCBIN "assets/level/level_data/world_four_plus/4_4_plus.bin"
+	
+	.GLOBAL gLevelUnusedTheThwamplet
+gLevelUnusedTheThwamplet:
+	.INCBIN "assets/level/level_data/world_four_plus/4_unused_the_thwamplet.bin"
+	
+	
+	.GLOBAL gLevel45Plus
+gLevel45Plus:
+	.INCBIN "assets/level/level_data/world_four_plus/4_5_plus.bin"
+	
+	.GLOBAL gLevelUnusedATrickyCandle
+gLevelUnusedATrickyCandle:
+	.INCBIN "assets/level/level_data/world_four_plus/4_unused_a_tricky_candle.bin"
+	
+	
+	.GLOBAL gLevel46Plus
+gLevel46Plus:
+	.INCBIN "assets/level/level_data/world_four_plus/4_6_plus.bin"
+	
+	.GLOBAL gLevelUnused6
+gLevelUnused6:
+	.INCBIN "assets/level/level_data/world_four_plus/4_unused_1.bin"
+	
+	
+	.GLOBAL gLevel4DKPlus
+gLevel4DKPlus:
+	.INCBIN "assets/level/level_data/world_four_plus/4_DK_plus.bin"
+										
+	.GLOBAL gLevelUnusedDK4
+gLevelUnusedDK4:
+	.INCBIN "assets/level/level_data/world_four_plus/4_unused_DK.bin"	
+	
+@ World 5+
+
+	.GLOBAL gLevel51Plus
+gLevel51Plus:
+	.INCBIN "assets/level/level_data/world_five_plus/5_1_plus.bin"
+	
+	.GLOBAL gLevelExpert5
+gLevelExpert5:
+	.INCBIN "assets/level/level_data/expert/expert_5.bin"	
+	
+	
+	.GLOBAL gLevel52Plus
+gLevel52Plus:
+	.INCBIN "assets/level/level_data/world_five_plus/5_2_plus.bin"
+	
+	.GLOBAL gLevelExpert11
+gLevelExpert11:
+	.INCBIN "assets/level/level_data/expert/expert_11.bin"	
+	
+	
+	.GLOBAL gLevel53Plus
+gLevel53Plus:
+	.INCBIN "assets/level/level_data/world_five_plus/5_3_plus.bin"
+	
+	.GLOBAL gLevelUnusedKeyToTheKey
+gLevelUnusedKeyToTheKey:
+	.INCBIN "assets/level/level_data/world_five_plus/5_unused_key_to_the_key.bin"
+	
+	
+	.GLOBAL gLevel54Plus
+gLevel54Plus:
+	.INCBIN "assets/level/level_data/world_five_plus/5_4_plus.bin"
+	
+	.GLOBAL gLevelUnusedDangerFlowersW5
+gLevelUnusedDangerFlowersW5:
+	.INCBIN "assets/level/level_data/world_five_plus/5_unused_danger_flowers_W5.bin"
+	
+	
+	.GLOBAL gLevel55Plus
+gLevel55Plus:
+	.INCBIN "assets/level/level_data/world_five_plus/5_5_plus.bin"
+	
+	.GLOBAL gLevelUnusedHitasuraKawase
+gLevelUnusedHitasuraKawase:
+	.INCBIN "assets/level/level_data/world_five_plus/5_unused_hitasura_kawase.bin"
+	
+	
+	.GLOBAL gLevel56Plus
+gLevel56Plus:
+	.INCBIN "assets/level/level_data/world_five_plus/5_6_plus.bin"
+	
+	.GLOBAL gLevelUnused7
+gLevelUnused7:
+	.INCBIN "assets/level/level_data/world_five_plus/5_unused_1.bin"
+	
+	
+	.GLOBAL gLevel5DKPlus
+gLevel5DKPlus:
+	.INCBIN "assets/level/level_data/world_five_plus/5_DK_plus.bin"
+										
+	.GLOBAL gLevelUnusedDK5
+gLevelUnusedDK5:
+	.INCBIN "assets/level/level_data/world_five_plus/5_unused_DK.bin"	
+	
+@ World 6+
+
+	.GLOBAL gLevel61Plus
+gLevel61Plus:
+	.INCBIN "assets/level/level_data/world_six_plus/6_1_plus.bin"
+	
+	.GLOBAL gLevelExpert6
+gLevelExpert6:
+	.INCBIN "assets/level/level_data/expert/expert_6.bin"	
+	
+	
+	.GLOBAL gLevel62Plus
+gLevel62Plus:
+	.INCBIN "assets/level/level_data/world_six_plus/6_2_plus.bin"
+	
+	.GLOBAL gLevelExpert12
+gLevelExpert12:
+	.INCBIN "assets/level/level_data/expert/expert_12.bin"	
+	
+	
+	.GLOBAL gLevel63Plus
+gLevel63Plus:
+	.INCBIN "assets/level/level_data/world_six_plus/6_3_plus.bin"
+	
+	.GLOBAL gLevelUnusedClimbAndFall
+gLevelUnusedClimbAndFall:
+	.INCBIN "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_1.bin"
+	
+	
+	.GLOBAL gLevel64Plus
+gLevel64Plus:
+	.INCBIN "assets/level/level_data/world_six_plus/6_4_plus.bin"
+	
+	.GLOBAL gLevelUnused8
+gLevelUnused8:
+	.INCBIN "assets/level/level_data/world_six_plus/6_unused_1.bin"
+	
+	
+	.GLOBAL gLevel65Plus
+gLevel65Plus:
+	.INCBIN "assets/level/level_data/world_six_plus/6_5_plus.bin"
+	
+	.GLOBAL gLevelUnused9
+gLevelUnused9:
+	.INCBIN "assets/level/level_data/world_six_plus/6_unused_2.bin"
+	
+	
+	.GLOBAL gLevel66Plus
+gLevel66Plus:
+	.INCBIN "assets/level/level_data/world_six_plus/6_6_plus.bin"
+	
+	.GLOBAL gLevelUnusedClimbAndFall2
+gLevelUnusedClimbAndFall2:
+	.INCBIN "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_2.bin"
+	
+	
+	.GLOBAL gLevel6DKPlus
+gLevel6DKPlus:
+	.INCBIN "assets/level/level_data/world_six_plus/6_DK_plus.bin"
+										
+	.GLOBAL gLevelUnusedDK6
+gLevelUnusedDK6:
+	.INCBIN "assets/level/level_data/world_six_plus/6_unused_DK.bin"	
+		
+@ Boss Levels
+
+	.GLOBAL gLevelDKBoss
+gLevelDKBoss:
+	.INCBIN "assets/level/level_data/boss/DK_boss.bin"
+	
+	.GLOBAL gLevelDKBossPlus
+gLevelDKBossPlus:
+	.INCBIN "assets/level/level_data/boss/DK_boss_plus.bin"
+	
+@ Demo/Tutorial Input data
+	
+	.GLOBAL gUnknown_08B19C18
+gUnknown_08B19C18:
+	.INCBIN "baserom.gba", 0xB19C18, 0xB29054-0xB19C18
+	
+	
+	
+	.GLOBAL gEWorldMenuData2
+gEWorldMenuData2:
 	.INCBIN "baserom.gba", 0xB29054, 0xB2AD88-0xB29054
 
 	.GLOBAL gUnknown_08B2AD88
 gUnknown_08B2AD88:
-	.INCBIN "baserom.gba", 0xB2AD88, 0xB2CA5C-0xB2AD88
+	.INCBIN "baserom.gba", 0xB2AD88, 0xb2c384-0xB2AD88
+	
+	
+	
+	.GLOBAL gWorldOneTable
+gWorldOneTable:
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel11A @ Level Data
+	.2byte 120 @ Timer
+	.byte 0 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000061 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel11B @ Level Data
+	.2byte 120 @ Timer
+	.byte 9 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000081 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel12A @ Level Data
+	.2byte 120 @ Timer
+	.byte 8 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000061 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel12B @ Level Data
+	.2byte 120 @ Timer
+	.byte 0 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000081 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel13A @ Level Data
+	.2byte 120 @ Timer
+	.byte 9 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000064 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel13B @ Level Data
+	.2byte 150 @ Timer
+	.byte 8 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000085 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldOneVerticalBG @ Background Data
+	.4byte gLevel14A @ Level Data
+	.2byte 120 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel14B @ Level Data
+	.2byte 150 @ Timer
+	.byte 9 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C5 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel15A @ Level Data
+	.2byte 120 @ Timer
+	.byte 8 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOneVerticalBG @ Background Data
+	.4byte gLevel15B @ Level Data
+	.2byte 120 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel16A @ Level Data
+	.2byte 150 @ Timer
+	.byte 9 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte gLevel16B @ Level Data
+	.2byte 120 @ Timer
+	.byte 8 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+		
+
+	.4byte gWorldOneMiniMarioBG @ Background Data
+	.4byte gLevel1MM @ Level Data
+	.2byte 90 @ Timer
+	.byte 12 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOneBossBG @ Background Data
+	.4byte gLevel1DK @ Level Data
+	.2byte 180 @ Timer
+	.byte 13 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldTwoTable
+gWorldTwoTable:
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel21A @ Level Data
+	.2byte 120 @ Timer
+	.byte 18 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000062 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel21B @ Level Data
+	.2byte 120 @ Timer
+	.byte 19 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000087 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	
+	.4byte gWorldTwoHorizontalBG @ Background Data
+	.4byte gLevel22A @ Level Data
+	.2byte 120 @ Timer
+	.byte 20 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000026 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoHorizontalBG @ Background Data
+	.4byte gLevel22B @ Level Data
+	.2byte 120 @ Timer
+	.byte 18 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C6 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel23A @ Level Data
+	.2byte 120 @ Timer
+	.byte 19 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000022 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel23B @ Level Data
+	.2byte 150 @ Timer
+	.byte 20 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldTwoHorizontalBG @ Background Data
+	.4byte gLevel24A @ Level Data
+	.2byte 120 @ Timer
+	.byte 18 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel24B @ Level Data
+	.2byte 150 @ Timer
+	.byte 19 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel25A @ Level Data
+	.2byte 120 @ Timer
+	.byte 20 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000022 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoHorizontalBG @ Background Data
+	.4byte gLevel25B @ Level Data
+	.2byte 180 @ Timer
+	.byte 18 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+
+	.4byte gWorldTwoHorizontalBG @ Background Data
+	.4byte gLevel26A @ Level Data
+	.2byte 150 @ Timer
+	.byte 19 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000026 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoHorizontalBG @ Background Data
+	.4byte gLevel26B @ Level Data
+	.2byte 180 @ Timer
+	.byte 20 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+		
+
+	.4byte gWorldTwoMiniMarioBG @ Background Data
+	.4byte gLevel2MM @ Level Data
+	.2byte 120 @ Timer
+	.byte 12 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoBossBG @ Background Data
+	.4byte gLevel2DK @ Level Data
+	.2byte 180 @ Timer
+	.byte 66 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldThreeTable
+gWorldThreeTable:
+	.4byte gWorldThreeHorizontalBG @ Background Data
+	.4byte gLevel31A @ Level Data
+	.2byte 120 @ Timer
+	.byte 33 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000030 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldThreeHorizontalBG @ Background Data
+	.4byte gLevel31B @ Level Data
+	.2byte 120 @ Timer
+	.byte 34 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000D0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	
+	.4byte gWorldThreeHorizontalBG @ Background Data
+	.4byte gLevel32A @ Level Data
+	.2byte 120 @ Timer
+	.byte 31 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000020 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldThreeHorizontalBG @ Background Data
+	.4byte gLevel32B @ Level Data
+	.2byte 150 @ Timer
+	.byte 30 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel33A @ Level Data
+	.2byte 120 @ Timer
+	.byte 33 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000063 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldThreeHorizontalBG @ Background Data
+	.4byte gLevel33B @ Level Data
+	.2byte 150 @ Timer
+	.byte 34 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000083 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldThreeHorizontalBG @ Background Data
+	.4byte gLevel34A @ Level Data
+	.2byte 120 @ Timer
+	.byte 31 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000022 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel34B @ Level Data
+	.2byte 150 @ Timer
+	.byte 30 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel35A @ Level Data
+	.2byte 120 @ Timer
+	.byte 33 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000022 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel35B @ Level Data
+	.2byte 120 @ Timer
+	.byte 34 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel36A @ Level Data
+	.2byte 120 @ Timer
+	.byte 31 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000020 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldThreeHorizontalBG @ Background Data
+	.4byte gLevel36B @ Level Data
+	.2byte 150 @ Timer
+	.byte 30 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+		
+
+	.4byte gWorldThreeMiniMarioBG @ Background Data
+	.4byte gLevel3MM @ Level Data
+	.2byte 120 @ Timer
+	.byte 12 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldThreeBossBG @ Background Data
+	.4byte gLevel3DK @ Level Data
+	.2byte 150 @ Timer
+	.byte 67 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000010 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldFourTable
+gWorldFourTable:
+		.4byte gWorldFourHorizontalBG @ Background Data
+	.4byte gLevel41A @ Level Data
+	.2byte 120 @ Timer
+	.byte 27 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000020 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourHorizontalBG @ Background Data
+	.4byte gLevel41B @ Level Data
+	.2byte 120 @ Timer
+	.byte 28 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	
+	.4byte gWorldFourHorizontalBG @ Background Data
+	.4byte gLevel42A @ Level Data
+	.2byte 150 @ Timer
+	.byte 29 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000022 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel42B @ Level Data
+	.2byte 150 @ Timer
+	.byte 27 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel43A @ Level Data
+	.2byte 150 @ Timer
+	.byte 28 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000060 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel43B @ Level Data
+	.2byte 150 @ Timer
+	.byte 29 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000081 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldFourHorizontalBG @ Background Data
+	.4byte gLevel44A @ Level Data
+	.2byte 120 @ Timer
+	.byte 27 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000063 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourHorizontalBG @ Background Data
+	.4byte gLevel44B @ Level Data
+	.2byte 150 @ Timer
+	.byte 28 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000081 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+
+	.4byte gWorldFourHorizontalBG @ Background Data
+	.4byte gLevel45A @ Level Data
+	.2byte 120 @ Timer
+	.byte 29 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000061 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel45B @ Level Data
+	.2byte 150 @ Timer
+	.byte 27 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000083 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel46A @ Level Data
+	.2byte 120 @ Timer
+	.byte 28 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel46B @ Level Data
+	.2byte 180 @ Timer
+	.byte 29 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+		
+
+	.4byte gWorldFourMiniMarioBG @ Background Data
+	.4byte gLevel4MM @ Level Data
+	.2byte 120 @ Timer
+	.byte 12 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourBossBG @ Background Data
+	.4byte gLevel4DK @ Level Data
+	.2byte 150 @ Timer
+	.byte 13 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldFiveTable
+gWorldFiveTable:
+	.4byte gWorldFiveHorizontalBG @ Background Data
+	.4byte gLevel51A @ Level Data
+	.2byte 120 @ Timer
+	.byte 26 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel51B @ Level Data
+	.2byte 150 @ Timer
+	.byte 24 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	
+	.4byte gWorldFiveHorizontalBG @ Background Data
+	.4byte gLevel52A @ Level Data
+	.2byte 120 @ Timer
+	.byte 25 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFiveHorizontalBG @ Background Data
+	.4byte gLevel52B @ Level Data
+	.2byte 150 @ Timer
+	.byte 26 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldFiveHorizontalBG @ Background Data
+	.4byte gLevel53A @ Level Data
+	.2byte 120 @ Timer
+	.byte 24 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFiveHorizontalBG @ Background Data
+	.4byte gLevel53B @ Level Data
+	.2byte 150 @ Timer
+	.byte 25 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel54A @ Level Data
+	.2byte 120 @ Timer
+	.byte 26 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000022 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel54B @ Level Data
+	.2byte 150 @ Timer
+	.byte 24 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+
+	.4byte gWorldFiveHorizontalBG @ Background Data
+	.4byte gLevel55A @ Level Data
+	.2byte 150 @ Timer
+	.byte 25 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel55B @ Level Data
+	.2byte 180 @ Timer
+	.byte 26 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+
+	.4byte gWorldFiveHorizontalBG @ Background Data
+	.4byte gLevel56A @ Level Data
+	.2byte 150 @ Timer
+	.byte 24 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000063 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel56B @ Level Data
+	.2byte 180 @ Timer
+	.byte 25 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000081 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+		
+
+	.4byte gWorldFiveMiniMarioBG @ Background Data
+	.4byte gLevel5MM @ Level Data
+	.2byte 120 @ Timer
+	.byte 12 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFiveBossBG @ Background Data
+	.4byte gLevel5DK @ Level Data
+	.2byte 150 @ Timer
+	.byte 0x42 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldSixTable
+gWorldSixTable:
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel61A @ Level Data
+	.2byte 120 @ Timer
+	.byte 35 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000020 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel61B @ Level Data
+	.2byte 150 @ Timer
+	.byte 36 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel62A @ Level Data
+	.2byte 120 @ Timer
+	.byte 37 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000060 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel62B @ Level Data
+	.2byte 150 @ Timer
+	.byte 38 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000085 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel63A @ Level Data
+	.2byte 120 @ Timer
+	.byte 35 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000022 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel63B @ Level Data
+	.2byte 150 @ Timer
+	.byte 36 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000C4 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+		
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel64A @ Level Data
+	.2byte 150 @ Timer
+	.byte 37 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000066 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel64B @ Level Data
+	.2byte 180 @ Timer
+	.byte 38 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000083 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel65A @ Level Data
+	.2byte 150 @ Timer
+	.byte 35 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000021 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel65B @ Level Data
+	.2byte 180 @ Timer
+	.byte 36 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000C5 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel66A @ Level Data
+	.2byte 150 @ Timer
+	.byte 37 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000062 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte gLevel66B @ Level Data
+	.2byte 180 @ Timer
+	.byte 38 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000085 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldSixMiniMarioBG @ Background Data
+	.4byte gLevel6MM @ Level Data
+	.2byte 120 @ Timer
+	.byte 12 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixBossBG @ Background Data
+	.4byte gLevel6DK @ Level Data
+	.2byte 180 @ Timer
+	.byte 67 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000007 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldTable
+gWorldTable:
+	.4byte 14 @ Level Count
+	.4byte gWorldOneTable
+	.4byte gWorldOneData
+	.4byte 14 @ Level Count
+	.4byte gWorldTwoTable
+	.4byte gWorldTwoData
+	.4byte 14 @ Level Count
+	.4byte gWorldThreeTable
+	.4byte gWorldThreeData
+	.4byte 14 @ Level Count
+	.4byte gWorldFourTable
+	.4byte gWorldFourData
+	.4byte 14 @ Level Count
+	.4byte gWorldFiveTable
+	.4byte gWorldFiveData
+	.4byte 14 @ Level Count
+	.4byte gWorldSixTable
+	.4byte gWorldSixData
 
 	.GLOBAL gUnknown_08B2CA5C
 gUnknown_08B2CA5C:
-	.INCBIN "baserom.gba", 0xB2CA5C, 0xB2CDF4-0xB2CA5C
+	.4byte 6 @ World Count
+	.4byte gWorldTable
+
+	.GLOBAL gWorldOnePlusTable
+gWorldOnePlusTable:
+	.4byte gWorldOnePlusHorizontalBG @ Background Data
+	.4byte gLevel11Plus @ Level Data
+	.2byte 120 @ Timer
+	.byte 0 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOnePlusHorizontalBG @ Background Data
+	.4byte gLevel12Plus @ Level Data
+	.2byte 120 @ Timer
+	.byte 9 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldOnePlusVerticalBG @ Background Data
+	.4byte gLevel13Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 8 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldOnePlusHorizontalBG @ Background Data
+	.4byte gLevel14Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+		
+	.4byte gWorldOnePlusHorizontalBG @ Background Data
+	.4byte gLevel15Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 9 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldOnePlusHorizontalBG @ Background Data
+	.4byte gLevel16Plus @ Level Data
+	.2byte 120 @ Timer
+	.byte 8 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldOneBossBG @ Background Data
+	.4byte gLevel1DKPlus @ Level Data
+	.2byte 120 @ Timer
+	.byte 13 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldTwoPlusTable
+gWorldTwoPlusTable:
+	.4byte gWorldTwoPlusVerticalBG @ Background Data
+	.4byte gLevel21Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 18 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoPlusHorizontalBG @ Background Data
+	.4byte gLevel22Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 19 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldTwoPlusHorizontalBG @ Background Data
+	.4byte gLevel23Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 20 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldTwoPlusVerticalBG @ Background Data
+	.4byte gLevel24Plus @ Level Data
+	.2byte 120 @ Timer
+	.byte 18 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoPlusHorizontalBG @ Background Data
+	.4byte gLevel25Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 19 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldTwoPlusHorizontalBG @ Background Data
+	.4byte gLevel26Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 20 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldTwoBossBG @ Background Data
+	.4byte gLevel2DKPlus @ Level Data
+	.2byte 120 @ Timer
+	.byte 66 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.GLOBAL gWorldThreePlusTable
+gWorldThreePlusTable:
+	.4byte gWorldThreePlusHorizontalBG @ Background Data
+	.4byte gLevel31Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 30 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldThreePlusVerticalBG @ Background Data
+	.4byte gLevel32Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 31 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldThreePlusHorizontalBG @ Background Data
+	.4byte gLevel33Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 33 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldThreePlusHorizontalBG @ Background Data
+	.4byte gLevel34Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 34 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldThreePlusVerticalBG @ Background Data
+	.4byte gLevel35Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 30 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldThreePlusHorizontalBG @ Background Data
+	.4byte gLevel36Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 31 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldThreePlusBossBG @ Background Data
+	.4byte gLevel3DKPlus @ Level Data
+	.2byte 120 @ Timer
+	.byte 67 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000010 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.GLOBAL gWorldFourPlusTable
+gWorldFourPlusTable:
+	.4byte gWorldFourPlusHorizontalBG @ Background Data
+	.4byte gLevel41Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 27 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourPlusHorizontalBG @ Background Data
+	.4byte gLevel42Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 28 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourPlusHorizontalBG @ Background Data
+	.4byte gLevel43Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 0x1D @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldFourPlusHorizontalBG @ Background Data
+	.4byte gLevel44Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 27 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourPlusHorizontalBG @ Background Data
+	.4byte gLevel45Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 28 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFourPlusHorizontalBG @ Background Data
+	.4byte gLevel46Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 0x1D @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldFourBossBG @ Background Data
+	.4byte gLevel4DKPlus @ Level Data
+	.2byte 120 @ Timer
+	.byte 0x0D @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldFivePlusTable
+gWorldFivePlusTable:
+	.4byte gWorldFivePlusHorizontalBG @ Background Data
+	.4byte gLevel51Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 24 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFivePlusHorizontalBG @ Background Data
+	.4byte gLevel52Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 25 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFivePlusHorizontalBG @ Background Data
+	.4byte gLevel53Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 26 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldFivePlusVerticalBG @ Background Data
+	.4byte gLevel54Plus
+	.2byte 150 @ Timer
+	.byte 24 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFivePlusVerticalBG @ Background Data
+	.4byte gLevel55Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 25 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldFivePlusHorizontalBG @ Background Data
+	.4byte gLevel56Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 26 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E5 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldFiveBossBG @ Background Data
+	.4byte gLevel5DKPlus @ Level Data
+	.2byte 120 @ Timer
+	.byte 66 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.GLOBAL gWorldSixPlusTable
+gWorldSixPlusTable:
+	.4byte gWorldSixPlusHorizontalBG @ Background Data
+	.4byte gLevel61Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 35 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixPlusHorizontalBG @ Background Data
+	.4byte gLevel62Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 36 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E7 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixPlusHorizontalBG @ Background Data
+	.4byte gLevel63Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 37 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldSixPlusVerticalBG @ Background Data
+	.4byte gLevel64Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 38 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixPlusVerticalBG @ Background Data
+	.4byte gLevel65Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 35 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.4byte gWorldSixPlusHorizontalBG @ Background Data
+	.4byte gLevel66Plus @ Level Data
+	.2byte 150 @ Timer
+	.byte 36 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.4byte gWorldSixBossBG @ Background Data
+	.4byte gLevel6DKPlus @ Level Data
+	.2byte 120 @ Timer
+	.byte 67 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.GLOBAL gWorldPlusTable
+gWorldPlusTable:
+	.4byte 7 @ Level Count
+	.4byte gWorldOnePlusTable
+	.4byte gWorldOneData
+	.4byte 7 @ Level Count
+	.4byte gWorldTwoPlusTable
+	.4byte gWorldTwoData
+	.4byte 7 @ Level Count
+	.4byte gWorldThreePlusTable
+	.4byte gWorldThreeData
+	.4byte 7 @ Level Count
+	.4byte gWorldFourPlusTable
+	.4byte gWorldFourData
+	.4byte 7 @ Level Count
+	.4byte gWorldFivePlusTable
+	.4byte gWorldFiveData
+	.4byte 7 @ Level Count
+	.4byte gWorldSixPlusTable
+	.4byte gWorldSixData
 
 	.GLOBAL gUnknown_08B2CDF4
 gUnknown_08B2CDF4:
-	.INCBIN "baserom.gba", 0xB2CDF4, 0xB2CEBC-0xB2CDF4
+	.4byte 6 @ World Count
+	.4byte gWorldPlusTable
+	
+	.GLOBAL gExpert1Table
+gExpert1Table:
+	.4byte gWorldOneHorizontalBG @ Background Data
+	.4byte 0x08B0E0E4 @ Level Data
+	.2byte 150 @ Timer
+	.byte 48 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gExpert2Table
+gExpert2Table:
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte 0x08B0FC00 @ Level Data
+	.2byte 150 @ Timer
+	.byte 49 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E2 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
 
+	.GLOBAL gExpert3Table
+gExpert3Table:
+	.4byte gWorldThreeHorizontalBG @ Background Data
+	.4byte 0x08B11E68 @ Level Data
+	.2byte 150 @ Timer
+	.byte 50 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.GLOBAL gExpert4Table
+gExpert4Table:
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte 0x08B13C80 @ Level Data
+	.2byte 150 @ Timer
+	.byte 51 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	.GLOBAL gExpert5Table
+gExpert5Table:
+	.4byte gWorldFiveHorizontalBG @ Background Data
+	.4byte 0x08B15804 @ Level Data
+	.2byte 150 @ Timer
+	.byte 52 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+.GLOBAL gExpert6Table
+gExpert6Table:
+	.4byte gWorldSixHorizontalBG @ Background Data
+	.4byte 0x08B176E0 @ Level Data
+	.2byte 180 @ Timer
+	.byte 53 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gExpertWorldTable
+gExpertWorldTable:
+	.4byte 1 @ Level Count
+	.4byte gExpert1Table
+	.4byte gWorldOneData
+	.4byte 1 @ Level Count
+	.4byte gExpert2Table
+	.4byte gWorldTwoData
+	.4byte 1 @ Level Count
+	.4byte gExpert3Table
+	.4byte gWorldThreeData
+	.4byte 1 @ Level Count
+	.4byte gExpert4Table
+	.4byte gWorldFourData
+	.4byte 1 @ Level Count
+	.4byte gExpert5Table
+	.4byte gWorldFiveData
+	.4byte 1 @ Level Count
+	.4byte gExpert6Table
+	.4byte gWorldSixData
+	
 	.GLOBAL gUnknown_08B2CEBC
 gUnknown_08B2CEBC:
-	.INCBIN "baserom.gba", 0xB2CEBC, 0xB2CF84-0xB2CEBC
+	.4byte 6 @ World Count
+	.4byte gExpertWorldTable
+	
+	.GLOBAL gExpert7Table
+gExpert7Table:
+	.4byte gWorldOnePlusHorizontalBG @ Background Data
+	.4byte gLevelExpert7 @ Level Data
+	.2byte 150 @ Timer
+	.byte 54 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gExpert8Table
+gExpert8Table:
+	.4byte gWorldTwoPlusVerticalBG @ Background Data
+	.4byte gLevelExpert8 @ Level Data
+	.2byte 120 @ Timer
+	.byte 55 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x000000E0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
 
+	.GLOBAL gExpert9Table
+gExpert9Table:
+	.4byte gWorldThreePlusHorizontalBG @ Background Data
+	.4byte gLevelExpert9 @ Level Data
+	.2byte 120 @ Timer
+	.byte 56 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gExpert10Table
+gExpert10Table:
+	.4byte gWorldFourPlusHorizontalBG @ Background Data
+	.4byte gLevelExpert10 @ Level Data
+	.2byte 150 @ Timer
+	.byte 57 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E0 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gExpert11Table
+gExpert11Table:
+	.4byte gWorldFivePlusHorizontalBG @ Background Data
+	.4byte gLevelExpert11 @ Level Data
+	.2byte 120 @ Timer
+	.byte 58 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E1 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused	
+	
+	.GLOBAL gExpert12Table
+gExpert12Table:
+	.4byte gWorldSixPlusHorizontalBG @ Background Data
+	.4byte gLevelExpert12 @ Level Data
+	.2byte 180 @ Timer
+	.byte 59 @ Song ID
+	.byte 2 @ Level Type (Unused)
+	.4byte 0x000000E3 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gExpertWorldTable2
+gExpertWorldTable2:
+	.4byte 1 @ Level Count
+	.4byte gExpert7Table
+	.4byte gWorldOneData
+	
+	.4byte 1 @ Level Count
+	.4byte gExpert8Table
+	.4byte gWorldTwoData
+	
+	.4byte 1 @ Level Count
+	.4byte gExpert9Table
+	.4byte gWorldThreeData
+	
+	.4byte 1 @ Level Count
+	.4byte gExpert10Table
+	.4byte gWorldFourData
+	
+	.4byte 1 @ Level Count
+	.4byte gExpert11Table
+	.4byte gWorldFiveData
+	
+	.4byte 1 @ Level Count
+	.4byte gExpert12Table
+	.4byte gWorldSixData
+	
 	.GLOBAL gUnknown_08B2CF84
 gUnknown_08B2CF84:
-	.INCBIN "baserom.gba", 0xB2CF84, 0xB2CFC0-0xB2CF84
+	.4byte 6 @ World Count
+	.4byte gExpertWorldTable2
+
+	.GLOBAL gBossLevelTable
+gBossLevelTable:
+@ DK-Boss
+	.4byte gDKBossBG @ Background Data
+	.4byte gLevelDKBoss @ Level Data
+	.2byte 300 @ Timer
+	.byte 39 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ DK-Boss+
+	.4byte gDKBossPlusBG @ Background Data
+	.4byte gLevelDKBossPlus @ Level Data
+	.2byte 300 @ Timer
+	.byte 40 @ Song ID
+	.byte 4 @ Level Type (Unused)
+	.4byte 0x00000024 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gBossWorldTable
+gBossWorldTable:
+	.4byte 2 @ Level Count
+	.4byte gBossLevelTable
+	.4byte gBossLevelData
 
 	.GLOBAL gUnknown_08B2CFC0
 gUnknown_08B2CFC0:
-	.INCBIN "baserom.gba", 0xB2CFC0, 0xB2CFC8-0xB2CFC0
+	.4byte 1 @ World Count
+	.4byte gBossWorldTable
 
-	.GLOBAL gUnknown_08B2CFC8
-gUnknown_08B2CFC8:
-	.INCBIN "baserom.gba", 0xB2CFC8, 0xB2CFD0-0xB2CFC8
+	.GLOBAL gTitleDemoLevelIDs
+gTitleDemoLevelIDs:
+	.byte 0x01
+	.byte 0x0B
+	.byte 0x04
+	.byte 0x07
+	.byte 0x02
+	.byte 0x05
+	.byte 0x00
+	.byte 0x00
 
 	.GLOBAL gTitleDemoInputTable
 gTitleDemoInputTable:
-	.INCBIN "baserom.gba", 0xB2CFD0, 0xB2D378-0xB2CFD0
+	.4byte 0x08B19C18
+	.4byte 0x08B1A1F0
+	.4byte 0x08B1A7C0
+	.4byte 0x08B1AF78
+	.4byte 0x08B1B55C
+	.4byte 0x08B1BB00
 
+	.GLOBAL gWorldOneTutorialLevelTable
+gWorldOneTutorialLevelTable:
+@ 1-1 Tutorial
+	.4byte gWorldOneVerticalBG @ Background Data
+	.4byte gLevel11Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 1-2 Tutorial	
+	.4byte gWorldOneVerticalBG @ Background Data
+	.4byte gLevel12Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 1-3 Tutorial
+	.4byte gWorldOneVerticalBG @ Background Data
+	.4byte gLevel13Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000024 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 1-4 Tutorial
+	.4byte gWorldOneVerticalBG @ Background Data
+	.4byte gLevel14Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 1-5 Tutorial
+	.4byte gWorldOneVerticalBG @ Background Data
+	.4byte gLevel15Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 1-6 Tutorial
+	.4byte gWorldOneVerticalBG @ Background Data
+	.4byte gLevel16Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 1-mm Tutorial
+	.4byte gWorldOneMiniMarioBG @ Background Data
+	.4byte gLevel1MMTutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x000000FF @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldTwoTutorialLevelTable
+gWorldTwoTutorialLevelTable:
+@ 2-1 Tutorial
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel21Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000082 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 2-2 Tutorial
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel22Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000046 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 2-3 Tutorial
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel23Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000082 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 2-4 Tutorial	
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel24Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 2-5 Tutorial
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel25Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000002 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 2-6 Tutorial
+	.4byte gWorldTwoVerticalBG @ Background Data
+	.4byte gLevel26Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000040 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+@ 2-mm Tutorial	
+	.4byte gWorldTwoMiniMarioBG @ Background Data
+	.4byte gLevel2MMTutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x000000FF @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldThreeTutorialLevelTable
+gWorldThreeTutorialLevelTable:
+@ 3-1 Tutorial
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel31Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000010 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 3-2 Tutorial
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel32Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 3-3 Tutorial
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel33Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000002 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 3-4 Tutorial
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel34Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000020 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 3-5 Tutorial
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel35Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+@ 3-6 Tutorial
+	.4byte gWorldThreeVerticalBG @ Background Data
+	.4byte gLevel36Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 3-mm Tutorial
+	.4byte gWorldThreeMiniMarioBG @ Background Data
+	.4byte gLevel3MMTutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldFourTutorialLevelTable
+gWorldFourTutorialLevelTable:
+@ 4-1 Tutorial
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel41Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 4-2 Tutorial
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel42Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 4-3 Tutorial
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel43Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000020 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 4-4 Tutorial
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel44Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 4-5 Tutorial
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel45Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+@ 4-6 Tutorial
+	.4byte gWorldFourVerticalBG @ Background Data
+	.4byte gLevel46Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 4-mm Tutorial
+	.4byte gWorldFourMiniMarioBG @ Background Data
+	.4byte gLevel4MMTutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x000000FF @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+
+	
+	.GLOBAL gWorldFiveTutorialLevelTable
+gWorldFiveTutorialLevelTable:
+@ 5-1 Tutorial
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel51Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 5-2 Tutorial	
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel52Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 5-3 Tutorial
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel53Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 5-4 Tutorial
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel54Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000002 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 5-5 Tutorial
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel55Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 5-6 Tutorial
+	.4byte gWorldFiveVerticalBG @ Background Data
+	.4byte gLevel56Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000001 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 5-mm Tutorial
+	.4byte gWorldFiveMiniMarioBG @ Background Data
+	.4byte gLevel5MMTutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x000000FF @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gWorldSixTutorialLevelTable
+gWorldSixTutorialLevelTable:
+@ 6-1 Tutorial
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel61Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 6-2 Tutorial
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel62Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 6-3 Tutorial	
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel63Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000022 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 6-4 Tutorial
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel64Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000000 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 6-5 Tutorial	
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel65Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000024 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 6-6 Tutorial
+	.4byte gWorldSixVerticalBG @ Background Data
+	.4byte gLevel66Tutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 1 @ Level Type (Unused)
+	.4byte 0x00000080 @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+@ 6-mm Tutorial
+	.4byte gWorldSixMiniMarioBG @ Background Data
+	.4byte gLevel6MMTutorial @ Level Data
+	.2byte 150 @ Timer
+	.byte 0 @ Song ID
+	.byte 3 @ Level Type (Unused)
+	.4byte 0x000000FF @ Level Flags (Binary)
+	.4byte 0x00000000 @ Unused
+	
+	.GLOBAL gTutorialWorldTable
+gTutorialWorldTable:
+
+	.4byte 7 @ Level Count
+	.4byte gWorldOneTutorialLevelTable
+	.4byte gWorldOneData
+	
+	.4byte 7 @ Level Count
+	.4byte gWorldTwoTutorialLevelTable
+	.4byte gWorldTwoData
+	
+	.4byte 7 @ Level Count
+	.4byte gWorldThreeTutorialLevelTable
+	.4byte gWorldThreeData
+	
+	.4byte 7 @ Level Count
+	.4byte gWorldFourTutorialLevelTable
+	.4byte gWorldFourData
+	
+	.4byte 7 @ Level Count
+	.4byte gWorldFiveTutorialLevelTable
+	.4byte gWorldFiveData
+	
+	.4byte 7 @ Level Count
+	.4byte gWorldSixTutorialLevelTable
+	.4byte gWorldSixData
+	
 	.GLOBAL gUnknown_08B2D378
 gUnknown_08B2D378:
-	.INCBIN "baserom.gba", 0xB2D378, 0xB2D380-0xB2D378
+	.4byte 6 @ World Count
+	.4byte gTutorialWorldTable
 
 	.GLOBAL gTutorialDemoInputTable
 gTutorialDemoInputTable:
-	.INCBIN "baserom.gba", 0xB2D380, 0xB2D574-0xB2D380
+
+@ World One
+	.4byte 0x08B1C0C0
+	.4byte 0x08B1C648
+	.4byte 0x08B1C8C8
+	.4byte 0x08B1CD8C
+	.4byte 0x08B1D19C
+	.4byte 0x08B1D5E0
+	.4byte 0x08B1DA40
+
+@ World Two
+	.4byte 0x08B1E714
+	.4byte 0x08B1EAC4
+	.4byte 0x08B1F098
+	.4byte 0x08B1F544
+	.4byte 0x08B1F784
+	.4byte 0x08B1FA5C
+	.4byte 0x08B1FD14
+
+@ World Three
+	.4byte 0x08B20A70
+	.4byte 0x08B2160C
+	.4byte 0x08B21804
+	.4byte 0x08B21A60
+	.4byte 0x08B21D90
+	.4byte 0x08B220B4
+	.4byte 0x08B22460
+	
+@ World Four
+	.4byte 0x08B2280C
+	.4byte 0x08B22AD0
+	.4byte 0x08B22CAC
+	.4byte 0x08B22F2C
+	.4byte 0x08B231A8
+	.4byte 0x08B237A0
+	.4byte 0x08B23A5C
+	
+@ World Five
+	.4byte 0x08B23E60
+	.4byte 0x08B24190
+	.4byte 0x08B24520
+	.4byte 0x08B248F4
+	.4byte 0x08B24F20
+	.4byte 0x08B25170
+	.4byte 0x08B25FE8
+	
+@ World Six
+	.4byte 0x08B265F8
+	.4byte 0x08B26A0C
+	.4byte 0x08B26CC8
+	.4byte 0x08B270FC
+	.4byte 0x08B27450
+	.4byte 0x08B27FBC
+	.4byte 0x08B28100
+	
+@ Unknown
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_08B2D440
+gUnknown_08B2D440:
+	.INCBIN "baserom.gba", 0xB2D440, 0xB2D574-0xB2D440
 
 	.GLOBAL gUnknown_08B2D574
 gUnknown_08B2D574:

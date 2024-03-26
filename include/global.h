@@ -104,12 +104,12 @@ struct UnknownStruct6
 
 struct UnknownStruct5
 {
-    u32 *levelTableData;
-    u32 worldData;
-    u16 unk8;
-    u8 unkA;
-    u8 unkB;
-    u32 *unkC;
+    u32 *backgroundData;
+    u32 *levelData;
+    u16 levelTimer;
+    u8 songID;
+    u8 levelType;
+    u32 levelFlags;
     u32 unk10;
 };
 
@@ -595,7 +595,7 @@ struct worldTableStruct gUnknown_0807C028[0];
 struct worldTableStruct gUnknown_08B2CA5C[0];
 struct worldTableStruct gUnknown_0807C0E0[0];
 struct worldTableStruct gUnknown_08B2D378[0];
-extern u8 gUnknown_08B2CFC8[0];
+extern u8 gTitleDemoLevelIDs[0];
 
 extern u8 gUnknown_0807C0D8;
 
@@ -605,7 +605,7 @@ extern u8 gUnknown_030009FC;
 
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
-extern struct UnknownStruct16 gEWorldMenuData1;
+extern struct UnknownStruct16 gEWorldMenuData2;
 s32 gUnknown_03000288;
 u32 gUnknown_0300028C;
 u8 gUnknown_03000290;
@@ -619,7 +619,7 @@ u16 *gUnknown_03000E80;
 extern u32 gUnknown_03000294;
 extern u32 gUnknown_03000298;
 extern s32 gUnknown_03000288;
-extern const gUnknown_080769F4[];
+extern const u32 gUnknown_080769F4[];
 
 //------------------------------------------------------------------------------
 // Functions
