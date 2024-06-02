@@ -564,12 +564,12 @@ gUnknown_0807820C:
 gUnknown_08078210:
 	.4byte 0x0200C010
 
-	.GLOBAL gUnknown_08078214
-gUnknown_08078214:
+	.GLOBAL gCollectableScoreTable1
+gCollectableScoreTable1:
 	.2byte 0x7D0
 
-	.GLOBAL gUnknown_08078216
-gUnknown_08078216:
+	.GLOBAL gCollectableScoreTable2
+gCollectableScoreTable2:
 .2byte 0x7D0
 .2byte 0xBB8
 .2byte 0xBB8
@@ -1571,7 +1571,7 @@ gUnknown_080B51F8:
 
 	.GLOBAL gUnknown_080B521C
 gUnknown_080B521C:
-	.INCBIN "baserom.gba", 0xB521C, 0xB5300-0xB521C
+	.INCBIN "assets/objects/key_blinking.bin"
 
 	.GLOBAL gUnknown_080B5300
 gUnknown_080B5300:
@@ -4599,11 +4599,11 @@ gWorldSixPlusHorizontalBG:
 gWorldSixPlusVerticalBG:
 	.INCBIN "assets/level/backgrounds/world_six/world_six_plus_vertical.bin"
 	
-@ unknown data
+@ Related to level intro camera panning/side of level the player enters from
 
 	.GLOBAL gUnknown_08AF43E4
 gUnknown_08AF43E4:
-	.INCBIN "baserom.gba", 0xAF43E4, 0xAF63E8-0xAF43E4
+	.INCBIN "assets/level/gUnknown_08AF43E4.bin"
 	
 @ Levels
 
@@ -5551,17 +5551,220 @@ gLevelDKBoss:
 gLevelDKBossPlus:
 	.INCBIN "assets/level/level_data/boss/DK_boss_plus.bin"
 	
-@ Demo/Tutorial Input data
+@ Title demo/Tutorial Input data
 	
-	.GLOBAL gUnknown_08B19C18
-gUnknown_08B19C18:
-	.INCBIN "baserom.gba", 0xB19C18, 0xB29054-0xB19C18
+	.GLOBAL g11BTitleDemo
+g11BTitleDemo:
+	.INCBIN "assets/demo_inputs/title/1_1B_demo_inputs.bin"
+	
+	.GLOBAL g26BTitleDemo
+g26BTitleDemo:
+	.INCBIN "assets/demo_inputs/title/2_6B_demo_inputs.bin"
+	
+	.GLOBAL g33ATitleDemo
+g33ATitleDemo:
+	.INCBIN "assets/demo_inputs/title/3_3A_demo_inputs.bin"
+	
+	.GLOBAL g44BTitleDemo
+g44BTitleDemo:
+	.INCBIN "assets/demo_inputs/title/4_4B_demo_inputs.bin"
+	
+	.GLOBAL g52ATitleDemo
+g52ATitleDemo:
+	.INCBIN "assets/demo_inputs/title/5_2A_demo_inputs.bin"
+	
+	.GLOBAL g63BTitleDemo
+g63BTitleDemo:
+	.INCBIN "assets/demo_inputs/title/6_3B_demo_inputs.bin"
+	
+@ World 1 Tutorials
+	
+	.GLOBAL g11TutorialDemo
+g11TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_one/1_1_tutorial_inputs.bin"
+
+	.GLOBAL g12TutorialDemo
+g12TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_one/1_2_tutorial_inputs.bin"
+		
+	.GLOBAL g13TutorialDemo
+g13TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_one/1_3_tutorial_inputs.bin"
+
+	.GLOBAL g14TutorialDemo
+g14TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_one/1_4_tutorial_inputs.bin"
+		
+	.GLOBAL g15TutorialDemo
+g15TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_one/1_5_tutorial_inputs.bin"
+
+	.GLOBAL g16TutorialDemo
+g16TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_one/1_6_tutorial_inputs.bin"
+	
+	.GLOBAL g1MMTutorialDemo
+g1MMTutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_one/1_mm_tutorial_inputs.bin"
+	
+@ World 2 Tutorials
+	
+	.GLOBAL g21TutorialDemo
+g21TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_two/2_1_tutorial_inputs.bin"
+
+	.GLOBAL g22TutorialDemo
+g22TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_two/2_2_tutorial_inputs.bin"
+		
+	.GLOBAL g23TutorialDemo
+g23TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_two/2_3_tutorial_inputs.bin"
+
+	.GLOBAL g24TutorialDemo
+g24TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_two/2_4_tutorial_inputs.bin"
+		
+	.GLOBAL g25TutorialDemo
+g25TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_two/2_5_tutorial_inputs.bin"
+
+	.GLOBAL g26TutorialDemo
+g26TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_two/2_6_tutorial_inputs.bin"
+	
+	.GLOBAL g2MMTutorialDemo
+g2MMTutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_two/2_mm_tutorial_inputs.bin"
+	
+@ World 3 Tutorials
+	
+	.GLOBAL g31TutorialDemo
+g31TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_three/3_1_tutorial_inputs.bin"
+
+	.GLOBAL g32TutorialDemo
+g32TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_three/3_2_tutorial_inputs.bin"
+		
+	.GLOBAL g33TutorialDemo
+g33TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_three/3_3_tutorial_inputs.bin"
+
+	.GLOBAL g34TutorialDemo
+g34TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_three/3_4_tutorial_inputs.bin"
+		
+	.GLOBAL g35TutorialDemo
+g35TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_three/3_5_tutorial_inputs.bin"
+
+	.GLOBAL g36TutorialDemo
+g36TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_three/3_6_tutorial_inputs.bin"
+	
+	.GLOBAL g3MMTutorialDemo
+g3MMTutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_three/3_mm_tutorial_inputs.bin"
+	
+@ World 4 Tutorials
+	
+	.GLOBAL g41TutorialDemo
+g41TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_four/4_1_tutorial_inputs.bin"
+
+	.GLOBAL g42TutorialDemo
+g42TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_four/4_2_tutorial_inputs.bin"
+		
+	.GLOBAL g43TutorialDemo
+g43TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_four/4_3_tutorial_inputs.bin"
+
+	.GLOBAL g44TutorialDemo
+g44TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_four/4_4_tutorial_inputs.bin"
+		
+	.GLOBAL g45TutorialDemo
+g45TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_four/4_5_tutorial_inputs.bin"
+
+	.GLOBAL g46TutorialDemo
+g46TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_four/4_6_tutorial_inputs.bin"
+	
+	.GLOBAL g4MMTutorialDemo
+g4MMTutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_four/4_mm_tutorial_inputs.bin"
+	
+@ World 5 Tutorials
+	
+	.GLOBAL g51TutorialDemo
+g51TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_five/5_1_tutorial_inputs.bin"
+
+	.GLOBAL g52TutorialDemo
+g52TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_five/5_2_tutorial_inputs.bin"
+		
+	.GLOBAL g53TutorialDemo
+g53TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_five/5_3_tutorial_inputs.bin"
+
+	.GLOBAL g54TutorialDemo
+g54TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_five/5_4_tutorial_inputs.bin"
+		
+	.GLOBAL g55TutorialDemo
+g55TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_five/5_5_tutorial_inputs.bin"
+
+	.GLOBAL g56TutorialDemo
+g56TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_five/5_6_tutorial_inputs.bin"
+	
+	.GLOBAL g5MMTutorialDemo
+g5MMTutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_five/5_mm_tutorial_inputs.bin"
+	
+@ World 6 Tutorials
+	
+	.GLOBAL g61TutorialDemo
+g61TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_six/6_1_tutorial_inputs.bin"
+
+	.GLOBAL g62TutorialDemo
+g62TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_six/6_2_tutorial_inputs.bin"
+	
+	.GLOBAL g63TutorialDemo
+g63TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_six/6_3_tutorial_inputs.bin"
+
+	.GLOBAL g64TutorialDemo
+g64TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_six/6_4_tutorial_inputs.bin"
+		
+	.GLOBAL g65TutorialDemo
+g65TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_six/6_5_tutorial_inputs.bin"
+
+	.GLOBAL g66TutorialDemo
+g66TutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_six/6_6_tutorial_inputs.bin"
+	
+	.GLOBAL g6MMTutorialDemo
+g6MMTutorialDemo:
+	.INCBIN "assets/demo_inputs/tutorial/world_six/6_mm_tutorial_inputs.bin"
 	
 	
+	.GLOBAL gUnknown_08B28D84
+gUnknown_08B28D84:
+	.INCBIN "baserom.gba", 0xb28d84, 0xB29054-0xb28d84
 	
 	.GLOBAL gEWorldMenuData2
 gEWorldMenuData2:
-	.INCBIN "baserom.gba", 0xB29054, 0xB2AD88-0xB29054
+	.INCBIN "assets/menu/EWorldMenuData2.bin"
 
 	.GLOBAL gUnknown_08B2AD88
 gUnknown_08B2AD88:
@@ -5931,7 +6134,7 @@ gWorldThreeTable:
 	
 	.GLOBAL gWorldFourTable
 gWorldFourTable:
-		.4byte gWorldFourHorizontalBG @ Background Data
+	.4byte gWorldFourHorizontalBG @ Background Data
 	.4byte gLevel41A @ Level Data
 	.2byte 120 @ Timer
 	.byte 27 @ Song ID
@@ -6904,12 +7107,12 @@ gTitleDemoLevelIDs:
 
 	.GLOBAL gTitleDemoInputTable
 gTitleDemoInputTable:
-	.4byte 0x08B19C18
-	.4byte 0x08B1A1F0
-	.4byte 0x08B1A7C0
-	.4byte 0x08B1AF78
-	.4byte 0x08B1B55C
-	.4byte 0x08B1BB00
+	.4byte g11BTitleDemo
+	.4byte g26BTitleDemo
+	.4byte g33ATitleDemo
+	.4byte g44BTitleDemo
+	.4byte g52ATitleDemo
+	.4byte g63BTitleDemo
 
 	.GLOBAL gWorldOneTutorialLevelTable
 gWorldOneTutorialLevelTable:
@@ -7338,58 +7541,58 @@ gUnknown_08B2D378:
 gTutorialDemoInputTable:
 
 @ World One
-	.4byte 0x08B1C0C0
-	.4byte 0x08B1C648
-	.4byte 0x08B1C8C8
-	.4byte 0x08B1CD8C
-	.4byte 0x08B1D19C
-	.4byte 0x08B1D5E0
-	.4byte 0x08B1DA40
+	.4byte g11TutorialDemo
+	.4byte g12TutorialDemo
+	.4byte g13TutorialDemo
+	.4byte g14TutorialDemo
+	.4byte g15TutorialDemo
+	.4byte g16TutorialDemo
+	.4byte g1MMTutorialDemo
 
 @ World Two
-	.4byte 0x08B1E714
-	.4byte 0x08B1EAC4
-	.4byte 0x08B1F098
-	.4byte 0x08B1F544
-	.4byte 0x08B1F784
-	.4byte 0x08B1FA5C
-	.4byte 0x08B1FD14
+	.4byte g21TutorialDemo
+	.4byte g22TutorialDemo
+	.4byte g23TutorialDemo
+	.4byte g24TutorialDemo
+	.4byte g25TutorialDemo
+	.4byte g26TutorialDemo
+	.4byte g2MMTutorialDemo
 
 @ World Three
-	.4byte 0x08B20A70
-	.4byte 0x08B2160C
-	.4byte 0x08B21804
-	.4byte 0x08B21A60
-	.4byte 0x08B21D90
-	.4byte 0x08B220B4
-	.4byte 0x08B22460
+	.4byte g31TutorialDemo
+	.4byte g32TutorialDemo
+	.4byte g33TutorialDemo
+	.4byte g34TutorialDemo
+	.4byte g35TutorialDemo
+	.4byte g36TutorialDemo
+	.4byte g3MMTutorialDemo
 	
 @ World Four
-	.4byte 0x08B2280C
-	.4byte 0x08B22AD0
-	.4byte 0x08B22CAC
-	.4byte 0x08B22F2C
-	.4byte 0x08B231A8
-	.4byte 0x08B237A0
-	.4byte 0x08B23A5C
+	.4byte g41TutorialDemo
+	.4byte g42TutorialDemo
+	.4byte g43TutorialDemo
+	.4byte g44TutorialDemo
+	.4byte g45TutorialDemo
+	.4byte g46TutorialDemo
+	.4byte g4MMTutorialDemo
 	
 @ World Five
-	.4byte 0x08B23E60
-	.4byte 0x08B24190
-	.4byte 0x08B24520
-	.4byte 0x08B248F4
-	.4byte 0x08B24F20
-	.4byte 0x08B25170
-	.4byte 0x08B25FE8
+	.4byte g51TutorialDemo
+	.4byte g52TutorialDemo
+	.4byte g53TutorialDemo
+	.4byte g54TutorialDemo
+	.4byte g55TutorialDemo
+	.4byte g56TutorialDemo
+	.4byte g5MMTutorialDemo
 	
 @ World Six
-	.4byte 0x08B265F8
-	.4byte 0x08B26A0C
-	.4byte 0x08B26CC8
-	.4byte 0x08B270FC
-	.4byte 0x08B27450
-	.4byte 0x08B27FBC
-	.4byte 0x08B28100
+	.4byte g61TutorialDemo
+	.4byte g62TutorialDemo
+	.4byte g63TutorialDemo
+	.4byte g64TutorialDemo
+	.4byte g65TutorialDemo
+	.4byte g66TutorialDemo
+	.4byte g6MMTutorialDemo
 	
 @ Unknown
 	.4byte 0x00000000
@@ -7521,11 +7724,56 @@ gUnknown_08B39F1C:
 
 	.GLOBAL gUnknown_08B39F48
 gUnknown_08B39F48:
-	.INCBIN "baserom.gba", 0xB39F48, 0xB39FC4-0xB39F48
+	.4byte 0x00000000
+	.4byte 0x00000100
+	.4byte 0x00000200
+	.4byte 0x00000001
+	.4byte 0x00000101
+	.4byte 0x00000201	
+	.4byte 0x00000002
+	.4byte 0x00000102
+	.4byte 0x00000202
+	.4byte 0x00000003
+	.4byte 0x00000103
+	.4byte 0x00000203
+	.4byte 0x00000004
+	.4byte 0x00000104
+	.4byte 0x00000204
+	.4byte 0x00000005
+	.4byte 0x00000105
+	.4byte 0x00000205
+	.4byte 0x00000006
+	.4byte 0x00000106
+	.4byte 0x00000206
+	.4byte 0x00000007
+	.4byte 0x00000107
+	.4byte 0x00000207
+	.4byte 0x00000008
+	.4byte 0x00000108
+	.4byte 0x00000208
+	.4byte 0x00000009
+	.4byte 0x00000109
+	.4byte 0x00000209
+	.4byte 0x0000000A
 
 	.GLOBAL gUnknown_08B39FC4
 gUnknown_08B39FC4:
-	.INCBIN "baserom.gba", 0xB39FC4, 0xB3A004-0xB39FC4
+	.4byte 0x00000000
+	.4byte 0x00000040
+	.4byte 0x00000080
+	.4byte 0x000000C0
+	.4byte 0x00000100
+	.4byte 0x00000140
+	.4byte 0x00000180
+	.4byte 0x000001C0
+	.4byte 0x00000200
+	.4byte 0x00000240
+	.4byte 0x00000280
+	.4byte 0x000002C0
+	.4byte 0x00000300
+	.4byte 0x00000340
+	.4byte 0x00000380
+	.4byte 0x000003C0
 
 	.GLOBAL gUnknown_08B3A004
 gUnknown_08B3A004:
@@ -7537,7 +7785,23 @@ gUnknown_08B3A0A8:
 
 	.GLOBAL gUnknown_08B3A4AC
 gUnknown_08B3A4AC:
-	.INCBIN "baserom.gba", 0xB3A4AC, 0xB3A4DC-0xB3A4AC
+	.4byte 0x04000062 @ SOUND1CNT_H
+	.4byte 0x04000064 @ SOUND1CNT_X
+	.4byte 0x07FFF800
+	
+	.4byte 0x04000068 @ SOUND2CNT_L
+	.4byte 0x0400006C @ SOUND2CNT_H
+	.4byte 0x07FFF800
+	
+	.4byte 0x04000072 @ SOUND3CNT_H
+	.4byte 0x04000074 @ SOUND3CNT_X
+	.4byte 0x07FFF800
+	
+	.4byte 0x04000078 @ SOUND4CNT_L
+	.4byte 0x0400007C @ SOUND4CNT_H
+	.4byte 0x0000FFFF
+	
+	
 
 	.GLOBAL gUnknown_08B3A4DC
 gUnknown_08B3A4DC:

@@ -33284,7 +33284,7 @@ _0802C372:
 	add r0, r0, #1
 	str r0, [sp, #4]
 	mov r0, sp
-	bl sub_08002160
+	bl level_edit_delete_object
 	ldr r3, _0802C3D4  @ =gUnknown_0807820C
 	ldr r2, [r3]
 	ldr r4, _0802C3E0  @ =0x0000800C
@@ -33378,7 +33378,7 @@ _0802C410:
 	add r5, sp, #8
 	str r0, [r5, #4]
 	add r0, r5, #0
-	bl sub_08002160
+	bl level_edit_delete_object
 	ldr r0, _0802C52C  @ =gUnknown_0807820C
 	ldr r2, [r0]
 	ldr r1, _0802C538  @ =0x0000800C

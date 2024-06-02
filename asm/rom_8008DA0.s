@@ -1915,7 +1915,7 @@ _08009BEC:
 	orr r1, r1, r2
 	str r1, [r0, #20]
 _08009C04:
-	ldr r1, _08009C54  @ =0x030008E4
+	ldr r1, _08009C54  @ =gUnknown_030008E4
 	ldrb r2, [r1]
 	mov r12, r2
 	add r0, r7, #0
@@ -1956,7 +1956,7 @@ _08009C4C:
 _08009C50:
 	.4byte gUnknown_03001B30
 _08009C54:
-	.4byte 0x030008E4
+	.4byte gUnknown_030008E4
 _08009C58:
 	.4byte gUnknown_03000A10
 _08009C5C:
@@ -7605,7 +7605,7 @@ _0800C674:
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0800C6FC
-	ldr r5, _0800C6E0  @ =0x030008C8
+	ldr r5, _0800C6E0  @ =gUnknown_030008C8
 	ldr r2, [r5]
 	sub r0, r2, #1
 	str r0, [r5]
@@ -7654,7 +7654,7 @@ _0800C6D8:
 _0800C6DC:
 	.4byte gUnknown_030012E8
 _0800C6E0:
-	.4byte 0x030008C8
+	.4byte gUnknown_030008C8
 _0800C6E4:
 	.4byte gLevelType
 _0800C6E8:
@@ -7670,7 +7670,7 @@ _0800C6E8:
 _0800C6F8:
 	.4byte 0xFF600000
 _0800C6FC:
-	ldr r1, _0800C74C  @ =0x030008C8
+	ldr r1, _0800C74C  @ =gUnknown_030008C8
 	ldr r0, [r1]
 	sub r0, r0, #1
 	str r0, [r1]
@@ -7713,7 +7713,7 @@ _0800C746:
 	add r0, r0, #1
 	b _0800C860
 _0800C74C:
-	.4byte 0x030008C8
+	.4byte gUnknown_030008C8
 _0800C750:
 	.4byte gLevelType
 _0800C754:
@@ -7735,7 +7735,7 @@ _0800C768:
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0800C80C
-	ldr r5, _0800C7CC  @ =0x030008C8
+	ldr r5, _0800C7CC  @ =gUnknown_030008C8
 	ldr r3, [r5]
 	add r0, r3, #1
 	str r0, [r5]
@@ -7780,7 +7780,7 @@ _0800C7C4:
 	strb r0, [r4]
 	b _0800C862
 _0800C7CC:
-	.4byte 0x030008C8
+	.4byte gUnknown_030008C8
 _0800C7D0:
 	.4byte gLevelType
 _0800C7D4:
@@ -7814,7 +7814,7 @@ _0800C804:
 _0800C808:
 	.4byte gCameraHorizontalOffset
 _0800C80C:
-	ldr r0, _0800C8F4  @ =0x030008C8
+	ldr r0, _0800C8F4  @ =gUnknown_030008C8
 	ldr r1, [r0]
 	add r1, r1, #1
 	str r1, [r0]
@@ -7901,7 +7901,7 @@ _0800C898:
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0800C928
-	ldr r2, _0800C8F4  @ =0x030008C8
+	ldr r2, _0800C8F4  @ =gUnknown_030008C8
 	ldr r3, [r2, #4]
 	sub r0, r3, #1
 	str r0, [r2, #4]
@@ -7939,7 +7939,7 @@ _0800C8EC:
 	.byte 0x00
 	.byte 0x00
 _0800C8F4:
-	.4byte 0x030008C8
+	.4byte gUnknown_030008C8
 _0800C8F8:
 	.4byte gLevelType
 _0800C8FC:
@@ -7966,7 +7966,7 @@ _0800C90C:
 _0800C924:
 	.4byte 0xFF100000
 _0800C928:
-	ldr r1, _0800C970  @ =0x030008C8
+	ldr r1, _0800C970  @ =gUnknown_030008C8
 	ldr r0, [r1, #4]
 	sub r0, r0, #1
 	str r0, [r1, #4]
@@ -8004,7 +8004,7 @@ _0800C96A:
 	add r0, r0, #1
 	b _0800CA64
 _0800C970:
-	.4byte 0x030008C8
+	.4byte gUnknown_030008C8
 _0800C974:
 	mov r7, #128
 	mov r8, r7
@@ -8027,7 +8027,7 @@ _0800C988:
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0800CA18
-	ldr r2, _0800C9F0  @ =0x030008C8
+	ldr r2, _0800C9F0  @ =gUnknown_030008C8
 	ldr r4, [r2, #4]
 	add r0, r4, #1
 	str r0, [r2, #4]
@@ -8071,7 +8071,7 @@ _0800C9E4:
 _0800C9EC:
 	.4byte gUnknown_03000A10
 _0800C9F0:
-	.4byte 0x030008C8
+	.4byte gUnknown_030008C8
 _0800C9F4:
 	ldr r0, [r2]
 	lsl r0, r0, #20
@@ -8092,7 +8092,7 @@ _0800CA0C:
 _0800CA14:
 	.4byte 0xFF100000
 _0800CA18:
-	ldr r0, _0800CA90  @ =0x030008C8
+	ldr r0, _0800CA90  @ =gUnknown_030008C8
 	ldr r1, [r0, #4]
 	add r1, r1, #1
 	str r1, [r0, #4]
@@ -8155,7 +8155,7 @@ _0800CA66:
 	strb r0, [r4]
 	b _0800CAAC
 _0800CA90:
-	.4byte 0x030008C8
+	.4byte gUnknown_030008C8
 _0800CA94:
 	.4byte gUnknown_03000A10
 _0800CA98:

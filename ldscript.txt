@@ -15,7 +15,7 @@ SECTIONS
 		src/rom_80088F0.o(.text);
 		asm/rom_8008DA0.o(.text);
 		src/rom_800EEC0.o(.text);
-		asm/rom_800F070.o(.text);
+		asm/rom_800F0C4.o(.text);
 		src/rom_800F1E4.o(.text);
 		asm/rom_800F6EC.o(.text);
 		src/title.o(.text);
@@ -136,10 +136,18 @@ SECTIONS
 		tools/agbcc/lib/libgcc.a:fp-bit.o(.bss);
 
 		. = 0x8C4;		gUnknown_030008C4 = .;
+		. = 0x8C8;		gUnknown_030008C8 = .;
+		. = 0x8D0;		gUnknown_030008D0 = .;
 		. = 0x8D4;		gUnknown_030008D4 = .;
 		. = 0x8D8;		gUnknown_030008D8 = .;
+		. = 0x8DC;		gUnknown_030008DC = .;
+		. = 0x8E4;		gUnknown_030008E4 = .;
 		. = 0x8E8;		gUnknown_030008E8 = .;
-		. = 0x924;      gUnknown_03000924 = .;
+		. = 0x8EC;		gUnknown_030008EC = .;
+		. = 0x924;		gUnknown_03000924 = .;
+		. = 0x928;		gUnknown_03000928 = .;
+		. = 0x92C;		gUnknown_0300092C = .;
+		. = 0x934;		gUnknown_03000934 = .;
 		. = 0x964;		gUnknown_03000964 = .;
 		. = 0x9B0;		gUnknown_030009B0 = .;
 		. = 0x9C0;		gMainState = .;

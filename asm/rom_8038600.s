@@ -18751,7 +18751,7 @@ sub_08040F54: @ 0x08040F54
 	mov r4, #0
 	ldrsh r0, [r3, r4]
 	str r0, [r1, #4]
-	ldr r1, _08040F98  @ =0x030008C8
+	ldr r1, _08040F98  @ =gUnknown_030008C8
 	ldrh r0, [r2]
 	lsl r0, r0, #16
 	asr r0, r0, #17
@@ -18775,7 +18775,7 @@ _08040F90:
 _08040F94:
 	.4byte gCameraVerticalOffset
 _08040F98:
-	.4byte 0x030008C8
+	.4byte gUnknown_030008C8
 	THUMB_FUNC_END sub_08040F54
 
 	THUMB_FUNC_START sub_08040F9C

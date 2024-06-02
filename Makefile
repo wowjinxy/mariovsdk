@@ -46,7 +46,7 @@ SFILES   := \
 	asm/rom_8001BA4.s \
 	asm/rom_80067F0.s \
 	asm/rom_8008DA0.s \
-	asm/rom_800F070.s \
+	asm/rom_800F0C4.s \
 	asm/rom_800F6EC.s \
 	asm/rom_801BAD8.s \
 	asm/boss_clear.s \

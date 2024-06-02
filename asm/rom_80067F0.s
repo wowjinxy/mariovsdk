@@ -314,7 +314,7 @@ _08006A08:
 
 	THUMB_FUNC_START sub_08006A0C
 sub_08006A0C: @ 0x08006A0C
-	ldr r1, _08006A24  @ =0x03000934
+	ldr r1, _08006A24  @ =gUnknown_03000934
 	mov r0, #1
 	strb r0, [r1]
 	ldr r1, _08006A28  @ =gNextLevelID
@@ -328,7 +328,7 @@ sub_08006A0C: @ 0x08006A0C
 	.byte 0x00
 	.byte 0x00
 _08006A24:
-	.4byte 0x03000934
+	.4byte gUnknown_03000934
 _08006A28:
 	.4byte gNextLevelID
 _08006A2C:
