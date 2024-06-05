@@ -17,7 +17,7 @@ DmaFill32(3, 0xa0, gOamData, 0x400);
       else if (gUnknown_03000288 >= (temp1 = 1)) { 
            if (6 > gUnknown_03000288) {
            if ((gUnknown_03000288 >= (temp1 = 3))){ 
-    sub_08034CCC(gUnknown_080769F4,0xffff8001,0x14,0xffffffff,2);
+    sub_08034CCC(gTextErasing,0xffff8001,0x14,0xffffffff,2);
   }}}
     
     sub_08035108(&temp2);

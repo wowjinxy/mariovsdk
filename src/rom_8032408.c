@@ -38,7 +38,7 @@ extern const struct UnknownStruct10 gUnknown_08B2AD88;
 extern struct UnknownStruct12 *gUnknown_080788FC;
 extern struct UnknownStruct13 gUnknown_0807DD1C[];
 extern void *const gUnknown_0807CA94;
-extern const u16 gMainPaletteTable[];
+extern const u16 gPaletteData[];
 
 void game_init_callback(void)
 {
@@ -179,7 +179,7 @@ void sub_08032788(u32 a, u32 b)
     {
         u32 offset1 = a * 0x400;
         u32 offset2 = r4 * 0x200;
-        const u16 *src = gMainPaletteTable + offset1 + offset2;
+        const u16 *src = gPaletteData + offset1 + offset2;
 
         DmaCopy16(3, src, (void *)PLTT, 0x200);
         sub_0802C104(0, 0);
@@ -189,7 +189,7 @@ void sub_08032788(u32 a, u32 b)
     {
         u32 offset1 = a * 0x400;
         u32 offset2 = r4 * 0x200;
-        const u16 *src = gMainPaletteTable + offset1 + offset2 + 0x100;
+        const u16 *src = gPaletteData + offset1 + offset2 + 0x100;
 
         // Why is this one DmaCopy32 while the other one is DmaCopy16?
         DmaCopy32(3, src, (void *)(PLTT + 0x200), 0x200);

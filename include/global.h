@@ -370,6 +370,8 @@ extern u8 gUnknown_030000AC;
 extern s32 gUnknown_030000B0;
 extern s8 gUnknown_030000B4;
 extern s16 gUnknown_030000B6;
+extern s8 gUnknown_03000110;
+extern s8 gUnknown_03000111;
 extern struct MoviePlayerParamaters gMoviePlayerParams;
 extern u8 gUnknown_030002A0[];
 extern u16 gUnknown_030002AA;
@@ -377,7 +379,13 @@ extern struct Struct30002B8 gUnknown_030002B0;
 extern struct Struct30002B8 gUnknown_030002B8;
 extern struct Struct30002B8 gUnknown_030002C0;
 extern struct Struct30002B8 gUnknown_030002C8;
-
+extern u32 gUnknown_030001B4;
+extern u32 gUnknown_030001C0;
+extern u8 *gUnknown_030001BC;
+extern u32 gUnknown_030001B8;
+extern u32 gUnknown_030001A8;
+extern u32 gUnknown_030001AC;
+extern u32 gUnknown_030001B0;
 
 //new for sub_0804A794
 extern u8 gUnknown_03000368;
@@ -560,7 +568,7 @@ extern u8 gUnknown_03001E3C;
 
 extern void *gUnknown_03007FFC;
 
-extern const u8 gUnknown_08076D94[];
+extern const u8 gTextHeapOverflow[];
 
 extern void (*const gMainStateInitCallbacks[])(void);
 extern void (*const gMainStateMainCallbacks[])(void);
@@ -570,6 +578,7 @@ extern const u32 gUnknown_0807846C[];
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];
 extern const u8 gUnknown_08079698[];
+extern const u32 gUnknown_0807C850[];
 extern u16 *const gUnknown_0807DD94;
 extern const struct UnknownStruct14 gNintendoSoftwareTechnologyLogo;
 extern const struct UnknownStruct14 gTitleScreenLeftData;
@@ -628,7 +637,7 @@ u16 *gUnknown_03000E80;
 extern u32 gUnknown_03000294;
 extern u32 gUnknown_03000298;
 extern s32 gUnknown_03000288;
-extern const u32 gUnknown_080769F4[];
+extern const u32 gTextErasing[];
 
 //------------------------------------------------------------------------------
 // Functions
@@ -746,7 +755,7 @@ void sub_0802D608(void);
 u8 sub_0805739C(const u32 *);
 u8 sub_0802BE50();
 u8 sub_0801B310();
-u8 sub_08029EB4();
+u32 sub_08029EB4();
 u8 sub_080148A4(u32, u8);
 s32 sub_08014BB4();
 s32 sub_080148F0(u32);
@@ -836,5 +845,7 @@ void sub_0803D248();
 void sub_08031D44();
 void sub_0806E594(u32, u32, u32);
 void sub_0800F0A8(u32);
+u32 sub_08029F7C(void);
+void sub_08007154(void);
 
 #endif  // GUARD_GLOBAL_H

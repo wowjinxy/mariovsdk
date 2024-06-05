@@ -24633,7 +24633,7 @@ _08043A0A:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08043ACA
-	ldr r0, _08043B38  @ =gUnknown_08076F6C
+	ldr r0, _08043B38  @ =gTextLostAll
 	mov r2, r9
 	str r2, [sp]
 	mov r3, r10
@@ -24644,7 +24644,7 @@ _08043A0A:
 	mov r2, #64
 	add r3, r7, #0
 	bl sub_080434CC
-	ldr r0, _08043B3C  @ =gUnknown_08076F78
+	ldr r0, _08043B3C  @ =gTextMiniMarios
 	mov r5, r9
 	str r5, [sp]
 	mov r6, r10
@@ -24728,7 +24728,7 @@ _08043ACA:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08043AE6
-	ldr r0, _08043B44  @ =gUnknown_08076F84
+	ldr r0, _08043B44  @ =gTextGetTOYCards
 	mov r1, #6
 	str r1, [sp]
 	mov r1, #32
@@ -24779,13 +24779,13 @@ _08043B30:
 _08043B34:
 	.4byte gUnknown_082F11CC
 _08043B38:
-	.4byte gUnknown_08076F6C
+	.4byte gTextLostAll
 _08043B3C:
-	.4byte gUnknown_08076F78
+	.4byte gTextMiniMarios
 _08043B40:
 	.4byte gUnknown_080CA130
 _08043B44:
-	.4byte gUnknown_08076F84
+	.4byte gTextGetTOYCards
 	THUMB_FUNC_END sub_08043750
 
 	THUMB_FUNC_START sub_08043B48

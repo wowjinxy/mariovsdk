@@ -979,7 +979,7 @@ void *sub_08034854(u32 a)
     
     gUnknown_03001750.unk4 += (a + 3) & ~3;
     if (gUnknown_03001750.unk4 > gUnknown_03001750.unk8)
-        sub_08037A04(gUnknown_08076D94);
+        sub_08037A04(gTextHeapOverflow);
     return r4;
 }
 

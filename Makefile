@@ -29,6 +29,8 @@ CFILES   := \
 	src/intro.c \
 	src/pause_menu.c \
 	src/movie_player.c \
+	src/rom_802D614.c \
+	src/fade_in_out.c \
 	src/eCard.c \
 	src/rom_8032408.c \
 	src/level_view.c \
@@ -48,18 +50,31 @@ SFILES   := \
 	asm/rom_8008DA0.s \
 	asm/rom_800F0C4.s \
 	asm/rom_800F6EC.s \
+	asm/main_menu.s \
+	asm/rom_801488C.s \
+	asm/level_select.s \
+	asm/rom_801827C.s \
 	asm/rom_801BAD8.s \
 	asm/boss_clear.s \
-	asm/rom_801CB9C.s \
-	asm/rom_802D614.s \
+	asm/bonus_stoparrow.s \
+	asm/bonus_swapboxes.s \
+	asm/options_menu.s \
+	asm/level_results.s \
+	asm/fade_in_out.s \
+	asm/rom_8029FD0.s \
+	asm/level_help.s \
+	asm/level_retry.s \
+	asm/rom_802B798.s \
 	asm/eCard.s \
 	asm/rom_8032814.s \
 	asm/rom_8033658.s \
 	asm/rom_8034928.s \
+	asm/expert_levels.s \
 	asm/world_start.s \
 	asm/rom_80379BC.s \
 	asm/rom_8038600.s \
 	asm/rom_804AAB8.s \
+	asm/rom_807166C.s \
 	asm/syscall.s \
 	asm/rom_80747B8.s \
 	data/data.s

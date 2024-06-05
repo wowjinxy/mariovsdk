@@ -12,7 +12,10 @@ gUnknown_08076368:
 
 	.GLOBAL gUnknown_08076387
 gUnknown_08076387:
-	.INCBIN "baserom.gba", 0x76387, 0x7638C-0x76387
+	.byte 0x8
+	.byte 0xA
+	.byte 0x9
+	.2byte 0x0000
 
 	.GLOBAL gUnknown_0807638C
 gUnknown_0807638C:
@@ -24,39 +27,78 @@ gUnknown_080763AC:
 
 	.GLOBAL gUnknown_080763CC
 gUnknown_080763CC:
-	.INCBIN "baserom.gba", 0x763CC, 0x763D2-0x763CC
+	.byte 0x4
+	.byte 0x6
+	.byte 0x8
+	.byte 0xC
+	.byte 0xA
+	.byte 0xA
 
 	.GLOBAL gUnknown_080763D2
 gUnknown_080763D2:
-	.INCBIN "baserom.gba", 0x763D2, 0x763D6-0x763D2
+	.2byte 0x0044
+	.2byte 0x0073
 
 	.GLOBAL gUnknown_080763D6
 gUnknown_080763D6:
-	.INCBIN "baserom.gba", 0x763D6, 0x763DC-0x763D6
+	.byte 0x5
+	.byte 0x7
+	.byte 0x9
+	.byte 0xD
+	.byte 0xB
+	.byte 0xB
 
 	.GLOBAL gUnknown_080763DC
 gUnknown_080763DC:
-	.INCBIN "baserom.gba", 0x763DC, 0x763E2-0x763DC
+	.byte 0x4
+	.byte 0x6
+	.byte 0x8
+	.byte 0x2
+	.byte 0xA
+	.byte 0xA
 
 	.GLOBAL gUnknown_080763E2
 gUnknown_080763E2:
-	.INCBIN "baserom.gba", 0x763E2, 0x763E8-0x763E2
+	.byte 0x5
+	.byte 0x7
+	.byte 0x9
+	.byte 0x2
+	.byte 0xB
+	.byte 0xB
 
 	.GLOBAL gUnknown_080763E8
 gUnknown_080763E8:
-	.INCBIN "baserom.gba", 0x763E8, 0x763ED-0x763E8
+	.byte 0x4
+	.byte 0x6
+	.byte 0x8
+	.byte 0xA
+	.byte 0xA
 
 	.GLOBAL gUnknown_080763ED
 gUnknown_080763ED:
-	.INCBIN "baserom.gba", 0x763ED, 0x763F4-0x763ED
+	.byte 0x5
+	.byte 0x7
+	.byte 0x9
+	.byte 0xB
+	.byte 0xB
+	.byte 0x0
+	.byte 0x0
 
 	.GLOBAL gUnknown_080763F4
 gUnknown_080763F4:
-	.INCBIN "baserom.gba", 0x763F4, 0x763FC-0x763F4
+	.byte 0x1
+	.byte 0x2
+	.byte 0x3
+	.byte 0x4
+	.byte 0x5
+	.byte 0x6
+	.byte 0x7
+	.byte 0x9
 
 	.GLOBAL gUnknown_080763FC
 gUnknown_080763FC:
-	.INCBIN "baserom.gba", 0x763FC, 0x76404-0x763FC
+	.4byte 0x0000000D
+	.4byte 0x00000002
 
 	.GLOBAL gUnknown_08076404
 gUnknown_08076404:
@@ -85,28 +127,49 @@ gUnknown_08076404:
 	.ASCII "Mario vs. Donkey Kong-e card\nDETECTED!!\n\n\0\0\0"
 	.ASCII "WAITING FOR\nMario vs. Donkey Kong-e card...\0"
 	.ASCII "Please connect to GBA with\nan e-Reader and scan a\nMario vs. Donkey Kong-e card\ninto it.\n\0\0\0\0"
+
+	.GLOBAL gTextPressAToRetry
+gTextPressAToRetry:
 	.ASCII "Press A Button to Retry\nPress B Button to Cancel\0\0\0\0"
+
+	.GLOBAL gTextPressAToContinue
+gTextPressAToContinue:
 	.ASCII "Press A Button to continue\0\0"
+	
+	.GLOBAL gTextDoNotTurnOff
+gTextDoNotTurnOff:
 	.ASCII "Please DO NOT TURN OFF\nGame Boy Advance Systems\nor DISCONNECT Game Boy Advance\nGame Link cable\0\0"
+	
+	.GLOBAL gTextPressAToReceiveLevel
+gTextPressAToReceiveLevel:
 	.ASCII "Press A Button to Receive Level\nPress B Button to Cancel\0\0\0\0"
+	
+	.GLOBAL gTextPressBToCancel
+gTextPressBToCancel:
 	.ASCII "Press B Button to Cancel\0\0\0\0"
+	
+	.GLOBAL gTextPressAWhenReady
+gTextPressAWhenReady:
 	.ASCII "Press A Button when Ready\nPress B Button to Cancel\0\0"
 
-	.GLOBAL gUnknown_08076800
-gUnknown_08076800:
+	.GLOBAL gTextEraseLevelE
+gTextEraseLevelE:
 	.ASCII "ERASE\nLEVEL e-\0\0"
+	
+	.GLOBAL gTextPressAToEraseLevel
+gTextPressAToEraseLevel:
 	.ASCII "Press A Button to ERASE LEVEL\0\0\0"
 
-	.GLOBAL gUnknown_08076830
-gUnknown_08076830:
+	.GLOBAL gTextPressAToAddLevel
+gTextPressAToAddLevel:
 	.ASCII "Press A Button to ADD LEVEL\0"
 	
-	.GLOBAL gUnknown_0807684C
-gUnknown_0807684C:
+	.GLOBAL gTextNoSpaceForNewELevels
+gTextNoSpaceForNewELevels:
 	.ASCII "No Space for new\nMario vs. Donkey\nKong-e levels.\nPlease Erase a\nLevel first!\0\0\0\0"
 	
-	.GLOBAL gUnknown_0807689C
-gUnknown_0807689C:
+	.GLOBAL gTextOK
+gTextOK:
 	.ASCII "OK\0\0"
 	
 	.GLOBAL gTextCardEThirteen
@@ -161,21 +224,21 @@ gTextCardETwo:
 gTextCardEOne:
 	.ASCII "Card-E Level 1\0\0"
 	
-	.GLOBAL gUnknown_08076970
-gUnknown_08076970:
+	.GLOBAL gTextScanCardE
+gTextScanCardE:
 	.ASCII "Scan Card-e\0"
 	
-	.GLOBAL gUnknown_0807697C
-gUnknown_0807697C:
+	.GLOBAL gTextScanPreloadedCardE
+gTextScanPreloadedCardE:
 	.ASCII "Scan Preloaded Card-e\0\0\0"
 
 	.GLOBAL gUnknown_08076994
 gUnknown_08076994:
-	.4byte gUnknown_08076970
-	.4byte gUnknown_0807697C
+	.4byte gTextScanCardE
+	.4byte gTextScanPreloadedCardE
 	
-	.GLOBAL gUnknown_0807699C
-gUnknown_0807699C:
+	.GLOBAL gTextPressBToReturn
+gTextPressBToReturn:
 	.ASCII "Press B to return\0\0\0"
 
 	.GLOBAL gUnknown_080769B0
@@ -190,11 +253,20 @@ gUnknown_080769B8:
 	.ASCII "Retry\0\0\0"
 	.ASCII "Data in memory\nis corrupted!\0\0\0\0"
 
-	.GLOBAL gUnknown_080769F4
-gUnknown_080769F4:
+	.GLOBAL gTextErasing
+gTextErasing:
 	.ASCII "Erasing...\0\0"
+	
+	.GLOBAL gErrorELevelCorruptedText
+gErrorELevelCorruptedText:
 	.ASCII "ERROR\nSaved Mario vs. Donkey Kong-e\nlevels have been erased due to\ncorruption of data.\0\0"
+	
+	.GLOBAL gTextErrorSaveCorrupted
+gTextErrorSaveCorrupted:
 	.ASCII "ERROR\nAll saved data has been erased\ndue to corruption of data\0\0"
+	
+	.GLOBAL gTextErrorFlashNotDetected
+gTextErrorFlashNotDetected:
 	.ASCII "ERROR\nFlash hardware could not\nbe detected.\nSaving is disabled.\0"
 
 	.GLOBAL gUnknown_08076AD8
@@ -203,25 +275,43 @@ gUnknown_08076AD8:
 
 	.GLOBAL gUnknown_08076D58
 gUnknown_08076D58:
-	.INCBIN "baserom.gba", 0x76D58, 0x76D70-0x76D58
+	.4byte sub_08033DCC
+	.4byte sub_08037ED4
+	.4byte sub_08034138
+	.4byte sub_0802BF70
+	.4byte sub_08073B90
+	.4byte sub_08034138
 
 	.GLOBAL gUnknown_08076D70
 gUnknown_08076D70:
-	.INCBIN "baserom.gba", 0x76D70, 0x76D94-0x76D70
+	.4byte sub_0803413C
+	.4byte sub_08037ED4
+	.4byte sub_08034138
+	.4byte sub_08071BCC
+	.4byte sub_08034138
+	.4byte sub_08034138
+	.4byte sub_08034138
+	.4byte sub_08034138
+	.4byte sub_08034138
 
-	.GLOBAL gUnknown_08076D94
-gUnknown_08076D94:
+	.GLOBAL gTextHeapOverflow
+gTextHeapOverflow:
 	.ASCII "Heap overflow.\nWe are out of RAM!\0"
 
 	.ALIGN 2
 	.ASCII "MultiSio010918\0"
 
 	.ALIGN 2
+	.GLOBAL gTextSendingCompleted
+gTextSendingCompleted:
 	.ASCII "SENDING COMPLETED\n\n"
 	.ASCII "Press A Button to Resend\n"
 	.ASCII "Press B Button to Cancel.\0"
 
 	.ALIGN 2
+	
+	.GLOBAL gTextSending
+gTextSending:
 	.ASCII "SENDING...\n\n"
 	.ASCII "Please DO NOT TURN OFF\n"
 	.ASCII "Game Boy Advance Systems\n"
@@ -230,12 +320,16 @@ gUnknown_08076D94:
 	.ASCII "Game Link cable.\0"
 
 	.ALIGN 2
+	.GLOBAL gTextReadyToSendPressA
+gTextReadyToSendPressA:
 	.ASCII "READY TO SEND\n\n"
 	.ASCII "Press A Button on GBA with\n"
 	.ASCII "Mario vs. Donkey Kong to\n"
 	.ASCII "begin sending new level to.\0"
 
 	.ALIGN 2
+	.GLOBAL gTextReadyToSendLink
+gTextReadyToSendLink:
 	.ASCII "READY TO SEND\n\n"
 	.ASCII "Link e-Reader to\n"
 	.ASCII "Mario vs. Donkey Kong and\n"
@@ -244,24 +338,24 @@ gUnknown_08076D94:
 	.ASCII "Press B Button to Cancel\0"
 
 	.ALIGN 2
-	.GLOBAL gUnknown_08076F6C
-gUnknown_08076F6C:
+	.GLOBAL gTextLostAll
+gTextLostAll:
 	.ASCII "LOST ALL\0"
 
 	.ALIGN 2
-	.GLOBAL gUnknown_08076F78
-gUnknown_08076F78:
+	.GLOBAL gTextMiniMarios
+gTextMiniMarios:
 	.ASCII "MINI MARIOS\0"
 
 	.ALIGN 2
-	.GLOBAL gUnknown_08076F84
-gUnknown_08076F84:
+	.GLOBAL gTextGetTOYCards
+gTextGetTOYCards:
 	.ASCII "GET TOY CARDS!\0"
 
 	.ALIGN 2
 	.GLOBAL gUnknown_08076F94
 gUnknown_08076F94:
-	.INCBIN "baserom.gba", 0x76F94, 0x76F98-0x76F94
+	.4byte 0x003A3938
 
 	.GLOBAL gUnknown_08076F98
 gUnknown_08076F98:
@@ -273,7 +367,7 @@ gUnknown_08076FA0:
 
 	.GLOBAL gUnknown_08076FB8
 gUnknown_08076FB8:
-	.INCBIN "baserom.gba", 0x76FB8, 0x76FBC-0x76FB8
+	.4byte 0x003A3938
 
 	.GLOBAL gUnknown_08076FBC
 gUnknown_08076FBC:
@@ -285,12 +379,13 @@ gUnknown_08076FC4:
 
 	.GLOBAL gUnknown_08076FC8
 gUnknown_08076FC8:
-	.INCBIN "baserom.gba", 0x76FC8, 0x76FD0-0x76FC8
+	.4byte 0xFFF00000
+	.4byte 0x00000010
 
 	.GLOBAL gUnknown_08076FD0
 gUnknown_08076FD0:
-	.INCBIN "baserom.gba", 0x76FD0, 0x76FD4-0x76FD0
-
+	.4byte 0x003A3938
+	
 	.GLOBAL gUnknown_08076FD4
 gUnknown_08076FD4:
 	.INCBIN "baserom.gba", 0x76FD4, 0x77534-0x76FD4
@@ -731,7 +826,7 @@ gMainStateEndCallbacks:
 	.4byte boss_clear_end
 	.4byte level_results_end
 	.4byte bonus_stoparrow_end
-	.4byte bonus_swapbxoes_end
+	.4byte bonus_swapboxes_end
 	.4byte e_world_end
 	.4byte e_world_end
 	.4byte e_card_scan_end
@@ -942,9 +1037,87 @@ gUnknown_08078D24:
 gUnknown_08078DE4:
 	.INCBIN "baserom.gba", 0x78DE4, 0x78E8C-0x78DE4
 
-	.GLOBAL gUnknown_08078E8C
-gUnknown_08078E8C:
-	.INCBIN "baserom.gba", 0x78E8C, 0x78F4C-0x78E8C
+	.GLOBAL gLevelSelectLevelArtSpriteLayout
+gLevelSelectLevelArtSpriteLayout:
+	.2byte 0x001C @ X Position
+	.2byte 0x0034 @ Y Position
+	.2byte 0x0080 @ Skip 4 pixels count? doesnt affect this first one
+	.2byte 0x0010 @ Total tiles
+	.2byte 0x0200 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte 0x085D0A00 @ Sprite Data 1
+	.4byte 0x085D10C0 @ Sprite Data 2
+	.4byte 0x085D10C8 @ Sprite Graphics
+
+	.2byte 0x004E @ X Position
+	.2byte 0x0034 @ Y Position
+	.2byte 0x0080 @ Skip 4 pixels count?
+	.2byte 0x0010 @ Total tiles
+	.2byte 0x0200 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte 0x085D0A00 @ Sprite Data 1
+	.4byte 0x085D10C0 @ Sprite Data 2
+	.4byte 0x085D10C8 @ Sprite Graphics
+	
+	.2byte 0x0080 @ X Position
+	.2byte 0x0034 @ Y Position
+	.2byte 0x0080 @ Skip 4 pixels count?
+	.2byte 0x0010 @ Total tiles
+	.2byte 0x0200 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte 0x085D0A00 @ Sprite Data 1
+	.4byte 0x085D10C0 @ Sprite Data 2
+	.4byte 0x085D10C8 @ Sprite Graphics
+	
+	.2byte 0x00B2 @ X Position
+	.2byte 0x0034 @ Y Position
+	.2byte 0x0080 @ Skip 4 pixels count?
+	.2byte 0x0010 @ Total tiles
+	.2byte 0x0200 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte 0x085D0A00 @ Sprite Data 1
+	.4byte 0x085D10C0 @ Sprite Data 2
+	.4byte 0x085D10C8 @ Sprite Graphics
+	
+	.2byte 0x001C @ X Position
+	.2byte 0x0061 @ Y Position
+	.2byte 0x0080 @ Graphics Size in Bytes
+	.2byte 0x0010 @ Total tiles
+	.2byte 0x0200 @ Skip 4 pixels count?
+	.2byte 0x0000 @ unused
+	.4byte 0x085D0A00 @ Sprite Data 1
+	.4byte 0x085D10C0 @ Sprite Data 2
+	.4byte 0x085D10C8 @ Sprite Graphics
+	
+	.2byte 0x004E @ X Position
+	.2byte 0x0061 @ Y Position
+	.2byte 0x0080 @ Skip 4 pixels count?
+	.2byte 0x0010 @ Total tiles
+	.2byte 0x0200 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte 0x085D0A00 @ Sprite Data 1
+	.4byte 0x085D10C0 @ Sprite Data 2
+	.4byte 0x085D10C8 @ Sprite Graphics
+	
+	.2byte 0x0080 @ X Position
+	.2byte 0x0061 @ Y Position
+	.2byte 0x0080 @ Skip 4 pixels count?
+	.2byte 0x0010 @ Total tiles
+	.2byte 0x0200 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte 0x085D0A00 @ Sprite Data 1
+	.4byte 0x085D10C0 @ Sprite Data 2
+	.4byte 0x085D10C8 @ Sprite Graphics
+	
+	.2byte 0x00B2 @ X Position
+	.2byte 0x0061 @ Y Position
+	.2byte 0x0080 @ Skip 4 pixels count?
+	.2byte 0x0010 @ Total tiles
+	.2byte 0x0200 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte 0x085D0A00 @ Sprite Data 1
+	.4byte 0x085D10C0 @ Sprite Data 2
+	.4byte 0x085D10C8 @ Sprite Graphics
 
 	.GLOBAL gUnknown_08078F4C
 gUnknown_08078F4C:
@@ -1075,7 +1248,6 @@ gLevelSelectBackgrounds:
 	.4byte gLevelSelectWorldFiveBG
 	.4byte gLevelSelectWorldSixBG
 
-	@ .INCBIN "baserom.gba", 0x7951C, 0x79534-0x7951C
 
 	.GLOBAL gLevelSelectPlusBackgrounds
 gLevelSelectPlusBackgrounds:
@@ -1086,7 +1258,6 @@ gLevelSelectPlusBackgrounds:
 	.4byte gLevelSelectWorldFivePlusBG
 	.4byte gLevelSelectWorldSixPlusBG
 	
-	@ .INCBIN "baserom.gba", 0x79534, 0x7954C-0x79534
 
 	.GLOBAL gUnknown_0807954C
 gUnknown_0807954C:
@@ -1297,7 +1468,21 @@ gUnknown_0807C990:
 
 	.GLOBAL gUnknown_0807C9CC
 gUnknown_0807C9CC:
-	.INCBIN "baserom.gba", 0x7C9CC, 0x7CA08-0x7C9CC
+	.4byte gTextPressAWhenReady
+	.4byte gTextPressBToCancel
+	.4byte gTextPressAToReceiveLevel
+	.4byte gTextDoNotTurnOff
+	.4byte gTextPressAToContinue
+	.4byte gTextPressAToContinue
+	.4byte gTextPressAToRetry
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_0807CA08
 gUnknown_0807CA08:
@@ -1313,12 +1498,13 @@ gUnknown_0807CA40:
 
 	.GLOBAL gUnknown_0807CA88
 gUnknown_0807CA88:
-	.4byte gUnknown_08076830
-	.4byte 0x08076810
+	.4byte gTextPressAToAddLevel
+	.4byte gTextPressAToEraseLevel
 
 	.GLOBAL gUnknown_0807CA90
 gUnknown_0807CA90:
-	.INCBIN "baserom.gba", 0x7CA90, 0x7CA94-0x7CA90
+	.2byte 0x0044
+	.2byte 0x0073
 
 	.GLOBAL gUnknown_0807CA94
 gUnknown_0807CA94:
@@ -1401,11 +1587,17 @@ gUnknown_0807DC9C:
 
 	.GLOBAL gUnknown_0807DD14
 gUnknown_0807DD14:
-	.INCBIN "baserom.gba", 0x7DD14, 0x7DD1C-0x7DD14
+	.4byte 0x7FFF0000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_0807DD1C
 gUnknown_0807DD1C:
-	.INCBIN "baserom.gba", 0x7DD1C, 0x7DD34-0x7DD1C
+	.4byte gTextErrorFlashNotDetected
+	.4byte 0x00000007
+	.4byte gTextErrorSaveCorrupted
+	.4byte 0x00000004
+	.4byte gErrorELevelCorruptedText
+	.4byte 0x00000005
 
 	.GLOBAL gUnknown_0807DD34
 gUnknown_0807DD34:
@@ -1427,9 +1619,9 @@ gUnknown_0807DD7C:
 gUnknown_0807DD94:
 	.INCBIN "baserom.gba", 0x7DD94, 0x81D98-0x7DD94
 
-	.GLOBAL gMainPaletteTable
-gMainPaletteTable:
-	.INCBIN "baserom.gba", 0x81D98, 0xA7D98-0x81D98
+	.GLOBAL gPaletteData
+gPaletteData:
+	.INCBIN "assets/Palettes.bin"
 
 	.GLOBAL gUnknown_080A7D98
 gUnknown_080A7D98:
@@ -1537,9 +1729,20 @@ gUnknown_080A86EC:
 gUnknown_080A86F4:
 	.INCBIN "baserom.gba", 0xA86F4, 0xA86FA-0xA86F4
 
-	.GLOBAL gUnknown_080A86FA
-gUnknown_080A86FA:
-	.INCBIN "baserom.gba", 0xA86FA, 0xB512C-0xA86FA
+	.GLOBAL gEReaderSendTextPointers
+gEReaderSendTextPointers:
+	.2byte 0x0000
+	.4byte 0x00000000
+	.4byte gTextReadyToSendLink
+	.4byte gTextReadyToSendLink
+	.4byte gTextReadyToSendPressA
+	.4byte gTextSending
+	.4byte gTextSendingCompleted
+	.4byte gTextSending
+
+	.GLOBAL gUnknown_080A8718
+gUnknown_080A8718:
+	.INCBIN "baserom.gba", 0xA8718, 0xB512C-0xA8718
 
 	.GLOBAL gUnknown_080B512C
 gUnknown_080B512C:
@@ -1595,7 +1798,95 @@ gUnknown_080B5F80:
 
 	.GLOBAL gUnknown_080B6C30
 gUnknown_080B6C30:
-	.INCBIN "baserom.gba", 0xB6C30, 0xB77F4-0xB6C30
+	.4byte 0x080A8718
+	.4byte 0x00000000
+	.4byte 0x080A8C18
+	.4byte 0x00000000
+	.4byte 0x080A9098
+	.4byte 0x00000000
+	.4byte 0x080A9558
+	.4byte 0x00000000
+	.4byte 0x080A999C
+	.4byte 0x00000000
+	.4byte 0x080A9D9C
+	.4byte 0x00000000
+	.4byte 0x080AA778
+	.4byte 0x00000000
+	.4byte 0x080AAC64
+	.4byte 0x00000000
+	.4byte 0x080AAEBC
+	.4byte 0x00000000
+	.4byte 0x080AB3CC
+	.4byte 0x00000000
+	.4byte 0x080AB624
+	.4byte 0x00000000
+	.4byte 0x080ABBF4
+	.4byte 0x00000000
+	.4byte 0x080AC54C
+	.4byte 0x00000000
+	.4byte 0x080AC9D4
+	.4byte 0x00000000
+	.4byte 0x080ACD00
+	.4byte 0x00000000
+	.4byte 0x080AD0E8
+	.4byte 0x00000000
+	.4byte 0x080AD418
+	.4byte 0x00000000
+	.4byte 0x080AD814
+	.4byte 0x00000000
+	.4byte 0x080AE610
+	.4byte 0x00000000
+	.4byte 0x080AEB38
+	.4byte 0x00000000
+	.4byte 0x080AF038
+	.4byte 0x00000000
+	.4byte 0x080AF538
+	.4byte 0x00000000
+	.4byte 0x080AF90C
+	.4byte 0x00000000
+	.4byte 0x080AFCB4
+	.4byte 0x00000000
+	.4byte 0x080B07EC
+	.4byte 0x00000000
+	.4byte 0x080B0D2C
+	.4byte 0x00000000
+	.4byte 0x080B116C
+	.4byte 0x00000000
+	.4byte 0x080B157C
+	.4byte 0x00000000
+	.4byte 0x080B1B58
+	.4byte 0x00000000
+	.4byte 0x080B20A0
+	.4byte 0x00000000
+	.4byte 0x080B2D60
+	.4byte 0x00000000
+	.4byte 0x080B3220
+	.4byte 0x00000000
+	.4byte 0x080B3760
+	.4byte 0x00000000
+	.4byte 0x080B3BD4
+	.4byte 0x00000000
+	.4byte 0x080B4094
+	.4byte 0x00000000
+	.4byte 0x080B43B4
+	.4byte 0x00000000
+	.4byte 0x02A302D5
+	.4byte 0x023F0271
+	.4byte 0x01DB020D
+	.4byte 0x017701A9
+	.4byte 0x01130145
+	.4byte 0x00AF00E1
+	.4byte 0x004B007D
+	.4byte 0xFFE70019
+	.4byte 0xFF83FFB5
+	.4byte 0xFF1FFF51
+	.4byte 0xFEBBFEED
+	.4byte 0xFE57FE89
+	.4byte 0xFDF3FE25
+	.4byte 0xFD8FFDC1
+	.4byte 0xFD2BFD5D
+
+	.INCBIN "baserom.gba", 0xb6d8c, 0xB77F4-0xb6d8c
 
 	.GLOBAL gUnknown_080B77F4
 gUnknown_080B77F4:
@@ -3591,19 +3882,21 @@ gUnknown_086637A0:
 
 	.GLOBAL gUnknown_08663C70
 gUnknown_08663C70:
-	.INCBIN "baserom.gba", 0x663C70, 0x663C74-0x663C70
+	.4byte 0x00B40107
 
 	.GLOBAL gUnknown_08663C74
 gUnknown_08663C74:
-	.INCBIN "baserom.gba", 0x663C74, 0x663C78-0x663C74
+	.4byte 0x00B40107
 
 	.GLOBAL gUnknown_08663C78
 gUnknown_08663C78:
-	.INCBIN "baserom.gba", 0x663C78, 0x663C7C-0x663C78
+	.4byte 0x00B40107
 
 	.GLOBAL gUnknown_08663C7C
 gUnknown_08663C7C:
-	.INCBIN "baserom.gba", 0x663C7C, 0x663C88-0x663C7C
+	.4byte 0x00B40107
+	.4byte 0xFED4FED4
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_08663C88
 gUnknown_08663C88:

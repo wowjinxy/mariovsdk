@@ -1069,7 +1069,7 @@ _0803815C:
 	beq _08038198
 	mov r0, #60
 	str r0, [r4, #68]
-	ldr r1, _08038194  @ =gUnknown_080A86FA
+	ldr r1, _08038194  @ =gEReaderSendTextPointers
 	ldr r0, [r4, #52]
 	add r0, r0, r1
 	ldrb r0, [r0]
@@ -1084,7 +1084,7 @@ _0803818C:
 _08038190:
 	.4byte 0x030018C4
 _08038194:
-	.4byte gUnknown_080A86FA
+	.4byte gEReaderSendTextPointers
 _08038198:
 	cmp r0, #0
 	beq _080381D8
@@ -1109,7 +1109,7 @@ _080381BA:
 	str r0, [r4, #68]
 	b _080381DC
 _080381C6:
-	ldr r0, _080381D4  @ =gUnknown_080A86FA
+	ldr r0, _080381D4  @ =gEReaderSendTextPointers
 	ldr r1, [r4, #52]
 	add r1, r1, r0
 	ldrb r0, [r1]
@@ -1118,7 +1118,7 @@ _080381C6:
 	.byte 0x00
 	.byte 0x00
 _080381D4:
-	.4byte gUnknown_080A86FA
+	.4byte gEReaderSendTextPointers
 _080381D8:
 	bl sub_08037FE8
 _080381DC:
