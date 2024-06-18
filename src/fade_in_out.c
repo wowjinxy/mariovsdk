@@ -2,6 +2,26 @@
 #include "global.h"
 #include "main.h"
 
+u32 sub_08029EB4(void) {
+    if (gUnknown_03000C28) {
+        if (gUnknown_03000110 <= 0) {
+            gUnknown_03000C28 = 0;
+            gUnknown_03000110 = 0;
+            REG_BLDCNT = gUnknown_03000112;
+            REG_BLDALPHA = gUnknown_03000114;
+            REG_BLDY = 0;
+            return 0;
+        }
+        gUnknown_03000110 -= 4;
+        if (gUnknown_03000110 < 0) {
+            gUnknown_03000110 = 0;
+        }
+        REG_BLDY = gUnknown_03000110;
+        return 1;
+    }
+    return 0;
+} 
+
 void fade_transition_main(void) {
 
     if (gUnknown_03000110 < 0x1F) {

@@ -388,7 +388,9 @@ gUnknown_08076FD0:
 	
 	.GLOBAL gUnknown_08076FD4
 gUnknown_08076FD4:
-	.INCBIN "baserom.gba", 0x76FD4, 0x77534-0x76FD4
+	.4byte 0xFFF00000
+
+	.INCBIN "assets/unused/DKPlusLeftoverPalette.bin"
 
 	.GLOBAL gUnknown_08077534
 gUnknown_08077534:

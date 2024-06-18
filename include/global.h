@@ -372,6 +372,8 @@ extern s8 gUnknown_030000B4;
 extern s16 gUnknown_030000B6;
 extern s8 gUnknown_03000110;
 extern s8 gUnknown_03000111;
+extern s16 gUnknown_03000112;
+extern s16 gUnknown_03000114;
 extern struct MoviePlayerParamaters gMoviePlayerParams;
 extern u8 gUnknown_030002A0[];
 extern u16 gUnknown_030002AA;

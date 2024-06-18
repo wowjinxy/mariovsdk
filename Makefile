@@ -53,7 +53,7 @@ SFILES   := \
 	asm/main_menu.s \
 	asm/rom_801488C.s \
 	asm/level_select.s \
-	asm/rom_801827C.s \
+	asm/rom_801B310.s \
 	asm/rom_801BAD8.s \
 	asm/boss_clear.s \
 	asm/bonus_stoparrow.s \

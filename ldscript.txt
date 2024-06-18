@@ -21,7 +21,7 @@ SECTIONS
 		asm/main_menu.o(.text);
 		asm/rom_801488C.o(.text);
 		asm/level_select.o(.text);
-		asm/rom_801827C.o(.text);
+		asm/rom_801B310.o(.text);
 		src/title.o(.text);
 		src/intro.o(.text);
 		asm/rom_801BAD8.o(.text);
