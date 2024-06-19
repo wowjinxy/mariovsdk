@@ -4836,11 +4836,11 @@ gWorldSixBossBG:
 
 	.GLOBAL gDKBossBG
 gDKBossBG:
-	.INCBIN "assets/level/backgrounds/boss/DK_boss.bin"
+	.INCBIN "assets/level/backgrounds/boss/dk_boss.bin"
 
 	.GLOBAL gDKBossPlusBG
 gDKBossPlusBG:
-	.INCBIN "assets/level/backgrounds/boss/DK_boss_plus.bin"
+	.INCBIN "assets/level/backgrounds/boss/dk_boss_plus.bin"
 
 	.GLOBAL gWorldOnePlusHorizontalBG
 gWorldOnePlusHorizontalBG:
@@ -5258,7 +5258,7 @@ gLevel46Tutorial:
 
 	.GLOBAL gLevel4MM
 gLevel4MM:
-	.INCBIN "assets/level/level_data/world_four/4_MM.bin"
+	.INCBIN "assets/level/level_data/world_four/4_mm.bin"
 	
 	.GLOBAL gLevel4DK
 gLevel4DK:

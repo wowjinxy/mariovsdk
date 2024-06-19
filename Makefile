@@ -1,4 +1,4 @@
-  #### Tools ####
+#### Tools ####
 
 CC1      := tools/agbcc/bin/agbcc
 CC1_OLD  := tools/agbcc/bin/old_agbcc
@@ -106,7 +106,7 @@ $(ELF): $(OFILES) $(LDSCRIPT)
 	$(OBJCOPY) -O binary --pad-to 0x9000000 $< $@
 
 %.o: %.c
-	$(CPP) $(CPPFLAGS) $< | $(CC1).exe $(CC1FLAGS) -o $*.s
+	$(CPP) $(CPPFLAGS) $< | $(CC1) $(CC1FLAGS) -o $*.s
 	$(AS) $(ASFLAGS) $*.s -o $*.o
 
 %.o: %.s

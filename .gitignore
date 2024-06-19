@@ -6,6 +6,9 @@ src/*.s
 *.map
 *.dump
 
+*.exe
+tools/agbcc
+
 # Emulator save files
 *.sav
 *.sgm
