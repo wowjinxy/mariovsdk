@@ -1,3 +1,64 @@
+#define OBJECT_FILE_LIST \
+	X(data/data.o) \
+	X(asm/crt0.o) \
+	X(asm/rom_800023C.o) \
+	X(asm/rom_8001BA4.o) \
+	X(src/rom_80066FC.o) \
+	X(asm/rom_80067F0.o) \
+	X(src/main.o) \
+	X(src/rom1.o) \
+	X(src/rom_80088F0.o) \
+	X(asm/rom_8008DA0.o) \
+	X(src/rom_800EEC0.o) \
+	X(asm/rom_800F0C4.o) \
+	X(src/rom_800F1E4.o) \
+	X(asm/rom_800F6EC.o) \
+	X(asm/main_menu.o) \
+	X(asm/rom_801488C.o) \
+	X(asm/level_select.o) \
+	X(asm/rom_801B310.o) \
+	X(src/title.o) \
+	X(src/intro.o) \
+	X(asm/rom_801BAD8.o) \
+	X(src/pause_menu.o) \
+	X(asm/boss_clear.o) \
+	X(asm/bonus_stoparrow.o) \
+	X(asm/bonus_swapboxes.o) \
+	X(asm/options_menu.o) \
+	X(asm/level_results.o) \
+	X(asm/fade_in_out.o) \
+	X(src/fade_in_out.o) \
+	X(asm/rom_8029FD0.o) \
+	X(asm/level_help.o) \
+	X(asm/level_retry.o) \
+	X(asm/rom_802B798.o) \
+	X(src/movie_player.o) \
+	X(src/rom_802D614.o) \
+	X(asm/eCard.o) \
+	X(src/eCard.o) \
+	X(src/level_view.o) \
+	X(src/rom_8032408.o) \
+	X(asm/rom_8032814.o) \
+	X(src/rom_8032FB0.o) \
+	X(asm/rom_8033658.o) \
+	X(src/rom_8033C38.o) \
+	X(asm/rom_8034928.o) \
+	X(asm/expert_levels.o) \
+	X(asm/world_start.o) \
+	X(asm/rom_80379BC.o) \
+	X(src/rom_8038414.o) \
+	X(asm/rom_8038600.o) \
+	X(src/rom_804A8E8.o) \
+	X(asm/rom_804AAB8.o) \
+	X(asm/rom_807166C.o) \
+	X(asm/syscall.o) \
+	X(src/agb_flash.o) \
+	X(src/agb_flash_1m.o) \
+	X(src/agb_flash_mx.o) \
+	X(asm/rom_80747B8.o) \
+	X(tools/agbcc/lib/libgcc.a) \
+	X(src/libc.o) \
+
 OUTPUT_ARCH(arm)
 SECTIONS
 {
@@ -5,81 +66,35 @@ SECTIONS
 	.text :
 	ALIGN(4)
 	{
-		asm/crt0.o(.text);
-		asm/rom_800023C.o(.text);
-		asm/rom_8001BA4.o(.text);
-		src/rom_80066FC.o(.text);
-		asm/rom_80067F0.o(.text);
-		src/main.o(.text);
-		src/rom1.o(.text);
-		src/rom_80088F0.o(.text);
-		asm/rom_8008DA0.o(.text);
-		src/rom_800EEC0.o(.text);
-		asm/rom_800F0C4.o(.text);
-		src/rom_800F1E4.o(.text);
-		asm/rom_800F6EC.o(.text);
-		asm/main_menu.o(.text);
-		asm/rom_801488C.o(.text);
-		asm/level_select.o(.text);
-		asm/rom_801B310.o(.text);
-		src/title.o(.text);
-		src/intro.o(.text);
-		asm/rom_801BAD8.o(.text);
-		src/pause_menu.o(.text);
-		asm/boss_clear.o(.text);
-		asm/bonus_stoparrow.o(.text);
-		asm/bonus_swapboxes.o(.text);
-		asm/options_menu.o(.text);
-		asm/level_results.o(.text);
-		asm/fade_in_out.o(.text);
-		src/fade_in_out.o(.text);
-		asm/rom_8029FD0.o(.text);
-		asm/level_help.o(.text);
-		asm/level_retry.o(.text);
-		asm/rom_802B798.o(.text);
-		src/movie_player.o(.text);
-		src/rom_802D614.o(.text);
-		asm/eCard.o(.text);
-		src/eCard.o(.text);
-		src/level_view.o(.text);
-		src/rom_8032408.o(.text);
-		asm/rom_8032814.o(.text);
-		src/rom_8032FB0.o(.text);
-		asm/rom_8033658.o(.text);
-		src/rom_8033C38.o(.text);
-		asm/rom_8034928.o(.text);
-		asm/expert_levels.o(.text);
-		asm/world_start.o(.text);
-		asm/rom_80379BC.o(.text);
-		src/rom_8038414.o(.text);
-		asm/rom_8038600.o(.text);
-		src/rom_804A8E8.o(.text);
-		asm/rom_804AAB8.o(.text);
-		asm/rom_807166C.o(.text);
-		asm/syscall.o(.text);
-		src/agb_flash.o(.text);
-		src/agb_flash_1m.o(.text);
-		src/agb_flash_mx.o(.text);
-		asm/rom_80747B8.o(.text);
-		tools/agbcc/lib/libgcc.a:_call_via_rX.o(.text);
-		tools/agbcc/lib/libgcc.a:_divsi3.o(.text);
-		tools/agbcc/lib/libgcc.a:_dvmd_tls.o(.text);
-		tools/agbcc/lib/libgcc.a:_modsi3.o(.text);
-		tools/agbcc/lib/libgcc.a:_udivsi3.o(.text);
-		tools/agbcc/lib/libgcc.a:_umodsi3.o(.text);
-		tools/agbcc/lib/libgcc.a:dp-bit.o(.text);
-		tools/agbcc/lib/libgcc.a:fp-bit.o(.text);
-		tools/agbcc/lib/libgcc.a:_lshrdi3.o(.text);
-		tools/agbcc/lib/libgcc.a:_muldi3.o(.text);
-		tools/agbcc/lib/libgcc.a:_negdi2.o(.text);
-		src/libc.o(.text);
+#define X(file) file(.text);
+		OBJECT_FILE_LIST
+#undef X
 		*(.glue_7t);
 	} = 0
 
-	.data :
+	/* Don't link these files' rodata for now, since it doesn't match.
+	 * This needs to be fixed eventually!!! */
+	/DISCARD/ :
+	{
+		src/agb_flash.o(.rodata);
+		src/agb_flash_1m.o(.rodata);
+		src/agb_flash_mx.o(.rodata);
+	}
+
+	.rodata (READONLY) :
 	ALIGN(4)
 	{
-		data/data.o(.data);
+#define X(file) file(.rodata);
+		OBJECT_FILE_LIST
+#undef X
+	}
+
+	.data (READONLY) :
+	ALIGN(4)
+	{
+#define X(file) file(.data);
+		OBJECT_FILE_LIST
+#undef X
 	}
 
 	. = 0x03000000;
