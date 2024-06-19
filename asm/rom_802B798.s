@@ -1080,8 +1080,8 @@ _0802BF24:
 	.4byte 0x0300015A
 	THUMB_FUNC_END sub_0802BF1C
 
-	THUMB_FUNC_START sub_0802BF28
-sub_0802BF28: @ 0x0802BF28
+	THUMB_FUNC_START enable_vcount_interrupt_0802BF28
+enable_vcount_interrupt_0802BF28: @ 0x0802BF28
 	ldr r2, _0802BF58  @ =0x04000200
 	ldrh r0, [r2]
 	mov r1, #4
@@ -1119,7 +1119,7 @@ _0802BF68:
 	.4byte 0x03000CB0
 _0802BF6C:
 	.4byte sub_0802C080
-	THUMB_FUNC_END sub_0802BF28
+	THUMB_FUNC_END enable_vcount_interrupt_0802BF28
 
 	THUMB_FUNC_START sub_0802BF70
 sub_0802BF70: @ 0x0802BF70
@@ -1322,8 +1322,8 @@ _0802C0B4:
 	.4byte 0xA2600000
 	THUMB_FUNC_END sub_0802C080
 
-	THUMB_FUNC_START sub_0802C0B8
-sub_0802C0B8: @ 0x0802C0B8
+	THUMB_FUNC_START gfx_related_0802C0B8
+gfx_related_0802C0B8: @ 0x0802C0B8
 	push {lr}
 	add r1, r0, #0
 	ldr r3, _0802C0E0  @ =gCurrentPalette
@@ -1365,7 +1365,7 @@ _0802C0E8:
 _0802C0FE:
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0802C0B8
+	THUMB_FUNC_END gfx_related_0802C0B8
 
 	.byte 0x00
 	.byte 0x00

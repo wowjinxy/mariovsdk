@@ -39,7 +39,7 @@
 	X(src/eCard.o) \
 	X(src/level_view.o) \
 	X(src/rom_8032408.o) \
-	X(asm/rom_8032814.o) \
+	X(src/rom_8032814.o) \
 	X(src/rom_8032FB0.o) \
 	X(asm/rom_8033658.o) \
 	X(src/rom_8033C38.o) \
@@ -262,8 +262,11 @@ SECTIONS
 		. = 0xDCC;		gUnknown_03000DCC = .;
 		. = 0xE60;		gUnknown_03000E60 = .;
 		. = 0xE70;		gUnknown_03000E70 = .;
-		. = 0xE80;		gUnknown_03000E80 = .;
-		. = 0xE90;		gUnknown_03000E90 = .;
+		. = 0xE80;		gSomeVRAMAddr_03000E80 = .;
+		. = 0xE88;		gUnknown_03000E88 = .;
+		. = 0xE8C;		gPaletteData_03000E8C = .;
+		. = 0xE90;		gSomeVRAMAddr_03000E90 = .;
+		. = 0xE94;		gUnknown_03000E94 = .;
 		. = 0xEA0;		gOamData = .;
 		. = 0x12A0;		gCameraHorizontalOffset = .;
 		. = 0x12A4;		gBGHorizontalOffset = .;

@@ -14,6 +14,100 @@
 // Types
 //------------------------------------------------------------------------------
 
+struct CmprHeader
+{
+    u32 reserved:4;
+    u32 compressionType:4;  // 1 = LZ77
+    u32 size:24;  // size of decompressed data
+    // data follows this header
+};
+
+struct UnkStruct1_sub_child_data
+{
+    u8 filler0[4];
+    u16 unk4;  // image width?
+    u16 unk6;  // image height?
+    union { s8 as_s8; s32 as_s32; } unk8;
+    union { s8 as_s8; s32 as_s32; } unkC;
+    void *unk10;  // pointer to BGxHOFS register?
+    void *unk14;  // pointer to BGxVOFS register?
+    u8 filler18[8];
+    s16 unk20;
+    s16 unk22;
+    s16 unk24;
+    u8 filler26[0x28-0x26];
+    // tilemap (with CmprHeader) immediately follows this
+};
+
+struct UnkStruct1_sub_child_data68_sub
+{
+    u32 unk0;
+    u32 unk4;  // something to do with VRAM allocation?
+    u16 unk8;
+    u8 fillerA[2];
+};  // size = 0xC
+
+struct UnkStruct1_sub_child_data68
+{
+    u16 unk0;
+    u16 unk2;  // count of unk4 array
+    struct UnkStruct1_sub_child_data68_sub unk4[1];
+};
+
+struct GraphicsConfig_6C
+{
+    u16 unk0;
+    u16 unk2;
+    u8 unk4[0x200];
+    u8 unk204[0];
+};
+
+struct GraphicsConfig
+{
+    s32 unk0;  // size of this struct? bit 31 is some flag
+    u8 filler4[4];
+    /*0x08*/ u32 gfxOffset;  // offset to CmprHeader containing graphics data. Actually 4 bytes ahead of this
+    /*0x0C*/ s32 unkOffsets[4];  // offsets to UnkStruct1_sub_child_data structs from the beginning of this struct. Is this tilemap related?
+    /*0x1C*/ u32 palOffset;  // offset from the beginning of this struct to palette. Palette is actually 4 bytes after the address.
+    u8 filler20[0xC];
+    u16 unk2C;
+    u16 unk2E;
+    /*0x30*/ u16 bldCnt;
+    /*0x32*/ u16 bldAlpha;
+    /*0x34*/ u16 bldY;
+    u8 filler36[2];
+    /*0x38*/ u16 bgCnt[4];  // bgcnt for BGs 0-3
+    /*0x40*/ u8 *bgVramMapAddrs[4];  // VRAM tile map addresses for each BG?
+    /*0x50*/ u8 *vramAddr50[4];  // VRAM addresses?
+    u8 filler60[8];
+    u32 unk68;  // some offset
+    u32 unk6C;  // offset to a GraphicsConfig_6C struct
+};
+
+struct UnkStruct1_sub
+{
+    struct GraphicsConfig *unk0;
+    /*0x04*/ u16 bgNum;  // bgNum
+    u8 unk6;
+    u8 unk7;
+};
+
+struct UnkStruct1
+{
+    struct UnkStruct1_sub unk0[4];
+    u8 unk20[4];  // some indices (0 to 3)?
+    /*0x24*/ u8 bgPrio[4];  // priorities for each background
+    /*0x28*/ void *levelData;
+    u8 unk2C;
+    u8 unk2D;
+    s8 unk2E;
+    u8 unk2F;
+    u8 unk30;
+    u8 unk31;
+    u8 unk32;  // some index
+    u8 unk33;  // flags: bit 0 = enable blending
+};
+
 struct KeyInput
 {
     u16 keys:10;
@@ -81,19 +175,6 @@ struct Struct3000A10 {
     u8 unk125;
 } unk1;
 
-struct CompressionHeader
-{
-    u32 unk0_0:4;
-    u32 compressionType:4;
-    u32 size:24;
-};
-
-struct UnknownStruct2
-{
-    struct CompressionHeader header;
-    u8 data[0];
-};
-
 struct UnknownStruct6
 {
     u8 filler0[0x20];
@@ -103,22 +184,28 @@ struct UnknownStruct6
 
 struct UnknownStruct5
 {
-    u32 *backgroundData;
-    u32 *levelData;
-    u16 levelTimer;
-    u8 songID;
-    u8 levelType;
-    u32 levelFlags;
-    u32 unk10;
+    /*0x00*/ struct GraphicsConfig *backgroundData;
+    /*0x04*/ u32 *levelData;
+    /*0x08*/ u16 levelTimer;
+    /*0x0A*/ u8 songID;
+    /*0x0B*/ u8 levelType;
+    /*0x0C*/ u32 levelFlags;
+    /*0x10*/ u32 unk10;
+};
+
+struct UnknownStruct4_child
+{
+    u8 filler0[6];
+    u16 unk6;
 };
 
 // These may be the same. Don't know yet.
 struct UnknownStruct4
 {
     struct UnknownStruct5 *unk0;
-    u32 unk4;
-    u32 unk8;
-    u32 (*unkC)();    
+    struct GraphicsConfig *unk4;
+    struct UnknownStruct4_child *unk8;
+    u32 (*unkC)(void);    
     s16 unk10;
     s16 unk12;
     u32 unk14;
@@ -167,24 +254,10 @@ struct UnknownStruct9
     u16 unk28;
 };
 
-struct UnknownStruct14
-{
-    u8 filler0[0x30];
-    u16 bldCnt;
-    u16 bldAlpha;
-    u16 bldY;
-};
-
 struct UnknownStruct15
 {
     u8 unk0[0x108];
     u32 unk108[0];
-};
-
-struct UnknownStruct16
-{
-    u8 filler0[0x48];
-    u32 unk48;
 };
 
 struct UnknownStruct17
@@ -213,23 +286,6 @@ struct backgroundLayerOffset
 	u16 bg3_x;
 	u16 bg3_y;
 };
-struct struct_03000E70_sub {
-    char pad0[8];
-    s32 unk8;
-    s32 unkC;
-    char pad10[0x10];
-    s16 unk20;
-    s16 unk22;
-    s16 unk24;
-};
-
-struct struct_03000E70 {
-    struct struct_03000E70_sub *unk0;
-    s32 unk4; // probably struct struct_03000E70_sub * too
-    struct struct_03000E70_sub *unk8;
-    struct struct_03000E70_sub *unkC;
-};
-
 
 typedef struct test {
     s16 unk0;
@@ -316,8 +372,8 @@ struct levelCollectableFlags
 
 struct worldTableStruct_unk_size_c {
     s32 unk0;
-    struct UnknownStruct5* unk4;
-    s32 unk8;
+    struct UnknownStruct5 *unk4;
+    struct GraphicsConfig *unk8;
 };
 
 struct worldTableStruct {
@@ -446,9 +502,12 @@ extern s32 gUnknown_03000D60;
 extern s32 gUnknown_03000D64;
 extern u8 gUnknown_03000DCC;
 
-extern u8 gUnknown_03000E60;
+extern u16 gUnknown_03000E60;
 
-extern struct struct_03000E70 gUnknown_03000E70;
+extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];
+extern u8 *gUnknown_03000E88;
+extern u8 *gPaletteData_03000E8C;
+extern void *gUnknown_03000E94;
 extern struct OamData gOamData[];
 extern s16 gCameraHorizontalOffset;
 extern s16 gBGHorizontalOffset;
@@ -473,6 +532,7 @@ extern u32 gUnknown_03001714;
 extern u32 gUnknown_03001718;
 extern u16 gUnknown_0300171C;
 extern s16 gCurrentLevelWidth;
+extern s16 gUnknown_03001720;
 extern s16 gSpriteHorizontalOffset;
 extern struct backgroundLayerOffset gBGLayerOffsets;  // no idea what type this is
 extern u8 gUnknown_03001740;
@@ -571,11 +631,15 @@ extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];
 extern const u8 gUnknown_08079698[];
 extern const u32 gUnknown_0807C850[];
+extern u32 gPaletteIndices_0807DD34[];
+extern u32 gPaletteIndices_0807DD4C[];
+extern u32 gPaletteIndices_0807DD64[];
+extern u32 gPaletteIndices_0807DD7C[];
 extern u16 *const gUnknown_0807DD94;
-extern const struct UnknownStruct14 gNintendoSoftwareTechnologyLogo;
-extern const struct UnknownStruct14 gTitleScreenLeftData;
-extern const u8 gTitleScreenRightData[];
-extern struct UnknownStruct16 gTitleMarioDKEyes;  // non-const (likely in .data instead of .rodata)
+extern struct GraphicsConfig gNintendoSoftwareTechnologyLogo;
+extern struct GraphicsConfig gTitleScreenLeftData;
+extern struct GraphicsConfig gTitleScreenRightData;
+extern struct GraphicsConfig gTitleMarioDKEyes;  // non-const (likely in .data instead of .rodata)
 extern const u32 gUnknown_08B30768[]; // Movie player uses the below
 extern const u8 gUnknown_08B32118[];
 extern const u8 gUnknown_08B30F94[];
@@ -623,8 +687,8 @@ u8 gUnknown_03000290;
 extern struct struct_0807820C *gUnknown_0807820C;
 u32 gMainState;
 
-u16 *gUnknown_03000E90;
-u16 *gUnknown_03000E80;
+void *gSomeVRAMAddr_03000E90;
+void *gSomeVRAMAddr_03000E80;
 
 extern u32 gUnknown_03000294;
 extern u32 gUnknown_03000298;
@@ -642,6 +706,7 @@ void interrupt_main(void);
 
 void sub_08004428();
 void sub_08004634();
+void sub_08006388(void);
 void sub_080064D4();
 int sub_080066FC(u32 *, int, int, int);
 struct UnknownStruct15 *sub_08006968();
@@ -654,24 +719,30 @@ void title_demo_setup(u32 titleDemoID);
 void sub_08011428();
 void sub_08014A58();
 void sub_0801500C();
+void reset_some_array_0801B3C0(void);
+void sub_0801B3DC(struct GraphicsConfig *, int, int);
 void sub_0801B88C(void);
 void sub_0802919C();
 void sub_08029C20(void);
-void sub_08029CDC();
+void set_blend_regs_08029CDC();
 int sub_08029FD0(void);
 int sub_0802A0A8(void);
 void sub_0802A164(void);
 int sub_0802A464(void);
 void sub_0802BA94(void);
 void sub_0802BC98(void);
+void sub_0802BCA4(struct GraphicsConfig *, int);
 void sub_0802BE74(void);
 void sub_0802BEEC();
 void sub_0802BF1C(void);
+void enable_vcount_interrupt_0802BF28(void);
 void sub_0802BFA4(void);
 void sub_0802C20C(void);
 void sub_0802C058(void);
+void gfx_related_0802C0B8(struct GraphicsConfig *);
 void sub_0802C104();
 void sub_0802C144();
+void sub_0802C1B0(void);
 void sub_0802C7A4(void);
 void sub_0802C938(void);
 void sub_0802CF08(void);
@@ -682,10 +753,13 @@ void sub_0802F1D4(void);
 int sub_0802F5C0();
 void sub_0803109C(void);
 void sub_080317F8(void);
+int sub_080319BC(struct GraphicsConfig *, struct UnknownStruct5 *, int);
 void sub_08031BF0();
 int sub_08031E04(void);
-void sub_08032788();
-void sub_08032F24();
+void load_predefined_palette();
+u32 load_bg_tilemap_08032E24(struct GraphicsConfig *arg0, int arg1, int arg2);
+void copy_some_palette_08032E80(struct GraphicsConfig *arg0);
+u16 load_graphics_config_08032F24(struct GraphicsConfig *arg0[4], int arg1);
 void sub_08032F68(void);
 void load_some_oam(void);
 void sub_080331FC(void);
@@ -693,7 +767,7 @@ void sub_08033440(void);
 void init_timer_regs(void);
 void sub_08033C74(void);
 void clear_ram(void);
-void sub_08033D1C(void);
+void clear_graphics_memory(void);
 void sub_08033D30(void);
 void sub_08033D58(void);
 void sub_08033EA0();
@@ -704,7 +778,7 @@ void sub_08033FAC(s16, s16);
 void sub_08033FC8(void);
 extern u8 sub_08034004(void);
 void sub_08034138(void);
-
+void *load_compressed_data(struct CmprHeader *src, void *dest, int toVram);
 void sub_080348C8(const struct UnknownStruct10 *, u32, u32, u32);
 void sub_08034CCC();
 void sub_08035108();
@@ -804,7 +878,7 @@ void sub_0802EDAC();
 void sub_08040D50();
 void sub_0802B998();
 void sub_080069BC();
-void sub_08032C44();
+int sub_08032C44(struct UnknownStruct4 *arg0);
 void sub_080041B8();
 void sub_080072A4();
 void level_demo_reset_init_callback();

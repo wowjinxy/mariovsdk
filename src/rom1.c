@@ -640,14 +640,14 @@ void sub_08008238(void) {
     gBGLayerOffsets.bg0_x = hOff;
     hOff += gBGHorizontalOffset;
     // >> 8 probably fixed point?
-    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8;
-    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8;
+    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70[2]->unk22) >> 8) + gUnknown_03000E70[2]->unk8.as_s32;
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70[3]->unk22) >> 8) + gUnknown_03000E70[3]->unk8.as_s32;
 
     gBGLayerOffsets.bg1_y = vOff;
     gBGLayerOffsets.bg0_y = vOff;
     vOff += gBGVerticalOffset;
-    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + gUnknown_03000E70.unk8->unkC;
-    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70[2]->unk24) >> 8) + gUnknown_03000E70[2]->unkC.as_s32;
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70[3]->unk24) >> 8) + gUnknown_03000E70[3]->unkC.as_s32;
 }
 
 void sub_080082C8(void) {
@@ -709,9 +709,9 @@ void sub_08008330(void) {
 
     hOff += gBGHorizontalOffset;
 
-    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8;
+    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70[2]->unk22) >> 8) + gUnknown_03000E70[2]->unk8.as_s32;
 
-    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8;
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70[3]->unk22) >> 8) + gUnknown_03000E70[3]->unk8.as_s32;
 
     var1 = vOff - (gUnknown_030009E0 - 0xa0);
     if (var1 < 1) { gBGLayerOffsets.bg2_y = 0; }
@@ -724,7 +724,7 @@ void sub_08008330(void) {
     }
     
     vOff += gBGVerticalOffset;
-    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70[3]->unk24) >> 8) + gUnknown_03000E70[3]->unkC.as_s32;
 }
 
 void sub_080084A4(void) {
@@ -758,12 +758,12 @@ void sub_080084A4(void) {
     gBGLayerOffsets.bg1_x = hOff;
     gBGLayerOffsets.bg1_y = vOff;
     hOff += gBGHorizontalOffset;
-    gBGLayerOffsets.bg0_x = ((hOff * gUnknown_03000E70.unk0->unk22) >> 8) + gUnknown_03000E70.unk0->unk8; 
+    gBGLayerOffsets.bg0_x = ((hOff * gUnknown_03000E70[0]->unk22) >> 8) + gUnknown_03000E70[0]->unk8.as_s32; 
 
     
-    gBGLayerOffsets.bg2_x = (((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8) - gUnknown_03001C48; 
+    gBGLayerOffsets.bg2_x = (((hOff * gUnknown_03000E70[2]->unk22) >> 8) + gUnknown_03000E70[2]->unk8.as_s32) - gUnknown_03001C48; 
     
-    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8; 
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70[3]->unk22) >> 8) + gUnknown_03000E70[3]->unk8.as_s32; 
 
     var1 = vOff - (gUnknown_030009E0 - 0xa0);
     if (var1 < 1) { gBGLayerOffsets.bg0_y = 0; }
@@ -777,9 +777,9 @@ void sub_080084A4(void) {
     
     vOff += gBGVerticalOffset;
     
-    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + 
-        (gUnknown_03000E70.unk8->unkC - 0x38) + gUnknown_03001C40; 
-    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70[2]->unk24) >> 8) + 
+        (gUnknown_03000E70[2]->unkC.as_s32 - 0x38) + gUnknown_03001C40; 
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70[3]->unk24) >> 8) + gUnknown_03000E70[3]->unkC.as_s32;
 }
 
 void sub_08008600(void) {
@@ -790,18 +790,18 @@ void sub_08008600(void) {
     gBGLayerOffsets.bg1_x = hOff;
     gBGLayerOffsets.bg0_x = hOff;
     hOff += gBGHorizontalOffset;
-    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8 - gUnknown_03001C48;  // couple extra things here
+    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70[2]->unk22) >> 8) + gUnknown_03000E70[2]->unk8.as_s32 - gUnknown_03001C48;  // couple extra things here
 
     
     
-    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8; 
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70[3]->unk22) >> 8) + gUnknown_03000E70[3]->unk8.as_s32; 
     gBGLayerOffsets.bg1_y = vOff;
     gBGLayerOffsets.bg0_y = vOff;
     vOff += gBGVerticalOffset;
     
-    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + 
-        (gUnknown_03000E70.unk8->unkC - 0x38) + gUnknown_03001C40; 
-    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70[2]->unk24) >> 8) + 
+        (gUnknown_03000E70[2]->unkC.as_s32 - 0x38) + gUnknown_03001C40; 
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70[3]->unk24) >> 8) + gUnknown_03000E70[3]->unkC.as_s32;
 }
 
 void sub_080086A4(void) {
@@ -812,18 +812,18 @@ void sub_080086A4(void) {
     gBGLayerOffsets.bg1_x = hOff;
     gBGLayerOffsets.bg0_x = hOff;
     hOff += gBGHorizontalOffset;
-    gBGLayerOffsets.bg2_x = (((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8 
+    gBGLayerOffsets.bg2_x = (((hOff * gUnknown_03000E70[2]->unk22) >> 8) + gUnknown_03000E70[2]->unk8.as_s32 
         + gUnknown_03001C80) - gUnknown_03001C48; 
 
-    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8; 
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70[3]->unk22) >> 8) + gUnknown_03000E70[3]->unk8.as_s32; 
     gBGLayerOffsets.bg1_y = vOff;
     gBGLayerOffsets.bg0_y = vOff;
     vOff += gBGVerticalOffset;
     
-    gBGLayerOffsets.bg2_y = (((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + gUnknown_03000E70.unk8->unkC
+    gBGLayerOffsets.bg2_y = (((vOff * gUnknown_03000E70[2]->unk24) >> 8) + gUnknown_03000E70[2]->unkC.as_s32
         + (gUnknown_03001C84 - 8)) + gUnknown_03001C40; 
     
-    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70[3]->unk24) >> 8) + gUnknown_03000E70[3]->unkC.as_s32;
 }	
 
 void sub_08008764(void) {
@@ -845,16 +845,16 @@ if ((vOff >> 1) + 0xA0 >= gCurrentLevelHeight) {
     gBGLayerOffsets.bg0_x = hOff;
     
     hOff += gBGHorizontalOffset;
-    gBGLayerOffsets.bg2_x = ((( hOff * gUnknown_03000E70.unk8->unk22) >> 8)+ gUnknown_03000E70.unk8->unk8); 
+    gBGLayerOffsets.bg2_x = ((( hOff * gUnknown_03000E70[2]->unk22) >> 8)+ gUnknown_03000E70[2]->unk8.as_s32); 
     
-    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8;  
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70[3]->unk22) >> 8) + gUnknown_03000E70[3]->unk8.as_s32;  
     gBGLayerOffsets.bg1_y = vOff;
     gBGLayerOffsets.bg0_y = vOff;
     vOff += gBGVerticalOffset;
     
-    gBGLayerOffsets.bg2_y = (((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + gUnknown_03000E70.unk8->unkC); 
+    gBGLayerOffsets.bg2_y = (((vOff * gUnknown_03000E70[2]->unk24) >> 8) + gUnknown_03000E70[2]->unkC.as_s32); 
     
-    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70[3]->unk24) >> 8) + gUnknown_03000E70[3]->unkC.as_s32;
 }
 
 void sub_0800881C(void) {
@@ -866,14 +866,14 @@ void sub_0800881C(void) {
     gBGLayerOffsets.bg0_x = hOff;
     hOff += gBGHorizontalOffset;
 
-    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70.unk8->unk22) >> 8) + gUnknown_03000E70.unk8->unk8;
-    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70.unkC->unk22) >> 8) + gUnknown_03000E70.unkC->unk8;
+    gBGLayerOffsets.bg2_x = ((hOff * gUnknown_03000E70[2]->unk22) >> 8) + gUnknown_03000E70[2]->unk8.as_s32;
+    gBGLayerOffsets.bg3_x = ((hOff * gUnknown_03000E70[3]->unk22) >> 8) + gUnknown_03000E70[3]->unk8.as_s32;
 
     gBGLayerOffsets.bg1_y = vOff;
     gBGLayerOffsets.bg0_y = vOff+ gUnknown_03000C00;
     vOff += gBGVerticalOffset;
-    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70.unk8->unk24) >> 8) + gUnknown_03000BFC;
-    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70.unkC->unk24) >> 8) + gUnknown_03000E70.unkC->unkC;
+    gBGLayerOffsets.bg2_y = ((vOff * gUnknown_03000E70[2]->unk24) >> 8) + gUnknown_03000BFC;
+    gBGLayerOffsets.bg3_y = ((vOff * gUnknown_03000E70[3]->unk24) >> 8) + gUnknown_03000E70[3]->unkC.as_s32;
 }
 
 void sub_080088C4(void) {

@@ -35,7 +35,7 @@ void sub_08033CA0(void)
 void sub_08033CD0(void)
 {
     clear_ram();
-    sub_08033D1C();
+    clear_graphics_memory();
 }
 
 // 0x08033CE0
@@ -45,7 +45,7 @@ void clear_ram(void)
     DmaFill32(3, 0, (void *)IWRAM, 0x7E00);
 }
 
-void sub_08033D1C(void)
+void clear_graphics_memory(void)
 {
     sub_08033D30();
     load_some_oam();
@@ -509,10 +509,10 @@ struct UnknownStruct1
     u8 data[1];  // unknown length
 };
 
-void sub_0803455C(struct UnknownStruct1 *a, u16 *vramPos)
+void decompress_rle(struct CmprHeader *hdr, u16 *dest)
 {
-    u8 *romPos = a->data; 
-    u32 dataSize = a->size1 >> 8;
+    u8 *romPos = (u8 *)hdr + sizeof(struct CmprHeader);  // skip over header 
+    u32 dataSize = hdr->size;
     u32 uncSize = 0;
     u8 dataLeft;
     u8 uncData2;
@@ -531,7 +531,7 @@ void sub_0803455C(struct UnknownStruct1 *a, u16 *vramPos)
                 if (uncSize & 1)
                 {
                     uncData |= uncData2 << 8;
-                    *vramPos++ = uncData;
+                    *dest++ = uncData;
                     uncData = 0;
                 }
                 else
@@ -551,7 +551,7 @@ void sub_0803455C(struct UnknownStruct1 *a, u16 *vramPos)
                 if (uncSize & 1)
                 {
                     uncData |= *romPos++ << 8;
-                    *vramPos++ = uncData;
+                    *dest++ = uncData;
                     uncData = 0;
                 }
 				
@@ -565,7 +565,7 @@ void sub_0803455C(struct UnknownStruct1 *a, u16 *vramPos)
         }
     }
     if (uncSize & 1)
-        *vramPos = uncData;
+        *dest = uncData;
 }
 
 // TODO: This function is crazy. Fix later.
@@ -916,26 +916,26 @@ _08034782:\n\
 	bx r0");
 }
 
-void *load_compressed_data(struct UnknownStruct2 *a, u16 *b, int c)
+void *load_compressed_data(struct CmprHeader *src, void *dest, int toVram)
 {
-    struct CompressionHeader header = a->header;
+    struct CmprHeader header = *src;
     
     switch (header.compressionType)
     {
-    case 3:
-        sub_0803455C((struct UnknownStruct1 *)a, b);
+    case 3:  // RLE
+        decompress_rle((void *)src, dest);
         break;
-    case 1:
-        if (c != 0)
-            LZ77UnCompVram(a, b);
+    case 1:  // LZ77
+        if (toVram)
+            LZ77UnCompVram(src, dest);
         else
-            LZ77UnCompWram(a, b);
+            LZ77UnCompWram(src, dest);
         break;
-    default:
-        CpuCopy16(a->data, b, header.size);
+    default:  // not compressed
+        CpuCopy16((u8 *)src + sizeof(struct CmprHeader), dest, header.size);
         break;
     }
-    return b;
+    return dest;
 }
 
 void goto_credits_init_callback(void)

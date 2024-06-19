@@ -171,7 +171,7 @@ void game_init_end(void)
 {
 }
 
-void sub_08032788(u32 a, u32 b)
+void load_predefined_palette(u32 a, u32 b)
 {
     // I have to do this stupid cast for it to match.
     bool32 r4 = ((*(u8 *)gUnknown_080788FC & 24) != 0);

@@ -950,20 +950,20 @@ gUnknown_0807DD1C:
 	.4byte gErrorELevelCorruptedText
 	.4byte 0x00000005
 
-	.GLOBAL gUnknown_0807DD34
-gUnknown_0807DD34:
+	.GLOBAL gPaletteIndices_0807DD34
+gPaletteIndices_0807DD34:
 	.INCBIN "baserom.gba", 0x7DD34, 0x7DD4C-0x7DD34
 
-	.GLOBAL gUnknown_0807DD4C
-gUnknown_0807DD4C:
+	.GLOBAL gPaletteIndices_0807DD4C
+gPaletteIndices_0807DD4C:
 	.INCBIN "baserom.gba", 0x7DD4C, 0x7DD64-0x7DD4C
 
-	.GLOBAL gUnknown_0807DD64
-gUnknown_0807DD64:
+	.GLOBAL gPaletteIndices_0807DD64
+gPaletteIndices_0807DD64:
 	.INCBIN "baserom.gba", 0x7DD64, 0x7DD7C-0x7DD64
 
-	.GLOBAL gUnknown_0807DD7C
-gUnknown_0807DD7C:
+	.GLOBAL gPaletteIndices_0807DD7C
+gPaletteIndices_0807DD7C:
 	.INCBIN "baserom.gba", 0x7DD7C, 0x7DD94-0x7DD7C
 
 	.GLOBAL gUnknown_0807DD94

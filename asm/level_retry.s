@@ -24,7 +24,7 @@ level_retry_init_callback: @ 0x0802AAE8
 	strb r0, [r1]
 	mov r0, #4
 	mov r1, #2
-	bl sub_08032788
+	bl load_predefined_palette
 	b _0802AC82
 _0802AB18:
 	.4byte gMainState

@@ -4,7 +4,7 @@
 
 void intro_init_callback(void)
 {
-    const void *arr[4];
+    struct GraphicsConfig *arr[4];
 
     gUnknown_03000BE0 = 0;
     gUnknown_03000BD0 = 0;
@@ -14,14 +14,14 @@ void intro_init_callback(void)
     arr[1] = NULL;
     arr[2] = NULL;
     arr[3] = NULL;
-    sub_08032F24(arr, 0);
+    load_graphics_config_08032F24(arr, 0);
     REG_BLDCNT = gNintendoSoftwareTechnologyLogo.bldCnt;
     REG_BLDALPHA = gNintendoSoftwareTechnologyLogo.bldAlpha;
     REG_BLDY = gNintendoSoftwareTechnologyLogo.bldY;
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
     REG_DISPCNT = 0x100;
     gGeneralTimer = 0;
-    sub_08029CDC(gNintendoSoftwareTechnologyLogo.bldCnt, gNintendoSoftwareTechnologyLogo.bldAlpha, gNintendoSoftwareTechnologyLogo.bldY);
+    set_blend_regs_08029CDC(gNintendoSoftwareTechnologyLogo.bldCnt, gNintendoSoftwareTechnologyLogo.bldAlpha, gNintendoSoftwareTechnologyLogo.bldY);
 }
 
 void title_end(void)

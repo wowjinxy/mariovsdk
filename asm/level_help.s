@@ -23,7 +23,7 @@ help_init_callback: @ 0x0802A4B4
 	strb r0, [r1]
 	mov r0, #5
 	mov r1, #2
-	bl sub_08032788
+	bl load_predefined_palette
 	ldr r0, _0802A504  @ =gUnknown_03001938
 	ldr r1, [r0]
 	mov r2, #2

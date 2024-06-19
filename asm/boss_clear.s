@@ -57,10 +57,10 @@ _0801BF64:
 	str r4, [r0, #8]
 	str r4, [r0, #12]
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	mov r0, #6
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	mov r1, #128
 	lsl r1, r1, #19
 	mov r2, #194
@@ -70,7 +70,7 @@ _0801BF64:
 	ldrh r0, [r4, #48]
 	ldrh r1, [r4, #50]
 	ldrh r2, [r4, #52]
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 	b _0801C1B4
 	.byte 0x00
 	.byte 0x00
@@ -287,7 +287,7 @@ _0801C140:
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #0
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	ldr r0, _0801C178  @ =gLevelType
 	ldrb r0, [r0]
 	lsl r0, r0, #24
@@ -302,7 +302,7 @@ _0801C140:
 	add r0, r0, r1
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_08032788
+	bl load_predefined_palette
 	b _0801C19C
 _0801C170:
 	.4byte gWorldSixPlusBossClearData1
@@ -325,7 +325,7 @@ _0801C184:
 	add r0, r0, r1
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_08032788
+	bl load_predefined_palette
 _0801C19C:
 	mov r1, #128
 	lsl r1, r1, #19
@@ -337,7 +337,7 @@ _0801C19C:
 	ldrh r0, [r2, #48]
 	ldrh r1, [r2, #50]
 	ldrh r2, [r2, #52]
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 _0801C1B4:
 	add r2, sp, #32
 	mov r0, #160

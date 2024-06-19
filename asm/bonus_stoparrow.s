@@ -9981,7 +9981,7 @@ _0802177E:
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #2
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	mov r1, #128
 	lsl r1, r1, #19
 	mov r2, #202
@@ -10006,7 +10006,7 @@ _0802177E:
 	ldrh r0, [r4, #48]
 	ldrh r1, [r4, #50]
 	ldrh r2, [r4, #52]
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 	mov r0, #0
 	mov r8, r0
 	strh r0, [r5]
@@ -10136,7 +10136,7 @@ _0802177E:
 	strb r5, [r0, #8]
 	mov r0, #9
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	add sp, sp, #20
 	pop {r3}
 	mov r8, r3

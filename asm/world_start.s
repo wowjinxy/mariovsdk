@@ -61,7 +61,7 @@ _080370A6:
 	str r0, [sp, #24]
 	add r0, sp, #12
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	bl sub_08037230
 	mov r0, #128
 	lsl r0, r0, #19
@@ -95,7 +95,7 @@ _080370E8:
 	add r0, r0, r1
 	ldr r0, [r0]
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	b _08037166
 	.byte 0x00
 	.byte 0x00
@@ -129,7 +129,7 @@ _0803712C:
 	add r0, r0, r1
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_08032788
+	bl load_predefined_palette
 	ldr r1, _080371C4  @ =gUnknown_080A8674
 	mov r0, #0
 	ldrsb r0, [r4, r0]
@@ -137,7 +137,7 @@ _0803712C:
 	add r0, r0, r1
 	ldr r0, [r0]
 	mov r1, #2
-	bl sub_08032788
+	bl load_predefined_palette
 _08037166:
 	ldr r0, _080371B8  @ =gCurrentWorld
 	mov r5, #0
@@ -204,7 +204,7 @@ _080371E6:
 	ldrh r0, [r2, #48]
 	ldrh r1, [r2, #50]
 	ldrh r2, [r2, #52]
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 	add r0, sp, #28
 	mov r1, #0
 	strh r1, [r0]

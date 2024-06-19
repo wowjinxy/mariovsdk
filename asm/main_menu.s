@@ -122,7 +122,7 @@ _0801157E:
 	strh r5, [r0]
 	ldr r4, _08011674  @ =gMainMenuData
 	add r0, r4, #0
-	bl sub_08032EB8
+	bl load_graphics_config_bg2_08032EB8
 	mov r1, sp
 	mov r0, #160
 	strh r0, [r1]
@@ -146,7 +146,7 @@ _080115E0:
 	ldrh r0, [r4, #48]
 	ldrh r1, [r4, #50]
 	ldrh r2, [r4, #52]
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 	mov r1, #128
 	lsl r1, r1, #19
 	mov r2, #218
@@ -155,7 +155,7 @@ _080115E0:
 	strh r0, [r1]
 	mov r0, #1
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	mov r0, sp
 	strh r5, [r0]
 	ldr r1, _08011680  @ =gBGLayerOffsets 

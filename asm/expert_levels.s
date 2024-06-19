@@ -45,7 +45,7 @@ expert_levels_init_callback: @ 0x08035388
 	str r5, [sp, #12]
 	mov r0, sp
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	mov r1, #128
 	lsl r1, r1, #19
 	mov r2, #234
@@ -89,7 +89,7 @@ expert_levels_init_callback: @ 0x08035388
 	bl sub_08029C9C
 	mov r0, #2
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	bl sub_08071FE4
 	cmp r0, #11
 	beq _08035454

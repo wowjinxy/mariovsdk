@@ -14,7 +14,7 @@ enum
 
 void title_init_callback(void)
 {
-    const void *arr[4];
+    struct GraphicsConfig *arr[4];
     struct UnknownStruct15 *var;
 
     arena_restore_head(0);
@@ -25,10 +25,10 @@ void title_init_callback(void)
     gCameraHorizontalOffset = 0;
     gCameraVerticalOffset = 0;
     arr[0] = &gTitleScreenLeftData;
-    arr[1] = gTitleScreenRightData;
+    arr[1] = &gTitleScreenRightData;
     arr[2] = &gTitleMarioDKEyes;
     arr[3] = NULL;
-    sub_08032F24(arr, 0);
+    load_graphics_config_08032F24(arr, 0);
     var = sub_08006968(&gTitleMarioDKEyes);
     gUnknown_030000A4 = var;
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
@@ -38,8 +38,8 @@ void title_init_callback(void)
     if (sub_08071FE4() != 10)
         sub_0807204C(10, 128, 1);
     sub_08033C74();
-    sub_08029CDC(gTitleScreenLeftData.bldCnt, gTitleScreenLeftData.bldAlpha, gTitleScreenLeftData.bldY);
-    sub_08032788(0, 3);
+    set_blend_regs_08029CDC(gTitleScreenLeftData.bldCnt, gTitleScreenLeftData.bldAlpha, gTitleScreenLeftData.bldY);
+    load_predefined_palette(0, 3);
     gPressStartFadeDir = FADE_UP;
     gTitleScreenFrameCounter = 3;
     gPressStartOpacity = 0;
@@ -59,10 +59,10 @@ void title_main(void)
         REG_DISPCNT = 0x1740;
     arr[0] = 0;
     arr[1] = 13;
-    sub_080064D4(arr, gUnknown_030000A4->unk108[gUnknown_0807956C[gUnknown_03000BE4]], gTitleMarioDKEyes.unk48, 5);
+    sub_080064D4(arr, gUnknown_030000A4->unk108[gUnknown_0807956C[gUnknown_03000BE4]], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
     arr[0] = 22;
     arr[1] = 0;
-    sub_080064D4(arr, gUnknown_030000A4->unk108[gUnknown_08079698[gUnknown_03000BE8] + 3], gTitleMarioDKEyes.unk48, 5);
+    sub_080064D4(arr, gUnknown_030000A4->unk108[gUnknown_08079698[gUnknown_03000BE8] + 3], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
     if (gUnknown_03000BE4 < 299)
         gUnknown_03000BE4++;
     else

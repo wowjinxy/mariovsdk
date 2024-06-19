@@ -1945,9 +1945,9 @@ options_init_callback: @ 0x0802895C
 	ldrh r0, [r4, #48]
 	ldrh r1, [r4, #50]
 	ldrh r2, [r4, #52]
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 	add r0, r4, #0
-	bl sub_08032EB8
+	bl load_graphics_config_bg2_08032EB8
 	mov r2, #128
 	lsl r2, r2, #19
 	mov r3, #192
@@ -2079,7 +2079,7 @@ _08028A48:
 	strh r0, [r2]
 	mov r0, #3
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	ldr r6, _08028BD8  @ =gUnknown_08B3A4DC
 	ldrh r0, [r6]
 	lsl r0, r0, #1

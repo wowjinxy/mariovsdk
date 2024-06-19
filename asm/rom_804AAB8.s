@@ -25793,7 +25793,7 @@ sub_08056774: @ 0x08056774
 _08056808:
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_08032814
+	bl setup_graphics_08032814
 	mov r2, #128
 	lsl r2, r2, #19
 	ldr r1, _080568BC  @ =0x0000F0FF
@@ -25922,7 +25922,7 @@ _08056900:
 _08056904:
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_08032814
+	bl setup_graphics_08032814
 	ldrh r1, [r5]
 	orr r1, r1, r0
 	strh r1, [r5]

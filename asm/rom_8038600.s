@@ -730,7 +730,7 @@ _08038B5C:
 	cmp r2, #3
 	bne _08038B80
 	mov r0, #52
-	bl sub_08032788
+	bl load_predefined_palette
 	b _08038B9E
 	.byte 0x00
 	.byte 0x00
@@ -749,12 +749,12 @@ _08038B88:
 	mov r0, #54
 _08038B8E:
 	mov r1, #2
-	bl sub_08032788
+	bl load_predefined_palette
 	b _08038B9E
 _08038B96:
 	ldr r0, [r3, #4]
 	mov r1, #2
-	bl sub_08032788
+	bl load_predefined_palette
 _08038B9E:
 	pop {r0}
 	bx r0

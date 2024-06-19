@@ -80,7 +80,7 @@ sub_08029C9C: @ 0x08029C9C
 	ldrh r1, [r0, #50]
 	ldrh r2, [r0, #52]
 	add r0, r3, #0
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 	pop {r0}
 	bx r0
 	THUMB_FUNC_END sub_08029C9C
@@ -113,8 +113,8 @@ _08029CD8:
 	.4byte REG_BLDCNT
 	THUMB_FUNC_END sub_08029CB0
 
-	THUMB_FUNC_START sub_08029CDC
-sub_08029CDC: @ 0x08029CDC
+	THUMB_FUNC_START set_blend_regs_08029CDC
+set_blend_regs_08029CDC: @ 0x08029CDC
 	push {r4,r5,lr}
 	ldr r4, _08029D24  @ =REG_WININ 
 	ldr r5, _08029D28  @ =0x00001010
@@ -169,7 +169,7 @@ _08029D40:
 	.4byte 0x03000116
 _08029D44:
 	.4byte REG_BLDCNT
-	THUMB_FUNC_END sub_08029CDC
+	THUMB_FUNC_END set_blend_regs_08029CDC
 
 	THUMB_FUNC_START fade_transition_init_callback
 fade_transition_init_callback: @ 0x08029D48

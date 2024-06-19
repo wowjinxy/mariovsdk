@@ -41,7 +41,7 @@ _08015124:
 	mov r1, #1
 	neg r1, r1
 	mov r0, sp
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	ldr r1, _08015164  @ =gUnknown_080794EC
 	mov r0, #0
 	ldrsb r0, [r4, r0]
@@ -49,7 +49,7 @@ _08015124:
 	add r0, r0, r1
 	ldr r0, [r0]
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	ldr r0, _08015168  @ =gLevelSelectData
 	b _080151F8
 _0801515C:
@@ -77,7 +77,7 @@ _0801516C:
 	mov r1, #1
 	neg r1, r1
 	mov r0, sp
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	ldr r1, _080151A8  @ =gUnknown_08079504
 	mov r0, #0
 	ldrsb r0, [r4, r0]
@@ -102,10 +102,10 @@ _080151AC:
 	mov r1, #1
 	neg r1, r1
 	mov r0, sp
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	mov r0, #17
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	ldr r0, _080151D4  @ =gLevelSelectData
 	b _080151F8
 	.byte 0x00
@@ -124,11 +124,11 @@ _080151D8:
 	mov r1, #1
 	neg r1, r1
 	mov r0, sp
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	mov r0, #24
 _080151F0:
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	ldr r0, _08015208  @ =gLevelSelectPlusData
 _080151F8:
 	bl sub_08006968
@@ -364,7 +364,7 @@ _08015362:
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #2
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	ldr r1, _08015468  @ =gUnknown_08079504
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -475,7 +475,7 @@ _0801546C:
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	mov r0, #17
 	b _08015566
 _08015498:
@@ -504,7 +504,7 @@ _080154A4:
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	mov r0, #24
 	b _08015566
 	.byte 0x00
@@ -549,7 +549,7 @@ _080154F4:
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	ldr r1, _08015534  @ =gUnknown_08079504
 	b _0801555C
 _08015528:
@@ -577,7 +577,7 @@ _0801553C:
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	ldr r1, _08015608  @ =gUnknown_080794EC
 _0801555C:
 	mov r0, #0
@@ -588,7 +588,7 @@ _08015560:
 	ldr r0, [r0]
 _08015566:
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	add r0, r4, #0
 	bl sub_08006968
 	ldr r1, _0801560C  @ =0x03000070
@@ -3902,7 +3902,7 @@ _08016E50:
 	str r0, [sp, #12]
 	mov r0, sp
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	ldr r1, _08016EBC  @ =gUnknown_08079504
 	mov r0, #0
 	ldrsb r0, [r4, r0]
@@ -3911,7 +3911,7 @@ _08016E50:
 	add r0, r0, r1
 	ldr r0, [r0]
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	add r0, sp, #16
 	mov r1, #0
 	strh r1, [r0]
@@ -3987,7 +3987,7 @@ _08016F08:
 	ldr r1, _08016F60  @ =gLevelSelectDKBossBG
 	str r1, [r0, #12]
 	mov r1, #3
-	bl sub_08032F24
+	bl load_graphics_config_08032F24
 	add r0, sp, #36
 	mov r1, #0
 	strh r1, [r0]
@@ -4002,7 +4002,7 @@ _08016F08:
 	bl CpuSet
 	mov r0, #17
 	mov r1, #3
-	bl sub_08032788
+	bl load_predefined_palette
 	add r0, r4, #0
 	bl sub_08006968
 	ldr r1, _08016F6C  @ =0x03000070
@@ -4014,7 +4014,7 @@ _08016F4C:
 	ldr r0, _08016F74  @ =0x00003D42
 	ldr r1, _08016F78  @ =0x0000A0A0
 	mov r2, #0
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 	b _0801706A
 	.byte 0x00
 	.byte 0x00

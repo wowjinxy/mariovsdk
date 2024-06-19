@@ -293,7 +293,7 @@ _08029390:
 	strh r1, [r0]
 	ldr r4, _0802941C  @ =gLevelResultsData
 	add r0, r4, #0
-	bl sub_08032EB8
+	bl load_graphics_config_bg2_08032EB8
 	mov r0, #0
 	mov r1, #0
 	bl sub_0802BCA4
@@ -383,7 +383,7 @@ _08029456:
 	ldrh r0, [r2, #48]
 	ldrh r1, [r2, #50]
 	ldrh r2, [r2, #52]
-	bl sub_08029CDC
+	bl set_blend_regs_08029CDC
 	bl sub_08071FE4
 	cmp r0, #11
 	beq _0802947E
