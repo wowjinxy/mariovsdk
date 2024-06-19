@@ -2687,7 +2687,7 @@ sub_080367C0: @ 0x080367C0
 	ldrb r2, [r4]
 	mov r0, #2
 	add r3, sp, #4
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	ldrb r0, [r5]
 	ldrb r1, [r4]
 	mov r2, #2
@@ -2719,7 +2719,7 @@ _08036810:
 	ldrb r2, [r4]
 	mov r0, #3
 	add r3, sp, #4
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	ldrb r0, [r5]
 	ldrb r1, [r4]
 	mov r2, #3
@@ -3687,7 +3687,7 @@ _08036F84:
 	add r1, r4, #0
 	mov r2, #0
 	add r3, sp, #4
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	cmp r6, r4
 	bls _08036FA2
 	lsl r1, r4, #24
@@ -3711,7 +3711,7 @@ _08036FB0:
 	mov r0, #3
 	mov r2, #0
 	add r3, sp, #4
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	cmp r6, r4
 	bls _08036FD2
 	lsl r1, r4, #24

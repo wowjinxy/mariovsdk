@@ -324,8 +324,8 @@ gUnknown_080788C8:
 gUnknown_080788E0:
 	.INCBIN "baserom.gba", 0x788E0, 0x788F4-0x788E0
 
-	.GLOBAL gUnknown_080788F4
-gUnknown_080788F4:
+	.GLOBAL gSelectedSaveFileNumPtr
+gSelectedSaveFileNumPtr:
 	.INCBIN "baserom.gba", 0x788F4, 0x788F8-0x788F4
 
 	.GLOBAL gUnknown_080788F8
@@ -336,8 +336,8 @@ gUnknown_080788F8:
 gUnknown_080788FC:
 	.INCBIN "baserom.gba", 0x788FC, 0x78900-0x788FC
 
-	.GLOBAL gUnknown_08078900
-gUnknown_08078900:
+	.GLOBAL gSaveFilesPtr
+gSaveFilesPtr:
 	.INCBIN "baserom.gba", 0x78900, 0x78904-0x78900
 
 	.GLOBAL gUnknown_08078904

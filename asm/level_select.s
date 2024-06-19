@@ -748,7 +748,7 @@ _08015684:
 	ldrb r1, [r1]
 	mov r2, #7
 	add r3, sp, #12
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _080156D0
@@ -956,7 +956,7 @@ _0801582C:
 	ldrb r1, [r2]
 	mov r2, #7
 	add r3, sp, #12
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08015858
@@ -4270,7 +4270,7 @@ _0801713E:
 	add r3, r3, r5
 	add r3, r3, #1
 	mov r0, #0
-	bl sub_0800FB28
+	bl get_level_stats_0800FB28
 	ldr r1, [r6]
 	add r5, r5, r1
 	strb r0, [r5]
@@ -4312,7 +4312,7 @@ _0801718A:
 	add r3, r3, r5
 	add r3, r3, #1
 	mov r0, #1
-	bl sub_0800FB28
+	bl get_level_stats_0800FB28
 	ldr r1, [r6]
 	add r5, r5, r1
 	strb r0, [r5]
@@ -11282,7 +11282,7 @@ _0801A60E:
 	mov r0, #0
 	add r2, r4, #0
 	mov r3, sp
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _0801A648
@@ -11315,7 +11315,7 @@ _0801A648:
 	mov r3, sp
 	add r3, r3, #1
 	mov r2, #7
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _0801A690
@@ -12498,7 +12498,7 @@ _0801AF58:
 	mov r0, #1
 	add r2, r4, #0
 	add r3, sp, #4
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _0801AFA4

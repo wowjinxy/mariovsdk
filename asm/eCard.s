@@ -5805,7 +5805,7 @@ _0803015A:
 	ldrb r1, [r1]
 	lsl r2, r6, #24
 	lsr r2, r2, #24
-	bl sub_0800FCE4
+	bl get_level_stats_0800FCE4
 	lsl r0, r0, #24
 	cmp r0, #0
 	bne _080301CC
@@ -6112,7 +6112,7 @@ _080303A4:
 	ldrb r1, [r1]
 	lsl r2, r5, #24
 	lsr r2, r2, #24
-	bl sub_0800FCE4
+	bl get_level_stats_0800FCE4
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _080303E0

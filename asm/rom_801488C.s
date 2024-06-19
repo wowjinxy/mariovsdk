@@ -23,8 +23,8 @@ sub_080148A4: @ 0x080148A4
 	push {r4,lr}
 	add r4, r0, #0
 	lsl r1, r1, #24
-	ldr r3, _080148CC  @ =gUnknown_08078900
-	ldr r0, _080148D0  @ =gUnknown_080788F4
+	ldr r3, _080148CC  @ =gSaveFilesPtr
+	ldr r0, _080148D0  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r2, [r0]
 	lsl r0, r2, #3
@@ -42,9 +42,9 @@ sub_080148A4: @ 0x080148A4
 	.byte 0x00
 	.byte 0x00
 _080148CC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080148D0:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _080148D4:
 	ldr r0, [r2, #4]
 	bic r0, r0, r4
@@ -67,8 +67,8 @@ _080148EC:
 sub_080148F0: @ 0x080148F0
 	push {r4,lr}
 	add r4, r0, #0
-	ldr r1, _08014920  @ =gUnknown_08078900
-	ldr r0, _08014924  @ =gUnknown_080788F4
+	ldr r1, _08014920  @ =gSaveFilesPtr
+	ldr r0, _08014924  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r2, [r0]
 	lsl r0, r2, #3
@@ -90,9 +90,9 @@ sub_080148F0: @ 0x080148F0
 	mov r0, #1
 	b _0801492A
 _08014920:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014924:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08014928:
 	mov r0, #0
 _0801492A:
@@ -126,7 +126,7 @@ sub_08014950: @ 0x08014950
 	add r4, r1, #0
 	lsl r0, r0, #24
 	lsr r2, r0, #24
-	ldr r1, _08014980  @ =gUnknown_08078900
+	ldr r1, _08014980  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -148,7 +148,7 @@ sub_08014950: @ 0x08014950
 	.byte 0x00
 	.byte 0x00
 _08014980:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014984:
 	mov r0, #0
 _08014986:
@@ -178,8 +178,8 @@ _080149A6:
 
 	THUMB_FUNC_START sub_080149AC
 sub_080149AC: @ 0x080149AC
-	ldr r2, _080149CC  @ =gUnknown_08078900
-	ldr r0, _080149D0  @ =gUnknown_080788F4
+	ldr r2, _080149CC  @ =gSaveFilesPtr
+	ldr r0, _080149D0  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -195,16 +195,16 @@ sub_080149AC: @ 0x080149AC
 	and r0, r0, r1
 	bx lr
 _080149CC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080149D0:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 	THUMB_FUNC_END sub_080149AC
 
 	THUMB_FUNC_START sub_080149D4
 sub_080149D4: @ 0x080149D4
 	lsl r0, r0, #24
 	lsr r0, r0, #24
-	ldr r2, _080149F4  @ =gUnknown_08078900
+	ldr r2, _080149F4  @ =gSaveFilesPtr
 	lsl r1, r0, #3
 	sub r1, r1, r0
 	lsl r1, r1, #5
@@ -220,7 +220,7 @@ sub_080149D4: @ 0x080149D4
 	.byte 0x00
 	.byte 0x00
 _080149F4:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 	THUMB_FUNC_END sub_080149D4
 
 	THUMB_FUNC_START sub_080149F8
@@ -228,8 +228,8 @@ sub_080149F8: @ 0x080149F8
 	push {lr}
 	lsl r0, r0, #24
 	lsr r3, r0, #24
-	ldr r2, _08014A28  @ =gUnknown_08078900
-	ldr r0, _08014A2C  @ =gUnknown_080788F4
+	ldr r2, _08014A28  @ =gSaveFilesPtr
+	ldr r0, _08014A2C  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -252,17 +252,17 @@ _08014A22:
 	.byte 0x00
 	.byte 0x00
 _08014A28:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014A2C:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08014A30:
 	.4byte gLevelEWorldFlag
 	THUMB_FUNC_END sub_080149F8
 
 	THUMB_FUNC_START sub_08014A34
 sub_08014A34: @ 0x08014A34
-	ldr r2, _08014A50  @ =gUnknown_08078900
-	ldr r0, _08014A54  @ =gUnknown_080788F4
+	ldr r2, _08014A50  @ =gSaveFilesPtr
+	ldr r0, _08014A54  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -276,9 +276,9 @@ sub_08014A34: @ 0x08014A34
 	ldrsb r0, [r1, r0]
 	bx lr
 _08014A50:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014A54:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 	THUMB_FUNC_END sub_08014A34
 
 	THUMB_FUNC_START sub_08014A58
@@ -287,8 +287,8 @@ sub_08014A58: @ 0x08014A58
 	lsl r0, r0, #24
 	lsr r4, r0, #24
 	add r5, r4, #0
-	ldr r2, _08014AA8  @ =gUnknown_08078900
-	ldr r0, _08014AAC  @ =gUnknown_080788F4
+	ldr r2, _08014AA8  @ =gSaveFilesPtr
+	ldr r0, _08014AAC  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -326,9 +326,9 @@ _08014AA2:
 	pop {r0}
 	bx r0
 _08014AA8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014AAC:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08014AB0:
 	.4byte gLevelEWorldFlag
 _08014AB4:
@@ -337,8 +337,8 @@ _08014AB4:
 
 	THUMB_FUNC_START sub_08014AB8
 sub_08014AB8: @ 0x08014AB8
-	ldr r2, _08014AD4  @ =gUnknown_08078900
-	ldr r0, _08014AD8  @ =gUnknown_080788F4
+	ldr r2, _08014AD4  @ =gSaveFilesPtr
+	ldr r0, _08014AD8  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -353,9 +353,9 @@ sub_08014AB8: @ 0x08014AB8
 	.byte 0x00
 	.byte 0x00
 _08014AD4:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014AD8:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 	THUMB_FUNC_END sub_08014AB8
 
 	THUMB_FUNC_START sub_08014ADC
@@ -364,8 +364,8 @@ sub_08014ADC: @ 0x08014ADC
 	lsl r0, r0, #24
 	lsl r1, r1, #24
 	lsl r2, r2, #16
-	ldr r5, _08014B1C  @ =gUnknown_08078900
-	ldr r3, _08014B20  @ =gUnknown_080788F4
+	ldr r5, _08014B1C  @ =gSaveFilesPtr
+	ldr r3, _08014B20  @ =gSelectedSaveFileNumPtr
 	ldr r3, [r3]
 	ldrb r4, [r3]
 	lsl r3, r4, #3
@@ -394,9 +394,9 @@ sub_08014ADC: @ 0x08014ADC
 	.byte 0x00
 	.byte 0x00
 _08014B1C:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014B20:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08014B24:
 	.4byte gCurrentPresentScore
 	THUMB_FUNC_END sub_08014ADC
@@ -410,7 +410,7 @@ sub_08014B28: @ 0x08014B28
 	mov r2, sp
 	mov r1, #0
 	strh r1, [r2]
-	ldr r5, _08014B6C  @ =gUnknown_08078900
+	ldr r5, _08014B6C  @ =gSaveFilesPtr
 	lsl r4, r0, #3
 	sub r4, r4, r0
 	lsl r4, r4, #5
@@ -437,7 +437,7 @@ _08014B62:
 	.byte 0x00
 	.byte 0x00
 _08014B6C:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014B70:
 	.4byte 0x010001BE
 _08014B74:
@@ -449,7 +449,7 @@ sub_08014B78: @ 0x08014B78
 	push {r4,r5,lr}
 	lsl r0, r0, #24
 	lsr r0, r0, #24
-	ldr r5, _08014BB0  @ =gUnknown_08078900
+	ldr r5, _08014BB0  @ =gSaveFilesPtr
 	lsl r4, r0, #3
 	sub r4, r4, r0
 	lsl r4, r4, #5
@@ -476,7 +476,7 @@ sub_08014B78: @ 0x08014B78
 	.byte 0x00
 	.byte 0x00
 _08014BB0:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 	THUMB_FUNC_END sub_08014B78
 
 	THUMB_FUNC_START sub_08014BB4
@@ -487,7 +487,7 @@ sub_08014BB4: @ 0x08014BB4
 	mov r1, #0
 	mov r2, #0
 	mov r3, sp
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	add sp, sp, #4
@@ -505,7 +505,7 @@ sub_08014BD0: @ 0x08014BD0
 	mov r1, #0
 	mov r2, #0
 	mov r3, sp
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	add sp, sp, #4
@@ -520,7 +520,7 @@ sub_08014BEC: @ 0x08014BEC
 	push {lr}
 	lsl r0, r0, #24
 	lsr r0, r0, #24
-	ldr r2, _08014C0C  @ =gUnknown_08078900
+	ldr r2, _08014C0C  @ =gSaveFilesPtr
 	lsl r1, r0, #3
 	sub r1, r1, r0
 	lsl r1, r1, #5
@@ -534,7 +534,7 @@ sub_08014BEC: @ 0x08014BEC
 	mov r0, #0
 	b _08014C12
 _08014C0C:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014C10:
 	mov r0, #1
 _08014C12:
@@ -549,8 +549,8 @@ sub_08014C18: @ 0x08014C18
 	push {lr}
 	lsl r0, r0, #24
 	lsr r3, r0, #24
-	ldr r2, _08014C54  @ =gUnknown_08078900
-	ldr r0, _08014C58  @ =gUnknown_080788F4
+	ldr r2, _08014C54  @ =gSaveFilesPtr
+	ldr r0, _08014C58  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -578,9 +578,9 @@ sub_08014C18: @ 0x08014C18
 	.byte 0x00
 	.byte 0x00
 _08014C54:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014C58:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08014C5C:
 	.4byte 0x00000313
 _08014C60:
@@ -597,8 +597,8 @@ _08014C66:
 	THUMB_FUNC_START sub_08014C6C
 sub_08014C6C: @ 0x08014C6C
 	push {lr}
-	ldr r2, _08014CBC  @ =gUnknown_08078900
-	ldr r0, _08014CC0  @ =gUnknown_080788F4
+	ldr r2, _08014CBC  @ =gSaveFilesPtr
+	ldr r0, _08014CC0  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -639,9 +639,9 @@ _08014CB4:
 	lsr r0, r0, #24
 	b _08014CCE
 _08014CBC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014CC0:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08014CC4:
 	.4byte 0x00000313
 _08014CC8:
@@ -657,8 +657,8 @@ _08014CCE:
 	.byte 0x00
 	THUMB_FUNC_START sub_08014CD4
 sub_08014CD4: @ 0x08014CD4
-	ldr r2, _08014CFC  @ =gUnknown_08078900
-	ldr r0, _08014D00  @ =gUnknown_080788F4
+	ldr r2, _08014CFC  @ =gSaveFilesPtr
+	ldr r0, _08014D00  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -679,9 +679,9 @@ sub_08014CD4: @ 0x08014CD4
 	.byte 0x00
 	.byte 0x00
 _08014CFC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014D00:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08014D04:
 	.4byte 0x0000036B
 	THUMB_FUNC_END sub_08014CD4
@@ -714,8 +714,8 @@ _08014D30:
 
 	THUMB_FUNC_START sub_08014D34
 sub_08014D34: @ 0x08014D34
-	ldr r2, _08014D50  @ =gUnknown_08078900
-	ldr r0, _08014D54  @ =gUnknown_080788F4
+	ldr r2, _08014D50  @ =gSaveFilesPtr
+	ldr r0, _08014D54  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -730,16 +730,16 @@ sub_08014D34: @ 0x08014D34
 	.byte 0x00
 	.byte 0x00
 _08014D50:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014D54:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 	THUMB_FUNC_END sub_08014D34
 
 	THUMB_FUNC_START sub_08014D58
 sub_08014D58: @ 0x08014D58
 	lsl r0, r0, #24
 	lsr r0, r0, #24
-	ldr r2, _08014D70  @ =gUnknown_08078900
+	ldr r2, _08014D70  @ =gSaveFilesPtr
 	lsl r1, r0, #3
 	sub r1, r1, r0
 	lsl r1, r1, #5
@@ -750,7 +750,7 @@ sub_08014D58: @ 0x08014D58
 	ldrb r0, [r0, #8]
 	bx lr
 _08014D70:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 	THUMB_FUNC_END sub_08014D58
 
 	THUMB_FUNC_START sub_08014D74
@@ -758,7 +758,7 @@ sub_08014D74: @ 0x08014D74
 	push {lr}
 	lsl r0, r0, #24
 	lsr r0, r0, #24
-	ldr r2, _08014DAC  @ =gUnknown_08078900
+	ldr r2, _08014DAC  @ =gSaveFilesPtr
 	lsl r1, r0, #3
 	sub r1, r1, r0
 	lsl r1, r1, #5
@@ -785,7 +785,7 @@ sub_08014D74: @ 0x08014D74
 	.byte 0x00
 	.byte 0x00
 _08014DAC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08014DB0:
 	.4byte 0x00000313
 _08014DB4:
@@ -803,7 +803,7 @@ _08014DBA:
 sub_08014DC0: @ 0x08014DC0
 	lsl r0, r0, #24
 	lsr r0, r0, #24
-	ldr r2, _08014DD8  @ =gUnknown_08078900
+	ldr r2, _08014DD8  @ =gSaveFilesPtr
 	lsl r1, r0, #3
 	sub r1, r1, r0
 	lsl r1, r1, #5
@@ -814,12 +814,12 @@ sub_08014DC0: @ 0x08014DC0
 	ldrb r0, [r0, #9]
 	bx lr
 _08014DD8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 	THUMB_FUNC_END sub_08014DC0
 
 	THUMB_FUNC_START sub_08014DDC
 sub_08014DDC: @ 0x08014DDC
-	ldr r2, _08014DF8  @ =gUnknown_08078900
+	ldr r2, _08014DF8  @ =gSaveFilesPtr
 	lsl r0, r0, #24
 	asr r0, r0, #24
 	lsl r1, r0, #3
@@ -834,7 +834,7 @@ sub_08014DDC: @ 0x08014DDC
 	asr r0, r0, #24
 	bx lr
 _08014DF8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 	THUMB_FUNC_END sub_08014DDC
 
 	THUMB_FUNC_START sub_08014DFC @ unused -- seems to be able to to set the current mode to the level editor

@@ -89,7 +89,7 @@ _0801156C:
 _08011570:
 	ldr r2, _0801163C  @ =0x03000058
 	ldr r1, _08011640  @ =0x03000059
-	ldr r0, _08011644  @ =gUnknown_080788F4
+	ldr r0, _08011644  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r0, [r0]
 _0801157A:
@@ -191,7 +191,7 @@ _0801163C:
 _08011640:
 	.4byte 0x03000059
 _08011644:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08011648:
 	.4byte 0x0300005B
 _0801164C:
@@ -263,7 +263,7 @@ _080116AE:
 	strh r0, [r1, #8]
 	ldr r0, _08011704  @ =0x03000058
 	ldrb r2, [r0]
-	ldr r1, _08011708  @ =gUnknown_08078900
+	ldr r1, _08011708  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -294,7 +294,7 @@ _08011700:
 _08011704:
 	.4byte 0x03000058
 _08011708:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _0801170C:
 	.4byte 0x00000313
 _08011710:
@@ -368,7 +368,7 @@ _08011780:
 	bne _08011830
 	mov r2, #0
 	ldr r4, _080117B8  @ =gUnknown_0807CA94
-	ldr r0, _080117BC  @ =gUnknown_08078900
+	ldr r0, _080117BC  @ =gSaveFilesPtr
 	ldr r3, [r0]
 _08011790:
 	lsl r1, r2, #24
@@ -395,7 +395,7 @@ _080117B4:
 _080117B8:
 	.4byte gUnknown_0807CA94
 _080117BC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080117C0:
 	mov r0, #0
 _080117C2:
@@ -502,7 +502,7 @@ _08011872:
 	mov r2, #16
 	mov r3, #64
 	bl sub_08071990
-	ldr r0, _08011908  @ =gUnknown_080788F4
+	ldr r0, _08011908  @ =gSelectedSaveFileNumPtr
 	mov r8, r0
 	ldr r1, [r0]
 	ldrb r0, [r4]
@@ -514,7 +514,7 @@ _08011872:
 	ldr r3, _08011910  @ =gNextLevelID
 	mov r12, r3
 	ldr r4, _08011914  @ =gLevelType
-	ldr r1, _08011918  @ =gUnknown_08078900
+	ldr r1, _08011918  @ =gSaveFilesPtr
 	mov r9, r1
 	lsl r1, r0, #3
 	sub r1, r1, r0
@@ -560,14 +560,14 @@ _080118F2:
 	mov r1, #0
 	mov r2, #0
 	add r3, sp, #12
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08011920
 	mov r0, #8
 	b _0801198A
 _08011908:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _0801190C:
 	.4byte gCurrentWorld
 _08011910:
@@ -575,7 +575,7 @@ _08011910:
 _08011914:
 	.4byte gLevelType
 _08011918:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _0801191C:
 	.4byte gLivesCount
 _08011920:
@@ -707,7 +707,7 @@ _08011A06:
 	bne _08011A12
 	b _08011B5A
 _08011A12:
-	ldr r0, _08011A44  @ =gUnknown_08078900
+	ldr r0, _08011A44  @ =gSaveFilesPtr
 	lsl r1, r2, #3
 	sub r1, r1, r2
 	lsl r1, r1, #5
@@ -734,7 +734,7 @@ _08011A12:
 	.byte 0x00
 	.byte 0x00
 _08011A44:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08011A48:
 	.4byte 0x00000313
 _08011A4C:
@@ -1107,7 +1107,7 @@ _08011CF8:
 	sub r1, r1, #7
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	ldr r2, _08011D48  @ =gUnknown_08078900
+	ldr r2, _08011D48  @ =gSaveFilesPtr
 	lsl r0, r1, #3
 	sub r0, r0, r1
 	lsl r0, r0, #5
@@ -1136,7 +1136,7 @@ _08011CF8:
 _08011D44:
 	.4byte 0x03000058
 _08011D48:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08011D4C:
 	.4byte 0x00000313
 _08011D50:
@@ -1219,7 +1219,7 @@ _08011DD4:
 	sub r1, r1, #5
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	ldr r2, _08011E20  @ =gUnknown_08078900
+	ldr r2, _08011E20  @ =gSaveFilesPtr
 	lsl r0, r1, #3
 	sub r0, r0, r1
 	lsl r0, r0, #5
@@ -1248,7 +1248,7 @@ _08011DD4:
 _08011E1C:
 	.4byte 0x03000058
 _08011E20:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08011E24:
 	.4byte 0x00000313
 _08011E28:
@@ -1387,7 +1387,7 @@ _08011F2C:
 _08011F30:
 	.4byte 0x03000058
 _08011F34:
-	ldr r0, _08011F54  @ =gUnknown_080788F4
+	ldr r0, _08011F54  @ =gSelectedSaveFileNumPtr
 	ldr r1, [r0]
 	sub r0, r2, #6
 	strb r0, [r1]
@@ -1404,7 +1404,7 @@ _08011F4C:
 	pop {r0}
 	bx r0
 _08011F54:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08011F58:
 	.4byte gCurrentWorld
 _08011F5C:
@@ -1429,7 +1429,7 @@ sub_08011F60: @ 0x08011F60
 	ldrb r2, [r0]
 	cmp r2, #2
 	bhi _08011FB2
-	ldr r1, _08011FA8  @ =gUnknown_08078900
+	ldr r1, _08011FA8  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -1449,7 +1449,7 @@ _08011FA0:
 _08011FA4:
 	.4byte 0x03000058
 _08011FA8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08011FAC:
 	mov r0, #0
 _08011FAE:
@@ -1620,7 +1620,7 @@ _080120CE:
 	strh r0, [r1, #8]
 	ldr r0, _08012128  @ =0x03000058
 	ldrb r2, [r0]
-	ldr r1, _0801212C  @ =gUnknown_08078900
+	ldr r1, _0801212C  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -1653,7 +1653,7 @@ _08012124:
 _08012128:
 	.4byte 0x03000058
 _0801212C:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012130:
 	.4byte 0x00000313
 _08012134:
@@ -1731,7 +1731,7 @@ _0801219E:
 	strh r0, [r1, #8]
 	ldr r0, _080121F8  @ =0x03000058
 	ldrb r2, [r0]
-	ldr r1, _080121FC  @ =gUnknown_08078900
+	ldr r1, _080121FC  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -1764,7 +1764,7 @@ _080121F4:
 _080121F8:
 	.4byte 0x03000058
 _080121FC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012200:
 	.4byte 0x00000313
 _08012204:
@@ -1832,7 +1832,7 @@ sub_08012230: @ 0x08012230
 	bhi _080122E0
 	add r0, sp, #12
 	strh r4, [r0]
-	ldr r5, _080122D0  @ =gUnknown_08078900
+	ldr r5, _080122D0  @ =gSaveFilesPtr
 	lsl r4, r1, #3
 	sub r4, r4, r1
 	lsl r4, r4, #5
@@ -1877,7 +1877,7 @@ _080122C8:
 _080122CC:
 	.4byte 0x03000058
 _080122D0:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080122D4:
 	.4byte 0x010001BE
 _080122D8:
@@ -2255,7 +2255,7 @@ _08012582:
 	ldrh r0, [r0]
 	mov r12, r0
 	ldrb r2, [r3]
-	ldr r1, _080125C0  @ =gUnknown_08078900
+	ldr r1, _080125C0  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -2277,7 +2277,7 @@ _080125B8:
 _080125BC:
 	.4byte 0x03000058
 _080125C0:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080125C4:
 	mov r0, #0
 _080125C6:
@@ -2404,7 +2404,7 @@ _0801269A:
 	ldrh r0, [r0]
 	mov r12, r0
 	ldrb r2, [r3]
-	ldr r1, _080126D8  @ =gUnknown_08078900
+	ldr r1, _080126D8  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -2426,7 +2426,7 @@ _080126D0:
 _080126D4:
 	.4byte 0x03000058
 _080126D8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080126DC:
 	mov r0, #0
 _080126DE:
@@ -2567,7 +2567,7 @@ _080127C6:
 	add r0, sp, r0
 	ldrb r0, [r0]
 	mov r8, r0
-	ldr r1, _08012810  @ =gUnknown_08078900
+	ldr r1, _08012810  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -2591,7 +2591,7 @@ _08012808:
 _0801280C:
 	.4byte 0x03000058
 _08012810:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012814:
 	mov r0, #0
 _08012816:
@@ -2858,7 +2858,7 @@ _080129F2:
 	add r0, r2, r1
 	ldrb r0, [r0]
 	str r0, [sp, #12]
-	ldr r2, _08012A38  @ =gUnknown_08078900
+	ldr r2, _08012A38  @ =gSaveFilesPtr
 	lsl r0, r1, #3
 	sub r0, r0, r1
 	lsl r0, r0, #5
@@ -2880,7 +2880,7 @@ _08012A30:
 _08012A34:
 	.4byte 0x03000058
 _08012A38:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012A3C:
 	mov r0, #0
 _08012A3E:
@@ -3330,7 +3330,7 @@ sub_08012D24: @ 0x08012D24
 	strh r6, [r3]
 	ldr r4, _08012E00  @ =0x03000058
 	ldrb r2, [r4]
-	ldr r1, _08012E04  @ =gUnknown_08078900
+	ldr r1, _08012E04  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -3375,7 +3375,7 @@ _08012DFC:
 _08012E00:
 	.4byte 0x03000058
 _08012E04:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012E08:
 	mov r0, #0
 _08012E0A:
@@ -5093,7 +5093,7 @@ _08013AE4:
 	add r1, r7, #0
 	mov r3, r8
 	bl sub_080138D0
-	ldr r1, _08013B44  @ =gUnknown_08078900
+	ldr r1, _08013B44  @ =gSaveFilesPtr
 	lsl r2, r7, #3
 	sub r0, r2, r7
 	lsl r0, r0, #5
@@ -5118,7 +5118,7 @@ _08013AE4:
 _08013B40:
 	.4byte gUnknown_08078700
 _08013B44:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013B48:
 	mov r0, #0
 _08013B4A:
@@ -5155,7 +5155,7 @@ _08013B84:
 _08013B88:
 	.4byte gUnknown_08078778
 _08013B8C:
-	ldr r2, _08013BA8  @ =gUnknown_08078900
+	ldr r2, _08013BA8  @ =gSaveFilesPtr
 	ldr r4, [sp, #32]
 	sub r0, r4, r7
 	lsl r0, r0, #5
@@ -5170,7 +5170,7 @@ _08013B8C:
 	mov r0, #1
 	b _08013BAE
 _08013BA8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013BAC:
 	mov r0, #0
 _08013BAE:
@@ -5272,7 +5272,7 @@ _08013C6C:
 	mov r4, #6
 	add r4, sp, r4
 	mov r8, r4
-	ldr r1, _08013D64  @ =gUnknown_08078900
+	ldr r1, _08013D64  @ =gSaveFilesPtr
 	ldr r2, [sp, #32]
 	sub r0, r2, r7
 	lsl r0, r0, #5
@@ -5387,7 +5387,7 @@ _08013C6C:
 	bl sub_080133D4
 	b _08013DF0
 _08013D64:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013D68:
 	.4byte gUnknown_08078790
 _08013D6C:
@@ -5458,7 +5458,7 @@ _08013DC0:
 	ldr r2, [sp, #16]
 	bl sub_080138D0
 _08013DF0:
-	ldr r5, _08013ED4  @ =gUnknown_08078900
+	ldr r5, _08013ED4  @ =gSaveFilesPtr
 	ldr r6, [sp, #32]
 	sub r0, r6, r7
 	lsl r0, r0, #5
@@ -5572,7 +5572,7 @@ _08013ECC:
 _08013ED0:
 	.4byte gUnknown_080786C0
 _08013ED4:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013ED8:
 	.4byte gUnknown_08078760
 _08013EDC:
@@ -5611,7 +5611,7 @@ _08013F18:
 	sub r3, r6, r7
 	lsl r2, r3, #24
 	lsr r2, r2, #24
-	ldr r1, _08013F5C  @ =gUnknown_08078900
+	ldr r1, _08013F5C  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -5643,7 +5643,7 @@ _08013F54:
 _08013F58:
 	.4byte gUnknown_08078610
 _08013F5C:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013F60:
 	.4byte 0x00000313
 _08013F64:
@@ -5761,7 +5761,7 @@ _08014034:
 	sub r3, r6, r7
 	lsl r2, r3, #24
 	lsr r2, r2, #24
-	ldr r1, _08014078  @ =gUnknown_08078900
+	ldr r1, _08014078  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -5793,7 +5793,7 @@ _08014070:
 _08014074:
 	.4byte gUnknown_08078628
 _08014078:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _0801407C:
 	.4byte 0x00000313
 _08014080:

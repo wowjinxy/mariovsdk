@@ -391,6 +391,8 @@ struct struct_0807820C {
     u32 unkC00C;
 };
 
+struct SaveFile;  // private - defined in savefile.c
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -627,6 +629,8 @@ extern void (*const gMainStateMainCallbacks[])(void);
 extern void (*const gMainStateLoopCallbacks[])(void);
 extern void (*const gMainStateEndCallbacks[])(void);
 extern const u32 gUnknown_0807846C[];
+extern u8 *gSelectedSaveFileNumPtr;
+extern struct SaveFile *gSaveFilesPtr;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];
 extern const u8 gUnknown_08079698[];
@@ -716,6 +720,8 @@ void sub_08007170(void);
 void sub_08008238(void);
 void sub_0800EE70(void);
 void title_demo_setup(u32 titleDemoID);
+u8 get_level_stats_08010068(u8, u8, u8, u8, u8 *);
+u8 sub_080103C8(u8, u8);
 void sub_08011428();
 void sub_08014A58();
 void sub_0801500C();

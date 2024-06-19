@@ -290,7 +290,7 @@ _0801BCEE:
 	asr r1, r1, #24
 	add r2, r6, #0
 	add r3, sp, #12
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	add r4, r0, #0
 	cmp r4, #0
 	bne _0801BD14

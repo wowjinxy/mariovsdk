@@ -8440,7 +8440,7 @@ _0800CC94:
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
-	bl sub_0800FCE4
+	bl get_level_stats_0800FCE4
 	cmp r0, #0
 	beq _0800CD00
 	ldr r0, _0800CCF0  @ =gUnknown_03000A10
@@ -8844,7 +8844,7 @@ _0800CF86:
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
-	bl sub_0800FCE4
+	bl get_level_stats_0800FCE4
 	mov r1, #72
 	lsl r1, r1, #16
 	str r1, [sp, #128]
