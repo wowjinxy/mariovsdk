@@ -5,6 +5,10 @@ src/*.s
 *.gba
 *.map
 *.dump
+ldscript.txt
+
+*.exe
+tools/agbcc
 
 # Emulator save files
 *.sav

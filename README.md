@@ -11,6 +11,6 @@ It builds the following ROM:
 
 * Install [**devkitARM**](http://devkitpro.org/wiki/Getting_Started/devkitARM).
 
-* Then get the build tools from https://github.com/pret/pokeruby-tools. Copy the `tools/` folder into the repository directory.
+* Clone [agbcc](https://github.com/pret/agbcc) outside of this repository, run `./build.sh`, and then `./install.sh [mariovsdk path]`, where `[mariovsdk path]` is the directory where you cloned the mariovsdk repository.
 
 * You can then build mariovsdk using `make` in the MSYS environment provided with devkitARM.
