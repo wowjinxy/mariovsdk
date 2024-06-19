@@ -13,7 +13,7 @@
 	X(src/rom_800EEC0.o) \
 	X(asm/rom_800F0C4.o) \
 	X(src/rom_800F1E4.o) \
-	X(asm/rom_800F6EC.o) \
+	X(asm/savefile.o) \
 	X(asm/main_menu.o) \
 	X(asm/rom_801488C.o) \
 	X(asm/level_select.o) \
