@@ -56,8 +56,18 @@
 	X(src/agb_flash_1m.o) \
 	X(src/agb_flash_mx.o) \
 	X(asm/rom_80747B8.o) \
-	X(tools/agbcc/lib/libgcc.a) \
-	X(src/libc.o) \
+	X(tools/agbcc/lib/libgcc.a:_call_via_rX.o) \
+	X(tools/agbcc/lib/libgcc.a:_divsi3.o) \
+	X(tools/agbcc/lib/libgcc.a:_dvmd_tls.o) \
+	X(tools/agbcc/lib/libgcc.a:_modsi3.o) \
+	X(tools/agbcc/lib/libgcc.a:_udivsi3.o) \
+	X(tools/agbcc/lib/libgcc.a:_umodsi3.o) \
+	X(tools/agbcc/lib/libgcc.a:dp-bit.o) \
+	X(tools/agbcc/lib/libgcc.a:fp-bit.o) \
+	X(tools/agbcc/lib/libgcc.a:_lshrdi3.o) \
+	X(tools/agbcc/lib/libgcc.a:_muldi3.o) \
+	X(tools/agbcc/lib/libgcc.a:_negdi2.o) \
+	X(src/libc.o)
 
 OUTPUT_ARCH(arm)
 SECTIONS
