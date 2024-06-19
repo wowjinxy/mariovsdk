@@ -1,4 +1,5 @@
 #define OBJECT_FILE_LIST \
+	X(data/rodata.o) \
 	X(data/data.o) \
 	X(asm/crt0.o) \
 	X(asm/rom_800023C.o) \
