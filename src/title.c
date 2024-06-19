@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "arena.h"
 #include "main.h"
 
 extern const u8 gUnknown_085F49D0[];
@@ -16,7 +17,7 @@ void title_init_callback(void)
     const void *arr[4];
     struct UnknownStruct15 *var;
 
-    sub_08034898(0);
+    arena_restore_head(0);
     sub_08071CD4();
     gUnknown_03001740 = 0;
     gUnknown_03000BE0 = 0;

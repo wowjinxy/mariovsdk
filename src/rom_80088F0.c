@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "arena.h"
 #include "main.h"
 
 void level_play_loop(void) 
@@ -53,7 +54,7 @@ void after_tutorial_init_callback(void) {
 void level_play_init_callback(void) {
 
     gUnknown_03000BD0 = 1;
-    sub_08034898(0);
+    arena_restore_head(0);
     sub_08040D50();
     sub_0805727C();
     sub_08038B18();
@@ -64,7 +65,7 @@ void level_play_init_callback(void) {
     gUnknown_03000B60 = 0;
     sub_08032C44(&gNextLevelInLevelTable.unk0);
     sub_080041B8(gNextLevelInLevelTable.unk4);
-    sub_08034884(2);
+    arena_save_head(2);
     gUnknown_03001B98 = 0;
     sub_080072A4();
     gUnknown_030009D4 = 0;
@@ -73,7 +74,7 @@ void level_play_init_callback(void) {
 void level_demo_init_callback(void) {
 
     gUnknown_03001744 = 0;
-    sub_08034898(0);
+    arena_restore_head(0);
     sub_08040D50();
     sub_0805727C();
     sub_08038B18();
@@ -84,7 +85,7 @@ void level_demo_init_callback(void) {
     gUnknown_03000B60 = 0;
     sub_08032C44(&gNextLevelInLevelTable.unk0);
     sub_080041B8(gNextLevelInLevelTable.unk4);
-    sub_08034884(2);
+    arena_save_head(2);
     level_demo_reset_init_callback();
 }
 
@@ -111,7 +112,7 @@ void unknown_0A_init_callback(void) {
 
     sub_08071BE0();
     gUnknown_03000B60 = 0;
-    sub_08034898(0);
+    arena_restore_head(0);
     sub_08040D50();
     sub_0805727C();
     sub_08032C44(&gNextLevelInLevelTable.unk0);
@@ -121,13 +122,13 @@ void unknown_0A_init_callback(void) {
     REG_DISPCNT &= 0xff7f;
     sub_08033F80(0,0);
     sub_08004428(gNextLevelInLevelTable.unk0->levelData);
-    sub_08034884(2);
+    arena_save_head(2);
     level_editor_init_callback();
 }
 
 void level_editor_init_callback(void) {
 
-    sub_08034898(2);
+    arena_restore_head(2);
     sub_08008CE4();
     sub_080069E8();
     sub_080040D8();

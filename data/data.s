@@ -6733,6 +6733,7 @@ gBossWorldTable:
 	.4byte gBossLevelTable
 	.4byte gBossLevelData
 
+	.BALIGN 4
 	.GLOBAL gUnknown_08B2CFC0
 gUnknown_08B2CFC0:
 	.4byte 1 @ World Count

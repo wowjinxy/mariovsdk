@@ -5269,7 +5269,7 @@ _0800417E:
 	cmp r4, #8
 	ble _0800414E
 	mov r0, #244
-	bl sub_08034854
+	bl arena_allocate
 	mov r1, r8
 	str r0, [r1]
 	add r0, r0, #240

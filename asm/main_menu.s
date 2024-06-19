@@ -6,7 +6,7 @@ main_menu_init_callback: @ 0x080114D4
 	push {r4,r5,lr}
 	sub sp, sp, #4
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	ldr r1, _0801150C  @ =gUnknown_03001740
 	mov r0, #0
 	strb r0, [r1]

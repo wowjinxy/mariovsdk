@@ -11,7 +11,7 @@ expert_levels_init_callback: @ 0x08035388
 	mov r4, #0
 	strh r4, [r0]
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	ldr r2, _08035464  @ =0x030002E8
 	ldr r1, _08035468  @ =0x030002E9
 	ldr r0, _0803546C  @ =0x030002EB

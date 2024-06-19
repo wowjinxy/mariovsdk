@@ -27234,7 +27234,7 @@ sub_0805727C: @ 0x0805727C
 	ldr r4, _08057290  @ =0x03001C18
 	mov r0, #160
 	lsl r0, r0, #2
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	pop {r4}
 	pop {r0}
@@ -54429,7 +54429,7 @@ sub_08063A8C: @ 0x08063A8C
 	ldr r4, _08063B14  @ =0x030006E0
 	mov r0, #254
 	lsl r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	add r0, r0, #57
 	mov r3, #0
@@ -61974,7 +61974,7 @@ sub_08067254: @ 0x08067254
 	ldr r7, _0806756C  @ =0x030006E4
 	mov r0, #220
 	lsl r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r7]
 	mov r5, #132
 	lsl r5, r5, #1
@@ -83653,7 +83653,7 @@ sub_08071338: @ 0x08071338
 	cmp r4, #0
 	bne _08071370
 	mov r0, #192
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	str r1, [r5]
 	mov r0, sp
@@ -83773,7 +83773,7 @@ sub_0807142C: @ 0x0807142C
 	push {r4,lr}
 	sub sp, sp, #4
 	mov r0, #192
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	ldr r4, _0807145C  @ =0x03001E50
 	add r0, r4, #0

@@ -11235,7 +11235,7 @@ bonus_swapboxes_init_callback: @ 0x08027068
 	push {r5-r7}
 	sub sp, sp, #24
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	bl sub_080720AC
 	mov r0, #68
 	mov r1, #128
@@ -11243,23 +11243,23 @@ bonus_swapboxes_init_callback: @ 0x08027068
 	bl sub_0807204C
 	ldr r7, _08027110  @ =0x030000E8
 	mov r0, #16
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r7]
 	ldr r4, _08027114  @ =0x030000EC
 	mov r0, #4
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	ldr r4, _08027118  @ =0x030000F0
 	mov r0, #4
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	ldr r5, _0802711C  @ =0x030000F4
 	mov r0, #44
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r5]
 	ldr r4, _08027120  @ =0x030000F8
 	mov r0, #24
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	ldr r0, [r5]
 	mov r1, #0

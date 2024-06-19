@@ -42,8 +42,8 @@ _08037A00:
 	.4byte 0x030002F0
 	THUMB_FUNC_END sub_080379BC
 
-		THUMB_FUNC_START sub_08037A04
-sub_08037A04: @ 0x08037A04
+		THUMB_FUNC_START print_error_message
+print_error_message: @ 0x08037A04
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -62,7 +62,7 @@ sub_08037A04: @ 0x08037A04
 	mov r0, #1
 	neg r0, r0
 	mov r10, r0
-	bl sub_08034898
+	bl arena_restore_head
 	ldr r0, _08037ACC  @ =gUnknown_08B2AD88
 	mov r1, #0
 	mov r2, #0

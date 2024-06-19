@@ -43,6 +43,8 @@
 	X(src/rom_8032FB0.o) \
 	X(asm/rom_8033658.o) \
 	X(src/rom_8033C38.o) \
+	X(src/arena.o) \
+	X(data/rodata2.o) \
 	X(asm/rom_8034928.o) \
 	X(asm/expert_levels.o) \
 	X(asm/world_start.o) \
@@ -291,7 +293,7 @@ SECTIONS
 		. = 0x1740;		gUnknown_03001740 = .;
 		. = 0x1744;		gUnknown_03001744 = .;
 		. = 0x1748;		gUnknown_03001748 = .;
-		. = 0x1750;		gUnknown_03001750 = .;
+		. = 0x1750;		gArena = .;
 		. = 0x1770;		gUnknown_03001770 = .;
 		. = 0x192C;		gUnknown_0300192C = .;
 		. = 0x1930;		gUnknown_03001930 = .;

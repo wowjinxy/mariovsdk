@@ -220,14 +220,14 @@ level_select_init_callback: @ 0x08015280
 	push {r6,r7}
 	sub sp, sp, #24
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	ldr r4, _080153C0  @ =0x0300007C
 	mov r0, #32
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	ldr r4, _080153C4  @ =0x03000094
 	mov r0, #56
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	str r1, [r4]
 	add r0, sp, #16
@@ -600,7 +600,7 @@ _08015566:
 	strh r0, [r5]
 	ldr r4, _08015614  @ =0x03000074
 	add r0, r1, #0
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	str r1, [r4]
 	mov r0, sp

@@ -6,7 +6,7 @@ boss_clear_init_callback: @ 0x0801BF14
 	push {r4-r6,lr}
 	sub sp, sp, #36
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	ldr r0, _0801BFAC  @ =gCameraHorizontalOffset
 	mov r5, #0
 	strh r5, [r0]

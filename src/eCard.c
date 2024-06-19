@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "arena.h"
 #include "main.h"
 
 void e_world_from_menu_loop(void) {
@@ -28,7 +29,7 @@ void e_world_from_menu_init_callback(void) {
 
     u32 var1;
     u16 var2[2];
-    sub_08034898(0);
+    arena_restore_head(0);
     gUnknown_03001930 = gUnknown_0300192C = 0;
     e_world_init_callback();
     sub_08006968(&gEWorldMenuData2);

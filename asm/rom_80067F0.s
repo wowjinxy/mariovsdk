@@ -266,7 +266,7 @@ sub_080069BC: @ 0x080069BC
 	push {r4,lr}
 	mov r0, #175
 	lsl r0, r0, #2
-	bl sub_08034854
+	bl arena_allocate
 	add r4, r0, #0
 	ldr r0, _080069E0  @ =0x08000430
 	mov r2, #175
@@ -293,7 +293,7 @@ sub_080069E8: @ 0x080069E8
 	ldr r4, _080069FC  @ =gUnknown_03000924
 	mov r0, #135
 	lsl r0, r0, #3
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	pop {r4}
 	pop {r0}

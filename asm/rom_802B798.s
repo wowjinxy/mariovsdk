@@ -267,7 +267,7 @@ sub_0802B998: @ 0x0802B998
 	push {r4,r5,lr}
 	ldr r5, _0802B9CC  @ =0x080006D8
 	ldr r0, _0802B9D0  @ =0x00001068
-	bl sub_08034854
+	bl arena_allocate
 	add r4, r0, #0
 	ldr r2, _0802B9D4  @ =0x0400041A
 	add r0, r5, #0
@@ -308,7 +308,7 @@ sub_0802B9E4: @ 0x0802B9E4
 	push {lr}
 	mov r0, #240
 	lsl r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	ldr r1, _0802B9FC  @ =0x03000C30
 	str r0, [r1, #4]
 	mov r0, #0
@@ -330,7 +330,7 @@ sub_0802BA00: @ 0x0802BA00
 	bne _0802BA16
 	mov r0, #240
 	lsl r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4, #4]
 	str r5, [r4]
 _0802BA16:
@@ -523,7 +523,7 @@ sub_0802BB4C: @ 0x0802BB4C
 	push {r4,lr}
 	sub sp, sp, #4
 	mov r0, #84
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	ldr r4, _0802BB78  @ =0x03000C40
 	str r1, [r4, #32]
@@ -565,7 +565,7 @@ sub_0802BB80: @ 0x0802BB80
 	cmp r4, #0
 	bne _0802BBB4
 	mov r0, #84
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	str r1, [r5, #32]
 	mov r0, sp
@@ -766,7 +766,7 @@ _0802BCF2:
 	ldr r7, _0802BD1C  @ =0x08001760
 	sub r4, r0, r7
 	add r0, r4, #0
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	ldr r0, _0802BD20  @ =0x03000C90
 	str r1, [r0, #24]
@@ -794,7 +794,7 @@ _0802BD2E:
 	ldrh r0, [r5, #2]
 	lsl r0, r0, #4
 	add r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	ldr r1, _0802BE00  @ =0x03000C90
 	str r0, [r1, #20]
 	add r0, sp, #4
@@ -805,7 +805,7 @@ _0802BD2E:
 _0802BD46:
 	mov r0, #228
 	lsl r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	stm r6!, {r0}
 	sub r4, r4, #1
 	cmp r4, #0
@@ -3516,7 +3516,7 @@ sub_0802D06C: @ 0x0802D06C
 	push {r7}
 	sub sp, sp, #4
 	mov r0, #144
-	bl sub_08034854
+	bl arena_allocate
 	ldr r1, _0802D0B8  @ =0x03000170
 	str r0, [r1, #28]
 	mov r8, r1
@@ -3591,7 +3591,7 @@ sub_0802D0E8: @ 0x0802D0E8
 	cmp r0, #0
 	bne _0802D12E
 	mov r0, #144
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4, #28]
 	mov r8, r4
 	mov r1, #0

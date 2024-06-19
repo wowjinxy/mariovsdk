@@ -81,16 +81,6 @@ struct Struct3000A10 {
     u8 unk125;
 } unk1;
 
-
-struct UnknownStruct3
-{
-    void *unk0;
-    void *unk4;
-    void *unk8;
-    u32 unkC;
-    void *unk10[4];
-};
-
 struct CompressionHeader
 {
     u32 unk0_0:4;
@@ -488,7 +478,7 @@ extern struct backgroundLayerOffset gBGLayerOffsets;  // no idea what type this 
 extern u8 gUnknown_03001740;
 extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
-extern struct UnknownStruct3 gUnknown_03001750;
+
 extern struct UnknownStruct9 gUnknown_03001770;
 extern u16 gUnknown_0300192C;  // unknown type
 extern u16 gUnknown_03001930; // unknown type
@@ -714,15 +704,12 @@ void sub_08033FAC(s16, s16);
 void sub_08033FC8(void);
 extern u8 sub_08034004(void);
 void sub_08034138(void);
-void sub_0803482C();
-void *sub_08034854();
-void sub_08034884(u32);
-void sub_08034898();
+
 void sub_080348C8(const struct UnknownStruct10 *, u32, u32, u32);
 void sub_08034CCC();
 void sub_08035108();
 void sub_080351E0();
-void sub_08037A04();
+void print_error_message();
 void sub_080386DC(void);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);

@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "arena.h"
 #include "main.h"
 
 void movie_player_main(void) {
@@ -174,7 +175,7 @@ void movie_player_setup_data(u8 param_1, u8 songID, u8 nextMode, u8 movieID) {
 
 void movie_player_init_callback(void) {
 
-    sub_08034898(0);
+    arena_restore_head(0);
     sub_0807204C(gMoviePlayerParams.songID, 0x80, 1);
     sub_0805727C();
     sub_08057420((u32)gMoviePlayerParams.movieData);

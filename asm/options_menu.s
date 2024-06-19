@@ -1935,7 +1935,7 @@ options_init_callback: @ 0x0802895C
 	push {r7}
 	sub sp, sp, #4
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	ldr r0, _080289D0  @ =gCameraHorizontalOffset
 	mov r5, #0
 	strh r5, [r0]
@@ -1959,7 +1959,7 @@ options_init_callback: @ 0x0802895C
 	bl sub_08006968
 	ldr r4, _080289DC  @ =0x030000FC
 	ldr r0, _080289E0  @ =0x00001150
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	str r1, [r4]
 	mov r0, sp
@@ -2083,7 +2083,7 @@ _08028A48:
 	ldr r6, _08028BD8  @ =gUnknown_08B3A4DC
 	ldrh r0, [r6]
 	lsl r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	ldr r1, [r7]
 	ldr r3, _08028BDC  @ =0x00001144
 	add r2, r1, r3
@@ -2123,7 +2123,7 @@ _08028ADE:
 	ldr r4, _08028BE8  @ =gUnknown_08D7B10C
 	ldrh r0, [r4]
 	lsl r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	ldr r3, _08028BB0  @ =0x030000FC
 	ldr r1, [r3]
 	ldr r5, _08028BEC  @ =0x00001148

@@ -186,7 +186,7 @@ sub_0801B430: @ 0x0801B430
 	bne _0801B45A
 	mov r0, #200
 	lsl r0, r0, #3
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 _0801B45A:
 	add r2, r6, #4

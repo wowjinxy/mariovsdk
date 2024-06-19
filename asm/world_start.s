@@ -6,7 +6,7 @@ world_start_init_callback: @ 0x08037050
 	push {r4,r5,lr}
 	sub sp, sp, #32
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	bl sub_08071FE4
 	cmp r0, #11
 	beq _0803706C
@@ -17,7 +17,7 @@ world_start_init_callback: @ 0x08037050
 _0803706C:
 	ldr r4, _08037094  @ =0x030002FC
 	mov r0, #16
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	ldr r1, _08037098  @ =gUnknown_03000BE0
 	mov r0, #0
@@ -242,7 +242,7 @@ sub_08037230: @ 0x08037230
 	push {r4,r5,lr}
 	ldr r4, _08037284  @ =0x03000300
 	mov r0, #20
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	mov r5, #0
 	strh r5, [r0, #12]
@@ -260,7 +260,7 @@ sub_08037230: @ 0x08037230
 	strh r1, [r0, #10]
 	ldr r4, _08037290  @ =0x03000304
 	mov r0, #20
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	strh r5, [r0, #12]
 	ldr r1, _08037294  @ =gUnknown_0854301C

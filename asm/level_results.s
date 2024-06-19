@@ -280,7 +280,7 @@ _0802938C:
 _08029390:
 	strb r0, [r1]
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	ldr r1, _0802940C  @ =0x03000C1C
 	mov r0, #0
 	strb r0, [r1]

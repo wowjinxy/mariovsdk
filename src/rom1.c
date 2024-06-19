@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "arena.h"
 #include "main.h"
 
 void sub_08007154(void)
@@ -10,7 +11,7 @@ void sub_08007154(void)
 
 void sub_08007170(void)
 {
-    sub_08034898(2);
+    arena_restore_head(2);
     sub_0802BA94();
     sub_0802BC98();
     sub_0802D1D0();

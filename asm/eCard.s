@@ -868,10 +868,10 @@ e_card_scan_init_callback: @ 0x0802DD4C
 	str r2, [r0]
 _0802DD68:
 	mov r0, #3
-	bl sub_08034884
+	bl arena_save_head
 	ldr r4, _0802DDD0  @ =gUnknown_030001BC
 	mov r0, #64
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	mov r1, #0
 	strb r1, [r0]
@@ -936,7 +936,7 @@ e_card_scan_end: @ 0x0802DDE8
 	push {lr}
 	bl sub_080382A8
 	mov r0, #3
-	bl sub_08034898
+	bl arena_restore_head
 	ldr r1, _0802DE04  @ =gUnknown_030001B4
 	mov r0, #0
 	str r0, [r1]
@@ -2843,7 +2843,7 @@ _0802EC30:
 e_world_init_callback: @ 0x0802EC34
 	push {r4,r5,lr}
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	bl sub_08038B18
 	ldr r4, _0802ECAC  @ =gEWorldMenuData1
 	add r0, r4, #0
@@ -2872,7 +2872,7 @@ _0802EC6E:
 	bl sub_080348C8
 	ldr r4, _0802ECBC  @ =gUnknown_030001C4
 	ldr r0, _0802ECC0  @ =0x000008FC
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	bl e_world_return_init_callback
 	bl sub_08071FE4
@@ -2943,7 +2943,7 @@ e_world_end: @ 0x0802ECF0
 	cmp r0, #0
 	beq _0802ED04
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 _0802ED04:
 	mov r2, #128
 	lsl r2, r2, #19
@@ -6174,7 +6174,7 @@ sub_08030408: @ 0x08030408
 	ldr r5, _0803046C  @ =0x030001D8
 	mov r0, #135
 	lsl r0, r0, #4
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	str r1, [r5]
 	mov r0, sp
@@ -7753,7 +7753,7 @@ sub_08030FC8: @ 0x08030FC8
 	push {r7}
 	sub sp, sp, #4
 	mov r0, #84
-	bl sub_08034854
+	bl arena_allocate
 	ldr r1, _08031014  @ =0x030001E8
 	str r0, [r1, #28]
 	mov r8, r1
@@ -7800,7 +7800,7 @@ sub_08031018: @ 0x08031018
 	cmp r0, #0
 	bne _0803105E
 	mov r0, #84
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4, #28]
 	mov r8, r4
 	mov r1, #0
@@ -8004,7 +8004,7 @@ sub_08031170: @ 0x08031170
 	cmp r5, #0
 	bne _080311AC
 	mov r0, #160
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	str r1, [r4, #108]
 	str r5, [sp]
@@ -8695,7 +8695,7 @@ sub_08031690: @ 0x08031690
 	push {r4,r5,lr}
 	sub sp, sp, #4
 	mov r0, #160
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	ldr r4, _080316C4  @ =0x03000210
 	str r1, [r4, #108]
@@ -9486,7 +9486,7 @@ sub_08031BF0: @ 0x08031BF0
 	push {lr}
 	sub sp, sp, #8
 	mov r0, #72
-	bl sub_08034854
+	bl arena_allocate
 	add r1, r0, #0
 	ldr r0, _08031C14  @ =0x03000284
 	str r1, [r0]

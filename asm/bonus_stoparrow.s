@@ -9749,7 +9749,7 @@ bonus_stoparrow_init_callback: @ 0x080215B4
 	push {r7}
 	sub sp, sp, #20
 	mov r0, #0
-	bl sub_08034898
+	bl arena_restore_head
 	bl sub_080720AC
 	mov r0, #68
 	mov r1, #128
@@ -9757,15 +9757,15 @@ bonus_stoparrow_init_callback: @ 0x080215B4
 	bl sub_0807204C
 	ldr r7, _08021648  @ =0x030000D0
 	mov r0, #12
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r7]
 	ldr r5, _0802164C  @ =0x030000D4
 	mov r0, #24
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r5]
 	ldr r4, _08021650  @ =0x030000D8
 	mov r0, #24
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	ldr r0, [r5]
 	mov r1, #0

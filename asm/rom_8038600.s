@@ -18422,15 +18422,15 @@ sub_08040D50: @ 0x08040D50
 	ldr r5, _08040D84  @ =gUnknown_03001940
 	mov r0, #220
 	lsl r0, r0, #4
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r5]
 	ldr r4, _08040D88  @ =0x03001A54
 	mov r0, #80
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	bl sub_08041ED8
 	mov r0, #1
-	bl sub_08034884
+	bl arena_save_head
 	ldr r0, _08040D8C  @ =0x0300193C
 	ldr r1, [r5]
 	str r1, [r0]
@@ -20931,7 +20931,7 @@ sub_08041ED8: @ 0x08041ED8
 	ldr r4, _08041EEC  @ =0x03000330
 	mov r0, #230
 	lsl r0, r0, #1
-	bl sub_08034854
+	bl arena_allocate
 	str r0, [r4]
 	pop {r4}
 	pop {r0}
