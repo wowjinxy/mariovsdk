@@ -73,7 +73,7 @@ OUTPUT_ARCH(arm)
 SECTIONS
 {
 	. = 0x08000000;
-	.text :
+	.text (READONLY) :
 	ALIGN(4)
 	{
 #define X(file) file(.text);
@@ -108,7 +108,7 @@ SECTIONS
 	}
 
 	. = 0x03000000;
-	.bss :
+	.bss (NOLOAD) :
 	ALIGN(4)
 	{
 		. = 0x0; 		gUnknown_03000000 = .;
