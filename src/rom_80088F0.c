@@ -20,13 +20,13 @@ void level_play_loop(void)
   sub_08031AD4(&sp4);
   sub_080322A8(&sp4, &sp6, &sp8);
     DmaCopy16(3, gOamData, OAM, 0x400);
-  sub_0802BA38(gSomeVRAMAddr_03000E80,6,gUnknown_0807820C->unk800C,6);
+  sub_0802BA38(gSomeVRAMAddr_03000E80,6,gEWRAMBasePtr->unk800C,6);
   if ((((gUnknown_030009EC != '\0') || (gMainState == MAIN_STATE_UNKNOWN_10)) || (gMainState == MAIN_STATE_LEVEL_EDIT)) || ((gUnknown_03001A1C & 0x1000) != 0)) {
-        for (uVar2 = 0x0; uVar2 < gUnknown_0807820C->unkC00C; uVar2 += 0x400) {
-            DmaCopy16(3, &gUnknown_0807820C->unk800C[uVar2], gSomeVRAMAddr_03000E80 + uVar2 * 2, 0x800);
+        for (uVar2 = 0x0; uVar2 < gEWRAMBasePtr->unkC00C; uVar2 += 0x400) {
+            DmaCopy16(3, &gEWRAMBasePtr->unk800C[uVar2], gSomeVRAMAddr_03000E80 + uVar2 * 2, 0x800);
             if (((gUnknown_030009D0 & 0x18) == 0) &&
                ((gCurrentWorld != 0x2 || ((gNextLevelInLevelTable.levelType & 2) == 0)))) {
-                DmaCopy16(3, &gUnknown_0807820C->unk800C[uVar2+0x1000], gSomeVRAMAddr_03000E90 + uVar2 * 2, 0x800);
+                DmaCopy16(3, &gEWRAMBasePtr->unk800C[uVar2+0x1000], gSomeVRAMAddr_03000E90 + uVar2 * 2, 0x800);
             }
         }
     gUnknown_030009EC = 0x0;

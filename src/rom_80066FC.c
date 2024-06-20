@@ -33,9 +33,9 @@ int sub_08006710(s32 *a)
         
         while (r2 <= r3)
         {
-            //if (gUnknown_0807820C[0x400C + r2] == 4)
-            //if (((u16 *)(gUnknown_0807820C + 0x400C))[r2] == 4)
-            if ((*(struct Struct2004000 *)(gUnknown_0807820C + 0x4000)).unkC[r2] == 4)
+            //if (gEWRAMBasePtr[0x400C + r2] == 4)
+            //if (((u16 *)(gEWRAMBasePtr + 0x400C))[r2] == 4)
+            if ((*(struct Struct2004000 *)(gEWRAMBasePtr + 0x4000)).unkC[r2] == 4)
                 return 1;
             r2++;
         }
@@ -73,7 +73,7 @@ _08006730:\n\
 _0800673A:\n\
 	cmp r4, r5\n\
 	bhi _0800677E\n\
-	ldr r0, _08006768  @ =gUnknown_0807820C\n\
+	ldr r0, _08006768  @ =gEWRAMBasePtr\n\
 	mov r8, r0\n\
 	ldr r0, _0800676C  @ =0x0000400C\n\
 	mov r12, r0\n\
@@ -98,7 +98,7 @@ _08006758:\n\
 _08006764:\n\
 	.4byte 0x00000FBF\n\
 _08006768:\n\
-	.4byte gUnknown_0807820C\n\
+	.4byte gEWRAMBasePtr\n\
 _0800676C:\n\
 	.4byte 0x0000400C\n\
 _08006770:\n\
@@ -127,7 +127,7 @@ int sub_0800678C(s32 *a, u32 b)
     s32 r2 = a[0] >> 11;
     s32 r5 = (a[1] >> 11) * 64;
     s32 r3 = a[2] >> 11;
-    u16 *r4 = (u16 *)(gUnknown_0807820C + 0x400C);
+    u16 *r4 = (u16 *)(gEWRAMBasePtr + 0x400C);
     
     if (r2 == r3)
         return 0;
@@ -153,7 +153,7 @@ int sub_0800678C(s32 *a, u32 b)
 	lsl r5, r1, #6\n\
 	ldr r0, [r0, #8]\n\
 	asr r3, r0, #11\n\
-	ldr r0, _080067DC  @ =gUnknown_0807820C\n\
+	ldr r0, _080067DC  @ =gEWRAMBasePtr\n\
 	ldr r0, [r0]\n\
 	ldr r1, _080067E0  @ =0x0000400C\n\
 	add r4, r0, r1\n\
@@ -187,7 +187,7 @@ _080067D6:\n\
 	.byte 0x00\n\
 	.byte 0x00\n\
 _080067DC:\n\
-	.4byte gUnknown_0807820C\n\
+	.4byte gEWRAMBasePtr\n\
 _080067E0:\n\
 	.4byte 0x0000400C\n\
 _080067E4:\n\

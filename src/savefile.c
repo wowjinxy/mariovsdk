@@ -1334,14 +1334,14 @@ void process_some_key_sequence_0801138C(void)  // unreferenced?
 
 void sub_08011428(u32 arg0)
 {
-    struct UnknownStruct12 r6 = *gUnknown_080788FC;
+    struct UnknownStruct12 r6 = *gScreenModeRelatedPtr;
     s16 i;
 
     CpuFill16(0, gSelectedSaveFileNumPtr, 0xA84);
     sub_08029080();
     if (arg0 == 0)
-        *gUnknown_080788FC = r6;
-    sub_0807220C(gUnknown_080788FC->unk0_5);
+        *gScreenModeRelatedPtr = r6;
+    sub_0807220C(gScreenModeRelatedPtr->unk0_5);
     init_level_highscores_08010DEC(&gSaveFilesPtr[0]);
     init_level_highscores_08010DEC(&gSaveFilesPtr[1]);
     init_level_highscores_08010DEC(&gSaveFilesPtr[2]);

@@ -7570,7 +7570,7 @@ _08030E78:
 	cmp r3, r8
 	bhi _08030F1E
 _08030E8A:
-	ldr r0, _08030EFC  @ =gUnknown_0807820C
+	ldr r0, _08030EFC  @ =gEWRAMBasePtr
 	ldr r4, [r0]
 	lsl r1, r3, #1
 	ldr r2, _08030F00  @ =0x0000400C
@@ -7628,7 +7628,7 @@ _08030EBE:
 	.byte 0x00
 	.byte 0x00
 _08030EFC:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _08030F00:
 	.4byte 0x0000400C
 _08030F04:
@@ -8074,7 +8074,7 @@ sub_080311FC: @ 0x080311FC
 	sub sp, sp, #28
 	mov r9, r0
 	add r4, r1, #0
-	ldr r0, _080312EC  @ =gUnknown_0807820C
+	ldr r0, _080312EC  @ =gEWRAMBasePtr
 	ldr r0, [r0]
 	ldr r1, _080312F0  @ =0x0000400C
 	add r1, r0, r1
@@ -8187,7 +8187,7 @@ _080312BC:
 	blt _080312BC
 	b _080313F8
 _080312EC:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _080312F0:
 	.4byte 0x0000400C
 _080312F4:
@@ -8343,7 +8343,7 @@ sub_08031408: @ 0x08031408
 	mov r5, r8
 	push {r5-r7}
 	mov r8, r0
-	ldr r0, _080314C4  @ =gUnknown_0807820C
+	ldr r0, _080314C4  @ =gEWRAMBasePtr
 	ldr r0, [r0]
 	ldr r1, _080314C8  @ =0x0000400C
 	add r1, r1, r0
@@ -8435,7 +8435,7 @@ _080314B2:
 	pop {r0}
 	bx r0
 _080314C4:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _080314C8:
 	.4byte 0x0000400C
 _080314CC:
@@ -8838,7 +8838,7 @@ _08031780:
 	add r4, r3, r5
 	cmp r2, r4
 	bhi _080317D4
-	ldr r0, _080317B8  @ =gUnknown_0807820C
+	ldr r0, _080317B8  @ =gEWRAMBasePtr
 	ldr r1, [r0]
 	ldr r0, _080317BC  @ =0x03001B54
 	mov r9, r0
@@ -8863,7 +8863,7 @@ _080317A2:
 	.byte 0x00
 	.byte 0x00
 _080317B8:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _080317BC:
 	.4byte 0x03001B54
 _080317C0:

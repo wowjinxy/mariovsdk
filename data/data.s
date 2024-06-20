@@ -2,31 +2,31 @@
 
 	.SECTION .data
 
-	.GLOBAL gUnknown_0807820C
-gUnknown_0807820C:
+	.GLOBAL gEWRAMBasePtr
+gEWRAMBasePtr:
 	.4byte 0x02000000
 
-	.GLOBAL gUnknown_08078210
-gUnknown_08078210:
+	.GLOBAL gObjectTileDataRAMPtr
+gObjectTileDataRAMPtr:
 	.4byte 0x0200C010
 
 	.GLOBAL gCollectableScoreTable1
 gCollectableScoreTable1:
-	.2byte 0x7D0
+	.2byte 2000
 
 	.GLOBAL gCollectableScoreTable2
 gCollectableScoreTable2:
-.2byte 0x7D0
-.2byte 0xBB8
-.2byte 0xBB8
-.2byte 0x1388
-.2byte 0x1388
-.2byte 0x1F4
-.2byte 0x1F4
-.2byte 0x1F4
-.2byte 0x1F4
-.2byte 0x1F4
-.2byte 0x1F4
+	.2byte 2000
+	.2byte 3000
+	.2byte 3000
+	.2byte 5000
+	.2byte 5000
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
 
 	.GLOBAL gUnknown_0807822C
 gUnknown_0807822C:
@@ -441,19 +441,19 @@ gUnknown_080788E0:
 
 	.GLOBAL gSelectedSaveFileNumPtr
 gSelectedSaveFileNumPtr:
-	.INCBIN "baserom.gba", 0x788F4, 0x788F8-0x788F4
+	.4byte 0x02032100
 
 	.GLOBAL gUnknown_080788F8
 gUnknown_080788F8:
-	.INCBIN "baserom.gba", 0x788F8, 0x788FC-0x788F8
+	.4byte 0x02032108
 
-	.GLOBAL gUnknown_080788FC
-gUnknown_080788FC:
-	.INCBIN "baserom.gba", 0x788FC, 0x78900-0x788FC
+	.GLOBAL gScreenModeRelatedPtr
+gScreenModeRelatedPtr:
+	.4byte 0x02032104 
 
 	.GLOBAL gSaveFilesPtr
 gSaveFilesPtr:
-	.INCBIN "baserom.gba", 0x78900, 0x78904-0x78900
+	.4byte 0x02032110
 
 	.GLOBAL gUnknown_08078904
 gUnknown_08078904:
@@ -1397,16 +1397,60 @@ gUnknown_0807C9CC:
 
 	.GLOBAL gUnknown_0807CA08
 gUnknown_0807CA08:
-	.INCBIN "baserom.gba", 0x7CA08, 0x7CA2C-0x7CA08
+	.4byte 0x00000334
+	.4byte 0x000003A3
+	.4byte 0x00000097
+	.4byte 0x00000359
+	.4byte 0x0000035D
+	.4byte 0x00000354
+	.4byte 0x00000357
+	.4byte 0x0000035B
+	.4byte 0x00000352
 
 	.GLOBAL gUnknown_0807CA2C
 gUnknown_0807CA2C:
-	.INCBIN "baserom.gba", 0x7CA2C, 0x7CA40-0x7CA2C
+	.byte 0x05
+	.byte 0x00
+	.byte 0x06
+	.byte 0x00
+	.byte 0x07
+	.byte 0x05
+	.byte 0x08
+	.byte 0x06
+	.byte 0x09
+	.byte 0x07
+	.byte 0x0A
+	.byte 0x08
+	.byte 0x0B
+	.byte 0x0D
+	.byte 0x0C
+	.byte 0x0E
+	.byte 0x0D
+	.byte 0x0F
+	.byte 0x00
+	.byte 0x00
 
 	.GLOBAL gUnknown_0807CA40
 gUnknown_0807CA40:
-	.INCBIN "baserom.gba", 0x7CA40, 0x7CA88-0x7CA40
-
+	.4byte 0x00000001
+	.4byte 0x00000011
+	.4byte 0x00000015
+	.4byte 0x00000011
+	.4byte 0x00000018
+	.4byte 0x00000011
+	.4byte 0x00000018
+	.4byte 0x00000011
+	.4byte 0x00000018
+	.4byte 0x00000011
+	.4byte 0x00000001
+	.4byte 0x00000011
+	.4byte 0x00000015
+	.4byte 0x00000011
+	.4byte 0x00000007
+	.4byte 0x00000006
+	.4byte 0x00000007
+	.4byte 0x00000003
+	
 	.GLOBAL gUnknown_0807CA88
 gUnknown_0807CA88:
 	.4byte gTextPressAToAddLevel

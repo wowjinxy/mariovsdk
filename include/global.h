@@ -928,7 +928,7 @@ extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
 extern struct SaveFile *gSaveFilesPtr;
 extern u16 gUnknown_080788E0[];
-extern struct UnknownStruct12 *gUnknown_080788FC;
+extern struct UnknownStruct12 *gScreenModeRelatedPtr;
 extern void *const gUnknown_0807CA94;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];
@@ -987,7 +987,7 @@ s32 gUnknown_03000288;
 u32 gUnknown_0300028C;
 u8 gUnknown_03000290;
 
-extern struct struct_0807820C *gUnknown_0807820C;
+extern struct struct_0807820C *gEWRAMBasePtr;
 u32 gMainState;
 
 void *gSomeVRAMAddr_03000E90;
