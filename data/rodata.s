@@ -121,32 +121,108 @@ gUnknown_080763FC:
 	.4byte 0x0000000D
 	.4byte 0x00000002
 
-	.GLOBAL gUnknown_08076404
-gUnknown_08076404:
+	.GLOBAL gTextNo
+gTextNo:
 	.ASCII "No\0\0"	
+	
+	.GLOBAL gTextYes
+gTextYes:
 	.ASCII "Yes\0"
+	
+	.GLOBAL gTextThemeCardAlreadyLoadedOverwrite
+gTextThemeCardAlreadyLoadedOverwrite:
 	.ASCII "Theme Card already loaded!\n\nOverwrite existing theme?\0\0\0"
+	
+	.GLOBAL gTextThemeCardDeactivated
+gTextThemeCardDeactivated:
 	.ASCII "Theme Card\nDEACTIVATED!\0"
+	
+	.GLOBAL gTextPressAToContinue2
+gTextPressAToContinue2:
 	.ASCII "Press A to continue\0"
+	
+	.GLOBAL gTextThemeCardActivated
+gTextThemeCardActivated:
 	.ASCII "Theme Card\nACTIVATED!\0\0\0"
+	
+	.GLOBAL gTextEraseOldWorld
+gTextEraseOldWorld:
 	.ASCII "Erase old world\0"
+	
+	.GLOBAL gTextLevelDoesNotBelongToCurrentWorld
+gTextLevelDoesNotBelongToCurrentWorld:
 	.ASCII "Level does not belong\nto current world!\0"
+	
+	.GLOBAL gTextOverwrite
+gTextOverwrite:
 	.ASCII "Overwrite\0\0\0"
+	
+	.GLOBAL gTextLevelAlreadyExists
+gTextLevelAlreadyExists:
 	.ASCII "Level already exists!\0\0\0"
+	
+	.GLOBAL gTextConnectionLost
+gTextConnectionLost:
 	.ASCII "Connection lost!\0\0\0\0"
+	
+	.GLOBAL gTextTimeOut
+gTextTimeOut:
 	.ASCII "Time out!\0\0\0"
+	
+	.GLOBAL gTextCancel
+gTextCancel:
 	.ASCII "Cancel\0\0"	
+	
+	.GLOBAL gTextRetry
+gTextRetry:
 	.ASCII "Retry\0\0\0"
-	.ASCII "CRC check failed!\0\0\0\0\0\0\0"
+	
+	.GLOBAL gTextCRCCheckFailed
+gTextCRCCheckFailed:
+	.ASCII "CRC check failed!\0\0\0"
+	
+	.GLOBAL gTextBlank
+gTextBlank:
+	.ASCII "\0\0\0\0"
+	
+	.GLOBAL gTextSavingLevelAs
+gTextSavingLevelAs:
 	.ASCII "Saving Level as\0"
+	
+	.GLOBAL gTextErasingLevels
+gTextErasingLevels:
 	.ASCII "Erasing levels\0\0"
+	
+	.GLOBAL gTextAddingLevel
+gTextAddingLevel:
 	.ASCII "Adding level\0\0\0\0"
+	
+	.GLOBAL gTextError
+gTextError:
 	.ASCII "ERROR\0\0\0"
+	
+	.GLOBAL gTextRecivedLevelAlreadyExists
+gTextRecivedLevelAlreadyExists:
 	.ASCII "Mario vs. Donkey Kong-e card\nRECEIVED!\n\nBut Level Already Exists as\0"
+	
+	.GLOBAL gTextRecivedNewLevel
+gTextRecivedNewLevel:
 	.ASCII "Mario vs. Donkey Kong-e card\nRECEIVED!\n\nNew level received:\0"
+
+	.GLOBAL gTextRecivingECard
+gTextRecivingECard:
 	.ASCII "RECEIVING\nMario vs. Donkey Kong-e card...\0\0\0"
+	
+	.GLOBAL gTextECardDetected
+gTextECardDetected:
 	.ASCII "Mario vs. Donkey Kong-e card\nDETECTED!!\n\n\0\0\0"
+	
+	.GLOBAL gTextWaitingForECard
+gTextWaitingForECard:
 	.ASCII "WAITING FOR\nMario vs. Donkey Kong-e card...\0"
+	
+	.GLOBAL gTextPleaseConnectEReader
+gTextPleaseConnectEReader:
 	.ASCII "Please connect to GBA with\nan e-Reader and scan a\nMario vs. Donkey Kong-e card\ninto it.\n\0\0\0\0"
 
 	.GLOBAL gTextPressAToRetry
