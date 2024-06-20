@@ -228,12 +228,12 @@ gUnknown_0807846C:
 	.4byte sub_08015044
 	.4byte sub_08015044
 
-	.GLOBAL gUnknown_080784F8
-gUnknown_080784F8:
+	.GLOBAL gMainLevelDefaultHighScores
+gMainLevelDefaultHighScores:
 	.INCBIN "baserom.gba", 0x784F8, 0x78558-0x784F8
 
-	.GLOBAL gUnknown_08078558
-gUnknown_08078558:
+	.GLOBAL gPlusLevelDefaultHighScores
+gPlusLevelDefaultHighScores:
 	.INCBIN "baserom.gba", 0x78558, 0x785B0-0x78558
 
 	.GLOBAL gUnknown_080785B0

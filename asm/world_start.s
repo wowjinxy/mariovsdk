@@ -155,7 +155,7 @@ _08037166:
 	mov r1, #12
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _080371CC  @ =0x03000300
 	ldr r1, [r1]
 	str r0, [r1, #16]
@@ -168,7 +168,7 @@ _08037166:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #1
 	mov r1, #0
 	bl sub_080379BC
@@ -357,7 +357,7 @@ _080372F0:
 	mov r1, #12
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _0803732C  @ =0x03000300
 	ldr r1, [r1]
 	str r0, [r1, #16]
@@ -370,7 +370,7 @@ _080372F0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080374D0
 _0803732C:
 	.4byte 0x03000300
@@ -412,7 +412,7 @@ _08037360:
 	mov r1, #12
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _080373EC  @ =0x03000304
 	ldr r1, [r1]
 	str r0, [r1, #16]
@@ -449,7 +449,7 @@ _080373B2:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _080373C8:
 	ldrb r0, [r4]
 	add r0, r0, #1
@@ -559,7 +559,7 @@ _0803746A:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r2, #128
 	lsl r2, r2, #19
 	ldrh r0, [r2]
@@ -614,7 +614,7 @@ world_start_main: @ 0x080374E0
 	ldrb r0, [r0]
 	cmp r0, #4
 	bne _08037550
-	ldr r0, _08037540  @ =gUnknown_030012E8
+	ldr r0, _08037540  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -629,7 +629,7 @@ world_start_main: @ 0x080374E0
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, _08037544  @ =gPreviousMainState
 	ldr r0, [r0]
 	cmp r0, #3
@@ -649,7 +649,7 @@ world_start_main: @ 0x080374E0
 _0803753C:
 	.4byte 0x030002F4
 _08037540:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08037544:
 	.4byte gPreviousMainState
 _08037548:

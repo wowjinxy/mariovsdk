@@ -144,7 +144,7 @@ sub_0803549C: @ 0x0803549C
 	lsl r0, r0, #24
 	lsr r4, r0, #24
 	add r7, r4, #0
-	ldr r0, _080354E4  @ =gUnknown_030012E8
+	ldr r0, _080354E4  @ =gSomeKeys_030012E8
 	ldrh r3, [r0]
 	mov r0, #32
 	and r0, r0, r3
@@ -177,7 +177,7 @@ _080354D0:
 	.byte 0x00
 	.byte 0x00
 _080354E4:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _080354E8:
 	.4byte gCurrentWorld
 _080354EC:
@@ -345,7 +345,7 @@ _080355EC:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08035654  @ =gLevelType
 	mov r0, #2
 	strb r0, [r1]
@@ -391,7 +391,7 @@ _08035670:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080356A8
 _0803567C:
 	mov r0, #2
@@ -405,7 +405,7 @@ _0803567C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, _080356B0  @ =gLevelType
 	mov r1, #2
 	strb r1, [r0]
@@ -433,7 +433,7 @@ sub_080356B8: @ 0x080356B8
 	lsl r0, r0, #24
 	lsr r3, r0, #24
 	add r5, r3, #0
-	ldr r0, _080356FC  @ =gUnknown_030012E8
+	ldr r0, _080356FC  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #32
 	and r0, r0, r1
@@ -462,7 +462,7 @@ _080356EA:
 	mov r0, #23
 	b _080358C0
 _080356FC:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08035700:
 	.4byte gCurrentWorld
 _08035704:
@@ -656,7 +656,7 @@ _08035838:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _080358A4  @ =gLevelType
 	mov r0, #3
 	strb r0, [r1]
@@ -699,7 +699,7 @@ _080358C0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080358F8
 _080358CC:
 	mov r0, #2
@@ -713,7 +713,7 @@ _080358CC:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, _08035900  @ =gLevelType
 	mov r1, #3
 	strb r1, [r0]
@@ -2691,7 +2691,7 @@ sub_080367C0: @ 0x080367C0
 	ldrb r0, [r5]
 	ldrb r1, [r4]
 	mov r2, #2
-	bl sub_0801095C
+	bl get_level_highscore_0801095C
 	add r3, r0, #0
 	lsl r3, r3, #16
 	lsr r3, r3, #16
@@ -2723,7 +2723,7 @@ _08036810:
 	ldrb r0, [r5]
 	ldrb r1, [r4]
 	mov r2, #3
-	bl sub_0801095C
+	bl get_level_highscore_0801095C
 	add r3, r0, #0
 	lsl r3, r3, #16
 	lsr r3, r3, #16

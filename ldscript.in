@@ -14,7 +14,6 @@
 	X(asm/rom_800F0C4.o) \
 	X(src/rom_800F1E4.o) \
 	X(src/savefile.o) \
-	X(asm/savefile.o) \
 	X(asm/main_menu.o) \
 	X(asm/rom_801488C.o) \
 	X(asm/level_select.o) \
@@ -129,6 +128,9 @@ SECTIONS
 		. = 0x34;		gUnknown_03000034 = .;
 		. = 0x38;		gUnknown_03000038 = .;
 		. = 0x3C;		gUnknown_0300003C = .;
+		. = 0x58;		gFileSelectMenuSel = .;
+		. = 0x65;		gUnknown_03000065 = .;
+		. = 0x66;		gUnknown_03000066 = .;
 		. = 0x70;		gUnknown_03000070 = .;
 		. = 0x80;		gLevelSelectLevelCursor = .;
 		. = 0x81;		gLevelSelectWorldCursor = .;
@@ -255,6 +257,7 @@ SECTIONS
 		. = 0xC00;		gUnknown_03000C00 = .;
 		. = 0xC04;		gUnknown_03000C04 = .;
 		. = 0xC0C;		gUnknown_03000C0C = .;
+		. = 0xC20;		gUnknown_03000C20 = .;
 		. = 0xC28;		gUnknown_03000C28 = .;
 		. = 0xD20;		gCurrentPalette = .;
 		. = 0xD38;		gUnknown_03000D38 = .;
@@ -275,9 +278,9 @@ SECTIONS
 		. = 0x12B0;		gUnknown_030012B0 = .;
 		. = 0x12C0;		gUnknown_030012C0 = .;
 		. = 0x12D0;		gUnknown_030012D0 = .;
-		. = 0x12E0;		gUnknown_030012E0 = .;
+		. = 0x12E0;		gHeldKeys = .;
 		. = 0x12E4;		gUnknown_030012E4 = .;
-		. = 0x12E8;		gUnknown_030012E8 = .;
+		. = 0x12E8;		gSomeKeys_030012E8 = .;
 		. = 0x12EC;		gBGVerticalOffset = .;
 		. = 0x12F4;		gUnknown_030012F4 = .;
 		. = 0x12F8;		gUnknown_030012F8 = .;

@@ -421,8 +421,8 @@ _0807198A:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08071990
-sub_08071990: @ 0x08071990
+	THUMB_FUNC_START play_sound_effect_08071990
+play_sound_effect_08071990: @ 0x08071990
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -731,7 +731,7 @@ _08071BBC:
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08071990
+	THUMB_FUNC_END play_sound_effect_08071990
 
 	THUMB_FUNC_START sub_08071BCC
 sub_08071BCC: @ 0x08071BCC

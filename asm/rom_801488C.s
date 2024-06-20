@@ -423,7 +423,7 @@ sub_08014B28: @ 0x08014B28
 	bl CpuSet
 	ldr r0, [r5]
 	add r0, r0, r4
-	bl sub_08010DEC
+	bl init_level_highscores_08010DEC
 	ldr r0, _08014B74  @ =gUnknown_03000B50
 	ldrb r0, [r0]
 	cmp r0, #1

@@ -688,7 +688,7 @@ sub_0801562C: @ 0x0801562C
 	mov r7, r8
 	push {r7}
 	sub sp, sp, #16
-	ldr r6, _08015664  @ =gUnknown_030012E8
+	ldr r6, _08015664  @ =gSomeKeys_030012E8
 	ldrh r1, [r6]
 	mov r0, #64
 	and r0, r0, r1
@@ -713,7 +713,7 @@ sub_0801562C: @ 0x0801562C
 	mov r0, #178
 	b _08015A18
 _08015664:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08015668:
 	.4byte gLevelSelectLevel
 _0801566C:
@@ -915,7 +915,7 @@ _0801579C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _080157EE:
 	ldrb r0, [r6]
 	mov r2, r8
@@ -1076,7 +1076,7 @@ _08015902:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08015938  @ =gLevelSelectLevel
 	ldrb r1, [r2]
 	mov r0, #0
@@ -1120,7 +1120,7 @@ _0801594C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _080159B8  @ =gLevelSelectLevel
 	ldrb r1, [r2]
 	mov r0, #0
@@ -1206,7 +1206,7 @@ _08015A18:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08015A48
 _08015A24:
 	ldrh r1, [r6]
@@ -1221,7 +1221,7 @@ _08015A24:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #3
 	mov r1, #1
 	bl change_main_state
@@ -1238,7 +1238,7 @@ _08015A48:
 sub_08015A54: @ 0x08015A54
 	push {r4-r7,lr}
 	sub sp, sp, #12
-	ldr r5, _08015A74  @ =gUnknown_030012E8
+	ldr r5, _08015A74  @ =gSomeKeys_030012E8
 	ldrh r1, [r5]
 	mov r6, #128
 	add r0, r6, #0
@@ -1253,7 +1253,7 @@ sub_08015A54: @ 0x08015A54
 	mov r0, #0
 	b _08015C28
 _08015A74:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08015A78:
 	.4byte gLevelSelectWorldCursor
 _08015A7C:
@@ -1350,7 +1350,7 @@ world_dk_button:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #0
 	bl sub_0800F6EC
@@ -1483,7 +1483,7 @@ _08015C30:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08015C5E
 _08015C3C:
 	mov r0, #2
@@ -1497,7 +1497,7 @@ _08015C3C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #3
 	mov r1, #1
 	bl change_main_state
@@ -1516,7 +1516,7 @@ sub_08015C68: @ 0x08015C68
 	mov r7, r8
 	push {r7}
 	sub sp, sp, #12
-	ldr r7, _08015CA0  @ =gUnknown_030012E8
+	ldr r7, _08015CA0  @ =gSomeKeys_030012E8
 	ldrh r1, [r7]
 	mov r0, #64
 	and r0, r0, r1
@@ -1541,7 +1541,7 @@ sub_08015C68: @ 0x08015C68
 	mov r0, #178
 	b _08015F3C
 _08015CA0:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08015CA4:
 	.4byte gLevelSelectLevel
 _08015CA8:
@@ -1794,7 +1794,7 @@ _08015E5C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08015EB0  @ =gNextLevelID
 	ldr r2, _08015EB4  @ =gLevelSelectLevel
 	ldrb r0, [r2]
@@ -1845,7 +1845,7 @@ _08015EBC:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08015F28  @ =gNextLevelID
 	ldrb r0, [r5]
 	strb r0, [r1]
@@ -1888,7 +1888,7 @@ _08015F3C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08015F6C
 _08015F48:
 	ldrh r1, [r7]
@@ -1903,7 +1903,7 @@ _08015F48:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #3
 	mov r1, #1
 	bl change_main_state
@@ -1920,7 +1920,7 @@ _08015F6C:
 sub_08015F78: @ 0x08015F78
 	push {r4-r7,lr}
 	sub sp, sp, #12
-	ldr r5, _08015F9C  @ =gUnknown_030012E8
+	ldr r5, _08015F9C  @ =gSomeKeys_030012E8
 	ldrh r1, [r5]
 	mov r6, #128
 	add r0, r6, #0
@@ -1938,7 +1938,7 @@ sub_08015F78: @ 0x08015F78
 	.byte 0x00
 	.byte 0x00
 _08015F9C:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08015FA0:
 	.4byte gLevelSelectWorldCursor
 _08015FA4:
@@ -2043,7 +2043,7 @@ _08016044:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #1
 	bl sub_0800F6EC
@@ -2183,7 +2183,7 @@ _08016174:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080161A2
 _08016180:
 	mov r0, #2
@@ -2197,7 +2197,7 @@ _08016180:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #3
 	mov r1, #1
 	bl change_main_state
@@ -2268,7 +2268,7 @@ _080161F4:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08016256
 _08016220:
 	.4byte gLevelSelectWorldCursor
@@ -2296,7 +2296,7 @@ _08016240:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _08016256:
 	add sp, sp, #12
 	pop {r4-r6}
@@ -2485,7 +2485,7 @@ _080163B8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080163EC
 _080163C4:
 	.4byte gLevelSelectMode
@@ -2506,7 +2506,7 @@ _080163D8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _080163EC:
 	add sp, sp, #12
 	pop {r4}
@@ -2774,7 +2774,7 @@ _080165E6:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08016638
 _080165F2:
 	ldr r1, _08016640  @ =gLevelSelectMode
@@ -2809,7 +2809,7 @@ _080165F2:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _08016638:
 	add sp, sp, #12
 	pop {r4-r7}
@@ -3079,7 +3079,7 @@ _08016830:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08016852
 _0801683C:
 	mov r1, #0
@@ -3091,7 +3091,7 @@ _0801683C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _08016852:
 	add sp, sp, #12
 	pop {r4-r6}
@@ -3105,7 +3105,7 @@ _08016852:
 sub_0801685C: @ 0x0801685C
 	push {r4,lr}
 	sub sp, sp, #12
-	ldr r0, _08016898  @ =gUnknown_030012E8
+	ldr r0, _08016898  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
 	mov r4, #128
 	add r0, r4, #0
@@ -3135,7 +3135,7 @@ sub_0801685C: @ 0x0801685C
 	.byte 0x00
 	.byte 0x00
 _08016898:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0801689C:
 	.4byte gLevelSelectMode
 _080168A0:
@@ -3154,7 +3154,7 @@ _080168A4:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080168EC
 _080168C4:
 	mov r0, #32
@@ -3175,9 +3175,9 @@ _080168C4:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _080168EC:
-	ldr r0, _08016930  @ =gUnknown_030012E8
+	ldr r0, _08016930  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
 	mov r1, #9
 	and r1, r1, r2
@@ -3205,14 +3205,14 @@ _0801691C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _0801695C
 _08016928:
 	.4byte gLevelSelectWorldCursor
 _0801692C:
 	.4byte gLevelSelectMode
 _08016930:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08016934:
 	.4byte gLevelSelect_03000083
 _08016938:
@@ -3228,7 +3228,7 @@ _08016938:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #3
 	mov r1, #1
 	bl change_main_state
@@ -3243,7 +3243,7 @@ _0801695C:
 sub_08016964: @ 0x08016964
 	push {r4,lr}
 	sub sp, sp, #12
-	ldr r0, _08016998  @ =gUnknown_030012E8
+	ldr r0, _08016998  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #64
 	and r0, r0, r1
@@ -3263,12 +3263,12 @@ sub_08016964: @ 0x08016964
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08016A1C
 	.byte 0x00
 	.byte 0x00
 _08016998:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0801699C:
 	.4byte gLevelSelectMode
 _080169A0:
@@ -3287,7 +3287,7 @@ _080169A0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #0
 	bl sub_0800F6EC
@@ -3326,7 +3326,7 @@ _080169F8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #3
 	mov r1, #1
 	bl change_main_state
@@ -3341,7 +3341,7 @@ _08016A1C:
 sub_08016A24: @ 0x08016A24
 	push {r4,lr}
 	sub sp, sp, #12
-	ldr r0, _08016A60  @ =gUnknown_030012E8
+	ldr r0, _08016A60  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
 	mov r4, #128
 	add r0, r4, #0
@@ -3371,7 +3371,7 @@ sub_08016A24: @ 0x08016A24
 	.byte 0x00
 	.byte 0x00
 _08016A60:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08016A64:
 	.4byte gLevelSelectMode
 _08016A68:
@@ -3390,7 +3390,7 @@ _08016A6C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08016AB4
 _08016A8C:
 	mov r0, #32
@@ -3411,9 +3411,9 @@ _08016A8C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _08016AB4:
-	ldr r0, _08016AF8  @ =gUnknown_030012E8
+	ldr r0, _08016AF8  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
 	mov r1, #9
 	and r1, r1, r2
@@ -3441,14 +3441,14 @@ _08016AE4:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08016B24
 _08016AF0:
 	.4byte gLevelSelectWorldCursor
 _08016AF4:
 	.4byte gLevelSelectMode
 _08016AF8:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08016AFC:
 	.4byte gLevelSelect_03000083
 _08016B00:
@@ -3464,7 +3464,7 @@ _08016B00:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #3
 	mov r1, #1
 	bl change_main_state
@@ -3479,7 +3479,7 @@ _08016B24:
 sub_08016B2C: @ 0x08016B2C
 	push {r4,lr}
 	sub sp, sp, #12
-	ldr r0, _08016B60  @ =gUnknown_030012E8
+	ldr r0, _08016B60  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #64
 	and r0, r0, r1
@@ -3499,12 +3499,12 @@ sub_08016B2C: @ 0x08016B2C
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08016BE4
 	.byte 0x00
 	.byte 0x00
 _08016B60:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08016B64:
 	.4byte gLevelSelectMode
 _08016B68:
@@ -3523,7 +3523,7 @@ _08016B68:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #1
 	bl sub_0800F6EC
@@ -3561,7 +3561,7 @@ _08016BC0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #3
 	mov r1, #1
 	bl change_main_state
@@ -3672,7 +3672,7 @@ _08016CBC:
 	ldrh r0, [r1, #6]
 	cmp r0, #0
 	bne _08016D56
-	ldr r0, _08016CE0  @ =gUnknown_030012E8
+	ldr r0, _08016CE0  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #136
 	lsl r0, r0, #1
@@ -3686,7 +3686,7 @@ _08016CBC:
 _08016CDC:
 	.4byte 0x03000094
 _08016CE0:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08016CE4:
 	mov r0, #136
 	lsl r0, r0, #2
@@ -3756,7 +3756,7 @@ _08016D56:
 _08016D5C:
 	.4byte 0x03000094
 _08016D60:
-	ldr r0, _08016D74  @ =gUnknown_030012E8
+	ldr r0, _08016D74  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #136
 	lsl r0, r0, #1
@@ -3766,7 +3766,7 @@ _08016D60:
 	bl sub_08016654
 	b _0801706A
 _08016D74:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08016D78:
 	mov r0, #136
 	lsl r0, r0, #2
@@ -6466,7 +6466,7 @@ sub_080181BC: @ 0x080181BC
 	ldrb r1, [r0]
 	add r0, r2, #0
 	mov r2, #1
-	bl sub_0801095C
+	bl get_level_highscore_0801095C
 	add r3, r0, #0
 	lsl r3, r3, #16
 	lsr r3, r3, #16
@@ -6510,7 +6510,7 @@ _08018224:
 	ldr r1, _08018270  @ =gLevelSelectLevel
 	ldrb r1, [r1]
 	mov r2, #0
-	bl sub_0801095C
+	bl get_level_highscore_0801095C
 	add r3, r0, #0
 	lsl r3, r3, #16
 	lsr r3, r3, #16
@@ -12860,7 +12860,7 @@ level_select_end: @ 0x0801B220
 	THUMB_FUNC_START sub_0801B224
 sub_0801B224: @ 0x0801B224
 	push {lr}
-	ldr r0, _0801B23C  @ =gUnknown_030012E8
+	ldr r0, _0801B23C  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #136
 	lsl r0, r0, #1
@@ -12872,7 +12872,7 @@ sub_0801B224: @ 0x0801B224
 	.byte 0x00
 	.byte 0x00
 _0801B23C:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0801B240:
 	mov r0, #136
 	lsl r0, r0, #2
@@ -12893,7 +12893,7 @@ _0801B254:
 	THUMB_FUNC_START sub_0801B258
 sub_0801B258: @ 0x0801B258
 	push {lr}
-	ldr r1, _0801B270  @ =gUnknown_030012E8
+	ldr r1, _0801B270  @ =gSomeKeys_030012E8
 	ldrh r2, [r1]
 	mov r1, #136
 	lsl r1, r1, #1
@@ -12904,7 +12904,7 @@ sub_0801B258: @ 0x0801B258
 	mov r0, #1
 	b _0801B284
 _0801B270:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0801B274:
 	mov r1, #136
 	lsl r1, r1, #2

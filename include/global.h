@@ -212,7 +212,7 @@ struct UnknownStruct4
     u32 unk18;
     u8 filler1C;
     u8 unk1D[3];
-    u32 levelType;
+    /*0x20*/ u32 levelType;
 };
 
 
@@ -393,6 +393,282 @@ struct struct_0807820C {
 
 struct SaveFile;  // private - defined in savefile.c
 
+enum SoundEffect
+{
+    SE_CLIMB          = 0,
+    SE_SKID           = 1,
+    SE_POUND          = 2,
+    SE_TUMBLE1        = 3,
+    SE_STUN           = 4,
+    SE_BURN1          = 5,
+    SE_JUMP_1         = 6,
+    SE_GRUNT2         = 7,
+    SE_JUMP_4         = 8,
+    SE_JUMP_3         = 9,
+    SE_PICKUP         = 10,
+    SE_JUMP_5         = 11,
+    SE_COUNTER        = 12,
+    SE_ITEM1          = 13,
+    SE_STEPS2         = 14,
+    SE_KEY1           = 15,
+    SE_CRASH          = 16,
+    SE_THROW          = 17,
+    SE_WALK           = 18,
+    SE_PICKUP_CRYSTAL = 19,
+    SE_HERE_WEGO      = 20,
+    SE_LETS_GO        = 21,
+    SE_BACK           = 22,
+    SE_CURSOR_E       = 23,
+    SE_CURSOR_M       = 24,
+    SE_CURSOR_S       = 25,
+    SE_ERASE          = 26,
+    SE_ERROR          = 27,
+    SE_EXIT_ED        = 28,
+    SE_FIELD          = 29,
+    SE_GRID           = 30,
+    SE_ITEM           = 31,
+    SE_SELECT_M       = 32,
+    SE_SELECT_S       = 33,
+    SE_STAMP          = 34,
+    SE_START          = 35,
+    SE_BEAM           = 36,
+    SE_BURN2          = 37,
+    SE_BLOCK          = 38,
+    SE_EXIT           = 39,
+    SE_HURT           = 40,
+    SE_ITEMLAST       = 41,
+    SE_POUND2         = 42,
+    SE_SCUFF          = 43,
+    SE_SHOCK          = 44,
+    SE_KEY_DOOR       = 45,
+    SE_SPIN           = 46,
+    SE_SPLAT          = 47,
+    SE_SQUEAK         = 48,
+    SE_UNLOCK         = 49,
+    SE_WIREJUMP       = 50,
+    SE_SPIN_1         = 51,
+    SE_ONE_UP         = 52,
+    SE_HELP           = 53,
+    SE_SILENCE        = 54,
+    SE_SKIDSHORT      = 55,
+    SE_SWITCH1        = 56,
+    SE_SWITCH2        = 57,
+    SE_SWITCH3        = 58,
+    SE_BOING          = 59,
+    SE_JUMP_6         = 60,
+    SE_ROPE_UP        = 61,
+    SE_ROPE_DOWN      = 62,
+    SE_DOOR           = 63,
+    SE_SCROLL         = 64,
+    SE_RETURN         = 65,
+    SE_BLANK          = 66,
+    SE_LOOK_UP        = 67,
+    SE_MM_DIE         = 68,
+    SE_MM_BOING       = 69,
+    SE_MM_PROTECT     = 70,
+    SE_CHEST_OPEN     = 71,
+    SE_CHEST_CLOSE    = 72,
+    SE_OOF            = 73,
+    SE_DK_HURT        = 74,
+    SE_DK_BELLOW      = 75,
+    SE_SLAM2          = 76,
+    SE_FRUIT_FALL     = 77,
+    SE_POINTER        = 78,
+    SE_CHOOSE         = 79,
+    SE_EMPTY          = 80,
+    SE_TOY1           = 81,
+    SE_TOYLAST        = 82,
+    SE_WARP_OUT       = 83,
+    SE_WARP_IN        = 84,
+    SE_SQUEEZE        = 85,
+    SE_GLASS          = 86,
+    SE_LIFT           = 87,
+    SE_MM_OH_NO       = 88,
+    SE_JUMP_7         = 89,
+    SE_LEVEL_START    = 90,
+    SE_ELEV_GO        = 91,
+    SE_ELEV_STOP      = 92,
+    SE_EGG_FALL       = 93,
+    SE_DK_EXIT1       = 94,
+    SE_DK_BLUBBER     = 95,
+    SE_MOVIE_02       = 96,
+    SE_MOVIE_03       = 97,
+    SE_MOVIE_04       = 98,
+    SE_MOVIE_05       = 99,
+    SE_MOVIE_06       = 100,
+    SE_KEY2           = 101,
+    SE_KEY3           = 102,
+    SE_GRAB_WIRE      = 103,
+    SE_GRAB_ROPE      = 104,
+    SE_GRAB_LADDER    = 105,
+    SE_CRUSH          = 106,
+    SE_SPITFIRE       = 107,
+    SE_NINJI          = 108,
+    SE_CRUMBLE        = 109,
+    SE_LAVA           = 110,
+    SE_BUBBLE         = 111,
+    SE_FOUNTAIN       = 112,
+    SE_OUCH           = 113,
+    SE_RESTART        = 114,
+    SE_METALROLL      = 115,
+    SE_SHWING         = 116,
+    SE_KICK           = 117,
+    SE_BRICKMAN       = 118,
+    SE_SPIT           = 119,
+    SE_POP            = 120,
+    SE_GROWL          = 121,
+    SE_GROWL2         = 122,
+    SE_GHOST          = 123,
+    SE_SHY_WAKE       = 124,
+    SE_SHY_RUN        = 125,
+    SE_BOMB_PEEP      = 126,
+    SE_BOMB_JUMP      = 127,
+    SE_BOMB_FLASH     = 128,
+    SE_BOMB_BLOW      = 129,
+    SE_VAPORIZE       = 130,
+    SE_BAT            = 131,
+    SE_CANNON         = 132,
+    SE_CROUCH         = 133,
+    SE_SCATTER        = 134,
+    SE_REACH          = 135,
+    SE_DK_HEAD        = 136,
+    SE_GOTCHA         = 137,
+    SE_TOAD_WALK      = 138,
+    SE_TOAD_TOSS      = 139,
+    SE_BOX_FALL       = 140,
+    SE_SPARKY_LOOP    = 141,
+    SE_DK_BLUB        = 142,
+    SE_YANK           = 143,
+    SE_SPIKE          = 144,
+    SE_BONE           = 145,
+    SE_MM_BOINGUP     = 146,
+    SE_LASER          = 147,
+    SE_DK_JUMP        = 148,
+    SE_JUMP_8         = 149,
+    SE_TRASHCAN       = 150,
+    SE_KEY_TOAD       = 151,
+    SE_SHATTER        = 152,
+    SE_TOAD_CARRY     = 153,
+    SE_TOAD_SET       = 154,
+    SE_JUMP_A         = 155,
+    SE_JUMP_B         = 156,
+    SE_JUMP_C         = 157,
+    SE_JUMP_D         = 158,
+    SE_SHUFFLE        = 159,
+    SE_MOVIE_07       = 160,
+    SE_MOVIE_01       = 161,
+    SE_MINI_KEY       = 162,
+    SE_MOVIE2_1       = 163,
+    SE_MOVIE2_2       = 164,
+    SE_MOVIE2_3       = 165,
+    SE_MOVIE2_4       = 166,
+    SE_MOVIE2_5       = 167,
+    SE_MOVIE2_6       = 168,
+    SE_MOVIE2_7       = 169,
+    SE_MOVIE2_8       = 170,
+    SE_BOSS_ARM       = 171,
+    SE_BOSS_ARM2      = 172,
+    SE_BOSS_ARM3      = 173,
+    SE_BOSS_ARM4      = 174,
+    SE_BOSS_ARM5      = 175,
+    SE_BOSS_SWITCH    = 176,
+    SE_CURSOR_WORLD   = 177,
+    SE_CURSOR_UP_DN   = 178,
+    SE_BOSS_DIE1      = 179,
+    SE_BOSS_DIE2      = 180,
+    SE_BOSS_INTRO1    = 181,
+    SE_BOSS_INTRO3    = 182,
+    SE_PLUS_MAIN      = 183,
+    SE_BARREL         = 184,
+    SE_SPIKE_HIT      = 185,
+    SE_BIGBARREL_HIT  = 186,
+    SE_BIGBARREL_FALL = 187,
+    SE_TOADS_JUMP     = 188,
+    SE_TOADS_GRAB     = 189,
+    SE_MOVIE3_01      = 190,
+    SE_MOVIE3_02      = 191,
+    SE_MOVIE3_03      = 192,
+    SE_MOVIE3_04      = 193,
+    SE_MOVIE3_05      = 194,
+    SE_MOVIE3_06      = 195,
+    SE_MOVIE3_07      = 196,
+    SE_MOVIE3_08      = 197,
+    SE_MOVIE3_09      = 198,
+    SE_MOVIE3_10      = 199,
+    SE_MOVIE3_11      = 200,
+    SE_MOVIE3_12      = 201,
+    SE_MOVIE3_13      = 202,
+    SE_MOVIE3_14      = 203,
+    SE_MOVIE4_01      = 204,
+    SE_MOVIE4_02      = 205,
+    SE_MOVIE4_03      = 206,
+    SE_MOVIE4_04      = 207,
+    SE_MOVIE4_06      = 208,
+    SE_MOVIE4_07      = 209,
+    SE_MOVIE4_08      = 210,
+    SE_MOVIE4_09      = 211,
+    SE_MOVIE4_10      = 212,
+    SE_MOVIE5_01      = 213,
+    SE_MOVIE5_05      = 214,
+    SE_MOVIE5_07      = 215,
+    SE_MOVIE6_01      = 216,
+    SE_MOVIE6_02      = 217,
+    SE_MOVIE6_03      = 218,
+    SE_MOVIE6_04      = 219,
+    SE_MOVIE6_05      = 220,
+    SE_MOVIE6_06      = 221,
+    SE_MOVIE6_07      = 222,
+    SE_MOVIE6_08      = 223,
+    SE_MOVIE6_09      = 224,
+    SE_MOVIE6_10      = 225,
+    SE_MOVIE2_9       = 226,
+    SE_MOVIE2_10      = 227,
+    SE_MOVIE_08       = 228,
+    SE_TITLE          = 229,
+    SE_YOU_WON1       = 230,
+    SE_YOU_WON2       = 231,
+    SE_YOU_WON3       = 232,
+    SE_STAR           = 233,
+    SE_DK_WALK        = 234,
+    SE_SCUFF2         = 235,
+    SE_WORLD_START    = 236,
+    SE_MM_WAKEUP      = 237,
+    SE_MM_FREE        = 238,
+    SE_MM_MAMAMIAS    = 239,
+    SE_SPIKE_VANISH   = 240,
+    SE_SPIKE_APPEAR   = 241,
+    SE_BOSS_DIE3      = 242,
+    SE_BARREL_BOUNCE  = 243,
+    SE_ROCK_BOUNCE    = 244,
+    SE_MM_WALK        = 245,
+    SE_DK_GRUNT       = 246,
+    SE_RIBBON         = 247,
+    SE_WON_TEXT       = 248,
+    SE_DK_FALL        = 249,
+};
+
+struct UnknownStruct13
+{
+    //u8 filler0[4];
+    u32 unk0;
+    u32 unk4;
+};
+
+struct UnknownStruct11
+{
+    u8 filler0[0x1000];
+    u32 unk1000;
+    u8 filler1004;
+    struct UnknownStruct13 *unk1008;
+};
+
+struct UnknownStruct12
+{
+    u32 unk0_0:5;
+    //u32 unk0_3:2;
+    u32 unk0_5:1;
+};
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -410,6 +686,9 @@ extern u8 gUnknown_03000033;
 extern u32 gUnknown_03000034;
 extern u32 gUnknown_03000038;
 extern u32 gUnknown_0300003C;
+extern u8 gFileSelectMenuSel;
+extern u8 gUnknown_03000065;
+extern u8 gUnknown_03000066[];
 extern struct UnknownStruct15 *gUnknown_030000A4;
 extern u8 gPressStartFadeDir;
 extern u8 gTitleScreenFrameCounter;
@@ -436,6 +715,7 @@ extern u32 gUnknown_030001B8;
 extern u32 gUnknown_030001A8;
 extern u32 gUnknown_030001AC;
 extern u32 gUnknown_030001B0;
+extern struct UnknownStruct11 *gUnknown_0300029C;
 
 //new for sub_0804A794
 extern u8 gUnknown_03000368;
@@ -498,6 +778,7 @@ extern s8 gUnknown_03000BFC;
 extern s8 gUnknown_03000C00;
 extern u16 gUnknown_03000C04;
 extern u16 gUnknown_03000C0C;
+extern u8 gUnknown_03000C20;
 extern u8 gUnknown_03000C28;
 extern u16 gUnknown_03000D38;
 extern s32 gUnknown_03000D60;
@@ -517,9 +798,9 @@ extern void (*gUnknown_030012A8)(void);
 extern u8 gUnknown_030012B0[];
 extern void (*gUnknown_030012C0)(void);
 extern struct Struct30012D0 gUnknown_030012D0;
-extern u16 gUnknown_030012E0;
+extern u16 gHeldKeys;
 extern u16 gUnknown_030012E4;
-extern u16 gUnknown_030012E8;
+extern u16 gSomeKeys_030012E8;
 extern s16 gBGVerticalOffset;
 extern s16 gUnknown_030012F4;
 extern s16 gUnknown_030012F8;
@@ -619,6 +900,8 @@ extern struct UnknownStruct7 *gUnknown_03001C78;
 
 extern u8 gUnknown_03001E38;
 extern u8 gUnknown_03001E3C;
+extern u8 gUnknown_03001F50[];  // unknown type
+extern u8 gUnknown_03007AB0[];  // unknown type
 
 extern void *gUnknown_03007FFC;
 
@@ -629,8 +912,13 @@ extern void (*const gMainStateMainCallbacks[])(void);
 extern void (*const gMainStateLoopCallbacks[])(void);
 extern void (*const gMainStateEndCallbacks[])(void);
 extern const u32 gUnknown_0807846C[];
+extern u16 gMainLevelDefaultHighScores[][8];
+extern u16 gPlusLevelDefaultHighScores[][7];
+extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
 extern struct SaveFile *gSaveFilesPtr;
+extern struct UnknownStruct12 *gUnknown_080788FC;
+extern void *const gUnknown_0807CA94;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];
 extern const u8 gUnknown_08079698[];
@@ -724,10 +1012,13 @@ u8 get_level_stats_08010068(u8, u8, u8, u8, u8 *);
 u8 sub_080103C8(u8, u8);
 void sub_08011428();
 void sub_08014A58();
+void sub_08014B78(int, s8 *, u8 *, s8 *);
+void sub_08014D08(void);
 void sub_0801500C();
 void reset_some_array_0801B3C0(void);
 void sub_0801B3DC(struct GraphicsConfig *, int, int);
 void sub_0801B88C(void);
+void sub_08029080(void);
 void sub_0802919C();
 void sub_08029C20(void);
 void set_blend_regs_08029CDC();
@@ -755,7 +1046,10 @@ void sub_0802CF08(void);
 void sub_0802D1D0(void);
 void movie_player_setup_data(u8, u8, u8, u8);
 void sub_0802F060(void);
+void sub_0802F168(int, u8 *);
+int sub_0802F1C0(int);
 void sub_0802F1D4(void);
+void sub_0802F1AC(int, int);
 int sub_0802F5C0();
 void sub_0803109C(void);
 void sub_080317F8(void);
@@ -799,7 +1093,7 @@ void sub_080714A8(void);
 void sub_0807166C();
 void sub_08071800(void);
 void sub_0807194C(void);
-int sub_08071990(u8, u8, u8, u8, u8, u8, u8);
+int play_sound_effect_08071990(u8, u8, u8, u8, u8, u8, u8);
 void sub_08071C24(void);
 void sub_08071CD4(void);
 void sub_08071E14(u8);
@@ -865,8 +1159,17 @@ void sub_08039C44();
 void sub_08038414(u16, u16);
 void sub_08007544();
 void sub_080149F8(u32);
-void sub_08010534(u32, u32, u8*);
+
+// There seems to be some conflict with parameter types. No idea why.
+#ifdef INCLUDED_FROM_SAVEFILE_C
+void sub_08010534(u8, u8, u8*);
+void sub_080107E8(u8 world, u8 level, u16 arg2);
+void sub_08010BE0(u8 arg0, u8 arg1);
+#else
+void sub_08010534();
+void sub_080107E8();
 void sub_08010BE0(u32, u32);
+#endif
 
 void sub_0802BAA0();
 void sub_0802CF78();
@@ -900,7 +1203,6 @@ void sub_0800EF0C();
 void sub_08004FBC();
 void sub_08005FA0();
 u32 sub_08006A34();
-void sub_080107E8();
 void e_world_init_callback();
 u32 sub_0802A458();
 void sub_0802F06C();

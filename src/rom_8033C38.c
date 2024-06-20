@@ -208,8 +208,8 @@ void sub_08033FC8(void)
 {
     s32 i;
 
-    gUnknown_030012E0 = 0xFFFF;
-    gUnknown_030012E8 = 0;
+    gHeldKeys = 0xFFFF;
+    gSomeKeys_030012E8 = 0;
     gUnknown_03001708 = 0;
     for (i = 0; i < 16; i++)
         gUnknown_030012B0[i] = 20;
@@ -217,7 +217,7 @@ void sub_08033FC8(void)
 
 u8 sub_08034004(void)
 {
-    if (gUnknown_03001740 != 0 && (gUnknown_030012E8 & 9))
+    if (gUnknown_03001740 != 0 && (gSomeKeys_030012E8 & 9))
         return TRUE;
     else
         return FALSE;
@@ -322,7 +322,7 @@ u16 sub_08034154(void)
 // probably an inline function
 bool32 sub_08034178(void)
 {
-    if ((gUnknown_030012E0 & START_BUTTON) &&  (gUnknown_030012E0 & SELECT_BUTTON) && (gUnknown_030012E0 & A_BUTTON) && (gUnknown_030012E0 & B_BUTTON)
+    if ((gHeldKeys & START_BUTTON) &&  (gHeldKeys & SELECT_BUTTON) && (gHeldKeys & A_BUTTON) && (gHeldKeys & B_BUTTON)
      && gMainState != MAIN_STATE_TITLE_SCREEN && gMainState != MAIN_STATE_INIT)
     {
         change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);

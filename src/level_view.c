@@ -6,7 +6,7 @@ void level_view_main(void) {
 
     u8 temp1;
     sub_080331FC();
-    if ((gUnknown_030012E0 & 0x300) != 0x300) {
+    if ((gHeldKeys & 0x300) != 0x300) {
         gUnknown_030019A0 |= 0x40000000;
    }
     sub_0800CC6C();
@@ -54,7 +54,7 @@ void level_view_init_callback(void) {
 	sub_08040F54();
 	gUnknown_03001A38 = 1; 
 	sub_08071C24();
-	sub_08071990(0x1a,8,0x10,0x40,0,0x80,0);
+	play_sound_effect_08071990(0x1a,8,0x10,0x40,0,0x80,0);
 	gUnknown_030019A0 = gUnknown_030019A0 & 0xbfffffff;
 	gUnknown_03000B78 = 1;
 	gUnknown_03001A00 = 0;

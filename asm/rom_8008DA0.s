@@ -1598,7 +1598,7 @@ _0800995A:
 	ldrb r2, [r2]
 	lsl r2, r2, #24
 	asr r2, r2, #24
-	bl sub_0801095C
+	bl get_level_highscore_0801095C
 	add r1, r0, #0
 	add r0, r4, #0
 	bl sub_0802FB18
@@ -2269,7 +2269,7 @@ _08009E66:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08009EE0
 _08009E9C:
 	mov r0, #2
@@ -2826,7 +2826,7 @@ sub_0800A258: @ 0x0800A258
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800A2AA:
 	add sp, sp, #12
 	pop {r4,r5}
@@ -7513,7 +7513,7 @@ sub_0800C5A4: @ 0x0800C5A4
 	mov r1, #31
 	and r0, r0, r1
 	strb r0, [r2]
-	ldr r2, _0800C614  @ =gUnknown_030012E0
+	ldr r2, _0800C614  @ =gHeldKeys
 	ldrh r1, [r2]
 	mov r0, #10
 	and r0, r0, r1
@@ -7547,7 +7547,7 @@ _0800C60C:
 _0800C610:
 	.4byte gUnknown_03000A10
 _0800C614:
-	.4byte gUnknown_030012E0
+	.4byte gHeldKeys
 _0800C618:
 	.4byte gUnknown_030019A0
 _0800C61C:
@@ -7584,7 +7584,7 @@ _0800C640:
 	bgt _0800C65A
 	b _0800C862
 _0800C65A:
-	ldr r0, _0800C6DC  @ =gUnknown_030012E8
+	ldr r0, _0800C6DC  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r3, #32
 	add r0, r3, #0
@@ -7639,7 +7639,7 @@ _0800C6A0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C6C8:
 	mov r1, r8
 	ldrb r0, [r1]
@@ -7652,7 +7652,7 @@ _0800C6D4:
 _0800C6D8:
 	.4byte gCurrentLevelWidth
 _0800C6DC:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0800C6E0:
 	.4byte gUnknown_030008C8
 _0800C6E4:
@@ -7703,7 +7703,7 @@ _0800C71A:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C740:
 	mov r5, r8
 	ldrb r0, [r5]
@@ -7773,7 +7773,7 @@ _0800C79C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C7C4:
 	mov r2, r8
 	ldrb r0, [r2]
@@ -7850,7 +7850,7 @@ _0800C830:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C856:
 	mov r2, r8
 	ldrb r0, [r2]
@@ -7877,14 +7877,14 @@ _0800C870:
 	bne _0800C87E
 	b _0800CA66
 _0800C87E:
-	ldr r0, _0800C900  @ =gUnknown_030012E8
+	ldr r0, _0800C900  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
 	mov r3, #64
 	add r0, r3, #0
 	and r0, r0, r2
 	cmp r0, #0
 	bne _0800C898
-	ldr r0, _0800C904  @ =gUnknown_030012E0
+	ldr r0, _0800C904  @ =gHeldKeys
 	ldrh r1, [r0]
 	add r0, r3, #0
 	and r0, r0, r1
@@ -7931,7 +7931,7 @@ _0800C898:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C8EC:
 	ldrb r0, [r5]
 	strb r0, [r4]
@@ -7945,9 +7945,9 @@ _0800C8F8:
 _0800C8FC:
 	.4byte gCurrentLevelHeight
 _0800C900:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0800C904:
-	.4byte gUnknown_030012E0
+	.4byte gHeldKeys
 _0800C908:
 	.4byte gUnknown_03000A10
 _0800C90C:
@@ -7995,7 +7995,7 @@ _0800C928:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C966:
 	ldrb r0, [r5]
 	strb r0, [r4]
@@ -8061,7 +8061,7 @@ _0800C988:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C9E4:
 	ldrb r0, [r4]
 	strb r0, [r5]
@@ -8124,7 +8124,7 @@ _0800CA18:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800CA5C:
 	ldrb r0, [r4]
 	strb r0, [r5]
@@ -8150,7 +8150,7 @@ _0800CA66:
 	mov r1, #12
 	mov r2, #1
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #1
 	strb r0, [r4]
 	b _0800CAAC

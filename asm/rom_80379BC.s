@@ -1423,7 +1423,7 @@ _080383B6:
 	add r0, r2, #0
 	add r1, r6, #0
 	mov r2, #16
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r2, r8
 	add r2, r2, #156
 	str r0, [r2]

@@ -465,7 +465,7 @@ _0801C296:
 	add r0, r1, #1
 	strh r0, [r4]
 _0801C2A4:
-	ldr r5, _0801C338  @ =gUnknown_030012E8
+	ldr r5, _0801C338  @ =gSomeKeys_030012E8
 	ldrh r1, [r5]
 	mov r0, #48
 	and r0, r0, r1
@@ -485,7 +485,7 @@ _0801C2A4:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0801C2D0:
 	ldrh r3, [r4]
 	cmp r3, #120
@@ -515,7 +515,7 @@ _0801C2E6:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, _0801C33C  @ =0x030000C1
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -540,7 +540,7 @@ _0801C330:
 _0801C334:
 	.4byte 0x0000270F
 _0801C338:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0801C33C:
 	.4byte 0x030000C1
 _0801C340:
@@ -572,7 +572,7 @@ _0801C358:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0801C378:
 	bl sub_080720AC
 	ldr r0, _0801C39C  @ =gCurrentWorld
@@ -608,7 +608,7 @@ _0801C3A8:
 	add r0, r1, #1
 	strh r0, [r2]
 _0801C3B8:
-	ldr r0, _0801C418  @ =gUnknown_030012E8
+	ldr r0, _0801C418  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -640,7 +640,7 @@ _0801C3B8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #21
 	mov r1, #1
 	bl change_main_state
@@ -653,7 +653,7 @@ _0801C408:
 _0801C414:
 	.4byte gUnknown_030009D8
 _0801C418:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0801C41C:
 	.4byte 0x030000C7
 _0801C420:
@@ -1343,7 +1343,7 @@ _0801C910:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0801C946:
 	ldr r0, _0801C97C  @ =0x030000C7
 	ldrb r0, [r0]
@@ -1620,7 +1620,7 @@ _0801CB00:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0801CB56:
 	bl sub_0801C8B8
 _0801CB5A:

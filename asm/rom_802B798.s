@@ -149,7 +149,7 @@ _0802B8BA:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _0802B962
 	.byte 0x00
 	.byte 0x00
@@ -225,7 +225,7 @@ _0802B8E0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0802B962:
 	add sp, sp, #12
 	pop {r4-r7}
@@ -2184,7 +2184,7 @@ _0802C6AA:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0802C6D8:
 	ldr r1, _0802C708  @ =0x03000160
 	ldrb r0, [r1]
@@ -3198,7 +3198,7 @@ _0802CDDA:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _0802CE94  @ =0x03000D84
 	mov r0, #1
 	strb r0, [r1]
@@ -3447,7 +3447,7 @@ _0802CFEC:
 	mov r1, #4
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	str r0, [r5, #32]
 _0802D004:
 	ldrb r0, [r4, #4]

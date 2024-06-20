@@ -8,37 +8,9 @@ struct Foo
     u8 filler[8];
 };
 
-struct UnknownStruct13
-{
-    //u8 filler0[4];
-    u32 unk0;
-    u32 unk4;
-};
-
-struct UnknownStruct11
-{
-    u8 filler0[0x1000];
-    u32 unk1000;
-    u8 filler1004;
-    struct UnknownStruct13 *unk1008;
-};
-
-struct UnknownStruct12
-{
-    u32 unk0_0:5;
-    //u32 unk0_3:2;
-    u32 unk0_5:1;
-};
-
-extern u8 gUnknown_03001F50[];  // unknown type
-extern u8 gUnknown_03007AB0[];  // unknown type
-extern struct UnknownStruct11 *gUnknown_0300029C;
-
 extern u16 gUnknown_0807DD14[];
 extern const struct UnknownStruct10 gUnknown_08B2AD88;
-extern struct UnknownStruct12 *gUnknown_080788FC;
 extern struct UnknownStruct13 gUnknown_0807DD1C[];
-extern void *const gUnknown_0807CA94;
 extern const u16 gPaletteData[];
 
 void game_init_callback(void)
@@ -145,9 +117,9 @@ void game_init_main(void)
         gUnknown_0300029C->unk1000 = 3;
         break;
       case 8:
-        if (gUnknown_030012E8 & 11)
+        if (gSomeKeys_030012E8 & 11)
         {
-            sub_08071990(35, 8, 16, 64, 0, 128, 0);
+            play_sound_effect_08071990(35, 8, 16, 64, 0, 128, 0);
             gUnknown_0300029C->unk1000 = gUnknown_0300029C->unk1008->unk4;
             gUnknown_0300029C->unk1008 = NULL;
         }
