@@ -2,31 +2,31 @@
 
 	.SECTION .data
 
-	.GLOBAL gUnknown_0807820C
-gUnknown_0807820C:
+	.GLOBAL gEWRAMBasePtr
+gEWRAMBasePtr:
 	.4byte 0x02000000
 
-	.GLOBAL gUnknown_08078210
-gUnknown_08078210:
+	.GLOBAL gObjectTileDataRAMPtr
+gObjectTileDataRAMPtr:
 	.4byte 0x0200C010
 
 	.GLOBAL gCollectableScoreTable1
 gCollectableScoreTable1:
-	.2byte 0x7D0
+	.2byte 2000
 
 	.GLOBAL gCollectableScoreTable2
 gCollectableScoreTable2:
-.2byte 0x7D0
-.2byte 0xBB8
-.2byte 0xBB8
-.2byte 0x1388
-.2byte 0x1388
-.2byte 0x1F4
-.2byte 0x1F4
-.2byte 0x1F4
-.2byte 0x1F4
-.2byte 0x1F4
-.2byte 0x1F4
+	.2byte 2000
+	.2byte 3000
+	.2byte 3000
+	.2byte 5000
+	.2byte 5000
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
 
 	.GLOBAL gUnknown_0807822C
 gUnknown_0807822C:
@@ -441,19 +441,19 @@ gUnknown_080788E0:
 
 	.GLOBAL gSelectedSaveFileNumPtr
 gSelectedSaveFileNumPtr:
-	.INCBIN "baserom.gba", 0x788F4, 0x788F8-0x788F4
+	.4byte 0x02032100
 
 	.GLOBAL gUnknown_080788F8
 gUnknown_080788F8:
-	.INCBIN "baserom.gba", 0x788F8, 0x788FC-0x788F8
+	.4byte 0x02032108
 
-	.GLOBAL gUnknown_080788FC
-gUnknown_080788FC:
-	.INCBIN "baserom.gba", 0x788FC, 0x78900-0x788FC
+	.GLOBAL gScreenModeRelatedPtr
+gScreenModeRelatedPtr:
+	.4byte 0x02032104 
 
 	.GLOBAL gSaveFilesPtr
 gSaveFilesPtr:
-	.INCBIN "baserom.gba", 0x78900, 0x78904-0x78900
+	.4byte 0x02032110
 
 	.GLOBAL gUnknown_08078904
 gUnknown_08078904:
@@ -506,7 +506,7 @@ gUnknown_08078DE4:
 	.GLOBAL gLevelSelectLevelArtSpriteLayout
 gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x001C @ X Position
-	.2byte 0x0034 @ Y Position
+	.2byte 0x0034 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count? doesnt affect this first one
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -516,7 +516,7 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte 0x085D10C8 @ Sprite Graphics
 
 	.2byte 0x004E @ X Position
-	.2byte 0x0034 @ Y Position
+	.2byte 0x0034 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -526,7 +526,7 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte 0x085D10C8 @ Sprite Graphics
 	
 	.2byte 0x0080 @ X Position
-	.2byte 0x0034 @ Y Position
+	.2byte 0x0034 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -536,7 +536,7 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte 0x085D10C8 @ Sprite Graphics
 	
 	.2byte 0x00B2 @ X Position
-	.2byte 0x0034 @ Y Position
+	.2byte 0x0034 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -546,7 +546,7 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte 0x085D10C8 @ Sprite Graphics
 	
 	.2byte 0x001C @ X Position
-	.2byte 0x0061 @ Y Position
+	.2byte 0x0061 @ Y position
 	.2byte 0x0080 @ Graphics Size in Bytes
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Skip 4 pixels count?
@@ -556,7 +556,7 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte 0x085D10C8 @ Sprite Graphics
 	
 	.2byte 0x004E @ X Position
-	.2byte 0x0061 @ Y Position
+	.2byte 0x0061 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -566,7 +566,7 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte 0x085D10C8 @ Sprite Graphics
 	
 	.2byte 0x0080 @ X Position
-	.2byte 0x0061 @ Y Position
+	.2byte 0x0061 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -576,7 +576,7 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte 0x085D10C8 @ Sprite Graphics
 	
 	.2byte 0x00B2 @ X Position
-	.2byte 0x0061 @ Y Position
+	.2byte 0x0061 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -585,8 +585,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte 0x085D10C0 @ Sprite Data 2
 	.4byte 0x085D10C8 @ Sprite Graphics
 
-	.GLOBAL gUnknown_08078F4C
-gUnknown_08078F4C:
+	.GLOBAL gLevelSelectLevelPlusArtSpriteLayout
+gLevelSelectLevelPlusArtSpriteLayout:
 	.INCBIN "baserom.gba", 0x78F4C, 0x78FF4-0x78F4C
 
 	.GLOBAL gUnknown_08078FF4
@@ -699,10 +699,14 @@ gUnknown_080794D4:
 
 	.GLOBAL gUnknown_080794EC
 gUnknown_080794EC:
-	.INCBIN "baserom.gba", 0x794EC, 0x79504-0x794EC
+	.4byte 0x0000000B
+	.4byte 0x0000000C
+	.4byte 0x0000000D
+	.4byte 0x0000000E
+	.4byte 0x0000000F
+	.4byte 0x00000010
 
 	.GLOBAL gUnknown_08079504
-gUnknown_08079504:
 gUnknown_08079504:
 	.4byte 0x00000012
 	.4byte 0x00000013
@@ -793,7 +797,26 @@ gUnknown_080798E8:
 
 	.GLOBAL gUnknown_08079938
 gUnknown_08079938:
-	.INCBIN "baserom.gba", 0x79938, 0x79988-0x79938
+	.4byte sub_0802200C
+	.4byte sub_08027C34
+	.4byte sub_08027CD0
+	.4byte sub_08027D08
+	.4byte sub_08027D40
+	.4byte sub_08027DD0
+	.4byte sub_08027DE4
+	.4byte sub_08027DF8
+	.4byte sub_08027E0C
+	.4byte sub_08027E20
+	.4byte sub_08027E34
+	.4byte sub_08027E48
+	.4byte sub_08027E5C
+	.4byte sub_08027E70
+	.4byte sub_08027E84
+	.4byte sub_08027EC8
+	.4byte sub_08027F58
+	.4byte sub_08027F9C
+	.4byte sub_08027FE0
+	.4byte sub_08028024
 
 	.GLOBAL gOptionsMenuMovieIDTable
 gOptionsMenuMovieIDTable:
@@ -888,29 +911,278 @@ gUnknown_08079DB0:
 gUnknown_08079ED0:
 	.INCBIN "baserom.gba", 0x79ED0, 0x79F00-0x79ED0
 
-	.GLOBAL gUnknown_08079F00 @ Level help screen base sprite layout 
-gUnknown_08079F00:
-	.INCBIN "baserom.gba", 0x79F00, 0x7A92C-0x79F00
+	.GLOBAL gHelpScreenBaseSpriteLayout
+gHelpScreenBaseSpriteLayout:
+	.4byte 0x08079DB0 @ Sprite pointer
+	.4byte 0x00000000 @ Unknown
+	.2byte 0 @ X position
+	.2byte 0 @ Y position
+
+	.4byte 0x08079DB0 @ Sprite pointer
+	.4byte 0x00000000 @ Unknown
+	.2byte 0 @ X position
+	.2byte 32 @ Y position
+	
+	.4byte 0x08079DB0 @ Sprite pointer
+	.4byte 0x00000000 @ Unknown
+	.2byte 0 @ X position
+	.2byte 64 @ Y position
+		
+	.4byte 0x08079DB0 @ Sprite pointer
+	.4byte 0x00000000 @ Unknown
+	.2byte 0 @ X position
+	.2byte 96 @ Y position
+
+	.4byte 0x08079DB0 @ Sprite pointer
+	.4byte 0x00000000 @ Unknown
+	.2byte 0 @ X position
+	.2byte 128 @ Y position
+	
+	.4byte 0x08079DB0 @ Sprite pointer
+	.4byte 0x00000000 @ Unknown
+	.2byte 0 @ X position
+	.2byte 32 @ Y position	
+	
+	.4byte 0x08079EA0 @ Sprite pointer
+	.4byte 0x0000000A @ Unknown
+	.2byte 24 @ X position
+	.2byte 16 @ Y position
+	
+	.4byte 0x08079DC8 @ Sprite pointer
+	.4byte 0x00000001 @ Unknown
+	.2byte 16 @ X position
+	.2byte 0 @ Y position
+		
+	.4byte 0x08079DE0 @ Sprite pointer
+	.4byte 0x00000002 @ Unknown
+	.2byte 48 @ X position
+	.2byte 0 @ Y position
+	
+	.4byte 0x08079DE0 @ Sprite pointer
+	.4byte 0x00000002 @ Unknown
+	.2byte 80 @ X position
+	.2byte 0 @ Y position
+		
+	.4byte 0x08079DE0 @ Sprite pointer
+	.4byte 0x00000002 @ Unknown
+	.2byte 112 @ X position
+	.2byte 0 @ Y position
+			
+	.4byte 0x08079DE0 @ Sprite pointer
+	.4byte 0x00000002 @ Unknown
+	.2byte 144 @ X position
+	.2byte 0 @ Y position
+				
+	.4byte 0x08079DE0 @ Sprite pointer
+	.4byte 0x00000002 @ Unknown
+	.2byte 176 @ X position
+	.2byte 0 @ Y position
+					
+	.4byte 0x08079DF8 @ Sprite pointer
+	.4byte 0x00000003 @ Unknown
+	.2byte 208 @ X position
+	.2byte 0 @ Y position
+						
+	.4byte 0x08079E10 @ Sprite pointer
+	.4byte 0x00000004 @ Unknown
+	.2byte 16 @ X position
+	.2byte 32 @ Y position
+	
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 48 @ X position
+	.2byte 32 @ Y position
+	
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 80 @ X position
+	.2byte 32 @ Y position
+		
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 112 @ X position
+	.2byte 32 @ Y position
+			
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 144 @ X position
+	.2byte 32 @ Y position
+				
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 176 @ X position
+	.2byte 32 @ Y position
+					
+	.4byte 0x08079E28 @ Sprite pointer
+	.4byte 0x00000005 @ Unknown
+	.2byte 208 @ X position
+	.2byte 32 @ Y position	
+	
+	.4byte 0x08079E10 @ Sprite pointer
+	.4byte 0x00000004 @ Unknown
+	.2byte 16 @ X position
+	.2byte 64 @ Y position
+	
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 48 @ X position
+	.2byte 64 @ Y position
+	
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 80 @ X position
+	.2byte 64 @ Y position
+		
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 112 @ X position
+	.2byte 64 @ Y position
+			
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 144 @ X position
+	.2byte 64 @ Y position
+				
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 176 @ X position
+	.2byte 64 @ Y position
+					
+	.4byte 0x08079E28 @ Sprite pointer
+	.4byte 0x00000005 @ Unknown
+	.2byte 208 @ X position
+	.2byte 64 @ Y position
+		
+	.4byte 0x08079E10 @ Sprite pointer
+	.4byte 0x00000004 @ Unknown
+	.2byte 16 @ X position
+	.2byte 96 @ Y position
+	
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 48 @ X position
+	.2byte 96 @ Y position
+	
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 80 @ X position
+	.2byte 96 @ Y position
+		
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 112 @ X position
+	.2byte 96 @ Y position
+			
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 144 @ X position
+	.2byte 96 @ Y position
+				
+	.4byte 0x08079E88 @ Sprite pointer
+	.4byte 0x00000009 @ Unknown
+	.2byte 176 @ X position
+	.2byte 96 @ Y position
+					
+	.4byte 0x08079E28 @ Sprite pointer
+	.4byte 0x00000005 @ Unknown
+	.2byte 208 @ X position
+	.2byte 96 @ Y position
+							
+	.4byte 0x08079EB8 @ Sprite pointer
+	.4byte 0x0000000B @ Unknown
+	.2byte 100 @ X position
+	.2byte 144 @ Y position
+							
+	.4byte 0x08079E40 @ Sprite pointer
+	.4byte 0x00000006 @ Unknown
+	.2byte 16 @ X position
+	.2byte 128 @ Y position
+	
+	.4byte 0x08079E58 @ Sprite pointer
+	.4byte 0x00000007 @ Unknown
+	.2byte 48 @ X position
+	.2byte 128 @ Y position
+	
+	.4byte 0x08079E58 @ Sprite pointer
+	.4byte 0x00000007 @ Unknown
+	.2byte 80 @ X position
+	.2byte 128 @ Y position	
+	
+	.4byte 0x08079E58 @ Sprite pointer
+	.4byte 0x00000007 @ Unknown
+	.2byte 112 @ X position
+	.2byte 128 @ Y position
+	
+	.4byte 0x08079E58 @ Sprite pointer
+	.4byte 0x00000007 @ Unknown
+	.2byte 144 @ X position
+	.2byte 128 @ Y position
+	
+	.4byte 0x08079E58 @ Sprite pointer
+	.4byte 0x00000007 @ Unknown
+	.2byte 176 @ X position
+	.2byte 128 @ Y position
+	
+	.4byte 0x08079E70 @ Sprite pointer
+	.4byte 0x00000008 @ Unknown
+	.2byte 208 @ X position
+	.2byte 128 @ Y position
+	
+	.GLOBAL gHelpLevelViewerSpriteLayout
+gHelpLevelViewerSpriteLayout:
+	.INCBIN "baserom.gba", 0x7A104, 0x7a1c4-0x7A104
+	
+	.GLOBAL gHelpHandstandSpriteLayout
+gHelpHandstandSpriteLayout:
+	.INCBIN "baserom.gba", 0x7a1c4, 0x7a2cc-0x7a1c4
+	
+	.GLOBAL gHelpHandstandDoubleJumpSpriteLayout
+gHelpHandstandDoubleJumpSpriteLayout:
+	.INCBIN "baserom.gba", 0x7a2cc, 0x7a44c-0x7a2cc
+	
+	.GLOBAL gHelpBackflipSpriteLayout
+gHelpBackflipSpriteLayout:
+	.INCBIN "baserom.gba", 0x7a44c, 0x7a4f4-0x7a44c
+	
+	.GLOBAL gHelpThrowObjectsSpriteLayout
+gHelpThrowObjectsSpriteLayout:
+	.INCBIN "baserom.gba", 0x7a4f4, 0x7a5b4-0x7a4f4
+	
+	.GLOBAL gHelpJumpUpAndThrowSpriteLayout
+gHelpJumpUpAndThrowSpriteLayout:
+	.INCBIN "baserom.gba", 0x7a5b4, 0x7a6a4-0x7a5b4
+	
+	.GLOBAL gHelpHandStandDeflectsSpriteLayout
+gHelpHandStandDeflectsSpriteLayout:
+	.INCBIN "baserom.gba", 0x7a6a4, 0x7a764-0x7a6a4
+	
+	.GLOBAL gHelpWireSpinAndJumpSpriteLayout
+gHelpWireSpinAndJumpSpriteLayout:
+	.INCBIN "baserom.gba", 0x7a764, 0x7a884-0x7a764
+	
+	.GLOBAL gHelpSpringJumpSpriteLayout
+gHelpSpringJumpSpriteLayout:
+	.INCBIN "baserom.gba", 0x7a884, 0x7A92C-0x7a884
 
 	.GLOBAL gUnknown_0807A92C @ Level help screen tutorial sprite layout table
 gUnknown_0807A92C:
-	.4byte 0x0807A104 @ Level viewer help sprite layout
+	.4byte gHelpLevelViewerSpriteLayout
 	.4byte 8 @ Sprite count
-	.4byte 0x0807A1C4 @ Handstand help sprite layout
+	.4byte gHelpHandstandSpriteLayout
 	.4byte 11 @ Sprite count
-	.4byte 0x0807A2CC @ Handstand double jump help sprite layout
+	.4byte gHelpHandstandDoubleJumpSpriteLayout
 	.4byte 16 @ Sprite count
-	.4byte 0x0807A44C @ Backflip help sprite layout
+	.4byte gHelpBackflipSpriteLayout
 	.4byte 7 @ Sprite count
-	.4byte 0x0807A4F4 @ Throw objects help sprite layout
+	.4byte gHelpThrowObjectsSpriteLayout
 	.4byte 8 @ Sprite count
-	.4byte 0x0807A5B4 @ Jump up and Throw help sprite layout
+	.4byte gHelpJumpUpAndThrowSpriteLayout
 	.4byte 10 @ Sprite count
-	.4byte 0x0807A6A4 @ Handstand deflects falling objects help sprite layout
+	.4byte gHelpHandStandDeflectsSpriteLayout
 	.4byte 8 @ Sprite count
-	.4byte 0x0807A764 @ Wire spin and jump help sprite layout
+	.4byte gHelpWireSpinAndJumpSpriteLayout
 	.4byte 12 @ Sprite count
-	.4byte 0x0807A884 @ Spring jump help sprite layout
+	.4byte gHelpSpringJumpSpriteLayout
 	.4byte 7 @ Sprite count
 
 	.GLOBAL gUnknown_0807A974
@@ -1125,16 +1397,60 @@ gUnknown_0807C9CC:
 
 	.GLOBAL gUnknown_0807CA08
 gUnknown_0807CA08:
-	.INCBIN "baserom.gba", 0x7CA08, 0x7CA2C-0x7CA08
+	.4byte 0x00000334
+	.4byte 0x000003A3
+	.4byte 0x00000097
+	.4byte 0x00000359
+	.4byte 0x0000035D
+	.4byte 0x00000354
+	.4byte 0x00000357
+	.4byte 0x0000035B
+	.4byte 0x00000352
 
 	.GLOBAL gUnknown_0807CA2C
 gUnknown_0807CA2C:
-	.INCBIN "baserom.gba", 0x7CA2C, 0x7CA40-0x7CA2C
+	.byte 0x05
+	.byte 0x00
+	.byte 0x06
+	.byte 0x00
+	.byte 0x07
+	.byte 0x05
+	.byte 0x08
+	.byte 0x06
+	.byte 0x09
+	.byte 0x07
+	.byte 0x0A
+	.byte 0x08
+	.byte 0x0B
+	.byte 0x0D
+	.byte 0x0C
+	.byte 0x0E
+	.byte 0x0D
+	.byte 0x0F
+	.byte 0x00
+	.byte 0x00
 
 	.GLOBAL gUnknown_0807CA40
 gUnknown_0807CA40:
-	.INCBIN "baserom.gba", 0x7CA40, 0x7CA88-0x7CA40
-
+	.4byte 0x00000001
+	.4byte 0x00000011
+	.4byte 0x00000015
+	.4byte 0x00000011
+	.4byte 0x00000018
+	.4byte 0x00000011
+	.4byte 0x00000018
+	.4byte 0x00000011
+	.4byte 0x00000018
+	.4byte 0x00000011
+	.4byte 0x00000001
+	.4byte 0x00000011
+	.4byte 0x00000015
+	.4byte 0x00000011
+	.4byte 0x00000007
+	.4byte 0x00000006
+	.4byte 0x00000007
+	.4byte 0x00000003
+	
 	.GLOBAL gUnknown_0807CA88
 gUnknown_0807CA88:
 	.4byte gTextPressAToAddLevel

@@ -239,7 +239,7 @@ _08000524:
 	mov r1, #1
 _0800052C:
 	orr r1, r1, r12, lsl #1
-	ldr r2, _080006D4  @ =gUnknown_0807820C
+	ldr r2, _080006D4  @ =gEWRAMBasePtr
 	ldr r2, [r2]
 	add r2, r2, #0x4000
 	add r2, r2, #12
@@ -363,7 +363,7 @@ _080006CC:
 _080006D0:
 	.4byte gCurrentLevelHeight
 _080006D4:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 
 
 	ARM_FUNC_START sub_080006D8

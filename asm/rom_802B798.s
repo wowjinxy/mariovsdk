@@ -21,7 +21,7 @@ _0802B7A6:
 	bne _0802B7B8
 	b _0802B962
 _0802B7B8:
-	ldr r0, _0802B82C  @ =gUnknown_0807820C
+	ldr r0, _0802B82C  @ =gEWRAMBasePtr
 	ldr r2, [r0]
 	lsr r1, r1, #16
 	lsl r1, r1, #1
@@ -77,7 +77,7 @@ _0802B7B8:
 _0802B828:
 	.4byte gCurrentSwitchState
 _0802B82C:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _0802B830:
 	.4byte 0x0000600C
 _0802B834:
@@ -95,7 +95,7 @@ _0802B840:
 	bne _0802B84E
 	b _0802B962
 _0802B84E:
-	ldr r0, _0802B8CC  @ =gUnknown_0807820C
+	ldr r0, _0802B8CC  @ =gEWRAMBasePtr
 	ldr r2, [r0]
 	lsr r1, r1, #16
 	lsl r1, r1, #1
@@ -156,7 +156,7 @@ _0802B8BA:
 _0802B8C8:
 	.4byte gCurrentSwitchState
 _0802B8CC:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _0802B8D0:
 	.4byte 0x0000600C
 _0802B8D4:
@@ -172,7 +172,7 @@ _0802B8E0:
 	ldrb r6, [r7]
 	cmp r6, #3
 	beq _0802B962
-	ldr r0, _0802B970  @ =gUnknown_0807820C
+	ldr r0, _0802B970  @ =gEWRAMBasePtr
 	ldr r2, [r0]
 	lsr r1, r1, #16
 	lsl r1, r1, #1
@@ -236,7 +236,7 @@ _0802B962:
 _0802B96C:
 	.4byte gCurrentSwitchState
 _0802B970:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _0802B974:
 	.4byte 0x0000600C
 _0802B978:
@@ -619,7 +619,7 @@ _0802BBF4:
 	THUMB_FUNC_START sub_0802BC00
 sub_0802BC00: @ 0x0802BC00
 	push {r4,lr}
-	ldr r1, _0802BC48  @ =gUnknown_0807820C
+	ldr r1, _0802BC48  @ =gEWRAMBasePtr
 	ldr r1, [r1]
 	lsl r0, r0, #1
 	ldr r2, _0802BC4C  @ =0x0000600C
@@ -656,7 +656,7 @@ _0802BC22:
 	lsr r0, r0, #24
 	b _0802BC5C
 _0802BC48:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _0802BC4C:
 	.4byte 0x0000600C
 _0802BC50:
@@ -1712,7 +1712,7 @@ _0802C348:
 	lsl r2, r2, #16
 	asr r4, r2, #16
 	add r0, r0, r4
-	ldr r6, _0802C3D4  @ =gUnknown_0807820C
+	ldr r6, _0802C3D4  @ =gEWRAMBasePtr
 	ldr r3, [r6]
 	lsl r1, r0, #1
 	ldr r6, _0802C3D8  @ =0x0000600C
@@ -1731,7 +1731,7 @@ _0802C372:
 	lsl r0, r0, #2
 	add r0, r3, r0
 	ldrh r6, [r0, #12]
-	ldr r0, _0802C3DC  @ =gUnknown_08078210
+	ldr r0, _0802C3DC  @ =gObjectTileDataRAMPtr
 	ldr r1, [r0]
 	sub r0, r6, #1
 	lsl r0, r0, #2
@@ -1753,7 +1753,7 @@ _0802C372:
 	str r0, [sp, #4]
 	mov r0, sp
 	bl level_edit_delete_object
-	ldr r3, _0802C3D4  @ =gUnknown_0807820C
+	ldr r3, _0802C3D4  @ =gEWRAMBasePtr
 	ldr r2, [r3]
 	ldr r4, _0802C3E0  @ =0x0000800C
 	add r2, r2, r4
@@ -1775,11 +1775,11 @@ _0802C3CC:
 _0802C3D0:
 	.4byte gUnknown_030009E0
 _0802C3D4:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _0802C3D8:
 	.4byte 0x0000600C
 _0802C3DC:
-	.4byte gUnknown_08078210
+	.4byte gObjectTileDataRAMPtr
 _0802C3E0:
 	.4byte 0x0000800C
 _0802C3E4:
@@ -1809,7 +1809,7 @@ _0802C410:
 	asr r7, r2, #16
 	lsl r0, r7, #6
 	add r0, r0, r9
-	ldr r4, _0802C52C  @ =gUnknown_0807820C
+	ldr r4, _0802C52C  @ =gEWRAMBasePtr
 	ldr r2, [r4]
 	lsl r1, r0, #1
 	ldr r6, _0802C530  @ =0x0000600C
@@ -1822,7 +1822,7 @@ _0802C410:
 	lsl r0, r0, #2
 	add r0, r2, r0
 	ldrh r6, [r0, #12]
-	ldr r0, _0802C534  @ =gUnknown_08078210
+	ldr r0, _0802C534  @ =gObjectTileDataRAMPtr
 	ldr r1, [r0]
 	sub r0, r6, #1
 	lsl r0, r0, #2
@@ -1847,7 +1847,7 @@ _0802C410:
 	str r0, [r5, #4]
 	add r0, r5, #0
 	bl level_edit_delete_object
-	ldr r0, _0802C52C  @ =gUnknown_0807820C
+	ldr r0, _0802C52C  @ =gEWRAMBasePtr
 	ldr r2, [r0]
 	ldr r1, _0802C538  @ =0x0000800C
 	add r2, r2, r1
@@ -1861,7 +1861,7 @@ _0802C410:
 	sub r0, r7, r0
 	lsl r0, r0, #6
 	add r0, r0, r9
-	ldr r3, _0802C52C  @ =gUnknown_0807820C
+	ldr r3, _0802C52C  @ =gEWRAMBasePtr
 	ldr r2, [r3]
 	lsl r1, r0, #1
 	ldr r4, _0802C530  @ =0x0000600C
@@ -1870,7 +1870,7 @@ _0802C410:
 	ldrh r0, [r0]
 	cmp r0, #0
 	bne _0802C4BA
-	ldr r1, _0802C534  @ =gUnknown_08078210
+	ldr r1, _0802C534  @ =gObjectTileDataRAMPtr
 	ldr r0, [r1]
 	add r1, r6, #2
 	lsl r1, r1, #2
@@ -1951,11 +1951,11 @@ _0802C524:
 _0802C528:
 	.4byte 0x03000D40
 _0802C52C:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _0802C530:
 	.4byte 0x0000600C
 _0802C534:
-	.4byte gUnknown_08078210
+	.4byte gObjectTileDataRAMPtr
 _0802C538:
 	.4byte 0x0000800C
 _0802C53C:
@@ -3645,7 +3645,7 @@ sub_0802D140: @ 0x0802D140
 	cmp r3, r7
 	bhi _0802D1CA
 _0802D15A:
-	ldr r0, _0802D18C  @ =gUnknown_0807820C
+	ldr r0, _0802D18C  @ =gEWRAMBasePtr
 	ldr r4, [r0]
 	lsl r1, r3, #1
 	ldr r2, _0802D190  @ =0x0000400C
@@ -3672,7 +3672,7 @@ _0802D15A:
 	.byte 0x00
 	.byte 0x00
 _0802D18C:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _0802D190:
 	.4byte 0x0000400C
 _0802D194:

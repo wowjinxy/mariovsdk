@@ -93,7 +93,7 @@ void game_init_main(void)
         break;
       case 3:
         change_main_state(MAIN_STATE_INTRO, NO_FADE);
-        sub_0807220C(gUnknown_080788FC->unk0_5);
+        sub_0807220C(gScreenModeRelatedPtr->unk0_5);
         break;
       case 4:
         sub_08011428(1);
@@ -147,7 +147,7 @@ void game_init_end(void)
 void load_predefined_palette(u32 paletteNum, u32 flags)
 {
     // I have to do this stupid cast for it to match.
-    bool32 r4 = ((*(u8 *)gUnknown_080788FC & 24) != 0);
+    bool32 r4 = ((*(u8 *)gScreenModeRelatedPtr & 24) != 0);
 
     if (flags & LOAD_BG_PALETTE)
     {

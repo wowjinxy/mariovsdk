@@ -1123,7 +1123,7 @@ _0802836E:
 	bne _08028384
 	add r1, r1, #25
 _08028384:
-	ldr r0, _0802846C  @ =gUnknown_08078210
+	ldr r0, _0802846C  @ =gObjectTileDataRAMPtr
 	ldr r0, [r0]
 	lsl r1, r1, #2
 	mov r2, #132
@@ -1177,7 +1177,7 @@ _080283D8:
 	beq _0802840C
 	str r2, [sp, #16]
 	str r3, [r5, #4]
-	ldr r0, _0802846C  @ =gUnknown_08078210
+	ldr r0, _0802846C  @ =gObjectTileDataRAMPtr
 	ldr r0, [r0]
 	lsl r1, r1, #2
 	mov r2, #132
@@ -1209,7 +1209,7 @@ _08028416:
 	add r0, r0, #64
 	add r5, r0, r7
 _08028426:
-	ldr r0, _0802846C  @ =gUnknown_08078210
+	ldr r0, _0802846C  @ =gObjectTileDataRAMPtr
 	ldr r1, [r0]
 	ldr r0, [r5]
 	lsl r0, r0, #2
@@ -1246,7 +1246,7 @@ _0802845C:
 	.byte 0x00
 	.byte 0x00
 _0802846C:
-	.4byte gUnknown_08078210
+	.4byte gObjectTileDataRAMPtr
 _08028470:
 	.4byte 0x030000FC
 	THUMB_FUNC_END sub_0802834C
@@ -1432,7 +1432,7 @@ _080285A0:
 	ldr r3, _080285F8  @ =0x0000112C
 	add r0, r2, r3
 	strh r1, [r0]
-	ldr r4, _080285FC  @ =gUnknown_080788FC
+	ldr r4, _080285FC  @ =gScreenModeRelatedPtr
 	ldr r3, [r4]
 	ldr r0, _08028600  @ =0x00001138
 	add r2, r2, r0
@@ -1469,7 +1469,7 @@ _080285F4:
 _080285F8:
 	.4byte 0x0000112C
 _080285FC:
-	.4byte gUnknown_080788FC
+	.4byte gScreenModeRelatedPtr
 _08028600:
 	.4byte 0x00001138
 	THUMB_FUNC_END sub_080284E8
@@ -1510,7 +1510,7 @@ _0802862E:
 	bne _08028644
 	add r1, r1, #25
 _08028644:
-	ldr r0, _08028734  @ =gUnknown_08078210
+	ldr r0, _08028734  @ =gObjectTileDataRAMPtr
 	ldr r0, [r0]
 	lsl r1, r1, #2
 	mov r3, #132
@@ -1545,7 +1545,7 @@ _08028680:
 	mov r1, #10
 	bl __modsi3
 	add r0, r0, r8
-	ldr r1, _08028734  @ =gUnknown_08078210
+	ldr r1, _08028734  @ =gObjectTileDataRAMPtr
 	ldr r1, [r1]
 	lsl r0, r0, #2
 	mov r2, #132
@@ -1586,7 +1586,7 @@ _080286D6:
 	mov r1, #10
 	bl __modsi3
 	add r0, r5, r0
-	ldr r1, _08028734  @ =gUnknown_08078210
+	ldr r1, _08028734  @ =gObjectTileDataRAMPtr
 	ldr r1, [r1]
 	lsl r0, r0, #2
 	mov r2, #132
@@ -1627,7 +1627,7 @@ _0802872C:
 _08028730:
 	.4byte 0x00001124
 _08028734:
-	.4byte gUnknown_08078210
+	.4byte gObjectTileDataRAMPtr
 _08028738:
 	.4byte 0x00001130
 _0802873C:
@@ -1724,7 +1724,7 @@ _080287C8:
 	ldr r3, _08028818  @ =0x0000112C
 	add r0, r1, r3
 	strh r2, [r0]
-	ldr r0, _0802881C  @ =gUnknown_080788FC
+	ldr r0, _0802881C  @ =gScreenModeRelatedPtr
 	ldr r3, [r0]
 	ldr r6, _08028820  @ =0x00001136
 	add r1, r1, r6
@@ -1759,7 +1759,7 @@ _08028814:
 _08028818:
 	.4byte 0x0000112C
 _0802881C:
-	.4byte gUnknown_080788FC
+	.4byte gScreenModeRelatedPtr
 _08028820:
 	.4byte 0x00001136
 	THUMB_FUNC_END sub_08028740
@@ -1802,7 +1802,7 @@ _08028852:
 	bne _08028868
 	add r1, r1, #25
 _08028868:
-	ldr r0, _08028950  @ =gUnknown_08078210
+	ldr r0, _08028950  @ =gObjectTileDataRAMPtr
 	ldr r0, [r0]
 	lsl r1, r1, #2
 	mov r3, #132
@@ -1849,7 +1849,7 @@ _080288B2:
 	bne _080288C0
 	mov r1, #49
 _080288C0:
-	ldr r0, _08028950  @ =gUnknown_08078210
+	ldr r0, _08028950  @ =gObjectTileDataRAMPtr
 	ldr r0, [r0]
 	lsl r1, r1, #2
 	mov r5, #132
@@ -1921,7 +1921,7 @@ _08028948:
 _0802894C:
 	.4byte 0x00001124
 _08028950:
-	.4byte gUnknown_08078210
+	.4byte gObjectTileDataRAMPtr
 _08028954:
 	.4byte 0x0000113A
 _08028958:
@@ -2063,7 +2063,7 @@ _08028A48:
 	mov r1, #14
 	strb r1, [r0]
 	ldr r2, [r7]
-	ldr r0, _08028BCC  @ =gUnknown_080788FC
+	ldr r0, _08028BCC  @ =gScreenModeRelatedPtr
 	ldr r3, [r0]
 	ldr r0, [r3]
 	lsl r0, r0, #27
@@ -2207,7 +2207,7 @@ _08028B7A:
 	strh r2, [r0]
 	ldr r5, _08028BFC  @ =0x0000114C
 	add r1, r1, r5
-	ldr r0, _08028BCC  @ =gUnknown_080788FC
+	ldr r0, _08028BCC  @ =gScreenModeRelatedPtr
 	ldr r0, [r0]
 	ldr r0, [r0]
 	str r0, [r1]
@@ -2239,7 +2239,7 @@ _08028BC4:
 _08028BC8:
 	.4byte gUnknown_08079998
 _08028BCC:
-	.4byte gUnknown_080788FC
+	.4byte gScreenModeRelatedPtr
 _08028BD0:
 	.4byte 0x00001136
 _08028BD4:
@@ -2835,7 +2835,7 @@ options_end: @ 0x0802904C
 	add r0, r0, r1
 	ldrb r3, [r0]
 	mov r1, #63
-	ldr r0, _0802907C  @ =gUnknown_080788FC
+	ldr r0, _0802907C  @ =gScreenModeRelatedPtr
 	ldr r0, [r0]
 	ldrb r2, [r0]
 	add r0, r1, #0
@@ -2854,12 +2854,12 @@ _08029074:
 _08029078:
 	.4byte 0x0000114C
 _0802907C:
-	.4byte gUnknown_080788FC
+	.4byte gScreenModeRelatedPtr
 	THUMB_FUNC_END options_end
 
 	THUMB_FUNC_START sub_08029080
 sub_08029080: @ 0x08029080
-	ldr r3, _080290A8  @ =gUnknown_080788FC
+	ldr r3, _080290A8  @ =gScreenModeRelatedPtr
 	ldr r2, [r3]
 	ldrb r1, [r2]
 	mov r0, #8
@@ -2881,7 +2881,7 @@ sub_08029080: @ 0x08029080
 	.byte 0x00
 	.byte 0x00
 _080290A8:
-	.4byte gUnknown_080788FC
+	.4byte gScreenModeRelatedPtr
 	THUMB_FUNC_END sub_08029080
 
 	THUMB_FUNC_START options_menu_play_music

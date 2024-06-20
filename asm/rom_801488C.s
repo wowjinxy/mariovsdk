@@ -894,7 +894,7 @@ _08014E4E:
 	str r0, [r3]
 	ldr r2, _08014E6C  @ =0x03000BC4
 	ldr r1, _08014E70  @ =0x03000BC0
-	ldr r0, _08014E74  @ =gUnknown_0807820C
+	ldr r0, _08014E74  @ =gEWRAMBasePtr
 	ldr r0, [r0]
 	str r0, [r1]
 	str r0, [r2]
@@ -906,7 +906,7 @@ _08014E6C:
 _08014E70:
 	.4byte 0x03000BC0
 _08014E74:
-	.4byte gUnknown_0807820C
+	.4byte gEWRAMBasePtr
 _08014E78:
 	mov r1, #2
 	add r0, r5, #0

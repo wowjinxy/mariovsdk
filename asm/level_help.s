@@ -421,7 +421,7 @@ sub_0802A7A0: @ 0x0802A7A0
 	add r4, r0, #0
 	add r7, r1, #0
 	add r6, r2, #0
-	ldr r0, _0802A8C4  @ =gUnknown_08079F00
+	ldr r0, _0802A8C4  @ =gHelpScreenBaseSpriteLayout
 	mov r8, r0
 	ldr r0, _0802A8C8  @ =gUnknown_08079ED0
 	ldr r3, [r0]
@@ -562,7 +562,7 @@ _0802A822:
 	.byte 0x00
 	.byte 0x00
 _0802A8C4:
-	.4byte gUnknown_08079F00
+	.4byte gHelpScreenBaseSpriteLayout
 _0802A8C8:
 	.4byte gUnknown_08079ED0
 _0802A8CC:
