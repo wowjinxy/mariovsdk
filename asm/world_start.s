@@ -609,7 +609,7 @@ world_start_main: @ 0x080374E0
 	push {r4,lr}
 	sub sp, sp, #12
 	bl sub_08029C20
-	bl sub_080331FC
+	bl process_input
 	ldr r0, _0803753C  @ =0x030002F4
 	ldrb r0, [r0]
 	cmp r0, #4
@@ -765,7 +765,7 @@ sub_080375EC: @ 0x080375EC
 	ldr r3, _08037648  @ =gUnknown_0300192C
 	mov r10, r3
 	ldr r4, _0803764C  @ =0x030002F6
-	ldr r5, _08037650  @ =gOamData
+	ldr r5, _08037650  @ =gOamBuffer
 	ldr r6, _08037654  @ =gUnknown_03001930
 	cmp r0, #0
 	blt _08037622
@@ -795,7 +795,7 @@ _08037648:
 _0803764C:
 	.4byte 0x030002F6
 _08037650:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08037654:
 	.4byte gUnknown_03001930
 _08037658:
@@ -846,7 +846,7 @@ _0803769C:
 	ldr r4, _0803782C  @ =0x030002F6
 	ldrh r0, [r4]
 	lsl r0, r0, #3
-	ldr r5, _08037830  @ =gOamData
+	ldr r5, _08037830  @ =gOamBuffer
 	add r0, r0, r5
 	str r0, [r3, #4]
 	ldr r0, _08037834  @ =0x84000002
@@ -1039,7 +1039,7 @@ _08037828:
 _0803782C:
 	.4byte 0x030002F6
 _08037830:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08037834:
 	.4byte 0x84000002
 _08037838:
@@ -1076,7 +1076,7 @@ world_start_loop: @ 0x08037848
 	str r0, [sp, #8]
 	add r0, sp, #8
 	str r0, [r1]
-	ldr r0, _080378AC  @ =gOamData
+	ldr r0, _080378AC  @ =gOamBuffer
 	str r0, [r1, #4]
 	ldr r0, _080378B0  @ =0x85000100
 	str r0, [r1, #8]
@@ -1105,7 +1105,7 @@ _080378A4:
 _080378A8:
 	.4byte 0x81000100
 _080378AC:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080378B0:
 	.4byte 0x85000100
 _080378B4:
@@ -1199,7 +1199,7 @@ _08037964:
 	bl sub_080375EC
 _08037968:
 	ldr r1, _080379A8  @ =REG_DMA3SAD
-	ldr r0, _080379AC  @ =gOamData
+	ldr r0, _080379AC  @ =gOamBuffer
 	str r0, [r1]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -1233,7 +1233,7 @@ _080379A4:
 _080379A8:
 	.4byte REG_DMA3SAD
 _080379AC:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080379B0:
 	.4byte 0x84000100
 _080379B4:

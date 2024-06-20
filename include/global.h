@@ -391,8 +391,6 @@ struct struct_0807820C {
     u32 unkC00C;
 };
 
-struct SaveFile;  // private - defined in savefile.c
-
 enum SoundEffect
 {
     SE_CLIMB          = 0,
@@ -679,6 +677,12 @@ enum LevelType
     LEVEL_TYPE_PLUS_BOSS,
 };
 
+enum
+{
+    LOAD_BG_PALETTE = (1 << 0),
+    LOAD_OBJ_PALETTE = (1 << 1),
+};
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -696,7 +700,29 @@ extern u8 gUnknown_03000033;
 extern u32 gUnknown_03000034;
 extern u32 gUnknown_03000038;
 extern u32 gUnknown_0300003C;
+extern u16 gSomeOamIndex_03000040;
+extern u16 gUnknown_03000042;
+extern u16 gUnknown_03000044;
+extern u16 gUnknown_03000046;
+extern u16 gUnknown_03000048;
+extern u16 gUnknown_0300004A;
+extern u16 gUnknown_0300004C;
+extern u16 gUnknown_0300004E;
+extern u16 gUnknown_03000050;
+extern u16 gUnknown_03000052;
+extern struct { u16 unk0; u16 unk2; } gUnknown_03000054;
 extern u8 gFileSelectMenuSel;
+extern u8 gPrevFileSelectMenuSel;
+extern u8 gUnknown_0300005B;
+extern u8 gUnknown_0300005C;
+extern u8 gUnknown_0300005D;
+extern u8 gUnknown_0300005E;
+extern u8 gUnknown_0300005F;
+extern u8 gUnknown_03000060;
+extern u8 gUnknown_03000061;
+extern u8 gUnknown_03000062;
+extern u8 gUnknown_03000063;
+extern u8 gUnknown_03000064;
 extern u8 gUnknown_03000065;
 extern u8 gUnknown_03000066[];
 extern struct UnknownStruct15 *gUnknown_030000A4;
@@ -801,7 +827,7 @@ extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];
 extern u8 *gUnknown_03000E88;
 extern u8 *gPaletteData_03000E8C;
 extern void *gUnknown_03000E94;
-extern struct OamData gOamData[];
+extern struct OamData gOamBuffer[];
 extern s16 gCameraHorizontalOffset;
 extern s16 gBGHorizontalOffset;
 extern void (*gUnknown_030012A8)(void);
@@ -926,10 +952,9 @@ extern u16 gMainLevelDefaultHighScores[][8];
 extern u16 gPlusLevelDefaultHighScores[][7];
 extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
-extern struct SaveFile *gSaveFilesPtr;
 extern u16 gUnknown_080788E0[];
 extern struct UnknownStruct12 *gUnknown_080788FC;
-extern void *const gUnknown_0807CA94;
+extern u32 *gUnknown_0807CA94;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];
 extern const u8 gUnknown_08079698[];
@@ -1019,9 +1044,6 @@ void sub_08007170(void);
 void sub_08008238(void);
 void sub_0800EE70(void);
 void title_demo_setup(u32 titleDemoID);
-u8 get_level_stats_08010068(u8, u8, u8, u8, u8 *);
-u8 is_world_or_expert_level_completed_080103C8(u8, u8);
-void sub_08011428();
 void sub_08014A58();
 void sub_08014B78(int, s8 *, u8 *, s8 *);
 void sub_08014D08(void);
@@ -1070,10 +1092,11 @@ int sub_08031E04(void);
 void load_predefined_palette();
 u32 load_bg_tilemap_08032E24(struct GraphicsConfig *arg0, int arg1, int arg2);
 void copy_some_palette_08032E80(struct GraphicsConfig *arg0);
+u16 load_graphics_config_bg2_08032EB8(struct GraphicsConfig *arg0);
 u16 load_graphics_config_08032F24(struct GraphicsConfig *arg0[4], int arg1);
 void sub_08032F68(void);
 void load_some_oam(void);
-void sub_080331FC(void);
+void process_input(void);
 void sub_08033440(void);
 void init_timer_regs(void);
 void sub_08033C74(void);
@@ -1095,6 +1118,9 @@ void sub_08034CCC();
 void sub_08035108();
 void sub_080351E0();
 void print_error_message();
+void sub_08038130(int);
+int sub_08038228(int);
+void sub_080381E4(int, int);
 void sub_080386DC(void);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);
@@ -1170,17 +1196,6 @@ void sub_08039C44();
 void sub_08038414(u16, u16);
 void sub_08007544();
 void sub_080149F8(u32);
-
-// There seems to be some conflict with parameter types. No idea why.
-#ifdef INCLUDED_FROM_SAVEFILE_C
-void set_level_flags_08010534(u8, u8, u8*);
-void set_level_highscore_flag_080107E8(u8 world, u8 level, u16 arg2);
-void sub_08010BE0(u8 arg0, u8 arg1);
-#else
-void set_level_flags_08010534();
-void set_level_highscore_flag_080107E8();
-void sub_08010BE0(u32, u32);
-#endif
 
 void sub_0802BAA0();
 void sub_0802CF78();

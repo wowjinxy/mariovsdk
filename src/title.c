@@ -51,7 +51,7 @@ void title_main(void)
     u32 r0;
     u32 r6;
 
-    sub_080331FC();
+    process_input();
     sub_08029C20();
     if (gUnknown_030000AC == 0 && gUnknown_03000C28 == 0 && gUnknown_030000B0 == -1)
         gUnknown_030000B0 = play_sound_effect_08071990(229, 8, 16, 64, 0, 128, 0);
@@ -150,19 +150,19 @@ void sub_0801B88C(void)
 void title_loop(void)
 {
     gGeneralTimer++;
-    DmaFill32(3, 0xA0, gOamData, 0x400);
+    DmaFill32(3, 0xA0, gOamBuffer, 0x400);
     if (gUnknown_03000C28 == 0 && sub_080721A8(gUnknown_030000B0) != 0)
     {
         u8 var;
 
-        DmaCopy32(3, gUnknown_085F49D0, gOamData, 8);
+        DmaCopy32(3, gUnknown_085F49D0, gOamBuffer, 8);
         DmaCopy32(3, gUnknown_085F49D8, (void *)(VRAM + 0x10000), 0x200);
-        gOamData[0].tileNum = 0;
-        gOamData[0].x = 204;
-        gOamData[0].y = 124;
-        gOamData[0].paletteNum = 0;
-        gOamData[0].objMode = 1;
-        gOamData[0].priority = 1;
+        gOamBuffer[0].tileNum = 0;
+        gOamBuffer[0].x = 204;
+        gOamBuffer[0].y = 124;
+        gOamBuffer[0].paletteNum = 0;
+        gOamBuffer[0].objMode = 1;
+        gOamBuffer[0].priority = 1;
     }
-    DmaCopy32(3, gOamData, (void *)OAM, 0x400);
+    DmaCopy32(3, gOamBuffer, (void *)OAM, 0x400);
 }

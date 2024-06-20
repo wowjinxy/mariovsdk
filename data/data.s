@@ -1278,8 +1278,8 @@ gPaletteIndices_0807DD7C:
 gUnknown_0807DD94:
 	.INCBIN "baserom.gba", 0x7DD94, 0x81D98-0x7DD94
 
-	.GLOBAL gPaletteData
-gPaletteData:
+	.GLOBAL gPredefinedPalettes
+gPredefinedPalettes:
 	.INCBIN "assets/Palettes.bin"
 
 	.GLOBAL gUnknown_080A7D98

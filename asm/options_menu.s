@@ -898,7 +898,7 @@ sub_080281C8: @ 0x080281C8
 	mov r10, r0
 	ldrh r0, [r3]
 	lsl r0, r0, #3
-	ldr r1, _08028290  @ =gOamData
+	ldr r1, _08028290  @ =gOamBuffer
 	add r3, r0, r1
 	ldrb r0, [r4, #13]
 	cmp r0, #0
@@ -990,7 +990,7 @@ _08028264:
 	blt _08028200
 	b _08028324
 _08028290:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08028294:
 	.4byte REG_DMA3SAD
 _08028298:
@@ -2283,7 +2283,7 @@ options_main: @ 0x08028C08
 	mov r5, #64
 	mov r1, #128
 	mov r8, r1
-	bl sub_080331FC
+	bl process_input
 	ldr r2, _08028C78  @ =0x030000FC
 	ldr r1, [r2]
 	ldr r0, _08028C7C  @ =0x00001128
@@ -2614,7 +2614,7 @@ _08028E9E:
 	ldr r1, _08028FEC  @ =REG_DMA3SAD
 	add r3, sp, #4
 	str r3, [r1]
-	ldr r0, _08028FF0  @ =gOamData
+	ldr r0, _08028FF0  @ =gOamBuffer
 	str r0, [r1, #4]
 	ldr r0, _08028FF4  @ =0x85000100
 	str r0, [r1, #8]
@@ -2779,7 +2779,7 @@ _08028FE8:
 _08028FEC:
 	.4byte REG_DMA3SAD
 _08028FF0:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08028FF4:
 	.4byte 0x85000100
 _08028FF8:
@@ -2802,7 +2802,7 @@ _08029004:
 _0802901A:
 	bl sub_0801B4BC
 	ldr r1, _08029040  @ =REG_DMA3SAD
-	ldr r0, _08029044  @ =gOamData
+	ldr r0, _08029044  @ =gOamBuffer
 	str r0, [r1]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -2821,7 +2821,7 @@ _0802901A:
 _08029040:
 	.4byte REG_DMA3SAD
 _08029044:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08029048:
 	.4byte 0x84000100
 	THUMB_FUNC_END options_loop

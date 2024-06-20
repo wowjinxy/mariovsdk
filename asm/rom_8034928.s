@@ -940,7 +940,7 @@ _08034FEE:
 	strb r0, [r4, #5]
 	ldrh r0, [r1]
 	lsl r0, r0, #3
-	ldr r1, _080350A0  @ =gOamData
+	ldr r1, _080350A0  @ =gOamBuffer
 	add r3, r0, r1
 	mov r0, #0
 	ldr r1, [sp, #8]
@@ -1027,7 +1027,7 @@ _0803502E:
 _0803509C:
 	.4byte gUnknown_03001770
 _080350A0:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080350A4:
 	.4byte 0x000001FF
 _080350A8:
@@ -1068,7 +1068,7 @@ _080350DC:
 	cmp r0, r2
 	blt _0803500E
 _080350E8:
-	ldr r1, _08035104  @ =gOamData
+	ldr r1, _08035104  @ =gOamBuffer
 	sub r0, r3, r1
 	asr r0, r0, #3
 	ldr r2, [sp, #4]
@@ -1084,7 +1084,7 @@ _080350E8:
 	.byte 0x00
 	.byte 0x00
 _08035104:
-	.4byte gOamData
+	.4byte gOamBuffer
 	THUMB_FUNC_END sub_08034FB0
 
 	THUMB_FUNC_START sub_08035108

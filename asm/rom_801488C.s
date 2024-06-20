@@ -690,7 +690,7 @@ _08014D04:
 sub_08014D08: @ 0x08014D08
 	push {r4,r5,lr}
 	mov r4, #0
-	ldr r5, _08014D30  @ =0x03000066
+	ldr r5, _08014D30  @ =gUnknown_03000066
 _08014D0E:
 	lsl r0, r4, #24
 	lsr r0, r0, #24
@@ -709,7 +709,7 @@ _08014D0E:
 	pop {r0}
 	bx r0
 _08014D30:
-	.4byte 0x03000066
+	.4byte gUnknown_03000066
 	THUMB_FUNC_END sub_08014D08
 
 	THUMB_FUNC_START sub_08014D34

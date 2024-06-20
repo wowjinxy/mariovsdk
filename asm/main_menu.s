@@ -1,6 +1,6 @@
 	.INCLUDE "macro.inc"
 	.INCLUDE "gba.inc"
-
+.if 0
 	THUMB_FUNC_START main_menu_init_callback
 main_menu_init_callback: @ 0x080114D4
 	push {r4,r5,lr}
@@ -10,8 +10,8 @@ main_menu_init_callback: @ 0x080114D4
 	ldr r1, _0801150C  @ =gUnknown_03001740
 	mov r0, #0
 	strb r0, [r1]
-	ldr r2, _08011510  @ =0x0300005D
-	ldr r1, _08011514  @ =0x03000062
+	ldr r2, _08011510  @ =gUnknown_0300005D
+	ldr r1, _08011514  @ =gUnknown_03000062
 	strb r0, [r1]
 	strb r0, [r2]
 	ldr r0, _08011518  @ =gUnknown_0807CA94
@@ -35,9 +35,9 @@ _080114FC:
 _0801150C:
 	.4byte gUnknown_03001740
 _08011510:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08011514:
-	.4byte 0x03000062
+	.4byte gUnknown_03000062
 _08011518:
 	.4byte gUnknown_0807CA94
 _0801151C:
@@ -68,12 +68,12 @@ _08011540:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08011570
-	ldr r0, _08011564  @ =0x0300005D
+	ldr r0, _08011564  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08011570
 	ldr r2, _08011568  @ =gFileSelectMenuSel
-	ldr r1, _0801156C  @ =0x03000059
+	ldr r1, _0801156C  @ =gPrevFileSelectMenuSel
 	mov r0, #3
 	b _0801157A
 	.byte 0x00
@@ -81,14 +81,14 @@ _08011540:
 _08011560:
 	.4byte gUnknown_080788F8
 _08011564:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08011568:
 	.4byte gFileSelectMenuSel
 _0801156C:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011570:
 	ldr r2, _0801163C  @ =gFileSelectMenuSel
-	ldr r1, _08011640  @ =0x03000059
+	ldr r1, _08011640  @ =gPrevFileSelectMenuSel
 	ldr r0, _08011644  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r0, [r0]
@@ -96,24 +96,24 @@ _0801157A:
 	strb r0, [r1]
 	strb r0, [r2]
 _0801157E:
-	ldr r0, _08011648  @ =0x0300005B
+	ldr r0, _08011648  @ =gUnknown_0300005B
 	mov r1, #0
 	strb r1, [r0]
-	ldr r0, _0801164C  @ =0x0300005E
+	ldr r0, _0801164C  @ =gUnknown_0300005E
 	strb r1, [r0]
-	ldr r2, _08011650  @ =0x0300005F
+	ldr r2, _08011650  @ =gUnknown_0300005F
 	ldr r0, _08011654  @ =gUnknown_085FEFE4
 	ldrb r0, [r0, #1]
 	strb r0, [r2]
-	ldr r0, _08011658  @ =0x03000060
+	ldr r0, _08011658  @ =gUnknown_03000060
 	strb r1, [r0]
-	ldr r2, _0801165C  @ =0x03000061
+	ldr r2, _0801165C  @ =gUnknown_03000061
 	ldr r0, _08011660  @ =gUnknown_08617030
 	ldrb r0, [r0, #1]
 	strb r0, [r2]
-	ldr r0, _08011664  @ =0x03000064
+	ldr r0, _08011664  @ =gUnknown_03000064
 	strb r1, [r0]
-	ldr r0, _08011668  @ =0x03000065
+	ldr r0, _08011668  @ =gUnknown_03000065
 	strb r1, [r0]
 	ldr r0, _0801166C  @ =gCameraHorizontalOffset
 	mov r5, #0
@@ -165,7 +165,7 @@ _080115E0:
 	mov r1, #0
 	bl sub_080381E4
 	mov r4, #0
-	ldr r5, _08011688  @ =0x03000066
+	ldr r5, _08011688  @ =gUnknown_03000066
 _08011616:
 	lsl r0, r4, #24
 	lsr r0, r0, #24
@@ -189,27 +189,27 @@ _08011616:
 _0801163C:
 	.4byte gFileSelectMenuSel
 _08011640:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011644:
 	.4byte gSelectedSaveFileNumPtr
 _08011648:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _0801164C:
-	.4byte 0x0300005E
+	.4byte gUnknown_0300005E
 _08011650:
-	.4byte 0x0300005F
+	.4byte gUnknown_0300005F
 _08011654:
 	.4byte gUnknown_085FEFE4
 _08011658:
-	.4byte 0x03000060
+	.4byte gUnknown_03000060
 _0801165C:
-	.4byte 0x03000061
+	.4byte gUnknown_03000061
 _08011660:
 	.4byte gUnknown_08617030
 _08011664:
-	.4byte 0x03000064
+	.4byte gUnknown_03000064
 _08011668:
-	.4byte 0x03000065
+	.4byte gUnknown_03000065
 _0801166C:
 	.4byte gCameraHorizontalOffset
 _08011670:
@@ -225,7 +225,7 @@ _08011680:
 _08011684:
 	.4byte 0x01000008
 _08011688:
-	.4byte 0x03000066
+	.4byte gUnknown_03000066
 	THUMB_FUNC_END main_menu_init_callback
 
 	THUMB_FUNC_START sub_0801168C
@@ -236,14 +236,14 @@ sub_0801168C: @ 0x0801168C
 	lsr r1, r0, #24
 	cmp r1, #0
 	beq _08011748
-	ldr r0, _080116A4  @ =0x0300005D
+	ldr r0, _080116A4  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _080116AC
 	ldr r1, _080116A8  @ =gUnknown_0807638C
 	b _080116AE
 _080116A4:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _080116A8:
 	.4byte gUnknown_0807638C
 _080116AC:
@@ -348,8 +348,8 @@ _08011764:
 	.4byte gBGLayerOffsets 
 	THUMB_FUNC_END sub_0801168C
 
-	THUMB_FUNC_START sub_08011768
-sub_08011768: @ 0x08011768
+	THUMB_FUNC_START pick_file
+pick_file: @ 0x08011768
 	push {r4-r7,lr}
 	mov r7, r9
 	mov r6, r8
@@ -431,7 +431,7 @@ _080117E8:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08011814  @ =0x03000059
+	ldr r1, _08011814  @ =gPrevFileSelectMenuSel
 	ldr r2, _08011818  @ =gFileSelectMenuSel
 	ldrb r0, [r2]
 	strb r0, [r1]
@@ -443,20 +443,20 @@ _080117E8:
 	strb r0, [r2]
 	b _0801181E
 _08011814:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011818:
 	.4byte gFileSelectMenuSel
 _0801181C:
 	strb r4, [r2]
 _0801181E:
-	ldr r1, _0801182C  @ =0x0300005B
+	ldr r1, _0801182C  @ =gUnknown_0300005B
 	mov r0, #2
 	strb r0, [r1]
 	mov r0, #1
 	bl sub_0801168C
 	b _08011C9C
 _0801182C:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08011830:
 	cmp r0, #4
 	bne _0801184E
@@ -666,14 +666,14 @@ _080119A8:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r0, _080119F8  @ =0x03000059
+	ldr r0, _080119F8  @ =gPrevFileSelectMenuSel
 	ldrb r1, [r5]
 	strb r1, [r0]
 	lsl r0, r1, #24
 	lsr r0, r0, #24
 	cmp r0, #2
 	bne _080119E4
-	ldr r0, _080119FC  @ =0x0300005D
+	ldr r0, _080119FC  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _080119E4
@@ -692,9 +692,9 @@ _080119F0:
 _080119F4:
 	.4byte gSomeKeys_030012E8
 _080119F8:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _080119FC:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08011A00:
 	cmp r2, #2
 	bls _08011A06
@@ -755,24 +755,24 @@ _08011A52:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08011A84  @ =0x03000059
+	ldr r2, _08011A84  @ =gPrevFileSelectMenuSel
 	ldr r1, _08011A88  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	add r0, r0, #6
 	strb r0, [r1]
-	ldr r1, _08011A8C  @ =0x0300005B
+	ldr r1, _08011A8C  @ =gUnknown_0300005B
 	mov r0, #1
 	strb r0, [r1]
 	b _08011C9C
 	.byte 0x00
 	.byte 0x00
 _08011A84:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011A88:
 	.4byte gFileSelectMenuSel
 _08011A8C:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08011A90:
 	str r1, [sp]
 	mov r0, #128
@@ -803,7 +803,7 @@ _08011AA6:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08011ADC  @ =0x03000059
+	ldr r1, _08011ADC  @ =gPrevFileSelectMenuSel
 	ldrb r0, [r5]
 	strb r0, [r1]
 	add r0, r0, #1
@@ -812,7 +812,7 @@ _08011AA6:
 _08011AD8:
 	.4byte gSomeKeys_030012E8
 _08011ADC:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011AE0:
 	mov r0, #0
 	str r0, [sp]
@@ -840,7 +840,7 @@ _08011AF4:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08011B28  @ =0x03000059
+	ldr r2, _08011B28  @ =gPrevFileSelectMenuSel
 	ldr r1, _08011B2C  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
@@ -851,7 +851,7 @@ _08011AF4:
 _08011B24:
 	.4byte gSomeKeys_030012E8
 _08011B28:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011B2C:
 	.4byte gFileSelectMenuSel
 _08011B30:
@@ -871,7 +871,7 @@ _08011B30:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08011BD4  @ =0x03000059
+	ldr r1, _08011BD4  @ =gPrevFileSelectMenuSel
 	ldrb r0, [r5]
 	strb r0, [r1]
 	strb r4, [r5]
@@ -898,14 +898,14 @@ _08011B5A:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r0, _08011BD4  @ =0x03000059
+	ldr r0, _08011BD4  @ =gPrevFileSelectMenuSel
 	ldrb r1, [r5]
 	strb r1, [r0]
 	lsl r0, r1, #24
 	lsr r0, r0, #24
 	cmp r0, #4
 	bne _08011BA2
-	ldr r0, _08011BDC  @ =0x0300005D
+	ldr r0, _08011BDC  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _08011BA2
@@ -940,11 +940,11 @@ _08011BB8:
 _08011BD0:
 	.4byte gSomeKeys_030012E8
 _08011BD4:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011BD8:
 	.4byte gFileSelectMenuSel
 _08011BDC:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08011BE0:
 	ldr r0, _08011C10  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
@@ -964,7 +964,7 @@ _08011BE0:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08011C14  @ =0x03000059
+	ldr r1, _08011C14  @ =gPrevFileSelectMenuSel
 	ldrb r0, [r5]
 	strb r0, [r1]
 	sub r0, r0, #1
@@ -972,7 +972,7 @@ _08011BE0:
 _08011C10:
 	.4byte gSomeKeys_030012E8
 _08011C14:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011C18:
 	mov r0, #32
 	and r0, r0, r2
@@ -987,10 +987,10 @@ _08011C18:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r0, _08011C4C  @ =0x03000059
+	ldr r0, _08011C4C  @ =gPrevFileSelectMenuSel
 	ldrb r1, [r5]
 	strb r1, [r0]
-	ldr r0, _08011C50  @ =0x0300005D
+	ldr r0, _08011C50  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _08011C46
@@ -1001,9 +1001,9 @@ _08011C46:
 	sub r0, r0, #2
 	b _08011C9A
 _08011C4C:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011C50:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08011C54:
 	ldr r6, _08011CAC  @ =gSomeKeys_030012E8
 	ldrh r1, [r6]
@@ -1035,7 +1035,7 @@ _08011C74:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08011CB0  @ =0x03000059
+	ldr r1, _08011CB0  @ =gPrevFileSelectMenuSel
 	ldrb r0, [r5]
 	strb r0, [r1]
 	mov r0, #4
@@ -1054,8 +1054,8 @@ _08011C9C:
 _08011CAC:
 	.4byte gSomeKeys_030012E8
 _08011CB0:
-	.4byte 0x03000059
-	THUMB_FUNC_END sub_08011768
+	.4byte gPrevFileSelectMenuSel
+	THUMB_FUNC_END pick_file
 
 	THUMB_FUNC_START sub_08011CB4
 sub_08011CB4: @ 0x08011CB4
@@ -1079,7 +1079,7 @@ sub_08011CB4: @ 0x08011CB4
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08011CF0  @ =0x03000059
+	ldr r2, _08011CF0  @ =gPrevFileSelectMenuSel
 	ldr r1, _08011CF4  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
@@ -1090,7 +1090,7 @@ sub_08011CB4: @ 0x08011CB4
 _08011CEC:
 	.4byte gSomeKeys_030012E8
 _08011CF0:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011CF4:
 	.4byte gFileSelectMenuSel
 _08011CF8:
@@ -1157,7 +1157,7 @@ _08011D56:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08011D80  @ =0x03000059
+	ldr r2, _08011D80  @ =gPrevFileSelectMenuSel
 	ldr r1, _08011D84  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
@@ -1165,7 +1165,7 @@ _08011D56:
 	strb r0, [r1]
 	b _08011EB6
 _08011D80:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011D84:
 	.4byte gFileSelectMenuSel
 _08011D88:
@@ -1178,14 +1178,14 @@ _08011D88:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08011DA8  @ =0x03000059
+	ldr r2, _08011DA8  @ =gPrevFileSelectMenuSel
 	ldr r1, _08011DAC  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	strb r4, [r1]
 	b _08011E80
 _08011DA8:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011DAC:
 	.4byte gFileSelectMenuSel
 _08011DB0:
@@ -1198,7 +1198,7 @@ _08011DB0:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08011DD0  @ =0x03000059
+	ldr r1, _08011DD0  @ =gPrevFileSelectMenuSel
 	ldrb r0, [r5]
 	strb r0, [r1]
 	strb r4, [r5]
@@ -1206,7 +1206,7 @@ _08011DB0:
 	.byte 0x00
 	.byte 0x00
 _08011DD0:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011DD4:
 	mov r0, #16
 	and r0, r0, r1
@@ -1269,7 +1269,7 @@ _08011E2E:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08011E58  @ =0x03000059
+	ldr r2, _08011E58  @ =gPrevFileSelectMenuSel
 	ldr r1, _08011E5C  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
@@ -1277,7 +1277,7 @@ _08011E2E:
 	strb r0, [r1]
 	b _08011EB6
 _08011E58:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011E5C:
 	.4byte gFileSelectMenuSel
 _08011E60:
@@ -1290,7 +1290,7 @@ _08011E60:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08011E88  @ =0x03000059
+	ldr r2, _08011E88  @ =gPrevFileSelectMenuSel
 	ldr r1, _08011E8C  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
@@ -1298,17 +1298,17 @@ _08011E60:
 _08011E7E:
 	strb r0, [r1]
 _08011E80:
-	ldr r0, _08011E90  @ =0x0300005B
+	ldr r0, _08011E90  @ =gUnknown_0300005B
 	strb r4, [r0]
 	b _08011EB6
 	.byte 0x00
 	.byte 0x00
 _08011E88:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011E8C:
 	.4byte gFileSelectMenuSel
 _08011E90:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08011E94:
 	str r5, [sp]
 	mov r0, #128
@@ -1319,12 +1319,12 @@ _08011E94:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08011F20  @ =0x03000059
+	ldr r1, _08011F20  @ =gPrevFileSelectMenuSel
 	ldrb r0, [r4]
 	strb r0, [r1]
 	mov r0, #5
 	strb r0, [r4]
-	ldr r0, _08011F24  @ =0x0300005B
+	ldr r0, _08011F24  @ =gUnknown_0300005B
 	strb r5, [r0]
 _08011EB6:
 	ldr r0, _08011F28  @ =gSomeKeys_030012E8
@@ -1377,9 +1377,9 @@ _08011ED8:
 	bl change_main_state
 	b _08011F4C
 _08011F20:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08011F24:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08011F28:
 	.4byte gSomeKeys_030012E8
 _08011F2C:
@@ -1487,7 +1487,7 @@ _08011FD8:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08011FFC  @ =0x0300005B
+	ldr r1, _08011FFC  @ =gUnknown_0300005B
 	mov r0, #3
 	strb r0, [r1]
 	ldr r0, _08012000  @ =0x0300005C
@@ -1496,7 +1496,7 @@ _08011FD8:
 	.byte 0x00
 	.byte 0x00
 _08011FFC:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08012000:
 	.4byte 0x0300005C
 _08012004:
@@ -1517,12 +1517,12 @@ _08012004:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08012044  @ =0x03000059
+	ldr r2, _08012044  @ =gPrevFileSelectMenuSel
 	ldr r1, _08012048  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	strb r6, [r1]
-	ldr r0, _0801204C  @ =0x0300005B
+	ldr r0, _0801204C  @ =gUnknown_0300005B
 	strb r6, [r0]
 	mov r0, #0
 	bl sub_0801168C
@@ -1532,11 +1532,11 @@ _08012004:
 _08012040:
 	.4byte gSomeKeys_030012E8
 _08012044:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08012048:
 	.4byte gFileSelectMenuSel
 _0801204C:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08012050:
 	mov r0, #192
 	and r0, r0, r2
@@ -1559,7 +1559,7 @@ _0801206C:
 	lsr r2, r0, #16
 	cmp r2, #0
 	beq _08012142
-	ldr r1, _080120A8  @ =0x03000059
+	ldr r1, _080120A8  @ =gPrevFileSelectMenuSel
 	ldr r5, _080120AC  @ =gFileSelectMenuSel
 	ldrb r0, [r5]
 	strb r0, [r1]
@@ -1573,7 +1573,7 @@ _0801206C:
 	mov r3, #64
 	bl play_sound_effect_08071990
 	ldrb r1, [r5]
-	ldr r0, _080120B0  @ =0x0300005D
+	ldr r0, _080120B0  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	add r0, r0, #2
 	cmp r1, r0
@@ -1582,15 +1582,15 @@ _0801206C:
 	strb r0, [r5]
 	b _080120B6
 _080120A8:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _080120AC:
 	.4byte gFileSelectMenuSel
 _080120B0:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _080120B4:
 	strb r6, [r5]
 _080120B6:
-	ldr r0, _080120C4  @ =0x0300005D
+	ldr r0, _080120C4  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _080120CC
@@ -1599,7 +1599,7 @@ _080120B6:
 	.byte 0x00
 	.byte 0x00
 _080120C4:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _080120C8:
 	.4byte gUnknown_0807638C
 _080120CC:
@@ -1670,7 +1670,7 @@ _08012142:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08012224
-	ldr r0, _08012174  @ =0x03000059
+	ldr r0, _08012174  @ =gPrevFileSelectMenuSel
 	ldr r4, _08012178  @ =gFileSelectMenuSel
 	ldrb r1, [r4]
 	strb r1, [r0]
@@ -1688,16 +1688,16 @@ _08012142:
 	beq _08012180
 	sub r0, r0, #1
 	strb r0, [r4]
-	ldr r1, _0801217C  @ =0x0300005D
+	ldr r1, _0801217C  @ =gUnknown_0300005D
 	b _08012188
 _08012174:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08012178:
 	.4byte gFileSelectMenuSel
 _0801217C:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08012180:
-	ldr r1, _08012194  @ =0x0300005D
+	ldr r1, _08012194  @ =gUnknown_0300005D
 	ldrb r0, [r1]
 	add r0, r0, #2
 	strb r0, [r4]
@@ -1710,7 +1710,7 @@ _08012188:
 	.byte 0x00
 	.byte 0x00
 _08012194:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08012198:
 	.4byte gUnknown_0807638C
 _0801219C:
@@ -1852,7 +1852,7 @@ sub_08012230: @ 0x08012230
 	bl sub_0802A164
 _080122A0:
 	mov r4, #0
-	ldr r5, _080122DC  @ =0x03000066
+	ldr r5, _080122DC  @ =gUnknown_03000066
 _080122A4:
 	lsl r0, r4, #24
 	lsr r0, r0, #24
@@ -1883,28 +1883,28 @@ _080122D4:
 _080122D8:
 	.4byte gUnknown_03000B50
 _080122DC:
-	.4byte 0x03000066
+	.4byte gUnknown_03000066
 _080122E0:
 	bl sub_0802F06C
 	bl sub_0802F1D4
 _080122E8:
-	ldr r1, _080122FC  @ =0x03000059
+	ldr r1, _080122FC  @ =gPrevFileSelectMenuSel
 	ldr r2, _08012300  @ =gFileSelectMenuSel
 	ldrb r0, [r2]
 	strb r0, [r1]
 	mov r1, #0
 	strb r1, [r2]
-	ldr r0, _08012304  @ =0x0300005B
+	ldr r0, _08012304  @ =gUnknown_0300005B
 	strb r1, [r0]
 	b _08012336
 	.byte 0x00
 	.byte 0x00
 _080122FC:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08012300:
 	.4byte gFileSelectMenuSel
 _08012304:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08012308:
 	ldr r0, _08012340  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
@@ -1922,12 +1922,12 @@ _08012314:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r2, _08012344  @ =0x03000059
+	ldr r2, _08012344  @ =gPrevFileSelectMenuSel
 	ldr r1, _08012348  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	strb r5, [r1]
-	ldr r0, _0801234C  @ =0x0300005B
+	ldr r0, _0801234C  @ =gUnknown_0300005B
 	strb r5, [r0]
 _08012336:
 	mov r0, #0
@@ -1938,11 +1938,11 @@ _08012336:
 _08012340:
 	.4byte gSomeKeys_030012E8
 _08012344:
-	.4byte 0x03000059
+	.4byte gPrevFileSelectMenuSel
 _08012348:
 	.4byte gFileSelectMenuSel
 _0801234C:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08012350:
 	mov r0, #16
 	and r0, r0, r2
@@ -2002,7 +2002,7 @@ _080123B4:
 main_menu_main: @ 0x080123B8
 	push {r4,r5,lr}
 	sub sp, sp, #12
-	bl sub_080331FC
+	bl process_input
 	bl sub_08029C20
 	ldr r0, _080123EC  @ =gUnknown_03000C28
 	ldrb r0, [r0]
@@ -2010,11 +2010,11 @@ main_menu_main: @ 0x080123B8
 	bne _080123D0
 	bl sub_0801B310
 _080123D0:
-	ldr r0, _080123F0  @ =0x03000064
+	ldr r0, _080123F0  @ =gUnknown_03000064
 	ldrb r0, [r0]
 	cmp r0, #20
 	bls _08012418
-	ldr r0, _080123F4  @ =0x0300005B
+	ldr r0, _080123F4  @ =gUnknown_0300005B
 	ldrb r0, [r0]
 	cmp r0, #1
 	beq _08012408
@@ -2028,9 +2028,9 @@ _080123D0:
 _080123EC:
 	.4byte gUnknown_03000C28
 _080123F0:
-	.4byte 0x03000064
+	.4byte gUnknown_03000064
 _080123F4:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _080123F8:
 	cmp r0, #2
 	beq _0801240E
@@ -2038,7 +2038,7 @@ _080123F8:
 	beq _08012414
 	b _08012418
 _08012402:
-	bl sub_08011768
+	bl pick_file
 	b _08012418
 _08012408:
 	bl sub_08011CB4
@@ -2049,7 +2049,7 @@ _0801240E:
 _08012414:
 	bl sub_08012230
 _08012418:
-	ldr r4, _08012494  @ =0x0300005D
+	ldr r4, _08012494  @ =gUnknown_0300005D
 	ldrb r5, [r4]
 	mov r0, #0
 	bl sub_08038130
@@ -2070,15 +2070,15 @@ _0801243E:
 	mov r0, #1
 _08012440:
 	strb r0, [r4]
-	ldr r0, _080124A0  @ =0x03000062
+	ldr r0, _080124A0  @ =gUnknown_03000062
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08012450
-	ldr r1, _08012494  @ =0x0300005D
+	ldr r1, _08012494  @ =gUnknown_0300005D
 	mov r0, #1
 	strb r0, [r1]
 _08012450:
-	ldr r0, _08012494  @ =0x0300005D
+	ldr r0, _08012494  @ =gUnknown_0300005D
 	ldrb r1, [r0]
 	cmp r5, r1
 	beq _080124CC
@@ -2114,13 +2114,13 @@ _08012476:
 	.byte 0x00
 	.byte 0x00
 _08012494:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08012498:
 	.4byte gUnknown_03000C28
 _0801249C:
 	.4byte gUnknown_0807CA94
 _080124A0:
-	.4byte 0x03000062
+	.4byte gUnknown_03000062
 _080124A4:
 	.4byte 0x03000063
 _080124A8:
@@ -2142,15 +2142,15 @@ _080124AC:
 	sub r0, r0, #1
 	strb r0, [r1]
 _080124CC:
-	ldr r1, _0801254C  @ =0x03000064
+	ldr r1, _0801254C  @ =gUnknown_03000064
 	ldrb r0, [r1]
 	cmp r0, #20
 	bhi _080124D8
 	add r0, r0, #1
 	strb r0, [r1]
 _080124D8:
-	ldr r1, _08012550  @ =0x0300005E
-	ldr r2, _08012554  @ =0x0300005F
+	ldr r1, _08012550  @ =gUnknown_0300005E
+	ldr r2, _08012554  @ =gUnknown_0300005F
 	ldr r3, _08012558  @ =gUnknown_085FEFE4
 	ldrb r0, [r2]
 	sub r0, r0, #1
@@ -2177,8 +2177,8 @@ _080124FC:
 	ldrb r0, [r1, #1]
 	strb r0, [r2]
 _0801250C:
-	ldr r1, _0801255C  @ =0x03000060
-	ldr r2, _08012560  @ =0x03000061
+	ldr r1, _0801255C  @ =gUnknown_03000060
+	ldr r2, _08012560  @ =gUnknown_03000061
 	ldr r3, _08012564  @ =gUnknown_08617030
 	ldrb r0, [r2]
 	sub r0, r0, #1
@@ -2212,17 +2212,17 @@ _08012540:
 _08012548:
 	.4byte gFileSelectMenuSel
 _0801254C:
-	.4byte 0x03000064
+	.4byte gUnknown_03000064
 _08012550:
-	.4byte 0x0300005E
+	.4byte gUnknown_0300005E
 _08012554:
-	.4byte 0x0300005F
+	.4byte gUnknown_0300005F
 _08012558:
 	.4byte gUnknown_085FEFE4
 _0801255C:
-	.4byte 0x03000060
+	.4byte gUnknown_03000060
 _08012560:
-	.4byte 0x03000061
+	.4byte gUnknown_03000061
 _08012564:
 	.4byte gUnknown_08617030
 	THUMB_FUNC_END main_menu_main
@@ -2230,7 +2230,7 @@ _08012564:
 	THUMB_FUNC_START sub_08012568
 sub_08012568: @ 0x08012568
 	push {r4-r7,lr}
-	ldr r0, _08012578  @ =0x0300005D
+	ldr r0, _08012578  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08012580
@@ -2239,7 +2239,7 @@ sub_08012568: @ 0x08012568
 	.byte 0x00
 	.byte 0x00
 _08012578:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _0801257C:
 	.4byte gUnknown_080785E0
 _08012580:
@@ -2287,7 +2287,7 @@ _080125C6:
 	ldr r5, _08012660  @ =0x03000040
 	ldrh r0, [r5]
 	lsl r0, r0, #3
-	ldr r6, _08012664  @ =gOamData
+	ldr r6, _08012664  @ =gOamBuffer
 	add r0, r0, r6
 	str r0, [r1, #4]
 	ldr r0, _08012668  @ =0x84000002
@@ -2361,7 +2361,7 @@ _0801265C:
 _08012660:
 	.4byte 0x03000040
 _08012664:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08012668:
 	.4byte 0x84000002
 _0801266C:
@@ -2379,7 +2379,7 @@ _0801267C:
 	THUMB_FUNC_START sub_08012680
 sub_08012680: @ 0x08012680
 	push {r4-r7,lr}
-	ldr r0, _08012690  @ =0x0300005D
+	ldr r0, _08012690  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08012698
@@ -2388,7 +2388,7 @@ sub_08012680: @ 0x08012680
 	.byte 0x00
 	.byte 0x00
 _08012690:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _08012694:
 	.4byte gUnknown_080785E0
 _08012698:
@@ -2436,7 +2436,7 @@ _080126DE:
 	ldr r5, _08012778  @ =0x03000040
 	ldrh r0, [r5]
 	lsl r0, r0, #3
-	ldr r6, _0801277C  @ =gOamData
+	ldr r6, _0801277C  @ =gOamBuffer
 	add r0, r0, r6
 	str r0, [r1, #4]
 	ldr r0, _08012780  @ =0x84000002
@@ -2510,7 +2510,7 @@ _08012774:
 _08012778:
 	.4byte 0x03000040
 _0801277C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08012780:
 	.4byte 0x84000002
 _08012784:
@@ -2535,7 +2535,7 @@ sub_08012798: @ 0x08012798
 	mov r0, sp
 	mov r2, #6
 	bl memcpy
-	ldr r0, _080127BC  @ =0x0300005D
+	ldr r0, _080127BC  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _080127C4
@@ -2546,7 +2546,7 @@ sub_08012798: @ 0x08012798
 _080127B8:
 	.4byte gUnknown_080763CC
 _080127BC:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _080127C0:
 	.4byte gUnknown_08078628
 _080127C4:
@@ -2601,7 +2601,7 @@ _08012816:
 	ldr r5, _080128CC  @ =0x03000040
 	ldrh r0, [r5]
 	lsl r0, r0, #3
-	ldr r6, _080128D0  @ =gOamData
+	ldr r6, _080128D0  @ =gOamBuffer
 	add r0, r0, r6
 	str r0, [r1, #4]
 	ldr r0, _080128D4  @ =0x84000002
@@ -2690,7 +2690,7 @@ _080128C8:
 _080128CC:
 	.4byte 0x03000040
 _080128D0:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080128D4:
 	.4byte 0x84000002
 _080128D8:
@@ -2719,7 +2719,7 @@ sub_080128EC: @ 0x080128EC
 	ldr r5, _0801299C  @ =0x03000040
 	ldrh r0, [r5]
 	lsl r0, r0, #3
-	ldr r6, _080129A0  @ =gOamData
+	ldr r6, _080129A0  @ =gOamBuffer
 	add r0, r0, r6
 	str r0, [r1, #4]
 	ldr r0, _080129A4  @ =0x84000002
@@ -2798,7 +2798,7 @@ _08012998:
 _0801299C:
 	.4byte 0x03000040
 _080129A0:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080129A4:
 	.4byte 0x84000002
 _080129A8:
@@ -2827,7 +2827,7 @@ sub_080129C0: @ 0x080129C0
 	mov r0, sp
 	mov r2, #6
 	bl memcpy
-	ldr r0, _080129E8  @ =0x0300005D
+	ldr r0, _080129E8  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _080129F0
@@ -2838,7 +2838,7 @@ sub_080129C0: @ 0x080129C0
 _080129E4:
 	.4byte gUnknown_080763CC
 _080129E8:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _080129EC:
 	.4byte gUnknown_080785E0
 _080129F0:
@@ -2896,7 +2896,7 @@ _08012A44:
 	ldr r3, _08012B78  @ =0x03000040
 	ldrh r0, [r3]
 	lsl r0, r0, #3
-	ldr r2, _08012B7C  @ =gOamData
+	ldr r2, _08012B7C  @ =gOamBuffer
 	mov r9, r2
 	add r0, r0, r9
 	str r0, [r1, #4]
@@ -3045,7 +3045,7 @@ _08012B74:
 _08012B78:
 	.4byte 0x03000040
 _08012B7C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08012B80:
 	.4byte 0x84000002
 _08012B84:
@@ -3070,7 +3070,7 @@ _08012BA0:
 	ldr r3, _08012CFC  @ =0x03000040
 	ldrh r0, [r3]
 	lsl r0, r0, #3
-	ldr r1, _08012D00  @ =gOamData
+	ldr r1, _08012D00  @ =gOamBuffer
 	mov r9, r1
 	add r0, r0, r9
 	str r0, [r2, #4]
@@ -3241,7 +3241,7 @@ _08012CF8:
 _08012CFC:
 	.4byte 0x03000040
 _08012D00:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08012D04:
 	.4byte 0x84000002
 _08012D08:
@@ -3387,7 +3387,7 @@ _08012E0A:
 _08012E14:
 	ldr r2, _08012E6C  @ =REG_DMA3SAD
 	ldr r3, _08012E70  @ =gUnknown_0860C0B4
-	ldr r6, _08012E74  @ =0x0300005E
+	ldr r6, _08012E74  @ =gUnknown_0300005E
 	ldrb r1, [r6]
 	lsl r0, r1, #3
 	add r0, r0, r1
@@ -3434,7 +3434,7 @@ _08012E6C:
 _08012E70:
 	.4byte gUnknown_0860C0B4
 _08012E74:
-	.4byte 0x0300005E
+	.4byte gUnknown_0300005E
 _08012E78:
 	.4byte gUnknown_0860C344
 _08012E7C:
@@ -3452,7 +3452,7 @@ _08012E90:
 _08012E94:
 	ldr r2, _0801307C  @ =REG_DMA3SAD
 	ldr r3, _08013080  @ =gUnknown_08602D04
-	ldr r6, _08013084  @ =0x0300005E
+	ldr r6, _08013084  @ =gUnknown_0300005E
 	ldrb r1, [r6]
 	lsl r0, r1, #3
 	add r0, r0, r1
@@ -3514,7 +3514,7 @@ _08012EEA:
 	strh r4, [r7]
 	ldr r2, _0801307C  @ =REG_DMA3SAD
 	ldr r3, _080130AC  @ =gUnknown_08606794
-	ldr r0, _08013084  @ =0x0300005E
+	ldr r0, _08013084  @ =gUnknown_0300005E
 	ldrb r1, [r0]
 	lsl r0, r1, #3
 	add r0, r0, r1
@@ -3551,7 +3551,7 @@ _08012EEA:
 	add r3, r6, r1
 	strh r3, [r7]
 	ldr r4, _080130B8  @ =gUnknown_085FB554
-	ldr r0, _08013084  @ =0x0300005E
+	ldr r0, _08013084  @ =gUnknown_0300005E
 	ldrb r1, [r0]
 	lsl r0, r1, #3
 	add r0, r0, r1
@@ -3576,7 +3576,7 @@ _08012EEA:
 	add r3, r3, r8
 	strh r3, [r7]
 	ldr r3, _080130C4  @ =gUnknown_085FEFE4
-	ldr r0, _08013084  @ =0x0300005E
+	ldr r0, _08013084  @ =gUnknown_0300005E
 	ldrb r1, [r0]
 	lsl r0, r1, #3
 	add r0, r0, r1
@@ -3605,7 +3605,7 @@ _08012EEA:
 	add r0, r6, r1
 	strh r0, [r7]
 	ldr r3, _080130D0  @ =gUnknown_0860FB44
-	ldr r0, _08013084  @ =0x0300005E
+	ldr r0, _08013084  @ =gUnknown_0300005E
 	ldrb r1, [r0]
 	lsl r0, r1, #3
 	add r0, r0, r1
@@ -3632,7 +3632,7 @@ _08012EEA:
 	add r0, r6, r1
 	strh r0, [r7]
 	ldr r3, _080130DC  @ =gUnknown_08617030
-	ldr r0, _080130E0  @ =0x03000060
+	ldr r0, _080130E0  @ =gUnknown_03000060
 	mov r9, r0
 	ldrb r1, [r0]
 	lsl r0, r1, #3
@@ -3701,7 +3701,7 @@ _0801307C:
 _08013080:
 	.4byte gUnknown_08602D04
 _08013084:
-	.4byte 0x0300005E
+	.4byte gUnknown_0300005E
 _08013088:
 	.4byte gUnknown_08602F94
 _0801308C:
@@ -3747,7 +3747,7 @@ _080130D8:
 _080130DC:
 	.4byte gUnknown_08617030
 _080130E0:
-	.4byte 0x03000060
+	.4byte gUnknown_03000060
 _080130E4:
 	.4byte gUnknown_08617080
 _080130E8:
@@ -3760,8 +3760,8 @@ _080130F4:
 	.4byte gUnknown_086180B4
 	THUMB_FUNC_END sub_08012D24
 
-	THUMB_FUNC_START sub_080130F8
-sub_080130F8: @ 0x080130F8
+	THUMB_FUNC_START print_digits_080130F8
+print_digits_080130F8: @ 0x080130F8
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -3789,7 +3789,7 @@ sub_080130F8: @ 0x080130F8
 	beq _08013216
 	ldr r5, _08013228  @ =REG_DMA3SAD
 	ldr r4, _0801322C  @ =0x03000040
-	ldr r6, _08013230  @ =gOamData
+	ldr r6, _08013230  @ =gOamBuffer
 	mov r8, r0
 	ldr r0, _08013234  @ =gUnknown_03001930
 	mov r10, r0
@@ -3920,7 +3920,7 @@ _08013228:
 _0801322C:
 	.4byte 0x03000040
 _08013230:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08013234:
 	.4byte gUnknown_03001930
 _08013238:
@@ -3943,10 +3943,10 @@ _08013258:
 	.4byte 0x000001FF
 _0801325C:
 	.4byte 0xFFFFFE00
-	THUMB_FUNC_END sub_080130F8
+	THUMB_FUNC_END print_digits_080130F8
 
-	THUMB_FUNC_START sub_08013260
-sub_08013260: @ 0x08013260
+	THUMB_FUNC_START print_digits_08013260
+print_digits_08013260: @ 0x08013260
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -3979,7 +3979,7 @@ sub_08013260: @ 0x08013260
 	bge _0801338A
 	ldr r5, _0801339C  @ =REG_DMA3SAD
 	ldr r4, _080133A0  @ =0x03000040
-	ldr r6, _080133A4  @ =gOamData
+	ldr r6, _080133A4  @ =gOamBuffer
 	ldr r1, _080133A8  @ =gUnknown_03001930
 	mov r10, r1
 _080132A6:
@@ -4111,7 +4111,7 @@ _0801339C:
 _080133A0:
 	.4byte 0x03000040
 _080133A4:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080133A8:
 	.4byte gUnknown_03001930
 _080133AC:
@@ -4134,10 +4134,10 @@ _080133CC:
 	.4byte 0x000001FF
 _080133D0:
 	.4byte 0xFFFFFE00
-	THUMB_FUNC_END sub_08013260
+	THUMB_FUNC_END print_digits_08013260
 
-	THUMB_FUNC_START sub_080133D4
-sub_080133D4: @ 0x080133D4
+	THUMB_FUNC_START print_digits_080133D4
+print_digits_080133D4: @ 0x080133D4
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -4170,7 +4170,7 @@ sub_080133D4: @ 0x080133D4
 	bge _080134FE
 	ldr r5, _08013510  @ =REG_DMA3SAD
 	ldr r4, _08013514  @ =0x03000040
-	ldr r6, _08013518  @ =gOamData
+	ldr r6, _08013518  @ =gOamBuffer
 	ldr r1, _0801351C  @ =gUnknown_03001930
 	mov r10, r1
 _0801341A:
@@ -4302,7 +4302,7 @@ _08013510:
 _08013514:
 	.4byte 0x03000040
 _08013518:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0801351C:
 	.4byte gUnknown_03001930
 _08013520:
@@ -4325,10 +4325,10 @@ _08013540:
 	.4byte 0x000001FF
 _08013544:
 	.4byte 0xFFFFFE00
-	THUMB_FUNC_END sub_080133D4
+	THUMB_FUNC_END print_digits_080133D4
 
-	THUMB_FUNC_START sub_08013548
-sub_08013548: @ 0x08013548
+	THUMB_FUNC_START print_digits_08013548
+print_digits_08013548: @ 0x08013548
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -4357,7 +4357,7 @@ sub_08013548: @ 0x08013548
 	bge _08013652
 	ldr r4, _08013664  @ =REG_DMA3SAD
 	ldr r5, _08013668  @ =0x03000040
-	ldr r6, _0801366C  @ =gOamData
+	ldr r6, _0801366C  @ =gOamBuffer
 	ldr r1, _08013670  @ =gUnknown_03001930
 	mov r10, r1
 _08013586:
@@ -4477,7 +4477,7 @@ _08013664:
 _08013668:
 	.4byte 0x03000040
 _0801366C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08013670:
 	.4byte gUnknown_03001930
 _08013674:
@@ -4500,10 +4500,10 @@ _08013694:
 	.4byte 0x000001FF
 _08013698:
 	.4byte 0xFFFFFE00
-	THUMB_FUNC_END sub_08013548
+	THUMB_FUNC_END print_digits_08013548
 
-	THUMB_FUNC_START sub_0801369C
-sub_0801369C: @ 0x0801369C
+	THUMB_FUNC_START add_sprite_0801369C
+add_sprite_0801369C: @ 0x0801369C
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -4526,7 +4526,7 @@ sub_0801369C: @ 0x0801369C
 	mov r9, r4
 	ldrh r4, [r4]
 	lsl r4, r4, #3
-	ldr r7, _08013788  @ =gOamData
+	ldr r7, _08013788  @ =gOamBuffer
 	mov r12, r7
 	add r4, r4, r12
 	str r4, [r5, #4]
@@ -4623,7 +4623,7 @@ _08013780:
 _08013784:
 	.4byte 0x03000040
 _08013788:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0801378C:
 	.4byte 0x84000002
 _08013790:
@@ -4634,10 +4634,10 @@ _08013798:
 	.4byte 0x000001FF
 _0801379C:
 	.4byte 0xFFFFFE00
-	THUMB_FUNC_END sub_0801369C
+	THUMB_FUNC_END add_sprite_0801369C
 
-	THUMB_FUNC_START sub_080137A0
-sub_080137A0: @ 0x080137A0
+	THUMB_FUNC_START add_sprite_080137A0
+add_sprite_080137A0: @ 0x080137A0
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -4666,7 +4666,7 @@ sub_080137A0: @ 0x080137A0
 	mov r10, r6
 	ldrh r4, [r6]
 	lsl r4, r4, #3
-	ldr r7, _080138B8  @ =gOamData
+	ldr r7, _080138B8  @ =gOamBuffer
 	add r4, r4, r7
 	str r4, [r5, #4]
 	ldr r4, _080138BC  @ =0x84000002
@@ -4780,7 +4780,7 @@ _080138B0:
 _080138B4:
 	.4byte 0x03000040
 _080138B8:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080138BC:
 	.4byte 0x84000002
 _080138C0:
@@ -4791,10 +4791,10 @@ _080138C8:
 	.4byte 0x000001FF
 _080138CC:
 	.4byte 0xFFFFFE00
-	THUMB_FUNC_END sub_080137A0
+	THUMB_FUNC_END add_sprite_080137A0
 
-	THUMB_FUNC_START sub_080138D0
-sub_080138D0: @ 0x080138D0
+	THUMB_FUNC_START add_sprite_080138D0
+add_sprite_080138D0: @ 0x080138D0
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -4841,7 +4841,7 @@ sub_080138D0: @ 0x080138D0
 	mov r10, r3
 	ldrh r0, [r3]
 	lsl r0, r0, #3
-	ldr r1, _080139D8  @ =gOamData
+	ldr r1, _080139D8  @ =gOamBuffer
 	mov r9, r1
 	add r0, r0, r9
 	str r0, [r4, #4]
@@ -4929,7 +4929,7 @@ _080139D0:
 _080139D4:
 	.4byte 0x03000040
 _080139D8:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080139DC:
 	.4byte 0x84000002
 _080139E0:
@@ -4986,8 +4986,8 @@ _08013A0A:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_080138D0
-
+	THUMB_FUNC_END add_sprite_080138D0
+.endif
 	THUMB_FUNC_START sub_08013A48
 sub_08013A48: @ 0x08013A48
 	push {r4-r7,lr}
@@ -5037,7 +5037,7 @@ _08013A78:
 	str r1, [sp]
 	mov r1, #0
 	add r2, r5, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	mov r0, r9
 	add r0, r0, #14
 	lsl r0, r0, #24
@@ -5052,7 +5052,7 @@ _08013A78:
 	mov r2, #0
 	str r2, [sp]
 	mov r2, #2
-	bl sub_08013260
+	bl print_digits_08013260
 	ldr r0, _08013AE0  @ =gUnknown_08078778
 	add r4, r4, #44
 	lsl r4, r4, #16
@@ -5092,7 +5092,7 @@ _08013AE4:
 	str r1, [sp]
 	add r1, r7, #0
 	mov r3, r8
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	ldr r1, _08013B44  @ =gSaveFilesPtr
 	lsl r2, r7, #3
 	sub r0, r2, r7
@@ -5137,7 +5137,7 @@ _08013B4A:
 	str r1, [sp]
 	mov r1, #2
 	add r3, r5, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	ldr r0, _08013B88  @ =gUnknown_08078778
 	ldr r2, [sp, #12]
 	add r4, r4, #44
@@ -5146,7 +5146,7 @@ _08013B4A:
 	str r4, [sp]
 	mov r1, #1
 	add r3, r5, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	b _08013EBA
 	.byte 0x00
 	.byte 0x00
@@ -5195,7 +5195,7 @@ _08013BAE:
 	ldr r2, [sp, #12]
 	str r2, [sp]
 	mov r2, #2
-	bl sub_080130F8
+	bl print_digits_080130F8
 	ldr r0, [r5]
 	add r0, r0, r4
 	ldrb r3, [r0, #9]
@@ -5210,7 +5210,7 @@ _08013BAE:
 	ldr r4, [sp, #12]
 	str r4, [sp]
 	mov r2, #2
-	bl sub_080130F8
+	bl print_digits_080130F8
 	lsl r1, r7, #24
 	asr r1, r1, #24
 	lsl r0, r1, #3
@@ -5234,7 +5234,7 @@ _08013BAE:
 	lsr r1, r1, #24
 	str r4, [sp]
 	mov r2, #2
-	bl sub_08013260
+	bl print_digits_08013260
 	ldr r0, _08013C64  @ =gUnknown_08078760
 	ldr r5, [sp, #12]
 	ldr r1, [sp, #36]
@@ -5249,7 +5249,7 @@ _08013BAE:
 	mov r1, #1
 	add r2, r5, #0
 	add r3, r6, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	ldr r0, _08013C68  @ =gUnknown_08078778
 	add r4, r4, #44
 	lsl r4, r4, #16
@@ -5259,7 +5259,7 @@ _08013BAE:
 _08013C5A:
 	add r2, r5, #0
 	add r3, r6, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	b _08013EBA
 _08013C64:
 	.4byte gUnknown_08078760
@@ -5319,7 +5319,7 @@ _08013C6C:
 	str r2, [sp]
 	ldr r2, [sp, #16]
 	mov r3, r12
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	ldr r2, _08013D6C  @ =gUnknown_08078640
 	ldrb r1, [r6]
 	lsl r1, r1, #3
@@ -5340,7 +5340,7 @@ _08013C6C:
 	ldr r4, [sp, #12]
 	str r4, [sp]
 	mov r2, #1
-	bl sub_080133D4
+	bl print_digits_080133D4
 	ldr r0, _08013D70  @ =gUnknown_080787F0
 	ldr r4, _08013D74  @ =gUnknown_08078680
 	ldrb r2, [r6]
@@ -5361,7 +5361,7 @@ _08013C6C:
 	str r1, [sp]
 	mov r1, #10
 	ldr r2, [sp, #16]
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	ldrb r1, [r6]
 	str r5, [sp, #28]
 	cmp r1, #5
@@ -5384,7 +5384,7 @@ _08013C6C:
 	ldr r4, [sp, #12]
 	str r4, [sp]
 	mov r2, #1
-	bl sub_080133D4
+	bl print_digits_080133D4
 	b _08013DF0
 _08013D64:
 	.4byte gSaveFilesPtr
@@ -5425,7 +5425,7 @@ _08013D7C:
 	asr r2, r2, #16
 	str r2, [sp]
 	ldr r2, [sp, #16]
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	b _08013DF0
 	.byte 0x00
 	.byte 0x00
@@ -5456,7 +5456,7 @@ _08013DC0:
 	asr r2, r2, #16
 	str r2, [sp]
 	ldr r2, [sp, #16]
-	bl sub_080138D0
+	bl add_sprite_080138D0
 _08013DF0:
 	ldr r5, _08013ED4  @ =gSaveFilesPtr
 	ldr r6, [sp, #32]
@@ -5484,7 +5484,7 @@ _08013E1C:
 	str r0, [sp]
 	add r0, r2, #0
 	mov r2, #2
-	bl sub_080130F8
+	bl print_digits_080130F8
 	ldr r0, [r5]
 	add r0, r0, r4
 	ldrb r3, [r0, #9]
@@ -5505,7 +5505,7 @@ _08013E46:
 	str r0, [sp]
 	add r0, r2, #0
 	mov r2, #2
-	bl sub_080130F8
+	bl print_digits_080130F8
 	lsl r1, r7, #24
 	asr r1, r1, #24
 	lsl r0, r1, #3
@@ -5530,7 +5530,7 @@ _08013E46:
 	ldr r6, [sp, #12]
 	str r6, [sp]
 	mov r2, #2
-	bl sub_08013260
+	bl print_digits_08013260
 	ldr r0, _08013ED8  @ =gUnknown_08078760
 	ldr r1, [sp, #28]
 	asr r5, r1, #24
@@ -5546,7 +5546,7 @@ _08013E46:
 	mov r1, #0
 	add r2, r5, #0
 	add r3, r6, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	ldr r0, _08013EDC  @ =gUnknown_08078778
 	add r4, r4, #44
 	lsl r4, r4, #16
@@ -5555,7 +5555,7 @@ _08013E46:
 	mov r1, #0
 	add r2, r5, #0
 	add r3, r6, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 _08013EBA:
 	add sp, sp, #44
 	pop {r3-r5}
@@ -5676,7 +5676,7 @@ _08013F6A:
 	str r0, [sp, #4]
 	ldr r0, _08013FAC  @ =gUnknown_080787D8
 	mov r2, #0
-	bl sub_0801369C
+	bl add_sprite_0801369C
 	b _08013FD8
 	.byte 0x00
 	.byte 0x00
@@ -5705,7 +5705,7 @@ _08013FB0:
 	str r0, [sp, #4]
 	ldr r0, _08013FF8  @ =gUnknown_080787D8
 	mov r2, #0
-	bl sub_0801369C
+	bl add_sprite_0801369C
 _08013FD8:
 	add r0, r6, #1
 	lsl r0, r0, #24
@@ -5826,7 +5826,7 @@ _08014086:
 	str r0, [sp, #4]
 	ldr r0, _080140C8  @ =gUnknown_080787D8
 	mov r2, #0
-	bl sub_0801369C
+	bl add_sprite_0801369C
 	b _080140F4
 	.byte 0x00
 	.byte 0x00
@@ -5855,7 +5855,7 @@ _080140CC:
 	str r0, [sp, #4]
 	ldr r0, _08014114  @ =gUnknown_080787D8
 	mov r2, #0
-	bl sub_0801369C
+	bl add_sprite_0801369C
 _080140F4:
 	add r0, r6, #1
 	lsl r0, r0, #24
@@ -5887,7 +5887,7 @@ sub_08014118: @ 0x08014118
 	mov r5, r8
 	push {r5-r7}
 	sub sp, sp, #40
-	ldr r0, _080141DC  @ =0x0300005D
+	ldr r0, _080141DC  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _0801412E
@@ -5957,7 +5957,7 @@ _0801416C:
 	str r0, [sp, #4]
 	mov r0, r8
 	mov r2, #0
-	bl sub_0801369C
+	bl add_sprite_0801369C
 	ldr r0, _08014200  @ =0x03000050
 	ldrh r1, [r0]
 	mov r3, #0
@@ -5972,10 +5972,10 @@ _0801416C:
 	str r0, [sp, #4]
 	mov r0, r8
 	mov r2, #1
-	bl sub_0801369C
+	bl add_sprite_0801369C
 	b _0801426A
 _080141DC:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _080141E0:
 	.4byte gUnknown_080763CC
 _080141E4:
@@ -6027,7 +6027,7 @@ _08014204:
 	str r0, [sp, #4]
 	mov r0, r8
 	mov r2, #0
-	bl sub_0801369C
+	bl add_sprite_0801369C
 	ldr r0, _080142AC  @ =0x03000050
 	ldrh r1, [r0]
 	mov r3, #0
@@ -6042,7 +6042,7 @@ _08014204:
 	str r0, [sp, #4]
 	mov r0, r8
 	mov r2, #1
-	bl sub_0801369C
+	bl add_sprite_0801369C
 _0801426A:
 	add r0, r7, #1
 	lsl r0, r0, #24
@@ -6072,7 +6072,7 @@ _08014276:
 	ldrsh r1, [r4, r5]
 	str r1, [sp]
 	mov r1, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	b _080142E2
 	.byte 0x00
 	.byte 0x00
@@ -6104,7 +6104,7 @@ _080142BC:
 	ldrsh r1, [r4, r5]
 	str r1, [sp]
 	mov r1, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 _080142E2:
 	add r4, r7, #1
 	ldr r0, _0801431C  @ =gFileSelectMenuSel
@@ -6128,7 +6128,7 @@ _080142E2:
 	ldrsh r1, [r4, r5]
 	str r1, [sp]
 	mov r1, #1
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	b _08014346
 _08014314:
 	.4byte gUnknown_080787C0
@@ -6154,7 +6154,7 @@ _08014320:
 	ldrsh r1, [r4, r5]
 	str r1, [sp]
 	mov r1, #1
-	bl sub_080138D0
+	bl add_sprite_080138D0
 _08014346:
 	add r0, r7, #2
 	lsl r0, r0, #24
@@ -6219,7 +6219,7 @@ _08014382:
 	str r0, [sp, #4]
 	mov r0, r8
 	mov r2, #0
-	bl sub_0801369C
+	bl add_sprite_0801369C
 	ldr r0, _08014404  @ =0x03000050
 	ldrh r1, [r0]
 	mov r3, #0
@@ -6234,7 +6234,7 @@ _08014382:
 	str r0, [sp, #4]
 	mov r0, r8
 	mov r2, #1
-	bl sub_0801369C
+	bl add_sprite_0801369C
 	b _08014468
 _080143EC:
 	.4byte gUnknown_080763E8
@@ -6280,7 +6280,7 @@ _08014408:
 	str r0, [sp, #4]
 	mov r0, r8
 	mov r2, #0
-	bl sub_0801369C
+	bl add_sprite_0801369C
 	ldr r0, _080144B0  @ =0x03000050
 	ldrh r1, [r0]
 	mov r3, #0
@@ -6295,7 +6295,7 @@ _08014408:
 	str r0, [sp, #4]
 	mov r0, r8
 	mov r2, #1
-	bl sub_0801369C
+	bl add_sprite_0801369C
 _08014468:
 	add r0, r7, #1
 	lsl r0, r0, #24
@@ -6328,7 +6328,7 @@ _08014474:
 	ldrsh r1, [r4, r5]
 	str r1, [sp]
 	mov r1, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	b _080144E6
 	.byte 0x00
 	.byte 0x00
@@ -6360,7 +6360,7 @@ _080144C0:
 	ldrsh r1, [r4, r5]
 	str r1, [sp]
 	mov r1, #0
-	bl sub_080138D0
+	bl add_sprite_080138D0
 _080144E6:
 	add r4, r7, #1
 	ldr r0, _08014520  @ =gFileSelectMenuSel
@@ -6384,7 +6384,7 @@ _080144E6:
 	ldrsh r1, [r4, r5]
 	str r1, [sp]
 	mov r1, #1
-	bl sub_080138D0
+	bl add_sprite_080138D0
 	b _0801454A
 _08014518:
 	.4byte gUnknown_080787C0
@@ -6410,7 +6410,7 @@ _08014524:
 	ldrsh r1, [r4, r5]
 	str r1, [sp]
 	mov r1, #1
-	bl sub_080138D0
+	bl add_sprite_080138D0
 _0801454A:
 	add r0, r7, #2
 	lsl r0, r0, #24
@@ -6439,7 +6439,7 @@ sub_0801456C: @ 0x0801456C
 	mov r5, r8
 	push {r5-r7}
 	sub sp, sp, #12
-	ldr r0, _080145F8  @ =0x0300005D
+	ldr r0, _080145F8  @ =gUnknown_0300005D
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _08014582
@@ -6451,7 +6451,7 @@ _08014582:
 	ldr r2, _08014600  @ =0x03000054
 	mov r9, r2
 _0801458C:
-	ldr r0, _08014604  @ =0x03000066
+	ldr r0, _08014604  @ =gUnknown_03000066
 	lsl r1, r1, #16
 	asr r3, r1, #16
 	add r2, r3, r0
@@ -6484,7 +6484,7 @@ _0801458C:
 	ldr r0, _0801460C  @ =gUnknown_08078850
 	mov r2, #0
 	mov r3, #3
-	bl sub_080137A0
+	bl add_sprite_080137A0
 	mov r3, r9
 	ldrh r1, [r3]
 	mov r0, #1
@@ -6500,18 +6500,18 @@ _0801458C:
 	ldr r0, _0801460C  @ =gUnknown_08078850
 	mov r2, #0
 	mov r3, #3
-	bl sub_080137A0
+	bl add_sprite_080137A0
 	b _08014670
 	.byte 0x00
 	.byte 0x00
 _080145F8:
-	.4byte 0x0300005D
+	.4byte gUnknown_0300005D
 _080145FC:
 	.4byte gUnknown_08078820
 _08014600:
 	.4byte 0x03000054
 _08014604:
-	.4byte 0x03000066
+	.4byte gUnknown_03000066
 _08014608:
 	.4byte gUnknown_08078868
 _0801460C:
@@ -6545,7 +6545,7 @@ _08014610:
 	add r0, r5, #0
 	mov r2, #0
 	add r3, r6, #0
-	bl sub_080137A0
+	bl add_sprite_080137A0
 	mov r3, r9
 	ldrh r1, [r3, #2]
 	mov r0, #1
@@ -6562,7 +6562,7 @@ _08014610:
 	add r0, r5, #0
 	mov r2, #0
 	add r3, r6, #0
-	bl sub_080137A0
+	bl add_sprite_080137A0
 _08014670:
 	mov r1, #128
 	lsl r1, r1, #9
@@ -6583,7 +6583,7 @@ _08014684:
 	mov r0, #1
 	mov r10, r0
 _08014692:
-	ldr r0, _08014700  @ =0x03000066
+	ldr r0, _08014700  @ =gUnknown_03000066
 	lsl r1, r1, #16
 	asr r3, r1, #16
 	add r2, r3, r0
@@ -6614,7 +6614,7 @@ _08014692:
 	ldr r0, _08014704  @ =gUnknown_08078850
 	mov r2, #0
 	mov r3, #3
-	bl sub_080137A0
+	bl add_sprite_080137A0
 	mov r3, r8
 	ldrh r1, [r3]
 	mov r0, r10
@@ -6630,14 +6630,14 @@ _08014692:
 	ldr r0, _08014704  @ =gUnknown_08078850
 	mov r2, #0
 	mov r3, #3
-	bl sub_080137A0
+	bl add_sprite_080137A0
 	b _08014760
 _080146F8:
 	.4byte gUnknown_08078820
 _080146FC:
 	.4byte 0x03000054
 _08014700:
-	.4byte 0x03000066
+	.4byte gUnknown_03000066
 _08014704:
 	.4byte gUnknown_08078850
 _08014708:
@@ -6666,7 +6666,7 @@ _08014708:
 	add r0, r5, #0
 	mov r2, #0
 	add r3, r6, #0
-	bl sub_080137A0
+	bl add_sprite_080137A0
 	mov r3, r8
 	ldrh r1, [r3, #2]
 	mov r0, r10
@@ -6682,7 +6682,7 @@ _08014708:
 	add r0, r5, #0
 	mov r2, #0
 	add r3, r6, #0
-	bl sub_080137A0
+	bl add_sprite_080137A0
 _08014760:
 	mov r3, #128
 	lsl r3, r3, #9
@@ -6720,7 +6720,7 @@ main_menu_loop: @ 0x08014780
 	ldr r1, _080147E4  @ =REG_DMA3SAD
 	mov r0, sp
 	str r0, [r1]
-	ldr r0, _080147E8  @ =gOamData
+	ldr r0, _080147E8  @ =gOamBuffer
 	str r0, [r1, #4]
 	ldr r0, _080147EC  @ =0x85000100
 	str r0, [r1, #8]
@@ -6731,7 +6731,7 @@ main_menu_loop: @ 0x08014780
 	cmp r0, #0
 	bne _080147C8
 	ldr r2, _080147F4  @ =gUnknown_085FEFE4
-	ldr r0, _080147F8  @ =0x0300005E
+	ldr r0, _080147F8  @ =gUnknown_0300005E
 	ldrb r1, [r0]
 	lsl r0, r1, #3
 	add r0, r0, r1
@@ -6741,7 +6741,7 @@ main_menu_loop: @ 0x08014780
 	ldr r0, [r0]
 	bl sub_0801B2CC
 _080147C8:
-	ldr r0, _080147FC  @ =0x0300005B
+	ldr r0, _080147FC  @ =gUnknown_0300005B
 	ldrb r0, [r0]
 	cmp r0, #3
 	bne _08014800
@@ -6758,7 +6758,7 @@ _080147E0:
 _080147E4:
 	.4byte REG_DMA3SAD
 _080147E8:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080147EC:
 	.4byte 0x85000100
 _080147F0:
@@ -6766,9 +6766,9 @@ _080147F0:
 _080147F4:
 	.4byte gUnknown_085FEFE4
 _080147F8:
-	.4byte 0x0300005E
+	.4byte gUnknown_0300005E
 _080147FC:
-	.4byte 0x0300005B
+	.4byte gUnknown_0300005B
 _08014800:
 	cmp r0, #2
 	bne _08014824
@@ -6816,7 +6816,7 @@ _08014850:
 	bl sub_08014118
 	bl sub_0801456C
 	ldr r1, _08014874  @ =REG_DMA3SAD
-	ldr r0, _08014878  @ =gOamData
+	ldr r0, _08014878  @ =gOamBuffer
 	str r0, [r1]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -6831,7 +6831,7 @@ _08014850:
 _08014874:
 	.4byte REG_DMA3SAD
 _08014878:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0801487C:
 	.4byte 0x84000100
 	THUMB_FUNC_END main_menu_loop

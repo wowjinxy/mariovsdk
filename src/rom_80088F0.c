@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "savefile.h"
 
 void level_play_loop(void) 
 {
@@ -15,11 +16,11 @@ void level_play_loop(void)
   sp6 = gUnknown_03001930;
   sp8 = gUnknown_0300192C;
   REG_DISPCNT &= 0xFF7F;
-    DmaFill32(3, 0xA0, gOamData, 0x400);
+    DmaFill32(3, 0xA0, gOamBuffer, 0x400);
   sub_0803D248(gMainState - 10 < 2, &sp4, &sp6, &sp8);
   sub_08031AD4(&sp4);
   sub_080322A8(&sp4, &sp6, &sp8);
-    DmaCopy16(3, gOamData, OAM, 0x400);
+    DmaCopy16(3, gOamBuffer, OAM, 0x400);
   sub_0802BA38(gSomeVRAMAddr_03000E80,6,gUnknown_0807820C->unk800C,6);
   if ((((gUnknown_030009EC != '\0') || (gMainState == MAIN_STATE_UNKNOWN_10)) || (gMainState == MAIN_STATE_LEVEL_EDIT)) || ((gUnknown_03001A1C & 0x1000) != 0)) {
         for (uVar2 = 0x0; uVar2 < gUnknown_0807820C->unkC00C; uVar2 += 0x400) {
@@ -150,10 +151,10 @@ void level_edit_main(void) {
 
     u32 var1;
 	if (gUnknown_030009FC != 0) {
-		sub_080331FC(); 
+		process_input(); 
 	}
 	else {
-		sub_080331FC();
+		process_input();
     if (gHeldKeys == 1) {     
 		gSomeKeys_030012E8 = gHeldKeys = gUnknown_03001708 = 0;
     }

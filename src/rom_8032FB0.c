@@ -5,7 +5,7 @@
 void load_some_oam(void)
 {
     int i;
-    struct OamData *oam = gOamData;
+    struct OamData *oam = gOamBuffer;
     u16 *ptr = (u16 *)oam;
 
     for (i = 0; i < 32; i++)
@@ -141,7 +141,7 @@ static inline bool32 inline_2(void)
     }
 }
 
-void sub_080331FC(void)
+void process_input(void)
 {
     struct KeyInput keyInput = {.keys = ~REG_KEYINPUT};
     u16 keys;

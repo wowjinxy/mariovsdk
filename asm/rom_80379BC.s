@@ -91,7 +91,7 @@ print_error_message: @ 0x08037A04
 	str r0, [sp, #8]
 	ldr r4, _08037AE4  @ =REG_DMA3SAD
 	str r1, [r4]
-	ldr r1, _08037AE8  @ =gOamData
+	ldr r1, _08037AE8  @ =gOamBuffer
 	mov r8, r1
 	str r1, [r4, #4]
 	ldr r0, _08037AEC  @ =0x85000100
@@ -150,7 +150,7 @@ _08037AE0:
 _08037AE4:
 	.4byte REG_DMA3SAD
 _08037AE8:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08037AEC:
 	.4byte 0x85000100
 _08037AF0:
@@ -176,7 +176,7 @@ sub_08037B04: @ 0x08037B04
 	ldr r4, _08037B58  @ =REG_DMA3SAD
 	add r0, sp, #4
 	str r0, [r4]
-	ldr r5, _08037B5C  @ =gOamData
+	ldr r5, _08037B5C  @ =gOamBuffer
 	str r5, [r4, #4]
 	ldr r0, _08037B60  @ =0x85000100
 	str r0, [r4, #8]
@@ -209,7 +209,7 @@ sub_08037B04: @ 0x08037B04
 _08037B58:
 	.4byte REG_DMA3SAD
 _08037B5C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08037B60:
 	.4byte 0x85000100
 _08037B64:

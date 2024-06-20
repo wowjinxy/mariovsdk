@@ -1,29 +1,6 @@
 	.SECTION .rodata
 
-	@ What is this first part? Seems unreferenced.
-
-	.4byte 0x40400030
-	.4byte 0x00000000
-
-	.GLOBAL gUnknown_08076368
-gUnknown_08076368:
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x01010101
-	.4byte 0x01010101
-	.4byte 0x01010101
-	.4byte 0x01010101
-	.2byte 0x0101
-	.byte 0x01
-
-	.GLOBAL gUnknown_08076387
-gUnknown_08076387:
-	.byte 0x8
-	.byte 0xA
-	.byte 0x9
-	.2byte 0x0000
-
+.if 0
 	.GLOBAL gUnknown_0807638C
 gUnknown_0807638C:
 	.4byte 0x8E5E2EFE
@@ -59,7 +36,7 @@ gUnknown_080763CC:
 gUnknown_080763D2:
 	.2byte 0x0044
 	.2byte 0x0073
-
+.endif
 	.GLOBAL gUnknown_080763D6
 gUnknown_080763D6:
 	.byte 0x5

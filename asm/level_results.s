@@ -677,7 +677,7 @@ level_results_main: @ 0x080296A4
 	b _080297DA
 _080296B8:
 	mov r4, #50
-	bl sub_080331FC
+	bl process_input
 	ldr r0, _08029778  @ =0x03000DDC
 	ldrb r0, [r0]
 	lsl r0, r0, #24
@@ -1334,7 +1334,7 @@ level_results_loop: @ 0x08029B84
 	ldr r4, _08029C08  @ =REG_DMA3SAD
 	mov r0, sp
 	str r0, [r4]
-	ldr r0, _08029C0C  @ =gOamData
+	ldr r0, _08029C0C  @ =gOamBuffer
 	mov r8, r0
 	str r0, [r4, #4]
 	ldr r0, _08029C10  @ =0x85000100
@@ -1377,7 +1377,7 @@ _08029C04:
 _08029C08:
 	.4byte REG_DMA3SAD
 _08029C0C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08029C10:
 	.4byte 0x85000100
 _08029C14:

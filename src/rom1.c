@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "savefile.h"
 
 void sub_08007154(void)
 {
@@ -405,7 +406,7 @@ void level_play_main(void) {
     u32 var3;
     
     sub_08029C20();
-    sub_080331FC();
+    process_input();
     sub_08038414(gSomeKeys_030012E8, gHeldKeys);
     sub_08039C44();
     var1 = (gUnknown_03001A1C & 0x1b08) == 0;
@@ -584,7 +585,7 @@ void level_demo_main(void) {
     u8 bVar1;
 
     sub_08029C20();
-    sub_080331FC();
+    process_input();
     if (0 == (gUnknown_03001938 & 0x800) != 0) {
         sub_08038414(gSomeKeys_030012E8, gHeldKeys);
         sub_08039C44();

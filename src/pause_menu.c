@@ -14,7 +14,7 @@ void pause_menu_init_callback(void)
 void pause_menu_main(void) 
 {
 
-    sub_080331FC();
+    process_input();
     
     switch(sub_0801BAD8()) {
         case 0:

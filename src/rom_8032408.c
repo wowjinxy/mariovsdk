@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "savefile.h"
 
 struct Foo
 {
@@ -11,7 +12,7 @@ struct Foo
 extern u16 gUnknown_0807DD14[];
 extern const struct UnknownStruct10 gUnknown_08B2AD88;
 extern struct UnknownStruct13 gUnknown_0807DD1C[];
-extern const u16 gPaletteData[];
+extern const u8 gPredefinedPalettes[];
 
 void game_init_callback(void)
 {
@@ -30,12 +31,12 @@ void game_init_callback(void)
     CpuFill16(0, gUnknown_0300029C, 0x100C);
     gUnknown_0300029C->unk1000 = 0;
     REG_DISPCNT = 0x1140;
-    sub_080331FC();
+    process_input();
 }
 
 void game_init_main(void)
 {
-    sub_080331FC();
+    process_input();
     switch (gUnknown_0300029C->unk1000)
     {
       case 0:
@@ -131,42 +132,37 @@ void game_init_loop(void)
 {
     u16 val = 0;
 
-    DmaFill32(3, 0xA0, gOamData, 0x400);
+    DmaFill32(3, 0xA0, gOamBuffer, 0x400);
     sub_080351E0();
     if (gUnknown_0300029C->unk1008 != NULL)
         sub_08034CCC(gUnknown_0300029C->unk1008->unk0, -32767, -32767, -1, 16);
     sub_08035108(&val);
-    DmaCopy32(3, gOamData, (void *)OAM, 0x400);
+    DmaCopy32(3, gOamBuffer, (void *)OAM, 0x400);
 }
 
 void game_init_end(void)
 {
 }
 
-void load_predefined_palette(u32 a, u32 b)
+void load_predefined_palette(u32 paletteNum, u32 flags)
 {
     // I have to do this stupid cast for it to match.
     bool32 r4 = ((*(u8 *)gUnknown_080788FC & 24) != 0);
 
-    if (b & 1)
+    if (flags & LOAD_BG_PALETTE)
     {
-        u32 offset1 = a * 0x400;
-        u32 offset2 = r4 * 0x200;
-        const u16 *src = gPaletteData + offset1 + offset2;
+        const void *src = gPredefinedPalettes + paletteNum * 0x800 + r4 * 0x400;
 
         DmaCopy16(3, src, (void *)PLTT, 0x200);
-        sub_0802C104(0, 0);
+        sub_0802C104(0, 0, src);
     }
 
-    if (b & 2)
+    if (flags & LOAD_OBJ_PALETTE)
     {
-        u32 offset1 = a * 0x400;
-        u32 offset2 = r4 * 0x200;
-        const u16 *src = gPaletteData + offset1 + offset2 + 0x100;
+        const void *src = gPredefinedPalettes + paletteNum * 0x800 + r4 * 0x400 + 0x200;
 
         // Why is this one DmaCopy32 while the other one is DmaCopy16?
         DmaCopy32(3, src, (void *)(PLTT + 0x200), 0x200);
-        sub_0802C104(0, 1);
+        sub_0802C104(0, 1, src);
     }
 }
-
