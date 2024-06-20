@@ -168,7 +168,7 @@ void movie_player_setup_data(u8 param_1, u8 songID, u8 nextMode, u8 movieID) {
     gMoviePlayerParams.movieData = (u32*)&gUnknown_08B3732C;
     break;
   case 9: //Movie ID 9 (Unused -- "Plus Worlds Unlocked!" message)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B37424;
+    gMoviePlayerParams.movieData = (u32*)&gMovieUnusedPlusWorldsUnlocked;
   }
     
 }

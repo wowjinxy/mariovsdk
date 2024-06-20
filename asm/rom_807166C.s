@@ -1275,7 +1275,7 @@ _08071F60:
 
 	THUMB_FUNC_START sub_08071F64
 sub_08071F64: @ 0x08071F64
-	ldr r2, _08071F74  @ =gUnknown_08D7B110
+	ldr r2, _08071F74  @ =gMusicTable1
 	lsl r1, r0, #1
 	add r1, r1, r0
 	lsl r1, r1, #2
@@ -1285,12 +1285,12 @@ sub_08071F64: @ 0x08071F64
 	.byte 0x00
 	.byte 0x00
 _08071F74:
-	.4byte gUnknown_08D7B110
+	.4byte gMusicTable1
 	THUMB_FUNC_END sub_08071F64
 
 	THUMB_FUNC_START sub_08071F78
 sub_08071F78: @ 0x08071F78
-	ldr r2, _08071F88  @ =gUnknown_08D7B110
+	ldr r2, _08071F88  @ =gMusicTable1
 	lsl r1, r0, #1
 	add r1, r1, r0
 	lsl r1, r1, #2
@@ -1300,7 +1300,7 @@ sub_08071F78: @ 0x08071F78
 	.byte 0x00
 	.byte 0x00
 _08071F88:
-	.4byte gUnknown_08D7B110
+	.4byte gMusicTable1
 	THUMB_FUNC_END sub_08071F78
 
 	THUMB_FUNC_START sub_08071F8C
@@ -1309,13 +1309,13 @@ sub_08071F8C: @ 0x08071F8C
 	lsl r0, r1, #1
 	add r0, r0, r1
 	lsl r0, r0, #2
-	ldr r1, _08071F9C  @ =gUnknown_08D7B116
+	ldr r1, _08071F9C  @ =gMusicTable2
 	add r0, r0, r1
 	bx lr
 	.byte 0x00
 	.byte 0x00
 _08071F9C:
-	.4byte gUnknown_08D7B116
+	.4byte gMusicTable2
 	THUMB_FUNC_END sub_08071F8C
 
 	THUMB_FUNC_START sub_08071FA0
@@ -1378,7 +1378,7 @@ _08071FF8:
 	add r0, r0, r3
 	ldr r4, [r0]
 	add r3, r1, #0
-	ldr r1, _08072034  @ =gUnknown_08D7B110
+	ldr r1, _08072034  @ =gMusicTable1
 _08072010:
 	ldr r0, [r1]
 	cmp r4, r0
@@ -1401,7 +1401,7 @@ _0807202C:
 _08072030:
 	.4byte 0x00000FC8
 _08072034:
-	.4byte gUnknown_08D7B110
+	.4byte gMusicTable1
 	THUMB_FUNC_END sub_08071FE4
 
 	THUMB_FUNC_START sub_08072038
@@ -1434,7 +1434,7 @@ sub_0807204C: @ 0x0807204C
 	ldr r1, _080720A4  @ =0x00000FC8
 	mov r8, r1
 	add r0, r0, r8
-	ldr r5, _080720A8  @ =gUnknown_08D7B110
+	ldr r5, _080720A8  @ =gMusicTable1
 	lsl r4, r3, #1
 	add r4, r4, r3
 	lsl r4, r4, #2
@@ -1465,7 +1465,7 @@ _080720A0:
 _080720A4:
 	.4byte 0x00000FC8
 _080720A8:
-	.4byte gUnknown_08D7B110
+	.4byte gMusicTable1
 	THUMB_FUNC_END sub_0807204C
 
 	THUMB_FUNC_START sub_080720AC

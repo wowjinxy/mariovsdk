@@ -40,14 +40,14 @@ gUnknown_08078234:
 
 	.GLOBAL gMainStateInitCallbacks
 gMainStateInitCallbacks:
-	.4byte intro_init_callback @ sub_0801B9DC 		  (Mode 0x0)
+	.4byte intro_init_callback @ sub_0801B9DC 	  (Mode 0x0)
 	.4byte goto_credits_init_callback @ sub_080347DC      	  (Mode 0x1)
-	.4byte level_demo_init_callback @ sub_08008B8C 		  (Mode 0x2)
-	.4byte main_menu_init_callback @ sub_080114D4 		  (Mode 0x3)
-	.4byte options_init_callback @ sub_0802895C		  (Mode 0x4)
-	.4byte level_demo_init_callback @ sub_08008B8C 		  (Mode 0x5)
+	.4byte level_demo_init_callback @ sub_08008B8C 	  (Mode 0x2)
+	.4byte main_menu_init_callback @ sub_080114D4 	  (Mode 0x3)
+	.4byte options_init_callback @ sub_0802895C	  (Mode 0x4)
+	.4byte level_demo_init_callback @ sub_08008B8C 	  (Mode 0x5)
 	.4byte level_demo_reset_init_callback @ sub_0800748C      (Mode 0x6)
-	.4byte title_init_callback @ sub_0801B55C		  (Mode 0x7)
+	.4byte title_init_callback @ sub_0801B55C	  (Mode 0x7)
 	.4byte level_select_init_callback @ sub_08015280 	  (Mode 0x8)
 	.4byte expert_levels_init_callback @ sub_08035388 	  (Mode 0x9)
 	.4byte unknown_0A_init_callback @ sub_08008C34 	          (Mode 0xA)
@@ -55,12 +55,12 @@ gMainStateInitCallbacks:
 	.4byte after_tutorial_init_callback @ sub_08008A9C 	  (Mode 0xC)
 	.4byte level_play_init_callback @ sub_08008B14 	          (Mode 0xD)
 	.4byte level_retry_init_callback @ sub_0802AAE8 	  (Mode 0xE)
-	.4byte 0 @  						  (Mode 0xF)
-	.4byte pause_menu_init_callback @ sub_0801BE34 		  (Mode 0x10)
+	.4byte 0 @  	  (Mode 0xF)
+	.4byte pause_menu_init_callback @ sub_0801BE34 	  (Mode 0x10)
 	.4byte help_init_callback @ sub_0802A4B4 	          (Mode 0x11)
 	.4byte level_retry_init_callback @ sub_0802AAE8 	  (Mode 0x12)
-	.4byte 0 @						  (Mode 0x13)
-	.4byte boss_clear_init_callback @ sub_0801BF14 		  (Mode 0x14)
+	.4byte 0 @	  (Mode 0x13)
+	.4byte boss_clear_init_callback @ sub_0801BF14 	  (Mode 0x14)
 	.4byte level_results_init_callback @ sub_0802935C         (Mode 0x15)
 	.4byte bonus_stoparrow_init_callback @ sub_080215B4       (Mode 0x16)
 	.4byte bonus_swapboxes_init_callback @ sub_08027068       (Mode 0x17)
@@ -78,41 +78,41 @@ gMainStateInitCallbacks:
 
 	.GLOBAL gMainStateMainCallbacks
 gMainStateMainCallbacks:
-	.4byte intro_main @ sub_0801ba88			  (Mode 0x0)
-	.4byte goto_credits_main @ sub_08034820			  (Mode 0x1)
-	.4byte level_demo_main @ sub_080080F8			  (Mode 0x2)
-	.4byte main_menu_main @ sub_080123B8			  (Mode 0x3)
-	.4byte options_main @ sub_08028C08			  (Mode 0x4)
-	.4byte level_demo_main @ sub_080080F8			  (Mode 0x5)
-	.4byte level_demo_main @ sub_080080F8			  (Mode 0x6)
-	.4byte title_main @ sub_0801B64C			  (Mode 0x7)
-	.4byte level_select_main @ sub_08016BEC			  (Mode 0x8)
-	.4byte expert_levels_main @ sub_08035908		  (Mode 0x9)
-	.4byte level_edit_main @ sub_08008CF0			  (Mode 0xA)
-	.4byte level_edit_main @ sub_08008CF0			  (Mode 0xB)
-	.4byte 0 @ 					  	  (Mode 0xC)
-	.4byte level_play_main @ sub_08007B58			  (Mode 0xD)
-	.4byte level_retry_main @ sub_0802ACAC			  (Mode 0xE)
-	.4byte level_play_main @ sub_08007B58			  (Mode 0xF)
-	.4byte pause_menu_main @ sub_0801BE7C			  (Mode 0x10)
-	.4byte help_main @ sub_0802AA28				  (Mode 0x11)
-	.4byte level_retry_main @ sub_0802ACAC			  (Mode 0x12)
-	.4byte 0 @ 					  	  (Mode 0x13)
-	.4byte boss_clear_main @ sub_0801C278			  (Mode 0x14)
-	.4byte level_results_main @ sub_080296A4		  (Mode 0x15)
-	.4byte bonus_stoparrow_main @ sub_08021924		  (Mode 0x16)
-	.4byte bonus_swapboxes_main @ sub_08027900		  (Mode 0x17)
-	.4byte e_world_main @ sub_0802DF50			  (Mode 0x18)
-	.4byte e_world_main @ sub_0802DF50			  (Mode 0x19)
-	.4byte e_card_scan_main @ sub_0802D6DC			  (Mode 0x1A)
-	.4byte e_card_scan_main @ sub_0802D6DC			  (Mode 0x1B)
-	.4byte e_world_debug_main @ sub_0802F1EC		  (Mode 0x1C)
-	.4byte e_world_from_menu_main @ sub_08031EE8		  (Mode 0x1D)
-	.4byte movie_player_main @ sub_0802D208			  (Mode 0x1E)
-	.4byte fade_transition_main @ sub_08029F24		  (Mode 0x1F)
-	.4byte world_start_main @ sub_080374E0			  (Mode 0x20)
-	.4byte level_view_main @ sub_08032210			  (Mode 0x21)
-	.4byte game_init_main @ sub_080324DC			  (Mode 0x22)
+	.4byte intro_main @ sub_0801ba88	  (Mode 0x0)
+	.4byte goto_credits_main @ sub_08034820	  (Mode 0x1)
+	.4byte level_demo_main @ sub_080080F8	  (Mode 0x2)
+	.4byte main_menu_main @ sub_080123B8	  (Mode 0x3)
+	.4byte options_main @ sub_08028C08	  (Mode 0x4)
+	.4byte level_demo_main @ sub_080080F8	  (Mode 0x5)
+	.4byte level_demo_main @ sub_080080F8	  (Mode 0x6)
+	.4byte title_main @ sub_0801B64C	  (Mode 0x7)
+	.4byte level_select_main @ sub_08016BEC	  (Mode 0x8)
+	.4byte expert_levels_main @ sub_08035908	  (Mode 0x9)
+	.4byte level_edit_main @ sub_08008CF0	  (Mode 0xA)
+	.4byte level_edit_main @ sub_08008CF0	  (Mode 0xB)
+	.4byte 0 @ 	  	  (Mode 0xC)
+	.4byte level_play_main @ sub_08007B58	  (Mode 0xD)
+	.4byte level_retry_main @ sub_0802ACAC	  (Mode 0xE)
+	.4byte level_play_main @ sub_08007B58	  (Mode 0xF)
+	.4byte pause_menu_main @ sub_0801BE7C	  (Mode 0x10)
+	.4byte help_main @ sub_0802AA28	  (Mode 0x11)
+	.4byte level_retry_main @ sub_0802ACAC	  (Mode 0x12)
+	.4byte 0 @ 	  	  (Mode 0x13)
+	.4byte boss_clear_main @ sub_0801C278	  (Mode 0x14)
+	.4byte level_results_main @ sub_080296A4	  (Mode 0x15)
+	.4byte bonus_stoparrow_main @ sub_08021924	  (Mode 0x16)
+	.4byte bonus_swapboxes_main @ sub_08027900	  (Mode 0x17)
+	.4byte e_world_main @ sub_0802DF50	  (Mode 0x18)
+	.4byte e_world_main @ sub_0802DF50	  (Mode 0x19)
+	.4byte e_card_scan_main @ sub_0802D6DC	  (Mode 0x1A)
+	.4byte e_card_scan_main @ sub_0802D6DC	  (Mode 0x1B)
+	.4byte e_world_debug_main @ sub_0802F1EC	  (Mode 0x1C)
+	.4byte e_world_from_menu_main @ sub_08031EE8	  (Mode 0x1D)
+	.4byte movie_player_main @ sub_0802D208	  (Mode 0x1E)
+	.4byte fade_transition_main @ sub_08029F24	  (Mode 0x1F)
+	.4byte world_start_main @ sub_080374E0	  (Mode 0x20)
+	.4byte level_view_main @ sub_08032210	  (Mode 0x21)
+	.4byte game_init_main @ sub_080324DC	  (Mode 0x22)
 
 	.GLOBAL gMainStateLoopCallbacks
 gMainStateLoopCallbacks:
@@ -328,7 +328,7 @@ gPlusLevelDefaultHighScores:
 	.2byte 21000
 	.2byte 22000
 	.2byte 20000
-		
+	
 @ World 5 Plus Scores
 	.2byte 19000
 	.2byte 22000
@@ -874,7 +874,7 @@ gUnknown_08079D4C:
 	.4byte 0x03C03440
 	.4byte 0x00000000
 	.4byte 0x04C04C18
-		
+	
 	.GLOBAL gUnknown_08079D68
 gUnknown_08079D68:
 	.4byte 0x00000003
@@ -883,7 +883,7 @@ gUnknown_08079D68:
 	.4byte 0x00000000
 	.4byte 0x03C03440
 	.4byte 0x00000000
-	.4byte 0x04C04C18		
+	.4byte 0x04C04C18	
 	
 	.GLOBAL gUnknown_08079D84
 gUnknown_08079D84:
@@ -927,7 +927,7 @@ gHelpScreenBaseSpriteLayout:
 	.4byte 0x00000000 @ Unknown
 	.2byte 0 @ X position
 	.2byte 64 @ Y position
-		
+	
 	.4byte 0x08079DB0 @ Sprite pointer
 	.4byte 0x00000000 @ Unknown
 	.2byte 0 @ X position
@@ -952,7 +952,7 @@ gHelpScreenBaseSpriteLayout:
 	.4byte 0x00000001 @ Unknown
 	.2byte 16 @ X position
 	.2byte 0 @ Y position
-		
+	
 	.4byte 0x08079DE0 @ Sprite pointer
 	.4byte 0x00000002 @ Unknown
 	.2byte 48 @ X position
@@ -962,27 +962,27 @@ gHelpScreenBaseSpriteLayout:
 	.4byte 0x00000002 @ Unknown
 	.2byte 80 @ X position
 	.2byte 0 @ Y position
-		
+	
 	.4byte 0x08079DE0 @ Sprite pointer
 	.4byte 0x00000002 @ Unknown
 	.2byte 112 @ X position
 	.2byte 0 @ Y position
-			
+	
 	.4byte 0x08079DE0 @ Sprite pointer
 	.4byte 0x00000002 @ Unknown
 	.2byte 144 @ X position
 	.2byte 0 @ Y position
-				
+	
 	.4byte 0x08079DE0 @ Sprite pointer
 	.4byte 0x00000002 @ Unknown
 	.2byte 176 @ X position
 	.2byte 0 @ Y position
-					
+	
 	.4byte 0x08079DF8 @ Sprite pointer
 	.4byte 0x00000003 @ Unknown
 	.2byte 208 @ X position
 	.2byte 0 @ Y position
-						
+	
 	.4byte 0x08079E10 @ Sprite pointer
 	.4byte 0x00000004 @ Unknown
 	.2byte 16 @ X position
@@ -997,22 +997,22 @@ gHelpScreenBaseSpriteLayout:
 	.4byte 0x00000009 @ Unknown
 	.2byte 80 @ X position
 	.2byte 32 @ Y position
-		
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 112 @ X position
 	.2byte 32 @ Y position
-			
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 144 @ X position
 	.2byte 32 @ Y position
-				
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 176 @ X position
 	.2byte 32 @ Y position
-					
+	
 	.4byte 0x08079E28 @ Sprite pointer
 	.4byte 0x00000005 @ Unknown
 	.2byte 208 @ X position
@@ -1032,27 +1032,27 @@ gHelpScreenBaseSpriteLayout:
 	.4byte 0x00000009 @ Unknown
 	.2byte 80 @ X position
 	.2byte 64 @ Y position
-		
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 112 @ X position
 	.2byte 64 @ Y position
-			
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 144 @ X position
 	.2byte 64 @ Y position
-				
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 176 @ X position
 	.2byte 64 @ Y position
-					
+	
 	.4byte 0x08079E28 @ Sprite pointer
 	.4byte 0x00000005 @ Unknown
 	.2byte 208 @ X position
 	.2byte 64 @ Y position
-		
+	
 	.4byte 0x08079E10 @ Sprite pointer
 	.4byte 0x00000004 @ Unknown
 	.2byte 16 @ X position
@@ -1067,32 +1067,32 @@ gHelpScreenBaseSpriteLayout:
 	.4byte 0x00000009 @ Unknown
 	.2byte 80 @ X position
 	.2byte 96 @ Y position
-		
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 112 @ X position
 	.2byte 96 @ Y position
-			
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 144 @ X position
 	.2byte 96 @ Y position
-				
+	
 	.4byte 0x08079E88 @ Sprite pointer
 	.4byte 0x00000009 @ Unknown
 	.2byte 176 @ X position
 	.2byte 96 @ Y position
-					
+	
 	.4byte 0x08079E28 @ Sprite pointer
 	.4byte 0x00000005 @ Unknown
 	.2byte 208 @ X position
 	.2byte 96 @ Y position
-							
+	
 	.4byte 0x08079EB8 @ Sprite pointer
 	.4byte 0x0000000B @ Unknown
 	.2byte 100 @ X position
 	.2byte 144 @ Y position
-							
+	
 	.4byte 0x08079E40 @ Sprite pointer
 	.4byte 0x00000006 @ Unknown
 	.2byte 16 @ X position
@@ -1336,7 +1336,7 @@ gUnknown_0807C850:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x14000101
-		
+	
 	.4byte 0x00000000
 	.4byte gTextThemeCardDeactivated
 	.4byte 0x00000001
@@ -4198,7 +4198,7 @@ gUnknown_08663C88:
 	.4byte 0x00000000
 	.4byte sub_0806369C
 	.4byte sub_08063860
-		
+	
 	.4byte gUnknown_03001C50
 	.4byte 0x08167938
 	.4byte 0x0816795C
@@ -4312,7 +4312,7 @@ gUnknown_08663C88:
 	.4byte 0x00000000
 	.4byte sub_0806369C
 	.4byte sub_08062B94
-		
+	
 	.4byte gUnknown_03001C50
 	.4byte 0x0813A120
 	.4byte 0x0813A168
@@ -4331,7 +4331,7 @@ gUnknown_08663C88:
 	.4byte 0x00000000
 	.4byte sub_0806369C
 	.4byte sub_08062C48
-			
+	
 	.4byte gUnknown_03001C50
 	.4byte 0x0813B170
 	.4byte 0x0813B3B0
@@ -4350,7 +4350,7 @@ gUnknown_08663C88:
 	.4byte 0x00000000
 	.4byte sub_0806369C
 	.4byte sub_08062C48
-				
+	
 	.4byte gUnknown_03001C50
 	.4byte 0x08224190
 	.4byte 0x08224514
@@ -4369,7 +4369,7 @@ gUnknown_08663C88:
 	.4byte 0x00000000
 	.4byte sub_0806369C
 	.4byte sub_08062C48
-					
+	
 	.4byte gUnknown_03001C50
 	.4byte 0x08227D1C
 	.4byte 0x08227D40
@@ -4388,7 +4388,7 @@ gUnknown_08663C88:
 	.4byte 0x00000000
 	.4byte sub_0806369C
 	.4byte sub_08062C48
-						
+	
 	.4byte gUnknown_03001C50
 	.4byte 0x08228D48
 	.4byte 0x08228ED4
@@ -6108,25 +6108,25 @@ gLevel6MMTutorial:
 	.GLOBAL gLevel11Plus
 gLevel11Plus:
 	.INCBIN "assets/level/level_data/world_one_plus/1_1_plus.bin"
-		
+	
 	.GLOBAL gLevelExpert1
 gLevelExpert1:
 	.INCBIN "assets/level/level_data/expert/expert_1.bin"
-		
-		
+	
+	
 	.GLOBAL gLevel12Plus
 gLevel12Plus:
 	.INCBIN "assets/level/level_data/world_one_plus/1_2_plus.bin"
-		
+	
 	.GLOBAL gLevelExpert7
 gLevelExpert7:
 	.INCBIN "assets/level/level_data/expert/expert_7.bin"
-		
-				
+	
+	
 	.GLOBAL gLevel13Plus
 gLevel13Plus:
 	.INCBIN "assets/level/level_data/world_one_plus/1_3_plus.bin"
-		
+	
 	.GLOBAL gLevelUnusedRevenge
 gLevelUnusedRevenge:
 	.INCBIN "assets/level/level_data/world_one_plus/1_unused_revenge.bin"
@@ -6135,7 +6135,7 @@ gLevelUnusedRevenge:
 	.GLOBAL gLevel14Plus
 gLevel14Plus:
 	.INCBIN "assets/level/level_data/world_one_plus/1_4_plus.bin"
-		
+	
 	.GLOBAL gLevelUnusedTheLongWay
 gLevelUnusedTheLongWay:
 	.INCBIN "assets/level/level_data/world_one_plus/1_unused_the_long_way.bin"	
@@ -6144,7 +6144,7 @@ gLevelUnusedTheLongWay:
 	.GLOBAL gLevel15Plus
 gLevel15Plus:
 	.INCBIN "assets/level/level_data/world_one_plus/1_5_plus.bin"
-		
+	
 	.GLOBAL gLevelUnused1
 gLevelUnused1:
 	.INCBIN "assets/level/level_data/world_one_plus/1_unused_1.bin"	
@@ -6153,16 +6153,16 @@ gLevelUnused1:
 	.GLOBAL gLevel16Plus
 gLevel16Plus:
 	.INCBIN "assets/level/level_data/world_one_plus/1_6_plus.bin"
-		
+	
 	.GLOBAL gLevelUnused2
 gLevelUnused2:
 	.INCBIN "assets/level/level_data/world_one_plus/1_unused_2.bin"
-		
+	
 
 	.GLOBAL gLevel1DKPlus
 gLevel1DKPlus:
 	.INCBIN "assets/level/level_data/world_one_plus/1_DK_plus.bin"
-		
+	
 	.GLOBAL gLevelUnusedDK1
 gLevelUnusedDK1:
 	.INCBIN "assets/level/level_data/world_one_plus/1_unused_DK.bin"
@@ -6172,61 +6172,61 @@ gLevelUnusedDK1:
 	.GLOBAL gLevel21Plus
 gLevel21Plus:
 	.INCBIN "assets/level/level_data/world_two_plus/2_1_plus.bin"
-		
+	
 	.GLOBAL gLevelExpert2
 gLevelExpert2:
 	.INCBIN "assets/level/level_data/expert/expert_2.bin"
-		
-		
+	
+	
 	.GLOBAL gLevel22Plus
 gLevel22Plus:
 	.INCBIN "assets/level/level_data/world_two_plus/2_2_plus.bin"
-		
+	
 	.GLOBAL gLevelExpert8
 gLevelExpert8:
 	.INCBIN "assets/level/level_data/expert/expert_8.bin"
-		
-				
+	
+	
 	.GLOBAL gLevel23Plus
 gLevel23Plus:
 	.INCBIN "assets/level/level_data/world_two_plus/2_3_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedOneShotBlue
 gLevelUnusedOneShotBlue:
 	.INCBIN "assets/level/level_data/world_two_plus/2_unused_one_shot_blue.bin"
-										
-										
+	
+	
 	.GLOBAL gLevel24Plus 
 gLevel24Plus: 
 	.INCBIN "assets/level/level_data/world_two_plus/2_4_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedEggAttack
 gLevelUnusedEggAttack:
 	.INCBIN "assets/level/level_data/world_two_plus/2_unused_egg_attack.bin"	
-										
-										
+	
+	
 	.GLOBAL gLevel25Plus 
 gLevel25Plus: 
 	.INCBIN "assets/level/level_data/world_two_plus/2_5_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedDangerFlowersW2
 gLevelUnusedDangerFlowersW2:
 	.INCBIN "assets/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin"	
-										
-										
+	
+	
 	.GLOBAL gLevel26Plus 
 gLevel26Plus: 
 	.INCBIN "assets/level/level_data/world_two_plus/2_6_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedLaterGator
 gLevelUnusedLaterGator:
 	.INCBIN "assets/level/level_data/world_two_plus/2_unused_later_gator.bin"
-										
-										
+	
+	
 	.GLOBAL gLevel2DKPlus
 gLevel2DKPlus:
 	.INCBIN "assets/level/level_data/world_two_plus/2_DK_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedDK2
 gLevelUnusedDK2:
 	.INCBIN "assets/level/level_data/world_two_plus/2_unused_DK.bin"	
@@ -6290,7 +6290,7 @@ gLevelUnused5:
 	.GLOBAL gLevel3DKPlus
 gLevel3DKPlus:
 	.INCBIN "assets/level/level_data/world_three_plus/3_DK_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedDK3
 gLevelUnusedDK3:
 	.INCBIN "assets/level/level_data/world_three_plus/3_unused_DK.bin"	
@@ -6354,7 +6354,7 @@ gLevelUnused6:
 	.GLOBAL gLevel4DKPlus
 gLevel4DKPlus:
 	.INCBIN "assets/level/level_data/world_four_plus/4_DK_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedDK4
 gLevelUnusedDK4:
 	.INCBIN "assets/level/level_data/world_four_plus/4_unused_DK.bin"	
@@ -6418,7 +6418,7 @@ gLevelUnused7:
 	.GLOBAL gLevel5DKPlus
 gLevel5DKPlus:
 	.INCBIN "assets/level/level_data/world_five_plus/5_DK_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedDK5
 gLevelUnusedDK5:
 	.INCBIN "assets/level/level_data/world_five_plus/5_unused_DK.bin"	
@@ -6482,11 +6482,11 @@ gLevelUnusedClimbAndFall2:
 	.GLOBAL gLevel6DKPlus
 gLevel6DKPlus:
 	.INCBIN "assets/level/level_data/world_six_plus/6_DK_plus.bin"
-										
+	
 	.GLOBAL gLevelUnusedDK6
 gLevelUnusedDK6:
 	.INCBIN "assets/level/level_data/world_six_plus/6_unused_DK.bin"	
-		
+	
 @ Boss Levels
 
 	.GLOBAL gLevelDKBoss
@@ -6532,7 +6532,7 @@ g11TutorialDemo:
 	.GLOBAL g12TutorialDemo
 g12TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_one/1_2_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g13TutorialDemo
 g13TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_one/1_3_tutorial_inputs.bin"
@@ -6540,7 +6540,7 @@ g13TutorialDemo:
 	.GLOBAL g14TutorialDemo
 g14TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_one/1_4_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g15TutorialDemo
 g15TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_one/1_5_tutorial_inputs.bin"
@@ -6562,7 +6562,7 @@ g21TutorialDemo:
 	.GLOBAL g22TutorialDemo
 g22TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_two/2_2_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g23TutorialDemo
 g23TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_two/2_3_tutorial_inputs.bin"
@@ -6570,7 +6570,7 @@ g23TutorialDemo:
 	.GLOBAL g24TutorialDemo
 g24TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_two/2_4_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g25TutorialDemo
 g25TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_two/2_5_tutorial_inputs.bin"
@@ -6592,7 +6592,7 @@ g31TutorialDemo:
 	.GLOBAL g32TutorialDemo
 g32TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_three/3_2_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g33TutorialDemo
 g33TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_three/3_3_tutorial_inputs.bin"
@@ -6600,7 +6600,7 @@ g33TutorialDemo:
 	.GLOBAL g34TutorialDemo
 g34TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_three/3_4_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g35TutorialDemo
 g35TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_three/3_5_tutorial_inputs.bin"
@@ -6622,7 +6622,7 @@ g41TutorialDemo:
 	.GLOBAL g42TutorialDemo
 g42TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_four/4_2_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g43TutorialDemo
 g43TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_four/4_3_tutorial_inputs.bin"
@@ -6630,7 +6630,7 @@ g43TutorialDemo:
 	.GLOBAL g44TutorialDemo
 g44TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_four/4_4_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g45TutorialDemo
 g45TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_four/4_5_tutorial_inputs.bin"
@@ -6652,7 +6652,7 @@ g51TutorialDemo:
 	.GLOBAL g52TutorialDemo
 g52TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_five/5_2_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g53TutorialDemo
 g53TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_five/5_3_tutorial_inputs.bin"
@@ -6660,7 +6660,7 @@ g53TutorialDemo:
 	.GLOBAL g54TutorialDemo
 g54TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_five/5_4_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g55TutorialDemo
 g55TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_five/5_5_tutorial_inputs.bin"
@@ -6690,7 +6690,7 @@ g63TutorialDemo:
 	.GLOBAL g64TutorialDemo
 g64TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_six/6_4_tutorial_inputs.bin"
-		
+	
 	.GLOBAL g65TutorialDemo
 g65TutorialDemo:
 	.INCBIN "assets/demo_inputs/tutorial/world_six/6_5_tutorial_inputs.bin"
@@ -6820,7 +6820,7 @@ gWorldOneTable:
 	.byte 2 @ Level Type (Unused)
 	.4byte 0x000000C0 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
-		
+	
 
 	.4byte gWorldOneMiniMarioBG @ Background Data
 	.4byte gLevel1MM @ Level Data
@@ -6940,7 +6940,7 @@ gWorldTwoTable:
 	.byte 2 @ Level Type (Unused)
 	.4byte 0x000000C2 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
-		
+	
 
 	.4byte gWorldTwoMiniMarioBG @ Background Data
 	.4byte gLevel2MM @ Level Data
@@ -7060,7 +7060,7 @@ gWorldThreeTable:
 	.byte 2 @ Level Type (Unused)
 	.4byte 0x000000C2 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
-		
+	
 
 	.4byte gWorldThreeMiniMarioBG @ Background Data
 	.4byte gLevel3MM @ Level Data
@@ -7180,7 +7180,7 @@ gWorldFourTable:
 	.byte 1 @ Level Type (Unused)
 	.4byte 0x000000C1 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
-		
+	
 
 	.4byte gWorldFourMiniMarioBG @ Background Data
 	.4byte gLevel4MM @ Level Data
@@ -7300,7 +7300,7 @@ gWorldFiveTable:
 	.byte 1 @ Level Type (Unused)
 	.4byte 0x00000081 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
-		
+	
 
 	.4byte gWorldFiveMiniMarioBG @ Background Data
 	.4byte gLevel5MM @ Level Data
@@ -7367,7 +7367,7 @@ gWorldSixTable:
 	.byte 1 @ Level Type (Unused)
 	.4byte 0x000000C4 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
-		
+	
 	.4byte gWorldSixHorizontalBG @ Background Data
 	.4byte gLevel64A @ Level Data
 	.2byte 150 @ Timer
@@ -7491,7 +7491,7 @@ gWorldOnePlusTable:
 	.byte 2 @ Level Type (Unused)
 	.4byte 0x000000E1 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
-		
+	
 	.4byte gWorldOnePlusHorizontalBG @ Background Data
 	.4byte gLevel15Plus @ Level Data
 	.2byte 150 @ Timer
@@ -8563,47 +8563,76 @@ gUnknown_08B2D578:
 
 	.GLOBAL gUnknown_08B2DC74
 gUnknown_08B2DC74:
-	.INCBIN "baserom.gba", 0xB2DC74, 0xB2F070-0xB2DC74
+	.INCBIN "baserom.gba", 0xB2DC74, 0xB2DEBC-0xB2DC74
+	
+	.GLOBAL gUnknown_08B2DEBC
+gUnknown_08B2DEBC:
+	.INCBIN "baserom.gba", 0xB2DEBC, 0xB2E90C-0xB2DEBC
+	
+	.GLOBAL gUnknown_08B2E90C
+gUnknown_08B2E90C:
+	.4byte 0x00000001
+	.4byte 0x08B2E8D8 @ Movie Data -- Early Opening Cutscene
+	.INCBIN "baserom.gba", 0xb2e914, 0xB2F070-0xb2e914
 
 	.GLOBAL gUnknown_08B2F070
 gUnknown_08B2F070:
-	.INCBIN "baserom.gba", 0xB2F070, 0xB2F5B8-0xB2F070
+	.4byte 0x00000001
+	.4byte 0x08B2F03C @ Movie Data -- Movie ID 6
+	.INCBIN "baserom.gba", 0xb2f078, 0xB2F5B8-0xb2f078
 
 	.GLOBAL gUnknown_08B2F5B8
 gUnknown_08B2F5B8:
-	.INCBIN "baserom.gba", 0xB2F5B8, 0xB2FFDC-0xB2F5B8
+	.4byte 0x00000001
+	.4byte 0x08B2F584 @ Movie Data -- Movie ID 5
+	.INCBIN "baserom.gba", 0xb2f5c0, 0xB2FFDC-0xb2f5c0
 
 	.GLOBAL gUnknown_08B2FFDC
 gUnknown_08B2FFDC:
-	.INCBIN "baserom.gba", 0xB2FFDC, 0xB30768-0xB2FFDC
+	.4byte 0x00000001
+	.4byte 0x08B2FFA8 @ Movie Data -- Movie ID 2
+	.INCBIN "baserom.gba", 0xb2ffe4, 0xB30768-0xb2ffe4
 
 	.GLOBAL gUnknown_08B30768
 gUnknown_08B30768:
-	.INCBIN "baserom.gba", 0xB30768, 0xB30F94-0xB30768
+	.4byte 0x00000001
+	.4byte 0x08B30734 @ Movie Data -- Movie ID 4
+	.INCBIN "baserom.gba", 0xb30770, 0xB30F94-0xb30770
 
 	.GLOBAL gUnknown_08B30F94
 gUnknown_08B30F94:
-	.INCBIN "baserom.gba", 0xB30F94, 0xB32118-0xB30F94
+	.4byte 0x00000001
+	.4byte 0x08B30F60 @ Movie Data -- Movie ID 1
+	.INCBIN "baserom.gba", 0xb30f9c, 0xB32118-0xb30f9c
 
 	.GLOBAL gUnknown_08B32118
 gUnknown_08B32118:
-	.INCBIN "baserom.gba", 0xB32118, 0xB35FC0-0xB32118
+	.4byte 0x00000001
+	.4byte 0x08B320E4 @ Movie Data -- Movie ID 0
+	.INCBIN "baserom.gba", 0xb32120, 0xB35FC0-0xb32120
 
 	.GLOBAL gUnknown_08B35FC0
 gUnknown_08B35FC0:
-	.INCBIN "baserom.gba", 0xB35FC0, 0xB37168-0xB35FC0
+	.4byte 0x00000001
+	.4byte 0x08B35F8C @ Movie Data -- Movie ID 7
+	.INCBIN "baserom.gba", 0xb35fc8, 0xB37168-0xb35fc8
 
 	.GLOBAL gUnknown_08B37168
 gUnknown_08B37168:
-	.INCBIN "baserom.gba", 0xB37168, 0xB3732C-0xB37168
+	.4byte 0x00000001
+	.4byte 0x08B37134 @ Movie Data -- Movie ID 3
+	.INCBIN "baserom.gba", 0xb37170, 0xB3732C-0xb37170
 
 	.GLOBAL gUnknown_08B3732C
 gUnknown_08B3732C:
-	.INCBIN "baserom.gba", 0xB3732C, 0xB37424-0xB3732C
+	.4byte 0x00000001
+	.4byte 0x08B372F8 @ Movie Data -- Movie ID 8
+	.INCBIN "baserom.gba", 0xb37334, 0xB37424-0xb37334
 
-	.GLOBAL gUnknown_08B37424
-gUnknown_08B37424:
-	.INCBIN "baserom.gba", 0xB37424, 0xB3742C-0xB37424
+	.GLOBAL gMovieUnusedPlusWorldsUnlocked
+gMovieUnusedPlusWorldsUnlocked:
+	.4byte 0x00000001
+	.4byte 0x08B373F0 @ Movie Data -- Unused Plus Worlds Unlocked Screen
 	
 	.GLOBAL gCardEDataRevenge
 gCardEDataRevenge:
@@ -8752,7 +8781,8 @@ gUnknown_08B3A4AC:
 
 	.GLOBAL gUnknown_08B3A4DC
 gUnknown_08B3A4DC:
-	.INCBIN "baserom.gba", 0xB3A4DC, 0xB3A4E0-0xB3A4DC
+	.2byte 0x00FA
+	.2byte 0x0000
 
 	.GLOBAL gUnknown_08B3A4E0
 gUnknown_08B3A4E0:
@@ -8760,15 +8790,647 @@ gUnknown_08B3A4E0:
 
 	.GLOBAL gUnknown_08D7B10C
 gUnknown_08D7B10C:
-	.INCBIN "baserom.gba", 0xD7B10C, 0xD7B110-0xD7B10C
+	.2byte 0x0046
+	.2byte 0x0000
 
-	.GLOBAL gUnknown_08D7B110
-gUnknown_08D7B110:
-	.INCBIN "baserom.gba", 0xD7B110, 0xD7B116-0xD7B110
+	.GLOBAL gMusicTable1
+gMusicTable1:
+	.4byte BGM_1AXM
+	.2byte 0x0064 @ Volume
 
-	.GLOBAL gUnknown_08D7B116
-gUnknown_08D7B116:
-	.INCBIN "baserom.gba", 0xD7B116, 0xEBFE90-0xD7B116
+	.GLOBAL gMusicTable2
+gMusicTable2:
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte HAMMERXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte WINXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte FAIL_1XM
+	.2byte 0x0050 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte FAIL_2XM
+	.2byte 0x0050 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte FAIL_3XM
+	.2byte 0x0050 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte TIMEXM
+	.2byte 0x006E @ Volume
+	.byte 0x04
+	.byte 0x08
+	.byte 0x07
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte INTRO_2XM
+	.2byte 0x005A @ Volume
+	.byte 0x05
+	.byte 0x07
+	.byte 0x02
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_1CXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_1BXM
+	.2byte 0x0064 @ Volume
+	.byte 0x04
+	.byte 0x04
+	.byte 0x04
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte TITLEXM
+	.2byte 0x0050 @ Volume
+	.byte 0x02
+	.byte 0x07
+	.byte 0x04
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte RESULTSXM
+	.2byte 0x004B @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_MM1XM
+	.2byte 0x0064 @ Volume
+	.byte 0x06
+	.byte 0x04
+	.byte 0x05
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BOSS1XM
+	.2byte 0x0078 @ Volume
+	.byte 0x05
+	.byte 0x05
+	.byte 0x05
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MM_PROTECTXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte GAMEOVERXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte INTRO_1XM
+	.2byte 0x005A @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte INTRO_3XM
+	.2byte 0x005A @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_2AXM
+	.2byte 0x0064 @ Volume
+	.byte 0x06
+	.byte 0x03
+	.byte 0x04
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_2BXM
+	.2byte 0x0064 @ Volume
+	.byte 0x07
+	.byte 0x06
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_2CXM
+	.2byte 0x0064 @ Volume
+	.byte 0x04
+	.byte 0x03
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00	
+	
+	.4byte WIN2XM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00	
+	
+	.4byte WIN3XM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MOVIEXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_5AXM
+	.2byte 0x008C @ Volume
+	.byte 0x05
+	.byte 0x05
+	.byte 0x05
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_5BXM
+	.2byte 0x008C @ Volume
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_5CXM
+	.2byte 0x008C @ Volume
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_4AXM
+	.2byte 0x0078 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_4BXM
+	.2byte 0x0082 @ Volume
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+
+	.4byte BGM_4CXM
+	.2byte 0x0078 @ Volume
+	.byte 0x05
+	.byte 0x05
+	.byte 0x05
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK01XM
+	.2byte 0x00AA @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK02XM
+	.2byte 0x0096 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BGM_MM_INTROXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK03XM
+	.2byte 0x008C @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK04XM
+	.2byte 0x00AA @ Volume
+	.byte 0x02
+	.byte 0x02
+	.byte 0x02
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK05XM
+	.2byte 0x00B4 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK06XM
+	.2byte 0x00B4 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK07XM
+	.2byte 0x00B4 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK08XM
+	.2byte 0x00B4 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK_BOSS01XM
+	.2byte 0x0082 @ Volume
+	.byte 0x04
+	.byte 0x05
+	.byte 0x05
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BOSS2XM
+	.2byte 0x008C @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MOVIE2XM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MINIGAMEXM
+	.2byte 0x0064 @ Volume
+	.byte 0x04
+	.byte 0x04
+	.byte 0x04
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MOVIE3XM
+	.2byte 0x00A0 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MOVIE4XM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MOVIE5XM
+	.2byte 0x00A0 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MOVIE6XM
+	.2byte 0x0082 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte CREDITSXM
+	.2byte 0x0082 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_1XM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_2XM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_3XM
+	.2byte 0x0096 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_4XM
+	.2byte 0x0078 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_5XM
+	.2byte 0x008C @ Volume
+	.byte 0x05
+	.byte 0x05
+	.byte 0x05
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_6XM
+	.2byte 0x00BE @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_7XM
+	.2byte 0x0064 @ Volume
+	.byte 0x02
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_8XM
+	.2byte 0x0064 @ Volume
+	.byte 0x06
+	.byte 0x03
+	.byte 0x04
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_9XM
+	.2byte 0x00B4 @ Volume
+	.byte 0x02
+	.byte 0x02
+	.byte 0x02
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_10XM
+	.2byte 0x0082 @ Volume
+	.byte 0x05
+	.byte 0x05
+	.byte 0x05
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte EXPERT_11XM
+	.2byte 0x00A0 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x0
+	
+	.4byte EXPERT_12XM
+	.2byte 0x00BE @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte INTRO_FINALBOSSXM
+	.2byte 0x006E @ Volume
+	.byte 0x06
+	.byte 0x02
+	.byte 0x05
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MIDCREDITSXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte MIDBOSS_ENDXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte FAIL_4XM
+	.2byte 0x0050 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte INTRO_FINALBOSS2XM
+	.2byte 0x006E @ Volume
+	.byte 0x06
+	.byte 0x02
+	.byte 0x05
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte WIN_FINALBOSSXM
+	.2byte 0x008C @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte BOSS3XM
+	.2byte 0x0069 @ Volume
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte DK_BOSS02XM
+	.2byte 0x00C8 @ Volume
+	.byte 0x05
+	.byte 0x05
+	.byte 0x05
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte INTRO_MINIGAMEXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.4byte OUTRO_MINIGAMEXM
+	.2byte 0x0064 @ Volume
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
+	.GLOBAL gUnknown_08D7B458
+gUnknown_08D7B458:
+	.INCBIN "baserom.gba", 0xd7b458, 0xEBFE90-0xd7b458
 
 	.GLOBAL gUnknown_08EBFE90
 gUnknown_08EBFE90:
