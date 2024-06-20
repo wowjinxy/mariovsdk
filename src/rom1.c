@@ -5,7 +5,7 @@
 
 void sub_08007154(void)
 {
-    gNextMainState = gUnknown_030009CC;
+    gNextMainState = gNextStateFromFade;
     gUnknown_03000024 = 1;
 }
 

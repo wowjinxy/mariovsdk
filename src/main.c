@@ -156,7 +156,7 @@ void change_main_state(s32 mainState, s32 useFadeFlag)
         }
         else
         {
-            gUnknown_030009CC = mainState;
+            gNextStateFromFade = mainState;
             gPreviousMainState = gNextMainState;
             gNextMainState = MAIN_STATE_FADETRANSITION;
         }

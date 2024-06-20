@@ -2,11 +2,20 @@
 
 	@ What is this first part? Seems unreferenced.
 
-	.INCBIN "baserom.gba", 0x76360, 0x76368-0x76360
+	.4byte 0x40400030
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_08076368
 gUnknown_08076368:
-	.INCBIN "baserom.gba", 0x76368, 0x76387-0x76368
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.2byte 0x0101
+	.byte 0x01
 
 	.GLOBAL gUnknown_08076387
 gUnknown_08076387:
@@ -17,11 +26,25 @@ gUnknown_08076387:
 
 	.GLOBAL gUnknown_0807638C
 gUnknown_0807638C:
-	.INCBIN "baserom.gba", 0x7638C, 0x763AC-0x7638C
+	.4byte 0x8E5E2EFE
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_080763AC
 gUnknown_080763AC:
-	.INCBIN "baserom.gba", 0x763AC, 0x763CC-0x763AC
+	.4byte 0x007A4108
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_080763CC
 gUnknown_080763CC:
@@ -98,32 +121,108 @@ gUnknown_080763FC:
 	.4byte 0x0000000D
 	.4byte 0x00000002
 
-	.GLOBAL gUnknown_08076404
-gUnknown_08076404:
+	.GLOBAL gTextNo
+gTextNo:
 	.ASCII "No\0\0"	
+	
+	.GLOBAL gTextYes
+gTextYes:
 	.ASCII "Yes\0"
+	
+	.GLOBAL gTextThemeCardAlreadyLoadedOverwrite
+gTextThemeCardAlreadyLoadedOverwrite:
 	.ASCII "Theme Card already loaded!\n\nOverwrite existing theme?\0\0\0"
+	
+	.GLOBAL gTextThemeCardDeactivated
+gTextThemeCardDeactivated:
 	.ASCII "Theme Card\nDEACTIVATED!\0"
+	
+	.GLOBAL gTextPressAToContinue2
+gTextPressAToContinue2:
 	.ASCII "Press A to continue\0"
+	
+	.GLOBAL gTextThemeCardActivated
+gTextThemeCardActivated:
 	.ASCII "Theme Card\nACTIVATED!\0\0\0"
+	
+	.GLOBAL gTextEraseOldWorld
+gTextEraseOldWorld:
 	.ASCII "Erase old world\0"
+	
+	.GLOBAL gTextLevelDoesNotBelongToCurrentWorld
+gTextLevelDoesNotBelongToCurrentWorld:
 	.ASCII "Level does not belong\nto current world!\0"
+	
+	.GLOBAL gTextOverwrite
+gTextOverwrite:
 	.ASCII "Overwrite\0\0\0"
+	
+	.GLOBAL gTextLevelAlreadyExists
+gTextLevelAlreadyExists:
 	.ASCII "Level already exists!\0\0\0"
+	
+	.GLOBAL gTextConnectionLost
+gTextConnectionLost:
 	.ASCII "Connection lost!\0\0\0\0"
+	
+	.GLOBAL gTextTimeOut
+gTextTimeOut:
 	.ASCII "Time out!\0\0\0"
+	
+	.GLOBAL gTextCancel
+gTextCancel:
 	.ASCII "Cancel\0\0"	
+	
+	.GLOBAL gTextRetry
+gTextRetry:
 	.ASCII "Retry\0\0\0"
-	.ASCII "CRC check failed!\0\0\0\0\0\0\0"
+	
+	.GLOBAL gTextCRCCheckFailed
+gTextCRCCheckFailed:
+	.ASCII "CRC check failed!\0\0\0"
+	
+	.GLOBAL gTextBlank
+gTextBlank:
+	.ASCII "\0\0\0\0"
+	
+	.GLOBAL gTextSavingLevelAs
+gTextSavingLevelAs:
 	.ASCII "Saving Level as\0"
+	
+	.GLOBAL gTextErasingLevels
+gTextErasingLevels:
 	.ASCII "Erasing levels\0\0"
+	
+	.GLOBAL gTextAddingLevel
+gTextAddingLevel:
 	.ASCII "Adding level\0\0\0\0"
+	
+	.GLOBAL gTextError
+gTextError:
 	.ASCII "ERROR\0\0\0"
+	
+	.GLOBAL gTextRecivedLevelAlreadyExists
+gTextRecivedLevelAlreadyExists:
 	.ASCII "Mario vs. Donkey Kong-e card\nRECEIVED!\n\nBut Level Already Exists as\0"
+	
+	.GLOBAL gTextRecivedNewLevel
+gTextRecivedNewLevel:
 	.ASCII "Mario vs. Donkey Kong-e card\nRECEIVED!\n\nNew level received:\0"
+
+	.GLOBAL gTextRecivingECard
+gTextRecivingECard:
 	.ASCII "RECEIVING\nMario vs. Donkey Kong-e card...\0\0\0"
+	
+	.GLOBAL gTextECardDetected
+gTextECardDetected:
 	.ASCII "Mario vs. Donkey Kong-e card\nDETECTED!!\n\n\0\0\0"
+	
+	.GLOBAL gTextWaitingForECard
+gTextWaitingForECard:
 	.ASCII "WAITING FOR\nMario vs. Donkey Kong-e card...\0"
+	
+	.GLOBAL gTextPleaseConnectEReader
+gTextPleaseConnectEReader:
 	.ASCII "Please connect to GBA with\nan e-Reader and scan a\nMario vs. Donkey Kong-e card\ninto it.\n\0\0\0\0"
 
 	.GLOBAL gTextPressAToRetry
@@ -241,7 +340,8 @@ gTextPressBToReturn:
 
 	.GLOBAL gUnknown_080769B0
 gUnknown_080769B0:
-	.INCBIN "baserom.gba", 0x769B0, 0x769B8-0x769B0
+	.4byte 0x0000001A
+	.4byte 0x0000001B
 
 	.GLOBAL gUnknown_080769B8
 gUnknown_080769B8:
@@ -269,7 +369,7 @@ gTextErrorFlashNotDetected:
 
 	.GLOBAL gUnknown_08076AD8
 gUnknown_08076AD8:
-	.INCBIN "baserom.gba", 0x76AD8, 0x76D58-0x76AD8
+	.INCBIN "assets/gUnknown_08076AD8.bin"
 
 	.GLOBAL gUnknown_08076D58
 gUnknown_08076D58:

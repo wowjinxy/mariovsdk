@@ -45,7 +45,7 @@ _0803863E:
 	ldrsb r0, [r6, r0]
 	cmp r0, #4
 	bne _08038664
-	ldr r6, _08038660  @ =gUnknown_080B5174
+	ldr r6, _08038660  @ =gBossOneSpriteTableData
 	b _08038680
 	.byte 0x00
 	.byte 0x00
@@ -56,14 +56,14 @@ _08038658:
 _0803865C:
 	.4byte gUnknown_03000924
 _08038660:
-	.4byte gUnknown_080B5174
+	.4byte gBossOneSpriteTableData
 _08038664:
 	cmp r0, #5
 	bne _08038670
-	ldr r6, _0803866C  @ =gUnknown_080B5180
+	ldr r6, _0803866C  @ =gBossTwoSpriteTableData
 	b _08038680
 _0803866C:
-	.4byte gUnknown_080B5180
+	.4byte gBossTwoSpriteTableData
 _08038670:
 	ldr r0, _080386D0  @ =gNextLevelInLevelTable
 	mov r2, #18
@@ -71,7 +71,7 @@ _08038670:
 	lsl r0, r1, #1
 	add r0, r0, r1
 	lsl r0, r0, #2
-	ldr r1, _080386D4  @ =gUnknown_080B512C
+	ldr r1, _080386D4  @ =gWorldSpriteTableData
 	add r6, r0, r1
 _08038680:
 	mov r5, #0
@@ -121,7 +121,7 @@ _080386CA:
 _080386D0:
 	.4byte gNextLevelInLevelTable
 _080386D4:
-	.4byte gUnknown_080B512C
+	.4byte gWorldSpriteTableData
 _080386D8:
 	.4byte gUnknown_03000924
 	THUMB_FUNC_END sub_08038600
@@ -689,25 +689,25 @@ sub_08038B18: @ 0x08038B18
 	asr r0, r0, #24
 	cmp r0, #4
 	bne _08038B38
-	ldr r3, _08038B30  @ =gUnknown_080B5174
+	ldr r3, _08038B30  @ =gBossOneSpriteTableData
 	ldr r2, _08038B34  @ =gNextLevelInLevelTable
 	b _08038B5C
 _08038B2C:
 	.4byte gLevelType
 _08038B30:
-	.4byte gUnknown_080B5174
+	.4byte gBossOneSpriteTableData
 _08038B34:
 	.4byte gNextLevelInLevelTable
 _08038B38:
 	cmp r0, #5
 	bne _08038B4C
-	ldr r3, _08038B44  @ =gUnknown_080B5180
+	ldr r3, _08038B44  @ =gBossTwoSpriteTableData
 	ldr r2, _08038B48  @ =gNextLevelInLevelTable
 	b _08038B5C
 	.byte 0x00
 	.byte 0x00
 _08038B44:
-	.4byte gUnknown_080B5180
+	.4byte gBossTwoSpriteTableData
 _08038B48:
 	.4byte gNextLevelInLevelTable
 _08038B4C:
@@ -717,7 +717,7 @@ _08038B4C:
 	lsl r0, r1, #1
 	add r0, r0, r1
 	lsl r0, r0, #2
-	ldr r1, _08038B7C  @ =gUnknown_080B512C
+	ldr r1, _08038B7C  @ =gWorldSpriteTableData
 	add r3, r0, r1
 _08038B5C:
 	ldr r0, [r2, #32]
@@ -737,7 +737,7 @@ _08038B5C:
 _08038B78:
 	.4byte gNextLevelInLevelTable
 _08038B7C:
-	.4byte gUnknown_080B512C
+	.4byte gWorldSpriteTableData
 _08038B80:
 	cmp r2, #4
 	bne _08038B88
@@ -799,19 +799,19 @@ _08038BD8:
 	asr r0, r0, #24
 	cmp r0, #4
 	bne _08038BF0
-	ldr r0, _08038BEC  @ =gUnknown_080B5174
+	ldr r0, _08038BEC  @ =gBossOneSpriteTableData
 	b _08038C10
 _08038BE8:
 	.4byte gLevelType
 _08038BEC:
-	.4byte gUnknown_080B5174
+	.4byte gBossOneSpriteTableData
 _08038BF0:
 	cmp r0, #5
 	bne _08038C00
-	ldr r0, _08038BF8  @ =gUnknown_080B5180
+	ldr r0, _08038BF8  @ =gBossTwoSpriteTableData
 	b _08038C10
 _08038BF8:
-	.4byte gUnknown_080B5180
+	.4byte gBossTwoSpriteTableData
 _08038BFC:
 	ldrb r0, [r2, #16]
 	b _08038C3E
@@ -822,7 +822,7 @@ _08038C00:
 	lsl r0, r1, #1
 	add r0, r0, r1
 	lsl r0, r0, #2
-	ldr r1, _08038C48  @ =gUnknown_080B512C
+	ldr r1, _08038C48  @ =gWorldSpriteTableData
 	add r0, r0, r1
 _08038C10:
 	mov r1, #0
@@ -857,7 +857,7 @@ _08038C3E:
 _08038C44:
 	.4byte gNextLevelInLevelTable
 _08038C48:
-	.4byte gUnknown_080B512C
+	.4byte gWorldSpriteTableData
 	THUMB_FUNC_END sub_08038BA4
 
 	THUMB_FUNC_START sub_08038C4C
@@ -986,21 +986,21 @@ sub_08038D1C: @ 0x08038D1C
 	asr r0, r0, #24
 	cmp r0, #4
 	bne _08038D3C
-	ldr r3, _08038D38  @ =gUnknown_080B5174
+	ldr r3, _08038D38  @ =gBossOneSpriteTableData
 	b _08038D58
 	.byte 0x00
 	.byte 0x00
 _08038D34:
 	.4byte gLevelType
 _08038D38:
-	.4byte gUnknown_080B5174
+	.4byte gBossOneSpriteTableData
 _08038D3C:
 	cmp r0, #5
 	bne _08038D48
-	ldr r3, _08038D44  @ =gUnknown_080B5180
+	ldr r3, _08038D44  @ =gBossTwoSpriteTableData
 	b _08038D58
 _08038D44:
-	.4byte gUnknown_080B5180
+	.4byte gBossTwoSpriteTableData
 _08038D48:
 	ldr r0, _08038DB0  @ =gNextLevelInLevelTable
 	mov r3, #18
@@ -1008,7 +1008,7 @@ _08038D48:
 	lsl r0, r1, #1
 	add r0, r0, r1
 	lsl r0, r0, #2
-	ldr r1, _08038DB4  @ =gUnknown_080B512C
+	ldr r1, _08038DB4  @ =gWorldSpriteTableData
 	add r3, r0, r1
 _08038D58:
 	cmp r2, #49
@@ -1060,7 +1060,7 @@ _08038D90:
 _08038DB0:
 	.4byte gNextLevelInLevelTable
 _08038DB4:
-	.4byte gUnknown_080B512C
+	.4byte gWorldSpriteTableData
 _08038DB8:
 	.4byte gUnknown_08706FC8
 _08038DBC:

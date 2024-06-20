@@ -230,11 +230,126 @@ gUnknown_0807846C:
 
 	.GLOBAL gMainLevelDefaultHighScores
 gMainLevelDefaultHighScores:
-	.INCBIN "baserom.gba", 0x784F8, 0x78558-0x784F8
+@ World 1 Scores
+	.2byte 27500
+	.2byte 28000
+	.2byte 27000
+	.2byte 28500
+	.2byte 30000
+	.2byte 27500
+	.2byte 15000
+	.2byte 22000
+	
+@ World 2 Scores
+	.2byte 29000
+	.2byte 27000
+	.2byte 31000
+	.2byte 29500
+	.2byte 32000
+	.2byte 32000
+	.2byte 13000
+	.2byte 23000
+	
+@ World 3 Scores
+	.2byte 28500
+	.2byte 32000
+	.2byte 30500
+	.2byte 29500
+	.2byte 29000
+	.2byte 27000
+	.2byte 14000
+	.2byte 18500
+	
+@ World 4 Scores
+	.2byte 29000
+	.2byte 32000
+	.2byte 31500
+	.2byte 31000
+	.2byte 30000
+	.2byte 27000
+	.2byte 10000
+	.2byte 21000
+	
+@ World 5 Scores
+	.2byte 28500
+	.2byte 29000
+	.2byte 27500
+	.2byte 26000
+	.2byte 24500
+	.2byte 26500
+	.2byte 12000
+	.2byte 22500
+	
+@ World 6 Scores
+	.2byte 26500
+	.2byte 24500
+	.2byte 27500
+	.2byte 27000
+	.2byte 26500
+	.2byte 25500
+	.2byte 18000
+	.2byte 21500
+
 
 	.GLOBAL gPlusLevelDefaultHighScores
 gPlusLevelDefaultHighScores:
-	.INCBIN "baserom.gba", 0x78558, 0x785B0-0x78558
+@ World 1 Plus Scores
+	.2byte 17000
+	.2byte 17500
+	.2byte 20000
+	.2byte 18500
+	.2byte 19000
+	.2byte 19500
+	.2byte 20000
+	
+@ World 2 Plus Scores
+	.2byte 21500
+	.2byte 23500
+	.2byte 18500
+	.2byte 19500
+	.2byte 21500
+	.2byte 21000
+	.2byte 20000
+	
+@ World 3 Plus Scores
+	.2byte 16000
+	.2byte 17500
+	.2byte 18500
+	.2byte 19500
+	.2byte 20500
+	.2byte 21000
+	.2byte 20000
+	
+@ World 4 Plus Scores
+	.2byte 19000
+	.2byte 18500
+	.2byte 20000
+	.2byte 20500
+	.2byte 21000
+	.2byte 22000
+	.2byte 20000
+		
+@ World 5 Plus Scores
+	.2byte 19000
+	.2byte 22000
+	.2byte 18500
+	.2byte 19500
+	.2byte 19000
+	.2byte 18500
+	.2byte 20000
+	
+@ World 6 Plus Scores
+	.2byte 18000
+	.2byte 21000
+	.2byte 19500
+	.2byte 20000
+	.2byte 18500
+	.2byte 19000
+	.2byte 20000
+	
+@ Unknown Scores
+	.2byte 10000
+	.2byte 10000
 
 	.GLOBAL gUnknown_080785B0
 gUnknown_080785B0:
@@ -588,7 +703,13 @@ gUnknown_080794EC:
 
 	.GLOBAL gUnknown_08079504
 gUnknown_08079504:
-	.INCBIN "baserom.gba", 0x79504, 0x7951C-0x79504
+gUnknown_08079504:
+	.4byte 0x00000012
+	.4byte 0x00000013
+	.4byte 0x00000014
+	.4byte 0x00000015
+	.4byte 0x00000016
+	.4byte 0x00000017
 
 	.GLOBAL gLevelSelectBackgrounds
 gLevelSelectBackgrounds:
@@ -703,27 +824,94 @@ gUnknown_080799F0:
 
 	.GLOBAL gUnknown_08079D20
 gUnknown_08079D20:
-	.INCBIN "baserom.gba", 0x79D20, 0x79D28-0x79D20
+	.4byte 0x00000004
+	.4byte 0x00000003
 
 	.GLOBAL gUnknown_08079D28
 gUnknown_08079D28:
-	.INCBIN "baserom.gba", 0x79D28, 0x79DA0-0x79D28
+	.4byte 0x00000012
+	.4byte 0x00000011
+	
+	.GLOBAL gUnknown_08079D30
+gUnknown_08079D30:
+	.4byte 0x00000003
+	.4byte 0x00000000
+	.4byte 0x00C02018
+	.4byte 0x00000000
+	.4byte 0x03C03440
+	.4byte 0x00000000
+	.4byte 0x04C04C18
+
+	.GLOBAL gUnknown_08079D4C
+gUnknown_08079D4C:
+	.4byte 0x00000003
+	.4byte 0x00000000
+	.4byte 0x00C02018
+	.4byte 0x00000000
+	.4byte 0x03C03440
+	.4byte 0x00000000
+	.4byte 0x04C04C18
+		
+	.GLOBAL gUnknown_08079D68
+gUnknown_08079D68:
+	.4byte 0x00000003
+	.4byte 0x00000000
+	.4byte 0x00C02018
+	.4byte 0x00000000
+	.4byte 0x03C03440
+	.4byte 0x00000000
+	.4byte 0x04C04C18		
+	
+	.GLOBAL gUnknown_08079D84
+gUnknown_08079D84:
+	.4byte 0x00000003
+	.4byte 0x00000000
+	.4byte 0x00C02018
+	.4byte 0x00000000
+	.4byte 0x03C03440
+	.4byte 0x00000000
+	.4byte 0x04C04C18
+	
 
 	.GLOBAL gUnknown_08079DA0
 gUnknown_08079DA0:
-	.INCBIN "baserom.gba", 0x79DA0, 0x79ED0-0x79DA0
+	.4byte gUnknown_08079D30
+	.4byte gUnknown_08079D4C
+	.4byte gUnknown_08079D68
+	.4byte gUnknown_08079D84
+	
+	.GLOBAL gUnknown_08079DB0  	@ Level help screen sprite table
+gUnknown_08079DB0:
+	.INCBIN "baserom.gba", 0x79DB0, 0x79ED0-0x79DB0
 
-	.GLOBAL gUnknown_08079ED0
+	.GLOBAL gUnknown_08079ED0 	@ Level help screen sprite table pointers
 gUnknown_08079ED0:
 	.INCBIN "baserom.gba", 0x79ED0, 0x79F00-0x79ED0
 
-	.GLOBAL gUnknown_08079F00
+	.GLOBAL gUnknown_08079F00 @ Level help screen base sprite layout 
 gUnknown_08079F00:
 	.INCBIN "baserom.gba", 0x79F00, 0x7A92C-0x79F00
 
-	.GLOBAL gUnknown_0807A92C
+	.GLOBAL gUnknown_0807A92C @ Level help screen tutorial sprite layout table
 gUnknown_0807A92C:
-	.INCBIN "baserom.gba", 0x7A92C, 0x7A974-0x7A92C
+	.4byte 0x0807A104 @ Level viewer help sprite layout
+	.4byte 8 @ Sprite count
+	.4byte 0x0807A1C4 @ Handstand help sprite layout
+	.4byte 11 @ Sprite count
+	.4byte 0x0807A2CC @ Handstand double jump help sprite layout
+	.4byte 16 @ Sprite count
+	.4byte 0x0807A44C @ Backflip help sprite layout
+	.4byte 7 @ Sprite count
+	.4byte 0x0807A4F4 @ Throw objects help sprite layout
+	.4byte 8 @ Sprite count
+	.4byte 0x0807A5B4 @ Jump up and Throw help sprite layout
+	.4byte 10 @ Sprite count
+	.4byte 0x0807A6A4 @ Handstand deflects falling objects help sprite layout
+	.4byte 8 @ Sprite count
+	.4byte 0x0807A764 @ Wire spin and jump help sprite layout
+	.4byte 12 @ Sprite count
+	.4byte 0x0807A884 @ Spring jump help sprite layout
+	.4byte 7 @ Sprite count
 
 	.GLOBAL gUnknown_0807A974
 gUnknown_0807A974:
@@ -811,11 +999,111 @@ gUnknown_0807C83A:
 
 	.GLOBAL gUnknown_0807C850
 gUnknown_0807C850:
-	.INCBIN "baserom.gba", 0x7C850, 0x7C990-0x7C850
-
+	.4byte 0x00000001
+	.4byte gTextCRCCheckFailed
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte gTextRetry
+	.4byte 0x000000C
+	.4byte gTextCancel
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	
+	.4byte 0x00000001
+	.4byte gTextTimeOut
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte gTextRetry
+	.4byte 0x000000C
+	.4byte gTextCancel
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	
+	.4byte 0x00000001
+	.4byte gTextConnectionLost
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte gTextRetry
+	.4byte 0x000000C
+	.4byte gTextCancel
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	
+	.4byte 0x00000000
+	.4byte gTextLevelAlreadyExists
+	.4byte 0x00000003
+	.4byte 0x00000007
+	.4byte gTextOverwrite
+	.4byte 0x00000001
+	.4byte gTextRetry
+	.4byte 0x0000000C
+	.4byte gTextCancel
+	.4byte 0x00000000
+	
+	.4byte 0x00000000
+	.4byte gTextLevelDoesNotBelongToCurrentWorld
+	.4byte 0x00000003
+	.4byte 0x00000008
+	.4byte gTextEraseOldWorld
+	.4byte 0x00000001
+	.4byte gTextRetry
+	.4byte 0x0000000C
+	.4byte gTextCancel
+	.4byte 0x00000000
+	
+	.4byte 0x00000000
+	.4byte gTextThemeCardActivated
+	.4byte 0x00000001
+	.4byte 0x0000000D
+	.4byte gTextPressAToContinue2
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x14000101
+		
+	.4byte 0x00000000
+	.4byte gTextThemeCardDeactivated
+	.4byte 0x00000001
+	.4byte 0x0000000E
+	.4byte gTextPressAToContinue2
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x14000101
+	
+	.4byte 0x00000000
+	.4byte gTextThemeCardAlreadyLoadedOverwrite
+	.4byte 0x00000002
+	.4byte 0x0000000D
+	.4byte gTextYes
+	.4byte 0x0000000B
+	.4byte gTextNo
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x28010101
+	
 	.GLOBAL gUnknown_0807C990
 gUnknown_0807C990:
-	.INCBIN "baserom.gba", 0x7C990, 0x7C9CC-0x7C990
+	.4byte gTextPleaseConnectEReader
+	.4byte gTextWaitingForECard
+	.4byte gTextECardDetected
+	.4byte gTextRecivingECard
+	.4byte gTextRecivedNewLevel
+	.4byte gTextRecivedLevelAlreadyExists
+	.4byte gTextError
+	.4byte gTextAddingLevel
+	.4byte gTextErasingLevels
+	.4byte gTextSavingLevelAs
+	.4byte gTextSavingLevelAs
+	.4byte gTextBlank
+	.4byte gTextBlank
+	.4byte 0x00000000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_0807C9CC
 gUnknown_0807C9CC:
@@ -952,19 +1240,39 @@ gUnknown_0807DD1C:
 
 	.GLOBAL gPaletteIndices_0807DD34
 gPaletteIndices_0807DD34:
-	.INCBIN "baserom.gba", 0x7DD34, 0x7DD4C-0x7DD34
+	.4byte 0x00000025
+	.4byte 0x00000026
+	.4byte 0x00000027
+	.4byte 0x00000028
+	.4byte 0x00000029
+	.4byte 0x0000002A
 
 	.GLOBAL gPaletteIndices_0807DD4C
 gPaletteIndices_0807DD4C:
-	.INCBIN "baserom.gba", 0x7DD4C, 0x7DD64-0x7DD4C
+	.4byte 0x0000002B
+	.4byte 0x0000002C
+	.4byte 0x0000002D
+	.4byte 0x0000002E
+	.4byte 0x0000002F
+	.4byte 0x00000030
 
 	.GLOBAL gPaletteIndices_0807DD64
 gPaletteIndices_0807DD64:
-	.INCBIN "baserom.gba", 0x7DD64, 0x7DD7C-0x7DD64
+	.4byte 0x00000031
+	.4byte 0x00000032
+	.4byte 0x00000033
+	.4byte 0x00000034
+	.4byte 0x00000035
+	.4byte 0x00000036
 
 	.GLOBAL gPaletteIndices_0807DD7C
 gPaletteIndices_0807DD7C:
-	.INCBIN "baserom.gba", 0x7DD7C, 0x7DD94-0x7DD7C
+	.4byte 0x00000037
+	.4byte 0x00000038
+	.4byte 0x00000039
+	.4byte 0x0000003B
+	.4byte 0x0000003C
+	.4byte 0x0000003D
 
 	.GLOBAL gUnknown_0807DD94
 gUnknown_0807DD94:
@@ -976,11 +1284,81 @@ gPaletteData:
 
 	.GLOBAL gUnknown_080A7D98
 gUnknown_080A7D98:
-	.INCBIN "baserom.gba", 0xA7D98, 0xA7DF8-0xA7D98
+	.4byte 0x00000048
+	.4byte 0x00000010
+	.4byte 0x00000070
+	.4byte 0x00000010
+	.4byte 0x00000098
+	.4byte 0x00000010
+	.4byte 0x000000C0
+	.4byte 0x00000010
+	.4byte 0x00000048
+	.4byte 0x00000038
+	.4byte 0x00000070
+	.4byte 0x00000038
+	.4byte 0x00000098
+	.4byte 0x00000038
+	.4byte 0x000000C0
+	.4byte 0x00000038
+	.4byte 0x00000048
+	.4byte 0x00000060
+	.4byte 0x00000070
+	.4byte 0x00000060
+	.4byte 0x00000098
+	.4byte 0x00000060
+	.4byte 0x000000C0
+	.4byte 0x00000060
 
 	.GLOBAL gUnknown_080A7DF8
 gUnknown_080A7DF8:
-	.INCBIN "baserom.gba", 0xA7DF8, 0xA7EB8-0xA7DF8
+	.4byte 0x0000004A
+	.4byte 0x00000013
+	.4byte 0x00000072
+	.4byte 0x00000013
+	.4byte 0x0000009A
+	.4byte 0x00000013
+	.4byte 0x000000C2
+	.4byte 0x00000013
+	.4byte 0x0000004A
+	.4byte 0x0000003B
+	.4byte 0x00000072
+	.4byte 0x0000003B
+	.4byte 0x0000009A
+	.4byte 0x0000003B
+	.4byte 0x000000C2
+	.4byte 0x0000003B
+	.4byte 0x0000004A
+	.4byte 0x00000063
+	.4byte 0x00000072
+	.4byte 0x00000063
+	.4byte 0x0000009A
+	.4byte 0x00000063
+	.4byte 0x000000C2
+	.4byte 0x00000063
+	.4byte 0x00000048
+	.4byte 0x00000010
+	.4byte 0x00000070
+	.4byte 0x00000010
+	.4byte 0x00000098
+	.4byte 0x00000010
+	.4byte 0x000000C0
+	.4byte 0x00000010
+	.4byte 0x00000048
+	.4byte 0x00000038
+	.4byte 0x00000070
+	.4byte 0x00000038
+	.4byte 0x00000098
+	.4byte 0x00000038
+	.4byte 0x000000C0
+	.4byte 0x00000038
+	.4byte 0x00000048
+	.4byte 0x00000060
+	.4byte 0x00000070
+	.4byte 0x00000060
+	.4byte 0x00000098
+	.4byte 0x00000060
+	.4byte 0x000000C0
+	.4byte 0x00000060
 
 	.GLOBAL gUnknown_080A7EB8
 gUnknown_080A7EB8:
@@ -1040,15 +1418,36 @@ gUnknown_080A8548:
 
 	.GLOBAL gUnknown_080A8668
 gUnknown_080A8668:
-	.INCBIN "baserom.gba", 0xA8668, 0xA8674-0xA8668
+	.byte 0x09
+	.byte 0x12
+	.byte 0x1B
+	.byte 0x24
+	.byte 0x2D
+	.byte 0x36
+	.byte 0x3F
+	.byte 0x48
+	.byte 0x51
+	.byte 0x5A
+	.byte 0x5A
+	.byte 0x5A
 
 	.GLOBAL gUnknown_080A8674
 gUnknown_080A8674:
-	.INCBIN "baserom.gba", 0xA8674, 0xA868C-0xA8674
+	.4byte 0x00000040
+	.4byte 0x00000041
+	.4byte 0x00000042
+	.4byte 0x00000043
+	.4byte 0x00000044
+	.4byte 0x00000045
 
 	.GLOBAL gUnknown_080A868C
 gUnknown_080A868C:
-	.INCBIN "baserom.gba", 0xA868C, 0xA86A4-0xA868C
+	.4byte 0x00000046
+	.4byte 0x00000047
+	.4byte 0x00000048
+	.4byte 0x00000049
+	.4byte 0x0000004A
+	.4byte 0x0000004B
 
 	.GLOBAL gWorldStartTable
 gWorldStartTable:
@@ -1070,15 +1469,32 @@ gWorldPlusStartTable:
 
 	.GLOBAL gUnknown_080A86D4
 gUnknown_080A86D4:
-	.INCBIN "baserom.gba", 0xA86D4, 0xA86EC-0xA86D4
+	.2byte 0x00EC
+	.2byte 0x00EC
+	.2byte 0x00A9
+	.2byte 0x00D7
+	.2byte 0x00D5
+	.2byte 0x00D5
+	.2byte 0x00DA
+	.2byte 0x00DA
+	.2byte 0x00D3
+	.2byte 0x00DA
+	.2byte 0x00D4
+	.2byte 0x00D4
 
 	.GLOBAL gUnknown_080A86EC
 gUnknown_080A86EC:
-	.INCBIN "baserom.gba", 0xA86EC, 0xA86F4-0xA86EC
+	.4byte 0x7FFF0000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_080A86F4
 gUnknown_080A86F4:
-	.INCBIN "baserom.gba", 0xA86F4, 0xA86FA-0xA86F4
+	.byte 0x01
+	.byte 0x02
+	.byte 0x02
+	.byte 0x03
+	.byte 0x04
+	.byte 0x03
 
 	.GLOBAL gEReaderSendTextPointers
 gEReaderSendTextPointers:
@@ -1095,21 +1511,60 @@ gEReaderSendTextPointers:
 gUnknown_080A8718:
 	.INCBIN "baserom.gba", 0xA8718, 0xB512C-0xA8718
 
-	.GLOBAL gUnknown_080B512C
-gUnknown_080B512C:
-	.INCBIN "baserom.gba", 0xB512C, 0xB5174-0xB512C
+	.GLOBAL gWorldSpriteTableData
+gWorldSpriteTableData:
+	.4byte 0x087140B8 @ TODO: replace this with gWorldOneSpriteTable once split
+	.4byte 37
+	.4byte 15 @ Sprite count
 
-	.GLOBAL gUnknown_080B5174
-gUnknown_080B5174:
-	.INCBIN "baserom.gba", 0xB5174, 0xB5180-0xB5174
+	.4byte 0x08723440 @ TODO: replace this with gWorldTwoSpriteTable once split
+	.4byte 38
+	.4byte 21 @ Sprite count
+	
+	.4byte 0x087326E8 @ TODO: replace this with gWorldThreeSpriteTable once split
+	.4byte 39
+	.4byte 22 @ Sprite count
+	
+	.4byte 0x0875A154 @ TODO: replace this with gWorldFourSpriteTable once split
+	.4byte 40
+	.4byte 28 @ Sprite count
 
-	.GLOBAL gUnknown_080B5180
-gUnknown_080B5180:
-	.INCBIN "baserom.gba", 0xB5180, 0xB51BC-0xB5180
+	.4byte 0x08771D24 @ TODO: replace this with gWorldFiveSpriteTable once split
+	.4byte 41
+	.4byte 15 @ Sprite count
+	
+	.4byte 0x08796104 @ TODO: replace this with gWorldSixSpriteTable once split
+	.4byte 42
+	.4byte 20 @ Sprite count	
 
+	.GLOBAL gBossOneSpriteTableData
+gBossOneSpriteTableData:
+	.4byte 0x087AC8DC @ TODO: replace this with gBossOneSpriteTable once split
+	.4byte 62
+	.4byte 14 @ Sprite count
+
+	.GLOBAL gBossTwoSpriteTableData
+gBossTwoSpriteTableData:
+	.4byte 0x087AFAA0 @ TODO: replace this with gBossTwoSpriteTable once split
+	.4byte 63
+	.4byte 10 @ Sprite count
+
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	
 	.GLOBAL gUnknown_080B51BC
 gUnknown_080B51BC:
-	.INCBIN "baserom.gba", 0xB51BC, 0xB51C0-0xB51BC
+	.4byte 0x00000008
 
 	.GLOBAL gUnknown_080B51C0
 gUnknown_080B51C0:
@@ -3246,12 +3701,415 @@ gUnknown_08663C78:
 	.GLOBAL gUnknown_08663C7C
 gUnknown_08663C7C:
 	.4byte 0x00B40107
+	
+	.GLOBAL gUnknown_08663C80
+gUnknown_08663C80:
 	.4byte 0xFED4FED4
+
+	.GLOBAL gUnknown_08663C84
+gUnknown_08663C84:
 	.4byte 0x00000000
 
 	.GLOBAL gUnknown_08663C88
 gUnknown_08663C88:
-	.INCBIN "baserom.gba", 0x663C88, 0x664120-0x663C88
+	.4byte gUnknown_03001C50
+	.4byte 0x0815FE34
+	.4byte 0x0815FFE4
+	.4byte 0x0815FFEC
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x0C
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_080636A4
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08167938
+	.4byte 0x0816795C
+	.4byte 0x08167964
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x01
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062844
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08168164
+	.4byte 0x08168554
+	.4byte 0x0816855C
+	.2byte 0x1000
+	.2byte 0x0400
+	.byte 0x80
+	.byte 0x1C
+	.byte 0x40
+	.byte 0x40
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062844
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x0815FE34
+	.4byte 0x0815FFE4
+	.4byte 0x0815FFEC
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x0C
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062844	
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x0815FE34
+	.4byte 0x0815FFE4
+	.4byte 0x0815FFEC
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x0C
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08063708
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08230EDC
+	.4byte 0x082310D4
+	.4byte 0x082310DC
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x0E
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08063784
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x081BD0A8
+	.4byte 0x081BD1EC
+	.4byte 0x081BD1F4
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x09
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08063818
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x0823F2DC
+	.4byte 0x0823F3FC
+	.4byte 0x0823F404
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x08
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08063860	
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x0823F2DC
+	.4byte 0x0823F3FC
+	.4byte 0x0823F404
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x08
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08063860
+		
+	.4byte gUnknown_03001C50
+	.4byte 0x08167938
+	.4byte 0x0816795C
+	.4byte 0x08167964
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x01
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000202
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08063960
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08168164
+	.4byte 0x08168554
+	.4byte 0x0816855C
+	.2byte 0x1000
+	.2byte 0x0400
+	.byte 0x80
+	.byte 0x1C
+	.byte 0x40
+	.byte 0x40
+	.4byte 0x00000202
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_080636A0
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08167938
+	.4byte 0x0816795C
+	.4byte 0x08167964
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x01
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08063990
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08168164
+	.4byte 0x08168554
+	.4byte 0x0816855C
+	.2byte 0x1000
+	.2byte 0x0400
+	.byte 0x80
+	.byte 0x1C
+	.byte 0x40
+	.byte 0x40
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_080639CC
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08150B48
+	.4byte 0x08150BD8
+	.4byte 0x08150BE0
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x04
+	.byte 0x20
+	.byte 0x40
+	.4byte 0x00000200
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062B94
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08152BE0
+	.4byte 0x08153180
+	.4byte 0x08153188
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x28
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000200
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062B94
+		
+	.4byte gUnknown_03001C50
+	.4byte 0x0813A120
+	.4byte 0x0813A168
+	.4byte 0x0813A170
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x02
+	.byte 0x20
+	.byte 0x40
+	.4byte 0x00000202
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062C48
+			
+	.4byte gUnknown_03001C50
+	.4byte 0x0813B170
+	.4byte 0x0813B3B0
+	.4byte 0x0813B3B8
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x10
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000202
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062C48
+				
+	.4byte gUnknown_03001C50
+	.4byte 0x08224190
+	.4byte 0x08224514
+	.4byte 0x0822451C
+	.2byte 0x0800
+	.2byte 0x0200
+	.byte 0x40
+	.byte 0x19
+	.byte 0x40
+	.byte 0x20
+	.4byte 0x00000202
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062C48
+					
+	.4byte gUnknown_03001C50
+	.4byte 0x08227D1C
+	.4byte 0x08227D40
+	.4byte 0x08227D48
+	.2byte 0x1000
+	.2byte 0x0400
+	.byte 0x80
+	.byte 0x01
+	.byte 0x40
+	.byte 0x40
+	.4byte 0x00000202
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08062C48
+						
+	.4byte gUnknown_03001C50
+	.4byte 0x08228D48
+	.4byte 0x08228ED4
+	.4byte 0x08228EDC
+	.2byte 0x1000
+	.2byte 0x0400
+	.byte 0x80
+	.byte 0x0B
+	.byte 0x40
+	.byte 0x40
+	.4byte 0x00000202
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_080638E0
+	
+	.4byte gUnknown_03001C50
+	.4byte 0x08251EC0
+	.4byte 0x08251FE0
+	.4byte 0x08251FE8
+	.2byte 0x1000
+	.2byte 0x0400
+	.byte 0x80
+	.byte 0x08
+	.byte 0x40
+	.byte 0x40
+	.4byte 0x00020202
+	.4byte gUnknown_08663C80
+	.4byte gUnknown_08663C84
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte sub_0806369C
+	.4byte sub_08063928
 
 	.GLOBAL gUnknown_08664120
 gUnknown_08664120:
@@ -3645,6 +4503,10 @@ gTitleScreenRightData:
 gTitleMarioDKEyes:
 	.INCBIN "assets/title/TitleMarioDKEyes.bin"
 
+	.GLOBAL gUnusedOptionsMenuData
+gUnusedOptionsMenuData:
+	.INCBIN "assets/unused/EarlyOptionsMenu.bin"
+	
 	.GLOBAL gOptionsMenuData
 gOptionsMenuData:
 	.INCBIN "assets/menu/OptionsMenuData.bin"
@@ -3657,10 +4519,128 @@ gUnusedToadDKCutscene:
 gUnusedToadMarioCutsceneGFX:
 	.INCBIN "baserom.gba", 0x87D89C, 0x880D90-0x87D89C
 
+@ Intro Cutscene
+
 	.GLOBAL gUnknown_08880D90
 gUnknown_08880D90:
-	.INCBIN "baserom.gba", 0x880D90, 0x908A30-0x880D90
+	.INCBIN "baserom.gba", 0x880D90, 0x8867F0-0x880D90
+	
+	.GLOBAL gUnknown_088867F0
+gUnknown_088867F0:
+	.INCBIN "baserom.gba", 0x8867F0, 0x88C3A0-0x8867F0
+	
+	.GLOBAL gUnknown_0888C3A0
+gUnknown_0888C3A0:
+	.INCBIN "baserom.gba", 0x88C3A0, 0x891CE4-0x88C3A0
+	
+	.GLOBAL gUnknown_08891CE4
+gUnknown_08891CE4:
+	.INCBIN "baserom.gba", 0x891CE4, 0x89782C-0x891CE4
+	
+	.GLOBAL gUnknown_0889782C
+gUnknown_0889782C:
+	.INCBIN "baserom.gba", 0x89782C, 0x89BF4C-0x89782C
+	
+	.GLOBAL gUnknown_0889BF4C
+gUnknown_0889BF4C:
+	.INCBIN "baserom.gba", 0x89BF4C, 0x8A19A8-0x89BF4C
+	
+	.GLOBAL gUnknown_088A19A8
+gUnknown_088A19A8:
+	.INCBIN "baserom.gba", 0x8A19A8, 0x8A6070-0x8A19A8
+	
+	.GLOBAL gUnknown_088A6070
+gUnknown_088A6070:
+	.INCBIN "baserom.gba", 0x8A6070, 0x8AA5D8-0x8A6070
+	
+	.GLOBAL gUnknown_088AA5D8
+gUnknown_088AA5D8:
+	.INCBIN "baserom.gba", 0x8AA5D8, 0x8AEA00-0x8AA5D8
+	
+	.GLOBAL gUnknown_088AEA00
+gUnknown_088AEA00:
+	.INCBIN "baserom.gba", 0x8AEA00, 0x8B3EB0-0x8AEA00
+	
+	.GLOBAL gUnknown_088B3EB0
+gUnknown_088B3EB0:
+	.INCBIN "baserom.gba", 0x8B3EB0, 0x8B7C4C-0x8B3EB0
+	
+	.GLOBAL gUnknown_088B7C4C
+gUnknown_088B7C4C:
+	.INCBIN "baserom.gba", 0x8B7C4C, 0x8BC7FC-0x8B7C4C
+	
+	.GLOBAL gUnknown_088BC7FC
+gUnknown_088BC7FC:
+	.INCBIN "baserom.gba", 0x8BC7FC, 0x8C09AC-0x8BC7FC
+	
+	.GLOBAL gUnknown_088C09AC
+gUnknown_088C09AC:
+	.INCBIN "baserom.gba", 0x8C09AC, 0x8C53EC-0x8C09AC
+	
+	.GLOBAL gUnknown_088C53EC
+gUnknown_088C53EC:
+	.INCBIN "baserom.gba", 0x8C53EC, 0x8C962C-0x8C53EC
+	
+	.GLOBAL gUnknown_088C962C
+gUnknown_088C962C:
+	.INCBIN "baserom.gba", 0x8C962C, 0x8CE9D4-0x8C962C
+	
+	.GLOBAL gUnknown_088CE9D4
+gUnknown_088CE9D4:
+	.INCBIN "baserom.gba", 0x8CE9D4, 0x8D3034-0x8CE9D4
+	
+	.GLOBAL gUnknown_088D3034
+gUnknown_088D3034:
+	.INCBIN "baserom.gba", 0x8D3034, 0x8DA250-0x8D3034
+	
+	.GLOBAL gUnknown_088DA250
+gUnknown_088DA250:
+	.INCBIN "baserom.gba", 0x8DA250, 0x8DCB4C-0x8DA250
+	
+	.GLOBAL gUnknown_088DCB4C
+gUnknown_088DCB4C:
+	.INCBIN "baserom.gba", 0x8DCB4C, 0x8DF5A8-0x8DCB4C
+	
+@ New Game Cutscene
 
+	.GLOBAL gUnknown_08DF5A8
+gUnknown_08DF5A8:
+	.INCBIN "baserom.gba", 0x8DF5A8, 0x8E44F4-0x8DF5A8
+
+	.GLOBAL gUnknown_08E44F4
+gUnknown_08E44F4:
+	.INCBIN "baserom.gba", 0x8E44F4, 0x8E95F8-0x8E44F4
+
+	.GLOBAL gUnknown_08E95F8
+gUnknown_088E95F8:
+	.INCBIN "baserom.gba", 0x8E95F8, 0x8EEC30-0x8E95F8
+
+	.GLOBAL gUnknown_08EEC30
+gUnknown_08EEC30:
+	.INCBIN "baserom.gba", 0x8EEC30, 0x8F45C8-0x8EEC30
+
+	.GLOBAL gUnknown_08F45C8
+gUnknown_08F45C8:
+	.INCBIN "baserom.gba", 0x8F45C8, 0x8F8B8C-0x8F45C8
+
+	.GLOBAL gUnknown_08F8B8C
+gUnknown_08F8B8C:
+	.INCBIN "baserom.gba", 0x8F8B8C, 0x8FCBE4-0x8F8B8C
+
+	.GLOBAL gUnknown_08FCBE4
+gUnknown_08FCBE4:
+	.INCBIN "baserom.gba", 0x8FCBE4, 0x901234-0x8FCBE4
+
+	.GLOBAL gUnknown_0901234
+gUnknown_0901234:
+	.INCBIN "baserom.gba", 0x901234, 0x9052C8-0x901234
+
+	.GLOBAL gUnknown_09052C8
+gUnknown_09052C8:
+	.INCBIN "baserom.gba", 0x9052C8, 0x908A30-0x9052C8
+	
+@ Pre DK-Boss 1
+	
 	.GLOBAL gUnknown_08908A30
 gUnknown_08908A30:
 	.INCBIN "baserom.gba", 0x908A30, 0x90D474-0x908A30
@@ -3701,7 +4681,7 @@ gUnknown_0893064C:
 gUnknown_089355B8:
 	.INCBIN "baserom.gba", 0x9355B8, 0x93A2C8-0x9355B8
 	
-	.GLOBAL gUnknown_0803A2C8
+	.GLOBAL gUnknown_0893A2C8
 gUnknown_0893A2C8:
 	.INCBIN "baserom.gba", 0x93A2C8, 0x93E960-0x93A2C8
 	
@@ -3716,6 +4696,8 @@ gUnknown_08942D4C:
 	.GLOBAL gUnknown_08947130
 gUnknown_08947130:
 	.INCBIN "baserom.gba", 0x947130, 0x94B710-0x947130
+	
+@ Post Credits 1
 	
 	.GLOBAL gUnknown_0894B710
 gUnknown_0894B710:
@@ -3765,6 +4747,8 @@ gUnknown_0897423C:
 gUnknown_08979C5C:
 	.INCBIN "baserom.gba", 0x979C5C, 0x97E3B8-0x979C5C
 	
+@ Movie 6
+	
 	.GLOBAL gUnknown_0897E3B8
 gUnknown_0897E3B8:
 	.INCBIN "baserom.gba", 0x97E3B8, 0x982F18-0x97E3B8
@@ -3792,6 +4776,8 @@ gUnknown_08996D1C:
 	.GLOBAL gUnknown_0899BDE0
 gUnknown_0899BDE0:
 	.INCBIN "baserom.gba", 0x99BDE0, 0x9A041C-0x99BDE0
+	
+@ Pre Credits 2
 	
 	.GLOBAL gUnknown_089A041C
 gUnknown_089A041C:
@@ -4053,7 +5039,7 @@ gCreditsAllRightsReserved:
 
 	.GLOBAL gUnusedPlusWorldsUnlocked
 gUnusedPlusWorldsUnlocked:
-	.INCBIN "baserom.gba", 0xA28710, 0xA294C0-0xA28710
+	.INCBIN "assets/cutscene/UnusedPlusWorldsUnlocked.bin"
 
 @ World Data
 
@@ -5404,7 +6390,7 @@ g6MMTutorialDemo:
 	
 	.GLOBAL gUnknown_08B28D84
 gUnknown_08B28D84:
-	.INCBIN "baserom.gba", 0xb28d84, 0xB29054-0xb28d84
+	.INCBIN "assets/unused/gUnknown_08B28D84.bin"
 	
 	.GLOBAL gEWorldMenuData2
 gEWorldMenuData2:

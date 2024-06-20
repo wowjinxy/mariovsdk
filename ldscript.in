@@ -211,7 +211,7 @@ SECTIONS
 		. = 0x9C0;		gMainState = .;
 		. = 0x9C4;		gNextMainState = .;
 		. = 0x9C8;		gPreviousMainState = .;
-		. = 0x9CC;		gUnknown_030009CC = .;
+		. = 0x9CC;		gNextStateFromFade = .;
 		. = 0x9D0;		gUnknown_030009D0 = .;
 		. = 0x9D4;		gUnknown_030009D4 = .;
 		. = 0x9D8;		gUnknown_030009D8 = .;
@@ -354,6 +354,7 @@ SECTIONS
 		. = 0x1C20;		gUnknown_03001C20 = .;
 		. = 0x1C40;		gUnknown_03001C40 = .;
 		. = 0x1C48;		gUnknown_03001C48 = .;
+		. = 0x1C50;		gUnknown_03001C50 = .;
 		. = 0x1C78;		gUnknown_03001C78 = .;
 		. = 0x1C80;		gUnknown_03001C80 = .;
 		. = 0x1C84;		gUnknown_03001C84 = .;
