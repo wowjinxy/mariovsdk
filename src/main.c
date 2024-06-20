@@ -19,28 +19,28 @@ void sub_08006E28(void)
 {
     u32 arr[4];
 
-    if ((gUnknown_030012E0 & 1) && gUnknown_030009B0.unk8 != 0)
+    if ((gHeldKeys & 1) && gUnknown_030009B0.unk8 != 0)
         gUnknown_030009B0.unk10 = 0xFD80;
 
     gUnknown_030009B0.unk10 = 0;  // wat?
     gUnknown_030009B0.unk12 = 0;
 
-    if (gUnknown_030012E0 & 0x10)
+    if (gHeldKeys & 0x10)
         gUnknown_030009B0.unk12 = 0x100;
-    else if (gUnknown_030012E0 & 0x20)
+    else if (gHeldKeys & 0x20)
         gUnknown_030009B0.unk12 = 0xFF00;
 
-    if (gUnknown_030012E0 & 0x40)
+    if (gHeldKeys & 0x40)
         gUnknown_030009B0.unk10 = 0xFF00;
-    else if (gUnknown_030012E0 & 0x80)
+    else if (gHeldKeys & 0x80)
         gUnknown_030009B0.unk10 = 0x100;
 
-    if (gUnknown_030012E0 & 0x200)
+    if (gHeldKeys & 0x200)
     {
         gUnknown_030009B0.unk12 = 0xFF00;
         gUnknown_030009B0.unk10 = 0xFF00;
     }
-    else if (gUnknown_030012E0 & 0x100)
+    else if (gHeldKeys & 0x100)
     {
         gUnknown_030009B0.unk12 = 0x100;
         gUnknown_030009B0.unk10 = 0x100;
@@ -162,6 +162,6 @@ void change_main_state(s32 mainState, s32 useFadeFlag)
         }
 
         gUnknown_03000024 = 1;
-        gUnknown_030012E8 = gUnknown_03001708 = 0;
+        gSomeKeys_030012E8 = gUnknown_03001708 = 0;
     }
 }

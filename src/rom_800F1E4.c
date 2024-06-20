@@ -272,19 +272,19 @@ void tutorial_level_setup(u32 worldID, u32 levelID) {
 }
 
 void sub_0800F6EC(u32 worldID, u32 levelID) {
-   if (gLevelType == 0x0) {
+   if (gLevelType == LEVEL_TYPE_MAIN) {
         normal_world_level_setup(worldID, levelID);
    } 
-   else if (gLevelType == 0x1) {
+   else if (gLevelType == LEVEL_TYPE_PLUS) {
         plus_world_level_setup(worldID, levelID);    
    }
-   else if (gLevelType == 0x2) {
+   else if (gLevelType == LEVEL_TYPE_EXPERT_1_6) {
         expert_1_6_level_setup(worldID, levelID);
    }
-   else if (gLevelType == 0x3) {
+   else if (gLevelType == LEVEL_TYPE_EXPERT_7_12) {
         expert_7_12_level_setup(worldID, levelID);
    }
-   else if (gLevelType == 0x4) {
+   else if (gLevelType == LEVEL_TYPE_MAIN_BOSS) {
         dk_boss_level_setup(worldID, levelID);
    } 
    else {

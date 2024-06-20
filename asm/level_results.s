@@ -478,7 +478,7 @@ _08029522:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08029558
-	ldr r1, _08029550  @ =gUnknown_03001BA0
+	ldr r1, _08029550  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r1]
 	cmp r0, #5
 	bhi _08029554
@@ -496,7 +496,7 @@ _08029548:
 _0802954C:
 	.4byte gNextLevelInLevelTable
 _08029550:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _08029554:
 	ldr r0, _080295D8  @ =0x00002710
 _08029556:
@@ -556,7 +556,7 @@ _08029558:
 	ldrb r1, [r0]
 	ldr r2, _0802960C  @ =gLevelCollectableFlags
 	mov r0, #5
-	bl sub_08010534
+	bl set_level_flags_08010534
 	b _0802961E
 _080295D8:
 	.4byte 0x00002710
@@ -592,7 +592,7 @@ _08029610:
 	ldr r1, _0802964C  @ =0x03000DF8
 	ldrb r1, [r1]
 	ldr r2, _08029650  @ =gLevelCollectableFlags
-	bl sub_08010534
+	bl set_level_flags_08010534
 _0802961E:
 	ldr r0, _08029654  @ =gNextLevelInLevelTable
 	ldr r0, [r0, #32]
@@ -686,7 +686,7 @@ _080296B8:
 	beq _080296CC
 	b _080297C8
 _080296CC:
-	ldr r0, _0802977C  @ =gUnknown_030012E8
+	ldr r0, _0802977C  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -718,10 +718,10 @@ _080296F8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0802970E:
 	ldr r4, _08029788  @ =0x000F423F
-	ldr r1, _0802977C  @ =gUnknown_030012E8
+	ldr r1, _0802977C  @ =gSomeKeys_030012E8
 	mov r0, #0
 	strh r0, [r1]
 _08029716:
@@ -768,7 +768,7 @@ _0802973C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080297DE
 	.byte 0x00
 	.byte 0x00
@@ -777,7 +777,7 @@ _08029774:
 _08029778:
 	.4byte 0x03000DDC
 _0802977C:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08029780:
 	.4byte gNextLevelInLevelTable
 _08029784:
@@ -808,7 +808,7 @@ _080297AA:
 	mov r1, #12
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	str r0, [r5]
 	b _080297DE
 	.byte 0x00
@@ -843,7 +843,7 @@ _080297EA:
 	bne _080297FC
 	b _08029A74
 _080297FC:
-	ldr r0, _08029864  @ =gUnknown_030012E8
+	ldr r0, _08029864  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -881,7 +881,7 @@ _08029834:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08029870  @ =0x03000C1C
 	mov r0, #1
 	strb r0, [r1]
@@ -897,7 +897,7 @@ _08029834:
 _08029860:
 	.4byte gUnknown_030009D8
 _08029864:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08029868:
 	.4byte 0x03000E00
 _0802986C:
@@ -981,7 +981,7 @@ _080298F2:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #0
 	bl sub_0800F6EC
@@ -1053,7 +1053,7 @@ _08029982:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #1
 	bl sub_0800F6EC

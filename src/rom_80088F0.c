@@ -154,19 +154,19 @@ void level_edit_main(void) {
 	}
 	else {
 		sub_080331FC();
-    if (gUnknown_030012E0 == 1) {     
-		gUnknown_030012E8 = gUnknown_030012E0 = gUnknown_03001708 = 0;
+    if (gHeldKeys == 1) {     
+		gSomeKeys_030012E8 = gHeldKeys = gUnknown_03001708 = 0;
     }
-    else if (gUnknown_030012E0 != 0) {
+    else if (gHeldKeys != 0) {
       gUnknown_030009FC = 0x1;
 		}
 	}
     sub_08004FBC();
     sub_08005FA0();
     sub_0801B310();
-    if (((gUnknown_030012E8 & 8) != 0)  && (var1 = sub_08006A34(), var1 == 7)) {
+    if (((gSomeKeys_030012E8 & 8) != 0)  && (var1 = sub_08006A34(), var1 == 7)) {
 		change_main_state(MAIN_STATE_LEVEL_PLAY,USE_FADE);
-		sub_080107E8((int)gNextLevelInLevelTable.unk12,(int)gNextLevelInLevelTable.unk10,0);
+		set_level_highscore_flag_080107E8(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10,0);
       }    
     sub_08008238();
 }

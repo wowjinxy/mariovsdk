@@ -24,7 +24,7 @@ void movie_player_main(void) {
 
     if (gPreviousMainState == 4) {
         if ((gMoviePlayerParams.unk4 & 1) != 0) {
-            if ((gUnknown_030012E8 & 10) != 0) {
+            if ((gSomeKeys_030012E8 & 10) != 0) {
                 change_main_state(gMoviePlayerParams.nextMode, USE_FADE);
             }
         }
@@ -33,7 +33,7 @@ void movie_player_main(void) {
         }
     } else if (gMoviePlayerParams.movieID == 3) {
         if (((gMoviePlayerParams.unk4 & 1) != 0) && (0xB4 < gGeneralTimer)) {
-                if ((gUnknown_030012E8 & 10) != 0) {
+                if ((gSomeKeys_030012E8 & 10) != 0) {
                     // macro here?
                     u32 temp = 3;
                     u32 temp_1 = 0x2c; 
@@ -63,7 +63,7 @@ void movie_player_main(void) {
         }
     }
     else if (gMoviePlayerParams.movieID == 4)  {
-        if ((((gMoviePlayerParams.unk4 & 1) != 0) && (0xb4 < gGeneralTimer)) && ((gUnknown_030012E8 & 10) != 0)
+        if ((((gMoviePlayerParams.unk4 & 1) != 0) && (0xb4 < gGeneralTimer)) && ((gSomeKeys_030012E8 & 10) != 0)
         ) {
             if (sub_080148F0(0x400000)) {
                 change_main_state(MAIN_STATE_LEVEL_SELECT, USE_FADE);
@@ -85,7 +85,7 @@ void movie_player_main(void) {
         }
     }
     else if (gMoviePlayerParams.movieID == 1) {
-        if (((gMoviePlayerParams.unk4 & 1) != 0) && (0xb4 < gGeneralTimer) && ((gUnknown_030012E8 & 10) != 0)) {
+        if (((gMoviePlayerParams.unk4 & 1) != 0) && (0xb4 < gGeneralTimer) && ((gSomeKeys_030012E8 & 10) != 0)) {
             if (sub_08014BB4()) {
                 change_main_state(MAIN_STATE_LEVEL_SELECT, USE_FADE);
             }
@@ -108,7 +108,7 @@ void movie_player_main(void) {
     }
     else if (gMoviePlayerParams.movieID == 0) {
         if (((gMoviePlayerParams.unk4 & 1) != 0) && (0x5 < gGeneralTimer)) {
-            if ((gUnknown_030012E8 & 10) != 0) {
+            if ((gSomeKeys_030012E8 & 10) != 0) {
                 change_main_state(gMoviePlayerParams.nextMode, USE_FADE);
             }
         }
@@ -118,7 +118,7 @@ void movie_player_main(void) {
     }
     else {
         if (((gMoviePlayerParams.unk4 & 1) != 0) && (0xb4 < gGeneralTimer)) {
-            if ((gUnknown_030012E8 & 10) != 0) {
+            if ((gSomeKeys_030012E8 & 10) != 0) {
                 change_main_state(gMoviePlayerParams.nextMode, USE_FADE);
             }
         }

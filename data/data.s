@@ -228,8 +228,8 @@ gUnknown_0807846C:
 	.4byte sub_08015044
 	.4byte sub_08015044
 
-	.GLOBAL gUnknown_080784F8
-gUnknown_080784F8:
+	.GLOBAL gMainLevelDefaultHighScores
+gMainLevelDefaultHighScores:
 @ World 1 Scores
 	.2byte 27500
 	.2byte 28000
@@ -291,8 +291,8 @@ gUnknown_080784F8:
 	.2byte 21500
 
 
-	.GLOBAL gUnknown_08078558
-gUnknown_08078558:
+	.GLOBAL gPlusLevelDefaultHighScores
+gPlusLevelDefaultHighScores:
 @ World 1 Plus Scores
 	.2byte 17000
 	.2byte 17500
@@ -350,7 +350,6 @@ gUnknown_08078558:
 @ Unknown Scores
 	.2byte 10000
 	.2byte 10000
-
 
 	.GLOBAL gUnknown_080785B0
 gUnknown_080785B0:
@@ -440,8 +439,8 @@ gUnknown_080788C8:
 gUnknown_080788E0:
 	.INCBIN "baserom.gba", 0x788E0, 0x788F4-0x788E0
 
-	.GLOBAL gUnknown_080788F4
-gUnknown_080788F4:
+	.GLOBAL gSelectedSaveFileNumPtr
+gSelectedSaveFileNumPtr:
 	.INCBIN "baserom.gba", 0x788F4, 0x788F8-0x788F4
 
 	.GLOBAL gUnknown_080788F8
@@ -452,8 +451,8 @@ gUnknown_080788F8:
 gUnknown_080788FC:
 	.INCBIN "baserom.gba", 0x788FC, 0x78900-0x788FC
 
-	.GLOBAL gUnknown_08078900
-gUnknown_08078900:
+	.GLOBAL gSaveFilesPtr
+gSaveFilesPtr:
 	.INCBIN "baserom.gba", 0x78900, 0x78904-0x78900
 
 	.GLOBAL gUnknown_08078904

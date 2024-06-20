@@ -1598,7 +1598,7 @@ _0800995A:
 	ldrb r2, [r2]
 	lsl r2, r2, #24
 	asr r2, r2, #24
-	bl sub_0801095C
+	bl get_level_highscore_0801095C
 	add r1, r0, #0
 	add r0, r4, #0
 	bl sub_0802FB18
@@ -1903,7 +1903,7 @@ _08009BE0:
 	b _08009E9C
 _08009BEC:
 	ldr r0, _08009C48  @ =gUnknown_03001BC8
-	ldr r1, _08009C4C  @ =gUnknown_03001BA0
+	ldr r1, _08009C4C  @ =gMiniMariosRescued_03001BA0
 	ldrb r2, [r0]
 	ldrb r0, [r1]
 	orr r0, r0, r2
@@ -1952,7 +1952,7 @@ _08009C04:
 _08009C48:
 	.4byte gUnknown_03001BC8
 _08009C4C:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _08009C50:
 	.4byte gUnknown_03001B30
 _08009C54:
@@ -2269,7 +2269,7 @@ _08009E66:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08009EE0
 _08009E9C:
 	mov r0, #2
@@ -2310,7 +2310,7 @@ _08009ECC:
 	blt _08009ECC
 _08009EE0:
 	mov r5, #0
-	ldr r0, _08009F3C  @ =gUnknown_03001BA0
+	ldr r0, _08009F3C  @ =gMiniMariosRescued_03001BA0
 	mov r10, r0
 	ldrb r3, [r0]
 	cmp r5, r3
@@ -2358,7 +2358,7 @@ _08009F34:
 _08009F38:
 	.4byte gUnknown_03000A10
 _08009F3C:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _08009F40:
 	.4byte gUnknown_08587E38
 _08009F44:
@@ -2460,7 +2460,7 @@ _08009FEE:
 	and r0, r0, r1
 	mov r2, r9
 	str r0, [r2]
-	ldr r3, _0800A018  @ =gUnknown_03001BA0
+	ldr r3, _0800A018  @ =gMiniMariosRescued_03001BA0
 	mov r10, r3
 	b _0800A0A6
 	.byte 0x00
@@ -2474,17 +2474,17 @@ _0800A010:
 _0800A014:
 	.4byte 0xEFFFFFFF
 _0800A018:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800A01C:
 	sub r0, r0, #1
 	str r0, [r6, #84]
-	ldr r5, _0800A028  @ =gUnknown_03001BA0
+	ldr r5, _0800A028  @ =gMiniMariosRescued_03001BA0
 	mov r10, r5
 	b _0800A0A6
 	.byte 0x00
 	.byte 0x00
 _0800A028:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800A02C:
 	ldr r2, _0800A0E8  @ =gUnknown_030019AC
 	ldr r3, [r2]
@@ -2496,7 +2496,7 @@ _0800A02C:
 	lsl r0, r0, #17
 	and r1, r1, r0
 	ldr r6, _0800A0EC  @ =gUnknown_03000A10
-	ldr r0, _0800A0F0  @ =gUnknown_03001BA0
+	ldr r0, _0800A0F0  @ =gMiniMariosRescued_03001BA0
 	mov r10, r0
 	cmp r1, #0
 	beq _0800A0A6
@@ -2590,7 +2590,7 @@ _0800A0E8:
 _0800A0EC:
 	.4byte gUnknown_03000A10
 _0800A0F0:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800A0F4:
 	.4byte 0x03000A71
 _0800A0F8:
@@ -2826,7 +2826,7 @@ sub_0800A258: @ 0x0800A258
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800A2AA:
 	add sp, sp, #12
 	pop {r4,r5}
@@ -4810,7 +4810,7 @@ _0800B15C:
 	ldr r1, _0800B1E0  @ =0x84000002
 	mov r8, r1
 _0800B168:
-	ldr r2, _0800B1E4  @ =gUnknown_03001BA0
+	ldr r2, _0800B1E4  @ =gMiniMariosRescued_03001BA0
 	ldrb r2, [r2]
 	cmp r12, r2
 	bge _0800B1F8
@@ -4874,7 +4874,7 @@ _0800B1DC:
 _0800B1E0:
 	.4byte 0x84000002
 _0800B1E4:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800B1E8:
 	.4byte 0x000001FF
 _0800B1EC:
@@ -5210,7 +5210,7 @@ _0800B44C:
 	mov r8, r3
 	ldr r6, _0800B4D0  @ =0x84000002
 _0800B46C:
-	ldr r0, _0800B4D4  @ =gUnknown_03001BA0
+	ldr r0, _0800B4D4  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r0]
 	cmp r12, r0
 	bge _0800B4E0
@@ -5264,7 +5264,7 @@ _0800B4CC:
 _0800B4D0:
 	.4byte 0x84000002
 _0800B4D4:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800B4D8:
 	.4byte 0x000001FF
 _0800B4DC:
@@ -5901,7 +5901,7 @@ _0800B9A2:
 	lsl r0, r0, #24
 	asr r0, r0, #24
 	mov r12, r0
-	ldr r6, _0800BB0C  @ =gUnknown_03001BA0
+	ldr r6, _0800BB0C  @ =gMiniMariosRescued_03001BA0
 	ldrb r4, [r6]
 	cmp r12, r4
 	bge _0800BA2C
@@ -6079,7 +6079,7 @@ _0800BB04:
 _0800BB08:
 	.4byte gUnknown_030019AC
 _0800BB0C:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800BB10:
 	.4byte REG_DMA3SAD
 _0800BB14:
@@ -6112,7 +6112,7 @@ _0800BB3C:
 	mov r12, r2
 	ldr r3, _0800BC40  @ =gUnknown_082EC2D8
 	mov r10, r3
-	ldr r4, _0800BC44  @ =gUnknown_03001BA0
+	ldr r4, _0800BC44  @ =gMiniMariosRescued_03001BA0
 	ldrb r4, [r4]
 	cmp r12, r4
 	bge _0800BBCC
@@ -6174,7 +6174,7 @@ _0800BB5E:
 _0800BBC0:
 	mov r1, #1
 	add r12, r12, r1
-	ldr r2, _0800BC44  @ =gUnknown_03001BA0
+	ldr r2, _0800BC44  @ =gMiniMariosRescued_03001BA0
 	ldrb r2, [r2]
 	cmp r12, r2
 	blt _0800BB5E
@@ -6242,7 +6242,7 @@ _0800BBE0:
 _0800BC40:
 	.4byte gUnknown_082EC2D8
 _0800BC44:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800BC48:
 	.4byte REG_DMA3SAD
 _0800BC4C:
@@ -6399,7 +6399,7 @@ _0800BD6C:
 	mov r3, #0
 	mov r12, r3
 _0800BD70:
-	ldr r4, _0800BE80  @ =gUnknown_03001BA0
+	ldr r4, _0800BE80  @ =gMiniMariosRescued_03001BA0
 	ldrb r4, [r4]
 	cmp r12, r4
 	blt _0800BD7A
@@ -6539,7 +6539,7 @@ _0800BD96:
 	and r1, r1, r0
 	b _0800BECA
 _0800BE80:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800BE84:
 	.4byte gUnknown_03000A10
 _0800BE88:
@@ -6637,7 +6637,7 @@ _0800BF2C:
 	add r9, r9, r3
 	mov r4, #1
 	add r12, r12, r4
-	ldr r0, _0800BF60  @ =gUnknown_03001BA0
+	ldr r0, _0800BF60  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r0]
 	cmp r12, r0
 	bge _0800BF46
@@ -6657,7 +6657,7 @@ _0800BF58:
 _0800BF5C:
 	.4byte 0xFFFFFC00
 _0800BF60:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800BF64:
 	mov r1, #0
 	mov r12, r1
@@ -6732,7 +6732,7 @@ _0800BF84:
 	cmp r12, r0
 	blt _0800BF84
 _0800BFF2:
-	ldr r6, _0800C23C  @ =gUnknown_03001BA0
+	ldr r6, _0800C23C  @ =gMiniMariosRescued_03001BA0
 	ldrb r4, [r6]
 	cmp r12, r4
 	bge _0800C06E
@@ -7035,7 +7035,7 @@ _0800C234:
 _0800C238:
 	.4byte gUnknown_030019AC
 _0800C23C:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0800C240:
 	.4byte gUnknown_03001C78
 _0800C244:
@@ -7513,7 +7513,7 @@ sub_0800C5A4: @ 0x0800C5A4
 	mov r1, #31
 	and r0, r0, r1
 	strb r0, [r2]
-	ldr r2, _0800C614  @ =gUnknown_030012E0
+	ldr r2, _0800C614  @ =gHeldKeys
 	ldrh r1, [r2]
 	mov r0, #10
 	and r0, r0, r1
@@ -7547,7 +7547,7 @@ _0800C60C:
 _0800C610:
 	.4byte gUnknown_03000A10
 _0800C614:
-	.4byte gUnknown_030012E0
+	.4byte gHeldKeys
 _0800C618:
 	.4byte gUnknown_030019A0
 _0800C61C:
@@ -7584,7 +7584,7 @@ _0800C640:
 	bgt _0800C65A
 	b _0800C862
 _0800C65A:
-	ldr r0, _0800C6DC  @ =gUnknown_030012E8
+	ldr r0, _0800C6DC  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r3, #32
 	add r0, r3, #0
@@ -7639,7 +7639,7 @@ _0800C6A0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C6C8:
 	mov r1, r8
 	ldrb r0, [r1]
@@ -7652,7 +7652,7 @@ _0800C6D4:
 _0800C6D8:
 	.4byte gCurrentLevelWidth
 _0800C6DC:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0800C6E0:
 	.4byte gUnknown_030008C8
 _0800C6E4:
@@ -7703,7 +7703,7 @@ _0800C71A:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C740:
 	mov r5, r8
 	ldrb r0, [r5]
@@ -7773,7 +7773,7 @@ _0800C79C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C7C4:
 	mov r2, r8
 	ldrb r0, [r2]
@@ -7850,7 +7850,7 @@ _0800C830:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C856:
 	mov r2, r8
 	ldrb r0, [r2]
@@ -7877,14 +7877,14 @@ _0800C870:
 	bne _0800C87E
 	b _0800CA66
 _0800C87E:
-	ldr r0, _0800C900  @ =gUnknown_030012E8
+	ldr r0, _0800C900  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
 	mov r3, #64
 	add r0, r3, #0
 	and r0, r0, r2
 	cmp r0, #0
 	bne _0800C898
-	ldr r0, _0800C904  @ =gUnknown_030012E0
+	ldr r0, _0800C904  @ =gHeldKeys
 	ldrh r1, [r0]
 	add r0, r3, #0
 	and r0, r0, r1
@@ -7931,7 +7931,7 @@ _0800C898:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C8EC:
 	ldrb r0, [r5]
 	strb r0, [r4]
@@ -7945,9 +7945,9 @@ _0800C8F8:
 _0800C8FC:
 	.4byte gCurrentLevelHeight
 _0800C900:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _0800C904:
-	.4byte gUnknown_030012E0
+	.4byte gHeldKeys
 _0800C908:
 	.4byte gUnknown_03000A10
 _0800C90C:
@@ -7995,7 +7995,7 @@ _0800C928:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C966:
 	ldrb r0, [r5]
 	strb r0, [r4]
@@ -8061,7 +8061,7 @@ _0800C988:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800C9E4:
 	ldrb r0, [r4]
 	strb r0, [r5]
@@ -8124,7 +8124,7 @@ _0800CA18:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0800CA5C:
 	ldrb r0, [r4]
 	strb r0, [r5]
@@ -8150,7 +8150,7 @@ _0800CA66:
 	mov r1, #12
 	mov r2, #1
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #1
 	strb r0, [r4]
 	b _0800CAAC
@@ -8440,7 +8440,7 @@ _0800CC94:
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
-	bl sub_0800FCE4
+	bl got_star_on_level
 	cmp r0, #0
 	beq _0800CD00
 	ldr r0, _0800CCF0  @ =gUnknown_03000A10
@@ -8844,7 +8844,7 @@ _0800CF86:
 	ldrb r1, [r1]
 	lsl r1, r1, #24
 	asr r1, r1, #24
-	bl sub_0800FCE4
+	bl got_star_on_level
 	mov r1, #72
 	lsl r1, r1, #16
 	str r1, [sp, #128]

@@ -27,7 +27,7 @@ _080114FC:
 	ldr r1, [r0]
 	cmp r1, #4
 	bne _08011524
-	ldr r0, _08011520  @ =0x03000058
+	ldr r0, _08011520  @ =gFileSelectMenuSel
 	strb r1, [r0]
 	b _0801157E
 	.byte 0x00
@@ -43,7 +43,7 @@ _08011518:
 _0801151C:
 	.4byte gPreviousMainState
 _08011520:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011524:
 	add r0, r1, #0
 	sub r0, r0, #24
@@ -52,14 +52,14 @@ _08011524:
 	ldrb r0, [r2]
 	cmp r0, #0
 	beq _08011540
-	ldr r1, _0801153C  @ =0x03000058
+	ldr r1, _0801153C  @ =gFileSelectMenuSel
 	mov r0, #3
 	strb r0, [r1]
 	b _0801157E
 	.byte 0x00
 	.byte 0x00
 _0801153C:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011540:
 	ldr r0, _08011560  @ =gUnknown_080788F8
 	ldr r0, [r0]
@@ -72,7 +72,7 @@ _08011540:
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08011570
-	ldr r2, _08011568  @ =0x03000058
+	ldr r2, _08011568  @ =gFileSelectMenuSel
 	ldr r1, _0801156C  @ =0x03000059
 	mov r0, #3
 	b _0801157A
@@ -83,13 +83,13 @@ _08011560:
 _08011564:
 	.4byte 0x0300005D
 _08011568:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _0801156C:
 	.4byte 0x03000059
 _08011570:
-	ldr r2, _0801163C  @ =0x03000058
+	ldr r2, _0801163C  @ =gFileSelectMenuSel
 	ldr r1, _08011640  @ =0x03000059
-	ldr r0, _08011644  @ =gUnknown_080788F4
+	ldr r0, _08011644  @ =gSelectedSaveFileNumPtr
 	ldr r0, [r0]
 	ldrb r0, [r0]
 _0801157A:
@@ -187,11 +187,11 @@ _08011616:
 	.byte 0x00
 	.byte 0x00
 _0801163C:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011640:
 	.4byte 0x03000059
 _08011644:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08011648:
 	.4byte 0x0300005B
 _0801164C:
@@ -253,7 +253,7 @@ _080116AE:
 	mov r2, #32
 	bl memcpy
 	ldr r1, _08011700  @ =gBGLayerOffsets 
-	ldr r0, _08011704  @ =0x03000058
+	ldr r0, _08011704  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	add r0, sp, r0
 	ldrb r0, [r0]
@@ -261,9 +261,9 @@ _080116AE:
 	asr r0, r0, #24
 	neg r0, r0
 	strh r0, [r1, #8]
-	ldr r0, _08011704  @ =0x03000058
+	ldr r0, _08011704  @ =gFileSelectMenuSel
 	ldrb r2, [r0]
-	ldr r1, _08011708  @ =gUnknown_08078900
+	ldr r1, _08011708  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -292,9 +292,9 @@ _080116FC:
 _08011700:
 	.4byte gBGLayerOffsets 
 _08011704:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011708:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _0801170C:
 	.4byte 0x00000313
 _08011710:
@@ -362,13 +362,13 @@ sub_08011768: @ 0x08011768
 	bne _08011780
 	b _08011968
 _08011780:
-	ldr r4, _080117B4  @ =0x03000058
+	ldr r4, _080117B4  @ =gFileSelectMenuSel
 	ldrb r0, [r4]
 	cmp r0, #5
 	bne _08011830
 	mov r2, #0
 	ldr r4, _080117B8  @ =gUnknown_0807CA94
-	ldr r0, _080117BC  @ =gUnknown_08078900
+	ldr r0, _080117BC  @ =gSaveFilesPtr
 	ldr r3, [r0]
 _08011790:
 	lsl r1, r2, #24
@@ -391,11 +391,11 @@ _08011790:
 	.byte 0x00
 	.byte 0x00
 _080117B4:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080117B8:
 	.4byte gUnknown_0807CA94
 _080117BC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080117C0:
 	mov r0, #0
 _080117C2:
@@ -430,9 +430,9 @@ _080117E8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08011814  @ =0x03000059
-	ldr r2, _08011818  @ =0x03000058
+	ldr r2, _08011818  @ =gFileSelectMenuSel
 	ldrb r0, [r2]
 	strb r0, [r1]
 	lsl r0, r5, #24
@@ -445,7 +445,7 @@ _080117E8:
 _08011814:
 	.4byte 0x03000059
 _08011818:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _0801181C:
 	strb r4, [r2]
 _0801181E:
@@ -469,7 +469,7 @@ _08011830:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #4
 	b _0801198A
 _0801184E:
@@ -484,7 +484,7 @@ _0801184E:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #29
 	b _0801198A
 _0801186C:
@@ -501,8 +501,8 @@ _08011872:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
-	ldr r0, _08011908  @ =gUnknown_080788F4
+	bl play_sound_effect_08071990
+	ldr r0, _08011908  @ =gSelectedSaveFileNumPtr
 	mov r8, r0
 	ldr r1, [r0]
 	ldrb r0, [r4]
@@ -514,7 +514,7 @@ _08011872:
 	ldr r3, _08011910  @ =gNextLevelID
 	mov r12, r3
 	ldr r4, _08011914  @ =gLevelType
-	ldr r1, _08011918  @ =gUnknown_08078900
+	ldr r1, _08011918  @ =gSaveFilesPtr
 	mov r9, r1
 	lsl r1, r0, #3
 	sub r1, r1, r0
@@ -560,14 +560,14 @@ _080118F2:
 	mov r1, #0
 	mov r2, #0
 	add r3, sp, #12
-	bl sub_0800FE2C
+	bl get_level_stats_0800FE2C
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08011920
 	mov r0, #8
 	b _0801198A
 _08011908:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _0801190C:
 	.4byte gCurrentWorld
 _08011910:
@@ -575,7 +575,7 @@ _08011910:
 _08011914:
 	.4byte gLevelType
 _08011918:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _0801191C:
 	.4byte gLivesCount
 _08011920:
@@ -615,7 +615,7 @@ _0801195C:
 _08011964:
 	.4byte gUnknown_03000B50
 _08011968:
-	ldr r0, _08011994  @ =gUnknown_030012E8
+	ldr r0, _08011994  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #2
 	and r0, r0, r1
@@ -629,7 +629,7 @@ _08011968:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #7
 _0801198A:
 	mov r1, #1
@@ -638,9 +638,9 @@ _0801198A:
 	.byte 0x00
 	.byte 0x00
 _08011994:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08011998:
-	ldr r5, _080119F0  @ =0x03000058
+	ldr r5, _080119F0  @ =gFileSelectMenuSel
 	ldrb r2, [r5]
 	cmp r2, #7
 	bls _080119A2
@@ -650,7 +650,7 @@ _080119A2:
 	bls _080119A8
 	b _08011AA6
 _080119A8:
-	ldr r0, _080119F4  @ =gUnknown_030012E8
+	ldr r0, _080119F4  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #16
 	and r0, r0, r1
@@ -665,7 +665,7 @@ _080119A8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, _080119F8  @ =0x03000059
 	ldrb r1, [r5]
 	strb r1, [r0]
@@ -680,7 +680,7 @@ _080119A8:
 	add r0, r1, #1
 	strb r0, [r5]
 _080119E4:
-	ldr r1, _080119F0  @ =0x03000058
+	ldr r1, _080119F0  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	add r0, r0, #1
 	strb r0, [r1]
@@ -688,9 +688,9 @@ _080119E4:
 	.byte 0x00
 	.byte 0x00
 _080119F0:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080119F4:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _080119F8:
 	.4byte 0x03000059
 _080119FC:
@@ -707,7 +707,7 @@ _08011A06:
 	bne _08011A12
 	b _08011B5A
 _08011A12:
-	ldr r0, _08011A44  @ =gUnknown_08078900
+	ldr r0, _08011A44  @ =gSaveFilesPtr
 	lsl r1, r2, #3
 	sub r1, r1, r2
 	lsl r1, r1, #5
@@ -734,7 +734,7 @@ _08011A12:
 	.byte 0x00
 	.byte 0x00
 _08011A44:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08011A48:
 	.4byte 0x00000313
 _08011A4C:
@@ -754,9 +754,9 @@ _08011A52:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08011A84  @ =0x03000059
-	ldr r1, _08011A88  @ =0x03000058
+	ldr r1, _08011A88  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	add r0, r0, #6
@@ -770,7 +770,7 @@ _08011A52:
 _08011A84:
 	.4byte 0x03000059
 _08011A88:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011A8C:
 	.4byte 0x0300005B
 _08011A90:
@@ -782,10 +782,10 @@ _08011A90:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08011B5A
 _08011AA6:
-	ldr r0, _08011AD8  @ =gUnknown_030012E8
+	ldr r0, _08011AD8  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r3, #128
 	add r0, r3, #0
@@ -802,7 +802,7 @@ _08011AA6:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08011ADC  @ =0x03000059
 	ldrb r0, [r5]
 	strb r0, [r1]
@@ -810,7 +810,7 @@ _08011AA6:
 	strb r0, [r5]
 	b _08011AF4
 _08011AD8:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08011ADC:
 	.4byte 0x03000059
 _08011AE0:
@@ -822,9 +822,9 @@ _08011AE0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _08011AF4:
-	ldr r0, _08011B24  @ =gUnknown_030012E8
+	ldr r0, _08011B24  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #16
 	and r0, r0, r1
@@ -839,9 +839,9 @@ _08011AF4:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08011B28  @ =0x03000059
-	ldr r1, _08011B2C  @ =0x03000058
+	ldr r1, _08011B2C  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	strb r4, [r1]
@@ -849,13 +849,13 @@ _08011AF4:
 	.byte 0x00
 	.byte 0x00
 _08011B24:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08011B28:
 	.4byte 0x03000059
 _08011B2C:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011B30:
-	ldr r0, _08011BD0  @ =gUnknown_030012E8
+	ldr r0, _08011BD0  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #16
 	and r0, r0, r1
@@ -870,19 +870,19 @@ _08011B30:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08011BD4  @ =0x03000059
 	ldrb r0, [r5]
 	strb r0, [r1]
 	strb r4, [r5]
 _08011B5A:
-	ldr r5, _08011BD8  @ =0x03000058
+	ldr r5, _08011BD8  @ =gFileSelectMenuSel
 	ldrb r4, [r5]
 	cmp r4, #0
 	beq _08011C54
 	cmp r4, #4
 	bhi _08011BE0
-	ldr r2, _08011BD0  @ =gUnknown_030012E8
+	ldr r2, _08011BD0  @ =gSomeKeys_030012E8
 	ldrh r1, [r2]
 	mov r0, #32
 	and r0, r0, r1
@@ -897,7 +897,7 @@ _08011B5A:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, _08011BD4  @ =0x03000059
 	ldrb r1, [r5]
 	strb r1, [r0]
@@ -912,11 +912,11 @@ _08011B5A:
 	sub r0, r1, #1
 	strb r0, [r5]
 _08011BA2:
-	ldr r1, _08011BD8  @ =0x03000058
+	ldr r1, _08011BD8  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	sub r0, r0, #1
 	strb r0, [r1]
-	ldr r2, _08011BD0  @ =gUnknown_030012E8
+	ldr r2, _08011BD0  @ =gSomeKeys_030012E8
 _08011BAC:
 	ldrh r1, [r2]
 	mov r0, #64
@@ -933,20 +933,20 @@ _08011BB8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08011C9C
 	.byte 0x00
 	.byte 0x00
 _08011BD0:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08011BD4:
 	.4byte 0x03000059
 _08011BD8:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011BDC:
 	.4byte 0x0300005D
 _08011BE0:
-	ldr r0, _08011C10  @ =gUnknown_030012E8
+	ldr r0, _08011C10  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
 	mov r0, #64
 	and r0, r0, r2
@@ -963,14 +963,14 @@ _08011BE0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08011C14  @ =0x03000059
 	ldrb r0, [r5]
 	strb r0, [r1]
 	sub r0, r0, #1
 	b _08011C9A
 _08011C10:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08011C14:
 	.4byte 0x03000059
 _08011C18:
@@ -986,7 +986,7 @@ _08011C18:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, _08011C4C  @ =0x03000059
 	ldrb r1, [r5]
 	strb r1, [r0]
@@ -1005,7 +1005,7 @@ _08011C4C:
 _08011C50:
 	.4byte 0x0300005D
 _08011C54:
-	ldr r6, _08011CAC  @ =gUnknown_030012E8
+	ldr r6, _08011CAC  @ =gSomeKeys_030012E8
 	ldrh r1, [r6]
 	mov r0, #64
 	and r0, r0, r1
@@ -1019,7 +1019,7 @@ _08011C54:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _08011C74:
 	ldrh r1, [r6]
 	mov r0, #32
@@ -1034,7 +1034,7 @@ _08011C74:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08011CB0  @ =0x03000059
 	ldrb r0, [r5]
 	strb r0, [r1]
@@ -1052,7 +1052,7 @@ _08011C9C:
 	.byte 0x00
 	.byte 0x00
 _08011CAC:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08011CB0:
 	.4byte 0x03000059
 	THUMB_FUNC_END sub_08011768
@@ -1061,7 +1061,7 @@ _08011CB0:
 sub_08011CB4: @ 0x08011CB4
 	push {r4,r5,lr}
 	sub sp, sp, #12
-	ldr r0, _08011CEC  @ =gUnknown_030012E8
+	ldr r0, _08011CEC  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #64
 	and r0, r0, r1
@@ -1078,9 +1078,9 @@ sub_08011CB4: @ 0x08011CB4
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08011CF0  @ =0x03000059
-	ldr r1, _08011CF4  @ =0x03000058
+	ldr r1, _08011CF4  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	sub r0, r0, #6
@@ -1088,11 +1088,11 @@ sub_08011CB4: @ 0x08011CB4
 	.byte 0x00
 	.byte 0x00
 _08011CEC:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08011CF0:
 	.4byte 0x03000059
 _08011CF4:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011CF8:
 	mov r0, #32
 	and r0, r0, r1
@@ -1100,14 +1100,14 @@ _08011CF8:
 	lsr r5, r0, #16
 	cmp r5, #0
 	beq _08011DD4
-	ldr r5, _08011D44  @ =0x03000058
+	ldr r5, _08011D44  @ =gFileSelectMenuSel
 	ldrb r1, [r5]
 	cmp r1, #6
 	bls _08011DB0
 	sub r1, r1, #7
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	ldr r2, _08011D48  @ =gUnknown_08078900
+	ldr r2, _08011D48  @ =gSaveFilesPtr
 	lsl r0, r1, #3
 	sub r0, r0, r1
 	lsl r0, r0, #5
@@ -1134,9 +1134,9 @@ _08011CF8:
 	.byte 0x00
 	.byte 0x00
 _08011D44:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011D48:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08011D4C:
 	.4byte 0x00000313
 _08011D50:
@@ -1156,9 +1156,9 @@ _08011D56:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08011D80  @ =0x03000059
-	ldr r1, _08011D84  @ =0x03000058
+	ldr r1, _08011D84  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	sub r0, r0, #1
@@ -1167,7 +1167,7 @@ _08011D56:
 _08011D80:
 	.4byte 0x03000059
 _08011D84:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011D88:
 	str r4, [sp]
 	mov r0, #128
@@ -1177,9 +1177,9 @@ _08011D88:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08011DA8  @ =0x03000059
-	ldr r1, _08011DAC  @ =0x03000058
+	ldr r1, _08011DAC  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	strb r4, [r1]
@@ -1187,7 +1187,7 @@ _08011D88:
 _08011DA8:
 	.4byte 0x03000059
 _08011DAC:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011DB0:
 	str r4, [sp]
 	mov r0, #128
@@ -1197,7 +1197,7 @@ _08011DB0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08011DD0  @ =0x03000059
 	ldrb r0, [r5]
 	strb r0, [r1]
@@ -1212,14 +1212,14 @@ _08011DD4:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08011EB6
-	ldr r4, _08011E1C  @ =0x03000058
+	ldr r4, _08011E1C  @ =gFileSelectMenuSel
 	ldrb r1, [r4]
 	cmp r1, #7
 	bhi _08011E94
 	sub r1, r1, #5
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	ldr r2, _08011E20  @ =gUnknown_08078900
+	ldr r2, _08011E20  @ =gSaveFilesPtr
 	lsl r0, r1, #3
 	sub r0, r0, r1
 	lsl r0, r0, #5
@@ -1246,9 +1246,9 @@ _08011DD4:
 	.byte 0x00
 	.byte 0x00
 _08011E1C:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011E20:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08011E24:
 	.4byte 0x00000313
 _08011E28:
@@ -1268,9 +1268,9 @@ _08011E2E:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08011E58  @ =0x03000059
-	ldr r1, _08011E5C  @ =0x03000058
+	ldr r1, _08011E5C  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	add r0, r0, #1
@@ -1279,7 +1279,7 @@ _08011E2E:
 _08011E58:
 	.4byte 0x03000059
 _08011E5C:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011E60:
 	str r4, [sp]
 	mov r0, #128
@@ -1289,9 +1289,9 @@ _08011E60:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08011E88  @ =0x03000059
-	ldr r1, _08011E8C  @ =0x03000058
+	ldr r1, _08011E8C  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	mov r0, #5
@@ -1306,7 +1306,7 @@ _08011E80:
 _08011E88:
 	.4byte 0x03000059
 _08011E8C:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011E90:
 	.4byte 0x0300005B
 _08011E94:
@@ -1318,7 +1318,7 @@ _08011E94:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08011F20  @ =0x03000059
 	ldrb r0, [r4]
 	strb r0, [r1]
@@ -1327,7 +1327,7 @@ _08011E94:
 	ldr r0, _08011F24  @ =0x0300005B
 	strb r5, [r0]
 _08011EB6:
-	ldr r0, _08011F28  @ =gUnknown_030012E8
+	ldr r0, _08011F28  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r5, #128
 	add r0, r5, #0
@@ -1342,7 +1342,7 @@ _08011EB6:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _08011ED8:
 	bl sub_08034004
 	lsl r0, r0, #24
@@ -1356,11 +1356,11 @@ _08011ED8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, _08011F2C  @ =gLevelType
 	mov r1, #2
 	strb r1, [r0]
-	ldr r0, _08011F30  @ =0x03000058
+	ldr r0, _08011F30  @ =gFileSelectMenuSel
 	ldrb r2, [r0]
 	cmp r2, #3
 	bne _08011F34
@@ -1371,7 +1371,7 @@ _08011ED8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	mov r0, #29
 	mov r1, #1
 	bl change_main_state
@@ -1381,13 +1381,13 @@ _08011F20:
 _08011F24:
 	.4byte 0x0300005B
 _08011F28:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08011F2C:
 	.4byte gLevelType
 _08011F30:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011F34:
-	ldr r0, _08011F54  @ =gUnknown_080788F4
+	ldr r0, _08011F54  @ =gSelectedSaveFileNumPtr
 	ldr r1, [r0]
 	sub r0, r2, #6
 	strb r0, [r1]
@@ -1404,7 +1404,7 @@ _08011F4C:
 	pop {r0}
 	bx r0
 _08011F54:
-	.4byte gUnknown_080788F4
+	.4byte gSelectedSaveFileNumPtr
 _08011F58:
 	.4byte gCurrentWorld
 _08011F5C:
@@ -1425,11 +1425,11 @@ sub_08011F60: @ 0x08011F60
 	lsr r1, r0, #24
 	cmp r1, #0
 	beq _08012004
-	ldr r0, _08011FA4  @ =0x03000058
+	ldr r0, _08011FA4  @ =gFileSelectMenuSel
 	ldrb r2, [r0]
 	cmp r2, #2
 	bhi _08011FB2
-	ldr r1, _08011FA8  @ =gUnknown_08078900
+	ldr r1, _08011FA8  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -1447,9 +1447,9 @@ sub_08011F60: @ 0x08011F60
 _08011FA0:
 	.4byte gBGLayerOffsets 
 _08011FA4:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08011FA8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08011FAC:
 	mov r0, #0
 _08011FAE:
@@ -1470,7 +1470,7 @@ _08011FB8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08012224
 	.byte 0x00
 	.byte 0x00
@@ -1486,7 +1486,7 @@ _08011FD8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r1, _08011FFC  @ =0x0300005B
 	mov r0, #3
 	strb r0, [r1]
@@ -1500,7 +1500,7 @@ _08011FFC:
 _08012000:
 	.4byte 0x0300005C
 _08012004:
-	ldr r5, _08012040  @ =gUnknown_030012E8
+	ldr r5, _08012040  @ =gSomeKeys_030012E8
 	ldrh r2, [r5]
 	mov r0, #2
 	and r0, r0, r2
@@ -1516,9 +1516,9 @@ _08012004:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08012044  @ =0x03000059
-	ldr r1, _08012048  @ =0x03000058
+	ldr r1, _08012048  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	strb r6, [r1]
@@ -1530,11 +1530,11 @@ _08012004:
 	.byte 0x00
 	.byte 0x00
 _08012040:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08012044:
 	.4byte 0x03000059
 _08012048:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _0801204C:
 	.4byte 0x0300005B
 _08012050:
@@ -1550,7 +1550,7 @@ _08012050:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0801206C:
 	ldrh r1, [r5]
 	mov r0, #16
@@ -1560,7 +1560,7 @@ _0801206C:
 	cmp r2, #0
 	beq _08012142
 	ldr r1, _080120A8  @ =0x03000059
-	ldr r5, _080120AC  @ =0x03000058
+	ldr r5, _080120AC  @ =gFileSelectMenuSel
 	ldrb r0, [r5]
 	strb r0, [r1]
 	str r4, [sp]
@@ -1571,7 +1571,7 @@ _0801206C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldrb r1, [r5]
 	ldr r0, _080120B0  @ =0x0300005D
 	ldrb r0, [r0]
@@ -1584,7 +1584,7 @@ _0801206C:
 _080120A8:
 	.4byte 0x03000059
 _080120AC:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080120B0:
 	.4byte 0x0300005D
 _080120B4:
@@ -1609,7 +1609,7 @@ _080120CE:
 	mov r2, #32
 	bl memcpy
 	ldr r1, _08012124  @ =gBGLayerOffsets 
-	ldr r0, _08012128  @ =0x03000058
+	ldr r0, _08012128  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	add r0, sp, r0
 	add r0, r0, #12
@@ -1618,9 +1618,9 @@ _080120CE:
 	asr r0, r0, #24
 	neg r0, r0
 	strh r0, [r1, #8]
-	ldr r0, _08012128  @ =0x03000058
+	ldr r0, _08012128  @ =gFileSelectMenuSel
 	ldrb r2, [r0]
-	ldr r1, _0801212C  @ =gUnknown_08078900
+	ldr r1, _0801212C  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -1651,9 +1651,9 @@ _08012120:
 _08012124:
 	.4byte gBGLayerOffsets 
 _08012128:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _0801212C:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012130:
 	.4byte 0x00000313
 _08012134:
@@ -1671,7 +1671,7 @@ _08012142:
 	cmp r0, #0
 	beq _08012224
 	ldr r0, _08012174  @ =0x03000059
-	ldr r4, _08012178  @ =0x03000058
+	ldr r4, _08012178  @ =gFileSelectMenuSel
 	ldrb r1, [r4]
 	strb r1, [r0]
 	str r2, [sp]
@@ -1682,7 +1682,7 @@ _08012142:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldrb r0, [r4]
 	cmp r0, #0
 	beq _08012180
@@ -1693,7 +1693,7 @@ _08012142:
 _08012174:
 	.4byte 0x03000059
 _08012178:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _0801217C:
 	.4byte 0x0300005D
 _08012180:
@@ -1720,7 +1720,7 @@ _0801219E:
 	mov r2, #32
 	bl memcpy
 	ldr r1, _080121F4  @ =gBGLayerOffsets 
-	ldr r0, _080121F8  @ =0x03000058
+	ldr r0, _080121F8  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	add r0, sp, r0
 	add r0, r0, #12
@@ -1729,9 +1729,9 @@ _0801219E:
 	asr r0, r0, #24
 	neg r0, r0
 	strh r0, [r1, #8]
-	ldr r0, _080121F8  @ =0x03000058
+	ldr r0, _080121F8  @ =gFileSelectMenuSel
 	ldrb r2, [r0]
-	ldr r1, _080121FC  @ =gUnknown_08078900
+	ldr r1, _080121FC  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -1762,9 +1762,9 @@ _080121F0:
 _080121F4:
 	.4byte gBGLayerOffsets 
 _080121F8:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080121FC:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012200:
 	.4byte 0x00000313
 _08012204:
@@ -1825,14 +1825,14 @@ sub_08012230: @ 0x08012230
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
-	ldr r0, _080122CC  @ =0x03000058
+	bl play_sound_effect_08071990
+	ldr r0, _080122CC  @ =gFileSelectMenuSel
 	ldrb r1, [r0]
 	cmp r1, #2
 	bhi _080122E0
 	add r0, sp, #12
 	strh r4, [r0]
-	ldr r5, _080122D0  @ =gUnknown_08078900
+	ldr r5, _080122D0  @ =gSaveFilesPtr
 	lsl r4, r1, #3
 	sub r4, r4, r1
 	lsl r4, r4, #5
@@ -1844,7 +1844,7 @@ sub_08012230: @ 0x08012230
 	bl CpuSet
 	ldr r0, [r5]
 	add r0, r0, r4
-	bl sub_08010DEC
+	bl init_level_highscores_08010DEC
 	ldr r0, _080122D8  @ =gUnknown_03000B50
 	ldrb r0, [r0]
 	cmp r0, #1
@@ -1875,9 +1875,9 @@ _080122C4:
 _080122C8:
 	.4byte 0x0300005C
 _080122CC:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080122D0:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080122D4:
 	.4byte 0x010001BE
 _080122D8:
@@ -1889,7 +1889,7 @@ _080122E0:
 	bl sub_0802F1D4
 _080122E8:
 	ldr r1, _080122FC  @ =0x03000059
-	ldr r2, _08012300  @ =0x03000058
+	ldr r2, _08012300  @ =gFileSelectMenuSel
 	ldrb r0, [r2]
 	strb r0, [r1]
 	mov r1, #0
@@ -1902,11 +1902,11 @@ _080122E8:
 _080122FC:
 	.4byte 0x03000059
 _08012300:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08012304:
 	.4byte 0x0300005B
 _08012308:
-	ldr r0, _08012340  @ =gUnknown_030012E8
+	ldr r0, _08012340  @ =gSomeKeys_030012E8
 	ldrh r2, [r0]
 	mov r0, #2
 	and r0, r0, r2
@@ -1921,9 +1921,9 @@ _08012314:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r2, _08012344  @ =0x03000059
-	ldr r1, _08012348  @ =0x03000058
+	ldr r1, _08012348  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	strb r0, [r2]
 	strb r5, [r1]
@@ -1936,11 +1936,11 @@ _08012336:
 	.byte 0x00
 	.byte 0x00
 _08012340:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08012344:
 	.4byte 0x03000059
 _08012348:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _0801234C:
 	.4byte 0x0300005B
 _08012350:
@@ -1965,7 +1965,7 @@ _08012350:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080123AC
 _08012380:
 	.4byte 0x0300005C
@@ -1988,7 +1988,7 @@ _08012384:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _080123AC:
 	add sp, sp, #16
 	pop {r4,r5}
@@ -2094,7 +2094,7 @@ _08012450:
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08012476
-	ldr r1, _080124A8  @ =0x03000058
+	ldr r1, _080124A8  @ =gFileSelectMenuSel
 	mov r0, #3
 	strb r0, [r1]
 _08012476:
@@ -2109,7 +2109,7 @@ _08012476:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _080124CC
 	.byte 0x00
 	.byte 0x00
@@ -2124,7 +2124,7 @@ _080124A0:
 _080124A4:
 	.4byte 0x03000063
 _080124A8:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080124AC:
 	str r1, [sp]
 	mov r0, #128
@@ -2134,8 +2134,8 @@ _080124AC:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
-	ldr r1, _08012548  @ =0x03000058
+	bl play_sound_effect_08071990
+	ldr r1, _08012548  @ =gFileSelectMenuSel
 	ldrb r0, [r1]
 	cmp r0, #3
 	bne _080124CC
@@ -2210,7 +2210,7 @@ _08012540:
 	pop {r0}
 	bx r0
 _08012548:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _0801254C:
 	.4byte 0x03000064
 _08012550:
@@ -2245,7 +2245,7 @@ _0801257C:
 _08012580:
 	ldr r2, _080125B8  @ =gUnknown_080785B0
 _08012582:
-	ldr r3, _080125BC  @ =0x03000058
+	ldr r3, _080125BC  @ =gFileSelectMenuSel
 	ldrb r0, [r3]
 	lsl r0, r0, #3
 	add r1, r0, r2
@@ -2255,7 +2255,7 @@ _08012582:
 	ldrh r0, [r0]
 	mov r12, r0
 	ldrb r2, [r3]
-	ldr r1, _080125C0  @ =gUnknown_08078900
+	ldr r1, _080125C0  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -2275,9 +2275,9 @@ _08012582:
 _080125B8:
 	.4byte gUnknown_080785B0
 _080125BC:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080125C0:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080125C4:
 	mov r0, #0
 _080125C6:
@@ -2394,7 +2394,7 @@ _08012694:
 _08012698:
 	ldr r2, _080126D0  @ =gUnknown_080785B0
 _0801269A:
-	ldr r3, _080126D4  @ =0x03000058
+	ldr r3, _080126D4  @ =gFileSelectMenuSel
 	ldrb r0, [r3]
 	lsl r0, r0, #3
 	add r1, r0, r2
@@ -2404,7 +2404,7 @@ _0801269A:
 	ldrh r0, [r0]
 	mov r12, r0
 	ldrb r2, [r3]
-	ldr r1, _080126D8  @ =gUnknown_08078900
+	ldr r1, _080126D8  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -2424,9 +2424,9 @@ _0801269A:
 _080126D0:
 	.4byte gUnknown_080785B0
 _080126D4:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080126D8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _080126DC:
 	mov r0, #0
 _080126DE:
@@ -2552,7 +2552,7 @@ _080127C0:
 _080127C4:
 	ldr r2, _08012808  @ =gUnknown_08078610
 _080127C6:
-	ldr r3, _0801280C  @ =0x03000058
+	ldr r3, _0801280C  @ =gFileSelectMenuSel
 	ldrb r0, [r3]
 	sub r0, r0, #6
 	lsl r0, r0, #3
@@ -2567,7 +2567,7 @@ _080127C6:
 	add r0, sp, r0
 	ldrb r0, [r0]
 	mov r8, r0
-	ldr r1, _08012810  @ =gUnknown_08078900
+	ldr r1, _08012810  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -2589,9 +2589,9 @@ _080127C6:
 _08012808:
 	.4byte gUnknown_08078610
 _0801280C:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08012810:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012814:
 	mov r0, #0
 _08012816:
@@ -2844,7 +2844,7 @@ _080129EC:
 _080129F0:
 	ldr r2, _08012A30  @ =gUnknown_080785B0
 _080129F2:
-	ldr r3, _08012A34  @ =0x03000058
+	ldr r3, _08012A34  @ =gFileSelectMenuSel
 	ldrb r0, [r3]
 	lsl r0, r0, #3
 	add r1, r0, r2
@@ -2858,7 +2858,7 @@ _080129F2:
 	add r0, r2, r1
 	ldrb r0, [r0]
 	str r0, [sp, #12]
-	ldr r2, _08012A38  @ =gUnknown_08078900
+	ldr r2, _08012A38  @ =gSaveFilesPtr
 	lsl r0, r1, #3
 	sub r0, r0, r1
 	lsl r0, r0, #5
@@ -2878,9 +2878,9 @@ _080129F2:
 _08012A30:
 	.4byte gUnknown_080785B0
 _08012A34:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08012A38:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012A3C:
 	mov r0, #0
 _08012A3E:
@@ -3328,9 +3328,9 @@ sub_08012D24: @ 0x08012D24
 	lsl r2, r2, #5
 	add r6, r6, r2
 	strh r6, [r3]
-	ldr r4, _08012E00  @ =0x03000058
+	ldr r4, _08012E00  @ =gFileSelectMenuSel
 	ldrb r2, [r4]
-	ldr r1, _08012E04  @ =gUnknown_08078900
+	ldr r1, _08012E04  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -3373,9 +3373,9 @@ _08012DF8:
 _08012DFC:
 	.4byte 0x03000052
 _08012E00:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08012E04:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08012E08:
 	mov r0, #0
 _08012E0A:
@@ -5093,7 +5093,7 @@ _08013AE4:
 	add r1, r7, #0
 	mov r3, r8
 	bl sub_080138D0
-	ldr r1, _08013B44  @ =gUnknown_08078900
+	ldr r1, _08013B44  @ =gSaveFilesPtr
 	lsl r2, r7, #3
 	sub r0, r2, r7
 	lsl r0, r0, #5
@@ -5118,7 +5118,7 @@ _08013AE4:
 _08013B40:
 	.4byte gUnknown_08078700
 _08013B44:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013B48:
 	mov r0, #0
 _08013B4A:
@@ -5155,7 +5155,7 @@ _08013B84:
 _08013B88:
 	.4byte gUnknown_08078778
 _08013B8C:
-	ldr r2, _08013BA8  @ =gUnknown_08078900
+	ldr r2, _08013BA8  @ =gSaveFilesPtr
 	ldr r4, [sp, #32]
 	sub r0, r4, r7
 	lsl r0, r0, #5
@@ -5170,7 +5170,7 @@ _08013B8C:
 	mov r0, #1
 	b _08013BAE
 _08013BA8:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013BAC:
 	mov r0, #0
 _08013BAE:
@@ -5272,7 +5272,7 @@ _08013C6C:
 	mov r4, #6
 	add r4, sp, r4
 	mov r8, r4
-	ldr r1, _08013D64  @ =gUnknown_08078900
+	ldr r1, _08013D64  @ =gSaveFilesPtr
 	ldr r2, [sp, #32]
 	sub r0, r2, r7
 	lsl r0, r0, #5
@@ -5387,7 +5387,7 @@ _08013C6C:
 	bl sub_080133D4
 	b _08013DF0
 _08013D64:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013D68:
 	.4byte gUnknown_08078790
 _08013D6C:
@@ -5458,7 +5458,7 @@ _08013DC0:
 	ldr r2, [sp, #16]
 	bl sub_080138D0
 _08013DF0:
-	ldr r5, _08013ED4  @ =gUnknown_08078900
+	ldr r5, _08013ED4  @ =gSaveFilesPtr
 	ldr r6, [sp, #32]
 	sub r0, r6, r7
 	lsl r0, r0, #5
@@ -5572,7 +5572,7 @@ _08013ECC:
 _08013ED0:
 	.4byte gUnknown_080786C0
 _08013ED4:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013ED8:
 	.4byte gUnknown_08078760
 _08013EDC:
@@ -5611,7 +5611,7 @@ _08013F18:
 	sub r3, r6, r7
 	lsl r2, r3, #24
 	lsr r2, r2, #24
-	ldr r1, _08013F5C  @ =gUnknown_08078900
+	ldr r1, _08013F5C  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -5643,7 +5643,7 @@ _08013F54:
 _08013F58:
 	.4byte gUnknown_08078610
 _08013F5C:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _08013F60:
 	.4byte 0x00000313
 _08013F64:
@@ -5653,7 +5653,7 @@ _08013F68:
 _08013F6A:
 	cmp r0, #0
 	beq _08013FD8
-	ldr r0, _08013FA4  @ =0x03000058
+	ldr r0, _08013FA4  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r6, r0
 	bne _08013FB0
@@ -5681,7 +5681,7 @@ _08013F6A:
 	.byte 0x00
 	.byte 0x00
 _08013FA4:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08013FA8:
 	.4byte 0x03000052
 _08013FAC:
@@ -5761,7 +5761,7 @@ _08014034:
 	sub r3, r6, r7
 	lsl r2, r3, #24
 	lsr r2, r2, #24
-	ldr r1, _08014078  @ =gUnknown_08078900
+	ldr r1, _08014078  @ =gSaveFilesPtr
 	lsl r0, r2, #3
 	sub r0, r0, r2
 	lsl r0, r0, #5
@@ -5793,7 +5793,7 @@ _08014070:
 _08014074:
 	.4byte gUnknown_08078628
 _08014078:
-	.4byte gUnknown_08078900
+	.4byte gSaveFilesPtr
 _0801407C:
 	.4byte 0x00000313
 _08014080:
@@ -5803,7 +5803,7 @@ _08014084:
 _08014086:
 	cmp r0, #0
 	beq _080140F4
-	ldr r0, _080140C0  @ =0x03000058
+	ldr r0, _080140C0  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r6, r0
 	bne _080140CC
@@ -5831,7 +5831,7 @@ _08014086:
 	.byte 0x00
 	.byte 0x00
 _080140C0:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080140C4:
 	.4byte 0x03000052
 _080140C8:
@@ -5921,7 +5921,7 @@ _0801412E:
 	ldr r2, _080141F4  @ =gUnknown_080787A8
 	mov r8, r2
 _0801416C:
-	ldr r0, _080141F8  @ =0x03000058
+	ldr r0, _080141F8  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r7, r0
 	bne _08014204
@@ -5989,7 +5989,7 @@ _080141F0:
 _080141F4:
 	.4byte gUnknown_080787A8
 _080141F8:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080141FC:
 	.4byte 0x0300004E
 _08014200:
@@ -6051,7 +6051,7 @@ _0801426A:
 	bhi _08014276
 	b _0801416C
 _08014276:
-	ldr r0, _080142B0  @ =0x03000058
+	ldr r0, _080142B0  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r7, r0
 	bne _080142BC
@@ -6081,7 +6081,7 @@ _080142A8:
 _080142AC:
 	.4byte 0x03000050
 _080142B0:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080142B4:
 	.4byte gUnknown_080787C0
 _080142B8:
@@ -6107,7 +6107,7 @@ _080142BC:
 	bl sub_080138D0
 _080142E2:
 	add r4, r7, #1
-	ldr r0, _0801431C  @ =0x03000058
+	ldr r0, _0801431C  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r4, r0
 	bne _08014320
@@ -6135,7 +6135,7 @@ _08014314:
 _08014318:
 	.4byte gUnknown_080785E0
 _0801431C:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08014320:
 	ldr r0, _08014354  @ =gUnknown_080787C0
 	mov r1, sp
@@ -6186,7 +6186,7 @@ _0801435C:
 	ldr r2, _080143F8  @ =gUnknown_080787A8
 	mov r8, r2
 _08014382:
-	ldr r0, _080143FC  @ =0x03000058
+	ldr r0, _080143FC  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r7, r0
 	bne _08014408
@@ -6245,7 +6245,7 @@ _080143F4:
 _080143F8:
 	.4byte gUnknown_080787A8
 _080143FC:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08014400:
 	.4byte 0x0300004E
 _08014404:
@@ -6307,7 +6307,7 @@ _08014474:
 	add r0, r7, #1
 	lsl r0, r0, #24
 	lsr r7, r0, #24
-	ldr r0, _080144B4  @ =0x03000058
+	ldr r0, _080144B4  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r7, r0
 	bne _080144C0
@@ -6337,7 +6337,7 @@ _080144AC:
 _080144B0:
 	.4byte 0x03000050
 _080144B4:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _080144B8:
 	.4byte gUnknown_080787C0
 _080144BC:
@@ -6363,7 +6363,7 @@ _080144C0:
 	bl sub_080138D0
 _080144E6:
 	add r4, r7, #1
-	ldr r0, _08014520  @ =0x03000058
+	ldr r0, _08014520  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r4, r0
 	bne _08014524
@@ -6391,7 +6391,7 @@ _08014518:
 _0801451C:
 	.4byte gUnknown_080785B0
 _08014520:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08014524:
 	ldr r0, _08014564  @ =gUnknown_080787C0
 	mov r1, sp
@@ -6790,7 +6790,7 @@ _0801481C:
 _08014820:
 	.4byte 0x00000808
 _08014824:
-	ldr r0, _08014834  @ =0x03000058
+	ldr r0, _08014834  @ =gFileSelectMenuSel
 	ldrb r0, [r0]
 	cmp r0, #3
 	bhi _08014838
@@ -6799,7 +6799,7 @@ _08014824:
 	.byte 0x00
 	.byte 0x00
 _08014834:
-	.4byte 0x03000058
+	.4byte gFileSelectMenuSel
 _08014838:
 	cmp r0, #4
 	bne _08014842

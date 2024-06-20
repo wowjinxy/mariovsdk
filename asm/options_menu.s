@@ -1341,7 +1341,7 @@ _08028504:
 	beq _0802850E
 	mov r5, #1
 _0802850E:
-	ldr r0, _08028540  @ =gUnknown_030012E8
+	ldr r0, _08028540  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	mov r0, #8
 	and r0, r0, r1
@@ -1367,7 +1367,7 @@ _08028522:
 	.byte 0x00
 	.byte 0x00
 _08028540:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08028544:
 	.4byte 0x030000FC
 _08028548:
@@ -1458,7 +1458,7 @@ _080285A0:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _080285EC:
 	add sp, sp, #12
 	pop {r4-r6}
@@ -1746,7 +1746,7 @@ _080287C8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _0802880A:
 	add sp, sp, #12
 	pop {r4-r6}
@@ -2307,7 +2307,7 @@ _08028C48:
 	ldr r0, _08028C80  @ =0x00001124
 	add r2, r1, r0
 	ldr r7, [r2]
-	ldr r0, _08028C84  @ =gUnknown_030012E8
+	ldr r0, _08028C84  @ =gSomeKeys_030012E8
 	ldrh r1, [r0]
 	add r0, r1, #0
 	and r5, r5, r0
@@ -2336,7 +2336,7 @@ _08028C7C:
 _08028C80:
 	.4byte 0x00001124
 _08028C84:
-	.4byte gUnknown_030012E8
+	.4byte gSomeKeys_030012E8
 _08028C88:
 	ldrb r0, [r3]
 	sub r0, r0, #1
@@ -2386,7 +2386,7 @@ _08028CB8:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	b _08028D92
 	.byte 0x00
 	.byte 0x00
@@ -2419,7 +2419,7 @@ _08028CF4:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	ldr r0, [r4, #8]
 	bl sub_08028474
 _08028D2A:
@@ -2470,7 +2470,7 @@ _08028D7C:
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 _08028D92:
 	ldr r6, _08028E2C  @ =0x030000FC
 	mov r5, #0
@@ -2939,7 +2939,7 @@ options_menu_play_sound_effect: @ 0x080290E0
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	add sp, sp, #12
 	pop {r0}
 	bx r0
@@ -2987,7 +2987,7 @@ options_menu_play_movie: @ 0x08029128
 	mov r1, #8
 	mov r2, #16
 	mov r3, #64
-	bl sub_08071990
+	bl play_sound_effect_08071990
 	add sp, sp, #12
 	pop {r4,r5}
 	pop {r0}
