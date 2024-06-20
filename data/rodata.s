@@ -36,7 +36,7 @@ gUnknown_080763CC:
 gUnknown_080763D2:
 	.2byte 0x0044
 	.2byte 0x0073
-.endif
+
 	.GLOBAL gUnknown_080763D6
 gUnknown_080763D6:
 	.byte 0x5
@@ -63,7 +63,7 @@ gUnknown_080763E2:
 	.byte 0x2
 	.byte 0xB
 	.byte 0xB
-
+.endif
 	.GLOBAL gUnknown_080763E8
 gUnknown_080763E8:
 	.byte 0x4

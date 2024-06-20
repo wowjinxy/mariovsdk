@@ -3319,7 +3319,7 @@ sub_08012D24: @ 0x08012D24
 	ldr r0, _08012DF8  @ =0x84000100
 	str r0, [r1, #8]
 	ldr r0, [r1, #8]
-	ldr r0, _08012DFC  @ =0x03000052
+	ldr r0, _08012DFC  @ =gUnknown_03000052
 	strh r5, [r0]
 	add r4, r4, #160
 	mov r1, r10
@@ -3371,7 +3371,7 @@ _08012DF4:
 _08012DF8:
 	.4byte 0x84000100
 _08012DFC:
-	.4byte 0x03000052
+	.4byte gUnknown_03000052
 _08012E00:
 	.4byte gFileSelectMenuSel
 _08012E04:
@@ -5578,7 +5578,7 @@ _08013ED8:
 _08013EDC:
 	.4byte gUnknown_08078778
 	THUMB_FUNC_END sub_08013A48
-.endif
+
 	THUMB_FUNC_START sub_08013EE0
 sub_08013EE0: @ 0x08013EE0
 	push {r4-r7,lr}
@@ -5657,7 +5657,7 @@ _08013F6A:
 	ldrb r0, [r0]
 	cmp r6, r0
 	bne _08013FB0
-	ldr r0, _08013FA8  @ =0x03000052
+	ldr r0, _08013FA8  @ =gUnknown_03000052
 	ldrh r1, [r0]
 	mov r0, sp
 	add r0, r0, r5
@@ -5683,11 +5683,11 @@ _08013F6A:
 _08013FA4:
 	.4byte gFileSelectMenuSel
 _08013FA8:
-	.4byte 0x03000052
+	.4byte gUnknown_03000052
 _08013FAC:
 	.4byte gUnknown_080787D8
 _08013FB0:
-	ldr r0, _08013FF4  @ =0x03000052
+	ldr r0, _08013FF4  @ =gUnknown_03000052
 	ldrh r1, [r0]
 	mov r2, r10
 	add r0, r2, r5
@@ -5724,7 +5724,7 @@ _08013FE2:
 	.byte 0x00
 	.byte 0x00
 _08013FF4:
-	.4byte 0x03000052
+	.4byte gUnknown_03000052
 _08013FF8:
 	.4byte gUnknown_080787D8
 	THUMB_FUNC_END sub_08013EE0
@@ -5807,7 +5807,7 @@ _08014086:
 	ldrb r0, [r0]
 	cmp r6, r0
 	bne _080140CC
-	ldr r0, _080140C4  @ =0x03000052
+	ldr r0, _080140C4  @ =gUnknown_03000052
 	ldrh r1, [r0]
 	mov r0, sp
 	add r0, r0, r5
@@ -5833,11 +5833,11 @@ _08014086:
 _080140C0:
 	.4byte gFileSelectMenuSel
 _080140C4:
-	.4byte 0x03000052
+	.4byte gUnknown_03000052
 _080140C8:
 	.4byte gUnknown_080787D8
 _080140CC:
-	ldr r0, _08014110  @ =0x03000052
+	ldr r0, _08014110  @ =gUnknown_03000052
 	ldrh r1, [r0]
 	mov r2, r10
 	add r0, r2, r5
@@ -5874,11 +5874,11 @@ _080140FE:
 	.byte 0x00
 	.byte 0x00
 _08014110:
-	.4byte 0x03000052
+	.4byte gUnknown_03000052
 _08014114:
 	.4byte gUnknown_080787D8
 	THUMB_FUNC_END sub_08013FFC
-
+.endif
 	THUMB_FUNC_START sub_08014118
 sub_08014118: @ 0x08014118
 	push {r4-r7,lr}

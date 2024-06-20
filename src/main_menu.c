@@ -1134,6 +1134,7 @@ extern struct Struct08013548 gUnknown_08078778;
 extern struct Struct08013548 gUnknown_08078790;
 extern struct Struct08013548 gUnknown_080787F0;
 extern struct Struct08013548 gUnknown_08078808;
+extern struct Struct08013548 gUnknown_080787D8;
 
 static inline u8 inlinefunc6(u8 fileNum)
 {
@@ -1229,4 +1230,40 @@ void sub_08013A48(u8 fileNum, u8 arg1, u8 arg2, s16 x, s16 y)
             r6++;r6++;
         }
     }
+}
+
+void sub_08013EE0(u8 arg0)
+{
+	s8 sp8[] = { 4, 6, 8, 12, 10, 10 };
+	s8 sp10[] = { 5, 7, 9, 13, 11, 11 };
+	u8 i;
+
+	for (i = arg0; i < 9; i++)
+	{
+		if (inlinefunc(i - arg0))
+		{
+			if (i == gFileSelectMenuSel)
+				add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
+			else
+				add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
+		}
+	}
+}
+
+void sub_08013FFC(u8 arg0)
+{
+	s8 sp8[] = { 4, 6, 8, 2, 10, 10 };
+	s8 sp10[] = { 5, 7, 9, 2, 11, 11 };
+	u8 i;
+
+	for (i = arg0; i < 9; i++)
+	{
+		if (inlinefunc(i - arg0))
+		{
+			if (i == gFileSelectMenuSel)
+				add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
+			else
+				add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
+		}
+	}
 }

@@ -8,11 +8,11 @@
 	.GLOBAL gUnknown_080785B0
 gUnknown_080785B0:
 	.INCBIN "baserom.gba", 0x785B0, 0x785E0-0x785B0
-
+.endif
 	.GLOBAL gUnknown_080785E0
 gUnknown_080785E0:
 	.INCBIN "baserom.gba", 0x785E0, 0x78610-0x785E0
-.endif
+
 	.GLOBAL gUnknown_08078610
 gUnknown_08078610:
 	.INCBIN "baserom.gba", 0x78610, 0x78628-0x78610

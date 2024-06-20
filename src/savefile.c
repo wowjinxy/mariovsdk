@@ -4,6 +4,40 @@
 #include "main.h"
 #include "savefile.h"
 
+static u16 gMainLevelDefaultHighScores[6][8] =
+{
+    // World 1 Scores
+    { 27500, 28000, 27000, 28500, 30000, 27500, 15000, 22000 },
+    // World 2 Scores
+    { 29000, 27000, 31000, 29500, 32000, 32000, 13000, 23000 },
+    // World 3 Scores
+    { 28500, 32000, 30500, 29500, 29000, 27000, 14000, 18500 },
+    // World 4 Scores
+    { 29000, 32000, 31500, 31000, 30000, 27000, 10000, 21000 },
+    // World 5 Scores
+    { 28500, 29000, 27500, 26000, 24500, 26500, 12000, 22500 },
+    // World 6 Scores
+    { 26500, 24500, 27500, 27000, 26500, 25500, 18000, 21500 },
+};
+
+static u16 gPlusLevelDefaultHighScores[6][7] =
+{
+    // World 1 Plus Scores
+    { 17000, 17500, 20000, 18500, 19000, 19500, 20000 },
+    // World 2 Plus Scores
+    { 21500, 23500, 18500, 19500, 21500, 21000, 20000 },
+    // World 3 Plus Scores
+    { 16000, 17500, 18500, 19500, 20500, 21000, 20000 },
+    // World 4 Plus Scores
+    { 19000, 18500, 20000, 20500, 21000, 22000, 20000 },
+    // World 5 Plus Scores
+    { 19000, 22000, 18500, 19500, 19000, 18500, 20000 },
+    // World 6 Plus Scores
+    { 18000, 21000, 19500, 20000, 18500, 19000, 20000 },
+};
+
+u16 unknownScores[] = { 10000, 10000 };
+
 // Returns the last unlocked level for a main or plus world. This is the first
 // level that has not yet been completed. If the world has not been unlocked,
 // returns -1 instead.

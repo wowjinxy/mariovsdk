@@ -941,15 +941,11 @@ extern u8 gUnknown_03007AB0[];  // unknown type
 
 extern void *gUnknown_03007FFC;
 
-extern const u8 gTextHeapOverflow[];
-
 extern void (*const gMainStateInitCallbacks[])(void);
 extern void (*const gMainStateMainCallbacks[])(void);
 extern void (*const gMainStateLoopCallbacks[])(void);
 extern void (*const gMainStateEndCallbacks[])(void);
 extern const u32 gUnknown_0807846C[];
-extern u16 gMainLevelDefaultHighScores[][8];
-extern u16 gPlusLevelDefaultHighScores[][7];
 extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
 extern u16 gUnknown_080788E0[];
