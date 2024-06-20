@@ -1,6 +1,6 @@
 #define OBJECT_FILE_LIST \
 	X(data/rodata0.o) \
-	X(data/data.o) \
+	X(data/data0.o) \
 	X(asm/crt0.o) \
 	X(asm/rom_800023C.o) \
 	X(asm/rom_8001BA4.o) \
@@ -15,6 +15,7 @@
 	X(src/rom_800F1E4.o) \
 	X(src/savefile.o) \
 	X(src/main_menu.o) \
+	X(data/data.o) \
 	X(asm/main_menu.o) \
 	X(data/rodata.o) \
 	X(asm/rom_801488C.o) \
@@ -404,8 +405,5 @@ SECTIONS
     {
         *(*);
     }
-    
-    gUnknown_0807638C = 0x0807638C;
-    gUnknown_080763AC = 0x080763AC;
     gUnknown_080763CC = 0x080763CC;
 }

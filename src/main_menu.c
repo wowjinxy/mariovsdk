@@ -4,25 +4,34 @@
 #include "main.h"
 #include "savefile.h"
 
-#define gUnknown_030009C8 gPreviousMainState
-#define pSelectedSaveFileNum gSelectedSaveFileNumPtr
-#define gUnknown_030012A0 gCameraHorizontalOffset
-#define gUnknown_03001710 gCameraVerticalOffset
-#define gFileSelectGfxConfig gMainMenuData
-#define gBGOffsets_03001730 gBGLayerOffsets
-#define gUnknown_03000B54 gGeneralTimer
-#define gUnknown_03000B58 gCurrentWorld
-#define gUnknown_03000BBC gLivesCount
-#define gUnknown_03000B74 gNextLevelID
-#define gUnknown_03000B80 gLevelType
-#define goto_state_080070E8 change_main_state
-#define init_movie_0802D468 movie_player_setup_data
-#define gUnknown_03000059 gPrevFileSelectMenuSel
-#define bg0vofs bg0_y
-#define bg1vofs bg1_y
-#define bg2hofs bg2_x
-#define bg2vofs bg2_y
+struct Coords32
+{
+    s32 x;
+    s32 y;
+};
 
+extern struct Coords32 gUnknown_080785B0[];
+extern struct Coords32 gUnknown_080785E0[];
+#if 0  // defining this causes sub_08012568 to no longer match. ¯\_(ツ)_/¯
+struct Coords32 gUnknown_080785B0[] =
+{
+	{ 14, 52 },
+	{ 71, 52 },
+	{ 128, 52 },
+	{ 128, 52 },
+	{ 185, 95 },
+};
+
+struct Coords32 gUnknown_080785E0[] =
+{
+	{ 4, 52 },
+	{ 52, 52 },
+	{ 100, 52 },
+	{ 148, 52 },
+	{ 196, 52 },
+	{ 196, 95 },
+};
+#endif
 struct Struct0860A4B4
 {
     u8 unk0;
@@ -35,13 +44,6 @@ extern struct Struct0860A4B4 gUnknown_08617030[];
 extern struct GraphicsConfig gMainMenuData;
 extern u8 gUnknown_080A8668;
 
-struct Coords32
-{
-    s32 x;
-    s32 y;
-};
-
-extern struct Coords32 gUnknown_080785E0[];
 extern struct Coords32 gUnknown_080785B0[];
 extern struct Coords32 gUnknown_08078610[];
 extern struct Coords32 gUnknown_08078628[];
@@ -113,9 +115,9 @@ struct Struct08013548  // maybe the same as Struct0860A4B4?
     u8 *unk14;  // tile data
 };  // size = 0x24
 
-extern struct
+extern struct Struct08078700
 {
-    struct Struct08013548 unk0[2];
+    struct Struct08013548 unk0[3];
     struct Struct08013548 unk48;  // maybe part of the same array?
 } gUnknown_08078700;
 
@@ -162,20 +164,20 @@ static inline void inlinefunc4(u8 fileNum)
 {
     struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
     int lives = saveFile->lives;
-    gUnknown_03000BBC = lives;
+    gLivesCount = lives;
 }
 
 static inline void inlinefunc5(u8 fileNum)
 {
-    u8 *r6 = &gUnknown_03000B58;
-    u8 *r3 = &gUnknown_03000B74;
-    u8 *r4 = &gUnknown_03000B80;
+    u8 *r6 = &gCurrentWorld;
+    u8 *r3 = &gNextLevelID;
+    u8 *r4 = &gLevelType;
     struct SaveFile *r1 = &gSaveFilesPtr[fileNum];
     u8 r7 = r1->unk2 & 0xF;
     *r4 = r1->unk3;
     *r3 = r7;
     *r6 = (r1->unk2 >> 4) & 7;
-    gUnknown_03000B80 = r1->unk3;
+    gLevelType = r1->unk3;
 }
 
 void main_menu_init_callback(void)
@@ -187,14 +189,14 @@ void main_menu_init_callback(void)
     gUnknown_0300005D = gUnknown_03000062 = 0;
     if (*gUnknown_0807CA94 != 0)
         gUnknown_0300005D = gUnknown_03000062 = 1;
-    if (gUnknown_030009C8 == 4)
+    if (gPreviousMainState == 4)
         gFileSelectMenuSel = FILE_SELECT_OPTION_MENU;
-    else if ((gUnknown_030009C8 == 24 || gUnknown_030009C8 == 25) && gUnknown_0300005D != 0)
+    else if ((gPreviousMainState == 24 || gPreviousMainState == 25) && gUnknown_0300005D != 0)
         gFileSelectMenuSel = FILE_SELECT_EWORLD;
     else if ((*gUnknown_080788F8 & 1) && gUnknown_0300005D != 0)
         gFileSelectMenuSel = gPrevFileSelectMenuSel = FILE_SELECT_EWORLD;
     else
-        gFileSelectMenuSel = gPrevFileSelectMenuSel = *pSelectedSaveFileNum;
+        gFileSelectMenuSel = gPrevFileSelectMenuSel = *gSelectedSaveFileNumPtr;
     gUnknown_0300005B = 0;
     gUnknown_0300005E = 0;
     gUnknown_0300005F = gUnknown_085FEFE4[0].unk1;
@@ -202,16 +204,16 @@ void main_menu_init_callback(void)
     gUnknown_03000061 = gUnknown_08617030[0].unk1;
     gUnknown_03000064 = 0;
     gUnknown_03000065 = 0;
-    gUnknown_030012A0 = 0;
-    gUnknown_03001710 = 0;
-    load_graphics_config_bg2_08032EB8(&gFileSelectGfxConfig);
+    gCameraHorizontalOffset = 0;
+    gCameraVerticalOffset = 0;
+    load_graphics_config_bg2_08032EB8(&gMainMenuData);
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
     if (sub_08071FE4() != 10)
         sub_0807204C(10, 0x80, 1);
-    set_blend_regs_08029CDC(gFileSelectGfxConfig.bldCnt, gFileSelectGfxConfig.bldAlpha, gFileSelectGfxConfig.bldY);
+    set_blend_regs_08029CDC(gMainMenuData.bldCnt, gMainMenuData.bldAlpha, gMainMenuData.bldY);
     REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG0_ON | DISPCNT_BG1_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     load_predefined_palette(1, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-    CpuFill16(0, &gBGOffsets_03001730, 16);
+    CpuFill16(0, &gBGLayerOffsets, 16);
     sub_080381E4(0, 0);
     for (i = 0; i < 3; i++)
         gUnknown_03000066[i] = sub_080111B4(i);
@@ -228,25 +230,25 @@ void sub_0801168C(u8 arg0)
         if (gUnknown_0300005D != 0)
         {
             s8 sp0[32] = {254, 46, 94, 142};  //gUnknown_0807638C
-            gBGOffsets_03001730.bg2_x = -sp0[gFileSelectMenuSel];
+            gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
         }
         else
         {
             s8 sp0[32] = {8, 65, 122};  //gUnknown_080763AC
-            gBGOffsets_03001730.bg2_x = -sp0[gFileSelectMenuSel];
+            gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
         }
         if (inlinefunc(gFileSelectMenuSel))
-            gBGOffsets_03001730.bg2_y = 0xFF00;
+            gBGLayerOffsets.bg2_y = 0xFF00;
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
         REG_BLDCNT = BLDCNT_EFF_ALPHA | BLDCNT_BG2_FIRST | BLDCNT_BG0_SECOND | BLDCNT_BG1_SECOND | BLDCNT_BG3_SECOND | BLDCNT_OBJ_SECOND | BLDCNT_BD_SECOND;
         REG_BLDALPHA = 0x0808;
     }
     else
     {
-        gBGOffsets_03001730.bg1_y = 0;
-        gBGOffsets_03001730.bg2_y = 0;
-        gBGOffsets_03001730.bg2_x = 0;
-        gBGOffsets_03001730.bg0_y = 0;
+        gBGLayerOffsets.bg1_y = 0;
+        gBGLayerOffsets.bg2_y = 0;
+        gBGLayerOffsets.bg2_x = 0;
+        gBGLayerOffsets.bg0_y = 0;
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG0_ON | DISPCNT_BG1_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     }
 }
@@ -296,13 +298,13 @@ void pick_file(void)
         else if (gFileSelectMenuSel == FILE_SELECT_OPTION_MENU)
         {
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 0x80, 0);
-            goto_state_080070E8(MAIN_STATE_OPTION_MENU, 1);
+            change_main_state(MAIN_STATE_OPTION_MENU, 1);
             return;
         }
         else if (gFileSelectMenuSel == FILE_SELECT_EWORLD)
         {
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 0x80, 0);
-            goto_state_080070E8(29, 1);
+            change_main_state(29, 1);
             return;
         }
         else if (gFileSelectMenuSel <= FILE_SELECT_FILE_C)  // files
@@ -310,21 +312,21 @@ void pick_file(void)
             u8 one;
 
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 0x80, 0);
-            *pSelectedSaveFileNum = gFileSelectMenuSel;
-            inlinefunc5(*pSelectedSaveFileNum);
-            inlinefunc4(*pSelectedSaveFileNum);
-            if (gUnknown_03000B80 == 0)
-                gUnknown_03000B74 = gUnknown_03000B74 << 1;
+            *gSelectedSaveFileNumPtr = gFileSelectMenuSel;
+            inlinefunc5(*gSelectedSaveFileNumPtr);
+            inlinefunc4(*gSelectedSaveFileNumPtr);
+            if (gLevelType == 0)
+                gNextLevelID = gNextLevelID << 1;
             if (get_level_stats_0800FE2C(0, 0, 0, &spC))
             {
-                goto_state_080070E8(MAIN_STATE_LEVEL_SELECT, 1);
+                change_main_state(MAIN_STATE_LEVEL_SELECT, 1);
             }
             else
             {
-                init_movie_0802D468(3, 41, MAIN_STATE_LEVEL_SELECT, 1);
-                goto_state_080070E8(MAIN_STATE_MOVIE, 1);
+                movie_player_setup_data(3, 41, MAIN_STATE_LEVEL_SELECT, 1);
+                change_main_state(MAIN_STATE_MOVIE, 1);
                 one = 1;
-                inlinefunc3(*pSelectedSaveFileNum, one);
+                inlinefunc3(*gSelectedSaveFileNumPtr, one);
                 if (gUnknown_03000B50 == 1)
                     sub_0802A164();
             }
@@ -334,7 +336,7 @@ void pick_file(void)
     else if (gSomeKeys_030012E8 & B_BUTTON)
     {
         play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 0x80, 0);
-        goto_state_080070E8(MAIN_STATE_TITLE_SCREEN, 1);
+        change_main_state(MAIN_STATE_TITLE_SCREEN, 1);
         return;
     }
 
@@ -441,7 +443,7 @@ void sub_08011CB4(void)
     if (gSomeKeys_030012E8 & DPAD_UP)
     {
         play_sound_effect_08071990(SE_CURSOR_UP_DN, 8, 16, 64, 0, 128, 0);
-        gUnknown_03000059 = gFileSelectMenuSel;
+        gPrevFileSelectMenuSel = gFileSelectMenuSel;
         gFileSelectMenuSel -= FILE_SELECT_EXPERT_FILE_A;
         gUnknown_0300005B = 0;
     }
@@ -452,13 +454,13 @@ void sub_08011CB4(void)
             if (inlinefunc(gFileSelectMenuSel - 7))
             {
                 play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
-                gUnknown_03000059 = gFileSelectMenuSel;
+                gPrevFileSelectMenuSel = gFileSelectMenuSel;
                 gFileSelectMenuSel--;
             }
             else
             {
                 play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
-                gUnknown_03000059 = gFileSelectMenuSel;
+                gPrevFileSelectMenuSel = gFileSelectMenuSel;
                 gFileSelectMenuSel = 0;
                 gUnknown_0300005B = 0;
             }
@@ -466,7 +468,7 @@ void sub_08011CB4(void)
         else
         {
             play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
-            gUnknown_03000059 = gFileSelectMenuSel;
+            gPrevFileSelectMenuSel = gFileSelectMenuSel;
             gFileSelectMenuSel = 0;
             gUnknown_0300005B = 0;
         }
@@ -478,13 +480,13 @@ void sub_08011CB4(void)
             if (inlinefunc(gFileSelectMenuSel - 5))
             {
                 play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
-                gUnknown_03000059 = gFileSelectMenuSel;
+                gPrevFileSelectMenuSel = gFileSelectMenuSel;
                 gFileSelectMenuSel++;
             }
             else
             {
                 play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
-                gUnknown_03000059 = gFileSelectMenuSel;
+                gPrevFileSelectMenuSel = gFileSelectMenuSel;
                 gFileSelectMenuSel = 5;
                 gUnknown_0300005B = 0;
             }
@@ -492,7 +494,7 @@ void sub_08011CB4(void)
         else
         {
             play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
-            gUnknown_03000059 = gFileSelectMenuSel;
+            gPrevFileSelectMenuSel = gFileSelectMenuSel;
             gFileSelectMenuSel = 5;
             gUnknown_0300005B = 0;
         }
@@ -503,25 +505,25 @@ void sub_08011CB4(void)
     if (sub_08034004())
     {
         play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
-        gUnknown_03000B80 = 2;
+        gLevelType = 2;
         if (gFileSelectMenuSel == 3)
         {
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
-            goto_state_080070E8(29, 1);
+            change_main_state(29, 1);
         }
         else
         {
-            *pSelectedSaveFileNum = gFileSelectMenuSel - 6;
-            gUnknown_03000B58 = 0;
-            gUnknown_03000B74 = 0;
-            goto_state_080070E8(MAIN_STATE_EXPERT_LEVEL_SELECT, 1);
+            *gSelectedSaveFileNumPtr = gFileSelectMenuSel - 6;
+            gCurrentWorld = 0;
+            gNextLevelID = 0;
+            change_main_state(MAIN_STATE_EXPERT_LEVEL_SELECT, 1);
         }
     }
 }
 
 void sub_08011F60(void)
 {
-    gBGOffsets_03001730.bg1vofs = 0xFF00;
+    gBGLayerOffsets.bg1_y = 0xFF00;
     if (sub_08034004())
     {
         u32 r1;
@@ -544,7 +546,7 @@ void sub_08011F60(void)
     else if (gSomeKeys_030012E8 & B_BUTTON)
     {
         play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
-        gUnknown_03000059 = gFileSelectMenuSel;
+        gPrevFileSelectMenuSel = gFileSelectMenuSel;
         gFileSelectMenuSel = 0;
         gUnknown_0300005B = 0;
         sub_0801168C(0);
@@ -555,7 +557,7 @@ void sub_08011F60(void)
             play_sound_effect_08071990(SE_ERROR, 8, 16, 64, 0, 128, 0);
         if (gSomeKeys_030012E8 & DPAD_RIGHT)
         {
-            gUnknown_03000059 = gFileSelectMenuSel;
+            gPrevFileSelectMenuSel = gFileSelectMenuSel;
             play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
             if (gFileSelectMenuSel < gUnknown_0300005D + 2)
                 gFileSelectMenuSel++;
@@ -564,21 +566,21 @@ void sub_08011F60(void)
             if (gUnknown_0300005D != 0)
             {
                 s8 sp0[32] = {254, 46, 94, 142};
-                gBGOffsets_03001730.bg2hofs = -sp0[gFileSelectMenuSel];
+                gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
             }
             else
             {
                 s8 sp0[32] = {8, 65, 122};
-                gBGOffsets_03001730.bg2hofs = -sp0[gFileSelectMenuSel];
+                gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
             }
             if (inlinefunc(gFileSelectMenuSel))
-                gBGOffsets_03001730.bg2vofs = 0xFF00;
+                gBGLayerOffsets.bg2_y = 0xFF00;
             else
-                gBGOffsets_03001730.bg2vofs = 0;
+                gBGLayerOffsets.bg2_y = 0;
         }
         else if (gSomeKeys_030012E8 & DPAD_LEFT)
         {
-            gUnknown_03000059 = gFileSelectMenuSel;
+            gPrevFileSelectMenuSel = gFileSelectMenuSel;
             play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
             if (gFileSelectMenuSel != 0)
                 gFileSelectMenuSel--;
@@ -587,17 +589,17 @@ void sub_08011F60(void)
             if (gUnknown_0300005D != 0)
             {
                 s8 sp0[32] = {254, 46, 94, 142};
-                gBGOffsets_03001730.bg2hofs = -sp0[gFileSelectMenuSel];
+                gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
             }
             else
             {
                 s8 sp0[32] = {8, 65, 122};
-                gBGOffsets_03001730.bg2hofs = -sp0[gFileSelectMenuSel];
+                gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
             }
             if (inlinefunc(gFileSelectMenuSel))
-                gBGOffsets_03001730.bg2vofs = 0xFF00;
+                gBGLayerOffsets.bg2_y = 0xFF00;
             else
-                gBGOffsets_03001730.bg2vofs = 0;
+                gBGLayerOffsets.bg2_y = 0;
         }
     }
 }
@@ -606,8 +608,8 @@ void sub_08012230(void)  // for new save file?
 {
     s16 i;
 
-    gBGOffsets_03001730.bg0vofs = 0xFF00;
-    gBGOffsets_03001730.bg1vofs = 0xFF00;
+    gBGLayerOffsets.bg0_y = 0xFF00;
+    gBGLayerOffsets.bg1_y = 0xFF00;
     if (sub_08034004())
     {
         if (gUnknown_0300005C != 0)
@@ -630,7 +632,7 @@ void sub_08012230(void)  // for new save file?
                 sub_0802F06C();
                 sub_0802F1D4();
             }
-            gUnknown_03000059 = gFileSelectMenuSel;
+            gPrevFileSelectMenuSel = gFileSelectMenuSel;
             gFileSelectMenuSel = 0;
             gUnknown_0300005B = 0;
             sub_0801168C(0);
@@ -638,7 +640,7 @@ void sub_08012230(void)  // for new save file?
         else
         {
             play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
-            gUnknown_03000059 = gFileSelectMenuSel;
+            gPrevFileSelectMenuSel = gFileSelectMenuSel;
             gFileSelectMenuSel = 0;
             gUnknown_0300005B = 0;
             sub_0801168C(0);
@@ -647,7 +649,7 @@ void sub_08012230(void)  // for new save file?
     else if (gSomeKeys_030012E8 & B_BUTTON)
     {
         play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
-        gUnknown_03000059 = gFileSelectMenuSel;
+        gPrevFileSelectMenuSel = gFileSelectMenuSel;
         gFileSelectMenuSel = 0;
         gUnknown_0300005B = 0;
         sub_0801168C(0);
@@ -1111,7 +1113,7 @@ void add_sprite_080137A0(struct Struct08013548 *arg0, u16 arg1, u8 arg2, int pal
 }
 
 void add_sprite_080138D0(struct Struct08013548 *arg0, u8 arg1, s8 arg2, s16 x, s16 y)
-{ 
+{
     DmaCopy32(3, arg0->unk14 + arg0->unkC[arg1].unk0 * arg0->unk4 * 4, (void *)(OBJ_VRAM0 + gUnknown_0300192C), arg0->unk8);
     DmaCopy32(3, arg0->unk10, &gOamBuffer[gSomeOamIndex_03000040], 8);
     gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03001930;
@@ -1125,4 +1127,106 @@ void add_sprite_080138D0(struct Struct08013548 *arg0, u8 arg1, s8 arg2, s16 x, s
     gUnknown_03001930 += arg0->unk6;
     gUnknown_0300192C += arg0->unk8;
     gSomeOamIndex_03000040++;
+}
+
+extern struct Struct08013548 gUnknown_08078760;
+extern struct Struct08013548 gUnknown_08078778;
+extern struct Struct08013548 gUnknown_08078790;
+extern struct Struct08013548 gUnknown_080787F0;
+extern struct Struct08013548 gUnknown_08078808;
+
+static inline u8 inlinefunc6(u8 fileNum)
+{
+    struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
+    if (saveFile->unk4 < 0)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+extern struct Coords32 gUnknown_08078640[];
+extern struct Coords32 gUnknown_08078680[];
+extern struct Coords32 gUnknown_080786C0[];
+
+#define PRINT_STARS(fileNum, x, y, d) \
+{ \
+    struct SaveFile *saveFile = &gSaveFilesPtr[fileNum]; \
+    u8 stars = saveFile->stars; \
+    print_digits_080130F8(x + 15, y + 48, 2, stars, d); \
+}
+
+#define PRINT_LEVELS(fileNum, x, y, d) \
+{ \
+    struct SaveFile *saveFile = &gSaveFilesPtr[fileNum]; \
+    u8 levels = saveFile->levelsCompleted; \
+    print_digits_080130F8(x + 25, y + 55, 2, levels, d); \
+}
+
+#define PRINT_LIVES(fileNum, x, y, d, e) \
+{ \
+    s8 fileNum_ = fileNum; \
+    struct SaveFile *saveFile = &gSaveFilesPtr[fileNum_]; \
+    u16 lives = saveFile->lives; \
+    print_digits_08013260(x + 24, y + 63, 2, lives, d); \
+    add_sprite_080138D0(&gUnknown_08078760, e, d, x, y + 12); \
+    add_sprite_080138D0(&gUnknown_08078778, 0, d, x, y + 44); \
+}
+
+void sub_08013A48(u8 fileNum, u8 arg1, u8 arg2, s16 x, s16 y)
+{
+    u8 spC = (arg1 == 0);
+
+    if (fileNum == 3)
+    {
+        struct Struct08078700 *r0 = &gUnknown_08078700;
+        add_sprite_080138D0(&r0->unk48, 0, arg2, x + 6, y + 6);
+        print_digits_08013260(x + 14, y + 46, 2, *gUnknown_0807CA94, 0);
+        add_sprite_080138D0(&gUnknown_08078778, 2, arg2, x, y + 44);
+    }
+    else
+    {
+        add_sprite_080138D0(&gUnknown_08078700.unk0[fileNum], fileNum, arg2, x + 13, y + 4);
+        if (!inlinefunc2(fileNum))
+        {
+            add_sprite_080138D0(&gUnknown_08078760, 2, arg2, x, y + 12);
+            add_sprite_080138D0(&gUnknown_08078778, 1, spC, x, y + 44);
+        }
+        else if (inlinefunc6(fileNum))
+        {
+            PRINT_STARS(fileNum, x, y, spC)
+            PRINT_LEVELS(fileNum, x, y, spC)
+            PRINT_LIVES(fileNum, x, y, spC, 1)
+        }
+        else
+        {
+            u8 sp4, sp5, sp6;
+            u8 *r3 = &sp4;
+            u8 *r6 = &sp5;
+            u8 *r8 = &sp6;
+            struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
+            u8 r0 = saveFile->unk2 & 0xF;
+
+            *r8 = saveFile->unk3;
+            *r6 = r0;
+
+            *r3 = (saveFile->unk2 >> 4) & 7;
+            *r8 = saveFile->unk3;
+
+            add_sprite_080138D0(&gUnknown_08078790, *r8, spC, x + 6, y + 24);
+            print_digits_080133D4(x + gUnknown_08078640[*r6].x, y + gUnknown_08078640[*r6].y, 1, sp4 + 1, spC);
+            add_sprite_080138D0(&gUnknown_080787F0, 10, spC, x + gUnknown_08078680[*r6].x, y + gUnknown_08078680[*r6].y);
+            if (*r6 <= 5)
+				print_digits_080133D4(x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y, 1, *r6 + 1, spC);
+			else if (*r8 == 0)
+				add_sprite_080138D0(&gUnknown_08078808, *r6 - 6, spC, x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y);
+			else
+				add_sprite_080138D0(&gUnknown_08078808, *r6 - 5, spC, x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y);
+            PRINT_STARS(fileNum, x, y, !arg1)
+            PRINT_LEVELS(fileNum, x, y, !arg1)
+            PRINT_LIVES(fileNum, x, y, spC, 0)
+            // needed to match
+            spC++;spC++;spC++;spC++;spC++;spC++;
+            r6++;r6++;
+        }
+    }
 }

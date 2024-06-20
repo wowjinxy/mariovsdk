@@ -4987,7 +4987,7 @@ _08013A0A:
 	pop {r0}
 	bx r0
 	THUMB_FUNC_END add_sprite_080138D0
-.endif
+
 	THUMB_FUNC_START sub_08013A48
 sub_08013A48: @ 0x08013A48
 	push {r4-r7,lr}
@@ -5298,10 +5298,10 @@ _08013C6C:
 	ldr r3, [sp, #12]
 	lsl r5, r3, #24
 	asr r4, r5, #24
-	str r4, [sp, #16]
+	str r4, [sp, #16]  @ sp16 = spC
 	ldr r2, [sp, #36]
 	asr r2, r2, #16
-	str r2, [sp, #20]
+	str r2, [sp, #20]  @ sp20 = sp36
 	ldr r4, [sp, #36]
 	mov r2, #192
 	lsl r2, r2, #11
@@ -5578,7 +5578,7 @@ _08013ED8:
 _08013EDC:
 	.4byte gUnknown_08078778
 	THUMB_FUNC_END sub_08013A48
-
+.endif
 	THUMB_FUNC_START sub_08013EE0
 sub_08013EE0: @ 0x08013EE0
 	push {r4-r7,lr}
