@@ -10897,7 +10897,7 @@ _0801A2FA:
 	mov r2, r10
 	asr r1, r2, #24
 	bl sub_080185EC
-	ldr r0, _0801A34C  @ =gUnknown_08078F4C
+	ldr r0, _0801A34C  @ =gLevelSelectLevelPlusArtSpriteLayout
 	add r4, r4, r0
 	add r1, r6, r7
 	lsl r1, r1, #24
@@ -10910,7 +10910,7 @@ _0801A344:
 _0801A348:
 	.4byte gUnknown_0807921C
 _0801A34C:
-	.4byte gUnknown_08078F4C
+	.4byte gLevelSelectLevelPlusArtSpriteLayout
 _0801A350:
 	lsl r4, r6, #1
 	add r4, r4, r6
@@ -10919,7 +10919,7 @@ _0801A350:
 	add r0, r4, r0
 	mov r1, #0
 	bl sub_080185EC
-	ldr r0, _0801A3D8  @ =gUnknown_08078F4C
+	ldr r0, _0801A3D8  @ =gLevelSelectLevelPlusArtSpriteLayout
 	add r4, r4, r0
 	add r1, r6, r7
 	lsl r1, r1, #24
@@ -10979,7 +10979,7 @@ _0801A380:
 _0801A3D4:
 	.4byte gUnknown_0807921C
 _0801A3D8:
-	.4byte gUnknown_08078F4C
+	.4byte gLevelSelectLevelPlusArtSpriteLayout
 _0801A3DC:
 	.4byte 0x0300007C
 _0801A3E0:
@@ -10999,7 +10999,7 @@ _0801A3E8:
 _0801A3FC:
 	add r0, r4, r6
 	lsl r0, r0, #3
-	ldr r1, _0801A410  @ =gUnknown_08078F4C
+	ldr r1, _0801A410  @ =gLevelSelectLevelPlusArtSpriteLayout
 	add r0, r0, r1
 	mov r3, r9
 	asr r2, r3, #24
@@ -11009,7 +11009,7 @@ _0801A3FC:
 _0801A40C:
 	.4byte gUnknown_080790B4
 _0801A410:
-	.4byte gUnknown_08078F4C
+	.4byte gLevelSelectLevelPlusArtSpriteLayout
 _0801A414:
 	cmp r6, #5
 	bhi _0801A434
@@ -11040,7 +11040,7 @@ _0801A434:
 _0801A448:
 	add r0, r4, r6
 	lsl r0, r0, #3
-	ldr r1, _0801A468  @ =gUnknown_08078F4C
+	ldr r1, _0801A468  @ =gLevelSelectLevelPlusArtSpriteLayout
 	add r0, r0, r1
 	mov r1, r9
 	asr r2, r1, #24
@@ -11055,7 +11055,7 @@ _0801A454:
 _0801A464:
 	.4byte gUnknown_0807921C
 _0801A468:
-	.4byte gUnknown_08078F4C
+	.4byte gLevelSelectLevelPlusArtSpriteLayout
 _0801A46C:
 	cmp r8, r6
 	bne _0801A4BC
@@ -11124,7 +11124,7 @@ _0801A4D8:
 _0801A4E8:
 	add r0, r4, r6
 	lsl r0, r0, #3
-	ldr r1, _0801A55C  @ =gUnknown_08078F4C
+	ldr r1, _0801A55C  @ =gLevelSelectLevelPlusArtSpriteLayout
 	add r0, r0, r1
 	mov r3, r9
 	asr r2, r3, #24
@@ -11149,7 +11149,7 @@ _0801A504:
 	mov r5, #128
 	lsl r5, r5, #17
 	add r5, r5, r9
-	ldr r2, _0801A55C  @ =gUnknown_08078F4C
+	ldr r2, _0801A55C  @ =gLevelSelectLevelPlusArtSpriteLayout
 	mov r9, r2
 	lsl r0, r1, #3
 	sub r7, r0, r1
@@ -11181,7 +11181,7 @@ _0801A526:
 _0801A558:
 	.4byte gUnknown_0807921C
 _0801A55C:
-	.4byte gUnknown_08078F4C
+	.4byte gLevelSelectLevelPlusArtSpriteLayout
 _0801A560:
 	.4byte 0x0300007C
 _0801A564:
