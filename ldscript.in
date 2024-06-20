@@ -257,7 +257,7 @@ SECTIONS
 		. = 0xC00;		gUnknown_03000C00 = .;
 		. = 0xC04;		gUnknown_03000C04 = .;
 		. = 0xC0C;		gUnknown_03000C0C = .;
-		. = 0xC20;		gUnknown_03000C20 = .;
+		. = 0xC20;		gDKLevelMarioLivesLeft_03000C20 = .;
 		. = 0xC28;		gUnknown_03000C28 = .;
 		. = 0xD20;		gCurrentPalette = .;
 		. = 0xD38;		gUnknown_03000D38 = .;
@@ -336,7 +336,7 @@ SECTIONS
 		. = 0x1B8C;		gUnknown_03001B8C = .;
 		. = 0x1B90;		gUnknown_03001B90 = .;
 		. = 0X1B98;		gUnknown_03001B98 = .;
-		. = 0x1BA0;		gUnknown_03001BA0 = .;
+		. = 0x1BA0;		gMiniMariosRescued_03001BA0 = .;
 		. = 0x1BA4;		gUnknown_03001BA4 = .;
 		. = 0x1BB0;		gUnknown_03001BB0 = .;
 		. = 0x1BC8;		gUnknown_03001BC8 = .;

@@ -478,7 +478,7 @@ _08029522:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08029558
-	ldr r1, _08029550  @ =gUnknown_03001BA0
+	ldr r1, _08029550  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r1]
 	cmp r0, #5
 	bhi _08029554
@@ -496,7 +496,7 @@ _08029548:
 _0802954C:
 	.4byte gNextLevelInLevelTable
 _08029550:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _08029554:
 	ldr r0, _080295D8  @ =0x00002710
 _08029556:
@@ -556,7 +556,7 @@ _08029558:
 	ldrb r1, [r0]
 	ldr r2, _0802960C  @ =gLevelCollectableFlags
 	mov r0, #5
-	bl sub_08010534
+	bl set_level_flags_08010534
 	b _0802961E
 _080295D8:
 	.4byte 0x00002710
@@ -592,7 +592,7 @@ _08029610:
 	ldr r1, _0802964C  @ =0x03000DF8
 	ldrb r1, [r1]
 	ldr r2, _08029650  @ =gLevelCollectableFlags
-	bl sub_08010534
+	bl set_level_flags_08010534
 _0802961E:
 	ldr r0, _08029654  @ =gNextLevelInLevelTable
 	ldr r0, [r0, #32]

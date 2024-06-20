@@ -459,7 +459,7 @@ void level_play_main(void) {
     }
     else if (gLevelType == 4) {
         sub_080149F8(gLivesCount);
-        sub_08010534(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10, &gLevelCollectableFlags.redPresent);
+        set_level_flags_08010534(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10, &gLevelCollectableFlags.redPresent);
         sub_08010BE0(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10);
         if (sub_080148F0(8) == 0) {
             sub_080148A4(8,1);
@@ -476,7 +476,7 @@ void level_play_main(void) {
     else if (gLevelType == '\x05') {
         sub_080149F8(gLivesCount);
         sub_08010BE0(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10);
-        sub_08010534(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10, &gLevelCollectableFlags.redPresent);
+        set_level_flags_08010534(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10, &gLevelCollectableFlags.redPresent);
         if (sub_080148F0(0x20) == 0) {
             sub_080148A4(0x20, 1);
         }

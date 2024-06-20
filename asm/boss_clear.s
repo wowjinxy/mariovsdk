@@ -387,7 +387,7 @@ sub_0801C1F0: @ 0x0801C1F0
 	lsl r1, r1, #24
 	asr r1, r1, #24
 	mov r2, #0
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	cmp r0, #0
 	bne _0801C25E
 	ldr r4, _0801C270  @ =gNextLevelInLevelTable

@@ -784,7 +784,7 @@ _080156D8:
 	asr r2, r2, #1
 	lsl r2, r2, #24
 	lsr r2, r2, #24
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08015710
@@ -853,7 +853,7 @@ _08015752:
 	asr r2, r2, #1
 	lsl r2, r2, #24
 	lsr r2, r2, #24
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08015794
@@ -901,7 +901,7 @@ _0801579C:
 	mov r2, r8
 	ldrb r1, [r2]
 	mov r2, #7
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _080157EE
@@ -924,7 +924,7 @@ _080157EE:
 	lsl r1, r1, #24
 	lsr r1, r1, #24
 	mov r2, #0
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08015824
@@ -1006,7 +1006,7 @@ _0801586C:
 	asr r2, r2, #1
 	lsl r2, r2, #24
 	lsr r2, r2, #24
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _080158BC
@@ -1035,7 +1035,7 @@ _080158C4:
 	ldr r1, _080158F0  @ =gLevelSelectWorld
 	ldrb r1, [r1]
 	mov r2, #7
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #0
@@ -1108,7 +1108,7 @@ _0801594C:
 	sub r1, r1, #1
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #0
@@ -1164,7 +1164,7 @@ _080159C4:
 _080159C8:
 	.4byte gUnknown_030012F8
 _080159CC:
-	ldr r0, _08015A00  @ =gUnknown_03001BA0
+	ldr r0, _08015A00  @ =gMiniMariosRescued_03001BA0
 	strb r4, [r0]
 	strb r4, [r6]
 _080159D2:
@@ -1189,7 +1189,7 @@ _080159D2:
 	bl change_main_state
 	b _08015A48
 _08015A00:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _08015A04:
 	.4byte gNextLevelID
 _08015A08:
@@ -1261,7 +1261,7 @@ _08015A7C:
 	ldrb r0, [r0]
 	ldrb r1, [r4]
 	mov r2, #0
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #0
@@ -1422,7 +1422,7 @@ _08015BB8:
 	ldrb r1, [r5]
 	ldr r2, _08015BF0  @ =gLevelSelectLevelCursor
 	ldrb r2, [r2]
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #0
@@ -1586,7 +1586,7 @@ _08015CC6:
 	add r2, r2, #3
 	lsl r2, r2, #24
 	lsr r2, r2, #24
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08015D1C
@@ -1650,7 +1650,7 @@ _08015D2C:
 	add r2, r2, #1
 	lsl r2, r2, #24
 	lsr r2, r2, #24
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08015D98
@@ -1703,7 +1703,7 @@ _08015DAC:
 	sub r2, r2, #1
 	lsl r2, r2, #24
 	lsr r2, r2, #24
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _08015DFC
@@ -1737,7 +1737,7 @@ _08015E04:
 	lsl r1, r1, #24
 	lsr r1, r1, #24
 	mov r2, #6
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #0
@@ -1830,7 +1830,7 @@ _08015EBC:
 	lsr r1, r1, #24
 	ldr r5, _08015F24  @ =gLevelSelectLevel
 	ldrb r2, [r5]
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #0
@@ -1952,7 +1952,7 @@ _08015FAA:
 	lsl r1, r1, #24
 	lsr r1, r1, #24
 	mov r2, #0
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #0
@@ -2120,7 +2120,7 @@ _080160F4:
 	lsr r1, r1, #24
 	ldr r2, _08016134  @ =gLevelSelectLevelCursor
 	ldrb r2, [r2]
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	cmp r0, #0
@@ -2318,7 +2318,7 @@ sub_08016260: @ 0x08016260
 	ldr r0, _080162C8  @ =gLevelType
 	ldrb r0, [r0]
 	ldrb r1, [r4]
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	lsl r0, r0, #24
 	lsr r1, r0, #24
 	cmp r1, #0
@@ -2386,7 +2386,7 @@ _080162F0:
 	ldr r0, _08016348  @ =gLevelType
 	ldrb r0, [r0]
 	mov r1, #5
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	lsl r0, r0, #24
 	lsr r1, r0, #24
 	cmp r1, #0
@@ -2645,7 +2645,7 @@ _080164E8:
 	mov r0, #5
 	mov r1, #0
 	mov r2, #0
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r5, r0, #24
 	cmp r5, #0
@@ -2699,7 +2699,7 @@ _08016554:
 	mov r0, #1
 	mov r1, #5
 	mov r2, #0
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r1, r0, #24
 	cmp r1, #0
@@ -2876,7 +2876,7 @@ _080166A0:
 	sub r1, r1, #1
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	lsl r0, r0, #24
 	lsr r1, r0, #24
 	cmp r1, #0
@@ -2950,7 +2950,7 @@ _08016738:
 	mov r0, #5
 	mov r1, #0
 	mov r2, #0
-	bl sub_0800FA04
+	bl is_level_unlocked
 	lsl r0, r0, #24
 	lsr r1, r0, #24
 	cmp r1, #0
@@ -12555,7 +12555,7 @@ _0801AFC0:
 	lsl r1, r1, #24
 	lsr r1, r1, #24
 	mov r0, #1
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	lsl r0, r0, #24
 	cmp r0, #0
 	bne _0801AFF6
@@ -12592,7 +12592,7 @@ _0801B014:
 	sub r1, r1, #1
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _0801B038
@@ -12650,7 +12650,7 @@ _0801B086:
 	lsl r1, r1, #24
 	lsr r1, r1, #24
 	mov r0, #0
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	lsl r0, r0, #24
 	cmp r0, #0
 	bne _0801B0BA
@@ -12684,7 +12684,7 @@ _0801B0D8:
 	ldr r0, _0801B10C  @ =gLevelType
 	ldrb r0, [r0]
 	ldrb r1, [r4]
-	bl sub_080103C8
+	bl is_world_or_expert_level_completed_080103C8
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _0801B11A

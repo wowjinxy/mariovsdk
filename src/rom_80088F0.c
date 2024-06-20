@@ -166,7 +166,7 @@ void level_edit_main(void) {
     sub_0801B310();
     if (((gSomeKeys_030012E8 & 8) != 0)  && (var1 = sub_08006A34(), var1 == 7)) {
 		change_main_state(MAIN_STATE_LEVEL_PLAY,USE_FADE);
-		sub_080107E8(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10,0);
+		set_level_highscore_flag_080107E8(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10,0);
       }    
     sub_08008238();
 }

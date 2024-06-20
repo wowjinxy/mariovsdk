@@ -38,7 +38,7 @@ void sub_0804A8E8(void) {
         case 2:
         if ((gUnknown_03001B8C == 0x0) && (gUnknown_03001B84 == 0)) {
                 gUnknown_03001B80 = gUnknown_03001B80 + 0x1;
-                if ((gUnknown_03001BA0 != 0x0) && (gUnknown_03001B80 == 0x1E)) {
+                if ((gMiniMariosRescued_03001BA0 != 0x0) && (gUnknown_03001B80 == 0x1E)) {
                     gUnknown_03001B8C = 0x1;
                     gUnknown_03000389 = gUnknown_03001B84;
                     gUnknown_0300038A = gUnknown_0812E128[0].pad[1];

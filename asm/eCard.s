@@ -4368,7 +4368,7 @@ _0802F700:
 _0802F714:
 	.4byte gUnknown_03000B44
 _0802F718:
-	ldr r0, _0802F728  @ =gUnknown_03001BA0
+	ldr r0, _0802F728  @ =gMiniMariosRescued_03001BA0
 	ldrb r1, [r0]
 	mov r0, #100
 	mul r1, r0, r1
@@ -4378,7 +4378,7 @@ _0802F718:
 	.byte 0x00
 	.byte 0x00
 _0802F728:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0802F72C:
 	ldr r0, _0802F740  @ =0x03000DD8
 	add r5, r4, #0
@@ -5148,7 +5148,7 @@ sub_0802FCA4: @ 0x0802FCA4
 	ldrb r1, [r1]
 	lsl r2, r2, #16
 	lsr r2, r2, #16
-	bl sub_080107E8
+	bl set_level_highscore_flag_080107E8
 _0802FCC6:
 	pop {r0}
 	bx r0
@@ -5805,7 +5805,7 @@ _0803015A:
 	ldrb r1, [r1]
 	lsl r2, r6, #24
 	lsr r2, r2, #24
-	bl get_level_stats_0800FCE4
+	bl got_star_on_level
 	lsl r0, r0, #24
 	cmp r0, #0
 	bne _080301CC
@@ -6036,7 +6036,7 @@ sub_080302FC: @ 0x080302FC
 	ldr r4, _08030390  @ =0x030001D4
 	ldr r1, _08030394  @ =0x03000DD0
 	ldrb r1, [r1]
-	bl sub_0800F76C
+	bl get_last_unlocked_level_for_world
 	strb r0, [r4]
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -6112,7 +6112,7 @@ _080303A4:
 	ldrb r1, [r1]
 	lsl r2, r5, #24
 	lsr r2, r2, #24
-	bl get_level_stats_0800FCE4
+	bl got_star_on_level
 	lsl r0, r0, #24
 	cmp r0, #0
 	beq _080303E0
@@ -6393,7 +6393,7 @@ _080305CC:
 	b _08030750
 _080305D2:
 	ldr r5, _0803072C  @ =gUnknown_03001BC8
-	ldr r0, _08030730  @ =gUnknown_03001BA0
+	ldr r0, _08030730  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r0]
 	strb r0, [r5]
 	mov r0, #32
@@ -6568,7 +6568,7 @@ _08030670:
 _0803072C:
 	.4byte gUnknown_03001BC8
 _08030730:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _08030734:
 	.4byte 0x030001E0
 _08030738:

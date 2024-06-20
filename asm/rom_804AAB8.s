@@ -6929,7 +6929,7 @@ _0804DE04:
 	lsl r1, r1, #4
 	add r0, r0, r1
 	str r0, [r4, #36]
-	ldr r1, _0804DE5C  @ =gUnknown_03001BA0
+	ldr r1, _0804DE5C  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r1]
 	add r0, r0, #1
 	strb r0, [r1]
@@ -6958,7 +6958,7 @@ _0804DE54:
 _0804DE58:
 	.4byte gUnknown_080B5F80
 _0804DE5C:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0804DE60:
 	.4byte 0x03000390
 _0804DE64:
@@ -9182,7 +9182,7 @@ _0804EDEE:
 	ldr r0, _0804EEE4  @ =0x84000002
 	str r0, [r2, #8]
 	ldr r0, [r2, #8]
-	ldr r0, _0804EF24  @ =gUnknown_03001BA0
+	ldr r0, _0804EF24  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r0]
 	lsl r0, r0, #6
 	ldr r1, _0804EF28  @ =gUnknown_082EC750
@@ -9325,7 +9325,7 @@ _0804EF1C:
 _0804EF20:
 	.4byte gUnknown_082EC748
 _0804EF24:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0804EF28:
 	.4byte gUnknown_082EC750
 _0804EF2C:
@@ -9793,7 +9793,7 @@ _0804F210:
 	THUMB_FUNC_START sub_0804F214
 sub_0804F214: @ 0x0804F214
 	push {lr}
-	ldr r0, _0804F230  @ =gUnknown_03001BA0
+	ldr r0, _0804F230  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0804F238
@@ -9808,7 +9808,7 @@ sub_0804F214: @ 0x0804F214
 	.byte 0x00
 	.byte 0x00
 _0804F230:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0804F234:
 	.4byte gUnknown_03001A1C
 _0804F238:
@@ -10833,7 +10833,7 @@ _0804F958:
 sub_0804F95C: @ 0x0804F95C
 	push {lr}
 	sub sp, sp, #12
-	ldr r0, _0804F9B0  @ =gUnknown_03001BA0
+	ldr r0, _0804F9B0  @ =gMiniMariosRescued_03001BA0
 	ldrb r2, [r0]
 	cmp r2, #0
 	bne _0804F9CC
@@ -10873,7 +10873,7 @@ sub_0804F95C: @ 0x0804F95C
 	mov r0, #1
 	b _0804F9CE
 _0804F9B0:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0804F9B4:
 	.4byte gUnknown_030019AC
 _0804F9B8:
@@ -10924,7 +10924,7 @@ _0804F9E6:
 	cmp r0, r3
 	blt _0804F9E6
 _0804FA08:
-	ldr r0, _0804FA24  @ =gUnknown_03001BA0
+	ldr r0, _0804FA24  @ =gMiniMariosRescued_03001BA0
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _0804FA16
@@ -10941,7 +10941,7 @@ _0804FA1C:
 _0804FA20:
 	.4byte gUnknown_03001BB0
 _0804FA24:
-	.4byte gUnknown_03001BA0
+	.4byte gMiniMariosRescued_03001BA0
 _0804FA28:
 	mov r0, #0
 _0804FA2A:

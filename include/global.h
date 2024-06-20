@@ -669,6 +669,16 @@ struct UnknownStruct12
     u32 unk0_5:1;
 };
 
+enum LevelType
+{
+    LEVEL_TYPE_MAIN,
+    LEVEL_TYPE_PLUS,
+    LEVEL_TYPE_EXPERT_1_6,
+    LEVEL_TYPE_EXPERT_7_12,
+    LEVEL_TYPE_MAIN_BOSS,
+    LEVEL_TYPE_PLUS_BOSS,
+};
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -778,7 +788,7 @@ extern s8 gUnknown_03000BFC;
 extern s8 gUnknown_03000C00;
 extern u16 gUnknown_03000C04;
 extern u16 gUnknown_03000C0C;
-extern u8 gUnknown_03000C20;
+extern u8 gDKLevelMarioLivesLeft_03000C20;
 extern u8 gUnknown_03000C28;
 extern u16 gUnknown_03000D38;
 extern s32 gUnknown_03000D60;
@@ -857,7 +867,7 @@ extern u8 gUnknown_0300038C;
 extern u8 gUnknown_03001B8C;
 extern u8 gUnknown_03001B84;
 extern u8 gUnknown_03001B80;
-extern u8 gUnknown_03001BA0;
+extern u8 gMiniMariosRescued_03001BA0;
 extern u8 gUnknown_03000389;
 extern u8 gUnknown_0300038A;
 extern u8 gUnknown_03001B90;
@@ -917,6 +927,7 @@ extern u16 gPlusLevelDefaultHighScores[][7];
 extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
 extern struct SaveFile *gSaveFilesPtr;
+extern u16 gUnknown_080788E0[];
 extern struct UnknownStruct12 *gUnknown_080788FC;
 extern void *const gUnknown_0807CA94;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
@@ -1009,7 +1020,7 @@ void sub_08008238(void);
 void sub_0800EE70(void);
 void title_demo_setup(u32 titleDemoID);
 u8 get_level_stats_08010068(u8, u8, u8, u8, u8 *);
-u8 sub_080103C8(u8, u8);
+u8 is_world_or_expert_level_completed_080103C8(u8, u8);
 void sub_08011428();
 void sub_08014A58();
 void sub_08014B78(int, s8 *, u8 *, s8 *);
@@ -1162,12 +1173,12 @@ void sub_080149F8(u32);
 
 // There seems to be some conflict with parameter types. No idea why.
 #ifdef INCLUDED_FROM_SAVEFILE_C
-void sub_08010534(u8, u8, u8*);
-void sub_080107E8(u8 world, u8 level, u16 arg2);
+void set_level_flags_08010534(u8, u8, u8*);
+void set_level_highscore_flag_080107E8(u8 world, u8 level, u16 arg2);
 void sub_08010BE0(u8 arg0, u8 arg1);
 #else
-void sub_08010534();
-void sub_080107E8();
+void set_level_flags_08010534();
+void set_level_highscore_flag_080107E8();
 void sub_08010BE0(u32, u32);
 #endif
 
