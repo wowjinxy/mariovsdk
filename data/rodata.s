@@ -2,11 +2,20 @@
 
 	@ What is this first part? Seems unreferenced.
 
-	.INCBIN "baserom.gba", 0x76360, 0x76368-0x76360
+	.4byte 0x40400030
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_08076368
 gUnknown_08076368:
-	.INCBIN "baserom.gba", 0x76368, 0x76387-0x76368
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.2byte 0x0101
+	.byte 0x01
 
 	.GLOBAL gUnknown_08076387
 gUnknown_08076387:
@@ -17,11 +26,25 @@ gUnknown_08076387:
 
 	.GLOBAL gUnknown_0807638C
 gUnknown_0807638C:
-	.INCBIN "baserom.gba", 0x7638C, 0x763AC-0x7638C
+	.4byte 0x8E5E2EFE
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_080763AC
 gUnknown_080763AC:
-	.INCBIN "baserom.gba", 0x763AC, 0x763CC-0x763AC
+	.4byte 0x007A4108
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_080763CC
 gUnknown_080763CC:
@@ -241,7 +264,8 @@ gTextPressBToReturn:
 
 	.GLOBAL gUnknown_080769B0
 gUnknown_080769B0:
-	.INCBIN "baserom.gba", 0x769B0, 0x769B8-0x769B0
+	.4byte 0x0000001A
+	.4byte 0x0000001B
 
 	.GLOBAL gUnknown_080769B8
 gUnknown_080769B8:
@@ -269,7 +293,7 @@ gTextErrorFlashNotDetected:
 
 	.GLOBAL gUnknown_08076AD8
 gUnknown_08076AD8:
-	.INCBIN "baserom.gba", 0x76AD8, 0x76D58-0x76AD8
+	.INCBIN "assets/gUnknown_08076AD8.bin"
 
 	.GLOBAL gUnknown_08076D58
 gUnknown_08076D58:
