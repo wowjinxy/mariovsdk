@@ -462,3 +462,34 @@ INTR_FLAG_DMA2     = (1 << 10)
 INTR_FLAG_DMA3     = (1 << 11)
 INTR_FLAG_KEYPAD   = (1 << 12)
 INTR_FLAG_GAMEPAK  = (1 << 13)
+
+@-------------------------------------------------------------------------------
+@ Structures
+@-------------------------------------------------------------------------------
+
+.MACRO OamData y, affineMode, objMode, mosaic, bpp, shape, x, matrixNum, size, tileNum, priority, paletteNum, affineParam=0
+	.BYTE \y
+	.BYTE (\affineMode & 3) | ((\objMode & 3) << 2) | ((\mosaic & 1) << 4) | ((\bpp & 1) << 5) | ((\shape & 3) << 6)
+	.2BYTE (\x & 0x1FF) | ((\matrixNum & 0x1F) << 9) | ((\size & 3) << 14)
+	.2BYTE (\tileNum & 0x3FF) | ((\priority & 3) << 10) | ((\paletteNum & 0xF) << 12)
+	.2BYTE \affineParam
+.ENDM
+
+ST_OAM_OBJ_NORMAL = 0
+ST_OAM_OBJ_BLEND  = 1
+ST_OAM_OBJ_WINDOW = 2
+
+ST_OAM_AFFINE_OFF    = 0
+ST_OAM_AFFINE_NORMAL = 1
+ST_OAM_AFFINE_ERASE  = 2
+ST_OAM_AFFINE_DOUBLE = 3
+
+ST_OAM_AFFINE_ON_MASK     = 1
+ST_OAM_AFFINE_DOUBLE_MASK = 2
+
+ST_OAM_4BPP = 0
+ST_OAM_8BPP = 1
+
+ST_OAM_SQUARE      = 0
+ST_OAM_H_RECTANGLE = 1
+ST_OAM_V_RECTANGLE = 2

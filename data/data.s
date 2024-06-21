@@ -1,3 +1,4 @@
+	.INCLUDE "gba.inc"
 	.INCLUDE "macro.inc"
 
 	.SECTION .data
@@ -3486,7 +3487,7 @@ gUnknown_085FB360:
 
 	.GLOBAL gUnknown_085FB3CC
 gUnknown_085FB3CC:
-	.INCBIN "baserom.gba", 0x5FB3CC, 0x5FB3D4-0x5FB3CC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_085FB3D4
 gUnknown_085FB3D4:
@@ -3498,7 +3499,7 @@ gUnknown_085FB554:
 
 	.GLOBAL gUnknown_085FB7DC
 gUnknown_085FB7DC:
-	.INCBIN "baserom.gba", 0x5FB7DC, 0x5FB7E4-0x5FB7DC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=10, affineParam=0
 
 	.GLOBAL gUnknown_085FB7E4
 gUnknown_085FB7E4:
@@ -3510,7 +3511,7 @@ gUnknown_085FEFE4:
 
 	.GLOBAL gUnknown_085FF26C
 gUnknown_085FF26C:
-	.INCBIN "baserom.gba", 0x5FF26C, 0x5FF274-0x5FF26C
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_085FF274
 gUnknown_085FF274:
@@ -3522,7 +3523,7 @@ gUnknown_08600E74:
 
 	.GLOBAL gUnknown_086010FC
 gUnknown_086010FC:
-	.INCBIN "baserom.gba", 0x6010FC, 0x601104-0x6010FC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08601104
 gUnknown_08601104:
@@ -3534,7 +3535,7 @@ gUnknown_08602D04:
 
 	.GLOBAL gUnknown_08602F8C
 gUnknown_08602F8C:
-	.INCBIN "baserom.gba", 0x602F8C, 0x602F94-0x602F8C
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08602F94
 gUnknown_08602F94:
@@ -3546,7 +3547,7 @@ gUnknown_08606794:
 
 	.GLOBAL gUnknown_08606A1C
 gUnknown_08606A1C:
-	.INCBIN "baserom.gba", 0x606A1C, 0x606A24-0x606A1C
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=10, affineParam=0
 
 	.GLOBAL gUnknown_08606A24
 gUnknown_08606A24:
@@ -3558,7 +3559,7 @@ gUnknown_0860A224:
 
 	.GLOBAL gUnknown_0860A4AC
 gUnknown_0860A4AC:
-	.INCBIN "baserom.gba", 0x60A4AC, 0x60A4B4-0x60A4AC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_0860A4B4
 gUnknown_0860A4B4:
@@ -3570,7 +3571,7 @@ gUnknown_0860C0B4:
 
 	.GLOBAL gUnknown_0860C33C
 gUnknown_0860C33C:
-	.INCBIN "baserom.gba", 0x60C33C, 0x60C344-0x60C33C
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_0860C344
 gUnknown_0860C344:
@@ -3582,7 +3583,7 @@ gUnknown_0860FB44:
 
 	.GLOBAL gUnknown_0860FDCC
 gUnknown_0860FDCC:
-	.INCBIN "baserom.gba", 0x60FDCC, 0x60FDD4-0x60FDCC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_0860FDD4
 gUnknown_0860FDD4:
@@ -3594,7 +3595,7 @@ gUnknown_086119D4:
 
 	.GLOBAL gUnknown_08611A40
 gUnknown_08611A40:
-	.INCBIN "baserom.gba", 0x611A40, 0x611A48-0x611A40
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08611A48
 gUnknown_08611A48:
@@ -3606,7 +3607,7 @@ gUnknown_08612648:
 
 	.GLOBAL gUnknown_086126B4
 gUnknown_086126B4:
-	.INCBIN "baserom.gba", 0x6126B4, 0x6126BC-0x6126B4
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=14, affineParam=0
 
 	.GLOBAL gUnknown_086126BC
 gUnknown_086126BC:
@@ -3618,7 +3619,7 @@ gUnknown_08613EBC:
 
 	.GLOBAL gUnknown_08613F04
 gUnknown_08613F04:
-	.INCBIN "baserom.gba", 0x613F04, 0x613F0C-0x613F04
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=2, affineParam=0
 
 	.GLOBAL gfxEReaderLogo4bpp
 gfxEReaderLogo4bpp:
@@ -3631,7 +3632,7 @@ gUnknown_08614738:
 
 	.GLOBAL gUnknown_0861475C
 gUnknown_0861475C:
-	.INCBIN "baserom.gba", 0x61475C, 0x614764-0x61475C
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08614764
 gUnknown_08614764:
@@ -3643,7 +3644,7 @@ gUnknown_08614B64:
 
 	.GLOBAL gUnknown_08614BAC
 gUnknown_08614BAC:
-	.INCBIN "baserom.gba", 0x614BAC, 0x614BB4-0x614BAC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=10, affineParam=0
 
 	.GLOBAL gUnknown_08614BB4
 gUnknown_08614BB4:
@@ -3655,7 +3656,7 @@ gUnknown_08615BB4:
 
 	.GLOBAL gUnknown_08615BFC
 gUnknown_08615BFC:
-	.INCBIN "baserom.gba", 0x615BFC, 0x615C04-0x615BFC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08615C04
 gUnknown_08615C04:
@@ -3668,7 +3669,7 @@ gUnknown_08617030:
 
 	.GLOBAL gUnknown_08617078
 gUnknown_08617078:
-	.INCBIN "baserom.gba", 0x617078, 0x617080-0x617078
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=3, affineParam=0
 
 	.GLOBAL gUnknown_08617080
 gUnknown_08617080:
@@ -3677,7 +3678,7 @@ gUnknown_08617080:
 
 	.GLOBAL gUnknown_086172E8
 gUnknown_086172E8:
-	.INCBIN "baserom.gba", 0x6172E8, 0x6172F0-0x6172E8
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_086172F0
 gUnknown_086172F0:
@@ -3689,7 +3690,7 @@ gUnknown_08617570:
 
 	.GLOBAL gUnknown_086175B8
 gUnknown_086175B8:
-	.INCBIN "baserom.gba", 0x6175B8, 0x6175C0-0x6175B8
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_086175C0
 gUnknown_086175C0:
@@ -3698,7 +3699,7 @@ gUnknown_086175C0:
 
 	.GLOBAL gUnknown_08617828
 gUnknown_08617828:
-	.INCBIN "baserom.gba", 0x617828, 0x617830-0x617828
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08617830
 gUnknown_08617830:
@@ -3710,7 +3711,7 @@ gUnknown_08617970:
 
 	.GLOBAL gUnknown_08617AFC
 gUnknown_08617AFC:
-	.INCBIN "baserom.gba", 0x617AFC, 0x617B04-0x617AFC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08617B04
 gUnknown_08617B04:
@@ -3722,7 +3723,7 @@ gUnknown_08617C64:
 
 	.GLOBAL gUnknown_08617CAC
 gUnknown_08617CAC:
-	.INCBIN "baserom.gba", 0x617CAC, 0x617CB4-0x617CAC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08617CB4
 gUnknown_08617CB4:
@@ -3731,7 +3732,7 @@ gUnknown_08617CB4:
 
 	.GLOBAL gUnknown_08617F1C
 gUnknown_08617F1C:
-	.INCBIN "baserom.gba", 0x617F1C, 0x617F24-0x617F1C
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
 	.GLOBAL gUnknown_08617F24
 gUnknown_08617F24:
@@ -3743,7 +3744,7 @@ gUnknown_08618064:
 
 	.GLOBAL gUnknown_086180AC
 gUnknown_086180AC:
-	.INCBIN "baserom.gba", 0x6180AC, 0x6180B4-0x6180AC
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=1, affineParam=0
 
 	.GLOBAL gUnknown_086180B4
 gUnknown_086180B4:
