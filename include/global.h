@@ -691,7 +691,7 @@ enum
 
 struct SpriteTemplate_child
 {
-    u8 unk0;
+    u8 unk0;  // index?
     u8 unk1;
     s8 unk2;  // x
     s8 unk3;  // y
@@ -706,7 +706,7 @@ struct SpriteTemplate
     /*0x02*/ u16 y;
     u16 unk4;
     u16 unk6;
-    u16 unk8;  // size
+    u16 unk8;  // size of each sprite's tile data
     struct SpriteTemplate_child *unkC;
     /*0x10*/ struct OamData *oamData;  // oam
     /*0x14*/ u8 *tileData;  // tile data
@@ -1056,7 +1056,7 @@ extern struct OamData gUnknown_086126B4;
 extern u8 gUnknown_086126BC[];
 extern struct SpriteTemplate_child gUnknown_08613EBC;
 extern struct OamData gUnknown_08613F04;
-extern u8 gUnknown_08613F0C[];
+extern u8 gfxEReaderLogo4bpp[];
 extern struct SpriteTemplate_child gUnknown_08614738;
 extern struct OamData gUnknown_0861475C;
 extern u8 gUnknown_08614764[];

@@ -3187,7 +3187,9 @@ gUnknown_085FB3CC:
 
 	.GLOBAL gUnknown_085FB3D4
 gUnknown_085FB3D4:
-	.INCBIN "baserom.gba", 0x5FB3D4, 0x5FB554-0x5FB3D4
+	.INCBIN "assets/sprites/gUnknown_085FB3D4_0.4bpp"
+	.INCBIN "assets/sprites/gUnknown_085FB3D4_1.4bpp"
+	.INCBIN "assets/sprites/gUnknown_085FB3D4_2.4bpp"
 
 	.GLOBAL gUnknown_085FB554
 gUnknown_085FB554:
@@ -3295,7 +3297,9 @@ gUnknown_08611A40:
 
 	.GLOBAL gUnknown_08611A48
 gUnknown_08611A48:
-	.INCBIN "baserom.gba", 0x611A48, 0x612648-0x611A48
+	.INCBIN "assets/sprites/gUnknown_08611A48_0.4bpp"
+	.INCBIN "assets/sprites/gUnknown_08611A48_1.4bpp"
+	.INCBIN "assets/sprites/gUnknown_08611A48_2.4bpp"
 
 	.GLOBAL gUnknown_08612648
 gUnknown_08612648:
@@ -3307,7 +3311,9 @@ gUnknown_086126B4:
 
 	.GLOBAL gUnknown_086126BC
 gUnknown_086126BC:
-	.INCBIN "baserom.gba", 0x6126BC, 0x613EBC-0x6126BC
+	.INCBIN "assets/sprites/gUnknown_086126BC_0.4bpp"
+	.INCBIN "assets/sprites/gUnknown_086126BC_1.4bpp"
+	.INCBIN "assets/sprites/gUnknown_086126BC_2.4bpp"
 
 	.GLOBAL gUnknown_08613EBC
 gUnknown_08613EBC:
@@ -3317,9 +3323,11 @@ gUnknown_08613EBC:
 gUnknown_08613F04:
 	.INCBIN "baserom.gba", 0x613F04, 0x613F0C-0x613F04
 
-	.GLOBAL gUnknown_08613F0C
-gUnknown_08613F0C:
-	.INCBIN "baserom.gba", 0x613F0C, 0x614738-0x613F0C
+	.GLOBAL gfxEReaderLogo4bpp
+gfxEReaderLogo4bpp:
+	.INCBIN "assets/sprites/EReaderLogo_0.4bpp"
+	.INCBIN "assets/sprites/EReaderLogo_1.4bpp"
+	.INCBIN "baserom.gba", 0x61430C, 0x614738-0x61430C
 
 	.GLOBAL gUnknown_08614738
 gUnknown_08614738:
@@ -3387,7 +3395,9 @@ gUnknown_086175B8:
 
 	.GLOBAL gUnknown_086175C0
 gUnknown_086175C0:
-	.INCBIN "baserom.gba", 0x6175C0, 0x617828-0x6175C0
+	.INCBIN "assets/sprites/gUnknown_086175C0_0.4bpp"
+	.INCBIN "assets/sprites/gUnknown_086175C0_1.4bpp"
+	.INCBIN "baserom.gba", 0x6176C0, 0x617828-0x6176C0
 
 	.GLOBAL gUnknown_08617828
 gUnknown_08617828:

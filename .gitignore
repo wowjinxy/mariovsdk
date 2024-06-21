@@ -6,9 +6,11 @@ src/*.s
 *.map
 *.dump
 ldscript.txt
-
+.extract/
 *.exe
 tools/agbcc
+*.4bpp
+*.8bpp
 
 # Emulator save files
 *.sav
