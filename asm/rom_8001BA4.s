@@ -10291,3 +10291,37 @@ _080066E6:
 _080066F8:
 	.4byte gUnknown_030008E8
 	THUMB_FUNC_END sub_0800667C
+
+	.SECTION .data
+
+	.GLOBAL gObjectTileDataRAMPtr
+gObjectTileDataRAMPtr:
+	.4byte 0x0200C010
+
+	.GLOBAL gCollectableScoreTable1
+gCollectableScoreTable1:
+	.2byte 2000
+
+	.GLOBAL gCollectableScoreTable2
+gCollectableScoreTable2:
+	.2byte 2000
+	.2byte 3000
+	.2byte 3000
+	.2byte 5000
+	.2byte 5000
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
+	.2byte 500
+
+	.GLOBAL gUnknown_0807822C
+gUnknown_0807822C:
+	.4byte 0x00000000
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_08078234
+gUnknown_08078234:
+	.4byte 0x00000000
+	.4byte 0x00000000

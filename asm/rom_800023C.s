@@ -1869,3 +1869,9 @@ _08001B84:
 	bx lr
 	.pool
 ARM_FUNC_END sub_08001840
+
+	.SECTION .data
+
+	.GLOBAL gEWRAMBasePtr
+gEWRAMBasePtr:
+	.4byte 0x02000000

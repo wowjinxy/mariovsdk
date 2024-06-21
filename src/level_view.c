@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "level_view.h"
 #include "main.h"
 
 void level_view_main(void) {
@@ -31,8 +32,6 @@ void level_view_main(void) {
     }
 }
 
-
-
 u32 sub_080322A8(u16 *param1, u16 *param2, u16 *param3) {
     if (gUnknown_03000B78 != 0) {
         DmaCopy32(3, gUnknown_082E8908, OBJ_VRAM0 + param3[0], 0x100);
@@ -60,7 +59,7 @@ void level_view_init_callback(void) {
 	gUnknown_03001A00 = 0;
 }
 
-void level_view_loop() { // 0x080323CC
+void level_view_loop(void) { // 0x080323CC
 	u32 var1;
 	var1 = gMainState;
 	gMainState = MAIN_STATE_LEVEL_PLAY;
@@ -68,7 +67,7 @@ void level_view_loop() { // 0x080323CC
 	gMainState = var1;
 }
 
-void level_view_end() { // 0x080323E8
+void level_view_end(void) { // 0x080323E8
 	
 	gUnknown_03000B78 = 0;
 	gUnknown_03001A00 = 1;

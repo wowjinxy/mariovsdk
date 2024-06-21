@@ -7,8 +7,6 @@ struct Struct2004000
     u16 unkC[0];
 };
 
-
-
 int sub_080066FC(u32 *a, int b, int c, int d)
 {
     return gUnknown_03000964(a, b, c, d);

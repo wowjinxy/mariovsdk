@@ -1,6 +1,7 @@
 #include "gba/gba.h"
 #include "global.h"
 #include "arena.h"
+#include "level_view.h"
 #include "main.h"
 #include "savefile.h"
 
