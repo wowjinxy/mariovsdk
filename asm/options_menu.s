@@ -698,7 +698,7 @@ sub_08028068: @ 0x08028068
 	ldr r5, _080280B0  @ =gUnknown_03001930
 	ldrh r3, [r5]
 	strh r3, [r0, #6]
-	ldr r6, _080280B4  @ =gUnknown_0300192C
+	ldr r6, _080280B4  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r4, [r6]
 	strh r4, [r0, #4]
 	ldrb r0, [r0, #13]
@@ -723,7 +723,7 @@ _080280AC:
 _080280B0:
 	.4byte gUnknown_03001930
 _080280B4:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _080280B8:
 	ldrh r0, [r2, #4]
 	add r0, r3, r0
@@ -898,7 +898,7 @@ sub_080281C8: @ 0x080281C8
 	mov r10, r0
 	ldrh r0, [r3]
 	lsl r0, r0, #3
-	ldr r1, _08028290  @ =gOamData
+	ldr r1, _08028290  @ =gOamBuffer
 	add r3, r0, r1
 	ldrb r0, [r4, #13]
 	cmp r0, #0
@@ -990,7 +990,7 @@ _08028264:
 	blt _08028200
 	b _08028324
 _08028290:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08028294:
 	.4byte REG_DMA3SAD
 _08028298:
@@ -2033,7 +2033,7 @@ _08028A1A:
 	add r1, r3, r5
 	ldr r0, [r2, #68]
 	str r0, [r1]
-	ldr r0, _08028BC0  @ =gUnknown_0300192C
+	ldr r0, _08028BC0  @ =gObjVRAMCopyOffset_0300192C
 	mov r1, #0
 	strh r1, [r0]
 	ldr r0, _08028BC4  @ =gUnknown_03001930
@@ -2233,7 +2233,7 @@ _08028BB8:
 _08028BBC:
 	.4byte gOptionsMenuData
 _08028BC0:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08028BC4:
 	.4byte gUnknown_03001930
 _08028BC8:
@@ -2283,7 +2283,7 @@ options_main: @ 0x08028C08
 	mov r5, #64
 	mov r1, #128
 	mov r8, r1
-	bl sub_080331FC
+	bl process_input
 	ldr r2, _08028C78  @ =0x030000FC
 	ldr r1, [r2]
 	ldr r0, _08028C7C  @ =0x00001128
@@ -2614,7 +2614,7 @@ _08028E9E:
 	ldr r1, _08028FEC  @ =REG_DMA3SAD
 	add r3, sp, #4
 	str r3, [r1]
-	ldr r0, _08028FF0  @ =gOamData
+	ldr r0, _08028FF0  @ =gOamBuffer
 	str r0, [r1, #4]
 	ldr r0, _08028FF4  @ =0x85000100
 	str r0, [r1, #8]
@@ -2779,7 +2779,7 @@ _08028FE8:
 _08028FEC:
 	.4byte REG_DMA3SAD
 _08028FF0:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08028FF4:
 	.4byte 0x85000100
 _08028FF8:
@@ -2802,7 +2802,7 @@ _08029004:
 _0802901A:
 	bl sub_0801B4BC
 	ldr r1, _08029040  @ =REG_DMA3SAD
-	ldr r0, _08029044  @ =gOamData
+	ldr r0, _08029044  @ =gOamBuffer
 	str r0, [r1]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -2821,7 +2821,7 @@ _0802901A:
 _08029040:
 	.4byte REG_DMA3SAD
 _08029044:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08029048:
 	.4byte 0x84000100
 	THUMB_FUNC_END options_loop

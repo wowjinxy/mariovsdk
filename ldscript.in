@@ -1,6 +1,5 @@
 #define OBJECT_FILE_LIST \
-	X(data/rodata.o) \
-	X(data/data.o) \
+	X(data/rodata0.o) \
 	X(asm/crt0.o) \
 	X(asm/rom_800023C.o) \
 	X(asm/rom_8001BA4.o) \
@@ -13,8 +12,11 @@
 	X(src/rom_800EEC0.o) \
 	X(asm/rom_800F0C4.o) \
 	X(src/rom_800F1E4.o) \
+	X(data/data0.o) \
 	X(src/savefile.o) \
-	X(asm/main_menu.o) \
+	X(src/main_menu.o) \
+	X(data/data.o) \
+	X(data/rodata.o) \
 	X(asm/rom_801488C.o) \
 	X(asm/level_select.o) \
 	X(asm/rom_801B310.o) \
@@ -128,7 +130,29 @@ SECTIONS
 		. = 0x34;		gUnknown_03000034 = .;
 		. = 0x38;		gUnknown_03000038 = .;
 		. = 0x3C;		gUnknown_0300003C = .;
+		. = 0x40;		gSomeOamIndex_03000040 = .;
+		. = 0x42;		gUnknown_03000042 = .;
+		. = 0x44;		gUnknown_03000044 = .;
+		. = 0x46;		gUnknown_03000046 = .;
+		. = 0x48;		gUnknown_03000048 = .;
+		. = 0x4A;		gUnknown_0300004A = .;
+		. = 0x4C;		gUnknown_0300004C = .;
+		. = 0x4E;		gUnknown_0300004E = .;
+		. = 0x50;		gUnknown_03000050 = .;
+		. = 0x52;		gUnknown_03000052 = .;
+		. = 0x54;		gUnknown_03000054 = .;
 		. = 0x58;		gFileSelectMenuSel = .;
+		. = 0x59;		gPrevFileSelectMenuSel = .;
+		. = 0x5B;		gUnknown_0300005B = .;
+		. = 0x5C;		gUnknown_0300005C = .;
+		. = 0x5D;		gUnknown_0300005D = .;
+		. = 0x5E;		gUnknown_0300005E = .;
+		. = 0x5F;		gUnknown_0300005F = .;
+		. = 0x60;		gUnknown_03000060 = .;
+		. = 0x61;		gUnknown_03000061 = .;
+		. = 0x62;		gUnknown_03000062 = .;
+		. = 0x63;		gUnknown_03000063 = .;
+		. = 0x64;		gUnknown_03000064 = .;
 		. = 0x65;		gUnknown_03000065 = .;
 		. = 0x66;		gUnknown_03000066 = .;
 		. = 0x70;		gUnknown_03000070 = .;
@@ -271,7 +295,7 @@ SECTIONS
 		. = 0xE8C;		gPaletteData_03000E8C = .;
 		. = 0xE90;		gSomeVRAMAddr_03000E90 = .;
 		. = 0xE94;		gUnknown_03000E94 = .;
-		. = 0xEA0;		gOamData = .;
+		. = 0xEA0;		gOamBuffer = .;
 		. = 0x12A0;		gCameraHorizontalOffset = .;
 		. = 0x12A4;		gBGHorizontalOffset = .;
 		. = 0x12A8;		gUnknown_030012A8 = .;
@@ -302,7 +326,7 @@ SECTIONS
 		. = 0x1748;		gUnknown_03001748 = .;
 		. = 0x1750;		gArena = .;
 		. = 0x1770;		gUnknown_03001770 = .;
-		. = 0x192C;		gUnknown_0300192C = .;
+		. = 0x192C;		gObjVRAMCopyOffset_0300192C = .;
 		. = 0x1930;		gUnknown_03001930 = .;
 		. = 0x1938;		gUnknown_03001938 = .;
 		. = 0x1940;		gUnknown_03001940 = .;

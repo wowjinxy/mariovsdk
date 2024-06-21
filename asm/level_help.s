@@ -289,7 +289,7 @@ _0802A6A6:
 	cmp r6, r2
 	bcs _0802A74C
 	ldr r7, _0802A76C  @ =REG_DMA3SAD
-	ldr r4, _0802A784  @ =gOamData
+	ldr r4, _0802A784  @ =gOamBuffer
 	ldr r3, _0802A788  @ =0x000003FF
 	ldr r0, [sp]
 	and r0, r0, r3
@@ -395,7 +395,7 @@ _0802A77C:
 _0802A780:
 	.4byte 0x03000132
 _0802A784:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802A788:
 	.4byte 0x000003FF
 _0802A78C:
@@ -470,7 +470,7 @@ _0802A7C4:
 	mov r1, #0
 	str r1, [sp]
 	ldr r6, _0802A8CC  @ =REG_DMA3SAD
-	ldr r5, _0802A8D8  @ =gOamData
+	ldr r5, _0802A8D8  @ =gOamBuffer
 	ldr r2, _0802A8D0  @ =0x03000138
 	mov r12, r2
 	ldr r3, _0802A8DC  @ =0xFFFFFE00
@@ -572,7 +572,7 @@ _0802A8D0:
 _0802A8D4:
 	.4byte OBJ_VRAM0
 _0802A8D8:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802A8DC:
 	.4byte 0xFFFFFE00
 _0802A8E0:
@@ -607,7 +607,7 @@ sub_0802A8F0: @ 0x0802A8F0
 	bge _0802A9E6
 	mov r10, r3
 	ldr r7, _0802A9FC  @ =REG_DMA3SAD
-	ldr r0, _0802AA00  @ =gOamData
+	ldr r0, _0802AA00  @ =gOamBuffer
 	mov r12, r0
 _0802A91C:
 	mov r3, r10
@@ -726,7 +726,7 @@ _0802A9F8:
 _0802A9FC:
 	.4byte REG_DMA3SAD
 _0802AA00:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802AA04:
 	.4byte OBJ_VRAM0
 _0802AA08:
@@ -755,7 +755,7 @@ help_end: @ 0x0802AA1C
 help_main: @ 0x0802AA28
 	push {lr}
 	sub sp, sp, #12
-	bl sub_080331FC
+	bl process_input
 	ldr r2, _0802AA4C  @ =0x03000130
 	ldrb r3, [r2]
 	cmp r3, #2

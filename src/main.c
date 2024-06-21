@@ -87,7 +87,7 @@ void sub_08006F5C(u32 a, u32 b)
 
 void sub_08006F90(void)
 {
-    struct OamData *oam = &gOamData[0];
+    struct OamData *oam = &gOamBuffer[0];
     s32 x;
     s32 y;
 

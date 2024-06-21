@@ -553,7 +553,7 @@
 #define BLDCNT_BG1_SECOND   (1 << 9)
 #define BLDCNT_BG2_SECOND   (1 << 10)
 #define BLDCNT_BG3_SECOND   (1 << 11)
-#define BLDCNT_BG4_SECOND   (1 << 12)
+#define BLDCNT_OBJ_SECOND   (1 << 12)
 #define BLDCNT_BD_SECOND    (1 << 13)
 
 // SOUNDCNT_H

@@ -14,6 +14,12 @@
 // Types
 //------------------------------------------------------------------------------
 
+struct Coords32
+{
+    s32 x;
+    s32 y;
+};
+
 struct CmprHeader
 {
     u32 reserved:4;
@@ -205,7 +211,7 @@ struct UnknownStruct4
     struct UnknownStruct5 *unk0;
     struct GraphicsConfig *unk4;
     struct UnknownStruct4_child *unk8;
-    u32 (*unkC)(void);    
+    u32 (*unkC)(void);
     s16 unk10;
     s16 unk12;
     u32 unk14;
@@ -271,20 +277,20 @@ struct MoviePlayerParamaters
     const u32 *movieData;
     u8 unk4;
     u8 songID;
-	u8 nextMode;
-	u8 movieID;
+    u8 nextMode;
+    u8 movieID;
 };
 
 struct backgroundLayerOffset
 {
-	u16 bg0_x;
-	u16 bg0_y;
-	u16 bg1_x;
-	u16 bg1_y;
-	u16 bg2_x;
-	u16 bg2_y;
-	u16 bg3_x;
-	u16 bg3_y;
+    u16 bg0_x;
+    u16 bg0_y;
+    u16 bg1_x;
+    u16 bg1_y;
+    u16 bg2_x;
+    u16 bg2_y;
+    u16 bg3_x;
+    u16 bg3_y;
 };
 
 typedef struct test {
@@ -360,14 +366,14 @@ typedef struct unkst24 {
 
 struct levelCollectableFlags
 {
-	u8 redPresent;
-	u8 yellowPresent;
-	u8 bluePresent;
-	u8 letterT;
-	u8 letterO;
-	u8 letterY;
-	u8 unk6;
-	u8 unk7;
+    u8 redPresent;
+    u8 yellowPresent;
+    u8 bluePresent;
+    u8 letterT;
+    u8 letterO;
+    u8 letterY;
+    u8 unk6;
+    u8 unk7;
 };
 
 struct worldTableStruct_unk_size_c {
@@ -390,8 +396,6 @@ struct struct_0807820C {
     u16 unk800C[0x2000];
     u32 unkC00C;
 };
-
-struct SaveFile;  // private - defined in savefile.c
 
 enum SoundEffect
 {
@@ -679,6 +683,35 @@ enum LevelType
     LEVEL_TYPE_PLUS_BOSS,
 };
 
+enum
+{
+    LOAD_BG_PALETTE = (1 << 0),
+    LOAD_OBJ_PALETTE = (1 << 1),
+};
+
+struct SpriteTemplate_child
+{
+    u8 unk0;
+    u8 unk1;
+    s8 unk2;  // x
+    s8 unk3;  // y
+    u8 filler4[4];
+    u32 unk8;
+    u8 fillerC[0x24-0xC];
+};
+
+struct SpriteTemplate
+{
+    /*0x00*/ u16 x;
+    /*0x02*/ u16 y;
+    u16 unk4;
+    u16 unk6;
+    u16 unk8;  // size
+    struct SpriteTemplate_child *unkC;
+    /*0x10*/ struct OamData *oamData;  // oam
+    /*0x14*/ u8 *tileData;  // tile data
+};  // size = 0x18
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -696,7 +729,29 @@ extern u8 gUnknown_03000033;
 extern u32 gUnknown_03000034;
 extern u32 gUnknown_03000038;
 extern u32 gUnknown_0300003C;
+extern u16 gSomeOamIndex_03000040;
+extern u16 gUnknown_03000042;
+extern u16 gUnknown_03000044;
+extern u16 gUnknown_03000046;
+extern u16 gUnknown_03000048;
+extern u16 gUnknown_0300004A;
+extern u16 gUnknown_0300004C;
+extern u16 gUnknown_0300004E;
+extern u16 gUnknown_03000050;
+extern u16 gUnknown_03000052;
+extern struct { u16 unk0; u16 unk2; } gUnknown_03000054;
 extern u8 gFileSelectMenuSel;
+extern u8 gPrevFileSelectMenuSel;
+extern u8 gUnknown_0300005B;
+extern u8 gUnknown_0300005C;
+extern u8 gUnknown_0300005D;
+extern u8 gUnknown_0300005E;
+extern u8 gUnknown_0300005F;
+extern u8 gUnknown_03000060;
+extern u8 gUnknown_03000061;
+extern u8 gUnknown_03000062;
+extern u8 gUnknown_03000063;
+extern u8 gUnknown_03000064;
 extern u8 gUnknown_03000065;
 extern u8 gUnknown_03000066[];
 extern struct UnknownStruct15 *gUnknown_030000A4;
@@ -801,7 +856,7 @@ extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];
 extern u8 *gUnknown_03000E88;
 extern u8 *gPaletteData_03000E8C;
 extern void *gUnknown_03000E94;
-extern struct OamData gOamData[];
+extern struct OamData gOamBuffer[128];
 extern s16 gCameraHorizontalOffset;
 extern s16 gBGHorizontalOffset;
 extern void (*gUnknown_030012A8)(void);
@@ -833,7 +888,7 @@ extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
 
 extern struct UnknownStruct9 gUnknown_03001770;
-extern u16 gUnknown_0300192C;  // unknown type
+extern u16 gObjVRAMCopyOffset_0300192C;  // unknown type
 extern u16 gUnknown_03001930; // unknown type
 extern u32 gUnknown_03001938;
 extern u16 gMarioIdleTimer;
@@ -895,7 +950,7 @@ extern u8 gUnknown_03001A00;
 extern u8 gUnknown_03000B78;
 
 extern u32 gUnknown_03001A1C;
-extern u16 gUnknown_03001A3C; 
+extern u16 gUnknown_03001A3C;
 extern u8 gUnknown_03001A4C;
 extern u8 gUnknown_03001A10[];
 extern u8 gUnknown_03001990; // current input? no clue on this but it does stuff relating to inputs looking at memory
@@ -915,21 +970,24 @@ extern u8 gUnknown_03007AB0[];  // unknown type
 
 extern void *gUnknown_03007FFC;
 
-extern const u8 gTextHeapOverflow[];
-
 extern void (*const gMainStateInitCallbacks[])(void);
 extern void (*const gMainStateMainCallbacks[])(void);
 extern void (*const gMainStateLoopCallbacks[])(void);
 extern void (*const gMainStateEndCallbacks[])(void);
 extern const u32 gUnknown_0807846C[];
-extern u16 gMainLevelDefaultHighScores[][8];
-extern u16 gPlusLevelDefaultHighScores[][7];
+extern struct Coords32 gUnknown_080785B0[];
+extern struct Coords32 gUnknown_080785E0[];
+extern struct Coords32 gUnknown_08078610[];
+extern struct Coords32 gUnknown_08078628[];
+extern struct Coords32 gUnknown_08078640[];
+extern struct Coords32 gUnknown_08078680[];
+extern struct Coords32 gUnknown_080786C0[];
+extern struct SpriteTemplate gUnknown_08078700[];
 extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
-extern struct SaveFile *gSaveFilesPtr;
 extern u16 gUnknown_080788E0[];
 extern struct UnknownStruct12 *gScreenModeRelatedPtr;
-extern void *const gUnknown_0807CA94;
+extern u32 *gUnknown_0807CA94;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gUnknown_0807956C[];
 extern const u8 gUnknown_08079698[];
@@ -955,7 +1013,7 @@ extern const u8 gUnknown_08B3732C[];
 extern const u8 gMovieUnusedPlusWorldsUnlocked[];
 
 extern const s16 gUnknown_0807C118[][2];
-extern unkst24 gUnknown_0812E128[1]; 
+extern unkst24 gUnknown_0812E128[1];
 
 extern u8 gUnknown_03000EA0[30];
 extern u8 gUnknown_03000EA0[30];
@@ -974,7 +1032,76 @@ struct worldTableStruct gUnknown_0807C0E0[0];
 struct worldTableStruct gUnknown_08B2D378[0];
 extern u8 gTitleDemoLevelIDs[0];
 
+extern struct GraphicsConfig gMainMenuData;
+
+extern struct SpriteTemplate_child gUnknown_085FB360;
+extern struct OamData gUnknown_085FB3CC;
+extern u8 gUnknown_085FB3D4[];
+extern struct SpriteTemplate_child gUnknown_085FB554[];
+extern struct OamData gUnknown_085FB7DC;
+extern u8 gUnknown_085FB7E4[];
+extern struct SpriteTemplate_child gUnknown_085FEFE4[];
+extern struct OamData gUnknown_085FF26C;
+extern u8 gUnknown_085FF274[];
+extern struct SpriteTemplate_child gUnknown_08600E74[];
+extern struct OamData gUnknown_086010FC;
+extern u8 gUnknown_08601104[];
+extern struct SpriteTemplate_child gUnknown_08602D04[];
+extern struct OamData gUnknown_08602F8C;
+extern u8 gUnknown_08602F94[];
+extern struct OamData gUnknown_08606A1C;
+extern u8 gUnknown_08606A24[];
+extern struct SpriteTemplate_child gUnknown_08606794[];
+extern struct SpriteTemplate_child gUnknown_0860A224[];
+extern struct OamData gUnknown_0860A4AC;
+extern u8 gUnknown_0860A4B4[];
+extern struct SpriteTemplate_child gUnknown_0860C0B4[];
+extern struct OamData gUnknown_0860C33C;
+extern u8 gUnknown_0860C344[];
+extern struct SpriteTemplate_child gUnknown_0860FB44[];
+extern struct OamData gUnknown_0860FDCC;
+extern u8 gUnknown_0860FDD4[];
+extern struct SpriteTemplate_child gUnknown_086119D4;
+extern struct OamData gUnknown_08611A40;
+extern u8 gUnknown_08611A48[];
+extern struct SpriteTemplate_child gUnknown_08612648;
+extern struct OamData gUnknown_086126B4;
+extern u8 gUnknown_086126BC[];
+extern struct SpriteTemplate_child gUnknown_08613EBC;
+extern struct OamData gUnknown_08613F04;
+extern u8 gUnknown_08613F0C[];
+extern struct SpriteTemplate_child gUnknown_08614738;
+extern struct OamData gUnknown_0861475C;
+extern u8 gUnknown_08614764[];
+extern struct SpriteTemplate_child gUnknown_08614B64;
+extern struct OamData gUnknown_08614BAC;
+extern u8 gUnknown_08614BB4[];
+extern struct SpriteTemplate_child gUnknown_08615BB4[];
+extern struct OamData gUnknown_08615BFC;
+extern u8 gUnknown_08615C04[];
+extern struct SpriteTemplate_child gUnknown_08617030[];
+extern struct OamData gUnknown_08617078;
+extern u8 gUnknown_08617080[];
+extern struct OamData gUnknown_086172E8;
+extern u8 gUnknown_086172F0[];
+extern struct SpriteTemplate_child gUnknown_08617570;
+extern struct OamData gUnknown_086175B8;
+extern u8 gUnknown_086175C0[];
+extern struct OamData gUnknown_08617828;
+extern u8 gUnknown_08617830[];
+extern struct SpriteTemplate_child gUnknown_08617970;
+extern struct OamData gUnknown_08617AFC;
+extern u8 gUnknown_08617B04[];
+extern struct SpriteTemplate_child gUnknown_08617C64;
+extern u8 gUnknown_08617CB4[];
+extern struct OamData gUnknown_08617CAC;
+extern struct OamData gUnknown_08617F1C;
+extern u8 gUnknown_08617F24[];
+extern struct SpriteTemplate_child gUnknown_08618064[];
+extern struct OamData gUnknown_086180AC;
+extern u8 gUnknown_086180B4[];
 extern u8 gUnknown_0807C0D8;
+extern u8 gUnknown_080A8668;
 
 extern u8 gUnknown_03001B98;
 extern u16 gUnknown_03000A0C;
@@ -1019,13 +1146,11 @@ void sub_08007170(void);
 void sub_08008238(void);
 void sub_0800EE70(void);
 void title_demo_setup(u32 titleDemoID);
-u8 get_level_stats_08010068(u8, u8, u8, u8, u8 *);
-u8 is_world_or_expert_level_completed_080103C8(u8, u8);
-void sub_08011428();
 void sub_08014A58();
 void sub_08014B78(int, s8 *, u8 *, s8 *);
 void sub_08014D08(void);
 void sub_0801500C();
+void sub_0801B2CC();
 void reset_some_array_0801B3C0(void);
 void sub_0801B3DC(struct GraphicsConfig *, int, int);
 void sub_0801B88C(void);
@@ -1070,10 +1195,11 @@ int sub_08031E04(void);
 void load_predefined_palette();
 u32 load_bg_tilemap_08032E24(struct GraphicsConfig *arg0, int arg1, int arg2);
 void copy_some_palette_08032E80(struct GraphicsConfig *arg0);
+u16 load_graphics_config_bg2_08032EB8(struct GraphicsConfig *arg0);
 u16 load_graphics_config_08032F24(struct GraphicsConfig *arg0[4], int arg1);
 void sub_08032F68(void);
 void load_some_oam(void);
-void sub_080331FC(void);
+void process_input(void);
 void sub_08033440(void);
 void init_timer_regs(void);
 void sub_08033C74(void);
@@ -1095,6 +1221,10 @@ void sub_08034CCC();
 void sub_08035108();
 void sub_080351E0();
 void print_error_message();
+void sub_08038130(int);
+void sub_080381E4(int, int);
+int sub_08038228(int);
+void sub_080382A8(void);
 void sub_080386DC(void);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);
@@ -1159,7 +1289,7 @@ void sub_08008764();
 
 u32 sub_08071F64(u32);
 u32 sub_08071F78(u32);
-u32 sub_08071F8C(u32);	
+u32 sub_08071F8C(u32);
 void sub_080084A4();
 void sub_08008330();
 void sub_08008600();
@@ -1170,17 +1300,6 @@ void sub_08039C44();
 void sub_08038414(u16, u16);
 void sub_08007544();
 void sub_080149F8(u32);
-
-// There seems to be some conflict with parameter types. No idea why.
-#ifdef INCLUDED_FROM_SAVEFILE_C
-void set_level_flags_08010534(u8, u8, u8*);
-void set_level_highscore_flag_080107E8(u8 world, u8 level, u16 arg2);
-void sub_08010BE0(u8 arg0, u8 arg1);
-#else
-void set_level_flags_08010534();
-void set_level_highscore_flag_080107E8();
-void sub_08010BE0(u32, u32);
-#endif
 
 void sub_0802BAA0();
 void sub_0802CF78();

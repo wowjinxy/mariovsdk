@@ -640,7 +640,7 @@ _0802AF70:
 	bge _0802B01A
 	ldr r0, _0802B03C  @ =REG_DMA3SAD
 	mov r12, r0
-	ldr r6, _0802B05C  @ =gOamData
+	ldr r6, _0802B05C  @ =gOamBuffer
 	ldr r1, _0802B060  @ =0x000003FF
 	ldr r2, [sp]
 	and r2, r2, r1
@@ -749,7 +749,7 @@ _0802B054:
 _0802B058:
 	.4byte 0x03000156
 _0802B05C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802B060:
 	.4byte 0x000003FF
 _0802B064:
@@ -819,7 +819,7 @@ _0802B0C4:
 	bge _0802B16E
 	ldr r0, _0802B190  @ =REG_DMA3SAD
 	mov r12, r0
-	ldr r6, _0802B1B0  @ =gOamData
+	ldr r6, _0802B1B0  @ =gOamBuffer
 	ldr r1, _0802B1B4  @ =0x000003FF
 	ldr r2, [sp]
 	and r2, r2, r1
@@ -928,7 +928,7 @@ _0802B1A8:
 _0802B1AC:
 	.4byte 0x03000154
 _0802B1B0:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802B1B4:
 	.4byte 0x000003FF
 _0802B1B8:
@@ -998,7 +998,7 @@ _0802B218:
 	bge _0802B2BE
 	ldr r0, _0802B2E0  @ =REG_DMA3SAD
 	mov r12, r0
-	ldr r6, _0802B300  @ =gOamData
+	ldr r6, _0802B300  @ =gOamBuffer
 	ldr r1, _0802B304  @ =0x000003FF
 	ldr r2, [sp]
 	and r2, r2, r1
@@ -1105,7 +1105,7 @@ _0802B2F8:
 _0802B2FC:
 	.4byte 0x03000154
 _0802B300:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802B304:
 	.4byte 0x000003FF
 _0802B308:
@@ -1175,7 +1175,7 @@ _0802B368:
 	bge _0802B412
 	ldr r0, _0802B434  @ =REG_DMA3SAD
 	mov r12, r0
-	ldr r6, _0802B454  @ =gOamData
+	ldr r6, _0802B454  @ =gOamBuffer
 	ldr r1, _0802B458  @ =0x000003FF
 	ldr r2, [sp]
 	and r2, r2, r1
@@ -1284,7 +1284,7 @@ _0802B44C:
 _0802B450:
 	.4byte 0x03000154
 _0802B454:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802B458:
 	.4byte 0x000003FF
 _0802B45C:
@@ -1455,7 +1455,7 @@ _0802B578:
 	cmp r6, r0
 	bge _0802B61E
 	ldr r7, _0802B640  @ =REG_DMA3SAD
-	ldr r4, _0802B658  @ =gOamData
+	ldr r4, _0802B658  @ =gOamBuffer
 	ldr r0, _0802B65C  @ =0x000003FF
 	ldr r2, [sp]
 	and r2, r2, r0
@@ -1563,7 +1563,7 @@ _0802B650:
 _0802B654:
 	.4byte 0x03000155
 _0802B658:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802B65C:
 	.4byte 0x000003FF
 _0802B660:

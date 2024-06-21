@@ -513,7 +513,7 @@ _08029558:
 	ldr r0, _080295E8  @ =0x840000A0
 	str r0, [r1, #8]
 	ldr r0, [r1, #8]
-	ldr r5, _080295EC  @ =gUnknown_0300192C
+	ldr r5, _080295EC  @ =gObjVRAMCopyOffset_0300192C
 	mov r1, #160
 	lsl r1, r1, #2
 	add r0, r1, #0
@@ -569,7 +569,7 @@ _080295E4:
 _080295E8:
 	.4byte 0x840000A0
 _080295EC:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _080295F0:
 	.4byte gUnknown_03001930
 _080295F4:
@@ -677,7 +677,7 @@ level_results_main: @ 0x080296A4
 	b _080297DA
 _080296B8:
 	mov r4, #50
-	bl sub_080331FC
+	bl process_input
 	ldr r0, _08029778  @ =0x03000DDC
 	ldrb r0, [r0]
 	lsl r0, r0, #24
@@ -1321,7 +1321,7 @@ level_results_loop: @ 0x08029B84
 	mov r5, sp
 	add r5, r5, #6
 	strh r0, [r5]
-	ldr r0, _08029C00  @ =gUnknown_0300192C
+	ldr r0, _08029C00  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r0]
 	add r7, sp, #8
 	strh r0, [r7]
@@ -1334,7 +1334,7 @@ level_results_loop: @ 0x08029B84
 	ldr r4, _08029C08  @ =REG_DMA3SAD
 	mov r0, sp
 	str r0, [r4]
-	ldr r0, _08029C0C  @ =gOamData
+	ldr r0, _08029C0C  @ =gOamBuffer
 	mov r8, r0
 	str r0, [r4, #4]
 	ldr r0, _08029C10  @ =0x85000100
@@ -1371,13 +1371,13 @@ _08029BEE:
 _08029BFC:
 	.4byte gUnknown_03001930
 _08029C00:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08029C04:
 	.4byte 0x03000C1C
 _08029C08:
 	.4byte REG_DMA3SAD
 _08029C0C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08029C10:
 	.4byte 0x85000100
 _08029C14:

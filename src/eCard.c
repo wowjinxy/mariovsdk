@@ -8,7 +8,7 @@ void e_world_from_menu_loop(void) {
     s32 temp1;
     u16 temp2 = 0;
 
-DmaFill32(3, 0xa0, gOamData, 0x400); 
+DmaFill32(3, 0xa0, gOamBuffer, 0x400); 
     
     sub_080351E0();
 
@@ -22,7 +22,7 @@ DmaFill32(3, 0xa0, gOamData, 0x400);
   }}}
     
     sub_08035108(&temp2);
-DmaCopy16(3, gOamData, 0x7000000, 0x400);
+DmaCopy16(3, gOamBuffer, 0x7000000, 0x400);
 }
 
 void e_world_from_menu_init_callback(void) {
@@ -30,7 +30,7 @@ void e_world_from_menu_init_callback(void) {
     u32 var1;
     u16 var2[2];
     arena_restore_head(0);
-    gUnknown_03001930 = gUnknown_0300192C = 0;
+    gUnknown_03001930 = gObjVRAMCopyOffset_0300192C = 0;
     e_world_init_callback();
     sub_08006968(&gEWorldMenuData2);
     var1 = sub_0802A458();

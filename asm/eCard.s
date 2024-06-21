@@ -5,7 +5,7 @@
 e_card_scan_main: @ 0x0802D6DC
 	push {r4,r5,lr}
 	sub sp, sp, #12
-	bl sub_080331FC
+	bl process_input
 	bl sub_08029C20
 	mov r1, #0
 	ldr r4, _0802D710  @ =gUnknown_030001A8
@@ -679,7 +679,7 @@ e_card_scan_loop: @ 0x0802DBEC
 	ldr r1, _0802DCD0  @ =REG_DMA3SAD
 	add r0, sp, #4
 	str r0, [r1]
-	ldr r0, _0802DCD4  @ =gOamData
+	ldr r0, _0802DCD4  @ =gOamBuffer
 	str r0, [r1, #4]
 	ldr r0, _0802DCD8  @ =0x85000100
 	str r0, [r1, #8]
@@ -789,7 +789,7 @@ _0802DCBA:
 _0802DCD0:
 	.4byte REG_DMA3SAD
 _0802DCD4:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802DCD8:
 	.4byte 0x85000100
 _0802DCDC:
@@ -826,7 +826,7 @@ _0802DD18:
 	add r0, r7, #0
 	bl sub_08035108
 	ldr r1, _0802DD40  @ =REG_DMA3SAD
-	ldr r0, _0802DD44  @ =gOamData
+	ldr r0, _0802DD44  @ =gOamBuffer
 	str r0, [r1]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -845,7 +845,7 @@ _0802DD3C:
 _0802DD40:
 	.4byte REG_DMA3SAD
 _0802DD44:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802DD48:
 	.4byte 0x80000200
 	THUMB_FUNC_END e_card_scan_loop
@@ -885,7 +885,7 @@ _0802DD68:
 	ldr r0, _0802DDD4  @ =REG_DMA3SAD
 	mov r1, sp
 	str r1, [r0]
-	ldr r2, _0802DDD8  @ =gOamData
+	ldr r2, _0802DDD8  @ =gOamBuffer
 	str r2, [r0, #4]
 	ldr r1, _0802DDDC  @ =0x85000100
 	str r1, [r0, #8]
@@ -922,7 +922,7 @@ _0802DDD0:
 _0802DDD4:
 	.4byte REG_DMA3SAD
 _0802DDD8:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802DDDC:
 	.4byte 0x85000100
 _0802DDE0:
@@ -1017,7 +1017,7 @@ e_world_return_init_callback: @ 0x0802DE08
 	str r0, [r2]
 _0802DE8C:
 	ldr r1, _0802DF3C  @ =gUnknown_03001930
-	ldr r0, _0802DF40  @ =gUnknown_0300192C
+	ldr r0, _0802DF40  @ =gObjVRAMCopyOffset_0300192C
 	strh r4, [r0]
 	strh r4, [r1]
 	mov r5, #0
@@ -1110,7 +1110,7 @@ _0802DF38:
 _0802DF3C:
 	.4byte gUnknown_03001930
 _0802DF40:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _0802DF44:
 	.4byte gUnknown_0807CA08
 _0802DF48:
@@ -1127,7 +1127,7 @@ e_world_main: @ 0x0802DF50
 	mov r5, r8
 	push {r5-r7}
 	sub sp, sp, #12
-	bl sub_080331FC
+	bl process_input
 	bl sub_08029C20
 	ldr r6, _0802DFA0  @ =gUnknown_030001C4
 	mov r5, #0
@@ -2371,7 +2371,7 @@ e_world_loop: @ 0x0802E888
 	ldr r1, _0802E8DC  @ =REG_DMA3SAD
 	add r0, sp, #4
 	str r0, [r1]
-	ldr r0, _0802E8E0  @ =gOamData
+	ldr r0, _0802E8E0  @ =gOamBuffer
 	str r0, [r1, #4]
 	ldr r0, _0802E8E4  @ =0x85000100
 	str r0, [r1, #8]
@@ -2401,7 +2401,7 @@ e_world_loop: @ 0x0802E888
 _0802E8DC:
 	.4byte REG_DMA3SAD
 _0802E8E0:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802E8E4:
 	.4byte 0x85000100
 _0802E8E8:
@@ -2789,7 +2789,7 @@ _0802EBC6:
 _0802EBCE:
 	bl sub_0801B4BC
 	ldr r2, _0802EC20  @ =REG_DMA3SAD
-	ldr r0, _0802EC24  @ =gOamData
+	ldr r0, _0802EC24  @ =gOamBuffer
 	str r0, [r2]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -2830,7 +2830,7 @@ _0802EC1C:
 _0802EC20:
 	.4byte REG_DMA3SAD
 _0802EC24:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802EC28:
 	.4byte 0x84000100
 _0802EC2C:
@@ -3662,7 +3662,7 @@ _0802F1E8:
 e_world_debug_main: @ 0x0802F1EC
 	push {r4-r7,lr}
 	sub sp, sp, #12
-	bl sub_080331FC
+	bl process_input
 	bl sub_08008238
 	ldr r7, _0802F228  @ =0x030001C8
 	ldrb r1, [r7]
@@ -3994,7 +3994,7 @@ e_world_debug_loop: @ 0x0802F440
 	ldr r1, _0802F498  @ =REG_DMA3SAD
 	add r0, sp, #4
 	str r0, [r1]
-	ldr r0, _0802F49C  @ =gOamData
+	ldr r0, _0802F49C  @ =gOamBuffer
 	str r0, [r1, #4]
 	ldr r0, _0802F4A0  @ =0x85000100
 	str r0, [r1, #8]
@@ -4025,7 +4025,7 @@ _0802F494:
 _0802F498:
 	.4byte REG_DMA3SAD
 _0802F49C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802F4A0:
 	.4byte 0x85000100
 _0802F4A4:
@@ -4126,7 +4126,7 @@ _0802F556:
 	mov r0, r8
 	bl sub_08035108
 	ldr r1, _0802F584  @ =REG_DMA3SAD
-	ldr r0, _0802F588  @ =gOamData
+	ldr r0, _0802F588  @ =gOamBuffer
 	str r0, [r1]
 	mov r0, #224
 	lsl r0, r0, #19
@@ -4149,7 +4149,7 @@ _0802F580:
 _0802F584:
 	.4byte REG_DMA3SAD
 _0802F588:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802F58C:
 	.4byte 0x80000200
 	THUMB_FUNC_END e_world_debug_loop
@@ -4777,7 +4777,7 @@ sub_0802F9D8: @ 0x0802F9D8
 	cmp r12, r8
 	bcs _0802FADE
 	ldr r5, _0802FAF0  @ =REG_DMA3SAD
-	ldr r7, _0802FAF4  @ =gOamData
+	ldr r7, _0802FAF4  @ =gOamBuffer
 _0802FA16:
 	mov r1, r9
 	add r1, r1, r12
@@ -4894,7 +4894,7 @@ _0802FADE:
 _0802FAF0:
 	.4byte REG_DMA3SAD
 _0802FAF4:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802FAF8:
 	.4byte gUnknown_080CB7F0
 _0802FAFC:
@@ -4973,7 +4973,7 @@ sub_0802FB60: @ 0x0802FB60
 	lsl r0, r0, #24
 	mov r6, #0
 	ldr r7, _0802FC08  @ =REG_DMA3SAD
-	ldr r5, _0802FC0C  @ =gOamData
+	ldr r5, _0802FC0C  @ =gOamBuffer
 	lsr r0, r0, #20
 	mov r12, r0
 _0802FB88:
@@ -5044,7 +5044,7 @@ _0802FB88:
 _0802FC08:
 	.4byte REG_DMA3SAD
 _0802FC0C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0802FC10:
 	.4byte gUnknown_082EC748
 _0802FC14:
@@ -6895,7 +6895,7 @@ _08030998:
 	mov r5, r9
 	ldrh r0, [r5]
 	lsl r0, r0, #3
-	ldr r1, _080309D4  @ =gOamData
+	ldr r1, _080309D4  @ =gOamBuffer
 	add r4, r0, r1
 	add r6, r2, #0
 	ldr r0, [r6, #12]
@@ -6924,7 +6924,7 @@ _080309CC:
 _080309D0:
 	.4byte gUnknown_030012F4
 _080309D4:
-	.4byte gOamData
+	.4byte gOamBuffer
 _080309D8:
 	ldr r5, [sp, #16]
 	lsl r1, r5, #16
@@ -7145,7 +7145,7 @@ _08030B76:
 	mov r5, r9
 	ldrh r0, [r5]
 	lsl r0, r0, #3
-	ldr r4, _08030C78  @ =gOamData
+	ldr r4, _08030C78  @ =gOamBuffer
 	add r0, r0, r4
 	str r0, [r3, #4]
 	ldr r0, _08030C7C  @ =0x84000002
@@ -7269,7 +7269,7 @@ _08030C70:
 _08030C74:
 	.4byte REG_DMA3SAD
 _08030C78:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08030C7C:
 	.4byte 0x84000002
 _08030C80:
@@ -7357,7 +7357,7 @@ _08030CFE:
 _08030D18:
 	ldrh r0, [r7]
 	lsl r0, r0, #3
-	ldr r1, _08030D5C  @ =gOamData
+	ldr r1, _08030D5C  @ =gOamBuffer
 	add r5, r0, r1
 	add r0, r4, #0
 	add r1, r7, #0
@@ -7389,7 +7389,7 @@ _08030D18:
 	mov r0, #128
 	b _08030D6C
 _08030D5C:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08030D60:
 	.4byte gUnknown_030009D8
 _08030D64:
@@ -9387,7 +9387,7 @@ _08031B34:
 	mov r1, r9
 	ldrh r3, [r1]
 	lsl r3, r3, #3
-	ldr r2, _08031BCC  @ =gOamData
+	ldr r2, _08031BCC  @ =gOamBuffer
 	add r3, r3, r2
 	ldr r0, _08031BD0  @ =gUnknown_082EC748
 	mov r1, r8
@@ -9462,7 +9462,7 @@ _08031BC4:
 _08031BC8:
 	.4byte REG_DMA3SAD
 _08031BCC:
-	.4byte gOamData
+	.4byte gOamBuffer
 _08031BD0:
 	.4byte gUnknown_082EC748
 _08031BD4:
@@ -9904,7 +9904,7 @@ _08031EDC:
 e_world_from_menu_main: @ 0x08031EE8
 	push {r4-r6,lr}
 	sub sp, sp, #4
-	bl sub_080331FC
+	bl process_input
 	bl sub_08029C20
 	bl sub_0802A458
 	cmp r0, #0

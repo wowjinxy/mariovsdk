@@ -60,7 +60,7 @@ sub_0800F104: @ 0x0800F104
 	mov r9, r1
 	mov r6, #0
 	ldr r7, _0800F1C0  @ =REG_DMA3SAD
-	ldr r5, _0800F1C4  @ =gOamData
+	ldr r5, _0800F1C4  @ =gOamBuffer
 	lsr r0, r0, #20
 	mov r12, r0
 _0800F132:
@@ -139,7 +139,7 @@ _0800F132:
 _0800F1C0:
 	.4byte REG_DMA3SAD
 _0800F1C4:
-	.4byte gOamData
+	.4byte gOamBuffer
 _0800F1C8:
 	.4byte gUnknown_082EC748
 _0800F1CC:

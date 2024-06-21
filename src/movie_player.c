@@ -19,7 +19,7 @@ void movie_player_main(void) {
     
     sub_0805739C(gMoviePlayerParams.movieData);
     sub_0802BE50();
-    sub_080331FC();
+    process_input();
     gGeneralTimer++;
 
     if (gPreviousMainState == 4) {
@@ -180,7 +180,7 @@ void movie_player_init_callback(void) {
     sub_0805727C();
     sub_08057420((u32)gMoviePlayerParams.movieData);
     gUnknown_030009EC = 0;
-    gUnknown_0300192C = 0;
+    gObjVRAMCopyOffset_0300192C = 0;
     gUnknown_03001930 = 0;
     gGeneralTimer = 0;
     gUnknown_03000DCC = 0;
@@ -195,12 +195,12 @@ void movie_player_loop(void) {
 
     temp = 0;
     temp_1 = gUnknown_03001930;
-    temp_2 = gUnknown_0300192C;
+    temp_2 = gObjVRAMCopyOffset_0300192C;
     temp_3 = 0;
 
-    DmaFill32(3, 0xa0, gOamData, 0x400);
+    DmaFill32(3, 0xa0, gOamBuffer, 0x400);
     sub_080573FC(&temp, &temp_1, &temp_2, &temp_3, gMoviePlayerParams.movieData);
-    DmaCopy32(3, gOamData, 0x7000000, 0x400);
+    DmaCopy32(3, gOamBuffer, 0x7000000, 0x400);
 }
 
 void movie_player_end(void) {
