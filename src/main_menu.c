@@ -4,22 +4,6 @@
 #include "main.h"
 #include "savefile.h"
 
-extern struct SpriteTemplate_child gUnknown_085FB360;
-extern struct OamData gUnknown_085FB3CC;
-extern u8 gUnknown_085FB3D4[];
-extern struct SpriteTemplate_child gUnknown_086119D4;
-extern struct OamData gUnknown_08611A40;
-extern u8 gUnknown_08611A48[];
-extern struct SpriteTemplate_child gUnknown_08612648;
-extern struct OamData gUnknown_086126B4;
-extern u8 gUnknown_086126BC[];
-extern struct SpriteTemplate_child gUnknown_08613EBC;
-extern struct OamData gUnknown_08613F04;
-extern u8 gUnknown_08613F0C[];
-extern struct SpriteTemplate_child gUnknown_08617570;
-extern struct OamData gUnknown_086175B8;
-extern u8 gUnknown_086175C0[];
-
 struct Coords32 gUnknown_080785B0[] =
 {
     { 14, 52 },
@@ -97,80 +81,26 @@ struct SpriteTemplate gUnknown_08078700[] =
     { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
     { 0, 0, 0x80, 0x10, 0x200, &gUnknown_08613EBC, &gUnknown_08613F04, gUnknown_08613F0C },
 };
-
 struct SpriteTemplate gUnknown_08078760 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_086119D4, &gUnknown_08611A40, gUnknown_08611A48 };
 struct SpriteTemplate gUnknown_08078778 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08612648, &gUnknown_086126B4, gUnknown_086126BC };
 struct SpriteTemplate gUnknown_08078790 = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617570, &gUnknown_086175B8, gUnknown_086175C0 };
-
-// TODO: dump this
-extern struct SpriteTemplate gUnknown_080787A8;
-extern struct SpriteTemplate gUnknown_080787C0;
-extern struct SpriteTemplate gUnknown_080787D8;
-extern struct SpriteTemplate gUnknown_080787F0;
-extern struct SpriteTemplate gUnknown_08078808;
-extern struct SpriteTemplate gUnknown_08078820[];
-extern struct SpriteTemplate gUnknown_08078850;
-extern struct SpriteTemplate gUnknown_08078868[];
-
-struct Struct0860A4B4
+struct SpriteTemplate gUnknown_080787A8 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08615BB4[0], (void *)0x08615BFC, (void *)0x08615C04 };
+struct SpriteTemplate gUnknown_080787C0 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08614B64, (void *)0x08614BAC, (void *)0x08614BB4 };
+struct SpriteTemplate gUnknown_080787D8 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_08614738, (void *)0x0861475C, (void *)0x08614764 };
+struct SpriteTemplate gUnknown_080787F0 = { 0, 0, 0x008, 0x01, 0x020, &gUnknown_08617970, (void *)0x08617AFC, (void *)0x08617B04 };
+struct SpriteTemplate gUnknown_08078808 = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617C64, (void *)0x08617CAC, (void *)0x08617CB4 };
+struct SpriteTemplate gUnknown_08078820[] =
 {
-    u8 unk0;
-    u8 unk1;
-    u8 filler2[6];
-    u32 unk8;
-    u8 fillerC[0x24-0xC];
-};  // size = 0x24
-
-extern struct Struct0860A4B4 gUnknown_085FEFE4[];
-extern struct Struct0860A4B4 gUnknown_08617030[];
-extern struct GraphicsConfig gMainMenuData;
-extern u8 gUnknown_080A8668;
-
-extern struct OamData gUnknown_08606A1C;
-extern struct OamData gUnknown_085FB7DC;
-extern struct OamData gUnknown_085FF26C;
-extern struct OamData gUnknown_0860FDCC;
-extern struct OamData gUnknown_0860C33C;
-extern struct OamData gUnknown_0860A4AC;
-extern struct OamData gUnknown_08602F8C;
-extern struct OamData gUnknown_086010FC;
-
-extern u8 gUnknown_08615C04[];
-extern u8 gUnknown_08614764[];
-extern u8 gUnknown_0860C344[];
-extern struct
+    {  20, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, (void *)0x086180B4 },
+    {  77, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, (void *)0x086180B4 },
+};
+struct SpriteTemplate gUnknown_08078850 = { 134, 33, 0x020, 0x04, 0x080, (void *)0x08617030, (void *)0x08617078, (void *)0x08617080 };
+struct SpriteTemplate gUnknown_08078868[] =
 {
-    u8 filler0[0x24];
-    u8 unk24;
-} gUnknown_08615BB4;
-extern struct Struct0860A4B4 gUnknown_0860C0B4[];
-extern u8 gUnknown_0860A4B4[];
-
-extern struct Struct0860A4B4 gUnknown_0860A224[];
-extern u8 gUnknown_08602F94[];
-
-extern struct Struct0860A4B4 gUnknown_08602D04[];
-extern u8 gUnknown_08601104[];
-
-extern struct Struct0860A4B4 gUnknown_08600E74[];
-extern u8 gUnknown_08606A24[];
-extern struct Struct0860A4B4 gUnknown_08606794[];
-extern u8 gUnknown_085FB7E4[];
-extern struct Struct0860A4B4 gUnknown_085FB554[];
-extern u8 gUnknown_085FF274[];
-extern u8 gUnknown_0860FDD4[];
-extern struct Struct0860A4B4 gUnknown_0860FB44[];
-extern u8 gUnknown_08617080[];
-extern u8 gUnknown_086180B4[];
-extern struct Struct0860A4B4 gUnknown_08618064[];
-extern u8 gUnknown_08617F24[];
-extern struct OamData gUnknown_08617F1C;
-extern u8 gUnknown_086172F0[];
-extern struct OamData gUnknown_086172E8;
-extern u8 gUnknown_08617B04[];
-extern struct OamData gUnknown_08617AFC;
-extern u8 gUnknown_08617830[];
-extern struct OamData gUnknown_08617828;
+    {  10, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, (void *)0x086180B4 },
+    {  58, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, (void *)0x086180B4 },
+    { 106, 33, 0x020, 0x04, 0x080, &gUnknown_08617030[0], &gUnknown_08617078, (void *)0x08617080 },
+};
 
 enum  // for gFileSelectMenuSel
 {
@@ -723,7 +653,7 @@ void sub_08012230(void)  // for new save file?
     }
 }
 
-static inline void testinline(s8 *toIncrement, s8 *toDecrement, struct Struct0860A4B4 *arr, int max)
+static inline void testinline(s8 *toIncrement, s8 *toDecrement, struct SpriteTemplate_child *arr, int max)
 {
     if (--*toDecrement <= 0)
     {
@@ -969,7 +899,7 @@ void sub_08012D24(void)
     gUnknown_03001930 += 64;
     gUnknown_0300192C += 0x800;
 
-    DmaCopy32(3, gUnknown_08615C04 + gUnknown_08615BB4.unk24 * 0x800, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x800);
+    DmaCopy32(3, gUnknown_08615C04 + gUnknown_08615BB4[1].unk0 * 0x800, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x800);
     gUnknown_03000050 = gUnknown_03001930;
     gUnknown_03001930 += 64;
     gUnknown_0300192C += 0x800;

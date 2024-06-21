@@ -211,7 +211,7 @@ struct UnknownStruct4
     struct UnknownStruct5 *unk0;
     struct GraphicsConfig *unk4;
     struct UnknownStruct4_child *unk8;
-    u32 (*unkC)(void);    
+    u32 (*unkC)(void);
     s16 unk10;
     s16 unk12;
     u32 unk14;
@@ -692,10 +692,12 @@ enum
 struct SpriteTemplate_child
 {
     u8 unk0;
-    u8 filler1[1];
+    u8 unk1;
     s8 unk2;  // x
     s8 unk3;  // y
-    u8 filler4[0x24-0x4];
+    u8 filler4[4];
+    u32 unk8;
+    u8 fillerC[0x24-0xC];
 };
 
 struct SpriteTemplate
@@ -948,7 +950,7 @@ extern u8 gUnknown_03001A00;
 extern u8 gUnknown_03000B78;
 
 extern u32 gUnknown_03001A1C;
-extern u16 gUnknown_03001A3C; 
+extern u16 gUnknown_03001A3C;
 extern u8 gUnknown_03001A4C;
 extern u8 gUnknown_03001A10[];
 extern u8 gUnknown_03001990; // current input? no clue on this but it does stuff relating to inputs looking at memory
@@ -1011,7 +1013,7 @@ extern const u8 gUnknown_08B3732C[];
 extern const u8 gUnknown_08B37424[];
 
 extern const s16 gUnknown_0807C118[][2];
-extern unkst24 gUnknown_0812E128[1]; 
+extern unkst24 gUnknown_0812E128[1];
 
 extern u8 gUnknown_03000EA0[30];
 extern u8 gUnknown_03000EA0[30];
@@ -1030,7 +1032,70 @@ struct worldTableStruct gUnknown_0807C0E0[0];
 struct worldTableStruct gUnknown_08B2D378[0];
 extern u8 gTitleDemoLevelIDs[0];
 
+extern struct GraphicsConfig gMainMenuData;
+
+extern struct SpriteTemplate_child gUnknown_085FB360;
+extern struct OamData gUnknown_085FB3CC;
+extern u8 gUnknown_085FB3D4[];
+extern struct SpriteTemplate_child gUnknown_085FB554[];
+extern struct OamData gUnknown_085FB7DC;
+extern u8 gUnknown_085FB7E4[];
+extern struct SpriteTemplate_child gUnknown_085FEFE4[];
+extern struct OamData gUnknown_085FF26C;
+extern u8 gUnknown_085FF274[];
+extern struct SpriteTemplate_child gUnknown_08600E74[];
+extern struct OamData gUnknown_086010FC;
+extern u8 gUnknown_08601104[];
+extern struct SpriteTemplate_child gUnknown_08602D04[];
+extern struct OamData gUnknown_08602F8C;
+extern u8 gUnknown_08602F94[];
+extern struct OamData gUnknown_08606A1C;
+extern u8 gUnknown_08606A24[];
+extern struct SpriteTemplate_child gUnknown_08606794[];
+extern struct SpriteTemplate_child gUnknown_0860A224[];
+extern struct OamData gUnknown_0860A4AC;
+extern u8 gUnknown_0860A4B4[];
+extern struct SpriteTemplate_child gUnknown_0860C0B4[];
+extern struct OamData gUnknown_0860C33C;
+extern u8 gUnknown_0860C344[];
+extern struct SpriteTemplate_child gUnknown_0860FB44[];
+extern struct OamData gUnknown_0860FDCC;
+extern u8 gUnknown_0860FDD4[];
+extern struct SpriteTemplate_child gUnknown_086119D4;
+extern struct OamData gUnknown_08611A40;
+extern u8 gUnknown_08611A48[];
+extern struct SpriteTemplate_child gUnknown_08612648;
+extern struct OamData gUnknown_086126B4;
+extern u8 gUnknown_086126BC[];
+extern struct SpriteTemplate_child gUnknown_08613EBC;
+extern struct OamData gUnknown_08613F04;
+extern u8 gUnknown_08613F0C[];
+extern struct SpriteTemplate_child gUnknown_08614738;
+extern u8 gUnknown_08614764[];
+extern struct SpriteTemplate_child gUnknown_08614B64;
+extern struct SpriteTemplate_child gUnknown_08615BB4[];
+extern u8 gUnknown_08615C04[];
+extern struct SpriteTemplate_child gUnknown_08617030[];
+extern struct OamData gUnknown_08617078;
+extern u8 gUnknown_08617080[];
+extern struct OamData gUnknown_086172E8;
+extern u8 gUnknown_086172F0[];
+extern struct SpriteTemplate_child gUnknown_08617570;
+extern struct OamData gUnknown_086175B8;
+extern u8 gUnknown_086175C0[];
+extern struct OamData gUnknown_08617828;
+extern u8 gUnknown_08617830[];
+extern struct SpriteTemplate_child gUnknown_08617970;
+extern struct OamData gUnknown_08617AFC;
+extern u8 gUnknown_08617B04[];
+extern struct SpriteTemplate_child gUnknown_08617C64;
+extern struct OamData gUnknown_08617F1C;
+extern u8 gUnknown_08617F24[];
+extern struct SpriteTemplate_child gUnknown_08618064[];
+extern struct OamData gUnknown_086180AC;
+extern u8 gUnknown_086180B4[];
 extern u8 gUnknown_0807C0D8;
+extern u8 gUnknown_080A8668;
 
 extern u8 gUnknown_03001B98;
 extern u16 gUnknown_03000A0C;
@@ -1218,7 +1283,7 @@ void sub_08008764();
 
 u32 sub_08071F64(u32);
 u32 sub_08071F78(u32);
-u32 sub_08071F8C(u32);  
+u32 sub_08071F8C(u32);
 void sub_080084A4();
 void sub_08008330();
 void sub_08008600();
