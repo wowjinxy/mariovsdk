@@ -36,7 +36,9 @@ struct Struct0860A4B4
 {
     u8 unk0;
     u8 unk1;
-    u8 filler2[0x24-0x2];
+    u8 filler2[6];
+    u32 unk8;
+    u8 fillerC[0x24-0xC];
 };  // size = 0x24
 
 extern struct Struct0860A4B4 gUnknown_085FEFE4[];
@@ -1100,7 +1102,7 @@ struct OamData_alt
     /*0x06*/ u16 affineParam;
 };
 
-void add_sprite_080137A0(struct Struct08013548 *arg0, u16 arg1, u8 arg2, int paletteNum, u8 hFlip, s16 x, s16 y)
+void add_sprite_080137A0(struct Struct08013548 *arg0, u16 arg1, u8 arg2, s8 paletteNum, u8 hFlip, s16 x, s16 y)
 {
     DmaCopy32(3, arg0->unk10, &gOamBuffer[gSomeOamIndex_03000040], 8);
     gOamBuffer[gSomeOamIndex_03000040].tileNum += arg1;
@@ -1135,6 +1137,9 @@ extern struct Struct08013548 gUnknown_08078790;
 extern struct Struct08013548 gUnknown_080787F0;
 extern struct Struct08013548 gUnknown_08078808;
 extern struct Struct08013548 gUnknown_080787D8;
+extern struct Struct08013548 gUnknown_080787A8;
+extern struct Struct08013548 gUnknown_080787C0;
+extern struct Struct08013548 gUnknown_08078850;
 
 static inline u8 inlinefunc6(u8 fileNum)
 {
@@ -1173,7 +1178,7 @@ extern struct Coords32 gUnknown_080786C0[];
     add_sprite_080138D0(&gUnknown_08078778, 0, d, x, y + 44); \
 }
 
-void sub_08013A48(u8 fileNum, u8 arg1, u8 arg2, s16 x, s16 y)
+void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
 {
     u8 spC = (arg1 == 0);
 
@@ -1267,3 +1272,166 @@ void sub_08013FFC(u8 arg0)
 		}
 	}
 }
+
+void sub_08014118(void)
+{
+	u8 i;
+
+	if (gUnknown_0300005D != 0)
+	{
+		s8 sp8[] = { 4, 6, 8, 12, 10, 10 };
+		s8 sp10[] = { 5, 7, 9, 13, 11, 11 };
+		s8 sp18[] = { 4, 6, 8, 2, 10, 10 };
+		s8 sp20[] = { 5, 7, 9, 2, 11, 11 };
+
+		for (i = 0; i < 4; i++)
+		{
+			if (i == gFileSelectMenuSel)
+			{
+				sub_08013A48(i, 1, sp18[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
+			}
+			else
+			{
+				sub_08013A48(i, 0, sp20[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
+			}
+		}
+		if (i == gFileSelectMenuSel)
+			add_sprite_080138D0(&gUnknown_080787C0, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+		else
+			add_sprite_080138D0(&gUnknown_080787C0, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+		if (i + 1 == gFileSelectMenuSel)
+			add_sprite_080138D0(&gUnknown_080787C0, 1, sp8[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
+		else
+			add_sprite_080138D0(&gUnknown_080787C0, 1, sp10[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
+		sub_08013FFC(i + 2);
+	}
+	else
+	{
+		s8 sp8[] = { 4, 6, 8, 10, 10 };
+		s8 sp10[] = { 5, 7, 9, 11, 11 };
+
+		for (i = 0; i < 3; i++)
+		{
+			if (i == gFileSelectMenuSel)
+			{
+				sub_08013A48(i, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
+			}
+			else
+			{
+				sub_08013A48(i, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
+			}
+		}
+		i++;
+		if (i == gFileSelectMenuSel)
+			add_sprite_080138D0(&gUnknown_080787C0, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+		else
+			add_sprite_080138D0(&gUnknown_080787C0, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+		if (i + 1 == gFileSelectMenuSel)
+			add_sprite_080138D0(&gUnknown_080787C0, 1, sp8[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
+		else
+			add_sprite_080138D0(&gUnknown_080787C0, 1, sp10[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
+		sub_08013EE0(i + 2);
+	}
+}
+
+extern struct Struct8078868
+{
+	s16 unk0;
+	s16 unk2;
+	u8 filler4[0x18-0x4];
+} gUnknown_08078868[];
+
+extern struct Struct8078868 gUnknown_08078820[];
+
+void sub_0801456C(void)
+{
+	s16 i;
+	s16 r6;
+
+	if (gUnknown_0300005D != 0)
+	{
+		for (i = 0; i < 3; i++)
+		{
+			if (gUnknown_03000066[i] != 0)
+			{
+				r6 = gUnknown_03000066[i] - 1;
+				if (r6 == 2)
+				{
+                    struct Struct8078868 *arr = gUnknown_08078820;
+					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078868[i].unk0, arr[i].unk2);
+					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078868[i].unk0 + 16, arr[i].unk2);
+				}
+				else
+				{
+					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078868[i].unk0, gUnknown_08078820[i].unk2);
+					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078868[i].unk0 + 16, gUnknown_08078820[i].unk2);
+				}
+			}
+		}
+	}
+	else
+	{
+		for (i = 0; i < 3; i++)
+		{
+			if (gUnknown_03000066[i] != 0)
+			{
+				r6 = gUnknown_03000066[i] - 1;
+				if (r6 == 2)
+				{
+                    struct Struct8078868 *arr = gUnknown_08078820;
+                    asm(""::"r"(arr));  // needed to match
+					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078820[i].unk0, arr[i].unk2);
+					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078820[i].unk0 + 16, arr[i].unk2);
+				}
+				else
+				{
+					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078820[i].unk0, gUnknown_08078820[i].unk2);
+					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078820[i].unk0 + 16, gUnknown_08078820[i].unk2);
+				}
+			}
+		}
+	}
+}
+
+void main_menu_loop(void)
+{
+	gUnknown_03001930 = gUnknown_0300192C = gSomeOamIndex_03000040 = 0;
+	DmaFill32(3, 0xA0, gOamBuffer, 0x400);
+	sub_08012D24();
+	if (gUnknown_03000C28 == 0)
+		sub_0801B2CC(gUnknown_085FEFE4[gUnknown_0300005E].unk8);
+	if (gUnknown_0300005B == 3)
+		sub_080128EC();
+	else if (gUnknown_0300005B == 2)
+	{
+		REG_BLDCNT = BLDCNT_EFF_ALPHA | BLDCNT_BG2_FIRST | BLDCNT_BG0_SECOND | BLDCNT_BG1_SECOND | BLDCNT_BG3_SECOND | BLDCNT_OBJ_SECOND | BLDCNT_BD_SECOND;
+		REG_BLDALPHA = 0x0808;
+	}
+	else if (gFileSelectMenuSel < 4)
+		sub_080129C0();
+	else if (gFileSelectMenuSel == 4)
+		sub_08012568();
+	else if (gFileSelectMenuSel == 5)
+		sub_08012680();
+	else
+		sub_08012798();
+	sub_08014118();
+	sub_0801456C();
+	DmaCopy32(3, gOamBuffer, (void *)OAM, 0x400);
+	sub_0801B4BC();
+}
+
+void main_menu_end(void)
+{
+	sub_080382A8();
+}
+
+asm(".balign 4, 0");

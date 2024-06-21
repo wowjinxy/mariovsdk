@@ -16,7 +16,6 @@
 	X(src/savefile.o) \
 	X(src/main_menu.o) \
 	X(data/data.o) \
-	X(asm/main_menu.o) \
 	X(data/rodata.o) \
 	X(asm/rom_801488C.o) \
 	X(asm/level_select.o) \
@@ -405,8 +404,4 @@ SECTIONS
     {
         *(*);
     }
-    gUnknown_080763CC = 0x080763CC;
-    gUnknown_080763D6 = 0x080763D6;
-    gUnknown_080763DC = 0x080763DC;
-    gUnknown_080763E2 = 0x080763E2;
 }
