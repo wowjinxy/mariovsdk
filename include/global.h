@@ -277,20 +277,20 @@ struct MoviePlayerParamaters
     const u32 *movieData;
     u8 unk4;
     u8 songID;
-	u8 nextMode;
-	u8 movieID;
+    u8 nextMode;
+    u8 movieID;
 };
 
 struct backgroundLayerOffset
 {
-	u16 bg0_x;
-	u16 bg0_y;
-	u16 bg1_x;
-	u16 bg1_y;
-	u16 bg2_x;
-	u16 bg2_y;
-	u16 bg3_x;
-	u16 bg3_y;
+    u16 bg0_x;
+    u16 bg0_y;
+    u16 bg1_x;
+    u16 bg1_y;
+    u16 bg2_x;
+    u16 bg2_y;
+    u16 bg3_x;
+    u16 bg3_y;
 };
 
 typedef struct test {
@@ -366,14 +366,14 @@ typedef struct unkst24 {
 
 struct levelCollectableFlags
 {
-	u8 redPresent;
-	u8 yellowPresent;
-	u8 bluePresent;
-	u8 letterT;
-	u8 letterO;
-	u8 letterY;
-	u8 unk6;
-	u8 unk7;
+    u8 redPresent;
+    u8 yellowPresent;
+    u8 bluePresent;
+    u8 letterT;
+    u8 letterO;
+    u8 letterY;
+    u8 unk6;
+    u8 unk7;
 };
 
 struct worldTableStruct_unk_size_c {
@@ -700,8 +700,8 @@ struct SpriteTemplate_child
 
 struct SpriteTemplate
 {
-	/*0x00*/ u16 x;
-	/*0x02*/ u16 y;
+    /*0x00*/ u16 x;
+    /*0x02*/ u16 y;
     u16 unk4;
     u16 unk6;
     u16 unk8;  // size
@@ -1218,7 +1218,7 @@ void sub_08008764();
 
 u32 sub_08071F64(u32);
 u32 sub_08071F78(u32);
-u32 sub_08071F8C(u32);	
+u32 sub_08071F8C(u32);  
 void sub_080084A4();
 void sub_08008330();
 void sub_08008600();

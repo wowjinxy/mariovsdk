@@ -22,22 +22,22 @@ extern u8 gUnknown_086175C0[];
 
 struct Coords32 gUnknown_080785B0[] =
 {
-	{ 14, 52 },
-	{ 71, 52 },
-	{ 128, 52 },
-	{ 128, 52 },
-	{ 185, 52 },
-	{ 185, 95 },
+    { 14, 52 },
+    { 71, 52 },
+    { 128, 52 },
+    { 128, 52 },
+    { 185, 52 },
+    { 185, 95 },
 };
 
 struct Coords32 gUnknown_080785E0[] =
 {
-	{ 4, 52 },
-	{ 52, 52 },
-	{ 100, 52 },
-	{ 148, 52 },
-	{ 196, 52 },
-	{ 196, 95 },
+    { 4, 52 },
+    { 52, 52 },
+    { 100, 52 },
+    { 148, 52 },
+    { 196, 52 },
+    { 196, 95 },
 };
 
 struct Coords32 gUnknown_08078610[] =
@@ -92,10 +92,10 @@ struct Coords32 gUnknown_080786C0[] =
 
 struct SpriteTemplate gUnknown_08078700[] =
 {
-	{ 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
-	{ 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
-	{ 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
-	{ 0, 0, 0x80, 0x10, 0x200, &gUnknown_08613EBC, &gUnknown_08613F04, gUnknown_08613F0C },
+    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
+    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
+    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
+    { 0, 0, 0x80, 0x10, 0x200, &gUnknown_08613EBC, &gUnknown_08613F04, gUnknown_08613F0C },
 };
 
 struct SpriteTemplate gUnknown_08078760 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_086119D4, &gUnknown_08611A40, gUnknown_08611A48 };
@@ -174,15 +174,15 @@ extern struct OamData gUnknown_08617828;
 
 enum  // for gFileSelectMenuSel
 {
-	FILE_SELECT_FILE_A,
-	FILE_SELECT_FILE_B,
-	FILE_SELECT_FILE_C,
-	FILE_SELECT_EWORLD,
-	FILE_SELECT_OPTION_MENU,
-	FILE_SELECT_ERASE_DATA,
-	FILE_SELECT_EXPERT_FILE_A,
-	FILE_SELECT_EXPERT_FILE_B,
-	FILE_SELECT_EXPERT_FILE_C,
+    FILE_SELECT_FILE_A,
+    FILE_SELECT_FILE_B,
+    FILE_SELECT_FILE_C,
+    FILE_SELECT_EWORLD,
+    FILE_SELECT_OPTION_MENU,
+    FILE_SELECT_ERASE_DATA,
+    FILE_SELECT_EXPERT_FILE_A,
+    FILE_SELECT_EXPERT_FILE_B,
+    FILE_SELECT_EXPERT_FILE_C,
 };
 
 static inline u8 inlinefunc(u8 fileNum)
@@ -1257,11 +1257,11 @@ void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
             print_digits_080133D4(x + gUnknown_08078640[*r6].x, y + gUnknown_08078640[*r6].y, 1, sp4 + 1, spC);
             add_sprite_080138D0(&gUnknown_080787F0, 10, spC, x + gUnknown_08078680[*r6].x, y + gUnknown_08078680[*r6].y);
             if (*r6 <= 5)
-				print_digits_080133D4(x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y, 1, *r6 + 1, spC);
-			else if (*r8 == 0)
-				add_sprite_080138D0(&gUnknown_08078808, *r6 - 6, spC, x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y);
-			else
-				add_sprite_080138D0(&gUnknown_08078808, *r6 - 5, spC, x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y);
+                print_digits_080133D4(x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y, 1, *r6 + 1, spC);
+            else if (*r8 == 0)
+                add_sprite_080138D0(&gUnknown_08078808, *r6 - 6, spC, x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y);
+            else
+                add_sprite_080138D0(&gUnknown_08078808, *r6 - 5, spC, x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y);
             PRINT_STARS(fileNum, x, y, !arg1)
             PRINT_LEVELS(fileNum, x, y, !arg1)
             PRINT_LIVES(fileNum, x, y, spC, 0)
@@ -1274,190 +1274,190 @@ void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
 
 void sub_08013EE0(u8 arg0)
 {
-	s8 sp8[] = { 4, 6, 8, 12, 10, 10 };
-	s8 sp10[] = { 5, 7, 9, 13, 11, 11 };
-	u8 i;
+    s8 sp8[] = { 4, 6, 8, 12, 10, 10 };
+    s8 sp10[] = { 5, 7, 9, 13, 11, 11 };
+    u8 i;
 
-	for (i = arg0; i < 9; i++)
-	{
-		if (inlinefunc(i - arg0))
-		{
-			if (i == gFileSelectMenuSel)
-				add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
-			else
-				add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
-		}
-	}
+    for (i = arg0; i < 9; i++)
+    {
+        if (inlinefunc(i - arg0))
+        {
+            if (i == gFileSelectMenuSel)
+                add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
+            else
+                add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
+        }
+    }
 }
 
 void sub_08013FFC(u8 arg0)
 {
-	s8 sp8[] = { 4, 6, 8, 2, 10, 10 };
-	s8 sp10[] = { 5, 7, 9, 2, 11, 11 };
-	u8 i;
+    s8 sp8[] = { 4, 6, 8, 2, 10, 10 };
+    s8 sp10[] = { 5, 7, 9, 2, 11, 11 };
+    u8 i;
 
-	for (i = arg0; i < 9; i++)
-	{
-		if (inlinefunc(i - arg0))
-		{
-			if (i == gFileSelectMenuSel)
-				add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
-			else
-				add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
-		}
-	}
+    for (i = arg0; i < 9; i++)
+    {
+        if (inlinefunc(i - arg0))
+        {
+            if (i == gFileSelectMenuSel)
+                add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
+            else
+                add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
+        }
+    }
 }
 
 void sub_08014118(void)
 {
-	u8 i;
+    u8 i;
 
-	if (gUnknown_0300005D != 0)
-	{
-		s8 sp8[] = { 4, 6, 8, 12, 10, 10 };
-		s8 sp10[] = { 5, 7, 9, 13, 11, 11 };
-		s8 sp18[] = { 4, 6, 8, 2, 10, 10 };
-		s8 sp20[] = { 5, 7, 9, 2, 11, 11 };
+    if (gUnknown_0300005D != 0)
+    {
+        s8 sp8[] = { 4, 6, 8, 12, 10, 10 };
+        s8 sp10[] = { 5, 7, 9, 13, 11, 11 };
+        s8 sp18[] = { 4, 6, 8, 2, 10, 10 };
+        s8 sp20[] = { 5, 7, 9, 2, 11, 11 };
 
-		for (i = 0; i < 4; i++)
-		{
-			if (i == gFileSelectMenuSel)
-			{
-				sub_08013A48(i, 1, sp18[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
-			}
-			else
-			{
-				sub_08013A48(i, 0, sp20[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
-			}
-		}
-		if (i == gFileSelectMenuSel)
-			add_sprite_080138D0(&gUnknown_080787C0, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-		else
-			add_sprite_080138D0(&gUnknown_080787C0, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-		if (i + 1 == gFileSelectMenuSel)
-			add_sprite_080138D0(&gUnknown_080787C0, 1, sp8[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
-		else
-			add_sprite_080138D0(&gUnknown_080787C0, 1, sp10[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
-		sub_08013FFC(i + 2);
-	}
-	else
-	{
-		s8 sp8[] = { 4, 6, 8, 10, 10 };
-		s8 sp10[] = { 5, 7, 9, 11, 11 };
+        for (i = 0; i < 4; i++)
+        {
+            if (i == gFileSelectMenuSel)
+            {
+                sub_08013A48(i, 1, sp18[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
+            }
+            else
+            {
+                sub_08013A48(i, 0, sp20[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
+            }
+        }
+        if (i == gFileSelectMenuSel)
+            add_sprite_080138D0(&gUnknown_080787C0, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+        else
+            add_sprite_080138D0(&gUnknown_080787C0, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+        if (i + 1 == gFileSelectMenuSel)
+            add_sprite_080138D0(&gUnknown_080787C0, 1, sp8[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
+        else
+            add_sprite_080138D0(&gUnknown_080787C0, 1, sp10[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
+        sub_08013FFC(i + 2);
+    }
+    else
+    {
+        s8 sp8[] = { 4, 6, 8, 10, 10 };
+        s8 sp10[] = { 5, 7, 9, 11, 11 };
 
-		for (i = 0; i < 3; i++)
-		{
-			if (i == gFileSelectMenuSel)
-			{
-				sub_08013A48(i, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
-			}
-			else
-			{
-				sub_08013A48(i, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-				add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
-			}
-		}
-		i++;
-		if (i == gFileSelectMenuSel)
-			add_sprite_080138D0(&gUnknown_080787C0, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-		else
-			add_sprite_080138D0(&gUnknown_080787C0, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-		if (i + 1 == gFileSelectMenuSel)
-			add_sprite_080138D0(&gUnknown_080787C0, 1, sp8[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
-		else
-			add_sprite_080138D0(&gUnknown_080787C0, 1, sp10[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
-		sub_08013EE0(i + 2);
-	}
+        for (i = 0; i < 3; i++)
+        {
+            if (i == gFileSelectMenuSel)
+            {
+                sub_08013A48(i, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
+            }
+            else
+            {
+                sub_08013A48(i, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
+            }
+        }
+        i++;
+        if (i == gFileSelectMenuSel)
+            add_sprite_080138D0(&gUnknown_080787C0, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+        else
+            add_sprite_080138D0(&gUnknown_080787C0, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+        if (i + 1 == gFileSelectMenuSel)
+            add_sprite_080138D0(&gUnknown_080787C0, 1, sp8[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
+        else
+            add_sprite_080138D0(&gUnknown_080787C0, 1, sp10[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
+        sub_08013EE0(i + 2);
+    }
 }
 
 void sub_0801456C(void)
 {
-	s16 i;
-	s16 r6;
+    s16 i;
+    s16 r6;
 
-	if (gUnknown_0300005D != 0)
-	{
-		for (i = 0; i < 3; i++)
-		{
-			if (gUnknown_03000066[i] != 0)
-			{
-				r6 = gUnknown_03000066[i] - 1;
-				if (r6 == 2)
-				{
+    if (gUnknown_0300005D != 0)
+    {
+        for (i = 0; i < 3; i++)
+        {
+            if (gUnknown_03000066[i] != 0)
+            {
+                r6 = gUnknown_03000066[i] - 1;
+                if (r6 == 2)
+                {
                     struct SpriteTemplate *arr = gUnknown_08078820;
-					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078868[i].x, arr[i].y);
-					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078868[i].x + 16, arr[i].y);
-				}
-				else
-				{
-					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078868[i].x, gUnknown_08078820[i].y);
-					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078868[i].x + 16, gUnknown_08078820[i].y);
-				}
-			}
-		}
-	}
-	else
-	{
-		for (i = 0; i < 3; i++)
-		{
-			if (gUnknown_03000066[i] != 0)
-			{
-				r6 = gUnknown_03000066[i] - 1;
-				if (r6 == 2)
-				{
+                    add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078868[i].x, arr[i].y);
+                    add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078868[i].x + 16, arr[i].y);
+                }
+                else
+                {
+                    add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078868[i].x, gUnknown_08078820[i].y);
+                    add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078868[i].x + 16, gUnknown_08078820[i].y);
+                }
+            }
+        }
+    }
+    else
+    {
+        for (i = 0; i < 3; i++)
+        {
+            if (gUnknown_03000066[i] != 0)
+            {
+                r6 = gUnknown_03000066[i] - 1;
+                if (r6 == 2)
+                {
                     struct SpriteTemplate *arr = gUnknown_08078820;
                     asm(""::"r"(arr));  // needed to match
-					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078820[i].x, arr[i].y);
-					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078820[i].x + 16, arr[i].y);
-				}
-				else
-				{
-					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078820[i].x, gUnknown_08078820[i].y);
-					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078820[i].x + 16, gUnknown_08078820[i].y);
-				}
-			}
-		}
-	}
+                    add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078820[i].x, arr[i].y);
+                    add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078820[i].x + 16, arr[i].y);
+                }
+                else
+                {
+                    add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078820[i].x, gUnknown_08078820[i].y);
+                    add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078820[i].x + 16, gUnknown_08078820[i].y);
+                }
+            }
+        }
+    }
 }
 
 void main_menu_loop(void)
 {
-	gUnknown_03001930 = gUnknown_0300192C = gSomeOamIndex_03000040 = 0;
-	DmaFill32(3, 0xA0, gOamBuffer, 0x400);
-	sub_08012D24();
-	if (gUnknown_03000C28 == 0)
-		sub_0801B2CC(gUnknown_085FEFE4[gUnknown_0300005E].unk8);
-	if (gUnknown_0300005B == 3)
-		sub_080128EC();
-	else if (gUnknown_0300005B == 2)
-	{
-		REG_BLDCNT = BLDCNT_EFF_ALPHA | BLDCNT_BG2_FIRST | BLDCNT_BG0_SECOND | BLDCNT_BG1_SECOND | BLDCNT_BG3_SECOND | BLDCNT_OBJ_SECOND | BLDCNT_BD_SECOND;
-		REG_BLDALPHA = 0x0808;
-	}
-	else if (gFileSelectMenuSel < 4)
-		sub_080129C0();
-	else if (gFileSelectMenuSel == 4)
-		sub_08012568();
-	else if (gFileSelectMenuSel == 5)
-		sub_08012680();
-	else
-		sub_08012798();
-	sub_08014118();
-	sub_0801456C();
-	DmaCopy32(3, gOamBuffer, (void *)OAM, 0x400);
-	sub_0801B4BC();
+    gUnknown_03001930 = gUnknown_0300192C = gSomeOamIndex_03000040 = 0;
+    DmaFill32(3, 0xA0, gOamBuffer, 0x400);
+    sub_08012D24();
+    if (gUnknown_03000C28 == 0)
+        sub_0801B2CC(gUnknown_085FEFE4[gUnknown_0300005E].unk8);
+    if (gUnknown_0300005B == 3)
+        sub_080128EC();
+    else if (gUnknown_0300005B == 2)
+    {
+        REG_BLDCNT = BLDCNT_EFF_ALPHA | BLDCNT_BG2_FIRST | BLDCNT_BG0_SECOND | BLDCNT_BG1_SECOND | BLDCNT_BG3_SECOND | BLDCNT_OBJ_SECOND | BLDCNT_BD_SECOND;
+        REG_BLDALPHA = 0x0808;
+    }
+    else if (gFileSelectMenuSel < 4)
+        sub_080129C0();
+    else if (gFileSelectMenuSel == 4)
+        sub_08012568();
+    else if (gFileSelectMenuSel == 5)
+        sub_08012680();
+    else
+        sub_08012798();
+    sub_08014118();
+    sub_0801456C();
+    DmaCopy32(3, gOamBuffer, (void *)OAM, 0x400);
+    sub_0801B4BC();
 }
 
 void main_menu_end(void)
 {
-	sub_080382A8();
+    sub_080382A8();
 }
 
 asm(".balign 4, 0");
