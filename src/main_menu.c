@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "main_menu.h"
 #include "savefile.h"
 
 struct Coords32 gUnknown_080785B0[] =
@@ -188,9 +189,9 @@ void main_menu_init_callback(void)
     gUnknown_0300005D = gUnknown_03000062 = 0;
     if (*gUnknown_0807CA94 != 0)
         gUnknown_0300005D = gUnknown_03000062 = 1;
-    if (gPreviousMainState == 4)
+    if (gPreviousMainState == MAIN_STATE_OPTION_MENU)
         gFileSelectMenuSel = FILE_SELECT_OPTION_MENU;
-    else if ((gPreviousMainState == 24 || gPreviousMainState == 25) && gUnknown_0300005D != 0)
+    else if ((gPreviousMainState == MAIN_STATE_EWORLD_LEVEL_SELECT || gPreviousMainState == MAIN_STATE_UKNOWN_25) && gUnknown_0300005D != 0)
         gFileSelectMenuSel = FILE_SELECT_EWORLD;
     else if ((*gUnknown_080788F8 & 1) && gUnknown_0300005D != 0)
         gFileSelectMenuSel = gPrevFileSelectMenuSel = FILE_SELECT_EWORLD;
@@ -218,12 +219,8 @@ void main_menu_init_callback(void)
         gUnknown_03000066[i] = sub_080111B4(i);
 }
 
-void sub_0801168C(u8 arg0)
+static void sub_0801168C(u8 arg0)
 {
-    struct SaveFile *saveFile;
-    u8 r0;
-    u8 fileNum;
-
     if (arg0 != 0)
     {
         if (gUnknown_0300005D != 0)
@@ -252,15 +249,12 @@ void sub_0801168C(u8 arg0)
     }
 }
 
-void pick_file(void)
+static void pick_file(void)
 {
     int i;
-    struct SaveFile *saveFile;
     int r0;
     s8 r5;
-    struct SaveFile *r1;
     u8 spC;
-    u32 r7;
 
     if (sub_08034004())
     {
@@ -303,7 +297,7 @@ void pick_file(void)
         else if (gFileSelectMenuSel == FILE_SELECT_EWORLD)
         {
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 0x80, 0);
-            change_main_state(29, 1);
+            change_main_state(MAIN_STATE_UKNOWN_29, 1);
             return;
         }
         else if (gFileSelectMenuSel <= FILE_SELECT_FILE_C)  // files
@@ -437,7 +431,7 @@ void pick_file(void)
     }
 }
 
-void sub_08011CB4(void)
+static void sub_08011CB4(void)
 {
     if (gSomeKeys_030012E8 & DPAD_UP)
     {
@@ -520,7 +514,7 @@ void sub_08011CB4(void)
     }
 }
 
-void sub_08011F60(void)
+static void sub_08011F60(void)
 {
     gBGLayerOffsets.bg1_y = -256;
     if (sub_08034004())
@@ -603,7 +597,7 @@ void sub_08011F60(void)
     }
 }
 
-void sub_08012230(void)  // for new save file?
+static void sub_08012230(void)  // for new save file?
 {
     s16 i;
 
@@ -731,7 +725,7 @@ void main_menu_main(void)
     inlinefunc7(&gUnknown_03000060, &gUnknown_03000061, gUnknown_08617030, 2);
 }
 
-void sub_08012568(void)
+static void sub_08012568(void)
 {
     s16 x, y;
     int dummy;
@@ -761,7 +755,7 @@ void sub_08012568(void)
     gSomeOamIndex_03000040++;
 }
 
-void sub_08012680(void)
+static void sub_08012680(void)
 {
     s16 x, y;
     int dummy;
@@ -791,7 +785,7 @@ void sub_08012680(void)
     gSomeOamIndex_03000040++;
 }
 
-void sub_08012798(void)
+static void sub_08012798(void)
 {
     u8 arr[] = { 4, 6, 8, 12, 10, 10 };
     s16 x, y;
@@ -825,7 +819,7 @@ void sub_08012798(void)
     gSomeOamIndex_03000040++;
 }
 
-void sub_080128EC(void)
+static void sub_080128EC(void)
 {
     s16 arr[] = { 68, 115 };
     s16 x, y;
@@ -839,7 +833,7 @@ void sub_080128EC(void)
     gSomeOamIndex_03000040++;
 }
 
-void sub_080129C0(void)
+static void sub_080129C0(void)
 {
     u8 arr[] = { 4, 6, 8, 12, 10, 10 };
     s16 x, y;
@@ -899,7 +893,7 @@ void sub_080129C0(void)
     }
 }
 
-void sub_08012D24(void)
+static void copy_sprite_tiles_to_vram_08012D24(void)
 {
     DmaCopy32(3, gUnknown_08615C04, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
     gUnknown_0300004E = gUnknown_03001930;
@@ -972,7 +966,7 @@ void sub_08012D24(void)
     gObjVRAMCopyOffset_0300192C += 0x80;
 }
 
-void print_digits_080130F8(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
+static void print_digits_080130F8(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
 {
     int i;
     int x2 = x + (digits - 1) * 8;
@@ -993,7 +987,7 @@ void print_digits_080130F8(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
     }
 }
 
-void print_digits_08013260(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
+static void print_digits_08013260(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
 {
     int i;
     int x2 = x + (digits - 1) * 8;
@@ -1014,7 +1008,7 @@ void print_digits_08013260(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
     }
 }
 
-void print_digits_080133D4(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
+static void print_digits_080133D4(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
 {
     int i;
     int x2 = x + (digits - 1) * 8;
@@ -1035,7 +1029,7 @@ void print_digits_080133D4(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
     }
 }
 
-void print_digits_08013548(u8 x, u8 y, u8 digits, u16 value)
+static void print_digits_08013548(u8 x, u8 y, u8 digits, u16 value)
 {
     int i;
     int x2 = x + (digits - 1) * 8;
@@ -1055,7 +1049,7 @@ void print_digits_08013548(u8 x, u8 y, u8 digits, u16 value)
     }
 }
 
-void add_sprite_0801369C(struct SpriteTemplate *arg0, u16 arg1, u8 arg2, int arg3, s16 arg4, s16 arg5)
+static void add_sprite_0801369C(struct SpriteTemplate *arg0, u16 arg1, u8 arg2, int arg3, s16 arg4, s16 arg5)
 {
     DmaCopy32(3, arg0->oamData, &gOamBuffer[gSomeOamIndex_03000040], 8);
     gOamBuffer[gSomeOamIndex_03000040].tileNum += arg1;
@@ -1088,7 +1082,7 @@ struct OamData_alt
     /*0x06*/ u16 affineParam;
 };
 
-void add_sprite_080137A0(struct SpriteTemplate *arg0, u16 arg1, u8 arg2, s8 paletteNum, u8 hFlip, s16 x, s16 y)
+static void add_sprite_080137A0(struct SpriteTemplate *arg0, u16 arg1, u8 arg2, s8 paletteNum, u8 hFlip, s16 x, s16 y)
 {
     DmaCopy32(3, arg0->oamData, &gOamBuffer[gSomeOamIndex_03000040], 8);
     gOamBuffer[gSomeOamIndex_03000040].tileNum += arg1;
@@ -1100,7 +1094,7 @@ void add_sprite_080137A0(struct SpriteTemplate *arg0, u16 arg1, u8 arg2, s8 pale
     gSomeOamIndex_03000040++;
 }
 
-void add_sprite_080138D0(struct SpriteTemplate *arg0, u8 arg1, s8 arg2, s16 x, s16 y)
+static void add_sprite_080138D0(struct SpriteTemplate *arg0, u8 arg1, s8 arg2, s16 x, s16 y)
 {
     DmaCopy32(3, arg0->tileData + arg0->unkC[arg1].unk0 * arg0->unk4 * 4, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), arg0->unk8);
     DmaCopy32(3, arg0->oamData, &gOamBuffer[gSomeOamIndex_03000040], 8);
@@ -1141,7 +1135,7 @@ void add_sprite_080138D0(struct SpriteTemplate *arg0, u8 arg1, s8 arg2, s16 x, s
     add_sprite_080138D0(&gUnknown_08078778, 0, d, x, y + 44); \
 }
 
-void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
+static void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
 {
     u8 spC = (arg1 == 0);
 
@@ -1188,7 +1182,7 @@ void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
     }
 }
 
-void sub_08013EE0(u8 arg0)
+static void sub_08013EE0(u8 arg0)
 {
     s8 sp8[] = { 4, 6, 8, 12, 10, 10 };
     s8 sp10[] = { 5, 7, 9, 13, 11, 11 };
@@ -1206,7 +1200,7 @@ void sub_08013EE0(u8 arg0)
     }
 }
 
-void sub_08013FFC(u8 arg0)
+static void sub_08013FFC(u8 arg0)
 {
     s8 sp8[] = { 4, 6, 8, 2, 10, 10 };
     s8 sp10[] = { 5, 7, 9, 2, 11, 11 };
@@ -1224,7 +1218,7 @@ void sub_08013FFC(u8 arg0)
     }
 }
 
-void sub_08014118(void)
+static void sub_08014118(void)
 {
     u8 i;
 
@@ -1293,7 +1287,7 @@ void sub_08014118(void)
     }
 }
 
-void sub_0801456C(void)
+static void sub_0801456C(void)
 {
     s16 i;
     s16 r6;
@@ -1347,7 +1341,7 @@ void main_menu_loop(void)
 {
     gUnknown_03001930 = gObjVRAMCopyOffset_0300192C = gSomeOamIndex_03000040 = 0;
     DmaFill32(3, 0xA0, gOamBuffer, sizeof(gOamBuffer));
-    sub_08012D24();
+    copy_sprite_tiles_to_vram_08012D24();
     if (gUnknown_03000C28 == 0)
         sub_0801B2CC(gUnknown_085FEFE4[gUnknown_0300005E].unk8);
     if (gUnknown_0300005B == 3)
@@ -1357,11 +1351,11 @@ void main_menu_loop(void)
         REG_BLDCNT = BLDCNT_EFF_ALPHA | BLDCNT_BG2_FIRST | BLDCNT_BG0_SECOND | BLDCNT_BG1_SECOND | BLDCNT_BG3_SECOND | BLDCNT_OBJ_SECOND | BLDCNT_BD_SECOND;
         REG_BLDALPHA = 0x0808;
     }
-    else if (gFileSelectMenuSel < 4)
+    else if (gFileSelectMenuSel <= FILE_SELECT_EWORLD)
         sub_080129C0();
-    else if (gFileSelectMenuSel == 4)
+    else if (gFileSelectMenuSel == FILE_SELECT_OPTION_MENU)
         sub_08012568();
-    else if (gFileSelectMenuSel == 5)
+    else if (gFileSelectMenuSel == FILE_SELECT_ERASE_DATA)
         sub_08012680();
     else
         sub_08012798();
