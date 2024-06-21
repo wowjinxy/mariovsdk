@@ -84,22 +84,22 @@ struct SpriteTemplate gUnknown_08078700[] =
 struct SpriteTemplate gUnknown_08078760 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_086119D4, &gUnknown_08611A40, gUnknown_08611A48 };
 struct SpriteTemplate gUnknown_08078778 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08612648, &gUnknown_086126B4, gUnknown_086126BC };
 struct SpriteTemplate gUnknown_08078790 = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617570, &gUnknown_086175B8, gUnknown_086175C0 };
-struct SpriteTemplate gUnknown_080787A8 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08615BB4[0], (void *)0x08615BFC, (void *)0x08615C04 };
-struct SpriteTemplate gUnknown_080787C0 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08614B64, (void *)0x08614BAC, (void *)0x08614BB4 };
-struct SpriteTemplate gUnknown_080787D8 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_08614738, (void *)0x0861475C, (void *)0x08614764 };
-struct SpriteTemplate gUnknown_080787F0 = { 0, 0, 0x008, 0x01, 0x020, &gUnknown_08617970, (void *)0x08617AFC, (void *)0x08617B04 };
-struct SpriteTemplate gUnknown_08078808 = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617C64, (void *)0x08617CAC, (void *)0x08617CB4 };
+struct SpriteTemplate gUnknown_080787A8 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08615BB4[0], &gUnknown_08615BFC, gUnknown_08615C04 };
+struct SpriteTemplate gUnknown_080787C0 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08614B64, &gUnknown_08614BAC, gUnknown_08614BB4 };
+struct SpriteTemplate gUnknown_080787D8 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_08614738, &gUnknown_0861475C, gUnknown_08614764 };
+struct SpriteTemplate gUnknown_080787F0 = { 0, 0, 0x008, 0x01, 0x020, &gUnknown_08617970, &gUnknown_08617AFC, gUnknown_08617B04 };
+struct SpriteTemplate gUnknown_08078808 = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617C64, &gUnknown_08617CAC, gUnknown_08617CB4 };
 struct SpriteTemplate gUnknown_08078820[] =
 {
-    {  20, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, (void *)0x086180B4 },
-    {  77, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, (void *)0x086180B4 },
+    {  20, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, gUnknown_086180B4 },
+    {  77, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, gUnknown_086180B4 },
 };
-struct SpriteTemplate gUnknown_08078850 = { 134, 33, 0x020, 0x04, 0x080, (void *)0x08617030, (void *)0x08617078, (void *)0x08617080 };
+struct SpriteTemplate gUnknown_08078850 = { 134, 33, 0x020, 0x04, 0x080, &gUnknown_08617030[0], &gUnknown_08617078, gUnknown_08617080 };
 struct SpriteTemplate gUnknown_08078868[] =
 {
-    {  10, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, (void *)0x086180B4 },
-    {  58, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, (void *)0x086180B4 },
-    { 106, 33, 0x020, 0x04, 0x080, &gUnknown_08617030[0], &gUnknown_08617078, (void *)0x08617080 },
+    {  10, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, gUnknown_086180B4 },
+    {  58, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, gUnknown_086180B4 },
+    { 106, 33, 0x020, 0x04, 0x080, &gUnknown_08617030[0], &gUnknown_08617078, gUnknown_08617080 },
 };
 
 enum  // for gFileSelectMenuSel
