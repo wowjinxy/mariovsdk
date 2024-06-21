@@ -2140,7 +2140,7 @@ _08028ADE:
 	bge _08028B36
 	add r7, r3, #0
 	add r6, r4, #0
-	ldr r4, _08028BF0  @ =gUnknown_08D7B110
+	ldr r4, _08028BF0  @ =gMusicTable1
 _08028B0A:
 	ldrb r0, [r4, #9]
 	cmp r0, #0
@@ -2257,7 +2257,7 @@ _08028BE8:
 _08028BEC:
 	.4byte 0x00001148
 _08028BF0:
-	.4byte gUnknown_08D7B110
+	.4byte gMusicTable1
 _08028BF4:
 	.4byte gUnknown_080799D0
 _08028BF8:

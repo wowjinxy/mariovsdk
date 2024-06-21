@@ -1010,7 +1010,7 @@ extern const u8 gUnknown_08B2F5B8[];
 extern const u8 gUnknown_08B2F070[];
 extern const u8 gUnknown_08B35FC0[];
 extern const u8 gUnknown_08B3732C[];
-extern const u8 gUnknown_08B37424[];
+extern const u8 gMovieUnusedPlusWorldsUnlocked[];
 
 extern const s16 gUnknown_0807C118[][2];
 extern unkst24 gUnknown_0812E128[1];
