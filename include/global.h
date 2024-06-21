@@ -14,6 +14,12 @@
 // Types
 //------------------------------------------------------------------------------
 
+struct Coords32
+{
+    s32 x;
+    s32 y;
+};
+
 struct CmprHeader
 {
     u32 reserved:4;
@@ -683,6 +689,27 @@ enum
     LOAD_OBJ_PALETTE = (1 << 1),
 };
 
+struct SpriteTemplate_child
+{
+    u8 unk0;
+    u8 filler1[1];
+    s8 unk2;  // x
+    s8 unk3;  // y
+    u8 filler4[0x24-0x4];
+};
+
+struct SpriteTemplate
+{
+	/*0x00*/ u16 x;
+	/*0x02*/ u16 y;
+    u16 unk4;
+    u16 unk6;
+    u16 unk8;  // size
+    struct SpriteTemplate_child *unkC;
+    /*0x10*/ struct OamData *oamData;  // oam
+    /*0x14*/ u8 *tileData;  // tile data
+};  // size = 0x18
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -946,6 +973,14 @@ extern void (*const gMainStateMainCallbacks[])(void);
 extern void (*const gMainStateLoopCallbacks[])(void);
 extern void (*const gMainStateEndCallbacks[])(void);
 extern const u32 gUnknown_0807846C[];
+extern struct Coords32 gUnknown_080785B0[];
+extern struct Coords32 gUnknown_080785E0[];
+extern struct Coords32 gUnknown_08078610[];
+extern struct Coords32 gUnknown_08078628[];
+extern struct Coords32 gUnknown_08078640[];
+extern struct Coords32 gUnknown_08078680[];
+extern struct Coords32 gUnknown_080786C0[];
+extern struct SpriteTemplate gUnknown_08078700[];
 extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
 extern u16 gUnknown_080788E0[];

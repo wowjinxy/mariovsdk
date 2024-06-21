@@ -4,21 +4,29 @@
 #include "main.h"
 #include "savefile.h"
 
-struct Coords32
-{
-    s32 x;
-    s32 y;
-};
+extern struct SpriteTemplate_child gUnknown_085FB360;
+extern struct OamData gUnknown_085FB3CC;
+extern u8 gUnknown_085FB3D4[];
+extern struct SpriteTemplate_child gUnknown_086119D4;
+extern struct OamData gUnknown_08611A40;
+extern u8 gUnknown_08611A48[];
+extern struct SpriteTemplate_child gUnknown_08612648;
+extern struct OamData gUnknown_086126B4;
+extern u8 gUnknown_086126BC[];
+extern struct SpriteTemplate_child gUnknown_08613EBC;
+extern struct OamData gUnknown_08613F04;
+extern u8 gUnknown_08613F0C[];
+extern struct SpriteTemplate_child gUnknown_08617570;
+extern struct OamData gUnknown_086175B8;
+extern u8 gUnknown_086175C0[];
 
-extern struct Coords32 gUnknown_080785B0[];
-extern struct Coords32 gUnknown_080785E0[];
-#if 0  // defining this causes sub_08012568 to no longer match. ¯\_(ツ)_/¯
 struct Coords32 gUnknown_080785B0[] =
 {
 	{ 14, 52 },
 	{ 71, 52 },
 	{ 128, 52 },
 	{ 128, 52 },
+	{ 185, 52 },
 	{ 185, 95 },
 };
 
@@ -31,7 +39,79 @@ struct Coords32 gUnknown_080785E0[] =
 	{ 196, 52 },
 	{ 196, 95 },
 };
-#endif
+
+struct Coords32 gUnknown_08078610[] =
+{
+    { 14, 138 },
+    { 71, 138 },
+    { 128, 138 },
+};
+
+struct Coords32 gUnknown_08078628[] =
+{
+    { 4, 138 },
+    { 52, 138 },
+    { 100, 138 },
+};
+
+struct Coords32 gUnknown_08078640[] =
+{
+    { 10, 33 },
+    { 10, 33 },
+    { 10, 33 },
+    { 10, 33 },
+    { 10, 33 },
+    { 10, 33 },
+    { 6, 33 },
+    { 7, 33 },
+};
+
+struct Coords32 gUnknown_08078680[] =
+{
+    { 18, 33 },
+    { 18, 33 },
+    { 18, 33 },
+    { 18, 33 },
+    { 18, 33 },
+    { 18, 33 },
+    { 13, 33 },
+    { 15, 33 },
+};
+
+struct Coords32 gUnknown_080786C0[] =
+{
+    { 26, 33 },
+    { 26, 33 },
+    { 26, 33 },
+    { 26, 33 },
+    { 26, 33 },
+    { 26, 33 },
+    { 20, 33 },
+    { 23, 33 },
+};
+
+struct SpriteTemplate gUnknown_08078700[] =
+{
+	{ 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
+	{ 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
+	{ 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
+	{ 0, 0, 0x80, 0x10, 0x200, &gUnknown_08613EBC, &gUnknown_08613F04, gUnknown_08613F0C },
+};
+
+struct SpriteTemplate gUnknown_08078760 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_086119D4, &gUnknown_08611A40, gUnknown_08611A48 };
+struct SpriteTemplate gUnknown_08078778 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08612648, &gUnknown_086126B4, gUnknown_086126BC };
+struct SpriteTemplate gUnknown_08078790 = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617570, &gUnknown_086175B8, gUnknown_086175C0 };
+
+// TODO: dump this
+extern struct SpriteTemplate gUnknown_080787A8;
+extern struct SpriteTemplate gUnknown_080787C0;
+extern struct SpriteTemplate gUnknown_080787D8;
+extern struct SpriteTemplate gUnknown_080787F0;
+extern struct SpriteTemplate gUnknown_08078808;
+extern struct SpriteTemplate gUnknown_08078820[];
+extern struct SpriteTemplate gUnknown_08078850;
+extern struct SpriteTemplate gUnknown_08078868[];
+
 struct Struct0860A4B4
 {
     u8 unk0;
@@ -45,10 +125,6 @@ extern struct Struct0860A4B4 gUnknown_085FEFE4[];
 extern struct Struct0860A4B4 gUnknown_08617030[];
 extern struct GraphicsConfig gMainMenuData;
 extern u8 gUnknown_080A8668;
-
-extern struct Coords32 gUnknown_080785B0[];
-extern struct Coords32 gUnknown_08078610[];
-extern struct Coords32 gUnknown_08078628[];
 
 extern struct OamData gUnknown_08606A1C;
 extern struct OamData gUnknown_085FB7DC;
@@ -95,33 +171,6 @@ extern u8 gUnknown_08617B04[];
 extern struct OamData gUnknown_08617AFC;
 extern u8 gUnknown_08617830[];
 extern struct OamData gUnknown_08617828;
-
-struct Struct08013548_child
-{
-    u8 unk0;
-    u8 filler1[1];
-    s8 unk2;  // x
-    s8 unk3;  // y
-    u8 filler4[0x24-0x4];
-};
-
-struct Struct08013548  // maybe the same as Struct0860A4B4?
-{
-    u8 filler0[4];
-    u16 unk4;
-    u16 unk6;
-    u16 unk8;  // size
-    u8 fillerA[0xC-0xA];
-    struct Struct08013548_child *unkC;
-    struct OamData *unk10;  // oam
-    u8 *unk14;  // tile data
-};  // size = 0x24
-
-extern struct Struct08078700
-{
-    struct Struct08013548 unk0[3];
-    struct Struct08013548 unk48;  // maybe part of the same array?
-} gUnknown_08078700;
 
 enum  // for gFileSelectMenuSel
 {
@@ -1069,9 +1118,9 @@ void print_digits_08013548(u8 x, u8 y, u8 digits, u16 value)
     }
 }
 
-void add_sprite_0801369C(struct Struct08013548 *arg0, u16 arg1, u8 arg2, int arg3, s16 arg4, s16 arg5)
+void add_sprite_0801369C(struct SpriteTemplate *arg0, u16 arg1, u8 arg2, int arg3, s16 arg4, s16 arg5)
 {
-    DmaCopy32(3, arg0->unk10, &gOamBuffer[gSomeOamIndex_03000040], 8);
+    DmaCopy32(3, arg0->oamData, &gOamBuffer[gSomeOamIndex_03000040], 8);
     gOamBuffer[gSomeOamIndex_03000040].tileNum += arg1;
     gOamBuffer[gSomeOamIndex_03000040].paletteNum = arg3;
     gOamBuffer[gSomeOamIndex_03000040].x = arg4 + arg0->unkC[arg2].unk2;
@@ -1102,9 +1151,9 @@ struct OamData_alt
     /*0x06*/ u16 affineParam;
 };
 
-void add_sprite_080137A0(struct Struct08013548 *arg0, u16 arg1, u8 arg2, s8 paletteNum, u8 hFlip, s16 x, s16 y)
+void add_sprite_080137A0(struct SpriteTemplate *arg0, u16 arg1, u8 arg2, s8 paletteNum, u8 hFlip, s16 x, s16 y)
 {
-    DmaCopy32(3, arg0->unk10, &gOamBuffer[gSomeOamIndex_03000040], 8);
+    DmaCopy32(3, arg0->oamData, &gOamBuffer[gSomeOamIndex_03000040], 8);
     gOamBuffer[gSomeOamIndex_03000040].tileNum += arg1;
     gOamBuffer[gSomeOamIndex_03000040].paletteNum = paletteNum;
     gOamBuffer[gSomeOamIndex_03000040].x = x + arg0->unkC[arg2].unk2;
@@ -1114,10 +1163,10 @@ void add_sprite_080137A0(struct Struct08013548 *arg0, u16 arg1, u8 arg2, s8 pale
     gSomeOamIndex_03000040++;
 }
 
-void add_sprite_080138D0(struct Struct08013548 *arg0, u8 arg1, s8 arg2, s16 x, s16 y)
+void add_sprite_080138D0(struct SpriteTemplate *arg0, u8 arg1, s8 arg2, s16 x, s16 y)
 {
-    DmaCopy32(3, arg0->unk14 + arg0->unkC[arg1].unk0 * arg0->unk4 * 4, (void *)(OBJ_VRAM0 + gUnknown_0300192C), arg0->unk8);
-    DmaCopy32(3, arg0->unk10, &gOamBuffer[gSomeOamIndex_03000040], 8);
+    DmaCopy32(3, arg0->tileData + arg0->unkC[arg1].unk0 * arg0->unk4 * 4, (void *)(OBJ_VRAM0 + gUnknown_0300192C), arg0->unk8);
+    DmaCopy32(3, arg0->oamData, &gOamBuffer[gSomeOamIndex_03000040], 8);
     gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03001930;
     gOamBuffer[gSomeOamIndex_03000040].x = x + arg0->unkC[arg1].unk2;
     gOamBuffer[gSomeOamIndex_03000040].y = y + arg0->unkC[arg1].unk3;
@@ -1131,16 +1180,6 @@ void add_sprite_080138D0(struct Struct08013548 *arg0, u8 arg1, s8 arg2, s16 x, s
     gSomeOamIndex_03000040++;
 }
 
-extern struct Struct08013548 gUnknown_08078760;
-extern struct Struct08013548 gUnknown_08078778;
-extern struct Struct08013548 gUnknown_08078790;
-extern struct Struct08013548 gUnknown_080787F0;
-extern struct Struct08013548 gUnknown_08078808;
-extern struct Struct08013548 gUnknown_080787D8;
-extern struct Struct08013548 gUnknown_080787A8;
-extern struct Struct08013548 gUnknown_080787C0;
-extern struct Struct08013548 gUnknown_08078850;
-
 static inline u8 inlinefunc6(u8 fileNum)
 {
     struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
@@ -1149,10 +1188,6 @@ static inline u8 inlinefunc6(u8 fileNum)
     else
         return FALSE;
 }
-
-extern struct Coords32 gUnknown_08078640[];
-extern struct Coords32 gUnknown_08078680[];
-extern struct Coords32 gUnknown_080786C0[];
 
 #define PRINT_STARS(fileNum, x, y, d) \
 { \
@@ -1184,14 +1219,14 @@ void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
 
     if (fileNum == 3)
     {
-        struct Struct08078700 *r0 = &gUnknown_08078700;
-        add_sprite_080138D0(&r0->unk48, 0, arg2, x + 6, y + 6);
+        struct SpriteTemplate *r0 = gUnknown_08078700;
+        add_sprite_080138D0(&r0[3], 0, arg2, x + 6, y + 6);
         print_digits_08013260(x + 14, y + 46, 2, *gUnknown_0807CA94, 0);
         add_sprite_080138D0(&gUnknown_08078778, 2, arg2, x, y + 44);
     }
     else
     {
-        add_sprite_080138D0(&gUnknown_08078700.unk0[fileNum], fileNum, arg2, x + 13, y + 4);
+        add_sprite_080138D0(&gUnknown_08078700[fileNum], fileNum, arg2, x + 13, y + 4);
         if (!inlinefunc2(fileNum))
         {
             add_sprite_080138D0(&gUnknown_08078760, 2, arg2, x, y + 12);
@@ -1342,15 +1377,6 @@ void sub_08014118(void)
 	}
 }
 
-extern struct Struct8078868
-{
-	s16 unk0;
-	s16 unk2;
-	u8 filler4[0x18-0x4];
-} gUnknown_08078868[];
-
-extern struct Struct8078868 gUnknown_08078820[];
-
 void sub_0801456C(void)
 {
 	s16 i;
@@ -1365,14 +1391,14 @@ void sub_0801456C(void)
 				r6 = gUnknown_03000066[i] - 1;
 				if (r6 == 2)
 				{
-                    struct Struct8078868 *arr = gUnknown_08078820;
-					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078868[i].unk0, arr[i].unk2);
-					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078868[i].unk0 + 16, arr[i].unk2);
+                    struct SpriteTemplate *arr = gUnknown_08078820;
+					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078868[i].x, arr[i].y);
+					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078868[i].x + 16, arr[i].y);
 				}
 				else
 				{
-					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078868[i].unk0, gUnknown_08078820[i].unk2);
-					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078868[i].unk0 + 16, gUnknown_08078820[i].unk2);
+					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078868[i].x, gUnknown_08078820[i].y);
+					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078868[i].x + 16, gUnknown_08078820[i].y);
 				}
 			}
 		}
@@ -1386,15 +1412,15 @@ void sub_0801456C(void)
 				r6 = gUnknown_03000066[i] - 1;
 				if (r6 == 2)
 				{
-                    struct Struct8078868 *arr = gUnknown_08078820;
+                    struct SpriteTemplate *arr = gUnknown_08078820;
                     asm(""::"r"(arr));  // needed to match
-					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078820[i].unk0, arr[i].unk2);
-					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078820[i].unk0 + 16, arr[i].unk2);
+					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 0, gUnknown_08078820[i].x, arr[i].y);
+					add_sprite_080137A0(&gUnknown_08078850, gUnknown_03000054.unk0, 0, 3, 1, gUnknown_08078820[i].x + 16, arr[i].y);
 				}
 				else
 				{
-					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078820[i].unk0, gUnknown_08078820[i].unk2);
-					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078820[i].unk0 + 16, gUnknown_08078820[i].unk2);
+					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078820[i].x, gUnknown_08078820[i].y);
+					add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078820[i].x + 16, gUnknown_08078820[i].y);
 				}
 			}
 		}
