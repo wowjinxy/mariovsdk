@@ -5,7 +5,7 @@
 #include "main_menu.h"
 #include "savefile.h"
 
-struct Coords32 gUnknown_080785B0[] =
+static struct Coords32 gUnknown_080785B0[] =
 {
     { 14, 52 },
     { 71, 52 },
@@ -15,7 +15,7 @@ struct Coords32 gUnknown_080785B0[] =
     { 185, 95 },
 };
 
-struct Coords32 gUnknown_080785E0[] =
+static struct Coords32 gUnknown_080785E0[] =
 {
     { 4, 52 },
     { 52, 52 },
@@ -25,21 +25,21 @@ struct Coords32 gUnknown_080785E0[] =
     { 196, 95 },
 };
 
-struct Coords32 gUnknown_08078610[] =
+static struct Coords32 gUnknown_08078610[] =
 {
     { 14, 138 },
     { 71, 138 },
     { 128, 138 },
 };
 
-struct Coords32 gUnknown_08078628[] =
+static struct Coords32 gUnknown_08078628[] =
 {
     { 4, 138 },
     { 52, 138 },
     { 100, 138 },
 };
 
-struct Coords32 gUnknown_08078640[] =
+static struct Coords32 gUnknown_08078640[] =
 {
     { 10, 33 },
     { 10, 33 },
@@ -51,7 +51,7 @@ struct Coords32 gUnknown_08078640[] =
     { 7, 33 },
 };
 
-struct Coords32 gUnknown_08078680[] =
+static struct Coords32 gUnknown_08078680[] =
 {
     { 18, 33 },
     { 18, 33 },
@@ -63,7 +63,7 @@ struct Coords32 gUnknown_08078680[] =
     { 15, 33 },
 };
 
-struct Coords32 gUnknown_080786C0[] =
+static struct Coords32 gUnknown_080786C0[] =
 {
     { 26, 33 },
     { 26, 33 },
@@ -75,28 +75,28 @@ struct Coords32 gUnknown_080786C0[] =
     { 23, 33 },
 };
 
-struct SpriteTemplate gUnknown_08078700[] =
+static struct SpriteTemplate sFileIconSpriteTemplates[] =
 {
-    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
-    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
-    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gUnknown_085FB3CC, gUnknown_085FB3D4 },
-    { 0, 0, 0x80, 0x10, 0x200, &gUnknown_08613EBC, &gUnknown_08613F04, gfxEReaderLogo4bpp },
+    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
+    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
+    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
+    { 0, 0, 0x80, 0x10, 0x200, &gUnknown_08613EBC, &gfxEReaderLogoOAM, gfxEReaderLogo4bpp },
 };
-struct SpriteTemplate gUnknown_08078760 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_086119D4, &gUnknown_08611A40, gUnknown_08611A48 };
-struct SpriteTemplate gUnknown_08078778 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08612648, &gUnknown_086126B4, gUnknown_086126BC };
-struct SpriteTemplate gUnknown_08078790 = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617570, &gUnknown_086175B8, gUnknown_086175C0 };
-struct SpriteTemplate gUnknown_080787A8 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08615BB4[0], &gUnknown_08615BFC, gUnknown_08615C04 };
-struct SpriteTemplate gUnknown_080787C0 = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08614B64, &gUnknown_08614BAC, gUnknown_08614BB4 };
-struct SpriteTemplate gUnknown_080787D8 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_08614738, &gUnknown_0861475C, gUnknown_08614764 };
-struct SpriteTemplate gUnknown_080787F0 = { 0, 0, 0x008, 0x01, 0x020, &gUnknown_08617970, &gUnknown_08617AFC, gUnknown_08617B04 };
-struct SpriteTemplate gUnknown_08078808 = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617C64, &gUnknown_08617CAC, gUnknown_08617CB4 };
-struct SpriteTemplate gUnknown_08078820[] =
+static struct SpriteTemplate gUnknown_08078760 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_086119D4, &gUnknown_08611A40, gUnknown_08611A48 };
+static struct SpriteTemplate sFileInfoBoxSpriteTemplate = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08612648, &gfxFileInfoBoxOAM, gfxFileInfoBox4bpp };
+static struct SpriteTemplate sPlusMainSpriteTemplate = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617570, &gfxPlusMainOAM, gfxPlusMain4bpp };
+static struct SpriteTemplate sFileBackgroundSpriteTemplate = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08615BB4[0], &gfxFileBackgroundOAM, gfxFileBackground4bpp };
+static struct SpriteTemplate sOptionMenuEraseDataButtonsSpriteTemplate = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08614B64, &gfxOptionMenuEraseDataButtonsOAM, gfxOptionMenuEraseDataButtons4bpp };
+static struct SpriteTemplate sExpertSpriteTemplate = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_08614738, &gfxExpertOAM, gfxExpert4bpp };
+static struct SpriteTemplate gUnknown_080787F0 = { 0, 0, 0x008, 0x01, 0x020, &gUnknown_08617970, &gUnknown_08617AFC, gUnknown_08617B04 };
+static struct SpriteTemplate gUnknown_08078808 = { 0, 0, 0x020, 0x04, 0x080, &sMMDKSpriteTemplate, &gfxMMDKOAM, gfxMMDK4bpp };
+static struct SpriteTemplate gUnknown_08078820[] =
 {
     {  20, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, gUnknown_086180B4 },
     {  77, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, gUnknown_086180B4 },
 };
-struct SpriteTemplate gUnknown_08078850 = { 134, 33, 0x020, 0x04, 0x080, &gUnknown_08617030[0], &gUnknown_08617078, gUnknown_08617080 };
-struct SpriteTemplate gUnknown_08078868[] =
+static struct SpriteTemplate gUnknown_08078850 = { 134, 33, 0x020, 0x04, 0x080, &gUnknown_08617030[0], &gUnknown_08617078, gUnknown_08617080 };
+static struct SpriteTemplate gUnknown_08078868[] =
 {
     {  10, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, gUnknown_086180B4 },
     {  58, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gUnknown_086180AC, gUnknown_086180B4 },
@@ -853,7 +853,7 @@ static void sub_080129C0(void)
 
     if (has_completed_first_level(gFileSelectMenuSel))
     {
-        DmaCopy32(3, &gUnknown_0860C33C, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
+        DmaCopy32(3, &gfxFileFrameNormalTopOAM, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03000042;
         gOamBuffer[gSomeOamIndex_03000040].objMode = 1;
         gOamBuffer[gSomeOamIndex_03000040].x = x - 8;
@@ -862,7 +862,7 @@ static void sub_080129C0(void)
         gOamBuffer[gSomeOamIndex_03000040].priority = 2;
         gSomeOamIndex_03000040++;
 
-        DmaCopy32(3, &gUnknown_0860A4AC, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
+        DmaCopy32(3, &gfxFileFrameNormalBottomOAM, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03000044;
         gOamBuffer[gSomeOamIndex_03000040].objMode = 1;
         gOamBuffer[gSomeOamIndex_03000040].x = x - 8;
@@ -873,7 +873,7 @@ static void sub_080129C0(void)
     }
     else
     {
-        DmaCopy32(3, &gUnknown_08602F8C, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
+        DmaCopy32(3, &gfxFileFrameNewGameTopOAM, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03000042;
         gOamBuffer[gSomeOamIndex_03000040].objMode = 1;
         gOamBuffer[gSomeOamIndex_03000040].x = x - 8;
@@ -882,7 +882,7 @@ static void sub_080129C0(void)
         gOamBuffer[gSomeOamIndex_03000040].priority = 2;
         gSomeOamIndex_03000040++;
 
-        DmaCopy32(3, &gUnknown_086010FC, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
+        DmaCopy32(3, &gfxFileFrameNewGameBottomOAM, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03000044;
         gOamBuffer[gSomeOamIndex_03000040].objMode = 1;
         gOamBuffer[gSomeOamIndex_03000040].x = x - 8;
@@ -895,41 +895,41 @@ static void sub_080129C0(void)
 
 static void copy_sprite_tiles_to_vram_08012D24(void)
 {
-    DmaCopy32(3, gUnknown_08615C04, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
+    DmaCopy32(3, gfxFileBackground4bpp, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
     gUnknown_0300004E = gUnknown_03001930;
     gUnknown_03001930 += 64;
     gObjVRAMCopyOffset_0300192C += 0x800;
 
-    DmaCopy32(3, gUnknown_08615C04 + gUnknown_08615BB4[1].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
+    DmaCopy32(3, gfxFileBackground4bpp + gUnknown_08615BB4[1].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
     gUnknown_03000050 = gUnknown_03001930;
     gUnknown_03001930 += 64;
     gObjVRAMCopyOffset_0300192C += 0x800;
 
-    DmaCopy32(3, gUnknown_08614764, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
+    DmaCopy32(3, gfxExpert4bpp, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
     gUnknown_03000052 = gUnknown_03001930;
     gUnknown_03001930 += 32;
     gObjVRAMCopyOffset_0300192C += 0x400;
 
     if (has_completed_first_level(gFileSelectMenuSel) || gFileSelectMenuSel == 3)
     {
-        DmaCopy32(3, gUnknown_0860C344 + gUnknown_0860C0B4[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
+        DmaCopy32(3, gfxFileFrameNormalTop4bpp + gUnknown_0860C0B4[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
         gUnknown_03000042 = gUnknown_03001930;
         gUnknown_03001930 += 64;
         gObjVRAMCopyOffset_0300192C += 0x800;
 
-        DmaCopy32(3, gUnknown_0860A4B4 + gUnknown_0860A224[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
+        DmaCopy32(3, gfxFileFrameNormalBottom4bpp + gUnknown_0860A224[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
         gUnknown_03000044 = gUnknown_03001930;
         gUnknown_03001930 += 32;
         gObjVRAMCopyOffset_0300192C += 0x400;
     }
     else
     {
-        DmaCopy32(3, gUnknown_08602F94 + gUnknown_08602D04[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
+        DmaCopy32(3, gfxFileFrameNewGameTop4bpp + gUnknown_08602D04[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
         gUnknown_03000042 = gUnknown_03001930;
         gUnknown_03001930 += 64;
         gObjVRAMCopyOffset_0300192C += 0x800;
 
-        DmaCopy32(3, gUnknown_08601104 + gUnknown_08600E74[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
+        DmaCopy32(3, gfxFileFrameNewGameBottom4bpp + gUnknown_08600E74[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
         gUnknown_03000044 = gUnknown_03001930;
         gUnknown_03001930 += 32;
         gObjVRAMCopyOffset_0300192C += 0x400;
@@ -1132,7 +1132,7 @@ static void add_sprite_080138D0(struct SpriteTemplate *arg0, u8 arg1, s8 arg2, s
     u16 lives = saveFile->lives; \
     print_digits_08013260(x + 24, y + 63, 2, lives, d); \
     add_sprite_080138D0(&gUnknown_08078760, e, d, x, y + 12); \
-    add_sprite_080138D0(&gUnknown_08078778, 0, d, x, y + 44); \
+    add_sprite_080138D0(&sFileInfoBoxSpriteTemplate, 0, d, x, y + 44); \
 }
 
 static void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
@@ -1141,18 +1141,18 @@ static void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
 
     if (fileNum == 3)
     {
-        struct SpriteTemplate *r0 = gUnknown_08078700;
+        struct SpriteTemplate *r0 = sFileIconSpriteTemplates;
         add_sprite_080138D0(&r0[3], 0, arg2, x + 6, y + 6);
         print_digits_08013260(x + 14, y + 46, 2, *gUnknown_0807CA94, 0);
-        add_sprite_080138D0(&gUnknown_08078778, 2, arg2, x, y + 44);
+        add_sprite_080138D0(&sFileInfoBoxSpriteTemplate, 2, arg2, x, y + 44);
     }
     else
     {
-        add_sprite_080138D0(&gUnknown_08078700[fileNum], fileNum, arg2, x + 13, y + 4);
+        add_sprite_080138D0(&sFileIconSpriteTemplates[fileNum], fileNum, arg2, x + 13, y + 4);
         if (!has_completed_first_level(fileNum))
         {
             add_sprite_080138D0(&gUnknown_08078760, 2, arg2, x, y + 12);
-            add_sprite_080138D0(&gUnknown_08078778, 1, spC, x, y + 44);
+            add_sprite_080138D0(&sFileInfoBoxSpriteTemplate, 1, spC, x, y + 44);
         }
         else if (inlinefunc6(fileNum))
         {
@@ -1166,7 +1166,7 @@ static void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
             u8 world, level, levelType;
 
             inlinefunc5(fileNum, &world, &level, &levelType);
-            add_sprite_080138D0(&gUnknown_08078790, levelType, spC, x + 6, y + 24);
+            add_sprite_080138D0(&sPlusMainSpriteTemplate, levelType, spC, x + 6, y + 24);
             print_digits_080133D4(x + gUnknown_08078640[level].x, y + gUnknown_08078640[level].y, 1, world + 1, spC);
             add_sprite_080138D0(&gUnknown_080787F0, 10, spC, x + gUnknown_08078680[level].x, y + gUnknown_08078680[level].y);
             if (level <= 5)
@@ -1193,9 +1193,9 @@ static void sub_08013EE0(u8 arg0)
         if (inlinefunc(i - arg0))
         {
             if (i == gFileSelectMenuSel)
-                add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
+                add_sprite_0801369C(&sExpertSpriteTemplate, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
             else
-                add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
+                add_sprite_0801369C(&sExpertSpriteTemplate, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078610[i - arg0].x, gUnknown_08078610[i - arg0].y);
         }
     }
 }
@@ -1211,9 +1211,9 @@ static void sub_08013FFC(u8 arg0)
         if (inlinefunc(i - arg0))
         {
             if (i == gFileSelectMenuSel)
-                add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
+                add_sprite_0801369C(&sExpertSpriteTemplate, gUnknown_03000052, 0, sp8[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
             else
-                add_sprite_0801369C(&gUnknown_080787D8, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
+                add_sprite_0801369C(&sExpertSpriteTemplate, gUnknown_03000052, 0, sp10[i - arg0], gUnknown_08078628[i - arg0].x, gUnknown_08078628[i - arg0].y);
         }
     }
 }
@@ -1234,24 +1234,24 @@ static void sub_08014118(void)
             if (i == gFileSelectMenuSel)
             {
                 sub_08013A48(i, 1, sp18[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
+                add_sprite_0801369C(&sFileBackgroundSpriteTemplate, gUnknown_0300004E, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+                add_sprite_0801369C(&sFileBackgroundSpriteTemplate, gUnknown_03000050, 1, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
             }
             else
             {
                 sub_08013A48(i, 0, sp20[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
-                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
+                add_sprite_0801369C(&sFileBackgroundSpriteTemplate, gUnknown_0300004E, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+                add_sprite_0801369C(&sFileBackgroundSpriteTemplate, gUnknown_03000050, 1, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y + 64);
             }
         }
         if (i == gFileSelectMenuSel)
-            add_sprite_080138D0(&gUnknown_080787C0, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+            add_sprite_080138D0(&sOptionMenuEraseDataButtonsSpriteTemplate, 0, sp8[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
         else
-            add_sprite_080138D0(&gUnknown_080787C0, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
+            add_sprite_080138D0(&sOptionMenuEraseDataButtonsSpriteTemplate, 0, sp10[i], gUnknown_080785E0[i].x, gUnknown_080785E0[i].y);
         if (i + 1 == gFileSelectMenuSel)
-            add_sprite_080138D0(&gUnknown_080787C0, 1, sp8[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
+            add_sprite_080138D0(&sOptionMenuEraseDataButtonsSpriteTemplate, 1, sp8[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
         else
-            add_sprite_080138D0(&gUnknown_080787C0, 1, sp10[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
+            add_sprite_080138D0(&sOptionMenuEraseDataButtonsSpriteTemplate, 1, sp10[i], gUnknown_080785E0[i + 1].x, gUnknown_080785E0[i + 1].y);
         sub_08013FFC(i + 2);
     }
     else
@@ -1264,25 +1264,25 @@ static void sub_08014118(void)
             if (i == gFileSelectMenuSel)
             {
                 sub_08013A48(i, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
+                add_sprite_0801369C(&sFileBackgroundSpriteTemplate, gUnknown_0300004E, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+                add_sprite_0801369C(&sFileBackgroundSpriteTemplate, gUnknown_03000050, 1, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
             }
             else
             {
                 sub_08013A48(i, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_0300004E, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
-                add_sprite_0801369C(&gUnknown_080787A8, gUnknown_03000050, 1, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
+                add_sprite_0801369C(&sFileBackgroundSpriteTemplate, gUnknown_0300004E, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+                add_sprite_0801369C(&sFileBackgroundSpriteTemplate, gUnknown_03000050, 1, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y + 64);
             }
         }
         i++;
         if (i == gFileSelectMenuSel)
-            add_sprite_080138D0(&gUnknown_080787C0, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+            add_sprite_080138D0(&sOptionMenuEraseDataButtonsSpriteTemplate, 0, sp8[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
         else
-            add_sprite_080138D0(&gUnknown_080787C0, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
+            add_sprite_080138D0(&sOptionMenuEraseDataButtonsSpriteTemplate, 0, sp10[i], gUnknown_080785B0[i].x, gUnknown_080785B0[i].y);
         if (i + 1 == gFileSelectMenuSel)
-            add_sprite_080138D0(&gUnknown_080787C0, 1, sp8[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
+            add_sprite_080138D0(&sOptionMenuEraseDataButtonsSpriteTemplate, 1, sp8[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
         else
-            add_sprite_080138D0(&gUnknown_080787C0, 1, sp10[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
+            add_sprite_080138D0(&sOptionMenuEraseDataButtonsSpriteTemplate, 1, sp10[i], gUnknown_080785B0[i + 1].x, gUnknown_080785B0[i + 1].y);
         sub_08013EE0(i + 2);
     }
 }

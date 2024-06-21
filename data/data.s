@@ -3485,13 +3485,13 @@ gUnknown_085F6390:
 gUnknown_085FB360:
 	.INCBIN "baserom.gba", 0x5FB360, 0x5FB3CC-0x5FB360
 
-	.GLOBAL gUnknown_085FB3CC
-gUnknown_085FB3CC:
+	.GLOBAL gfxFileLettersOAM
+gfxFileLettersOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_085FB3D4
-gUnknown_085FB3D4:
-	.INCBIN "assets/sprites/gUnknown_085FB3D4.4bpp"
+	.GLOBAL gfxFileLetters4bpp
+gfxFileLetters4bpp:
+	.INCBIN "assets/sprites/FileLetters.4bpp"
 
 	.GLOBAL gUnknown_085FB554
 gUnknown_085FB554:
@@ -3521,25 +3521,25 @@ gUnknown_085FF274:
 gUnknown_08600E74:
 	.INCBIN "baserom.gba", 0x600E74, 0x6010FC-0x600E74
 
-	.GLOBAL gUnknown_086010FC
-gUnknown_086010FC:
+	.GLOBAL gfxFileFrameNewGameBottomOAM
+gfxFileFrameNewGameBottomOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08601104
-gUnknown_08601104:
-	.INCBIN "assets/sprites/gUnknown_08601104.4bpp"
+	.GLOBAL gfxFileFrameNewGameBottom4bpp
+gfxFileFrameNewGameBottom4bpp:
+	.INCBIN "assets/sprites/FileFrameNewGameBottom.4bpp"
 
 	.GLOBAL gUnknown_08602D04
 gUnknown_08602D04:
 	.INCBIN "baserom.gba", 0x602D04, 0x602F8C-0x602D04
 
-	.GLOBAL gUnknown_08602F8C
-gUnknown_08602F8C:
+	.GLOBAL gfxFileFrameNewGameTopOAM
+gfxFileFrameNewGameTopOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08602F94
-gUnknown_08602F94:
-	.INCBIN "assets/sprites/gUnknown_08602F94.4bpp"
+	.GLOBAL gfxFileFrameNewGameTop4bpp
+gfxFileFrameNewGameTop4bpp:
+	.INCBIN "assets/sprites/FileFrameNewGameTop.4bpp"
 
 	.GLOBAL gUnknown_08606794
 gUnknown_08606794:
@@ -3557,25 +3557,25 @@ gUnknown_08606A24:
 gUnknown_0860A224:
 	.INCBIN "baserom.gba", 0x60A224, 0x60A4AC-0x60A224
 
-	.GLOBAL gUnknown_0860A4AC
-gUnknown_0860A4AC:
+	.GLOBAL gfxFileFrameNormalBottomOAM
+gfxFileFrameNormalBottomOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_0860A4B4
-gUnknown_0860A4B4:
-	.INCBIN "assets/sprites/gUnknown_0860A4B4.4bpp"
+	.GLOBAL gfxFileFrameNormalBottom4bpp
+gfxFileFrameNormalBottom4bpp:
+	.INCBIN "assets/sprites/FileFrameNormalBottom.4bpp"
 
 	.GLOBAL gUnknown_0860C0B4
 gUnknown_0860C0B4:
 	.INCBIN "baserom.gba", 0x60C0B4, 0x60C33C-0x60C0B4
 
-	.GLOBAL gUnknown_0860C33C
-gUnknown_0860C33C:
+	.GLOBAL gfxFileFrameNormalTopOAM
+gfxFileFrameNormalTopOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_0860C344
-gUnknown_0860C344:
-	.INCBIN "assets/sprites/gUnknown_0860C344.4bpp"
+	.GLOBAL gfxFileFrameNormalTop4bpp
+gfxFileFrameNormalTop4bpp:
+	.INCBIN "assets/sprites/FileFrameNormalTop.4bpp"
 
 	.GLOBAL gUnknown_0860FB44
 gUnknown_0860FB44:
@@ -3605,20 +3605,20 @@ gUnknown_08611A48:
 gUnknown_08612648:
 	.INCBIN "baserom.gba", 0x612648, 0x6126B4-0x612648
 
-	.GLOBAL gUnknown_086126B4
-gUnknown_086126B4:
+	.GLOBAL gfxFileInfoBoxOAM
+gfxFileInfoBoxOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=14, affineParam=0
 
-	.GLOBAL gUnknown_086126BC
-gUnknown_086126BC:
-	.INCBIN "assets/sprites/gUnknown_086126BC.4bpp"
+	.GLOBAL gfxFileInfoBox4bpp
+gfxFileInfoBox4bpp:
+	.INCBIN "assets/sprites/FileInfoBox.4bpp"
 
 	.GLOBAL gUnknown_08613EBC
 gUnknown_08613EBC:
 	.INCBIN "baserom.gba", 0x613EBC, 0x613F04-0x613EBC
 
-	.GLOBAL gUnknown_08613F04
-gUnknown_08613F04:
+	.GLOBAL gfxEReaderLogoOAM
+gfxEReaderLogoOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=2, affineParam=0
 
 	.GLOBAL gfxEReaderLogo4bpp
@@ -3630,37 +3630,37 @@ gfxEReaderLogo4bpp:
 gUnknown_08614738:
 	.INCBIN "baserom.gba", 0x614738, 0x61475C-0x614738
 
-	.GLOBAL gUnknown_0861475C
-gUnknown_0861475C:
+	.GLOBAL gfxExpertOAM
+gfxExpertOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08614764
-gUnknown_08614764:
-	.INCBIN "assets/sprites/gUnknown_08614764.4bpp"
+	.GLOBAL gfxExpert4bpp
+gfxExpert4bpp:
+	.INCBIN "assets/sprites/Expert.4bpp"
 
 	.GLOBAL gUnknown_08614B64
 gUnknown_08614B64:
 	.INCBIN "baserom.gba", 0x614B64, 0x614BAC-0x614B64
 
-	.GLOBAL gUnknown_08614BAC
-gUnknown_08614BAC:
+	.GLOBAL gfxOptionMenuEraseDataButtonsOAM
+gfxOptionMenuEraseDataButtonsOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=10, affineParam=0
 
-	.GLOBAL gUnknown_08614BB4
-gUnknown_08614BB4:
-	.INCBIN "assets/sprites/gUnknown_08614BB4.4bpp"
+	.GLOBAL gfxOptionMenuEraseDataButtons4bpp
+gfxOptionMenuEraseDataButtons4bpp:
+	.INCBIN "assets/sprites/OptionMenuEraseDataButtons.4bpp"
 
 	.GLOBAL gUnknown_08615BB4
 gUnknown_08615BB4:
 	.INCBIN "baserom.gba", 0x615BB4, 0x615BFC-0x615BB4
 
-	.GLOBAL gUnknown_08615BFC
-gUnknown_08615BFC:
+	.GLOBAL gfxFileBackgroundOAM
+gfxFileBackgroundOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08615C04
-gUnknown_08615C04:
-	.INCBIN "assets/sprites/gUnknown_08615C04.4bpp"
+	.GLOBAL gfxFileBackground4bpp
+gfxFileBackground4bpp:
+	.INCBIN "assets/sprites/FileBackground.4bpp"
 	.INCBIN "baserom.gba", 0x616C04, 0x617030-0x616C04
 
 	.GLOBAL gUnknown_08617030
@@ -3688,13 +3688,13 @@ gUnknown_086172F0:
 gUnknown_08617570:
 	.INCBIN "baserom.gba", 0x617570, 0x6175B8-0x617570
 
-	.GLOBAL gUnknown_086175B8
-gUnknown_086175B8:
+	.GLOBAL gfxPlusMainOAM
+gfxPlusMainOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_086175C0
-gUnknown_086175C0:
-	.INCBIN "assets/sprites/gUnknown_086175C0.4bpp"
+	.GLOBAL gfxPlusMain4bpp
+gfxPlusMain4bpp:
+	.INCBIN "assets/sprites/PlusMain.4bpp"
 	.INCBIN "baserom.gba", 0x6176C0, 0x617828-0x6176C0
 
 	.GLOBAL gUnknown_08617828
@@ -3717,17 +3717,17 @@ gUnknown_08617AFC:
 gUnknown_08617B04:
 	.INCBIN "assets/sprites/gUnknown_08617B04.4bpp"
 
-	.GLOBAL gUnknown_08617C64
-gUnknown_08617C64:
+	.GLOBAL sMMDKSpriteTemplate
+sMMDKSpriteTemplate:
 	.INCBIN "baserom.gba", 0x617C64, 0x617CAC-0x617C64
 
-	.GLOBAL gUnknown_08617CAC
-gUnknown_08617CAC:
+	.GLOBAL gfxMMDKOAM
+gfxMMDKOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08617CB4
-gUnknown_08617CB4:
-	.INCBIN "assets/sprites/gUnknown_08617CB4.4bpp"
+	.GLOBAL gfxMMDK4bpp
+gfxMMDK4bpp:
+	.INCBIN "assets/sprites/MMDK.4bpp"
 	.INCBIN "baserom.gba", 0x617DB4, 0x617F1C-0x617DB4
 
 	.GLOBAL gUnknown_08617F1C
