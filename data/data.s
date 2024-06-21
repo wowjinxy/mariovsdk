@@ -9188,11 +9188,15 @@ gMusicTable2:
 	.byte 0x00
 	.byte 0x00
 	
-	.GLOBAL gUnknown_08D7B458
+	.GLOBAL gUnknown_08D7B458 @ Sound Sample Data
 gUnknown_08D7B458:
-	.INCBIN "baserom.gba", 0xd7b458, 0xEBFE90-0xd7b458
+	.INCBIN "baserom.gba", 0xd7b458, 0xebbf60-0xd7b458
 
-	.GLOBAL gUnknown_08EBFE90
+	.GLOBAL gUnknown_08EBBF60 @ Instrument Data 1
+gUnknown_08EBBF60:
+	.INCBIN "baserom.gba", 0xebbf60, 0xEBFE90-0xebbf60
+
+	.GLOBAL gUnknown_08EBFE90 @ Instrument Data 2
 gUnknown_08EBFE90:
 	.INCBIN "baserom.gba", 0xEBFE90, 0xECCA3C-0xEBFE90
 	
