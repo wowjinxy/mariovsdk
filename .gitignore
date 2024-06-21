@@ -11,6 +11,7 @@ ldscript.txt
 tools/agbcc
 *.4bpp
 *.8bpp
+*.gbapal
 
 # Emulator save files
 *.sav

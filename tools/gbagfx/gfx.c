@@ -550,6 +550,8 @@ void ReadGbaPalette(char *path, struct Palette *palette)
 		FATAL_ERROR("The file size (%d) is not a multiple of 2.\n", fileSize);
 
 	palette->numColors = fileSize / 2;
+	if (palette->numColors > 256)
+		FATAL_ERROR("Only a maximum of 256 colors is supported.\n");
 
 	for (int i = 0; i < palette->numColors; i++) {
 		uint16_t paletteEntry = (data[i * 2 + 1] << 8) | data[i * 2];

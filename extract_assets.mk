@@ -9,11 +9,17 @@ GBAGFX := tools/gbagfx/gbagfx
 # canned recipe to extract bytes from binary file
 # parameters: offset, size
 define romextract
- @mkdir -p $(@D)
- dd if=$< of=$@ bs=1 skip=$$(($(1))) count=$$(($(2)))
+	@mkdir -p $(@D)
+	dd if=$< of=$@ bs=1 skip=$$(($(1))) count=$$(($(2))) status=none
 endef
 
 FILES := \
+	$(foreach n,$(shell seq 0 75), \
+		assets/palettes/$(n)_bg.pal \
+		assets/palettes/$(n)_bg_gbplayer.pal \
+		assets/palettes/$(n)_obj.pal \
+		assets/palettes/$(n)_obj_gbplayer.pal \
+	) \
 	assets/sprites/gUnknown_085FB3D4.png \
 	assets/sprites/gUnknown_085FB7E4.png \
 	assets/sprites/gUnknown_085FF274.png \
@@ -39,6 +45,12 @@ all: $(FILES)
 
 clean:
 	$(RM) -r $(FILES) $(TMPDIR)
+
+# Predefined palettes
+$(TMPDIR)/palettes/%_bg.gbapal:           baserom.gba ; $(call romextract,0x81D98+$**0x800+0x000+0x000,0x200)
+$(TMPDIR)/palettes/%_obj.gbapal:          baserom.gba ; $(call romextract,0x81D98+$**0x800+0x000+0x200,0x200)
+$(TMPDIR)/palettes/%_bg_gbplayer.gbapal:  baserom.gba ; $(call romextract,0x81D98+$**0x800+0x400+0x000,0x200)
+$(TMPDIR)/palettes/%_obj_gbplayer.gbapal: baserom.gba ; $(call romextract,0x81D98+$**0x800+0x400+0x200,0x200)
 
 # TODO: find the correct palettes
 
@@ -113,6 +125,10 @@ assets/%.png: $(TMPDIR)/%.4bpp $(GBAGFX)
 	@mkdir -p $(@D)
 	$(GBAGFX) $< $@ $(GBAGFX_FLAGS)
 assets/%.png: $(TMPDIR)/%.8bpp $(GBAGFX)
+	@mkdir -p $(@D)
+	$(GBAGFX) $< $@ $(GBAGFX_FLAGS)
+
+assets/%.pal: $(TMPDIR)/%.gbapal $(GBAGFX)
 	@mkdir -p $(@D)
 	$(GBAGFX) $< $@ $(GBAGFX_FLAGS)
 

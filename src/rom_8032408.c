@@ -147,11 +147,11 @@ void game_init_end(void)
 void load_predefined_palette(u32 paletteNum, u32 flags)
 {
     // I have to do this stupid cast for it to match.
-    bool32 r4 = ((*(u8 *)gScreenModeRelatedPtr & 24) != 0);
+    bool32 isGBPlayer = ((*(u8 *)gScreenModeRelatedPtr & 24) != 0);
 
     if (flags & LOAD_BG_PALETTE)
     {
-        const void *src = gPredefinedPalettes + paletteNum * 0x800 + r4 * 0x400;
+        const void *src = gPredefinedPalettes + paletteNum * 0x800 + isGBPlayer * 0x400;
 
         DmaCopy16(3, src, (void *)PLTT, 0x200);
         sub_0802C104(0, 0, src);
@@ -159,7 +159,7 @@ void load_predefined_palette(u32 paletteNum, u32 flags)
 
     if (flags & LOAD_OBJ_PALETTE)
     {
-        const void *src = gPredefinedPalettes + paletteNum * 0x800 + r4 * 0x400 + 0x200;
+        const void *src = gPredefinedPalettes + paletteNum * 0x800 + isGBPlayer * 0x400 + 0x200;
 
         // Why is this one DmaCopy32 while the other one is DmaCopy16?
         DmaCopy32(3, src, (void *)(PLTT + 0x200), 0x200);
