@@ -70973,7 +70973,7 @@ sub_0806B600: @ 0x0806B600
 	ldrh r1, [r4]
 	str r1, [r0]
 	ldr r0, _0806B698  @ =gUnknown_081C1A20
-	ldr r5, _0806B69C  @ =gUnknown_0300192C
+	ldr r5, _0806B69C  @ =gObjVRAMCopyOffset_0300192C
 	mov r3, #128
 	lsl r3, r3, #2
 	add r1, r4, #0
@@ -71035,7 +71035,7 @@ _0806B694:
 _0806B698:
 	.4byte gUnknown_081C1A20
 _0806B69C:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _0806B6A0:
 	.4byte gUnknown_081C209C
 _0806B6A4:

@@ -11270,7 +11270,7 @@ bonus_swapboxes_init_callback: @ 0x08027068
 	strh r1, [r0]
 	ldr r0, _0802712C  @ =gUnknown_03001930
 	strh r1, [r0]
-	ldr r0, _08027130  @ =gUnknown_0300192C
+	ldr r0, _08027130  @ =gObjVRAMCopyOffset_0300192C
 	strh r1, [r0]
 	ldr r0, _08027134  @ =gUnknown_030009DC
 	ldr r6, [r0]
@@ -11320,7 +11320,7 @@ _08027128:
 _0802712C:
 	.4byte gUnknown_03001930
 _08027130:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08027134:
 	.4byte gUnknown_030009DC
 _08027138:
@@ -12142,7 +12142,7 @@ _080276E2:
 	ldrh r0, [r4]
 	str r0, [r1, #28]
 	ldr r0, _080278D4  @ =gUnknown_082EBE60
-	ldr r6, _080278D8  @ =gUnknown_0300192C
+	ldr r6, _080278D8  @ =gObjVRAMCopyOffset_0300192C
 	mov r3, #128
 	lsl r3, r3, #2
 	add r1, r4, #0
@@ -12381,7 +12381,7 @@ _080278D0:
 _080278D4:
 	.4byte gUnknown_082EBE60
 _080278D8:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _080278DC:
 	.4byte gUnknown_082ECB40
 _080278E0:
@@ -12492,7 +12492,7 @@ bonus_swapboxes_loop: @ 0x08027990
 	add r2, r2, #10
 	str r2, [sp, #24]
 	strh r0, [r2]
-	ldr r0, _08027B60  @ =gUnknown_0300192C
+	ldr r0, _08027B60  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r0]
 	add r2, r2, #2
 	str r2, [sp, #28]
@@ -12711,7 +12711,7 @@ _08027AB8:
 _08027B5C:
 	.4byte gUnknown_03001930
 _08027B60:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08027B64:
 	.4byte REG_DMA3SAD
 _08027B68:

@@ -14,7 +14,7 @@ void level_play_loop(void)
     
   sp4 = 0;
   sp6 = gUnknown_03001930;
-  sp8 = gUnknown_0300192C;
+  sp8 = gObjVRAMCopyOffset_0300192C;
   REG_DISPCNT &= 0xFF7F;
     DmaFill32(3, 0xA0, gOamBuffer, 0x400);
   sub_0803D248(gMainState - 10 < 2, &sp4, &sp6, &sp8);

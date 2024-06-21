@@ -137,7 +137,7 @@ sub_080386DC: @ 0x080386DC
 	ldr r0, _08038744  @ =gUnknown_03001930
 	mov r4, #0
 	strh r4, [r0]
-	ldr r0, _08038748  @ =gUnknown_0300192C
+	ldr r0, _08038748  @ =gObjVRAMCopyOffset_0300192C
 	strh r4, [r0]
 	ldr r0, _0803874C  @ =0x03001C7C
 	strb r4, [r0]
@@ -181,7 +181,7 @@ sub_080386DC: @ 0x080386DC
 _08038744:
 	.4byte gUnknown_03001930
 _08038748:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _0803874C:
 	.4byte 0x03001C7C
 _08038750:
@@ -316,7 +316,7 @@ _0803883A:
 	ldr r0, _080388B0  @ =gUnknown_0300199C
 	strb r1, [r0]
 	ldr r4, _080388B4  @ =gUnknown_03001930
-	ldr r5, _080388B8  @ =gUnknown_0300192C
+	ldr r5, _080388B8  @ =gObjVRAMCopyOffset_0300192C
 	add r0, r4, #0
 	add r1, r5, #0
 	bl sub_08042FB0
@@ -368,7 +368,7 @@ _080388B0:
 _080388B4:
 	.4byte gUnknown_03001930
 _080388B8:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _080388BC:
 	.4byte gCurrentEnemyScore
 _080388C0:
@@ -383,7 +383,7 @@ _080388CC:
 	bl sub_080091A8
 _080388D4:
 	ldr r0, _080389D0  @ =gUnknown_03001930
-	ldr r1, _080389D4  @ =gUnknown_0300192C
+	ldr r1, _080389D4  @ =gObjVRAMCopyOffset_0300192C
 	bl sub_08042508
 	ldr r1, _080389D8  @ =gSpriteHorizontalOffset
 	ldr r0, _080389DC  @ =gCameraHorizontalOffset
@@ -513,7 +513,7 @@ _08038958:
 _080389D0:
 	.4byte gUnknown_03001930
 _080389D4:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _080389D8:
 	.4byte gSpriteHorizontalOffset
 _080389DC:
@@ -890,7 +890,7 @@ _08038C70:
 	beq _08038C98
 _08038C7C:
 	ldr r0, _08038C90  @ =gUnknown_03001930
-	ldr r1, _08038C94  @ =gUnknown_0300192C
+	ldr r1, _08038C94  @ =gObjVRAMCopyOffset_0300192C
 	bl sub_08042580
 	bl sub_0804A794
 	b _08038D18
@@ -901,7 +901,7 @@ _08038C8C:
 _08038C90:
 	.4byte gUnknown_03001930
 _08038C94:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08038C98:
 	ldr r0, _08038CB4  @ =gLevelType
 	mov r2, #0
@@ -913,7 +913,7 @@ _08038C98:
 	cmp r1, #0
 	bne _08038CC0
 	ldr r0, _08038CB8  @ =gUnknown_03001930
-	ldr r1, _08038CBC  @ =gUnknown_0300192C
+	ldr r1, _08038CBC  @ =gObjVRAMCopyOffset_0300192C
 	bl sub_08042580
 	b _08038D18
 _08038CB4:
@@ -921,7 +921,7 @@ _08038CB4:
 _08038CB8:
 	.4byte gUnknown_03001930
 _08038CBC:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08038CC0:
 	mov r1, #18
 	ldrsh r0, [r3, r1]

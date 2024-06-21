@@ -856,7 +856,7 @@ extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];
 extern u8 *gUnknown_03000E88;
 extern u8 *gPaletteData_03000E8C;
 extern void *gUnknown_03000E94;
-extern struct OamData gOamBuffer[];
+extern struct OamData gOamBuffer[128];
 extern s16 gCameraHorizontalOffset;
 extern s16 gBGHorizontalOffset;
 extern void (*gUnknown_030012A8)(void);
@@ -888,7 +888,7 @@ extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
 
 extern struct UnknownStruct9 gUnknown_03001770;
-extern u16 gUnknown_0300192C;  // unknown type
+extern u16 gObjVRAMCopyOffset_0300192C;  // unknown type
 extern u16 gUnknown_03001930; // unknown type
 extern u32 gUnknown_03001938;
 extern u16 gMarioIdleTimer;

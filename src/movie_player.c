@@ -180,7 +180,7 @@ void movie_player_init_callback(void) {
     sub_0805727C();
     sub_08057420((u32)gMoviePlayerParams.movieData);
     gUnknown_030009EC = 0;
-    gUnknown_0300192C = 0;
+    gObjVRAMCopyOffset_0300192C = 0;
     gUnknown_03001930 = 0;
     gGeneralTimer = 0;
     gUnknown_03000DCC = 0;
@@ -195,7 +195,7 @@ void movie_player_loop(void) {
 
     temp = 0;
     temp_1 = gUnknown_03001930;
-    temp_2 = gUnknown_0300192C;
+    temp_2 = gObjVRAMCopyOffset_0300192C;
     temp_3 = 0;
 
     DmaFill32(3, 0xa0, gOamBuffer, 0x400);

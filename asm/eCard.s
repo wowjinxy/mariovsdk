@@ -1017,7 +1017,7 @@ e_world_return_init_callback: @ 0x0802DE08
 	str r0, [r2]
 _0802DE8C:
 	ldr r1, _0802DF3C  @ =gUnknown_03001930
-	ldr r0, _0802DF40  @ =gUnknown_0300192C
+	ldr r0, _0802DF40  @ =gObjVRAMCopyOffset_0300192C
 	strh r4, [r0]
 	strh r4, [r1]
 	mov r5, #0
@@ -1110,7 +1110,7 @@ _0802DF38:
 _0802DF3C:
 	.4byte gUnknown_03001930
 _0802DF40:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _0802DF44:
 	.4byte gUnknown_0807CA08
 _0802DF48:

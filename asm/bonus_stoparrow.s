@@ -9776,7 +9776,7 @@ bonus_stoparrow_init_callback: @ 0x080215B4
 	strh r1, [r0]
 	ldr r0, _0802165C  @ =gUnknown_03001930
 	strh r1, [r0]
-	ldr r0, _08021660  @ =gUnknown_0300192C
+	ldr r0, _08021660  @ =gObjVRAMCopyOffset_0300192C
 	strh r1, [r0]
 	ldr r0, _08021664  @ =gUnknown_030009DC
 	ldr r5, [r0]
@@ -9824,7 +9824,7 @@ _08021658:
 _0802165C:
 	.4byte gUnknown_03001930
 _08021660:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08021664:
 	.4byte gUnknown_030009DC
 _08021668:
@@ -10026,7 +10026,7 @@ _0802177E:
 	ldrh r0, [r4]
 	str r0, [r1, #8]
 	ldr r0, _08021908  @ =gUnknown_082EBE60
-	ldr r5, _0802190C  @ =gUnknown_0300192C
+	ldr r5, _0802190C  @ =gObjVRAMCopyOffset_0300192C
 	mov r3, #128
 	lsl r3, r3, #2
 	add r1, r4, #0
@@ -10166,7 +10166,7 @@ _08021904:
 _08021908:
 	.4byte gUnknown_082EBE60
 _0802190C:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08021910:
 	.4byte gUnknown_082ECB40
 _08021914:
@@ -10260,7 +10260,7 @@ bonus_stoparrow_loop: @ 0x080219A4
 	add r2, r2, #10
 	str r2, [sp, #24]
 	strh r0, [r2]
-	ldr r0, _08021B68  @ =gUnknown_0300192C
+	ldr r0, _08021B68  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r0]
 	add r2, r2, #2
 	str r2, [sp, #28]
@@ -10472,7 +10472,7 @@ _08021AC6:
 _08021B64:
 	.4byte gUnknown_03001930
 _08021B68:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08021B6C:
 	.4byte REG_DMA3SAD
 _08021B70:

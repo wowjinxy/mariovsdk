@@ -527,7 +527,7 @@ sub_08034CCC: @ 0x08034CCC
 	and r0, r0, r6
 	cmp r0, #0
 	beq _08034CFC
-	ldr r0, _08034D30  @ =gUnknown_0300192C
+	ldr r0, _08034D30  @ =gObjVRAMCopyOffset_0300192C
 	str r0, [sp, #52]
 	mov r1, #1
 	str r1, [sp, #48]
@@ -559,7 +559,7 @@ _08034CFC:
 _08034D2C:
 	.4byte 0x03001798
 _08034D30:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08034D34:
 	.4byte gUnknown_03001770
 _08034D38:

@@ -698,7 +698,7 @@ sub_08028068: @ 0x08028068
 	ldr r5, _080280B0  @ =gUnknown_03001930
 	ldrh r3, [r5]
 	strh r3, [r0, #6]
-	ldr r6, _080280B4  @ =gUnknown_0300192C
+	ldr r6, _080280B4  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r4, [r6]
 	strh r4, [r0, #4]
 	ldrb r0, [r0, #13]
@@ -723,7 +723,7 @@ _080280AC:
 _080280B0:
 	.4byte gUnknown_03001930
 _080280B4:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _080280B8:
 	ldrh r0, [r2, #4]
 	add r0, r3, r0
@@ -2033,7 +2033,7 @@ _08028A1A:
 	add r1, r3, r5
 	ldr r0, [r2, #68]
 	str r0, [r1]
-	ldr r0, _08028BC0  @ =gUnknown_0300192C
+	ldr r0, _08028BC0  @ =gObjVRAMCopyOffset_0300192C
 	mov r1, #0
 	strh r1, [r0]
 	ldr r0, _08028BC4  @ =gUnknown_03001930
@@ -2233,7 +2233,7 @@ _08028BB8:
 _08028BBC:
 	.4byte gOptionsMenuData
 _08028BC0:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08028BC4:
 	.4byte gUnknown_03001930
 _08028BC8:

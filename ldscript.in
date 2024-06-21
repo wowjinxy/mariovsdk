@@ -326,7 +326,7 @@ SECTIONS
 		. = 0x1748;		gUnknown_03001748 = .;
 		. = 0x1750;		gArena = .;
 		. = 0x1770;		gUnknown_03001770 = .;
-		. = 0x192C;		gUnknown_0300192C = .;
+		. = 0x192C;		gObjVRAMCopyOffset_0300192C = .;
 		. = 0x1930;		gUnknown_03001930 = .;
 		. = 0x1938;		gUnknown_03001938 = .;
 		. = 0x1940;		gUnknown_03001940 = .;

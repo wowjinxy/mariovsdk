@@ -126,7 +126,7 @@ static inline u8 inlinefunc(u8 fileNum)
         return FALSE;
 }
 
-static inline u8 inlinefunc2(u8 fileNum)
+static inline u8 has_completed_first_level(u8 fileNum)
 {
     struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
     if (fileNum < 3 && (saveFile->mainLevels[0].flags & LEVEL_FLAG_COMPLETE))
@@ -148,17 +148,35 @@ static inline void inlinefunc4(u8 fileNum)
     gLivesCount = lives;
 }
 
-static inline void inlinefunc5(u8 fileNum)
+static inline void inlinefunc5(u8 fileNum, u8 *pWorld, u8 *pLevel, u8 *pLevelType)
 {
-    u8 *r6 = &gCurrentWorld;
-    u8 *r3 = &gNextLevelID;
-    u8 *r4 = &gLevelType;
-    struct SaveFile *r1 = &gSaveFilesPtr[fileNum];
-    u8 r7 = r1->unk2 & 0xF;
-    *r4 = r1->unk3;
-    *r3 = r7;
-    *r6 = (r1->unk2 >> 4) & 7;
-    gLevelType = r1->unk3;
+    struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
+    u8 level = saveFile->unk2 & 0xF;
+
+    *pLevelType = saveFile->unk3;
+    *pLevel = level;
+    *pWorld = (saveFile->unk2 >> 4) & 7;
+    *pLevelType = saveFile->unk3;
+}
+
+static inline u8 inlinefunc6(u8 fileNum)
+{
+    struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
+    if (saveFile->unk4 < 0)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+static inline void inlinefunc7(s8 *toIncrement, s8 *toDecrement, struct SpriteTemplate_child *arr, int max)
+{
+    if (--*toDecrement <= 0)
+    {
+        (*toIncrement)++;
+        if (*toIncrement >= max)
+            *toIncrement = 0;
+        *toDecrement = arr[*toIncrement].unk1;
+    }
 }
 
 void main_menu_init_callback(void)
@@ -210,16 +228,16 @@ void sub_0801168C(u8 arg0)
     {
         if (gUnknown_0300005D != 0)
         {
-            s8 sp0[32] = {254, 46, 94, 142};  //gUnknown_0807638C
+            s8 sp0[32] = { 254, 46, 94, 142 };
             gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
         }
         else
         {
-            s8 sp0[32] = {8, 65, 122};  //gUnknown_080763AC
+            s8 sp0[32] = { 8, 65, 122 };
             gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
         }
         if (inlinefunc(gFileSelectMenuSel))
-            gBGLayerOffsets.bg2_y = 0xFF00;
+            gBGLayerOffsets.bg2_y = -256;
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
         REG_BLDCNT = BLDCNT_EFF_ALPHA | BLDCNT_BG2_FIRST | BLDCNT_BG0_SECOND | BLDCNT_BG1_SECOND | BLDCNT_BG3_SECOND | BLDCNT_OBJ_SECOND | BLDCNT_BD_SECOND;
         REG_BLDALPHA = 0x0808;
@@ -250,7 +268,7 @@ void pick_file(void)
         {
             for (i = 0; i < 3; i++)
             {
-                if (inlinefunc2(i))
+                if (has_completed_first_level(i))
                 {
                     r0 = i + 1;
                     goto _080117CE;
@@ -294,7 +312,7 @@ void pick_file(void)
 
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 0x80, 0);
             *gSelectedSaveFileNumPtr = gFileSelectMenuSel;
-            inlinefunc5(*gSelectedSaveFileNumPtr);
+            inlinefunc5(*gSelectedSaveFileNumPtr, &gCurrentWorld, &gNextLevelID, &gLevelType);
             inlinefunc4(*gSelectedSaveFileNumPtr);
             if (gLevelType == 0)
                 gNextLevelID = gNextLevelID << 1;
@@ -403,7 +421,7 @@ void pick_file(void)
             gPrevFileSelectMenuSel = gFileSelectMenuSel;
             if (gUnknown_0300005D == 0)
                 gFileSelectMenuSel--;
-            gFileSelectMenuSel -= 2;
+            gFileSelectMenuSel -= FILE_SELECT_FILE_C;
         }
     }
     else
@@ -414,7 +432,7 @@ void pick_file(void)
         {
             play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
             gPrevFileSelectMenuSel = gFileSelectMenuSel;
-            gFileSelectMenuSel = 4;
+            gFileSelectMenuSel = FILE_SELECT_OPTION_MENU;
         }
     }
 }
@@ -442,7 +460,7 @@ void sub_08011CB4(void)
             {
                 play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
                 gPrevFileSelectMenuSel = gFileSelectMenuSel;
-                gFileSelectMenuSel = 0;
+                gFileSelectMenuSel = FILE_SELECT_FILE_A;
                 gUnknown_0300005B = 0;
             }
         }
@@ -450,7 +468,7 @@ void sub_08011CB4(void)
         {
             play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
             gPrevFileSelectMenuSel = gFileSelectMenuSel;
-            gFileSelectMenuSel = 0;
+            gFileSelectMenuSel = FILE_SELECT_FILE_A;
             gUnknown_0300005B = 0;
         }
     }
@@ -468,7 +486,7 @@ void sub_08011CB4(void)
             {
                 play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
                 gPrevFileSelectMenuSel = gFileSelectMenuSel;
-                gFileSelectMenuSel = 5;
+                gFileSelectMenuSel = FILE_SELECT_ERASE_DATA;
                 gUnknown_0300005B = 0;
             }
         }
@@ -476,7 +494,7 @@ void sub_08011CB4(void)
         {
             play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
             gPrevFileSelectMenuSel = gFileSelectMenuSel;
-            gFileSelectMenuSel = 5;
+            gFileSelectMenuSel = FILE_SELECT_ERASE_DATA;
             gUnknown_0300005B = 0;
         }
     }
@@ -487,14 +505,14 @@ void sub_08011CB4(void)
     {
         play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
         gLevelType = 2;
-        if (gFileSelectMenuSel == 3)
+        if (gFileSelectMenuSel == FILE_SELECT_EWORLD)
         {
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
-            change_main_state(29, 1);
+            change_main_state(MAIN_STATE_UKNOWN_29, 1);
         }
         else
         {
-            *gSelectedSaveFileNumPtr = gFileSelectMenuSel - 6;
+            *gSelectedSaveFileNumPtr = gFileSelectMenuSel - FILE_SELECT_EXPERT_FILE_A;
             gCurrentWorld = 0;
             gNextLevelID = 0;
             change_main_state(MAIN_STATE_EXPERT_LEVEL_SELECT, 1);
@@ -504,13 +522,13 @@ void sub_08011CB4(void)
 
 void sub_08011F60(void)
 {
-    gBGLayerOffsets.bg1_y = 0xFF00;
+    gBGLayerOffsets.bg1_y = -256;
     if (sub_08034004())
     {
         u32 r1;
 
         if (gFileSelectMenuSel <= 2)
-            r1 = inlinefunc2(gFileSelectMenuSel);
+            r1 = has_completed_first_level(gFileSelectMenuSel);
         else
             r1 = *gUnknown_0807CA94;
         if (!r1)
@@ -555,7 +573,7 @@ void sub_08011F60(void)
                 gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
             }
             if (inlinefunc(gFileSelectMenuSel))
-                gBGLayerOffsets.bg2_y = 0xFF00;
+                gBGLayerOffsets.bg2_y = -256;
             else
                 gBGLayerOffsets.bg2_y = 0;
         }
@@ -578,7 +596,7 @@ void sub_08011F60(void)
                 gBGLayerOffsets.bg2_x = -sp0[gFileSelectMenuSel];
             }
             if (inlinefunc(gFileSelectMenuSel))
-                gBGLayerOffsets.bg2_y = 0xFF00;
+                gBGLayerOffsets.bg2_y = -256;
             else
                 gBGLayerOffsets.bg2_y = 0;
         }
@@ -589,20 +607,20 @@ void sub_08012230(void)  // for new save file?
 {
     s16 i;
 
-    gBGLayerOffsets.bg0_y = 0xFF00;
-    gBGLayerOffsets.bg1_y = 0xFF00;
+    gBGLayerOffsets.bg0_y = -256;
+    gBGLayerOffsets.bg1_y = -256;
     if (sub_08034004())
     {
         if (gUnknown_0300005C != 0)
         {
-            u8 r1;
+            u8 fileNum;
 
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
-            r1 = gFileSelectMenuSel;
-            if (r1 <= 2)
+            fileNum = gFileSelectMenuSel;
+            if (fileNum < 3)
             {
-                CpuFill16(0, &gSaveFilesPtr[r1], sizeof(struct SaveFile));
-                init_level_highscores_08010DEC(&gSaveFilesPtr[r1]);
+                CpuFill16(0, &gSaveFilesPtr[fileNum], sizeof(struct SaveFile));
+                init_level_highscores_08010DEC(&gSaveFilesPtr[fileNum]);
                 if (gUnknown_03000B50 == 1)
                     sub_0802A164();
                 for (i = 0; i < 3; i++)
@@ -614,7 +632,7 @@ void sub_08012230(void)  // for new save file?
                 sub_0802F1D4();
             }
             gPrevFileSelectMenuSel = gFileSelectMenuSel;
-            gFileSelectMenuSel = 0;
+            gFileSelectMenuSel = FILE_SELECT_FILE_A;
             gUnknown_0300005B = 0;
             sub_0801168C(0);
         }
@@ -622,7 +640,7 @@ void sub_08012230(void)  // for new save file?
         {
             play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
             gPrevFileSelectMenuSel = gFileSelectMenuSel;
-            gFileSelectMenuSel = 0;
+            gFileSelectMenuSel = FILE_SELECT_FILE_A;
             gUnknown_0300005B = 0;
             sub_0801168C(0);
         }
@@ -631,7 +649,7 @@ void sub_08012230(void)  // for new save file?
     {
         play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
         gPrevFileSelectMenuSel = gFileSelectMenuSel;
-        gFileSelectMenuSel = 0;
+        gFileSelectMenuSel = FILE_SELECT_FILE_A;
         gUnknown_0300005B = 0;
         sub_0801168C(0);
     }
@@ -650,17 +668,6 @@ void sub_08012230(void)  // for new save file?
             gUnknown_0300005C--;
             play_sound_effect_08071990(SE_CURSOR_E, 8, 16, 64, 0, 128, 0);
         }
-    }
-}
-
-static inline void testinline(s8 *toIncrement, s8 *toDecrement, struct SpriteTemplate_child *arr, int max)
-{
-    if (--*toDecrement <= 0)
-    {
-        (*toIncrement)++;
-        if (*toIncrement >= max)
-            *toIncrement = 0;
-        *toDecrement = arr[*toIncrement].unk1;
     }
 }
 
@@ -706,22 +713,22 @@ void main_menu_main(void)
         if (gUnknown_0300005D != 0)
         {
             if (gUnknown_03000063 == 0 && *gUnknown_0807CA94 == 0)
-                gFileSelectMenuSel = 3;
+                gFileSelectMenuSel = FILE_SELECT_EWORLD;
             gUnknown_03000063 = 1;
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
         }
         else
         {
             play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
-            if (gFileSelectMenuSel == 3)
+            if (gFileSelectMenuSel == FILE_SELECT_EWORLD)
                 gFileSelectMenuSel--;
         }
     }
     if (gUnknown_03000064 <= 20)
         gUnknown_03000064++;
 
-    testinline(&gUnknown_0300005E, &gUnknown_0300005F, gUnknown_085FEFE4, 18);
-    testinline(&gUnknown_03000060, &gUnknown_03000061, gUnknown_08617030, 2);
+    inlinefunc7(&gUnknown_0300005E, &gUnknown_0300005F, gUnknown_085FEFE4, 18);
+    inlinefunc7(&gUnknown_03000060, &gUnknown_03000061, gUnknown_08617030, 2);
 }
 
 void sub_08012568(void)
@@ -741,7 +748,7 @@ void sub_08012568(void)
     }
 
     // useless code
-    dummy = inlinefunc2(gFileSelectMenuSel);
+    dummy = has_completed_first_level(gFileSelectMenuSel);
     if (dummy)
         dummy++;
 
@@ -771,7 +778,7 @@ void sub_08012680(void)
     }
 
     // useless code
-    dummy = inlinefunc2(gFileSelectMenuSel);
+    dummy = has_completed_first_level(gFileSelectMenuSel);
     if (dummy)
         dummy++;
 
@@ -804,7 +811,7 @@ void sub_08012798(void)
     paletteNum = arr[gFileSelectMenuSel - 6];
 
     // useless code
-    dummy = inlinefunc2(gFileSelectMenuSel);
+    dummy = has_completed_first_level(gFileSelectMenuSel);
     if (dummy)
         dummy++;
 
@@ -850,7 +857,7 @@ void sub_080129C0(void)
     }
     paletteNum = arr[gFileSelectMenuSel];
 
-    if (inlinefunc2(gFileSelectMenuSel))
+    if (has_completed_first_level(gFileSelectMenuSel))
     {
         DmaCopy32(3, &gUnknown_0860C33C, &gOamBuffer[gSomeOamIndex_03000040], sizeof(struct OamData));
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03000042;
@@ -894,75 +901,75 @@ void sub_080129C0(void)
 
 void sub_08012D24(void)
 {
-    DmaCopy32(3, gUnknown_08615C04, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x800);
+    DmaCopy32(3, gUnknown_08615C04, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
     gUnknown_0300004E = gUnknown_03001930;
     gUnknown_03001930 += 64;
-    gUnknown_0300192C += 0x800;
+    gObjVRAMCopyOffset_0300192C += 0x800;
 
-    DmaCopy32(3, gUnknown_08615C04 + gUnknown_08615BB4[1].unk0 * 0x800, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x800);
+    DmaCopy32(3, gUnknown_08615C04 + gUnknown_08615BB4[1].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
     gUnknown_03000050 = gUnknown_03001930;
     gUnknown_03001930 += 64;
-    gUnknown_0300192C += 0x800;
+    gObjVRAMCopyOffset_0300192C += 0x800;
 
-    DmaCopy32(3, gUnknown_08614764, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x400);
+    DmaCopy32(3, gUnknown_08614764, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
     gUnknown_03000052 = gUnknown_03001930;
     gUnknown_03001930 += 32;
-    gUnknown_0300192C += 0x400;
+    gObjVRAMCopyOffset_0300192C += 0x400;
 
-    if (inlinefunc2(gFileSelectMenuSel) || gFileSelectMenuSel == 3)
+    if (has_completed_first_level(gFileSelectMenuSel) || gFileSelectMenuSel == 3)
     {
-        DmaCopy32(3, gUnknown_0860C344 + gUnknown_0860C0B4[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x800);
+        DmaCopy32(3, gUnknown_0860C344 + gUnknown_0860C0B4[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
         gUnknown_03000042 = gUnknown_03001930;
         gUnknown_03001930 += 64;
-        gUnknown_0300192C += 0x800;
+        gObjVRAMCopyOffset_0300192C += 0x800;
 
-        DmaCopy32(3, gUnknown_0860A4B4 + gUnknown_0860A224[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x400);
+        DmaCopy32(3, gUnknown_0860A4B4 + gUnknown_0860A224[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
         gUnknown_03000044 = gUnknown_03001930;
         gUnknown_03001930 += 32;
-        gUnknown_0300192C += 0x400;
+        gObjVRAMCopyOffset_0300192C += 0x400;
     }
     else
     {
-        DmaCopy32(3, gUnknown_08602F94 + gUnknown_08602D04[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x800);
+        DmaCopy32(3, gUnknown_08602F94 + gUnknown_08602D04[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
         gUnknown_03000042 = gUnknown_03001930;
         gUnknown_03001930 += 64;
-        gUnknown_0300192C += 0x800;
+        gObjVRAMCopyOffset_0300192C += 0x800;
 
-        DmaCopy32(3, gUnknown_08601104 + gUnknown_08600E74[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x400);
+        DmaCopy32(3, gUnknown_08601104 + gUnknown_08600E74[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
         gUnknown_03000044 = gUnknown_03001930;
         gUnknown_03001930 += 32;
-        gUnknown_0300192C += 0x400;
+        gObjVRAMCopyOffset_0300192C += 0x400;
     }
 
-    DmaCopy32(3, gUnknown_08606A24 + gUnknown_08606794[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x800);
+    DmaCopy32(3, gUnknown_08606A24 + gUnknown_08606794[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
     gUnknown_03000046 = gUnknown_03001930;
     gUnknown_03001930 += 64;
-    gUnknown_0300192C += 0x800;
+    gObjVRAMCopyOffset_0300192C += 0x800;
 
-    DmaCopy32(3, gUnknown_085FB7E4 + gUnknown_085FB554[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x800);
+    DmaCopy32(3, gUnknown_085FB7E4 + gUnknown_085FB554[gUnknown_0300005E].unk0 * 0x800, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x800);
     gUnknown_03000048 = gUnknown_03001930;
     gUnknown_03001930 += 64;
-    gUnknown_0300192C += 0x800;
+    gObjVRAMCopyOffset_0300192C += 0x800;
 
-    DmaCopy32(3, gUnknown_085FF274 + gUnknown_085FEFE4[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x400);
+    DmaCopy32(3, gUnknown_085FF274 + gUnknown_085FEFE4[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
     gUnknown_0300004C = gUnknown_03001930;
     gUnknown_03001930 += 32;
-    gUnknown_0300192C += 0x400;
+    gObjVRAMCopyOffset_0300192C += 0x400;
 
-    DmaCopy32(3, gUnknown_0860FDD4 + gUnknown_0860FB44[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x400);
+    DmaCopy32(3, gUnknown_0860FDD4 + gUnknown_0860FB44[gUnknown_0300005E].unk0 * 0x400, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x400);
     gUnknown_0300004A = gUnknown_03001930;
     gUnknown_03001930 += 32;
-    gUnknown_0300192C += 0x400;
+    gObjVRAMCopyOffset_0300192C += 0x400;
 
-    DmaCopy32(3, gUnknown_08617080 + gUnknown_08617030[gUnknown_03000060].unk0 * 0x80, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x80);
+    DmaCopy32(3, gUnknown_08617080 + gUnknown_08617030[gUnknown_03000060].unk0 * 0x80, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x80);
     gUnknown_03000054.unk0 = gUnknown_03001930;
     gUnknown_03001930 += 4;
-    gUnknown_0300192C += 0x80;
+    gObjVRAMCopyOffset_0300192C += 0x80;
 
-    DmaCopy32(3, gUnknown_086180B4 + gUnknown_08618064[gUnknown_03000060].unk0 * 0x80, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 0x80);
+    DmaCopy32(3, gUnknown_086180B4 + gUnknown_08618064[gUnknown_03000060].unk0 * 0x80, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 0x80);
     gUnknown_03000054.unk2 = gUnknown_03001930;
     gUnknown_03001930 += 4;
-    gUnknown_0300192C += 0x80;
+    gObjVRAMCopyOffset_0300192C += 0x80;
 }
 
 void print_digits_080130F8(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
@@ -972,7 +979,7 @@ void print_digits_080130F8(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
 
     for (i = 0; i < digits; i++)
     {
-        DmaCopy32(3, gUnknown_08617F24 + (value % 10) * 32, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 32);
+        DmaCopy32(3, gUnknown_08617F24 + (value % 10) * 32, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 32);
         DmaCopy32(3, &gUnknown_08617F1C, &gOamBuffer[gSomeOamIndex_03000040], 8);
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03001930;
         gOamBuffer[gSomeOamIndex_03000040].x = x2 - i * 5;
@@ -980,7 +987,7 @@ void print_digits_080130F8(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
         gOamBuffer[gSomeOamIndex_03000040].paletteNum += arg4;
         gOamBuffer[gSomeOamIndex_03000040].priority = 2;
         gUnknown_03001930++;
-        gUnknown_0300192C += 32;
+        gObjVRAMCopyOffset_0300192C += 32;
         gSomeOamIndex_03000040++;
         value /= 10;
     }
@@ -993,7 +1000,7 @@ void print_digits_08013260(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
 
     for (i = 0; i < digits; i++)
     {
-        DmaCopy32(3, gUnknown_086172F0 + (value % 10) * 64, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 64);
+        DmaCopy32(3, gUnknown_086172F0 + (value % 10) * 64, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 64);
         DmaCopy32(3, &gUnknown_086172E8, &gOamBuffer[gSomeOamIndex_03000040], 8);
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03001930;
         gOamBuffer[gSomeOamIndex_03000040].x = x2 - i * 8;
@@ -1001,7 +1008,7 @@ void print_digits_08013260(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
         gOamBuffer[gSomeOamIndex_03000040].paletteNum += arg4;
         gOamBuffer[gSomeOamIndex_03000040].priority = 2;
         gUnknown_03001930 += 2;
-        gUnknown_0300192C += 64;
+        gObjVRAMCopyOffset_0300192C += 64;
         gSomeOamIndex_03000040++;
         value /= 10;
     }
@@ -1014,7 +1021,7 @@ void print_digits_080133D4(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
 
     for (i = 0; i < digits; i++)
     {
-        DmaCopy32(3, gUnknown_08617B04 + (value % 10) * 32, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 32);
+        DmaCopy32(3, gUnknown_08617B04 + (value % 10) * 32, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 32);
         DmaCopy32(3, &gUnknown_08617AFC, &gOamBuffer[gSomeOamIndex_03000040], 8);
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03001930;
         gOamBuffer[gSomeOamIndex_03000040].x = x2 - i * 8;
@@ -1022,7 +1029,7 @@ void print_digits_080133D4(u8 x, u8 y, u8 digits, u16 value, u8 arg4)
         gOamBuffer[gSomeOamIndex_03000040].paletteNum += arg4;
         gOamBuffer[gSomeOamIndex_03000040].priority = 2;
         gUnknown_03001930++;
-        gUnknown_0300192C += 32;
+        gObjVRAMCopyOffset_0300192C += 32;
         gSomeOamIndex_03000040++;
         value /= 10;
     }
@@ -1035,14 +1042,14 @@ void print_digits_08013548(u8 x, u8 y, u8 digits, u16 value)
 
     for (i = 0; i < digits; i++)
     {
-        DmaCopy32(3, gUnknown_08617830 + (value % 10) * 32, (void *)(OBJ_VRAM0 + gUnknown_0300192C), 32);
+        DmaCopy32(3, gUnknown_08617830 + (value % 10) * 32, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), 32);
         DmaCopy32(3, &gUnknown_08617828, &gOamBuffer[gSomeOamIndex_03000040], 8);
         gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03001930;
         gOamBuffer[gSomeOamIndex_03000040].x = x2 - i * 8;
         gOamBuffer[gSomeOamIndex_03000040].y = y;
         gOamBuffer[gSomeOamIndex_03000040].priority = 2;
         gUnknown_03001930++;
-        gUnknown_0300192C += 32;
+        gObjVRAMCopyOffset_0300192C += 32;
         gSomeOamIndex_03000040++;
         value /= 10;
     }
@@ -1095,7 +1102,7 @@ void add_sprite_080137A0(struct SpriteTemplate *arg0, u16 arg1, u8 arg2, s8 pale
 
 void add_sprite_080138D0(struct SpriteTemplate *arg0, u8 arg1, s8 arg2, s16 x, s16 y)
 {
-    DmaCopy32(3, arg0->tileData + arg0->unkC[arg1].unk0 * arg0->unk4 * 4, (void *)(OBJ_VRAM0 + gUnknown_0300192C), arg0->unk8);
+    DmaCopy32(3, arg0->tileData + arg0->unkC[arg1].unk0 * arg0->unk4 * 4, (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C), arg0->unk8);
     DmaCopy32(3, arg0->oamData, &gOamBuffer[gSomeOamIndex_03000040], 8);
     gOamBuffer[gSomeOamIndex_03000040].tileNum += gUnknown_03001930;
     gOamBuffer[gSomeOamIndex_03000040].x = x + arg0->unkC[arg1].unk2;
@@ -1106,17 +1113,8 @@ void add_sprite_080138D0(struct SpriteTemplate *arg0, u8 arg1, s8 arg2, s16 x, s
         gOamBuffer[gSomeOamIndex_03000040].paletteNum += arg2;
     gOamBuffer[gSomeOamIndex_03000040].priority = 2;
     gUnknown_03001930 += arg0->unk6;
-    gUnknown_0300192C += arg0->unk8;
+    gObjVRAMCopyOffset_0300192C += arg0->unk8;
     gSomeOamIndex_03000040++;
-}
-
-static inline u8 inlinefunc6(u8 fileNum)
-{
-    struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
-    if (saveFile->unk4 < 0)
-        return TRUE;
-    else
-        return FALSE;
 }
 
 #define PRINT_STARS(fileNum, x, y, d) \
@@ -1157,7 +1155,7 @@ void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
     else
     {
         add_sprite_080138D0(&gUnknown_08078700[fileNum], fileNum, arg2, x + 13, y + 4);
-        if (!inlinefunc2(fileNum))
+        if (!has_completed_first_level(fileNum))
         {
             add_sprite_080138D0(&gUnknown_08078760, 2, arg2, x, y + 12);
             add_sprite_080138D0(&gUnknown_08078778, 1, spC, x, y + 44);
@@ -1167,37 +1165,25 @@ void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
             PRINT_STARS(fileNum, x, y, spC)
             PRINT_LEVELS(fileNum, x, y, spC)
             PRINT_LIVES(fileNum, x, y, spC, 1)
+            spC++;spC++;spC++;spC++;spC++;spC++;spC++;  // needed to match
         }
         else
         {
-            u8 sp4, sp5, sp6;
-            u8 *r3 = &sp4;
-            u8 *r6 = &sp5;
-            u8 *r8 = &sp6;
-            struct SaveFile *saveFile = &gSaveFilesPtr[fileNum];
-            u8 r0 = saveFile->unk2 & 0xF;
+            u8 world, level, levelType;
 
-            *r8 = saveFile->unk3;
-            *r6 = r0;
-
-            *r3 = (saveFile->unk2 >> 4) & 7;
-            *r8 = saveFile->unk3;
-
-            add_sprite_080138D0(&gUnknown_08078790, *r8, spC, x + 6, y + 24);
-            print_digits_080133D4(x + gUnknown_08078640[*r6].x, y + gUnknown_08078640[*r6].y, 1, sp4 + 1, spC);
-            add_sprite_080138D0(&gUnknown_080787F0, 10, spC, x + gUnknown_08078680[*r6].x, y + gUnknown_08078680[*r6].y);
-            if (*r6 <= 5)
-                print_digits_080133D4(x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y, 1, *r6 + 1, spC);
-            else if (*r8 == 0)
-                add_sprite_080138D0(&gUnknown_08078808, *r6 - 6, spC, x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y);
+            inlinefunc5(fileNum, &world, &level, &levelType);
+            add_sprite_080138D0(&gUnknown_08078790, levelType, spC, x + 6, y + 24);
+            print_digits_080133D4(x + gUnknown_08078640[level].x, y + gUnknown_08078640[level].y, 1, world + 1, spC);
+            add_sprite_080138D0(&gUnknown_080787F0, 10, spC, x + gUnknown_08078680[level].x, y + gUnknown_08078680[level].y);
+            if (level <= 5)
+                print_digits_080133D4(x + gUnknown_080786C0[level].x, y + gUnknown_080786C0[level].y, 1, level + 1, spC);
+            else if (levelType == 0)
+                add_sprite_080138D0(&gUnknown_08078808, level - 6, spC, x + gUnknown_080786C0[level].x, y + gUnknown_080786C0[level].y);
             else
-                add_sprite_080138D0(&gUnknown_08078808, *r6 - 5, spC, x + gUnknown_080786C0[*r6].x, y + gUnknown_080786C0[*r6].y);
+                add_sprite_080138D0(&gUnknown_08078808, level - 5, spC, x + gUnknown_080786C0[level].x, y + gUnknown_080786C0[level].y);
             PRINT_STARS(fileNum, x, y, !arg1)
             PRINT_LEVELS(fileNum, x, y, !arg1)
             PRINT_LIVES(fileNum, x, y, spC, 0)
-            // needed to match
-            spC++;spC++;spC++;spC++;spC++;spC++;
-            r6++;r6++;
         }
     }
 }
@@ -1327,8 +1313,8 @@ void sub_0801456C(void)
                 }
                 else
                 {
-                    add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078868[i].x, gUnknown_08078820[i].y);
-                    add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078868[i].x + 16, gUnknown_08078820[i].y);
+                    add_sprite_080137A0(&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078868[i].x, gUnknown_08078820[i].y);
+                    add_sprite_080137A0(&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078868[i].x + 16, gUnknown_08078820[i].y);
                 }
             }
         }
@@ -1349,8 +1335,8 @@ void sub_0801456C(void)
                 }
                 else
                 {
-                    add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078820[i].x, gUnknown_08078820[i].y);
-                    add_sprite_080137A0((void *)&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078820[i].x + 16, gUnknown_08078820[i].y);
+                    add_sprite_080137A0(&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 0, gUnknown_08078820[i].x, gUnknown_08078820[i].y);
+                    add_sprite_080137A0(&gUnknown_08078820[r6], gUnknown_03000054.unk2, 0, r6 ^ 1, 1, gUnknown_08078820[i].x + 16, gUnknown_08078820[i].y);
                 }
             }
         }
@@ -1359,8 +1345,8 @@ void sub_0801456C(void)
 
 void main_menu_loop(void)
 {
-    gUnknown_03001930 = gUnknown_0300192C = gSomeOamIndex_03000040 = 0;
-    DmaFill32(3, 0xA0, gOamBuffer, 0x400);
+    gUnknown_03001930 = gObjVRAMCopyOffset_0300192C = gSomeOamIndex_03000040 = 0;
+    DmaFill32(3, 0xA0, gOamBuffer, sizeof(gOamBuffer));
     sub_08012D24();
     if (gUnknown_03000C28 == 0)
         sub_0801B2CC(gUnknown_085FEFE4[gUnknown_0300005E].unk8);

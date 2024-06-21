@@ -336,7 +336,7 @@ _08015362:
 	strh r1, [r0]
 	ldr r0, _0801544C  @ =gUnknown_03001930
 	strh r1, [r0]
-	ldr r0, _08015450  @ =gUnknown_0300192C
+	ldr r0, _08015450  @ =gObjVRAMCopyOffset_0300192C
 	strh r1, [r0]
 	ldr r0, _08015454  @ =gUnknown_03001BDC
 	strb r6, [r0]
@@ -443,7 +443,7 @@ _08015448:
 _0801544C:
 	.4byte gUnknown_03001930
 _08015450:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08015454:
 	.4byte gUnknown_03001BDC
 _08015458:
@@ -5717,7 +5717,7 @@ _08017C16:
 	ldr r1, _08017CEC  @ =gUnknown_085DEA9C
 	add r0, r0, r1
 	str r0, [r5]
-	ldr r2, _08017CF0  @ =gUnknown_0300192C
+	ldr r2, _08017CF0  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r2]
 	ldr r3, _08017CF4  @ =OBJ_VRAM0
 	add r0, r0, r3
@@ -5790,7 +5790,7 @@ _08017C16:
 	ldrh r0, [r1]
 	add r0, r0, #2
 	strh r0, [r1]
-	ldr r2, _08017CF0  @ =gUnknown_0300192C
+	ldr r2, _08017CF0  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r2]
 	add r0, r0, #64
 	strh r0, [r2]
@@ -5817,7 +5817,7 @@ _08017CE8:
 _08017CEC:
 	.4byte gUnknown_085DEA9C
 _08017CF0:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08017CF4:
 	.4byte OBJ_VRAM0
 _08017CF8:
@@ -5854,7 +5854,7 @@ _08017D28:
 	ldr r1, _08017E20  @ =gUnknown_082EC750
 	add r0, r0, r1
 	str r0, [r5]
-	ldr r2, _08017E24  @ =gUnknown_0300192C
+	ldr r2, _08017E24  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r2]
 	ldr r3, _08017E28  @ =OBJ_VRAM0
 	add r0, r0, r3
@@ -5937,7 +5937,7 @@ _08017D28:
 	ldrh r0, [r1]
 	add r0, r0, #2
 	strh r0, [r1]
-	ldr r2, _08017E24  @ =gUnknown_0300192C
+	ldr r2, _08017E24  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r2]
 	add r0, r0, #64
 	strh r0, [r2]
@@ -5972,7 +5972,7 @@ _08017E1C:
 _08017E20:
 	.4byte gUnknown_082EC750
 _08017E24:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08017E28:
 	.4byte OBJ_VRAM0
 _08017E2C:
@@ -6034,7 +6034,7 @@ _08017E88:
 	ldr r1, _08017F8C  @ =gUnknown_082EC750
 	add r0, r0, r1
 	str r0, [r5]
-	ldr r2, _08017F90  @ =gUnknown_0300192C
+	ldr r2, _08017F90  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r2]
 	ldr r3, _08017F94  @ =OBJ_VRAM0
 	add r0, r0, r3
@@ -6120,7 +6120,7 @@ _08017E88:
 	ldrh r0, [r1]
 	add r0, r0, #2
 	strh r0, [r1]
-	ldr r2, _08017F90  @ =gUnknown_0300192C
+	ldr r2, _08017F90  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r2]
 	add r0, r0, #64
 	strh r0, [r2]
@@ -6159,7 +6159,7 @@ _08017F88:
 _08017F8C:
 	.4byte gUnknown_082EC750
 _08017F90:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08017F94:
 	.4byte OBJ_VRAM0
 _08017F98:
@@ -6189,7 +6189,7 @@ sub_08017FB8: @ 0x08017FB8
 	ldr r2, _08018084  @ =REG_DMA3SAD
 	ldr r0, _08018088  @ =gUnknown_085D0900
 	str r0, [r2]
-	ldr r0, _0801808C  @ =gUnknown_0300192C
+	ldr r0, _0801808C  @ =gObjVRAMCopyOffset_0300192C
 	mov r9, r0
 	ldrh r0, [r0]
 	ldr r1, _08018090  @ =OBJ_VRAM0
@@ -6289,7 +6289,7 @@ _08018084:
 _08018088:
 	.4byte gUnknown_085D0900
 _0801808C:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08018090:
 	.4byte OBJ_VRAM0
 _08018094:
@@ -6323,7 +6323,7 @@ sub_080180BC: @ 0x080180BC
 	ldr r2, _08018188  @ =REG_DMA3SAD
 	ldr r0, _0801818C  @ =gUnknown_085E2338
 	str r0, [r2]
-	ldr r0, _08018190  @ =gUnknown_0300192C
+	ldr r0, _08018190  @ =gObjVRAMCopyOffset_0300192C
 	mov r9, r0
 	ldrh r0, [r0]
 	ldr r1, _08018194  @ =OBJ_VRAM0
@@ -6422,7 +6422,7 @@ _08018188:
 _0801818C:
 	.4byte gUnknown_085E2338
 _08018190:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08018194:
 	.4byte OBJ_VRAM0
 _08018198:
@@ -6770,7 +6770,7 @@ sub_08018418: @ 0x08018418
 	ldr r4, _080184FC  @ =REG_DMA3SAD
 	ldr r2, [r0, #20]
 	str r2, [r4]
-	ldr r2, _08018500  @ =gUnknown_0300192C
+	ldr r2, _08018500  @ =gObjVRAMCopyOffset_0300192C
 	mov r12, r2
 	ldrh r2, [r2]
 	ldr r3, _08018504  @ =OBJ_VRAM0
@@ -6880,7 +6880,7 @@ sub_08018418: @ 0x08018418
 _080184FC:
 	.4byte REG_DMA3SAD
 _08018500:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08018504:
 	.4byte OBJ_VRAM0
 _08018508:
@@ -7129,7 +7129,7 @@ sub_080186B0: @ 0x080186B0
 	ldr r1, [r0, #20]
 	add r1, r1, r2
 	str r1, [r3]
-	ldr r1, _08018798  @ =gUnknown_0300192C
+	ldr r1, _08018798  @ =gObjVRAMCopyOffset_0300192C
 	mov r10, r1
 	ldrh r1, [r1]
 	ldr r2, _0801879C  @ =OBJ_VRAM0
@@ -7227,7 +7227,7 @@ sub_080186B0: @ 0x080186B0
 _08018794:
 	.4byte REG_DMA3SAD
 _08018798:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _0801879C:
 	.4byte OBJ_VRAM0
 _080187A0:
@@ -7271,7 +7271,7 @@ sub_080187C0: @ 0x080187C0
 	ldr r1, [r0, #20]
 	add r1, r1, r3
 	str r1, [r4]
-	ldr r1, _080188C0  @ =gUnknown_0300192C
+	ldr r1, _080188C0  @ =gObjVRAMCopyOffset_0300192C
 	mov r12, r1
 	ldrh r1, [r1]
 	ldr r3, _080188C4  @ =OBJ_VRAM0
@@ -7379,7 +7379,7 @@ sub_080187C0: @ 0x080187C0
 _080188BC:
 	.4byte REG_DMA3SAD
 _080188C0:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _080188C4:
 	.4byte OBJ_VRAM0
 _080188C8:
@@ -7687,7 +7687,7 @@ sub_08018AE0: @ 0x08018AE0
 	ldr r1, [r0, #20]
 	add r1, r1, r4
 	str r1, [r5]
-	ldr r7, _08018BC4  @ =gUnknown_0300192C
+	ldr r7, _08018BC4  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r1, [r7]
 	ldr r4, _08018BC8  @ =OBJ_VRAM0
 	add r1, r1, r4
@@ -7783,7 +7783,7 @@ sub_08018AE0: @ 0x08018AE0
 _08018BC0:
 	.4byte REG_DMA3SAD
 _08018BC4:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08018BC8:
 	.4byte OBJ_VRAM0
 _08018BCC:
@@ -7825,7 +7825,7 @@ sub_08018BE8: @ 0x08018BE8
 	ldr r1, [r0, #20]
 	add r1, r1, r4
 	str r1, [r5]
-	ldr r4, _08018CE8  @ =gUnknown_0300192C
+	ldr r4, _08018CE8  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r1, [r4]
 	ldr r4, _08018CEC  @ =OBJ_VRAM0
 	add r1, r1, r4
@@ -7912,10 +7912,10 @@ sub_08018BE8: @ 0x08018BE8
 	mov r4, r10
 	strh r1, [r4]
 	ldrh r0, [r0, #8]
-	ldr r1, _08018CE8  @ =gUnknown_0300192C
+	ldr r1, _08018CE8  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r1, [r1]
 	add r0, r0, r1
-	ldr r2, _08018CE8  @ =gUnknown_0300192C
+	ldr r2, _08018CE8  @ =gObjVRAMCopyOffset_0300192C
 	strh r0, [r2]
 	mov r3, r12
 	ldr r1, [r3]
@@ -7934,7 +7934,7 @@ sub_08018BE8: @ 0x08018BE8
 _08018CE4:
 	.4byte REG_DMA3SAD
 _08018CE8:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08018CEC:
 	.4byte OBJ_VRAM0
 _08018CF0:
@@ -7979,7 +7979,7 @@ sub_08018D0C: @ 0x08018D0C
 	ldr r1, [r0, #20]
 	add r1, r1, r4
 	str r1, [r5]
-	ldr r4, _08018E10  @ =gUnknown_0300192C
+	ldr r4, _08018E10  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r1, [r4]
 	ldr r4, _08018E14  @ =OBJ_VRAM0
 	add r1, r1, r4
@@ -8067,10 +8067,10 @@ sub_08018D0C: @ 0x08018D0C
 	mov r3, r12
 	strh r1, [r3]
 	ldrh r0, [r0, #8]
-	ldr r4, _08018E10  @ =gUnknown_0300192C
+	ldr r4, _08018E10  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r4, [r4]
 	add r0, r0, r4
-	ldr r6, _08018E10  @ =gUnknown_0300192C
+	ldr r6, _08018E10  @ =gObjVRAMCopyOffset_0300192C
 	strh r0, [r6]
 	ldr r1, [r7]
 	ldrh r0, [r1, #2]
@@ -8086,7 +8086,7 @@ sub_08018D0C: @ 0x08018D0C
 _08018E0C:
 	.4byte REG_DMA3SAD
 _08018E10:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _08018E14:
 	.4byte OBJ_VRAM0
 _08018E18:
@@ -11364,7 +11364,7 @@ sub_0801A69C: @ 0x0801A69C
 	ldr r1, _0801A7A0  @ =gUnknown_085E3820
 	add r0, r0, r1
 	str r0, [r2]
-	ldr r1, _0801A7A4  @ =gUnknown_0300192C
+	ldr r1, _0801A7A4  @ =gObjVRAMCopyOffset_0300192C
 	mov r12, r1
 	ldrh r0, [r1]
 	ldr r1, _0801A7A8  @ =OBJ_VRAM0
@@ -11483,7 +11483,7 @@ _0801A79C:
 _0801A7A0:
 	.4byte gUnknown_085E3820
 _0801A7A4:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _0801A7A8:
 	.4byte OBJ_VRAM0
 _0801A7AC:
@@ -11521,7 +11521,7 @@ sub_0801A7D8: @ 0x0801A7D8
 	ldr r7, _0801ABBC  @ =REG_DMA3SAD
 	ldr r0, _0801ABC0  @ =gUnknown_085CD848
 	str r0, [r7]
-	ldr r3, _0801ABC4  @ =gUnknown_0300192C
+	ldr r3, _0801ABC4  @ =gObjVRAMCopyOffset_0300192C
 	ldrh r0, [r3]
 	ldr r1, _0801ABC8  @ =OBJ_VRAM0
 	add r0, r0, r1
@@ -12019,7 +12019,7 @@ _0801ABBC:
 _0801ABC0:
 	.4byte gUnknown_085CD848
 _0801ABC4:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _0801ABC8:
 	.4byte OBJ_VRAM0
 _0801ABCC:
@@ -12296,7 +12296,7 @@ level_select_loop: @ 0x0801ADBC
 	ldr r0, _0801AE14  @ =0x03000094
 	ldr r3, [r0]
 	ldr r2, _0801AE18  @ =gUnknown_03001930
-	ldr r0, _0801AE1C  @ =gUnknown_0300192C
+	ldr r0, _0801AE1C  @ =gObjVRAMCopyOffset_0300192C
 	mov r1, #0
 	strh r1, [r0]
 	strh r1, [r2]
@@ -12330,7 +12330,7 @@ _0801AE14:
 _0801AE18:
 	.4byte gUnknown_03001930
 _0801AE1C:
-	.4byte gUnknown_0300192C
+	.4byte gObjVRAMCopyOffset_0300192C
 _0801AE20:
 	.4byte 0x03000084
 _0801AE24:
