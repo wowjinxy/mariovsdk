@@ -35,10 +35,13 @@ FILES := \
 	assets/sprites/gUnknown_08614764.png \
 	assets/sprites/gUnknown_08614BB4.png \
 	assets/sprites/gUnknown_08615C04.png \
-	assets/sprites/gUnknown_086175C0.png \
 	assets/sprites/gUnknown_08617080.png \
+	assets/sprites/gUnknown_086172F0.png \
+	assets/sprites/gUnknown_086175C0.png \
+	assets/sprites/gUnknown_08617830.png \
 	assets/sprites/gUnknown_08617B04.png \
 	assets/sprites/gUnknown_08617CB4.png \
+	assets/sprites/gUnknown_08617F24.png \
 	assets/sprites/gUnknown_086180B4.png
 
 all: $(FILES)
@@ -119,9 +122,17 @@ assets/sprites/gUnknown_08617080.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_08617080.4bpp: baserom.gba ; $(call romextract,0x617080,0x80*2)
 $(TMPDIR)/sprites/gUnknown_08617080.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,1,3),0x20)
 
+assets/sprites/gUnknown_086172F0.png: GBAGFX_FLAGS := -width 1
+$(TMPDIR)/sprites/gUnknown_086172F0.4bpp: baserom.gba ; $(call romextract,0x6172F0,0x40*10)
+$(TMPDIR)/sprites/gUnknown_086172F0.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,1,4),0x20)
+
 assets/sprites/gUnknown_086175C0.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_086175C0.4bpp: baserom.gba ; $(call romextract,0x6175C0,0x80*2)
 $(TMPDIR)/sprites/gUnknown_086175C0.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,1,4),0x20)
+
+assets/sprites/gUnknown_08617830.png: GBAGFX_FLAGS := -width 1
+$(TMPDIR)/sprites/gUnknown_08617830.4bpp: baserom.gba ; $(call romextract,0x617830,0x20*10)
+$(TMPDIR)/sprites/gUnknown_08617830.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,1,4),0x20)
 
 assets/sprites/gUnknown_08617B04.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_08617B04.4bpp: baserom.gba ; $(call romextract,0x617B04,0x20*11)
@@ -129,6 +140,11 @@ $(TMPDIR)/sprites/gUnknown_08617B04.gbapal: baserom.gba ; $(call romextract,$(ca
 
 assets/sprites/gUnknown_08617CB4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_08617CB4.4bpp: baserom.gba ; $(call romextract,0x617CB4,0x80*2)
+$(TMPDIR)/sprites/gUnknown_08617CB4.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,1,4),0x20)
+
+assets/sprites/gUnknown_08617F24.png: GBAGFX_FLAGS := -width 1
+$(TMPDIR)/sprites/gUnknown_08617F24.4bpp: baserom.gba ; $(call romextract,0x617F24,0x20*10)
+$(TMPDIR)/sprites/gUnknown_08617F24.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,1,4),0x20)
 
 assets/sprites/gUnknown_086180B4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_086180B4.4bpp: baserom.gba ; $(call romextract,0x6180B4,0x80*2)
