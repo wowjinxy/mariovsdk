@@ -92,7 +92,7 @@ s16 sub_08033DB4(s16 a)
 
 void sub_08033DCC(void)
 {
-    sub_0802BEEC(&gUnknown_030012D0);
+    set_bg_offset_regs_0802BEEC(&gUnknown_030012D0);
     sub_0802BFA4();
     sub_0802C144(gUnknown_030012D0.unk6);
     sub_0802C058();
@@ -105,7 +105,7 @@ void sub_08033DCC(void)
             sub_08033EC8();
             gUnknown_03001748 = 0;
             CpuCopy16(&gBGLayerOffsets , &gUnknown_030012D0, 16);
-            sub_0802BEEC(&gUnknown_030012D0);
+            set_bg_offset_regs_0802BEEC(&gUnknown_030012D0);
             sub_0802BE74();
             gUnknown_030012C0();
             sub_08033EC8();

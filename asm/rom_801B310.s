@@ -21,7 +21,7 @@ sub_0801B310: @ 0x0801B310
 	cmp r1, #0
 	bne _0801B3B4
 	mov r12, r2
-	ldr r7, _0801B360  @ =0x03000D3C
+	ldr r7, _0801B360  @ =gUnknown_03000D3C
 	mov r5, #0
 _0801B338:
 	ldrh r0, [r3, #10]
@@ -46,7 +46,7 @@ _0801B358:
 _0801B35C:
 	.4byte 0x03000BDC
 _0801B360:
-	.4byte 0x03000D3C
+	.4byte gUnknown_03000D3C
 _0801B364:
 	ldrb r1, [r1, #3]
 	mov r0, #128
