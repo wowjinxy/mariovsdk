@@ -3459,15 +3459,23 @@ gUnknown_085E90D0:
 
 	.GLOBAL gUnknown_085E9360
 gUnknown_085E9360:
-	.INCBIN "baserom.gba", 0x5E9360, 0x5F49D0-0x5E9360
+	.INCBIN "baserom.gba", 0x5E9360, 0x5F49AC-0x5E9360
 
-	.GLOBAL gUnknown_085F49D0
-gUnknown_085F49D0:
-	.INCBIN "baserom.gba", 0x5F49D0, 0x5F49D8-0x5F49D0
+	.GLOBAL gUnknown_085F49AC
+gUnknown_085F49AC:
+	.INCBIN "baserom.gba", 0x5F49AC, 0x5F49D0-0x5F49AC
 
-	.GLOBAL gUnknown_085F49D8
-gUnknown_085F49D8:
-	.INCBIN "baserom.gba", 0x5F49D8, 0x5F61B4-0x5F49D8
+	.GLOBAL gfxTitleScreenPressStartOAM
+gfxTitleScreenPressStartOAM:
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=0, affineParam=0
+	
+	.GLOBAL gfxTitleScreenPressStart4bpp
+gfxTitleScreenPressStart4bpp:
+	.INCBIN "assets/sprites/PressStart.4bpp"
+	
+	.GLOBAL gUnknown_085F4BD8
+gUnknown_085F4BD8:
+	.INCBIN "baserom.gba", 0x5F4BD8, 0x5F61B4-0x5F4BD8
 
 	.GLOBAL gUnknown_085F61B4
 gUnknown_085F61B4:

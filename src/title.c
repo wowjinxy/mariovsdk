@@ -3,8 +3,8 @@
 #include "arena.h"
 #include "main.h"
 
-extern const u8 gUnknown_085F49D0[];
-extern const u8 gUnknown_085F49D8[];
+extern const u8 gfxTitleScreenPressStartOAM[];
+extern const u8 gfxTitleScreenPressStart4bpp[];
 
 enum
 {
@@ -155,8 +155,8 @@ void title_loop(void)
     {
         u8 var;
 
-        DmaCopy32(3, gUnknown_085F49D0, gOamBuffer, 8);
-        DmaCopy32(3, gUnknown_085F49D8, (void *)(VRAM + 0x10000), 0x200);
+        DmaCopy32(3, gfxTitleScreenPressStartOAM, gOamBuffer, 8);
+        DmaCopy32(3, gfxTitleScreenPressStart4bpp, (void *)(VRAM + 0x10000), 0x200);
         gOamBuffer[0].tileNum = 0;
         gOamBuffer[0].x = 204;
         gOamBuffer[0].y = 124;
