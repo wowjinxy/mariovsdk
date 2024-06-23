@@ -273,23 +273,23 @@ gUnknown_080794BC:
 gUnknown_080794D4:
 	.INCBIN "baserom.gba", 0x794D4, 0x794EC-0x794D4
 
-	.GLOBAL gUnknown_080794EC
-gUnknown_080794EC:
-	.4byte 0x0000000B
-	.4byte 0x0000000C
-	.4byte 0x0000000D
-	.4byte 0x0000000E
-	.4byte 0x0000000F
-	.4byte 0x00000010
+	.GLOBAL gLevelSelectPaletteIDs
+gLevelSelectPaletteIDs:
+	.4byte 11 @ palette level_select_world_one
+	.4byte 12 @ palette level_select_world_two
+	.4byte 13 @ palette level_select_world_three
+	.4byte 14 @ palette level_select_world_four
+	.4byte 15 @ palette level_select_world_five
+	.4byte 16 @ palette level_select_world_six
 
-	.GLOBAL gUnknown_08079504
-gUnknown_08079504:
-	.4byte 0x00000012
-	.4byte 0x00000013
-	.4byte 0x00000014
-	.4byte 0x00000015
-	.4byte 0x00000016
-	.4byte 0x00000017
+	.GLOBAL gLevelSelectPlusPaletteIDs
+gLevelSelectPlusPaletteIDs:
+	.4byte 18 @ palette level_select_world_one_plus
+	.4byte 19 @ palette level_select_world_two_plus
+	.4byte 20 @ palette level_select_world_three_plus
+	.4byte 21 @ palette level_select_world_four_plus
+	.4byte 22 @ palette level_select_world_five_plus
+	.4byte 23 @ palette level_select_world_six_plus
 
 	.GLOBAL gLevelSelectBackgrounds
 gLevelSelectBackgrounds:
@@ -313,27 +313,57 @@ gLevelSelectPlusBackgrounds:
 
 	.GLOBAL gUnknown_0807954C
 gUnknown_0807954C:
-	.INCBIN "baserom.gba", 0x7954C, 0x7956C-0x7954C
+	.2byte 0x0000 @ world 1
+	.2byte 0x0000
+	.2byte 0x0100 @ world 2
+	.2byte 0x0000
+	.2byte 0x0200 @ world 3
+	.2byte 0x0000
+	.2byte 0x0001 @ title screen plays intro cutscene
+	.2byte 0x0000
+	.2byte 0x0300 @ world 4
+	.2byte 0x0000
+	.2byte 0x0400 @ world 5
+	.2byte 0x0000
+	.2byte 0x0500 @ world 6
+	.2byte 0x0000
+	.2byte 0x0001 @ title screen plays intro cutscene
+	.2byte 0x0000
 
-	.GLOBAL gUnknown_0807956C
-gUnknown_0807956C:
+	.GLOBAL gTitleMarioEyesAnimationData
+gTitleMarioEyesAnimationData:
 	.INCBIN "baserom.gba", 0x7956C, 0x79698-0x7956C
 
-	.GLOBAL gUnknown_08079698
-gUnknown_08079698:
+	.GLOBAL gTitleDKEyesAnimationData
+gTitleDKEyesAnimationData:
 	.INCBIN "baserom.gba", 0x79698, 0x7976C-0x79698
 
 	.GLOBAL gUnknown_0807976C
 gUnknown_0807976C:
-	.INCBIN "baserom.gba", 0x7976C, 0x79778-0x7976C
+	.2byte 0x00E6
+	.2byte 0x00E7
+	.2byte 0x00E8
+	.2byte 0x00E6
+	.2byte 0x00E7
+	.2byte 0x00E8
 
 	.GLOBAL gUnknown_08079778
 gUnknown_08079778:
-	.INCBIN "baserom.gba", 0x79778, 0x79790-0x79778
+	.4byte 25 @ palette world_one_boss_clear
+	.4byte 26 @ palette world_two_boss_clear
+	.4byte 27 @ palette world_three_boss_clear
+	.4byte 28 @ palette world_four_boss_clear
+	.4byte 29 @ palette world_five_boss_clear
+	.4byte 30 @ palette world_six_boss_clear
 
 	.GLOBAL gUnknown_08079790
 gUnknown_08079790:
-	.INCBIN "baserom.gba", 0x79790, 0x797A8-0x79790
+	.4byte 31 @ palette world_one_plus_boss_clear
+	.4byte 32 @ palette world_two_plus_boss_clear
+	.4byte 33 @ palette world_three_plus_boss_clear
+	.4byte 34 @ palette world_four_plus_boss_clear
+	.4byte 35 @ palette world_five_plus_boss_clear
+	.4byte 36 @ palette world_six_plus_boss_clear
 
 	.GLOBAL gUnknown_080797A8
 gUnknown_080797A8:
@@ -405,9 +435,16 @@ gOptionsMenuMovieIDTable:
 	.byte 0x6
 	.byte 0x7
 
-	.GLOBAL gUnknown_08079990
+	.GLOBAL gUnknown_08079990 @ potentally movie song ID table?
 gUnknown_08079990:
-	.INCBIN "baserom.gba", 0x79990, 0x79998-0x79990
+	.byte 0x17
+	.byte 0x29
+	.byte 0x2B
+	.byte 0x3D
+	.byte 0x2C
+	.byte 0x2D
+	.byte 0x2E
+	.byte 0x2F
 
 	.GLOBAL gUnknown_08079998
 gUnknown_08079998:
@@ -815,7 +852,14 @@ gUnknown_0807C7A8:
 
 	.GLOBAL gUnknown_0807C7C4
 gUnknown_0807C7C4:
-	.INCBIN "baserom.gba", 0x7C7C4, 0x7C7CC-0x7C7C4
+	.byte 0x01
+	.byte 0x01
+	.byte 0x01
+	.byte 0x01
+	.byte 0x01
+	.byte 0x01
+	.byte 0x01
+	.byte 0x00
 
 	.GLOBAL gUnknown_0807C7CC
 gUnknown_0807C7CC:
@@ -831,7 +875,14 @@ gUnknown_0807C814:
 
 	.GLOBAL gUnknown_0807C82C
 gUnknown_0807C82C:
-	.INCBIN "baserom.gba", 0x7C82C, 0x7C834-0x7C82C
+	.byte 0x03
+	.byte 0x02
+	.byte 0x02
+	.byte 0x02
+	.byte 0x02
+	.byte 0x02
+	.byte 0x00
+	.byte 0x00
 
 	.GLOBAL gUnknown_0807C834
 gUnknown_0807C834:
@@ -839,11 +890,22 @@ gUnknown_0807C834:
 
 	.GLOBAL gUnknown_0807C838
 gUnknown_0807C838:
-	.INCBIN "baserom.gba", 0x7C838, 0x7C83A-0x7C838
+	.byte 0x02
+	.byte 0x00
 
 	.GLOBAL gUnknown_0807C83A
 gUnknown_0807C83A:
-	.INCBIN "baserom.gba", 0x7C83A, 0x7C850-0x7C83A
+	.2byte 0x0169
+	.2byte 0x0143
+	.2byte 0x011D
+	.2byte 0x00F7
+	.2byte 0x00D1
+	.2byte 0x00AB
+	.2byte 0x0085
+	.2byte 0x005F
+	.2byte 0x0039
+	.2byte 0x0013
+	.2byte 0x0000
 
 	.GLOBAL gUnknown_0807C850
 gUnknown_0807C850:

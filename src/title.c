@@ -59,10 +59,10 @@ void title_main(void)
         REG_DISPCNT = 0x1740;
     arr[0] = 0;
     arr[1] = 13;
-    sub_080064D4(arr, gUnknown_030000A4->unk108[gUnknown_0807956C[gUnknown_03000BE4]], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
+    sub_080064D4(arr, gUnknown_030000A4->unk108[gTitleMarioEyesAnimationData[gUnknown_03000BE4]], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
     arr[0] = 22;
     arr[1] = 0;
-    sub_080064D4(arr, gUnknown_030000A4->unk108[gUnknown_08079698[gUnknown_03000BE8] + 3], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
+    sub_080064D4(arr, gUnknown_030000A4->unk108[gTitleDKEyesAnimationData[gUnknown_03000BE8] + 3], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
     if (gUnknown_03000BE4 < 299)
         gUnknown_03000BE4++;
     else
