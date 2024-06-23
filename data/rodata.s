@@ -273,7 +273,7 @@ gUnknown_08076D58:
 	.4byte sub_08033DCC
 	.4byte sub_08037ED4
 	.4byte sub_08034138
-	.4byte sub_0802BF70
+	.4byte tm0over_interrupt_handler
 	.4byte sub_08073B90
 	.4byte sub_08034138
 

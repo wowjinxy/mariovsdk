@@ -34,7 +34,7 @@
 	X(asm/rom_8029FD0.o) \
 	X(asm/level_help.o) \
 	X(asm/level_retry.o) \
-	X(asm/rom_802B798.o) \
+	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \
 	X(src/rom_802D614.o) \
 	X(asm/eCard.o) \
@@ -173,8 +173,15 @@ SECTIONS
 		. = 0x111;		gUnknown_03000111 = .;
 		. = 0x112;		gUnknown_03000112 = .;
 		. = 0x114;		gUnknown_03000114 = .;
+		. = 0x15A;		gUnknown_0300015A = .;
+		. = 0x15C;		gUnknown_0300015C = .;
+		. = 0x160;		gUnknown_03000160 = .;
+		. = 0x161;		gUnknown_03000161 = .;
+		. = 0x162;		gUnknown_03000162 = .;
+		. = 0x164;		gUnknown_03000164 = .;
+		. = 0x168;		gUnknown_03000168 = .;
+		. = 0x170;		gUnknown_03000170 = .;
 		. = 0x1A0;		gMoviePlayerParams = .;
-		. = 0x1A0;		gUnknown_030001A0 = .;
 		. = 0x1A8;		gUnknown_030001A8 = .;
 		. = 0x1AC;		gUnknown_030001AC = .;
 		. = 0x1B0;		gUnknown_030001B0 = .;
@@ -195,7 +202,6 @@ SECTIONS
 		. = 0x2B8;		gUnknown_030002B8 = .;
 		. = 0x2C0;		gUnknown_030002C0 = .;
 		. = 0x2C8;		gUnknown_030002C8 = .;
-		
 		. = 0x368;		gUnknown_03000368 = .;
 		. = 0x374;		gUnknown_03000374 = .;
 		. = 0x378;		gUnknown_03000378 = .;
@@ -208,9 +214,6 @@ SECTIONS
 		. = 0x394;		gUnknown_03000394 = .;
 		. = 0x395;		gUnknown_03000395 = .;
 		. = 0x396;		gUnknown_03000396 = .;
-		
-		
-		
 
 		. = 0x880;
 		src/agb_flash.o(.bss);
@@ -231,6 +234,7 @@ SECTIONS
 		. = 0x92C;		gUnknown_0300092C = .;
 		. = 0x934;		gUnknown_03000934 = .;
 		. = 0x964;		gUnknown_03000964 = .;
+		. = 0x970;		gUnknown_03000970 = .;
 		. = 0x9B0;		gUnknown_030009B0 = .;
 		. = 0x9C0;		gMainState = .;
 		. = 0x9C4;		gNextMainState = .;
@@ -284,10 +288,34 @@ SECTIONS
 		. = 0xC1C;		gUnknown_03000C1C = .;
 		. = 0xC20;		gDKLevelMarioLivesLeft_03000C20 = .;
 		. = 0xC28;		gUnknown_03000C28 = .;
+		. = 0xC2C;		gUnknown_03000C2C = .;
+		. = 0xC30;		gUnknown_03000C30 = .;
+		. = 0xC40;		gUnknown_03000C40 = .;
+		. = 0xC70;		gUnknown_03000C70 = .;
+		. = 0xC90;		gUnknown_03000C90 = .;
+		. = 0xCB0;		gUnknown_03000CB0 = .;
 		. = 0xD20;		gCurrentPalette = .;
+		. = 0xD34;		gUnknown_03000D34 = .;
 		. = 0xD38;		gUnknown_03000D38 = .;
+		. = 0xD3C;		gUnknown_03000D3C = .;
+		. = 0xD40;		gUnknown_03000D40 = .;
+		. = 0xD50;		gUnknown_03000D50 = .;
+		. = 0xD54;		gUnknown_03000D54 = .;
+		. = 0xD58;		gUnknown_03000D58 = .;
 		. = 0xD60;		gUnknown_03000D60 = .;
 		. = 0xD64;		gUnknown_03000D64 = .;
+		. = 0xD68;		gUnknown_03000D68 = .;
+		. = 0xD6C;		gUnknown_03000D6C = .;
+		. = 0xD70;		gUnknown_03000D70 = .;
+		. = 0xD74;		gUnknown_03000D74 = .;
+		. = 0xD78;		gUnknown_03000D78 = .;
+		. = 0xD7C;		gUnknown_03000D7C = .;
+		. = 0xD80;		gUnknown_03000D80 = .;
+		. = 0xD84;		gUnknown_03000D84 = .;
+		. = 0xD88;		gUnknown_03000D88 = .;
+		. = 0xD90;		gUnknown_03000D90 = .;
+		. = 0xDA0;		gUnknown_03000DA0 = .;
+		. = 0xDC8;		gUnknown_03000DC8 = .;
 		. = 0xDCC;		gUnknown_03000DCC = .;
 		. = 0xE00;		gUnknown_03000E00 = .;
 		. = 0xE60;		gUnknown_03000E60 = .;
@@ -345,6 +373,7 @@ SECTIONS
 		. = 0x19C0;		gUnknown_030019C0 = .;
 		. = 0x19D8;		gUnknown_030019D8 = .;
 		. = 0x19DC;		gPreviousSwitchState = .;
+		. = 0x19E4;		gUnknown_030019E4 = .;
 		. = 0x19E8;		gUnknown_030019E8 = .;
 		. = 0x19F4;		gUnknown_030019F4 = .;
 		. = 0x1A00;		gUnknown_03001A00 = .;

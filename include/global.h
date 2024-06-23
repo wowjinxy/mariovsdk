@@ -320,7 +320,9 @@ typedef struct struct_030019AC {
     s32 unk34;
     s32 unk38;
     s32 unk3C;
-    s32 unk40;
+    //s32 unk40;
+    u8 filler40[3];
+    s8 unk43;
     s32 unk44;
     s32 unk48;
     s32 unk4C;
@@ -387,12 +389,40 @@ struct worldTableStruct {
     struct worldTableStruct_unk_size_c *unk4;
 };
 
+struct Struct0807C0E0  // Is this supposed to be worldTableStruct?
+{
+    struct Struct168 *unk0;
+    u16 unk4;
+    u8 filler6[2];
+};  // size = 0x8
+
 struct iwRAMBase {
 u32 base[0];
 };
 
-struct struct_0807820C {
-    u8 bigpad[0x800c];
+struct struct_0807820C_sub8
+{
+    u32 filler0_0:16;
+    u32 unk2_0:7;
+    u32 filler2_7:1;
+    u32 unk3:8;
+};
+
+struct struct_0807820C_sub
+{
+    u16 unk0;
+    u8 unk2;
+    u8 unk3;
+};
+
+struct struct_0807820C
+{
+    u8 filler0[0x8];
+    struct struct_0807820C_sub8 unk8[1];
+    struct struct_0807820C_sub unkC[1];
+    u8 filler10[0x400C-0x10];
+    u16 unk400C[0x1000];
+    u16 unk600C[0x1000];
     u16 unk800C[0x2000];
     u32 unkC00C;
 };
@@ -712,6 +742,200 @@ struct SpriteTemplate
     /*0x14*/ u8 *tileData;  // tile data
 };  // size = 0x18
 
+// header to some data
+// full size is unkB * gUnknown_03000170.unk18
+struct SomeUnknownHeader
+{
+    u8 filler0[0xB];
+    u8 unkB;
+    u8 unkC;
+};
+
+// header for UnknownListThing2 and StructC40_child
+struct LinkedListHeaderMaybe
+{
+    u32 unk0;
+    union
+    {
+        u32 as_u32;
+        struct
+        {
+            u8 unk0;
+            u16 unk2;
+        } as_struct;
+    } unk4;
+    struct LinkedListHeaderMaybe *unk8;
+};  // size = 0xC
+
+struct LinkedListHeaderMaybe_alt  // should be LinkedListHeaderMaybe?
+{
+    s32 unk0;
+    union
+    {
+        u32 as_u32;
+        struct
+        {
+            u8 unk0;
+            u16 unk2;
+        } as_struct;
+    } unk4;
+    struct LinkedListHeaderMaybe *unk8;
+};  // size = 0xC
+
+struct UnknownListThing1
+{
+    struct LinkedListHeaderMaybe header;
+    u8 unkC;
+};  // size = 0x10
+
+struct UnknownListThing2
+{
+    struct LinkedListHeaderMaybe header;
+    void *unkC;
+};  // size = 0x10
+
+struct Struct170_sub
+{
+    struct SomeUnknownHeader *unk0;
+    struct SomeUnknownHeader *unk4;  // next one after unk0
+};  // size = 0x8
+
+struct Struct170
+{
+    struct Struct170_sub unk0[3];
+    u32 unk18;  // size of something
+    struct LinkedListHeaderMaybe *unk1C;  // array of 12 LinkedListHeaderMaybe structs
+    s32 unk20;
+};
+
+struct StructC30
+{
+    u32 unk0;
+    struct UnknownListThing2 *unk4;
+};
+
+struct StructC40_sub
+{
+    void *unk0;
+    u8 *unk4;
+};
+
+struct StructC40
+{
+    struct StructC40_sub unk0[1];
+    u8 filler0[4];
+    u8 fillerC[0x18-0xC];
+    u32 unk18;
+    u32 unk1C;
+    struct LinkedListHeaderMaybe *unk20;  // array
+};
+
+struct StructC70
+{
+    void *unk0;
+    u32 unk4;
+    void *unk8;
+    void *unkC;
+    u8 filler10[0x4];
+    void *unk14;
+    u32 unk18;
+};
+
+struct StructC90_child14
+{
+    u32 unk0;
+    u32 unk4;
+    u8 filler8[4];
+    u16 unkC;
+    u8 fillerE[2];
+};  // size = 0x10
+
+struct StructC90
+{
+    /*0x00*/ void *copyDest;
+    /*0x04*/ void *copySrc;
+    u16 unk8;
+    /*0x0A*/ u16 copyLength;
+    void *unkC[2];
+    struct StructC90_child14 *unk14;
+    /*0x18*/ void (*armFunc)(struct StructC90 *, struct StructC70 *, void *, int);  // pointer to some ARM function loaded into RAM
+};
+
+struct Struct0802C1C0
+{
+    u8 filler0[8];
+    /*0x08*/ void *bgPalSrc;
+    /*0x0C*/ void *objPalSrc;
+    u8 filler10[2];
+    u16 unk12;
+};
+
+struct StructCB0_child
+{
+    void (*unk0)(struct Struct0802C1C0 *);
+    u8 unk4;
+    struct StructCB0_child *unk8;
+    /*0x0C*/ struct StructCB0_child *next;
+    struct Struct0802C1C0 *unk10;
+};
+
+struct StructCB0
+{
+    struct StructCB0_child unk0[5];
+    u32 unk64;  // count of unk0 structs
+    struct StructCB0_child *unk68;
+    struct StructCB0_child *unk6C;
+};
+
+struct StructD20
+{
+    void *unk0[1][2];
+    void *unk8;
+    void *unkC;
+    u16 unk10;
+    u16 unk12;
+};
+
+struct StructD78
+{
+    s32 unk0;
+    s32 unk4;
+    s16 unk8;
+    s16 unkA;
+    u16 unkC;
+    u16 unkE;
+    u8 unk10[0x18-0x10];
+};  // size = 0x18
+
+struct StructD7C
+{
+    u8 filler0[0x20];
+    s32 unk20;
+    s32 unk24;
+    u8 filler28[0xB0-0x28];
+};  // size = 0xB0
+
+struct Struct802C31C
+{
+    u32 unk0;
+    u32 unk4;
+};  // size = 0x8
+
+struct Struct08078210_sub
+{
+    u8 filler0[2];
+    u16 unk2;
+    u8 unk4;
+};
+
+struct Struct168
+{
+    u16 unk0;
+    u16 unk2;
+    u16 unk4;
+    u16 unk6;
+};
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -766,7 +990,18 @@ extern s8 gUnknown_03000110;
 extern s8 gUnknown_03000111;
 extern s16 gUnknown_03000112;
 extern s16 gUnknown_03000114;
+extern s16 gUnknown_0300015A;
+extern u32 gUnknown_0300015C;
+extern u8 gUnknown_03000160;
+extern u8 gUnknown_03000161;
+extern u16 gUnknown_03000162;
+extern u16 gUnknown_03000164;
+extern struct Struct168 *gUnknown_03000168;
+extern struct Struct170 gUnknown_03000170;
 extern struct MoviePlayerParamaters gMoviePlayerParams;
+extern u32 gUnknown_030001A8;
+extern u32 gUnknown_030001AC;
+extern u32 gUnknown_030001B0;
 extern u8 gUnknown_030002A0[];
 extern u16 gUnknown_030002AA;
 extern struct Struct30002B8 gUnknown_030002B0;
@@ -774,12 +1009,9 @@ extern struct Struct30002B8 gUnknown_030002B8;
 extern struct Struct30002B8 gUnknown_030002C0;
 extern struct Struct30002B8 gUnknown_030002C8;
 extern u32 gUnknown_030001B4;
-extern u32 gUnknown_030001C0;
-extern u8 *gUnknown_030001BC;
 extern u32 gUnknown_030001B8;
-extern u32 gUnknown_030001A8;
-extern u32 gUnknown_030001AC;
-extern u32 gUnknown_030001B0;
+extern u8 *gUnknown_030001BC;
+extern u32 gUnknown_030001C0;
 extern struct UnknownStruct11 *gUnknown_0300029C;
 
 //new for sub_0804A794
@@ -787,18 +1019,16 @@ extern u8 gUnknown_03000368;
 extern u8 gUnknown_03000374;
 extern u8 gUnknown_03000378;
 extern u8 gUnknown_03000380;
-
 extern u8 gUnknown_03000394;
 extern u8 gUnknown_03000395;
 extern u8 gUnknown_03000396;
-
 extern u8 gUnknown_030008C4;
 extern u8 gUnknown_030008D4;
 extern u8 gUnknown_030008D8;
 extern u8 gUnknown_030008E8;
-
 extern u8 gUnknown_03000924;
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
+extern void *gUnknown_03000970[];
 extern struct Struct30009B0 gUnknown_030009B0;
 extern u32 gNextMainState;
 extern u32 gPreviousMainState;
@@ -846,13 +1076,37 @@ extern u16 gUnknown_03000C0C;
 extern u8 gUnknown_03000C1C;
 extern u8 gDKLevelMarioLivesLeft_03000C20;
 extern u8 gUnknown_03000C28;
+extern void *gUnknown_03000C2C;
+extern struct StructC30 gUnknown_03000C30;
+extern struct StructC40 gUnknown_03000C40;
+extern struct StructC70 gUnknown_03000C70;
+extern struct StructC90 gUnknown_03000C90;
+extern struct StructCB0 gUnknown_03000CB0;
+extern struct StructD20 gCurrentPalette;
+extern u32 gUnknown_03000D34;
 extern u16 gUnknown_03000D38;
+extern u8 gUnknown_03000D3C;
+extern s16 gUnknown_03000D40;
+extern s32 gUnknown_03000D50;
+extern s32 gUnknown_03000D54;
+extern u8 gUnknown_03000D58[];
 extern s32 gUnknown_03000D60;
 extern s32 gUnknown_03000D64;
+extern u16 gUnknown_03000D68;
+extern u32 gUnknown_03000D6C;
+extern s32 gUnknown_03000D70;
+extern u8 gUnknown_03000D74;
+extern struct StructD78 *gUnknown_03000D78;
+extern struct StructD7C *gUnknown_03000D7C;
+extern u8 gUnknown_03000D80;
+extern u8 gUnknown_03000D84;
+extern u8 *gUnknown_03000D88;
+extern u8 gUnknown_03000D90[];
+extern struct StructD7C *gUnknown_03000DA0[];
+extern u16 gUnknown_03000DC8;
 extern u8 gUnknown_03000DCC;
 extern u32 gUnknown_03000E00;
 extern u16 gUnknown_03000E60;
-
 extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];
 extern u8 *gUnknown_03000E88;
 extern u8 *gPaletteData_03000E8C;
@@ -881,7 +1135,6 @@ extern u32 gUnknown_03001714;
 extern u32 gUnknown_03001718;
 extern u16 gUnknown_0300171C;
 extern s16 gCurrentLevelWidth;
-extern s16 gUnknown_03001720;
 extern s16 gSpriteHorizontalOffset;
 extern struct backgroundLayerOffset gBGLayerOffsets;  // no idea what type this is
 extern u8 gUnknown_03001740;
@@ -892,6 +1145,8 @@ extern struct UnknownStruct9 gUnknown_03001770;
 extern u16 gObjVRAMCopyOffset_0300192C;  // unknown type
 extern u16 gUnknown_03001930; // unknown type
 extern u32 gUnknown_03001938;
+extern struct StructD7C *gUnknown_03001940;
+extern u8 gCurrentSwitchState;
 extern u16 gMarioIdleTimer;
 
 extern u8 gUnknown_03001994;
@@ -900,6 +1155,8 @@ extern u8 gUnknown_0300199C;
 //extern u32 gUnknown_030019A0;
 
 extern u8 gUnknown_030019B0;
+extern u8 gPreviousSwitchState;
+extern u8 gUnknown_030019E4;
 extern u8 gUnknown_030019E8;
 
 // extern u32 gUnknown_03001A1C;
@@ -971,6 +1228,11 @@ extern u8 gUnknown_03007AB0[];  // unknown type
 
 extern void *gUnknown_03007FFC;
 
+extern struct Struct08078210
+{
+    u8 filler0[0x108];
+    struct Struct08078210_sub *unk108[1];
+} *gObjectTileDataRAMPtr;
 extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
 extern u16 gUnknown_080788E0[];
@@ -979,6 +1241,11 @@ extern u32 *gUnknown_0807CA94;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gTitleMarioEyesAnimationData[];
 extern const u8 gTitleDKEyesAnimationData[];
+extern void *gUnknown_0807AA1C[];
+extern struct UnkStruct1_sub_child_data68 gUnknown_0807BA58;
+extern u8 gUnknown_0807BA68[];
+extern void *gUnknown_0807BB30[];
+extern s16 gUnknown_0807C83A[];
 extern const u32 gUnknown_0807C850[];
 extern u32 gPaletteIndices_0807DD34[];
 extern u32 gPaletteIndices_0807DD4C[];
@@ -1003,22 +1270,28 @@ extern const u8 gMovieUnusedPlusWorldsUnlocked[];
 extern const s16 gUnknown_0807C118[][2];
 extern unkst24 gUnknown_0812E128[1];
 
-extern u8 gUnknown_03000EA0[30];
-extern u8 gUnknown_03000EA0[30];
 extern u8 gUnknown_082E8908[];
 extern u8 gUnknown_082E8900[];
 
-struct worldTableStruct gUnknown_08B2CFC0[0];
-struct worldTableStruct gUnknown_08B2CF84[0];
-struct worldTableStruct gUnknown_08B2CEBC[0];
-struct worldTableStruct gUnknown_0807C0D0[0];
-struct worldTableStruct gUnknown_0807C098[0];
-struct worldTableStruct gUnknown_08B2CDF4[0];
-struct worldTableStruct gUnknown_0807C028[0];
-struct worldTableStruct gUnknown_08B2CA5C[0];
-struct worldTableStruct gUnknown_0807C0E0[0];
-struct worldTableStruct gUnknown_08B2D378[0];
+extern struct worldTableStruct gUnknown_08B2CFC0[0];
+extern struct worldTableStruct gUnknown_08B2CF84[0];
+extern struct worldTableStruct gUnknown_08B2CEBC[0];
+extern struct Struct0807C0E0 /*worldTableStruct*/ gUnknown_0807C0D0;
+extern struct Struct0807C0E0 /*worldTableStruct*/ gUnknown_0807C098[0];
+extern struct worldTableStruct gUnknown_08B2CDF4[0];
+extern struct Struct0807C0E0 /*worldTableStruct*/ gUnknown_0807C028[0];
+extern struct worldTableStruct gUnknown_08B2CA5C[0];
+extern struct Struct0807C0E0 /*worldTableStruct*/ gUnknown_0807C0E0[0];
+extern struct worldTableStruct gUnknown_08B2D378[0];
 extern u8 gTitleDemoLevelIDs[0];
+extern void *gUnknown_0807C7A8[];
+extern u8 gUnknown_0807C7C4[];
+extern void *gUnknown_0807C7CC[];
+extern u8 gUnknown_0807C804[];
+extern void *gUnknown_0807C814[];
+extern u8 gUnknown_0807C82C[];
+struct StructD78 *gUnknown_0807C834;
+extern u8 gUnknown_0807C838[];
 
 extern struct GraphicsConfig gMainMenuData;
 
@@ -1088,7 +1361,7 @@ extern u8 gUnknown_08617F24[];
 extern struct SpriteTemplate_child gUnknown_08618064[];
 extern struct OamData gUnknown_086180AC;
 extern u8 gUnknown_086180B4[];
-extern u8 gUnknown_0807C0D8;
+extern struct Struct0807C0E0 gUnknown_0807C0D8;
 extern u8 gUnknown_080A8668;
 
 extern u8 gUnknown_03001B98;
@@ -1098,15 +1371,14 @@ extern u8 gUnknown_030009FC;
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
 extern struct UnknownStruct16 gEWorldMenuData2;
-s32 gUnknown_03000288;
-u32 gUnknown_0300028C;
-u8 gUnknown_03000290;
+extern s32 gUnknown_03000288;
+extern u32 gUnknown_0300028C;
+extern u8 gUnknown_03000290;
 
 extern struct struct_0807820C *gEWRAMBasePtr;
-u32 gMainState;
 
-void *gSomeVRAMAddr_03000E90;
-void *gSomeVRAMAddr_03000E80;
+extern void *gSomeVRAMAddr_03000E90;
+extern void *gSomeVRAMAddr_03000E80;
 
 extern u32 gUnknown_03000294;
 extern u32 gUnknown_03000298;
@@ -1122,6 +1394,14 @@ void irq_enable_t(void);
 void irq_disable_t(void);
 void interrupt_main(void);
 
+// ARM code (copied to RAM)
+extern u8 sub_080006D8[];
+extern u8 sub_0800169C[]; extern u8 sub_0800169C_end[];
+extern u8 sub_08001760[]; extern u8 sub_08001760_end[];
+
+void sub_08001BA4(void *, void *);
+void level_edit_delete_object(struct Struct802C31C *);
+void sub_080035C0(int, int);
 void sub_08004428();
 void sub_08004634();
 void sub_08006388(void);
@@ -1129,6 +1409,7 @@ void sub_080064D4();
 int sub_080066FC(u32 *, int, int, int);
 struct UnknownStruct15 *sub_08006968();
 void sub_08006D44(void);
+void sub_080063E4(struct Struct802C31C *, int, void *);
 void change_main_state(s32, s32);
 void sub_08007170(void);
 void level_play_main(void);
@@ -1157,6 +1438,7 @@ void level_select_end(void);
 void sub_0801B2CC();
 void reset_some_array_0801B3C0(void);
 void sub_0801B3DC(struct GraphicsConfig *, int, int);
+void sub_0801B50C(int);
 void title_init_callback(void);
 void title_main(void);
 void sub_0801B88C(void);
@@ -1210,23 +1492,27 @@ void level_retry_main(void);
 void level_retry_end(void);
 void level_retry_loop(void);
 void sub_0802BA94(void);
+extern void sub_0802BC64(u8, int);
 void sub_0802BC98(void);
 void sub_0802BCA4(struct GraphicsConfig *, int);
 void sub_0802BE74(void);
-void sub_0802BEEC();
+void set_bg_offset_regs_0802BEEC();
 void sub_0802BF1C(void);
 void enable_vcount_interrupt_0802BF28(void);
 void sub_0802BFA4(void);
 void sub_0802C20C(void);
 void sub_0802C058(void);
+void sub_0802C080(struct Struct0802C1C0 *);
 void gfx_related_0802C0B8(struct GraphicsConfig *);
 void sub_0802C104();
 void sub_0802C144();
 void sub_0802C1B0(void);
+void load_some_palettes_0802C1C0(struct Struct0802C1C0 *arg0);
 void sub_0802C7A4(void);
 void sub_0802C938(void);
 void sub_0802CF08(void);
 void sub_0802D1D0(void);
+void sub_0802D1DC(struct LinkedListHeaderMaybe *arg0, int arg1);
 void movie_player_main(void);
 void movie_player_setup_data(u8, u8, u8, u8);
 void movie_player_init_callback(void);
@@ -1311,8 +1597,11 @@ void sub_080381E4(int, int);
 int sub_08038228(int);
 void sub_080382A8(void);
 void sub_080386DC(void);
+extern u8 sub_08038DF4(u8, u8, int, u16, u16, int);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);
+extern void sub_08041F2C(s8);
+void sub_0804138C(int, int, u32, u32);
 u16 sub_0806C2C4(void);
 void sub_0806D1AC(u16, u16);
 void sub_080714A8(void);
@@ -1322,6 +1611,7 @@ void sub_0807194C(void);
 int play_sound_effect_08071990(u8, u8, u8, u8, u8, u8, u8);
 void sub_08071C24(void);
 void sub_08071CD4(void);
+void sub_08071D9C(void);
 void sub_08071E14(u8);
 void sub_08071FA0();
 int sub_08071FE4(void);
@@ -1342,7 +1632,7 @@ u8 sub_08038B18();
 void sub_0802D608(void);
 
 u8 sub_0805739C(const u32 *);
-u8 sub_0802BE50();
+void sub_0802BE50(void);
 u8 sub_0801B310();
 u32 sub_08029EB4();
 u8 sub_080148A4(u32, u8);
@@ -1367,7 +1657,7 @@ void sub_0800CC6C();
 void sub_08041F70();
 u8 sub_0800C5A4();
 u8 sub_08072118();
-u8 sub_0802BEA4(u8);
+void sub_0802BEA4(u8);
 
 void sub_08008764();
 
@@ -1399,7 +1689,7 @@ void sub_0800F070(u8);
 void sub_0800F6EC();
 void sub_0802EDAC();
 void sub_08040D50();
-void sub_0802B998();
+void load_arm_code_0802B998();
 void sub_080069BC();
 int sub_08032C44(struct UnknownStruct4 *arg0);
 void sub_080041B8();

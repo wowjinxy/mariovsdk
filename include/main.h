@@ -3,7 +3,7 @@
 
 enum
 {
-	//Game modes/states
+    //Game modes/states
     MAIN_STATE_INTRO = 0,  // "Nintendo Software Technology" screen
     MAIN_STATE_GOTO_CREDITS = 1,
     MAIN_STATE_DEMO = 2,
@@ -14,7 +14,7 @@ enum
     MAIN_STATE_TITLE_SCREEN = 7,
     MAIN_STATE_LEVEL_SELECT = 8,
     MAIN_STATE_EXPERT_LEVEL_SELECT = 9,
-	MAIN_STATE_UNKNOWN_10  = 10,
+    MAIN_STATE_UNKNOWN_10  = 10,
     MAIN_STATE_LEVEL_EDIT = 11,
     MAIN_STATE_UKNOWN_12 = 12,
     MAIN_STATE_LEVEL_PLAY = 13,
@@ -31,30 +31,30 @@ enum
     MAIN_STATE_EWORLD_LEVEL_SELECT = 24,
     MAIN_STATE_UKNOWN_25 = 25,
     MAIN_STATE_CONNECT_EREADER = 26,
-	MAIN_STATE_UKNOWN_27 = 27,
+    MAIN_STATE_UKNOWN_27 = 27,
     MAIN_STATE_SCAN_EREADER_CARD = 28,
-	MAIN_STATE_UKNOWN_29 = 29,
+    MAIN_STATE_UKNOWN_29 = 29,
     MAIN_STATE_MOVIE = 30,
     MAIN_STATE_FADETRANSITION = 31,
     MAIN_STATE_WORLD_INTRO = 32,
     MAIN_STATE_LEVEL_SCROLL = 33,
     MAIN_STATE_INIT = 34,
-	
-	//Fade Flag for change_main_state
-	NO_FADE = 0,
-	USE_FADE = 1,
-	
-	//Movies
-	MOVIE_INTRO = 0,
-	MOVIE_INTRO2 = 1,
-	MOVIE_DK_BOSS_1 = 2,
-	MOVIE_CREDITS_1 = 3,
-	MOVIE_DK_BOSS_1_END = 4,
-	MOVIE_DK_BOSS_2 = 5,
-	MOVIE_DK_BOSS_2_END = 6,
-	MOVIE_CREDITS_2 = 7,
-	MOVIE_UNUSED_1 = 8,
-	MOVIE_UNUSED_2 = 9,
+    
+    //Fade Flag for change_main_state
+    NO_FADE = 0,
+    USE_FADE = 1,
+    
+    //Movies
+    MOVIE_INTRO = 0,
+    MOVIE_INTRO2 = 1,
+    MOVIE_DK_BOSS_1 = 2,
+    MOVIE_CREDITS_1 = 3,
+    MOVIE_DK_BOSS_1_END = 4,
+    MOVIE_DK_BOSS_2 = 5,
+    MOVIE_DK_BOSS_2_END = 6,
+    MOVIE_CREDITS_2 = 7,
+    MOVIE_UNUSED_1 = 8,
+    MOVIE_UNUSED_2 = 9,
 };
 
 extern u32 gMainState;

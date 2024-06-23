@@ -3828,7 +3828,7 @@ _0803A204:
 	b _0803A402
 _0803A216:
 	mov r5, r8
-	ldr r0, _0803A298  @ =0x03000C2C
+	ldr r0, _0803A298  @ =gUnknown_03000C2C
 	mov r1, r9
 	ldr r2, [r0]
 	mov r0, r8
@@ -3895,7 +3895,7 @@ _0803A290:
 _0803A294:
 	.4byte 0xFFFFFE00
 _0803A298:
-	.4byte 0x03000C2C
+	.4byte gUnknown_03000C2C
 _0803A29C:
 	.4byte 0x03001958
 _0803A2A0:
@@ -7457,13 +7457,13 @@ _0803BD14:
 _0803BD18:
 	.4byte gUnknown_030019A0
 _0803BD1C:
-	ldr r0, _0803BD90  @ =0x03000D84
+	ldr r0, _0803BD90  @ =gUnknown_03000D84
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0803BDE0
 	ldr r0, _0803BD94  @ =gUnknown_030019AC
 	ldr r2, [r0]
-	ldr r0, _0803BD98  @ =0x03000D7C
+	ldr r0, _0803BD98  @ =gUnknown_03000D7C
 	ldr r3, [r0]
 	ldr r0, [r2, #116]
 	ldr r1, [r3, #32]
@@ -7513,11 +7513,11 @@ _0803BD1C:
 	bl sub_0803ED98
 	b _0803BDC2
 _0803BD90:
-	.4byte 0x03000D84
+	.4byte gUnknown_03000D84
 _0803BD94:
 	.4byte gUnknown_030019AC
 _0803BD98:
-	.4byte 0x03000D7C
+	.4byte gUnknown_03000D7C
 _0803BD9C:
 	.4byte 0xFFFFF600
 _0803BDA0:
@@ -9429,7 +9429,7 @@ sub_0803CBCC: @ 0x0803CBCC
 	ldrb r1, [r2]
 	cmp r1, #0
 	bne _0803CC0C
-	ldr r0, _0803CBFC  @ =0x03000D84
+	ldr r0, _0803CBFC  @ =gUnknown_03000D84
 	ldrb r0, [r0]
 	cmp r0, #1
 	bhi _0803CBE6
@@ -9447,7 +9447,7 @@ _0803CBE6:
 _0803CBF8:
 	.4byte 0x03001970
 _0803CBFC:
-	.4byte 0x03000D84
+	.4byte gUnknown_03000D84
 _0803CC00:
 	.4byte 0x03001A44
 _0803CC04:
@@ -9455,7 +9455,7 @@ _0803CC04:
 _0803CC08:
 	.4byte gUnknown_08657630
 _0803CC0C:
-	ldr r0, _0803CC1C  @ =0x03000D84
+	ldr r0, _0803CC1C  @ =gUnknown_03000D84
 	ldrb r0, [r0]
 	cmp r0, #1
 	bhi _0803CC20
@@ -9465,7 +9465,7 @@ _0803CC0C:
 	.byte 0x00
 	.byte 0x00
 _0803CC1C:
-	.4byte 0x03000D84
+	.4byte gUnknown_03000D84
 _0803CC20:
 	ldr r2, _0803CD34  @ =0x03001A44
 	ldrb r1, [r2]
@@ -9530,7 +9530,7 @@ _0803CC64:
 	ldrh r3, [r6]
 	lsl r3, r3, #3
 	add r3, r3, r4
-	ldr r0, _0803CD60  @ =0x03000D7C
+	ldr r0, _0803CD60  @ =gUnknown_03000D7C
 	ldr r5, [r0]
 	ldr r1, [r5, #32]
 	asr r1, r1, #8
@@ -9632,7 +9632,7 @@ _0803CD58:
 _0803CD5C:
 	.4byte 0x84000040
 _0803CD60:
-	.4byte 0x03000D7C
+	.4byte gUnknown_03000D7C
 _0803CD64:
 	.4byte gSpriteHorizontalOffset
 _0803CD68:
