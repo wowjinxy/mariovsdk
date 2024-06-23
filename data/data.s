@@ -87,9 +87,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
 	.2byte 0x004E @ X Position
 	.2byte 0x0034 @ Y position
@@ -97,9 +97,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x0080 @ X Position
 	.2byte 0x0034 @ Y position
@@ -107,9 +107,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x00B2 @ X Position
 	.2byte 0x0034 @ Y position
@@ -117,9 +117,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x001C @ X Position
 	.2byte 0x0061 @ Y position
@@ -127,9 +127,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Skip 4 pixels count?
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x004E @ X Position
 	.2byte 0x0061 @ Y position
@@ -137,9 +137,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x0080 @ X Position
 	.2byte 0x0061 @ Y position
@@ -147,9 +147,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x00B2 @ X Position
 	.2byte 0x0061 @ Y position
@@ -157,9 +157,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
 	.GLOBAL gLevelSelectLevelPlusArtSpriteLayout
 gLevelSelectLevelPlusArtSpriteLayout:
@@ -3335,7 +3335,20 @@ gUnknown_085D08F8:
 
 	.GLOBAL gUnknown_085D0900
 gUnknown_085D0900:
-	.INCBIN "baserom.gba", 0x5D0900, 0x5DEA94-0x5D0900
+	.INCBIN "baserom.gba", 0x5D0900, 0x5D0A00-0x5D0900
+
+	.GLOBAL gUnknown_085D0A00
+gUnknown_085D0A00:
+	.INCBIN "baserom.gba", 0x5D0A00, 0x5D10C0-0x5D0A00
+
+	.GLOBAL gfxMainLevelIconPicsOAM
+gfxMainLevelIconPicsOAM:
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
+
+	.GLOBAL gfxMainLevelIconPics4bpp
+gfxMainLevelIconPics4bpp:
+	.INCBIN "assets/sprites/MainLevelIconPics.4bpp"
+	.INCBIN "baserom.gba", 0x5D70C8, 0x5DEA94-0x5D70C8
 
 	.GLOBAL gUnknown_085DEA94
 gUnknown_085DEA94:
@@ -8574,61 +8587,61 @@ gUnknown_08B2DEBC:
 gUnknown_08B2E90C:
 	.4byte 0x00000001
 	.4byte 0x08B2E8D8 @ Movie Data -- Early Opening Cutscene
-	.INCBIN "baserom.gba", 0xb2e914, 0xB2F070-0xb2e914
+	.INCBIN "baserom.gba", 0xB2E914, 0xB2F070-0xB2E914
 
 	.GLOBAL gUnknown_08B2F070
 gUnknown_08B2F070:
 	.4byte 0x00000001
 	.4byte 0x08B2F03C @ Movie Data -- Movie ID 6
-	.INCBIN "baserom.gba", 0xb2f078, 0xB2F5B8-0xb2f078
+	.INCBIN "baserom.gba", 0xB2F078, 0xB2F5B8-0xB2F078
 
 	.GLOBAL gUnknown_08B2F5B8
 gUnknown_08B2F5B8:
 	.4byte 0x00000001
 	.4byte 0x08B2F584 @ Movie Data -- Movie ID 5
-	.INCBIN "baserom.gba", 0xb2f5c0, 0xB2FFDC-0xb2f5c0
+	.INCBIN "baserom.gba", 0xB2F5C0, 0xB2FFDC-0xB2F5C0
 
 	.GLOBAL gUnknown_08B2FFDC
 gUnknown_08B2FFDC:
 	.4byte 0x00000001
 	.4byte 0x08B2FFA8 @ Movie Data -- Movie ID 2
-	.INCBIN "baserom.gba", 0xb2ffe4, 0xB30768-0xb2ffe4
+	.INCBIN "baserom.gba", 0xB2FFE4, 0xB30768-0xB2FFE4
 
 	.GLOBAL gUnknown_08B30768
 gUnknown_08B30768:
 	.4byte 0x00000001
 	.4byte 0x08B30734 @ Movie Data -- Movie ID 4
-	.INCBIN "baserom.gba", 0xb30770, 0xB30F94-0xb30770
+	.INCBIN "baserom.gba", 0xB30770, 0xB30F94-0xB30770
 
 	.GLOBAL gUnknown_08B30F94
 gUnknown_08B30F94:
 	.4byte 0x00000001
 	.4byte 0x08B30F60 @ Movie Data -- Movie ID 1
-	.INCBIN "baserom.gba", 0xb30f9c, 0xB32118-0xb30f9c
+	.INCBIN "baserom.gba", 0xB30F9C, 0xB32118-0xB30F9C
 
 	.GLOBAL gUnknown_08B32118
 gUnknown_08B32118:
 	.4byte 0x00000001
 	.4byte 0x08B320E4 @ Movie Data -- Movie ID 0
-	.INCBIN "baserom.gba", 0xb32120, 0xB35FC0-0xb32120
+	.INCBIN "baserom.gba", 0xB32120, 0xB35FC0-0xB32120
 
 	.GLOBAL gUnknown_08B35FC0
 gUnknown_08B35FC0:
 	.4byte 0x00000001
 	.4byte 0x08B35F8C @ Movie Data -- Movie ID 7
-	.INCBIN "baserom.gba", 0xb35fc8, 0xB37168-0xb35fc8
+	.INCBIN "baserom.gba", 0xB35FC8, 0xB37168-0xB35FC8
 
 	.GLOBAL gUnknown_08B37168
 gUnknown_08B37168:
 	.4byte 0x00000001
 	.4byte 0x08B37134 @ Movie Data -- Movie ID 3
-	.INCBIN "baserom.gba", 0xb37170, 0xB3732C-0xb37170
+	.INCBIN "baserom.gba", 0xB37170, 0xB3732C-0xB37170
 
 	.GLOBAL gUnknown_08B3732C
 gUnknown_08B3732C:
 	.4byte 0x00000001
 	.4byte 0x08B372F8 @ Movie Data -- Movie ID 8
-	.INCBIN "baserom.gba", 0xb37334, 0xB37424-0xb37334
+	.INCBIN "baserom.gba", 0xB37334, 0xB37424-0xB37334
 
 	.GLOBAL gMovieUnusedPlusWorldsUnlocked
 gMovieUnusedPlusWorldsUnlocked:
@@ -9431,11 +9444,11 @@ gMusicTable2:
 	
 	.GLOBAL gUnknown_08D7B458 @ Sound Sample Data
 gUnknown_08D7B458:
-	.INCBIN "baserom.gba", 0xd7b458, 0xebbf60-0xd7b458
+	.INCBIN "baserom.gba", 0xD7B458, 0xEBBF60-0xD7B458
 
 	.GLOBAL gUnknown_08EBBF60 @ Instrument Data 1
 gUnknown_08EBBF60:
-	.INCBIN "baserom.gba", 0xebbf60, 0xEBFE90-0xebbf60
+	.INCBIN "baserom.gba", 0xEBBF60, 0xEBFE90-0xEBBF60
 
 	.GLOBAL gUnknown_08EBFE90 @ Instrument Data 2
 gUnknown_08EBFE90:

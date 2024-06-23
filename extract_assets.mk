@@ -92,6 +92,7 @@ FILES := \
 		assets/palettes/74_$(t).pal \
 		assets/palettes/75_$(t).pal \
 	) \
+	assets/sprites/MainLevelIconPics.png \
 	assets/sprites/PressStart.png \
 	assets/sprites/FileLetters.png \
 	assets/sprites/gUnknown_085FB7E4.png \
@@ -210,6 +211,10 @@ $(TMPDIR)/palettes/%_obj_gbplayer.gbapal: baserom.gba ; $(call romextract,0x81D9
 
 # Calculates the offset of the specified OBJ sub-palette
 obj_palette_addr = 0x81D98+$(1)*0x800+0x200+$(2)*0x20
+
+assets/sprites/MainLevelIconPics.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/MainLevelIconPics.4bpp: baserom.gba ; $(call romextract,0x5D10C8,0x200*48)
+$(TMPDIR)/sprites/MainLevelIconPics.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,11,13),0x20)
 
 assets/sprites/PressStart.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/PressStart.4bpp: baserom.gba ; $(call romextract,0x5F49D8,0x200)
