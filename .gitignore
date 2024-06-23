@@ -12,6 +12,7 @@ tools/agbcc
 *.4bpp
 *.8bpp
 *.gbapal
+baserom-objs/
 
 # Emulator save files
 *.sav
