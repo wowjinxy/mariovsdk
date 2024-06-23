@@ -320,7 +320,9 @@ typedef struct struct_030019AC {
     s32 unk34;
     s32 unk38;
     s32 unk3C;
-    s32 unk40;
+    //s32 unk40;
+    u8 filler40[3];
+    s8 unk43;
     s32 unk44;
     s32 unk48;
     s32 unk4C;
@@ -730,6 +732,27 @@ struct SpriteTemplate
     /*0x14*/ u8 *tileData;  // tile data
 };  // size = 0x18
 
+struct Struct170_child_child
+{
+    u8 filler0[8];
+    u32 unk8;
+};
+
+struct Struct170_child
+{
+    s32 unk0;
+    s32 unk4;
+    struct Struct170_child_child *unk8;
+};  // size = 0xC
+
+struct Struct170
+{
+    u8 filler0[0x18];
+    u32 unk18;
+    struct Struct170_child *unk1C;
+    s32 unk20;
+};
+
 struct StructC30_child
 {
     u8 filler0[0x8];
@@ -845,6 +868,29 @@ struct StructD20
     u16 unk12;
 };
 
+struct StructD78
+{
+    s32 unk0;
+    s32 unk4;
+    s16 unk8;
+    s16 unkA;
+    u16 unkC;
+    u16 unkE;
+    u8 unk10[0x18-0x10];
+};  // size = 0x18
+
+struct StructD7C
+{
+    u8 filler0[0x20];
+    s32 unk20;
+    s32 unk24;
+};
+
+struct Struct1940
+{
+    u8 filler0[0xB0];
+};  // size = 0xB0
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -905,6 +951,7 @@ extern u8 gUnknown_03000160;
 extern u8 gUnknown_03000161;
 extern u16 gUnknown_03000162;
 extern u16 gUnknown_03000164;
+extern struct Struct170 gUnknown_03000170;
 extern struct MoviePlayerParamaters gMoviePlayerParams;
 extern u32 gUnknown_030001A8;
 extern u32 gUnknown_030001AC;
@@ -995,8 +1042,17 @@ extern u32 gUnknown_03000D34;
 extern u16 gUnknown_03000D38;
 extern u8 gUnknown_03000D3C;
 extern s16 gUnknown_03000D40;
+extern u8 gUnknown_03000D58[];
 extern s32 gUnknown_03000D60;
 extern s32 gUnknown_03000D64;
+extern u16 gUnknown_03000D68;
+extern u8 gUnknown_03000D74;
+extern struct StructD78 *gUnknown_03000D78;
+extern struct StructD7C *gUnknown_03000D7C;
+extern u8 gUnknown_03000D80;
+extern u8 gUnknown_03000D84;
+extern u8 *gUnknown_03000D88;
+extern u8 gUnknown_03000D90[];
 extern u8 gUnknown_03000DCC;
 extern u16 gUnknown_03000E60;
 extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];
@@ -1037,6 +1093,7 @@ extern struct UnknownStruct9 gUnknown_03001770;
 extern u16 gObjVRAMCopyOffset_0300192C;  // unknown type
 extern u16 gUnknown_03001930; // unknown type
 extern u32 gUnknown_03001938;
+extern struct Struct1940 *gUnknown_03001940;
 extern u8 gCurrentSwitchState;
 extern u16 gMarioIdleTimer;
 

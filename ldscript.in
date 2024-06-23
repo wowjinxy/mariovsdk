@@ -33,7 +33,6 @@
 	X(asm/rom_8029FD0.o) \
 	X(asm/level_help.o) \
 	X(asm/level_retry.o) \
-	X(src/rom_802B798.o) \
 	X(asm/rom_802B798.o) \
 	X(src/movie_player.o) \
 	X(src/rom_802D614.o) \
@@ -180,6 +179,7 @@ SECTIONS
 		. = 0x162;		gUnknown_03000162 = .;
 		. = 0x164;		gUnknown_03000164 = .;
 		. = 0x168;		gUnknown_03000168 = .;
+		. = 0x170;		gUnknown_03000170 = .;
 		. = 0x1A0;		gMoviePlayerParams = .;
 		. = 0x1A8;		gUnknown_030001A8 = .;
 		. = 0x1AC;		gUnknown_030001AC = .;

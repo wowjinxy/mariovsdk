@@ -59,7 +59,7 @@ void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 	{
 		u32 r0 = arg1 & 0x7F;
 		if (r0 == 9)
-		{	
+		{
 			if (gCurrentSwitchState != 1)
 			{
 				r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
@@ -786,3 +786,360 @@ void sub_0802C71C(void)
     gUnknown_03000D40 = gUnknown_030009E0 >> 3;
     gUnknown_03000160 = 1;
 }
+
+extern void *gUnknown_0807C7A8[];
+extern void *gUnknown_0807C7CC[];
+extern void *gUnknown_0807C814[];
+extern void **gUnknown_0807C834;
+
+extern u8 gUnknown_0807C7C4[];
+extern u8 gUnknown_0807C804[];
+extern u8 gUnknown_0807C82C[];
+extern u8 gUnknown_0807C838[];
+
+void sub_0802C7A4(void)
+{
+    s16 i;
+
+    if (gNextLevelInLevelTable.unk12 == 2)
+    {
+        gUnknown_03000D7C = 0;
+        if (gMainState == MAIN_STATE_TUTORIAL)
+        {
+            gUnknown_03000D78 = gUnknown_0807C7A8[gNextLevelInLevelTable.unk10];
+            gUnknown_03000D80 = 0;
+            gUnknown_03000D88 = gUnknown_0807C7C4;
+            gUnknown_03000D74 = gUnknown_03000D88[gNextLevelInLevelTable.unk10];
+        }
+        else if (gLevelType == LEVEL_TYPE_MAIN || gMainState == MAIN_STATE_DEMO)
+        {
+            gUnknown_03000D78 = gUnknown_0807C7CC[gNextLevelInLevelTable.unk10];
+            gUnknown_03000D80 = 0;
+            gUnknown_03000D88 = gUnknown_0807C804;
+            gUnknown_03000D74 = gUnknown_03000D88[gNextLevelInLevelTable.unk10];
+        }
+        else if (gLevelType == LEVEL_TYPE_PLUS)
+        {
+            gUnknown_03000D78 = gUnknown_0807C814[gNextLevelInLevelTable.unk10];
+            gUnknown_03000D80 = 0;
+            gUnknown_03000D88 = gUnknown_0807C82C;
+            gUnknown_03000D74 = gUnknown_03000D88[gNextLevelInLevelTable.unk10];
+        }
+        else
+        {
+            gUnknown_03000D78 = gUnknown_0807C834;
+            gUnknown_03000D80 = 0;
+            gUnknown_03000D88 = gUnknown_0807C838;
+            gUnknown_03000D74 = gUnknown_03000D88[0];
+        }
+        gUnknown_03000D64 = (gUnknown_030009E0 + 8) << 8;
+        for (i = 0; i < gUnknown_03000D74; i++)
+            gUnknown_03000D90[i] = gUnknown_03000D58[i] = 0;
+        gUnknown_03000D84 = 0;
+        gUnknown_03000D68 = 0;
+    }
+}
+
+extern u8 sub_08038DF4(u8, u8, int, u16, u16, int);
+extern struct Struct1940 *gUnknown_03000DA0[];
+
+static inline void sub_0802C938_inline(struct Struct1940 **r6, s16 r5, int r7)
+{
+    u8 r1 = sub_08038DF4(255, 171, -1, (gUnknown_03000D78[r5].unk0 >> 8) + 12, gUnknown_030009E0 - 8, r7);
+    r6[r5] = &gUnknown_03001940[r1];
+}
+
+void sub_0802C938(void)
+{
+    s16 i;
+
+    for (i = 0; i < gUnknown_03000D88[gNextLevelInLevelTable.unk10]; i++)
+    {
+        int r7 = 0;
+        u16 r3;
+        u8 r1;
+        struct Struct1940 **r6 = gUnknown_03000DA0;
+        s16 r5 = i;
+        
+        //asm(""::"r"(i));
+        
+        r1 = sub_08038DF4(255, 171, -1, (gUnknown_03000D78[r5].unk0 >> 8) + 12, gUnknown_030009E0 - 8, r7);
+        r6[r5] = &gUnknown_03001940[r1];
+        
+        //sub_0802C938_inline(gUnknown_03000DA0, i, 0);
+    }
+}
+
+extern s32 gUnknown_03000D54;
+extern s32 gUnknown_03000D50;
+extern s32 gUnknown_03000D60;
+extern s32 gUnknown_03000D70;
+extern u32 gUnknown_03000D6C;
+extern u16 gUnknown_03000DC8;
+extern s16 gUnknown_0807C83A[];
+
+void sub_0802C9D8(void)
+{
+    // r6 = &gUnknown_030009D0
+    // r12 = &gUnknown_03000D84
+    // r7 = &gUnknown_03000D7C
+    // r8 = &gNextLevelInLevelTable
+    int r2;
+    int r0;
+
+    if (gNextLevelInLevelTable.unk12 == 2
+     && (gUnknown_03001A1C & 0x2000)
+     && (gUnknown_030009D0 & 0x10))
+    {
+        if (gUnknown_03000D7C != NULL)
+        {
+            if (gUnknown_03000D54 > gUnknown_03000D64 - 0x500)
+            {
+                if ((u8)(gUnknown_03000D84 - 2) > 1)
+                    gUnknown_03000D7C->unk24 = gUnknown_03000D64 - 0x500;
+                else
+                    gUnknown_03000D7C->unk24 = gUnknown_03000D50 - 0x500;
+            }
+            //_0802CA62
+            else
+                gUnknown_03000D7C->unk24 = gUnknown_03000D54;
+        }
+        //_0802CA64
+        switch (gUnknown_03000D84)
+        {
+        case 0:
+            if (gUnknown_030009D0 & 8)
+            {
+                //gUnknown_03000D68++;
+                // r6 = &gUnknown_03000D80
+                if (++gUnknown_03000D68 >= gUnknown_03000D78[gUnknown_03000D80].unkC)
+                {
+                    gUnknown_03000D84 = 1;
+                    gUnknown_03000D60 = gUnknown_03000D78[gUnknown_03000D80].unk0;
+                    gUnknown_03000D70 = (gUnknown_030009E0 << 8) - gUnknown_03000D78[gUnknown_03000D80].unk4;
+                    gUnknown_03000D64 = gUnknown_030009E0 << 8;
+                    gUnknown_03000D7C = gUnknown_03000DA0[gUnknown_03000D80];
+                    gUnknown_03000D54 = gUnknown_03000D7C->unk24;
+                    gUnknown_03000D6C = gUnknown_030019AC->unk24;
+                }
+            }
+            break;
+        case 1:
+            gUnknown_03000D64 -= gUnknown_03000D78[gUnknown_03000D80].unk8;
+            if (gUnknown_03000D64 < gUnknown_03000D70 + 0x800)
+            {
+                gUnknown_03000D84 = 2;
+                gUnknown_03000D68 = 0;
+                gUnknown_03000D50 = gUnknown_03000D64;
+                gUnknown_03000DC8 = 0;
+            }
+            break;
+        case 2:
+            gUnknown_03000D68++;
+            if (gUnknown_03000DC8 > 9)
+            {
+                gUnknown_03000DC8 = 9;
+                if (gUnknown_03000D68 >= gUnknown_03000D78[gUnknown_03000D80].unkE)
+                {
+                    gUnknown_03000D84 = 3;
+                    gUnknown_03000D68 = 2;
+                }
+            }
+            //_0802CBF0
+            else
+            {
+                gUnknown_03000D50 -= gUnknown_0807C83A[gUnknown_03000DC8];
+            }
+            //_0802CC04
+            gUnknown_03000DC8++;
+            break;
+        case 3:
+            gUnknown_03000D50 += 32 + gUnknown_03000D78[gUnknown_03000D80].unkA;
+            gUnknown_03000D64 += gUnknown_03000D78[gUnknown_03000D80].unkA;
+            if (gUnknown_03000D64 > (gUnknown_030009E0 << 8))
+            {
+                gUnknown_03000D64 = (gUnknown_030009E0 + 8) << 8;
+                gUnknown_03000D68 = 0;
+                if (gUnknown_030009D0 & 8)
+                {
+                    gUnknown_03000D84 = 0;
+                    gUnknown_03000D80++;
+                    if (gUnknown_03000D80 >= gUnknown_03000D88[gNextLevelInLevelTable.unk10])
+                        gUnknown_03000D80 = 0;
+                }
+                //_0802CCAC
+                else
+                {
+                    sub_0804138C(12, 0, (gUnknown_03000D7C->unk20 << 8) >> 16, (gUnknown_03000D7C->unk24 << 8) >> 16);
+                    gUnknown_03000D84 = 4;
+                }
+            }
+            break;
+        case 4:
+            gUnknown_03000D50 += gUnknown_03000D78[gUnknown_03000D80].unkA;
+            r2 = (s32)gUnknown_03000D7C->unk20 >> 8;
+            r0 = gUnknown_03000D78[gUnknown_03000D80].unk0 >> 8;
+            if (r2 - r0 >= 0)
+            {
+                if (r2 - r0 > 8)
+                    goto label;
+            }
+            else
+            {
+                if (r0 - r2 > 8)
+                {
+                label:
+                    gUnknown_03000D84 = 0;
+                    gUnknown_03000D7C = 0;
+                }
+            }
+            break;
+        }
+    }
+}
+
+extern u32 gUnknown_03000D6C;
+
+int sub_0802CD34(struct StructD7C *arg0)
+{
+    int r4 = arg0->unk20 >> 8;
+    int r12 = gUnknown_030009E0 << 8;
+    s16 i;
+
+    if ((gUnknown_030009D0 & 0x10)
+     && arg0->unk24 <= r12
+     && r12 - arg0->unk20 <= 0x1000
+     && gUnknown_03000D84 == 0)
+    {
+        // r8 = gUnknown_03000D78
+        for (i = 0; i < gUnknown_03000D88[gNextLevelInLevelTable.unk10]; i++)
+        {
+            //s16 asdf = i;
+            //#define i asdf
+            int r1;
+            
+            r1 = gUnknown_03000D78[i].unk0 >> 8;
+            //if ((r4 - r1 >= 0 /*&& r4 == r1*/)
+            // || (r4 - r1 < 0 && r1 == r4))
+            if (r4 - r1 >= 0)
+            {
+                if (r4 == r1)
+                    goto label;
+            }
+            else if (r1 == r4)
+            {
+            label:
+                i++;i--;
+                arg0++;arg0--;arg0++;arg0--;
+                arg0++;arg0--;arg0++;arg0--;
+                arg0++;arg0--;arg0++;arg0--;
+                arg0++;arg0--;arg0++;arg0--;
+                arg0++;arg0--;arg0++;arg0--;
+                arg0++;arg0--;arg0++;arg0--;
+                arg0++;arg0--;arg0++;arg0--;
+                arg0++;arg0--;arg0++;arg0--;
+                if (gUnknown_03000D78[i].unk10[gUnknown_03000D90[i]] != 0)
+                {
+                    arg0->unk20 = gUnknown_03000D78[i].unk0;
+                    gUnknown_03000D80 = i;
+                    gUnknown_03000D60 = gUnknown_03000D78[gUnknown_03000D80].unk0;
+                    gUnknown_03000D70 = r12 - gUnknown_03000D78[gUnknown_03000D80].unk4;
+                    gUnknown_03000D64 = r12;
+                    play_sound_effect_08071990(112, 8, 16, 64, 0, 128, 0);
+                    gUnknown_03000D84 = 1;
+                    gUnknown_03000D7C = arg0;
+                    gUnknown_03000D54 = arg0->unk24;
+                    gUnknown_03000D6C = gUnknown_030019AC->unk24;
+                    sub_0804138C(12, 0, (u32)(arg0->unk20 << 8) >> 16, (u32)(arg0->unk24 << 8) >> 16);
+                    if (++gUnknown_03000D90[i] > 7)
+                        gUnknown_03000D90[i] = 0;
+                    return 1;
+                }
+                //_0802CEA8
+                if (gUnknown_03000D58[i] == 0)
+                {
+                    gUnknown_03000D58[i] = 1;
+                    // to _0802CEF6
+                }
+                //_0802CEBC
+                else
+                {
+                    gUnknown_03000D58[i]--;
+                    if (gUnknown_03000D58[i] == 0)
+                    {
+                        if (++gUnknown_03000D90[i] > 7)
+                            gUnknown_03000D90[i] = 0;
+                    }
+                }
+                //to _0802CEF6
+                break;
+            }
+            //_0802CEDA
+        }
+    }
+    return 0;
+}
+
+void sub_0802CF08(void)
+{
+    gUnknown_03000D84 = 0;
+    gUnknown_03000D68 = 0;
+}
+
+struct Struct0802CF20
+{
+    u8 filler0[0x24];
+    void *unk24;
+    u8 filler28[0x3D-0x28];
+    u8 unk3D;
+};
+
+int sub_0802CF20(struct Struct0802CF20 *arg0)
+{
+    if (gUnknown_03000D84 == 4)
+    {
+        if (arg0->unk3D == gUnknown_030019AC->unk43)
+        {
+            gUnknown_030019AC->unk24 = (gUnknown_030019AC->unk24 + 0x400) & 0xFFFFFF00;
+            gUnknown_030019AC->unk43 = 255;
+        }
+        arg0->unk24 = gUnknown_03000D54;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+/*
+void sub_0802CF78(void)
+{
+    struct Struct170_child *r4;
+    struct Struct170_child *r6;
+
+    if (!(gUnknown_03001A1C & 8)
+     && gUnknown_03000170.unk1C != 0
+     && gUnknown_03001A38 != 1)
+    {
+        r4 = gUnknown_03000170.unk1C;
+        r6 = r4 + 12;
+        while (r4 < r6)
+        {
+            if (r4->unk0 != -1 && r4->unk0 <= 2)
+            {
+                if (r4->unk0 == 2)
+                    r4->unk0 = -1;
+                else
+                {
+                    if (gUnknown_03000170.unk20 == -1 || sub_080721A8() != 0)
+                        gUnknown_03000170.unk20 = play_sound_effect_08071990(109, 4, 16, 64, 0, 128, 0);
+                    if (r4->unk4 != 0)
+                        r4->unk4--;  // to _0802D038
+                    r4->unk8->unk8 += gUnknown_03000170.unk18;
+                    if (r4->unk8->unk8 == r4->
+                }
+            }
+            //_0802D03A
+            r4++;
+        }
+    }
+}
+*/
