@@ -42,7 +42,7 @@ _08015124:
 	neg r1, r1
 	mov r0, sp
 	bl load_graphics_config_08032F24
-	ldr r1, _08015164  @ =gUnknown_080794EC
+	ldr r1, _08015164  @ =gLevelSelectPaletteIDs
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	lsl r0, r0, #2
@@ -57,7 +57,7 @@ _0801515C:
 _08015160:
 	.4byte gLevelSelectWorld
 _08015164:
-	.4byte gUnknown_080794EC
+	.4byte gLevelSelectPaletteIDs
 _08015168:
 	.4byte gLevelSelectData
 _0801516C:
@@ -78,7 +78,7 @@ _0801516C:
 	neg r1, r1
 	mov r0, sp
 	bl load_graphics_config_08032F24
-	ldr r1, _080151A8  @ =gUnknown_08079504
+	ldr r1, _080151A8  @ =gLevelSelectPlusPaletteIDs
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	sub r0, r0, #1
@@ -91,7 +91,7 @@ _080151A0:
 _080151A4:
 	.4byte gLevelSelectWorld
 _080151A8:
-	.4byte gUnknown_08079504
+	.4byte gLevelSelectPlusPaletteIDs
 _080151AC:
 	mov r0, #0
 	str r0, [sp]
@@ -365,7 +365,7 @@ _08015362:
 	mov r0, sp
 	mov r1, #2
 	bl load_graphics_config_08032F24
-	ldr r1, _08015468  @ =gUnknown_08079504
+	ldr r1, _08015468  @ =gLevelSelectPlusPaletteIDs
 	mov r0, #0
 	ldrsb r0, [r5, r0]
 	sub r0, r0, #1
@@ -455,7 +455,7 @@ _08015460:
 _08015464:
 	.4byte gLevelSelectPlusBackgrounds
 _08015468:
-	.4byte gUnknown_08079504
+	.4byte gLevelSelectPlusPaletteIDs
 _0801546C:
 	cmp r2, #4
 	bne _080154A4
@@ -550,7 +550,7 @@ _080154F4:
 	mov r0, sp
 	mov r1, #3
 	bl load_graphics_config_08032F24
-	ldr r1, _08015534  @ =gUnknown_08079504
+	ldr r1, _08015534  @ =gLevelSelectPlusPaletteIDs
 	b _0801555C
 _08015528:
 	.4byte gLevelSelectMode
@@ -559,7 +559,7 @@ _0801552C:
 _08015530:
 	.4byte gLevelSelectPlusBackgrounds
 _08015534:
-	.4byte gUnknown_08079504
+	.4byte gLevelSelectPlusPaletteIDs
 _08015538:
 	ldr r0, _080155FC  @ =gLevelSelectMode
 	strb r6, [r0]
@@ -578,7 +578,7 @@ _0801553C:
 	mov r0, sp
 	mov r1, #3
 	bl load_graphics_config_08032F24
-	ldr r1, _08015608  @ =gUnknown_080794EC
+	ldr r1, _08015608  @ =gLevelSelectPaletteIDs
 _0801555C:
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -663,7 +663,7 @@ _08015600:
 _08015604:
 	.4byte gLevelSelectBackgrounds
 _08015608:
-	.4byte gUnknown_080794EC
+	.4byte gLevelSelectPaletteIDs
 _0801560C:
 	.4byte 0x03000070
 _08015610:
@@ -3903,7 +3903,7 @@ _08016E50:
 	mov r0, sp
 	mov r1, #3
 	bl load_graphics_config_08032F24
-	ldr r1, _08016EBC  @ =gUnknown_08079504
+	ldr r1, _08016EBC  @ =gLevelSelectPlusPaletteIDs
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	sub r0, r0, #1
@@ -3938,7 +3938,7 @@ _08016EB4:
 _08016EB8:
 	.4byte gLevelSelectWorld
 _08016EBC:
-	.4byte gUnknown_08079504
+	.4byte gLevelSelectPlusPaletteIDs
 _08016EC0:
 	.4byte 0x03000074
 _08016EC4:
