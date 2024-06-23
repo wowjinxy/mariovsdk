@@ -37,7 +37,7 @@ extern struct Struct08078210
     struct Struct08078210_sub *unk108[1];
 } *gObjectTileDataRAMPtr;
 
-void sub_0802D1DC(struct Struct170_child *arg0, int arg1);
+void sub_0802D1DC(struct LinkedListHeaderMaybe *arg0, int arg1);
 
 void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 {
@@ -140,19 +140,18 @@ void load_arm_code_0802B998(void)
 
 void sub_0802B9E4(void)
 {
-    gUnknown_03000C30.unk4 = arena_allocate(0x1E0);
+    gUnknown_03000C30.unk4 = arena_allocate(30 * sizeof(struct UnknownListThing2));
     gUnknown_03000C30.unk0 = 0;
 }
 
-// returns ?
-struct StructC30_child *sub_0802BA00(void)
+struct UnknownListThing2 *sub_0802BA00(void)
 {
     void *r5 = gUnknown_03000C30.unk4;
-    struct StructC30_child *r0;
+    struct UnknownListThing2 *r0;
 
     if (r5 == NULL)
     {
-        gUnknown_03000C30.unk4 = arena_allocate(0x1E0);
+        gUnknown_03000C30.unk4 = arena_allocate(30 * sizeof(struct UnknownListThing2));
         gUnknown_03000C30.unk0 = 0;
     }
     if (gUnknown_03000C30.unk0 >= 30)
@@ -167,16 +166,16 @@ void sub_0802BA38(int arg0, int arg1, int arg2, int arg3)
 {
     if (gUnknown_03000C30.unk4 != NULL)
     {
-        struct StructC30_child *r4 = gUnknown_03000C30.unk4;
-        struct StructC30_child *r5 = r4 + gUnknown_03000C30.unk0;
+        struct UnknownListThing2 *r4 = gUnknown_03000C30.unk4;
+        struct UnknownListThing2 *r5 = r4 + gUnknown_03000C30.unk0;
 
         while (r4 < r5)
         {
-            if (r4->unk8 != r4->unkC)
+            if (r4->header.unk8 != r4->unkC)
             {
-                sub_080064D4(r4, r4->unk8, arg0, arg1);
-                sub_080064D4(r4, r4->unk8, arg2, arg3);
-                r4->unkC = r4->unk8;
+                sub_080064D4(r4, r4->header.unk8, arg0, arg1);
+                sub_080064D4(r4, r4->header.unk8, arg2, arg3);
+                r4->unkC = r4->header.unk8;
             }
             r4++;
         }
@@ -192,24 +191,24 @@ void sub_0802BAA0(void)
 {
     if (gUnknown_03000C40.unk20 != NULL)
     {
-        struct StructC40_child *r4 = gUnknown_03000C40.unk20;
-        struct StructC40_child *r7 = r4 + gUnknown_03000C40.unk1C;
+        struct LinkedListHeaderMaybe *r4 = gUnknown_03000C40.unk20;
+        struct LinkedListHeaderMaybe *r7 = r4 + gUnknown_03000C40.unk1C;
 
         while (r4 < r7)
         {
             if (r4->unk0 != 0)
             {
-                if (r4->unk4 != 0)
-                    r4->unk4--;
+                if (r4->unk4.as_struct.unk0 != 0)
+                    r4->unk4.as_struct.unk0--;
                 else
                 {
-                    struct StructC40_child *r3;
+                    struct UnknownListThing1 *r3;
                     r3 = (void *)((u8 *)r4->unk8->unk8 + gUnknown_03000C40.unk18);
-                    r4->unk8->unk8 = r3;
+                    r4->unk8->unk8 = &r3->header;
                     if (r3 == (void *)gUnknown_03000C40.unk0[r4->unk0].unk4)
-                        sub_0802BC64(((r4 - gUnknown_03000C40.unk20)), 0);
+                        sub_0802BC64(r4 - gUnknown_03000C40.unk20, 0);
                     else
-                        r4->unk4 = *(u8 *)&r3[1].unk0;  // WTF?
+                        r4->unk4.as_struct.unk0 = r3->unkC;
                 }
             }
             r4++;
@@ -239,8 +238,8 @@ void sub_0802BB4C(void)
 
 int sub_0802BB80(u8 arg0, u8 arg1, u16 arg2)
 {
-    struct StructC30_child *r4 = gUnknown_03000C40.unk20;  // hmm
-    struct StructC40_child *r2;
+    struct UnknownListThing2 *r4 = gUnknown_03000C40.unk20;  // hmm
+    struct LinkedListHeaderMaybe *r2;
     int r0;
 
     if (r4 == NULL)
@@ -253,25 +252,25 @@ int sub_0802BB80(u8 arg0, u8 arg1, u16 arg2)
         return 0;
     r2 = gUnknown_03000C40.unk20 + gUnknown_03000C40.unk1C;
     gUnknown_03000C40.unk1C++;
-    r2->unk4 = 0;
+    r2->unk4.as_struct.unk0 = 0;
     r2->unk0 = 0;
     r2->unk8 = r4;
-    r2->unk6 = arg2;
-    r4->unk0 = arg0;
-    *(u32 *)&r4->unk4 = arg1;  // WTF?
-    r4->unk8 = gUnknown_03000C40.unk0[0].unk0;
+    r2->unk4.as_struct.unk2 = arg2;
+    r4->header.unk0 = arg0;
+    r4->header.unk4.as_u32 = arg1;  // WTF?
+    r4->header.unk8 = gUnknown_03000C40.unk0[0].unk0;
     // missing return value
 }
 
 u8 sub_0802BC00(int arg0)
 {
     u16 r4 = gEWRAMBasePtr->unk600C[arg0];
-    struct StructC40_child *r2 = gUnknown_03000C40.unk20;
-    struct StructC40_child *r1 = r2 + gUnknown_03000C40.unk1C;
+    struct LinkedListHeaderMaybe *r2 = gUnknown_03000C40.unk20;
+    struct LinkedListHeaderMaybe *r1 = r2 + gUnknown_03000C40.unk1C;
 
     while (r2 < r1)
     {
-        if (r2->unk6 == r4)
+        if (r2->unk4.as_struct.unk2 == r4)
             return r2 - gUnknown_03000C40.unk20 + 1;
         r2++;
     }
@@ -280,14 +279,14 @@ u8 sub_0802BC00(int arg0)
 
 void sub_0802BC64(u8 arg0, int arg1)
 {
-    struct StructC40_child *r2 = &gUnknown_03000C40.unk20[arg0];
-    struct StructC40_child *r0;
+    struct LinkedListHeaderMaybe *r2 = &gUnknown_03000C40.unk20[arg0];
+    struct LinkedListHeaderMaybe *r0;
 
     if (r2->unk0 != arg1)
     {
         r2->unk0 = arg1;
         r0 = r2->unk8->unk8 = gUnknown_03000C40.unk0[arg1].unk0;
-        r2->unk4 = *(u8 *)&r0[1].unk0;  // WTF?
+        r2->unk4.as_struct.unk0 = *(u8 *)&r0[1].unk0;  // WTF?
     }
 }
 
@@ -1098,7 +1097,7 @@ int sub_0802CD34(struct StructD7C *arg0)
                 gUnknown_03000D7C = arg0;
                 gUnknown_03000D54 = arg0->unk24;
                 gUnknown_03000D6C = gUnknown_030019AC->unk24;
-                sub_0804138C(12, 0, arg0->unk20 >> 8, arg0->unk24 >> 8);
+                sub_0804138C(12, 0, (u16)(arg0->unk20 >> 8), (u16)(arg0->unk24 >> 8));
                 if (++gUnknown_03000D90[i] > 7)
                     gUnknown_03000D90[i] = 0;
                 return TRUE;
@@ -1178,11 +1177,11 @@ void sub_0802CF78(void)
                         r4->unk4--;
                     else
                     {
-                        r4->unk8->unk8 = (void *)((u8 *)r4->unk8->unk8 + gUnknown_03000170.unk18);
-                        if (r4->unk8->unk8 == gUnknown_03000170.unk0[r4->unk0].unk4)
+                        r4->unk8->header.unk8 = (void *)((u8 *)r4->unk8->header.unk8 + gUnknown_03000170.unk18);
+                        if (r4->unk8->header.unk8 == gUnknown_03000170.unk0[r4->unk0].unk4)
                             sub_0802D1DC(r4, 2);
                         else
-                            r4->unk4 = r4->unk8->unk8->unkC;
+                            r4->unk4 = ((struct UnknownListThing1 *)r4->unk8->header.unk8)->unkC;
                     }
                 }
             }
@@ -1208,7 +1207,7 @@ void sub_0802D06C(void)
         r4->unk0 = -1;
         r4->unk8 = sub_0802BA00();
         r4->unk8->unkC = 0;
-        r4->unk8->unk8 = 0;
+        r4->unk8->header.unk8 = 0;
     }
     gUnknown_03000170.unk20 = -1;
 }
@@ -1241,7 +1240,7 @@ void sub_0802D0E8(void)
             r4->unk0 = -1;
             r4->unk8 = sub_0802BA00();
             r4->unk8->unkC = 0;
-            r4->unk8->unk8 = 0;
+            r4->unk8->header.unk8 = 0;
         }
         gUnknown_03000170.unk20 = -1;
     }
@@ -1274,8 +1273,8 @@ void sub_0802D140(struct Struct0802D140 *arg0, u32 arg1)
             {
                 if (r2_->unk0 == -1)
                 {
-                    r2_->unk8->unk0 = r3->unk2_0;
-                    *(u32 *)&r2_->unk8->unk4 = r3->unk3;
+                    r2_->unk8->header.unk0 = r3->unk2_0;
+                    *(u32 *)&r2_->unk8->header.unk4 = r3->unk3;
                     sub_0802D1DC(r2_, 1);
                     break;
                 }
@@ -1293,15 +1292,17 @@ void sub_0802D1D0(void)
     gUnknown_03000170.unk1C = 0;
 }
 
-void sub_0802D1DC(struct Struct170_child *arg0, int arg1)
+void sub_0802D1DC(struct LinkedListHeaderMaybe *arg0, int arg1)
 {
     struct SomeUnknownHeader *r1;
+    struct LinkedListHeaderMaybe *r0;
 
     if (arg0->unk0 != arg1)
     {
         arg0->unk0 = arg1;
-        r1 = arg0->unk8->unk8 = gUnknown_03000170.unk0[arg1].unk0;
-        arg0->unk4 = r1->unkC;
-        sub_08001BA4(arg0->unk8, arg0->unk8->unk8);
+        r0 = arg0->unk8;
+        r1 = (void *)r0->unk8 = gUnknown_03000170.unk0[arg1].unk0;
+        arg0->unk4.as_struct.unk0 = r1->unkC;
+        sub_08001BA4(r0, r0->unk8);
     }
 }

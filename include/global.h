@@ -751,26 +751,40 @@ struct SomeUnknownHeader
     u8 unkC;
 };
 
-// header for StructC30_child and StructC40_child
-struct SomeWeirdLinkedListThing
+// header for UnknownListThing2 and StructC40_child
+struct LinkedListHeaderMaybe
 {
     u32 unk0;
-    u8 unk4;
-    u16 unk6;
-    struct SomeWeirdLinkedListThing *unk8;
-};
+    // This can also be a u32. TODO: make it a union
+    union
+    {
+        u32 as_u32;
+        struct
+        {
+            u8 unk0;
+            u16 unk2;
+        } as_struct;
+    } unk4;
+    struct LinkedListHeaderMaybe *unk8;
+};  // size = 0xC
 
-struct Struct170_child_child_child
+struct UnknownListThing1
 {
-    u8 filler0[0xC];
+    struct LinkedListHeaderMaybe header;
     u8 unkC;
-};
+};  // size = 0x10
 
-struct Struct170_child
+struct UnknownListThing2
+{
+    struct LinkedListHeaderMaybe header;
+    void *unkC;
+};  // size = 0x10
+
+struct Struct170_child  // should be LinkedListHeaderMaybe
 {
     s32 unk0;
     u8 unk4;
-    struct StructC30_child *unk8;  // correct type
+    struct UnknownListThing2 *unk8;  // correct type
 };  // size = 0xC
 
 struct Struct170_sub
@@ -783,34 +797,15 @@ struct Struct170
 {
     struct Struct170_sub unk0[3];
     u32 unk18;  // size of something
-    struct Struct170_child *unk1C;  // array of 12 Struct170_child structs
+    struct LinkedListHeaderMaybe *unk1C;  // array of 12 LinkedListHeaderMaybe structs
     s32 unk20;
 };
-
-// StructC30_child and StructC40_child are the same!
-
-struct StructC30_child
-{
-    u32 unk0;
-    u8 unk4;
-    u16 unk6;
-    struct Struct170_child_child_child *unk8;
-    void *unkC;
-};  // size = 0x10
 
 struct StructC30
 {
     u32 unk0;
-    struct StructC30_child *unk4;
+    struct UnknownListThing2 *unk4;
 };
-
-struct StructC40_child
-{
-    u32 unk0;
-    u8 unk4;
-    u16 unk6;
-    struct StructC40_child *unk8;
-};  // size = 0xC
 
 struct StructC40_sub
 {
@@ -825,7 +820,7 @@ struct StructC40
     u8 fillerC[0x18-0xC];
     u32 unk18;
     u32 unk1C;
-    struct StructC40_child *unk20;  // array
+    struct LinkedListHeaderMaybe *unk20;  // array
 };
 
 struct StructC70
@@ -1068,6 +1063,7 @@ extern s8 gUnknown_03000BFC;
 extern s8 gUnknown_03000C00;
 extern u16 gUnknown_03000C04;
 extern u16 gUnknown_03000C0C;
+extern u8 gUnknown_03000C1C;
 extern u8 gDKLevelMarioLivesLeft_03000C20;
 extern u8 gUnknown_03000C28;
 extern void *gUnknown_03000C2C;
@@ -1094,6 +1090,7 @@ extern u8 gUnknown_03000D84;
 extern u8 *gUnknown_03000D88;
 extern u8 gUnknown_03000D90[];
 extern u8 gUnknown_03000DCC;
+extern u32 gUnknown_03000E00;
 extern u16 gUnknown_03000E60;
 extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];
 extern u8 *gUnknown_03000E88;
@@ -1343,15 +1340,14 @@ extern u8 gUnknown_030009FC;
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
 extern struct UnknownStruct16 gEWorldMenuData2;
-s32 gUnknown_03000288;
-u32 gUnknown_0300028C;
-u8 gUnknown_03000290;
+extern s32 gUnknown_03000288;
+extern u32 gUnknown_0300028C;
+extern u8 gUnknown_03000290;
 
 extern struct struct_0807820C *gEWRAMBasePtr;
-u32 gMainState;
 
-void *gSomeVRAMAddr_03000E90;
-void *gSomeVRAMAddr_03000E80;
+extern void *gSomeVRAMAddr_03000E90;
+extern void *gSomeVRAMAddr_03000E80;
 
 extern u32 gUnknown_03000294;
 extern u32 gUnknown_03000298;
@@ -1367,7 +1363,7 @@ void irq_enable_t(void);
 void irq_disable_t(void);
 void interrupt_main(void);
 
-void sub_08001BA4(struct Struct802C31C *, struct SomeUnknownHeader *);
+void sub_08001BA4(void *, void *);
 void level_edit_delete_object(struct Struct802C31C *);
 void sub_080035C0(int, int);
 void sub_08004428();
@@ -1565,7 +1561,7 @@ void sub_080382A8(void);
 void sub_080386DC(void);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);
-void sub_0804138C(int, int, u16, u16);
+void sub_0804138C(int, int, u32, u32);
 u16 sub_0806C2C4(void);
 void sub_0806D1AC(u16, u16);
 void sub_080714A8(void);

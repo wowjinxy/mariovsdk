@@ -87,9 +87,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
 	.2byte 0x004E @ X Position
 	.2byte 0x0034 @ Y position
@@ -97,9 +97,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x0080 @ X Position
 	.2byte 0x0034 @ Y position
@@ -107,9 +107,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x00B2 @ X Position
 	.2byte 0x0034 @ Y position
@@ -117,9 +117,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x001C @ X Position
 	.2byte 0x0061 @ Y position
@@ -127,9 +127,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Skip 4 pixels count?
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x004E @ X Position
 	.2byte 0x0061 @ Y position
@@ -137,9 +137,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x0080 @ X Position
 	.2byte 0x0061 @ Y position
@@ -147,9 +147,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 0x00B2 @ X Position
 	.2byte 0x0061 @ Y position
@@ -157,9 +157,9 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte 0x085D0A00 @ Sprite Data 1
-	.4byte 0x085D10C0 @ Sprite Data 2
-	.4byte 0x085D10C8 @ Sprite Graphics
+	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
 	.GLOBAL gLevelSelectLevelPlusArtSpriteLayout
 gLevelSelectLevelPlusArtSpriteLayout:
@@ -1132,39 +1132,39 @@ gUnknown_0807DD1C:
 
 	.GLOBAL gPaletteIndices_0807DD34
 gPaletteIndices_0807DD34:
-	.4byte 0x00000025
-	.4byte 0x00000026
-	.4byte 0x00000027
-	.4byte 0x00000028
-	.4byte 0x00000029
-	.4byte 0x0000002A
+	.4byte 37 @ World 1 palette
+	.4byte 38 @ World 2 palette
+	.4byte 39 @ World 3 palette
+	.4byte 40 @ World 4 palette
+	.4byte 41 @ World 5 palette
+	.4byte 42 @ World 6 palette
 
 	.GLOBAL gPaletteIndices_0807DD4C
 gPaletteIndices_0807DD4C:
-	.4byte 0x0000002B
-	.4byte 0x0000002C
-	.4byte 0x0000002D
-	.4byte 0x0000002E
-	.4byte 0x0000002F
-	.4byte 0x00000030
+	.4byte 43 @ World 1 Plus palette
+	.4byte 44 @ World 2 Plus palette
+	.4byte 45 @ World 3 Plus palette
+	.4byte 46 @ World 4 Plus palette
+	.4byte 47 @ World 5 Plus palette
+	.4byte 48 @ World 6 Plus palette
 
 	.GLOBAL gPaletteIndices_0807DD64
 gPaletteIndices_0807DD64:
-	.4byte 0x00000031
-	.4byte 0x00000032
-	.4byte 0x00000033
-	.4byte 0x00000034
-	.4byte 0x00000035
-	.4byte 0x00000036
+	.4byte 49 @ Expert 1 palette
+	.4byte 50 @ Expert 2 palette
+	.4byte 51 @ Expert 3 palette
+	.4byte 52 @ Expert 4 palette
+	.4byte 53 @ Expert 5 palette
+	.4byte 54 @ Expert 6 palette
 
 	.GLOBAL gPaletteIndices_0807DD7C
 gPaletteIndices_0807DD7C:
-	.4byte 0x00000037
-	.4byte 0x00000038
-	.4byte 0x00000039
-	.4byte 0x0000003B
-	.4byte 0x0000003C
-	.4byte 0x0000003D
+	.4byte 55 @ Expert 7 palette
+	.4byte 56 @ Expert 8 palette
+	.4byte 57 @ Expert 9 palette
+	.4byte 59 @ Expert 10 palette
+	.4byte 60 @ Expert 11 palette
+	.4byte 61 @ Expert 12 palette
 
 	.GLOBAL gUnknown_0807DD94
 gUnknown_0807DD94:
@@ -1172,30 +1172,30 @@ gUnknown_0807DD94:
 
 	.GLOBAL gPredefinedPalettes
 gPredefinedPalettes:
-	.INCBIN "assets/palettes/0_bg.gbapal"
-	.INCBIN "assets/palettes/0_obj.gbapal"
-	.INCBIN "assets/palettes/0_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/0_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/1_bg.gbapal"
-	.INCBIN "assets/palettes/1_obj.gbapal"
-	.INCBIN "assets/palettes/1_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/1_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/2_bg.gbapal"
-	.INCBIN "assets/palettes/2_obj.gbapal"
-	.INCBIN "assets/palettes/2_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/2_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/3_bg.gbapal"
-	.INCBIN "assets/palettes/3_obj.gbapal"
-	.INCBIN "assets/palettes/3_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/3_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/0_title_screen_bg.gbapal"
+	.INCBIN "assets/palettes/0_title_screen_obj.gbapal"
+	.INCBIN "assets/palettes/0_title_screen_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/0_title_screen_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/1_main_menu_bg.gbapal"
+	.INCBIN "assets/palettes/1_main_menu_obj.gbapal"
+	.INCBIN "assets/palettes/1_main_menu_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/1_main_menu_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/2_expert_levels_bg.gbapal"
+	.INCBIN "assets/palettes/2_expert_levels_obj.gbapal"
+	.INCBIN "assets/palettes/2_expert_levels_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/2_expert_levels_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/3_options_menu_bg.gbapal"
+	.INCBIN "assets/palettes/3_options_menu_obj.gbapal"
+	.INCBIN "assets/palettes/3_options_menu_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/3_options_menu_obj_gbplayer.gbapal"
 	.INCBIN "assets/palettes/4_bg.gbapal"
 	.INCBIN "assets/palettes/4_obj.gbapal"
 	.INCBIN "assets/palettes/4_bg_gbplayer.gbapal"
 	.INCBIN "assets/palettes/4_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/5_bg.gbapal"
-	.INCBIN "assets/palettes/5_obj.gbapal"
-	.INCBIN "assets/palettes/5_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/5_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/5_level_help_bg.gbapal"
+	.INCBIN "assets/palettes/5_level_help_obj.gbapal"
+	.INCBIN "assets/palettes/5_level_help_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/5_level_help_obj_gbplayer.gbapal"
 	.INCBIN "assets/palettes/6_bg.gbapal"
 	.INCBIN "assets/palettes/6_obj.gbapal"
 	.INCBIN "assets/palettes/6_bg_gbplayer.gbapal"
@@ -1204,10 +1204,10 @@ gPredefinedPalettes:
 	.INCBIN "assets/palettes/7_obj.gbapal"
 	.INCBIN "assets/palettes/7_bg_gbplayer.gbapal"
 	.INCBIN "assets/palettes/7_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/8_bg.gbapal"
-	.INCBIN "assets/palettes/8_obj.gbapal"
-	.INCBIN "assets/palettes/8_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/8_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/8_e_world_bg.gbapal"
+	.INCBIN "assets/palettes/8_e_world_obj.gbapal"
+	.INCBIN "assets/palettes/8_e_world_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/8_e_world_obj_gbplayer.gbapal"
 	.INCBIN "assets/palettes/9_bg.gbapal"
 	.INCBIN "assets/palettes/9_obj.gbapal"
 	.INCBIN "assets/palettes/9_bg_gbplayer.gbapal"
@@ -1216,218 +1216,218 @@ gPredefinedPalettes:
 	.INCBIN "assets/palettes/10_obj.gbapal"
 	.INCBIN "assets/palettes/10_bg_gbplayer.gbapal"
 	.INCBIN "assets/palettes/10_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/11_bg.gbapal"
-	.INCBIN "assets/palettes/11_obj.gbapal"
-	.INCBIN "assets/palettes/11_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/11_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/12_bg.gbapal"
-	.INCBIN "assets/palettes/12_obj.gbapal"
-	.INCBIN "assets/palettes/12_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/12_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/13_bg.gbapal"
-	.INCBIN "assets/palettes/13_obj.gbapal"
-	.INCBIN "assets/palettes/13_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/13_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/14_bg.gbapal"
-	.INCBIN "assets/palettes/14_obj.gbapal"
-	.INCBIN "assets/palettes/14_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/14_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/15_bg.gbapal"
-	.INCBIN "assets/palettes/15_obj.gbapal"
-	.INCBIN "assets/palettes/15_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/15_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/16_bg.gbapal"
-	.INCBIN "assets/palettes/16_obj.gbapal"
-	.INCBIN "assets/palettes/16_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/16_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/17_bg.gbapal"
-	.INCBIN "assets/palettes/17_obj.gbapal"
-	.INCBIN "assets/palettes/17_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/17_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/18_bg.gbapal"
-	.INCBIN "assets/palettes/18_obj.gbapal"
-	.INCBIN "assets/palettes/18_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/18_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/19_bg.gbapal"
-	.INCBIN "assets/palettes/19_obj.gbapal"
-	.INCBIN "assets/palettes/19_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/19_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/20_bg.gbapal"
-	.INCBIN "assets/palettes/20_obj.gbapal"
-	.INCBIN "assets/palettes/20_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/20_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/21_bg.gbapal"
-	.INCBIN "assets/palettes/21_obj.gbapal"
-	.INCBIN "assets/palettes/21_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/21_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/22_bg.gbapal"
-	.INCBIN "assets/palettes/22_obj.gbapal"
-	.INCBIN "assets/palettes/22_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/22_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/23_bg.gbapal"
-	.INCBIN "assets/palettes/23_obj.gbapal"
-	.INCBIN "assets/palettes/23_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/23_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/24_bg.gbapal"
-	.INCBIN "assets/palettes/24_obj.gbapal"
-	.INCBIN "assets/palettes/24_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/24_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/25_bg.gbapal"
-	.INCBIN "assets/palettes/25_obj.gbapal"
-	.INCBIN "assets/palettes/25_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/25_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/26_bg.gbapal"
-	.INCBIN "assets/palettes/26_obj.gbapal"
-	.INCBIN "assets/palettes/26_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/26_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/27_bg.gbapal"
-	.INCBIN "assets/palettes/27_obj.gbapal"
-	.INCBIN "assets/palettes/27_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/27_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/28_bg.gbapal"
-	.INCBIN "assets/palettes/28_obj.gbapal"
-	.INCBIN "assets/palettes/28_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/28_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/29_bg.gbapal"
-	.INCBIN "assets/palettes/29_obj.gbapal"
-	.INCBIN "assets/palettes/29_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/29_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/30_bg.gbapal"
-	.INCBIN "assets/palettes/30_obj.gbapal"
-	.INCBIN "assets/palettes/30_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/30_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/31_bg.gbapal"
-	.INCBIN "assets/palettes/31_obj.gbapal"
-	.INCBIN "assets/palettes/31_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/31_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/32_bg.gbapal"
-	.INCBIN "assets/palettes/32_obj.gbapal"
-	.INCBIN "assets/palettes/32_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/32_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/33_bg.gbapal"
-	.INCBIN "assets/palettes/33_obj.gbapal"
-	.INCBIN "assets/palettes/33_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/33_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/34_bg.gbapal"
-	.INCBIN "assets/palettes/34_obj.gbapal"
-	.INCBIN "assets/palettes/34_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/34_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/35_bg.gbapal"
-	.INCBIN "assets/palettes/35_obj.gbapal"
-	.INCBIN "assets/palettes/35_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/35_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/36_bg.gbapal"
-	.INCBIN "assets/palettes/36_obj.gbapal"
-	.INCBIN "assets/palettes/36_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/36_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/37_bg.gbapal"
-	.INCBIN "assets/palettes/37_obj.gbapal"
-	.INCBIN "assets/palettes/37_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/37_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/38_bg.gbapal"
-	.INCBIN "assets/palettes/38_obj.gbapal"
-	.INCBIN "assets/palettes/38_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/38_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/39_bg.gbapal"
-	.INCBIN "assets/palettes/39_obj.gbapal"
-	.INCBIN "assets/palettes/39_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/39_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/40_bg.gbapal"
-	.INCBIN "assets/palettes/40_obj.gbapal"
-	.INCBIN "assets/palettes/40_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/40_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/41_bg.gbapal"
-	.INCBIN "assets/palettes/41_obj.gbapal"
-	.INCBIN "assets/palettes/41_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/41_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/42_bg.gbapal"
-	.INCBIN "assets/palettes/42_obj.gbapal"
-	.INCBIN "assets/palettes/42_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/42_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/43_bg.gbapal"
-	.INCBIN "assets/palettes/43_obj.gbapal"
-	.INCBIN "assets/palettes/43_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/43_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/44_bg.gbapal"
-	.INCBIN "assets/palettes/44_obj.gbapal"
-	.INCBIN "assets/palettes/44_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/44_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/45_bg.gbapal"
-	.INCBIN "assets/palettes/45_obj.gbapal"
-	.INCBIN "assets/palettes/45_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/45_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/46_bg.gbapal"
-	.INCBIN "assets/palettes/46_obj.gbapal"
-	.INCBIN "assets/palettes/46_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/46_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/47_bg.gbapal"
-	.INCBIN "assets/palettes/47_obj.gbapal"
-	.INCBIN "assets/palettes/47_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/47_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/48_bg.gbapal"
-	.INCBIN "assets/palettes/48_obj.gbapal"
-	.INCBIN "assets/palettes/48_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/48_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/49_bg.gbapal"
-	.INCBIN "assets/palettes/49_obj.gbapal"
-	.INCBIN "assets/palettes/49_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/49_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/50_bg.gbapal"
-	.INCBIN "assets/palettes/50_obj.gbapal"
-	.INCBIN "assets/palettes/50_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/50_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/51_bg.gbapal"
-	.INCBIN "assets/palettes/51_obj.gbapal"
-	.INCBIN "assets/palettes/51_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/51_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/52_bg.gbapal"
-	.INCBIN "assets/palettes/52_obj.gbapal"
-	.INCBIN "assets/palettes/52_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/52_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/53_bg.gbapal"
-	.INCBIN "assets/palettes/53_obj.gbapal"
-	.INCBIN "assets/palettes/53_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/53_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/54_bg.gbapal"
-	.INCBIN "assets/palettes/54_obj.gbapal"
-	.INCBIN "assets/palettes/54_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/54_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/55_bg.gbapal"
-	.INCBIN "assets/palettes/55_obj.gbapal"
-	.INCBIN "assets/palettes/55_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/55_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/56_bg.gbapal"
-	.INCBIN "assets/palettes/56_obj.gbapal"
-	.INCBIN "assets/palettes/56_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/56_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/57_bg.gbapal"
-	.INCBIN "assets/palettes/57_obj.gbapal"
-	.INCBIN "assets/palettes/57_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/57_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/58_bg.gbapal"
-	.INCBIN "assets/palettes/58_obj.gbapal"
-	.INCBIN "assets/palettes/58_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/58_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/59_bg.gbapal"
-	.INCBIN "assets/palettes/59_obj.gbapal"
-	.INCBIN "assets/palettes/59_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/59_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/60_bg.gbapal"
-	.INCBIN "assets/palettes/60_obj.gbapal"
-	.INCBIN "assets/palettes/60_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/60_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/61_bg.gbapal"
-	.INCBIN "assets/palettes/61_obj.gbapal"
-	.INCBIN "assets/palettes/61_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/61_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/62_bg.gbapal"
-	.INCBIN "assets/palettes/62_obj.gbapal"
-	.INCBIN "assets/palettes/62_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/62_obj_gbplayer.gbapal"
-	.INCBIN "assets/palettes/63_bg.gbapal"
-	.INCBIN "assets/palettes/63_obj.gbapal"
-	.INCBIN "assets/palettes/63_bg_gbplayer.gbapal"
-	.INCBIN "assets/palettes/63_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/11_level_select_world_one_bg.gbapal"
+	.INCBIN "assets/palettes/11_level_select_world_one_obj.gbapal"
+	.INCBIN "assets/palettes/11_level_select_world_one_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/11_level_select_world_one_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/12_level_select_world_two_bg.gbapal"
+	.INCBIN "assets/palettes/12_level_select_world_two_obj.gbapal"
+	.INCBIN "assets/palettes/12_level_select_world_two_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/12_level_select_world_two_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/13_level_select_world_three_bg.gbapal"
+	.INCBIN "assets/palettes/13_level_select_world_three_obj.gbapal"
+	.INCBIN "assets/palettes/13_level_select_world_three_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/13_level_select_world_three_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/14_level_select_world_four_bg.gbapal"
+	.INCBIN "assets/palettes/14_level_select_world_four_obj.gbapal"
+	.INCBIN "assets/palettes/14_level_select_world_four_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/14_level_select_world_four_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/15_level_select_world_five_bg.gbapal"
+	.INCBIN "assets/palettes/15_level_select_world_five_obj.gbapal"
+	.INCBIN "assets/palettes/15_level_select_world_five_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/15_level_select_world_five_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/16_level_select_world_six_bg.gbapal"
+	.INCBIN "assets/palettes/16_level_select_world_six_obj.gbapal"
+	.INCBIN "assets/palettes/16_level_select_world_six_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/16_level_select_world_six_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/17_level_select_dk_boss_bg.gbapal"
+	.INCBIN "assets/palettes/17_level_select_dk_boss_obj.gbapal"
+	.INCBIN "assets/palettes/17_level_select_dk_boss_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/17_level_select_dk_boss_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/18_level_select_world_one_plus_bg.gbapal"
+	.INCBIN "assets/palettes/18_level_select_world_one_plus_obj.gbapal"
+	.INCBIN "assets/palettes/18_level_select_world_one_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/18_level_select_world_one_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/19_level_select_world_two_plus_bg.gbapal"
+	.INCBIN "assets/palettes/19_level_select_world_two_plus_obj.gbapal"
+	.INCBIN "assets/palettes/19_level_select_world_two_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/19_level_select_world_two_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/20_level_select_world_three_plus_bg.gbapal"
+	.INCBIN "assets/palettes/20_level_select_world_three_plus_obj.gbapal"
+	.INCBIN "assets/palettes/20_level_select_world_three_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/20_level_select_world_three_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/21_level_select_world_four_plus_bg.gbapal"
+	.INCBIN "assets/palettes/21_level_select_world_four_plus_obj.gbapal"
+	.INCBIN "assets/palettes/21_level_select_world_four_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/21_level_select_world_four_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/22_level_select_world_five_plus_bg.gbapal"
+	.INCBIN "assets/palettes/22_level_select_world_five_plus_obj.gbapal"
+	.INCBIN "assets/palettes/22_level_select_world_five_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/22_level_select_world_five_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/23_level_select_world_six_plus_bg.gbapal"
+	.INCBIN "assets/palettes/23_level_select_world_six_plus_obj.gbapal"
+	.INCBIN "assets/palettes/23_level_select_world_six_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/23_level_select_world_six_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/24_level_select_dk_boss_plus_bg.gbapal"
+	.INCBIN "assets/palettes/24_level_select_dk_boss_plus_obj.gbapal"
+	.INCBIN "assets/palettes/24_level_select_dk_boss_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/24_level_select_dk_boss_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/25_world_one_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/25_world_one_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/25_world_one_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/25_world_one_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/26_world_two_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/26_world_two_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/26_world_two_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/26_world_two_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/27_world_three_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/27_world_three_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/27_world_three_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/27_world_three_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/28_world_four_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/28_world_four_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/28_world_four_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/28_world_four_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/29_world_five_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/29_world_five_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/29_world_five_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/29_world_five_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/30_world_six_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/30_world_six_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/30_world_six_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/30_world_six_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/31_world_one_plus_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/31_world_one_plus_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/31_world_one_plus_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/31_world_one_plus_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/32_world_two_plus_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/32_world_two_plus_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/32_world_two_plus_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/32_world_two_plus_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/33_world_three_plus_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/33_world_three_plus_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/33_world_three_plus_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/33_world_three_plus_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/34_world_four_plus_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/34_world_four_plus_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/34_world_four_plus_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/34_world_four_plus_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/35_world_five_plus_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/35_world_five_plus_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/35_world_five_plus_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/35_world_five_plus_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/36_world_six_plus_boss_clear_bg.gbapal"
+	.INCBIN "assets/palettes/36_world_six_plus_boss_clear_obj.gbapal"
+	.INCBIN "assets/palettes/36_world_six_plus_boss_clear_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/36_world_six_plus_boss_clear_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/37_world_one_bg.gbapal"
+	.INCBIN "assets/palettes/37_world_one_obj.gbapal"
+	.INCBIN "assets/palettes/37_world_one_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/37_world_one_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/38_world_two_bg.gbapal"
+	.INCBIN "assets/palettes/38_world_two_obj.gbapal"
+	.INCBIN "assets/palettes/38_world_two_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/38_world_two_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/39_world_three_bg.gbapal"
+	.INCBIN "assets/palettes/39_world_three_obj.gbapal"
+	.INCBIN "assets/palettes/39_world_three_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/39_world_three_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/40_world_four_bg.gbapal"
+	.INCBIN "assets/palettes/40_world_four_obj.gbapal"
+	.INCBIN "assets/palettes/40_world_four_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/40_world_four_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/41_world_five_bg.gbapal"
+	.INCBIN "assets/palettes/41_world_five_obj.gbapal"
+	.INCBIN "assets/palettes/41_world_five_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/41_world_five_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/42_world_six_bg.gbapal"
+	.INCBIN "assets/palettes/42_world_six_obj.gbapal"
+	.INCBIN "assets/palettes/42_world_six_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/42_world_six_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/43_world_one_plus_bg.gbapal"
+	.INCBIN "assets/palettes/43_world_one_plus_obj.gbapal"
+	.INCBIN "assets/palettes/43_world_one_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/43_world_one_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/44_world_two_plus_bg.gbapal"
+	.INCBIN "assets/palettes/44_world_two_plus_obj.gbapal"
+	.INCBIN "assets/palettes/44_world_two_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/44_world_two_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/45_world_three_plus_bg.gbapal"
+	.INCBIN "assets/palettes/45_world_three_plus_obj.gbapal"
+	.INCBIN "assets/palettes/45_world_three_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/45_world_three_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/46_world_four_plus_bg.gbapal"
+	.INCBIN "assets/palettes/46_world_four_plus_obj.gbapal"
+	.INCBIN "assets/palettes/46_world_four_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/46_world_four_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/47_world_five_plus_bg.gbapal"
+	.INCBIN "assets/palettes/47_world_five_plus_obj.gbapal"
+	.INCBIN "assets/palettes/47_world_five_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/47_world_five_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/48_world_six_plus_bg.gbapal"
+	.INCBIN "assets/palettes/48_world_six_plus_obj.gbapal"
+	.INCBIN "assets/palettes/48_world_six_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/48_world_six_plus_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/49_expert_1_bg.gbapal"
+	.INCBIN "assets/palettes/49_expert_1_obj.gbapal"
+	.INCBIN "assets/palettes/49_expert_1_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/49_expert_1_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/50_expert_2_bg.gbapal"
+	.INCBIN "assets/palettes/50_expert_2_obj.gbapal"
+	.INCBIN "assets/palettes/50_expert_2_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/50_expert_2_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/51_expert_3_bg.gbapal"
+	.INCBIN "assets/palettes/51_expert_3_obj.gbapal"
+	.INCBIN "assets/palettes/51_expert_3_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/51_expert_3_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/52_expert_4_bg.gbapal"
+	.INCBIN "assets/palettes/52_expert_4_obj.gbapal"
+	.INCBIN "assets/palettes/52_expert_4_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/52_expert_4_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/53_expert_5_bg.gbapal"
+	.INCBIN "assets/palettes/53_expert_5_obj.gbapal"
+	.INCBIN "assets/palettes/53_expert_5_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/53_expert_5_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/54_expert_6_bg.gbapal"
+	.INCBIN "assets/palettes/54_expert_6_obj.gbapal"
+	.INCBIN "assets/palettes/54_expert_6_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/54_expert_6_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/55_expert_7_bg.gbapal"
+	.INCBIN "assets/palettes/55_expert_7_obj.gbapal"
+	.INCBIN "assets/palettes/55_expert_7_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/55_expert_7_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/56_expert_8_bg.gbapal"
+	.INCBIN "assets/palettes/56_expert_8_obj.gbapal"
+	.INCBIN "assets/palettes/56_expert_8_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/56_expert_8_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/57_expert_9_bg.gbapal"
+	.INCBIN "assets/palettes/57_expert_9_obj.gbapal"
+	.INCBIN "assets/palettes/57_expert_9_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/57_expert_9_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/58_expert_unused_bg.gbapal"
+	.INCBIN "assets/palettes/58_expert_unused_obj.gbapal"
+	.INCBIN "assets/palettes/58_expert_unused_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/58_expert_unused_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/59_expert_10_bg.gbapal"
+	.INCBIN "assets/palettes/59_expert_10_obj.gbapal"
+	.INCBIN "assets/palettes/59_expert_10_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/59_expert_10_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/60_expert_11_bg.gbapal"
+	.INCBIN "assets/palettes/60_expert_11_obj.gbapal"
+	.INCBIN "assets/palettes/60_expert_11_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/60_expert_11_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/61_expert_12_bg.gbapal"
+	.INCBIN "assets/palettes/61_expert_12_obj.gbapal"
+	.INCBIN "assets/palettes/61_expert_12_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/61_expert_12_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/62_dk_boss_bg.gbapal"
+	.INCBIN "assets/palettes/62_dk_boss_obj.gbapal"
+	.INCBIN "assets/palettes/62_dk_boss_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/62_dk_boss_obj_gbplayer.gbapal"
+	.INCBIN "assets/palettes/63_dk_boss_plus_bg.gbapal"
+	.INCBIN "assets/palettes/63_dk_boss_plus_obj.gbapal"
+	.INCBIN "assets/palettes/63_dk_boss_plus_bg_gbplayer.gbapal"
+	.INCBIN "assets/palettes/63_dk_boss_plus_obj_gbplayer.gbapal"
 	.INCBIN "assets/palettes/64_bg.gbapal"
 	.INCBIN "assets/palettes/64_obj.gbapal"
 	.INCBIN "assets/palettes/64_bg_gbplayer.gbapal"
@@ -3335,7 +3335,20 @@ gUnknown_085D08F8:
 
 	.GLOBAL gUnknown_085D0900
 gUnknown_085D0900:
-	.INCBIN "baserom.gba", 0x5D0900, 0x5DEA94-0x5D0900
+	.INCBIN "baserom.gba", 0x5D0900, 0x5D0A00-0x5D0900
+
+	.GLOBAL gUnknown_085D0A00
+gUnknown_085D0A00:
+	.INCBIN "baserom.gba", 0x5D0A00, 0x5D10C0-0x5D0A00
+
+	.GLOBAL gfxMainLevelIconPicsOAM
+gfxMainLevelIconPicsOAM:
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
+
+	.GLOBAL gfxMainLevelIconPics4bpp
+gfxMainLevelIconPics4bpp:
+	.INCBIN "assets/sprites/MainLevelIconPics.4bpp"
+	.INCBIN "baserom.gba", 0x5D70C8, 0x5DEA94-0x5D70C8
 
 	.GLOBAL gUnknown_085DEA94
 gUnknown_085DEA94:
@@ -3459,15 +3472,23 @@ gUnknown_085E90D0:
 
 	.GLOBAL gUnknown_085E9360
 gUnknown_085E9360:
-	.INCBIN "baserom.gba", 0x5E9360, 0x5F49D0-0x5E9360
+	.INCBIN "baserom.gba", 0x5E9360, 0x5F49AC-0x5E9360
 
-	.GLOBAL gUnknown_085F49D0
-gUnknown_085F49D0:
-	.INCBIN "baserom.gba", 0x5F49D0, 0x5F49D8-0x5F49D0
+	.GLOBAL gUnknown_085F49AC
+gUnknown_085F49AC:
+	.INCBIN "baserom.gba", 0x5F49AC, 0x5F49D0-0x5F49AC
 
-	.GLOBAL gUnknown_085F49D8
-gUnknown_085F49D8:
-	.INCBIN "baserom.gba", 0x5F49D8, 0x5F61B4-0x5F49D8
+	.GLOBAL gfxTitleScreenPressStartOAM
+gfxTitleScreenPressStartOAM:
+	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=0, affineParam=0
+	
+	.GLOBAL gfxTitleScreenPressStart4bpp
+gfxTitleScreenPressStart4bpp:
+	.INCBIN "assets/sprites/PressStart.4bpp"
+	
+	.GLOBAL gUnknown_085F4BD8
+gUnknown_085F4BD8:
+	.INCBIN "baserom.gba", 0x5F4BD8, 0x5F61B4-0x5F4BD8
 
 	.GLOBAL gUnknown_085F61B4
 gUnknown_085F61B4:
@@ -8566,61 +8587,61 @@ gUnknown_08B2DEBC:
 gUnknown_08B2E90C:
 	.4byte 0x00000001
 	.4byte 0x08B2E8D8 @ Movie Data -- Early Opening Cutscene
-	.INCBIN "baserom.gba", 0xb2e914, 0xB2F070-0xb2e914
+	.INCBIN "baserom.gba", 0xB2E914, 0xB2F070-0xB2E914
 
 	.GLOBAL gUnknown_08B2F070
 gUnknown_08B2F070:
 	.4byte 0x00000001
 	.4byte 0x08B2F03C @ Movie Data -- Movie ID 6
-	.INCBIN "baserom.gba", 0xb2f078, 0xB2F5B8-0xb2f078
+	.INCBIN "baserom.gba", 0xB2F078, 0xB2F5B8-0xB2F078
 
 	.GLOBAL gUnknown_08B2F5B8
 gUnknown_08B2F5B8:
 	.4byte 0x00000001
 	.4byte 0x08B2F584 @ Movie Data -- Movie ID 5
-	.INCBIN "baserom.gba", 0xb2f5c0, 0xB2FFDC-0xb2f5c0
+	.INCBIN "baserom.gba", 0xB2F5C0, 0xB2FFDC-0xB2F5C0
 
 	.GLOBAL gUnknown_08B2FFDC
 gUnknown_08B2FFDC:
 	.4byte 0x00000001
 	.4byte 0x08B2FFA8 @ Movie Data -- Movie ID 2
-	.INCBIN "baserom.gba", 0xb2ffe4, 0xB30768-0xb2ffe4
+	.INCBIN "baserom.gba", 0xB2FFE4, 0xB30768-0xB2FFE4
 
 	.GLOBAL gUnknown_08B30768
 gUnknown_08B30768:
 	.4byte 0x00000001
 	.4byte 0x08B30734 @ Movie Data -- Movie ID 4
-	.INCBIN "baserom.gba", 0xb30770, 0xB30F94-0xb30770
+	.INCBIN "baserom.gba", 0xB30770, 0xB30F94-0xB30770
 
 	.GLOBAL gUnknown_08B30F94
 gUnknown_08B30F94:
 	.4byte 0x00000001
 	.4byte 0x08B30F60 @ Movie Data -- Movie ID 1
-	.INCBIN "baserom.gba", 0xb30f9c, 0xB32118-0xb30f9c
+	.INCBIN "baserom.gba", 0xB30F9C, 0xB32118-0xB30F9C
 
 	.GLOBAL gUnknown_08B32118
 gUnknown_08B32118:
 	.4byte 0x00000001
 	.4byte 0x08B320E4 @ Movie Data -- Movie ID 0
-	.INCBIN "baserom.gba", 0xb32120, 0xB35FC0-0xb32120
+	.INCBIN "baserom.gba", 0xB32120, 0xB35FC0-0xB32120
 
 	.GLOBAL gUnknown_08B35FC0
 gUnknown_08B35FC0:
 	.4byte 0x00000001
 	.4byte 0x08B35F8C @ Movie Data -- Movie ID 7
-	.INCBIN "baserom.gba", 0xb35fc8, 0xB37168-0xb35fc8
+	.INCBIN "baserom.gba", 0xB35FC8, 0xB37168-0xB35FC8
 
 	.GLOBAL gUnknown_08B37168
 gUnknown_08B37168:
 	.4byte 0x00000001
 	.4byte 0x08B37134 @ Movie Data -- Movie ID 3
-	.INCBIN "baserom.gba", 0xb37170, 0xB3732C-0xb37170
+	.INCBIN "baserom.gba", 0xB37170, 0xB3732C-0xB37170
 
 	.GLOBAL gUnknown_08B3732C
 gUnknown_08B3732C:
 	.4byte 0x00000001
 	.4byte 0x08B372F8 @ Movie Data -- Movie ID 8
-	.INCBIN "baserom.gba", 0xb37334, 0xB37424-0xb37334
+	.INCBIN "baserom.gba", 0xB37334, 0xB37424-0xB37334
 
 	.GLOBAL gMovieUnusedPlusWorldsUnlocked
 gMovieUnusedPlusWorldsUnlocked:
@@ -9423,11 +9444,11 @@ gMusicTable2:
 	
 	.GLOBAL gUnknown_08D7B458 @ Sound Sample Data
 gUnknown_08D7B458:
-	.INCBIN "baserom.gba", 0xd7b458, 0xebbf60-0xd7b458
+	.INCBIN "baserom.gba", 0xD7B458, 0xEBBF60-0xD7B458
 
 	.GLOBAL gUnknown_08EBBF60 @ Instrument Data 1
 gUnknown_08EBBF60:
-	.INCBIN "baserom.gba", 0xebbf60, 0xEBFE90-0xebbf60
+	.INCBIN "baserom.gba", 0xEBBF60, 0xEBFE90-0xEBBF60
 
 	.GLOBAL gUnknown_08EBFE90 @ Instrument Data 2
 gUnknown_08EBFE90:

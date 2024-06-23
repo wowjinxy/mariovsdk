@@ -51,6 +51,12 @@ clean:
 	find . -name '*.4bpp' -exec rm {} +
 	$(MAKE) -C tools/gbagfx clean
 
+# Compile a set of baserom objects for use with objdiff
+baserom-objs: compare
+	mkdir -p baserom-objs && rm -f baserom-objs/*
+	cp src/*.o baserom-objs
+	cp asm/*.o baserom-objs
+
 #### Recipes ####
 
 $(ELF): $(OFILES) $(LDSCRIPT)
