@@ -9,36 +9,6 @@ struct Struct0802B798
 	s16 unk32;
 };
 
-extern void sub_08041F2C(s8);
-extern void sub_0802BC64(u8, int);
-
-extern struct UnkStruct1_sub_child_data68 gUnknown_0807BA58;
-extern u8 sub_0800169C[]; extern u8 sub_0800169C_end[];
-extern u8 sub_08001760[]; extern u8 sub_08001760_end[];
-extern void *gUnknown_0807BB30[];
-
-extern void *gUnknown_0807AA1C[];
-extern void *gUnknown_03000970[];
-extern u8 sub_080006D8[];
-extern u8 gUnknown_0807BA68[];
-
-struct Struct168
-{
-    u16 unk0;
-    u16 unk2;
-    u16 unk4;
-    u16 unk6;
-};
-extern struct Struct168 *gUnknown_03000168;
-
-extern struct Struct08078210
-{
-    u8 filler0[0x108];
-    struct Struct08078210_sub *unk108[1];
-} *gObjectTileDataRAMPtr;
-
-void sub_0802D1DC(struct LinkedListHeaderMaybe *arg0, int arg1);
-
 void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 {
 	s16 r0_;
@@ -67,7 +37,7 @@ void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 				r4 -= 8;
 				r5 += 8;
 				sub_0804138C(3, 0, r4, r5);
-				play_sound_effect_08071990(56, 8, 16, 64, 0, 128, 0);
+				play_sound_effect_08071990(SE_SWITCH1, 8, 16, 64, 0, 128, 0);
 			}
 		}
 		else if (r0 == 8)
@@ -89,7 +59,7 @@ void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 				r4 -= 8;
 				r5 += 8;
 				sub_0804138C(4, 0, r4, r5);
-				play_sound_effect_08071990(57, 8, 16, 64, 0, 128, 0);
+				play_sound_effect_08071990(SE_SWITCH2, 8, 16, 64, 0, 128, 0);
 			}
 		}
 		else if (r0 == 10)
@@ -111,7 +81,7 @@ void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 				r4 -= 8;
 				r5 += 8;
 				sub_0804138C(5, 0, r4, r5);
-				play_sound_effect_08071990(58, 8, 16, 64, 0, 128, 0);
+				play_sound_effect_08071990(SE_SWITCH3, 8, 16, 64, 0, 128, 0);
 			}
 		}
 	}
@@ -144,7 +114,7 @@ void sub_0802B9E4(void)
     gUnknown_03000C30.unk0 = 0;
 }
 
-struct UnknownListThing2 *sub_0802BA00(void)
+struct LinkedListHeaderMaybe *sub_0802BA00(void)
 {
     void *r5 = gUnknown_03000C30.unk4;
     struct UnknownListThing2 *r0;
@@ -159,7 +129,7 @@ struct UnknownListThing2 *sub_0802BA00(void)
     r0 = &gUnknown_03000C30.unk4[gUnknown_03000C30.unk0];
     gUnknown_03000C30.unk0++;
     r0->unkC = 0;
-    return r0;
+    return &r0->header;
 }
 
 void sub_0802BA38(int arg0, int arg1, int arg2, int arg3)
@@ -238,7 +208,7 @@ void sub_0802BB4C(void)
 
 int sub_0802BB80(u8 arg0, u8 arg1, u16 arg2)
 {
-    struct UnknownListThing2 *r4 = gUnknown_03000C40.unk20;  // hmm
+    struct LinkedListHeaderMaybe *r4 = gUnknown_03000C40.unk20;
     struct LinkedListHeaderMaybe *r2;
     int r0;
 
@@ -256,9 +226,9 @@ int sub_0802BB80(u8 arg0, u8 arg1, u16 arg2)
     r2->unk0 = 0;
     r2->unk8 = r4;
     r2->unk4.as_struct.unk2 = arg2;
-    r4->header.unk0 = arg0;
-    r4->header.unk4.as_u32 = arg1;  // WTF?
-    r4->header.unk8 = gUnknown_03000C40.unk0[0].unk0;
+    r4->unk0 = arg0;
+    r4->unk4.as_u32 = arg1;
+    r4->unk8 = gUnknown_03000C40.unk0[0].unk0;
     // missing return value
 }
 
@@ -280,13 +250,13 @@ u8 sub_0802BC00(int arg0)
 void sub_0802BC64(u8 arg0, int arg1)
 {
     struct LinkedListHeaderMaybe *r2 = &gUnknown_03000C40.unk20[arg0];
-    struct LinkedListHeaderMaybe *r0;
+    struct UnknownListThing1 *r0;
 
     if (r2->unk0 != arg1)
     {
         r2->unk0 = arg1;
-        r0 = r2->unk8->unk8 = gUnknown_03000C40.unk0[arg1].unk0;
-        r2->unk4.as_struct.unk0 = *(u8 *)&r0[1].unk0;  // WTF?
+        r0 = (struct UnknownListThing1 *)r2->unk8->unk8 = gUnknown_03000C40.unk0[arg1].unk0;
+        r2->unk4.as_struct.unk0 = r0->unkC;
     }
 }
 
@@ -602,17 +572,17 @@ void sub_0802C20C(void)
         gUnknown_03000164 = gUnknown_0807C0E0[gNextLevelInLevelTable.unk10].unk4;
         gUnknown_03000168 = gUnknown_0807C0E0[gNextLevelInLevelTable.unk10].unk0;
     }
-    else if (gLevelType == 1)
+    else if (gLevelType == LEVEL_TYPE_PLUS)
     {
         gUnknown_03000164 = gUnknown_0807C098[gNextLevelInLevelTable.unk10].unk4;
         gUnknown_03000168 = gUnknown_0807C098[gNextLevelInLevelTable.unk10].unk0;
     }
-    else if (gLevelType == 2)
+    else if (gLevelType == LEVEL_TYPE_EXPERT_1_6)
     {
         gUnknown_03000164 = gUnknown_0807C0D0.unk4;
         gUnknown_03000168 = gUnknown_0807C0D0.unk0;
     }
-    else if (gLevelType == 3)
+    else if (gLevelType == LEVEL_TYPE_EXPERT_7_12)
     {
         gUnknown_03000164 = gUnknown_0807C0D8.unk4;
         gUnknown_03000168 = gUnknown_0807C0D8.unk0;
@@ -776,23 +746,13 @@ void sub_0802C71C(void)
     gUnknown_03000160 = 1;
 }
 
-extern void *gUnknown_0807C7A8[];
-extern void *gUnknown_0807C7CC[];
-extern void *gUnknown_0807C814[];
-extern void **gUnknown_0807C834;
-
-extern u8 gUnknown_0807C7C4[];
-extern u8 gUnknown_0807C804[];
-extern u8 gUnknown_0807C82C[];
-extern u8 gUnknown_0807C838[];
-
 void sub_0802C7A4(void)
 {
     s16 i;
 
     if (gNextLevelInLevelTable.unk12 == 2)
     {
-        gUnknown_03000D7C = 0;
+        gUnknown_03000D7C = NULL;
         if (gMainState == MAIN_STATE_TUTORIAL)
         {
             gUnknown_03000D78 = gUnknown_0807C7A8[gNextLevelInLevelTable.unk10];
@@ -829,15 +789,6 @@ void sub_0802C7A4(void)
     }
 }
 
-extern u8 sub_08038DF4(u8, u8, int, u16, u16, int);
-extern struct Struct1940 *gUnknown_03000DA0[];
-
-static inline void sub_0802C938_inline(struct Struct1940 **r6, s16 r5, int r7)
-{
-    u8 r1 = sub_08038DF4(255, 171, -1, (gUnknown_03000D78[r5].unk0 >> 8) + 12, gUnknown_030009E0 - 8, r7);
-    r6[r5] = &gUnknown_03001940[r1];
-}
-
 #if NONMATCHING
 void sub_0802C938(void)
 {
@@ -848,7 +799,7 @@ void sub_0802C938(void)
         int r7 = 0;
         u16 r3;
         u8 r1;
-        struct Struct1940 **r6 = gUnknown_03000DA0;
+        struct StructD7C **r6 = gUnknown_03000DA0;
         s16 r5 = i;
 
         r1 = sub_08038DF4(255, 171, -1, (gUnknown_03000D78[r5].unk0 >> 8) + 12, gUnknown_030009E0 - 8, r7);
@@ -944,14 +895,6 @@ _0802C9D4:\n\
 }
 #endif
 
-extern s32 gUnknown_03000D54;
-extern s32 gUnknown_03000D50;
-extern s32 gUnknown_03000D60;
-extern s32 gUnknown_03000D70;
-extern u32 gUnknown_03000D6C;
-extern u16 gUnknown_03000DC8;
-extern s16 gUnknown_0807C83A[];
-
 void sub_0802C9D8(void)
 {
     int r2;
@@ -1033,7 +976,7 @@ void sub_0802C9D8(void)
                 }
                 else
                 {
-                    sub_0804138C(12, 0, (u32)(gUnknown_03000D7C->unk20 << 8) >> 16, (u32)(gUnknown_03000D7C->unk24 << 8) >> 16);
+                    sub_0804138C(12, 0, (u16)(gUnknown_03000D7C->unk20 >> 8), (u16)(gUnknown_03000D7C->unk24 >> 8));
                     gUnknown_03000D84 = 4;
                 }
             }
@@ -1053,7 +996,7 @@ void sub_0802C9D8(void)
                 {
                 label:
                     gUnknown_03000D84 = 0;
-                    gUnknown_03000D7C = 0;
+                    gUnknown_03000D7C = NULL;
                 }
             }
             break;
@@ -1092,7 +1035,7 @@ int sub_0802CD34(struct StructD7C *arg0)
                 gUnknown_03000D60 = gUnknown_03000D78[gUnknown_03000D80].unk0;
                 gUnknown_03000D70 = r12 - gUnknown_03000D78[gUnknown_03000D80].unk4;
                 gUnknown_03000D64 = r12;
-                play_sound_effect_08071990(112, 8, 16, 64, 0, 128, 0);
+                play_sound_effect_08071990(SE_FOUNTAIN, 8, 16, 64, 0, 128, 0);
                 gUnknown_03000D84 = 1;
                 gUnknown_03000D7C = arg0;
                 gUnknown_03000D54 = arg0->unk24;
@@ -1130,7 +1073,7 @@ void sub_0802CF08(void)
 struct Struct0802CF20
 {
     u8 filler0[0x24];
-    void *unk24;
+    u32 unk24;
     u8 filler28[0x3D-0x28];
     u8 unk3D;
 };
@@ -1152,17 +1095,17 @@ int sub_0802CF20(struct Struct0802CF20 *arg0)
 
 void sub_0802CF78(void)
 {
-    struct Struct170_child *r4;
-    struct Struct170_child *r6;
+    struct LinkedListHeaderMaybe_alt *r4;
+    struct LinkedListHeaderMaybe_alt *endptr;
     int r8 = 0;
 
     if (!(gUnknown_03001A1C & 8)
-     && gUnknown_03000170.unk1C != 0
+     && gUnknown_03000170.unk1C != NULL
      && gUnknown_03001A38 != 1)
     {
-        r4 = gUnknown_03000170.unk1C;
-        r6 = r4 + 12;
-        while (r4 < r6)
+        r4 = (struct LinkedListHeaderMaybe_alt *)gUnknown_03000170.unk1C;
+        endptr = r4 + 12;
+        while (r4 < endptr)
         {
             if (r4->unk0 != -1 && r4->unk0 <= 2)
             {
@@ -1172,16 +1115,18 @@ void sub_0802CF78(void)
                 {
                     r8++;
                     if (gUnknown_03000170.unk20 == -1 || sub_080721A8() != 0)
-                        gUnknown_03000170.unk20 = play_sound_effect_08071990(109, 4, 16, 64, 0, 128, 0);
-                    if (r4->unk4 != 0)
-                        r4->unk4--;
+                        gUnknown_03000170.unk20 = play_sound_effect_08071990(SE_CRUMBLE, 4, 16, 64, 0, 128, 0);
+                    if (r4->unk4.as_struct.unk0 != 0)
+                        r4->unk4.as_struct.unk0--;
                     else
                     {
-                        r4->unk8->header.unk8 = (void *)((u8 *)r4->unk8->header.unk8 + gUnknown_03000170.unk18);
-                        if (r4->unk8->header.unk8 == gUnknown_03000170.unk0[r4->unk0].unk4)
-                            sub_0802D1DC(r4, 2);
+                        struct UnknownListThing1 *thing = (void *)((u8 *)r4->unk8->unk8 + gUnknown_03000170.unk18);
+
+                        r4->unk8->unk8 = &thing->header;
+                        if (thing == (void *)gUnknown_03000170.unk0[r4->unk0].unk4)
+                            sub_0802D1DC((struct LinkedListHeaderMaybe *)r4, 2);
                         else
-                            r4->unk4 = ((struct UnknownListThing1 *)r4->unk8->header.unk8)->unkC;
+                            r4->unk4.as_struct.unk0 = thing->unkC;
                     }
                 }
             }
@@ -1199,15 +1144,17 @@ void sub_0802D06C(void)
 {
     int i;
 
-    gUnknown_03000170.unk1C = arena_allocate(12 * sizeof(struct Struct170_child));
+    gUnknown_03000170.unk1C = arena_allocate(12 * sizeof(struct LinkedListHeaderMaybe_alt));
     for (i = 0; i < 12; i++)
     {
-        struct Struct170_child *r4 = &gUnknown_03000170.unk1C[i];
+        struct LinkedListHeaderMaybe *r4 = &gUnknown_03000170.unk1C[i];
+        struct UnknownListThing2 *thing;
 
         r4->unk0 = -1;
         r4->unk8 = sub_0802BA00();
-        r4->unk8->unkC = 0;
-        r4->unk8->header.unk8 = 0;
+        thing = (struct UnknownListThing2 *)r4->unk8;
+        thing->unkC = NULL;
+        thing->header.unk8 = NULL;
     }
     gUnknown_03000170.unk20 = -1;
 }
@@ -1232,15 +1179,17 @@ void sub_0802D0E8(void)
     if (gUnknown_03000170.unk1C == NULL)
     {
         // possible inlined call to sub_0802D06C?
-        gUnknown_03000170.unk1C = arena_allocate(12 * sizeof(struct Struct170_child));
+        gUnknown_03000170.unk1C = arena_allocate(12 * sizeof(struct LinkedListHeaderMaybe_alt));
         for (i = 0; i < 12; i++)
         {
-            struct Struct170_child *r4 = &gUnknown_03000170.unk1C[i];
+            struct LinkedListHeaderMaybe *r4 = &gUnknown_03000170.unk1C[i];
+            struct UnknownListThing2 *thing;
 
             r4->unk0 = -1;
             r4->unk8 = sub_0802BA00();
-            r4->unk8->unkC = 0;
-            r4->unk8->header.unk8 = 0;
+            thing = (struct UnknownListThing2 *)r4->unk8;
+            thing->unkC = NULL;
+            thing->header.unk8 = NULL;
         }
         gUnknown_03000170.unk20 = -1;
     }
@@ -1266,19 +1215,19 @@ void sub_0802D140(struct Struct0802D140 *arg0, u32 arg1)
         if (r2 == 6 && r5 != r12)
         {
             struct struct_0807820C_sub8 *r3 = &gEWRAMBasePtr->unk8[r5];
-            struct Struct170_child *r2_ = gUnknown_03000170.unk1C;
-            struct Struct170_child *r4 = r2_ + 12;
+            struct LinkedListHeaderMaybe *ptr = gUnknown_03000170.unk1C;
+            struct LinkedListHeaderMaybe *endptr = ptr + 12;
 
-            while (r2_ < r4)
+            while (ptr < endptr)
             {
-                if (r2_->unk0 == -1)
+                if (ptr->unk0 == -1)
                 {
-                    r2_->unk8->header.unk0 = r3->unk2_0;
-                    *(u32 *)&r2_->unk8->header.unk4 = r3->unk3;
-                    sub_0802D1DC(r2_, 1);
+                    ptr->unk8->unk0 = r3->unk2_0;
+                    ptr->unk8->unk4.as_u32 = r3->unk3;
+                    sub_0802D1DC(ptr, 1);
                     break;
                 }
-                r2_++;
+                ptr++;
             }
 
         }
