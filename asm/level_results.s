@@ -281,7 +281,7 @@ _08029390:
 	strb r0, [r1]
 	mov r0, #0
 	bl arena_restore_head
-	ldr r1, _0802940C  @ =0x03000C1C
+	ldr r1, _0802940C  @ =gUnknown_03000C1C
 	mov r0, #0
 	strb r0, [r1]
 	ldr r0, _08029410  @ =gUnknown_030009D8
@@ -337,7 +337,7 @@ _08029390:
 _08029408:
 	.4byte 0x03000C20
 _0802940C:
-	.4byte 0x03000C1C
+	.4byte gUnknown_03000C1C
 _08029410:
 	.4byte gUnknown_030009D8
 _08029414:
@@ -405,7 +405,7 @@ _0802947E:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _080294C8
-	ldr r0, _080294C0  @ =0x03000E00
+	ldr r0, _080294C0  @ =gUnknown_03000E00
 	ldr r1, _080294C4  @ =gUnknown_08079DA0
 	ldr r1, [r1, #4]
 	bl sub_0802F648
@@ -423,7 +423,7 @@ _080294B8:
 _080294BC:
 	.4byte gNextLevelInLevelTable
 _080294C0:
-	.4byte 0x03000E00
+	.4byte gUnknown_03000E00
 _080294C4:
 	.4byte gUnknown_08079DA0
 _080294C8:
@@ -431,13 +431,13 @@ _080294C8:
 	and r1, r1, r0
 	cmp r1, #0
 	beq _080294E4
-	ldr r0, _080294DC  @ =0x03000E00
+	ldr r0, _080294DC  @ =gUnknown_03000E00
 	ldr r1, _080294E0  @ =gUnknown_08079DA0
 	ldr r1, [r1, #8]
 	bl sub_0802F648
 	b _08029522
 _080294DC:
-	.4byte 0x03000E00
+	.4byte gUnknown_03000E00
 _080294E0:
 	.4byte gUnknown_08079DA0
 _080294E4:
@@ -453,7 +453,7 @@ _080294E4:
 	asr r0, r0, #24
 	cmp r0, #0
 	bne _08029518
-	ldr r0, _08029510  @ =0x03000E00
+	ldr r0, _08029510  @ =gUnknown_03000E00
 	ldr r1, _08029514  @ =gUnknown_08079DA0
 	ldr r1, [r1]
 	bl sub_0802F648
@@ -463,11 +463,11 @@ _08029508:
 _0802950C:
 	.4byte gLevelType
 _08029510:
-	.4byte 0x03000E00
+	.4byte gUnknown_03000E00
 _08029514:
 	.4byte gUnknown_08079DA0
 _08029518:
-	ldr r0, _08029544  @ =0x03000E00
+	ldr r0, _08029544  @ =gUnknown_03000E00
 	ldr r1, _08029548  @ =gUnknown_08079DA0
 	ldr r1, [r1, #12]
 	bl sub_0802F648
@@ -490,7 +490,7 @@ _08029522:
 	lsl r0, r0, #3
 	b _08029556
 _08029544:
-	.4byte 0x03000E00
+	.4byte gUnknown_03000E00
 _08029548:
 	.4byte gUnknown_08079DA0
 _0802954C:
@@ -725,7 +725,7 @@ _0802970E:
 	mov r0, #0
 	strh r0, [r1]
 _08029716:
-	ldr r0, _0802978C  @ =0x03000E00
+	ldr r0, _0802978C  @ =gUnknown_03000E00
 	add r1, r4, #0
 	bl sub_0802F7B8
 	mov r4, #0
@@ -785,7 +785,7 @@ _08029784:
 _08029788:
 	.4byte 0x000F423F
 _0802978C:
-	.4byte 0x03000E00
+	.4byte gUnknown_03000E00
 _08029790:
 	.4byte 0x03000108
 _08029794:
@@ -851,7 +851,7 @@ _080297FC:
 	bne _0802980A
 	b _08029A74
 _0802980A:
-	ldr r2, _08029868  @ =0x03000E00
+	ldr r2, _08029868  @ =gUnknown_03000E00
 	ldr r0, [r2, #80]
 	ldr r1, [r0]
 	sub r1, r1, #1
@@ -882,7 +882,7 @@ _08029834:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _08029870  @ =0x03000C1C
+	ldr r1, _08029870  @ =gUnknown_03000C1C
 	mov r0, #1
 	strb r0, [r1]
 	ldr r0, _08029874  @ =gLevelEWorldFlag
@@ -899,11 +899,11 @@ _08029860:
 _08029864:
 	.4byte gSomeKeys_030012E8
 _08029868:
-	.4byte 0x03000E00
+	.4byte gUnknown_03000E00
 _0802986C:
 	.4byte 0x03000108
 _08029870:
-	.4byte 0x03000C1C
+	.4byte gUnknown_03000C1C
 _08029874:
 	.4byte gLevelEWorldFlag
 _08029878:

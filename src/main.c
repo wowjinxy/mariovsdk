@@ -6,197 +6,197 @@
 
 static void (*gMainStateInitCallbacks[])(void) =
 {
-    intro_init_callback,
-    goto_credits_init_callback,
-    level_demo_init_callback,
-    main_menu_init_callback,
-    options_init_callback,
-    level_demo_init_callback,
-    level_demo_reset_init_callback,
-    title_init_callback,
-    level_select_init_callback,
-    expert_levels_init_callback,
-    unknown_0A_init_callback,
-    level_editor_init_callback,
-    after_tutorial_init_callback,
-    level_play_init_callback,
-    level_retry_init_callback,
-    NULL,
-    pause_menu_init_callback,
-    help_init_callback,
-    level_retry_init_callback,
-    NULL,
-    boss_clear_init_callback,
-    level_results_init_callback,
-    bonus_stoparrow_init_callback,
-    bonus_swapboxes_init_callback,
-    e_world_init_callback,
-    e_world_return_init_callback,
-    e_card_scan_init_callback,
-    e_card_scan_init_callback,
-    e_world_debug_init_callback,
-    e_world_from_menu_init_callback,
-    movie_player_init_callback,
-    fade_transition_init_callback,
-    world_start_init_callback,
-    level_view_init_callback,
-    game_init_callback,
+    intro_init_callback,               //main state 0x0
+    goto_credits_init_callback,        //main state 0x1
+    level_demo_init_callback,          //main state 0x2
+    main_menu_init_callback,           //main state 0x3
+    options_init_callback,             //main state 0x4
+    level_demo_init_callback,          //main state 0x5
+    level_demo_reset_init_callback,    //main state 0x6
+    title_init_callback,               //main state 0x7
+    level_select_init_callback,        //main state 0x8
+    expert_levels_init_callback,       //main state 0x9
+    unknown_0A_init_callback,          //main state 0xA
+    level_editor_init_callback,        //main state 0xB
+    after_tutorial_init_callback,      //main state 0xC
+    level_play_init_callback,          //main state 0xD
+    level_retry_init_callback,         //main state 0xE
+    NULL,                              //main state 0xF
+    pause_menu_init_callback,          //main state 0x10
+    help_init_callback,                //main state 0x11
+    level_retry_init_callback,         //main state 0x12
+    NULL,                              //main state 0x13
+    boss_clear_init_callback,          //main state 0x14
+    level_results_init_callback,       //main state 0x15
+    bonus_stoparrow_init_callback,     //main state 0x16
+    bonus_swapboxes_init_callback,     //main state 0x17
+    e_world_init_callback,             //main state 0x18
+    e_world_return_init_callback,      //main state 0x19
+    e_card_scan_init_callback,         //main state 0x1A
+    e_card_scan_init_callback,         //main state 0x1B
+    e_world_debug_init_callback,       //main state 0x1C
+    e_world_from_menu_init_callback,   //main state 0x1D
+    movie_player_init_callback,        //main state 0x1E
+    fade_transition_init_callback,     //main state 0x1F
+    world_start_init_callback,         //main state 0x20
+    level_view_init_callback,          //main state 0x21
+    game_init_callback,                //main state 0x22
 };
 
 static void (*gMainStateMainCallbacks[])(void) =
 {
-    intro_main,
-    goto_credits_main,
-    level_demo_main,
-    main_menu_main,
-    options_main,
-    level_demo_main,
-    level_demo_main,
-    title_main,
-    level_select_main,
-    expert_levels_main,
-    level_edit_main,
-    level_edit_main,
-    NULL,
-    level_play_main,
-    level_retry_main,
-    level_play_main,
-    pause_menu_main,
-    help_main,
-    level_retry_main,
-    NULL,
-    boss_clear_main,
-    level_results_main,
-    bonus_stoparrow_main,
-    bonus_swapboxes_main,
-    e_world_main,
-    e_world_main,
-    e_card_scan_main,
-    e_card_scan_main,
-    e_world_debug_main,
-    e_world_from_menu_main,
-    movie_player_main,
-    fade_transition_main,
-    world_start_main,
-    level_view_main,
-    game_init_main,
+    intro_main,                        //main state 0x0
+    goto_credits_main,                 //main state 0x1
+    level_demo_main,                   //main state 0x2
+    main_menu_main,                    //main state 0x3
+    options_main,                      //main state 0x4
+    level_demo_main,                   //main state 0x5
+    level_demo_main,                   //main state 0x6
+    title_main,                        //main state 0x7
+    level_select_main,                 //main state 0x8
+    expert_levels_main,                //main state 0x9
+    level_edit_main,                   //main state 0xA
+    level_edit_main,                   //main state 0xB
+    NULL,                              //main state 0xC
+    level_play_main,                   //main state 0xD
+    level_retry_main,                  //main state 0xE
+    level_play_main,                   //main state 0xF
+    pause_menu_main,                   //main state 0x10
+    help_main,                         //main state 0x11
+    level_retry_main,                  //main state 0x12
+    NULL,                              //main state 0x13
+    boss_clear_main,                   //main state 0x14
+    level_results_main,                //main state 0x15
+    bonus_stoparrow_main,              //main state 0x16
+    bonus_swapboxes_main,              //main state 0x17
+    e_world_main,                      //main state 0x18
+    e_world_main,                      //main state 0x19
+    e_card_scan_main,                  //main state 0x1A
+    e_card_scan_main,                  //main state 0x1B
+    e_world_debug_main,                //main state 0x1C
+    e_world_from_menu_main,            //main state 0x1D
+    movie_player_main,                 //main state 0x1E
+    fade_transition_main,              //main state 0x1F
+    world_start_main,                  //main state 0x20
+    level_view_main,                   //main state 0x21
+    game_init_main,                    //main state 0x22
 };
 
 static void (*gMainStateLoopCallbacks[])(void) =
 {
-    intro_loop,
-    goto_credits_loop,
-    level_play_loop,
-    main_menu_loop,
-    options_loop,
-    level_play_loop,
-    level_play_loop,
-    title_loop,
-    level_select_loop,
-    expert_levels_loop,
-    NULL,
-    level_play_loop,
-    level_play_loop,
-    level_play_loop,
-    level_retry_loop,
-    level_play_loop,
-    pause_menu_loop,
-    help_loop,
-    level_retry_loop,
-    NULL,
-    boss_clear_loop,
-    level_results_loop,
-    bonus_stoparrow_loop,
-    bonus_swapboxes_loop,
-    e_world_loop,
-    e_world_loop,
-    e_card_scan_loop,
-    e_card_scan_loop,
-    e_world_debug_loop,
-    e_world_from_menu_loop,
-    movie_player_loop,
-    NULL,
-    world_start_loop,
-    level_view_loop,
-    game_init_loop,
+    intro_loop,                        //main state 0x0
+    goto_credits_loop,                 //main state 0x1
+    level_play_loop,                   //main state 0x2
+    main_menu_loop,                    //main state 0x3
+    options_loop,                      //main state 0x4
+    level_play_loop,                   //main state 0x5
+    level_play_loop,                   //main state 0x6
+    title_loop,                        //main state 0x7
+    level_select_loop,                 //main state 0x8
+    expert_levels_loop,                //main state 0x9
+    NULL,                              //main state 0xA
+    level_play_loop,                   //main state 0xB
+    level_play_loop,                   //main state 0xC
+    level_play_loop,                   //main state 0xD
+    level_retry_loop,                  //main state 0xE
+    level_play_loop,                   //main state 0xF
+    pause_menu_loop,                   //main state 0x10
+    help_loop,                         //main state 0x11
+    level_retry_loop,                  //main state 0x12
+    NULL,                              //main state 0x13
+    boss_clear_loop,                   //main state 0x14
+    level_results_loop,                //main state 0x15
+    bonus_stoparrow_loop,              //main state 0x16
+    bonus_swapboxes_loop,              //main state 0x17
+    e_world_loop,                      //main state 0x18
+    e_world_loop,                      //main state 0x19
+    e_card_scan_loop,                  //main state 0x1A
+    e_card_scan_loop,                  //main state 0x1B
+    e_world_debug_loop,                //main state 0x1C
+    e_world_from_menu_loop,            //main state 0x1D
+    movie_player_loop,                 //main state 0x1E
+    NULL,                              //main state 0x1F
+    world_start_loop,                  //main state 0x20
+    level_view_loop,                   //main state 0x21
+    game_init_loop,                    //main state 0x22
 };
 
 static void (*gMainStateEndCallbacks[])(void) =
 {
-    intro_end,
-    goto_credits_end,
-    level_play_end,
-    main_menu_end,
-    options_end,
-    level_play_end,
-    level_play_end,
-    title_end,
-    level_select_end,
-    expert_levels_end,
-    level_editor_end,
-    level_editor_end,
-    NULL,
-    level_play_end,
-    level_retry_end,
-    level_play_end,
-    pause_menu_end,
-    help_end,
-    level_retry_end,
-    NULL,
-    boss_clear_end,
-    level_results_end,
-    bonus_stoparrow_end,
-    bonus_swapboxes_end,
-    e_world_end,
-    e_world_end,
-    e_card_scan_end,
-    e_card_scan_end,
-    e_world_debug_end,
-    e_world_from_menu_end,
-    movie_player_end,
-    fade_transition_end,
-    world_start_end,
-    level_view_end,
-    game_init_end,
+    intro_end,                         //main state 0x0
+    goto_credits_end,                  //main state 0x1
+    level_play_end,                    //main state 0x2
+    main_menu_end,                     //main state 0x3
+    options_end,                       //main state 0x4
+    level_play_end,                    //main state 0x5
+    level_play_end,                    //main state 0x6
+    title_end,                         //main state 0x7
+    level_select_end,                  //main state 0x8
+    expert_levels_end,                 //main state 0x9
+    level_editor_end,                  //main state 0xA
+    level_editor_end,                  //main state 0xB
+    NULL,                              //main state 0xC
+    level_play_end,                    //main state 0xD
+    level_retry_end,                   //main state 0xE
+    level_play_end,                    //main state 0xF
+    pause_menu_end,                    //main state 0x10
+    help_end,                          //main state 0x11
+    level_retry_end,                   //main state 0x12
+    NULL,                              //main state 0x13
+    boss_clear_end,                    //main state 0x14
+    level_results_end,                 //main state 0x15
+    bonus_stoparrow_end,               //main state 0x16
+    bonus_swapboxes_end,               //main state 0x17
+    e_world_end,                       //main state 0x18
+    e_world_end,                       //main state 0x19
+    e_card_scan_end,                   //main state 0x1A
+    e_card_scan_end,                   //main state 0x1B
+    e_world_debug_end,                 //main state 0x1C
+    e_world_from_menu_end,             //main state 0x1D
+    movie_player_end,                  //main state 0x1E
+    fade_transition_end,               //main state 0x1F
+    world_start_end,                   //main state 0x20
+    level_view_end,                    //main state 0x21
+    game_init_end,                     //main state 0x22
 };
 
 static void (*gUnknown_0807846C[])(void) =
 {
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
-    sub_08015044,
+    sub_08015044,                      //main state 0x0
+    sub_08015044,                      //main state 0x1
+    sub_08015044,                      //main state 0x2
+    sub_08015044,                      //main state 0x3
+    sub_08015044,                      //main state 0x4
+    sub_08015044,                      //main state 0x5
+    sub_08015044,                      //main state 0x6
+    sub_08015044,                      //main state 0x7
+    sub_08015044,                      //main state 0x8
+    sub_08015044,                      //main state 0x9
+    sub_08015044,                      //main state 0xA
+    sub_08015044,                      //main state 0xB
+    sub_08015044,                      //main state 0xC
+    sub_08015044,                      //main state 0xD
+    sub_08015044,                      //main state 0xE
+    sub_08015044,                      //main state 0xF
+    sub_08015044,                      //main state 0x10
+    sub_08015044,                      //main state 0x11
+    sub_08015044,                      //main state 0x12
+    sub_08015044,                      //main state 0x13
+    sub_08015044,                      //main state 0x14
+    sub_08015044,                      //main state 0x15
+    sub_08015044,                      //main state 0x16
+    sub_08015044,                      //main state 0x17
+    sub_08015044,                      //main state 0x18
+    sub_08015044,                      //main state 0x19
+    sub_08015044,                      //main state 0x1A
+    sub_08015044,                      //main state 0x1B
+    sub_08015044,                      //main state 0x1C
+    sub_08015044,                      //main state 0x1D
+    sub_08015044,                      //main state 0x1E
+    sub_08015044,                      //main state 0x1F
+    sub_08015044,                      //main state 0x20
+    sub_08015044,                      //main state 0x21
+    sub_08015044,                      //main state 0x22
 };
 
 static void main_loop(void);
