@@ -1564,7 +1564,7 @@ void sub_080382A8(void);
 void sub_080386DC(void);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);
-void sub_0804138C(int, int, u32, u32);
+void sub_0804138C(int, int, u16, u16);
 u16 sub_0806C2C4(void);
 void sub_0806D1AC(u16, u16);
 void sub_080714A8(void);

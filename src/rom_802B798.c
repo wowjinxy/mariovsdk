@@ -987,73 +987,54 @@ int sub_0802CD34(struct StructD7C *arg0)
 
     if ((gUnknown_030009D0 & 0x10)
      && arg0->unk24 <= r12
-     && r12 - arg0->unk20 <= 0x1000
+     && r12 - arg0->unk24 <= 0x1000
      && gUnknown_03000D84 == 0)
     {
-        // r8 = gUnknown_03000D78
         for (i = 0; i < gUnknown_03000D88[gNextLevelInLevelTable.unk10]; i++)
         {
-            //s16 asdf = i;
-            //#define i asdf
-            int r1;
+            int r1 = gUnknown_03000D78[i].unk0 >> 8;
 
-            r1 = gUnknown_03000D78[i].unk0 >> 8;
-            //if ((r4 - r1 >= 0 /*&& r4 == r1*/)
-            // || (r4 - r1 < 0 && r1 == r4))
             if (r4 - r1 >= 0)
             {
-                if (r4 == r1)
-                    goto label;
+                if (r4 != r1)
+                    continue;
             }
-            else if (r1 == r4)
+            else
             {
-            label:
-                i++;i--;
-                arg0++;arg0--;arg0++;arg0--;
-                arg0++;arg0--;arg0++;arg0--;
-                arg0++;arg0--;arg0++;arg0--;
-                arg0++;arg0--;arg0++;arg0--;
-                arg0++;arg0--;arg0++;arg0--;
-                arg0++;arg0--;arg0++;arg0--;
-                arg0++;arg0--;arg0++;arg0--;
-                arg0++;arg0--;arg0++;arg0--;
-                if (gUnknown_03000D78[i].unk10[gUnknown_03000D90[i]] != 0)
-                {
-                    arg0->unk20 = gUnknown_03000D78[i].unk0;
-                    gUnknown_03000D80 = i;
-                    gUnknown_03000D60 = gUnknown_03000D78[gUnknown_03000D80].unk0;
-                    gUnknown_03000D70 = r12 - gUnknown_03000D78[gUnknown_03000D80].unk4;
-                    gUnknown_03000D64 = r12;
-                    play_sound_effect_08071990(112, 8, 16, 64, 0, 128, 0);
-                    gUnknown_03000D84 = 1;
-                    gUnknown_03000D7C = arg0;
-                    gUnknown_03000D54 = arg0->unk24;
-                    gUnknown_03000D6C = gUnknown_030019AC->unk24;
-                    sub_0804138C(12, 0, (u32)(arg0->unk20 << 8) >> 16, (u32)(arg0->unk24 << 8) >> 16);
-                    if (++gUnknown_03000D90[i] > 7)
-                        gUnknown_03000D90[i] = 0;
-                    return 1;
-                }
-                //_0802CEA8
+                if (r1 != r4)
+                    continue;
+            }
+            if (gUnknown_03000D78[i].unk10[gUnknown_03000D90[i]] != 0)
+            {
+                arg0->unk20 = gUnknown_03000D78[i].unk0;
+                gUnknown_03000D80 = i;
+                gUnknown_03000D60 = gUnknown_03000D78[gUnknown_03000D80].unk0;
+                gUnknown_03000D70 = r12 - gUnknown_03000D78[gUnknown_03000D80].unk4;
+                gUnknown_03000D64 = r12;
+                play_sound_effect_08071990(112, 8, 16, 64, 0, 128, 0);
+                gUnknown_03000D84 = 1;
+                gUnknown_03000D7C = arg0;
+                gUnknown_03000D54 = arg0->unk24;
+                gUnknown_03000D6C = gUnknown_030019AC->unk24;
+                sub_0804138C(12, 0, arg0->unk20 >> 8, arg0->unk24 >> 8);
+                if (++gUnknown_03000D90[i] > 7)
+                    gUnknown_03000D90[i] = 0;
+                return 1;
+            }
+            if (gUnknown_03000D58[i] == 0)
+            {
+                gUnknown_03000D58[i] = 1;
+            }
+            else
+            {
+                gUnknown_03000D58[i]--;
                 if (gUnknown_03000D58[i] == 0)
                 {
-                    gUnknown_03000D58[i] = 1;
-                    // to _0802CEF6
+                    if (++gUnknown_03000D90[i] > 7)
+                        gUnknown_03000D90[i] = 0;
                 }
-                //_0802CEBC
-                else
-                {
-                    gUnknown_03000D58[i]--;
-                    if (gUnknown_03000D58[i] == 0)
-                    {
-                        if (++gUnknown_03000D90[i] > 7)
-                            gUnknown_03000D90[i] = 0;
-                    }
-                }
-                //to _0802CEF6
-                break;
             }
-            //_0802CEDA
+            break;
         }
     }
     return 0;
