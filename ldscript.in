@@ -33,7 +33,7 @@
 	X(asm/rom_8029FD0.o) \
 	X(asm/level_help.o) \
 	X(asm/level_retry.o) \
-	X(asm/rom_802B798.o) \
+	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \
 	X(src/rom_802D614.o) \
 	X(asm/eCard.o) \

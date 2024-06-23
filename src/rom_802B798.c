@@ -839,6 +839,7 @@ static inline void sub_0802C938_inline(struct Struct1940 **r6, s16 r5, int r7)
     r6[r5] = &gUnknown_03001940[r1];
 }
 
+#if NONMATCHING
 void sub_0802C938(void)
 {
     s16 i;
@@ -851,14 +852,98 @@ void sub_0802C938(void)
         struct Struct1940 **r6 = gUnknown_03000DA0;
         s16 r5 = i;
 
-        //asm(""::"r"(i));
-
         r1 = sub_08038DF4(255, 171, -1, (gUnknown_03000D78[r5].unk0 >> 8) + 12, gUnknown_030009E0 - 8, r7);
         r6[r5] = &gUnknown_03001940[r1];
-
-        //sub_0802C938_inline(gUnknown_03000DA0, i, 0);
     }
 }
+#else
+__attribute__((naked))
+void sub_0802C938(void)
+{
+    asm("\n\
+	push {r4-r7,lr}\n\
+	sub sp, sp, #8\n\
+	mov r4, #0\n\
+	ldr r0, _0802C9C0  @ =gNextLevelInLevelTable\n\
+	mov r2, #16\n\
+	ldrsh r1, [r0, r2]\n\
+	ldr r0, _0802C9C4  @ =gUnknown_03000D88\n\
+	ldr r0, [r0]\n\
+	add r0, r0, r1\n\
+	ldrb r0, [r0]\n\
+	cmp r4, r0\n\
+	bge _0802C9B8\n\
+	mov r7, #0\n\
+	ldr r6, _0802C9C8  @ =gUnknown_03000DA0\n\
+_0802C954:\n\
+	lsl r4, r4, #16\n\
+	asr r5, r4, #16\n\
+	ldr r0, _0802C9CC  @ =gUnknown_03000D78\n\
+	ldr r1, [r0]\n\
+	lsl r0, r5, #1\n\
+	add r0, r0, r5\n\
+	lsl r0, r0, #3\n\
+	add r0, r0, r1\n\
+	ldr r3, [r0]\n\
+	asr r3, r3, #8\n\
+	add r3, r3, #12\n\
+	lsl r3, r3, #16\n\
+	lsr r3, r3, #16\n\
+	ldr r0, _0802C9D0  @ =gUnknown_030009E0\n\
+	ldrh r0, [r0]\n\
+	sub r0, r0, #8\n\
+	lsl r0, r0, #16\n\
+	lsr r0, r0, #16\n\
+	str r0, [sp]\n\
+	str r7, [sp, #4]\n\
+	mov r0, #255\n\
+	mov r1, #171\n\
+	mov r2, #1\n\
+	neg r2, r2\n\
+	bl sub_08038DF4\n\
+	lsl r0, r0, #24\n\
+	lsr r1, r0, #24\n\
+	lsl r2, r5, #2\n\
+	add r2, r2, r6\n\
+	ldr r3, _0802C9D4  @ =gUnknown_03001940\n\
+	mov r0, #176\n\
+	mul r1, r0, r1\n\
+	ldr r0, [r3]\n\
+	add r0, r0, r1\n\
+	str r0, [r2]\n\
+	mov r3, #128\n\
+	lsl r3, r3, #9\n\
+	add r1, r4, r3\n\
+	lsr r4, r1, #16\n\
+	asr r1, r1, #16\n\
+	ldr r0, _0802C9C0  @ =gNextLevelInLevelTable\n\
+	mov r3, #16\n\
+	ldrsh r2, [r0, r3]\n\
+	ldr r0, _0802C9C4  @ =gUnknown_03000D88\n\
+	ldr r0, [r0]\n\
+	add r0, r0, r2\n\
+	ldrb r0, [r0]\n\
+	cmp r1, r0\n\
+	blt _0802C954\n\
+_0802C9B8:\n\
+	add sp, sp, #8\n\
+	pop {r4-r7}\n\
+	pop {r0}\n\
+	bx r0\n\
+_0802C9C0:\n\
+	.4byte gNextLevelInLevelTable\n\
+_0802C9C4:\n\
+	.4byte gUnknown_03000D88\n\
+_0802C9C8:\n\
+	.4byte gUnknown_03000DA0\n\
+_0802C9CC:\n\
+	.4byte gUnknown_03000D78\n\
+_0802C9D0:\n\
+	.4byte gUnknown_030009E0\n\
+_0802C9D4:\n\
+	.4byte gUnknown_03001940");
+}
+#endif
 
 extern s32 gUnknown_03000D54;
 extern s32 gUnknown_03000D50;
@@ -977,8 +1062,6 @@ void sub_0802C9D8(void)
     }
 }
 
-extern u32 gUnknown_03000D6C;
-
 int sub_0802CD34(struct StructD7C *arg0)
 {
     int r4 = arg0->unk20 >> 8;
@@ -986,8 +1069,7 @@ int sub_0802CD34(struct StructD7C *arg0)
     s16 i;
 
     if ((gUnknown_030009D0 & 0x10)
-     && arg0->unk24 <= r12
-     && r12 - arg0->unk24 <= 0x1000
+     && arg0->unk24 <= r12 && r12 - arg0->unk24 <= 0x1000
      && gUnknown_03000D84 == 0)
     {
         for (i = 0; i < gUnknown_03000D88[gNextLevelInLevelTable.unk10]; i++)
@@ -1019,7 +1101,7 @@ int sub_0802CD34(struct StructD7C *arg0)
                 sub_0804138C(12, 0, arg0->unk20 >> 8, arg0->unk24 >> 8);
                 if (++gUnknown_03000D90[i] > 7)
                     gUnknown_03000D90[i] = 0;
-                return 1;
+                return TRUE;
             }
             if (gUnknown_03000D58[i] == 0)
             {
@@ -1037,7 +1119,7 @@ int sub_0802CD34(struct StructD7C *arg0)
             break;
         }
     }
-    return 0;
+    return FALSE;
 }
 
 void sub_0802CF08(void)

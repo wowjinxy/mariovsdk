@@ -1,7 +1,7 @@
 	.INCLUDE "macro.inc"
 	.INCLUDE "gba.inc"
 
-.if 1
+.if 0
 	THUMB_FUNC_START sub_0802B798
 sub_0802B798: @ 0x0802B798
 	push {r4-r7,lr}
@@ -2515,7 +2515,7 @@ _0802C930:
 _0802C934:
 	.4byte gUnknown_03000D58
 	THUMB_FUNC_END sub_0802C7A4
-.endif
+
 	THUMB_FUNC_START sub_0802C938
 sub_0802C938: @ 0x0802C938
 	push {r4-r7,lr}
@@ -3747,3 +3747,4 @@ _0802D1FE:
 _0802D204:
 	.4byte gUnknown_03000170
 	THUMB_FUNC_END sub_0802D1DC
+.endif

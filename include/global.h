@@ -1085,6 +1085,7 @@ extern u8 gUnknown_03000D58[];
 extern s32 gUnknown_03000D60;
 extern s32 gUnknown_03000D64;
 extern u16 gUnknown_03000D68;
+extern u32 gUnknown_03000D6C;
 extern u8 gUnknown_03000D74;
 extern struct StructD78 *gUnknown_03000D78;
 extern struct StructD7C *gUnknown_03000D7C;
