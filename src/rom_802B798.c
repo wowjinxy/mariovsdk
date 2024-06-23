@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "arena.h"
 #include "main.h"
 
 struct Struct0802B798
@@ -30,24 +31,13 @@ struct Struct168
 };
 extern struct Struct168 *gUnknown_03000168;
 
-struct Struct08078210_sub
-{
-    u8 filler0[2];
-    u16 unk2;
-    u8 unk4;
-};
-
 extern struct Struct08078210
 {
     u8 filler0[0x108];
     struct Struct08078210_sub *unk108[1];
 } *gObjectTileDataRAMPtr;
 
-struct Struct802C31C
-{
-    u32 unk0;
-    u32 unk4;
-};
+void sub_0802D1DC(struct Struct170_child *arg0, int arg1);
 
 void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 {
@@ -154,7 +144,8 @@ void sub_0802B9E4(void)
     gUnknown_03000C30.unk0 = 0;
 }
 
-void *sub_0802BA00(void)
+// returns ?
+struct StructC30_child *sub_0802BA00(void)
 {
     void *r5 = gUnknown_03000C30.unk4;
     struct StructC30_child *r0;
@@ -212,15 +203,13 @@ void sub_0802BAA0(void)
                     r4->unk4--;
                 else
                 {
-                    struct StructC40_child_child_child *r3;
-                    r4->unk8->unk8 = (void *)((u8 *)r4->unk8->unk8 + gUnknown_03000C40.unk18);
-                    r3 = (void *)r4->unk8->unk8;
+                    struct StructC40_child *r3;
+                    r3 = (void *)((u8 *)r4->unk8->unk8 + gUnknown_03000C40.unk18);
+                    r4->unk8->unk8 = r3;
                     if (r3 == (void *)gUnknown_03000C40.unk0[r4->unk0].unk4)
-                    {
                         sub_0802BC64(((r4 - gUnknown_03000C40.unk20)), 0);
-                    }
                     else
-                        r4->unk4 = r3->unkC;
+                        r4->unk4 = *(u8 *)&r3[1].unk0;  // WTF?
                 }
             }
             r4++;
@@ -250,7 +239,7 @@ void sub_0802BB4C(void)
 
 int sub_0802BB80(u8 arg0, u8 arg1, u16 arg2)
 {
-    struct StructC40_child *r4 = gUnknown_03000C40.unk20;
+    struct StructC30_child *r4 = gUnknown_03000C40.unk20;  // hmm
     struct StructC40_child *r2;
     int r0;
 
@@ -292,12 +281,13 @@ u8 sub_0802BC00(int arg0)
 void sub_0802BC64(u8 arg0, int arg1)
 {
     struct StructC40_child *r2 = &gUnknown_03000C40.unk20[arg0];
+    struct StructC40_child *r0;
 
     if (r2->unk0 != arg1)
     {
         r2->unk0 = arg1;
-        r2->unk8->unk8 = gUnknown_03000C40.unk0[arg1].unk0;
-        r2->unk4 = ((struct StructC40_child_child_child *)r2->unk8->unk8)->unkC;
+        r0 = r2->unk8->unk8 = gUnknown_03000C40.unk0[arg1].unk0;
+        r2->unk4 = *(u8 *)&r0[1].unk0;  // WTF?
     }
 }
 
@@ -860,12 +850,12 @@ void sub_0802C938(void)
         u8 r1;
         struct Struct1940 **r6 = gUnknown_03000DA0;
         s16 r5 = i;
-        
+
         //asm(""::"r"(i));
-        
+
         r1 = sub_08038DF4(255, 171, -1, (gUnknown_03000D78[r5].unk0 >> 8) + 12, gUnknown_030009E0 - 8, r7);
         r6[r5] = &gUnknown_03001940[r1];
-        
+
         //sub_0802C938_inline(gUnknown_03000DA0, i, 0);
     }
 }
@@ -880,10 +870,6 @@ extern s16 gUnknown_0807C83A[];
 
 void sub_0802C9D8(void)
 {
-    // r6 = &gUnknown_030009D0
-    // r12 = &gUnknown_03000D84
-    // r7 = &gUnknown_03000D7C
-    // r8 = &gNextLevelInLevelTable
     int r2;
     int r0;
 
@@ -900,18 +886,14 @@ void sub_0802C9D8(void)
                 else
                     gUnknown_03000D7C->unk24 = gUnknown_03000D50 - 0x500;
             }
-            //_0802CA62
             else
                 gUnknown_03000D7C->unk24 = gUnknown_03000D54;
         }
-        //_0802CA64
         switch (gUnknown_03000D84)
         {
         case 0:
             if (gUnknown_030009D0 & 8)
             {
-                //gUnknown_03000D68++;
-                // r6 = &gUnknown_03000D80
                 if (++gUnknown_03000D68 >= gUnknown_03000D78[gUnknown_03000D80].unkC)
                 {
                     gUnknown_03000D84 = 1;
@@ -945,12 +927,10 @@ void sub_0802C9D8(void)
                     gUnknown_03000D68 = 2;
                 }
             }
-            //_0802CBF0
             else
             {
                 gUnknown_03000D50 -= gUnknown_0807C83A[gUnknown_03000DC8];
             }
-            //_0802CC04
             gUnknown_03000DC8++;
             break;
         case 3:
@@ -967,10 +947,9 @@ void sub_0802C9D8(void)
                     if (gUnknown_03000D80 >= gUnknown_03000D88[gNextLevelInLevelTable.unk10])
                         gUnknown_03000D80 = 0;
                 }
-                //_0802CCAC
                 else
                 {
-                    sub_0804138C(12, 0, (gUnknown_03000D7C->unk20 << 8) >> 16, (gUnknown_03000D7C->unk24 << 8) >> 16);
+                    sub_0804138C(12, 0, (u32)(gUnknown_03000D7C->unk20 << 8) >> 16, (u32)(gUnknown_03000D7C->unk24 << 8) >> 16);
                     gUnknown_03000D84 = 4;
                 }
             }
@@ -1017,7 +996,7 @@ int sub_0802CD34(struct StructD7C *arg0)
             //s16 asdf = i;
             //#define i asdf
             int r1;
-            
+
             r1 = gUnknown_03000D78[i].unk0 >> 8;
             //if ((r4 - r1 >= 0 /*&& r4 == r1*/)
             // || (r4 - r1 < 0 && r1 == r4))
@@ -1109,11 +1088,11 @@ int sub_0802CF20(struct Struct0802CF20 *arg0)
     return FALSE;
 }
 
-/*
 void sub_0802CF78(void)
 {
     struct Struct170_child *r4;
     struct Struct170_child *r6;
+    int r8 = 0;
 
     if (!(gUnknown_03001A1C & 8)
      && gUnknown_03000170.unk1C != 0
@@ -1129,17 +1108,137 @@ void sub_0802CF78(void)
                     r4->unk0 = -1;
                 else
                 {
+                    r8++;
                     if (gUnknown_03000170.unk20 == -1 || sub_080721A8() != 0)
                         gUnknown_03000170.unk20 = play_sound_effect_08071990(109, 4, 16, 64, 0, 128, 0);
                     if (r4->unk4 != 0)
-                        r4->unk4--;  // to _0802D038
-                    r4->unk8->unk8 += gUnknown_03000170.unk18;
-                    if (r4->unk8->unk8 == r4->
+                        r4->unk4--;
+                    else
+                    {
+                        r4->unk8->unk8 = (void *)((u8 *)r4->unk8->unk8 + gUnknown_03000170.unk18);
+                        if (r4->unk8->unk8 == gUnknown_03000170.unk0[r4->unk0].unk4)
+                            sub_0802D1DC(r4, 2);
+                        else
+                            r4->unk4 = r4->unk8->unk8->unkC;
+                    }
                 }
             }
-            //_0802D03A
             r4++;
+        }
+        if (r8 == 0 && gUnknown_03000170.unk20 != -1)
+        {
+            sub_08071D9C();
+            gUnknown_03000170.unk20 = -1;
         }
     }
 }
-*/
+
+void sub_0802D06C(void)
+{
+    int i;
+
+    gUnknown_03000170.unk1C = arena_allocate(12 * sizeof(struct Struct170_child));
+    for (i = 0; i < 12; i++)
+    {
+        struct Struct170_child *r4 = &gUnknown_03000170.unk1C[i];
+
+        r4->unk0 = -1;
+        r4->unk8 = sub_0802BA00();
+        r4->unk8->unkC = 0;
+        r4->unk8->unk8 = 0;
+    }
+    gUnknown_03000170.unk20 = -1;
+}
+
+void sub_0802D0BC(struct SomeUnknownHeader *hdr, u32 size)
+{
+    int i;
+
+    gUnknown_03000170.unk18 = size;
+    for (i = 0; i < 3; i++)
+    {
+        gUnknown_03000170.unk0[i].unk0 = hdr;
+        hdr = (void *)((u8 *)hdr + hdr->unkB * size);
+        gUnknown_03000170.unk0[i].unk4 = hdr;
+    }
+}
+
+void sub_0802D0E8(void)
+{
+    int i;
+
+    if (gUnknown_03000170.unk1C == NULL)
+    {
+        // possible inlined call to sub_0802D06C?
+        gUnknown_03000170.unk1C = arena_allocate(12 * sizeof(struct Struct170_child));
+        for (i = 0; i < 12; i++)
+        {
+            struct Struct170_child *r4 = &gUnknown_03000170.unk1C[i];
+
+            r4->unk0 = -1;
+            r4->unk8 = sub_0802BA00();
+            r4->unk8->unkC = 0;
+            r4->unk8->unk8 = 0;
+        }
+        gUnknown_03000170.unk20 = -1;
+    }
+}
+
+struct Struct0802D140
+{
+    u8 filler0[8];
+    s32 unk8;
+};
+
+void sub_0802D140(struct Struct0802D140 *arg0, u32 arg1)
+{
+    int r12 = -1;
+    u32 r7 = (arg0->unk8 >> 11);
+
+    r7 += (arg1 & ~0x3F);
+    while (arg1 <= r7)
+    {
+        int r2 = gEWRAMBasePtr->unk400C[arg1];
+        int r5 = gEWRAMBasePtr->unk600C[arg1];
+
+        if (r2 == 6 && r5 != r12)
+        {
+            struct struct_0807820C_sub8 *r3 = &gEWRAMBasePtr->unk8[r5];
+            struct Struct170_child *r2_ = gUnknown_03000170.unk1C;
+            struct Struct170_child *r4 = r2_ + 12;
+
+            while (r2_ < r4)
+            {
+                if (r2_->unk0 == -1)
+                {
+                    r2_->unk8->unk0 = r3->unk2_0;
+                    *(u32 *)&r2_->unk8->unk4 = r3->unk3;
+                    sub_0802D1DC(r2_, 1);
+                    break;
+                }
+                r2_++;
+            }
+
+        }
+        r12 = r5;
+        arg1++;
+    }
+}
+
+void sub_0802D1D0(void)
+{
+    gUnknown_03000170.unk1C = 0;
+}
+
+void sub_0802D1DC(struct Struct170_child *arg0, int arg1)
+{
+    struct SomeUnknownHeader *r1;
+
+    if (arg0->unk0 != arg1)
+    {
+        arg0->unk0 = arg1;
+        r1 = arg0->unk8->unk8 = gUnknown_03000170.unk0[arg1].unk0;
+        arg0->unk4 = r1->unkC;
+        sub_08001BA4(arg0->unk8, arg0->unk8->unk8);
+    }
+}

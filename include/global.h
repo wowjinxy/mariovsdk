@@ -400,6 +400,14 @@ struct iwRAMBase {
 u32 base[0];
 };
 
+struct struct_0807820C_sub8
+{
+    u32 filler0_0:16;
+    u32 unk2_0:7;
+    u32 filler2_7:1;
+    u32 unk3:8;
+};
+
 struct struct_0807820C_sub
 {
     u16 unk0;
@@ -407,11 +415,13 @@ struct struct_0807820C_sub
     u8 unk3;
 };
 
-struct struct_0807820C {
-    //u8 bigpad[0x600C];
-    u8 filler0[0xC];
+struct struct_0807820C
+{
+    u8 filler0[0x8];
+    struct struct_0807820C_sub8 unk8[1];
     struct struct_0807820C_sub unkC[1];
-    u8 filler10[0x600C-0x10];
+    u8 filler10[0x400C-0x10];
+    u16 unk400C[0x1000];
     u16 unk600C[0x1000];
     u16 unk800C[0x2000];
     u32 unkC00C;
@@ -732,33 +742,61 @@ struct SpriteTemplate
     /*0x14*/ u8 *tileData;  // tile data
 };  // size = 0x18
 
-struct Struct170_child_child
+// header to some data
+// full size is unkB * gUnknown_03000170.unk18
+struct SomeUnknownHeader
 {
-    u8 filler0[8];
-    u32 unk8;
+    u8 filler0[0xB];
+    u8 unkB;
+    u8 unkC;
+};
+
+// header for StructC30_child and StructC40_child
+struct SomeWeirdLinkedListThing
+{
+    u32 unk0;
+    u8 unk4;
+    u16 unk6;
+    struct SomeWeirdLinkedListThing *unk8;
+};
+
+struct Struct170_child_child_child
+{
+    u8 filler0[0xC];
+    u8 unkC;
 };
 
 struct Struct170_child
 {
     s32 unk0;
-    s32 unk4;
-    struct Struct170_child_child *unk8;
+    u8 unk4;
+    struct StructC30_child *unk8;  // correct type
 };  // size = 0xC
+
+struct Struct170_sub
+{
+    struct SomeUnknownHeader *unk0;
+    struct SomeUnknownHeader *unk4;  // next one after unk0
+};  // size = 0x8
 
 struct Struct170
 {
-    u8 filler0[0x18];
-    u32 unk18;
-    struct Struct170_child *unk1C;
+    struct Struct170_sub unk0[3];
+    u32 unk18;  // size of something
+    struct Struct170_child *unk1C;  // array of 12 Struct170_child structs
     s32 unk20;
 };
 
+// StructC30_child and StructC40_child are the same!
+
 struct StructC30_child
 {
-    u8 filler0[0x8];
-    u32 unk8;
-    u32 unkC;
-};
+    u32 unk0;
+    u8 unk4;
+    u16 unk6;
+    struct Struct170_child_child_child *unk8;
+    void *unkC;
+};  // size = 0x10
 
 struct StructC30
 {
@@ -766,24 +804,12 @@ struct StructC30
     struct StructC30_child *unk4;
 };
 
-struct StructC40_child_child_child  // might not actually be a struct
-{
-    u8 filler0[0xC];
-    u8 unkC;
-};
-
-struct StructC40_child_child
-{
-    u8 filler0[8];
-    struct StructC40_child_child_child *unk8;
-};
-
 struct StructC40_child
 {
     u32 unk0;
     u8 unk4;
     u16 unk6;
-    struct StructC40_child_child *unk8;  // possibly recursive struct StructC40_child?
+    struct StructC40_child *unk8;
 };  // size = 0xC
 
 struct StructC40_sub
@@ -799,7 +825,7 @@ struct StructC40
     u8 fillerC[0x18-0xC];
     u32 unk18;
     u32 unk1C;
-    struct StructC40_child *unk20;
+    struct StructC40_child *unk20;  // array
 };
 
 struct StructC70
@@ -890,6 +916,19 @@ struct Struct1940
 {
     u8 filler0[0xB0];
 };  // size = 0xB0
+
+struct Struct802C31C
+{
+    u32 unk0;
+    u32 unk4;
+};  // size = 0x8
+
+struct Struct08078210_sub
+{
+    u8 filler0[2];
+    u16 unk2;
+    u8 unk4;
+};
 
 //------------------------------------------------------------------------------
 // Variables
@@ -1327,6 +1366,9 @@ void irq_enable_t(void);
 void irq_disable_t(void);
 void interrupt_main(void);
 
+void sub_08001BA4(struct Struct802C31C *, struct SomeUnknownHeader *);
+void level_edit_delete_object(struct Struct802C31C *);
+void sub_080035C0(int, int);
 void sub_08004428();
 void sub_08004634();
 void sub_08006388(void);
@@ -1334,6 +1376,7 @@ void sub_080064D4();
 int sub_080066FC(u32 *, int, int, int);
 struct UnknownStruct15 *sub_08006968();
 void sub_08006D44(void);
+void sub_080063E4(struct Struct802C31C *, int, void *);
 void change_main_state(s32, s32);
 void sub_08007170(void);
 void level_play_main(void);
@@ -1362,6 +1405,7 @@ void level_select_end(void);
 void sub_0801B2CC();
 void reset_some_array_0801B3C0(void);
 void sub_0801B3DC(struct GraphicsConfig *, int, int);
+void sub_0801B50C(int);
 void title_init_callback(void);
 void title_main(void);
 void sub_0801B88C(void);
@@ -1520,6 +1564,7 @@ void sub_080382A8(void);
 void sub_080386DC(void);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);
+void sub_0804138C(int, int, u32, u32);
 u16 sub_0806C2C4(void);
 void sub_0806D1AC(u16, u16);
 void sub_080714A8(void);
