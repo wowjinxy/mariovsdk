@@ -843,13 +843,14 @@ extern s8 gUnknown_03000BFC;
 extern s8 gUnknown_03000C00;
 extern u16 gUnknown_03000C04;
 extern u16 gUnknown_03000C0C;
+extern u8 gUnknown_03000C1C;
 extern u8 gDKLevelMarioLivesLeft_03000C20;
 extern u8 gUnknown_03000C28;
 extern u16 gUnknown_03000D38;
 extern s32 gUnknown_03000D60;
 extern s32 gUnknown_03000D64;
 extern u8 gUnknown_03000DCC;
-
+extern u32 gUnknown_03000E00;
 extern u16 gUnknown_03000E60;
 
 extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];

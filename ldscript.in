@@ -28,6 +28,7 @@
 	X(asm/bonus_swapboxes.o) \
 	X(asm/options_menu.o) \
 	X(asm/level_results.o) \
+	X(src/level_results.o) \
 	X(asm/fade_in_out.o) \
 	X(src/fade_in_out.o) \
 	X(asm/rom_8029FD0.o) \
@@ -280,6 +281,7 @@ SECTIONS
 		. = 0xC00;		gUnknown_03000C00 = .;
 		. = 0xC04;		gUnknown_03000C04 = .;
 		. = 0xC0C;		gUnknown_03000C0C = .;
+		. = 0xC1C;		gUnknown_03000C1C = .;
 		. = 0xC20;		gDKLevelMarioLivesLeft_03000C20 = .;
 		. = 0xC28;		gUnknown_03000C28 = .;
 		. = 0xD20;		gCurrentPalette = .;
@@ -287,6 +289,7 @@ SECTIONS
 		. = 0xD60;		gUnknown_03000D60 = .;
 		. = 0xD64;		gUnknown_03000D64 = .;
 		. = 0xDCC;		gUnknown_03000DCC = .;
+		. = 0xE00;		gUnknown_03000E00 = .;
 		. = 0xE60;		gUnknown_03000E60 = .;
 		. = 0xE70;		gUnknown_03000E70 = .;
 		. = 0xE80;		gSomeVRAMAddr_03000E80 = .;
