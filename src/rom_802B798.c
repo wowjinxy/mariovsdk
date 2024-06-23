@@ -5,91 +5,91 @@
 
 struct Struct0802B798
 {
-	u8 filler0[0x32];
-	s16 unk32;
+    u8 filler0[0x32];
+    s16 unk32;
 };
 
 void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 {
-	s16 r0_;
-	u32 r4;
-	u32 r5;
+    s16 r0_;
+    u32 r4;
+    u32 r5;
 
-	if (arg0->unk32 > 0)
-	{
-		u32 r0 = arg1 & 0x7F;
-		if (r0 == 9)
-		{
-			if (gCurrentSwitchState != 1)
-			{
-				r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-				r4 = gEWRAMBasePtr->unkC[r0_].unk2;
-				r4 <<= 25;
-				r4 >>= 22;
-				r5 = gEWRAMBasePtr->unkC[r0_].unk3;
-				r5 <<= 3;
-				gPreviousSwitchState = gCurrentSwitchState;
-				gCurrentSwitchState = 1;
-				gUnknown_030019A0 |= 0x20000;
-				sub_080035C0(1, gPreviousSwitchState);
-				sub_0801B50C(1);
-				sub_08041F2C(gUnknown_030019E4);
-				r4 -= 8;
-				r5 += 8;
-				sub_0804138C(3, 0, r4, r5);
-				play_sound_effect_08071990(SE_SWITCH1, 8, 16, 64, 0, 128, 0);
-			}
-		}
-		else if (r0 == 8)
-		{
-			if (gCurrentSwitchState != 2)
-			{
-				r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-				r4 = gEWRAMBasePtr->unkC[r0_].unk2;
-				r4 <<= 25;
-				r4 >>= 22;
-				r5 = gEWRAMBasePtr->unkC[r0_].unk3;
-				r5 <<= 3;
-				gPreviousSwitchState = gCurrentSwitchState;
-				gCurrentSwitchState = 2;
-				gUnknown_030019A0 |= 0x20000;
-				sub_080035C0(2, gPreviousSwitchState);
-				sub_0801B50C(1);
-				sub_08041F2C(gUnknown_030019E4);
-				r4 -= 8;
-				r5 += 8;
-				sub_0804138C(4, 0, r4, r5);
-				play_sound_effect_08071990(SE_SWITCH2, 8, 16, 64, 0, 128, 0);
-			}
-		}
-		else if (r0 == 10)
-		{
-			if (gCurrentSwitchState != 3)
-			{
-				r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-				r4 = gEWRAMBasePtr->unkC[r0_].unk2;
-				r4 <<= 25;
-				r4 >>= 22;
-				r5 = gEWRAMBasePtr->unkC[r0_].unk3;
-				r5 <<= 3;
-				gPreviousSwitchState = gCurrentSwitchState;
-				gCurrentSwitchState = 3;
-				gUnknown_030019A0 |= 0x20000;
-				sub_080035C0(3, gPreviousSwitchState);
-				sub_0801B50C(1);
-				sub_08041F2C(gUnknown_030019E4);
-				r4 -= 8;
-				r5 += 8;
-				sub_0804138C(5, 0, r4, r5);
-				play_sound_effect_08071990(SE_SWITCH3, 8, 16, 64, 0, 128, 0);
-			}
-		}
-	}
+    if (arg0->unk32 > 0)
+    {
+        u32 r0 = arg1 & 0x7F;
+        if (r0 == 9)
+        {
+            if (gCurrentSwitchState != 1)
+            {
+                r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
+                r4 = gEWRAMBasePtr->unkC[r0_].unk2;
+                r4 <<= 25;
+                r4 >>= 22;
+                r5 = gEWRAMBasePtr->unkC[r0_].unk3;
+                r5 <<= 3;
+                gPreviousSwitchState = gCurrentSwitchState;
+                gCurrentSwitchState = 1;
+                gUnknown_030019A0 |= 0x20000;
+                sub_080035C0(1, gPreviousSwitchState);
+                sub_0801B50C(1);
+                sub_08041F2C(gUnknown_030019E4);
+                r4 -= 8;
+                r5 += 8;
+                sub_0804138C(3, 0, r4, r5);
+                play_sound_effect_08071990(SE_SWITCH1, 8, 16, 64, 0, 128, 0);
+            }
+        }
+        else if (r0 == 8)
+        {
+            if (gCurrentSwitchState != 2)
+            {
+                r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
+                r4 = gEWRAMBasePtr->unkC[r0_].unk2;
+                r4 <<= 25;
+                r4 >>= 22;
+                r5 = gEWRAMBasePtr->unkC[r0_].unk3;
+                r5 <<= 3;
+                gPreviousSwitchState = gCurrentSwitchState;
+                gCurrentSwitchState = 2;
+                gUnknown_030019A0 |= 0x20000;
+                sub_080035C0(2, gPreviousSwitchState);
+                sub_0801B50C(1);
+                sub_08041F2C(gUnknown_030019E4);
+                r4 -= 8;
+                r5 += 8;
+                sub_0804138C(4, 0, r4, r5);
+                play_sound_effect_08071990(SE_SWITCH2, 8, 16, 64, 0, 128, 0);
+            }
+        }
+        else if (r0 == 10)
+        {
+            if (gCurrentSwitchState != 3)
+            {
+                r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
+                r4 = gEWRAMBasePtr->unkC[r0_].unk2;
+                r4 <<= 25;
+                r4 >>= 22;
+                r5 = gEWRAMBasePtr->unkC[r0_].unk3;
+                r5 <<= 3;
+                gPreviousSwitchState = gCurrentSwitchState;
+                gCurrentSwitchState = 3;
+                gUnknown_030019A0 |= 0x20000;
+                sub_080035C0(3, gPreviousSwitchState);
+                sub_0801B50C(1);
+                sub_08041F2C(gUnknown_030019E4);
+                r4 -= 8;
+                r5 += 8;
+                sub_0804138C(5, 0, r4, r5);
+                play_sound_effect_08071990(SE_SWITCH3, 8, 16, 64, 0, 128, 0);
+            }
+        }
+    }
 }
 
 void sub_0802B984(void)
 {
-	gUnknown_030019A0 |= 0x10000;
+    gUnknown_030019A0 |= 0x10000;
 }
 
 void load_arm_code_0802B998(void)
@@ -811,87 +811,87 @@ __attribute__((naked))
 void sub_0802C938(void)
 {
     asm("\n\
-	push {r4-r7,lr}\n\
-	sub sp, sp, #8\n\
-	mov r4, #0\n\
-	ldr r0, _0802C9C0  @ =gNextLevelInLevelTable\n\
-	mov r2, #16\n\
-	ldrsh r1, [r0, r2]\n\
-	ldr r0, _0802C9C4  @ =gUnknown_03000D88\n\
-	ldr r0, [r0]\n\
-	add r0, r0, r1\n\
-	ldrb r0, [r0]\n\
-	cmp r4, r0\n\
-	bge _0802C9B8\n\
-	mov r7, #0\n\
-	ldr r6, _0802C9C8  @ =gUnknown_03000DA0\n\
+    push {r4-r7,lr}\n\
+    sub sp, sp, #8\n\
+    mov r4, #0\n\
+    ldr r0, _0802C9C0  @ =gNextLevelInLevelTable\n\
+    mov r2, #16\n\
+    ldrsh r1, [r0, r2]\n\
+    ldr r0, _0802C9C4  @ =gUnknown_03000D88\n\
+    ldr r0, [r0]\n\
+    add r0, r0, r1\n\
+    ldrb r0, [r0]\n\
+    cmp r4, r0\n\
+    bge _0802C9B8\n\
+    mov r7, #0\n\
+    ldr r6, _0802C9C8  @ =gUnknown_03000DA0\n\
 _0802C954:\n\
-	lsl r4, r4, #16\n\
-	asr r5, r4, #16\n\
-	ldr r0, _0802C9CC  @ =gUnknown_03000D78\n\
-	ldr r1, [r0]\n\
-	lsl r0, r5, #1\n\
-	add r0, r0, r5\n\
-	lsl r0, r0, #3\n\
-	add r0, r0, r1\n\
-	ldr r3, [r0]\n\
-	asr r3, r3, #8\n\
-	add r3, r3, #12\n\
-	lsl r3, r3, #16\n\
-	lsr r3, r3, #16\n\
-	ldr r0, _0802C9D0  @ =gUnknown_030009E0\n\
-	ldrh r0, [r0]\n\
-	sub r0, r0, #8\n\
-	lsl r0, r0, #16\n\
-	lsr r0, r0, #16\n\
-	str r0, [sp]\n\
-	str r7, [sp, #4]\n\
-	mov r0, #255\n\
-	mov r1, #171\n\
-	mov r2, #1\n\
-	neg r2, r2\n\
-	bl sub_08038DF4\n\
-	lsl r0, r0, #24\n\
-	lsr r1, r0, #24\n\
-	lsl r2, r5, #2\n\
-	add r2, r2, r6\n\
-	ldr r3, _0802C9D4  @ =gUnknown_03001940\n\
-	mov r0, #176\n\
-	mul r1, r0, r1\n\
-	ldr r0, [r3]\n\
-	add r0, r0, r1\n\
-	str r0, [r2]\n\
-	mov r3, #128\n\
-	lsl r3, r3, #9\n\
-	add r1, r4, r3\n\
-	lsr r4, r1, #16\n\
-	asr r1, r1, #16\n\
-	ldr r0, _0802C9C0  @ =gNextLevelInLevelTable\n\
-	mov r3, #16\n\
-	ldrsh r2, [r0, r3]\n\
-	ldr r0, _0802C9C4  @ =gUnknown_03000D88\n\
-	ldr r0, [r0]\n\
-	add r0, r0, r2\n\
-	ldrb r0, [r0]\n\
-	cmp r1, r0\n\
-	blt _0802C954\n\
+    lsl r4, r4, #16\n\
+    asr r5, r4, #16\n\
+    ldr r0, _0802C9CC  @ =gUnknown_03000D78\n\
+    ldr r1, [r0]\n\
+    lsl r0, r5, #1\n\
+    add r0, r0, r5\n\
+    lsl r0, r0, #3\n\
+    add r0, r0, r1\n\
+    ldr r3, [r0]\n\
+    asr r3, r3, #8\n\
+    add r3, r3, #12\n\
+    lsl r3, r3, #16\n\
+    lsr r3, r3, #16\n\
+    ldr r0, _0802C9D0  @ =gUnknown_030009E0\n\
+    ldrh r0, [r0]\n\
+    sub r0, r0, #8\n\
+    lsl r0, r0, #16\n\
+    lsr r0, r0, #16\n\
+    str r0, [sp]\n\
+    str r7, [sp, #4]\n\
+    mov r0, #255\n\
+    mov r1, #171\n\
+    mov r2, #1\n\
+    neg r2, r2\n\
+    bl sub_08038DF4\n\
+    lsl r0, r0, #24\n\
+    lsr r1, r0, #24\n\
+    lsl r2, r5, #2\n\
+    add r2, r2, r6\n\
+    ldr r3, _0802C9D4  @ =gUnknown_03001940\n\
+    mov r0, #176\n\
+    mul r1, r0, r1\n\
+    ldr r0, [r3]\n\
+    add r0, r0, r1\n\
+    str r0, [r2]\n\
+    mov r3, #128\n\
+    lsl r3, r3, #9\n\
+    add r1, r4, r3\n\
+    lsr r4, r1, #16\n\
+    asr r1, r1, #16\n\
+    ldr r0, _0802C9C0  @ =gNextLevelInLevelTable\n\
+    mov r3, #16\n\
+    ldrsh r2, [r0, r3]\n\
+    ldr r0, _0802C9C4  @ =gUnknown_03000D88\n\
+    ldr r0, [r0]\n\
+    add r0, r0, r2\n\
+    ldrb r0, [r0]\n\
+    cmp r1, r0\n\
+    blt _0802C954\n\
 _0802C9B8:\n\
-	add sp, sp, #8\n\
-	pop {r4-r7}\n\
-	pop {r0}\n\
-	bx r0\n\
+    add sp, sp, #8\n\
+    pop {r4-r7}\n\
+    pop {r0}\n\
+    bx r0\n\
 _0802C9C0:\n\
-	.4byte gNextLevelInLevelTable\n\
+    .4byte gNextLevelInLevelTable\n\
 _0802C9C4:\n\
-	.4byte gUnknown_03000D88\n\
+    .4byte gUnknown_03000D88\n\
 _0802C9C8:\n\
-	.4byte gUnknown_03000DA0\n\
+    .4byte gUnknown_03000DA0\n\
 _0802C9CC:\n\
-	.4byte gUnknown_03000D78\n\
+    .4byte gUnknown_03000D78\n\
 _0802C9D0:\n\
-	.4byte gUnknown_030009E0\n\
+    .4byte gUnknown_030009E0\n\
 _0802C9D4:\n\
-	.4byte gUnknown_03001940");
+    .4byte gUnknown_03001940");
 }
 #endif
 
