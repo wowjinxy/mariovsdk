@@ -81,6 +81,7 @@ ldscript.txt: ldscript.in
 	$(CPP) -P $< >> $@
 
 %.4bpp:   %.png $(GBAGFX) ; $(GBAGFX) $< $@
+%.8bpp:   %.png $(GBAGFX) ; $(GBAGFX) $< $@
 %.gbapal: %.pal $(GBAGFX) ; $(GBAGFX) $< $@
 
 $(GBAGFX): ; $(MAKE) -C $(@D)

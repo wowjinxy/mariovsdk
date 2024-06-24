@@ -92,6 +92,7 @@ FILES := \
 		assets/palettes/74_$(t).pal \
 		assets/palettes/75_$(t).pal \
 	) \
+	assets/sprites/gUnknown_08153188.png \
 	assets/sprites/MainLevelIconPics.png \
 	assets/sprites/PressStart.png \
 	assets/sprites/FileLetters.png \
@@ -116,7 +117,11 @@ FILES := \
 	assets/sprites/gUnknown_08617B04.png \
 	assets/sprites/MMDK.png \
 	assets/sprites/gUnknown_08617F24.png \
-	assets/sprites/gUnknown_086180B4.png
+	assets/sprites/gUnknown_086180B4.png \
+	assets/sprites/gUnknown_0861E0B8.png \
+	assets/sprites/gUnknown_086201E0.png \
+	assets/sprites/gUnknown_08621308.png \
+	assets/sprites/gUnknown_086576C8.png \
 
 all: $(FILES)
 
@@ -211,6 +216,12 @@ $(TMPDIR)/palettes/%_obj_gbplayer.gbapal: baserom.gba ; $(call romextract,0x81D9
 
 # Calculates the offset of the specified OBJ sub-palette
 obj_palette_addr = 0x81D98+$(1)*0x800+0x200+$(2)*0x20
+
+assets/sprites/test.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/test.8bpp: baserom.gba ; $(call romextract,0x153188,0x800*12)
+
+assets/sprites/gUnknown_08153188.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/gUnknown_08153188.8bpp: baserom.gba ; $(call romextract,0x153188,0x800*12)
 
 assets/sprites/MainLevelIconPics.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/MainLevelIconPics.4bpp: baserom.gba ; $(call romextract,0x5D10C8,0x200*48)
@@ -311,6 +322,18 @@ $(TMPDIR)/sprites/gUnknown_08617F24.gbapal: baserom.gba ; $(call romextract,$(ca
 assets/sprites/gUnknown_086180B4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_086180B4.4bpp: baserom.gba ; $(call romextract,0x6180B4,0x80*2)
 $(TMPDIR)/sprites/gUnknown_086180B4.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,1,1),0x20)
+
+assets/sprites/gUnknown_0861E0B8.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/gUnknown_0861E0B8.4bpp: baserom.gba ; $(call romextract,0x61E0B8,0x200*16)
+
+assets/sprites/gUnknown_086201E0.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/gUnknown_086201E0.4bpp: baserom.gba ; $(call romextract,0x6201E0,0x200*8)
+
+assets/sprites/gUnknown_08621308.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/gUnknown_08621308.4bpp: baserom.gba ; $(call romextract,0x621308,0x200*8)
+
+assets/sprites/gUnknown_086576C8.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/gUnknown_086576C8.4bpp: baserom.gba ; $(call romextract,0x6576C8,0x400)
 
 # convert files to PNG (with or without palette)
 assets/%.png: $(TMPDIR)/%.4bpp $(TMPDIR)/%.gbapal $(GBAGFX)
