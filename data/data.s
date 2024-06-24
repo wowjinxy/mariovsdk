@@ -2149,7 +2149,7 @@ gUnknown_080B889C:
 
 	.GLOBAL gUnknown_080B88A4
 gUnknown_080B88A4:
-	.INCBIN "baserom.gba", 0xB88A4, 0xB90A4-0xB88A4
+	.INCBIN "assets/sprites/gUnknown_080B88A4.4bpp"
 
 	.GLOBAL gUnknown_080B90A4
 gUnknown_080B90A4:
@@ -2161,7 +2161,7 @@ gUnknown_080B92E4:
 
 	.GLOBAL gUnknown_080B92EC
 gUnknown_080B92EC:
-	.INCBIN "baserom.gba", 0xB92EC, 0xB9AEC-0xB92EC
+	.INCBIN "assets/sprites/gUnknown_080B92EC.4bpp"
 
 	.GLOBAL gUnknown_080B9AEC
 gUnknown_080B9AEC:
@@ -2173,7 +2173,7 @@ gUnknown_080B9B7C:
 
 	.GLOBAL gUnknown_080B9B84
 gUnknown_080B9B84:
-	.INCBIN "baserom.gba", 0xB9B84, 0xB9C84-0xB9B84
+	.INCBIN "assets/sprites/gUnknown_080B9B84.4bpp"
 
 	.GLOBAL gUnknown_080B9C84
 gUnknown_080B9C84:
@@ -2185,7 +2185,7 @@ gUnknown_080B9DA4:
 
 	.GLOBAL gUnknown_080B9DAC
 gUnknown_080B9DAC:
-	.INCBIN "baserom.gba", 0xB9DAC, 0xB9FAC-0xB9DAC
+	.INCBIN "assets/sprites/gUnknown_080B9DAC.4bpp"
 
 	.GLOBAL gUnknown_080B9FAC
 gUnknown_080B9FAC:
@@ -2197,7 +2197,7 @@ gUnknown_080BA1A4:
 
 	.GLOBAL gUnknown_080BA1AC
 gUnknown_080BA1AC:
-	.INCBIN "baserom.gba", 0xBA1AC, 0xBA8AC-0xBA1AC
+	.INCBIN "assets/sprites/gUnknown_080BA1AC.4bpp"
 
 	.GLOBAL gUnknown_080BA8AC
 gUnknown_080BA8AC:
@@ -2209,7 +2209,7 @@ gUnknown_080BA9CC:
 
 	.GLOBAL gUnknown_080BA9D4
 gUnknown_080BA9D4:
-	.INCBIN "baserom.gba", 0xBA9D4, 0xBACD4-0xBA9D4
+	.INCBIN "assets/sprites/gUnknown_080BA9D4.4bpp"
 
 	.GLOBAL gUnknown_080BACD4
 gUnknown_080BACD4:
@@ -2221,7 +2221,7 @@ gUnknown_080BADF4:
 
 	.GLOBAL gUnknown_080BADFC
 gUnknown_080BADFC:
-	.INCBIN "baserom.gba", 0xBADFC, 0xBEDFC-0xBADFC
+	.INCBIN "assets/sprites/gUnknown_080BADFC.4bpp"
 
 	.GLOBAL gUnknown_080BEDFC
 gUnknown_080BEDFC:
@@ -2233,7 +2233,7 @@ gUnknown_080BF03C:
 
 	.GLOBAL gUnknown_080BF044
 gUnknown_080BF044:
-	.INCBIN "baserom.gba", 0xBF044, 0xC0044-0xBF044
+	.INCBIN "assets/sprites/gUnknown_080BF044.4bpp"
 
 	.GLOBAL gUnknown_080C0044
 gUnknown_080C0044:
@@ -2245,7 +2245,7 @@ gUnknown_080C0140:
 
 	.GLOBAL gUnknown_080C0148
 gUnknown_080C0148:
-	.INCBIN "baserom.gba", 0xC0148, 0xC0848-0xC0148
+	.INCBIN "assets/sprites/gUnknown_080C0148.4bpp"
 
 	.GLOBAL gUnknown_080C0848
 gUnknown_080C0848:
@@ -2257,7 +2257,7 @@ gUnknown_080C09F8:
 
 	.GLOBAL gUnknown_080C0A00
 gUnknown_080C0A00:
-	.INCBIN "baserom.gba", 0xC0A00, 0xC2200-0xC0A00
+	.INCBIN "assets/sprites/gUnknown_080C0A00.4bpp"
 
 	.GLOBAL gUnknown_080C2200
 gUnknown_080C2200:
@@ -2269,7 +2269,7 @@ gUnknown_080C2320:
 
 	.GLOBAL gUnknown_080C2328
 gUnknown_080C2328:
-	.INCBIN "baserom.gba", 0xC2328, 0xC2728-0xC2328
+	.INCBIN "assets/sprites/gUnknown_080C2328.4bpp"
 
 	.GLOBAL gUnknown_080C2728
 gUnknown_080C2728:
@@ -2281,7 +2281,7 @@ gUnknown_080C2800:
 
 	.GLOBAL gUnknown_080C2808
 gUnknown_080C2808:
-	.INCBIN "baserom.gba", 0xC2808, 0xC3408-0xC2808
+	.INCBIN "assets/sprites/gUnknown_080C2808.4bpp"
 
 	.GLOBAL gUnknown_080C3408
 gUnknown_080C3408:
@@ -2293,7 +2293,7 @@ gUnknown_080C3648:
 
 	.GLOBAL gUnknown_080C3650
 gUnknown_080C3650:
-	.INCBIN "baserom.gba", 0xC3650, 0xC5650-0xC3650
+	.INCBIN "assets/sprites/gUnknown_080C3650.4bpp"
 
 	.GLOBAL gUnknown_080C5650
 gUnknown_080C5650:
@@ -2305,7 +2305,7 @@ gUnknown_080C56E0:
 
 	.GLOBAL gUnknown_080C56E8
 gUnknown_080C56E8:
-	.INCBIN "baserom.gba", 0xC56E8, 0xC5EE8-0xC56E8
+	.INCBIN "assets/sprites/gUnknown_080C56E8.4bpp"
 
 	.GLOBAL gUnknown_080C5EE8
 gUnknown_080C5EE8:
@@ -2317,7 +2317,7 @@ gUnknown_080C6008:
 
 	.GLOBAL gUnknown_080C6010
 gUnknown_080C6010:
-	.INCBIN "baserom.gba", 0xC6010, 0xC7010-0xC6010
+	.INCBIN "assets/sprites/gUnknown_080C6010.4bpp"
 
 	.GLOBAL gUnknown_080C7010
 gUnknown_080C7010:
@@ -2329,7 +2329,7 @@ gUnknown_080C70E8:
 
 	.GLOBAL gUnknown_080C70F0
 gUnknown_080C70F0:
-	.INCBIN "baserom.gba", 0xC70F0, 0xC73F0-0xC70F0
+	.INCBIN "assets/sprites/gUnknown_080C70F0.4bpp"
 
 	.GLOBAL gUnknown_080C73F0
 gUnknown_080C73F0:
@@ -2341,7 +2341,7 @@ gUnknown_080C7774:
 
 	.GLOBAL gUnknown_080C777C
 gUnknown_080C777C:
-	.INCBIN "baserom.gba", 0xC777C, 0xC7B7C-0xC777C
+	.INCBIN "assets/sprites/gUnknown_080C777C.4bpp"
 
 	.GLOBAL gUnknown_080C7B7C
 gUnknown_080C7B7C:
@@ -2353,7 +2353,7 @@ gUnknown_080C7C54:
 
 	.GLOBAL gUnknown_080C7C5C
 gUnknown_080C7C5C:
-	.INCBIN "baserom.gba", 0xC7C5C, 0xC7F5C-0xC7C5C
+	.INCBIN "assets/sprites/gUnknown_080C7C5C.4bpp"
 
 	.GLOBAL gUnknown_080C7F5C
 gUnknown_080C7F5C:
@@ -2365,7 +2365,7 @@ gUnknown_080C8034:
 
 	.GLOBAL gUnknown_080C803C
 gUnknown_080C803C:
-	.INCBIN "baserom.gba", 0xC803C, 0xC833C-0xC803C
+	.INCBIN "assets/sprites/gUnknown_080C803C.4bpp"
 
 	.GLOBAL gUnknown_080C833C
 gUnknown_080C833C:
@@ -2377,7 +2377,7 @@ gUnknown_080C83A8:
 
 	.GLOBAL gUnknown_080C83B0
 gUnknown_080C83B0:
-	.INCBIN "baserom.gba", 0xC83B0, 0xC87B0-0xC83B0
+	.INCBIN "assets/sprites/gUnknown_080C83B0.4bpp"
 
 	.GLOBAL gUnknown_080C87B0
 gUnknown_080C87B0:
@@ -2389,7 +2389,7 @@ gUnknown_080C8E28:
 
 	.GLOBAL gUnknown_080C8E30
 gUnknown_080C8E30:
-	.INCBIN "baserom.gba", 0xC8E30, 0xC9B30-0xC8E30
+	.INCBIN "assets/sprites/gUnknown_080C8E30.4bpp"
 
 	.GLOBAL gUnknown_080C9B30
 gUnknown_080C9B30:
@@ -2409,7 +2409,7 @@ gUnknown_080CABA8:
 
 	.GLOBAL gUnknown_080CABB0
 gUnknown_080CABB0:
-	.INCBIN "baserom.gba", 0xCABB0, 0xCB170-0xCABB0
+	.INCBIN "assets/sprites/gUnknown_080CABB0.4bpp"
 
 	.GLOBAL gUnknown_080CB170
 gUnknown_080CB170:
@@ -2421,7 +2421,7 @@ gUnknown_080CB7E8:
 
 	.GLOBAL gUnknown_080CB7F0
 gUnknown_080CB7F0:
-	.INCBIN "baserom.gba", 0xCB7F0, 0xCBDB0-0xCB7F0
+	.INCBIN "assets/sprites/gUnknown_080CB7F0.4bpp"
 
 	.GLOBAL gUnknown_080CBDB0
 gUnknown_080CBDB0:
@@ -2433,7 +2433,7 @@ gUnknown_080CC230:
 
 	.GLOBAL gUnknown_080CC238
 gUnknown_080CC238:
-	.INCBIN "baserom.gba", 0xCC238, 0xD4238-0xCC238
+	.INCBIN "assets/sprites/gUnknown_080CC238.8bpp"
 
 	.GLOBAL gUnknown_080D4238
 gUnknown_080D4238:
@@ -2445,7 +2445,7 @@ gUnknown_080D46B8:
 
 	.GLOBAL gUnknown_080D46C0
 gUnknown_080D46C0:
-	.INCBIN "baserom.gba", 0xD46C0, 0xDC6C0-0xD46C0
+	.INCBIN "assets/sprites/gUnknown_080D46C0.8bpp"
 
 	.GLOBAL gUnknown_080DC6C0
 gUnknown_080DC6C0:
@@ -2457,7 +2457,7 @@ gUnknown_080DCB40:
 
 	.GLOBAL gUnknown_080DCB48
 gUnknown_080DCB48:
-	.INCBIN "baserom.gba", 0xDCB48, 0xE4B48-0xDCB48
+	.INCBIN "assets/sprites/gUnknown_080DCB48.8bpp"
 
 	.GLOBAL gUnknown_080E4B48
 gUnknown_080E4B48:
@@ -2469,7 +2469,7 @@ gUnknown_080E4C68:
 
 	.GLOBAL gUnknown_080E4C70
 gUnknown_080E4C70:
-	.INCBIN "baserom.gba", 0xE4C70, 0xE6C70-0xE4C70
+	.INCBIN "assets/sprites/gUnknown_080E4C70.8bpp"
 
 	.GLOBAL gUnknown_080E6C70
 gUnknown_080E6C70:
@@ -2481,7 +2481,7 @@ gUnknown_080E6EB0:
 
 	.GLOBAL gUnknown_080E6EB8
 gUnknown_080E6EB8:
-	.INCBIN "baserom.gba", 0xE6EB8, 0xEAEB8-0xE6EB8
+	.INCBIN "assets/sprites/gUnknown_080E6EB8.8bpp"
 
 	.GLOBAL gUnknown_080EAEB8
 gUnknown_080EAEB8:
@@ -2493,7 +2493,7 @@ gUnknown_080EB0F8:
 
 	.GLOBAL gUnknown_080EB100
 gUnknown_080EB100:
-	.INCBIN "baserom.gba", 0xEB100, 0xED100-0xEB100
+	.INCBIN "assets/sprites/gUnknown_080EB100.8bpp"
 
 	.GLOBAL gUnknown_080ED100
 gUnknown_080ED100:
@@ -2505,7 +2505,7 @@ gUnknown_080ED244:
 
 	.GLOBAL gUnknown_080ED24C
 gUnknown_080ED24C:
-	.INCBIN "baserom.gba", 0xED24C, 0xEF64C-0xED24C
+	.INCBIN "assets/sprites/gUnknown_080ED24C.8bpp"
 
 	.GLOBAL gUnknown_080EF64C
 gUnknown_080EF64C:
@@ -2517,7 +2517,7 @@ gUnknown_080EF790:
 
 	.GLOBAL gUnknown_080EF798
 gUnknown_080EF798:
-	.INCBIN "baserom.gba", 0xEF798, 0xF1B98-0xEF798
+	.INCBIN "assets/sprites/gUnknown_080EF798.8bpp"
 
 	.GLOBAL gUnknown_080F1B98
 gUnknown_080F1B98:
@@ -2529,7 +2529,7 @@ gUnknown_080F2018:
 
 	.GLOBAL gUnknown_080F2020
 gUnknown_080F2020:
-	.INCBIN "baserom.gba", 0xF2020, 0xF4020-0xF2020
+	.INCBIN "assets/sprites/gUnknown_080F2020.8bpp"
 
 	.GLOBAL gUnknown_080F4020
 gUnknown_080F4020:
@@ -2541,7 +2541,7 @@ gUnknown_080F4800:
 
 	.GLOBAL gUnknown_080F4808
 gUnknown_080F4808:
-	.INCBIN "baserom.gba", 0xF4808, 0xF7008-0xF4808
+	.INCBIN "assets/sprites/gUnknown_080F4808.8bpp"
 
 	.GLOBAL gUnknown_080F7008
 gUnknown_080F7008:
@@ -2553,7 +2553,7 @@ gUnknown_080F7248:
 
 	.GLOBAL gUnknown_080F7250
 gUnknown_080F7250:
-	.INCBIN "baserom.gba", 0xF7250, 0xF8250-0xF7250
+	.INCBIN "assets/sprites/gUnknown_080F7250.8bpp"
 
 	.GLOBAL gUnknown_080F8250
 gUnknown_080F8250:
@@ -2565,7 +2565,7 @@ gUnknown_080F8370:
 
 	.GLOBAL gUnknown_080F8378
 gUnknown_080F8378:
-	.INCBIN "baserom.gba", 0xF8378, 0xF8B78-0xF8378
+	.INCBIN "assets/sprites/gUnknown_080F8378.8bpp"
 
 	.GLOBAL gUnknown_080F8B78
 gUnknown_080F8B78:
@@ -2577,7 +2577,7 @@ gUnknown_080F8C98:
 
 	.GLOBAL gUnknown_080F8CA0
 gUnknown_080F8CA0:
-	.INCBIN "baserom.gba", 0xF8CA0, 0xF94A0-0xF8CA0
+	.INCBIN "assets/sprites/gUnknown_080F8CA0.8bpp"
 
 	.GLOBAL gUnknown_080F94A0
 gUnknown_080F94A0:
@@ -2589,7 +2589,7 @@ gUnknown_080F96E0:
 
 	.GLOBAL gUnknown_080F96E8
 gUnknown_080F96E8:
-	.INCBIN "baserom.gba", 0xF96E8, 0xFA4E8-0xF96E8
+	.INCBIN "assets/sprites/gUnknown_080F96E8.8bpp"
 
 	.GLOBAL gUnknown_080FA4E8
 gUnknown_080FA4E8:
@@ -2601,7 +2601,7 @@ gUnknown_080FA824:
 
 	.GLOBAL gUnknown_080FA82C
 gUnknown_080FA82C:
-	.INCBIN "baserom.gba", 0xFA82C, 0xFDC2C-0xFA82C
+	.INCBIN "assets/sprites/gUnknown_080FA82C.8bpp"
 
 	.GLOBAL gUnknown_080FDC2C
 gUnknown_080FDC2C:
@@ -2613,7 +2613,7 @@ gUnknown_080FDD28:
 
 	.GLOBAL gUnknown_080FDD30
 gUnknown_080FDD30:
-	.INCBIN "baserom.gba", 0xFDD30, 0xFE0B0-0xFDD30
+	.INCBIN "assets/sprites/gUnknown_080FDD30.4bpp"
 
 	.GLOBAL gUnknown_080FE0B0
 gUnknown_080FE0B0:
@@ -2625,7 +2625,7 @@ gUnknown_080FE1D0:
 
 	.GLOBAL gUnknown_080FE1D8
 gUnknown_080FE1D8:
-	.INCBIN "baserom.gba", 0xFE1D8, 0xFE5D8-0xFE1D8
+	.INCBIN "assets/sprites/gUnknown_080FE1D8.4bpp"
 
 	.GLOBAL gUnknown_080FE5D8
 gUnknown_080FE5D8:
@@ -2637,7 +2637,7 @@ gUnknown_080FE6F8:
 
 	.GLOBAL gUnknown_080FE700
 gUnknown_080FE700:
-	.INCBIN "baserom.gba", 0xFE700, 0xFEB00-0xFE700
+	.INCBIN "assets/sprites/gUnknown_080FE700.4bpp"
 
 	.GLOBAL gUnknown_080FEB00
 gUnknown_080FEB00:
@@ -2649,7 +2649,7 @@ gUnknown_080FED40:
 
 	.GLOBAL gUnknown_080FED48
 gUnknown_080FED48:
-	.INCBIN "baserom.gba", 0xFED48, 0xFF548-0xFED48
+	.INCBIN "assets/sprites/gUnknown_080FED48.4bpp"
 
 	.GLOBAL gUnknown_080FF548
 gUnknown_080FF548:
@@ -2661,7 +2661,7 @@ gUnknown_080FF56C:
 
 	.GLOBAL gUnknown_080FF574
 gUnknown_080FF574:
-	.INCBIN "baserom.gba", 0xFF574, 0xFF5F4-0xFF574
+	.INCBIN "assets/sprites/gUnknown_080FF574.4bpp"
 
 	.GLOBAL gUnknown_080FF5F4
 gUnknown_080FF5F4:
@@ -2673,7 +2673,7 @@ gUnknown_080FF858:
 
 	.GLOBAL gUnknown_080FF860
 gUnknown_080FF860:
-	.INCBIN "baserom.gba", 0xFF860, 0xFFBE0-0xFF860
+	.INCBIN "assets/sprites/gUnknown_080FF860.4bpp"
 
 	.GLOBAL gUnknown_080FFBE0
 gUnknown_080FFBE0:
@@ -2685,7 +2685,7 @@ gUnknown_080FFE20:
 
 	.GLOBAL gUnknown_080FFE28
 gUnknown_080FFE28:
-	.INCBIN "baserom.gba", 0xFFE28, 0x100228-0xFFE28
+	.INCBIN "assets/sprites/gUnknown_080FFE28.4bpp"
 
 	.GLOBAL gUnknown_08100228
 gUnknown_08100228:
@@ -2697,7 +2697,7 @@ gUnknown_081002B8:
 
 	.GLOBAL gUnknown_081002C0
 gUnknown_081002C0:
-	.INCBIN "baserom.gba", 0x1002C0, 0x1004C0-0x1002C0
+	.INCBIN "assets/sprites/gUnknown_081002C0.4bpp"
 
 	.GLOBAL gUnknown_081004C0
 gUnknown_081004C0:
@@ -2709,7 +2709,7 @@ gUnknown_08100700:
 
 	.GLOBAL gUnknown_08100708
 gUnknown_08100708:
-	.INCBIN "baserom.gba", 0x100708, 0x100B08-0x100708
+	.INCBIN "assets/sprites/gUnknown_08100708.4bpp"
 
 	.GLOBAL gUnknown_08100B08
 gUnknown_08100B08:
@@ -2721,7 +2721,7 @@ gUnknown_08100CB8:
 
 	.GLOBAL gUnknown_08100CC0
 gUnknown_08100CC0:
-	.INCBIN "baserom.gba", 0x100CC0, 0x100D40-0x100CC0
+	.INCBIN "assets/sprites/gUnknown_08100CC0.4bpp"
 
 	.GLOBAL gUnknown_08100D40
 gUnknown_08100D40:
@@ -2733,7 +2733,7 @@ gUnknown_08100F80:
 
 	.GLOBAL gUnknown_08100F88
 gUnknown_08100F88:
-	.INCBIN "baserom.gba", 0x100F88, 0x101788-0x100F88
+	.INCBIN "assets/sprites/gUnknown_08100F88.4bpp"
 
 	.GLOBAL gUnknown_08101788
 gUnknown_08101788:
@@ -2745,7 +2745,7 @@ gUnknown_081018A8:
 
 	.GLOBAL gUnknown_081018B0
 gUnknown_081018B0:
-	.INCBIN "baserom.gba", 0x1018B0, 0x101930-0x1018B0
+	.INCBIN "assets/sprites/gUnknown_081018B0.4bpp"
 
 	.GLOBAL gUnknown_08101930
 gUnknown_08101930:
@@ -2757,7 +2757,7 @@ gUnknown_08101A50:
 
 	.GLOBAL gUnknown_08101A58
 gUnknown_08101A58:
-	.INCBIN "baserom.gba", 0x101A58, 0x101AD8-0x101A58
+	.INCBIN "assets/sprites/gUnknown_08101A58.4bpp"
 
 	.GLOBAL gUnknown_08101AD8
 gUnknown_08101AD8:
@@ -2769,7 +2769,7 @@ gUnknown_08101CD0:
 
 	.GLOBAL gUnknown_08101CD8
 gUnknown_08101CD8:
-	.INCBIN "baserom.gba", 0x101CD8, 0x102358-0x101CD8
+	.INCBIN "assets/sprites/gUnknown_08101CD8.4bpp"
 
 	.GLOBAL gUnknown_08102358
 gUnknown_08102358:
@@ -2781,7 +2781,7 @@ gUnknown_08102430:
 
 	.GLOBAL gUnknown_08102438
 gUnknown_08102438:
-	.INCBIN "baserom.gba", 0x102438, 0x102738-0x102438
+	.INCBIN "assets/sprites/gUnknown_08102438.4bpp"
 
 	.GLOBAL gUnknown_08102738
 gUnknown_08102738:
@@ -2793,7 +2793,7 @@ gUnknown_08102858:
 
 	.GLOBAL gUnknown_08102860
 gUnknown_08102860:
-	.INCBIN "baserom.gba", 0x102860, 0x103860-0x102860
+	.INCBIN "assets/sprites/gUnknown_08102860.4bpp"
 
 	.GLOBAL gUnknown_08103860
 gUnknown_08103860:
@@ -2805,7 +2805,7 @@ gUnknown_08103C98:
 
 	.GLOBAL gUnknown_08103CA0
 gUnknown_08103CA0:
-	.INCBIN "baserom.gba", 0x103CA0, 0x1054A0-0x103CA0
+	.INCBIN "assets/sprites/gUnknown_08103CA0.4bpp"
 
 	.GLOBAL gUnknown_081054A0
 gUnknown_081054A0:
@@ -2817,7 +2817,7 @@ gUnknown_081054C4:
 
 	.GLOBAL gUnknown_081054CC
 gUnknown_081054CC:
-	.INCBIN "baserom.gba", 0x1054CC, 0x10554C-0x1054CC
+	.INCBIN "assets/sprites/gUnknown_081054CC.4bpp"
 
 	.GLOBAL gUnknown_0810554C
 gUnknown_0810554C:
@@ -2829,7 +2829,7 @@ gUnknown_0810566C:
 
 	.GLOBAL gUnknown_08105674
 gUnknown_08105674:
-	.INCBIN "baserom.gba", 0x105674, 0x105A74-0x105674
+	.INCBIN "assets/sprites/gUnknown_08105674.4bpp"
 
 	.GLOBAL gUnknown_08105A74
 gUnknown_08105A74:
@@ -2841,7 +2841,7 @@ gUnknown_08105B04:
 
 	.GLOBAL gUnknown_08105B0C
 gUnknown_08105B0C:
-	.INCBIN "baserom.gba", 0x105B0C, 0x105D0C-0x105B0C
+	.INCBIN "assets/sprites/gUnknown_08105B0C.4bpp"
 
 	.GLOBAL gUnknown_08105D0C
 gUnknown_08105D0C:
@@ -2853,7 +2853,7 @@ gUnknown_08105E2C:
 
 	.GLOBAL gUnknown_08105E34
 gUnknown_08105E34:
-	.INCBIN "baserom.gba", 0x105E34, 0x106234-0x105E34
+	.INCBIN "assets/sprites/gUnknown_08105E34.4bpp"
 
 	.GLOBAL gUnknown_08106234
 gUnknown_08106234:
@@ -2865,7 +2865,7 @@ gUnknown_08106450:
 
 	.GLOBAL gUnknown_08106458
 gUnknown_08106458:
-	.INCBIN "baserom.gba", 0x106458, 0x106BD8-0x106458
+	.INCBIN "assets/sprites/gUnknown_08106458.4bpp"
 
 	.GLOBAL gUnknown_08106BD8
 gUnknown_08106BD8:
@@ -2877,7 +2877,7 @@ gUnknown_08106BFC:
 
 	.GLOBAL gUnknown_08106C04
 gUnknown_08106C04:
-	.INCBIN "baserom.gba", 0x106C04, 0x106D04-0x106C04
+	.INCBIN "assets/sprites/gUnknown_08106C04.4bpp"
 
 	.GLOBAL gUnknown_08106D04
 gUnknown_08106D04:
@@ -2889,7 +2889,7 @@ gUnknown_08106E24:
 
 	.GLOBAL gUnknown_08106E2C
 gUnknown_08106E2C:
-	.INCBIN "baserom.gba", 0x106E2C, 0x10722C-0x106E2C
+	.INCBIN "assets/sprites/gUnknown_08106E2C.4bpp"
 
 	.GLOBAL gUnknown_0810722C
 gUnknown_0810722C:
@@ -2901,7 +2901,7 @@ gUnknown_0810746C:
 
 	.GLOBAL gUnknown_08107474
 gUnknown_08107474:
-	.INCBIN "baserom.gba", 0x107474, 0x108474-0x107474
+	.INCBIN "assets/sprites/gUnknown_08107474.4bpp"
 
 	.GLOBAL gUnknown_08108474
 gUnknown_08108474:
@@ -2913,7 +2913,7 @@ gUnknown_08108498:
 
 	.GLOBAL gUnknown_081084A0
 gUnknown_081084A0:
-	.INCBIN "baserom.gba", 0x1084A0, 0x1086A0-0x1084A0
+	.INCBIN "assets/sprites/gUnknown_081084A0.4bpp"
 
 	.GLOBAL gUnknown_081086A0
 gUnknown_081086A0:
@@ -2925,7 +2925,7 @@ gUnknown_081088E0:
 
 	.GLOBAL gUnknown_081088E8
 gUnknown_081088E8:
-	.INCBIN "baserom.gba", 0x1088E8, 0x10C8E8-0x1088E8
+	.INCBIN "assets/sprites/gUnknown_081088E8.4bpp"
 
 	.GLOBAL gUnknown_0810C8E8
 gUnknown_0810C8E8:
@@ -2937,7 +2937,7 @@ gUnknown_0810CAE0:
 
 	.GLOBAL gUnknown_0810CAE8
 gUnknown_0810CAE8:
-	.INCBIN "baserom.gba", 0x10CAE8, 0x10E6E8-0x10CAE8
+	.INCBIN "assets/sprites/gUnknown_0810CAE8.4bpp"
 
 	.GLOBAL gUnknown_0810E6E8
 gUnknown_0810E6E8:
@@ -2949,7 +2949,7 @@ gUnknown_0810E70C:
 
 	.GLOBAL gUnknown_0810E714
 gUnknown_0810E714:
-	.INCBIN "baserom.gba", 0x10E714, 0x10E914-0x10E714
+	.INCBIN "assets/sprites/gUnknown_0810E714.4bpp"
 
 	.GLOBAL gUnknown_0810E914
 gUnknown_0810E914:
@@ -2961,7 +2961,7 @@ gUnknown_0810EA34:
 
 	.GLOBAL gUnknown_0810EA3C
 gUnknown_0810EA3C:
-	.INCBIN "baserom.gba", 0x10EA3C, 0x10F23C-0x10EA3C
+	.INCBIN "assets/sprites/gUnknown_0810EA3C.4bpp"
 
 	.GLOBAL gUnknown_0810F23C
 gUnknown_0810F23C:
@@ -2973,7 +2973,7 @@ gUnknown_0810F35C:
 
 	.GLOBAL gUnknown_0810F364
 gUnknown_0810F364:
-	.INCBIN "baserom.gba", 0x10F364, 0x10F764-0x10F364
+	.INCBIN "assets/sprites/gUnknown_0810F364.4bpp"
 
 	.GLOBAL gUnknown_0810F764
 gUnknown_0810F764:
@@ -2985,7 +2985,7 @@ gUnknown_0810F788:
 
 	.GLOBAL gUnknown_0810F790
 gUnknown_0810F790:
-	.INCBIN "baserom.gba", 0x10F790, 0x10F890-0x10F790
+	.INCBIN "assets/sprites/gUnknown_0810F790.4bpp"
 
 	.GLOBAL gUnknown_0810F890
 gUnknown_0810F890:
@@ -2997,7 +2997,7 @@ gUnknown_0810F968:
 
 	.GLOBAL gUnknown_0810F970
 gUnknown_0810F970:
-	.INCBIN "baserom.gba", 0x10F970, 0x10FC70-0x10F970
+	.INCBIN "assets/sprites/gUnknown_0810F970.4bpp"
 
 	.GLOBAL gUnknown_0810FC70
 gUnknown_0810FC70:
@@ -3009,7 +3009,7 @@ gUnknown_0810FD48:
 
 	.GLOBAL gUnknown_0810FD50
 gUnknown_0810FD50:
-	.INCBIN "baserom.gba", 0x10FD50, 0x110050-0x10FD50
+	.INCBIN "assets/sprites/gUnknown_0810FD50.4bpp"
 
 	.GLOBAL gUnknown_08110050
 gUnknown_08110050:
@@ -3021,7 +3021,7 @@ gUnknown_081100E0:
 
 	.GLOBAL gUnknown_081100E8
 gUnknown_081100E8:
-	.INCBIN "baserom.gba", 0x1100E8, 0x1102E8-0x1100E8
+	.INCBIN "assets/sprites/gUnknown_081100E8.4bpp"
 
 	.GLOBAL gUnknown_081102E8
 gUnknown_081102E8:
@@ -3033,7 +3033,7 @@ gUnknown_081104E0:
 
 	.GLOBAL gUnknown_081104E8
 gUnknown_081104E8:
-	.INCBIN "baserom.gba", 0x1104E8, 0x110BE8-0x1104E8
+	.INCBIN "assets/sprites/gUnknown_081104E8.4bpp"
 
 	.GLOBAL gUnknown_08110BE8
 gUnknown_08110BE8:
@@ -3045,7 +3045,7 @@ gUnknown_08110CE4:
 
 	.GLOBAL gUnknown_08110CEC
 gUnknown_08110CEC:
-	.INCBIN "baserom.gba", 0x110CEC, 0x11106C-0x110CEC
+	.INCBIN "assets/sprites/gUnknown_08110CEC.4bpp"
 
 	.GLOBAL gUnknown_0811106C
 gUnknown_0811106C:
@@ -3057,7 +3057,7 @@ gUnknown_0811121C:
 
 	.GLOBAL gUnknown_08111224
 gUnknown_08111224:
-	.INCBIN "baserom.gba", 0x111224, 0x112A24-0x111224
+	.INCBIN "assets/sprites/gUnknown_08111224.4bpp"
 
 	.GLOBAL gUnknown_08112A24
 gUnknown_08112A24:
@@ -3069,7 +3069,7 @@ gUnknown_08112B44:
 
 	.GLOBAL gUnknown_08112B4C
 gUnknown_08112B4C:
-	.INCBIN "baserom.gba", 0x112B4C, 0x112C4C-0x112B4C
+	.INCBIN "assets/sprites/gUnknown_08112B4C.4bpp"
 
 	.GLOBAL gUnknown_08112C4C
 gUnknown_08112C4C:
@@ -3081,7 +3081,7 @@ gUnknown_08112D24:
 
 	.GLOBAL gUnknown_08112D2C
 gUnknown_08112D2C:
-	.INCBIN "baserom.gba", 0x112D2C, 0x11392C-0x112D2C
+	.INCBIN "assets/sprites/gUnknown_08112D2C.4bpp"
 
 	.GLOBAL gUnknown_0811392C
 gUnknown_0811392C:
@@ -3093,7 +3093,7 @@ gUnknown_08113ADC:
 
 	.GLOBAL gUnknown_08113AE4
 gUnknown_08113AE4:
-	.INCBIN "baserom.gba", 0x113AE4, 0x1152E4-0x113AE4
+	.INCBIN "assets/sprites/gUnknown_08113AE4.4bpp"
 
 	.GLOBAL gUnknown_081152E4
 gUnknown_081152E4:
@@ -3105,7 +3105,7 @@ gUnknown_08115404:
 
 	.GLOBAL gUnknown_0811540C
 gUnknown_0811540C:
-	.INCBIN "baserom.gba", 0x11540C, 0x11640C-0x11540C
+	.INCBIN "assets/sprites/gUnknown_0811540C.4bpp"
 
 	.GLOBAL gUnknown_0811640C
 gUnknown_0811640C:
@@ -3117,7 +3117,7 @@ gUnknown_0811649C:
 
 	.GLOBAL gUnknown_081164A4
 gUnknown_081164A4:
-	.INCBIN "baserom.gba", 0x1164A4, 0x116CA4-0x1164A4
+	.INCBIN "assets/sprites/gUnknown_081164A4.4bpp"
 
 	.GLOBAL gUnknown_08116CA4
 gUnknown_08116CA4:
@@ -3129,7 +3129,7 @@ gUnknown_08116E54:
 
 	.GLOBAL gUnknown_08116E5C
 gUnknown_08116E5C:
-	.INCBIN "baserom.gba", 0x116E5C, 0x11865C-0x116E5C
+	.INCBIN "assets/sprites/gUnknown_08116E5C.4bpp"
 
 	.GLOBAL gUnknown_0811865C
 gUnknown_0811865C:
@@ -3141,7 +3141,7 @@ gUnknown_08118680:
 
 	.GLOBAL gUnknown_08118688
 gUnknown_08118688:
-	.INCBIN "baserom.gba", 0x118688, 0x118708-0x118688
+	.INCBIN "assets/sprites/gUnknown_08118688.4bpp"
 
 	.GLOBAL gUnknown_08118708
 gUnknown_08118708:
@@ -3153,7 +3153,7 @@ gUnknown_08118948:
 
 	.GLOBAL gUnknown_08118950
 gUnknown_08118950:
-	.INCBIN "baserom.gba", 0x118950, 0x118D50-0x118950
+	.INCBIN "assets/sprites/gUnknown_08118950.4bpp"
 
 	.GLOBAL gUnknown_08118D50
 gUnknown_08118D50:
@@ -3165,7 +3165,7 @@ gUnknown_08118D74:
 
 	.GLOBAL gUnknown_08118D7C
 gUnknown_08118D7C:
-	.INCBIN "baserom.gba", 0x118D7C, 0x118DFC-0x118D7C
+	.INCBIN "assets/sprites/gUnknown_08118D7C.4bpp"
 
 	.GLOBAL gUnknown_08118DFC
 gUnknown_08118DFC:
@@ -3177,7 +3177,7 @@ gUnknown_08118EB0:
 
 	.GLOBAL gUnknown_08118EB8
 gUnknown_08118EB8:
-	.INCBIN "baserom.gba", 0x118EB8, 0x119138-0x118EB8
+	.INCBIN "assets/sprites/gUnknown_08118EB8.4bpp"
 
 	.GLOBAL gUnknown_08119138
 gUnknown_08119138:
@@ -3189,7 +3189,7 @@ gUnknown_08119450:
 
 	.GLOBAL gUnknown_08119458
 gUnknown_08119458:
-	.INCBIN "baserom.gba", 0x119458, 0x119658-0x119458
+	.INCBIN "assets/sprites/gUnknown_08119458.4bpp"
 
 	.GLOBAL gUnknown_08119658
 gUnknown_08119658:
@@ -3201,7 +3201,7 @@ gUnknown_081196E8:
 
 	.GLOBAL gUnknown_081196F0
 gUnknown_081196F0:
-	.INCBIN "baserom.gba", 0x1196F0, 0x1198F0-0x1196F0
+	.INCBIN "assets/sprites/gUnknown_081196F0.4bpp"
 
 	.GLOBAL gUnknown_081198F0
 gUnknown_081198F0:
@@ -3213,7 +3213,7 @@ gUnknown_08119938:
 
 	.GLOBAL gUnknown_08119940
 gUnknown_08119940:
-	.INCBIN "baserom.gba", 0x119940, 0x119A40-0x119940
+	.INCBIN "assets/sprites/gUnknown_08119940.4bpp"
 
 	.GLOBAL gUnknown_08119A40
 gUnknown_08119A40:
@@ -3225,7 +3225,7 @@ gUnknown_08119A88:
 
 	.GLOBAL gUnknown_08119A90
 gUnknown_08119A90:
-	.INCBIN "baserom.gba", 0x119A90, 0x119B90-0x119A90
+	.INCBIN "assets/sprites/gUnknown_08119A90.4bpp"
 
 	.GLOBAL gUnknown_08119B90
 gUnknown_08119B90:
@@ -3237,7 +3237,7 @@ gUnknown_08119CB0:
 
 	.GLOBAL gUnknown_08119CB8
 gUnknown_08119CB8:
-	.INCBIN "baserom.gba", 0x119CB8, 0x11A038-0x119CB8
+	.INCBIN "assets/sprites/gUnknown_08119CB8.4bpp"
 
 	.GLOBAL gUnknown_0811A038
 gUnknown_0811A038:
@@ -3249,7 +3249,7 @@ gUnknown_0811A1E8:
 
 	.GLOBAL gUnknown_0811A1F0
 gUnknown_0811A1F0:
-	.INCBIN "baserom.gba", 0x11A1F0, 0x11A570-0x11A1F0
+	.INCBIN "assets/sprites/gUnknown_0811A1F0.4bpp"
 
 	.GLOBAL gUnknown_0811A570
 gUnknown_0811A570:
@@ -3261,7 +3261,7 @@ gUnknown_0811A600:
 
 	.GLOBAL gUnknown_0811A608
 gUnknown_0811A608:
-	.INCBIN "baserom.gba", 0x11A608, 0x11A688-0x11A608
+	.INCBIN "assets/sprites/gUnknown_0811A608.4bpp"
 
 	.GLOBAL gUnknown_0811A688
 gUnknown_0811A688:
@@ -3273,7 +3273,7 @@ gUnknown_0811A718:
 
 	.GLOBAL gUnknown_0811A720
 gUnknown_0811A720:
-	.INCBIN "baserom.gba", 0x11A720, 0x11A7A0-0x11A720
+	.INCBIN "assets/sprites/gUnknown_0811A720.4bpp"
 
 	.GLOBAL gUnknown_0811A7A0
 gUnknown_0811A7A0:
@@ -3285,7 +3285,7 @@ gUnknown_0811A830:
 
 	.GLOBAL gUnknown_0811A838
 gUnknown_0811A838:
-	.INCBIN "baserom.gba", 0x11A838, 0x11A8B8-0x11A838
+	.INCBIN "assets/sprites/gUnknown_0811A838.4bpp"
 
 	.GLOBAL gUnknown_0811A8B8
 gUnknown_0811A8B8:
@@ -3297,7 +3297,7 @@ gUnknown_0811AA20:
 
 	.GLOBAL gUnknown_0811AA28
 gUnknown_0811AA28:
-	.INCBIN "baserom.gba", 0x11AA28, 0x11AD28-0x11AA28
+	.INCBIN "assets/sprites/gUnknown_0811AA28.4bpp"
 
 	.GLOBAL gUnknown_0811AD28
 gUnknown_0811AD28:
@@ -3309,7 +3309,7 @@ gUnknown_0811AE90:
 
 	.GLOBAL gUnknown_0811AE98
 gUnknown_0811AE98:
-	.INCBIN "baserom.gba", 0x11AE98, 0x11B198-0x11AE98
+	.INCBIN "assets/sprites/gUnknown_0811AE98.4bpp"
 
 	.GLOBAL gUnknown_0811B198
 gUnknown_0811B198:
@@ -3321,7 +3321,7 @@ gUnknown_0811B3D8:
 
 	.GLOBAL gUnknown_0811B3E0
 gUnknown_0811B3E0:
-	.INCBIN "baserom.gba", 0x11B3E0, 0x11BBE0-0x11B3E0
+	.INCBIN "assets/sprites/gUnknown_0811B3E0.4bpp"
 
 	.GLOBAL gUnknown_0811BBE0
 gUnknown_0811BBE0:
@@ -3333,7 +3333,7 @@ gUnknown_0811BC04:
 
 	.GLOBAL gUnknown_0811BC0C
 gUnknown_0811BC0C:
-	.INCBIN "baserom.gba", 0x11BC0C, 0x11BC8C-0x11BC0C
+	.INCBIN "assets/sprites/gUnknown_0811BC0C.4bpp"
 
 	.GLOBAL gUnknown_0811BC8C
 gUnknown_0811BC8C:
@@ -3345,7 +3345,7 @@ gUnknown_0811BCB0:
 
 	.GLOBAL gUnknown_0811BCB8
 gUnknown_0811BCB8:
-	.INCBIN "baserom.gba", 0x11BCB8, 0x11BD38-0x11BCB8
+	.INCBIN "assets/sprites/gUnknown_0811BCB8.4bpp"
 
 	.GLOBAL gUnknown_0811BD38
 gUnknown_0811BD38:
@@ -3357,7 +3357,7 @@ gUnknown_0811BD5C:
 
 	.GLOBAL gUnknown_0811BD64
 gUnknown_0811BD64:
-	.INCBIN "baserom.gba", 0x11BD64, 0x11BDE4-0x11BD64
+	.INCBIN "assets/sprites/gUnknown_0811BD64.4bpp"
 
 	.GLOBAL gUnknown_0811BDE4
 gUnknown_0811BDE4:
@@ -3369,7 +3369,7 @@ gUnknown_0811BE08:
 
 	.GLOBAL gUnknown_0811BE10
 gUnknown_0811BE10:
-	.INCBIN "baserom.gba", 0x11BE10, 0x11C010-0x11BE10
+	.INCBIN "assets/sprites/gUnknown_0811BE10.4bpp"
 
 	.GLOBAL gUnknown_0811C010
 gUnknown_0811C010:
@@ -3381,7 +3381,7 @@ gUnknown_0811C1C0:
 
 	.GLOBAL gUnknown_0811C1C8
 gUnknown_0811C1C8:
-	.INCBIN "baserom.gba", 0x11C1C8, 0x11F1C8-0x11C1C8
+	.INCBIN "assets/sprites/gUnknown_0811C1C8.4bpp"
 
 	.GLOBAL gUnknown_0811F1C8
 gUnknown_0811F1C8:
@@ -3393,7 +3393,7 @@ gUnknown_0811F1EC:
 
 	.GLOBAL gUnknown_0811F1F4
 gUnknown_0811F1F4:
-	.INCBIN "baserom.gba", 0x11F1F4, 0x11F5F4-0x11F1F4
+	.INCBIN "assets/sprites/gUnknown_0811F1F4.8bpp"
 
 	.GLOBAL gUnknown_0811F5F4
 gUnknown_0811F5F4:
@@ -3405,7 +3405,7 @@ gUnknown_0811F7A4:
 
 	.GLOBAL gUnknown_0811F7AC
 gUnknown_0811F7AC:
-	.INCBIN "baserom.gba", 0x11F7AC, 0x1257AC-0x11F7AC
+	.INCBIN "assets/sprites/gUnknown_0811F7AC.8bpp"
 
 	.GLOBAL gUnknown_081257AC
 gUnknown_081257AC:
@@ -3417,7 +3417,7 @@ gUnknown_081257D0:
 
 	.GLOBAL gUnknown_081257D8
 gUnknown_081257D8:
-	.INCBIN "baserom.gba", 0x1257D8, 0x125858-0x1257D8
+	.INCBIN "assets/sprites/gUnknown_081257D8.4bpp"
 
 	.GLOBAL gUnknown_08125858
 gUnknown_08125858:
@@ -3429,7 +3429,7 @@ gUnknown_0812587C:
 
 	.GLOBAL gUnknown_08125884
 gUnknown_08125884:
-	.INCBIN "baserom.gba", 0x125884, 0x125904-0x125884
+	.INCBIN "assets/sprites/gUnknown_08125884.4bpp"
 
 	.GLOBAL gUnknown_08125904
 gUnknown_08125904:
@@ -3441,7 +3441,7 @@ gUnknown_08125928:
 
 	.GLOBAL gUnknown_08125930
 gUnknown_08125930:
-	.INCBIN "baserom.gba", 0x125930, 0x1259B0-0x125930
+	.INCBIN "assets/sprites/gUnknown_08125930.4bpp"
 
 	.GLOBAL gUnknown_081259B0
 gUnknown_081259B0:
@@ -3453,7 +3453,7 @@ gUnknown_08125A40:
 
 	.GLOBAL gUnknown_08125A48
 gUnknown_08125A48:
-	.INCBIN "baserom.gba", 0x125A48, 0x125C48-0x125A48
+	.INCBIN "assets/sprites/gUnknown_08125A48.4bpp"
 
 	.GLOBAL gUnknown_08125C48
 gUnknown_08125C48:
@@ -3465,7 +3465,7 @@ gUnknown_08125DF8:
 
 	.GLOBAL gUnknown_08125E00
 gUnknown_08125E00:
-	.INCBIN "baserom.gba", 0x125E00, 0x126400-0x125E00
+	.INCBIN "assets/sprites/gUnknown_08125E00.4bpp"
 
 	.GLOBAL gUnknown_08126400
 gUnknown_08126400:
@@ -3477,7 +3477,7 @@ gUnknown_08126AC0:
 
 	.GLOBAL gUnknown_08126AC8
 gUnknown_08126AC8:
-	.INCBIN "baserom.gba", 0x126AC8, 0x128AC8-0x126AC8
+	.INCBIN "assets/sprites/gUnknown_08126AC8.4bpp"
 
 	.GLOBAL gUnknown_08128AC8
 gUnknown_08128AC8:
@@ -3489,7 +3489,7 @@ gUnknown_08128BE8:
 
 	.GLOBAL gUnknown_08128BF0
 gUnknown_08128BF0:
-	.INCBIN "baserom.gba", 0x128BF0, 0x128FF0-0x128BF0
+	.INCBIN "assets/sprites/gUnknown_08128BF0.4bpp"
 
 	.GLOBAL gUnknown_08128FF0
 gUnknown_08128FF0:
@@ -3501,7 +3501,7 @@ gUnknown_08129110:
 
 	.GLOBAL gUnknown_08129118
 gUnknown_08129118:
-	.INCBIN "baserom.gba", 0x129118, 0x129518-0x129118
+	.INCBIN "assets/sprites/gUnknown_08129118.4bpp"
 
 	.GLOBAL gUnknown_08129518
 gUnknown_08129518:
@@ -3513,7 +3513,7 @@ gUnknown_0812953C:
 
 	.GLOBAL gUnknown_08129544
 gUnknown_08129544:
-	.INCBIN "baserom.gba", 0x129544, 0x1295C4-0x129544
+	.INCBIN "assets/sprites/gUnknown_08129544.4bpp"
 
 	.GLOBAL gUnknown_081295C4
 gUnknown_081295C4:
@@ -3525,7 +3525,7 @@ gUnknown_08129804:
 
 	.GLOBAL gUnknown_0812980C
 gUnknown_0812980C:
-	.INCBIN "baserom.gba", 0x12980C, 0x12A80C-0x12980C
+	.INCBIN "assets/sprites/gUnknown_0812980C.4bpp"
 
 	.GLOBAL gUnknown_0812A80C
 gUnknown_0812A80C:
@@ -3537,7 +3537,7 @@ gUnknown_0812A950:
 
 	.GLOBAL gUnknown_0812A958
 gUnknown_0812A958:
-	.INCBIN "baserom.gba", 0x12A958, 0x12B558-0x12A958
+	.INCBIN "assets/sprites/gUnknown_0812A958.4bpp"
 
 	.GLOBAL gUnknown_0812B558
 gUnknown_0812B558:
@@ -3549,7 +3549,7 @@ gUnknown_0812BA68:
 
 	.GLOBAL gUnknown_0812BA70
 gUnknown_0812BA70:
-	.INCBIN "baserom.gba", 0x12BA70, 0x12CA70-0x12BA70
+	.INCBIN "assets/sprites/gUnknown_0812BA70.4bpp"
 
 	.GLOBAL gUnknown_0812CA70
 gUnknown_0812CA70:
@@ -3561,7 +3561,7 @@ gUnknown_0812CA94:
 
 	.GLOBAL gUnknown_0812CA9C
 gUnknown_0812CA9C:
-	.INCBIN "baserom.gba", 0x12CA9C, 0x12CB1C-0x12CA9C
+	.INCBIN "assets/sprites/gUnknown_0812CA9C.4bpp"
 
 	.GLOBAL gUnknown_0812CB1C
 gUnknown_0812CB1C:
@@ -3573,7 +3573,7 @@ gUnknown_0812CB40:
 
 	.GLOBAL gUnknown_0812CB48
 gUnknown_0812CB48:
-	.INCBIN "baserom.gba", 0x12CB48, 0x12CBC8-0x12CB48
+	.INCBIN "assets/sprites/gUnknown_0812CB48.4bpp"
 
 	.GLOBAL gUnknown_0812CBC8
 gUnknown_0812CBC8:
@@ -3585,7 +3585,7 @@ gUnknown_0812CBEC:
 
 	.GLOBAL gUnknown_0812CBF4
 gUnknown_0812CBF4:
-	.INCBIN "baserom.gba", 0x12CBF4, 0x12CC74-0x12CBF4
+	.INCBIN "assets/sprites/gUnknown_0812CBF4.4bpp"
 
 	.GLOBAL gUnknown_0812CC74
 gUnknown_0812CC74:
@@ -3597,7 +3597,7 @@ gUnknown_0812CC98:
 
 	.GLOBAL gUnknown_0812CCA0
 gUnknown_0812CCA0:
-	.INCBIN "baserom.gba", 0x12CCA0, 0x12CCE0-0x12CCA0
+	.INCBIN "assets/sprites/gUnknown_0812CCA0.4bpp"
 
 	.GLOBAL gUnknown_0812CCE0
 gUnknown_0812CCE0:
@@ -3609,7 +3609,7 @@ gUnknown_0812CD04:
 
 	.GLOBAL gUnknown_0812CD0C
 gUnknown_0812CD0C:
-	.INCBIN "baserom.gba", 0x12CD0C, 0x12CD2C-0x12CD0C
+	.INCBIN "assets/sprites/gUnknown_0812CD0C.4bpp"
 
 	.GLOBAL gUnknown_0812CD2C
 gUnknown_0812CD2C:
@@ -3621,7 +3621,7 @@ gUnknown_0812CD50:
 
 	.GLOBAL gUnknown_0812CD58
 gUnknown_0812CD58:
-	.INCBIN "baserom.gba", 0x12CD58, 0x12CDD8-0x12CD58
+	.INCBIN "assets/sprites/gUnknown_0812CD58.4bpp"
 
 	.GLOBAL gUnknown_0812CDD8
 gUnknown_0812CDD8:
@@ -3633,7 +3633,7 @@ gUnknown_0812CDFC:
 
 	.GLOBAL gUnknown_0812CE04
 gUnknown_0812CE04:
-	.INCBIN "baserom.gba", 0x12CE04, 0x12D004-0x12CE04
+	.INCBIN "assets/sprites/gUnknown_0812CE04.4bpp"
 
 	.GLOBAL gUnknown_0812D004
 gUnknown_0812D004:
@@ -3645,7 +3645,7 @@ gUnknown_0812D028:
 
 	.GLOBAL gUnknown_0812D030
 gUnknown_0812D030:
-	.INCBIN "baserom.gba", 0x12D030, 0x12D130-0x12D030
+	.INCBIN "assets/sprites/gUnknown_0812D030.4bpp"
 
 	.GLOBAL gUnknown_0812D130
 gUnknown_0812D130:
@@ -3657,7 +3657,7 @@ gUnknown_0812D154:
 
 	.GLOBAL gUnknown_0812D15C
 gUnknown_0812D15C:
-	.INCBIN "baserom.gba", 0x12D15C, 0x12D1DC-0x12D15C
+	.INCBIN "assets/sprites/gUnknown_0812D15C.4bpp"
 
 	.GLOBAL gUnknown_0812D1DC
 gUnknown_0812D1DC:
@@ -3669,7 +3669,7 @@ gUnknown_0812D200:
 
 	.GLOBAL gUnknown_0812D208
 gUnknown_0812D208:
-	.INCBIN "baserom.gba", 0x12D208, 0x12D288-0x12D208
+	.INCBIN "assets/sprites/gUnknown_0812D208.4bpp"
 
 	.GLOBAL gUnknown_0812D288
 gUnknown_0812D288:
@@ -3681,7 +3681,7 @@ gUnknown_0812D2AC:
 
 	.GLOBAL gUnknown_0812D2B4
 gUnknown_0812D2B4:
-	.INCBIN "baserom.gba", 0x12D2B4, 0x12D334-0x12D2B4
+	.INCBIN "assets/sprites/gUnknown_0812D2B4.4bpp"
 
 	.GLOBAL gUnknown_0812D334
 gUnknown_0812D334:
@@ -3693,7 +3693,7 @@ gUnknown_0812D358:
 
 	.GLOBAL gUnknown_0812D360
 gUnknown_0812D360:
-	.INCBIN "baserom.gba", 0x12D360, 0x12D3E0-0x12D360
+	.INCBIN "assets/sprites/gUnknown_0812D360.4bpp"
 
 	.GLOBAL gUnknown_0812D3E0
 gUnknown_0812D3E0:
@@ -3705,7 +3705,7 @@ gUnknown_0812D404:
 
 	.GLOBAL gUnknown_0812D40C
 gUnknown_0812D40C:
-	.INCBIN "baserom.gba", 0x12D40C, 0x12D48C-0x12D40C
+	.INCBIN "assets/sprites/gUnknown_0812D40C.4bpp"
 
 	.GLOBAL gUnknown_0812D48C
 gUnknown_0812D48C:
@@ -3717,7 +3717,7 @@ gUnknown_0812D4B0:
 
 	.GLOBAL gUnknown_0812D4B8
 gUnknown_0812D4B8:
-	.INCBIN "baserom.gba", 0x12D4B8, 0x12D538-0x12D4B8
+	.INCBIN "assets/sprites/gUnknown_0812D4B8.4bpp"
 
 	.GLOBAL gUnknown_0812D538
 gUnknown_0812D538:
@@ -3729,7 +3729,7 @@ gUnknown_0812D55C:
 
 	.GLOBAL gUnknown_0812D564
 gUnknown_0812D564:
-	.INCBIN "baserom.gba", 0x12D564, 0x12D5E4-0x12D564
+	.INCBIN "assets/sprites/gUnknown_0812D564.4bpp"
 
 	.GLOBAL gUnknown_0812D5E4
 gUnknown_0812D5E4:
@@ -3741,7 +3741,7 @@ gUnknown_0812D608:
 
 	.GLOBAL gUnknown_0812D610
 gUnknown_0812D610:
-	.INCBIN "baserom.gba", 0x12D610, 0x12D690-0x12D610
+	.INCBIN "assets/sprites/gUnknown_0812D610.4bpp"
 
 	.GLOBAL gUnknown_0812D690
 gUnknown_0812D690:
@@ -3753,7 +3753,7 @@ gUnknown_0812D6B4:
 
 	.GLOBAL gUnknown_0812D6BC
 gUnknown_0812D6BC:
-	.INCBIN "baserom.gba", 0x12D6BC, 0x12D73C-0x12D6BC
+	.INCBIN "assets/sprites/gUnknown_0812D6BC.4bpp"
 
 	.GLOBAL gUnknown_0812D73C
 gUnknown_0812D73C:
@@ -3765,7 +3765,7 @@ gUnknown_0812D760:
 
 	.GLOBAL gUnknown_0812D768
 gUnknown_0812D768:
-	.INCBIN "baserom.gba", 0x12D768, 0x12D7E8-0x12D768
+	.INCBIN "assets/sprites/gUnknown_0812D768.4bpp"
 
 	.GLOBAL gUnknown_0812D7E8
 gUnknown_0812D7E8:
@@ -3777,7 +3777,7 @@ gUnknown_0812D80C:
 
 	.GLOBAL gUnknown_0812D814
 gUnknown_0812D814:
-	.INCBIN "baserom.gba", 0x12D814, 0x12D894-0x12D814
+	.INCBIN "assets/sprites/gUnknown_0812D814.4bpp"
 
 	.GLOBAL gUnknown_0812D894
 gUnknown_0812D894:
@@ -3789,7 +3789,7 @@ gUnknown_0812D8B8:
 
 	.GLOBAL gUnknown_0812D8C0
 gUnknown_0812D8C0:
-	.INCBIN "baserom.gba", 0x12D8C0, 0x12D940-0x12D8C0
+	.INCBIN "assets/sprites/gUnknown_0812D8C0.4bpp"
 
 	.GLOBAL gUnknown_0812D940
 gUnknown_0812D940:
@@ -3801,7 +3801,7 @@ gUnknown_0812D964:
 
 	.GLOBAL gUnknown_0812D96C
 gUnknown_0812D96C:
-	.INCBIN "baserom.gba", 0x12D96C, 0x12D9EC-0x12D96C
+	.INCBIN "assets/sprites/gUnknown_0812D96C.4bpp"
 
 	.GLOBAL gUnknown_0812D9EC
 gUnknown_0812D9EC:
@@ -3813,7 +3813,7 @@ gUnknown_0812DA10:
 
 	.GLOBAL gUnknown_0812DA18
 gUnknown_0812DA18:
-	.INCBIN "baserom.gba", 0x12DA18, 0x12DA98-0x12DA18
+	.INCBIN "assets/sprites/gUnknown_0812DA18.4bpp"
 
 	.GLOBAL gUnknown_0812DA98
 gUnknown_0812DA98:
@@ -3825,7 +3825,7 @@ gUnknown_0812DABC:
 
 	.GLOBAL gUnknown_0812DAC4
 gUnknown_0812DAC4:
-	.INCBIN "baserom.gba", 0x12DAC4, 0x12DB44-0x12DAC4
+	.INCBIN "assets/sprites/gUnknown_0812DAC4.4bpp"
 
 	.GLOBAL gUnknown_0812DB44
 gUnknown_0812DB44:
@@ -3837,7 +3837,7 @@ gUnknown_0812DB68:
 
 	.GLOBAL gUnknown_0812DB70
 gUnknown_0812DB70:
-	.INCBIN "baserom.gba", 0x12DB70, 0x12DBF0-0x12DB70
+	.INCBIN "assets/sprites/gUnknown_0812DB70.4bpp"
 
 	.GLOBAL gUnknown_0812DBF0
 gUnknown_0812DBF0:
@@ -3849,7 +3849,7 @@ gUnknown_0812DC14:
 
 	.GLOBAL gUnknown_0812DC1C
 gUnknown_0812DC1C:
-	.INCBIN "baserom.gba", 0x12DC1C, 0x12DC9C-0x12DC1C
+	.INCBIN "assets/sprites/gUnknown_0812DC1C.4bpp"
 
 	.GLOBAL gUnknown_0812DC9C
 gUnknown_0812DC9C:
@@ -3861,7 +3861,7 @@ gUnknown_0812DCC0:
 
 	.GLOBAL gUnknown_0812DCC8
 gUnknown_0812DCC8:
-	.INCBIN "baserom.gba", 0x12DCC8, 0x12DD48-0x12DCC8
+	.INCBIN "assets/sprites/gUnknown_0812DCC8.4bpp"
 
 	.GLOBAL gUnknown_0812DD48
 gUnknown_0812DD48:
@@ -3873,7 +3873,7 @@ gUnknown_0812DE20:
 
 	.GLOBAL gUnknown_0812DE28
 gUnknown_0812DE28:
-	.INCBIN "baserom.gba", 0x12DE28, 0x12E128-0x12DE28
+	.INCBIN "assets/sprites/gUnknown_0812DE28.4bpp"
 
 	.GLOBAL gUnknown_0812E128
 gUnknown_0812E128:
@@ -3885,7 +3885,7 @@ gUnknown_0812E170:
 
 	.GLOBAL gUnknown_0812E178
 gUnknown_0812E178:
-	.INCBIN "baserom.gba", 0x12E178, 0x12E378-0x12E178
+	.INCBIN "assets/sprites/gUnknown_0812E178.4bpp"
 
 	.GLOBAL gUnknown_0812E378
 gUnknown_0812E378:
@@ -3897,7 +3897,7 @@ gUnknown_0812E39C:
 
 	.GLOBAL gUnknown_0812E3A4
 gUnknown_0812E3A4:
-	.INCBIN "baserom.gba", 0x12E3A4, 0x12E5A4-0x12E3A4
+	.INCBIN "assets/sprites/gUnknown_0812E3A4.4bpp"
 
 	.GLOBAL gUnknown_0812E5A4
 gUnknown_0812E5A4:
@@ -3909,7 +3909,7 @@ gUnknown_0812E5C8:
 
 	.GLOBAL gUnknown_0812E5D0
 gUnknown_0812E5D0:
-	.INCBIN "baserom.gba", 0x12E5D0, 0x12E7D0-0x12E5D0
+	.INCBIN "assets/sprites/gUnknown_0812E5D0.4bpp"
 
 	.GLOBAL gUnknown_0812E7D0
 gUnknown_0812E7D0:
@@ -3921,7 +3921,7 @@ gUnknown_0812EA10:
 
 	.GLOBAL gUnknown_0812EA18
 gUnknown_0812EA18:
-	.INCBIN "baserom.gba", 0x12EA18, 0x12FA18-0x12EA18
+	.INCBIN "assets/sprites/gUnknown_0812EA18.4bpp"
 
 	.GLOBAL gUnknown_0812FA18
 gUnknown_0812FA18:
@@ -3933,7 +3933,7 @@ gUnknown_0812FA84:
 
 	.GLOBAL gUnknown_0812FA8C
 gUnknown_0812FA8C:
-	.INCBIN "baserom.gba", 0x12FA8C, 0x12FB8C-0x12FA8C
+	.INCBIN "assets/sprites/gUnknown_0812FA8C.4bpp"
 
 	.GLOBAL gUnknown_0812FB8C
 gUnknown_0812FB8C:
@@ -3945,7 +3945,7 @@ gUnknown_0812FBF8:
 
 	.GLOBAL gUnknown_0812FC00
 gUnknown_0812FC00:
-	.INCBIN "baserom.gba", 0x12FC00, 0x12FD00-0x12FC00
+	.INCBIN "assets/sprites/gUnknown_0812FC00.4bpp"
 
 	.GLOBAL gUnknown_0812FD00
 gUnknown_0812FD00:
@@ -3957,7 +3957,7 @@ gUnknown_0812FD6C:
 
 	.GLOBAL gUnknown_0812FD74
 gUnknown_0812FD74:
-	.INCBIN "baserom.gba", 0x12FD74, 0x12FE74-0x12FD74
+	.INCBIN "assets/sprites/gUnknown_0812FD74.4bpp"
 
 	.GLOBAL gUnknown_0812FE74
 gUnknown_0812FE74:
@@ -3969,7 +3969,7 @@ gUnknown_0812FEBC:
 
 	.GLOBAL gUnknown_0812FEC4
 gUnknown_0812FEC4:
-	.INCBIN "baserom.gba", 0x12FEC4, 0x130EC4-0x12FEC4
+	.INCBIN "assets/sprites/gUnknown_0812FEC4.4bpp"
 
 	.GLOBAL gUnknown_08130EC4
 gUnknown_08130EC4:
@@ -3981,7 +3981,7 @@ gUnknown_08130FC0:
 
 	.GLOBAL gUnknown_08130FC8
 gUnknown_08130FC8:
-	.INCBIN "baserom.gba", 0x130FC8, 0x1311C8-0x130FC8
+	.INCBIN "assets/sprites/gUnknown_08130FC8.4bpp"
 
 	.GLOBAL gUnknown_081311C8
 gUnknown_081311C8:
@@ -3993,7 +3993,7 @@ gUnknown_081312A0:
 
 	.GLOBAL gUnknown_081312A8
 gUnknown_081312A8:
-	.INCBIN "baserom.gba", 0x1312A8, 0x131EA8-0x1312A8
+	.INCBIN "assets/sprites/gUnknown_081312A8.4bpp"
 
 	.GLOBAL gUnknown_08131EA8
 gUnknown_08131EA8:
@@ -4005,7 +4005,7 @@ gUnknown_08131F38:
 
 	.GLOBAL gUnknown_08131F40
 gUnknown_08131F40:
-	.INCBIN "baserom.gba", 0x131F40, 0x132740-0x131F40
+	.INCBIN "assets/sprites/gUnknown_08131F40.4bpp"
 
 	.GLOBAL gUnknown_08132740
 gUnknown_08132740:
@@ -4017,7 +4017,7 @@ gUnknown_08132860:
 
 	.GLOBAL gUnknown_08132868
 gUnknown_08132868:
-	.INCBIN "baserom.gba", 0x132868, 0x133868-0x132868
+	.INCBIN "assets/sprites/gUnknown_08132868.4bpp"
 
 	.GLOBAL gUnknown_08133868
 gUnknown_08133868:
@@ -4029,7 +4029,7 @@ gUnknown_08133A60:
 
 	.GLOBAL gUnknown_08133A68
 gUnknown_08133A68:
-	.INCBIN "baserom.gba", 0x133A68, 0x135668-0x133A68
+	.INCBIN "assets/sprites/gUnknown_08133A68.4bpp"
 
 	.GLOBAL gUnknown_08135668
 gUnknown_08135668:
@@ -4041,7 +4041,7 @@ gUnknown_08135788:
 
 	.GLOBAL gUnknown_08135790
 gUnknown_08135790:
-	.INCBIN "baserom.gba", 0x135790, 0x135B90-0x135790
+	.INCBIN "assets/sprites/gUnknown_08135790.4bpp"
 
 	.GLOBAL gUnknown_08135B90
 gUnknown_08135B90:
@@ -4053,7 +4053,7 @@ gUnknown_08135C20:
 
 	.GLOBAL gUnknown_08135C28
 gUnknown_08135C28:
-	.INCBIN "baserom.gba", 0x135C28, 0x135E28-0x135C28
+	.INCBIN "assets/sprites/gUnknown_08135C28.4bpp"
 
 	.GLOBAL gUnknown_08135E28
 gUnknown_08135E28:
@@ -4065,7 +4065,7 @@ gUnknown_08135F48:
 
 	.GLOBAL gUnknown_08135F50
 gUnknown_08135F50:
-	.INCBIN "baserom.gba", 0x135F50, 0x136350-0x135F50
+	.INCBIN "assets/sprites/gUnknown_08135F50.4bpp"
 
 	.GLOBAL gUnknown_08136350
 gUnknown_08136350:
@@ -4077,7 +4077,7 @@ gUnknown_08136500:
 
 	.GLOBAL gUnknown_08136508
 gUnknown_08136508:
-	.INCBIN "baserom.gba", 0x136508, 0x136B08-0x136508
+	.INCBIN "assets/sprites/gUnknown_08136508.4bpp"
 
 	.GLOBAL gUnknown_08136B08
 gUnknown_08136B08:
@@ -4089,7 +4089,7 @@ gUnknown_08136C28:
 
 	.GLOBAL gUnknown_08136C30
 gUnknown_08136C30:
-	.INCBIN "baserom.gba", 0x136C30, 0x137030-0x136C30
+	.INCBIN "assets/sprites/gUnknown_08136C30.4bpp"
 
 	.GLOBAL gUnknown_08137030
 gUnknown_08137030:
@@ -4101,7 +4101,7 @@ gUnknown_08137150:
 
 	.GLOBAL gUnknown_08137158
 gUnknown_08137158:
-	.INCBIN "baserom.gba", 0x137158, 0x137558-0x137158
+	.INCBIN "assets/sprites/gUnknown_08137158.4bpp"
 
 	.GLOBAL gUnknown_08137558
 gUnknown_08137558:
@@ -4113,7 +4113,7 @@ gUnknown_081375E8:
 
 	.GLOBAL gUnknown_081375F0
 gUnknown_081375F0:
-	.INCBIN "baserom.gba", 0x1375F0, 0x1377F0-0x1375F0
+	.INCBIN "assets/sprites/gUnknown_081375F0.4bpp"
 
 	.GLOBAL gUnknown_081377F0
 gUnknown_081377F0:
@@ -4125,7 +4125,7 @@ gUnknown_081379A0:
 
 	.GLOBAL gUnknown_081379A8
 gUnknown_081379A8:
-	.INCBIN "baserom.gba", 0x1379A8, 0x137FA8-0x1379A8
+	.INCBIN "assets/sprites/gUnknown_081379A8.4bpp"
 
 	.GLOBAL gUnknown_08137FA8
 gUnknown_08137FA8:
@@ -4137,7 +4137,7 @@ gUnknown_081381E8:
 
 	.GLOBAL gUnknown_081381F0
 gUnknown_081381F0:
-	.INCBIN "baserom.gba", 0x1381F0, 0x1389F0-0x1381F0
+	.INCBIN "assets/sprites/gUnknown_081381F0.4bpp"
 
 	.GLOBAL gUnknown_081389F0
 gUnknown_081389F0:
@@ -4149,7 +4149,7 @@ gUnknown_08138B10:
 
 	.GLOBAL gUnknown_08138B18
 gUnknown_08138B18:
-	.INCBIN "baserom.gba", 0x138B18, 0x138F18-0x138B18
+	.INCBIN "assets/sprites/gUnknown_08138B18.4bpp"
 
 	.GLOBAL gUnknown_08138F18
 gUnknown_08138F18:
@@ -4161,7 +4161,7 @@ gUnknown_08139038:
 
 	.GLOBAL gUnknown_08139040
 gUnknown_08139040:
-	.INCBIN "baserom.gba", 0x139040, 0x139440-0x139040
+	.INCBIN "assets/sprites/gUnknown_08139040.4bpp"
 
 	.GLOBAL gUnknown_08139440
 gUnknown_08139440:
@@ -4173,7 +4173,7 @@ gUnknown_081394D0:
 
 	.GLOBAL gUnknown_081394D8
 gUnknown_081394D8:
-	.INCBIN "baserom.gba", 0x1394D8, 0x1396D8-0x1394D8
+	.INCBIN "assets/sprites/gUnknown_081394D8.4bpp"
 
 	.GLOBAL gUnknown_081396D8
 gUnknown_081396D8:
@@ -4185,7 +4185,7 @@ gUnknown_08139918:
 
 	.GLOBAL gUnknown_08139920
 gUnknown_08139920:
-	.INCBIN "baserom.gba", 0x139920, 0x13A120-0x139920
+	.INCBIN "assets/sprites/gUnknown_08139920.4bpp"
 
 	.GLOBAL gUnknown_0813A120
 gUnknown_0813A120:
@@ -4197,7 +4197,7 @@ gUnknown_0813A168:
 
 	.GLOBAL gUnknown_0813A170
 gUnknown_0813A170:
-	.INCBIN "baserom.gba", 0x13A170, 0x13B170-0x13A170
+	.INCBIN "assets/sprites/gUnknown_0813A170.8bpp"
 
 	.GLOBAL gUnknown_0813B170
 gUnknown_0813B170:
@@ -4209,7 +4209,7 @@ gUnknown_0813B3B0:
 
 	.GLOBAL gUnknown_0813B3B8
 gUnknown_0813B3B8:
-	.INCBIN "baserom.gba", 0x13B3B8, 0x13EBB8-0x13B3B8
+	.INCBIN "assets/sprites/gUnknown_0813B3B8.8bpp"
 
 	.GLOBAL gUnknown_0813EBB8
 gUnknown_0813EBB8:
@@ -4221,7 +4221,7 @@ gUnknown_0813EC00:
 
 	.GLOBAL gUnknown_0813EC08
 gUnknown_0813EC08:
-	.INCBIN "baserom.gba", 0x13EC08, 0x13FC08-0x13EC08
+	.INCBIN "assets/sprites/gUnknown_0813EC08.8bpp"
 
 	.GLOBAL gUnknown_0813FC08
 gUnknown_0813FC08:
@@ -4233,7 +4233,7 @@ gUnknown_0813FE6C:
 
 	.GLOBAL gUnknown_0813FE74
 gUnknown_0813FE74:
-	.INCBIN "baserom.gba", 0x13FE74, 0x145E74-0x13FE74
+	.INCBIN "assets/sprites/gUnknown_0813FE74.8bpp"
 
 	.GLOBAL gUnknown_08145E74
 gUnknown_08145E74:
@@ -4245,7 +4245,7 @@ gUnknown_08145F28:
 
 	.GLOBAL gUnknown_08145F30
 gUnknown_08145F30:
-	.INCBIN "baserom.gba", 0x145F30, 0x1460B0-0x145F30
+	.INCBIN "assets/sprites/gUnknown_08145F30.4bpp"
 
 	.GLOBAL gUnknown_081460B0
 gUnknown_081460B0:
@@ -4257,7 +4257,7 @@ gUnknown_081461D0:
 
 	.GLOBAL gUnknown_081461D8
 gUnknown_081461D8:
-	.INCBIN "baserom.gba", 0x1461D8, 0x14E1D8-0x1461D8
+	.INCBIN "assets/sprites/gUnknown_081461D8.8bpp"
 
 	.GLOBAL gUnknown_0814E1D8
 gUnknown_0814E1D8:
@@ -4269,7 +4269,7 @@ gUnknown_0814E340:
 
 	.GLOBAL gUnknown_0814E348
 gUnknown_0814E348:
-	.INCBIN "baserom.gba", 0x14E348, 0x150B48-0x14E348
+	.INCBIN "assets/sprites/gUnknown_0814E348.8bpp"
 
 	.GLOBAL gUnknown_08150B48
 gUnknown_08150B48:
@@ -4281,7 +4281,7 @@ gUnknown_08150BD8:
 
 	.GLOBAL gUnknown_08150BE0
 gUnknown_08150BE0:
-	.INCBIN "baserom.gba", 0x150BE0, 0x152BE0-0x150BE0
+	.INCBIN "assets/sprites/gUnknown_08150BE0.8bpp"
 
 	.GLOBAL gUnknown_08152BE0
 gUnknown_08152BE0:
@@ -4305,7 +4305,7 @@ gUnknown_0815962C:
 
 	.GLOBAL gUnknown_08159634
 gUnknown_08159634:
-	.INCBIN "baserom.gba", 0x159634, 0x15FE34-0x159634
+	.INCBIN "assets/sprites/gUnknown_08159634.8bpp"
 
 	.GLOBAL gUnknown_0815FE34
 gUnknown_0815FE34:
@@ -4317,7 +4317,7 @@ gUnknown_0815FFE4:
 
 	.GLOBAL gUnknown_0815FFEC
 gUnknown_0815FFEC:
-	.INCBIN "baserom.gba", 0x15FFEC, 0x162FEC-0x15FFEC
+	.INCBIN "assets/sprites/gUnknown_0815FFEC.8bpp"
 
 	.GLOBAL gUnknown_08162FEC
 gUnknown_08162FEC:
@@ -4329,7 +4329,7 @@ gUnknown_08163130:
 
 	.GLOBAL gUnknown_08163138
 gUnknown_08163138:
-	.INCBIN "baserom.gba", 0x163138, 0x167938-0x163138
+	.INCBIN "assets/sprites/gUnknown_08163138.8bpp"
 
 	.GLOBAL gUnknown_08167938
 gUnknown_08167938:
@@ -4341,7 +4341,7 @@ gUnknown_0816795C:
 
 	.GLOBAL gUnknown_08167964
 gUnknown_08167964:
-	.INCBIN "baserom.gba", 0x167964, 0x168164-0x167964
+	.INCBIN "assets/sprites/gUnknown_08167964.8bpp"
 
 	.GLOBAL gUnknown_08168164
 gUnknown_08168164:
@@ -4353,7 +4353,7 @@ gUnknown_08168554:
 
 	.GLOBAL gUnknown_0816855C
 gUnknown_0816855C:
-	.INCBIN "baserom.gba", 0x16855C, 0x17555C-0x16855C
+	.INCBIN "assets/sprites/gUnknown_0816855C.8bpp"
 
 	.GLOBAL gUnknown_0817555C
 gUnknown_0817555C:
@@ -4365,7 +4365,7 @@ gUnknown_0817570C:
 
 	.GLOBAL gUnknown_08175714
 gUnknown_08175714:
-	.INCBIN "baserom.gba", 0x175714, 0x181714-0x175714
+	.INCBIN "assets/sprites/gUnknown_08175714.8bpp"
 
 	.GLOBAL gUnknown_08181714
 gUnknown_08181714:
@@ -4377,7 +4377,7 @@ gUnknown_081817EC:
 
 	.GLOBAL gUnknown_081817F4
 gUnknown_081817F4:
-	.INCBIN "baserom.gba", 0x1817F4, 0x1877F4-0x1817F4
+	.INCBIN "assets/sprites/gUnknown_081817F4.8bpp"
 
 	.GLOBAL gUnknown_081877F4
 gUnknown_081877F4:
@@ -4389,7 +4389,7 @@ gUnknown_08187AC4:
 
 	.GLOBAL gUnknown_08187ACC
 gUnknown_08187ACC:
-	.INCBIN "baserom.gba", 0x187ACC, 0x18AACC-0x187ACC
+	.INCBIN "assets/sprites/gUnknown_08187ACC.8bpp"
 
 	.GLOBAL gUnknown_0818AACC
 gUnknown_0818AACC:
@@ -4401,7 +4401,7 @@ gUnknown_0818ADC0:
 
 	.GLOBAL gUnknown_0818ADC8
 gUnknown_0818ADC8:
-	.INCBIN "baserom.gba", 0x18ADC8, 0x19EDC8-0x18ADC8
+	.INCBIN "assets/sprites/gUnknown_0818ADC8.8bpp"
 
 	.GLOBAL gUnknown_0819EDC8
 gUnknown_0819EDC8:
@@ -4413,7 +4413,7 @@ gUnknown_0819EE58:
 
 	.GLOBAL gUnknown_0819EE60
 gUnknown_0819EE60:
-	.INCBIN "baserom.gba", 0x19EE60, 0x1A1E60-0x19EE60
+	.INCBIN "assets/sprites/gUnknown_0819EE60.8bpp"
 
 	.GLOBAL gUnknown_081A1E60
 gUnknown_081A1E60:
@@ -4425,7 +4425,7 @@ gUnknown_081A2178:
 
 	.GLOBAL gUnknown_081A2180
 gUnknown_081A2180:
-	.INCBIN "baserom.gba", 0x1A2180, 0x1B6180-0x1A2180
+	.INCBIN "assets/sprites/gUnknown_081A2180.8bpp"
 
 	.GLOBAL gUnknown_081B6180
 gUnknown_081B6180:
@@ -4437,7 +4437,7 @@ gUnknown_081B6378:
 
 	.GLOBAL gUnknown_081B6380
 gUnknown_081B6380:
-	.INCBIN "baserom.gba", 0x1B6380, 0x1B8F80-0x1B6380
+	.INCBIN "assets/sprites/gUnknown_081B6380.8bpp"
 
 	.GLOBAL gUnknown_081B8F80
 gUnknown_081B8F80:
@@ -4449,7 +4449,7 @@ gUnknown_081B90A0:
 
 	.GLOBAL gUnknown_081B90A8
 gUnknown_081B90A8:
-	.INCBIN "baserom.gba", 0x1B90A8, 0x1BD0A8-0x1B90A8
+	.INCBIN "assets/sprites/gUnknown_081B90A8.8bpp"
 
 	.GLOBAL gUnknown_081BD0A8
 gUnknown_081BD0A8:
@@ -4461,7 +4461,7 @@ gUnknown_081BD1EC:
 
 	.GLOBAL gUnknown_081BD1F4
 gUnknown_081BD1F4:
-	.INCBIN "baserom.gba", 0x1BD1F4, 0x1C19F4-0x1BD1F4
+	.INCBIN "assets/sprites/gUnknown_081BD1F4.8bpp"
 
 	.GLOBAL gUnknown_081C19F4
 gUnknown_081C19F4:
@@ -4473,7 +4473,7 @@ gUnknown_081C1A18:
 
 	.GLOBAL gUnknown_081C1A20
 gUnknown_081C1A20:
-	.INCBIN "baserom.gba", 0x1C1A20, 0x1C1C20-0x1C1A20
+	.INCBIN "assets/sprites/gUnknown_081C1A20.4bpp"
 
 	.GLOBAL gUnknown_081C1C20
 gUnknown_081C1C20:
@@ -4485,7 +4485,7 @@ gUnknown_081C1C68:
 
 	.GLOBAL gUnknown_081C1C70
 gUnknown_081C1C70:
-	.INCBIN "baserom.gba", 0x1C1C70, 0x1C2070-0x1C1C70
+	.INCBIN "assets/sprites/gUnknown_081C1C70.4bpp"
 
 	.GLOBAL gUnknown_081C2070
 gUnknown_081C2070:
@@ -4497,7 +4497,7 @@ gUnknown_081C2094:
 
 	.GLOBAL gUnknown_081C209C
 gUnknown_081C209C:
-	.INCBIN "baserom.gba", 0x1C209C, 0x1C211C-0x1C209C
+	.INCBIN "assets/sprites/gUnknown_081C209C.4bpp"
 
 	.GLOBAL gUnknown_081C211C
 gUnknown_081C211C:
@@ -4509,7 +4509,7 @@ gUnknown_081C2164:
 
 	.GLOBAL gUnknown_081C216C
 gUnknown_081C216C:
-	.INCBIN "baserom.gba", 0x1C216C, 0x1C226C-0x1C216C
+	.INCBIN "assets/sprites/gUnknown_081C216C.4bpp"
 
 	.GLOBAL gUnknown_081C226C
 gUnknown_081C226C:
@@ -4521,7 +4521,7 @@ gUnknown_081C22B4:
 
 	.GLOBAL gUnknown_081C22BC
 gUnknown_081C22BC:
-	.INCBIN "baserom.gba", 0x1C22BC, 0x1C32BC-0x1C22BC
+	.INCBIN "assets/sprites/gUnknown_081C22BC.8bpp"
 
 	.GLOBAL gUnknown_081C32BC
 gUnknown_081C32BC:
@@ -4533,7 +4533,7 @@ gUnknown_081C3304:
 
 	.GLOBAL gUnknown_081C330C
 gUnknown_081C330C:
-	.INCBIN "baserom.gba", 0x1C330C, 0x1C430C-0x1C330C
+	.INCBIN "assets/sprites/gUnknown_081C330C.8bpp"
 
 	.GLOBAL gUnknown_081C430C
 gUnknown_081C430C:
@@ -4545,7 +4545,7 @@ gUnknown_081C4378:
 
 	.GLOBAL gUnknown_081C4380
 gUnknown_081C4380:
-	.INCBIN "baserom.gba", 0x1C4380, 0x1C7380-0x1C4380
+	.INCBIN "assets/sprites/gUnknown_081C4380.8bpp"
 
 	.GLOBAL gUnknown_081C7380
 gUnknown_081C7380:
@@ -4557,7 +4557,7 @@ gUnknown_081C7410:
 
 	.GLOBAL gUnknown_081C7418
 gUnknown_081C7418:
-	.INCBIN "baserom.gba", 0x1C7418, 0x1CB418-0x1C7418
+	.INCBIN "assets/sprites/gUnknown_081C7418.8bpp"
 
 	.GLOBAL gUnknown_081CB418
 gUnknown_081CB418:
@@ -4569,7 +4569,7 @@ gUnknown_081CB538:
 
 	.GLOBAL gUnknown_081CB540
 gUnknown_081CB540:
-	.INCBIN "baserom.gba", 0x1CB540, 0x1CD540-0x1CB540
+	.INCBIN "assets/sprites/gUnknown_081CB540.8bpp"
 
 	.GLOBAL gUnknown_081CD540
 gUnknown_081CD540:
@@ -4581,7 +4581,7 @@ gUnknown_081CD564:
 
 	.GLOBAL gUnknown_081CD56C
 gUnknown_081CD56C:
-	.INCBIN "baserom.gba", 0x1CD56C, 0x1CD96C-0x1CD56C
+	.INCBIN "assets/sprites/gUnknown_081CD56C.8bpp"
 
 	.GLOBAL gUnknown_081CD96C
 gUnknown_081CD96C:
@@ -4593,7 +4593,7 @@ gUnknown_081CDA8C:
 
 	.GLOBAL gUnknown_081CDA94
 gUnknown_081CDA94:
-	.INCBIN "baserom.gba", 0x1CDA94, 0x1CFA94-0x1CDA94
+	.INCBIN "assets/sprites/gUnknown_081CDA94.8bpp"
 
 	.GLOBAL gUnknown_081CFA94
 gUnknown_081CFA94:
@@ -4605,7 +4605,7 @@ gUnknown_081CFAB8:
 
 	.GLOBAL gUnknown_081CFAC0
 gUnknown_081CFAC0:
-	.INCBIN "baserom.gba", 0x1CFAC0, 0x1CFEC0-0x1CFAC0
+	.INCBIN "assets/sprites/gUnknown_081CFAC0.8bpp"
 
 	.GLOBAL gUnknown_081CFEC0
 gUnknown_081CFEC0:
@@ -4617,7 +4617,7 @@ gUnknown_081CFFE0:
 
 	.GLOBAL gUnknown_081CFFE8
 gUnknown_081CFFE8:
-	.INCBIN "baserom.gba", 0x1CFFE8, 0x1D1FE8-0x1CFFE8
+	.INCBIN "assets/sprites/gUnknown_081CFFE8.8bpp"
 
 	.GLOBAL gUnknown_081D1FE8
 gUnknown_081D1FE8:
@@ -4629,7 +4629,7 @@ gUnknown_081D2204:
 
 	.GLOBAL gUnknown_081D220C
 gUnknown_081D220C:
-	.INCBIN "baserom.gba", 0x1D220C, 0x1D360C-0x1D220C
+	.INCBIN "assets/sprites/gUnknown_081D220C.8bpp"
 
 	.GLOBAL gUnknown_081D360C
 gUnknown_081D360C:
@@ -4641,7 +4641,7 @@ gUnknown_081D384C:
 
 	.GLOBAL gUnknown_081D3854
 gUnknown_081D3854:
-	.INCBIN "baserom.gba", 0x1D3854, 0x1D4854-0x1D3854
+	.INCBIN "assets/sprites/gUnknown_081D3854.8bpp"
 
 	.GLOBAL gUnknown_081D4854
 gUnknown_081D4854:
@@ -4653,7 +4653,7 @@ gUnknown_081D4A94:
 
 	.GLOBAL gUnknown_081D4A9C
 gUnknown_081D4A9C:
-	.INCBIN "baserom.gba", 0x1D4A9C, 0x1D5A9C-0x1D4A9C
+	.INCBIN "assets/sprites/gUnknown_081D4A9C.8bpp"
 
 	.GLOBAL gUnknown_081D5A9C
 gUnknown_081D5A9C:
@@ -4665,7 +4665,7 @@ gUnknown_081D5CB8:
 
 	.GLOBAL gUnknown_081D5CC0
 gUnknown_081D5CC0:
-	.INCBIN "baserom.gba", 0x1D5CC0, 0x1D70C0-0x1D5CC0
+	.INCBIN "assets/sprites/gUnknown_081D5CC0.8bpp"
 
 	.GLOBAL gUnknown_081D70C0
 gUnknown_081D70C0:
@@ -4677,7 +4677,7 @@ gUnknown_081D71E0:
 
 	.GLOBAL gUnknown_081D71E8
 gUnknown_081D71E8:
-	.INCBIN "baserom.gba", 0x1D71E8, 0x1D91E8-0x1D71E8
+	.INCBIN "assets/sprites/gUnknown_081D71E8.8bpp"
 
 	.GLOBAL gUnknown_081D91E8
 gUnknown_081D91E8:
@@ -4689,7 +4689,7 @@ gUnknown_081D920C:
 
 	.GLOBAL gUnknown_081D9214
 gUnknown_081D9214:
-	.INCBIN "baserom.gba", 0x1D9214, 0x1D9614-0x1D9214
+	.INCBIN "assets/sprites/gUnknown_081D9214.8bpp"
 
 	.GLOBAL gUnknown_081D9614
 gUnknown_081D9614:
@@ -4701,7 +4701,7 @@ gUnknown_081D96EC:
 
 	.GLOBAL gUnknown_081D96F4
 gUnknown_081D96F4:
-	.INCBIN "baserom.gba", 0x1D96F4, 0x1DF6F4-0x1D96F4
+	.INCBIN "assets/sprites/gUnknown_081D96F4.8bpp"
 
 	.GLOBAL gUnknown_081DF6F4
 gUnknown_081DF6F4:
@@ -4713,7 +4713,7 @@ gUnknown_081DF718:
 
 	.GLOBAL gUnknown_081DF720
 gUnknown_081DF720:
-	.INCBIN "baserom.gba", 0x1DF720, 0x1DFF20-0x1DF720
+	.INCBIN "assets/sprites/gUnknown_081DF720.8bpp"
 
 	.GLOBAL gUnknown_081DFF20
 gUnknown_081DFF20:
@@ -4725,7 +4725,7 @@ gUnknown_081DFF68:
 
 	.GLOBAL gUnknown_081DFF70
 gUnknown_081DFF70:
-	.INCBIN "baserom.gba", 0x1DFF70, 0x1E0070-0x1DFF70
+	.INCBIN "assets/sprites/gUnknown_081DFF70.8bpp"
 
 	.GLOBAL gUnknown_081E0070
 gUnknown_081E0070:
@@ -4737,7 +4737,7 @@ gUnknown_081E0094:
 
 	.GLOBAL gUnknown_081E009C
 gUnknown_081E009C:
-	.INCBIN "baserom.gba", 0x1E009C, 0x1E019C-0x1E009C
+	.INCBIN "assets/sprites/gUnknown_081E009C.8bpp"
 
 	.GLOBAL gUnknown_081E019C
 gUnknown_081E019C:
@@ -4749,7 +4749,7 @@ gUnknown_081E0274:
 
 	.GLOBAL gUnknown_081E027C
 gUnknown_081E027C:
-	.INCBIN "baserom.gba", 0x1E027C, 0x1E327C-0x1E027C
+	.INCBIN "assets/sprites/gUnknown_081E027C.4bpp"
 
 	.GLOBAL gUnknown_081E327C
 gUnknown_081E327C:
@@ -4761,7 +4761,7 @@ gUnknown_081E3378:
 
 	.GLOBAL gUnknown_081E3380
 gUnknown_081E3380:
-	.INCBIN "baserom.gba", 0x1E3380, 0x1E6B80-0x1E3380
+	.INCBIN "assets/sprites/gUnknown_081E3380.4bpp"
 
 	.GLOBAL gUnknown_081E6B80
 gUnknown_081E6B80:
@@ -4773,7 +4773,7 @@ gUnknown_081E6DC0:
 
 	.GLOBAL gUnknown_081E6DC8
 gUnknown_081E6DC8:
-	.INCBIN "baserom.gba", 0x1E6DC8, 0x1EADC8-0x1E6DC8
+	.INCBIN "assets/sprites/gUnknown_081E6DC8.8bpp"
 
 	.GLOBAL gUnknown_081EADC8
 gUnknown_081EADC8:
@@ -4785,7 +4785,7 @@ gUnknown_081EAEE8:
 
 	.GLOBAL gUnknown_081EAEF0
 gUnknown_081EAEF0:
-	.INCBIN "baserom.gba", 0x1EAEF0, 0x1F2EF0-0x1EAEF0
+	.INCBIN "assets/sprites/gUnknown_081EAEF0.8bpp"
 
 	.GLOBAL gUnknown_081F2EF0
 gUnknown_081F2EF0:
@@ -4797,7 +4797,7 @@ gUnknown_081F31E4:
 
 	.GLOBAL gUnknown_081F31EC
 gUnknown_081F31EC:
-	.INCBIN "baserom.gba", 0x1F31EC, 0x2031EC-0x1F31EC
+	.INCBIN "assets/sprites/gUnknown_081F31EC.8bpp"
 
 	.GLOBAL gUnknown_082031EC
 gUnknown_082031EC:
@@ -4809,7 +4809,7 @@ gUnknown_082034E0:
 
 	.GLOBAL gUnknown_082034E8
 gUnknown_082034E8:
-	.INCBIN "baserom.gba", 0x2034E8, 0x2084E8-0x2034E8
+	.INCBIN "assets/sprites/gUnknown_082034E8.8bpp"
 
 	.GLOBAL gUnknown_082084E8
 gUnknown_082084E8:
@@ -4821,7 +4821,7 @@ gUnknown_0820850C:
 
 	.GLOBAL gUnknown_08208514
 gUnknown_08208514:
-	.INCBIN "baserom.gba", 0x208514, 0x208914-0x208514
+	.INCBIN "assets/sprites/gUnknown_08208514.4bpp"
 
 	.GLOBAL gUnknown_08208914
 gUnknown_08208914:
@@ -4833,7 +4833,7 @@ gUnknown_08208A34:
 
 	.GLOBAL gUnknown_08208A3C
 gUnknown_08208A3C:
-	.INCBIN "baserom.gba", 0x208A3C, 0x210A3C-0x208A3C
+	.INCBIN "assets/sprites/gUnknown_08208A3C.8bpp"
 
 	.GLOBAL gUnknown_08210A3C
 gUnknown_08210A3C:
@@ -4845,7 +4845,7 @@ gUnknown_08210ACC:
 
 	.GLOBAL gUnknown_08210AD4
 gUnknown_08210AD4:
-	.INCBIN "baserom.gba", 0x210AD4, 0x213AD4-0x210AD4
+	.INCBIN "assets/sprites/gUnknown_08210AD4.8bpp"
 
 	.GLOBAL gUnknown_08213AD4
 gUnknown_08213AD4:
@@ -4857,7 +4857,7 @@ gUnknown_08213D14:
 
 	.GLOBAL gUnknown_08213D1C
 gUnknown_08213D1C:
-	.INCBIN "baserom.gba", 0x213D1C, 0x223D1C-0x213D1C
+	.INCBIN "assets/sprites/gUnknown_08213D1C.8bpp"
 
 	.GLOBAL gUnknown_08223D1C
 gUnknown_08223D1C:
@@ -4869,7 +4869,7 @@ gUnknown_08223D40:
 
 	.GLOBAL gUnknown_08223D48
 gUnknown_08223D48:
-	.INCBIN "baserom.gba", 0x223D48, 0x223D68-0x223D48
+	.INCBIN "assets/sprites/gUnknown_08223D48.4bpp"
 
 	.GLOBAL gUnknown_08223D68
 gUnknown_08223D68:
@@ -4881,7 +4881,7 @@ gUnknown_08223D8C:
 
 	.GLOBAL gUnknown_08223D94
 gUnknown_08223D94:
-	.INCBIN "baserom.gba", 0x223D94, 0x223E14-0x223D94
+	.INCBIN "assets/sprites/gUnknown_08223D94.4bpp"
 
 	.GLOBAL gUnknown_08223E14
 gUnknown_08223E14:
@@ -4893,7 +4893,7 @@ gUnknown_08223E38:
 
 	.GLOBAL gUnknown_08223E40
 gUnknown_08223E40:
-	.INCBIN "baserom.gba", 0x223E40, 0x223EC0-0x223E40
+	.INCBIN "assets/sprites/gUnknown_08223E40.4bpp"
 
 	.GLOBAL gUnknown_08223EC0
 gUnknown_08223EC0:
@@ -4905,7 +4905,7 @@ gUnknown_08223EE4:
 
 	.GLOBAL gUnknown_08223EEC
 gUnknown_08223EEC:
-	.INCBIN "baserom.gba", 0x223EEC, 0x223F6C-0x223EEC
+	.INCBIN "assets/sprites/gUnknown_08223EEC.4bpp"
 
 	.GLOBAL gUnknown_08223F6C
 gUnknown_08223F6C:
@@ -4917,7 +4917,7 @@ gUnknown_08223F90:
 
 	.GLOBAL gUnknown_08223F98
 gUnknown_08223F98:
-	.INCBIN "baserom.gba", 0x223F98, 0x224018-0x223F98
+	.INCBIN "assets/sprites/gUnknown_08223F98.4bpp"
 
 	.GLOBAL gUnknown_08224018
 gUnknown_08224018:
@@ -4929,7 +4929,7 @@ gUnknown_0822403C:
 
 	.GLOBAL gUnknown_08224044
 gUnknown_08224044:
-	.INCBIN "baserom.gba", 0x224044, 0x224064-0x224044
+	.INCBIN "assets/sprites/gUnknown_08224044.4bpp"
 
 	.GLOBAL gUnknown_08224064
 gUnknown_08224064:
@@ -4941,7 +4941,7 @@ gUnknown_08224088:
 
 	.GLOBAL gUnknown_08224090
 gUnknown_08224090:
-	.INCBIN "baserom.gba", 0x224090, 0x224190-0x224090
+	.INCBIN "assets/sprites/gUnknown_08224090.4bpp"
 
 	.GLOBAL gUnknown_08224190
 gUnknown_08224190:
@@ -4953,7 +4953,7 @@ gUnknown_08224514:
 
 	.GLOBAL gUnknown_0822451C
 gUnknown_0822451C:
-	.INCBIN "baserom.gba", 0x22451C, 0x227D1C-0x22451C
+	.INCBIN "assets/sprites/gUnknown_0822451C.8bpp"
 
 	.GLOBAL gUnknown_08227D1C
 gUnknown_08227D1C:
@@ -4965,7 +4965,7 @@ gUnknown_08227D40:
 
 	.GLOBAL gUnknown_08227D48
 gUnknown_08227D48:
-	.INCBIN "baserom.gba", 0x227D48, 0x228D48-0x227D48
+	.INCBIN "assets/sprites/gUnknown_08227D48.8bpp"
 
 	.GLOBAL gUnknown_08228D48
 gUnknown_08228D48:
@@ -4977,7 +4977,7 @@ gUnknown_08228ED4:
 
 	.GLOBAL gUnknown_08228EDC
 gUnknown_08228EDC:
-	.INCBIN "baserom.gba", 0x228EDC, 0x230EDC-0x228EDC
+	.INCBIN "assets/sprites/gUnknown_08228EDC.8bpp"
 
 	.GLOBAL gUnknown_08230EDC
 gUnknown_08230EDC:
@@ -4989,7 +4989,7 @@ gUnknown_082310D4:
 
 	.GLOBAL gUnknown_082310DC
 gUnknown_082310DC:
-	.INCBIN "baserom.gba", 0x2310DC, 0x2380DC-0x2310DC
+	.INCBIN "assets/sprites/gUnknown_082310DC.8bpp"
 
 	.GLOBAL gUnknown_082380DC
 gUnknown_082380DC:
@@ -5001,7 +5001,7 @@ gUnknown_082382D4:
 
 	.GLOBAL gUnknown_082382DC
 gUnknown_082382DC:
-	.INCBIN "baserom.gba", 0x2382DC, 0x23F2DC-0x2382DC
+	.INCBIN "assets/sprites/gUnknown_082382DC.8bpp"
 
 	.GLOBAL gUnknown_0823F2DC
 gUnknown_0823F2DC:
@@ -5013,7 +5013,7 @@ gUnknown_0823F3FC:
 
 	.GLOBAL gUnknown_0823F404
 gUnknown_0823F404:
-	.INCBIN "baserom.gba", 0x23F404, 0x243404-0x23F404
+	.INCBIN "assets/sprites/gUnknown_0823F404.8bpp"
 
 	.GLOBAL gUnknown_08243404
 gUnknown_08243404:
@@ -5025,7 +5025,7 @@ gUnknown_0824356C:
 
 	.GLOBAL gUnknown_08243574
 gUnknown_08243574:
-	.INCBIN "baserom.gba", 0x243574, 0x24D574-0x243574
+	.INCBIN "assets/sprites/gUnknown_08243574.8bpp"
 
 	.GLOBAL gUnknown_0824D574
 gUnknown_0824D574:
@@ -5037,7 +5037,7 @@ gUnknown_0824D6B8:
 
 	.GLOBAL gUnknown_0824D6C0
 gUnknown_0824D6C0:
-	.INCBIN "baserom.gba", 0x24D6C0, 0x251EC0-0x24D6C0
+	.INCBIN "assets/sprites/gUnknown_0824D6C0.8bpp"
 
 	.GLOBAL gUnknown_08251EC0
 gUnknown_08251EC0:
@@ -5049,7 +5049,7 @@ gUnknown_08251FE0:
 
 	.GLOBAL gUnknown_08251FE8
 gUnknown_08251FE8:
-	.INCBIN "baserom.gba", 0x251FE8, 0x259FE8-0x251FE8
+	.INCBIN "assets/sprites/gUnknown_08251FE8.8bpp"
 
 	.GLOBAL gUnknown_08259FE8
 gUnknown_08259FE8:
@@ -5061,7 +5061,7 @@ gUnknown_0825A00C:
 
 	.GLOBAL gUnknown_0825A014
 gUnknown_0825A014:
-	.INCBIN "baserom.gba", 0x25A014, 0x25A814-0x25A014
+	.INCBIN "assets/sprites/gUnknown_0825A014.8bpp"
 
 	.GLOBAL gUnknown_0825A814
 gUnknown_0825A814:
@@ -5073,7 +5073,7 @@ gUnknown_0825AA78:
 
 	.GLOBAL gUnknown_0825AA80
 gUnknown_0825AA80:
-	.INCBIN "baserom.gba", 0x25AA80, 0x26BA80-0x25AA80
+	.INCBIN "assets/sprites/gUnknown_0825AA80.8bpp"
 
 	.GLOBAL gUnknown_0826BA80
 gUnknown_0826BA80:
@@ -5085,7 +5085,7 @@ gUnknown_0826BAA4:
 
 	.GLOBAL gUnknown_0826BAAC
 gUnknown_0826BAAC:
-	.INCBIN "baserom.gba", 0x26BAAC, 0x26C2AC-0x26BAAC
+	.INCBIN "assets/sprites/gUnknown_0826BAAC.8bpp"
 
 	.GLOBAL gUnknown_0826C2AC
 gUnknown_0826C2AC:
@@ -5097,7 +5097,7 @@ gUnknown_0826C33C:
 
 	.GLOBAL gUnknown_0826C344
 gUnknown_0826C344:
-	.INCBIN "baserom.gba", 0x26C344, 0x270344-0x26C344
+	.INCBIN "assets/sprites/gUnknown_0826C344.8bpp"
 
 	.GLOBAL gUnknown_08270344
 gUnknown_08270344:
@@ -5109,7 +5109,7 @@ gUnknown_082705F0:
 
 	.GLOBAL gUnknown_082705F8
 gUnknown_082705F8:
-	.INCBIN "baserom.gba", 0x2705F8, 0x275DF8-0x2705F8
+	.INCBIN "assets/sprites/gUnknown_082705F8.8bpp"
 
 	.GLOBAL gUnknown_08275DF8
 gUnknown_08275DF8:
@@ -5121,7 +5121,7 @@ gUnknown_08275E88:
 
 	.GLOBAL gUnknown_08275E90
 gUnknown_08275E90:
-	.INCBIN "baserom.gba", 0x275E90, 0x277E90-0x275E90
+	.INCBIN "assets/sprites/gUnknown_08275E90.8bpp"
 
 	.GLOBAL gUnknown_08277E90
 gUnknown_08277E90:
@@ -5133,7 +5133,7 @@ gUnknown_08277F44:
 
 	.GLOBAL gUnknown_08277F4C
 gUnknown_08277F4C:
-	.INCBIN "baserom.gba", 0x277F4C, 0x27CF4C-0x277F4C
+	.INCBIN "assets/sprites/gUnknown_08277F4C.8bpp"
 
 	.GLOBAL gUnknown_0827CF4C
 gUnknown_0827CF4C:
@@ -5145,7 +5145,7 @@ gUnknown_0827CF70:
 
 	.GLOBAL gUnknown_0827CF78
 gUnknown_0827CF78:
-	.INCBIN "baserom.gba", 0x27CF78, 0x27D778-0x27CF78
+	.INCBIN "assets/sprites/gUnknown_0827CF78.8bpp"
 
 	.GLOBAL gUnknown_0827D778
 gUnknown_0827D778:
@@ -5157,7 +5157,7 @@ gUnknown_0827D898:
 
 	.GLOBAL gUnknown_0827D8A0
 gUnknown_0827D8A0:
-	.INCBIN "baserom.gba", 0x27D8A0, 0x27E8A0-0x27D8A0
+	.INCBIN "assets/sprites/gUnknown_0827D8A0.4bpp"
 
 	.GLOBAL gUnknown_0827E8A0
 gUnknown_0827E8A0:
@@ -5169,7 +5169,7 @@ gUnknown_0827E9E4:
 
 	.GLOBAL gUnknown_0827E9EC
 gUnknown_0827E9EC:
-	.INCBIN "baserom.gba", 0x27E9EC, 0x27FBEC-0x27E9EC
+	.INCBIN "assets/sprites/gUnknown_0827E9EC.4bpp"
 
 	.GLOBAL gUnknown_0827FBEC
 gUnknown_0827FBEC:
@@ -5181,7 +5181,7 @@ gUnknown_0827FDE4:
 
 	.GLOBAL gUnknown_0827FDEC
 gUnknown_0827FDEC:
-	.INCBIN "baserom.gba", 0x27FDEC, 0x280BEC-0x27FDEC
+	.INCBIN "assets/sprites/gUnknown_0827FDEC.4bpp"
 
 	.GLOBAL gUnknown_08280BEC
 gUnknown_08280BEC:
@@ -5193,7 +5193,7 @@ gUnknown_08280DE4:
 
 	.GLOBAL gUnknown_08280DEC
 gUnknown_08280DEC:
-	.INCBIN "baserom.gba", 0x280DEC, 0x281BEC-0x280DEC
+	.INCBIN "assets/sprites/gUnknown_08280DEC.4bpp"
 
 	.GLOBAL gUnknown_08281BEC
 gUnknown_08281BEC:
@@ -5205,7 +5205,7 @@ gUnknown_08281D54:
 
 	.GLOBAL gUnknown_08281D5C
 gUnknown_08281D5C:
-	.INCBIN "baserom.gba", 0x281D5C, 0x28315C-0x281D5C
+	.INCBIN "assets/sprites/gUnknown_08281D5C.4bpp"
 
 	.GLOBAL gUnknown_0828315C
 gUnknown_0828315C:
@@ -5217,7 +5217,7 @@ gUnknown_0828339C:
 
 	.GLOBAL gUnknown_082833A4
 gUnknown_082833A4:
-	.INCBIN "baserom.gba", 0x2833A4, 0x2853A4-0x2833A4
+	.INCBIN "assets/sprites/gUnknown_082833A4.4bpp"
 
 	.GLOBAL gUnknown_082853A4
 gUnknown_082853A4:
@@ -5229,7 +5229,7 @@ gUnknown_08285554:
 
 	.GLOBAL gUnknown_0828555C
 gUnknown_0828555C:
-	.INCBIN "baserom.gba", 0x28555C, 0x28855C-0x28555C
+	.INCBIN "assets/sprites/gUnknown_0828555C.8bpp"
 
 	.GLOBAL gUnknown_0828855C
 gUnknown_0828855C:
@@ -5241,7 +5241,7 @@ gUnknown_08288634:
 
 	.GLOBAL gUnknown_0828863C
 gUnknown_0828863C:
-	.INCBIN "baserom.gba", 0x28863C, 0x28B63C-0x28863C
+	.INCBIN "assets/sprites/gUnknown_0828863C.4bpp"
 
 	.GLOBAL gUnknown_0828B63C
 gUnknown_0828B63C:
@@ -5253,7 +5253,7 @@ gUnknown_0828B75C:
 
 	.GLOBAL gUnknown_0828B764
 gUnknown_0828B764:
-	.INCBIN "baserom.gba", 0x28B764, 0x28C764-0x28B764
+	.INCBIN "assets/sprites/gUnknown_0828B764.4bpp"
 
 	.GLOBAL gUnknown_0828C764
 gUnknown_0828C764:
@@ -5265,7 +5265,7 @@ gUnknown_0828C83C:
 
 	.GLOBAL gUnknown_0828C844
 gUnknown_0828C844:
-	.INCBIN "baserom.gba", 0x28C844, 0x28CE44-0x28C844
+	.INCBIN "assets/sprites/gUnknown_0828C844.4bpp"
 
 	.GLOBAL gUnknown_0828CE44
 gUnknown_0828CE44:
@@ -5277,7 +5277,7 @@ gUnknown_0828D084:
 
 	.GLOBAL gUnknown_0828D08C
 gUnknown_0828D08C:
-	.INCBIN "baserom.gba", 0x28D08C, 0x28D28C-0x28D08C
+	.INCBIN "assets/sprites/gUnknown_0828D08C.4bpp"
 
 	.GLOBAL gUnknown_0828D28C
 gUnknown_0828D28C:
@@ -5289,7 +5289,7 @@ gUnknown_0828D31C:
 
 	.GLOBAL gUnknown_0828D324
 gUnknown_0828D324:
-	.INCBIN "baserom.gba", 0x28D324, 0x28DB24-0x28D324
+	.INCBIN "assets/sprites/gUnknown_0828D324.4bpp"
 
 	.GLOBAL gUnknown_0828DB24
 gUnknown_0828DB24:
@@ -5301,7 +5301,7 @@ gUnknown_0828DD64:
 
 	.GLOBAL gUnknown_0828DD6C
 gUnknown_0828DD6C:
-	.INCBIN "baserom.gba", 0x28DD6C, 0x28E46C-0x28DD6C
+	.INCBIN "assets/sprites/gUnknown_0828DD6C.4bpp"
 
 	.GLOBAL gUnknown_0828E46C
 gUnknown_0828E46C:
@@ -5313,7 +5313,7 @@ gUnknown_0828E6AC:
 
 	.GLOBAL gUnknown_0828E6B4
 gUnknown_0828E6B4:
-	.INCBIN "baserom.gba", 0x28E6B4, 0x28EDB4-0x28E6B4
+	.INCBIN "assets/sprites/gUnknown_0828E6B4.4bpp"
 
 	.GLOBAL gUnknown_0828EDB4
 gUnknown_0828EDB4:
@@ -5325,7 +5325,7 @@ gUnknown_0828F114:
 
 	.GLOBAL gUnknown_0828F11C
 gUnknown_0828F11C:
-	.INCBIN "baserom.gba", 0x28F11C, 0x28FD1C-0x28F11C
+	.INCBIN "assets/sprites/gUnknown_0828F11C.4bpp"
 
 	.GLOBAL gUnknown_0828FD1C
 gUnknown_0828FD1C:
@@ -5337,7 +5337,7 @@ gUnknown_0828FF5C:
 
 	.GLOBAL gUnknown_0828FF64
 gUnknown_0828FF64:
-	.INCBIN "baserom.gba", 0x28FF64, 0x28FFE4-0x28FF64
+	.INCBIN "assets/sprites/gUnknown_0828FF64.4bpp"
 
 	.GLOBAL gUnknown_0828FFE4
 gUnknown_0828FFE4:
@@ -5349,7 +5349,7 @@ gUnknown_08290224:
 
 	.GLOBAL gUnknown_0829022C
 gUnknown_0829022C:
-	.INCBIN "baserom.gba", 0x29022C, 0x2902AC-0x29022C
+	.INCBIN "assets/sprites/gUnknown_0829022C.4bpp"
 
 	.GLOBAL gUnknown_082902AC
 gUnknown_082902AC:
@@ -5361,7 +5361,7 @@ gUnknown_082904EC:
 
 	.GLOBAL gUnknown_082904F4
 gUnknown_082904F4:
-	.INCBIN "baserom.gba", 0x2904F4, 0x290574-0x2904F4
+	.INCBIN "assets/sprites/gUnknown_082904F4.4bpp"
 
 	.GLOBAL gUnknown_08290574
 gUnknown_08290574:
@@ -5373,7 +5373,7 @@ gUnknown_082907B4:
 
 	.GLOBAL gUnknown_082907BC
 gUnknown_082907BC:
-	.INCBIN "baserom.gba", 0x2907BC, 0x29083C-0x2907BC
+	.INCBIN "assets/sprites/gUnknown_082907BC.4bpp"
 
 	.GLOBAL gUnknown_0829083C
 gUnknown_0829083C:
@@ -5385,7 +5385,7 @@ gUnknown_08290B9C:
 
 	.GLOBAL gUnknown_08290BA4
 gUnknown_08290BA4:
-	.INCBIN "baserom.gba", 0x290BA4, 0x2923A4-0x290BA4
+	.INCBIN "assets/sprites/gUnknown_08290BA4.4bpp"
 
 	.GLOBAL gUnknown_082923A4
 gUnknown_082923A4:
@@ -5397,7 +5397,7 @@ gUnknown_082925E4:
 
 	.GLOBAL gUnknown_082925EC
 gUnknown_082925EC:
-	.INCBIN "baserom.gba", 0x2925EC, 0x2935EC-0x2925EC
+	.INCBIN "assets/sprites/gUnknown_082925EC.4bpp"
 
 	.GLOBAL gUnknown_082935EC
 gUnknown_082935EC:
@@ -5409,7 +5409,7 @@ gUnknown_0829382C:
 
 	.GLOBAL gUnknown_08293834
 gUnknown_08293834:
-	.INCBIN "baserom.gba", 0x293834, 0x293C34-0x293834
+	.INCBIN "assets/sprites/gUnknown_08293834.4bpp"
 
 	.GLOBAL gUnknown_08293C34
 gUnknown_08293C34:
@@ -5421,7 +5421,7 @@ gUnknown_08293F94:
 
 	.GLOBAL gUnknown_08293F9C
 gUnknown_08293F9C:
-	.INCBIN "baserom.gba", 0x293F9C, 0x29429C-0x293F9C
+	.INCBIN "assets/sprites/gUnknown_08293F9C.4bpp"
 
 	.GLOBAL gUnknown_0829429C
 gUnknown_0829429C:
@@ -5433,7 +5433,7 @@ gUnknown_082944DC:
 
 	.GLOBAL gUnknown_082944E4
 gUnknown_082944E4:
-	.INCBIN "baserom.gba", 0x2944E4, 0x2954E4-0x2944E4
+	.INCBIN "assets/sprites/gUnknown_082944E4.4bpp"
 
 	.GLOBAL gUnknown_082954E4
 gUnknown_082954E4:
@@ -5445,7 +5445,7 @@ gUnknown_08295508:
 
 	.GLOBAL gUnknown_08295510
 gUnknown_08295510:
-	.INCBIN "baserom.gba", 0x295510, 0x295530-0x295510
+	.INCBIN "assets/sprites/gUnknown_08295510.4bpp"
 
 	.GLOBAL gUnknown_08295530
 gUnknown_08295530:
@@ -5457,7 +5457,7 @@ gUnknown_08295554:
 
 	.GLOBAL gUnknown_0829555C
 gUnknown_0829555C:
-	.INCBIN "baserom.gba", 0x29555C, 0x29557C-0x29555C
+	.INCBIN "assets/sprites/gUnknown_0829555C.4bpp"
 
 	.GLOBAL gUnknown_0829557C
 gUnknown_0829557C:
@@ -5469,7 +5469,7 @@ gUnknown_082955A0:
 
 	.GLOBAL gUnknown_082955A8
 gUnknown_082955A8:
-	.INCBIN "baserom.gba", 0x2955A8, 0x2955C8-0x2955A8
+	.INCBIN "assets/sprites/gUnknown_082955A8.4bpp"
 
 	.GLOBAL gUnknown_082955C8
 gUnknown_082955C8:
@@ -5481,7 +5481,7 @@ gUnknown_082955EC:
 
 	.GLOBAL gUnknown_082955F4
 gUnknown_082955F4:
-	.INCBIN "baserom.gba", 0x2955F4, 0x295614-0x2955F4
+	.INCBIN "assets/sprites/gUnknown_082955F4.4bpp"
 
 	.GLOBAL gUnknown_08295614
 gUnknown_08295614:
@@ -5493,7 +5493,7 @@ gUnknown_08295638:
 
 	.GLOBAL gUnknown_08295640
 gUnknown_08295640:
-	.INCBIN "baserom.gba", 0x295640, 0x295660-0x295640
+	.INCBIN "assets/sprites/gUnknown_08295640.4bpp"
 
 	.GLOBAL gUnknown_08295660
 gUnknown_08295660:
@@ -5505,7 +5505,7 @@ gUnknown_08295684:
 
 	.GLOBAL gUnknown_0829568C
 gUnknown_0829568C:
-	.INCBIN "baserom.gba", 0x29568C, 0x29578C-0x29568C
+	.INCBIN "assets/sprites/gUnknown_0829568C.4bpp"
 
 	.GLOBAL gUnknown_0829578C
 gUnknown_0829578C:
@@ -5517,7 +5517,7 @@ gUnknown_082957B0:
 
 	.GLOBAL gUnknown_082957B8
 gUnknown_082957B8:
-	.INCBIN "baserom.gba", 0x2957B8, 0x295FB8-0x2957B8
+	.INCBIN "assets/sprites/gUnknown_082957B8.4bpp"
 
 	.GLOBAL gUnknown_08295FB8
 gUnknown_08295FB8:
@@ -5529,7 +5529,7 @@ gUnknown_08295FDC:
 
 	.GLOBAL gUnknown_08295FE4
 gUnknown_08295FE4:
-	.INCBIN "baserom.gba", 0x295FE4, 0x2967E4-0x295FE4
+	.INCBIN "assets/sprites/gUnknown_08295FE4.4bpp"
 
 	.GLOBAL gUnknown_082967E4
 gUnknown_082967E4:
@@ -5541,7 +5541,7 @@ gUnknown_08296808:
 
 	.GLOBAL gUnknown_08296810
 gUnknown_08296810:
-	.INCBIN "baserom.gba", 0x296810, 0x297010-0x296810
+	.INCBIN "assets/sprites/gUnknown_08296810.4bpp"
 
 	.GLOBAL gUnknown_08297010
 gUnknown_08297010:
@@ -5553,7 +5553,7 @@ gUnknown_08297034:
 
 	.GLOBAL gUnknown_0829703C
 gUnknown_0829703C:
-	.INCBIN "baserom.gba", 0x29703C, 0x29713C-0x29703C
+	.INCBIN "assets/sprites/gUnknown_0829703C.4bpp"
 
 	.GLOBAL gUnknown_0829713C
 gUnknown_0829713C:
@@ -5565,7 +5565,7 @@ gUnknown_08297160:
 
 	.GLOBAL gUnknown_08297168
 gUnknown_08297168:
-	.INCBIN "baserom.gba", 0x297168, 0x297268-0x297168
+	.INCBIN "assets/sprites/gUnknown_08297168.4bpp"
 
 	.GLOBAL gUnknown_08297268
 gUnknown_08297268:
@@ -5577,7 +5577,7 @@ gUnknown_0829728C:
 
 	.GLOBAL gUnknown_08297294
 gUnknown_08297294:
-	.INCBIN "baserom.gba", 0x297294, 0x297394-0x297294
+	.INCBIN "assets/sprites/gUnknown_08297294.4bpp"
 
 	.GLOBAL gUnknown_08297394
 gUnknown_08297394:
@@ -5589,7 +5589,7 @@ gUnknown_082973B8:
 
 	.GLOBAL gUnknown_082973C0
 gUnknown_082973C0:
-	.INCBIN "baserom.gba", 0x2973C0, 0x2974C0-0x2973C0
+	.INCBIN "assets/sprites/gUnknown_082973C0.4bpp"
 
 	.GLOBAL gUnknown_082974C0
 gUnknown_082974C0:
@@ -5601,7 +5601,7 @@ gUnknown_082974E4:
 
 	.GLOBAL gUnknown_082974EC
 gUnknown_082974EC:
-	.INCBIN "baserom.gba", 0x2974EC, 0x2975EC-0x2974EC
+	.INCBIN "assets/sprites/gUnknown_082974EC.4bpp"
 
 	.GLOBAL gUnknown_082975EC
 gUnknown_082975EC:
@@ -5613,7 +5613,7 @@ gUnknown_08297610:
 
 	.GLOBAL gUnknown_08297618
 gUnknown_08297618:
-	.INCBIN "baserom.gba", 0x297618, 0x297718-0x297618
+	.INCBIN "assets/sprites/gUnknown_08297618.4bpp"
 
 	.GLOBAL gUnknown_08297718
 gUnknown_08297718:
@@ -5625,7 +5625,7 @@ gUnknown_0829773C:
 
 	.GLOBAL gUnknown_08297744
 gUnknown_08297744:
-	.INCBIN "baserom.gba", 0x297744, 0x297844-0x297744
+	.INCBIN "assets/sprites/gUnknown_08297744.4bpp"
 
 	.GLOBAL gUnknown_08297844
 gUnknown_08297844:
@@ -5637,7 +5637,7 @@ gUnknown_08297868:
 
 	.GLOBAL gUnknown_08297870
 gUnknown_08297870:
-	.INCBIN "baserom.gba", 0x297870, 0x297970-0x297870
+	.INCBIN "assets/sprites/gUnknown_08297870.4bpp"
 
 	.GLOBAL gUnknown_08297970
 gUnknown_08297970:
@@ -5649,7 +5649,7 @@ gUnknown_08297994:
 
 	.GLOBAL gUnknown_0829799C
 gUnknown_0829799C:
-	.INCBIN "baserom.gba", 0x29799C, 0x297A9C-0x29799C
+	.INCBIN "assets/sprites/gUnknown_0829799C.4bpp"
 
 	.GLOBAL gUnknown_08297A9C
 gUnknown_08297A9C:
@@ -5661,7 +5661,7 @@ gUnknown_08297AC0:
 
 	.GLOBAL gUnknown_08297AC8
 gUnknown_08297AC8:
-	.INCBIN "baserom.gba", 0x297AC8, 0x297BC8-0x297AC8
+	.INCBIN "assets/sprites/gUnknown_08297AC8.4bpp"
 
 	.GLOBAL gUnknown_08297BC8
 gUnknown_08297BC8:
@@ -5673,7 +5673,7 @@ gUnknown_08297BEC:
 
 	.GLOBAL gUnknown_08297BF4
 gUnknown_08297BF4:
-	.INCBIN "baserom.gba", 0x297BF4, 0x297CF4-0x297BF4
+	.INCBIN "assets/sprites/gUnknown_08297BF4.4bpp"
 
 	.GLOBAL gUnknown_08297CF4
 gUnknown_08297CF4:
@@ -5685,7 +5685,7 @@ gUnknown_08297D18:
 
 	.GLOBAL gUnknown_08297D20
 gUnknown_08297D20:
-	.INCBIN "baserom.gba", 0x297D20, 0x297E20-0x297D20
+	.INCBIN "assets/sprites/gUnknown_08297D20.4bpp"
 
 	.GLOBAL gUnknown_08297E20
 gUnknown_08297E20:
@@ -5697,7 +5697,7 @@ gUnknown_08297E44:
 
 	.GLOBAL gUnknown_08297E4C
 gUnknown_08297E4C:
-	.INCBIN "baserom.gba", 0x297E4C, 0x297F4C-0x297E4C
+	.INCBIN "assets/sprites/gUnknown_08297E4C.4bpp"
 
 	.GLOBAL gUnknown_08297F4C
 gUnknown_08297F4C:
@@ -5709,7 +5709,7 @@ gUnknown_08297F70:
 
 	.GLOBAL gUnknown_08297F78
 gUnknown_08297F78:
-	.INCBIN "baserom.gba", 0x297F78, 0x298078-0x297F78
+	.INCBIN "assets/sprites/gUnknown_08297F78.4bpp"
 
 	.GLOBAL gUnknown_08298078
 gUnknown_08298078:
@@ -5721,7 +5721,7 @@ gUnknown_0829809C:
 
 	.GLOBAL gUnknown_082980A4
 gUnknown_082980A4:
-	.INCBIN "baserom.gba", 0x2980A4, 0x2981A4-0x2980A4
+	.INCBIN "assets/sprites/gUnknown_082980A4.4bpp"
 
 	.GLOBAL gUnknown_082981A4
 gUnknown_082981A4:
@@ -5733,7 +5733,7 @@ gUnknown_082981C8:
 
 	.GLOBAL gUnknown_082981D0
 gUnknown_082981D0:
-	.INCBIN "baserom.gba", 0x2981D0, 0x2982D0-0x2981D0
+	.INCBIN "assets/sprites/gUnknown_082981D0.4bpp"
 
 	.GLOBAL gUnknown_082982D0
 gUnknown_082982D0:
@@ -5745,7 +5745,7 @@ gUnknown_082982F4:
 
 	.GLOBAL gUnknown_082982FC
 gUnknown_082982FC:
-	.INCBIN "baserom.gba", 0x2982FC, 0x2983FC-0x2982FC
+	.INCBIN "assets/sprites/gUnknown_082982FC.4bpp"
 
 	.GLOBAL gUnknown_082983FC
 gUnknown_082983FC:
@@ -5757,7 +5757,7 @@ gUnknown_08298420:
 
 	.GLOBAL gUnknown_08298428
 gUnknown_08298428:
-	.INCBIN "baserom.gba", 0x298428, 0x298528-0x298428
+	.INCBIN "assets/sprites/gUnknown_08298428.4bpp"
 
 	.GLOBAL gUnknown_08298528
 gUnknown_08298528:
@@ -5769,7 +5769,7 @@ gUnknown_0829854C:
 
 	.GLOBAL gUnknown_08298554
 gUnknown_08298554:
-	.INCBIN "baserom.gba", 0x298554, 0x298654-0x298554
+	.INCBIN "assets/sprites/gUnknown_08298554.4bpp"
 
 	.GLOBAL gUnknown_08298654
 gUnknown_08298654:
@@ -5781,7 +5781,7 @@ gUnknown_08298678:
 
 	.GLOBAL gUnknown_08298680
 gUnknown_08298680:
-	.INCBIN "baserom.gba", 0x298680, 0x298780-0x298680
+	.INCBIN "assets/sprites/gUnknown_08298680.4bpp"
 
 	.GLOBAL gUnknown_08298780
 gUnknown_08298780:
@@ -5793,7 +5793,7 @@ gUnknown_082987A4:
 
 	.GLOBAL gUnknown_082987AC
 gUnknown_082987AC:
-	.INCBIN "baserom.gba", 0x2987AC, 0x2988AC-0x2987AC
+	.INCBIN "assets/sprites/gUnknown_082987AC.4bpp"
 
 	.GLOBAL gUnknown_082988AC
 gUnknown_082988AC:
@@ -5805,7 +5805,7 @@ gUnknown_082988D0:
 
 	.GLOBAL gUnknown_082988D8
 gUnknown_082988D8:
-	.INCBIN "baserom.gba", 0x2988D8, 0x2989D8-0x2988D8
+	.INCBIN "assets/sprites/gUnknown_082988D8.4bpp"
 
 	.GLOBAL gUnknown_082989D8
 gUnknown_082989D8:
@@ -5817,7 +5817,7 @@ gUnknown_082989FC:
 
 	.GLOBAL gUnknown_08298A04
 gUnknown_08298A04:
-	.INCBIN "baserom.gba", 0x298A04, 0x298B04-0x298A04
+	.INCBIN "assets/sprites/gUnknown_08298A04.4bpp"
 
 	.GLOBAL gUnknown_08298B04
 gUnknown_08298B04:
@@ -5829,7 +5829,7 @@ gUnknown_08298B28:
 
 	.GLOBAL gUnknown_08298B30
 gUnknown_08298B30:
-	.INCBIN "baserom.gba", 0x298B30, 0x298C30-0x298B30
+	.INCBIN "assets/sprites/gUnknown_08298B30.4bpp"
 
 	.GLOBAL gUnknown_08298C30
 gUnknown_08298C30:
@@ -5841,7 +5841,7 @@ gUnknown_08298C54:
 
 	.GLOBAL gUnknown_08298C5C
 gUnknown_08298C5C:
-	.INCBIN "baserom.gba", 0x298C5C, 0x298D5C-0x298C5C
+	.INCBIN "assets/sprites/gUnknown_08298C5C.4bpp"
 
 	.GLOBAL gUnknown_08298D5C
 gUnknown_08298D5C:
@@ -5853,7 +5853,7 @@ gUnknown_08298D80:
 
 	.GLOBAL gUnknown_08298D88
 gUnknown_08298D88:
-	.INCBIN "baserom.gba", 0x298D88, 0x298E88-0x298D88
+	.INCBIN "assets/sprites/gUnknown_08298D88.4bpp"
 
 	.GLOBAL gUnknown_08298E88
 gUnknown_08298E88:
@@ -5865,7 +5865,7 @@ gUnknown_08298EAC:
 
 	.GLOBAL gUnknown_08298EB4
 gUnknown_08298EB4:
-	.INCBIN "baserom.gba", 0x298EB4, 0x298FB4-0x298EB4
+	.INCBIN "assets/sprites/gUnknown_08298EB4.4bpp"
 
 	.GLOBAL gUnknown_08298FB4
 gUnknown_08298FB4:
@@ -5877,7 +5877,7 @@ gUnknown_08298FD8:
 
 	.GLOBAL gUnknown_08298FE0
 gUnknown_08298FE0:
-	.INCBIN "baserom.gba", 0x298FE0, 0x2990E0-0x298FE0
+	.INCBIN "assets/sprites/gUnknown_08298FE0.4bpp"
 
 	.GLOBAL gUnknown_082990E0
 gUnknown_082990E0:
@@ -5889,7 +5889,7 @@ gUnknown_08299104:
 
 	.GLOBAL gUnknown_0829910C
 gUnknown_0829910C:
-	.INCBIN "baserom.gba", 0x29910C, 0x29920C-0x29910C
+	.INCBIN "assets/sprites/gUnknown_0829910C.4bpp"
 
 	.GLOBAL gUnknown_0829920C
 gUnknown_0829920C:
@@ -5901,7 +5901,7 @@ gUnknown_08299230:
 
 	.GLOBAL gUnknown_08299238
 gUnknown_08299238:
-	.INCBIN "baserom.gba", 0x299238, 0x299338-0x299238
+	.INCBIN "assets/sprites/gUnknown_08299238.4bpp"
 
 	.GLOBAL gUnknown_08299338
 gUnknown_08299338:
@@ -5913,7 +5913,7 @@ gUnknown_0829935C:
 
 	.GLOBAL gUnknown_08299364
 gUnknown_08299364:
-	.INCBIN "baserom.gba", 0x299364, 0x299464-0x299364
+	.INCBIN "assets/sprites/gUnknown_08299364.4bpp"
 
 	.GLOBAL gUnknown_08299464
 gUnknown_08299464:
@@ -5925,7 +5925,7 @@ gUnknown_08299488:
 
 	.GLOBAL gUnknown_08299490
 gUnknown_08299490:
-	.INCBIN "baserom.gba", 0x299490, 0x299590-0x299490
+	.INCBIN "assets/sprites/gUnknown_08299490.4bpp"
 
 	.GLOBAL gUnknown_08299590
 gUnknown_08299590:
@@ -5937,7 +5937,7 @@ gUnknown_082995B4:
 
 	.GLOBAL gUnknown_082995BC
 gUnknown_082995BC:
-	.INCBIN "baserom.gba", 0x2995BC, 0x2996BC-0x2995BC
+	.INCBIN "assets/sprites/gUnknown_082995BC.4bpp"
 
 	.GLOBAL gUnknown_082996BC
 gUnknown_082996BC:
@@ -5949,7 +5949,7 @@ gUnknown_082996E0:
 
 	.GLOBAL gUnknown_082996E8
 gUnknown_082996E8:
-	.INCBIN "baserom.gba", 0x2996E8, 0x2997E8-0x2996E8
+	.INCBIN "assets/sprites/gUnknown_082996E8.4bpp"
 
 	.GLOBAL gUnknown_082997E8
 gUnknown_082997E8:
@@ -5961,7 +5961,7 @@ gUnknown_0829980C:
 
 	.GLOBAL gUnknown_08299814
 gUnknown_08299814:
-	.INCBIN "baserom.gba", 0x299814, 0x299914-0x299814
+	.INCBIN "assets/sprites/gUnknown_08299814.4bpp"
 
 	.GLOBAL gUnknown_08299914
 gUnknown_08299914:
@@ -5973,7 +5973,7 @@ gUnknown_08299938:
 
 	.GLOBAL gUnknown_08299940
 gUnknown_08299940:
-	.INCBIN "baserom.gba", 0x299940, 0x299A40-0x299940
+	.INCBIN "assets/sprites/gUnknown_08299940.4bpp"
 
 	.GLOBAL gUnknown_08299A40
 gUnknown_08299A40:
@@ -5985,7 +5985,7 @@ gUnknown_08299BF0:
 
 	.GLOBAL gUnknown_08299BF8
 gUnknown_08299BF8:
-	.INCBIN "baserom.gba", 0x299BF8, 0x29A7F8-0x299BF8
+	.INCBIN "assets/sprites/gUnknown_08299BF8.4bpp"
 
 	.GLOBAL gUnknown_0829A7F8
 gUnknown_0829A7F8:
@@ -5997,7 +5997,7 @@ gUnknown_0829A81C:
 
 	.GLOBAL gUnknown_0829A824
 gUnknown_0829A824:
-	.INCBIN "baserom.gba", 0x29A824, 0x29B824-0x29A824
+	.INCBIN "assets/sprites/gUnknown_0829A824.8bpp"
 
 	.GLOBAL gUnknown_0829B824
 gUnknown_0829B824:
@@ -6009,7 +6009,7 @@ gUnknown_0829BA64:
 
 	.GLOBAL gUnknown_0829BA6C
 gUnknown_0829BA6C:
-	.INCBIN "baserom.gba", 0x29BA6C, 0x29C26C-0x29BA6C
+	.INCBIN "assets/sprites/gUnknown_0829BA6C.4bpp"
 
 	.GLOBAL gUnknown_0829C26C
 gUnknown_0829C26C:
@@ -6021,7 +6021,7 @@ gUnknown_0829C4AC:
 
 	.GLOBAL gUnknown_0829C4B4
 gUnknown_0829C4B4:
-	.INCBIN "baserom.gba", 0x29C4B4, 0x29CCB4-0x29C4B4
+	.INCBIN "assets/sprites/gUnknown_0829C4B4.4bpp"
 
 	.GLOBAL gUnknown_0829CCB4
 gUnknown_0829CCB4:
@@ -6033,7 +6033,7 @@ gUnknown_0829CEF4:
 
 	.GLOBAL gUnknown_0829CEFC
 gUnknown_0829CEFC:
-	.INCBIN "baserom.gba", 0x29CEFC, 0x29CF7C-0x29CEFC
+	.INCBIN "assets/sprites/gUnknown_0829CEFC.4bpp"
 
 	.GLOBAL gUnknown_0829CF7C
 gUnknown_0829CF7C:
@@ -6045,7 +6045,7 @@ gUnknown_0829D1BC:
 
 	.GLOBAL gUnknown_0829D1C4
 gUnknown_0829D1C4:
-	.INCBIN "baserom.gba", 0x29D1C4, 0x29D9C4-0x29D1C4
+	.INCBIN "assets/sprites/gUnknown_0829D1C4.4bpp"
 
 	.GLOBAL gUnknown_0829D9C4
 gUnknown_0829D9C4:
@@ -6057,7 +6057,7 @@ gUnknown_0829D9E8:
 
 	.GLOBAL gUnknown_0829D9F0
 gUnknown_0829D9F0:
-	.INCBIN "baserom.gba", 0x29D9F0, 0x29DA70-0x29D9F0
+	.INCBIN "assets/sprites/gUnknown_0829D9F0.4bpp"
 
 	.GLOBAL gUnknown_0829DA70
 gUnknown_0829DA70:
@@ -6069,7 +6069,7 @@ gUnknown_0829DCB0:
 
 	.GLOBAL gUnknown_0829DCB8
 gUnknown_0829DCB8:
-	.INCBIN "baserom.gba", 0x29DCB8, 0x29ECB8-0x29DCB8
+	.INCBIN "assets/sprites/gUnknown_0829DCB8.4bpp"
 
 	.GLOBAL gUnknown_0829ECB8
 gUnknown_0829ECB8:
@@ -6081,7 +6081,7 @@ gUnknown_0829EDB4:
 
 	.GLOBAL gUnknown_0829EDBC
 gUnknown_0829EDBC:
-	.INCBIN "baserom.gba", 0x29EDBC, 0x29F4BC-0x29EDBC
+	.INCBIN "assets/sprites/gUnknown_0829EDBC.4bpp"
 
 	.GLOBAL gUnknown_0829F4BC
 gUnknown_0829F4BC:
@@ -6093,7 +6093,7 @@ gUnknown_0829F66C:
 
 	.GLOBAL gUnknown_0829F674
 gUnknown_0829F674:
-	.INCBIN "baserom.gba", 0x29F674, 0x2A0E74-0x29F674
+	.INCBIN "assets/sprites/gUnknown_0829F674.4bpp"
 
 	.GLOBAL gUnknown_082A0E74
 gUnknown_082A0E74:
@@ -6105,7 +6105,7 @@ gUnknown_082A0F94:
 
 	.GLOBAL gUnknown_082A0F9C
 gUnknown_082A0F9C:
-	.INCBIN "baserom.gba", 0x2A0F9C, 0x2A139C-0x2A0F9C
+	.INCBIN "assets/sprites/gUnknown_082A0F9C.4bpp"
 
 	.GLOBAL gUnknown_082A139C
 gUnknown_082A139C:
@@ -6117,7 +6117,7 @@ gUnknown_082A1474:
 
 	.GLOBAL gUnknown_082A147C
 gUnknown_082A147C:
-	.INCBIN "baserom.gba", 0x2A147C, 0x2A207C-0x2A147C
+	.INCBIN "assets/sprites/gUnknown_082A147C.4bpp"
 
 	.GLOBAL gUnknown_082A207C
 gUnknown_082A207C:
@@ -6129,7 +6129,7 @@ gUnknown_082A22BC:
 
 	.GLOBAL gUnknown_082A22C4
 gUnknown_082A22C4:
-	.INCBIN "baserom.gba", 0x2A22C4, 0x2A42C4-0x2A22C4
+	.INCBIN "assets/sprites/gUnknown_082A22C4.4bpp"
 
 	.GLOBAL gUnknown_082A42C4
 gUnknown_082A42C4:
@@ -6141,7 +6141,7 @@ gUnknown_082A4354:
 
 	.GLOBAL gUnknown_082A435C
 gUnknown_082A435C:
-	.INCBIN "baserom.gba", 0x2A435C, 0x2A4B5C-0x2A435C
+	.INCBIN "assets/sprites/gUnknown_082A435C.4bpp"
 
 	.GLOBAL gUnknown_082A4B5C
 gUnknown_082A4B5C:
@@ -6153,7 +6153,7 @@ gUnknown_082A4C7C:
 
 	.GLOBAL gUnknown_082A4C84
 gUnknown_082A4C84:
-	.INCBIN "baserom.gba", 0x2A4C84, 0x2A5C84-0x2A4C84
+	.INCBIN "assets/sprites/gUnknown_082A4C84.4bpp"
 
 	.GLOBAL gUnknown_082A5C84
 gUnknown_082A5C84:
@@ -6165,7 +6165,7 @@ gUnknown_082A5D5C:
 
 	.GLOBAL gUnknown_082A5D64
 gUnknown_082A5D64:
-	.INCBIN "baserom.gba", 0x2A5D64, 0x2A6064-0x2A5D64
+	.INCBIN "assets/sprites/gUnknown_082A5D64.4bpp"
 
 	.GLOBAL gUnknown_082A6064
 gUnknown_082A6064:
@@ -6177,7 +6177,7 @@ gUnknown_082A6184:
 
 	.GLOBAL gUnknown_082A618C
 gUnknown_082A618C:
-	.INCBIN "baserom.gba", 0x2A618C, 0x2A658C-0x2A618C
+	.INCBIN "assets/sprites/gUnknown_082A618C.4bpp"
 
 	.GLOBAL gUnknown_082A658C
 gUnknown_082A658C:
@@ -6189,7 +6189,7 @@ gUnknown_082A6910:
 
 	.GLOBAL gUnknown_082A6918
 gUnknown_082A6918:
-	.INCBIN "baserom.gba", 0x2A6918, 0x2A6C18-0x2A6918
+	.INCBIN "assets/sprites/gUnknown_082A6918.4bpp"
 
 	.GLOBAL gUnknown_082A6C18
 gUnknown_082A6C18:
@@ -6201,7 +6201,7 @@ gUnknown_082A6CF0:
 
 	.GLOBAL gUnknown_082A6CF8
 gUnknown_082A6CF8:
-	.INCBIN "baserom.gba", 0x2A6CF8, 0x2A6FF8-0x2A6CF8
+	.INCBIN "assets/sprites/gUnknown_082A6CF8.4bpp"
 
 	.GLOBAL gUnknown_082A6FF8
 gUnknown_082A6FF8:
@@ -6213,7 +6213,7 @@ gUnknown_082A70AC:
 
 	.GLOBAL gUnknown_082A70B4
 gUnknown_082A70B4:
-	.INCBIN "baserom.gba", 0x2A70B4, 0x2A7334-0x2A70B4
+	.INCBIN "assets/sprites/gUnknown_082A70B4.4bpp"
 
 	.GLOBAL gUnknown_082A7334
 gUnknown_082A7334:
@@ -6225,7 +6225,7 @@ gUnknown_082A7454:
 
 	.GLOBAL gUnknown_082A745C
 gUnknown_082A745C:
-	.INCBIN "baserom.gba", 0x2A745C, 0x2A785C-0x2A745C
+	.INCBIN "assets/sprites/gUnknown_082A745C.4bpp"
 
 	.GLOBAL gUnknown_082A785C
 gUnknown_082A785C:
@@ -6237,7 +6237,7 @@ gUnknown_082A7934:
 
 	.GLOBAL gUnknown_082A793C
 gUnknown_082A793C:
-	.INCBIN "baserom.gba", 0x2A793C, 0x2A7C3C-0x2A793C
+	.INCBIN "assets/sprites/gUnknown_082A793C.4bpp"
 
 	.GLOBAL gUnknown_082A7C3C
 gUnknown_082A7C3C:
@@ -6249,7 +6249,7 @@ gUnknown_082A7DEC:
 
 	.GLOBAL gUnknown_082A7DF4
 gUnknown_082A7DF4:
-	.INCBIN "baserom.gba", 0x2A7DF4, 0x2A95F4-0x2A7DF4
+	.INCBIN "assets/sprites/gUnknown_082A7DF4.4bpp"
 
 	.GLOBAL gUnknown_082A95F4
 gUnknown_082A95F4:
@@ -6261,7 +6261,7 @@ gUnknown_082A9834:
 
 	.GLOBAL gUnknown_082A983C
 gUnknown_082A983C:
-	.INCBIN "baserom.gba", 0x2A983C, 0x2AB83C-0x2A983C
+	.INCBIN "assets/sprites/gUnknown_082A983C.4bpp"
 
 	.GLOBAL gUnknown_082AB83C
 gUnknown_082AB83C:
@@ -6273,7 +6273,7 @@ gUnknown_082AB8CC:
 
 	.GLOBAL gUnknown_082AB8D4
 gUnknown_082AB8D4:
-	.INCBIN "baserom.gba", 0x2AB8D4, 0x2AC0D4-0x2AB8D4
+	.INCBIN "assets/sprites/gUnknown_082AB8D4.4bpp"
 
 	.GLOBAL gUnknown_082AC0D4
 gUnknown_082AC0D4:
@@ -6285,7 +6285,7 @@ gUnknown_082AC2A8:
 
 	.GLOBAL gUnknown_082AC2B0
 gUnknown_082AC2B0:
-	.INCBIN "baserom.gba", 0x2AC2B0, 0x2ADAB0-0x2AC2B0
+	.INCBIN "assets/sprites/gUnknown_082AC2B0.4bpp"
 
 	.GLOBAL gUnknown_082ADAB0
 gUnknown_082ADAB0:
@@ -6297,7 +6297,7 @@ gUnknown_082ADAD4:
 
 	.GLOBAL gUnknown_082ADADC
 gUnknown_082ADADC:
-	.INCBIN "baserom.gba", 0x2ADADC, 0x2ADBDC-0x2ADADC
+	.INCBIN "assets/sprites/gUnknown_082ADADC.4bpp"
 
 	.GLOBAL gUnknown_082ADBDC
 gUnknown_082ADBDC:
@@ -6309,7 +6309,7 @@ gUnknown_082ADE1C:
 
 	.GLOBAL gUnknown_082ADE24
 gUnknown_082ADE24:
-	.INCBIN "baserom.gba", 0x2ADE24, 0x2AEE24-0x2ADE24
+	.INCBIN "assets/sprites/gUnknown_082ADE24.4bpp"
 
 	.GLOBAL gUnknown_082AEE24
 gUnknown_082AEE24:
@@ -6321,7 +6321,7 @@ gUnknown_082AEE48:
 
 	.GLOBAL gUnknown_082AEE50
 gUnknown_082AEE50:
-	.INCBIN "baserom.gba", 0x2AEE50, 0x2AEF50-0x2AEE50
+	.INCBIN "assets/sprites/gUnknown_082AEE50.4bpp"
 
 	.GLOBAL gUnknown_082AEF50
 gUnknown_082AEF50:
@@ -6333,7 +6333,7 @@ gUnknown_082AEF74:
 
 	.GLOBAL gUnknown_082AEF7C
 gUnknown_082AEF7C:
-	.INCBIN "baserom.gba", 0x2AEF7C, 0x2AF77C-0x2AEF7C
+	.INCBIN "assets/sprites/gUnknown_082AEF7C.4bpp"
 
 	.GLOBAL gUnknown_082AF77C
 gUnknown_082AF77C:
@@ -6345,7 +6345,7 @@ gUnknown_082AF7A0:
 
 	.GLOBAL gUnknown_082AF7A8
 gUnknown_082AF7A8:
-	.INCBIN "baserom.gba", 0x2AF7A8, 0x2AFFA8-0x2AF7A8
+	.INCBIN "assets/sprites/gUnknown_082AF7A8.4bpp"
 
 	.GLOBAL gUnknown_082AFFA8
 gUnknown_082AFFA8:
@@ -6357,7 +6357,7 @@ gUnknown_082B0080:
 
 	.GLOBAL gUnknown_082B0088
 gUnknown_082B0088:
-	.INCBIN "baserom.gba", 0x2B0088, 0x2B3088-0x2B0088
+	.INCBIN "assets/sprites/gUnknown_082B0088.4bpp"
 
 	.GLOBAL gUnknown_082B3088
 gUnknown_082B3088:
@@ -6369,7 +6369,7 @@ gUnknown_082B30AC:
 
 	.GLOBAL gUnknown_082B30B4
 gUnknown_082B30B4:
-	.INCBIN "baserom.gba", 0x2B30B4, 0x2B34B4-0x2B30B4
+	.INCBIN "assets/sprites/gUnknown_082B30B4.4bpp"
 
 	.GLOBAL gUnknown_082B34B4
 gUnknown_082B34B4:
@@ -6381,7 +6381,7 @@ gUnknown_082B3544:
 
 	.GLOBAL gUnknown_082B354C
 gUnknown_082B354C:
-	.INCBIN "baserom.gba", 0x2B354C, 0x2B454C-0x2B354C
+	.INCBIN "assets/sprites/gUnknown_082B354C.4bpp"
 
 	.GLOBAL gUnknown_082B454C
 gUnknown_082B454C:
@@ -6393,7 +6393,7 @@ gUnknown_082B45DC:
 
 	.GLOBAL gUnknown_082B45E4
 gUnknown_082B45E4:
-	.INCBIN "baserom.gba", 0x2B45E4, 0x2B55E4-0x2B45E4
+	.INCBIN "assets/sprites/gUnknown_082B45E4.4bpp"
 
 	.GLOBAL gUnknown_082B55E4
 gUnknown_082B55E4:
@@ -6405,7 +6405,7 @@ gUnknown_082B5674:
 
 	.GLOBAL gUnknown_082B567C
 gUnknown_082B567C:
-	.INCBIN "baserom.gba", 0x2B567C, 0x2B667C-0x2B567C
+	.INCBIN "assets/sprites/gUnknown_082B567C.4bpp"
 
 	.GLOBAL gUnknown_082B667C
 gUnknown_082B667C:
@@ -6417,7 +6417,7 @@ gUnknown_082B670C:
 
 	.GLOBAL gUnknown_082B6714
 gUnknown_082B6714:
-	.INCBIN "baserom.gba", 0x2B6714, 0x2B7714-0x2B6714
+	.INCBIN "assets/sprites/gUnknown_082B6714.4bpp"
 
 	.GLOBAL gUnknown_082B7714
 gUnknown_082B7714:
@@ -6429,7 +6429,7 @@ gUnknown_082B787C:
 
 	.GLOBAL gUnknown_082B7884
 gUnknown_082B7884:
-	.INCBIN "baserom.gba", 0x2B7884, 0x2B8C84-0x2B7884
+	.INCBIN "assets/sprites/gUnknown_082B7884.4bpp"
 
 	.GLOBAL gUnknown_082B8C84
 gUnknown_082B8C84:
@@ -6441,7 +6441,7 @@ gUnknown_082B8F54:
 
 	.GLOBAL gUnknown_082B8F5C
 gUnknown_082B8F5C:
-	.INCBIN "baserom.gba", 0x2B8F5C, 0x2C2F5C-0x2B8F5C
+	.INCBIN "assets/sprites/gUnknown_082B8F5C.4bpp"
 
 	.GLOBAL gUnknown_082C2F5C
 gUnknown_082C2F5C:
@@ -6453,7 +6453,7 @@ gUnknown_082C32BC:
 
 	.GLOBAL gUnknown_082C32C4
 gUnknown_082C32C4:
-	.INCBIN "baserom.gba", 0x2C32C4, 0x2C36C4-0x2C32C4
+	.INCBIN "assets/sprites/gUnknown_082C32C4.8bpp"
 
 	.GLOBAL gUnknown_082C36C4
 gUnknown_082C36C4:
@@ -6465,7 +6465,7 @@ gUnknown_082C37C0:
 
 	.GLOBAL gUnknown_082C37C8
 gUnknown_082C37C8:
-	.INCBIN "baserom.gba", 0x2C37C8, 0x2C45C8-0x2C37C8
+	.INCBIN "assets/sprites/gUnknown_082C37C8.4bpp"
 
 	.GLOBAL gUnknown_082C45C8
 gUnknown_082C45C8:
@@ -6477,7 +6477,7 @@ gUnknown_082C470C:
 
 	.GLOBAL gUnknown_082C4714
 gUnknown_082C4714:
-	.INCBIN "baserom.gba", 0x2C4714, 0x2C6B14-0x2C4714
+	.INCBIN "assets/sprites/gUnknown_082C4714.8bpp"
 
 	.GLOBAL gUnknown_082C6B14
 gUnknown_082C6B14:
@@ -6489,7 +6489,7 @@ gUnknown_082C6B38:
 
 	.GLOBAL gUnknown_082C6B40
 gUnknown_082C6B40:
-	.INCBIN "baserom.gba", 0x2C6B40, 0x2C6C40-0x2C6B40
+	.INCBIN "assets/sprites/gUnknown_082C6B40.4bpp"
 
 	.GLOBAL gUnknown_082C6C40
 gUnknown_082C6C40:
@@ -6501,7 +6501,7 @@ gUnknown_082C6C64:
 
 	.GLOBAL gUnknown_082C6C6C
 gUnknown_082C6C6C:
-	.INCBIN "baserom.gba", 0x2C6C6C, 0x2C6D6C-0x2C6C6C
+	.INCBIN "assets/sprites/gUnknown_082C6C6C.4bpp"
 
 	.GLOBAL gUnknown_082C6D6C
 gUnknown_082C6D6C:
@@ -6513,7 +6513,7 @@ gUnknown_082C6D90:
 
 	.GLOBAL gUnknown_082C6D98
 gUnknown_082C6D98:
-	.INCBIN "baserom.gba", 0x2C6D98, 0x2C6E98-0x2C6D98
+	.INCBIN "assets/sprites/gUnknown_082C6D98.4bpp"
 
 	.GLOBAL gUnknown_082C6E98
 gUnknown_082C6E98:
@@ -6525,7 +6525,7 @@ gUnknown_082C6EBC:
 
 	.GLOBAL gUnknown_082C6EC4
 gUnknown_082C6EC4:
-	.INCBIN "baserom.gba", 0x2C6EC4, 0x2C72C4-0x2C6EC4
+	.INCBIN "assets/sprites/gUnknown_082C6EC4.4bpp"
 
 	.GLOBAL gUnknown_082C72C4
 gUnknown_082C72C4:
@@ -6537,7 +6537,7 @@ gUnknown_082C72E8:
 
 	.GLOBAL gUnknown_082C72F0
 gUnknown_082C72F0:
-	.INCBIN "baserom.gba", 0x2C72F0, 0x2C7330-0x2C72F0
+	.INCBIN "assets/sprites/gUnknown_082C72F0.4bpp"
 
 	.GLOBAL gUnknown_082C7330
 gUnknown_082C7330:
@@ -6549,7 +6549,7 @@ gUnknown_082C7354:
 
 	.GLOBAL gUnknown_082C735C
 gUnknown_082C735C:
-	.INCBIN "baserom.gba", 0x2C735C, 0x2C775C-0x2C735C
+	.INCBIN "assets/sprites/gUnknown_082C735C.4bpp"
 
 	.GLOBAL gUnknown_082C775C
 gUnknown_082C775C:
@@ -6561,7 +6561,7 @@ gUnknown_082C7780:
 
 	.GLOBAL gUnknown_082C7788
 gUnknown_082C7788:
-	.INCBIN "baserom.gba", 0x2C7788, 0x2C7B88-0x2C7788
+	.INCBIN "assets/sprites/gUnknown_082C7788.4bpp"
 
 	.GLOBAL gUnknown_082C7B88
 gUnknown_082C7B88:
@@ -6573,7 +6573,7 @@ gUnknown_082C7BAC:
 
 	.GLOBAL gUnknown_082C7BB4
 gUnknown_082C7BB4:
-	.INCBIN "baserom.gba", 0x2C7BB4, 0x2C7FB4-0x2C7BB4
+	.INCBIN "assets/sprites/gUnknown_082C7BB4.4bpp"
 
 	.GLOBAL gUnknown_082C7FB4
 gUnknown_082C7FB4:
@@ -6585,7 +6585,7 @@ gUnknown_082C7FD8:
 
 	.GLOBAL gUnknown_082C7FE0
 gUnknown_082C7FE0:
-	.INCBIN "baserom.gba", 0x2C7FE0, 0x2C80E0-0x2C7FE0
+	.INCBIN "assets/sprites/gUnknown_082C7FE0.4bpp"
 
 	.GLOBAL gUnknown_082C80E0
 gUnknown_082C80E0:
@@ -6597,7 +6597,7 @@ gUnknown_082C8104:
 
 	.GLOBAL gUnknown_082C810C
 gUnknown_082C810C:
-	.INCBIN "baserom.gba", 0x2C810C, 0x2C820C-0x2C810C
+	.INCBIN "assets/sprites/gUnknown_082C810C.4bpp"
 
 	.GLOBAL gUnknown_082C820C
 gUnknown_082C820C:
@@ -6609,7 +6609,7 @@ gUnknown_082C8230:
 
 	.GLOBAL gUnknown_082C8238
 gUnknown_082C8238:
-	.INCBIN "baserom.gba", 0x2C8238, 0x2C82B8-0x2C8238
+	.INCBIN "assets/sprites/gUnknown_082C8238.4bpp"
 
 	.GLOBAL gUnknown_082C82B8
 gUnknown_082C82B8:
@@ -6621,7 +6621,7 @@ gUnknown_082C82DC:
 
 	.GLOBAL gUnknown_082C82E4
 gUnknown_082C82E4:
-	.INCBIN "baserom.gba", 0x2C82E4, 0x2C84E4-0x2C82E4
+	.INCBIN "assets/sprites/gUnknown_082C82E4.4bpp"
 
 	.GLOBAL gUnknown_082C84E4
 gUnknown_082C84E4:
@@ -6633,7 +6633,7 @@ gUnknown_082C8508:
 
 	.GLOBAL gUnknown_082C8510
 gUnknown_082C8510:
-	.INCBIN "baserom.gba", 0x2C8510, 0x2C8710-0x2C8510
+	.INCBIN "assets/sprites/gUnknown_082C8510.8bpp"
 
 	.GLOBAL gUnknown_082C8710
 gUnknown_082C8710:
@@ -6645,7 +6645,7 @@ gUnknown_082C8734:
 
 	.GLOBAL gUnknown_082C873C
 gUnknown_082C873C:
-	.INCBIN "baserom.gba", 0x2C873C, 0x2C973C-0x2C873C
+	.INCBIN "assets/sprites/gUnknown_082C873C.8bpp"
 
 	.GLOBAL gUnknown_082C973C
 gUnknown_082C973C:
@@ -6657,7 +6657,7 @@ gUnknown_082C9760:
 
 	.GLOBAL gUnknown_082C9768
 gUnknown_082C9768:
-	.INCBIN "baserom.gba", 0x2C9768, 0x2CA768-0x2C9768
+	.INCBIN "assets/sprites/gUnknown_082C9768.8bpp"
 
 	.GLOBAL gUnknown_082CA768
 gUnknown_082CA768:
@@ -6669,7 +6669,7 @@ gUnknown_082CA78C:
 
 	.GLOBAL gUnknown_082CA794
 gUnknown_082CA794:
-	.INCBIN "baserom.gba", 0x2CA794, 0x2CA994-0x2CA794
+	.INCBIN "assets/sprites/gUnknown_082CA794.8bpp"
 
 	.GLOBAL gUnknown_082CA994
 gUnknown_082CA994:
@@ -6681,7 +6681,7 @@ gUnknown_082CA9B8:
 
 	.GLOBAL gUnknown_082CA9C0
 gUnknown_082CA9C0:
-	.INCBIN "baserom.gba", 0x2CA9C0, 0x2CABC0-0x2CA9C0
+	.INCBIN "assets/sprites/gUnknown_082CA9C0.8bpp"
 
 	.GLOBAL gUnknown_082CABC0
 gUnknown_082CABC0:
@@ -6693,7 +6693,7 @@ gUnknown_082CABE4:
 
 	.GLOBAL gUnknown_082CABEC
 gUnknown_082CABEC:
-	.INCBIN "baserom.gba", 0x2CABEC, 0x2CACEC-0x2CABEC
+	.INCBIN "assets/sprites/gUnknown_082CABEC.8bpp"
 
 	.GLOBAL gUnknown_082CACEC
 gUnknown_082CACEC:
@@ -6705,7 +6705,7 @@ gUnknown_082CAD10:
 
 	.GLOBAL gUnknown_082CAD18
 gUnknown_082CAD18:
-	.INCBIN "baserom.gba", 0x2CAD18, 0x2CB118-0x2CAD18
+	.INCBIN "assets/sprites/gUnknown_082CAD18.8bpp"
 
 	.GLOBAL gUnknown_082CB118
 gUnknown_082CB118:
@@ -6717,7 +6717,7 @@ gUnknown_082CB13C:
 
 	.GLOBAL gUnknown_082CB144
 gUnknown_082CB144:
-	.INCBIN "baserom.gba", 0x2CB144, 0x2CB544-0x2CB144
+	.INCBIN "assets/sprites/gUnknown_082CB144.8bpp"
 
 	.GLOBAL gUnknown_082CB544
 gUnknown_082CB544:
@@ -6729,7 +6729,7 @@ gUnknown_082CB568:
 
 	.GLOBAL gUnknown_082CB570
 gUnknown_082CB570:
-	.INCBIN "baserom.gba", 0x2CB570, 0x2CB5B0-0x2CB570
+	.INCBIN "assets/sprites/gUnknown_082CB570.4bpp"
 
 	.GLOBAL gUnknown_082CB5B0
 gUnknown_082CB5B0:
@@ -6741,7 +6741,7 @@ gUnknown_082CB5D4:
 
 	.GLOBAL gUnknown_082CB5DC
 gUnknown_082CB5DC:
-	.INCBIN "baserom.gba", 0x2CB5DC, 0x2CB6DC-0x2CB5DC
+	.INCBIN "assets/sprites/gUnknown_082CB5DC.4bpp"
 
 	.GLOBAL gUnknown_082CB6DC
 gUnknown_082CB6DC:
@@ -6753,7 +6753,7 @@ gUnknown_082CB700:
 
 	.GLOBAL gUnknown_082CB708
 gUnknown_082CB708:
-	.INCBIN "baserom.gba", 0x2CB708, 0x2CB808-0x2CB708
+	.INCBIN "assets/sprites/gUnknown_082CB708.4bpp"
 
 	.GLOBAL gUnknown_082CB808
 gUnknown_082CB808:
@@ -6765,7 +6765,7 @@ gUnknown_082CB82C:
 
 	.GLOBAL gUnknown_082CB834
 gUnknown_082CB834:
-	.INCBIN "baserom.gba", 0x2CB834, 0x2CB934-0x2CB834
+	.INCBIN "assets/sprites/gUnknown_082CB834.4bpp"
 
 	.GLOBAL gUnknown_082CB934
 gUnknown_082CB934:
@@ -6777,7 +6777,7 @@ gUnknown_082CB958:
 
 	.GLOBAL gUnknown_082CB960
 gUnknown_082CB960:
-	.INCBIN "baserom.gba", 0x2CB960, 0x2CBB60-0x2CB960
+	.INCBIN "assets/sprites/gUnknown_082CB960.4bpp"
 
 	.GLOBAL gUnknown_082CBB60
 gUnknown_082CBB60:
@@ -6789,7 +6789,7 @@ gUnknown_082CBB84:
 
 	.GLOBAL gUnknown_082CBB8C
 gUnknown_082CBB8C:
-	.INCBIN "baserom.gba", 0x2CBB8C, 0x2CBD8C-0x2CBB8C
+	.INCBIN "assets/sprites/gUnknown_082CBB8C.4bpp"
 
 	.GLOBAL gUnknown_082CBD8C
 gUnknown_082CBD8C:
@@ -6801,7 +6801,7 @@ gUnknown_082CBDB0:
 
 	.GLOBAL gUnknown_082CBDB8
 gUnknown_082CBDB8:
-	.INCBIN "baserom.gba", 0x2CBDB8, 0x2CBFB8-0x2CBDB8
+	.INCBIN "assets/sprites/gUnknown_082CBDB8.4bpp"
 
 	.GLOBAL gUnknown_082CBFB8
 gUnknown_082CBFB8:
@@ -6813,7 +6813,7 @@ gUnknown_082CBFDC:
 
 	.GLOBAL gUnknown_082CBFE4
 gUnknown_082CBFE4:
-	.INCBIN "baserom.gba", 0x2CBFE4, 0x2CC064-0x2CBFE4
+	.INCBIN "assets/sprites/gUnknown_082CBFE4.4bpp"
 
 	.GLOBAL gUnknown_082CC064
 gUnknown_082CC064:
@@ -6825,7 +6825,7 @@ gUnknown_082CC088:
 
 	.GLOBAL gUnknown_082CC090
 gUnknown_082CC090:
-	.INCBIN "baserom.gba", 0x2CC090, 0x2CC490-0x2CC090
+	.INCBIN "assets/sprites/gUnknown_082CC090.8bpp"
 
 	.GLOBAL gUnknown_082CC490
 gUnknown_082CC490:
@@ -6837,7 +6837,7 @@ gUnknown_082CC4B4:
 
 	.GLOBAL gUnknown_082CC4BC
 gUnknown_082CC4BC:
-	.INCBIN "baserom.gba", 0x2CC4BC, 0x2CC8BC-0x2CC4BC
+	.INCBIN "assets/sprites/gUnknown_082CC4BC.8bpp"
 
 	.GLOBAL gUnknown_082CC8BC
 gUnknown_082CC8BC:
@@ -6849,7 +6849,7 @@ gUnknown_082CC8E0:
 
 	.GLOBAL gUnknown_082CC8E8
 gUnknown_082CC8E8:
-	.INCBIN "baserom.gba", 0x2CC8E8, 0x2CD8E8-0x2CC8E8
+	.INCBIN "assets/sprites/gUnknown_082CC8E8.8bpp"
 
 	.GLOBAL gUnknown_082CD8E8
 gUnknown_082CD8E8:
@@ -6861,7 +6861,7 @@ gUnknown_082CD90C:
 
 	.GLOBAL gUnknown_082CD914
 gUnknown_082CD914:
-	.INCBIN "baserom.gba", 0x2CD914, 0x2CDA14-0x2CD914
+	.INCBIN "assets/sprites/gUnknown_082CD914.4bpp"
 
 	.GLOBAL gUnknown_082CDA14
 gUnknown_082CDA14:
@@ -6873,7 +6873,7 @@ gUnknown_082CDA38:
 
 	.GLOBAL gUnknown_082CDA40
 gUnknown_082CDA40:
-	.INCBIN "baserom.gba", 0x2CDA40, 0x2CDB40-0x2CDA40
+	.INCBIN "assets/sprites/gUnknown_082CDA40.4bpp"
 
 	.GLOBAL gUnknown_082CDB40
 gUnknown_082CDB40:
@@ -6885,7 +6885,7 @@ gUnknown_082CDB64:
 
 	.GLOBAL gUnknown_082CDB6C
 gUnknown_082CDB6C:
-	.INCBIN "baserom.gba", 0x2CDB6C, 0x2CDC6C-0x2CDB6C
+	.INCBIN "assets/sprites/gUnknown_082CDB6C.4bpp"
 
 	.GLOBAL gUnknown_082CDC6C
 gUnknown_082CDC6C:
@@ -6897,7 +6897,7 @@ gUnknown_082CDC90:
 
 	.GLOBAL gUnknown_082CDC98
 gUnknown_082CDC98:
-	.INCBIN "baserom.gba", 0x2CDC98, 0x2CDD98-0x2CDC98
+	.INCBIN "assets/sprites/gUnknown_082CDC98.4bpp"
 
 	.GLOBAL gUnknown_082CDD98
 gUnknown_082CDD98:
@@ -6909,7 +6909,7 @@ gUnknown_082CDDBC:
 
 	.GLOBAL gUnknown_082CDDC4
 gUnknown_082CDDC4:
-	.INCBIN "baserom.gba", 0x2CDDC4, 0x2CDEC4-0x2CDDC4
+	.INCBIN "assets/sprites/gUnknown_082CDDC4.4bpp"
 
 	.GLOBAL gUnknown_082CDEC4
 gUnknown_082CDEC4:
@@ -6921,7 +6921,7 @@ gUnknown_082CDEE8:
 
 	.GLOBAL gUnknown_082CDEF0
 gUnknown_082CDEF0:
-	.INCBIN "baserom.gba", 0x2CDEF0, 0x2CE2F0-0x2CDEF0
+	.INCBIN "assets/sprites/gUnknown_082CDEF0.4bpp"
 
 	.GLOBAL gUnknown_082CE2F0
 gUnknown_082CE2F0:
@@ -6933,7 +6933,7 @@ gUnknown_082CE314:
 
 	.GLOBAL gUnknown_082CE31C
 gUnknown_082CE31C:
-	.INCBIN "baserom.gba", 0x2CE31C, 0x2CE71C-0x2CE31C
+	.INCBIN "assets/sprites/gUnknown_082CE31C.4bpp"
 
 	.GLOBAL gUnknown_082CE71C
 gUnknown_082CE71C:
@@ -6945,7 +6945,7 @@ gUnknown_082CE740:
 
 	.GLOBAL gUnknown_082CE748
 gUnknown_082CE748:
-	.INCBIN "baserom.gba", 0x2CE748, 0x2CE7C8-0x2CE748
+	.INCBIN "assets/sprites/gUnknown_082CE748.4bpp"
 
 	.GLOBAL gUnknown_082CE7C8
 gUnknown_082CE7C8:
@@ -6957,7 +6957,7 @@ gUnknown_082CE7EC:
 
 	.GLOBAL gUnknown_082CE7F4
 gUnknown_082CE7F4:
-	.INCBIN "baserom.gba", 0x2CE7F4, 0x2CE8F4-0x2CE7F4
+	.INCBIN "assets/sprites/gUnknown_082CE7F4.4bpp"
 
 	.GLOBAL gUnknown_082CE8F4
 gUnknown_082CE8F4:
@@ -6969,7 +6969,7 @@ gUnknown_082CE918:
 
 	.GLOBAL gUnknown_082CE920
 gUnknown_082CE920:
-	.INCBIN "baserom.gba", 0x2CE920, 0x2CE9A0-0x2CE920
+	.INCBIN "assets/sprites/gUnknown_082CE920.8bpp"
 
 	.GLOBAL gUnknown_082CE9A0
 gUnknown_082CE9A0:
@@ -6981,7 +6981,7 @@ gUnknown_082CE9C4:
 
 	.GLOBAL gUnknown_082CE9CC
 gUnknown_082CE9CC:
-	.INCBIN "baserom.gba", 0x2CE9CC, 0x2CEDCC-0x2CE9CC
+	.INCBIN "assets/sprites/gUnknown_082CE9CC.8bpp"
 
 	.GLOBAL gUnknown_082CEDCC
 gUnknown_082CEDCC:
@@ -6993,7 +6993,7 @@ gUnknown_082CEDF0:
 
 	.GLOBAL gUnknown_082CEDF8
 gUnknown_082CEDF8:
-	.INCBIN "baserom.gba", 0x2CEDF8, 0x2CF1F8-0x2CEDF8
+	.INCBIN "assets/sprites/gUnknown_082CEDF8.8bpp"
 
 	.GLOBAL gUnknown_082CF1F8
 gUnknown_082CF1F8:
@@ -7005,7 +7005,7 @@ gUnknown_082CF21C:
 
 	.GLOBAL gUnknown_082CF224
 gUnknown_082CF224:
-	.INCBIN "baserom.gba", 0x2CF224, 0x2CFA24-0x2CF224
+	.INCBIN "assets/sprites/gUnknown_082CF224.8bpp"
 
 	.GLOBAL gUnknown_082CFA24
 gUnknown_082CFA24:
@@ -7017,7 +7017,7 @@ gUnknown_082CFA48:
 
 	.GLOBAL gUnknown_082CFA50
 gUnknown_082CFA50:
-	.INCBIN "baserom.gba", 0x2CFA50, 0x2D0A50-0x2CFA50
+	.INCBIN "assets/sprites/gUnknown_082CFA50.8bpp"
 
 	.GLOBAL gUnknown_082D0A50
 gUnknown_082D0A50:
@@ -7029,7 +7029,7 @@ gUnknown_082D0A74:
 
 	.GLOBAL gUnknown_082D0A7C
 gUnknown_082D0A7C:
-	.INCBIN "baserom.gba", 0x2D0A7C, 0x2D0B7C-0x2D0A7C
+	.INCBIN "assets/sprites/gUnknown_082D0A7C.8bpp"
 
 	.GLOBAL gUnknown_082D0B7C
 gUnknown_082D0B7C:
@@ -7041,7 +7041,7 @@ gUnknown_082D0BA0:
 
 	.GLOBAL gUnknown_082D0BA8
 gUnknown_082D0BA8:
-	.INCBIN "baserom.gba", 0x2D0BA8, 0x2D0CA8-0x2D0BA8
+	.INCBIN "assets/sprites/gUnknown_082D0BA8.4bpp"
 
 	.GLOBAL gUnknown_082D0CA8
 gUnknown_082D0CA8:
@@ -7053,7 +7053,7 @@ gUnknown_082D0CCC:
 
 	.GLOBAL gUnknown_082D0CD4
 gUnknown_082D0CD4:
-	.INCBIN "baserom.gba", 0x2D0CD4, 0x2D0DD4-0x2D0CD4
+	.INCBIN "assets/sprites/gUnknown_082D0CD4.4bpp"
 
 	.GLOBAL gUnknown_082D0DD4
 gUnknown_082D0DD4:
@@ -7065,7 +7065,7 @@ gUnknown_082D0DF8:
 
 	.GLOBAL gUnknown_082D0E00
 gUnknown_082D0E00:
-	.INCBIN "baserom.gba", 0x2D0E00, 0x2D1200-0x2D0E00
+	.INCBIN "assets/sprites/gUnknown_082D0E00.4bpp"
 
 	.GLOBAL gUnknown_082D1200
 gUnknown_082D1200:
@@ -7077,7 +7077,7 @@ gUnknown_082D1224:
 
 	.GLOBAL gUnknown_082D122C
 gUnknown_082D122C:
-	.INCBIN "baserom.gba", 0x2D122C, 0x2D132C-0x2D122C
+	.INCBIN "assets/sprites/gUnknown_082D122C.8bpp"
 
 	.GLOBAL gUnknown_082D132C
 gUnknown_082D132C:
@@ -7089,7 +7089,7 @@ gUnknown_082D1350:
 
 	.GLOBAL gUnknown_082D1358
 gUnknown_082D1358:
-	.INCBIN "baserom.gba", 0x2D1358, 0x2D13D8-0x2D1358
+	.INCBIN "assets/sprites/gUnknown_082D1358.8bpp"
 
 	.GLOBAL gUnknown_082D13D8
 gUnknown_082D13D8:
@@ -7101,7 +7101,7 @@ gUnknown_082D13FC:
 
 	.GLOBAL gUnknown_082D1404
 gUnknown_082D1404:
-	.INCBIN "baserom.gba", 0x2D1404, 0x2D2404-0x2D1404
+	.INCBIN "assets/sprites/gUnknown_082D1404.8bpp"
 
 	.GLOBAL gUnknown_082D2404
 gUnknown_082D2404:
@@ -7113,7 +7113,7 @@ gUnknown_082D2428:
 
 	.GLOBAL gUnknown_082D2430
 gUnknown_082D2430:
-	.INCBIN "baserom.gba", 0x2D2430, 0x2D3430-0x2D2430
+	.INCBIN "assets/sprites/gUnknown_082D2430.8bpp"
 
 	.GLOBAL gUnknown_082D3430
 gUnknown_082D3430:
@@ -7125,7 +7125,7 @@ gUnknown_082D3454:
 
 	.GLOBAL gUnknown_082D345C
 gUnknown_082D345C:
-	.INCBIN "baserom.gba", 0x2D345C, 0x2D355C-0x2D345C
+	.INCBIN "assets/sprites/gUnknown_082D345C.4bpp"
 
 	.GLOBAL gUnknown_082D355C
 gUnknown_082D355C:
@@ -7137,7 +7137,7 @@ gUnknown_082D3580:
 
 	.GLOBAL gUnknown_082D3588
 gUnknown_082D3588:
-	.INCBIN "baserom.gba", 0x2D3588, 0x2D3688-0x2D3588
+	.INCBIN "assets/sprites/gUnknown_082D3588.4bpp"
 
 	.GLOBAL gUnknown_082D3688
 gUnknown_082D3688:
@@ -7149,7 +7149,7 @@ gUnknown_082D36AC:
 
 	.GLOBAL gUnknown_082D36B4
 gUnknown_082D36B4:
-	.INCBIN "baserom.gba", 0x2D36B4, 0x2D37B4-0x2D36B4
+	.INCBIN "assets/sprites/gUnknown_082D36B4.4bpp"
 
 	.GLOBAL gUnknown_082D37B4
 gUnknown_082D37B4:
@@ -7161,7 +7161,7 @@ gUnknown_082D37D8:
 
 	.GLOBAL gUnknown_082D37E0
 gUnknown_082D37E0:
-	.INCBIN "baserom.gba", 0x2D37E0, 0x2D38E0-0x2D37E0
+	.INCBIN "assets/sprites/gUnknown_082D37E0.4bpp"
 
 	.GLOBAL gUnknown_082D38E0
 gUnknown_082D38E0:
@@ -7173,7 +7173,7 @@ gUnknown_082D3904:
 
 	.GLOBAL gUnknown_082D390C
 gUnknown_082D390C:
-	.INCBIN "baserom.gba", 0x2D390C, 0x2D3D0C-0x2D390C
+	.INCBIN "assets/sprites/gUnknown_082D390C.4bpp"
 
 	.GLOBAL gUnknown_082D3D0C
 gUnknown_082D3D0C:
@@ -7185,7 +7185,7 @@ gUnknown_082D3D30:
 
 	.GLOBAL gUnknown_082D3D38
 gUnknown_082D3D38:
-	.INCBIN "baserom.gba", 0x2D3D38, 0x2D4D38-0x2D3D38
+	.INCBIN "assets/sprites/gUnknown_082D3D38.8bpp"
 
 	.GLOBAL gUnknown_082D4D38
 gUnknown_082D4D38:
@@ -7197,7 +7197,7 @@ gUnknown_082D4D5C:
 
 	.GLOBAL gUnknown_082D4D64
 gUnknown_082D4D64:
-	.INCBIN "baserom.gba", 0x2D4D64, 0x2D5D64-0x2D4D64
+	.INCBIN "assets/sprites/gUnknown_082D4D64.8bpp"
 
 	.GLOBAL gUnknown_082D5D64
 gUnknown_082D5D64:
@@ -7209,7 +7209,7 @@ gUnknown_082D5D88:
 
 	.GLOBAL gUnknown_082D5D90
 gUnknown_082D5D90:
-	.INCBIN "baserom.gba", 0x2D5D90, 0x2D6D90-0x2D5D90
+	.INCBIN "assets/sprites/gUnknown_082D5D90.8bpp"
 
 	.GLOBAL gUnknown_082D6D90
 gUnknown_082D6D90:
@@ -7221,7 +7221,7 @@ gUnknown_082D6DB4:
 
 	.GLOBAL gUnknown_082D6DBC
 gUnknown_082D6DBC:
-	.INCBIN "baserom.gba", 0x2D6DBC, 0x2D6EBC-0x2D6DBC
+	.INCBIN "assets/sprites/gUnknown_082D6DBC.4bpp"
 
 	.GLOBAL gUnknown_082D6EBC
 gUnknown_082D6EBC:
@@ -7233,7 +7233,7 @@ gUnknown_082D6EE0:
 
 	.GLOBAL gUnknown_082D6EE8
 gUnknown_082D6EE8:
-	.INCBIN "baserom.gba", 0x2D6EE8, 0x2D6FE8-0x2D6EE8
+	.INCBIN "assets/sprites/gUnknown_082D6EE8.4bpp"
 
 	.GLOBAL gUnknown_082D6FE8
 gUnknown_082D6FE8:
@@ -7245,7 +7245,7 @@ gUnknown_082D700C:
 
 	.GLOBAL gUnknown_082D7014
 gUnknown_082D7014:
-	.INCBIN "baserom.gba", 0x2D7014, 0x2D7114-0x2D7014
+	.INCBIN "assets/sprites/gUnknown_082D7014.4bpp"
 
 	.GLOBAL gUnknown_082D7114
 gUnknown_082D7114:
@@ -7257,7 +7257,7 @@ gUnknown_082D7138:
 
 	.GLOBAL gUnknown_082D7140
 gUnknown_082D7140:
-	.INCBIN "baserom.gba", 0x2D7140, 0x2D7240-0x2D7140
+	.INCBIN "assets/sprites/gUnknown_082D7140.4bpp"
 
 	.GLOBAL gUnknown_082D7240
 gUnknown_082D7240:
@@ -7269,7 +7269,7 @@ gUnknown_082D7264:
 
 	.GLOBAL gUnknown_082D726C
 gUnknown_082D726C:
-	.INCBIN "baserom.gba", 0x2D726C, 0x2D766C-0x2D726C
+	.INCBIN "assets/sprites/gUnknown_082D726C.4bpp"
 
 	.GLOBAL gUnknown_082D766C
 gUnknown_082D766C:
@@ -7281,7 +7281,7 @@ gUnknown_082D7690:
 
 	.GLOBAL gUnknown_082D7698
 gUnknown_082D7698:
-	.INCBIN "baserom.gba", 0x2D7698, 0x2D7898-0x2D7698
+	.INCBIN "assets/sprites/gUnknown_082D7698.4bpp"
 
 	.GLOBAL gUnknown_082D7898
 gUnknown_082D7898:
@@ -7293,7 +7293,7 @@ gUnknown_082D78BC:
 
 	.GLOBAL gUnknown_082D78C4
 gUnknown_082D78C4:
-	.INCBIN "baserom.gba", 0x2D78C4, 0x2D79C4-0x2D78C4
+	.INCBIN "assets/sprites/gUnknown_082D78C4.8bpp"
 
 	.GLOBAL gUnknown_082D79C4
 gUnknown_082D79C4:
@@ -7305,7 +7305,7 @@ gUnknown_082D79E8:
 
 	.GLOBAL gUnknown_082D79F0
 gUnknown_082D79F0:
-	.INCBIN "baserom.gba", 0x2D79F0, 0x2D89F0-0x2D79F0
+	.INCBIN "assets/sprites/gUnknown_082D79F0.8bpp"
 
 	.GLOBAL gUnknown_082D89F0
 gUnknown_082D89F0:
@@ -7317,7 +7317,7 @@ gUnknown_082D8A14:
 
 	.GLOBAL gUnknown_082D8A1C
 gUnknown_082D8A1C:
-	.INCBIN "baserom.gba", 0x2D8A1C, 0x2D9A1C-0x2D8A1C
+	.INCBIN "assets/sprites/gUnknown_082D8A1C.8bpp"
 
 	.GLOBAL gUnknown_082D9A1C
 gUnknown_082D9A1C:
@@ -7329,7 +7329,7 @@ gUnknown_082D9A40:
 
 	.GLOBAL gUnknown_082D9A48
 gUnknown_082D9A48:
-	.INCBIN "baserom.gba", 0x2D9A48, 0x2DAA48-0x2D9A48
+	.INCBIN "assets/sprites/gUnknown_082D9A48.8bpp"
 
 	.GLOBAL gUnknown_082DAA48
 gUnknown_082DAA48:
@@ -7341,7 +7341,7 @@ gUnknown_082DAA6C:
 
 	.GLOBAL gUnknown_082DAA74
 gUnknown_082DAA74:
-	.INCBIN "baserom.gba", 0x2DAA74, 0x2DAE74-0x2DAA74
+	.INCBIN "assets/sprites/gUnknown_082DAA74.4bpp"
 
 	.GLOBAL gUnknown_082DAE74
 gUnknown_082DAE74:
@@ -7353,7 +7353,7 @@ gUnknown_082DAE98:
 
 	.GLOBAL gUnknown_082DAEA0
 gUnknown_082DAEA0:
-	.INCBIN "baserom.gba", 0x2DAEA0, 0x2DB2A0-0x2DAEA0
+	.INCBIN "assets/sprites/gUnknown_082DAEA0.4bpp"
 
 	.GLOBAL gUnknown_082DB2A0
 gUnknown_082DB2A0:
@@ -7365,7 +7365,7 @@ gUnknown_082DB2C4:
 
 	.GLOBAL gUnknown_082DB2CC
 gUnknown_082DB2CC:
-	.INCBIN "baserom.gba", 0x2DB2CC, 0x2DB3CC-0x2DB2CC
+	.INCBIN "assets/sprites/gUnknown_082DB2CC.4bpp"
 
 	.GLOBAL gUnknown_082DB3CC
 gUnknown_082DB3CC:
@@ -7377,7 +7377,7 @@ gUnknown_082DB3F0:
 
 	.GLOBAL gUnknown_082DB3F8
 gUnknown_082DB3F8:
-	.INCBIN "baserom.gba", 0x2DB3F8, 0x2DB4F8-0x2DB3F8
+	.INCBIN "assets/sprites/gUnknown_082DB3F8.4bpp"
 
 	.GLOBAL gUnknown_082DB4F8
 gUnknown_082DB4F8:
@@ -7389,7 +7389,7 @@ gUnknown_082DB51C:
 
 	.GLOBAL gUnknown_082DB524
 gUnknown_082DB524:
-	.INCBIN "baserom.gba", 0x2DB524, 0x2DB624-0x2DB524
+	.INCBIN "assets/sprites/gUnknown_082DB524.4bpp"
 
 	.GLOBAL gUnknown_082DB624
 gUnknown_082DB624:
@@ -7401,7 +7401,7 @@ gUnknown_082DB648:
 
 	.GLOBAL gUnknown_082DB650
 gUnknown_082DB650:
-	.INCBIN "baserom.gba", 0x2DB650, 0x2DB750-0x2DB650
+	.INCBIN "assets/sprites/gUnknown_082DB650.4bpp"
 
 	.GLOBAL gUnknown_082DB750
 gUnknown_082DB750:
@@ -7413,7 +7413,7 @@ gUnknown_082DB774:
 
 	.GLOBAL gUnknown_082DB77C
 gUnknown_082DB77C:
-	.INCBIN "baserom.gba", 0x2DB77C, 0x2DB97C-0x2DB77C
+	.INCBIN "assets/sprites/gUnknown_082DB77C.4bpp"
 
 	.GLOBAL gUnknown_082DB97C
 gUnknown_082DB97C:
@@ -7425,7 +7425,7 @@ gUnknown_082DB9A0:
 
 	.GLOBAL gUnknown_082DB9A8
 gUnknown_082DB9A8:
-	.INCBIN "baserom.gba", 0x2DB9A8, 0x2DBBA8-0x2DB9A8
+	.INCBIN "assets/sprites/gUnknown_082DB9A8.8bpp"
 
 	.GLOBAL gUnknown_082DBBA8
 gUnknown_082DBBA8:
@@ -7437,7 +7437,7 @@ gUnknown_082DBBCC:
 
 	.GLOBAL gUnknown_082DBBD4
 gUnknown_082DBBD4:
-	.INCBIN "baserom.gba", 0x2DBBD4, 0x2DBCD4-0x2DBBD4
+	.INCBIN "assets/sprites/gUnknown_082DBBD4.8bpp"
 
 	.GLOBAL gUnknown_082DBCD4
 gUnknown_082DBCD4:
@@ -7449,7 +7449,7 @@ gUnknown_082DBCF8:
 
 	.GLOBAL gUnknown_082DBD00
 gUnknown_082DBD00:
-	.INCBIN "baserom.gba", 0x2DBD00, 0x2DC500-0x2DBD00
+	.INCBIN "assets/sprites/gUnknown_082DBD00.8bpp"
 
 	.GLOBAL gUnknown_082DC500
 gUnknown_082DC500:
@@ -7461,7 +7461,7 @@ gUnknown_082DC524:
 
 	.GLOBAL gUnknown_082DC52C
 gUnknown_082DC52C:
-	.INCBIN "baserom.gba", 0x2DC52C, 0x2DCD2C-0x2DC52C
+	.INCBIN "assets/sprites/gUnknown_082DC52C.8bpp"
 
 	.GLOBAL gUnknown_082DCD2C
 gUnknown_082DCD2C:
@@ -7473,7 +7473,7 @@ gUnknown_082DCD50:
 
 	.GLOBAL gUnknown_082DCD58
 gUnknown_082DCD58:
-	.INCBIN "baserom.gba", 0x2DCD58, 0x2DCDD8-0x2DCD58
+	.INCBIN "assets/sprites/gUnknown_082DCD58.8bpp"
 
 	.GLOBAL gUnknown_082DCDD8
 gUnknown_082DCDD8:
@@ -7485,7 +7485,7 @@ gUnknown_082DCDFC:
 
 	.GLOBAL gUnknown_082DCE04
 gUnknown_082DCE04:
-	.INCBIN "baserom.gba", 0x2DCE04, 0x2DD004-0x2DCE04
+	.INCBIN "assets/sprites/gUnknown_082DCE04.8bpp"
 
 	.GLOBAL gUnknown_082DD004
 gUnknown_082DD004:
@@ -7497,7 +7497,7 @@ gUnknown_082DD028:
 
 	.GLOBAL gUnknown_082DD030
 gUnknown_082DD030:
-	.INCBIN "baserom.gba", 0x2DD030, 0x2DD230-0x2DD030
+	.INCBIN "assets/sprites/gUnknown_082DD030.8bpp"
 
 	.GLOBAL gUnknown_082DD230
 gUnknown_082DD230:
@@ -7509,7 +7509,7 @@ gUnknown_082DD254:
 
 	.GLOBAL gUnknown_082DD25C
 gUnknown_082DD25C:
-	.INCBIN "baserom.gba", 0x2DD25C, 0x2DD45C-0x2DD25C
+	.INCBIN "assets/sprites/gUnknown_082DD25C.8bpp"
 
 	.GLOBAL gUnknown_082DD45C
 gUnknown_082DD45C:
@@ -7521,7 +7521,7 @@ gUnknown_082DD480:
 
 	.GLOBAL gUnknown_082DD488
 gUnknown_082DD488:
-	.INCBIN "baserom.gba", 0x2DD488, 0x2DD688-0x2DD488
+	.INCBIN "assets/sprites/gUnknown_082DD488.8bpp"
 
 	.GLOBAL gUnknown_082DD688
 gUnknown_082DD688:
@@ -7533,7 +7533,7 @@ gUnknown_082DD6AC:
 
 	.GLOBAL gUnknown_082DD6B4
 gUnknown_082DD6B4:
-	.INCBIN "baserom.gba", 0x2DD6B4, 0x2DDAB4-0x2DD6B4
+	.INCBIN "assets/sprites/gUnknown_082DD6B4.8bpp"
 
 	.GLOBAL gUnknown_082DDAB4
 gUnknown_082DDAB4:
@@ -7545,7 +7545,7 @@ gUnknown_082DDAD8:
 
 	.GLOBAL gUnknown_082DDAE0
 gUnknown_082DDAE0:
-	.INCBIN "baserom.gba", 0x2DDAE0, 0x2DDEE0-0x2DDAE0
+	.INCBIN "assets/sprites/gUnknown_082DDAE0.8bpp"
 
 	.GLOBAL gUnknown_082DDEE0
 gUnknown_082DDEE0:
@@ -7557,7 +7557,7 @@ gUnknown_082DDF04:
 
 	.GLOBAL gUnknown_082DDF0C
 gUnknown_082DDF0C:
-	.INCBIN "baserom.gba", 0x2DDF0C, 0x2DE30C-0x2DDF0C
+	.INCBIN "assets/sprites/gUnknown_082DDF0C.8bpp"
 
 	.GLOBAL gUnknown_082DE30C
 gUnknown_082DE30C:
@@ -7569,7 +7569,7 @@ gUnknown_082DE330:
 
 	.GLOBAL gUnknown_082DE338
 gUnknown_082DE338:
-	.INCBIN "baserom.gba", 0x2DE338, 0x2DE438-0x2DE338
+	.INCBIN "assets/sprites/gUnknown_082DE338.4bpp"
 
 	.GLOBAL gUnknown_082DE438
 gUnknown_082DE438:
@@ -7581,7 +7581,7 @@ gUnknown_082DE45C:
 
 	.GLOBAL gUnknown_082DE464
 gUnknown_082DE464:
-	.INCBIN "baserom.gba", 0x2DE464, 0x2DE564-0x2DE464
+	.INCBIN "assets/sprites/gUnknown_082DE464.4bpp"
 
 	.GLOBAL gUnknown_082DE564
 gUnknown_082DE564:
@@ -7593,7 +7593,7 @@ gUnknown_082DE588:
 
 	.GLOBAL gUnknown_082DE590
 gUnknown_082DE590:
-	.INCBIN "baserom.gba", 0x2DE590, 0x2DE690-0x2DE590
+	.INCBIN "assets/sprites/gUnknown_082DE590.4bpp"
 
 	.GLOBAL gUnknown_082DE690
 gUnknown_082DE690:
@@ -7605,7 +7605,7 @@ gUnknown_082DE6B4:
 
 	.GLOBAL gUnknown_082DE6BC
 gUnknown_082DE6BC:
-	.INCBIN "baserom.gba", 0x2DE6BC, 0x2DE7BC-0x2DE6BC
+	.INCBIN "assets/sprites/gUnknown_082DE6BC.4bpp"
 
 	.GLOBAL gUnknown_082DE7BC
 gUnknown_082DE7BC:
@@ -7617,7 +7617,7 @@ gUnknown_082DE7E0:
 
 	.GLOBAL gUnknown_082DE7E8
 gUnknown_082DE7E8:
-	.INCBIN "baserom.gba", 0x2DE7E8, 0x2DEBE8-0x2DE7E8
+	.INCBIN "assets/sprites/gUnknown_082DE7E8.4bpp"
 
 	.GLOBAL gUnknown_082DEBE8
 gUnknown_082DEBE8:
@@ -7629,7 +7629,7 @@ gUnknown_082DEC0C:
 
 	.GLOBAL gUnknown_082DEC14
 gUnknown_082DEC14:
-	.INCBIN "baserom.gba", 0x2DEC14, 0x2DF014-0x2DEC14
+	.INCBIN "assets/sprites/gUnknown_082DEC14.4bpp"
 
 	.GLOBAL gUnknown_082DF014
 gUnknown_082DF014:
@@ -7641,7 +7641,7 @@ gUnknown_082DF038:
 
 	.GLOBAL gUnknown_082DF040
 gUnknown_082DF040:
-	.INCBIN "baserom.gba", 0x2DF040, 0x2DF440-0x2DF040
+	.INCBIN "assets/sprites/gUnknown_082DF040.8bpp"
 
 	.GLOBAL gUnknown_082DF440
 gUnknown_082DF440:
@@ -7653,7 +7653,7 @@ gUnknown_082DF464:
 
 	.GLOBAL gUnknown_082DF46C
 gUnknown_082DF46C:
-	.INCBIN "baserom.gba", 0x2DF46C, 0x2E046C-0x2DF46C
+	.INCBIN "assets/sprites/gUnknown_082DF46C.8bpp"
 
 	.GLOBAL gUnknown_082E046C
 gUnknown_082E046C:
@@ -7665,7 +7665,7 @@ gUnknown_082E0490:
 
 	.GLOBAL gUnknown_082E0498
 gUnknown_082E0498:
-	.INCBIN "baserom.gba", 0x2E0498, 0x2E1498-0x2E0498
+	.INCBIN "assets/sprites/gUnknown_082E0498.8bpp"
 
 	.GLOBAL gUnknown_082E1498
 gUnknown_082E1498:
@@ -7677,7 +7677,7 @@ gUnknown_082E14BC:
 
 	.GLOBAL gUnknown_082E14C4
 gUnknown_082E14C4:
-	.INCBIN "baserom.gba", 0x2E14C4, 0x2E1CC4-0x2E14C4
+	.INCBIN "assets/sprites/gUnknown_082E14C4.8bpp"
 
 	.GLOBAL gUnknown_082E1CC4
 gUnknown_082E1CC4:
@@ -7689,7 +7689,7 @@ gUnknown_082E1CE8:
 
 	.GLOBAL gUnknown_082E1CF0
 gUnknown_082E1CF0:
-	.INCBIN "baserom.gba", 0x2E1CF0, 0x2E20F0-0x2E1CF0
+	.INCBIN "assets/sprites/gUnknown_082E1CF0.4bpp"
 
 	.GLOBAL gUnknown_082E20F0
 gUnknown_082E20F0:
@@ -7701,7 +7701,7 @@ gUnknown_082E2114:
 
 	.GLOBAL gUnknown_082E211C
 gUnknown_082E211C:
-	.INCBIN "baserom.gba", 0x2E211C, 0x2E291C-0x2E211C
+	.INCBIN "assets/sprites/gUnknown_082E211C.8bpp"
 
 	.GLOBAL gUnknown_082E291C
 gUnknown_082E291C:
@@ -7713,7 +7713,7 @@ gUnknown_082E2940:
 
 	.GLOBAL gUnknown_082E2948
 gUnknown_082E2948:
-	.INCBIN "baserom.gba", 0x2E2948, 0x2E29C8-0x2E2948
+	.INCBIN "assets/sprites/gUnknown_082E2948.8bpp"
 
 	.GLOBAL gUnknown_082E29C8
 gUnknown_082E29C8:
@@ -7725,7 +7725,7 @@ gUnknown_082E29EC:
 
 	.GLOBAL gUnknown_082E29F4
 gUnknown_082E29F4:
-	.INCBIN "baserom.gba", 0x2E29F4, 0x2E2DF4-0x2E29F4
+	.INCBIN "assets/sprites/gUnknown_082E29F4.8bpp"
 
 	.GLOBAL gUnknown_082E2DF4
 gUnknown_082E2DF4:
@@ -7737,7 +7737,7 @@ gUnknown_082E2E18:
 
 	.GLOBAL gUnknown_082E2E20
 gUnknown_082E2E20:
-	.INCBIN "baserom.gba", 0x2E2E20, 0x2E2F20-0x2E2E20
+	.INCBIN "assets/sprites/gUnknown_082E2E20.8bpp"
 
 	.GLOBAL gUnknown_082E2F20
 gUnknown_082E2F20:
@@ -7749,7 +7749,7 @@ gUnknown_082E2F44:
 
 	.GLOBAL gUnknown_082E2F4C
 gUnknown_082E2F4C:
-	.INCBIN "baserom.gba", 0x2E2F4C, 0x2E304C-0x2E2F4C
+	.INCBIN "assets/sprites/gUnknown_082E2F4C.8bpp"
 
 	.GLOBAL gUnknown_082E304C
 gUnknown_082E304C:
@@ -7761,7 +7761,7 @@ gUnknown_082E3070:
 
 	.GLOBAL gUnknown_082E3078
 gUnknown_082E3078:
-	.INCBIN "baserom.gba", 0x2E3078, 0x2E3278-0x2E3078
+	.INCBIN "assets/sprites/gUnknown_082E3078.8bpp"
 
 	.GLOBAL gUnknown_082E3278
 gUnknown_082E3278:
@@ -7773,7 +7773,7 @@ gUnknown_082E329C:
 
 	.GLOBAL gUnknown_082E32A4
 gUnknown_082E32A4:
-	.INCBIN "baserom.gba", 0x2E32A4, 0x2E33A4-0x2E32A4
+	.INCBIN "assets/sprites/gUnknown_082E32A4.8bpp"
 
 	.GLOBAL gUnknown_082E33A4
 gUnknown_082E33A4:
@@ -7785,7 +7785,7 @@ gUnknown_082E33C8:
 
 	.GLOBAL gUnknown_082E33D0
 gUnknown_082E33D0:
-	.INCBIN "baserom.gba", 0x2E33D0, 0x2E3410-0x2E33D0
+	.INCBIN "assets/sprites/gUnknown_082E33D0.8bpp"
 
 	.GLOBAL gUnknown_082E3410
 gUnknown_082E3410:
@@ -7797,7 +7797,7 @@ gUnknown_082E3434:
 
 	.GLOBAL gUnknown_082E343C
 gUnknown_082E343C:
-	.INCBIN "baserom.gba", 0x2E343C, 0x2E363C-0x2E343C
+	.INCBIN "assets/sprites/gUnknown_082E343C.4bpp"
 
 	.GLOBAL gUnknown_082E363C
 gUnknown_082E363C:
@@ -7809,7 +7809,7 @@ gUnknown_082E3660:
 
 	.GLOBAL gUnknown_082E3668
 gUnknown_082E3668:
-	.INCBIN "baserom.gba", 0x2E3668, 0x2E3868-0x2E3668
+	.INCBIN "assets/sprites/gUnknown_082E3668.4bpp"
 
 	.GLOBAL gUnknown_082E3868
 gUnknown_082E3868:
@@ -7821,7 +7821,7 @@ gUnknown_082E388C:
 
 	.GLOBAL gUnknown_082E3894
 gUnknown_082E3894:
-	.INCBIN "baserom.gba", 0x2E3894, 0x2E3A94-0x2E3894
+	.INCBIN "assets/sprites/gUnknown_082E3894.4bpp"
 
 	.GLOBAL gUnknown_082E3A94
 gUnknown_082E3A94:
@@ -7833,7 +7833,7 @@ gUnknown_082E3AB8:
 
 	.GLOBAL gUnknown_082E3AC0
 gUnknown_082E3AC0:
-	.INCBIN "baserom.gba", 0x2E3AC0, 0x2E3CC0-0x2E3AC0
+	.INCBIN "assets/sprites/gUnknown_082E3AC0.8bpp"
 
 	.GLOBAL gUnknown_082E3CC0
 gUnknown_082E3CC0:
@@ -7845,7 +7845,7 @@ gUnknown_082E3CE4:
 
 	.GLOBAL gUnknown_082E3CEC
 gUnknown_082E3CEC:
-	.INCBIN "baserom.gba", 0x2E3CEC, 0x2E3EEC-0x2E3CEC
+	.INCBIN "assets/sprites/gUnknown_082E3CEC.4bpp"
 
 	.GLOBAL gUnknown_082E3EEC
 gUnknown_082E3EEC:
@@ -7857,7 +7857,7 @@ gUnknown_082E3F10:
 
 	.GLOBAL gUnknown_082E3F18
 gUnknown_082E3F18:
-	.INCBIN "baserom.gba", 0x2E3F18, 0x2E4018-0x2E3F18
+	.INCBIN "assets/sprites/gUnknown_082E3F18.4bpp"
 
 	.GLOBAL gUnknown_082E4018
 gUnknown_082E4018:
@@ -7869,7 +7869,7 @@ gUnknown_082E403C:
 
 	.GLOBAL gUnknown_082E4044
 gUnknown_082E4044:
-	.INCBIN "baserom.gba", 0x2E4044, 0x2E4244-0x2E4044
+	.INCBIN "assets/sprites/gUnknown_082E4044.4bpp"
 
 	.GLOBAL gUnknown_082E4244
 gUnknown_082E4244:
@@ -7881,7 +7881,7 @@ gUnknown_082E4268:
 
 	.GLOBAL gUnknown_082E4270
 gUnknown_082E4270:
-	.INCBIN "baserom.gba", 0x2E4270, 0x2E4470-0x2E4270
+	.INCBIN "assets/sprites/gUnknown_082E4270.4bpp"
 
 	.GLOBAL gUnknown_082E4470
 gUnknown_082E4470:
@@ -7893,7 +7893,7 @@ gUnknown_082E4494:
 
 	.GLOBAL gUnknown_082E449C
 gUnknown_082E449C:
-	.INCBIN "baserom.gba", 0x2E449C, 0x2E469C-0x2E449C
+	.INCBIN "assets/sprites/gUnknown_082E449C.4bpp"
 
 	.GLOBAL gUnknown_082E469C
 gUnknown_082E469C:
@@ -7905,7 +7905,7 @@ gUnknown_082E46C0:
 
 	.GLOBAL gUnknown_082E46C8
 gUnknown_082E46C8:
-	.INCBIN "baserom.gba", 0x2E46C8, 0x2E48C8-0x2E46C8
+	.INCBIN "assets/sprites/gUnknown_082E46C8.4bpp"
 
 	.GLOBAL gUnknown_082E48C8
 gUnknown_082E48C8:
@@ -7917,7 +7917,7 @@ gUnknown_082E48EC:
 
 	.GLOBAL gUnknown_082E48F4
 gUnknown_082E48F4:
-	.INCBIN "baserom.gba", 0x2E48F4, 0x2E4AF4-0x2E48F4
+	.INCBIN "assets/sprites/gUnknown_082E48F4.4bpp"
 
 	.GLOBAL gUnknown_082E4AF4
 gUnknown_082E4AF4:
@@ -7929,7 +7929,7 @@ gUnknown_082E4B18:
 
 	.GLOBAL gUnknown_082E4B20
 gUnknown_082E4B20:
-	.INCBIN "baserom.gba", 0x2E4B20, 0x2E4C20-0x2E4B20
+	.INCBIN "assets/sprites/gUnknown_082E4B20.4bpp"
 
 	.GLOBAL gUnknown_082E4C20
 gUnknown_082E4C20:
@@ -7941,7 +7941,7 @@ gUnknown_082E4C44:
 
 	.GLOBAL gUnknown_082E4C4C
 gUnknown_082E4C4C:
-	.INCBIN "baserom.gba", 0x2E4C4C, 0x2E4E4C-0x2E4C4C
+	.INCBIN "assets/sprites/gUnknown_082E4C4C.4bpp"
 
 	.GLOBAL gUnknown_082E4E4C
 gUnknown_082E4E4C:
@@ -7953,7 +7953,7 @@ gUnknown_082E4E70:
 
 	.GLOBAL gUnknown_082E4E78
 gUnknown_082E4E78:
-	.INCBIN "baserom.gba", 0x2E4E78, 0x2E4F78-0x2E4E78
+	.INCBIN "assets/sprites/gUnknown_082E4E78.8bpp"
 
 	.GLOBAL gUnknown_082E4F78
 gUnknown_082E4F78:
@@ -7965,7 +7965,7 @@ gUnknown_082E4F9C:
 
 	.GLOBAL gUnknown_082E4FA4
 gUnknown_082E4FA4:
-	.INCBIN "baserom.gba", 0x2E4FA4, 0x2E53A4-0x2E4FA4
+	.INCBIN "assets/sprites/gUnknown_082E4FA4.8bpp"
 
 	.GLOBAL gUnknown_082E53A4
 gUnknown_082E53A4:
@@ -7977,7 +7977,7 @@ gUnknown_082E53C8:
 
 	.GLOBAL gUnknown_082E53D0
 gUnknown_082E53D0:
-	.INCBIN "baserom.gba", 0x2E53D0, 0x2E57D0-0x2E53D0
+	.INCBIN "assets/sprites/gUnknown_082E53D0.8bpp"
 
 	.GLOBAL gUnknown_082E57D0
 gUnknown_082E57D0:
@@ -7989,7 +7989,7 @@ gUnknown_082E57F4:
 
 	.GLOBAL gUnknown_082E57FC
 gUnknown_082E57FC:
-	.INCBIN "baserom.gba", 0x2E57FC, 0x2E5BFC-0x2E57FC
+	.INCBIN "assets/sprites/gUnknown_082E57FC.8bpp"
 
 	.GLOBAL gUnknown_082E5BFC
 gUnknown_082E5BFC:
@@ -8001,7 +8001,7 @@ gUnknown_082E5C20:
 
 	.GLOBAL gUnknown_082E5C28
 gUnknown_082E5C28:
-	.INCBIN "baserom.gba", 0x2E5C28, 0x2E6028-0x2E5C28
+	.INCBIN "assets/sprites/gUnknown_082E5C28.8bpp"
 
 	.GLOBAL gUnknown_082E6028
 gUnknown_082E6028:
@@ -8013,7 +8013,7 @@ gUnknown_082E604C:
 
 	.GLOBAL gUnknown_082E6054
 gUnknown_082E6054:
-	.INCBIN "baserom.gba", 0x2E6054, 0x2E6454-0x2E6054
+	.INCBIN "assets/sprites/gUnknown_082E6054.8bpp"
 
 	.GLOBAL gUnknown_082E6454
 gUnknown_082E6454:
@@ -8025,7 +8025,7 @@ gUnknown_082E6478:
 
 	.GLOBAL gUnknown_082E6480
 gUnknown_082E6480:
-	.INCBIN "baserom.gba", 0x2E6480, 0x2E6580-0x2E6480
+	.INCBIN "assets/sprites/gUnknown_082E6480.8bpp"
 
 	.GLOBAL gUnknown_082E6580
 gUnknown_082E6580:
@@ -8037,7 +8037,7 @@ gUnknown_082E65A4:
 
 	.GLOBAL gUnknown_082E65AC
 gUnknown_082E65AC:
-	.INCBIN "baserom.gba", 0x2E65AC, 0x2E66AC-0x2E65AC
+	.INCBIN "assets/sprites/gUnknown_082E65AC.8bpp"
 
 	.GLOBAL gUnknown_082E66AC
 gUnknown_082E66AC:
@@ -8049,7 +8049,7 @@ gUnknown_082E66D0:
 
 	.GLOBAL gUnknown_082E66D8
 gUnknown_082E66D8:
-	.INCBIN "baserom.gba", 0x2E66D8, 0x2E6718-0x2E66D8
+	.INCBIN "assets/sprites/gUnknown_082E66D8.8bpp"
 
 	.GLOBAL gUnknown_082E6718
 gUnknown_082E6718:
@@ -8061,7 +8061,7 @@ gUnknown_082E6760:
 
 	.GLOBAL gUnknown_082E6768
 gUnknown_082E6768:
-	.INCBIN "baserom.gba", 0x2E6768, 0x2E6868-0x2E6768
+	.INCBIN "assets/sprites/gUnknown_082E6768.4bpp"
 
 	.GLOBAL gUnknown_082E6868
 gUnknown_082E6868:
@@ -8073,7 +8073,7 @@ gUnknown_082E6940:
 
 	.GLOBAL gUnknown_082E6948
 gUnknown_082E6948:
-	.INCBIN "baserom.gba", 0x2E6948, 0x2E8148-0x2E6948
+	.INCBIN "assets/sprites/gUnknown_082E6948.8bpp"
 
 	.GLOBAL gUnknown_082E8148
 gUnknown_082E8148:
@@ -8085,7 +8085,7 @@ gUnknown_082E8190:
 
 	.GLOBAL gUnknown_082E8198
 gUnknown_082E8198:
-	.INCBIN "baserom.gba", 0x2E8198, 0x2E8298-0x2E8198
+	.INCBIN "assets/sprites/gUnknown_082E8198.4bpp"
 
 	.GLOBAL gUnknown_082E8298
 gUnknown_082E8298:
@@ -8097,7 +8097,7 @@ gUnknown_082E8304:
 
 	.GLOBAL gUnknown_082E830C
 gUnknown_082E830C:
-	.INCBIN "baserom.gba", 0x2E830C, 0x2E848C-0x2E830C
+	.INCBIN "assets/sprites/gUnknown_082E830C.4bpp"
 
 	.GLOBAL gUnknown_082E848C
 gUnknown_082E848C:
@@ -8109,7 +8109,7 @@ gUnknown_082E84D4:
 
 	.GLOBAL gUnknown_082E84DC
 gUnknown_082E84DC:
-	.INCBIN "baserom.gba", 0x2E84DC, 0x2E88DC-0x2E84DC
+	.INCBIN "assets/sprites/gUnknown_082E84DC.4bpp"
 
 	.GLOBAL gUnknown_082E88DC
 gUnknown_082E88DC:
@@ -8121,7 +8121,7 @@ gUnknown_082E8900:
 
 	.GLOBAL gUnknown_082E8908
 gUnknown_082E8908:
-	.INCBIN "baserom.gba", 0x2E8908, 0x2E8A08-0x2E8908
+	.INCBIN "assets/sprites/gUnknown_082E8908.4bpp"
 
 	.GLOBAL gUnknown_082E8A08
 gUnknown_082E8A08:
@@ -8133,7 +8133,7 @@ gUnknown_082E8A50:
 
 	.GLOBAL gUnknown_082E8A58
 gUnknown_082E8A58:
-	.INCBIN "baserom.gba", 0x2E8A58, 0x2E8E58-0x2E8A58
+	.INCBIN "assets/sprites/gUnknown_082E8A58.4bpp"
 
 	.GLOBAL gUnknown_082E8E58
 gUnknown_082E8E58:
@@ -8145,7 +8145,7 @@ gUnknown_082E8EA0:
 
 	.GLOBAL gUnknown_082E8EA8
 gUnknown_082E8EA8:
-	.INCBIN "baserom.gba", 0x2E8EA8, 0x2E90A8-0x2E8EA8
+	.INCBIN "assets/sprites/gUnknown_082E8EA8.8bpp"
 
 	.GLOBAL gUnknown_082E90A8
 gUnknown_082E90A8:
@@ -8157,7 +8157,7 @@ gUnknown_082E9114:
 
 	.GLOBAL gUnknown_082E911C
 gUnknown_082E911C:
-	.INCBIN "baserom.gba", 0x2E911C, 0x2E929C-0x2E911C
+	.INCBIN "assets/sprites/gUnknown_082E911C.8bpp"
 
 	.GLOBAL gUnknown_082E929C
 gUnknown_082E929C:
@@ -8169,7 +8169,7 @@ gUnknown_082E92C0:
 
 	.GLOBAL gUnknown_082E92C8
 gUnknown_082E92C8:
-	.INCBIN "baserom.gba", 0x2E92C8, 0x2E94C8-0x2E92C8
+	.INCBIN "assets/sprites/gUnknown_082E92C8.8bpp"
 
 	.GLOBAL gUnknown_082E94C8
 gUnknown_082E94C8:
@@ -8181,7 +8181,7 @@ gUnknown_082E94EC:
 
 	.GLOBAL gUnknown_082E94F4
 gUnknown_082E94F4:
-	.INCBIN "baserom.gba", 0x2E94F4, 0x2E9574-0x2E94F4
+	.INCBIN "assets/sprites/gUnknown_082E94F4.4bpp"
 
 	.GLOBAL gUnknown_082E9574
 gUnknown_082E9574:
@@ -8193,7 +8193,7 @@ gUnknown_082E964C:
 
 	.GLOBAL gUnknown_082E9654
 gUnknown_082E9654:
-	.INCBIN "baserom.gba", 0x2E9654, 0x2EAE54-0x2E9654
+	.INCBIN "assets/sprites/gUnknown_082E9654.8bpp"
 
 	.GLOBAL gUnknown_082EAE54
 gUnknown_082EAE54:
@@ -8205,7 +8205,7 @@ gUnknown_082EAE78:
 
 	.GLOBAL gUnknown_082EAE80
 gUnknown_082EAE80:
-	.INCBIN "baserom.gba", 0x2EAE80, 0x2EAF00-0x2EAE80
+	.INCBIN "assets/sprites/gUnknown_082EAE80.4bpp"
 
 	.GLOBAL gUnknown_082EAF00
 gUnknown_082EAF00:
@@ -8217,7 +8217,7 @@ gUnknown_082EAF90:
 
 	.GLOBAL gUnknown_082EAF98
 gUnknown_082EAF98:
-	.INCBIN "baserom.gba", 0x2EAF98, 0x2EB118-0x2EAF98
+	.INCBIN "assets/sprites/gUnknown_082EAF98.4bpp"
 
 	.GLOBAL gUnknown_082EB118
 gUnknown_082EB118:
@@ -8233,7 +8233,7 @@ gUnknown_082EB1BC:
 
 	.GLOBAL gUnknown_082EB1C4
 gUnknown_082EB1C4:
-	.INCBIN "baserom.gba", 0x2EB1C4, 0x2EB244-0x2EB1C4
+	.INCBIN "assets/sprites/gUnknown_082EB1C4.4bpp"
 
 	.GLOBAL gUnknown_082EB244
 gUnknown_082EB244:
@@ -8245,7 +8245,7 @@ gUnknown_082EB2B0:
 
 	.GLOBAL gUnknown_082EB2B8
 gUnknown_082EB2B8:
-	.INCBIN "baserom.gba", 0x2EB2B8, 0x2EBAB8-0x2EB2B8
+	.INCBIN "assets/sprites/gUnknown_082EB2B8.4bpp"
 
 	.GLOBAL gUnknown_082EBAB8
 gUnknown_082EBAB8:
@@ -8257,7 +8257,7 @@ gUnknown_082EBB00:
 
 	.GLOBAL gUnknown_082EBB08
 gUnknown_082EBB08:
-	.INCBIN "baserom.gba", 0x2EBB08, 0x2EBC08-0x2EBB08
+	.INCBIN "assets/sprites/gUnknown_082EBB08.4bpp"
 
 	.GLOBAL gUnknown_082EBC08
 gUnknown_082EBC08:
@@ -8269,7 +8269,7 @@ gUnknown_082EBC2C:
 
 	.GLOBAL gUnknown_082EBC34
 gUnknown_082EBC34:
-	.INCBIN "baserom.gba", 0x2EBC34, 0x2EBE34-0x2EBC34
+	.INCBIN "assets/sprites/gUnknown_082EBC34.8bpp"
 
 	.GLOBAL gUnknown_082EBE34
 gUnknown_082EBE34:
@@ -8281,7 +8281,7 @@ gUnknown_082EBE58:
 
 	.GLOBAL gUnknown_082EBE60
 gUnknown_082EBE60:
-	.INCBIN "baserom.gba", 0x2EBE60, 0x2EC060-0x2EBE60
+	.INCBIN "assets/sprites/gUnknown_082EBE60.8bpp"
 
 	.GLOBAL gUnknown_082EC060
 gUnknown_082EC060:
@@ -8293,7 +8293,7 @@ gUnknown_082EC0CC:
 
 	.GLOBAL gUnknown_082EC0D4
 gUnknown_082EC0D4:
-	.INCBIN "baserom.gba", 0x2EC0D4, 0x2EC154-0x2EC0D4
+	.INCBIN "assets/sprites/gUnknown_082EC0D4.4bpp"
 
 	.GLOBAL gUnknown_082EC154
 gUnknown_082EC154:
@@ -8305,7 +8305,7 @@ gUnknown_082EC1E4:
 
 	.GLOBAL gUnknown_082EC1EC
 gUnknown_082EC1EC:
-	.INCBIN "baserom.gba", 0x2EC1EC, 0x2EC26C-0x2EC1EC
+	.INCBIN "assets/sprites/gUnknown_082EC1EC.4bpp"
 
 	.GLOBAL gUnknown_082EC26C
 gUnknown_082EC26C:
@@ -8317,7 +8317,7 @@ gUnknown_082EC2D8:
 
 	.GLOBAL gUnknown_082EC2E0
 gUnknown_082EC2E0:
-	.INCBIN "baserom.gba", 0x2EC2E0, 0x2EC5E0-0x2EC2E0
+	.INCBIN "assets/sprites/gUnknown_082EC2E0.8bpp"
 
 	.GLOBAL gUnknown_082EC5E0
 gUnknown_082EC5E0:
@@ -8329,7 +8329,7 @@ gUnknown_082EC748:
 
 	.GLOBAL gUnknown_082EC750
 gUnknown_082EC750:
-	.INCBIN "baserom.gba", 0x2EC750, 0x2EC9D0-0x2EC750
+	.INCBIN "assets/sprites/gUnknown_082EC750.4bpp"
 
 	.GLOBAL gUnknown_082EC9D0
 gUnknown_082EC9D0:
@@ -8341,7 +8341,7 @@ gUnknown_082ECB38:
 
 	.GLOBAL gUnknown_082ECB40
 gUnknown_082ECB40:
-	.INCBIN "baserom.gba", 0x2ECB40, 0x2ECDC0-0x2ECB40
+	.INCBIN "assets/sprites/gUnknown_082ECB40.4bpp"
 
 	.GLOBAL gUnknown_082ECDC0
 gUnknown_082ECDC0:
@@ -8353,7 +8353,7 @@ gUnknown_082ECF94:
 
 	.GLOBAL gUnknown_082ECF9C
 gUnknown_082ECF9C:
-	.INCBIN "baserom.gba", 0x2ECF9C, 0x2ED13C-0x2ECF9C
+	.INCBIN "assets/sprites/gUnknown_082ECF9C.4bpp"
 
 	.GLOBAL gUnknown_082ED13C
 gUnknown_082ED13C:
@@ -8365,7 +8365,7 @@ gUnknown_082ED280:
 
 	.GLOBAL gUnknown_082ED288
 gUnknown_082ED288:
-	.INCBIN "baserom.gba", 0x2ED288, 0x2ED4C8-0x2ED288
+	.INCBIN "assets/sprites/gUnknown_082ED288.4bpp"
 
 	.GLOBAL gUnknown_082ED4C8
 gUnknown_082ED4C8:
@@ -8377,7 +8377,7 @@ gUnknown_082ED4EC:
 
 	.GLOBAL gUnknown_082ED4F4
 gUnknown_082ED4F4:
-	.INCBIN "baserom.gba", 0x2ED4F4, 0x2ED574-0x2ED4F4
+	.INCBIN "assets/sprites/gUnknown_082ED4F4.4bpp"
 
 	.GLOBAL gUnknown_082ED574
 gUnknown_082ED574:
@@ -8389,7 +8389,7 @@ gUnknown_082ED5BC:
 
 	.GLOBAL gUnknown_082ED5C4
 gUnknown_082ED5C4:
-	.INCBIN "baserom.gba", 0x2ED5C4, 0x2ED644-0x2ED5C4
+	.INCBIN "assets/sprites/gUnknown_082ED5C4.8bpp"
 
 	.GLOBAL gUnknown_082ED644
 gUnknown_082ED644:
@@ -8401,7 +8401,7 @@ gUnknown_082ED668:
 
 	.GLOBAL gUnknown_082ED670
 gUnknown_082ED670:
-	.INCBIN "baserom.gba", 0x2ED670, 0x2ED770-0x2ED670
+	.INCBIN "assets/sprites/gUnknown_082ED670.4bpp"
 
 	.GLOBAL gUnknown_082ED770
 gUnknown_082ED770:
@@ -8413,7 +8413,7 @@ gUnknown_082ED794:
 
 	.GLOBAL gUnknown_082ED79C
 gUnknown_082ED79C:
-	.INCBIN "baserom.gba", 0x2ED79C, 0x2ED89C-0x2ED79C
+	.INCBIN "assets/sprites/gUnknown_082ED79C.4bpp"
 
 	.GLOBAL gUnknown_082ED89C
 gUnknown_082ED89C:
@@ -8425,7 +8425,7 @@ gUnknown_082ED8C0:
 
 	.GLOBAL gUnknown_082ED8C8
 gUnknown_082ED8C8:
-	.INCBIN "baserom.gba", 0x2ED8C8, 0x2ED9C8-0x2ED8C8
+	.INCBIN "assets/sprites/gUnknown_082ED8C8.4bpp"
 
 	.GLOBAL gUnknown_082ED9C8
 gUnknown_082ED9C8:
@@ -8437,7 +8437,7 @@ gUnknown_082ED9EC:
 
 	.GLOBAL gUnknown_082ED9F4
 gUnknown_082ED9F4:
-	.INCBIN "baserom.gba", 0x2ED9F4, 0x2EDAF4-0x2ED9F4
+	.INCBIN "assets/sprites/gUnknown_082ED9F4.4bpp"
 
 	.GLOBAL gUnknown_082EDAF4
 gUnknown_082EDAF4:
@@ -8449,7 +8449,7 @@ gUnknown_082EDB18:
 
 	.GLOBAL gUnknown_082EDB20
 gUnknown_082EDB20:
-	.INCBIN "baserom.gba", 0x2EDB20, 0x2EDC20-0x2EDB20
+	.INCBIN "assets/sprites/gUnknown_082EDB20.4bpp"
 
 	.GLOBAL gUnknown_082EDC20
 gUnknown_082EDC20:
@@ -8461,7 +8461,7 @@ gUnknown_082EDC44:
 
 	.GLOBAL gUnknown_082EDC4C
 gUnknown_082EDC4C:
-	.INCBIN "baserom.gba", 0x2EDC4C, 0x2EDCCC-0x2EDC4C
+	.INCBIN "assets/sprites/gUnknown_082EDC4C.4bpp"
 
 	.GLOBAL gUnknown_082EDCCC
 gUnknown_082EDCCC:
@@ -8473,7 +8473,7 @@ gUnknown_082EDCF0:
 
 	.GLOBAL gUnknown_082EDCF8
 gUnknown_082EDCF8:
-	.INCBIN "baserom.gba", 0x2EDCF8, 0x2EDDF8-0x2EDCF8
+	.INCBIN "assets/sprites/gUnknown_082EDCF8.4bpp"
 
 	.GLOBAL gUnknown_082EDDF8
 gUnknown_082EDDF8:
@@ -8485,7 +8485,7 @@ gUnknown_082EDE1C:
 
 	.GLOBAL gUnknown_082EDE24
 gUnknown_082EDE24:
-	.INCBIN "baserom.gba", 0x2EDE24, 0x2EDF24-0x2EDE24
+	.INCBIN "assets/sprites/gUnknown_082EDE24.4bpp"
 
 	.GLOBAL gUnknown_082EDF24
 gUnknown_082EDF24:
@@ -8497,7 +8497,7 @@ gUnknown_082EDF48:
 
 	.GLOBAL gUnknown_082EDF50
 gUnknown_082EDF50:
-	.INCBIN "baserom.gba", 0x2EDF50, 0x2EE050-0x2EDF50
+	.INCBIN "assets/sprites/gUnknown_082EDF50.4bpp"
 
 	.GLOBAL gUnknown_082EE050
 gUnknown_082EE050:
@@ -8509,7 +8509,7 @@ gUnknown_082EE074:
 
 	.GLOBAL gUnknown_082EE07C
 gUnknown_082EE07C:
-	.INCBIN "baserom.gba", 0x2EE07C, 0x2EE0FC-0x2EE07C
+	.INCBIN "assets/sprites/gUnknown_082EE07C.4bpp"
 
 	.GLOBAL gUnknown_082EE0FC
 gUnknown_082EE0FC:
@@ -8521,7 +8521,7 @@ gUnknown_082EE120:
 
 	.GLOBAL gUnknown_082EE128
 gUnknown_082EE128:
-	.INCBIN "baserom.gba", 0x2EE128, 0x2EE168-0x2EE128
+	.INCBIN "assets/sprites/gUnknown_082EE128.4bpp"
 
 	.GLOBAL gUnknown_082EE168
 gUnknown_082EE168:
@@ -8533,7 +8533,7 @@ gUnknown_082EE18C:
 
 	.GLOBAL gUnknown_082EE194
 gUnknown_082EE194:
-	.INCBIN "baserom.gba", 0x2EE194, 0x2EE214-0x2EE194
+	.INCBIN "assets/sprites/gUnknown_082EE194.4bpp"
 
 	.GLOBAL gUnknown_082EE214
 gUnknown_082EE214:
@@ -8545,7 +8545,7 @@ gUnknown_082EE25C:
 
 	.GLOBAL gUnknown_082EE264
 gUnknown_082EE264:
-	.INCBIN "baserom.gba", 0x2EE264, 0x2EE464-0x2EE264
+	.INCBIN "assets/sprites/gUnknown_082EE264.4bpp"
 
 	.GLOBAL gUnknown_082EE464
 gUnknown_082EE464:
@@ -8557,7 +8557,7 @@ gUnknown_082EE4AC:
 
 	.GLOBAL gUnknown_082EE4B4
 gUnknown_082EE4B4:
-	.INCBIN "baserom.gba", 0x2EE4B4, 0x2EE6B4-0x2EE4B4
+	.INCBIN "assets/sprites/gUnknown_082EE4B4.4bpp"
 
 	.GLOBAL gUnknown_082EE6B4
 gUnknown_082EE6B4:
@@ -8569,7 +8569,7 @@ gUnknown_082EE6FC:
 
 	.GLOBAL gUnknown_082EE704
 gUnknown_082EE704:
-	.INCBIN "baserom.gba", 0x2EE704, 0x2EE904-0x2EE704
+	.INCBIN "assets/sprites/gUnknown_082EE704.4bpp"
 
 	.GLOBAL gUnknown_082EE904
 gUnknown_082EE904:
@@ -8581,7 +8581,7 @@ gUnknown_082EE94C:
 
 	.GLOBAL gUnknown_082EE954
 gUnknown_082EE954:
-	.INCBIN "baserom.gba", 0x2EE954, 0x2EEB54-0x2EE954
+	.INCBIN "assets/sprites/gUnknown_082EE954.4bpp"
 
 	.GLOBAL gUnknown_082EEB54
 gUnknown_082EEB54:
@@ -8593,7 +8593,7 @@ gUnknown_082EEB9C:
 
 	.GLOBAL gUnknown_082EEBA4
 gUnknown_082EEBA4:
-	.INCBIN "baserom.gba", 0x2EEBA4, 0x2EEDA4-0x2EEBA4
+	.INCBIN "assets/sprites/gUnknown_082EEBA4.4bpp"
 
 	.GLOBAL gUnknown_082EEDA4
 gUnknown_082EEDA4:
@@ -8605,7 +8605,7 @@ gUnknown_082EEDEC:
 
 	.GLOBAL gUnknown_082EEDF4
 gUnknown_082EEDF4:
-	.INCBIN "baserom.gba", 0x2EEDF4, 0x2EEEF4-0x2EEDF4
+	.INCBIN "assets/sprites/gUnknown_082EEDF4.4bpp"
 
 	.GLOBAL gUnknown_082EEEF4
 gUnknown_082EEEF4:
@@ -8617,7 +8617,7 @@ gUnknown_082EEF3C:
 
 	.GLOBAL gUnknown_082EEF44
 gUnknown_082EEF44:
-	.INCBIN "baserom.gba", 0x2EEF44, 0x2EF144-0x2EEF44
+	.INCBIN "assets/sprites/gUnknown_082EEF44.4bpp"
 
 	.GLOBAL gUnknown_082EF144
 gUnknown_082EF144:
@@ -8629,7 +8629,7 @@ gUnknown_082EF18C:
 
 	.GLOBAL gUnknown_082EF194
 gUnknown_082EF194:
-	.INCBIN "baserom.gba", 0x2EF194, 0x2EF394-0x2EF194
+	.INCBIN "assets/sprites/gUnknown_082EF194.4bpp"
 
 	.GLOBAL gUnknown_082EF394
 gUnknown_082EF394:
@@ -8641,7 +8641,7 @@ gUnknown_082EF3DC:
 
 	.GLOBAL gUnknown_082EF3E4
 gUnknown_082EF3E4:
-	.INCBIN "baserom.gba", 0x2EF3E4, 0x2EF5E4-0x2EF3E4
+	.INCBIN "assets/sprites/gUnknown_082EF3E4.4bpp"
 
 	.GLOBAL gUnknown_082EF5E4
 gUnknown_082EF5E4:
@@ -8653,7 +8653,7 @@ gUnknown_082EF62C:
 
 	.GLOBAL gUnknown_082EF634
 gUnknown_082EF634:
-	.INCBIN "baserom.gba", 0x2EF634, 0x2EF734-0x2EF634
+	.INCBIN "assets/sprites/gUnknown_082EF634.4bpp"
 
 	.GLOBAL gUnknown_082EF734
 gUnknown_082EF734:
@@ -8665,7 +8665,7 @@ gUnknown_082EF77C:
 
 	.GLOBAL gUnknown_082EF784
 gUnknown_082EF784:
-	.INCBIN "baserom.gba", 0x2EF784, 0x2EF804-0x2EF784
+	.INCBIN "assets/sprites/gUnknown_082EF784.4bpp"
 
 	.GLOBAL gUnknown_082EF804
 gUnknown_082EF804:
@@ -8677,7 +8677,7 @@ gUnknown_082EF924:
 
 	.GLOBAL gUnknown_082EF92C
 gUnknown_082EF92C:
-	.INCBIN "baserom.gba", 0x2EF92C, 0x2EFB2C-0x2EF92C
+	.INCBIN "assets/sprites/gUnknown_082EF92C.4bpp"
 
 	.GLOBAL gUnknown_082EFB2C
 gUnknown_082EFB2C:
@@ -8689,7 +8689,7 @@ gUnknown_082EFB50:
 
 	.GLOBAL gUnknown_082EFB58
 gUnknown_082EFB58:
-	.INCBIN "baserom.gba", 0x2EFB58, 0x2EFBD8-0x2EFB58
+	.INCBIN "assets/sprites/gUnknown_082EFB58.4bpp"
 
 	.GLOBAL gUnknown_082EFBD8
 gUnknown_082EFBD8:
@@ -8701,7 +8701,7 @@ gUnknown_082EFBFC:
 
 	.GLOBAL gUnknown_082EFC04
 gUnknown_082EFC04:
-	.INCBIN "baserom.gba", 0x2EFC04, 0x2EFC44-0x2EFC04
+	.INCBIN "assets/sprites/gUnknown_082EFC04.4bpp"
 
 	.GLOBAL gUnknown_082EFC44
 gUnknown_082EFC44:
@@ -8713,7 +8713,7 @@ gUnknown_082EFC68:
 
 	.GLOBAL gUnknown_082EFC70
 gUnknown_082EFC70:
-	.INCBIN "baserom.gba", 0x2EFC70, 0x2EFC90-0x2EFC70
+	.INCBIN "assets/sprites/gUnknown_082EFC70.4bpp"
 
 	.GLOBAL gUnknown_082EFC90
 gUnknown_082EFC90:
@@ -8725,7 +8725,7 @@ gUnknown_082EFCB4:
 
 	.GLOBAL gUnknown_082EFCBC
 gUnknown_082EFCBC:
-	.INCBIN "baserom.gba", 0x2EFCBC, 0x2EFCDC-0x2EFCBC
+	.INCBIN "assets/sprites/gUnknown_082EFCBC.4bpp"
 
 	.GLOBAL gUnknown_082EFCDC
 gUnknown_082EFCDC:
@@ -8737,7 +8737,7 @@ gUnknown_082EFD00:
 
 	.GLOBAL gUnknown_082EFD08
 gUnknown_082EFD08:
-	.INCBIN "baserom.gba", 0x2EFD08, 0x2EFD88-0x2EFD08
+	.INCBIN "assets/sprites/gUnknown_082EFD08.4bpp"
 
 	.GLOBAL gUnknown_082EFD88
 gUnknown_082EFD88:
@@ -8749,7 +8749,7 @@ gUnknown_082EFDAC:
 
 	.GLOBAL gUnknown_082EFDB4
 gUnknown_082EFDB4:
-	.INCBIN "baserom.gba", 0x2EFDB4, 0x2EFDD4-0x2EFDB4
+	.INCBIN "assets/sprites/gUnknown_082EFDB4.4bpp"
 
 	.GLOBAL gUnknown_082EFDD4
 gUnknown_082EFDD4:
@@ -8761,7 +8761,7 @@ gUnknown_082EFDF8:
 
 	.GLOBAL gUnknown_082EFE00
 gUnknown_082EFE00:
-	.INCBIN "baserom.gba", 0x2EFE00, 0x2EFE20-0x2EFE00
+	.INCBIN "assets/sprites/gUnknown_082EFE00.4bpp"
 
 	.GLOBAL gUnknown_082EFE20
 gUnknown_082EFE20:
@@ -8773,7 +8773,7 @@ gUnknown_082EFE44:
 
 	.GLOBAL gUnknown_082EFE4C
 gUnknown_082EFE4C:
-	.INCBIN "baserom.gba", 0x2EFE4C, 0x2EFE6C-0x2EFE4C
+	.INCBIN "assets/sprites/gUnknown_082EFE4C.4bpp"
 
 	.GLOBAL gUnknown_082EFE6C
 gUnknown_082EFE6C:
@@ -8785,7 +8785,7 @@ gUnknown_082EFE90:
 
 	.GLOBAL gUnknown_082EFE98
 gUnknown_082EFE98:
-	.INCBIN "baserom.gba", 0x2EFE98, 0x2EFEB8-0x2EFE98
+	.INCBIN "assets/sprites/gUnknown_082EFE98.4bpp"
 
 	.GLOBAL gUnknown_082EFEB8
 gUnknown_082EFEB8:
@@ -8797,7 +8797,7 @@ gUnknown_082EFF24:
 
 	.GLOBAL gUnknown_082EFF2C
 gUnknown_082EFF2C:
-	.INCBIN "baserom.gba", 0x2EFF2C, 0x2EFF4C-0x2EFF2C
+	.INCBIN "assets/sprites/gUnknown_082EFF2C.4bpp"
 
 	.GLOBAL gUnknown_082EFF4C
 gUnknown_082EFF4C:
@@ -8817,7 +8817,7 @@ gUnknown_082EFFB0:
 
 	.GLOBAL gUnknown_082EFFB8
 gUnknown_082EFFB8:
-	.INCBIN "baserom.gba", 0x2EFFB8, 0x2EFFD8-0x2EFFB8
+	.INCBIN "assets/sprites/gUnknown_082EFFB8.4bpp"
 
 	.GLOBAL gUnknown_082EFFD8
 gUnknown_082EFFD8:
@@ -8829,7 +8829,7 @@ gUnknown_082EFFFC:
 
 	.GLOBAL gUnknown_082F0004
 gUnknown_082F0004:
-	.INCBIN "baserom.gba", 0x2F0004, 0x2F0024-0x2F0004
+	.INCBIN "assets/sprites/gUnknown_082F0004.4bpp"
 
 	.GLOBAL gUnknown_082F0024
 gUnknown_082F0024:
@@ -8841,7 +8841,7 @@ gUnknown_082F01B0:
 
 	.GLOBAL gUnknown_082F01B8
 gUnknown_082F01B8:
-	.INCBIN "baserom.gba", 0x2F01B8, 0x2F0318-0x2F01B8
+	.INCBIN "assets/sprites/gUnknown_082F01B8.4bpp"
 
 	.GLOBAL gUnknown_082F0318
 gUnknown_082F0318:
@@ -8853,7 +8853,7 @@ gUnknown_082F033C:
 
 	.GLOBAL gUnknown_082F0344
 gUnknown_082F0344:
-	.INCBIN "baserom.gba", 0x2F0344, 0x2F0364-0x2F0344
+	.INCBIN "assets/sprites/gUnknown_082F0344.4bpp"
 
 	.GLOBAL gUnknown_082F0364
 gUnknown_082F0364:
@@ -8865,7 +8865,7 @@ gUnknown_082F043C:
 
 	.GLOBAL gUnknown_082F0444
 gUnknown_082F0444:
-	.INCBIN "baserom.gba", 0x2F0444, 0x2F0744-0x2F0444
+	.INCBIN "assets/sprites/gUnknown_082F0444.4bpp"
 
 	.GLOBAL gUnknown_082F0744
 gUnknown_082F0744:
@@ -8877,7 +8877,7 @@ gUnknown_082F0768:
 
 	.GLOBAL gUnknown_082F0770
 gUnknown_082F0770:
-	.INCBIN "baserom.gba", 0x2F0770, 0x2F0790-0x2F0770
+	.INCBIN "assets/sprites/gUnknown_082F0770.4bpp"
 
 	.GLOBAL gUnknown_082F0790
 gUnknown_082F0790:
@@ -8889,7 +8889,7 @@ gUnknown_082F07B4:
 
 	.GLOBAL gUnknown_082F07BC
 gUnknown_082F07BC:
-	.INCBIN "baserom.gba", 0x2F07BC, 0x2F07DC-0x2F07BC
+	.INCBIN "assets/sprites/gUnknown_082F07BC.4bpp"
 
 	.GLOBAL gUnknown_082F07DC
 gUnknown_082F07DC:
@@ -8901,7 +8901,7 @@ gUnknown_082F0800:
 
 	.GLOBAL gUnknown_082F0808
 gUnknown_082F0808:
-	.INCBIN "baserom.gba", 0x2F0808, 0x2F0828-0x2F0808
+	.INCBIN "assets/sprites/gUnknown_082F0808.4bpp"
 
 	.GLOBAL gUnknown_082F0828
 gUnknown_082F0828:
@@ -8913,7 +8913,7 @@ gUnknown_082F084C:
 
 	.GLOBAL gUnknown_082F0854
 gUnknown_082F0854:
-	.INCBIN "baserom.gba", 0x2F0854, 0x2F0874-0x2F0854
+	.INCBIN "assets/sprites/gUnknown_082F0854.4bpp"
 
 	.GLOBAL gUnknown_082F0874
 gUnknown_082F0874:
@@ -8925,7 +8925,7 @@ gUnknown_082F0898:
 
 	.GLOBAL gUnknown_082F08A0
 gUnknown_082F08A0:
-	.INCBIN "baserom.gba", 0x2F08A0, 0x2F0920-0x2F08A0
+	.INCBIN "assets/sprites/gUnknown_082F08A0.4bpp"
 
 	.GLOBAL gUnknown_082F0920
 gUnknown_082F0920:
@@ -8937,7 +8937,7 @@ gUnknown_082F0944:
 
 	.GLOBAL gUnknown_082F094C
 gUnknown_082F094C:
-	.INCBIN "baserom.gba", 0x2F094C, 0x2F096C-0x2F094C
+	.INCBIN "assets/sprites/gUnknown_082F094C.4bpp"
 
 	.GLOBAL gUnknown_082F096C
 gUnknown_082F096C:
@@ -8949,7 +8949,7 @@ gUnknown_082F0990:
 
 	.GLOBAL gUnknown_082F0998
 gUnknown_082F0998:
-	.INCBIN "baserom.gba", 0x2F0998, 0x2F0A18-0x2F0998
+	.INCBIN "assets/sprites/gUnknown_082F0998.4bpp"
 
 	.GLOBAL gUnknown_082F0A18
 gUnknown_082F0A18:
@@ -8961,7 +8961,7 @@ gUnknown_082F0A60:
 
 	.GLOBAL gUnknown_082F0A68
 gUnknown_082F0A68:
-	.INCBIN "baserom.gba", 0x2F0A68, 0x2F0AE8-0x2F0A68
+	.INCBIN "assets/sprites/gUnknown_082F0A68.4bpp"
 
 	.GLOBAL gUnknown_082F0AE8
 gUnknown_082F0AE8:
@@ -8973,7 +8973,7 @@ gUnknown_082F0B30:
 
 	.GLOBAL gUnknown_082F0B38
 gUnknown_082F0B38:
-	.INCBIN "baserom.gba", 0x2F0B38, 0x2F0BB8-0x2F0B38
+	.INCBIN "assets/sprites/gUnknown_082F0B38.4bpp"
 
 	.GLOBAL gUnknown_082F0BB8
 gUnknown_082F0BB8:
@@ -8985,7 +8985,7 @@ gUnknown_082F0BDC:
 
 	.GLOBAL gUnknown_082F0BE4
 gUnknown_082F0BE4:
-	.INCBIN "baserom.gba", 0x2F0BE4, 0x2F0C64-0x2F0BE4
+	.INCBIN "assets/sprites/gUnknown_082F0BE4.4bpp"
 
 	.GLOBAL gUnknown_082F0C64
 gUnknown_082F0C64:
@@ -8997,7 +8997,7 @@ gUnknown_082F0C88:
 
 	.GLOBAL gUnknown_082F0C90
 gUnknown_082F0C90:
-	.INCBIN "baserom.gba", 0x2F0C90, 0x2F0CD0-0x2F0C90
+	.INCBIN "assets/sprites/gUnknown_082F0C90.4bpp"
 
 	.GLOBAL gUnknown_082F0CD0
 gUnknown_082F0CD0:
@@ -9009,7 +9009,7 @@ gUnknown_082F0CF4:
 
 	.GLOBAL gUnknown_082F0CFC
 gUnknown_082F0CFC:
-	.INCBIN "baserom.gba", 0x2F0CFC, 0x2F0D7C-0x2F0CFC
+	.INCBIN "assets/sprites/gUnknown_082F0CFC.4bpp"
 
 	.GLOBAL gUnknown_082F0D7C
 gUnknown_082F0D7C:
@@ -9021,7 +9021,7 @@ gUnknown_082F0DA0:
 
 	.GLOBAL gUnknown_082F0DA8
 gUnknown_082F0DA8:
-	.INCBIN "baserom.gba", 0x2F0DA8, 0x2F11A8-0x2F0DA8
+	.INCBIN "assets/sprites/gUnknown_082F0DA8.4bpp"
 
 	.GLOBAL gUnknown_082F11A8
 gUnknown_082F11A8:
@@ -9033,7 +9033,7 @@ gUnknown_082F11CC:
 
 	.GLOBAL gUnknown_082F11D4
 gUnknown_082F11D4:
-	.INCBIN "baserom.gba", 0x2F11D4, 0x2F15D4-0x2F11D4
+	.INCBIN "assets/sprites/gUnknown_082F11D4.4bpp"
 
 	.GLOBAL gUnknown_082F15D4
 gUnknown_082F15D4:
@@ -9045,7 +9045,7 @@ gUnknown_082F15F8:
 
 	.GLOBAL gUnknown_082F1600
 gUnknown_082F1600:
-	.INCBIN "baserom.gba", 0x2F1600, 0x2F1680-0x2F1600
+	.INCBIN "assets/sprites/gUnknown_082F1600.4bpp"
 
 	.GLOBAL gUnknown_082F1680
 gUnknown_082F1680:
@@ -9057,7 +9057,7 @@ gUnknown_082F1710:
 
 	.GLOBAL gUnknown_082F1718
 gUnknown_082F1718:
-	.INCBIN "baserom.gba", 0x2F1718, 0x2F1898-0x2F1718
+	.INCBIN "assets/sprites/gUnknown_082F1718.4bpp"
 
 	.GLOBAL gUnknown_082F1898
 gUnknown_082F1898:
@@ -9069,7 +9069,7 @@ gUnknown_082F1928:
 
 	.GLOBAL gUnknown_082F1930
 gUnknown_082F1930:
-	.INCBIN "baserom.gba", 0x2F1930, 0x2F1AB0-0x2F1930
+	.INCBIN "assets/sprites/gUnknown_082F1930.4bpp"
 
 	.GLOBAL gUnknown_082F1AB0
 gUnknown_082F1AB0:
@@ -9081,7 +9081,7 @@ gUnknown_082F1B40:
 
 	.GLOBAL gUnknown_082F1B48
 gUnknown_082F1B48:
-	.INCBIN "baserom.gba", 0x2F1B48, 0x2F1CC8-0x2F1B48
+	.INCBIN "assets/sprites/gUnknown_082F1B48.4bpp"
 
 	.GLOBAL gUnknown_082F1CC8
 gUnknown_082F1CC8:
@@ -9093,7 +9093,7 @@ gUnknown_082F1CEC:
 
 	.GLOBAL gUnknown_082F1CF4
 gUnknown_082F1CF4:
-	.INCBIN "baserom.gba", 0x2F1CF4, 0x2F1DF4-0x2F1CF4
+	.INCBIN "assets/sprites/gUnknown_082F1CF4.4bpp"
 
 	.GLOBAL gUnknown_082F1DF4
 gUnknown_082F1DF4:
@@ -9105,7 +9105,7 @@ gUnknown_082F1E60:
 
 	.GLOBAL gUnknown_082F1E68
 gUnknown_082F1E68:
-	.INCBIN "baserom.gba", 0x2F1E68, 0x2F1FE8-0x2F1E68
+	.INCBIN "assets/sprites/gUnknown_082F1E68.4bpp"
 
 	.GLOBAL gUnknown_082F1FE8
 gUnknown_082F1FE8:
@@ -9117,7 +9117,7 @@ gUnknown_082F200C:
 
 	.GLOBAL gUnknown_082F2014
 gUnknown_082F2014:
-	.INCBIN "baserom.gba", 0x2F2014, 0x2F2094-0x2F2014
+	.INCBIN "assets/sprites/gUnknown_082F2014.4bpp"
 
 	.GLOBAL gUnknown_082F2094
 gUnknown_082F2094:
@@ -9129,7 +9129,7 @@ gUnknown_082F20B8:
 
 	.GLOBAL gUnknown_082F20C0
 gUnknown_082F20C0:
-	.INCBIN "baserom.gba", 0x2F20C0, 0x2F2140-0x2F20C0
+	.INCBIN "assets/sprites/gUnknown_082F20C0.4bpp"
 
 	.GLOBAL gUnknown_082F2140
 gUnknown_082F2140:
@@ -9141,7 +9141,7 @@ gUnknown_082F2164:
 
 	.GLOBAL gUnknown_082F216C
 gUnknown_082F216C:
-	.INCBIN "baserom.gba", 0x2F216C, 0x2F21EC-0x2F216C
+	.INCBIN "assets/sprites/gUnknown_082F216C.4bpp"
 
 	.GLOBAL gUnknown_082F21EC
 gUnknown_082F21EC:
@@ -9153,7 +9153,7 @@ gUnknown_082F2210:
 
 	.GLOBAL gUnknown_082F2218
 gUnknown_082F2218:
-	.INCBIN "baserom.gba", 0x2F2218, 0x2F2298-0x2F2218
+	.INCBIN "assets/sprites/gUnknown_082F2218.4bpp"
 
 	.GLOBAL gUnknown_082F2298
 gUnknown_082F2298:
@@ -9165,7 +9165,7 @@ gUnknown_082F22BC:
 
 	.GLOBAL gUnknown_082F22C4
 gUnknown_082F22C4:
-	.INCBIN "baserom.gba", 0x2F22C4, 0x2F2344-0x2F22C4
+	.INCBIN "assets/sprites/gUnknown_082F22C4.4bpp"
 
 	.GLOBAL gUnknown_082F2344
 gUnknown_082F2344:
@@ -9177,7 +9177,7 @@ gUnknown_082F2368:
 
 	.GLOBAL gUnknown_082F2370
 gUnknown_082F2370:
-	.INCBIN "baserom.gba", 0x2F2370, 0x2F23F0-0x2F2370
+	.INCBIN "assets/sprites/gUnknown_082F2370.4bpp"
 
 	.GLOBAL gUnknown_082F23F0
 gUnknown_082F23F0:
@@ -9189,7 +9189,7 @@ gUnknown_082F2414:
 
 	.GLOBAL gUnknown_082F241C
 gUnknown_082F241C:
-	.INCBIN "baserom.gba", 0x2F241C, 0x2F261C-0x2F241C
+	.INCBIN "assets/sprites/gUnknown_082F241C.4bpp"
 
 	.GLOBAL gUnknown_082F261C
 gUnknown_082F261C:
@@ -9201,7 +9201,7 @@ gUnknown_082F2640:
 
 	.GLOBAL gUnknown_082F2648
 gUnknown_082F2648:
-	.INCBIN "baserom.gba", 0x2F2648, 0x2F2848-0x2F2648
+	.INCBIN "assets/sprites/gUnknown_082F2648.4bpp"
 
 	.GLOBAL gUnknown_082F2848
 gUnknown_082F2848:
@@ -9213,7 +9213,7 @@ gUnknown_082F286C:
 
 	.GLOBAL gUnknown_082F2874
 gUnknown_082F2874:
-	.INCBIN "baserom.gba", 0x2F2874, 0x2F2A74-0x2F2874
+	.INCBIN "assets/sprites/gUnknown_082F2874.4bpp"
 
 	.GLOBAL gUnknown_082F2A74
 gUnknown_082F2A74:
@@ -9225,7 +9225,7 @@ gUnknown_082F2A98:
 
 	.GLOBAL gUnknown_082F2AA0
 gUnknown_082F2AA0:
-	.INCBIN "baserom.gba", 0x2F2AA0, 0x2F2CA0-0x2F2AA0
+	.INCBIN "assets/sprites/gUnknown_082F2AA0.4bpp"
 
 	.GLOBAL gUnknown_082F2CA0
 gUnknown_082F2CA0:
@@ -9237,7 +9237,7 @@ gUnknown_082F2CC4:
 
 	.GLOBAL gUnknown_082F2CCC
 gUnknown_082F2CCC:
-	.INCBIN "baserom.gba", 0x2F2CCC, 0x2F2ECC-0x2F2CCC
+	.INCBIN "assets/sprites/gUnknown_082F2CCC.4bpp"
 
 	.GLOBAL gUnknown_082F2ECC
 gUnknown_082F2ECC:
@@ -9249,7 +9249,7 @@ gUnknown_082F2EF0:
 
 	.GLOBAL gUnknown_082F2EF8
 gUnknown_082F2EF8:
-	.INCBIN "baserom.gba", 0x2F2EF8, 0x2F30F8-0x2F2EF8
+	.INCBIN "assets/sprites/gUnknown_082F2EF8.4bpp"
 
 	.GLOBAL gUnknown_082F30F8
 gUnknown_082F30F8:
@@ -9261,7 +9261,7 @@ gUnknown_082F311C:
 
 	.GLOBAL gUnknown_082F3124
 gUnknown_082F3124:
-	.INCBIN "baserom.gba", 0x2F3124, 0x2F3324-0x2F3124
+	.INCBIN "assets/sprites/gUnknown_082F3124.4bpp"
 
 	.GLOBAL gUnknown_082F3324
 gUnknown_082F3324:
@@ -9273,7 +9273,7 @@ gUnknown_082F3348:
 
 	.GLOBAL gUnknown_082F3350
 gUnknown_082F3350:
-	.INCBIN "baserom.gba", 0x2F3350, 0x2F3550-0x2F3350
+	.INCBIN "assets/sprites/gUnknown_082F3350.4bpp"
 
 	.GLOBAL gUnknown_082F3550
 gUnknown_082F3550:
@@ -9285,7 +9285,7 @@ gUnknown_082F3574:
 
 	.GLOBAL gUnknown_082F357C
 gUnknown_082F357C:
-	.INCBIN "baserom.gba", 0x2F357C, 0x2F377C-0x2F357C
+	.INCBIN "assets/sprites/gUnknown_082F357C.4bpp"
 
 	.GLOBAL gUnknown_082F377C
 gUnknown_082F377C:
@@ -9297,7 +9297,7 @@ gUnknown_082F37A0:
 
 	.GLOBAL gUnknown_082F37A8
 gUnknown_082F37A8:
-	.INCBIN "baserom.gba", 0x2F37A8, 0x2F37C8-0x2F37A8
+	.INCBIN "assets/sprites/gUnknown_082F37A8.4bpp"
 
 	.GLOBAL gUnknown_082F37C8
 gUnknown_082F37C8:
@@ -9309,7 +9309,7 @@ gUnknown_082F37EC:
 
 	.GLOBAL gUnknown_082F37F4
 gUnknown_082F37F4:
-	.INCBIN "baserom.gba", 0x2F37F4, 0x2F38F4-0x2F37F4
+	.INCBIN "assets/sprites/gUnknown_082F37F4.4bpp"
 
 	.GLOBAL gUnknown_082F38F4
 gUnknown_082F38F4:
@@ -9321,7 +9321,7 @@ gUnknown_082F39F0:
 
 	.GLOBAL gUnknown_082F39F8
 gUnknown_082F39F8:
-	.INCBIN "baserom.gba", 0x2F39F8, 0x2F3D78-0x2F39F8
+	.INCBIN "assets/sprites/gUnknown_082F39F8.4bpp"
 
 	.GLOBAL gUnknown_082F3D78
 gUnknown_082F3D78:
@@ -9333,7 +9333,7 @@ gUnknown_082F3FB8:
 
 	.GLOBAL gUnknown_082F3FC0
 gUnknown_082F3FC0:
-	.INCBIN "baserom.gba", 0x2F3FC0, 0x2F43C0-0x2F3FC0
+	.INCBIN "assets/sprites/gUnknown_082F3FC0.4bpp"
 
 	.GLOBAL gUnknown_082F43C0
 gUnknown_082F43C0:
@@ -9345,7 +9345,7 @@ gUnknown_082F4B10:
 
 	.GLOBAL gUnknown_082F4B18
 gUnknown_082F4B18:
-	.INCBIN "baserom.gba", 0x2F4B18, 0x2F4D18-0x2F4B18
+	.INCBIN "assets/sprites/gUnknown_082F4B18.8bpp"
 
 	.GLOBAL gUnknown_082F4D18
 gUnknown_082F4D18:
@@ -9357,7 +9357,7 @@ gUnknown_082F4F34:
 
 	.GLOBAL gUnknown_082F4F3C
 gUnknown_082F4F3C:
-	.INCBIN "baserom.gba", 0x2F4F3C, 0x2F513C-0x2F4F3C
+	.INCBIN "assets/sprites/gUnknown_082F4F3C.8bpp"
 
 	.GLOBAL gUnknown_082F513C
 gUnknown_082F513C:
@@ -9369,7 +9369,7 @@ gUnknown_082F52A4:
 
 	.GLOBAL gUnknown_082F52AC
 gUnknown_082F52AC:
-	.INCBIN "baserom.gba", 0x2F52AC, 0x2F57AC-0x2F52AC
+	.INCBIN "assets/sprites/gUnknown_082F52AC.4bpp"
 
 	.GLOBAL gUnknown_082F57AC
 gUnknown_082F57AC:
@@ -9381,7 +9381,7 @@ gUnknown_082F5B9C:
 
 	.GLOBAL gUnknown_082F5BA4
 gUnknown_082F5BA4:
-	.INCBIN "baserom.gba", 0x2F5BA4, 0x2F67A4-0x2F5BA4
+	.INCBIN "assets/sprites/gUnknown_082F5BA4.4bpp"
 
 	.GLOBAL gUnknown_082F67A4
 gUnknown_082F67A4:
@@ -9393,7 +9393,7 @@ gUnknown_082F67C8:
 
 	.GLOBAL gUnknown_082F67D0
 gUnknown_082F67D0:
-	.INCBIN "baserom.gba", 0x2F67D0, 0x2F6850-0x2F67D0
+	.INCBIN "assets/sprites/gUnknown_082F67D0.4bpp"
 
 	.GLOBAL gUnknown_082F6850
 gUnknown_082F6850:
@@ -9405,7 +9405,7 @@ gUnknown_082F6AD8:
 
 	.GLOBAL gUnknown_082F6AE0
 gUnknown_082F6AE0:
-	.INCBIN "baserom.gba", 0x2F6AE0, 0x2F8EE0-0x2F6AE0
+	.INCBIN "assets/sprites/gUnknown_082F6AE0.4bpp"
 
 	.GLOBAL gUnknown_082F8EE0
 gUnknown_082F8EE0:
@@ -9417,7 +9417,7 @@ gUnknown_082F8F04:
 
 	.GLOBAL gUnknown_082F8F0C
 gUnknown_082F8F0C:
-	.INCBIN "baserom.gba", 0x2F8F0C, 0x2F8F8C-0x2F8F0C
+	.INCBIN "assets/sprites/gUnknown_082F8F0C.4bpp"
 
 	.GLOBAL gUnknown_082F8F8C
 gUnknown_082F8F8C:
@@ -9429,7 +9429,7 @@ gUnknown_082F8FB0:
 
 	.GLOBAL gUnknown_082F8FB8
 gUnknown_082F8FB8:
-	.INCBIN "baserom.gba", 0x2F8FB8, 0x2F9038-0x2F8FB8
+	.INCBIN "assets/sprites/gUnknown_082F8FB8.4bpp"
 
 	.GLOBAL gUnknown_082F9038
 gUnknown_082F9038:
@@ -9441,7 +9441,7 @@ gUnknown_082F917C:
 
 	.GLOBAL gUnknown_082F9184
 gUnknown_082F9184:
-	.INCBIN "baserom.gba", 0x2F9184, 0x2F9A84-0x2F9184
+	.INCBIN "assets/sprites/gUnknown_082F9184.4bpp"
 
 	.GLOBAL gUnknown_082F9A84
 gUnknown_082F9A84:
@@ -9453,7 +9453,7 @@ gUnknown_082F9B14:
 
 	.GLOBAL gUnknown_082F9B1C
 gUnknown_082F9B1C:
-	.INCBIN "baserom.gba", 0x2F9B1C, 0x2F9C9C-0x2F9B1C
+	.INCBIN "assets/sprites/gUnknown_082F9B1C.4bpp"
 
 	.GLOBAL gUnknown_082F9C9C
 gUnknown_082F9C9C:
@@ -9465,7 +9465,7 @@ gUnknown_082F9E4C:
 
 	.GLOBAL gUnknown_082F9E54
 gUnknown_082F9E54:
-	.INCBIN "baserom.gba", 0x2F9E54, 0x2FA454-0x2F9E54
+	.INCBIN "assets/sprites/gUnknown_082F9E54.4bpp"
 
 	.GLOBAL gUnknown_082FA454
 gUnknown_082FA454:
@@ -9477,7 +9477,7 @@ gUnknown_082FA5BC:
 
 	.GLOBAL gUnknown_082FA5C4
 gUnknown_082FA5C4:
-	.INCBIN "baserom.gba", 0x2FA5C4, 0x2FCDC4-0x2FA5C4
+	.INCBIN "assets/sprites/gUnknown_082FA5C4.8bpp"
 
 	.GLOBAL gUnknown_082FCDC4
 gUnknown_082FCDC4:
@@ -9489,7 +9489,7 @@ gUnknown_082FD16C:
 
 	.GLOBAL gUnknown_082FD174
 gUnknown_082FD174:
-	.INCBIN "baserom.gba", 0x2FD174, 0x303974-0x2FD174
+	.INCBIN "assets/sprites/gUnknown_082FD174.8bpp"
 
 	.GLOBAL gUnknown_08303974
 gUnknown_08303974:
@@ -9501,7 +9501,7 @@ gUnknown_08303A94:
 
 	.GLOBAL gUnknown_08303A9C
 gUnknown_08303A9C:
-	.INCBIN "baserom.gba", 0x303A9C, 0x305A9C-0x303A9C
+	.INCBIN "assets/sprites/gUnknown_08303A9C.8bpp"
 
 	.GLOBAL gUnknown_08305A9C
 gUnknown_08305A9C:
@@ -9513,7 +9513,7 @@ gUnknown_083060A8:
 
 	.GLOBAL gUnknown_083060B0
 gUnknown_083060B0:
-	.INCBIN "baserom.gba", 0x3060B0, 0x30E0B0-0x3060B0
+	.INCBIN "assets/sprites/gUnknown_083060B0.8bpp"
 
 	.GLOBAL gUnknown_0830E0B0
 gUnknown_0830E0B0:
@@ -9525,7 +9525,7 @@ gUnknown_0830E8D8:
 
 	.GLOBAL gUnknown_0830E8E0
 gUnknown_0830E8E0:
-	.INCBIN "baserom.gba", 0x30E8E0, 0x33E8E0-0x30E8E0
+	.INCBIN "assets/sprites/gUnknown_0830E8E0.8bpp"
 
 	.GLOBAL gUnknown_0833E8E0
 gUnknown_0833E8E0:
@@ -9537,7 +9537,7 @@ gUnknown_0833EE80:
 
 	.GLOBAL gUnknown_0833EE88
 gUnknown_0833EE88:
-	.INCBIN "baserom.gba", 0x33EE88, 0x342E88-0x33EE88
+	.INCBIN "assets/sprites/gUnknown_0833EE88.8bpp"
 
 	.GLOBAL gUnknown_08342E88
 gUnknown_08342E88:
@@ -9549,7 +9549,7 @@ gUnknown_08342EAC:
 
 	.GLOBAL gUnknown_08342EB4
 gUnknown_08342EB4:
-	.INCBIN "baserom.gba", 0x342EB4, 0x342FB4-0x342EB4
+	.INCBIN "assets/sprites/gUnknown_08342EB4.8bpp"
 
 	.GLOBAL gUnknown_08342FB4
 gUnknown_08342FB4:
@@ -9561,7 +9561,7 @@ gUnknown_08343260:
 
 	.GLOBAL gUnknown_08343268
 gUnknown_08343268:
-	.INCBIN "baserom.gba", 0x343268, 0x347E68-0x343268
+	.INCBIN "assets/sprites/gUnknown_08343268.8bpp"
 
 	.GLOBAL gUnknown_08347E68
 gUnknown_08347E68:
@@ -9573,7 +9573,7 @@ gUnknown_08348114:
 
 	.GLOBAL gUnknown_0834811C
 gUnknown_0834811C:
-	.INCBIN "baserom.gba", 0x34811C, 0x34CD1C-0x34811C
+	.INCBIN "assets/sprites/gUnknown_0834811C.8bpp"
 
 	.GLOBAL gUnknown_0834CD1C
 gUnknown_0834CD1C:
@@ -9585,7 +9585,7 @@ gUnknown_0834CD40:
 
 	.GLOBAL gUnknown_0834CD48
 gUnknown_0834CD48:
-	.INCBIN "baserom.gba", 0x34CD48, 0x34D148-0x34CD48
+	.INCBIN "assets/sprites/gUnknown_0834CD48.8bpp"
 
 	.GLOBAL gUnknown_0834D148
 gUnknown_0834D148:
@@ -9597,7 +9597,7 @@ gUnknown_0834D244:
 
 	.GLOBAL gUnknown_0834D24C
 gUnknown_0834D24C:
-	.INCBIN "baserom.gba", 0x34D24C, 0x34EE4C-0x34D24C
+	.INCBIN "assets/sprites/gUnknown_0834D24C.8bpp"
 
 	.GLOBAL gUnknown_0834EE4C
 gUnknown_0834EE4C:
@@ -9609,7 +9609,7 @@ gUnknown_0834EF48:
 
 	.GLOBAL gUnknown_0834EF50
 gUnknown_0834EF50:
-	.INCBIN "baserom.gba", 0x34EF50, 0x350B50-0x34EF50
+	.INCBIN "assets/sprites/gUnknown_0834EF50.8bpp"
 
 	.GLOBAL gUnknown_08350B50
 gUnknown_08350B50:
@@ -9621,7 +9621,7 @@ gUnknown_08350DB4:
 
 	.GLOBAL gUnknown_08350DBC
 gUnknown_08350DBC:
-	.INCBIN "baserom.gba", 0x350DBC, 0x3551BC-0x350DBC
+	.INCBIN "assets/sprites/gUnknown_08350DBC.8bpp"
 
 	.GLOBAL gUnknown_083551BC
 gUnknown_083551BC:
@@ -9633,7 +9633,7 @@ gUnknown_0835563C:
 
 	.GLOBAL gUnknown_08355644
 gUnknown_08355644:
-	.INCBIN "baserom.gba", 0x355644, 0x35D644-0x355644
+	.INCBIN "assets/sprites/gUnknown_08355644.8bpp"
 
 	.GLOBAL gUnknown_0835D644
 gUnknown_0835D644:
@@ -9645,7 +9645,7 @@ gUnknown_0835DAC4:
 
 	.GLOBAL gUnknown_0835DACC
 gUnknown_0835DACC:
-	.INCBIN "baserom.gba", 0x35DACC, 0x365ACC-0x35DACC
+	.INCBIN "assets/sprites/gUnknown_0835DACC.8bpp"
 
 	.GLOBAL gUnknown_08365ACC
 gUnknown_08365ACC:
@@ -9657,7 +9657,7 @@ gUnknown_08365AF0:
 
 	.GLOBAL gUnknown_08365AF8
 gUnknown_08365AF8:
-	.INCBIN "baserom.gba", 0x365AF8, 0x365EF8-0x365AF8
+	.INCBIN "assets/sprites/gUnknown_08365AF8.8bpp"
 
 	.GLOBAL gUnknown_08365EF8
 gUnknown_08365EF8:
@@ -9669,7 +9669,7 @@ gUnknown_08366378:
 
 	.GLOBAL gUnknown_08366380
 gUnknown_08366380:
-	.INCBIN "baserom.gba", 0x366380, 0x36E380-0x366380
+	.INCBIN "assets/sprites/gUnknown_08366380.8bpp"
 
 	.GLOBAL gUnknown_0836E380
 gUnknown_0836E380:
@@ -9681,7 +9681,7 @@ gUnknown_0836E4A0:
 
 	.GLOBAL gUnknown_0836E4A8
 gUnknown_0836E4A8:
-	.INCBIN "baserom.gba", 0x36E4A8, 0x3704A8-0x36E4A8
+	.INCBIN "assets/sprites/gUnknown_0836E4A8.8bpp"
 
 	.GLOBAL gUnknown_083704A8
 gUnknown_083704A8:
@@ -9693,7 +9693,7 @@ gUnknown_083706E8:
 
 	.GLOBAL gUnknown_083706F0
 gUnknown_083706F0:
-	.INCBIN "baserom.gba", 0x3706F0, 0x3746F0-0x3706F0
+	.INCBIN "assets/sprites/gUnknown_083706F0.8bpp"
 
 	.GLOBAL gUnknown_083746F0
 gUnknown_083746F0:
@@ -9705,7 +9705,7 @@ gUnknown_08374930:
 
 	.GLOBAL gUnknown_08374938
 gUnknown_08374938:
-	.INCBIN "baserom.gba", 0x374938, 0x376938-0x374938
+	.INCBIN "assets/sprites/gUnknown_08374938.8bpp"
 
 	.GLOBAL gUnknown_08376938
 gUnknown_08376938:
@@ -9717,7 +9717,7 @@ gUnknown_08376B78:
 
 	.GLOBAL gUnknown_08376B80
 gUnknown_08376B80:
-	.INCBIN "baserom.gba", 0x376B80, 0x37AB80-0x376B80
+	.INCBIN "assets/sprites/gUnknown_08376B80.8bpp"
 
 	.GLOBAL gUnknown_0837AB80
 gUnknown_0837AB80:
@@ -9729,7 +9729,7 @@ gUnknown_0837ACA0:
 
 	.GLOBAL gUnknown_0837ACA8
 gUnknown_0837ACA8:
-	.INCBIN "baserom.gba", 0x37ACA8, 0x37CCA8-0x37ACA8
+	.INCBIN "assets/sprites/gUnknown_0837ACA8.8bpp"
 
 	.GLOBAL gUnknown_0837CCA8
 gUnknown_0837CCA8:
@@ -9741,7 +9741,7 @@ gUnknown_0837CEE8:
 
 	.GLOBAL gUnknown_0837CEF0
 gUnknown_0837CEF0:
-	.INCBIN "baserom.gba", 0x37CEF0, 0x380EF0-0x37CEF0
+	.INCBIN "assets/sprites/gUnknown_0837CEF0.8bpp"
 
 	.GLOBAL gUnknown_08380EF0
 gUnknown_08380EF0:
@@ -9753,7 +9753,7 @@ gUnknown_08381010:
 
 	.GLOBAL gUnknown_08381018
 gUnknown_08381018:
-	.INCBIN "baserom.gba", 0x381018, 0x383018-0x381018
+	.INCBIN "assets/sprites/gUnknown_08381018.8bpp"
 
 	.GLOBAL gUnknown_08383018
 gUnknown_08383018:
@@ -9765,7 +9765,7 @@ gUnknown_08383744:
 
 	.GLOBAL gUnknown_0838374C
 gUnknown_0838374C:
-	.INCBIN "baserom.gba", 0x38374C, 0x38434C-0x38374C
+	.INCBIN "assets/sprites/gUnknown_0838374C.8bpp"
 
 	.GLOBAL gUnknown_0838434C
 gUnknown_0838434C:
@@ -9777,7 +9777,7 @@ gUnknown_083844FC:
 
 	.GLOBAL gUnknown_08384504
 gUnknown_08384504:
-	.INCBIN "baserom.gba", 0x384504, 0x387504-0x384504
+	.INCBIN "assets/sprites/gUnknown_08384504.8bpp"
 
 	.GLOBAL gUnknown_08387504
 gUnknown_08387504:
@@ -9789,7 +9789,7 @@ gUnknown_08387864:
 
 	.GLOBAL gUnknown_0838786C
 gUnknown_0838786C:
-	.INCBIN "baserom.gba", 0x38786C, 0x38D86C-0x38786C
+	.INCBIN "assets/sprites/gUnknown_0838786C.8bpp"
 
 	.GLOBAL gUnknown_0838D86C
 gUnknown_0838D86C:
@@ -9801,7 +9801,7 @@ gUnknown_0838DB3C:
 
 	.GLOBAL gUnknown_0838DB44
 gUnknown_0838DB44:
-	.INCBIN "baserom.gba", 0x38DB44, 0x392B44-0x38DB44
+	.INCBIN "assets/sprites/gUnknown_0838DB44.8bpp"
 
 	.GLOBAL gUnknown_08392B44
 gUnknown_08392B44:
@@ -9813,7 +9813,7 @@ gUnknown_08392C64:
 
 	.GLOBAL gUnknown_08392C6C
 gUnknown_08392C6C:
-	.INCBIN "baserom.gba", 0x392C6C, 0x394C6C-0x392C6C
+	.INCBIN "assets/sprites/gUnknown_08392C6C.8bpp"
 
 	.GLOBAL gUnknown_08394C6C
 gUnknown_08394C6C:
@@ -9825,7 +9825,7 @@ gUnknown_08394EAC:
 
 	.GLOBAL gUnknown_08394EB4
 gUnknown_08394EB4:
-	.INCBIN "baserom.gba", 0x394EB4, 0x3A4EB4-0x394EB4
+	.INCBIN "assets/sprites/gUnknown_08394EB4.8bpp"
 
 	.GLOBAL gUnknown_083A4EB4
 gUnknown_083A4EB4:
@@ -9837,7 +9837,7 @@ gUnknown_083A52A4:
 
 	.GLOBAL gUnknown_083A52AC
 gUnknown_083A52AC:
-	.INCBIN "baserom.gba", 0x3A52AC, 0x3C12AC-0x3A52AC
+	.INCBIN "assets/sprites/gUnknown_083A52AC.8bpp"
 
 	.GLOBAL gUnknown_083C12AC
 gUnknown_083C12AC:
@@ -9849,7 +9849,7 @@ gUnknown_083C1708:
 
 	.GLOBAL gUnknown_083C1710
 gUnknown_083C1710:
-	.INCBIN "baserom.gba", 0x3C1710, 0x3DE710-0x3C1710
+	.INCBIN "assets/sprites/gUnknown_083C1710.8bpp"
 
 	.GLOBAL gUnknown_083DE710
 gUnknown_083DE710:
@@ -9861,7 +9861,7 @@ gUnknown_083DE89C:
 
 	.GLOBAL gUnknown_083DE8A4
 gUnknown_083DE8A4:
-	.INCBIN "baserom.gba", 0x3DE8A4, 0x3E14A4-0x3DE8A4
+	.INCBIN "assets/sprites/gUnknown_083DE8A4.8bpp"
 
 	.GLOBAL gUnknown_083E14A4
 gUnknown_083E14A4:
@@ -9873,7 +9873,7 @@ gUnknown_083E17BC:
 
 	.GLOBAL gUnknown_083E17C4
 gUnknown_083E17C4:
-	.INCBIN "baserom.gba", 0x3E17C4, 0x3E6FC4-0x3E17C4
+	.INCBIN "assets/sprites/gUnknown_083E17C4.8bpp"
 
 	.GLOBAL gUnknown_083E6FC4
 gUnknown_083E6FC4:
@@ -9885,7 +9885,7 @@ gUnknown_083E712C:
 
 	.GLOBAL gUnknown_083E7134
 gUnknown_083E7134:
-	.INCBIN "baserom.gba", 0x3E7134, 0x3E8934-0x3E7134
+	.INCBIN "assets/sprites/gUnknown_083E7134.8bpp"
 
 	.GLOBAL gUnknown_083E8934
 gUnknown_083E8934:
@@ -9897,7 +9897,7 @@ gUnknown_083E8A30:
 
 	.GLOBAL gUnknown_083E8A38
 gUnknown_083E8A38:
-	.INCBIN "baserom.gba", 0x3E8A38, 0x3EA638-0x3E8A38
+	.INCBIN "assets/sprites/gUnknown_083E8A38.8bpp"
 
 	.GLOBAL gUnknown_083EA638
 gUnknown_083EA638:
@@ -9909,7 +9909,7 @@ gUnknown_083EA734:
 
 	.GLOBAL gUnknown_083EA73C
 gUnknown_083EA73C:
-	.INCBIN "baserom.gba", 0x3EA73C, 0x3EC33C-0x3EA73C
+	.INCBIN "assets/sprites/gUnknown_083EA73C.8bpp"
 
 	.GLOBAL gUnknown_083EC33C
 gUnknown_083EC33C:
@@ -9921,7 +9921,7 @@ gUnknown_083ECC3C:
 
 	.GLOBAL gUnknown_083ECC44
 gUnknown_083ECC44:
-	.INCBIN "baserom.gba", 0x3ECC44, 0x3F4C44-0x3ECC44
+	.INCBIN "assets/sprites/gUnknown_083ECC44.8bpp"
 
 	.GLOBAL gUnknown_083F4C44
 gUnknown_083F4C44:
@@ -9933,7 +9933,7 @@ gUnknown_083F4E84:
 
 	.GLOBAL gUnknown_083F4E8C
 gUnknown_083F4E8C:
-	.INCBIN "baserom.gba", 0x3F4E8C, 0x3F8E8C-0x3F4E8C
+	.INCBIN "assets/sprites/gUnknown_083F4E8C.8bpp"
 
 	.GLOBAL gUnknown_083F8E8C
 gUnknown_083F8E8C:
@@ -9945,7 +9945,7 @@ gUnknown_083F981C:
 
 	.GLOBAL gUnknown_083F9824
 gUnknown_083F9824:
-	.INCBIN "baserom.gba", 0x3F9824, 0x3FE024-0x3F9824
+	.INCBIN "assets/sprites/gUnknown_083F9824.8bpp"
 
 	.GLOBAL gUnknown_083FE024
 gUnknown_083FE024:
@@ -9957,7 +9957,7 @@ gUnknown_083FE4EC:
 
 	.GLOBAL gUnknown_083FE4F4
 gUnknown_083FE4F4:
-	.INCBIN "baserom.gba", 0x3FE4F4, 0x4064F4-0x3FE4F4
+	.INCBIN "assets/sprites/gUnknown_083FE4F4.8bpp"
 
 	.GLOBAL gUnknown_084064F4
 gUnknown_084064F4:
@@ -9969,7 +9969,7 @@ gUnknown_084068E4:
 
 	.GLOBAL gUnknown_084068EC
 gUnknown_084068EC:
-	.INCBIN "baserom.gba", 0x4068EC, 0x40A8EC-0x4068EC
+	.INCBIN "assets/sprites/gUnknown_084068EC.8bpp"
 
 	.GLOBAL gUnknown_0840A8EC
 gUnknown_0840A8EC:
@@ -9981,7 +9981,7 @@ gUnknown_0840A9E8:
 
 	.GLOBAL gUnknown_0840A9F0
 gUnknown_0840A9F0:
-	.INCBIN "baserom.gba", 0x40A9F0, 0x40C5F0-0x40A9F0
+	.INCBIN "assets/sprites/gUnknown_0840A9F0.8bpp"
 
 	.GLOBAL gUnknown_0840C5F0
 gUnknown_0840C5F0:
@@ -9993,7 +9993,7 @@ gUnknown_0840C734:
 
 	.GLOBAL gUnknown_0840C73C
 gUnknown_0840C73C:
-	.INCBIN "baserom.gba", 0x40C73C, 0x40D93C-0x40C73C
+	.INCBIN "assets/sprites/gUnknown_0840C73C.8bpp"
 
 	.GLOBAL gUnknown_0840D93C
 gUnknown_0840D93C:
@@ -10005,7 +10005,7 @@ gUnknown_0840D9A8:
 
 	.GLOBAL gUnknown_0840D9B0
 gUnknown_0840D9B0:
-	.INCBIN "baserom.gba", 0x40D9B0, 0x40E5B0-0x40D9B0
+	.INCBIN "assets/sprites/gUnknown_0840D9B0.8bpp"
 
 	.GLOBAL gUnknown_0840E5B0
 gUnknown_0840E5B0:
@@ -10017,7 +10017,7 @@ gUnknown_0840E6F4:
 
 	.GLOBAL gUnknown_0840E6FC
 gUnknown_0840E6FC:
-	.INCBIN "baserom.gba", 0x40E6FC, 0x40F8FC-0x40E6FC
+	.INCBIN "assets/sprites/gUnknown_0840E6FC.8bpp"
 
 	.GLOBAL gUnknown_0840F8FC
 gUnknown_0840F8FC:
@@ -10029,7 +10029,7 @@ gUnknown_0840FC5C:
 
 	.GLOBAL gUnknown_0840FC64
 gUnknown_0840FC64:
-	.INCBIN "baserom.gba", 0x40FC64, 0x415C64-0x40FC64
+	.INCBIN "assets/sprites/gUnknown_0840FC64.8bpp"
 
 	.GLOBAL gUnknown_08415C64
 gUnknown_08415C64:
@@ -10041,7 +10041,7 @@ gUnknown_08415EA4:
 
 	.GLOBAL gUnknown_08415EAC
 gUnknown_08415EAC:
-	.INCBIN "baserom.gba", 0x415EAC, 0x419EAC-0x415EAC
+	.INCBIN "assets/sprites/gUnknown_08415EAC.8bpp"
 
 	.GLOBAL gUnknown_08419EAC
 gUnknown_08419EAC:
@@ -10053,7 +10053,7 @@ gUnknown_0841A0EC:
 
 	.GLOBAL gUnknown_0841A0F4
 gUnknown_0841A0F4:
-	.INCBIN "baserom.gba", 0x41A0F4, 0x41E0F4-0x41A0F4
+	.INCBIN "assets/sprites/gUnknown_0841A0F4.8bpp"
 
 	.GLOBAL gUnknown_0841E0F4
 gUnknown_0841E0F4:
@@ -10065,7 +10065,7 @@ gUnknown_0841E454:
 
 	.GLOBAL gUnknown_0841E45C
 gUnknown_0841E45C:
-	.INCBIN "baserom.gba", 0x41E45C, 0x42445C-0x41E45C
+	.INCBIN "assets/sprites/gUnknown_0841E45C.8bpp"
 
 	.GLOBAL gUnknown_0842445C
 gUnknown_0842445C:
@@ -10077,7 +10077,7 @@ gUnknown_08424558:
 
 	.GLOBAL gUnknown_08424560
 gUnknown_08424560:
-	.INCBIN "baserom.gba", 0x424560, 0x426160-0x424560
+	.INCBIN "assets/sprites/gUnknown_08424560.8bpp"
 
 	.GLOBAL gUnknown_08426160
 gUnknown_08426160:
@@ -10089,7 +10089,7 @@ gUnknown_08426508:
 
 	.GLOBAL gUnknown_08426510
 gUnknown_08426510:
-	.INCBIN "baserom.gba", 0x426510, 0x42CD10-0x426510
+	.INCBIN "assets/sprites/gUnknown_08426510.8bpp"
 
 	.GLOBAL gUnknown_0842CD10
 gUnknown_0842CD10:
@@ -10101,7 +10101,7 @@ gUnknown_0842D004:
 
 	.GLOBAL gUnknown_0842D00C
 gUnknown_0842D00C:
-	.INCBIN "baserom.gba", 0x42D00C, 0x43240C-0x42D00C
+	.INCBIN "assets/sprites/gUnknown_0842D00C.8bpp"
 
 	.GLOBAL gUnknown_0843240C
 gUnknown_0843240C:
@@ -10113,7 +10113,7 @@ gUnknown_084325BC:
 
 	.GLOBAL gUnknown_084325C4
 gUnknown_084325C4:
-	.INCBIN "baserom.gba", 0x4325C4, 0x4355C4-0x4325C4
+	.INCBIN "assets/sprites/gUnknown_084325C4.8bpp"
 
 	.GLOBAL gUnknown_084355C4
 gUnknown_084355C4:
@@ -10125,7 +10125,7 @@ gUnknown_08435804:
 
 	.GLOBAL gUnknown_0843580C
 gUnknown_0843580C:
-	.INCBIN "baserom.gba", 0x43580C, 0x43980C-0x43580C
+	.INCBIN "assets/sprites/gUnknown_0843580C.8bpp"
 
 	.GLOBAL gUnknown_0843980C
 gUnknown_0843980C:
@@ -10137,7 +10137,7 @@ gUnknown_08439A4C:
 
 	.GLOBAL gUnknown_08439A54
 gUnknown_08439A54:
-	.INCBIN "baserom.gba", 0x439A54, 0x43DA54-0x439A54
+	.INCBIN "assets/sprites/gUnknown_08439A54.8bpp"
 
 	.GLOBAL gUnknown_0843DA54
 gUnknown_0843DA54:
@@ -10149,7 +10149,7 @@ gUnknown_0843DED4:
 
 	.GLOBAL gUnknown_0843DEDC
 gUnknown_0843DEDC:
-	.INCBIN "baserom.gba", 0x43DEDC, 0x445EDC-0x43DEDC
+	.INCBIN "assets/sprites/gUnknown_0843DEDC.8bpp"
 
 	.GLOBAL gUnknown_08445EDC
 gUnknown_08445EDC:
@@ -10161,7 +10161,7 @@ gUnknown_08446314:
 
 	.GLOBAL gUnknown_0844631C
 gUnknown_0844631C:
-	.INCBIN "baserom.gba", 0x44631C, 0x44DB1C-0x44631C
+	.INCBIN "assets/sprites/gUnknown_0844631C.8bpp"
 
 	.GLOBAL gUnknown_0844DB1C
 gUnknown_0844DB1C:
@@ -10173,7 +10173,7 @@ gUnknown_0844DE58:
 
 	.GLOBAL gUnknown_0844DE60
 gUnknown_0844DE60:
-	.INCBIN "baserom.gba", 0x44DE60, 0x453A60-0x44DE60
+	.INCBIN "assets/sprites/gUnknown_0844DE60.8bpp"
 
 	.GLOBAL gUnknown_08453A60
 gUnknown_08453A60:
@@ -10185,7 +10185,7 @@ gUnknown_08453CA0:
 
 	.GLOBAL gUnknown_08453CA8
 gUnknown_08453CA8:
-	.INCBIN "baserom.gba", 0x453CA8, 0x457CA8-0x453CA8
+	.INCBIN "assets/sprites/gUnknown_08453CA8.8bpp"
 
 	.GLOBAL gUnknown_08457CA8
 gUnknown_08457CA8:
@@ -10197,7 +10197,7 @@ gUnknown_08457D38:
 
 	.GLOBAL gUnknown_08457D40
 gUnknown_08457D40:
-	.INCBIN "baserom.gba", 0x457D40, 0x458D40-0x457D40
+	.INCBIN "assets/sprites/gUnknown_08457D40.8bpp"
 
 	.GLOBAL gUnknown_08458D40
 gUnknown_08458D40:
@@ -10209,7 +10209,7 @@ gUnknown_08458F14:
 
 	.GLOBAL gUnknown_08458F1C
 gUnknown_08458F1C:
-	.INCBIN "baserom.gba", 0x458F1C, 0x45C31C-0x458F1C
+	.INCBIN "assets/sprites/gUnknown_08458F1C.8bpp"
 
 	.GLOBAL gUnknown_0845C31C
 gUnknown_0845C31C:
@@ -10221,7 +10221,7 @@ gUnknown_0845C43C:
 
 	.GLOBAL gUnknown_0845C444
 gUnknown_0845C444:
-	.INCBIN "baserom.gba", 0x45C444, 0x45E444-0x45C444
+	.INCBIN "assets/sprites/gUnknown_0845C444.8bpp"
 
 	.GLOBAL gUnknown_0845E444
 gUnknown_0845E444:
@@ -10233,7 +10233,7 @@ gUnknown_0845E564:
 
 	.GLOBAL gUnknown_0845E56C
 gUnknown_0845E56C:
-	.INCBIN "baserom.gba", 0x45E56C, 0x46056C-0x45E56C
+	.INCBIN "assets/sprites/gUnknown_0845E56C.8bpp"
 
 	.GLOBAL gUnknown_0846056C
 gUnknown_0846056C:
@@ -10245,7 +10245,7 @@ gUnknown_084608CC:
 
 	.GLOBAL gUnknown_084608D4
 gUnknown_084608D4:
-	.INCBIN "baserom.gba", 0x4608D4, 0x4668D4-0x4608D4
+	.INCBIN "assets/sprites/gUnknown_084608D4.8bpp"
 
 	.GLOBAL gUnknown_084668D4
 gUnknown_084668D4:
@@ -10257,7 +10257,7 @@ gUnknown_08466B14:
 
 	.GLOBAL gUnknown_08466B1C
 gUnknown_08466B1C:
-	.INCBIN "baserom.gba", 0x466B1C, 0x46AB1C-0x466B1C
+	.INCBIN "assets/sprites/gUnknown_08466B1C.8bpp"
 
 	.GLOBAL gUnknown_0846AB1C
 gUnknown_0846AB1C:
@@ -10269,7 +10269,7 @@ gUnknown_0846ACCC:
 
 	.GLOBAL gUnknown_0846ACD4
 gUnknown_0846ACD4:
-	.INCBIN "baserom.gba", 0x46ACD4, 0x46DCD4-0x46ACD4
+	.INCBIN "assets/sprites/gUnknown_0846ACD4.8bpp"
 
 	.GLOBAL gUnknown_0846DCD4
 gUnknown_0846DCD4:
@@ -10281,7 +10281,7 @@ gUnknown_0846DEA8:
 
 	.GLOBAL gUnknown_0846DEB0
 gUnknown_0846DEB0:
-	.INCBIN "baserom.gba", 0x46DEB0, 0x4712B0-0x46DEB0
+	.INCBIN "assets/sprites/gUnknown_0846DEB0.8bpp"
 
 	.GLOBAL gUnknown_084712B0
 gUnknown_084712B0:
@@ -10293,7 +10293,7 @@ gUnknown_084714F0:
 
 	.GLOBAL gUnknown_084714F8
 gUnknown_084714F8:
-	.INCBIN "baserom.gba", 0x4714F8, 0x4754F8-0x4714F8
+	.INCBIN "assets/sprites/gUnknown_084714F8.8bpp"
 
 	.GLOBAL gUnknown_084754F8
 gUnknown_084754F8:
@@ -10305,7 +10305,7 @@ gUnknown_08475A08:
 
 	.GLOBAL gUnknown_08475A10
 gUnknown_08475A10:
-	.INCBIN "baserom.gba", 0x475A10, 0x47EA10-0x475A10
+	.INCBIN "assets/sprites/gUnknown_08475A10.8bpp"
 
 	.GLOBAL gUnknown_0847EA10
 gUnknown_0847EA10:
@@ -10317,7 +10317,7 @@ gUnknown_0847EB78:
 
 	.GLOBAL gUnknown_0847EB80
 gUnknown_0847EB80:
-	.INCBIN "baserom.gba", 0x47EB80, 0x481380-0x47EB80
+	.INCBIN "assets/sprites/gUnknown_0847EB80.8bpp"
 
 	.GLOBAL gUnknown_08481380
 gUnknown_08481380:
@@ -10329,7 +10329,7 @@ gUnknown_084816E0:
 
 	.GLOBAL gUnknown_084816E8
 gUnknown_084816E8:
-	.INCBIN "baserom.gba", 0x4816E8, 0x4876E8-0x4816E8
+	.INCBIN "assets/sprites/gUnknown_084816E8.8bpp"
 
 	.GLOBAL gUnknown_084876E8
 gUnknown_084876E8:
@@ -10341,7 +10341,7 @@ gUnknown_08487808:
 
 	.GLOBAL gUnknown_08487810
 gUnknown_08487810:
-	.INCBIN "baserom.gba", 0x487810, 0x489810-0x487810
+	.INCBIN "assets/sprites/gUnknown_08487810.8bpp"
 
 	.GLOBAL gUnknown_08489810
 gUnknown_08489810:
@@ -10353,7 +10353,7 @@ gUnknown_08489B70:
 
 	.GLOBAL gUnknown_08489B78
 gUnknown_08489B78:
-	.INCBIN "baserom.gba", 0x489B78, 0x48FB78-0x489B78
+	.INCBIN "assets/sprites/gUnknown_08489B78.8bpp"
 
 	.GLOBAL gUnknown_0848FB78
 gUnknown_0848FB78:
@@ -10365,7 +10365,7 @@ gUnknown_0848FB9C:
 
 	.GLOBAL gUnknown_0848FBA4
 gUnknown_0848FBA4:
-	.INCBIN "baserom.gba", 0x48FBA4, 0x48FFA4-0x48FBA4
+	.INCBIN "assets/sprites/gUnknown_0848FBA4.8bpp"
 
 	.GLOBAL gUnknown_0848FFA4
 gUnknown_0848FFA4:
@@ -10377,7 +10377,7 @@ gUnknown_084900A0:
 
 	.GLOBAL gUnknown_084900A8
 gUnknown_084900A8:
-	.INCBIN "baserom.gba", 0x4900A8, 0x491CA8-0x4900A8
+	.INCBIN "assets/sprites/gUnknown_084900A8.8bpp"
 
 	.GLOBAL gUnknown_08491CA8
 gUnknown_08491CA8:
@@ -10389,7 +10389,7 @@ gUnknown_08491EE8:
 
 	.GLOBAL gUnknown_08491EF0
 gUnknown_08491EF0:
-	.INCBIN "baserom.gba", 0x491EF0, 0x495EF0-0x491EF0
+	.INCBIN "assets/sprites/gUnknown_08491EF0.8bpp"
 
 	.GLOBAL gUnknown_08495EF0
 gUnknown_08495EF0:
@@ -10401,7 +10401,7 @@ gUnknown_084960A0:
 
 	.GLOBAL gUnknown_084960A8
 gUnknown_084960A8:
-	.INCBIN "baserom.gba", 0x4960A8, 0x4990A8-0x4960A8
+	.INCBIN "assets/sprites/gUnknown_084960A8.8bpp"
 
 	.GLOBAL gUnknown_084990A8
 gUnknown_084990A8:
@@ -10413,7 +10413,7 @@ gUnknown_084992E8:
 
 	.GLOBAL gUnknown_084992F0
 gUnknown_084992F0:
-	.INCBIN "baserom.gba", 0x4992F0, 0x49D2F0-0x4992F0
+	.INCBIN "assets/sprites/gUnknown_084992F0.8bpp"
 
 	.GLOBAL gUnknown_0849D2F0
 gUnknown_0849D2F0:
@@ -10425,7 +10425,7 @@ gUnknown_0849D380:
 
 	.GLOBAL gUnknown_0849D388
 gUnknown_0849D388:
-	.INCBIN "baserom.gba", 0x49D388, 0x49E388-0x49D388
+	.INCBIN "assets/sprites/gUnknown_0849D388.8bpp"
 
 	.GLOBAL gUnknown_0849E388
 gUnknown_0849E388:
@@ -10437,7 +10437,7 @@ gUnknown_0849E4A8:
 
 	.GLOBAL gUnknown_0849E4B0
 gUnknown_0849E4B0:
-	.INCBIN "baserom.gba", 0x49E4B0, 0x4A04B0-0x49E4B0
+	.INCBIN "assets/sprites/gUnknown_0849E4B0.8bpp"
 
 	.GLOBAL gUnknown_084A04B0
 gUnknown_084A04B0:
@@ -10449,7 +10449,7 @@ gUnknown_084A05D0:
 
 	.GLOBAL gUnknown_084A05D8
 gUnknown_084A05D8:
-	.INCBIN "baserom.gba", 0x4A05D8, 0x4A25D8-0x4A05D8
+	.INCBIN "assets/sprites/gUnknown_084A05D8.8bpp"
 
 	.GLOBAL gUnknown_084A25D8
 gUnknown_084A25D8:
@@ -10461,7 +10461,7 @@ gUnknown_084A27F4:
 
 	.GLOBAL gUnknown_084A27FC
 gUnknown_084A27FC:
-	.INCBIN "baserom.gba", 0x4A27FC, 0x4A63FC-0x4A27FC
+	.INCBIN "assets/sprites/gUnknown_084A27FC.8bpp"
 
 	.GLOBAL gUnknown_084A63FC
 gUnknown_084A63FC:
@@ -10473,7 +10473,7 @@ gUnknown_084A6684:
 
 	.GLOBAL gUnknown_084A668C
 gUnknown_084A668C:
-	.INCBIN "baserom.gba", 0x4A668C, 0x4AAE8C-0x4A668C
+	.INCBIN "assets/sprites/gUnknown_084A668C.8bpp"
 
 	.GLOBAL gUnknown_084AAE8C
 gUnknown_084AAE8C:
@@ -10485,7 +10485,7 @@ gUnknown_084AB30C:
 
 	.GLOBAL gUnknown_084AB314
 gUnknown_084AB314:
-	.INCBIN "baserom.gba", 0x4AB314, 0x4AB714-0x4AB314
+	.INCBIN "assets/sprites/gUnknown_084AB314.8bpp"
 
 	.GLOBAL gUnknown_084AB714
 gUnknown_084AB714:
@@ -10497,7 +10497,7 @@ gUnknown_084AB8C4:
 
 	.GLOBAL gUnknown_084AB8CC
 gUnknown_084AB8CC:
-	.INCBIN "baserom.gba", 0x4AB8CC, 0x4ABCCC-0x4AB8CC
+	.INCBIN "assets/sprites/gUnknown_084AB8CC.8bpp"
 
 	.GLOBAL gUnknown_084ABCCC
 gUnknown_084ABCCC:
@@ -10509,7 +10509,7 @@ gUnknown_084ABE34:
 
 	.GLOBAL gUnknown_084ABE3C
 gUnknown_084ABE3C:
-	.INCBIN "baserom.gba", 0x4ABE3C, 0x4ADE3C-0x4ABE3C
+	.INCBIN "assets/sprites/gUnknown_084ABE3C.8bpp"
 
 	.GLOBAL gUnknown_084ADE3C
 gUnknown_084ADE3C:
@@ -10521,7 +10521,7 @@ gUnknown_084ADF5C:
 
 	.GLOBAL gUnknown_084ADF64
 gUnknown_084ADF64:
-	.INCBIN "baserom.gba", 0x4ADF64, 0x4AFF64-0x4ADF64
+	.INCBIN "assets/sprites/gUnknown_084ADF64.8bpp"
 
 	.GLOBAL gUnknown_084AFF64
 gUnknown_084AFF64:
@@ -10533,7 +10533,7 @@ gUnknown_084B0060:
 
 	.GLOBAL gUnknown_084B0068
 gUnknown_084B0068:
-	.INCBIN "baserom.gba", 0x4B0068, 0x4B1C68-0x4B0068
+	.INCBIN "assets/sprites/gUnknown_084B0068.8bpp"
 
 	.GLOBAL gUnknown_084B1C68
 gUnknown_084B1C68:
@@ -10545,7 +10545,7 @@ gUnknown_084B1EA8:
 
 	.GLOBAL gUnknown_084B1EB0
 gUnknown_084B1EB0:
-	.INCBIN "baserom.gba", 0x4B1EB0, 0x4B5EB0-0x4B1EB0
+	.INCBIN "assets/sprites/gUnknown_084B1EB0.8bpp"
 
 	.GLOBAL gUnknown_084B5EB0
 gUnknown_084B5EB0:
@@ -10557,7 +10557,7 @@ gUnknown_084B61EC:
 
 	.GLOBAL gUnknown_084B61F4
 gUnknown_084B61F4:
-	.INCBIN "baserom.gba", 0x4B61F4, 0x4BBDF4-0x4B61F4
+	.INCBIN "assets/sprites/gUnknown_084B61F4.8bpp"
 
 	.GLOBAL gUnknown_084BBDF4
 gUnknown_084BBDF4:
@@ -10569,7 +10569,7 @@ gUnknown_084BC274:
 
 	.GLOBAL gUnknown_084BC27C
 gUnknown_084BC27C:
-	.INCBIN "baserom.gba", 0x4BC27C, 0x4C427C-0x4BC27C
+	.INCBIN "assets/sprites/gUnknown_084BC27C.8bpp"
 
 	.GLOBAL gUnknown_084C427C
 gUnknown_084C427C:
@@ -10581,7 +10581,7 @@ gUnknown_084C4624:
 
 	.GLOBAL gUnknown_084C462C
 gUnknown_084C462C:
-	.INCBIN "baserom.gba", 0x4C462C, 0x4DE62C-0x4C462C
+	.INCBIN "assets/sprites/gUnknown_084C462C.8bpp"
 
 	.GLOBAL gUnknown_084DE62C
 gUnknown_084DE62C:
@@ -10593,7 +10593,7 @@ gUnknown_084DE7DC:
 
 	.GLOBAL gUnknown_084DE7E4
 gUnknown_084DE7E4:
-	.INCBIN "baserom.gba", 0x4DE7E4, 0x4E17E4-0x4DE7E4
+	.INCBIN "assets/sprites/gUnknown_084DE7E4.8bpp"
 
 	.GLOBAL gUnknown_084E17E4
 gUnknown_084E17E4:
@@ -10605,7 +10605,7 @@ gUnknown_084E1904:
 
 	.GLOBAL gUnknown_084E190C
 gUnknown_084E190C:
-	.INCBIN "baserom.gba", 0x4E190C, 0x4E390C-0x4E190C
+	.INCBIN "assets/sprites/gUnknown_084E190C.8bpp"
 
 	.GLOBAL gUnknown_084E390C
 gUnknown_084E390C:
@@ -10617,7 +10617,7 @@ gUnknown_084E3B4C:
 
 	.GLOBAL gUnknown_084E3B54
 gUnknown_084E3B54:
-	.INCBIN "baserom.gba", 0x4E3B54, 0x4E7B54-0x4E3B54
+	.INCBIN "assets/sprites/gUnknown_084E3B54.8bpp"
 
 	.GLOBAL gUnknown_084E7B54
 gUnknown_084E7B54:
@@ -10629,7 +10629,7 @@ gUnknown_084E7C50:
 
 	.GLOBAL gUnknown_084E7C58
 gUnknown_084E7C58:
-	.INCBIN "baserom.gba", 0x4E7C58, 0x4E9858-0x4E7C58
+	.INCBIN "assets/sprites/gUnknown_084E7C58.8bpp"
 
 	.GLOBAL gUnknown_084E9858
 gUnknown_084E9858:
@@ -10641,7 +10641,7 @@ gUnknown_084E9954:
 
 	.GLOBAL gUnknown_084E995C
 gUnknown_084E995C:
-	.INCBIN "baserom.gba", 0x4E995C, 0x4EB55C-0x4E995C
+	.INCBIN "assets/sprites/gUnknown_084E995C.8bpp"
 
 	.GLOBAL gUnknown_084EB55C
 gUnknown_084EB55C:
@@ -10653,7 +10653,7 @@ gUnknown_084EB7E4:
 
 	.GLOBAL gUnknown_084EB7EC
 gUnknown_084EB7EC:
-	.INCBIN "baserom.gba", 0x4EB7EC, 0x4EFFEC-0x4EB7EC
+	.INCBIN "assets/sprites/gUnknown_084EB7EC.8bpp"
 
 	.GLOBAL gUnknown_084EFFEC
 gUnknown_084EFFEC:
@@ -10665,7 +10665,7 @@ gUnknown_084F010C:
 
 	.GLOBAL gUnknown_084F0114
 gUnknown_084F0114:
-	.INCBIN "baserom.gba", 0x4F0114, 0x4F2114-0x4F0114
+	.INCBIN "assets/sprites/gUnknown_084F0114.8bpp"
 
 	.GLOBAL gUnknown_084F2114
 gUnknown_084F2114:
@@ -10677,7 +10677,7 @@ gUnknown_084F2210:
 
 	.GLOBAL gUnknown_084F2218
 gUnknown_084F2218:
-	.INCBIN "baserom.gba", 0x4F2218, 0x4F3E18-0x4F2218
+	.INCBIN "assets/sprites/gUnknown_084F2218.8bpp"
 
 	.GLOBAL gUnknown_084F3E18
 gUnknown_084F3E18:
@@ -10689,7 +10689,7 @@ gUnknown_084F3F38:
 
 	.GLOBAL gUnknown_084F3F40
 gUnknown_084F3F40:
-	.INCBIN "baserom.gba", 0x4F3F40, 0x4F5F40-0x4F3F40
+	.INCBIN "assets/sprites/gUnknown_084F3F40.8bpp"
 
 	.GLOBAL gUnknown_084F5F40
 gUnknown_084F5F40:
@@ -10701,7 +10701,7 @@ gUnknown_084F61C8:
 
 	.GLOBAL gUnknown_084F61D0
 gUnknown_084F61D0:
-	.INCBIN "baserom.gba", 0x4F61D0, 0x4FA9D0-0x4F61D0
+	.INCBIN "assets/sprites/gUnknown_084F61D0.8bpp"
 
 	.GLOBAL gUnknown_084FA9D0
 gUnknown_084FA9D0:
@@ -10713,7 +10713,7 @@ gUnknown_084FAACC:
 
 	.GLOBAL gUnknown_084FAAD4
 gUnknown_084FAAD4:
-	.INCBIN "baserom.gba", 0x4FAAD4, 0x4FC6D4-0x4FAAD4
+	.INCBIN "assets/sprites/gUnknown_084FAAD4.8bpp"
 
 	.GLOBAL gUnknown_084FC6D4
 gUnknown_084FC6D4:
@@ -10725,7 +10725,7 @@ gUnknown_084FC7D0:
 
 	.GLOBAL gUnknown_084FC7D8
 gUnknown_084FC7D8:
-	.INCBIN "baserom.gba", 0x4FC7D8, 0x4FE3D8-0x4FC7D8
+	.INCBIN "assets/sprites/gUnknown_084FC7D8.8bpp"
 
 	.GLOBAL gUnknown_084FE3D8
 gUnknown_084FE3D8:
@@ -10737,7 +10737,7 @@ gUnknown_084FE660:
 
 	.GLOBAL gUnknown_084FE668
 gUnknown_084FE668:
-	.INCBIN "baserom.gba", 0x4FE668, 0x502E68-0x4FE668
+	.INCBIN "assets/sprites/gUnknown_084FE668.8bpp"
 
 	.GLOBAL gUnknown_08502E68
 gUnknown_08502E68:
@@ -10749,7 +10749,7 @@ gUnknown_08502F64:
 
 	.GLOBAL gUnknown_08502F6C
 gUnknown_08502F6C:
-	.INCBIN "baserom.gba", 0x502F6C, 0x504B6C-0x502F6C
+	.INCBIN "assets/sprites/gUnknown_08502F6C.8bpp"
 
 	.GLOBAL gUnknown_08504B6C
 gUnknown_08504B6C:
@@ -10761,7 +10761,7 @@ gUnknown_08504C68:
 
 	.GLOBAL gUnknown_08504C70
 gUnknown_08504C70:
-	.INCBIN "baserom.gba", 0x504C70, 0x506870-0x504C70
+	.INCBIN "assets/sprites/gUnknown_08504C70.8bpp"
 
 	.GLOBAL gUnknown_08506870
 gUnknown_08506870:
@@ -10773,7 +10773,7 @@ gUnknown_08506AB0:
 
 	.GLOBAL gUnknown_08506AB8
 gUnknown_08506AB8:
-	.INCBIN "baserom.gba", 0x506AB8, 0x50AAB8-0x506AB8
+	.INCBIN "assets/sprites/gUnknown_08506AB8.8bpp"
 
 	.GLOBAL gUnknown_0850AAB8
 gUnknown_0850AAB8:
@@ -10785,7 +10785,7 @@ gUnknown_0850AB90:
 
 	.GLOBAL gUnknown_0850AB98
 gUnknown_0850AB98:
-	.INCBIN "baserom.gba", 0x50AB98, 0x50C398-0x50AB98
+	.INCBIN "assets/sprites/gUnknown_0850AB98.8bpp"
 
 	.GLOBAL gUnknown_0850C398
 gUnknown_0850C398:
@@ -10797,7 +10797,7 @@ gUnknown_0850C5D8:
 
 	.GLOBAL gUnknown_0850C5E0
 gUnknown_0850C5E0:
-	.INCBIN "baserom.gba", 0x50C5E0, 0x5105E0-0x50C5E0
+	.INCBIN "assets/sprites/gUnknown_0850C5E0.8bpp"
 
 	.GLOBAL gUnknown_085105E0
 gUnknown_085105E0:
@@ -10809,7 +10809,7 @@ gUnknown_085106DC:
 
 	.GLOBAL gUnknown_085106E4
 gUnknown_085106E4:
-	.INCBIN "baserom.gba", 0x5106E4, 0x5122E4-0x5106E4
+	.INCBIN "assets/sprites/gUnknown_085106E4.8bpp"
 
 	.GLOBAL gUnknown_085122E4
 gUnknown_085122E4:
@@ -10821,7 +10821,7 @@ gUnknown_085123E0:
 
 	.GLOBAL gUnknown_085123E8
 gUnknown_085123E8:
-	.INCBIN "baserom.gba", 0x5123E8, 0x513FE8-0x5123E8
+	.INCBIN "assets/sprites/gUnknown_085123E8.8bpp"
 
 	.GLOBAL gUnknown_08513FE8
 gUnknown_08513FE8:
@@ -10833,7 +10833,7 @@ gUnknown_0851400C:
 
 	.GLOBAL gUnknown_08514014
 gUnknown_08514014:
-	.INCBIN "baserom.gba", 0x514014, 0x514214-0x514014
+	.INCBIN "assets/sprites/gUnknown_08514014.4bpp"
 
 	.GLOBAL gUnknown_08514214
 gUnknown_08514214:
@@ -10845,7 +10845,7 @@ gUnknown_08514478:
 
 	.GLOBAL gUnknown_08514480
 gUnknown_08514480:
-	.INCBIN "baserom.gba", 0x514480, 0x518880-0x514480
+	.INCBIN "assets/sprites/gUnknown_08514480.8bpp"
 
 	.GLOBAL gUnknown_08518880
 gUnknown_08518880:
@@ -10857,7 +10857,7 @@ gUnknown_085188C8:
 
 	.GLOBAL gUnknown_085188D0
 gUnknown_085188D0:
-	.INCBIN "baserom.gba", 0x5188D0, 0x5190D0-0x5188D0
+	.INCBIN "assets/sprites/gUnknown_085188D0.8bpp"
 
 	.GLOBAL gUnknown_085190D0
 gUnknown_085190D0:
@@ -10869,7 +10869,7 @@ gUnknown_085191F0:
 
 	.GLOBAL gUnknown_085191F8
 gUnknown_085191F8:
-	.INCBIN "baserom.gba", 0x5191F8, 0x51B1F8-0x5191F8
+	.INCBIN "assets/sprites/gUnknown_085191F8.8bpp"
 
 	.GLOBAL gUnknown_0851B1F8
 gUnknown_0851B1F8:
@@ -10881,7 +10881,7 @@ gUnknown_0851B438:
 
 	.GLOBAL gUnknown_0851B440
 gUnknown_0851B440:
-	.INCBIN "baserom.gba", 0x51B440, 0x51F440-0x51B440
+	.INCBIN "assets/sprites/gUnknown_0851B440.8bpp"
 
 	.GLOBAL gUnknown_0851F440
 gUnknown_0851F440:
@@ -10893,7 +10893,7 @@ gUnknown_0851F560:
 
 	.GLOBAL gUnknown_0851F568
 gUnknown_0851F568:
-	.INCBIN "baserom.gba", 0x51F568, 0x521568-0x51F568
+	.INCBIN "assets/sprites/gUnknown_0851F568.8bpp"
 
 	.GLOBAL gUnknown_08521568
 gUnknown_08521568:
@@ -10905,7 +10905,7 @@ gUnknown_08521688:
 
 	.GLOBAL gUnknown_08521690
 gUnknown_08521690:
-	.INCBIN "baserom.gba", 0x521690, 0x523690-0x521690
+	.INCBIN "assets/sprites/gUnknown_08521690.8bpp"
 
 	.GLOBAL gUnknown_08523690
 gUnknown_08523690:
@@ -10917,7 +10917,7 @@ gUnknown_085238D0:
 
 	.GLOBAL gUnknown_085238D8
 gUnknown_085238D8:
-	.INCBIN "baserom.gba", 0x5238D8, 0x5278D8-0x5238D8
+	.INCBIN "assets/sprites/gUnknown_085238D8.8bpp"
 
 	.GLOBAL gUnknown_085278D8
 gUnknown_085278D8:
@@ -10929,7 +10929,7 @@ gUnknown_08527B18:
 
 	.GLOBAL gUnknown_08527B20
 gUnknown_08527B20:
-	.INCBIN "baserom.gba", 0x527B20, 0x52BB20-0x527B20
+	.INCBIN "assets/sprites/gUnknown_08527B20.8bpp"
 
 	.GLOBAL gUnknown_0852BB20
 gUnknown_0852BB20:
@@ -10941,7 +10941,7 @@ gUnknown_0852BD60:
 
 	.GLOBAL gUnknown_0852BD68
 gUnknown_0852BD68:
-	.INCBIN "baserom.gba", 0x52BD68, 0x52FD68-0x52BD68
+	.INCBIN "assets/sprites/gUnknown_0852BD68.8bpp"
 
 	.GLOBAL gUnknown_0852FD68
 gUnknown_0852FD68:
@@ -10953,7 +10953,7 @@ gUnknown_0852FFA8:
 
 	.GLOBAL gUnknown_0852FFB0
 gUnknown_0852FFB0:
-	.INCBIN "baserom.gba", 0x52FFB0, 0x533FB0-0x52FFB0
+	.INCBIN "assets/sprites/gUnknown_0852FFB0.8bpp"
 
 	.GLOBAL gUnknown_08533FB0
 gUnknown_08533FB0:
@@ -10965,7 +10965,7 @@ gUnknown_085341F0:
 
 	.GLOBAL gUnknown_085341F8
 gUnknown_085341F8:
-	.INCBIN "baserom.gba", 0x5341F8, 0x537DF8-0x5341F8
+	.INCBIN "assets/sprites/gUnknown_085341F8.8bpp"
 
 	.GLOBAL gUnknown_08537DF8
 gUnknown_08537DF8:
@@ -10977,7 +10977,7 @@ gUnknown_08538038:
 
 	.GLOBAL gUnknown_08538040
 gUnknown_08538040:
-	.INCBIN "baserom.gba", 0x538040, 0x53C040-0x538040
+	.INCBIN "assets/sprites/gUnknown_08538040.8bpp"
 
 	.GLOBAL gUnknown_0853C040
 gUnknown_0853C040:
@@ -10989,7 +10989,7 @@ gUnknown_0853C3A0:
 
 	.GLOBAL gUnknown_0853C3A8
 gUnknown_0853C3A8:
-	.INCBIN "baserom.gba", 0x53C3A8, 0x5423A8-0x53C3A8
+	.INCBIN "assets/sprites/gUnknown_0853C3A8.8bpp"
 
 	.GLOBAL gUnknown_085423A8
 gUnknown_085423A8:
@@ -11001,7 +11001,7 @@ gUnknown_08542414:
 
 	.GLOBAL gUnknown_0854241C
 gUnknown_0854241C:
-	.INCBIN "baserom.gba", 0x54241C, 0x54301C-0x54241C
+	.INCBIN "assets/sprites/gUnknown_0854241C.8bpp"
 
 	.GLOBAL gUnknown_0854301C
 gUnknown_0854301C:
@@ -11013,7 +11013,7 @@ gUnknown_0854337C:
 
 	.GLOBAL gUnknown_08543384
 gUnknown_08543384:
-	.INCBIN "baserom.gba", 0x543384, 0x549384-0x543384
+	.INCBIN "assets/sprites/gUnknown_08543384.8bpp"
 
 	.GLOBAL gUnknown_08549384
 gUnknown_08549384:
@@ -11025,7 +11025,7 @@ gUnknown_08549534:
 
 	.GLOBAL gUnknown_0854953C
 gUnknown_0854953C:
-	.INCBIN "baserom.gba", 0x54953C, 0x54C53C-0x54953C
+	.INCBIN "assets/sprites/gUnknown_0854953C.8bpp"
 
 	.GLOBAL gUnknown_0854C53C
 gUnknown_0854C53C:
@@ -11037,7 +11037,7 @@ gUnknown_0854C77C:
 
 	.GLOBAL gUnknown_0854C784
 gUnknown_0854C784:
-	.INCBIN "baserom.gba", 0x54C784, 0x550784-0x54C784
+	.INCBIN "assets/sprites/gUnknown_0854C784.8bpp"
 
 	.GLOBAL gUnknown_08550784
 gUnknown_08550784:
@@ -11049,7 +11049,7 @@ gUnknown_085509C4:
 
 	.GLOBAL gUnknown_085509CC
 gUnknown_085509CC:
-	.INCBIN "baserom.gba", 0x5509CC, 0x5549CC-0x5509CC
+	.INCBIN "assets/sprites/gUnknown_085509CC.8bpp"
 
 	.GLOBAL gUnknown_085549CC
 gUnknown_085549CC:
@@ -11061,7 +11061,7 @@ gUnknown_08554D74:
 
 	.GLOBAL gUnknown_08554D7C
 gUnknown_08554D7C:
-	.INCBIN "baserom.gba", 0x554D7C, 0x55B57C-0x554D7C
+	.INCBIN "assets/sprites/gUnknown_08554D7C.8bpp"
 
 	.GLOBAL gUnknown_0855B57C
 gUnknown_0855B57C:
@@ -11073,7 +11073,7 @@ gUnknown_0855B84C:
 
 	.GLOBAL gUnknown_0855B854
 gUnknown_0855B854:
-	.INCBIN "baserom.gba", 0x55B854, 0x560854-0x55B854
+	.INCBIN "assets/sprites/gUnknown_0855B854.8bpp"
 
 	.GLOBAL gUnknown_08560854
 gUnknown_08560854:
@@ -11085,7 +11085,7 @@ gUnknown_08560ADC:
 
 	.GLOBAL gUnknown_08560AE4
 gUnknown_08560AE4:
-	.INCBIN "baserom.gba", 0x560AE4, 0x5652E4-0x560AE4
+	.INCBIN "assets/sprites/gUnknown_08560AE4.8bpp"
 
 	.GLOBAL gUnknown_085652E4
 gUnknown_085652E4:
@@ -11097,7 +11097,7 @@ gUnknown_08565524:
 
 	.GLOBAL gUnknown_0856552C
 gUnknown_0856552C:
-	.INCBIN "baserom.gba", 0x56552C, 0x56952C-0x56552C
+	.INCBIN "assets/sprites/gUnknown_0856552C.8bpp"
 
 	.GLOBAL gUnknown_0856952C
 gUnknown_0856952C:
@@ -11109,7 +11109,7 @@ gUnknown_0856976C:
 
 	.GLOBAL gUnknown_08569774
 gUnknown_08569774:
-	.INCBIN "baserom.gba", 0x569774, 0x56D774-0x569774
+	.INCBIN "assets/sprites/gUnknown_08569774.8bpp"
 
 	.GLOBAL gUnknown_0856D774
 gUnknown_0856D774:
@@ -11121,7 +11121,7 @@ gUnknown_0856D924:
 
 	.GLOBAL gUnknown_0856D92C
 gUnknown_0856D92C:
-	.INCBIN "baserom.gba", 0x56D92C, 0x57092C-0x56D92C
+	.INCBIN "assets/sprites/gUnknown_0856D92C.8bpp"
 
 	.GLOBAL gUnknown_0857092C
 gUnknown_0857092C:
@@ -11133,7 +11133,7 @@ gUnknown_08570AB8:
 
 	.GLOBAL gUnknown_08570AC0
 gUnknown_08570AC0:
-	.INCBIN "baserom.gba", 0x570AC0, 0x5736C0-0x570AC0
+	.INCBIN "assets/sprites/gUnknown_08570AC0.8bpp"
 
 	.GLOBAL gUnknown_085736C0
 gUnknown_085736C0:
@@ -11145,7 +11145,7 @@ gUnknown_085737E0:
 
 	.GLOBAL gUnknown_085737E8
 gUnknown_085737E8:
-	.INCBIN "baserom.gba", 0x5737E8, 0x5757E8-0x5737E8
+	.INCBIN "assets/sprites/gUnknown_085737E8.8bpp"
 
 	.GLOBAL gUnknown_085757E8
 gUnknown_085757E8:
@@ -11157,7 +11157,7 @@ gUnknown_08575908:
 
 	.GLOBAL gUnknown_08575910
 gUnknown_08575910:
-	.INCBIN "baserom.gba", 0x575910, 0x577910-0x575910
+	.INCBIN "assets/sprites/gUnknown_08575910.8bpp"
 
 	.GLOBAL gUnknown_08577910
 gUnknown_08577910:
@@ -11169,7 +11169,7 @@ gUnknown_08577A30:
 
 	.GLOBAL gUnknown_08577A38
 gUnknown_08577A38:
-	.INCBIN "baserom.gba", 0x577A38, 0x579A38-0x577A38
+	.INCBIN "assets/sprites/gUnknown_08577A38.8bpp"
 
 	.GLOBAL gUnknown_08579A38
 gUnknown_08579A38:
@@ -11181,7 +11181,7 @@ gUnknown_08579C78:
 
 	.GLOBAL gUnknown_08579C80
 gUnknown_08579C80:
-	.INCBIN "baserom.gba", 0x579C80, 0x57A480-0x579C80
+	.INCBIN "assets/sprites/gUnknown_08579C80.8bpp"
 
 	.GLOBAL gUnknown_0857A480
 gUnknown_0857A480:
@@ -11193,7 +11193,7 @@ gUnknown_0857A5A0:
 
 	.GLOBAL gUnknown_0857A5A8
 gUnknown_0857A5A8:
-	.INCBIN "baserom.gba", 0x57A5A8, 0x57ADA8-0x57A5A8
+	.INCBIN "assets/sprites/gUnknown_0857A5A8.8bpp"
 
 	.GLOBAL gUnknown_0857ADA8
 gUnknown_0857ADA8:
@@ -11205,7 +11205,7 @@ gUnknown_0857AFE8:
 
 	.GLOBAL gUnknown_0857AFF0
 gUnknown_0857AFF0:
-	.INCBIN "baserom.gba", 0x57AFF0, 0x57BFF0-0x57AFF0
+	.INCBIN "assets/sprites/gUnknown_0857AFF0.8bpp"
 
 	.GLOBAL gUnknown_0857BFF0
 gUnknown_0857BFF0:
@@ -11217,7 +11217,7 @@ gUnknown_0857C350:
 
 	.GLOBAL gUnknown_0857C358
 gUnknown_0857C358:
-	.INCBIN "baserom.gba", 0x57C358, 0x57DB58-0x57C358
+	.INCBIN "assets/sprites/gUnknown_0857C358.8bpp"
 
 	.GLOBAL gUnknown_0857DB58
 gUnknown_0857DB58:
@@ -11229,7 +11229,7 @@ gUnknown_0857E08C:
 
 	.GLOBAL gUnknown_0857E094
 gUnknown_0857E094:
-	.INCBIN "baserom.gba", 0x57E094, 0x580094-0x57E094
+	.INCBIN "assets/sprites/gUnknown_0857E094.8bpp"
 
 	.GLOBAL gUnknown_08580094
 gUnknown_08580094:
@@ -11241,7 +11241,7 @@ gUnknown_085809B8:
 
 	.GLOBAL gUnknown_085809C0
 gUnknown_085809C0:
-	.INCBIN "baserom.gba", 0x5809C0, 0x5829C0-0x5809C0
+	.INCBIN "assets/sprites/gUnknown_085809C0.8bpp"
 
 	.GLOBAL gUnknown_085829C0
 gUnknown_085829C0:
@@ -11253,7 +11253,7 @@ gUnknown_08582FA8:
 
 	.GLOBAL gUnknown_08582FB0
 gUnknown_08582FB0:
-	.INCBIN "baserom.gba", 0x582FB0, 0x583BB0-0x582FB0
+	.INCBIN "assets/sprites/gUnknown_08582FB0.8bpp"
 
 	.GLOBAL gUnknown_08583BB0
 gUnknown_08583BB0:
@@ -11265,7 +11265,7 @@ gUnknown_08583E80:
 
 	.GLOBAL gUnknown_08583E88
 gUnknown_08583E88:
-	.INCBIN "baserom.gba", 0x583E88, 0x585088-0x583E88
+	.INCBIN "assets/sprites/gUnknown_08583E88.8bpp"
 
 	.GLOBAL gUnknown_08585088
 gUnknown_08585088:
@@ -11277,7 +11277,7 @@ gUnknown_085852C8:
 
 	.GLOBAL gUnknown_085852D0
 gUnknown_085852D0:
-	.INCBIN "baserom.gba", 0x5852D0, 0x5862D0-0x5852D0
+	.INCBIN "assets/sprites/gUnknown_085852D0.8bpp"
 
 	.GLOBAL gUnknown_085862D0
 gUnknown_085862D0:
@@ -11289,7 +11289,7 @@ gUnknown_08586630:
 
 	.GLOBAL gUnknown_08586638
 gUnknown_08586638:
-	.INCBIN "baserom.gba", 0x586638, 0x587E38-0x586638
+	.INCBIN "assets/sprites/gUnknown_08586638.8bpp"
 
 	.GLOBAL gUnknown_08587E38
 gUnknown_08587E38:
@@ -11301,7 +11301,7 @@ gUnknown_085882B8:
 
 	.GLOBAL gUnknown_085882C0
 gUnknown_085882C0:
-	.INCBIN "baserom.gba", 0x5882C0, 0x5902C0-0x5882C0
+	.INCBIN "assets/sprites/gUnknown_085882C0.8bpp"
 
 	.GLOBAL gUnknown_085902C0
 gUnknown_085902C0:
@@ -11313,7 +11313,7 @@ gUnknown_08590740:
 
 	.GLOBAL gUnknown_08590748
 gUnknown_08590748:
-	.INCBIN "baserom.gba", 0x590748, 0x592748-0x590748
+	.INCBIN "assets/sprites/gUnknown_08590748.8bpp"
 
 	.GLOBAL gUnknown_08592748
 gUnknown_08592748:
@@ -11325,7 +11325,7 @@ gUnknown_08592F28:
 
 	.GLOBAL gUnknown_08592F30
 gUnknown_08592F30:
-	.INCBIN "baserom.gba", 0x592F30, 0x595730-0x592F30
+	.INCBIN "assets/sprites/gUnknown_08592F30.8bpp"
 
 	.GLOBAL gUnknown_08595730
 gUnknown_08595730:
@@ -11337,7 +11337,7 @@ gUnknown_08595970:
 
 	.GLOBAL gUnknown_08595978
 gUnknown_08595978:
-	.INCBIN "baserom.gba", 0x595978, 0x596978-0x595978
+	.INCBIN "assets/sprites/gUnknown_08595978.8bpp"
 
 	.GLOBAL gUnknown_08596978
 gUnknown_08596978:
@@ -11349,7 +11349,7 @@ gUnknown_08596A98:
 
 	.GLOBAL gUnknown_08596AA0
 gUnknown_08596AA0:
-	.INCBIN "baserom.gba", 0x596AA0, 0x5972A0-0x596AA0
+	.INCBIN "assets/sprites/gUnknown_08596AA0.8bpp"
 
 	.GLOBAL gUnknown_085972A0
 gUnknown_085972A0:
@@ -11361,7 +11361,7 @@ gUnknown_085973C0:
 
 	.GLOBAL gUnknown_085973C8
 gUnknown_085973C8:
-	.INCBIN "baserom.gba", 0x5973C8, 0x597BC8-0x5973C8
+	.INCBIN "assets/sprites/gUnknown_085973C8.8bpp"
 
 	.GLOBAL gUnknown_08597BC8
 gUnknown_08597BC8:
@@ -11373,7 +11373,7 @@ gUnknown_08597E08:
 
 	.GLOBAL gUnknown_08597E10
 gUnknown_08597E10:
-	.INCBIN "baserom.gba", 0x597E10, 0x598C10-0x597E10
+	.INCBIN "assets/sprites/gUnknown_08597E10.8bpp"
 
 	.GLOBAL gUnknown_08598C10
 gUnknown_08598C10:
@@ -11385,7 +11385,7 @@ gUnknown_08599090:
 
 	.GLOBAL gUnknown_08599098
 gUnknown_08599098:
-	.INCBIN "baserom.gba", 0x599098, 0x59B098-0x599098
+	.INCBIN "assets/sprites/gUnknown_08599098.8bpp"
 
 	.GLOBAL gUnknown_0859B098
 gUnknown_0859B098:
@@ -11397,7 +11397,7 @@ gUnknown_0859B3F8:
 
 	.GLOBAL gUnknown_0859B400
 gUnknown_0859B400:
-	.INCBIN "baserom.gba", 0x59B400, 0x59CC00-0x59B400
+	.INCBIN "assets/sprites/gUnknown_0859B400.8bpp"
 
 	.GLOBAL gUnknown_0859CC00
 gUnknown_0859CC00:
@@ -11409,7 +11409,7 @@ gUnknown_0859CE40:
 
 	.GLOBAL gUnknown_0859CE48
 gUnknown_0859CE48:
-	.INCBIN "baserom.gba", 0x59CE48, 0x59DD48-0x59CE48
+	.INCBIN "assets/sprites/gUnknown_0859CE48.8bpp"
 
 	.GLOBAL gUnknown_0859DD48
 gUnknown_0859DD48:
@@ -11421,7 +11421,7 @@ gUnknown_0859E114:
 
 	.GLOBAL gUnknown_0859E11C
 gUnknown_0859E11C:
-	.INCBIN "baserom.gba", 0x59E11C, 0x59FC1C-0x59E11C
+	.INCBIN "assets/sprites/gUnknown_0859E11C.8bpp"
 
 	.GLOBAL gUnknown_0859FC1C
 gUnknown_0859FC1C:
@@ -11433,7 +11433,7 @@ gUnknown_0859FD3C:
 
 	.GLOBAL gUnknown_0859FD44
 gUnknown_0859FD44:
-	.INCBIN "baserom.gba", 0x59FD44, 0x5A0544-0x59FD44
+	.INCBIN "assets/sprites/gUnknown_0859FD44.8bpp"
 
 	.GLOBAL gUnknown_085A0544
 gUnknown_085A0544:
@@ -11445,7 +11445,7 @@ gUnknown_085A0568:
 
 	.GLOBAL gUnknown_085A0570
 gUnknown_085A0570:
-	.INCBIN "baserom.gba", 0x5A0570, 0x5A0770-0x5A0570
+	.INCBIN "assets/sprites/gUnknown_085A0570.8bpp"
 
 	.GLOBAL gUnknown_085A0770
 gUnknown_085A0770:
@@ -11457,7 +11457,7 @@ gUnknown_085A0794:
 
 	.GLOBAL gUnknown_085A079C
 gUnknown_085A079C:
-	.INCBIN "baserom.gba", 0x5A079C, 0x5A099C-0x5A079C
+	.INCBIN "assets/sprites/gUnknown_085A079C.8bpp"
 
 	.GLOBAL gUnknown_085A099C
 gUnknown_085A099C:
@@ -11469,7 +11469,7 @@ gUnknown_085A09C0:
 
 	.GLOBAL gUnknown_085A09C8
 gUnknown_085A09C8:
-	.INCBIN "baserom.gba", 0x5A09C8, 0x5A0BC8-0x5A09C8
+	.INCBIN "assets/sprites/gUnknown_085A09C8.8bpp"
 
 	.GLOBAL gUnknown_085A0BC8
 gUnknown_085A0BC8:
@@ -11481,7 +11481,7 @@ gUnknown_085A0C58:
 
 	.GLOBAL gUnknown_085A0C60
 gUnknown_085A0C60:
-	.INCBIN "baserom.gba", 0x5A0C60, 0x5A1060-0x5A0C60
+	.INCBIN "assets/sprites/gUnknown_085A0C60.8bpp"
 
 	.GLOBAL gUnknown_085A1060
 gUnknown_085A1060:
@@ -11493,7 +11493,7 @@ gUnknown_085A10A8:
 
 	.GLOBAL gUnknown_085A10B0
 gUnknown_085A10B0:
-	.INCBIN "baserom.gba", 0x5A10B0, 0x5A11B0-0x5A10B0
+	.INCBIN "assets/sprites/gUnknown_085A10B0.4bpp"
 
 	.GLOBAL gUnknown_085A11B0
 gUnknown_085A11B0:
@@ -11505,7 +11505,7 @@ gUnknown_085A121C:
 
 	.GLOBAL gUnknown_085A1224
 gUnknown_085A1224:
-	.INCBIN "baserom.gba", 0x5A1224, 0x5A1E24-0x5A1224
+	.INCBIN "assets/sprites/gUnknown_085A1224.8bpp"
 
 	.GLOBAL gUnknown_085A1E24
 gUnknown_085A1E24:
@@ -11517,7 +11517,7 @@ gUnknown_085A1F44:
 
 	.GLOBAL gUnknown_085A1F4C
 gUnknown_085A1F4C:
-	.INCBIN "baserom.gba", 0x5A1F4C, 0x5A274C-0x5A1F4C
+	.INCBIN "assets/sprites/gUnknown_085A1F4C.8bpp"
 
 	.GLOBAL gUnknown_085A274C
 gUnknown_085A274C:
@@ -11529,7 +11529,7 @@ gUnknown_085A298C:
 
 	.GLOBAL gUnknown_085A2994
 gUnknown_085A2994:
-	.INCBIN "baserom.gba", 0x5A2994, 0x5A3994-0x5A2994
+	.INCBIN "assets/sprites/gUnknown_085A2994.8bpp"
 
 	.GLOBAL gUnknown_085A3994
 gUnknown_085A3994:
@@ -11541,7 +11541,7 @@ gUnknown_085A3BD4:
 
 	.GLOBAL gUnknown_085A3BDC
 gUnknown_085A3BDC:
-	.INCBIN "baserom.gba", 0x5A3BDC, 0x5A4BDC-0x5A3BDC
+	.INCBIN "assets/sprites/gUnknown_085A3BDC.8bpp"
 
 	.GLOBAL gUnknown_085A4BDC
 gUnknown_085A4BDC:
@@ -11553,7 +11553,7 @@ gUnknown_085A5CBC:
 
 	.GLOBAL gUnknown_085A5CC4
 gUnknown_085A5CC4:
-	.INCBIN "baserom.gba", 0x5A5CC4, 0x5A74C4-0x5A5CC4
+	.INCBIN "assets/sprites/gUnknown_085A5CC4.8bpp"
 
 	.GLOBAL gUnknown_085A74C4
 gUnknown_085A74C4:
@@ -11565,7 +11565,7 @@ gUnknown_085A7674:
 
 	.GLOBAL gUnknown_085A767C
 gUnknown_085A767C:
-	.INCBIN "baserom.gba", 0x5A767C, 0x5A827C-0x5A767C
+	.INCBIN "assets/sprites/gUnknown_085A767C.8bpp"
 
 	.GLOBAL gUnknown_085A827C
 gUnknown_085A827C:
@@ -11577,7 +11577,7 @@ gUnknown_085A842C:
 
 	.GLOBAL gUnknown_085A8434
 gUnknown_085A8434:
-	.INCBIN "baserom.gba", 0x5A8434, 0x5A8A34-0x5A8434
+	.INCBIN "assets/sprites/gUnknown_085A8434.4bpp"
 
 	.GLOBAL gUnknown_085A8A34
 gUnknown_085A8A34:
@@ -11589,7 +11589,7 @@ gUnknown_085A8BE4:
 
 	.GLOBAL gUnknown_085A8BEC
 gUnknown_085A8BEC:
-	.INCBIN "baserom.gba", 0x5A8BEC, 0x5A91EC-0x5A8BEC
+	.INCBIN "assets/sprites/gUnknown_085A8BEC.4bpp"
 
 	.GLOBAL gUnknown_085A91EC
 gUnknown_085A91EC:
@@ -11601,7 +11601,7 @@ gUnknown_085A930C:
 
 	.GLOBAL gUnknown_085A9314
 gUnknown_085A9314:
-	.INCBIN "baserom.gba", 0x5A9314, 0x5A9B14-0x5A9314
+	.INCBIN "assets/sprites/gUnknown_085A9314.8bpp"
 
 	.GLOBAL gUnknown_085A9B14
 gUnknown_085A9B14:
@@ -11613,7 +11613,7 @@ gUnknown_085A9CE8:
 
 	.GLOBAL gUnknown_085A9CF0
 gUnknown_085A9CF0:
-	.INCBIN "baserom.gba", 0x5A9CF0, 0x5AA070-0x5A9CF0
+	.INCBIN "assets/sprites/gUnknown_085A9CF0.4bpp"
 
 	.GLOBAL gUnknown_085AA070
 gUnknown_085AA070:
@@ -11625,7 +11625,7 @@ gUnknown_085AA220:
 
 	.GLOBAL gUnknown_085AA228
 gUnknown_085AA228:
-	.INCBIN "baserom.gba", 0x5AA228, 0x5AAE28-0x5AA228
+	.INCBIN "assets/sprites/gUnknown_085AA228.8bpp"
 
 	.GLOBAL gUnknown_085AAE28
 gUnknown_085AAE28:
@@ -11637,7 +11637,7 @@ gUnknown_085AB068:
 
 	.GLOBAL gUnknown_085AB070
 gUnknown_085AB070:
-	.INCBIN "baserom.gba", 0x5AB070, 0x5ABF70-0x5AB070
+	.INCBIN "assets/sprites/gUnknown_085AB070.8bpp"
 
 	.GLOBAL gUnknown_085ABF70
 gUnknown_085ABF70:
@@ -11649,7 +11649,7 @@ gUnknown_085AC1B0:
 
 	.GLOBAL gUnknown_085AC1B8
 gUnknown_085AC1B8:
-	.INCBIN "baserom.gba", 0x5AC1B8, 0x5AD1B8-0x5AC1B8
+	.INCBIN "assets/sprites/gUnknown_085AC1B8.8bpp"
 
 	.GLOBAL gUnknown_085AD1B8
 gUnknown_085AD1B8:
@@ -11661,7 +11661,7 @@ gUnknown_085AD224:
 
 	.GLOBAL gUnknown_085AD22C
 gUnknown_085AD22C:
-	.INCBIN "baserom.gba", 0x5AD22C, 0x5AD3AC-0x5AD22C
+	.INCBIN "assets/sprites/gUnknown_085AD22C.4bpp"
 
 	.GLOBAL gUnknown_085AD3AC
 gUnknown_085AD3AC:
@@ -11673,7 +11673,7 @@ gUnknown_085AD67C:
 
 	.GLOBAL gUnknown_085AD684
 gUnknown_085AD684:
-	.INCBIN "baserom.gba", 0x5AD684, 0x5AE084-0x5AD684
+	.INCBIN "assets/sprites/gUnknown_085AD684.4bpp"
 
 	.GLOBAL gUnknown_085AE084
 gUnknown_085AE084:
@@ -11685,7 +11685,7 @@ gUnknown_085AE0A8:
 
 	.GLOBAL gUnknown_085AE0B0
 gUnknown_085AE0B0:
-	.INCBIN "baserom.gba", 0x5AE0B0, 0x5AE1B0-0x5AE0B0
+	.INCBIN "assets/sprites/gUnknown_085AE0B0.8bpp"
 
 	.GLOBAL gUnknown_085AE1B0
 gUnknown_085AE1B0:
@@ -11697,7 +11697,7 @@ gUnknown_085AE510:
 
 	.GLOBAL gUnknown_085AE518
 gUnknown_085AE518:
-	.INCBIN "baserom.gba", 0x5AE518, 0x5AFD18-0x5AE518
+	.INCBIN "assets/sprites/gUnknown_085AE518.8bpp"
 
 	.GLOBAL gUnknown_085AFD18
 gUnknown_085AFD18:
@@ -11709,7 +11709,7 @@ gUnknown_085B0078:
 
 	.GLOBAL gUnknown_085B0080
 gUnknown_085B0080:
-	.INCBIN "baserom.gba", 0x5B0080, 0x5B1880-0x5B0080
+	.INCBIN "assets/sprites/gUnknown_085B0080.8bpp"
 
 	.GLOBAL gUnknown_085B1880
 gUnknown_085B1880:
@@ -11721,7 +11721,7 @@ gUnknown_085B18A4:
 
 	.GLOBAL gUnknown_085B18AC
 gUnknown_085B18AC:
-	.INCBIN "baserom.gba", 0x5B18AC, 0x5B192C-0x5B18AC
+	.INCBIN "assets/sprites/gUnknown_085B18AC.4bpp"
 
 	.GLOBAL gUnknown_085B192C
 gUnknown_085B192C:
@@ -11733,7 +11733,7 @@ gUnknown_085B1A4C:
 
 	.GLOBAL gUnknown_085B1A54
 gUnknown_085B1A54:
-	.INCBIN "baserom.gba", 0x5B1A54, 0x5B2254-0x5B1A54
+	.INCBIN "assets/sprites/gUnknown_085B1A54.8bpp"
 
 	.GLOBAL gUnknown_085B2254
 gUnknown_085B2254:
@@ -11745,7 +11745,7 @@ gUnknown_085B2764:
 
 	.GLOBAL gUnknown_085B276C
 gUnknown_085B276C:
-	.INCBIN "baserom.gba", 0x5B276C, 0x5B496C-0x5B276C
+	.INCBIN "assets/sprites/gUnknown_085B276C.8bpp"
 
 	.GLOBAL gUnknown_085B496C
 gUnknown_085B496C:
@@ -11757,7 +11757,7 @@ gUnknown_085B4CA8:
 
 	.GLOBAL gUnknown_085B4CB0
 gUnknown_085B4CB0:
-	.INCBIN "baserom.gba", 0x5B4CB0, 0x5B60B0-0x5B4CB0
+	.INCBIN "assets/sprites/gUnknown_085B4CB0.8bpp"
 
 	.GLOBAL gUnknown_085B60B0
 gUnknown_085B60B0:
@@ -11769,7 +11769,7 @@ gUnknown_085B61D0:
 
 	.GLOBAL gUnknown_085B61D8
 gUnknown_085B61D8:
-	.INCBIN "baserom.gba", 0x5B61D8, 0x5B81D8-0x5B61D8
+	.INCBIN "assets/sprites/gUnknown_085B61D8.8bpp"
 
 	.GLOBAL gUnknown_085B81D8
 gUnknown_085B81D8:
@@ -11781,7 +11781,7 @@ gUnknown_085B8364:
 
 	.GLOBAL gUnknown_085B836C
 gUnknown_085B836C:
-	.INCBIN "baserom.gba", 0x5B836C, 0x5B8E6C-0x5B836C
+	.INCBIN "assets/sprites/gUnknown_085B836C.8bpp"
 
 	.GLOBAL gUnknown_085B8E6C
 gUnknown_085B8E6C:
@@ -11793,7 +11793,7 @@ gUnknown_085B8F44:
 
 	.GLOBAL gUnknown_085B8F4C
 gUnknown_085B8F4C:
-	.INCBIN "baserom.gba", 0x5B8F4C, 0x5B954C-0x5B8F4C
+	.INCBIN "assets/sprites/gUnknown_085B8F4C.8bpp"
 
 	.GLOBAL gUnknown_085B954C
 gUnknown_085B954C:
@@ -11805,7 +11805,7 @@ gUnknown_085BA188:
 
 	.GLOBAL gUnknown_085BA190
 gUnknown_085BA190:
-	.INCBIN "baserom.gba", 0x5BA190, 0x5BC190-0x5BA190
+	.INCBIN "assets/sprites/gUnknown_085BA190.8bpp"
 
 	.GLOBAL gUnknown_085BC190
 gUnknown_085BC190:
@@ -11817,7 +11817,7 @@ gUnknown_085BC3D0:
 
 	.GLOBAL gUnknown_085BC3D8
 gUnknown_085BC3D8:
-	.INCBIN "baserom.gba", 0x5BC3D8, 0x5BD3D8-0x5BC3D8
+	.INCBIN "assets/sprites/gUnknown_085BC3D8.8bpp"
 
 	.GLOBAL gUnknown_085BD3D8
 gUnknown_085BD3D8:
@@ -11829,7 +11829,7 @@ gUnknown_085BD588:
 
 	.GLOBAL gUnknown_085BD590
 gUnknown_085BD590:
-	.INCBIN "baserom.gba", 0x5BD590, 0x5BE190-0x5BD590
+	.INCBIN "assets/sprites/gUnknown_085BD590.8bpp"
 
 	.GLOBAL gUnknown_085BE190
 gUnknown_085BE190:
@@ -11841,7 +11841,7 @@ gUnknown_085BE2B0:
 
 	.GLOBAL gUnknown_085BE2B8
 gUnknown_085BE2B8:
-	.INCBIN "baserom.gba", 0x5BE2B8, 0x5BF2B8-0x5BE2B8
+	.INCBIN "assets/sprites/gUnknown_085BE2B8.4bpp"
 
 	.GLOBAL gUnknown_085BF2B8
 gUnknown_085BF2B8:
@@ -11853,7 +11853,7 @@ gUnknown_085BF3B4:
 
 	.GLOBAL gUnknown_085BF3BC
 gUnknown_085BF3BC:
-	.INCBIN "baserom.gba", 0x5BF3BC, 0x5C01BC-0x5BF3BC
+	.INCBIN "assets/sprites/gUnknown_085BF3BC.4bpp"
 
 	.GLOBAL gUnknown_085C01BC
 gUnknown_085C01BC:
@@ -11865,7 +11865,7 @@ gUnknown_085C02DC:
 
 	.GLOBAL gUnknown_085C02E4
 gUnknown_085C02E4:
-	.INCBIN "baserom.gba", 0x5C02E4, 0x5C12E4-0x5C02E4
+	.INCBIN "assets/sprites/gUnknown_085C02E4.4bpp"
 
 	.GLOBAL gUnknown_085C12E4
 gUnknown_085C12E4:
@@ -11877,7 +11877,7 @@ gUnknown_085C1404:
 
 	.GLOBAL gUnknown_085C140C
 gUnknown_085C140C:
-	.INCBIN "baserom.gba", 0x5C140C, 0x5C240C-0x5C140C
+	.INCBIN "assets/sprites/gUnknown_085C140C.4bpp"
 
 	.GLOBAL gUnknown_085C240C
 gUnknown_085C240C:
@@ -11889,7 +11889,7 @@ gUnknown_085C2454:
 
 	.GLOBAL gUnknown_085C245C
 gUnknown_085C245C:
-	.INCBIN "baserom.gba", 0x5C245C, 0x5C255C-0x5C245C
+	.INCBIN "assets/sprites/gUnknown_085C245C.4bpp"
 
 	.GLOBAL gUnknown_085C255C
 gUnknown_085C255C:
@@ -11901,7 +11901,7 @@ gUnknown_085C2580:
 
 	.GLOBAL gUnknown_085C2588
 gUnknown_085C2588:
-	.INCBIN "baserom.gba", 0x5C2588, 0x5C2608-0x5C2588
+	.INCBIN "assets/sprites/gUnknown_085C2588.4bpp"
 
 	.GLOBAL gUnknown_085C2608
 gUnknown_085C2608:
@@ -11913,7 +11913,7 @@ gUnknown_085C262C:
 
 	.GLOBAL gUnknown_085C2634
 gUnknown_085C2634:
-	.INCBIN "baserom.gba", 0x5C2634, 0x5C26B4-0x5C2634
+	.INCBIN "assets/sprites/gUnknown_085C2634.4bpp"
 
 	.GLOBAL gUnknown_085C26B4
 gUnknown_085C26B4:
@@ -11925,7 +11925,7 @@ gUnknown_085C26D8:
 
 	.GLOBAL gUnknown_085C26E0
 gUnknown_085C26E0:
-	.INCBIN "baserom.gba", 0x5C26E0, 0x5C2760-0x5C26E0
+	.INCBIN "assets/sprites/gUnknown_085C26E0.4bpp"
 
 	.GLOBAL gUnknown_085C2760
 gUnknown_085C2760:
@@ -11937,7 +11937,7 @@ gUnknown_085C2784:
 
 	.GLOBAL gUnknown_085C278C
 gUnknown_085C278C:
-	.INCBIN "baserom.gba", 0x5C278C, 0x5C280C-0x5C278C
+	.INCBIN "assets/sprites/gUnknown_085C278C.4bpp"
 
 	.GLOBAL gUnknown_085C280C
 gUnknown_085C280C:
@@ -11949,7 +11949,7 @@ gUnknown_085C2830:
 
 	.GLOBAL gUnknown_085C2838
 gUnknown_085C2838:
-	.INCBIN "baserom.gba", 0x5C2838, 0x5C2858-0x5C2838
+	.INCBIN "assets/sprites/gUnknown_085C2838.4bpp"
 
 	.GLOBAL gUnknown_085C2858
 gUnknown_085C2858:
@@ -11961,7 +11961,7 @@ gUnknown_085C28A0:
 
 	.GLOBAL gUnknown_085C28A8
 gUnknown_085C28A8:
-	.INCBIN "baserom.gba", 0x5C28A8, 0x5C29A8-0x5C28A8
+	.INCBIN "assets/sprites/gUnknown_085C28A8.4bpp"
 
 	.GLOBAL gUnknown_085C29A8
 gUnknown_085C29A8:
@@ -11973,7 +11973,7 @@ gUnknown_085C29F0:
 
 	.GLOBAL gUnknown_085C29F8
 gUnknown_085C29F8:
-	.INCBIN "baserom.gba", 0x5C29F8, 0x5C2AF8-0x5C29F8
+	.INCBIN "assets/sprites/gUnknown_085C29F8.4bpp"
 
 	.GLOBAL gUnknown_085C2AF8
 gUnknown_085C2AF8:
@@ -11985,7 +11985,7 @@ gUnknown_085C2BAC:
 
 	.GLOBAL gUnknown_085C2BB4
 gUnknown_085C2BB4:
-	.INCBIN "baserom.gba", 0x5C2BB4, 0x5C2E34-0x5C2BB4
+	.INCBIN "assets/sprites/gUnknown_085C2BB4.4bpp"
 
 	.GLOBAL gUnknown_085C2E34
 gUnknown_085C2E34:
@@ -11997,7 +11997,7 @@ gUnknown_085C2EE8:
 
 	.GLOBAL gUnknown_085C2EF0
 gUnknown_085C2EF0:
-	.INCBIN "baserom.gba", 0x5C2EF0, 0x5C2F90-0x5C2EF0
+	.INCBIN "assets/sprites/gUnknown_085C2EF0.4bpp"
 
 	.GLOBAL gUnknown_085C2F90
 gUnknown_085C2F90:
@@ -12009,7 +12009,7 @@ gUnknown_085C3218:
 
 	.GLOBAL gUnknown_085C3220
 gUnknown_085C3220:
-	.INCBIN "baserom.gba", 0x5C3220, 0x5C7220-0x5C3220
+	.INCBIN "assets/sprites/gUnknown_085C3220.4bpp"
 
 	.GLOBAL gUnknown_085C7220
 gUnknown_085C7220:
@@ -12021,7 +12021,7 @@ gUnknown_085C7244:
 
 	.GLOBAL gUnknown_085C724C
 gUnknown_085C724C:
-	.INCBIN "baserom.gba", 0x5C724C, 0x5C764C-0x5C724C
+	.INCBIN "assets/sprites/gUnknown_085C724C.4bpp"
 
 	.GLOBAL gUnknown_085C764C
 gUnknown_085C764C:
@@ -12033,7 +12033,7 @@ gUnknown_085C7670:
 
 	.GLOBAL gUnknown_085C7678
 gUnknown_085C7678:
-	.INCBIN "baserom.gba", 0x5C7678, 0x5C7A78-0x5C7678
+	.INCBIN "assets/sprites/gUnknown_085C7678.4bpp"
 
 	.GLOBAL gUnknown_085C7A78
 gUnknown_085C7A78:
@@ -12045,7 +12045,7 @@ gUnknown_085C7D00:
 
 	.GLOBAL gUnknown_085C7D08
 gUnknown_085C7D08:
-	.INCBIN "baserom.gba", 0x5C7D08, 0x5CBD08-0x5C7D08
+	.INCBIN "assets/sprites/gUnknown_085C7D08.4bpp"
 
 	.GLOBAL gUnknown_085CBD08
 gUnknown_085CBD08:
@@ -12057,7 +12057,7 @@ gUnknown_085CBD2C:
 
 	.GLOBAL gUnknown_085CBD34
 gUnknown_085CBD34:
-	.INCBIN "baserom.gba", 0x5CBD34, 0x5CC134-0x5CBD34
+	.INCBIN "assets/sprites/gUnknown_085CBD34.4bpp"
 
 	.GLOBAL gUnknown_085CC134
 gUnknown_085CC134:
@@ -12069,7 +12069,7 @@ gUnknown_085CC158:
 
 	.GLOBAL gUnknown_085CC160
 gUnknown_085CC160:
-	.INCBIN "baserom.gba", 0x5CC160, 0x5CC960-0x5CC160
+	.INCBIN "assets/sprites/gUnknown_085CC160.4bpp"
 
 	.GLOBAL gUnknown_085CC960
 gUnknown_085CC960:
@@ -12081,7 +12081,7 @@ gUnknown_085CC984:
 
 	.GLOBAL gUnknown_085CC98C
 gUnknown_085CC98C:
-	.INCBIN "baserom.gba", 0x5CC98C, 0x5CD18C-0x5CC98C
+	.INCBIN "assets/sprites/gUnknown_085CC98C.4bpp"
 
 	.GLOBAL gUnknown_085CD18C
 gUnknown_085CD18C:
@@ -12093,7 +12093,7 @@ gUnknown_085CD414:
 
 	.GLOBAL gUnknown_085CD41C
 gUnknown_085CD41C:
-	.INCBIN "baserom.gba", 0x5CD41C, 0x5CD81C-0x5CD41C
+	.INCBIN "assets/sprites/gUnknown_085CD41C.4bpp"
 
 	.GLOBAL gUnknown_085CD81C
 gUnknown_085CD81C:
@@ -12105,7 +12105,7 @@ gUnknown_085CD840:
 
 	.GLOBAL gUnknown_085CD848
 gUnknown_085CD848:
-	.INCBIN "baserom.gba", 0x5CD848, 0x5CE048-0x5CD848
+	.INCBIN "assets/sprites/gUnknown_085CD848.4bpp"
 
 	.GLOBAL gUnknown_085CE048
 gUnknown_085CE048:
@@ -12117,7 +12117,7 @@ gUnknown_085CE06C:
 
 	.GLOBAL gUnknown_085CE074
 gUnknown_085CE074:
-	.INCBIN "baserom.gba", 0x5CE074, 0x5CE874-0x5CE074
+	.INCBIN "assets/sprites/gUnknown_085CE074.4bpp"
 
 	.GLOBAL gUnknown_085CE874
 gUnknown_085CE874:
@@ -12129,7 +12129,7 @@ gUnknown_085CE898:
 
 	.GLOBAL gUnknown_085CE8A0
 gUnknown_085CE8A0:
-	.INCBIN "baserom.gba", 0x5CE8A0, 0x5CF0A0-0x5CE8A0
+	.INCBIN "assets/sprites/gUnknown_085CE8A0.4bpp"
 
 	.GLOBAL gUnknown_085CF0A0
 gUnknown_085CF0A0:
@@ -12141,7 +12141,7 @@ gUnknown_085CF0C4:
 
 	.GLOBAL gUnknown_085CF0CC
 gUnknown_085CF0CC:
-	.INCBIN "baserom.gba", 0x5CF0CC, 0x5CF8CC-0x5CF0CC
+	.INCBIN "assets/sprites/gUnknown_085CF0CC.4bpp"
 
 	.GLOBAL gUnknown_085CF8CC
 gUnknown_085CF8CC:
@@ -12153,7 +12153,7 @@ gUnknown_085CF9C8:
 
 	.GLOBAL gUnknown_085CF9D0
 gUnknown_085CF9D0:
-	.INCBIN "baserom.gba", 0x5CF9D0, 0x5D00D0-0x5CF9D0
+	.INCBIN "assets/sprites/gUnknown_085CF9D0.4bpp"
 
 	.GLOBAL gUnknown_085D00D0
 gUnknown_085D00D0:
@@ -12165,7 +12165,7 @@ gUnknown_085D01CC:
 
 	.GLOBAL gUnknown_085D01D4
 gUnknown_085D01D4:
-	.INCBIN "baserom.gba", 0x5D01D4, 0x5D08D4-0x5D01D4
+	.INCBIN "assets/sprites/gUnknown_085D01D4.4bpp"
 
 	.GLOBAL gUnknown_085D08D4
 gUnknown_085D08D4:
@@ -12177,7 +12177,7 @@ gUnknown_085D08F8:
 
 	.GLOBAL gUnknown_085D0900
 gUnknown_085D0900:
-	.INCBIN "baserom.gba", 0x5D0900, 0x5D0A00-0x5D0900
+	.INCBIN "assets/sprites/gUnknown_085D0900.4bpp"
 
 	.GLOBAL gUnknown_085D0A00
 gUnknown_085D0A00:
@@ -12201,7 +12201,7 @@ gUnknown_085D76B0:
 
 	.GLOBAL gUnknown_085D76B8
 gUnknown_085D76B8:
-	.INCBIN "baserom.gba", 0x5D76B8, 0x5DCAB8-0x5D76B8
+	.INCBIN "assets/sprites/gUnknown_085D76B8.4bpp"
 
 	.GLOBAL gUnknown_085DCAB8
 gUnknown_085DCAB8:
@@ -12213,7 +12213,7 @@ gUnknown_085DCB6C:
 
 	.GLOBAL gUnknown_085DCB74
 gUnknown_085DCB74:
-	.INCBIN "baserom.gba", 0x5DCB74, 0x5DCC34-0x5DCB74
+	.INCBIN "assets/sprites/gUnknown_085DCB74.4bpp"
 
 	.GLOBAL gUnknown_085DCC34
 gUnknown_085DCC34:
@@ -12225,7 +12225,7 @@ gUnknown_085DCCC4:
 
 	.GLOBAL gUnknown_085DCCCC
 gUnknown_085DCCCC:
-	.INCBIN "baserom.gba", 0x5DCCCC, 0x5DCECC-0x5DCCCC
+	.INCBIN "assets/sprites/gUnknown_085DCCCC.4bpp"
 
 	.GLOBAL gUnknown_085DCECC
 gUnknown_085DCECC:
@@ -12237,7 +12237,7 @@ gUnknown_085DCF80:
 
 	.GLOBAL gUnknown_085DCF88
 gUnknown_085DCF88:
-	.INCBIN "baserom.gba", 0x5DCF88, 0x5DD108-0x5DCF88
+	.INCBIN "assets/sprites/gUnknown_085DCF88.4bpp"
 
 	.GLOBAL gUnknown_085DD108
 gUnknown_085DD108:
@@ -12249,7 +12249,7 @@ gUnknown_085DD150:
 
 	.GLOBAL gUnknown_085DD158
 gUnknown_085DD158:
-	.INCBIN "baserom.gba", 0x5DD158, 0x5DD258-0x5DD158
+	.INCBIN "assets/sprites/gUnknown_085DD158.4bpp"
 
 	.GLOBAL gUnknown_085DD258
 gUnknown_085DD258:
@@ -12261,7 +12261,7 @@ gUnknown_085DD744:
 
 	.GLOBAL gUnknown_085DD74C
 gUnknown_085DD74C:
-	.INCBIN "baserom.gba", 0x5DD74C, 0x5DD9EC-0x5DD74C
+	.INCBIN "assets/sprites/gUnknown_085DD74C.4bpp"
 
 	.GLOBAL gUnknown_085DD9EC
 gUnknown_085DD9EC:
@@ -12273,7 +12273,7 @@ gUnknown_085DDE24:
 
 	.GLOBAL gUnknown_085DDE2C
 gUnknown_085DDE2C:
-	.INCBIN "baserom.gba", 0x5DDE2C, 0x5DE06C-0x5DDE2C
+	.INCBIN "assets/sprites/gUnknown_085DDE2C.4bpp"
 
 	.GLOBAL gUnknown_085DE06C
 gUnknown_085DE06C:
@@ -12285,7 +12285,7 @@ gUnknown_085DE4A4:
 
 	.GLOBAL gUnknown_085DE4AC
 gUnknown_085DE4AC:
-	.INCBIN "baserom.gba", 0x5DE4AC, 0x5DE92C-0x5DE4AC
+	.INCBIN "assets/sprites/gUnknown_085DE4AC.4bpp"
 
 	.GLOBAL gUnknown_085DE92C
 gUnknown_085DE92C:
@@ -12297,7 +12297,7 @@ gUnknown_085DEA94:
 
 	.GLOBAL gUnknown_085DEA9C
 gUnknown_085DEA9C:
-	.INCBIN "baserom.gba", 0x5DEA9C, 0x5DED1C-0x5DEA9C
+	.INCBIN "assets/sprites/gUnknown_085DEA9C.4bpp"
 
 	.GLOBAL gUnknown_085DED1C
 gUnknown_085DED1C:
@@ -12309,7 +12309,7 @@ gUnknown_085DEFA4:
 
 	.GLOBAL gUnknown_085DEFAC
 gUnknown_085DEFAC:
-	.INCBIN "baserom.gba", 0x5DEFAC, 0x5DF3AC-0x5DEFAC
+	.INCBIN "assets/sprites/gUnknown_085DEFAC.4bpp"
 
 	.GLOBAL gUnknown_085DF3AC
 gUnknown_085DF3AC:
@@ -12321,7 +12321,7 @@ gUnknown_085DF634:
 
 	.GLOBAL gUnknown_085DF63C
 gUnknown_085DF63C:
-	.INCBIN "baserom.gba", 0x5DF63C, 0x5DFA3C-0x5DF63C
+	.INCBIN "assets/sprites/gUnknown_085DF63C.4bpp"
 
 	.GLOBAL gUnknown_085DFA3C
 gUnknown_085DFA3C:
@@ -12333,7 +12333,7 @@ gUnknown_085DFCC4:
 
 	.GLOBAL gUnknown_085DFCCC
 gUnknown_085DFCCC:
-	.INCBIN "baserom.gba", 0x5DFCCC, 0x5E00CC-0x5DFCCC
+	.INCBIN "assets/sprites/gUnknown_085DFCCC.4bpp"
 
 	.GLOBAL gUnknown_085E00CC
 gUnknown_085E00CC:
@@ -12345,7 +12345,7 @@ gUnknown_085E015C:
 
 	.GLOBAL gUnknown_085E0164
 gUnknown_085E0164:
-	.INCBIN "baserom.gba", 0x5E0164, 0x5E0564-0x5E0164
+	.INCBIN "assets/sprites/gUnknown_085E0164.4bpp"
 
 	.GLOBAL gUnknown_085E0564
 gUnknown_085E0564:
@@ -12357,7 +12357,7 @@ gUnknown_085E05F4:
 
 	.GLOBAL gUnknown_085E05FC
 gUnknown_085E05FC:
-	.INCBIN "baserom.gba", 0x5E05FC, 0x5E063C-0x5E05FC
+	.INCBIN "assets/sprites/gUnknown_085E05FC.4bpp"
 
 	.GLOBAL gUnknown_085E063C
 gUnknown_085E063C:
@@ -12369,7 +12369,7 @@ gUnknown_085E0684:
 
 	.GLOBAL gUnknown_085E068C
 gUnknown_085E068C:
-	.INCBIN "baserom.gba", 0x5E068C, 0x5E078C-0x5E068C
+	.INCBIN "assets/sprites/gUnknown_085E068C.4bpp"
 
 	.GLOBAL gUnknown_085E078C
 gUnknown_085E078C:
@@ -12381,7 +12381,7 @@ gUnknown_085E07D4:
 
 	.GLOBAL gUnknown_085E07DC
 gUnknown_085E07DC:
-	.INCBIN "baserom.gba", 0x5E07DC, 0x5E08DC-0x5E07DC
+	.INCBIN "assets/sprites/gUnknown_085E07DC.4bpp"
 
 	.GLOBAL gUnknown_085E08DC
 gUnknown_085E08DC:
@@ -12393,7 +12393,7 @@ gUnknown_085E0900:
 
 	.GLOBAL gUnknown_085E0908
 gUnknown_085E0908:
-	.INCBIN "baserom.gba", 0x5E0908, 0x5E0988-0x5E0908
+	.INCBIN "assets/sprites/gUnknown_085E0908.4bpp"
 
 	.GLOBAL gUnknown_085E0988
 gUnknown_085E0988:
@@ -12405,7 +12405,7 @@ gUnknown_085E09AC:
 
 	.GLOBAL gUnknown_085E09B4
 gUnknown_085E09B4:
-	.INCBIN "baserom.gba", 0x5E09B4, 0x5E0A34-0x5E09B4
+	.INCBIN "assets/sprites/gUnknown_085E09B4.4bpp"
 
 	.GLOBAL gUnknown_085E0A34
 gUnknown_085E0A34:
@@ -12417,7 +12417,7 @@ gUnknown_085E0A7C:
 
 	.GLOBAL gUnknown_085E0A84
 gUnknown_085E0A84:
-	.INCBIN "baserom.gba", 0x5E0A84, 0x5E0AC4-0x5E0A84
+	.INCBIN "assets/sprites/gUnknown_085E0A84.4bpp"
 
 	.GLOBAL gUnknown_085E0AC4
 gUnknown_085E0AC4:
@@ -12429,7 +12429,7 @@ gUnknown_085E0B0C:
 
 	.GLOBAL gUnknown_085E0B14
 gUnknown_085E0B14:
-	.INCBIN "baserom.gba", 0x5E0B14, 0x5E0C14-0x5E0B14
+	.INCBIN "assets/sprites/gUnknown_085E0B14.4bpp"
 
 	.GLOBAL gUnknown_085E0C14
 gUnknown_085E0C14:
@@ -12441,7 +12441,7 @@ gUnknown_085E0C5C:
 
 	.GLOBAL gUnknown_085E0C64
 gUnknown_085E0C64:
-	.INCBIN "baserom.gba", 0x5E0C64, 0x5E0D64-0x5E0C64
+	.INCBIN "assets/sprites/gUnknown_085E0C64.4bpp"
 
 	.GLOBAL gUnknown_085E0D64
 gUnknown_085E0D64:
@@ -12453,7 +12453,7 @@ gUnknown_085E0D88:
 
 	.GLOBAL gUnknown_085E0D90
 gUnknown_085E0D90:
-	.INCBIN "baserom.gba", 0x5E0D90, 0x5E0E10-0x5E0D90
+	.INCBIN "assets/sprites/gUnknown_085E0D90.4bpp"
 
 	.GLOBAL gUnknown_085E0E10
 gUnknown_085E0E10:
@@ -12465,7 +12465,7 @@ gUnknown_085E0E34:
 
 	.GLOBAL gUnknown_085E0E3C
 gUnknown_085E0E3C:
-	.INCBIN "baserom.gba", 0x5E0E3C, 0x5E0EBC-0x5E0E3C
+	.INCBIN "assets/sprites/gUnknown_085E0E3C.4bpp"
 
 	.GLOBAL gUnknown_085E0EBC
 gUnknown_085E0EBC:
@@ -12477,7 +12477,7 @@ gUnknown_085E0F04:
 
 	.GLOBAL gUnknown_085E0F0C
 gUnknown_085E0F0C:
-	.INCBIN "baserom.gba", 0x5E0F0C, 0x5E100C-0x5E0F0C
+	.INCBIN "assets/sprites/gUnknown_085E0F0C.4bpp"
 
 	.GLOBAL gUnknown_085E100C
 gUnknown_085E100C:
@@ -12489,7 +12489,7 @@ gUnknown_085E1054:
 
 	.GLOBAL gUnknown_085E105C
 gUnknown_085E105C:
-	.INCBIN "baserom.gba", 0x5E105C, 0x5E115C-0x5E105C
+	.INCBIN "assets/sprites/gUnknown_085E105C.4bpp"
 
 	.GLOBAL gUnknown_085E115C
 gUnknown_085E115C:
@@ -12501,7 +12501,7 @@ gUnknown_085E1180:
 
 	.GLOBAL gUnknown_085E1188
 gUnknown_085E1188:
-	.INCBIN "baserom.gba", 0x5E1188, 0x5E1208-0x5E1188
+	.INCBIN "assets/sprites/gUnknown_085E1188.4bpp"
 
 	.GLOBAL gUnknown_085E1208
 gUnknown_085E1208:
@@ -12513,7 +12513,7 @@ gUnknown_085E122C:
 
 	.GLOBAL gUnknown_085E1234
 gUnknown_085E1234:
-	.INCBIN "baserom.gba", 0x5E1234, 0x5E12B4-0x5E1234
+	.INCBIN "assets/sprites/gUnknown_085E1234.4bpp"
 
 	.GLOBAL gUnknown_085E12B4
 gUnknown_085E12B4:
@@ -12525,7 +12525,7 @@ gUnknown_085E1344:
 
 	.GLOBAL gUnknown_085E134C
 gUnknown_085E134C:
-	.INCBIN "baserom.gba", 0x5E134C, 0x5E1B4C-0x5E134C
+	.INCBIN "assets/sprites/gUnknown_085E134C.4bpp"
 
 	.GLOBAL gUnknown_085E1B4C
 gUnknown_085E1B4C:
@@ -12537,7 +12537,7 @@ gUnknown_085E1C24:
 
 	.GLOBAL gUnknown_085E1C2C
 gUnknown_085E1C2C:
-	.INCBIN "baserom.gba", 0x5E1C2C, 0x5E1F2C-0x5E1C2C
+	.INCBIN "assets/sprites/gUnknown_085E1C2C.4bpp"
 
 	.GLOBAL gUnknown_085E1F2C
 gUnknown_085E1F2C:
@@ -12549,7 +12549,7 @@ gUnknown_085E2004:
 
 	.GLOBAL gUnknown_085E200C
 gUnknown_085E200C:
-	.INCBIN "baserom.gba", 0x5E200C, 0x5E230C-0x5E200C
+	.INCBIN "assets/sprites/gUnknown_085E200C.4bpp"
 
 	.GLOBAL gUnknown_085E230C
 gUnknown_085E230C:
@@ -12561,7 +12561,7 @@ gUnknown_085E2330:
 
 	.GLOBAL gUnknown_085E2338
 gUnknown_085E2338:
-	.INCBIN "baserom.gba", 0x5E2338, 0x5E2438-0x5E2338
+	.INCBIN "assets/sprites/gUnknown_085E2338.4bpp"
 
 	.GLOBAL gUnknown_085E2438
 gUnknown_085E2438:
@@ -12573,7 +12573,7 @@ gUnknown_085E245C:
 
 	.GLOBAL gUnknown_085E2464
 gUnknown_085E2464:
-	.INCBIN "baserom.gba", 0x5E2464, 0x5E24A4-0x5E2464
+	.INCBIN "assets/sprites/gUnknown_085E2464.4bpp"
 
 	.GLOBAL gUnknown_085E24A4
 gUnknown_085E24A4:
@@ -12585,7 +12585,7 @@ gUnknown_085E24C8:
 
 	.GLOBAL gUnknown_085E24D0
 gUnknown_085E24D0:
-	.INCBIN "baserom.gba", 0x5E24D0, 0x5E2510-0x5E24D0
+	.INCBIN "assets/sprites/gUnknown_085E24D0.4bpp"
 
 	.GLOBAL gUnknown_085E2510
 gUnknown_085E2510:
@@ -12597,7 +12597,7 @@ gUnknown_085E2534:
 
 	.GLOBAL gUnknown_085E253C
 gUnknown_085E253C:
-	.INCBIN "baserom.gba", 0x5E253C, 0x5E257C-0x5E253C
+	.INCBIN "assets/sprites/gUnknown_085E253C.4bpp"
 
 	.GLOBAL gUnknown_085E257C
 gUnknown_085E257C:
@@ -12609,7 +12609,7 @@ gUnknown_085E25A0:
 
 	.GLOBAL gUnknown_085E25A8
 gUnknown_085E25A8:
-	.INCBIN "baserom.gba", 0x5E25A8, 0x5E25E8-0x5E25A8
+	.INCBIN "assets/sprites/gUnknown_085E25A8.4bpp"
 
 	.GLOBAL gUnknown_085E25E8
 gUnknown_085E25E8:
@@ -12621,7 +12621,7 @@ gUnknown_085E260C:
 
 	.GLOBAL gUnknown_085E2614
 gUnknown_085E2614:
-	.INCBIN "baserom.gba", 0x5E2614, 0x5E2654-0x5E2614
+	.INCBIN "assets/sprites/gUnknown_085E2614.4bpp"
 
 	.GLOBAL gUnknown_085E2654
 gUnknown_085E2654:
@@ -12633,7 +12633,7 @@ gUnknown_085E2678:
 
 	.GLOBAL gUnknown_085E2680
 gUnknown_085E2680:
-	.INCBIN "baserom.gba", 0x5E2680, 0x5E26C0-0x5E2680
+	.INCBIN "assets/sprites/gUnknown_085E2680.4bpp"
 
 	.GLOBAL gUnknown_085E26C0
 gUnknown_085E26C0:
@@ -12645,7 +12645,7 @@ gUnknown_085E26E4:
 
 	.GLOBAL gUnknown_085E26EC
 gUnknown_085E26EC:
-	.INCBIN "baserom.gba", 0x5E26EC, 0x5E272C-0x5E26EC
+	.INCBIN "assets/sprites/gUnknown_085E26EC.4bpp"
 
 	.GLOBAL gUnknown_085E272C
 gUnknown_085E272C:
@@ -12657,7 +12657,7 @@ gUnknown_085E2750:
 
 	.GLOBAL gUnknown_085E2758
 gUnknown_085E2758:
-	.INCBIN "baserom.gba", 0x5E2758, 0x5E2798-0x5E2758
+	.INCBIN "assets/sprites/gUnknown_085E2758.4bpp"
 
 	.GLOBAL gUnknown_085E2798
 gUnknown_085E2798:
@@ -12669,7 +12669,7 @@ gUnknown_085E27BC:
 
 	.GLOBAL gUnknown_085E27C4
 gUnknown_085E27C4:
-	.INCBIN "baserom.gba", 0x5E27C4, 0x5E2804-0x5E27C4
+	.INCBIN "assets/sprites/gUnknown_085E27C4.4bpp"
 
 	.GLOBAL gUnknown_085E2804
 gUnknown_085E2804:
@@ -12681,7 +12681,7 @@ gUnknown_085E2828:
 
 	.GLOBAL gUnknown_085E2830
 gUnknown_085E2830:
-	.INCBIN "baserom.gba", 0x5E2830, 0x5E2870-0x5E2830
+	.INCBIN "assets/sprites/gUnknown_085E2830.4bpp"
 
 	.GLOBAL gUnknown_085E2870
 gUnknown_085E2870:
@@ -12693,7 +12693,7 @@ gUnknown_085E2AF8:
 
 	.GLOBAL gUnknown_085E2B00
 gUnknown_085E2B00:
-	.INCBIN "baserom.gba", 0x5E2B00, 0x5E2F00-0x5E2B00
+	.INCBIN "assets/sprites/gUnknown_085E2B00.4bpp"
 
 	.GLOBAL gUnknown_085E2F00
 gUnknown_085E2F00:
@@ -12705,7 +12705,7 @@ gUnknown_085E3188:
 
 	.GLOBAL gUnknown_085E3190
 gUnknown_085E3190:
-	.INCBIN "baserom.gba", 0x5E3190, 0x5E3590-0x5E3190
+	.INCBIN "assets/sprites/gUnknown_085E3190.4bpp"
 
 	.GLOBAL gUnknown_085E3590
 gUnknown_085E3590:
@@ -12717,7 +12717,7 @@ gUnknown_085E3818:
 
 	.GLOBAL gUnknown_085E3820
 gUnknown_085E3820:
-	.INCBIN "baserom.gba", 0x5E3820, 0x5E8020-0x5E3820
+	.INCBIN "assets/sprites/gUnknown_085E3820.4bpp"
 
 	.GLOBAL gUnknown_085E8020
 gUnknown_085E8020:
@@ -12729,7 +12729,7 @@ gUnknown_085E8044:
 
 	.GLOBAL gUnknown_085E804C
 gUnknown_085E804C:
-	.INCBIN "baserom.gba", 0x5E804C, 0x5E844C-0x5E804C
+	.INCBIN "assets/sprites/gUnknown_085E804C.4bpp"
 
 	.GLOBAL gUnknown_085E844C
 gUnknown_085E844C:
@@ -12741,7 +12741,7 @@ gUnknown_085E8470:
 
 	.GLOBAL gUnknown_085E8478
 gUnknown_085E8478:
-	.INCBIN "baserom.gba", 0x5E8478, 0x5E8878-0x5E8478
+	.INCBIN "assets/sprites/gUnknown_085E8478.4bpp"
 
 	.GLOBAL gUnknown_085E8878
 gUnknown_085E8878:
@@ -12753,7 +12753,7 @@ gUnknown_085E889C:
 
 	.GLOBAL gUnknown_085E88A4
 gUnknown_085E88A4:
-	.INCBIN "baserom.gba", 0x5E88A4, 0x5E8CA4-0x5E88A4
+	.INCBIN "assets/sprites/gUnknown_085E88A4.4bpp"
 
 	.GLOBAL gUnknown_085E8CA4
 gUnknown_085E8CA4:
@@ -12765,7 +12765,7 @@ gUnknown_085E8CC8:
 
 	.GLOBAL gUnknown_085E8CD0
 gUnknown_085E8CD0:
-	.INCBIN "baserom.gba", 0x5E8CD0, 0x5E90D0-0x5E8CD0
+	.INCBIN "assets/sprites/gUnknown_085E8CD0.4bpp"
 
 	.GLOBAL gUnknown_085E90D0
 gUnknown_085E90D0:
@@ -12777,7 +12777,7 @@ gUnknown_085E9358:
 
 	.GLOBAL gUnknown_085E9360
 gUnknown_085E9360:
-	.INCBIN "baserom.gba", 0x5E9360, 0x5EAB60-0x5E9360
+	.INCBIN "assets/sprites/gUnknown_085E9360.4bpp"
 
 	.GLOBAL gUnknown_085EAB60
 gUnknown_085EAB60:
@@ -12789,7 +12789,7 @@ gUnknown_085EAB84:
 
 	.GLOBAL gUnknown_085EAB8C
 gUnknown_085EAB8C:
-	.INCBIN "baserom.gba", 0x5EAB8C, 0x5EAC8C-0x5EAB8C
+	.INCBIN "assets/sprites/gUnknown_085EAB8C.4bpp"
 
 	.GLOBAL gUnknown_085EAC8C
 gUnknown_085EAC8C:
@@ -12801,7 +12801,7 @@ gUnknown_085EAD1C:
 
 	.GLOBAL gUnknown_085EAD24
 gUnknown_085EAD24:
-	.INCBIN "baserom.gba", 0x5EAD24, 0x5EAF24-0x5EAD24
+	.INCBIN "assets/sprites/gUnknown_085EAD24.4bpp"
 
 	.GLOBAL gUnknown_085EAF24
 gUnknown_085EAF24:
@@ -12813,7 +12813,7 @@ gUnknown_085EAF48:
 
 	.GLOBAL gUnknown_085EAF50
 gUnknown_085EAF50:
-	.INCBIN "baserom.gba", 0x5EAF50, 0x5EAFD0-0x5EAF50
+	.INCBIN "assets/sprites/gUnknown_085EAF50.4bpp"
 
 	.GLOBAL gUnknown_085EAFD0
 gUnknown_085EAFD0:
@@ -12825,7 +12825,7 @@ gUnknown_085EB0A8:
 
 	.GLOBAL gUnknown_085EB0B0
 gUnknown_085EB0B0:
-	.INCBIN "baserom.gba", 0x5EB0B0, 0x5EB3B0-0x5EB0B0
+	.INCBIN "assets/sprites/gUnknown_085EB0B0.4bpp"
 
 	.GLOBAL gUnknown_085EB3B0
 gUnknown_085EB3B0:
@@ -12837,7 +12837,7 @@ gUnknown_085EB488:
 
 	.GLOBAL gUnknown_085EB490
 gUnknown_085EB490:
-	.INCBIN "baserom.gba", 0x5EB490, 0x5EB790-0x5EB490
+	.INCBIN "assets/sprites/gUnknown_085EB490.4bpp"
 
 	.GLOBAL gUnknown_085EB790
 gUnknown_085EB790:
@@ -12849,7 +12849,7 @@ gUnknown_085EB820:
 
 	.GLOBAL gUnknown_085EB828
 gUnknown_085EB828:
-	.INCBIN "baserom.gba", 0x5EB828, 0x5EBA28-0x5EB828
+	.INCBIN "assets/sprites/gUnknown_085EB828.4bpp"
 
 	.GLOBAL gUnknown_085EBA28
 gUnknown_085EBA28:
@@ -12861,7 +12861,7 @@ gUnknown_085EBC68:
 
 	.GLOBAL gUnknown_085EBC70
 gUnknown_085EBC70:
-	.INCBIN "baserom.gba", 0x5EBC70, 0x5ECC70-0x5EBC70
+	.INCBIN "assets/sprites/gUnknown_085EBC70.4bpp"
 
 	.GLOBAL gUnknown_085ECC70
 gUnknown_085ECC70:
@@ -12873,7 +12873,7 @@ gUnknown_085ECC94:
 
 	.GLOBAL gUnknown_085ECC9C
 gUnknown_085ECC9C:
-	.INCBIN "baserom.gba", 0x5ECC9C, 0x5ED49C-0x5ECC9C
+	.INCBIN "assets/sprites/gUnknown_085ECC9C.8bpp"
 
 	.GLOBAL gUnknown_085ED49C
 gUnknown_085ED49C:
@@ -12885,7 +12885,7 @@ gUnknown_085ED4C0:
 
 	.GLOBAL gUnknown_085ED4C8
 gUnknown_085ED4C8:
-	.INCBIN "baserom.gba", 0x5ED4C8, 0x5EDCC8-0x5ED4C8
+	.INCBIN "assets/sprites/gUnknown_085ED4C8.8bpp"
 
 	.GLOBAL gUnknown_085EDCC8
 gUnknown_085EDCC8:
@@ -12897,7 +12897,7 @@ gUnknown_085EDCEC:
 
 	.GLOBAL gUnknown_085EDCF4
 gUnknown_085EDCF4:
-	.INCBIN "baserom.gba", 0x5EDCF4, 0x5EE4F4-0x5EDCF4
+	.INCBIN "assets/sprites/gUnknown_085EDCF4.8bpp"
 
 	.GLOBAL gUnknown_085EE4F4
 gUnknown_085EE4F4:
@@ -12909,7 +12909,7 @@ gUnknown_085EE518:
 
 	.GLOBAL gUnknown_085EE520
 gUnknown_085EE520:
-	.INCBIN "baserom.gba", 0x5EE520, 0x5EED20-0x5EE520
+	.INCBIN "assets/sprites/gUnknown_085EE520.8bpp"
 
 	.GLOBAL gUnknown_085EED20
 gUnknown_085EED20:
@@ -12921,7 +12921,7 @@ gUnknown_085EED44:
 
 	.GLOBAL gUnknown_085EED4C
 gUnknown_085EED4C:
-	.INCBIN "baserom.gba", 0x5EED4C, 0x5EF54C-0x5EED4C
+	.INCBIN "assets/sprites/gUnknown_085EED4C.8bpp"
 
 	.GLOBAL gUnknown_085EF54C
 gUnknown_085EF54C:
@@ -12933,7 +12933,7 @@ gUnknown_085EF570:
 
 	.GLOBAL gUnknown_085EF578
 gUnknown_085EF578:
-	.INCBIN "baserom.gba", 0x5EF578, 0x5EFD78-0x5EF578
+	.INCBIN "assets/sprites/gUnknown_085EF578.8bpp"
 
 	.GLOBAL gUnknown_085EFD78
 gUnknown_085EFD78:
@@ -12945,7 +12945,7 @@ gUnknown_085EFD9C:
 
 	.GLOBAL gUnknown_085EFDA4
 gUnknown_085EFDA4:
-	.INCBIN "baserom.gba", 0x5EFDA4, 0x5F05A4-0x5EFDA4
+	.INCBIN "assets/sprites/gUnknown_085EFDA4.8bpp"
 
 	.GLOBAL gUnknown_085F05A4
 gUnknown_085F05A4:
@@ -12957,7 +12957,7 @@ gUnknown_085F05C8:
 
 	.GLOBAL gUnknown_085F05D0
 gUnknown_085F05D0:
-	.INCBIN "baserom.gba", 0x5F05D0, 0x5F0DD0-0x5F05D0
+	.INCBIN "assets/sprites/gUnknown_085F05D0.8bpp"
 
 	.GLOBAL gUnknown_085F0DD0
 gUnknown_085F0DD0:
@@ -12969,7 +12969,7 @@ gUnknown_085F0DF4:
 
 	.GLOBAL gUnknown_085F0DFC
 gUnknown_085F0DFC:
-	.INCBIN "baserom.gba", 0x5F0DFC, 0x5F15FC-0x5F0DFC
+	.INCBIN "assets/sprites/gUnknown_085F0DFC.8bpp"
 
 	.GLOBAL gUnknown_085F15FC
 gUnknown_085F15FC:
@@ -12981,7 +12981,7 @@ gUnknown_085F1620:
 
 	.GLOBAL gUnknown_085F1628
 gUnknown_085F1628:
-	.INCBIN "baserom.gba", 0x5F1628, 0x5F1E28-0x5F1628
+	.INCBIN "assets/sprites/gUnknown_085F1628.8bpp"
 
 	.GLOBAL gUnknown_085F1E28
 gUnknown_085F1E28:
@@ -12993,7 +12993,7 @@ gUnknown_085F1E70:
 
 	.GLOBAL gUnknown_085F1E78
 gUnknown_085F1E78:
-	.INCBIN "baserom.gba", 0x5F1E78, 0x5F2278-0x5F1E78
+	.INCBIN "assets/sprites/gUnknown_085F1E78.4bpp"
 
 	.GLOBAL gUnknown_085F2278
 gUnknown_085F2278:
@@ -13005,7 +13005,7 @@ gUnknown_085F229C:
 
 	.GLOBAL gUnknown_085F22A4
 gUnknown_085F22A4:
-	.INCBIN "baserom.gba", 0x5F22A4, 0x5F2324-0x5F22A4
+	.INCBIN "assets/sprites/gUnknown_085F22A4.4bpp"
 
 	.GLOBAL gUnknown_085F2324
 gUnknown_085F2324:
@@ -13017,7 +13017,7 @@ gUnknown_085F2348:
 
 	.GLOBAL gUnknown_085F2350
 gUnknown_085F2350:
-	.INCBIN "baserom.gba", 0x5F2350, 0x5F23D0-0x5F2350
+	.INCBIN "assets/sprites/gUnknown_085F2350.4bpp"
 
 	.GLOBAL gUnknown_085F23D0
 gUnknown_085F23D0:
@@ -13029,7 +13029,7 @@ gUnknown_085F24A8:
 
 	.GLOBAL gUnknown_085F24B0
 gUnknown_085F24B0:
-	.INCBIN "baserom.gba", 0x5F24B0, 0x5F2AB0-0x5F24B0
+	.INCBIN "assets/sprites/gUnknown_085F24B0.4bpp"
 
 	.GLOBAL gUnknown_085F2AB0
 gUnknown_085F2AB0:
@@ -13041,7 +13041,7 @@ gUnknown_085F2D80:
 
 	.GLOBAL gUnknown_085F2D88
 gUnknown_085F2D88:
-	.INCBIN "baserom.gba", 0x5F2D88, 0x5F2F88-0x5F2D88
+	.INCBIN "assets/sprites/gUnknown_085F2D88.4bpp"
 
 	.GLOBAL gUnknown_085F2F88
 gUnknown_085F2F88:
@@ -13053,7 +13053,7 @@ gUnknown_085F3138:
 
 	.GLOBAL gUnknown_085F3140
 gUnknown_085F3140:
-	.INCBIN "baserom.gba", 0x5F3140, 0x5F3940-0x5F3140
+	.INCBIN "assets/sprites/gUnknown_085F3140.4bpp"
 
 	.GLOBAL gUnknown_085F3940
 gUnknown_085F3940:
@@ -13065,7 +13065,7 @@ gUnknown_085F3C7C:
 
 	.GLOBAL gUnknown_085F3C84
 gUnknown_085F3C84:
-	.INCBIN "baserom.gba", 0x5F3C84, 0x5F4084-0x5F3C84
+	.INCBIN "assets/sprites/gUnknown_085F3C84.4bpp"
 
 	.GLOBAL gUnknown_085F4084
 gUnknown_085F4084:
@@ -13077,7 +13077,7 @@ gUnknown_085F41A4:
 
 	.GLOBAL gUnknown_085F41AC
 gUnknown_085F41AC:
-	.INCBIN "baserom.gba", 0x5F41AC, 0x5F49AC-0x5F41AC
+	.INCBIN "assets/sprites/gUnknown_085F41AC.4bpp"
 
 	.GLOBAL gUnknown_085F49AC
 gUnknown_085F49AC:
@@ -13101,7 +13101,7 @@ gUnknown_085F4CD4:
 
 	.GLOBAL gUnknown_085F4CDC
 gUnknown_085F4CDC:
-	.INCBIN "baserom.gba", 0x5F4CDC, 0x5F4EDC-0x5F4CDC
+	.INCBIN "assets/sprites/gUnknown_085F4CDC.4bpp"
 
 	.GLOBAL gUnknown_085F4EDC
 gUnknown_085F4EDC:
@@ -13113,7 +13113,7 @@ gUnknown_085F4F6C:
 
 	.GLOBAL gUnknown_085F4F74
 gUnknown_085F4F74:
-	.INCBIN "baserom.gba", 0x5F4F74, 0x5F5174-0x5F4F74
+	.INCBIN "assets/sprites/gUnknown_085F4F74.4bpp"
 
 	.GLOBAL gUnknown_085F5174
 gUnknown_085F5174:
@@ -13125,7 +13125,7 @@ gUnknown_085F5294:
 
 	.GLOBAL gUnknown_085F529C
 gUnknown_085F529C:
-	.INCBIN "baserom.gba", 0x5F529C, 0x5F569C-0x5F529C
+	.INCBIN "assets/sprites/gUnknown_085F529C.4bpp"
 
 	.GLOBAL gUnknown_085F569C
 gUnknown_085F569C:
@@ -13137,7 +13137,7 @@ gUnknown_085F58DC:
 
 	.GLOBAL gUnknown_085F58E4
 gUnknown_085F58E4:
-	.INCBIN "baserom.gba", 0x5F58E4, 0x5F60E4-0x5F58E4
+	.INCBIN "assets/sprites/gUnknown_085F58E4.4bpp"
 
 	.GLOBAL gUnknown_085F60E4
 gUnknown_085F60E4:
@@ -13149,7 +13149,7 @@ gUnknown_085F612C:
 
 	.GLOBAL gUnknown_085F6134
 gUnknown_085F6134:
-	.INCBIN "baserom.gba", 0x5F6134, 0x5F61B4-0x5F6134
+	.INCBIN "assets/sprites/gUnknown_085F6134.4bpp"
 
 	.GLOBAL gUnknown_085F61B4
 gUnknown_085F61B4:
@@ -13161,7 +13161,7 @@ gUnknown_085F6388:
 
 	.GLOBAL gUnknown_085F6390
 gUnknown_085F6390:
-	.INCBIN "baserom.gba", 0x5F6390, 0x5F6910-0x5F6390
+	.INCBIN "assets/sprites/gUnknown_085F6390.4bpp"
 
 	.GLOBAL gUnknown_085F6910
 gUnknown_085F6910:
@@ -13173,7 +13173,7 @@ gUnknown_085F6B50:
 
 	.GLOBAL gUnknown_085F6B58
 gUnknown_085F6B58:
-	.INCBIN "baserom.gba", 0x5F6B58, 0x5F7358-0x5F6B58
+	.INCBIN "assets/sprites/gUnknown_085F6B58.4bpp"
 
 	.GLOBAL gUnknown_085F7358
 gUnknown_085F7358:
@@ -13185,7 +13185,7 @@ gUnknown_085F73E8:
 
 	.GLOBAL gUnknown_085F73F0
 gUnknown_085F73F0:
-	.INCBIN "baserom.gba", 0x5F73F0, 0x5F77F0-0x5F73F0
+	.INCBIN "assets/sprites/gUnknown_085F73F0.4bpp"
 
 	.GLOBAL gUnknown_085F77F0
 gUnknown_085F77F0:
@@ -13197,7 +13197,7 @@ gUnknown_085F79A0:
 
 	.GLOBAL gUnknown_085F79A8
 gUnknown_085F79A8:
-	.INCBIN "baserom.gba", 0x5F79A8, 0x5F85A8-0x5F79A8
+	.INCBIN "assets/sprites/gUnknown_085F79A8.4bpp"
 
 	.GLOBAL gUnknown_085F85A8
 gUnknown_085F85A8:
@@ -13209,7 +13209,7 @@ gUnknown_085F86C8:
 
 	.GLOBAL gUnknown_085F86D0
 gUnknown_085F86D0:
-	.INCBIN "baserom.gba", 0x5F86D0, 0x5F8ED0-0x5F86D0
+	.INCBIN "assets/sprites/gUnknown_085F86D0.4bpp"
 
 	.GLOBAL gUnknown_085F8ED0
 gUnknown_085F8ED0:
@@ -13221,7 +13221,7 @@ gUnknown_085F9110:
 
 	.GLOBAL gUnknown_085F9118
 gUnknown_085F9118:
-	.INCBIN "baserom.gba", 0x5F9118, 0x5FA118-0x5F9118
+	.INCBIN "assets/sprites/gUnknown_085F9118.4bpp"
 
 	.GLOBAL gUnknown_085FA118
 gUnknown_085FA118:
@@ -13233,7 +13233,7 @@ gUnknown_085FA358:
 
 	.GLOBAL gUnknown_085FA360
 gUnknown_085FA360:
-	.INCBIN "baserom.gba", 0x5FA360, 0x5FB360-0x5FA360
+	.INCBIN "assets/sprites/gUnknown_085FA360.4bpp"
 
 	.GLOBAL gUnknown_085FB360
 gUnknown_085FB360:
@@ -13389,7 +13389,7 @@ gUnknown_08614330:
 
 	.GLOBAL gUnknown_08614338
 gUnknown_08614338:
-	.INCBIN "baserom.gba", 0x614338, 0x614738-0x614338
+	.INCBIN "assets/sprites/gUnknown_08614338.4bpp"
 
 	.GLOBAL gUnknown_08614738
 gUnknown_08614738:
@@ -13437,7 +13437,7 @@ gUnknown_08616C28:
 
 	.GLOBAL gUnknown_08616C30
 gUnknown_08616C30:
-	.INCBIN "baserom.gba", 0x616C30, 0x617030-0x616C30
+	.INCBIN "assets/sprites/gUnknown_08616C30.4bpp"
 
 	.GLOBAL gUnknown_08617030
 gUnknown_08617030:
@@ -13545,7 +13545,7 @@ gUnknown_086183F4:
 
 	.GLOBAL gUnknown_086183FC
 gUnknown_086183FC:
-	.INCBIN "baserom.gba", 0x6183FC, 0x6187FC-0x6183FC
+	.INCBIN "assets/sprites/gUnknown_086183FC.4bpp"
 
 	.GLOBAL gUnknown_086187FC
 gUnknown_086187FC:
@@ -13557,7 +13557,7 @@ gUnknown_086188F8:
 
 	.GLOBAL gUnknown_08618900
 gUnknown_08618900:
-	.INCBIN "baserom.gba", 0x618900, 0x619000-0x618900
+	.INCBIN "assets/sprites/gUnknown_08618900.8bpp"
 
 	.GLOBAL gUnknown_08619000
 gUnknown_08619000:
@@ -13569,7 +13569,7 @@ gUnknown_086190FC:
 
 	.GLOBAL gUnknown_08619104
 gUnknown_08619104:
-	.INCBIN "baserom.gba", 0x619104, 0x619804-0x619104
+	.INCBIN "assets/sprites/gUnknown_08619104.8bpp"
 
 	.GLOBAL gUnknown_08619804
 gUnknown_08619804:
@@ -13581,7 +13581,7 @@ gUnknown_0861996C:
 
 	.GLOBAL gUnknown_08619974
 gUnknown_08619974:
-	.INCBIN "baserom.gba", 0x619974, 0x619AB4-0x619974
+	.INCBIN "assets/sprites/gUnknown_08619974.4bpp"
 
 	.GLOBAL gUnknown_08619AB4
 gUnknown_08619AB4:
@@ -13593,7 +13593,7 @@ gUnknown_08619AD8:
 
 	.GLOBAL gUnknown_08619AE0
 gUnknown_08619AE0:
-	.INCBIN "baserom.gba", 0x619AE0, 0x619B60-0x619AE0
+	.INCBIN "assets/sprites/gUnknown_08619AE0.4bpp"
 
 	.GLOBAL gUnknown_08619B60
 gUnknown_08619B60:
@@ -13605,7 +13605,7 @@ gUnknown_08619C80:
 
 	.GLOBAL gUnknown_08619C88
 gUnknown_08619C88:
-	.INCBIN "baserom.gba", 0x619C88, 0x61AC88-0x619C88
+	.INCBIN "assets/sprites/gUnknown_08619C88.4bpp"
 
 	.GLOBAL gUnknown_0861AC88
 gUnknown_0861AC88:
@@ -13617,7 +13617,7 @@ gUnknown_0861ADA8:
 
 	.GLOBAL gUnknown_0861ADB0
 gUnknown_0861ADB0:
-	.INCBIN "baserom.gba", 0x61ADB0, 0x61AE30-0x61ADB0
+	.INCBIN "assets/sprites/gUnknown_0861ADB0.4bpp"
 
 	.GLOBAL gUnknown_0861AE30
 gUnknown_0861AE30:
@@ -13629,7 +13629,7 @@ gUnknown_0861AF08:
 
 	.GLOBAL gUnknown_0861AF10
 gUnknown_0861AF10:
-	.INCBIN "baserom.gba", 0x61AF10, 0x61B210-0x61AF10
+	.INCBIN "assets/sprites/gUnknown_0861AF10.4bpp"
 
 	.GLOBAL gUnknown_0861B210
 gUnknown_0861B210:
@@ -13641,7 +13641,7 @@ gUnknown_0861B2A0:
 
 	.GLOBAL gUnknown_0861B2A8
 gUnknown_0861B2A8:
-	.INCBIN "baserom.gba", 0x61B2A8, 0x61B4A8-0x61B2A8
+	.INCBIN "assets/sprites/gUnknown_0861B2A8.4bpp"
 
 	.GLOBAL gUnknown_0861B4A8
 gUnknown_0861B4A8:
@@ -13653,7 +13653,7 @@ gUnknown_0861B55C:
 
 	.GLOBAL gUnknown_0861B564
 gUnknown_0861B564:
-	.INCBIN "baserom.gba", 0x61B564, 0x61B7E4-0x61B564
+	.INCBIN "assets/sprites/gUnknown_0861B564.4bpp"
 
 	.GLOBAL gUnknown_0861B7E4
 gUnknown_0861B7E4:
@@ -13665,7 +13665,7 @@ gUnknown_0861BA24:
 
 	.GLOBAL gUnknown_0861BA2C
 gUnknown_0861BA2C:
-	.INCBIN "baserom.gba", 0x61BA2C, 0x61BE2C-0x61BA2C
+	.INCBIN "assets/sprites/gUnknown_0861BA2C.4bpp"
 
 	.GLOBAL gUnknown_0861BE2C
 gUnknown_0861BE2C:
@@ -13677,7 +13677,7 @@ gUnknown_0861BEBC:
 
 	.GLOBAL gUnknown_0861BEC4
 gUnknown_0861BEC4:
-	.INCBIN "baserom.gba", 0x61BEC4, 0x61C0C4-0x61BEC4
+	.INCBIN "assets/sprites/gUnknown_0861BEC4.4bpp"
 
 	.GLOBAL gUnknown_0861C0C4
 gUnknown_0861C0C4:
@@ -13689,7 +13689,7 @@ gUnknown_0861C154:
 
 	.GLOBAL gUnknown_0861C15C
 gUnknown_0861C15C:
-	.INCBIN "baserom.gba", 0x61C15C, 0x61C35C-0x61C15C
+	.INCBIN "assets/sprites/gUnknown_0861C15C.4bpp"
 
 	.GLOBAL gUnknown_0861C35C
 gUnknown_0861C35C:
@@ -13701,7 +13701,7 @@ gUnknown_0861C47C:
 
 	.GLOBAL gUnknown_0861C484
 gUnknown_0861C484:
-	.INCBIN "baserom.gba", 0x61C484, 0x61C884-0x61C484
+	.INCBIN "assets/sprites/gUnknown_0861C484.4bpp"
 
 	.GLOBAL gUnknown_0861C884
 gUnknown_0861C884:
@@ -13713,7 +13713,7 @@ gUnknown_0861C95C:
 
 	.GLOBAL gUnknown_0861C964
 gUnknown_0861C964:
-	.INCBIN "baserom.gba", 0x61C964, 0x61CC64-0x61C964
+	.INCBIN "assets/sprites/gUnknown_0861C964.4bpp"
 
 	.GLOBAL gUnknown_0861CC64
 gUnknown_0861CC64:
@@ -13725,7 +13725,7 @@ gUnknown_0861CE14:
 
 	.GLOBAL gUnknown_0861CE1C
 gUnknown_0861CE1C:
-	.INCBIN "baserom.gba", 0x61CE1C, 0x61D41C-0x61CE1C
+	.INCBIN "assets/sprites/gUnknown_0861CE1C.4bpp"
 
 	.GLOBAL gUnknown_0861D41C
 gUnknown_0861D41C:
@@ -13737,7 +13737,7 @@ gUnknown_0861D488:
 
 	.GLOBAL gUnknown_0861D490
 gUnknown_0861D490:
-	.INCBIN "baserom.gba", 0x61D490, 0x61D610-0x61D490
+	.INCBIN "assets/sprites/gUnknown_0861D490.4bpp"
 
 	.GLOBAL gUnknown_0861D610
 gUnknown_0861D610:
@@ -13749,7 +13749,7 @@ gUnknown_0861D67C:
 
 	.GLOBAL gUnknown_0861D684
 gUnknown_0861D684:
-	.INCBIN "baserom.gba", 0x61D684, 0x61D804-0x61D684
+	.INCBIN "assets/sprites/gUnknown_0861D684.4bpp"
 
 	.GLOBAL gUnknown_0861D804
 gUnknown_0861D804:
@@ -13761,7 +13761,7 @@ gUnknown_0861DA68:
 
 	.GLOBAL gUnknown_0861DA70
 gUnknown_0861DA70:
-	.INCBIN "baserom.gba", 0x61DA70, 0x61DE70-0x61DA70
+	.INCBIN "assets/sprites/gUnknown_0861DA70.4bpp"
 
 	.GLOBAL gUnknown_0861DE70
 gUnknown_0861DE70:
@@ -13809,7 +13809,7 @@ gUnknown_08622548:
 
 	.GLOBAL gUnknown_08622550
 gUnknown_08622550:
-	.INCBIN "baserom.gba", 0x622550, 0x622950-0x622550
+	.INCBIN "assets/sprites/gUnknown_08622550.4bpp"
 
 	.GLOBAL gUnknown_08622950
 gUnknown_08622950:
@@ -13821,7 +13821,7 @@ gUnknown_08622974:
 
 	.GLOBAL gUnknown_0862297C
 gUnknown_0862297C:
-	.INCBIN "baserom.gba", 0x62297C, 0x6229FC-0x62297C
+	.INCBIN "assets/sprites/gUnknown_0862297C.4bpp"
 
 	.GLOBAL gUnknown_086229FC
 gUnknown_086229FC:
@@ -13833,7 +13833,7 @@ gUnknown_08622C60:
 
 	.GLOBAL gUnknown_08622C68
 gUnknown_08622C68:
-	.INCBIN "baserom.gba", 0x622C68, 0x624E68-0x622C68
+	.INCBIN "assets/sprites/gUnknown_08622C68.4bpp"
 
 	.GLOBAL gUnknown_08624E68
 gUnknown_08624E68:
@@ -13845,7 +13845,7 @@ gUnknown_08624EF8:
 
 	.GLOBAL gUnknown_08624F00
 gUnknown_08624F00:
-	.INCBIN "baserom.gba", 0x624F00, 0x625100-0x624F00
+	.INCBIN "assets/sprites/gUnknown_08624F00.4bpp"
 
 	.GLOBAL gUnknown_08625100
 gUnknown_08625100:
@@ -13857,7 +13857,7 @@ gUnknown_08625340:
 
 	.GLOBAL gUnknown_08625348
 gUnknown_08625348:
-	.INCBIN "baserom.gba", 0x625348, 0x625748-0x625348
+	.INCBIN "assets/sprites/gUnknown_08625348.4bpp"
 
 	.GLOBAL gUnknown_08625748
 gUnknown_08625748:
@@ -13869,7 +13869,7 @@ gUnknown_086258F8:
 
 	.GLOBAL gUnknown_08625900
 gUnknown_08625900:
-	.INCBIN "baserom.gba", 0x625900, 0x625F00-0x625900
+	.INCBIN "assets/sprites/gUnknown_08625900.4bpp"
 
 	.GLOBAL gUnknown_08625F00
 gUnknown_08625F00:
@@ -13881,7 +13881,7 @@ gUnknown_08626140:
 
 	.GLOBAL gUnknown_08626148
 gUnknown_08626148:
-	.INCBIN "baserom.gba", 0x626148, 0x626948-0x626148
+	.INCBIN "assets/sprites/gUnknown_08626148.4bpp"
 
 	.GLOBAL gUnknown_08626948
 gUnknown_08626948:
@@ -13893,7 +13893,7 @@ gUnknown_086269D8:
 
 	.GLOBAL gUnknown_086269E0
 gUnknown_086269E0:
-	.INCBIN "baserom.gba", 0x6269E0, 0x626BE0-0x6269E0
+	.INCBIN "assets/sprites/gUnknown_086269E0.4bpp"
 
 	.GLOBAL gUnknown_08626BE0
 gUnknown_08626BE0:
@@ -13905,7 +13905,7 @@ gUnknown_08626D00:
 
 	.GLOBAL gUnknown_08626D08
 gUnknown_08626D08:
-	.INCBIN "baserom.gba", 0x626D08, 0x627108-0x626D08
+	.INCBIN "assets/sprites/gUnknown_08626D08.4bpp"
 
 	.GLOBAL gUnknown_08627108
 gUnknown_08627108:
@@ -13917,7 +13917,7 @@ gUnknown_08627300:
 
 	.GLOBAL gUnknown_08627308
 gUnknown_08627308:
-	.INCBIN "baserom.gba", 0x627308, 0x627588-0x627308
+	.INCBIN "assets/sprites/gUnknown_08627308.4bpp"
 
 	.GLOBAL gUnknown_08627588
 gUnknown_08627588:
@@ -13929,7 +13929,7 @@ gUnknown_08627660:
 
 	.GLOBAL gUnknown_08627668
 gUnknown_08627668:
-	.INCBIN "baserom.gba", 0x627668, 0x627968-0x627668
+	.INCBIN "assets/sprites/gUnknown_08627668.4bpp"
 
 	.GLOBAL gUnknown_08627968
 gUnknown_08627968:
@@ -13941,7 +13941,7 @@ gUnknown_08627BA8:
 
 	.GLOBAL gUnknown_08627BB0
 gUnknown_08627BB0:
-	.INCBIN "baserom.gba", 0x627BB0, 0x627FB0-0x627BB0
+	.INCBIN "assets/sprites/gUnknown_08627BB0.4bpp"
 
 	.GLOBAL gUnknown_08627FB0
 gUnknown_08627FB0:
@@ -13953,7 +13953,7 @@ gUnknown_086280D0:
 
 	.GLOBAL gUnknown_086280D8
 gUnknown_086280D8:
-	.INCBIN "baserom.gba", 0x6280D8, 0x628358-0x6280D8
+	.INCBIN "assets/sprites/gUnknown_086280D8.4bpp"
 
 	.GLOBAL gUnknown_08628358
 gUnknown_08628358:
@@ -13965,7 +13965,7 @@ gUnknown_086283E8:
 
 	.GLOBAL gUnknown_086283F0
 gUnknown_086283F0:
-	.INCBIN "baserom.gba", 0x6283F0, 0x6285F0-0x6283F0
+	.INCBIN "assets/sprites/gUnknown_086283F0.4bpp"
 
 	.GLOBAL gUnknown_086285F0
 gUnknown_086285F0:
@@ -13977,7 +13977,7 @@ gUnknown_08628710:
 
 	.GLOBAL gUnknown_08628718
 gUnknown_08628718:
-	.INCBIN "baserom.gba", 0x628718, 0x628B18-0x628718
+	.INCBIN "assets/sprites/gUnknown_08628718.4bpp"
 
 	.GLOBAL gUnknown_08628B18
 gUnknown_08628B18:
@@ -13989,7 +13989,7 @@ gUnknown_08628CA4:
 
 	.GLOBAL gUnknown_08628CAC
 gUnknown_08628CAC:
-	.INCBIN "baserom.gba", 0x628CAC, 0x62922C-0x628CAC
+	.INCBIN "assets/sprites/gUnknown_08628CAC.4bpp"
 
 	.GLOBAL gUnknown_0862922C
 gUnknown_0862922C:
@@ -14001,7 +14001,7 @@ gUnknown_08629304:
 
 	.GLOBAL gUnknown_0862930C
 gUnknown_0862930C:
-	.INCBIN "baserom.gba", 0x62930C, 0x62960C-0x62930C
+	.INCBIN "assets/sprites/gUnknown_0862930C.4bpp"
 
 	.GLOBAL gUnknown_0862960C
 gUnknown_0862960C:
@@ -14013,7 +14013,7 @@ gUnknown_086297BC:
 
 	.GLOBAL gUnknown_086297C4
 gUnknown_086297C4:
-	.INCBIN "baserom.gba", 0x6297C4, 0x629DC4-0x6297C4
+	.INCBIN "assets/sprites/gUnknown_086297C4.4bpp"
 
 	.GLOBAL gUnknown_08629DC4
 gUnknown_08629DC4:
@@ -14025,7 +14025,7 @@ gUnknown_08629EE4:
 
 	.GLOBAL gUnknown_08629EEC
 gUnknown_08629EEC:
-	.INCBIN "baserom.gba", 0x629EEC, 0x629FAC-0x629EEC
+	.INCBIN "assets/sprites/gUnknown_08629EEC.4bpp"
 
 	.GLOBAL gUnknown_08629FAC
 gUnknown_08629FAC:
@@ -14037,7 +14037,7 @@ gUnknown_0862A060:
 
 	.GLOBAL gUnknown_0862A068
 gUnknown_0862A068:
-	.INCBIN "baserom.gba", 0x62A068, 0x62A108-0x62A068
+	.INCBIN "assets/sprites/gUnknown_0862A068.4bpp"
 
 	.GLOBAL gUnknown_0862A108
 gUnknown_0862A108:
@@ -14049,7 +14049,7 @@ gUnknown_0862A348:
 
 	.GLOBAL gUnknown_0862A350
 gUnknown_0862A350:
-	.INCBIN "baserom.gba", 0x62A350, 0x62A750-0x62A350
+	.INCBIN "assets/sprites/gUnknown_0862A350.4bpp"
 
 	.GLOBAL gUnknown_0862A750
 gUnknown_0862A750:
@@ -14061,7 +14061,7 @@ gUnknown_0862A7E0:
 
 	.GLOBAL gUnknown_0862A7E8
 gUnknown_0862A7E8:
-	.INCBIN "baserom.gba", 0x62A7E8, 0x62A9E8-0x62A7E8
+	.INCBIN "assets/sprites/gUnknown_0862A7E8.4bpp"
 
 	.GLOBAL gUnknown_0862A9E8
 gUnknown_0862A9E8:
@@ -14073,7 +14073,7 @@ gUnknown_0862AB08:
 
 	.GLOBAL gUnknown_0862AB10
 gUnknown_0862AB10:
-	.INCBIN "baserom.gba", 0x62AB10, 0x62AF10-0x62AB10
+	.INCBIN "assets/sprites/gUnknown_0862AB10.4bpp"
 
 	.GLOBAL gUnknown_0862AF10
 gUnknown_0862AF10:
@@ -14085,7 +14085,7 @@ gUnknown_0862AFE8:
 
 	.GLOBAL gUnknown_0862AFF0
 gUnknown_0862AFF0:
-	.INCBIN "baserom.gba", 0x62AFF0, 0x62B2F0-0x62AFF0
+	.INCBIN "assets/sprites/gUnknown_0862AFF0.4bpp"
 
 	.GLOBAL gUnknown_0862B2F0
 gUnknown_0862B2F0:
@@ -14097,7 +14097,7 @@ gUnknown_0862B4A0:
 
 	.GLOBAL gUnknown_0862B4A8
 gUnknown_0862B4A8:
-	.INCBIN "baserom.gba", 0x62B4A8, 0x62BAA8-0x62B4A8
+	.INCBIN "assets/sprites/gUnknown_0862B4A8.4bpp"
 
 	.GLOBAL gUnknown_0862BAA8
 gUnknown_0862BAA8:
@@ -14109,7 +14109,7 @@ gUnknown_0862BBC8:
 
 	.GLOBAL gUnknown_0862BBD0
 gUnknown_0862BBD0:
-	.INCBIN "baserom.gba", 0x62BBD0, 0x62CBD0-0x62BBD0
+	.INCBIN "assets/sprites/gUnknown_0862BBD0.4bpp"
 
 	.GLOBAL gUnknown_0862CBD0
 gUnknown_0862CBD0:
@@ -14121,7 +14121,7 @@ gUnknown_0862CCF0:
 
 	.GLOBAL gUnknown_0862CCF8
 gUnknown_0862CCF8:
-	.INCBIN "baserom.gba", 0x62CCF8, 0x62D0F8-0x62CCF8
+	.INCBIN "assets/sprites/gUnknown_0862CCF8.4bpp"
 
 	.GLOBAL gUnknown_0862D0F8
 gUnknown_0862D0F8:
@@ -14133,7 +14133,7 @@ gUnknown_0862D11C:
 
 	.GLOBAL gUnknown_0862D124
 gUnknown_0862D124:
-	.INCBIN "baserom.gba", 0x62D124, 0x62D1A4-0x62D124
+	.INCBIN "assets/sprites/gUnknown_0862D124.4bpp"
 
 	.GLOBAL gUnknown_0862D1A4
 gUnknown_0862D1A4:
@@ -14145,7 +14145,7 @@ gUnknown_0862D1C8:
 
 	.GLOBAL gUnknown_0862D1D0
 gUnknown_0862D1D0:
-	.INCBIN "baserom.gba", 0x62D1D0, 0x62D250-0x62D1D0
+	.INCBIN "assets/sprites/gUnknown_0862D1D0.4bpp"
 
 	.GLOBAL gUnknown_0862D250
 gUnknown_0862D250:
@@ -14157,7 +14157,7 @@ gUnknown_0862D2BC:
 
 	.GLOBAL gUnknown_0862D2C4
 gUnknown_0862D2C4:
-	.INCBIN "baserom.gba", 0x62D2C4, 0x62D444-0x62D2C4
+	.INCBIN "assets/sprites/gUnknown_0862D2C4.4bpp"
 
 	.GLOBAL gUnknown_0862D444
 gUnknown_0862D444:
@@ -14169,7 +14169,7 @@ gUnknown_0862D4B0:
 
 	.GLOBAL gUnknown_0862D4B8
 gUnknown_0862D4B8:
-	.INCBIN "baserom.gba", 0x62D4B8, 0x62D638-0x62D4B8
+	.INCBIN "assets/sprites/gUnknown_0862D4B8.4bpp"
 
 	.GLOBAL gUnknown_0862D638
 gUnknown_0862D638:
@@ -14181,7 +14181,7 @@ gUnknown_0862D65C:
 
 	.GLOBAL gUnknown_0862D664
 gUnknown_0862D664:
-	.INCBIN "baserom.gba", 0x62D664, 0x62D864-0x62D664
+	.INCBIN "assets/sprites/gUnknown_0862D664.4bpp"
 
 	.GLOBAL gUnknown_0862D864
 gUnknown_0862D864:
@@ -14193,7 +14193,7 @@ gUnknown_0862D8F4:
 
 	.GLOBAL gUnknown_0862D8FC
 gUnknown_0862D8FC:
-	.INCBIN "baserom.gba", 0x62D8FC, 0x62DCFC-0x62D8FC
+	.INCBIN "assets/sprites/gUnknown_0862D8FC.4bpp"
 
 	.GLOBAL gUnknown_0862DCFC
 gUnknown_0862DCFC:
@@ -14205,7 +14205,7 @@ gUnknown_0862DD8C:
 
 	.GLOBAL gUnknown_0862DD94
 gUnknown_0862DD94:
-	.INCBIN "baserom.gba", 0x62DD94, 0x62E194-0x62DD94
+	.INCBIN "assets/sprites/gUnknown_0862DD94.4bpp"
 
 	.GLOBAL gUnknown_0862E194
 gUnknown_0862E194:
@@ -14217,7 +14217,7 @@ gUnknown_0862E2B4:
 
 	.GLOBAL gUnknown_0862E2BC
 gUnknown_0862E2BC:
-	.INCBIN "baserom.gba", 0x62E2BC, 0x62E4BC-0x62E2BC
+	.INCBIN "assets/sprites/gUnknown_0862E2BC.4bpp"
 
 	.GLOBAL gUnknown_0862E4BC
 gUnknown_0862E4BC:
@@ -14229,7 +14229,7 @@ gUnknown_0862E54C:
 
 	.GLOBAL gUnknown_0862E554
 gUnknown_0862E554:
-	.INCBIN "baserom.gba", 0x62E554, 0x62E754-0x62E554
+	.INCBIN "assets/sprites/gUnknown_0862E554.4bpp"
 
 	.GLOBAL gUnknown_0862E754
 gUnknown_0862E754:
@@ -14241,7 +14241,7 @@ gUnknown_0862E778:
 
 	.GLOBAL gUnknown_0862E780
 gUnknown_0862E780:
-	.INCBIN "baserom.gba", 0x62E780, 0x62E980-0x62E780
+	.INCBIN "assets/sprites/gUnknown_0862E780.4bpp"
 
 	.GLOBAL gUnknown_0862E980
 gUnknown_0862E980:
@@ -14253,7 +14253,7 @@ gUnknown_0862E9C8:
 
 	.GLOBAL gUnknown_0862E9D0
 gUnknown_0862E9D0:
-	.INCBIN "baserom.gba", 0x62E9D0, 0x62EBD0-0x62E9D0
+	.INCBIN "assets/sprites/gUnknown_0862E9D0.4bpp"
 
 	.GLOBAL gUnknown_0862EBD0
 gUnknown_0862EBD0:
@@ -14265,7 +14265,7 @@ gUnknown_0862F008:
 
 	.GLOBAL gUnknown_0862F010
 gUnknown_0862F010:
-	.INCBIN "baserom.gba", 0x62F010, 0x62FC10-0x62F010
+	.INCBIN "assets/sprites/gUnknown_0862F010.4bpp"
 
 	.GLOBAL gUnknown_0862FC10
 gUnknown_0862FC10:
@@ -14277,7 +14277,7 @@ gUnknown_0862FE50:
 
 	.GLOBAL gUnknown_0862FE58
 gUnknown_0862FE58:
-	.INCBIN "baserom.gba", 0x62FE58, 0x63FE58-0x62FE58
+	.INCBIN "assets/sprites/gUnknown_0862FE58.8bpp"
 
 	.GLOBAL gUnknown_0863FE58
 gUnknown_0863FE58:
@@ -14289,7 +14289,7 @@ gUnknown_086400E0:
 
 	.GLOBAL gUnknown_086400E8
 gUnknown_086400E8:
-	.INCBIN "baserom.gba", 0x6400E8, 0x640DE8-0x6400E8
+	.INCBIN "assets/sprites/gUnknown_086400E8.4bpp"
 
 	.GLOBAL gUnknown_08640DE8
 gUnknown_08640DE8:
@@ -14301,7 +14301,7 @@ gUnknown_08640F2C:
 
 	.GLOBAL gUnknown_08640F34
 gUnknown_08640F34:
-	.INCBIN "baserom.gba", 0x640F34, 0x642134-0x640F34
+	.INCBIN "assets/sprites/gUnknown_08640F34.4bpp"
 
 	.GLOBAL gUnknown_08642134
 gUnknown_08642134:
@@ -14313,7 +14313,7 @@ gUnknown_086421E8:
 
 	.GLOBAL gUnknown_086421F0
 gUnknown_086421F0:
-	.INCBIN "baserom.gba", 0x6421F0, 0x642BF0-0x6421F0
+	.INCBIN "assets/sprites/gUnknown_086421F0.4bpp"
 
 	.GLOBAL gUnknown_08642BF0
 gUnknown_08642BF0:
@@ -14325,7 +14325,7 @@ gUnknown_08642D34:
 
 	.GLOBAL gUnknown_08642D3C
 gUnknown_08642D3C:
-	.INCBIN "baserom.gba", 0x642D3C, 0x64BD3C-0x642D3C
+	.INCBIN "assets/sprites/gUnknown_08642D3C.8bpp"
 
 	.GLOBAL gUnknown_0864BD3C
 gUnknown_0864BD3C:
@@ -14337,7 +14337,7 @@ gUnknown_0864BF58:
 
 	.GLOBAL gUnknown_0864BF60
 gUnknown_0864BF60:
-	.INCBIN "baserom.gba", 0x64BF60, 0x64CC60-0x64BF60
+	.INCBIN "assets/sprites/gUnknown_0864BF60.4bpp"
 
 	.GLOBAL gUnknown_0864CC60
 gUnknown_0864CC60:
@@ -14349,7 +14349,7 @@ gUnknown_0864CF30:
 
 	.GLOBAL gUnknown_0864CF38
 gUnknown_0864CF38:
-	.INCBIN "baserom.gba", 0x64CF38, 0x64D138-0x64CF38
+	.INCBIN "assets/sprites/gUnknown_0864CF38.4bpp"
 
 	.GLOBAL gUnknown_0864D138
 gUnknown_0864D138:
@@ -14361,7 +14361,7 @@ gUnknown_0864D2E8:
 
 	.GLOBAL gUnknown_0864D2F0
 gUnknown_0864D2F0:
-	.INCBIN "baserom.gba", 0x64D2F0, 0x64DAF0-0x64D2F0
+	.INCBIN "assets/sprites/gUnknown_0864D2F0.4bpp"
 
 	.GLOBAL gUnknown_0864DAF0
 gUnknown_0864DAF0:
@@ -14373,7 +14373,7 @@ gUnknown_0864DC10:
 
 	.GLOBAL gUnknown_0864DC18
 gUnknown_0864DC18:
-	.INCBIN "baserom.gba", 0x64DC18, 0x64EC18-0x64DC18
+	.INCBIN "assets/sprites/gUnknown_0864DC18.8bpp"
 
 	.GLOBAL gUnknown_0864EC18
 gUnknown_0864EC18:
@@ -14385,7 +14385,7 @@ gUnknown_0864ED38:
 
 	.GLOBAL gUnknown_0864ED40
 gUnknown_0864ED40:
-	.INCBIN "baserom.gba", 0x64ED40, 0x64FD40-0x64ED40
+	.INCBIN "assets/sprites/gUnknown_0864ED40.8bpp"
 
 	.GLOBAL gUnknown_0864FD40
 gUnknown_0864FD40:
@@ -14397,7 +14397,7 @@ gUnknown_0864FE60:
 
 	.GLOBAL gUnknown_0864FE68
 gUnknown_0864FE68:
-	.INCBIN "baserom.gba", 0x64FE68, 0x650E68-0x64FE68
+	.INCBIN "assets/sprites/gUnknown_0864FE68.8bpp"
 
 	.GLOBAL gUnknown_08650E68
 gUnknown_08650E68:
@@ -14409,7 +14409,7 @@ gUnknown_08650F88:
 
 	.GLOBAL gUnknown_08650F90
 gUnknown_08650F90:
-	.INCBIN "baserom.gba", 0x650F90, 0x651F90-0x650F90
+	.INCBIN "assets/sprites/gUnknown_08650F90.8bpp"
 
 	.GLOBAL gUnknown_08651F90
 gUnknown_08651F90:
@@ -14421,7 +14421,7 @@ gUnknown_08651FFC:
 
 	.GLOBAL gUnknown_08652004
 gUnknown_08652004:
-	.INCBIN "baserom.gba", 0x652004, 0x652184-0x652004
+	.INCBIN "assets/sprites/gUnknown_08652004.4bpp"
 
 	.GLOBAL gUnknown_08652184
 gUnknown_08652184:
@@ -14433,7 +14433,7 @@ gUnknown_086521F0:
 
 	.GLOBAL gUnknown_086521F8
 gUnknown_086521F8:
-	.INCBIN "baserom.gba", 0x6521F8, 0x652378-0x6521F8
+	.INCBIN "assets/sprites/gUnknown_086521F8.4bpp"
 
 	.GLOBAL gUnknown_08652378
 gUnknown_08652378:
@@ -14445,7 +14445,7 @@ gUnknown_08652720:
 
 	.GLOBAL gUnknown_08652728
 gUnknown_08652728:
-	.INCBIN "baserom.gba", 0x652728, 0x654B28-0x652728
+	.INCBIN "assets/sprites/gUnknown_08652728.4bpp"
 
 	.GLOBAL gUnknown_08654B28
 gUnknown_08654B28:
@@ -14457,7 +14457,7 @@ gUnknown_08654BDC:
 
 	.GLOBAL gUnknown_08654BE4
 gUnknown_08654BE4:
-	.INCBIN "baserom.gba", 0x654BE4, 0x6553E4-0x654BE4
+	.INCBIN "assets/sprites/gUnknown_08654BE4.4bpp"
 
 	.GLOBAL gUnknown_086553E4
 gUnknown_086553E4:
@@ -14469,7 +14469,7 @@ gUnknown_08655624:
 
 	.GLOBAL gUnknown_0865562C
 gUnknown_0865562C:
-	.INCBIN "baserom.gba", 0x65562C, 0x656A2C-0x65562C
+	.INCBIN "assets/sprites/gUnknown_0865562C.4bpp"
 
 	.GLOBAL gUnknown_08656A2C
 gUnknown_08656A2C:
@@ -14481,7 +14481,7 @@ gUnknown_08656A50:
 
 	.GLOBAL gUnknown_08656A58
 gUnknown_08656A58:
-	.INCBIN "baserom.gba", 0x656A58, 0x656C58-0x656A58
+	.INCBIN "assets/sprites/gUnknown_08656A58.4bpp"
 
 	.GLOBAL gUnknown_08656C58
 gUnknown_08656C58:
@@ -14493,7 +14493,7 @@ gUnknown_08656C7C:
 
 	.GLOBAL gUnknown_08656C84
 gUnknown_08656C84:
-	.INCBIN "baserom.gba", 0x656C84, 0x656E84-0x656C84
+	.INCBIN "assets/sprites/gUnknown_08656C84.4bpp"
 
 	.GLOBAL gUnknown_08656E84
 gUnknown_08656E84:
@@ -14505,7 +14505,7 @@ gUnknown_08656EA8:
 
 	.GLOBAL gUnknown_08656EB0
 gUnknown_08656EB0:
-	.INCBIN "baserom.gba", 0x656EB0, 0x6570B0-0x656EB0
+	.INCBIN "assets/sprites/gUnknown_08656EB0.4bpp"
 
 	.GLOBAL gUnknown_086570B0
 gUnknown_086570B0:
@@ -14517,7 +14517,7 @@ gUnknown_086570D4:
 
 	.GLOBAL gUnknown_086570DC
 gUnknown_086570DC:
-	.INCBIN "baserom.gba", 0x6570DC, 0x6572DC-0x6570DC
+	.INCBIN "assets/sprites/gUnknown_086570DC.4bpp"
 
 	.GLOBAL gUnknown_086572DC
 gUnknown_086572DC:
@@ -14529,7 +14529,7 @@ gUnknown_08657324:
 
 	.GLOBAL gUnknown_0865732C
 gUnknown_0865732C:
-	.INCBIN "baserom.gba", 0x65732C, 0x6573AC-0x65732C
+	.INCBIN "assets/sprites/gUnknown_0865732C.4bpp"
 
 	.GLOBAL gUnknown_086573AC
 gUnknown_086573AC:
@@ -14545,7 +14545,7 @@ gUnknown_08657450:
 
 	.GLOBAL gUnknown_08657458
 gUnknown_08657458:
-	.INCBIN "baserom.gba", 0x657458, 0x6574D8-0x657458
+	.INCBIN "assets/sprites/gUnknown_08657458.4bpp"
 
 	.GLOBAL gUnknown_086574D8
 gUnknown_086574D8:
@@ -14557,7 +14557,7 @@ gUnknown_086574FC:
 
 	.GLOBAL gUnknown_08657504
 gUnknown_08657504:
-	.INCBIN "baserom.gba", 0x657504, 0x657584-0x657504
+	.INCBIN "assets/sprites/gUnknown_08657504.4bpp"
 
 	.GLOBAL gUnknown_08657584
 gUnknown_08657584:
@@ -14569,7 +14569,7 @@ gUnknown_086575A8:
 
 	.GLOBAL gUnknown_086575B0
 gUnknown_086575B0:
-	.INCBIN "baserom.gba", 0x6575B0, 0x657630-0x6575B0
+	.INCBIN "assets/sprites/gUnknown_086575B0.4bpp"
 
 	.GLOBAL gUnknown_08657630
 gUnknown_08657630:
@@ -14593,7 +14593,7 @@ gUnknown_08657AEC:
 
 	.GLOBAL gUnknown_08657AF4
 gUnknown_08657AF4:
-	.INCBIN "baserom.gba", 0x657AF4, 0x657B74-0x657AF4
+	.INCBIN "assets/sprites/gUnknown_08657AF4.4bpp"
 
 	.GLOBAL gUnknown_08657B74
 gUnknown_08657B74:
@@ -14605,7 +14605,7 @@ gUnknown_08657B98:
 
 	.GLOBAL gUnknown_08657BA0
 gUnknown_08657BA0:
-	.INCBIN "baserom.gba", 0x657BA0, 0x657C20-0x657BA0
+	.INCBIN "assets/sprites/gUnknown_08657BA0.4bpp"
 
 	.GLOBAL gUnknown_08657C20
 gUnknown_08657C20:
@@ -14617,7 +14617,7 @@ gUnknown_08657CD4:
 
 	.GLOBAL gUnknown_08657CDC
 gUnknown_08657CDC:
-	.INCBIN "baserom.gba", 0x657CDC, 0x657F5C-0x657CDC
+	.INCBIN "assets/sprites/gUnknown_08657CDC.4bpp"
 
 	.GLOBAL gUnknown_08657F5C
 gUnknown_08657F5C:
@@ -14629,7 +14629,7 @@ gUnknown_08657FC8:
 
 	.GLOBAL gUnknown_08657FD0
 gUnknown_08657FD0:
-	.INCBIN "baserom.gba", 0x657FD0, 0x658150-0x657FD0
+	.INCBIN "assets/sprites/gUnknown_08657FD0.4bpp"
 
 	.GLOBAL gUnknown_08658150
 gUnknown_08658150:
@@ -14641,7 +14641,7 @@ gUnknown_086581E0:
 
 	.GLOBAL gUnknown_086581E8
 gUnknown_086581E8:
-	.INCBIN "baserom.gba", 0x6581E8, 0x658268-0x6581E8
+	.INCBIN "assets/sprites/gUnknown_086581E8.4bpp"
 
 	.GLOBAL gUnknown_08658268
 gUnknown_08658268:
@@ -14653,7 +14653,7 @@ gUnknown_0865828C:
 
 	.GLOBAL gUnknown_08658294
 gUnknown_08658294:
-	.INCBIN "baserom.gba", 0x658294, 0x658314-0x658294
+	.INCBIN "assets/sprites/gUnknown_08658294.4bpp"
 
 	.GLOBAL gUnknown_08658314
 gUnknown_08658314:
@@ -14665,7 +14665,7 @@ gUnknown_086583A4:
 
 	.GLOBAL gUnknown_086583AC
 gUnknown_086583AC:
-	.INCBIN "baserom.gba", 0x6583AC, 0x6585AC-0x6583AC
+	.INCBIN "assets/sprites/gUnknown_086583AC.4bpp"
 
 	.GLOBAL gUnknown_086585AC
 gUnknown_086585AC:
@@ -14677,7 +14677,7 @@ gUnknown_086588A0:
 
 	.GLOBAL gUnknown_086588A8
 gUnknown_086588A8:
-	.INCBIN "baserom.gba", 0x6588A8, 0x658C28-0x6588A8
+	.INCBIN "assets/sprites/gUnknown_086588A8.4bpp"
 
 	.GLOBAL gUnknown_08658C28
 gUnknown_08658C28:
@@ -14689,7 +14689,7 @@ gUnknown_08658CB8:
 
 	.GLOBAL gUnknown_08658CC0
 gUnknown_08658CC0:
-	.INCBIN "baserom.gba", 0x658CC0, 0x658EC0-0x658CC0
+	.INCBIN "assets/sprites/gUnknown_08658CC0.4bpp"
 
 	.GLOBAL gUnknown_08658EC0
 gUnknown_08658EC0:
@@ -14701,7 +14701,7 @@ gUnknown_08658F50:
 
 	.GLOBAL gUnknown_08658F58
 gUnknown_08658F58:
-	.INCBIN "baserom.gba", 0x658F58, 0x658FD8-0x658F58
+	.INCBIN "assets/sprites/gUnknown_08658F58.4bpp"
 
 	.GLOBAL gUnknown_08658FD8
 gUnknown_08658FD8:
@@ -14713,7 +14713,7 @@ gUnknown_08658FFC:
 
 	.GLOBAL gUnknown_08659004
 gUnknown_08659004:
-	.INCBIN "baserom.gba", 0x659004, 0x659084-0x659004
+	.INCBIN "assets/sprites/gUnknown_08659004.4bpp"
 
 	.GLOBAL gUnknown_08659084
 gUnknown_08659084:
@@ -14725,7 +14725,7 @@ gUnknown_08659114:
 
 	.GLOBAL gUnknown_0865911C
 gUnknown_0865911C:
-	.INCBIN "baserom.gba", 0x65911C, 0x65919C-0x65911C
+	.INCBIN "assets/sprites/gUnknown_0865911C.4bpp"
 
 	.GLOBAL gUnknown_0865919C
 gUnknown_0865919C:
@@ -14737,7 +14737,7 @@ gUnknown_086591C0:
 
 	.GLOBAL gUnknown_086591C8
 gUnknown_086591C8:
-	.INCBIN "baserom.gba", 0x6591C8, 0x659248-0x6591C8
+	.INCBIN "assets/sprites/gUnknown_086591C8.4bpp"
 
 	.GLOBAL gUnknown_08659248
 gUnknown_08659248:
@@ -14749,7 +14749,7 @@ gUnknown_0865926C:
 
 	.GLOBAL gUnknown_08659274
 gUnknown_08659274:
-	.INCBIN "baserom.gba", 0x659274, 0x6592F4-0x659274
+	.INCBIN "assets/sprites/gUnknown_08659274.4bpp"
 
 	.GLOBAL gUnknown_086592F4
 gUnknown_086592F4:
@@ -14761,7 +14761,7 @@ gUnknown_08659318:
 
 	.GLOBAL gUnknown_08659320
 gUnknown_08659320:
-	.INCBIN "baserom.gba", 0x659320, 0x6593A0-0x659320
+	.INCBIN "assets/sprites/gUnknown_08659320.4bpp"
 
 	.GLOBAL gUncompressedGraphicsTable
 gUncompressedGraphicsTable:
@@ -31170,4 +31170,5 @@ INTRO_MINIGAMEXM:
 OUTRO_MINIGAMEXM:
 	.INCBIN "assets/music/OUTRO_MINIGAMEXM.bin"
 	
+
 
