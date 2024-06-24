@@ -4287,13 +4287,13 @@ gUnknown_08150BE0:
 gUnknown_08152BE0:
 	.INCBIN "baserom.gba", 0x152BE0, 0x153180-0x152BE0
 
-	.GLOBAL gUnknown_08153180
-gUnknown_08153180:
+	.GLOBAL gfxDKHurtOAM
+gfxDKHurtOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_08153188
-gUnknown_08153188:
-	.INCBIN "assets/sprites/gUnknown_08153188.8bpp"
+	.GLOBAL gfxDKHurt8bpp
+gfxDKHurt8bpp:
+	.INCBIN "assets/sprites/DKHurt.8bpp"
 
 	.GLOBAL gUnknown_08159188
 gUnknown_08159188:
@@ -16552,8 +16552,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_08152BE0 @ Sprite Data 1
-	.4byte gUnknown_08153180 @ OAM
-	.4byte gUnknown_08153188 @ Sprite Graphics
+	.4byte gfxDKHurtOAM @ OAM
+	.4byte gfxDKHurt8bpp @ Sprite Graphics
 
 	.2byte 0x0021 @ X Position
 	.2byte 0x0800 @ Y position
@@ -25740,8 +25740,8 @@ gUnknown_08663C88:
 	
 	.4byte gUnknown_03001C50
 	.4byte gUnknown_08152BE0
-	.4byte gUnknown_08153180
-	.4byte gUnknown_08153188
+	.4byte gfxDKHurtOAM
+	.4byte gfxDKHurt8bpp
 	.2byte 0x0800
 	.2byte 0x0200
 	.byte 0x40

@@ -92,7 +92,7 @@ FILES := \
 		assets/palettes/74_$(t).pal \
 		assets/palettes/75_$(t).pal \
 	) \
-	assets/sprites/gUnknown_08153188.png \
+	assets/sprites/DKHurt.png \
 	assets/sprites/MainLevelIconPics.png \
 	assets/sprites/PressStart.png \
 	assets/sprites/FileLetters.png \
@@ -126,7 +126,7 @@ FILES := \
 all: $(FILES)
 
 clean:
-	$(RM) -r $(FILES) $(TMPDIR)
+	$(RM) -r $(FILES) $(TMPDIR) assets/sprites/*
 
 ### Predefined palettes ###
 
@@ -220,9 +220,9 @@ obj_palette_addr = 0x81D98+$(1)*0x800+0x200+$(2)*0x20
 assets/sprites/test.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/test.8bpp: baserom.gba ; $(call romextract,0x153188,0x800*12)
 
-assets/sprites/gUnknown_08153188.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_08153188.8bpp: baserom.gba ; $(call romextract,0x153188,0x800*12)
-$(TMPDIR)/sprites/gUnknown_08153188.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,62,0),0x200)
+assets/sprites/DKHurt.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DKHurt.8bpp: baserom.gba ; $(call romextract,0x153188,0x800*12)
+$(TMPDIR)/sprites/DKHurt.gbapal: baserom.gba ; $(call romextract,$(call obj_palette_addr,62,0),0x200)
 
 assets/sprites/MainLevelIconPics.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/MainLevelIconPics.4bpp: baserom.gba ; $(call romextract,0x5D10C8,0x200*48)
