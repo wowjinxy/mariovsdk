@@ -1532,6 +1532,7 @@ $(TMPDIR)/sprites/gUnknown_080FE700.4bpp: baserom.gba ; $(call dump_data,0xFE700
 
 assets/sprites/gUnknown_080FED48.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_080FED48.4bpp: baserom.gba ; $(call dump_data,0xFED48,0x800)
+assets/sprites/gUnknown_080FED48.png: $(TMPDIR)/palettes/37_world_one_obj.2.gbapal
 
 assets/sprites/gUnknown_080FF574.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_080FF574.4bpp: baserom.gba ; $(call dump_data,0xFF574,0x80)
@@ -1760,93 +1761,122 @@ $(TMPDIR)/sprites/gUnknown_0812BA70.4bpp: baserom.gba ; $(call dump_data,0x12BA7
 
 assets/sprites/gUnknown_0812CA9C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812CA9C.4bpp: baserom.gba ; $(call dump_data,0x12CA9C,0x80)
+assets/sprites/gUnknown_0812CA9C.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812CB48.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812CB48.4bpp: baserom.gba ; $(call dump_data,0x12CB48,0x80)
+assets/sprites/gUnknown_0812CB48.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812CBF4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812CBF4.4bpp: baserom.gba ; $(call dump_data,0x12CBF4,0x80)
+assets/sprites/gUnknown_0812CBF4.png: $(TMPDIR)/palettes/38_world_two_obj.10.gbapal
 
 assets/sprites/gUnknown_0812CCA0.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812CCA0.4bpp: baserom.gba ; $(call dump_data,0x12CCA0,0x40)
+assets/sprites/gUnknown_0812CCA0.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_0812CD0C.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_0812CD0C.4bpp: baserom.gba ; $(call dump_data,0x12CD0C,0x20)
+assets/sprites/gUnknown_0812CD0C.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_0812CD58.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812CD58.4bpp: baserom.gba ; $(call dump_data,0x12CD58,0x80)
+assets/sprites/gUnknown_0812CD58.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_0812CE04.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_0812CE04.4bpp: baserom.gba ; $(call dump_data,0x12CE04,0x200)
+assets/sprites/gUnknown_0812CE04.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_0812D030.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D030.4bpp: baserom.gba ; $(call dump_data,0x12D030,0x100)
+assets/sprites/gUnknown_0812D030.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_0812D15C.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_0812D15C.4bpp: baserom.gba ; $(call dump_data,0x12D15C,0x80)
+assets/sprites/gUnknown_0812D15C.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_0812D208.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D208.4bpp: baserom.gba ; $(call dump_data,0x12D208,0x80)
+assets/sprites/gUnknown_0812D208.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812D2B4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D2B4.4bpp: baserom.gba ; $(call dump_data,0x12D2B4,0x80)
+assets/sprites/gUnknown_0812D2B4.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812D360.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D360.4bpp: baserom.gba ; $(call dump_data,0x12D360,0x80)
+assets/sprites/gUnknown_0812D360.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812D40C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D40C.4bpp: baserom.gba ; $(call dump_data,0x12D40C,0x80)
+assets/sprites/gUnknown_0812D40C.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812D4B8.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D4B8.4bpp: baserom.gba ; $(call dump_data,0x12D4B8,0x80)
+assets/sprites/gUnknown_0812D4B8.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812D564.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D564.4bpp: baserom.gba ; $(call dump_data,0x12D564,0x80)
+assets/sprites/gUnknown_0812D564.png: $(TMPDIR)/palettes/37_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_0812D610.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D610.4bpp: baserom.gba ; $(call dump_data,0x12D610,0x80)
+assets/sprites/gUnknown_0812D610.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812D6BC.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D6BC.4bpp: baserom.gba ; $(call dump_data,0x12D6BC,0x80)
+assets/sprites/gUnknown_0812D6BC.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812D768.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D768.4bpp: baserom.gba ; $(call dump_data,0x12D768,0x80)
+assets/sprites/gUnknown_0812D768.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812D814.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D814.4bpp: baserom.gba ; $(call dump_data,0x12D814,0x80)
+assets/sprites/gUnknown_0812D814.png: $(TMPDIR)/palettes/37_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_0812D8C0.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D8C0.4bpp: baserom.gba ; $(call dump_data,0x12D8C0,0x80)
+assets/sprites/gUnknown_0812D8C0.png: $(TMPDIR)/palettes/37_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_0812D96C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812D96C.4bpp: baserom.gba ; $(call dump_data,0x12D96C,0x80)
+assets/sprites/gUnknown_0812D96C.png: $(TMPDIR)/palettes/37_world_one_obj.8.gbapal
 
 assets/sprites/gUnknown_0812DA18.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812DA18.4bpp: baserom.gba ; $(call dump_data,0x12DA18,0x80)
+assets/sprites/gUnknown_0812DA18.png: $(TMPDIR)/palettes/37_world_one_obj.8.gbapal
 
 assets/sprites/gUnknown_0812DAC4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812DAC4.4bpp: baserom.gba ; $(call dump_data,0x12DAC4,0x80)
+assets/sprites/gUnknown_0812DAC4.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812DB70.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812DB70.4bpp: baserom.gba ; $(call dump_data,0x12DB70,0x80)
+assets/sprites/gUnknown_0812DB70.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
 assets/sprites/gUnknown_0812DC1C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812DC1C.4bpp: baserom.gba ; $(call dump_data,0x12DC1C,0x80)
+assets/sprites/gUnknown_0812DC1C.png: $(TMPDIR)/palettes/37_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_0812DCC8.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812DCC8.4bpp: baserom.gba ; $(call dump_data,0x12DCC8,0x80)
+assets/sprites/gUnknown_0812DCC8.png: $(TMPDIR)/palettes/37_world_one_obj.4.gbapal
 
 assets/sprites/gUnknown_0812DE28.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812DE28.4bpp: baserom.gba ; $(call dump_data,0x12DE28,0x300)
 
 assets/sprites/gUnknown_0812E178.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812E178.4bpp: baserom.gba ; $(call dump_data,0x12E178,0x200)
+assets/sprites/gUnknown_0812E178.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_0812E3A4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_0812E3A4.4bpp: baserom.gba ; $(call dump_data,0x12E3A4,0x200)
+assets/sprites/gUnknown_0812E3A4.png: $(TMPDIR)/palettes/62_dk_boss_plus_obj.0.gbapal
 
 assets/sprites/gUnknown_0812E5D0.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_0812E5D0.4bpp: baserom.gba ; $(call dump_data,0x12E5D0,0x200)
+assets/sprites/gUnknown_0812E5D0.png: $(TMPDIR)/palettes/62_dk_boss_plus_obj.0.gbapal
 
 assets/sprites/gUnknown_0812EA18.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_0812EA18.4bpp: baserom.gba ; $(call dump_data,0x12EA18,0x1000)
@@ -2475,15 +2505,19 @@ $(TMPDIR)/sprites/gUnknown_082A793C.4bpp: baserom.gba ; $(call dump_data,0x2A793
 
 assets/sprites/gUnknown_082A7DF4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082A7DF4.4bpp: baserom.gba ; $(call dump_data,0x2A7DF4,0x1800)
+assets/sprites/gUnknown_082A7DF4.png: $(TMPDIR)/palettes/38_world_two_obj.7.gbapal
 
 assets/sprites/gUnknown_082A983C.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082A983C.4bpp: baserom.gba ; $(call dump_data,0x2A983C,0x2000)
+assets/sprites/gUnknown_082A983C.png: $(TMPDIR)/palettes/37_world_one_obj.4.gbapal # unused, lost its palette
 
 assets/sprites/gUnknown_082AB8D4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082AB8D4.4bpp: baserom.gba ; $(call dump_data,0x2AB8D4,0x800)
+assets/sprites/gUnknown_082AB8D4.png: $(TMPDIR)/palettes/37_world_one_obj.4.gbapal # -- early version of tane pakkun
 
 assets/sprites/gUnknown_082AC2B0.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082AC2B0.4bpp: baserom.gba ; $(call dump_data,0x2AC2B0,0x1800)
+assets/sprites/gUnknown_082AC2B0.png: $(TMPDIR)/palettes/38_world_two_obj.7.gbapal
 
 assets/sprites/gUnknown_082ADADC.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082ADADC.4bpp: baserom.gba ; $(call dump_data,0x2ADADC,0x100)
@@ -2547,6 +2581,7 @@ assets/sprites/gUnknown_082C37C8.png: $(TMPDIR)/palettes/37_world_one_obj.2.gbap
 
 assets/sprites/gUnknown_082C4714.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082C4714.8bpp: baserom.gba ; $(call dump_data,0x2C4714,0x2400)
+assets/sprites/gUnknown_082C4714.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_082C6B40.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082C6B40.4bpp: baserom.gba ; $(call dump_data,0x2C6B40,0x100)
@@ -2920,9 +2955,11 @@ assets/sprites/gUnknown_082E343C.png: $(TMPDIR)/palettes/5_level_help_bg.15.gbap
 
 assets/sprites/gUnknown_082E3668.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082E3668.4bpp: baserom.gba ; $(call dump_data,0x2E3668,0x200)
+assets/sprites/gUnknown_082E3668.png: $(TMPDIR)/palettes/5_level_help_bg.15.gbapal
 
 assets/sprites/gUnknown_082E3894.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082E3894.4bpp: baserom.gba ; $(call dump_data,0x2E3894,0x200)
+assets/sprites/gUnknown_082E3894.png: $(TMPDIR)/palettes/5_level_help_bg.15.gbapal
 
 assets/sprites/gUnknown_082E3AC0.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082E3AC0.8bpp: baserom.gba ; $(call dump_data,0x2E3AC0,0x200)
@@ -3013,9 +3050,11 @@ assets/sprites/gUnknown_082E8EA8.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_082E911C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082E911C.8bpp: baserom.gba ; $(call dump_data,0x2E911C,0x180)
+assets/sprites/gUnknown_082E911C.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_082E92C8.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082E92C8.8bpp: baserom.gba ; $(call dump_data,0x2E92C8,0x200)
+assets/sprites/gUnknown_082E92C8.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_082E94F4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082E94F4.4bpp: baserom.gba ; $(call dump_data,0x2E94F4,0x80)
@@ -3063,6 +3102,7 @@ assets/sprites/gUnknown_082EC2E0.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_082EC750.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_082EC750.4bpp: baserom.gba ; $(call dump_data,0x2EC750,0x280)
+assets/sprites/gUnknown_082EC750.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082ECB40.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_082ECB40.4bpp: baserom.gba ; $(call dump_data,0x2ECB40,0x280)
@@ -3250,6 +3290,7 @@ $(TMPDIR)/sprites/gUnknown_082F0854.4bpp: baserom.gba ; $(call dump_data,0x2F085
 
 assets/sprites/gUnknown_082F08A0.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F08A0.4bpp: baserom.gba ; $(call dump_data,0x2F08A0,0x80)
+assets/sprites/gUnknown_082F08A0.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F094C.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_082F094C.4bpp: baserom.gba ; $(call dump_data,0x2F094C,0x20)
@@ -3288,12 +3329,15 @@ $(TMPDIR)/sprites/gUnknown_082F1600.4bpp: baserom.gba ; $(call dump_data,0x2F160
 
 assets/sprites/gUnknown_082F1718.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F1718.4bpp: baserom.gba ; $(call dump_data,0x2F1718,0x180)
+assets/sprites/gUnknown_082F1718.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F1930.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F1930.4bpp: baserom.gba ; $(call dump_data,0x2F1930,0x180)
+assets/sprites/gUnknown_082F1930.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F1B48.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F1B48.4bpp: baserom.gba ; $(call dump_data,0x2F1B48,0x180)
+assets/sprites/gUnknown_082F1B48.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F1CF4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F1CF4.4bpp: baserom.gba ; $(call dump_data,0x2F1CF4,0x100)
@@ -3303,54 +3347,70 @@ $(TMPDIR)/sprites/gUnknown_082F1E68.4bpp: baserom.gba ; $(call dump_data,0x2F1E6
 
 assets/sprites/gUnknown_082F2014.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F2014.4bpp: baserom.gba ; $(call dump_data,0x2F2014,0x80)
+assets/sprites/gUnknown_082F2014.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F20C0.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F20C0.4bpp: baserom.gba ; $(call dump_data,0x2F20C0,0x80)
+assets/sprites/gUnknown_082F20C0.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F216C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F216C.4bpp: baserom.gba ; $(call dump_data,0x2F216C,0x80)
+assets/sprites/gUnknown_082F216C.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F2218.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F2218.4bpp: baserom.gba ; $(call dump_data,0x2F2218,0x80)
+assets/sprites/gUnknown_082F2218.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F22C4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F22C4.4bpp: baserom.gba ; $(call dump_data,0x2F22C4,0x80)
+assets/sprites/gUnknown_082F22C4.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F2370.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F2370.4bpp: baserom.gba ; $(call dump_data,0x2F2370,0x80)
+assets/sprites/gUnknown_082F2370.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F241C.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F241C.4bpp: baserom.gba ; $(call dump_data,0x2F241C,0x200)
+assets/sprites/gUnknown_082F241C.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F2648.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F2648.4bpp: baserom.gba ; $(call dump_data,0x2F2648,0x200)
+assets/sprites/gUnknown_082F2648.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F2874.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F2874.4bpp: baserom.gba ; $(call dump_data,0x2F2874,0x200)
+assets/sprites/gUnknown_082F2874.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F2AA0.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F2AA0.4bpp: baserom.gba ; $(call dump_data,0x2F2AA0,0x200)
+assets/sprites/gUnknown_082F2AA0.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F2CCC.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F2CCC.4bpp: baserom.gba ; $(call dump_data,0x2F2CCC,0x200)
+assets/sprites/gUnknown_082F2CCC.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F2EF8.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F2EF8.4bpp: baserom.gba ; $(call dump_data,0x2F2EF8,0x200)
+assets/sprites/gUnknown_082F2EF8.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F3124.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F3124.4bpp: baserom.gba ; $(call dump_data,0x2F3124,0x200)
+assets/sprites/gUnknown_082F3124.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F3350.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F3350.4bpp: baserom.gba ; $(call dump_data,0x2F3350,0x200)
+assets/sprites/gUnknown_082F3350.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F357C.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F357C.4bpp: baserom.gba ; $(call dump_data,0x2F357C,0x200)
+assets/sprites/gUnknown_082F357C.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F37A8.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_082F37A8.4bpp: baserom.gba ; $(call dump_data,0x2F37A8,0x20)
 
 assets/sprites/gUnknown_082F37F4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F37F4.4bpp: baserom.gba ; $(call dump_data,0x2F37F4,0x100)
+assets/sprites/gUnknown_082F37F4.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F39F8.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F39F8.4bpp: baserom.gba ; $(call dump_data,0x2F39F8,0x380)
@@ -3381,18 +3441,23 @@ $(TMPDIR)/sprites/gUnknown_082F6AE0.4bpp: baserom.gba ; $(call dump_data,0x2F6AE
 
 assets/sprites/gUnknown_082F8F0C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F8F0C.4bpp: baserom.gba ; $(call dump_data,0x2F8F0C,0x80)
+assets/sprites/gUnknown_082F8F0C.png: $(TMPDIR)/palettes/37_world_one_obj.2.gbapal
 
 assets/sprites/gUnknown_082F8FB8.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F8FB8.4bpp: baserom.gba ; $(call dump_data,0x2F8FB8,0x80)
+assets/sprites/gUnknown_082F8FB8.png: $(TMPDIR)/palettes/37_world_one_obj.2.gbapal
 
 assets/sprites/gUnknown_082F9184.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082F9184.4bpp: baserom.gba ; $(call dump_data,0x2F9184,0x900)
+assets/sprites/gUnknown_082F9184.png: $(TMPDIR)/palettes/29_world_five_boss_clear_obj.7.gbapal
 
 assets/sprites/gUnknown_082F9B1C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F9B1C.4bpp: baserom.gba ; $(call dump_data,0x2F9B1C,0x180)
+assets/sprites/gUnknown_082F9B1C.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/gUnknown_082F9E54.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_082F9E54.4bpp: baserom.gba ; $(call dump_data,0x2F9E54,0x600)
+assets/sprites/gUnknown_082F9E54.png: $(TMPDIR)/palettes/29_world_five_boss_clear_obj.8.gbapal
 
 assets/sprites/gUnknown_082FA5C4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082FA5C4.8bpp: baserom.gba ; $(call dump_data,0x2FA5C4,0x2800)
@@ -4021,168 +4086,222 @@ $(TMPDIR)/sprites/gUnknown_085C245C.4bpp: baserom.gba ; $(call dump_data,0x5C245
 
 assets/sprites/gUnknown_085C2588.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085C2588.4bpp: baserom.gba ; $(call dump_data,0x5C2588,0x80)
+assets/sprites/gUnknown_085C2588.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085C2634.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085C2634.4bpp: baserom.gba ; $(call dump_data,0x5C2634,0x80)
+assets/sprites/gUnknown_085C2634.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085C26E0.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085C26E0.4bpp: baserom.gba ; $(call dump_data,0x5C26E0,0x80)
+assets/sprites/gUnknown_085C26E0.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.11.gbapal
 
 assets/sprites/gUnknown_085C278C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085C278C.4bpp: baserom.gba ; $(call dump_data,0x5C278C,0x80)
+assets/sprites/gUnknown_085C278C.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.11.gbapal
 
 assets/sprites/gUnknown_085C2838.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085C2838.4bpp: baserom.gba ; $(call dump_data,0x5C2838,0x20)
+assets/sprites/gUnknown_085C2838.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085C28A8.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085C28A8.4bpp: baserom.gba ; $(call dump_data,0x5C28A8,0x100)
+assets/sprites/gUnknown_085C28A8.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085C29F8.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085C29F8.4bpp: baserom.gba ; $(call dump_data,0x5C29F8,0x100)
 
 assets/sprites/gUnknown_085C2BB4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085C2BB4.4bpp: baserom.gba ; $(call dump_data,0x5C2BB4,0x280)
+assets/sprites/gUnknown_085C2BB4.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085C2EF0.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085C2EF0.4bpp: baserom.gba ; $(call dump_data,0x5C2EF0,0xA0)
+assets/sprites/gUnknown_085C2EF0.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085C3220.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085C3220.4bpp: baserom.gba ; $(call dump_data,0x5C3220,0x4000)
+assets/sprites/gUnknown_085C3220.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.1.gbapal
 
 assets/sprites/gUnknown_085C724C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085C724C.4bpp: baserom.gba ; $(call dump_data,0x5C724C,0x400)
+assets/sprites/gUnknown_085C724C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.0.gbapal
 
 assets/sprites/gUnknown_085C7678.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085C7678.4bpp: baserom.gba ; $(call dump_data,0x5C7678,0x400)
+assets/sprites/gUnknown_085C7678.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.1.gbapal
 
 assets/sprites/gUnknown_085C7D08.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085C7D08.4bpp: baserom.gba ; $(call dump_data,0x5C7D08,0x4000)
+assets/sprites/gUnknown_085C7D08.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.1.gbapal
 
 assets/sprites/gUnknown_085CBD34.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085CBD34.4bpp: baserom.gba ; $(call dump_data,0x5CBD34,0x400)
+assets/sprites/gUnknown_085CBD34.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.15.gbapal
 
 assets/sprites/gUnknown_085CC160.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085CC160.4bpp: baserom.gba ; $(call dump_data,0x5CC160,0x800)
+assets/sprites/gUnknown_085CC160.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.0.gbapal
 
 assets/sprites/gUnknown_085CC98C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085CC98C.4bpp: baserom.gba ; $(call dump_data,0x5CC98C,0x800)
+assets/sprites/gUnknown_085CC98C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.1.gbapal
 
 assets/sprites/gUnknown_085CD41C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085CD41C.4bpp: baserom.gba ; $(call dump_data,0x5CD41C,0x400)
+assets/sprites/gUnknown_085CD41C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.15.gbapal
 
 assets/sprites/gUnknown_085CD848.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085CD848.4bpp: baserom.gba ; $(call dump_data,0x5CD848,0x800)
+assets/sprites/gUnknown_085CD848.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.0.gbapal
 
 assets/sprites/gUnknown_085CE074.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085CE074.4bpp: baserom.gba ; $(call dump_data,0x5CE074,0x800)
+assets/sprites/gUnknown_085CE074.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.1.gbapal
 
 assets/sprites/gUnknown_085CE8A0.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085CE8A0.4bpp: baserom.gba ; $(call dump_data,0x5CE8A0,0x800)
+assets/sprites/gUnknown_085CE8A0.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.0.gbapal
 
 assets/sprites/gUnknown_085CF0CC.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085CF0CC.4bpp: baserom.gba ; $(call dump_data,0x5CF0CC,0x800)
+assets/sprites/gUnknown_085CF0CC.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.1.gbapal
 
 assets/sprites/gUnknown_085CF9D0.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085CF9D0.4bpp: baserom.gba ; $(call dump_data,0x5CF9D0,0x700)
+assets/sprites/gUnknown_085CF9D0.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085D01D4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085D01D4.4bpp: baserom.gba ; $(call dump_data,0x5D01D4,0x700)
+assets/sprites/gUnknown_085D01D4.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.9.gbapal
 
 assets/sprites/gUnknown_085D0900.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085D0900.4bpp: baserom.gba ; $(call dump_data,0x5D0900,0x100)
+assets/sprites/gUnknown_085D0900.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.12.gbapal
 
 assets/sprites/gUnknown_085D76B8.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085D76B8.4bpp: baserom.gba ; $(call dump_data,0x5D76B8,0x5400)
+assets/sprites/gUnknown_085D76B8.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.13.gbapal
 
 assets/sprites/gUnknown_085DCB74.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085DCB74.4bpp: baserom.gba ; $(call dump_data,0x5DCB74,0xC0)
+assets/sprites/gUnknown_085DCB74.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085DCCCC.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085DCCCC.4bpp: baserom.gba ; $(call dump_data,0x5DCCCC,0x200)
+assets/sprites/gUnknown_085DCCCC.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.11.gbapal
 
 assets/sprites/gUnknown_085DCF88.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085DCF88.4bpp: baserom.gba ; $(call dump_data,0x5DCF88,0x180)
+assets/sprites/gUnknown_085DCF88.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085DD158.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085DD158.4bpp: baserom.gba ; $(call dump_data,0x5DD158,0x100)
+assets/sprites/gUnknown_085DD158.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.12.gbapal
 
 assets/sprites/gUnknown_085DD74C.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085DD74C.4bpp: baserom.gba ; $(call dump_data,0x5DD74C,0x2A0)
+assets/sprites/gUnknown_085DD74C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085DDE2C.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085DDE2C.4bpp: baserom.gba ; $(call dump_data,0x5DDE2C,0x240)
+assets/sprites/gUnknown_085DDE2C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085DE4AC.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085DE4AC.4bpp: baserom.gba ; $(call dump_data,0x5DE4AC,0x480)
+assets/sprites/gUnknown_085DE4AC.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.11.gbapal
 
 assets/sprites/gUnknown_085DEA9C.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085DEA9C.4bpp: baserom.gba ; $(call dump_data,0x5DEA9C,0x280)
+assets/sprites/gUnknown_085DEA9C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085DEFAC.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085DEFAC.4bpp: baserom.gba ; $(call dump_data,0x5DEFAC,0x400)
+assets/sprites/gUnknown_085DEFAC.png: $(TMPDIR)/palettes/3_options_menu_obj.0.gbapal
 
 assets/sprites/gUnknown_085DF63C.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085DF63C.4bpp: baserom.gba ; $(call dump_data,0x5DF63C,0x400)
+assets/sprites/gUnknown_085DF63C.png: $(TMPDIR)/palettes/3_options_menu_obj.0.gbapal
 
 assets/sprites/gUnknown_085DFCCC.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085DFCCC.4bpp: baserom.gba ; $(call dump_data,0x5DFCCC,0x400)
+assets/sprites/gUnknown_085DFCCC.png: $(TMPDIR)/palettes/3_options_menu_obj.0.gbapal
 
 assets/sprites/gUnknown_085E0164.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085E0164.4bpp: baserom.gba ; $(call dump_data,0x5E0164,0x400)
+assets/sprites/gUnknown_085E0164.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E05FC.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085E05FC.4bpp: baserom.gba ; $(call dump_data,0x5E05FC,0x40)
+assets/sprites/gUnknown_085E05FC.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E068C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E068C.4bpp: baserom.gba ; $(call dump_data,0x5E068C,0x100)
+assets/sprites/gUnknown_085E068C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E07DC.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E07DC.4bpp: baserom.gba ; $(call dump_data,0x5E07DC,0x100)
+assets/sprites/gUnknown_085E07DC.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E0908.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E0908.4bpp: baserom.gba ; $(call dump_data,0x5E0908,0x80)
+assets/sprites/gUnknown_085E0908.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E09B4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E09B4.4bpp: baserom.gba ; $(call dump_data,0x5E09B4,0x80)
+assets/sprites/gUnknown_085E09B4.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E0A84.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085E0A84.4bpp: baserom.gba ; $(call dump_data,0x5E0A84,0x40)
+assets/sprites/gUnknown_085E0A84.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.0.gbapal
 
 assets/sprites/gUnknown_085E0B14.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E0B14.4bpp: baserom.gba ; $(call dump_data,0x5E0B14,0x100)
+assets/sprites/gUnknown_085E0B14.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E0C64.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E0C64.4bpp: baserom.gba ; $(call dump_data,0x5E0C64,0x100)
+assets/sprites/gUnknown_085E0C64.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E0D90.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E0D90.4bpp: baserom.gba ; $(call dump_data,0x5E0D90,0x80)
+assets/sprites/gUnknown_085E0D90.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E0E3C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E0E3C.4bpp: baserom.gba ; $(call dump_data,0x5E0E3C,0x80)
+assets/sprites/gUnknown_085E0E3C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E0F0C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E0F0C.4bpp: baserom.gba ; $(call dump_data,0x5E0F0C,0x100)
+assets/sprites/gUnknown_085E0F0C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E105C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E105C.4bpp: baserom.gba ; $(call dump_data,0x5E105C,0x100)
+assets/sprites/gUnknown_085E105C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E1188.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E1188.4bpp: baserom.gba ; $(call dump_data,0x5E1188,0x80)
+assets/sprites/gUnknown_085E1188.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E1234.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E1234.4bpp: baserom.gba ; $(call dump_data,0x5E1234,0x80)
+assets/sprites/gUnknown_085E1234.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E134C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085E134C.4bpp: baserom.gba ; $(call dump_data,0x5E134C,0x800)
+assets/sprites/gUnknown_085E134C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.1.gbapal
 
 assets/sprites/gUnknown_085E1C2C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E1C2C.4bpp: baserom.gba ; $(call dump_data,0x5E1C2C,0x300)
+assets/sprites/gUnknown_085E1C2C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085E200C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085E200C.4bpp: baserom.gba ; $(call dump_data,0x5E200C,0x300)
+assets/sprites/gUnknown_085E200C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085E2338.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085E2338.4bpp: baserom.gba ; $(call dump_data,0x5E2338,0x100)
+assets/sprites/gUnknown_085E2338.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085E2464.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_085E2464.4bpp: baserom.gba ; $(call dump_data,0x5E2464,0x40)
@@ -4216,30 +4335,39 @@ $(TMPDIR)/sprites/gUnknown_085E2830.4bpp: baserom.gba ; $(call dump_data,0x5E283
 
 assets/sprites/gUnknown_085E2B00.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085E2B00.4bpp: baserom.gba ; $(call dump_data,0x5E2B00,0x400)
+assets/sprites/gUnknown_085E2B00.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.1.gbapal
 
 assets/sprites/gUnknown_085E3190.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085E3190.4bpp: baserom.gba ; $(call dump_data,0x5E3190,0x400)
+assets/sprites/gUnknown_085E3190.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.7.gbapal
 
 assets/sprites/gUnknown_085E3820.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085E3820.4bpp: baserom.gba ; $(call dump_data,0x5E3820,0x4800)
+assets/sprites/gUnknown_085E3820.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.10.gbapal
 
 assets/sprites/gUnknown_085E804C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085E804C.4bpp: baserom.gba ; $(call dump_data,0x5E804C,0x400)
+assets/sprites/gUnknown_085E804C.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.9.gbapal
 
 assets/sprites/gUnknown_085E8478.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085E8478.4bpp: baserom.gba ; $(call dump_data,0x5E8478,0x400)
+assets/sprites/gUnknown_085E8478.png: $(TMPDIR)/palettes/18_level_select_world_one_plus_obj.9.gbapal
 
 assets/sprites/gUnknown_085E88A4.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085E88A4.4bpp: baserom.gba ; $(call dump_data,0x5E88A4,0x400)
+assets/sprites/gUnknown_085E88A4.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E8CD0.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085E8CD0.4bpp: baserom.gba ; $(call dump_data,0x5E8CD0,0x400)
+assets/sprites/gUnknown_085E8CD0.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085E9360.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085E9360.4bpp: baserom.gba ; $(call dump_data,0x5E9360,0x1800)
+assets/sprites/gUnknown_085E9360.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.9.gbapal
 
 assets/sprites/gUnknown_085EAB8C.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085EAB8C.4bpp: baserom.gba ; $(call dump_data,0x5EAB8C,0x100)
+assets/sprites/gUnknown_085EAB8C.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.11.gbapal
 
 assets/sprites/gUnknown_085EAD24.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085EAD24.4bpp: baserom.gba ; $(call dump_data,0x5EAD24,0x200)
@@ -4261,36 +4389,47 @@ $(TMPDIR)/sprites/gUnknown_085EBC70.4bpp: baserom.gba ; $(call dump_data,0x5EBC7
 
 assets/sprites/gUnknown_085ECC9C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085ECC9C.8bpp: baserom.gba ; $(call dump_data,0x5ECC9C,0x800)
+assets/sprites/gUnknown_085ECC9C.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085ED4C8.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085ED4C8.8bpp: baserom.gba ; $(call dump_data,0x5ED4C8,0x800)
+assets/sprites/gUnknown_085ED4C8.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085EDCF4.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085EDCF4.8bpp: baserom.gba ; $(call dump_data,0x5EDCF4,0x800)
+assets/sprites/gUnknown_085EDCF4.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085EE520.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085EE520.8bpp: baserom.gba ; $(call dump_data,0x5EE520,0x800)
+assets/sprites/gUnknown_085EE520.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085EED4C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085EED4C.8bpp: baserom.gba ; $(call dump_data,0x5EED4C,0x800)
+assets/sprites/gUnknown_085EED4C.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085EF578.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085EF578.8bpp: baserom.gba ; $(call dump_data,0x5EF578,0x800)
+assets/sprites/gUnknown_085EF578.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085EFDA4.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085EFDA4.8bpp: baserom.gba ; $(call dump_data,0x5EFDA4,0x800)
+assets/sprites/gUnknown_085EFDA4.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085F05D0.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085F05D0.8bpp: baserom.gba ; $(call dump_data,0x5F05D0,0x800)
+assets/sprites/gUnknown_085F05D0.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085F0DFC.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085F0DFC.8bpp: baserom.gba ; $(call dump_data,0x5F0DFC,0x800)
+assets/sprites/gUnknown_085F0DFC.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085F1628.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_085F1628.8bpp: baserom.gba ; $(call dump_data,0x5F1628,0x800)
+assets/sprites/gUnknown_085F1628.png: $(TMPDIR)/palettes/3_options_menu_obj.gbapal
 
 assets/sprites/gUnknown_085F1E78.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085F1E78.4bpp: baserom.gba ; $(call dump_data,0x5F1E78,0x400)
+assets/sprites/gUnknown_085F1E78.png: $(TMPDIR)/palettes/3_options_menu_obj.2.gbapal
 
 assets/sprites/gUnknown_085F22A4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085F22A4.4bpp: baserom.gba ; $(call dump_data,0x5F22A4,0x80)
@@ -4330,6 +4469,7 @@ $(TMPDIR)/sprites/gUnknown_085F6134.4bpp: baserom.gba ; $(call dump_data,0x5F613
 
 assets/sprites/gUnknown_085F6390.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_085F6390.4bpp: baserom.gba ; $(call dump_data,0x5F6390,0x580)
+assets/sprites/gUnknown_085F6390.png: $(TMPDIR)/palettes/25_world_one_boss_clear_obj.6.gbapal
 
 assets/sprites/gUnknown_085F6B58.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085F6B58.4bpp: baserom.gba ; $(call dump_data,0x5F6B58,0x800)
