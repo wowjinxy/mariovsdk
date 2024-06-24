@@ -128,7 +128,7 @@ FILES := \
 	assets/sprites/gUnknown_080B9DAC.png \
 	assets/sprites/gUnknown_080BA1AC.png \
 	assets/sprites/gUnknown_080BA9D4.png \
-	assets/sprites/gUnknown_080BADFC.png \
+	assets/sprites/DKPack.png \
 	assets/sprites/gUnknown_080BF044.png \
 	assets/sprites/gUnknown_080C0148.png \
 	assets/sprites/gUnknown_080C0A00.png \
@@ -145,13 +145,13 @@ FILES := \
 	assets/sprites/gUnknown_080C8E30.png \
 	assets/sprites/gUnknown_080CABB0.png \
 	assets/sprites/gUnknown_080CB7F0.png \
-	assets/sprites/gUnknown_080CC238.png \
+	assets/sprites/MarioBurn.png \
 	assets/sprites/gUnknown_080D46C0.png \
-	assets/sprites/gUnknown_080DCB48.png \
+	assets/sprites/MarioFlail.png \
 	assets/sprites/gUnknown_080E4C70.png \
 	assets/sprites/gUnknown_080E6EB8.png \
-	assets/sprites/gUnknown_080EB100.png \
-	assets/sprites/gUnknown_080ED24C.png \
+	assets/sprites/MarioElectrocute.png \
+	assets/sprites/MarioLand.png \
 	assets/sprites/gUnknown_080EF798.png \
 	assets/sprites/gUnknown_080F2020.png \
 	assets/sprites/gUnknown_080F4808.png \
@@ -470,8 +470,8 @@ FILES := \
 	assets/sprites/gUnknown_082ADE24.png \
 	assets/sprites/gUnknown_082AEE50.png \
 	assets/sprites/gUnknown_082AEF7C.png \
-	assets/sprites/gUnknown_082AF7A8.png \
-	assets/sprites/gUnknown_082B0088.png \
+	assets/sprites/BonusPresent.png \
+	assets/sprites/BonusPresentSquish.png \
 	assets/sprites/gUnknown_082B30B4.png \
 	assets/sprites/gUnknown_082B354C.png \
 	assets/sprites/gUnknown_082B45E4.png \
@@ -1404,9 +1404,9 @@ $(TMPDIR)/sprites/gUnknown_080BA1AC.4bpp: baserom.gba ; $(call dump_data,0xBA1AC
 assets/sprites/gUnknown_080BA9D4.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_080BA9D4.4bpp: baserom.gba ; $(call dump_data,0xBA9D4,0x300)
 
-assets/sprites/gUnknown_080BADFC.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_080BADFC.4bpp: baserom.gba ; $(call dump_data,0xBADFC,0x4000)
-assets/sprites/gUnknown_080BADFC.png: $(TMPDIR)/palettes/64_obj.3.gbapal
+assets/sprites/DKPack.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DKPack.4bpp: baserom.gba ; $(call dump_data,0xBADFC,0x4000)
+assets/sprites/DKPack.png: $(TMPDIR)/palettes/64_obj.3.gbapal
 
 assets/sprites/gUnknown_080BF044.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_080BF044.4bpp: baserom.gba ; $(call dump_data,0xBF044,0x1000)
@@ -1459,17 +1459,17 @@ assets/sprites/gUnknown_080CABB0.png: $(TMPDIR)/palettes/37_world_one_obj.0.gbap
 assets/sprites/gUnknown_080CB7F0.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_080CB7F0.4bpp: baserom.gba ; $(call dump_data,0xCB7F0,0x5C0)
 
-assets/sprites/gUnknown_080CC238.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_080CC238.8bpp: baserom.gba ; $(call dump_data,0xCC238,0x8000)
-assets/sprites/gUnknown_080CC238.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/MarioBurn.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/MarioBurn.8bpp: baserom.gba ; $(call dump_data,0xCC238,0x8000)
+assets/sprites/MarioBurn.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_080D46C0.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_080D46C0.8bpp: baserom.gba ; $(call dump_data,0xD46C0,0x8000)
 assets/sprites/gUnknown_080D46C0.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080DCB48.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_080DCB48.8bpp: baserom.gba ; $(call dump_data,0xDCB48,0x8000)
-assets/sprites/gUnknown_080DCB48.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/MarioFlail.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/MarioFlail.8bpp: baserom.gba ; $(call dump_data,0xDCB48,0x8000)
+assets/sprites/MarioFlail.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_080E4C70.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_080E4C70.8bpp: baserom.gba ; $(call dump_data,0xE4C70,0x2000)
@@ -1479,13 +1479,13 @@ assets/sprites/gUnknown_080E6EB8.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_080E6EB8.8bpp: baserom.gba ; $(call dump_data,0xE6EB8,0x4000)
 assets/sprites/gUnknown_080E6EB8.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080EB100.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_080EB100.8bpp: baserom.gba ; $(call dump_data,0xEB100,0x2000)
-assets/sprites/gUnknown_080EB100.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/MarioElectrocute.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/MarioElectrocute.8bpp: baserom.gba ; $(call dump_data,0xEB100,0x2000)
+assets/sprites/MarioElectrocute.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080ED24C.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_080ED24C.8bpp: baserom.gba ; $(call dump_data,0xED24C,0x2400)
-assets/sprites/gUnknown_080ED24C.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/MarioLand.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/MarioLand.8bpp: baserom.gba ; $(call dump_data,0xED24C,0x2400)
+assets/sprites/MarioLand.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_080EF798.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_080EF798.8bpp: baserom.gba ; $(call dump_data,0xEF798,0x2400)
@@ -2457,13 +2457,13 @@ assets/sprites/gUnknown_082AEF7C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_082AEF7C.4bpp: baserom.gba ; $(call dump_data,0x2AEF7C,0x800)
 assets/sprites/gUnknown_082AEF7C.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/gUnknown_082AF7A8.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_082AF7A8.4bpp: baserom.gba ; $(call dump_data,0x2AF7A8,0x800)
-assets/sprites/gUnknown_082AF7A8.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/BonusPresent.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/BonusPresent.4bpp: baserom.gba ; $(call dump_data,0x2AF7A8,0x800)
+assets/sprites/BonusPresent.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/gUnknown_082B0088.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_082B0088.4bpp: baserom.gba ; $(call dump_data,0x2B0088,0x3000)
-assets/sprites/gUnknown_082B0088.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/BonusPresentSquish.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/BonusPresentSquish.4bpp: baserom.gba ; $(call dump_data,0x2B0088,0x3000)
+assets/sprites/BonusPresentSquish.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
 assets/sprites/gUnknown_082B30B4.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_082B30B4.4bpp: baserom.gba ; $(call dump_data,0x2B30B4,0x400)

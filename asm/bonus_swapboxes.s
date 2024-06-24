@@ -5352,7 +5352,7 @@ _08024422:
 	add r0, r0, r2
 	ldrb r0, [r0]
 	lsl r0, r0, #11
-	ldr r1, _08024544  @ =gUnknown_082B0088
+	ldr r1, _08024544  @ =gfxBonusPresentSquish4bpp
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
@@ -5362,7 +5362,7 @@ _08024422:
 	ldr r0, _0802454C  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08024550  @ =gUnknown_082B0080
+	ldr r0, _08024550  @ =gfxBonusPresentSquishOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5466,13 +5466,13 @@ _0802453C:
 _08024540:
 	.4byte gUnknown_082AFFA8
 _08024544:
-	.4byte gUnknown_082B0088
+	.4byte gfxBonusPresentSquish4bpp
 _08024548:
 	.4byte OBJ_VRAM0
 _0802454C:
 	.4byte 0x84000200
 _08024550:
-	.4byte gUnknown_082B0080
+	.4byte gfxBonusPresentSquishOAM
 _08024554:
 	.4byte gOamBuffer
 _08024558:
@@ -5511,7 +5511,7 @@ _08024570:
 	ldr r3, [sp, #32]
 	str r0, [r3]
 	ldr r4, _080246E8  @ =REG_DMA3SAD
-	ldr r0, _080246EC  @ =gUnknown_082AF7A8
+	ldr r0, _080246EC  @ =gfxBonusPresent4bpp
 	str r0, [r4]
 	ldrh r0, [r6]
 	ldr r1, _080246F0  @ =OBJ_VRAM0
@@ -5520,7 +5520,7 @@ _08024570:
 	ldr r0, _080246F4  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _080246F8  @ =gUnknown_082AF7A0
+	ldr r0, _080246F8  @ =gfxBonusPresentOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5648,7 +5648,7 @@ _0802466A:
 	add r0, r0, r2
 	ldrb r0, [r0]
 	lsl r0, r0, #11
-	ldr r1, _08024720  @ =gUnknown_082B0088
+	ldr r1, _08024720  @ =gfxBonusPresentSquish4bpp
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
@@ -5658,7 +5658,7 @@ _0802466A:
 	ldr r0, _080246F4  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08024724  @ =gUnknown_082B0080
+	ldr r0, _08024724  @ =gfxBonusPresentSquishOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5680,13 +5680,13 @@ _080246E4:
 _080246E8:
 	.4byte REG_DMA3SAD
 _080246EC:
-	.4byte gUnknown_082AF7A8
+	.4byte gfxBonusPresent4bpp
 _080246F0:
 	.4byte OBJ_VRAM0
 _080246F4:
 	.4byte 0x84000200
 _080246F8:
-	.4byte gUnknown_082AF7A0
+	.4byte gfxBonusPresentOAM
 _080246FC:
 	.4byte gOamBuffer
 _08024700:
@@ -5706,9 +5706,9 @@ _08024718:
 _0802471C:
 	.4byte gUnknown_082AFFA8
 _08024720:
-	.4byte gUnknown_082B0088
+	.4byte gfxBonusPresentSquish4bpp
 _08024724:
-	.4byte gUnknown_082B0080
+	.4byte gfxBonusPresentSquishOAM
 _08024728:
 	ldr r1, _08024890  @ =0x030000E8
 	ldr r0, [r1]
@@ -5730,7 +5730,7 @@ _08024728:
 	ldr r2, [sp, #32]
 	str r0, [r2]
 	ldr r4, _08024894  @ =REG_DMA3SAD
-	ldr r0, _08024898  @ =gUnknown_082AF7A8
+	ldr r0, _08024898  @ =gfxBonusPresent4bpp
 	str r0, [r4]
 	ldrh r0, [r6]
 	ldr r1, _0802489C  @ =OBJ_VRAM0
@@ -5739,7 +5739,7 @@ _08024728:
 	ldr r0, _080248A0  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _080248A4  @ =gUnknown_082AF7A0
+	ldr r0, _080248A4  @ =gfxBonusPresentOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5866,7 +5866,7 @@ _0802477C:
 	add r0, r0, r2
 	ldrb r0, [r0]
 	lsl r0, r0, #11
-	ldr r1, _080248C8  @ =gUnknown_082B0088
+	ldr r1, _080248C8  @ =gfxBonusPresentSquish4bpp
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
@@ -5876,7 +5876,7 @@ _0802477C:
 	ldr r0, _080248A0  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _080248CC  @ =gUnknown_082B0080
+	ldr r0, _080248CC  @ =gfxBonusPresentSquishOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5896,13 +5896,13 @@ _08024890:
 _08024894:
 	.4byte REG_DMA3SAD
 _08024898:
-	.4byte gUnknown_082AF7A8
+	.4byte gfxBonusPresent4bpp
 _0802489C:
 	.4byte OBJ_VRAM0
 _080248A0:
 	.4byte 0x84000200
 _080248A4:
-	.4byte gUnknown_082AF7A0
+	.4byte gfxBonusPresentOAM
 _080248A8:
 	.4byte 0x84000002
 _080248AC:
@@ -5920,9 +5920,9 @@ _080248C0:
 _080248C4:
 	.4byte gUnknown_082AFFA8
 _080248C8:
-	.4byte gUnknown_082B0088
+	.4byte gfxBonusPresentSquish4bpp
 _080248CC:
-	.4byte gUnknown_082B0080
+	.4byte gfxBonusPresentSquishOAM
 _080248D0:
 	ldr r1, _080249D4  @ =0x030000E8
 	ldr r0, [r1]
@@ -5944,7 +5944,7 @@ _080248D0:
 	ldr r2, [sp, #32]
 	str r0, [r2]
 	ldr r4, _080249D8  @ =REG_DMA3SAD
-	ldr r0, _080249DC  @ =gUnknown_082AF7A8
+	ldr r0, _080249DC  @ =gfxBonusPresent4bpp
 	str r0, [r4]
 	ldrh r0, [r6]
 	ldr r1, _080249E0  @ =OBJ_VRAM0
@@ -5953,7 +5953,7 @@ _080248D0:
 	ldr r0, _080249E4  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _080249E8  @ =gUnknown_082AF7A0
+	ldr r0, _080249E8  @ =gfxBonusPresentOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -6060,13 +6060,13 @@ _080249D4:
 _080249D8:
 	.4byte REG_DMA3SAD
 _080249DC:
-	.4byte gUnknown_082AF7A8
+	.4byte gfxBonusPresent4bpp
 _080249E0:
 	.4byte OBJ_VRAM0
 _080249E4:
 	.4byte 0x84000200
 _080249E8:
-	.4byte gUnknown_082AF7A0
+	.4byte gfxBonusPresentOAM
 _080249EC:
 	.4byte 0x84000002
 _080249F0:
@@ -6131,7 +6131,7 @@ _08024A22:
 	add r0, r0, r2
 	ldrb r0, [r0]
 	lsl r0, r0, #11
-	ldr r1, _08024B44  @ =gUnknown_082B0088
+	ldr r1, _08024B44  @ =gfxBonusPresentSquish4bpp
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
@@ -6141,7 +6141,7 @@ _08024A22:
 	ldr r0, _08024B4C  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08024B50  @ =gUnknown_082B0080
+	ldr r0, _08024B50  @ =gfxBonusPresentSquishOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -6245,13 +6245,13 @@ _08024B3C:
 _08024B40:
 	.4byte gUnknown_082AFFA8
 _08024B44:
-	.4byte gUnknown_082B0088
+	.4byte gfxBonusPresentSquish4bpp
 _08024B48:
 	.4byte OBJ_VRAM0
 _08024B4C:
 	.4byte 0x84000200
 _08024B50:
-	.4byte gUnknown_082B0080
+	.4byte gfxBonusPresentSquishOAM
 _08024B54:
 	.4byte gOamBuffer
 _08024B58:
@@ -6290,7 +6290,7 @@ _08024B70:
 	ldr r3, [sp, #32]
 	str r0, [r3]
 	ldr r4, _08024CE8  @ =REG_DMA3SAD
-	ldr r0, _08024CEC  @ =gUnknown_082AF7A8
+	ldr r0, _08024CEC  @ =gfxBonusPresent4bpp
 	str r0, [r4]
 	ldrh r0, [r6]
 	ldr r1, _08024CF0  @ =OBJ_VRAM0
@@ -6299,7 +6299,7 @@ _08024B70:
 	ldr r0, _08024CF4  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08024CF8  @ =gUnknown_082AF7A0
+	ldr r0, _08024CF8  @ =gfxBonusPresentOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -6427,7 +6427,7 @@ _08024C6A:
 	add r0, r0, r2
 	ldrb r0, [r0]
 	lsl r0, r0, #11
-	ldr r1, _08024D20  @ =gUnknown_082B0088
+	ldr r1, _08024D20  @ =gfxBonusPresentSquish4bpp
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r6]
@@ -6437,7 +6437,7 @@ _08024C6A:
 	ldr r0, _08024CF4  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08024D24  @ =gUnknown_082B0080
+	ldr r0, _08024D24  @ =gfxBonusPresentSquishOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -6459,13 +6459,13 @@ _08024CE4:
 _08024CE8:
 	.4byte REG_DMA3SAD
 _08024CEC:
-	.4byte gUnknown_082AF7A8
+	.4byte gfxBonusPresent4bpp
 _08024CF0:
 	.4byte OBJ_VRAM0
 _08024CF4:
 	.4byte 0x84000200
 _08024CF8:
-	.4byte gUnknown_082AF7A0
+	.4byte gfxBonusPresentOAM
 _08024CFC:
 	.4byte gOamBuffer
 _08024D00:
@@ -6485,9 +6485,9 @@ _08024D18:
 _08024D1C:
 	.4byte gUnknown_082AFFA8
 _08024D20:
-	.4byte gUnknown_082B0088
+	.4byte gfxBonusPresentSquish4bpp
 _08024D24:
-	.4byte gUnknown_082B0080
+	.4byte gfxBonusPresentSquishOAM
 _08024D28:
 	ldr r1, _08024E2C  @ =0x030000E8
 	ldr r0, [r1]
@@ -6509,7 +6509,7 @@ _08024D28:
 	ldr r2, [sp, #32]
 	str r0, [r2]
 	ldr r4, _08024E30  @ =REG_DMA3SAD
-	ldr r0, _08024E34  @ =gUnknown_082AF7A8
+	ldr r0, _08024E34  @ =gfxBonusPresent4bpp
 	str r0, [r4]
 	ldrh r0, [r6]
 	ldr r1, _08024E38  @ =OBJ_VRAM0
@@ -6518,7 +6518,7 @@ _08024D28:
 	ldr r0, _08024E3C  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08024E40  @ =gUnknown_082AF7A0
+	ldr r0, _08024E40  @ =gfxBonusPresentOAM
 	str r0, [r4]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -6625,13 +6625,13 @@ _08024E2C:
 _08024E30:
 	.4byte REG_DMA3SAD
 _08024E34:
-	.4byte gUnknown_082AF7A8
+	.4byte gfxBonusPresent4bpp
 _08024E38:
 	.4byte OBJ_VRAM0
 _08024E3C:
 	.4byte 0x84000200
 _08024E40:
-	.4byte gUnknown_082AF7A0
+	.4byte gfxBonusPresentOAM
 _08024E44:
 	.4byte 0x84000002
 _08024E48:
@@ -6682,7 +6682,7 @@ sub_08024E5C: @ 0x08024E5C
 	ldr r1, [sp, #32]
 	str r0, [r1]
 	ldr r4, _08025170  @ =REG_DMA3SAD
-	ldr r0, _08025174  @ =gUnknown_082AF7A8
+	ldr r0, _08025174  @ =gfxBonusPresent4bpp
 	str r0, [r4]
 	ldrh r0, [r7]
 	ldr r1, _08025178  @ =OBJ_VRAM0
@@ -6691,7 +6691,7 @@ sub_08024E5C: @ 0x08024E5C
 	ldr r0, _0802517C  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08025180  @ =gUnknown_082AF7A0
+	ldr r0, _08025180  @ =gfxBonusPresentOAM
 	str r0, [r4]
 	ldrh r0, [r6]
 	lsl r0, r0, #3
@@ -6807,7 +6807,7 @@ _08024F6A:
 	ldr r2, [sp, #32]
 	str r0, [r2]
 	ldr r4, _08025170  @ =REG_DMA3SAD
-	ldr r0, _08025174  @ =gUnknown_082AF7A8
+	ldr r0, _08025174  @ =gfxBonusPresent4bpp
 	str r0, [r4]
 	ldrh r0, [r7]
 	ldr r1, _08025178  @ =OBJ_VRAM0
@@ -6816,7 +6816,7 @@ _08024F6A:
 	ldr r0, _0802517C  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08025180  @ =gUnknown_082AF7A0
+	ldr r0, _08025180  @ =gfxBonusPresentOAM
 	str r0, [r4]
 	ldrh r0, [r6]
 	lsl r0, r0, #3
@@ -6931,7 +6931,7 @@ _08025060:
 	ldr r2, [sp, #32]
 	str r0, [r2]
 	ldr r4, _08025170  @ =REG_DMA3SAD
-	ldr r0, _08025174  @ =gUnknown_082AF7A8
+	ldr r0, _08025174  @ =gfxBonusPresent4bpp
 	str r0, [r4]
 	ldrh r0, [r7]
 	ldr r1, _08025178  @ =OBJ_VRAM0
@@ -6940,7 +6940,7 @@ _08025060:
 	ldr r0, _0802517C  @ =0x84000200
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08025180  @ =gUnknown_082AF7A0
+	ldr r0, _08025180  @ =gfxBonusPresentOAM
 	str r0, [r4]
 	ldrh r0, [r6]
 	lsl r0, r0, #3
@@ -7048,13 +7048,13 @@ _0802516C:
 _08025170:
 	.4byte REG_DMA3SAD
 _08025174:
-	.4byte gUnknown_082AF7A8
+	.4byte gfxBonusPresent4bpp
 _08025178:
 	.4byte OBJ_VRAM0
 _0802517C:
 	.4byte 0x84000200
 _08025180:
-	.4byte gUnknown_082AF7A0
+	.4byte gfxBonusPresentOAM
 _08025184:
 	.4byte gOamBuffer
 _08025188:

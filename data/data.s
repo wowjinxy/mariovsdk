@@ -2215,13 +2215,13 @@ gUnknown_080BA9D4:
 gUnknown_080BACD4:
 	.INCBIN "baserom.gba", 0xBACD4, 0xBADF4-0xBACD4
 
-	.GLOBAL gUnknown_080BADF4
-gUnknown_080BADF4:
+	.GLOBAL gfxDKPackOAM
+gfxDKPackOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=3, affineParam=0
 
-	.GLOBAL gUnknown_080BADFC
-gUnknown_080BADFC:
-	.INCBIN "assets/sprites/gUnknown_080BADFC.4bpp"
+	.GLOBAL gfxDKPack4bpp
+gfxDKPack4bpp:
+	.INCBIN "assets/sprites/DKPack.4bpp"
 
 	.GLOBAL gUnknown_080BEDFC
 gUnknown_080BEDFC:
@@ -2427,13 +2427,13 @@ gUnknown_080CB7F0:
 gUnknown_080CBDB0:
 	.INCBIN "baserom.gba", 0xCBDB0, 0xCC230-0xCBDB0
 
-	.GLOBAL gUnknown_080CC230
-gUnknown_080CC230:
+	.GLOBAL gfxMarioBurnOAM
+gfxMarioBurnOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_080CC238
-gUnknown_080CC238:
-	.INCBIN "assets/sprites/gUnknown_080CC238.8bpp"
+	.GLOBAL gfxMarioBurn8bpp
+gfxMarioBurn8bpp:
+	.INCBIN "assets/sprites/MarioBurn.8bpp"
 
 	.GLOBAL gUnknown_080D4238
 gUnknown_080D4238:
@@ -2451,13 +2451,13 @@ gUnknown_080D46C0:
 gUnknown_080DC6C0:
 	.INCBIN "baserom.gba", 0xDC6C0, 0xDCB40-0xDC6C0
 
-	.GLOBAL gUnknown_080DCB40
-gUnknown_080DCB40:
+	.GLOBAL gfxMarioFlailOAM
+gfxMarioFlailOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_080DCB48
-gUnknown_080DCB48:
-	.INCBIN "assets/sprites/gUnknown_080DCB48.8bpp"
+	.GLOBAL gfxMarioFlail8bpp
+gfxMarioFlail8bpp:
+	.INCBIN "assets/sprites/MarioFlail.8bpp"
 
 	.GLOBAL gUnknown_080E4B48
 gUnknown_080E4B48:
@@ -2487,25 +2487,25 @@ gUnknown_080E6EB8:
 gUnknown_080EAEB8:
 	.INCBIN "baserom.gba", 0xEAEB8, 0xEB0F8-0xEAEB8
 
-	.GLOBAL gUnknown_080EB0F8
-gUnknown_080EB0F8:
+	.GLOBAL gfxMarioElectrocuteOAM
+gfxMarioElectrocuteOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_080EB100
-gUnknown_080EB100:
-	.INCBIN "assets/sprites/gUnknown_080EB100.8bpp"
+	.GLOBAL gfxMarioElectrocute8bpp
+gfxMarioElectrocute8bpp:
+	.INCBIN "assets/sprites/MarioElectrocute.8bpp"
 
 	.GLOBAL gUnknown_080ED100
 gUnknown_080ED100:
 	.INCBIN "baserom.gba", 0xED100, 0xED244-0xED100
 
-	.GLOBAL gUnknown_080ED244
-gUnknown_080ED244:
+	.GLOBAL gfxMarioLandOAM
+gfxMarioLandOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_080ED24C
-gUnknown_080ED24C:
-	.INCBIN "assets/sprites/gUnknown_080ED24C.8bpp"
+	.GLOBAL gfxMarioLand8bpp
+gfxMarioLand8bpp:
+	.INCBIN "assets/sprites/MarioLand.8bpp"
 
 	.GLOBAL gUnknown_080EF64C
 gUnknown_080EF64C:
@@ -6339,25 +6339,25 @@ gUnknown_082AEF7C:
 gUnknown_082AF77C:
 	.INCBIN "baserom.gba", 0x2AF77C, 0x2AF7A0-0x2AF77C
 
-	.GLOBAL gUnknown_082AF7A0
-gUnknown_082AF7A0:
+	.GLOBAL gfxBonusPresentOAM
+gfxBonusPresentOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=8, affineParam=0
 
-	.GLOBAL gUnknown_082AF7A8
-gUnknown_082AF7A8:
-	.INCBIN "assets/sprites/gUnknown_082AF7A8.4bpp"
+	.GLOBAL gfxBonusPresent4bpp
+gfxBonusPresent4bpp:
+	.INCBIN "assets/sprites/BonusPresent.4bpp"
 
 	.GLOBAL gUnknown_082AFFA8
 gUnknown_082AFFA8:
 	.INCBIN "baserom.gba", 0x2AFFA8, 0x2B0080-0x2AFFA8
 
-	.GLOBAL gUnknown_082B0080
-gUnknown_082B0080:
+	.GLOBAL gfxBonusPresentSquishOAM
+gfxBonusPresentSquishOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=8, affineParam=0
 
-	.GLOBAL gUnknown_082B0088
-gUnknown_082B0088:
-	.INCBIN "assets/sprites/gUnknown_082B0088.4bpp"
+	.GLOBAL gfxBonusPresentSquish4bpp
+gfxBonusPresentSquish4bpp:
+	.INCBIN "assets/sprites/BonusPresentSquish.4bpp"
 
 	.GLOBAL gUnknown_082B3088
 gUnknown_082B3088:
@@ -14832,8 +14832,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_080BACD4 @ Sprite Data 1
-	.4byte gUnknown_080BADF4 @ OAM
-	.4byte gUnknown_080BADFC @ Sprite Graphics
+	.4byte gfxDKPackOAM @ OAM
+	.4byte gfxDKPack4bpp @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0100 @ Y position
@@ -15002,8 +15002,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_080CBDB0 @ Sprite Data 1
-	.4byte gUnknown_080CC230 @ OAM
-	.4byte gUnknown_080CC238 @ Sprite Graphics
+	.4byte gfxMarioBurnOAM @ OAM
+	.4byte gfxMarioBurn8bpp @ Sprite Graphics
 
 	.2byte 0x0020 @ X Position
 	.2byte 0x0400 @ Y position
@@ -15022,8 +15022,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_080DC6C0 @ Sprite Data 1
-	.4byte gUnknown_080DCB40 @ OAM
-	.4byte gUnknown_080DCB48 @ Sprite Graphics
+	.4byte gfxMarioFlailOAM @ OAM
+	.4byte gfxMarioFlail8bpp @ Sprite Graphics
 
 	.2byte 0x0008 @ X Position
 	.2byte 0x0400 @ Y position
@@ -15052,8 +15052,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_080EAEB8 @ Sprite Data 1
-	.4byte gUnknown_080EB0F8 @ OAM
-	.4byte gUnknown_080EB100 @ Sprite Graphics
+	.4byte gfxMarioElectrocuteOAM @ OAM
+	.4byte gfxMarioElectrocute8bpp @ Sprite Graphics
 
 	.2byte 0x0009 @ X Position
 	.2byte 0x0400 @ Y position
@@ -15062,8 +15062,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_080ED100 @ Sprite Data 1
-	.4byte gUnknown_080ED244 @ OAM
-	.4byte gUnknown_080ED24C @ Sprite Graphics
+	.4byte gfxMarioLandOAM @ OAM
+	.4byte gfxMarioLand8bpp @ Sprite Graphics
 
 	.2byte 0x0009 @ X Position
 	.2byte 0x0400 @ Y position
@@ -18262,8 +18262,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082AF77C @ Sprite Data 1
-	.4byte gUnknown_082AF7A0 @ OAM
-	.4byte gUnknown_082AF7A8 @ Sprite Graphics
+	.4byte gfxBonusPresentOAM @ OAM
+	.4byte gfxBonusPresent4bpp @ Sprite Graphics
 
 	.2byte 0x0006 @ X Position
 	.2byte 0x0800 @ Y position
@@ -18272,8 +18272,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082AFFA8 @ Sprite Data 1
-	.4byte gUnknown_082B0080 @ OAM
-	.4byte gUnknown_082B0088 @ Sprite Graphics
+	.4byte gfxBonusPresentSquishOAM @ OAM
+	.4byte gfxBonusPresentSquish4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0400 @ Y position

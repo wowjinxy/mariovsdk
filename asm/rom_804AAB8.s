@@ -21088,9 +21088,9 @@ _0805421C:
 	mov r0, sp
 	bl sub_08055FB8
 _08054478:
-	ldr r0, _08054654  @ =gUnknown_080BADF4
+	ldr r0, _08054654  @ =gfxDKPackOAM
 	str r0, [sp]
-	ldr r0, _08054658  @ =gUnknown_080BADFC
+	ldr r0, _08054658  @ =gfxDKPack4bpp
 	str r0, [sp, #4]
 	ldr r0, _0805465C  @ =gUnknown_080BACD4
 	str r0, [sp, #8]
@@ -21325,9 +21325,9 @@ _0805464C:
 _08054650:
 	.4byte gUnknown_0865FE80
 _08054654:
-	.4byte gUnknown_080BADF4
+	.4byte gfxDKPackOAM
 _08054658:
-	.4byte gUnknown_080BADFC
+	.4byte gfxDKPack4bpp
 _0805465C:
 	.4byte gUnknown_080BACD4
 _08054660:
@@ -23127,9 +23127,9 @@ _080551B0:
 	ldr r3, [sp, #96]
 	bl sub_08055B2C
 _08055426:
-	ldr r0, _080555E8  @ =gUnknown_080BADF4
+	ldr r0, _080555E8  @ =gfxDKPackOAM
 	str r0, [sp, #4]
-	ldr r0, _080555EC  @ =gUnknown_080BADFC
+	ldr r0, _080555EC  @ =gfxDKPack4bpp
 	str r0, [sp, #8]
 	ldr r0, _080555F0  @ =gUnknown_080BACD4
 	str r0, [sp, #12]
@@ -23351,9 +23351,9 @@ _080555E0:
 _080555E4:
 	.4byte gUnknown_0865FE80
 _080555E8:
-	.4byte gUnknown_080BADF4
+	.4byte gfxDKPackOAM
 _080555EC:
-	.4byte gUnknown_080BADFC
+	.4byte gfxDKPack4bpp
 _080555F0:
 	.4byte gUnknown_080BACD4
 _080555F4:
