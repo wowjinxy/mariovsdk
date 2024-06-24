@@ -49,6 +49,8 @@ compare: $(ROM)
 clean:
 	$(RM) $(ROM) $(ELF) $(MAP) $(OFILES) src/*.s
 	find . -name '*.4bpp' -exec rm {} +
+	find . -name '*.8bpp' -exec rm {} +
+	find . -name '*.gbapal' -exec rm {} +
 	$(MAKE) -C tools/gbagfx clean
 
 # Compile a set of baserom objects for use with objdiff
