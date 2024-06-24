@@ -614,7 +614,7 @@ world_start_main: @ 0x080374E0
 	ldrb r0, [r0]
 	cmp r0, #4
 	bne _08037550
-	ldr r0, _08037540  @ =gSomeKeys_030012E8
+	ldr r0, _08037540  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -649,7 +649,7 @@ world_start_main: @ 0x080374E0
 _0803753C:
 	.4byte 0x030002F4
 _08037540:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08037544:
 	.4byte gPreviousMainState
 _08037548:
@@ -766,7 +766,7 @@ sub_080375EC: @ 0x080375EC
 	mov r10, r3
 	ldr r4, _0803764C  @ =0x030002F6
 	ldr r5, _08037650  @ =gOamBuffer
-	ldr r6, _08037654  @ =gUnknown_03001930
+	ldr r6, _08037654  @ =gVRAMCurrTileNum_03001930
 	cmp r0, #0
 	blt _08037622
 	b _08037740
@@ -797,7 +797,7 @@ _0803764C:
 _08037650:
 	.4byte gOamBuffer
 _08037654:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08037658:
 	mov r0, r9
 	lsl r1, r0, #16
@@ -857,7 +857,7 @@ _0803769C:
 	add r2, r2, r5
 	ldrh r3, [r2, #4]
 	lsl r1, r3, #22
-	ldr r6, _08037838  @ =gUnknown_03001930
+	ldr r6, _08037838  @ =gVRAMCurrTileNum_03001930
 	lsr r1, r1, #22
 	ldrh r0, [r6]
 	add r1, r1, r0
@@ -1043,7 +1043,7 @@ _08037830:
 _08037834:
 	.4byte 0x84000002
 _08037838:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _0803783C:
 	.4byte 0x000003FF
 _08037840:
@@ -1081,7 +1081,7 @@ world_start_loop: @ 0x08037848
 	ldr r0, _080378B0  @ =0x85000100
 	str r0, [r1, #8]
 	ldr r0, [r1, #8]
-	ldr r3, _080378B4  @ =gUnknown_03001930
+	ldr r3, _080378B4  @ =gVRAMCurrTileNum_03001930
 	ldr r2, _080378B8  @ =gObjVRAMCopyOffset_0300192C
 	ldr r1, _080378BC  @ =0x030002F6
 	mov r0, #0
@@ -1109,7 +1109,7 @@ _080378AC:
 _080378B0:
 	.4byte 0x85000100
 _080378B4:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080378B8:
 	.4byte gObjVRAMCopyOffset_0300192C
 _080378BC:

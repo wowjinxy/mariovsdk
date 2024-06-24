@@ -98,7 +98,7 @@ void sub_08033DCC(void)
     sub_0802C058();
     sub_0807194C();
     irq_enable_t();
-    if (gUnknown_030012C0 != NULL)
+    if (gLoopCallback_030012C0 != NULL)
     {
         if (gUnknown_03001700 == 0)
         {
@@ -107,7 +107,7 @@ void sub_08033DCC(void)
             CpuCopy16(&gBGLayerOffsets , &gUnknown_030012D0, 16);
             set_bg_offset_regs_0802BEEC(&gUnknown_030012D0);
             sub_0802BE74();
-            gUnknown_030012C0();
+            gLoopCallback_030012C0();
             sub_08033EC8();
         }
     }
@@ -121,19 +121,19 @@ void sub_08033DCC(void)
     irq_disable_t();
 }
 
-void sub_08033E60(void)
+void sub_08033E60(void)  // unreferenced
 {
     sub_08033EBC();
-    gUnknown_030012C0 = sub_08034138;
+    gLoopCallback_030012C0 = dummy_loop_callback;
     DmaCopy16(3, interrupt_main, gIntrMainBuffer, 0x400);
     gUnknown_03007FFC = gIntrMainBuffer;
 }
 
-void sub_08033EA0(void (*func)(void))
+void set_loop_callback_08033EA0(void (*func)(void))
 {
-    gUnknown_030012C0 = func;
-    if (gUnknown_030012C0 == NULL)
-        gUnknown_030012C0 = sub_08034138;
+    gLoopCallback_030012C0 = func;
+    if (gLoopCallback_030012C0 == NULL)
+        gLoopCallback_030012C0 = dummy_loop_callback;
 }
 
 void sub_08033EBC(void)
@@ -147,7 +147,7 @@ void sub_08033EC8(void)
     gUnknown_03001700++;
 }
 
-void sub_08033EE0(void)
+void wait_for_some_counter_08033EE0(void)
 {
     gUnknown_03001700 = 0;
     while (gUnknown_03001700 < 2)
@@ -158,7 +158,7 @@ void sub_08033EF8(void (*func)(void))
 {
     gUnknown_030012FC = func;
     if (gUnknown_030012FC == NULL)
-        gUnknown_030012FC = sub_08034138;
+        gUnknown_030012FC = dummy_loop_callback;
 }
 
 void sub_08033F14(void)
@@ -176,7 +176,7 @@ void sub_08033F3C(void (*func)(void))
 {
     gUnknown_030012A8 = func;
     if (gUnknown_030012A8 == NULL)
-        gUnknown_030012A8 = sub_08034138;
+        gUnknown_030012A8 = dummy_loop_callback;
 }
 
 void sub_08033F58(void)
@@ -209,15 +209,15 @@ void sub_08033FC8(void)
     s32 i;
 
     gHeldKeys = 0xFFFF;
-    gSomeKeys_030012E8 = 0;
+    gNewKeys = 0;
     gUnknown_03001708 = 0;
     for (i = 0; i < 16; i++)
         gUnknown_030012B0[i] = 20;
 }
 
-u8 sub_08034004(void)
+u8 pressed_a_or_start_08034004(void)
 {
-    if (gUnknown_03001740 != 0 && (gSomeKeys_030012E8 & 9))
+    if (gUnknown_03001740 != 0 && (gNewKeys & (A_BUTTON|START_BUTTON)))
         return TRUE;
     else
         return FALSE;
@@ -300,7 +300,7 @@ void sub_0803411C(void)
     sub_08033F6C();
 }
 
-void sub_08034138(void)
+void dummy_loop_callback(void)
 {
 }
 

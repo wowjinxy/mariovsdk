@@ -8251,7 +8251,7 @@ sub_08020A74: @ 0x08020A74
 	mov r5, r8
 	push {r5-r7}
 	sub sp, sp, #20
-	ldr r0, _08020ACC  @ =gSomeKeys_030012E8
+	ldr r0, _08020ACC  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #1
 	and r0, r0, r1
@@ -8289,7 +8289,7 @@ sub_08020A74: @ 0x08020A74
 	strh r4, [r2, #20]
 	b _08020BB0
 _08020ACC:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08020AD0:
 	.4byte 0x030000D4
 _08020AD4:
@@ -9774,7 +9774,7 @@ bonus_stoparrow_init_callback: @ 0x080215B4
 	strh r1, [r0]
 	ldr r0, _08021658  @ =gCameraVerticalOffset
 	strh r1, [r0]
-	ldr r0, _0802165C  @ =gUnknown_03001930
+	ldr r0, _0802165C  @ =gVRAMCurrTileNum_03001930
 	strh r1, [r0]
 	ldr r0, _08021660  @ =gObjVRAMCopyOffset_0300192C
 	strh r1, [r0]
@@ -9822,7 +9822,7 @@ _08021654:
 _08021658:
 	.4byte gCameraVerticalOffset
 _0802165C:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08021660:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08021664:
@@ -10022,7 +10022,7 @@ _0802177E:
 	bl CpuSet
 	ldr r6, _08021900  @ =0x030000D4
 	ldr r1, [r6]
-	ldr r4, _08021904  @ =gUnknown_03001930
+	ldr r4, _08021904  @ =gVRAMCurrTileNum_03001930
 	ldrh r0, [r4]
 	str r0, [r1, #8]
 	ldr r0, _08021908  @ =gUnknown_082EBE60
@@ -10162,7 +10162,7 @@ _080218FC:
 _08021900:
 	.4byte 0x030000D4
 _08021904:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08021908:
 	.4byte gUnknown_082EBE60
 _0802190C:
@@ -10254,7 +10254,7 @@ bonus_stoparrow_loop: @ 0x080219A4
 	add r5, sp, #8
 	mov r1, #0
 	strh r1, [r5]
-	ldr r0, _08021B64  @ =gUnknown_03001930
+	ldr r0, _08021B64  @ =gVRAMCurrTileNum_03001930
 	ldrh r0, [r0]
 	mov r2, sp
 	add r2, r2, #10
@@ -10470,7 +10470,7 @@ _08021AC6:
 	pop {r0}
 	bx r0
 _08021B64:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08021B68:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08021B6C:

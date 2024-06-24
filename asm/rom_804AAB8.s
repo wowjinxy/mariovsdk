@@ -20153,7 +20153,7 @@ sub_08053CD0: @ 0x08053CD0
 	ldr r0, _08053DE0  @ =0x000001B1
 	cmp r1, r0
 	bgt _08053D46
-	ldr r0, _08053DE4  @ =gSomeKeys_030012E8
+	ldr r0, _08053DE4  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #10
 	and r0, r0, r1
@@ -20246,7 +20246,7 @@ _08053DDC:
 _08053DE0:
 	.4byte 0x000001B1
 _08053DE4:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08053DE8:
 	.4byte gUnknown_03001938
 _08053DEC:
@@ -70969,7 +70969,7 @@ sub_0806B600: @ 0x0806B600
 	mov r1, #200
 	lsl r1, r1, #1
 	add r0, r0, r1
-	ldr r4, _0806B694  @ =gUnknown_03001930
+	ldr r4, _0806B694  @ =gVRAMCurrTileNum_03001930
 	ldrh r1, [r4]
 	str r1, [r0]
 	ldr r0, _0806B698  @ =gUnknown_081C1A20
@@ -71031,7 +71031,7 @@ sub_0806B600: @ 0x0806B600
 _0806B690:
 	.4byte 0x030006E4
 _0806B694:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _0806B698:
 	.4byte gUnknown_081C1A20
 _0806B69C:
@@ -80708,7 +80708,7 @@ _0806FDA0:
 sub_0806FDA4: @ 0x0806FDA4
 	push {r4,r5,lr}
 	sub sp, sp, #12
-	ldr r0, _0806FE24  @ =gSomeKeys_030012E8
+	ldr r0, _0806FE24  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #10
 	and r0, r0, r1
@@ -80769,7 +80769,7 @@ _0806FDBC:
 	str r0, [r4]
 	b _0806FEAA
 _0806FE24:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0806FE28:
 	.4byte gUnknown_03001B98 
 _0806FE2C:

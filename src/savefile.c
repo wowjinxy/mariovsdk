@@ -1322,7 +1322,7 @@ static void process_some_key_sequence_0801138C(void)  // unreferenced
         {
             gUnknown_03000065 = 0;
         }
-        gSomeKeys_030012E8 = 0;
+        gNewKeys = 0;
         gHeldKeys = 0;
     }
     else

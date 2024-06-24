@@ -134,7 +134,7 @@ sub_080386DC: @ 0x080386DC
 	mov r5, r8
 	push {r5-r7}
 	sub sp, sp, #4
-	ldr r0, _08038744  @ =gUnknown_03001930
+	ldr r0, _08038744  @ =gVRAMCurrTileNum_03001930
 	mov r4, #0
 	strh r4, [r0]
 	ldr r0, _08038748  @ =gObjVRAMCopyOffset_0300192C
@@ -179,7 +179,7 @@ sub_080386DC: @ 0x080386DC
 	mov r0, #136
 	b _08038780
 _08038744:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08038748:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0803874C:
@@ -315,7 +315,7 @@ _0803883A:
 	strb r1, [r0]
 	ldr r0, _080388B0  @ =gUnknown_0300199C
 	strb r1, [r0]
-	ldr r4, _080388B4  @ =gUnknown_03001930
+	ldr r4, _080388B4  @ =gVRAMCurrTileNum_03001930
 	ldr r5, _080388B8  @ =gObjVRAMCopyOffset_0300192C
 	add r0, r4, #0
 	add r1, r5, #0
@@ -366,7 +366,7 @@ _080388AC:
 _080388B0:
 	.4byte gUnknown_0300199C
 _080388B4:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080388B8:
 	.4byte gObjVRAMCopyOffset_0300192C
 _080388BC:
@@ -382,7 +382,7 @@ _080388CC:
 	add r1, r5, #0
 	bl sub_080091A8
 _080388D4:
-	ldr r0, _080389D0  @ =gUnknown_03001930
+	ldr r0, _080389D0  @ =gVRAMCurrTileNum_03001930
 	ldr r1, _080389D4  @ =gObjVRAMCopyOffset_0300192C
 	bl sub_08042508
 	ldr r1, _080389D8  @ =gSpriteHorizontalOffset
@@ -511,7 +511,7 @@ _08038958:
 	.byte 0x00
 	.byte 0x00
 _080389D0:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080389D4:
 	.4byte gObjVRAMCopyOffset_0300192C
 _080389D8:
@@ -889,7 +889,7 @@ _08038C70:
 	cmp r0, #0
 	beq _08038C98
 _08038C7C:
-	ldr r0, _08038C90  @ =gUnknown_03001930
+	ldr r0, _08038C90  @ =gVRAMCurrTileNum_03001930
 	ldr r1, _08038C94  @ =gObjVRAMCopyOffset_0300192C
 	bl sub_08042580
 	bl sub_0804A794
@@ -899,7 +899,7 @@ _08038C7C:
 _08038C8C:
 	.4byte gNextLevelInLevelTable
 _08038C90:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08038C94:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08038C98:
@@ -912,14 +912,14 @@ _08038C98:
 	and r1, r1, r0
 	cmp r1, #0
 	bne _08038CC0
-	ldr r0, _08038CB8  @ =gUnknown_03001930
+	ldr r0, _08038CB8  @ =gVRAMCurrTileNum_03001930
 	ldr r1, _08038CBC  @ =gObjVRAMCopyOffset_0300192C
 	bl sub_08042580
 	b _08038D18
 _08038CB4:
 	.4byte gLevelType
 _08038CB8:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08038CBC:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08038CC0:
@@ -18838,7 +18838,7 @@ sub_08040FF8: @ 0x08040FF8
 	mov r6, r8
 	push {r6,r7}
 	mov r1, #0
-	ldr r0, _08041050  @ =gSomeKeys_030012E8
+	ldr r0, _08041050  @ =gNewKeys
 	mov r9, r0
 	ldr r0, _08041054  @ =gHeldKeys
 	mov r8, r0
@@ -18879,7 +18879,7 @@ _08041018:
 	pop {r0}
 	bx r0
 _08041050:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08041054:
 	.4byte gHeldKeys
 _08041058:

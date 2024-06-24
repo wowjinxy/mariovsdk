@@ -465,7 +465,7 @@ _0801C296:
 	add r0, r1, #1
 	strh r0, [r4]
 _0801C2A4:
-	ldr r5, _0801C338  @ =gSomeKeys_030012E8
+	ldr r5, _0801C338  @ =gNewKeys
 	ldrh r1, [r5]
 	mov r0, #48
 	and r0, r0, r1
@@ -540,7 +540,7 @@ _0801C330:
 _0801C334:
 	.4byte 0x0000270F
 _0801C338:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0801C33C:
 	.4byte 0x030000C1
 _0801C340:
@@ -608,7 +608,7 @@ _0801C3A8:
 	add r0, r1, #1
 	strh r0, [r2]
 _0801C3B8:
-	ldr r0, _0801C418  @ =gSomeKeys_030012E8
+	ldr r0, _0801C418  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -653,7 +653,7 @@ _0801C408:
 _0801C414:
 	.4byte gUnknown_030009D8
 _0801C418:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0801C41C:
 	.4byte 0x030000C7
 _0801C420:
@@ -696,7 +696,7 @@ sub_0801C42C: @ 0x0801C42C
 	ldr r0, [r4, #8]
 	ldr r1, _0801C504  @ =0x030000B8
 	mov r9, r1
-	ldr r0, _0801C508  @ =gUnknown_03001930
+	ldr r0, _0801C508  @ =gVRAMCurrTileNum_03001930
 	mov r8, r0
 	ldrh r2, [r0]
 	strh r2, [r1]
@@ -777,7 +777,7 @@ _0801C500:
 _0801C504:
 	.4byte 0x030000B8
 _0801C508:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _0801C50C:
 	.4byte gUnknown_085DF3AC
 _0801C510:
@@ -955,7 +955,7 @@ sub_0801C5E0: @ 0x0801C5E0
 	add r4, r4, r6
 	ldrh r5, [r4, #4]
 	lsl r3, r5, #22
-	ldr r7, _0801C6F8  @ =gUnknown_03001930
+	ldr r7, _0801C6F8  @ =gVRAMCurrTileNum_03001930
 	mov r9, r7
 	lsr r3, r3, #22
 	mov r2, r9
@@ -1035,7 +1035,7 @@ _0801C6F0:
 _0801C6F4:
 	.4byte 0x84000002
 _0801C6F8:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _0801C6FC:
 	.4byte 0x000003FF
 _0801C700:
@@ -1145,7 +1145,7 @@ sub_0801C758: @ 0x0801C758
 	add r3, r3, r5
 	ldrh r4, [r3, #4]
 	lsl r2, r4, #22
-	ldr r7, _0801C840  @ =gUnknown_03001930
+	ldr r7, _0801C840  @ =gVRAMCurrTileNum_03001930
 	mov r8, r7
 	lsr r2, r2, #22
 	mov r0, r8
@@ -1205,7 +1205,7 @@ _0801C838:
 _0801C83C:
 	.4byte 0x84000002
 _0801C840:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _0801C844:
 	.4byte 0x000003FF
 _0801C848:
@@ -1433,7 +1433,7 @@ _0801C9BA:
 	ldr r0, _0801CAD0  @ =0x85000100
 	str r0, [r1, #8]
 	ldr r0, [r1, #8]
-	ldr r3, _0801CAD4  @ =gUnknown_03001930
+	ldr r3, _0801CAD4  @ =gVRAMCurrTileNum_03001930
 	ldr r2, _0801CAD8  @ =gObjVRAMCopyOffset_0300192C
 	ldr r1, _0801CADC  @ =0x030000BE
 	mov r0, #0
@@ -1557,7 +1557,7 @@ _0801CACC:
 _0801CAD0:
 	.4byte 0x85000100
 _0801CAD4:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _0801CAD8:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0801CADC:
@@ -1604,7 +1604,7 @@ _0801CB00:
 	ldrh r4, [r0]
 	cmp r4, #119
 	bls _0801CB5A
-	ldr r2, _0801CB88  @ =gUnknown_03001930
+	ldr r2, _0801CB88  @ =gVRAMCurrTileNum_03001930
 	ldr r1, _0801CB8C  @ =gObjVRAMCopyOffset_0300192C
 	ldr r0, _0801CB90  @ =0x030000BE
 	strh r3, [r0]
@@ -1648,7 +1648,7 @@ _0801CB80:
 _0801CB84:
 	.4byte gUnknown_030009D8
 _0801CB88:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _0801CB8C:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0801CB90:

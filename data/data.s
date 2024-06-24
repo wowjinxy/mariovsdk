@@ -1143,8 +1143,8 @@ gUnknown_0807CA90:
 	.2byte 0x0044
 	.2byte 0x0073
 
-	.GLOBAL gUnknown_0807CA94
-gUnknown_0807CA94:
+	.GLOBAL gEWorldLevelCountPtr
+gEWorldLevelCountPtr:
 	.4byte 0x02012C00
 
 	.GLOBAL gUnknown_0807CA98
@@ -13443,25 +13443,25 @@ gUnknown_08616C30:
 gUnknown_08617030:
 	.INCBIN "baserom.gba", 0x617030, 0x617078-0x617030
 
-	.GLOBAL gUnknown_08617078
-gUnknown_08617078:
+	.GLOBAL gfxGoldCrownOAM
+gfxGoldCrownOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=3, affineParam=0
 
-	.GLOBAL gUnknown_08617080
-gUnknown_08617080:
-	.INCBIN "assets/sprites/gUnknown_08617080.4bpp"
+	.GLOBAL gfxGoldCrown4bpp
+gfxGoldCrown4bpp:
+	.INCBIN "assets/sprites/GoldCrown.4bpp"
 
 	.GLOBAL gUnknown_08617180
 gUnknown_08617180:
 	.INCBIN "baserom.gba", 0x617180, 0x6172E8-0x617180
 
-	.GLOBAL gUnknown_086172E8
-gUnknown_086172E8:
+	.GLOBAL gfxMainMenuDigitsLargeOAM
+gfxMainMenuDigitsLargeOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_086172F0
-gUnknown_086172F0:
-	.INCBIN "assets/sprites/gUnknown_086172F0.4bpp"
+	.GLOBAL gfxMainMenuDigitsLarge4bpp
+gfxMainMenuDigitsLarge4bpp:
+	.INCBIN "assets/sprites/MainMenuDigitsLarge.4bpp"
 
 	.GLOBAL gUnknown_08617570
 gUnknown_08617570:
@@ -13479,25 +13479,25 @@ gfxPlusMain4bpp:
 gUnknown_086176C0:
 	.INCBIN "baserom.gba", 0x6176C0, 0x617828-0x6176C0
 
-	.GLOBAL gUnknown_08617828
-gUnknown_08617828:
+	.GLOBAL gfxUnusedDigitsOAM
+gfxUnusedDigitsOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08617830
-gUnknown_08617830:
-	.INCBIN "assets/sprites/gUnknown_08617830.4bpp"
+	.GLOBAL gfxUnusedDigits4bpp
+gfxUnusedDigits4bpp:
+	.INCBIN "assets/sprites/UnusedDigits.4bpp"
 
 	.GLOBAL gUnknown_08617970
 gUnknown_08617970:
 	.INCBIN "baserom.gba", 0x617970, 0x617AFC-0x617970
 
-	.GLOBAL gUnknown_08617AFC
-gUnknown_08617AFC:
+	.GLOBAL gfxMainMenuDigitsMediumOAM
+gfxMainMenuDigitsMediumOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08617B04
-gUnknown_08617B04:
-	.INCBIN "assets/sprites/gUnknown_08617B04.4bpp"
+	.GLOBAL gfxMainMenuDigitsMedium4bpp
+gfxMainMenuDigitsMedium4bpp:
+	.INCBIN "assets/sprites/MainMenuDigitsMedium.4bpp"
 
 	.GLOBAL sMMDKSpriteTemplate
 sMMDKSpriteTemplate:
@@ -13515,25 +13515,25 @@ gfxMMDK4bpp:
 gUnknown_08617DB4:
 	.INCBIN "baserom.gba", 0x617DB4, 0x617F1C-0x617DB4
 
-	.GLOBAL gUnknown_08617F1C
-gUnknown_08617F1C:
+	.GLOBAL gfxMainMenuDigitsSmallOAM
+gfxMainMenuDigitsSmallOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08617F24
-gUnknown_08617F24:
-	.INCBIN "assets/sprites/gUnknown_08617F24.4bpp"
+	.GLOBAL gfxMainMenuDigitsSmall4bpp
+gfxMainMenuDigitsSmall4bpp:
+	.INCBIN "assets/sprites/MainMenuDigitsSmall.4bpp"
 
 	.GLOBAL gUnknown_08618064
 gUnknown_08618064:
 	.INCBIN "baserom.gba", 0x618064, 0x6180AC-0x618064
 
-	.GLOBAL gUnknown_086180AC
-gUnknown_086180AC:
+	.GLOBAL gfxBronzeCrownOAM
+gfxBronzeCrownOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=1, affineParam=0
 
-	.GLOBAL gUnknown_086180B4
-gUnknown_086180B4:
-	.INCBIN "assets/sprites/gUnknown_086180B4.4bpp"
+	.GLOBAL gfxBronzeCrown4bpp
+gfxBronzeCrown4bpp:
+	.INCBIN "assets/sprites/BronzeCrown.4bpp"
 
 	.GLOBAL gUnknown_086181B4
 gUnknown_086181B4:
@@ -24172,8 +24172,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_08617030 @ Sprite Data 1
-	.4byte gUnknown_08617078 @ OAM
-	.4byte gUnknown_08617080 @ Sprite Graphics
+	.4byte gfxGoldCrownOAM @ OAM
+	.4byte gfxGoldCrown4bpp @ Sprite Graphics
 
 	.2byte 0x000A @ X Position
 	.2byte 0x0040 @ Y position
@@ -24182,8 +24182,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_08617180 @ Sprite Data 1
-	.4byte gUnknown_086172E8 @ OAM
-	.4byte gUnknown_086172F0 @ Sprite Graphics
+	.4byte gfxMainMenuDigitsLargeOAM @ OAM
+	.4byte gfxMainMenuDigitsLarge4bpp @ Sprite Graphics
 
 	.2byte 0x0002 @ X Position
 	.2byte 0x0080 @ Y position
@@ -24202,8 +24202,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_086176C0 @ Sprite Data 1
-	.4byte gUnknown_08617828 @ OAM
-	.4byte gUnknown_08617830 @ Sprite Graphics
+	.4byte gfxUnusedDigitsOAM @ OAM
+	.4byte gfxUnusedDigits4bpp @ Sprite Graphics
 
 	.2byte 0x000B @ X Position
 	.2byte 0x0020 @ Y position
@@ -24212,8 +24212,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_08617970 @ Sprite Data 1
-	.4byte gUnknown_08617AFC @ OAM
-	.4byte gUnknown_08617B04 @ Sprite Graphics
+	.4byte gfxMainMenuDigitsMediumOAM @ OAM
+	.4byte gfxMainMenuDigitsMedium4bpp @ Sprite Graphics
 
 	.2byte 0x0002 @ X Position
 	.2byte 0x0080 @ Y position
@@ -24232,8 +24232,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_08617DB4 @ Sprite Data 1
-	.4byte gUnknown_08617F1C @ OAM
-	.4byte gUnknown_08617F24 @ Sprite Graphics
+	.4byte gfxMainMenuDigitsSmallOAM @ OAM
+	.4byte gfxMainMenuDigitsSmall4bpp @ Sprite Graphics
 
 	.2byte 0x0002 @ X Position
 	.2byte 0x0080 @ Y position
@@ -24242,8 +24242,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_08618064 @ Sprite Data 1
-	.4byte gUnknown_086180AC @ OAM
-	.4byte gUnknown_086180B4 @ Sprite Graphics
+	.4byte gfxBronzeCrownOAM @ OAM
+	.4byte gfxBronzeCrown4bpp @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0400 @ Y position

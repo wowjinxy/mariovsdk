@@ -95,7 +95,7 @@ void title_main(void)
     }
     if (gUnknown_03000C28 == 0 && sub_080721A8(gUnknown_030000B0) != 0)
     {
-        if (sub_08034004() != 0 && !(gSomeKeys_030012E8 & 2) && !(gHeldKeys & 2))
+        if (pressed_a_or_start_08034004() != 0 && !(gNewKeys & 2) && !(gHeldKeys & 2))
         {
             play_sound_effect_08071990(35, 8, 16, 64, 0, 128, 0);
             change_main_state(MAIN_STATE_FILE_SELECT, USE_FADE);

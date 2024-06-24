@@ -50,7 +50,7 @@ _0802D718:
 	.4byte _0802DB80
 	.4byte _0802DB8C
 _0802D754:
-	ldr r0, _0802D784  @ =gSomeKeys_030012E8
+	ldr r0, _0802D784  @ =gNewKeys
 	ldrh r2, [r0]
 	mov r1, #9
 	and r1, r1, r2
@@ -75,7 +75,7 @@ _0802D754:
 	.byte 0x00
 	.byte 0x00
 _0802D784:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802D788:
 	.4byte gUnknown_030001A8
 _0802D78C:
@@ -123,7 +123,7 @@ _0802D7D8:
 _0802D7DC:
 	.4byte gUnknown_030001A8
 _0802D7E0:
-	ldr r0, _0802D7FC  @ =gSomeKeys_030012E8
+	ldr r0, _0802D7FC  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #2
 	and r0, r0, r1
@@ -138,7 +138,7 @@ _0802D7E0:
 	mov r0, #22
 	b _0802DBAC
 _0802D7FC:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802D800:
 	ldr r5, _0802D814  @ =gUnknown_030001B8
 	ldr r1, [r5]
@@ -217,7 +217,7 @@ _0802D890:
 _0802D894:
 	.4byte gUnknown_0807C850
 _0802D898:
-	ldr r0, _0802D8CC  @ =gSomeKeys_030012E8
+	ldr r0, _0802D8CC  @ =gNewKeys
 	ldrh r2, [r0]
 	mov r1, #9
 	and r1, r1, r2
@@ -243,7 +243,7 @@ _0802D898:
 	.byte 0x00
 	.byte 0x00
 _0802D8CC:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802D8D0:
 	.4byte gUnknown_030001B8
 _0802D8D4:
@@ -262,7 +262,7 @@ _0802D8E2:
 	mov r0, #22
 	b _0802DBAC
 _0802D8EE:
-	ldr r0, _0802D90C  @ =gSomeKeys_030012E8
+	ldr r0, _0802D90C  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #2
 	and r0, r0, r1
@@ -278,7 +278,7 @@ _0802D8EE:
 	mov r0, #22
 	b _0802DBAC
 _0802D90C:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802D910:
 	mov r0, #1
 	bl sub_08038228
@@ -494,7 +494,7 @@ _0802DAA0:
 _0802DAA4:
 	.4byte gUnknown_030001B0
 _0802DAA8:
-	ldr r0, _0802DAD4  @ =gSomeKeys_030012E8
+	ldr r0, _0802DAD4  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -517,11 +517,11 @@ _0802DAB6:
 	bl play_sound_effect_08071990
 	b _0802DBD4
 _0802DAD4:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802DAD8:
 	.4byte gUnknown_030001A8
 _0802DADC:
-	ldr r0, _0802DAEC  @ =gSomeKeys_030012E8
+	ldr r0, _0802DAEC  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -531,7 +531,7 @@ _0802DADC:
 	.byte 0x00
 	.byte 0x00
 _0802DAEC:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802DAF0:
 	bl sub_0802F06C
 _0802DAF4:
@@ -571,7 +571,7 @@ _0802DB34:
 _0802DB38:
 	.4byte gUnknown_030001A8
 _0802DB3C:
-	ldr r0, _0802DB50  @ =gUnknown_0807CA94
+	ldr r0, _0802DB50  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
@@ -581,11 +581,11 @@ _0802DB3C:
 	str r0, [r1]
 	b _0802DBD4
 _0802DB50:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802DB54:
 	.4byte gUnknown_030001A8
 _0802DB58:
-	ldr r0, _0802DB7C  @ =gUnknown_0807CA94
+	ldr r0, _0802DB7C  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	ldr r0, [r1]
 	add r0, r1, r0
@@ -604,7 +604,7 @@ _0802DB58:
 	.byte 0x00
 	.byte 0x00
 _0802DB7C:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802DB80:
 	ldr r0, _0802DB88  @ =gUnknown_030001C0
 	ldr r0, [r0]
@@ -1016,7 +1016,7 @@ e_world_return_init_callback: @ 0x0802DE08
 	mov r0, #2
 	str r0, [r2]
 _0802DE8C:
-	ldr r1, _0802DF3C  @ =gUnknown_03001930
+	ldr r1, _0802DF3C  @ =gVRAMCurrTileNum_03001930
 	ldr r0, _0802DF40  @ =gObjVRAMCopyOffset_0300192C
 	strh r4, [r0]
 	strh r4, [r1]
@@ -1108,7 +1108,7 @@ _0802DF34:
 _0802DF38:
 	.4byte gUnknown_0807CA98
 _0802DF3C:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _0802DF40:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0802DF44:
@@ -1390,7 +1390,7 @@ _0802E144:
 	add r0, r0, #196
 	str r4, [r0]
 _0802E162:
-	ldr r0, _0802E18C  @ =gSomeKeys_030012E8
+	ldr r0, _0802E18C  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r4, #9
 	and r4, r4, r1
@@ -1414,7 +1414,7 @@ _0802E170:
 _0802E188:
 	.4byte gUnknown_030001C4
 _0802E18C:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802E190:
 	cmp r1, #2
 	beq _0802E236
@@ -1552,7 +1552,7 @@ _0802E276:
 _0802E290:
 	.4byte gLevelEWorldFlag
 _0802E294:
-	ldr r0, _0802E2C0  @ =gSomeKeys_030012E8
+	ldr r0, _0802E2C0  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #32
 	and r0, r0, r1
@@ -1576,7 +1576,7 @@ _0802E2B0:
 	mov r0, #23
 	b _0802E420
 _0802E2C0:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802E2C4:
 	mov r0, #16
 	and r0, r0, r1
@@ -1937,7 +1937,7 @@ _0802E54C:
 	mov r0, #27
 	b _0802E5F6
 _0802E55A:
-	ldr r0, _0802E5C4  @ =gSomeKeys_030012E8
+	ldr r0, _0802E5C4  @ =gNewKeys
 	ldrh r2, [r0]
 	mov r3, #9
 	and r3, r3, r2
@@ -1990,7 +1990,7 @@ _0802E5AA:
 	.byte 0x00
 	.byte 0x00
 _0802E5C4:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802E5C8:
 	.4byte gTextEraseLevelE
 _0802E5CC:
@@ -2153,16 +2153,16 @@ _0802E6E4:
 	mov r1, #5
 	b _0802E760
 _0802E6FE:
-	ldr r0, _0802E70C  @ =gUnknown_0807CA94
+	ldr r0, _0802E70C  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
 	bl sub_0802A370
 	b _0802E758
 _0802E70C:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802E710:
-	ldr r0, _0802E740  @ =gSomeKeys_030012E8
+	ldr r0, _0802E740  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #11
 	and r0, r0, r1
@@ -2186,7 +2186,7 @@ _0802E710:
 	bl play_sound_effect_08071990
 	b _0802E758
 _0802E740:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802E744:
 	str r1, [sp]
 	mov r0, #128
@@ -2695,7 +2695,7 @@ _0802EB1A:
 	lsl r7, r7, #3
 	add r6, r6, #3
 	add r7, r7, #17
-	ldr r0, _0802EC0C  @ =gUnknown_0807CA94
+	ldr r0, _0802EC0C  @ =gEWorldLevelCountPtr
 	ldr r0, [r0]
 	lsl r2, r4, #2
 	add r0, r0, #28
@@ -2720,7 +2720,7 @@ _0802EB46:
 	add r0, r0, r3
 	lsl r4, r0, #2
 _0802EB52:
-	ldr r0, _0802EC0C  @ =gUnknown_0807CA94
+	ldr r0, _0802EC0C  @ =gEWorldLevelCountPtr
 	ldr r0, [r0]
 	add r0, r0, #28
 	add r0, r0, r9
@@ -2818,7 +2818,7 @@ _0802EBCE:
 	pop {r0}
 	bx r0
 _0802EC0C:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802EC10:
 	.4byte gUnknown_030001C4
 _0802EC14:
@@ -3131,7 +3131,7 @@ sub_0802EE54: @ 0x0802EE54
 	sub sp, sp, #4
 	ldr r7, _0802EEBC  @ =gUnknown_0807CA98
 	ldr r1, [r7]
-	ldr r6, _0802EEC0  @ =gUnknown_0807CA94
+	ldr r6, _0802EEC0  @ =gEWorldLevelCountPtr
 	ldr r0, [r6]
 	ldr r0, [r0]
 	mov r2, #0
@@ -3184,7 +3184,7 @@ _0802EEAA:
 _0802EEBC:
 	.4byte gUnknown_0807CA98
 _0802EEC0:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802EEC4:
 	.4byte 0x01000018
 	THUMB_FUNC_END sub_0802EE54
@@ -3193,7 +3193,7 @@ _0802EEC4:
 sub_0802EEC8: @ 0x0802EEC8
 	push {r4-r7,lr}
 	add r6, r0, #0
-	ldr r3, _0802EF6C  @ =gUnknown_0807CA94
+	ldr r3, _0802EF6C  @ =gEWorldLevelCountPtr
 	ldr r5, [r3]
 	add r0, r5, #0
 	ldm r0!, {r7}
@@ -3278,7 +3278,7 @@ _0802EF4E:
 	pop {r0}
 	bx r0
 _0802EF6C:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 	THUMB_FUNC_END sub_0802EEC8
 
 	THUMB_FUNC_START sub_0802EF70
@@ -3289,7 +3289,7 @@ sub_0802EF70: @ 0x0802EF70
 	sub sp, sp, #4
 	mov r8, r0
 	mov r3, #0
-	ldr r2, _0802F058  @ =gUnknown_0807CA94
+	ldr r2, _0802F058  @ =gEWorldLevelCountPtr
 	ldr r0, [r2]
 	add r0, r0, #100
 	ldrh r0, [r0]
@@ -3402,7 +3402,7 @@ _0802F000:
 	pop {r1}
 	bx r1
 _0802F058:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802F05C:
 	.4byte 0x01000600
 	THUMB_FUNC_END sub_0802EF70
@@ -3424,7 +3424,7 @@ sub_0802F06C: @ 0x0802F06C
 	mov r1, sp
 	mov r0, #0
 	strh r0, [r1]
-	ldr r0, _0802F088  @ =gUnknown_0807CA94
+	ldr r0, _0802F088  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	ldr r2, _0802F08C  @ =0x01000034
 	mov r0, sp
@@ -3433,7 +3433,7 @@ sub_0802F06C: @ 0x0802F06C
 	pop {r0}
 	bx r0
 _0802F088:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802F08C:
 	.4byte 0x01000034
 	THUMB_FUNC_END sub_0802F06C
@@ -3445,7 +3445,7 @@ sub_0802F090: @ 0x0802F090
 	push {r7}
 	add r6, r0, #0
 	mov r4, #0
-	ldr r2, _0802F0F0  @ =gUnknown_0807CA94
+	ldr r2, _0802F0F0  @ =gEWorldLevelCountPtr
 	ldr r0, [r2]
 	ldr r1, [r0]
 	cmp r4, r1
@@ -3493,7 +3493,7 @@ _0802F0E2:
 	add r0, r0, #1
 	b _0802F0FC
 _0802F0F0:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802F0F4:
 	add r4, r4, #1
 	cmp r4, r7
@@ -3513,7 +3513,7 @@ _0802F0FC:
 	THUMB_FUNC_START sub_0802F108
 sub_0802F108: @ 0x0802F108
 	push {lr}
-	ldr r1, _0802F120  @ =gUnknown_0807CA94
+	ldr r1, _0802F120  @ =gEWorldLevelCountPtr
 	ldr r1, [r1]
 	add r1, r1, #100
 	ldrh r1, [r1]
@@ -3525,7 +3525,7 @@ sub_0802F108: @ 0x0802F108
 	mov r0, #0
 	b _0802F126
 _0802F120:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802F124:
 	mov r0, #1
 _0802F126:
@@ -3579,7 +3579,7 @@ sub_0802F168: @ 0x0802F168
 	push {r4-r7,lr}
 	add r5, r1, #0
 	lsl r0, r0, #24
-	ldr r3, _0802F1A8  @ =gUnknown_0807CA94
+	ldr r3, _0802F1A8  @ =gEWorldLevelCountPtr
 	ldr r1, [r3]
 	lsr r0, r0, #22
 	add r1, r1, #28
@@ -3611,13 +3611,13 @@ _0802F19C:
 	pop {r0}
 	bx r0
 _0802F1A8:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 	THUMB_FUNC_END sub_0802F168
 
 	THUMB_FUNC_START sub_0802F1AC
 sub_0802F1AC: @ 0x0802F1AC
 	lsl r0, r0, #24
-	ldr r2, _0802F1BC  @ =gUnknown_0807CA94
+	ldr r2, _0802F1BC  @ =gEWorldLevelCountPtr
 	ldr r2, [r2]
 	lsr r0, r0, #23
 	add r2, r2, #4
@@ -3625,13 +3625,13 @@ sub_0802F1AC: @ 0x0802F1AC
 	strh r1, [r2]
 	bx lr
 _0802F1BC:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 	THUMB_FUNC_END sub_0802F1AC
 
 	THUMB_FUNC_START sub_0802F1C0
 sub_0802F1C0: @ 0x0802F1C0
 	lsl r0, r0, #24
-	ldr r1, _0802F1D0  @ =gUnknown_0807CA94
+	ldr r1, _0802F1D0  @ =gEWorldLevelCountPtr
 	ldr r1, [r1]
 	lsr r0, r0, #23
 	add r1, r1, #4
@@ -3639,13 +3639,13 @@ sub_0802F1C0: @ 0x0802F1C0
 	ldrh r0, [r1]
 	bx lr
 _0802F1D0:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 	THUMB_FUNC_END sub_0802F1C0
 
 	THUMB_FUNC_START sub_0802F1D4
 sub_0802F1D4: @ 0x0802F1D4
 	push {lr}
-	ldr r0, _0802F1E8  @ =gUnknown_0807CA94
+	ldr r0, _0802F1E8  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
@@ -3655,7 +3655,7 @@ sub_0802F1D4: @ 0x0802F1D4
 	.byte 0x00
 	.byte 0x00
 _0802F1E8:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 	THUMB_FUNC_END sub_0802F1D4
 
 	THUMB_FUNC_START e_world_debug_main
@@ -3721,7 +3721,7 @@ _0802F24E:
 _0802F25C:
 	.4byte 0x030001C9
 _0802F260:
-	ldr r0, _0802F2A8  @ =gSomeKeys_030012E8
+	ldr r0, _0802F2A8  @ =gNewKeys
 	ldrh r2, [r0]
 	mov r1, #9
 	and r1, r1, r2
@@ -3739,7 +3739,7 @@ _0802F260:
 	ldrb r0, [r6]
 	cmp r0, #0
 	bne _0802F2BC
-	ldr r0, _0802F2B0  @ =gUnknown_0807CA94
+	ldr r0, _0802F2B0  @ =gEWorldLevelCountPtr
 	ldr r0, [r0]
 	ldr r0, [r0]
 	cmp r0, #11
@@ -3757,11 +3757,11 @@ _0802F260:
 	.byte 0x00
 	.byte 0x00
 _0802F2A8:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802F2AC:
 	.4byte 0x030001C9
 _0802F2B0:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802F2B4:
 	str r4, [sp]
 	str r5, [sp, #4]
@@ -3899,13 +3899,13 @@ _0802F3A8:
 _0802F3AC:
 	.4byte 0x030001CA
 _0802F3B0:
-	ldr r0, _0802F3EC  @ =gSomeKeys_030012E8
+	ldr r0, _0802F3EC  @ =gNewKeys
 	ldrh r2, [r0]
 	mov r4, #9
 	and r4, r4, r2
 	cmp r4, #0
 	beq _0802F410
-	ldr r0, _0802F3F0  @ =gUnknown_0807CA94
+	ldr r0, _0802F3F0  @ =gEWorldLevelCountPtr
 	ldr r0, [r0]
 	ldr r0, [r0]
 	cmp r0, #11
@@ -3928,9 +3928,9 @@ _0802F3B0:
 	bl sub_0802D614
 	b _0802F432
 _0802F3EC:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802F3F0:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _0802F3F4:
 	.4byte gPreloadedCardETable
 _0802F3F8:
@@ -9598,7 +9598,7 @@ _08031CAE:
 	bl play_sound_effect_08071990
 	b _08031D38
 _08031CBC:
-	ldr r0, _08031CE8  @ =gSomeKeys_030012E8
+	ldr r0, _08031CE8  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -9620,9 +9620,9 @@ _08031CBC:
 	ldr r0, [r1]
 	b _08031D3C
 _08031CE8:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08031CEC:
-	ldr r0, _08031D14  @ =gSomeKeys_030012E8
+	ldr r0, _08031D14  @ =gNewKeys
 	ldrh r2, [r0]
 	mov r1, #9
 	and r1, r1, r2
@@ -9643,7 +9643,7 @@ _08031CEC:
 	.byte 0x00
 	.byte 0x00
 _08031D14:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08031D18:
 	mov r0, #2
 	and r0, r0, r2
@@ -9785,7 +9785,7 @@ sub_08031E04: @ 0x08031E04
 	ldr r0, _08031E8C  @ =gUnknown_03000290
 	ldrb r0, [r0]
 	add r0, r0, #2
-	ldr r4, _08031E90  @ =gUnknown_0807CA94
+	ldr r4, _08031E90  @ =gEWorldLevelCountPtr
 	ldr r1, [r4]
 	mov r2, #104
 	bl sub_0802A430
@@ -9817,10 +9817,10 @@ _08031E2C:
 	ldr r0, [r7]
 	cmp r5, r0
 	bcs _08031EB8
-	ldr r0, _08031E90  @ =gUnknown_0807CA94
+	ldr r0, _08031E90  @ =gEWorldLevelCountPtr
 	mov r8, r0
 _08031E58:
-	ldr r0, _08031E90  @ =gUnknown_0807CA94
+	ldr r0, _08031E90  @ =gEWorldLevelCountPtr
 	ldr r2, [r0]
 	add r0, r2, #0
 	add r0, r0, #88
@@ -9849,7 +9849,7 @@ _08031E78:
 _08031E8C:
 	.4byte gUnknown_03000290
 _08031E90:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _08031E94:
 	.4byte 0x01000034
 _08031E98:
@@ -9952,7 +9952,7 @@ _08031F4C:
 	add r4, r0, #0
 	cmp r1, #0
 	bne _08031F68
-	ldr r0, _08031F64  @ =gUnknown_0807CA94
+	ldr r0, _08031F64  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	mov r2, #104
 	b _08031F7E
@@ -9961,9 +9961,9 @@ _08031F4C:
 _08031F60:
 	.4byte gUnknown_03000290
 _08031F64:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _08031F68:
-	ldr r2, _08031FB0  @ =gUnknown_0807CA94
+	ldr r2, _08031FB0  @ =gEWorldLevelCountPtr
 	ldrb r1, [r4]
 	lsl r0, r1, #1
 	add r0, r0, r1
@@ -9989,7 +9989,7 @@ _08031F7E:
 _08031F96:
 	mov r0, #0
 	strb r0, [r4]
-	ldr r1, _08031FB0  @ =gUnknown_0807CA94
+	ldr r1, _08031FB0  @ =gEWorldLevelCountPtr
 	ldr r0, [r1]
 	ldr r0, [r0]
 	cmp r0, #12
@@ -10001,7 +10001,7 @@ _08031F96:
 	ldr r0, _08031FC0  @ =gUnknown_0807DC9C
 	b _080320D0
 _08031FB0:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _08031FB4:
 	.4byte 0xFFFFF468
 _08031FB8:
@@ -10110,7 +10110,7 @@ _0803207A:
 	mov r1, sp
 	mov r0, #0
 	strh r0, [r1]
-	ldr r0, _08032094  @ =gUnknown_0807CA94
+	ldr r0, _08032094  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	ldr r2, _08032098  @ =0x01004834
 	mov r0, sp
@@ -10121,13 +10121,13 @@ _0803207A:
 	.byte 0x00
 	.byte 0x00
 _08032094:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _08032098:
 	.4byte 0x01004834
 _0803209C:
 	.4byte gUnknown_0300028C
 _080320A0:
-	ldr r0, _080320B4  @ =gUnknown_0807CA94
+	ldr r0, _080320B4  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
@@ -10138,7 +10138,7 @@ _080320A0:
 	.byte 0x00
 	.byte 0x00
 _080320B4:
-	.4byte gUnknown_0807CA94
+	.4byte gEWorldLevelCountPtr
 _080320B8:
 	.4byte gUnknown_0300028C
 _080320BC:

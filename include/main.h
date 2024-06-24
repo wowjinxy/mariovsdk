@@ -58,5 +58,8 @@ enum
 };
 
 extern u32 gMainState;
+extern u32 gNextMainState;
+extern u32 gPreviousMainState;
+extern u32 gNextStateFromFade;
 
 #endif

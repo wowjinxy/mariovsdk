@@ -9,6 +9,10 @@
 #define ABS(n) ((n) >= 0 ? (n) : -(n))
 //#define ABS(n) ((n) < 0 ? -(n) : (n))
 
+// TODO: find a way to control ordering of BSS symbols within an object file
+// The compiler seems to always put global symbols before static symbols
+#define GLOBAL_BSS __attribute__((section(".bss_global")))
+#define BSS __attribute__((section(".bss")))
 
 //------------------------------------------------------------------------------
 // Types
@@ -141,7 +145,7 @@ struct Struct30009B0
     s16 unk12;
 };
 
-struct Struct3000A10 {
+extern struct Struct3000A10 {
     u32 *base;
     u8 unk4;
     u8 unk5;
@@ -719,14 +723,14 @@ enum
     LOAD_OBJ_PALETTE = (1 << 1),
 };
 
-struct SpriteTemplate_child
+struct SubSpriteTemplate
 {
-    u8 unk0;  // index?
-    u8 unk1;
-    s8 unk2;  // x
-    s8 unk3;  // y
+    /*0x00*/ u8 index;  // index into sprite sheet?
+    /*0x01*/ u8 duration;  // animation frame duration
+    /*0x02*/ s8 x_offset;  // x offset from sprite position
+    /*0x03*/ s8 y_offset;  // y offset from sprite position
     u8 filler4[4];
-    u32 unk8;
+    u32 unk8;  // some kind of flags?
     u8 fillerC[0x24-0xC];
 };
 
@@ -735,9 +739,9 @@ struct SpriteTemplate
     /*0x00*/ u16 x;
     /*0x02*/ u16 y;
     u16 unk4;
-    u16 unk6;
-    u16 unk8;  // size of each sprite's tile data
-    struct SpriteTemplate_child *unkC;
+    u16 unk6;  // number of tiles used? not sure...
+    /*0x08*/ u16 subSpriteSize;  // size of each sprite's tile data
+    /*0x0C*/ struct SubSpriteTemplate *subSprites;
     /*0x10*/ struct OamData *oamData;  // oam
     /*0x14*/ u8 *tileData;  // tile data
 };  // size = 0x18
@@ -936,6 +940,22 @@ struct Struct168
     u16 unk6;
 };
 
+enum PaletteID
+{
+    PALETTE_0_TITLE_SCREEN,
+    PALETTE_1_MAIN_MENU,
+    PALETTE_2_EXPERT_LEVELS,
+    PALETTE_3_OPTIONS_MENU,
+};
+
+struct Struct1C0
+{
+    u8 filler0[6];
+    u16 unk6;
+    u8 filler8[0x10-0x8];
+    u8 unk10;  // unknown type
+};
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -953,29 +973,20 @@ extern u8 gUnknown_03000033;
 extern u32 gUnknown_03000034;
 extern u32 gUnknown_03000038;
 extern u32 gUnknown_0300003C;
-extern u16 gSomeOamIndex_03000040;
-extern u16 gUnknown_03000042;
-extern u16 gUnknown_03000044;
-extern u16 gUnknown_03000046;
-extern u16 gUnknown_03000048;
-extern u16 gUnknown_0300004A;
-extern u16 gUnknown_0300004C;
-extern u16 gUnknown_0300004E;
-extern u16 gUnknown_03000050;
-extern u16 gUnknown_03000052;
-extern struct { u16 unk0; u16 unk2; } gUnknown_03000054;
+
 extern u8 gFileSelectMenuSel;
 extern u8 gPrevFileSelectMenuSel;
-extern u8 gUnknown_0300005B;
+extern u8 gMainMenuState;
+
 extern u8 gUnknown_0300005C;
-extern u8 gUnknown_0300005D;
-extern u8 gUnknown_0300005E;
-extern u8 gUnknown_0300005F;
-extern u8 gUnknown_03000060;
-extern u8 gUnknown_03000061;
+extern u8 gIsEWorldVisible_0300005D;
+extern u8 gMainMenuSpriteFrameNum;
+extern u8 gMainMenuSpriteFrameTimer;
+extern u8 gMainMenuCrownFrameNum;
+extern u8 gMainMenuCrownFrameTimer;
 extern u8 gUnknown_03000062;
 extern u8 gUnknown_03000063;
-extern u8 gUnknown_03000064;
+extern u8 gMainMenuInitDelayTimer;
 extern u8 gUnknown_03000065;
 extern u8 gUnknown_03000066[];
 extern struct UnknownStruct15 *gUnknown_030000A4;
@@ -1011,7 +1022,7 @@ extern struct Struct30002B8 gUnknown_030002C8;
 extern u32 gUnknown_030001B4;
 extern u32 gUnknown_030001B8;
 extern u8 *gUnknown_030001BC;
-extern u32 gUnknown_030001C0;
+extern struct Struct1C0 *gUnknown_030001C0;
 extern struct UnknownStruct11 *gUnknown_0300029C;
 
 //new for sub_0804A794
@@ -1030,9 +1041,7 @@ extern u8 gUnknown_03000924;
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
 extern void *gUnknown_03000970[];
 extern struct Struct30009B0 gUnknown_030009B0;
-extern u32 gNextMainState;
-extern u32 gPreviousMainState;
-extern u32 gNextStateFromFade;
+
 extern u8 gUnknown_030009D0;
 extern u8 gUnknown_030009D4;
 extern u16 gUnknown_030009D8;
@@ -1116,11 +1125,11 @@ extern s16 gCameraHorizontalOffset;
 extern s16 gBGHorizontalOffset;
 extern void (*gUnknown_030012A8)(void);
 extern u8 gUnknown_030012B0[];
-extern void (*gUnknown_030012C0)(void);
+extern void (*gLoopCallback_030012C0)(void);
 extern struct Struct30012D0 gUnknown_030012D0;
-extern u16 gHeldKeys;
+extern u16 gHeldKeys;  // keys that are currently held down
 extern u16 gUnknown_030012E4;
-extern u16 gSomeKeys_030012E8;
+extern u16 gNewKeys;  // keys that were newly pressed on this frame
 extern s16 gBGVerticalOffset;
 extern s16 gUnknown_030012F4;
 extern s16 gUnknown_030012F8;
@@ -1143,7 +1152,7 @@ extern u16 gUnknown_03001748;
 
 extern struct UnknownStruct9 gUnknown_03001770;
 extern u16 gObjVRAMCopyOffset_0300192C;  // unknown type
-extern u16 gUnknown_03001930; // unknown type
+extern u16 gVRAMCurrTileNum_03001930; // unknown type
 extern u32 gUnknown_03001938;
 extern struct StructD7C *gUnknown_03001940;
 extern u8 gCurrentSwitchState;
@@ -1237,7 +1246,7 @@ extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
 extern u16 gUnknown_080788E0[];
 extern struct UnknownStruct12 *gScreenModeRelatedPtr;
-extern u32 *gUnknown_0807CA94;
+extern u32 *gEWorldLevelCountPtr;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gTitleMarioEyesAnimationData[];
 extern const u8 gTitleDKEyesAnimationData[];
@@ -1290,77 +1299,77 @@ extern void *gUnknown_0807C7CC[];
 extern u8 gUnknown_0807C804[];
 extern void *gUnknown_0807C814[];
 extern u8 gUnknown_0807C82C[];
-struct StructD78 *gUnknown_0807C834;
+extern struct StructD78 *gUnknown_0807C834;
 extern u8 gUnknown_0807C838[];
 
 extern struct GraphicsConfig gMainMenuData;
 
-extern struct SpriteTemplate_child gUnknown_085FB360;
+extern struct SubSpriteTemplate gUnknown_085FB360;
 extern struct OamData gfxFileLettersOAM;
 extern u8 gfxFileLetters4bpp[];
-extern struct SpriteTemplate_child gUnknown_085FB554[];
+extern struct SubSpriteTemplate gUnknown_085FB554[];
 extern struct OamData gUnknown_085FB7DC;
 extern u8 gUnknown_085FB7E4[];
-extern struct SpriteTemplate_child gUnknown_085FEFE4[];
+extern struct SubSpriteTemplate gUnknown_085FEFE4[];
 extern struct OamData gUnknown_085FF26C;
 extern u8 gUnknown_085FF274[];
-extern struct SpriteTemplate_child gUnknown_08600E74[];
+extern struct SubSpriteTemplate gUnknown_08600E74[];
 extern struct OamData gfxFileFrameNewGameBottomOAM;
 extern u8 gfxFileFrameNewGameBottom4bpp[];
-extern struct SpriteTemplate_child gUnknown_08602D04[];
+extern struct SubSpriteTemplate gUnknown_08602D04[];
 extern struct OamData gfxFileFrameNewGameTopOAM;
 extern u8 gfxFileFrameNewGameTop4bpp[];
 extern struct OamData gUnknown_08606A1C;
 extern u8 gUnknown_08606A24[];
-extern struct SpriteTemplate_child gUnknown_08606794[];
-extern struct SpriteTemplate_child gUnknown_0860A224[];
+extern struct SubSpriteTemplate gUnknown_08606794[];
+extern struct SubSpriteTemplate gUnknown_0860A224[];
 extern struct OamData gfxFileFrameNormalBottomOAM;
 extern u8 gfxFileFrameNormalBottom4bpp[];
-extern struct SpriteTemplate_child gUnknown_0860C0B4[];
+extern struct SubSpriteTemplate gUnknown_0860C0B4[];
 extern struct OamData gfxFileFrameNormalTopOAM;
 extern u8 gfxFileFrameNormalTop4bpp[];
-extern struct SpriteTemplate_child gUnknown_0860FB44[];
+extern struct SubSpriteTemplate gUnknown_0860FB44[];
 extern struct OamData gUnknown_0860FDCC;
 extern u8 gUnknown_0860FDD4[];
-extern struct SpriteTemplate_child gUnknown_086119D4;
+extern struct SubSpriteTemplate gUnknown_086119D4;
 extern struct OamData gUnknown_08611A40;
 extern u8 gUnknown_08611A48[];
-extern struct SpriteTemplate_child gUnknown_08612648;
+extern struct SubSpriteTemplate gUnknown_08612648;
 extern struct OamData gfxFileInfoBoxOAM;
 extern u8 gfxFileInfoBox4bpp[];
-extern struct SpriteTemplate_child gUnknown_08613EBC;
+extern struct SubSpriteTemplate gUnknown_08613EBC;
 extern struct OamData gfxEReaderLogoOAM;
 extern u8 gfxEReaderLogo4bpp[];
-extern struct SpriteTemplate_child gUnknown_08614738;
+extern struct SubSpriteTemplate gUnknown_08614738;
 extern struct OamData gfxExpertOAM;
 extern u8 gfxExpert4bpp[];
-extern struct SpriteTemplate_child gUnknown_08614B64;
+extern struct SubSpriteTemplate gUnknown_08614B64;
 extern struct OamData gfxOptionMenuEraseDataButtonsOAM;
 extern u8 gfxOptionMenuEraseDataButtons4bpp[];
-extern struct SpriteTemplate_child gUnknown_08615BB4[];
+extern struct SubSpriteTemplate gUnknown_08615BB4[];
 extern struct OamData gfxFileBackgroundOAM;
 extern u8 gfxFileBackground4bpp[];
-extern struct SpriteTemplate_child gUnknown_08617030[];
-extern struct OamData gUnknown_08617078;
-extern u8 gUnknown_08617080[];
-extern struct OamData gUnknown_086172E8;
-extern u8 gUnknown_086172F0[];
-extern struct SpriteTemplate_child gUnknown_08617570;
+extern struct SubSpriteTemplate gUnknown_08617030[];
+extern struct OamData gfxGoldCrownOAM;
+extern u8 gfxGoldCrown4bpp[];
+extern struct OamData gfxMainMenuDigitsLargeOAM;
+extern u8 gfxMainMenuDigitsLarge4bpp[];
+extern struct SubSpriteTemplate gUnknown_08617570;
 extern struct OamData gfxPlusMainOAM;
 extern u8 gfxPlusMain4bpp[];
-extern struct OamData gUnknown_08617828;
-extern u8 gUnknown_08617830[];
-extern struct SpriteTemplate_child gUnknown_08617970;
-extern struct OamData gUnknown_08617AFC;
-extern u8 gUnknown_08617B04[];
-extern struct SpriteTemplate_child sMMDKSpriteTemplate;
+extern struct OamData gfxUnusedDigitsOAM;
+extern u8 gfxUnusedDigits4bpp[];
+extern struct SubSpriteTemplate gUnknown_08617970;
+extern struct OamData gfxMainMenuDigitsMediumOAM;
+extern u8 gfxMainMenuDigitsMedium4bpp[];
+extern struct SubSpriteTemplate sMMDKSpriteTemplate;
 extern u8 gfxMMDK4bpp[];
 extern struct OamData gfxMMDKOAM;
-extern struct OamData gUnknown_08617F1C;
-extern u8 gUnknown_08617F24[];
-extern struct SpriteTemplate_child gUnknown_08618064[];
-extern struct OamData gUnknown_086180AC;
-extern u8 gUnknown_086180B4[];
+extern struct OamData gfxMainMenuDigitsSmallOAM;
+extern u8 gfxMainMenuDigitsSmall4bpp[];
+extern struct SubSpriteTemplate gUnknown_08618064[];
+extern struct OamData gfxBronzeCrownOAM;
+extern u8 gfxBronzeCrown4bpp[];
 extern struct Struct0807C0E0 gUnknown_0807C0D8;
 extern u8 gUnknown_080A8668;
 
@@ -1528,6 +1537,7 @@ void e_world_loop(void);
 void e_world_init_callback(void);
 void e_world_end(void);
 void sub_0802F060(void);
+int sub_0802F090(void *);
 void sub_0802F168(int, u8 *);
 void sub_0802F1AC(int, int);
 int sub_0802F1C0(int);
@@ -1537,8 +1547,12 @@ void e_world_debug_loop(void);
 void e_world_debug_init_callback(void);
 void e_world_debug_end(void);
 int sub_0802F5C0();
+void sub_0802F890(u32 *, u16 *, u16 *, u16 *);
+void sub_08030C84(u16 *, u16 *, u16 *);
 void sub_0803109C(void);
 void sub_080317F8(void);
+int sub_08031944(void *);
+void sub_08031978(void *);
 int sub_080319BC(struct GraphicsConfig *, struct UnknownStruct5 *, int);
 void sub_08031BF0();
 int sub_08031E04(void);
@@ -1550,7 +1564,7 @@ void game_init_callback(void);
 void game_init_main(void);
 void game_init_loop(void);
 void game_init_end(void);
-void load_predefined_palette(u32 paletteNum, u32 flags);
+void load_predefined_palette(enum PaletteID paletteNum, u32 flags);
 u32 load_bg_tilemap_08032E24(struct GraphicsConfig *arg0, int arg1, int arg2);
 void copy_some_palette_08032E80(struct GraphicsConfig *arg0);
 u16 load_graphics_config_bg2_08032EB8(struct GraphicsConfig *arg0);
@@ -1565,14 +1579,14 @@ void clear_ram(void);
 void clear_graphics_memory(void);
 void sub_08033D30(void);
 void sub_08033D58(void);
-void sub_08033EA0();
+void set_loop_callback_08033EA0();
 void sub_08033EBC(void);
 void sub_08033EC8(void);
-void sub_08033EE0(void);
+void wait_for_some_counter_08033EE0(void);
 void sub_08033FAC(s16, s16);
 void sub_08033FC8(void);
-extern u8 sub_08034004(void);
-void sub_08034138(void);
+extern u8 pressed_a_or_start_08034004(void);
+void dummy_loop_callback(void);
 void *load_compressed_data(struct CmprHeader *src, void *dest, int toVram);
 void goto_credits_init_callback(void);
 void goto_credits_main(void);

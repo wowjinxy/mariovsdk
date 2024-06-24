@@ -760,7 +760,7 @@ help_main: @ 0x0802AA28
 	ldrb r3, [r2]
 	cmp r3, #2
 	bne _0802AA54
-	ldr r0, _0802AA50  @ =gSomeKeys_030012E8
+	ldr r0, _0802AA50  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #10
 	and r0, r0, r1
@@ -774,7 +774,7 @@ help_main: @ 0x0802AA28
 _0802AA4C:
 	.4byte 0x03000130
 _0802AA50:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0802AA54:
 	cmp r3, #0
 	bne _0802AA84

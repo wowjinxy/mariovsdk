@@ -7584,7 +7584,7 @@ _0800C640:
 	bgt _0800C65A
 	b _0800C862
 _0800C65A:
-	ldr r0, _0800C6DC  @ =gSomeKeys_030012E8
+	ldr r0, _0800C6DC  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r3, #32
 	add r0, r3, #0
@@ -7652,7 +7652,7 @@ _0800C6D4:
 _0800C6D8:
 	.4byte gCurrentLevelWidth
 _0800C6DC:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0800C6E0:
 	.4byte gUnknown_030008C8
 _0800C6E4:
@@ -7877,7 +7877,7 @@ _0800C870:
 	bne _0800C87E
 	b _0800CA66
 _0800C87E:
-	ldr r0, _0800C900  @ =gSomeKeys_030012E8
+	ldr r0, _0800C900  @ =gNewKeys
 	ldrh r2, [r0]
 	mov r3, #64
 	add r0, r3, #0
@@ -7945,7 +7945,7 @@ _0800C8F8:
 _0800C8FC:
 	.4byte gCurrentLevelHeight
 _0800C900:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0800C904:
 	.4byte gHeldKeys
 _0800C908:

@@ -69,7 +69,7 @@ print_error_message: @ 0x08037A04
 	mov r3, #0
 	bl sub_080348C8
 	ldr r0, _08037AD0  @ =0x08037B05
-	bl sub_08033EA0
+	bl set_loop_callback_08033EA0
 	add r0, sp, #4
 	strh r4, [r0]
 	mov r1, #160
@@ -131,7 +131,7 @@ print_error_message: @ 0x08037A04
 	add r0, r0, #2
 	strh r5, [r0]
 _08037AC2:
-	bl sub_08033EE0
+	bl wait_for_some_counter_08033EE0
 	b _08037AC2
 _08037AC8:
 	.4byte 0x04000208

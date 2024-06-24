@@ -32,12 +32,12 @@ void load_some_oam(void)
 
 void sub_08033024(void)
 {
-    if (gSomeKeys_030012E8 == 8 || gSomeKeys_030012E8 == 2)
+    if (gNewKeys == 8 || gNewKeys == 2)
     {
         change_main_state(MAIN_STATE_UKNOWN_12, USE_FADE);
         gUnknown_030012F8 = 0;
         gHeldKeys = 0;
-        gSomeKeys_030012E8 = 0;
+        gNewKeys = 0;
         play_sound_effect_08071990(22, 8, 16, 64, 0, 128, 0);
         return;
     }
@@ -46,20 +46,20 @@ void sub_08033024(void)
     {
         if (gUnknown_0807DD94[0] > gUnknown_030012F8)
         {
-            gSomeKeys_030012E8 = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 0];
+            gNewKeys = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 0];
             gHeldKeys = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 1];
-            if ((gHeldKeys & 0x200) && (gSomeKeys_030012E8 & 0x40))
+            if ((gHeldKeys & 0x200) && (gNewKeys & 0x40))
             {
                 change_main_state(MAIN_STATE_UNKNOWN_18, NO_FADE);
                 gUnknown_030012F8 = 0;
                 gHeldKeys = 0;
-                gSomeKeys_030012E8 = 0;
+                gNewKeys = 0;
                 gUnknown_030019A0 |= 0x200000;
                 gUnknown_03001744 = 1;
             }
             else
             {
-                sub_0806D1AC(gSomeKeys_030012E8, gHeldKeys);
+                sub_0806D1AC(gNewKeys, gHeldKeys);
                 if (gUnknown_03001938 & 0x800)
                 {
                     sub_0800EE70();
@@ -75,19 +75,19 @@ void sub_08033024(void)
             change_main_state(MAIN_STATE_TUTORIAL_SETUP, NO_FADE);
             gUnknown_030012F8 = 0;
             gHeldKeys = 0;
-            gSomeKeys_030012E8 = 0;
+            gNewKeys = 0;
         }
     }
 }
 
 void sub_08033148(void)
 {
-    if (gSomeKeys_030012E8 == 8 || gSomeKeys_030012E8 == 2)
+    if (gNewKeys == 8 || gNewKeys == 2)
     {
         change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
         gUnknown_030012F8 = 0;
         gHeldKeys = 0;
-        gSomeKeys_030012E8 = 0;
+        gNewKeys = 0;
         play_sound_effect_08071990(22, 8, 16, 64, 0, 128, 0);
         return;
     }
@@ -96,7 +96,7 @@ void sub_08033148(void)
     {
         if (gUnknown_0807DD94[0] > gUnknown_030012F8)
         {
-            gSomeKeys_030012E8 = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 0];
+            gNewKeys = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 0];
             gHeldKeys = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 1];
             gUnknown_030012F8++;
         }
@@ -105,7 +105,7 @@ void sub_08033148(void)
             change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
             gUnknown_030012F8 = 0;
             gHeldKeys = 0;
-            gSomeKeys_030012E8 = 0;
+            gNewKeys = 0;
         }
     }
 
@@ -154,7 +154,7 @@ void process_input(void)
     r4 = gUnknown_03001938;
     if (r4 & 0x400)
     {
-        gSomeKeys_030012E8 = keys & ~gHeldKeys;
+        gNewKeys = keys & ~gHeldKeys;
         gHeldKeys = keys;
 
         if ((keys & (START_BUTTON | SELECT_BUTTON)) == (START_BUTTON | SELECT_BUTTON) && (keys & A_BUTTON) && (keys & B_BUTTON) && gMainState != MAIN_STATE_TITLE_SCREEN)
@@ -165,16 +165,16 @@ void process_input(void)
         {
             u16 r2 = inline_1();
 
-            gSomeKeys_030012E8 = r2 & ~gHeldKeys;
+            gNewKeys = r2 & ~gHeldKeys;
             gHeldKeys = r2;
         }
 
     }
     else
     {
-        gSomeKeys_030012E8 = keys & ~gHeldKeys;
+        gNewKeys = keys & ~gHeldKeys;
         gHeldKeys = keys;
-        if (gUnknown_03001740 == 0 && gSomeKeys_030012E8 == 0 && keys == 0)
+        if (gUnknown_03001740 == 0 && gNewKeys == 0 && keys == 0)
             gUnknown_03001740 = 1;
     }
 
@@ -195,13 +195,13 @@ void process_input(void)
         }
         else if (gUnknown_03000C28 != 0)
         {
-            gSomeKeys_030012E8 = gHeldKeys = 0;
+            gNewKeys = gHeldKeys = 0;
         }
         else if (gMainState == MAIN_STATE_LEVEL_PLAY)
         {
             if (gGeneralTimer <= 10)
             {
-                gSomeKeys_030012E8 = gHeldKeys = 0;
+                gNewKeys = gHeldKeys = 0;
             }
         }
         gUnknown_03001708 = 0;
@@ -210,7 +210,7 @@ void process_input(void)
         {
             u16 r3 = 1 << i;
 
-            if (gSomeKeys_030012E8 & r3)
+            if (gNewKeys & r3)
                 gUnknown_03001708 |= r3;
             if ((u16)gHeldKeys & r3)
             {

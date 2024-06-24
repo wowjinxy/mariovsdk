@@ -4,6 +4,11 @@
 #include "main.h"
 #include "main_menu.h"
 
+BSS u32 gMainState = 0;
+BSS u32 gNextMainState = 0;
+BSS u32 gPreviousMainState = 0;
+BSS u32 gNextStateFromFade = 0;
+
 static void (*gMainStateInitCallbacks[])(void) =
 {
     intro_init_callback,               //main state 0x0
@@ -216,31 +221,31 @@ void sub_08006E28(void)
 {
     u32 arr[4];
 
-    if ((gHeldKeys & 1) && gUnknown_030009B0.unk8 != 0)
-        gUnknown_030009B0.unk10 = 0xFD80;
+    if ((gHeldKeys & A_BUTTON) && gUnknown_030009B0.unk8 != 0)
+        gUnknown_030009B0.unk10 = -640;
 
     gUnknown_030009B0.unk10 = 0;  // wat?
     gUnknown_030009B0.unk12 = 0;
 
-    if (gHeldKeys & 0x10)
-        gUnknown_030009B0.unk12 = 0x100;
-    else if (gHeldKeys & 0x20)
-        gUnknown_030009B0.unk12 = 0xFF00;
+    if (gHeldKeys & DPAD_RIGHT)
+        gUnknown_030009B0.unk12 = 256;
+    else if (gHeldKeys & DPAD_LEFT)
+        gUnknown_030009B0.unk12 = -256;
 
-    if (gHeldKeys & 0x40)
-        gUnknown_030009B0.unk10 = 0xFF00;
-    else if (gHeldKeys & 0x80)
-        gUnknown_030009B0.unk10 = 0x100;
+    if (gHeldKeys & DPAD_UP)
+        gUnknown_030009B0.unk10 = -256;
+    else if (gHeldKeys & DPAD_DOWN)
+        gUnknown_030009B0.unk10 = 256;
 
-    if (gHeldKeys & 0x200)
+    if (gHeldKeys & L_BUTTON)
     {
-        gUnknown_030009B0.unk12 = 0xFF00;
-        gUnknown_030009B0.unk10 = 0xFF00;
+        gUnknown_030009B0.unk12 = -256;
+        gUnknown_030009B0.unk10 = -256;
     }
-    else if (gHeldKeys & 0x100)
+    else if (gHeldKeys & R_BUTTON)
     {
-        gUnknown_030009B0.unk12 = 0x100;
-        gUnknown_030009B0.unk10 = 0x100;
+        gUnknown_030009B0.unk12 = 256;
+        gUnknown_030009B0.unk10 = 256;
     }
 
     arr[0] = gUnknown_030009B0.unk0;
@@ -285,13 +290,9 @@ void sub_08006F5C(u32 a, u32 b)
 void sub_08006F90(void)
 {
     struct OamData *oam = &gOamBuffer[0];
-    s32 x;
-    s32 y;
 
-    x = ((gUnknown_030009B0.unk0 >> 8) - gSpriteHorizontalOffset - 4) & 0xFF;
-    oam->x = x;
-    y = (gUnknown_030009B0.unk4 >> 8) - (u8)gUnknown_030012F4;
-    oam->y = y;
+    oam->x = ((gUnknown_030009B0.unk0 >> 8) - gSpriteHorizontalOffset - 4) & 0xFF;
+    oam->y = (gUnknown_030009B0.unk4 >> 8) - (u8)gUnknown_030012F4;
     oam->affineMode = 0;
     oam->tileNum = 0;
 }
@@ -306,6 +307,7 @@ static void main_loop(void)
     {
         gUnknown_03000020 = gMainState;
 
+        // Initialize the state
         if (gMainStateInitCallbacks[gUnknown_03000020] != NULL)
             gMainStateInitCallbacks[gUnknown_03000020]();
 
@@ -323,13 +325,13 @@ static void main_loop(void)
         }
 
         sub_0801500C(gUnknown_0807846C[gUnknown_03000020]);
-        sub_08033EA0(gMainStateLoopCallbacks[gUnknown_03000020]);
+        set_loop_callback_08033EA0(gMainStateLoopCallbacks[gUnknown_03000020]);
 
         while (gNextMainState == gUnknown_03000020 && gUnknown_03000024 == 0)
         {
             if (gMainStateMainCallbacks[gUnknown_03000020] != NULL)
                 gMainStateMainCallbacks[gUnknown_03000020]();
-            sub_08033EE0();
+            wait_for_some_counter_08033EE0();
         }
 
         gUnknown_03000024 = 0;
@@ -341,24 +343,26 @@ static void main_loop(void)
     }
 }
 
-void change_main_state(s32 mainState, s32 useFadeFlag)
+void change_main_state(s32 newState, s32 useFadeFlag)
 {
     if (gNextMainState != MAIN_STATE_FADETRANSITION)
     {
-        if (gLevelEWorldFlag != 0 && mainState == MAIN_STATE_LEVEL_SELECT)
-            mainState = MAIN_STATE_EWORLD_LEVEL_SELECT;
-        if (useFadeFlag == 0)
+        if (gLevelEWorldFlag != 0 && newState == MAIN_STATE_LEVEL_SELECT)
+            newState = MAIN_STATE_EWORLD_LEVEL_SELECT;
+        if (!useFadeFlag)
         {
-            gNextMainState = mainState;
+            // go directly to the new state
+            gNextMainState = newState;
         }
         else
         {
-            gNextStateFromFade = mainState;
+            // go to the fade transition state first
+            gNextStateFromFade = newState;
             gPreviousMainState = gNextMainState;
             gNextMainState = MAIN_STATE_FADETRANSITION;
         }
 
         gUnknown_03000024 = 1;
-        gSomeKeys_030012E8 = gUnknown_03001708 = 0;
+        gNewKeys = gUnknown_03001708 = 0;
     }
 }

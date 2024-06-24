@@ -518,7 +518,7 @@ _08029558:
 	lsl r1, r1, #2
 	add r0, r1, #0
 	strh r0, [r5]
-	ldr r4, _080295F0  @ =gUnknown_03001930
+	ldr r4, _080295F0  @ =gVRAMCurrTileNum_03001930
 	mov r0, #20
 	strh r0, [r4]
 	add r0, r4, #0
@@ -571,7 +571,7 @@ _080295E8:
 _080295EC:
 	.4byte gObjVRAMCopyOffset_0300192C
 _080295F0:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080295F4:
 	.4byte 0x03000C24
 _080295F8:
@@ -686,7 +686,7 @@ _080296B8:
 	beq _080296CC
 	b _080297C8
 _080296CC:
-	ldr r0, _0802977C  @ =gSomeKeys_030012E8
+	ldr r0, _0802977C  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -721,7 +721,7 @@ _080296F8:
 	bl play_sound_effect_08071990
 _0802970E:
 	ldr r4, _08029788  @ =0x000F423F
-	ldr r1, _0802977C  @ =gSomeKeys_030012E8
+	ldr r1, _0802977C  @ =gNewKeys
 	mov r0, #0
 	strh r0, [r1]
 _08029716:
@@ -777,7 +777,7 @@ _08029774:
 _08029778:
 	.4byte 0x03000DDC
 _0802977C:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08029780:
 	.4byte gNextLevelInLevelTable
 _08029784:
@@ -843,7 +843,7 @@ _080297EA:
 	bne _080297FC
 	b _08029A74
 _080297FC:
-	ldr r0, _08029864  @ =gSomeKeys_030012E8
+	ldr r0, _08029864  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #9
 	and r0, r0, r1
@@ -897,7 +897,7 @@ _08029834:
 _08029860:
 	.4byte gUnknown_030009D8
 _08029864:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08029868:
 	.4byte gUnknown_03000E00
 _0802986C:

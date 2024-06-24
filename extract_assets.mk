@@ -110,14 +110,14 @@ FILES := \
 	assets/sprites/Expert.png \
 	assets/sprites/OptionMenuEraseDataButtons.png \
 	assets/sprites/FileBackground.png \
-	assets/sprites/gUnknown_08617080.png \
-	assets/sprites/gUnknown_086172F0.png \
+	assets/sprites/GoldCrown.png \
+	assets/sprites/MainMenuDigitsLarge.png \
 	assets/sprites/PlusMain.png \
-	assets/sprites/gUnknown_08617830.png \
-	assets/sprites/gUnknown_08617B04.png \
+	assets/sprites/UnusedDigits.png \
+	assets/sprites/MainMenuDigitsMedium.png \
 	assets/sprites/MMDK.png \
-	assets/sprites/gUnknown_08617F24.png \
-	assets/sprites/gUnknown_086180B4.png \
+	assets/sprites/MainMenuDigitsSmall.png \
+	assets/sprites/BronzeCrown.png \
 	assets/sprites/gUnknown_0861E0B8.png \
 	assets/sprites/gUnknown_086201E0.png \
 	assets/sprites/gUnknown_08621308.png \
@@ -1049,12 +1049,12 @@ FILES := \
 	assets/sprites/gUnknown_08611A48.png \
 	assets/sprites/gUnknown_08614338.png \
 	assets/sprites/gUnknown_08616C30.png \
-	assets/sprites/gUnknown_08617080.png \
-	assets/sprites/gUnknown_086172F0.png \
-	assets/sprites/gUnknown_08617830.png \
-	assets/sprites/gUnknown_08617B04.png \
-	assets/sprites/gUnknown_08617F24.png \
-	assets/sprites/gUnknown_086180B4.png \
+	assets/sprites/GoldCrown.png \
+	assets/sprites/MainMenuDigitsLarge.png \
+	assets/sprites/UnusedDigits.png \
+	assets/sprites/MainMenuDigitsMedium.png \
+	assets/sprites/MainMenuDigitsSmall.png \
+	assets/sprites/BronzeCrown.png \
 	assets/sprites/gUnknown_086183FC.png \
 	assets/sprites/gUnknown_08618900.png \
 	assets/sprites/gUnknown_08619104.png \
@@ -1342,37 +1342,37 @@ assets/sprites/FileBackground.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/FileBackground.4bpp: baserom.gba ; $(call dump_data,0x615C04,0x800*2)
 assets/sprites/FileBackground.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
 
-assets/sprites/gUnknown_08617080.png: GBAGFX_FLAGS := -width 2
-$(TMPDIR)/sprites/gUnknown_08617080.4bpp: baserom.gba ; $(call dump_data,0x617080,0x80*2)
-assets/sprites/gUnknown_08617080.png: $(TMPDIR)/palettes/1_main_menu_obj.3.gbapal
+assets/sprites/GoldCrown.png: GBAGFX_FLAGS := -width 2
+$(TMPDIR)/sprites/GoldCrown.4bpp: baserom.gba ; $(call dump_data,0x617080,0x80*2)
+assets/sprites/GoldCrown.png: $(TMPDIR)/palettes/1_main_menu_obj.3.gbapal
 
-assets/sprites/gUnknown_086172F0.png: GBAGFX_FLAGS := -width 1
-$(TMPDIR)/sprites/gUnknown_086172F0.4bpp: baserom.gba ; $(call dump_data,0x6172F0,0x40*10)
-assets/sprites/gUnknown_086172F0.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
+assets/sprites/MainMenuDigitsLarge.png: GBAGFX_FLAGS := -width 1
+$(TMPDIR)/sprites/MainMenuDigitsLarge.4bpp: baserom.gba ; $(call dump_data,0x6172F0,0x40*10)
+assets/sprites/MainMenuDigitsLarge.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
 
 assets/sprites/PlusMain.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/PlusMain.4bpp: baserom.gba ; $(call dump_data,0x6175C0,0x80*2)
 assets/sprites/PlusMain.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
 
-assets/sprites/gUnknown_08617830.png: GBAGFX_FLAGS := -width 1
-$(TMPDIR)/sprites/gUnknown_08617830.4bpp: baserom.gba ; $(call dump_data,0x617830,0x20*10)
-assets/sprites/gUnknown_08617830.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
+assets/sprites/UnusedDigits.png: GBAGFX_FLAGS := -width 1
+$(TMPDIR)/sprites/UnusedDigits.4bpp: baserom.gba ; $(call dump_data,0x617830,0x20*10)
+assets/sprites/UnusedDigits.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
 
-assets/sprites/gUnknown_08617B04.png: GBAGFX_FLAGS := -width 1
-$(TMPDIR)/sprites/gUnknown_08617B04.4bpp: baserom.gba ; $(call dump_data,0x617B04,0x20*11)
-assets/sprites/gUnknown_08617B04.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
+assets/sprites/MainMenuDigitsMedium.png: GBAGFX_FLAGS := -width 1
+$(TMPDIR)/sprites/MainMenuDigitsMedium.4bpp: baserom.gba ; $(call dump_data,0x617B04,0x20*11)
+assets/sprites/MainMenuDigitsMedium.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
 
 assets/sprites/MMDK.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/MMDK.4bpp: baserom.gba ; $(call dump_data,0x617CB4,0x80*2)
 assets/sprites/MMDK.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
 
-assets/sprites/gUnknown_08617F24.png: GBAGFX_FLAGS := -width 1
-$(TMPDIR)/sprites/gUnknown_08617F24.4bpp: baserom.gba ; $(call dump_data,0x617F24,0x20*10)
-assets/sprites/gUnknown_08617F24.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
+assets/sprites/MainMenuDigitsSmall.png: GBAGFX_FLAGS := -width 1
+$(TMPDIR)/sprites/MainMenuDigitsSmall.4bpp: baserom.gba ; $(call dump_data,0x617F24,0x20*10)
+assets/sprites/MainMenuDigitsSmall.png: $(TMPDIR)/palettes/1_main_menu_obj.4.gbapal
 
-assets/sprites/gUnknown_086180B4.png: GBAGFX_FLAGS := -width 2
-$(TMPDIR)/sprites/gUnknown_086180B4.4bpp: baserom.gba ; $(call dump_data,0x6180B4,0x80*2)
-assets/sprites/gUnknown_086180B4.png: $(TMPDIR)/palettes/1_main_menu_obj.1.gbapal
+assets/sprites/BronzeCrown.png: GBAGFX_FLAGS := -width 2
+$(TMPDIR)/sprites/BronzeCrown.4bpp: baserom.gba ; $(call dump_data,0x6180B4,0x80*2)
+assets/sprites/BronzeCrown.png: $(TMPDIR)/palettes/1_main_menu_obj.1.gbapal
 
 assets/sprites/gUnknown_0861E0B8.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_0861E0B8.4bpp: baserom.gba ; $(call dump_data,0x61E0B8,0x200*16)

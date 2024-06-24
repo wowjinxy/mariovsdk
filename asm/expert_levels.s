@@ -144,7 +144,7 @@ sub_0803549C: @ 0x0803549C
 	lsl r0, r0, #24
 	lsr r4, r0, #24
 	add r7, r4, #0
-	ldr r0, _080354E4  @ =gSomeKeys_030012E8
+	ldr r0, _080354E4  @ =gNewKeys
 	ldrh r3, [r0]
 	mov r0, #32
 	and r0, r0, r3
@@ -177,7 +177,7 @@ _080354D0:
 	.byte 0x00
 	.byte 0x00
 _080354E4:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _080354E8:
 	.4byte gCurrentWorld
 _080354EC:
@@ -433,7 +433,7 @@ sub_080356B8: @ 0x080356B8
 	lsl r0, r0, #24
 	lsr r3, r0, #24
 	add r5, r3, #0
-	ldr r0, _080356FC  @ =gSomeKeys_030012E8
+	ldr r0, _080356FC  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #32
 	and r0, r0, r1
@@ -462,7 +462,7 @@ _080356EA:
 	mov r0, #23
 	b _080358C0
 _080356FC:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08035700:
 	.4byte gCurrentWorld
 _08035704:
@@ -954,7 +954,7 @@ _08035A9C:
 	ldr r5, _08035B6C  @ =0x030002D0
 	ldr r0, _08035B70  @ =gOamBuffer
 	mov r8, r0
-	ldr r1, _08035B74  @ =gUnknown_03001930
+	ldr r1, _08035B74  @ =gVRAMCurrTileNum_03001930
 	mov r10, r1
 _08035AA8:
 	add r0, r7, #0
@@ -1059,7 +1059,7 @@ _08035B6C:
 _08035B70:
 	.4byte gOamBuffer
 _08035B74:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08035B78:
 	.4byte gUnknown_085DEA9C
 _08035B7C:
@@ -1121,7 +1121,7 @@ _08035BAE:
 	ldrh r2, [r3, #4]
 	lsl r0, r2, #22
 	lsr r0, r0, #22
-	ldr r3, _08035CB8  @ =gUnknown_03001930
+	ldr r3, _08035CB8  @ =gVRAMCurrTileNum_03001930
 	ldrh r3, [r3]
 	add r0, r0, r3
 	ldr r1, _08035CBC  @ =0x000003FF
@@ -1174,7 +1174,7 @@ _08035BAE:
 	add r1, r3, #0
 	and r0, r0, r1
 	strb r0, [r2, #5]
-	ldr r1, _08035CB8  @ =gUnknown_03001930
+	ldr r1, _08035CB8  @ =gVRAMCurrTileNum_03001930
 	ldrh r0, [r1]
 	add r0, r0, #2
 	strh r0, [r1]
@@ -1223,7 +1223,7 @@ _08035CB0:
 _08035CB4:
 	.4byte 0x84000002
 _08035CB8:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08035CBC:
 	.4byte 0x000003FF
 _08035CC0:
@@ -1265,7 +1265,7 @@ sub_08035CCC: @ 0x08035CCC
 	ldr r5, _08035DF4  @ =REG_DMA3SAD
 	ldr r4, _08035DF8  @ =0x030002D0
 	ldr r6, _08035DFC  @ =gOamBuffer
-	ldr r1, _08035E00  @ =gUnknown_03001930
+	ldr r1, _08035E00  @ =gVRAMCurrTileNum_03001930
 	mov r10, r1
 _08035D0A:
 	mov r0, r8
@@ -1391,7 +1391,7 @@ _08035DF8:
 _08035DFC:
 	.4byte gOamBuffer
 _08035E00:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08035E04:
 	.4byte gUnknown_082EC750
 _08035E08:
@@ -1468,7 +1468,7 @@ sub_08035E2C: @ 0x08035E2C
 	ldrh r5, [r4]
 	lsl r5, r5, #3
 	add r5, r5, r10
-	ldr r1, _08035F38  @ =gUnknown_03001930
+	ldr r1, _08035F38  @ =gVRAMCurrTileNum_03001930
 	mov r12, r1
 	ldrh r1, [r1]
 	ldr r4, _08035F3C  @ =0x000003FF
@@ -1551,7 +1551,7 @@ _08035F30:
 _08035F34:
 	.4byte 0x84000002
 _08035F38:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08035F3C:
 	.4byte 0x000003FF
 _08035F40:
@@ -1616,7 +1616,7 @@ sub_08035F4C: @ 0x08035F4C
 	mov r8, r3
 	mov r4, r8
 	lsl r5, r4, #22
-	ldr r7, _08036070  @ =gUnknown_03001930
+	ldr r7, _08036070  @ =gVRAMCurrTileNum_03001930
 	lsr r5, r5, #22
 	ldrh r3, [r7]
 	add r5, r5, r3
@@ -1711,7 +1711,7 @@ _08036068:
 _0803606C:
 	.4byte 0x84000002
 _08036070:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08036074:
 	.4byte 0x000003FF
 _08036078:
@@ -1785,7 +1785,7 @@ sub_08036084: @ 0x08036084
 	mov r8, r4
 	mov r1, r8
 	lsl r4, r1, #22
-	ldr r7, _080361B8  @ =gUnknown_03001930
+	ldr r7, _080361B8  @ =gVRAMCurrTileNum_03001930
 	lsr r4, r4, #22
 	ldrh r3, [r7]
 	add r4, r4, r3
@@ -1879,7 +1879,7 @@ _080361B0:
 _080361B4:
 	.4byte 0x84000002
 _080361B8:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080361BC:
 	.4byte 0x000003FF
 _080361C0:
@@ -2429,7 +2429,7 @@ _08036592:
 	add r2, r2, r9
 	ldrh r3, [r2, #4]
 	lsl r1, r3, #22
-	ldr r0, _080366B8  @ =gUnknown_03001930
+	ldr r0, _080366B8  @ =gVRAMCurrTileNum_03001930
 	mov r10, r0
 	lsr r1, r1, #22
 	ldrh r5, [r0]
@@ -2536,7 +2536,7 @@ _080366B0:
 _080366B4:
 	.4byte 0x84000002
 _080366B8:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080366BC:
 	.4byte 0x000003FF
 _080366C0:
@@ -2582,7 +2582,7 @@ sub_080366D0: @ 0x080366D0
 	add r2, r2, r5
 	ldrh r4, [r2, #4]
 	lsl r1, r4, #22
-	ldr r6, _080367B0  @ =gUnknown_03001930
+	ldr r6, _080367B0  @ =gVRAMCurrTileNum_03001930
 	lsr r1, r1, #22
 	ldrh r7, [r6]
 	add r1, r1, r7
@@ -2662,7 +2662,7 @@ _080367A8:
 _080367AC:
 	.4byte 0x84000002
 _080367B0:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080367B4:
 	.4byte 0x000003FF
 _080367B8:
@@ -3404,7 +3404,7 @@ sub_08036D3C: @ 0x08036D3C
 	str r6, [r2, #8]
 	ldr r0, [r2, #8]
 	ldr r0, _08036EC8  @ =0x030002D4
-	ldr r7, _08036ECC  @ =gUnknown_03001930
+	ldr r7, _08036ECC  @ =gVRAMCurrTileNum_03001930
 	ldrh r3, [r7]
 	strh r3, [r0]
 	add r3, r3, #4
@@ -3586,7 +3586,7 @@ _08036EC4:
 _08036EC8:
 	.4byte 0x030002D4
 _08036ECC:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08036ED0:
 	.4byte gUnknown_085E1188
 _08036ED4:
@@ -3662,7 +3662,7 @@ _08036F52:
 	ldr r0, _08037030  @ =0x030002D0
 	mov r1, #0
 	strh r1, [r0]
-	ldr r2, _08037034  @ =gUnknown_03001930
+	ldr r2, _08037034  @ =gVRAMCurrTileNum_03001930
 	ldr r0, _08037038  @ =gObjVRAMCopyOffset_0300192C
 	strh r1, [r0]
 	strh r1, [r2]
@@ -3766,7 +3766,7 @@ _0803702C:
 _08037030:
 	.4byte 0x030002D0
 _08037034:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08037038:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0803703C:

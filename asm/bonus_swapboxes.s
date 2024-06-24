@@ -8345,7 +8345,7 @@ _08025B1E:
 	add r0, sp, #12
 	mov r3, #5
 	bl sub_080064D4
-	ldr r0, _08025BC0  @ =gSomeKeys_030012E8
+	ldr r0, _08025BC0  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r5, #1
 	and r5, r5, r1
@@ -8407,7 +8407,7 @@ _08025BB8:
 _08025BBC:
 	.4byte gBonusSwapBoxesData
 _08025BC0:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08025BC4:
 	mov r0, #32
 	and r0, r0, r1
@@ -9431,7 +9431,7 @@ sub_080262F0: @ 0x080262F0
 	add r0, sp, #12
 	mov r3, #5
 	bl sub_080064D4
-	ldr r0, _080263B0  @ =gSomeKeys_030012E8
+	ldr r0, _080263B0  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #1
 	and r0, r0, r1
@@ -9494,7 +9494,7 @@ _080263A8:
 _080263AC:
 	.4byte gBonusSwapBoxesData
 _080263B0:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _080263B4:
 	mov r0, r8
 	ldr r1, [r0]
@@ -11268,7 +11268,7 @@ bonus_swapboxes_init_callback: @ 0x08027068
 	strh r1, [r0]
 	ldr r0, _08027128  @ =gCameraVerticalOffset
 	strh r1, [r0]
-	ldr r0, _0802712C  @ =gUnknown_03001930
+	ldr r0, _0802712C  @ =gVRAMCurrTileNum_03001930
 	strh r1, [r0]
 	ldr r0, _08027130  @ =gObjVRAMCopyOffset_0300192C
 	strh r1, [r0]
@@ -11318,7 +11318,7 @@ _08027124:
 _08027128:
 	.4byte gCameraVerticalOffset
 _0802712C:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08027130:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08027134:
@@ -12138,7 +12138,7 @@ _080276E2:
 	bls _080276B2
 	ldr r5, _080278CC  @ =0x030000F4
 	ldr r1, [r5]
-	ldr r4, _080278D0  @ =gUnknown_03001930
+	ldr r4, _080278D0  @ =gVRAMCurrTileNum_03001930
 	ldrh r0, [r4]
 	str r0, [r1, #28]
 	ldr r0, _080278D4  @ =gUnknown_082EBE60
@@ -12377,7 +12377,7 @@ _080278C8:
 _080278CC:
 	.4byte 0x030000F4
 _080278D0:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080278D4:
 	.4byte gUnknown_082EBE60
 _080278D8:
@@ -12486,7 +12486,7 @@ bonus_swapboxes_loop: @ 0x08027990
 	add r5, sp, #8
 	mov r1, #0
 	strh r1, [r5]
-	ldr r0, _08027B5C  @ =gUnknown_03001930
+	ldr r0, _08027B5C  @ =gVRAMCurrTileNum_03001930
 	ldrh r0, [r0]
 	mov r2, sp
 	add r2, r2, #10
@@ -12709,7 +12709,7 @@ _08027AB8:
 	.byte 0x00
 	.byte 0x00
 _08027B5C:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08027B60:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08027B64:

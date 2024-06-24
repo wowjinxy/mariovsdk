@@ -695,7 +695,7 @@ sub_08028068: @ 0x08028068
 	ldr r1, [r2, #12]
 	ldrb r1, [r1, #1]
 	strh r1, [r0, #8]
-	ldr r5, _080280B0  @ =gUnknown_03001930
+	ldr r5, _080280B0  @ =gVRAMCurrTileNum_03001930
 	ldrh r3, [r5]
 	strh r3, [r0, #6]
 	ldr r6, _080280B4  @ =gObjVRAMCopyOffset_0300192C
@@ -721,7 +721,7 @@ sub_08028068: @ 0x08028068
 _080280AC:
 	.4byte gUncompressedGraphicsTable
 _080280B0:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _080280B4:
 	.4byte gObjVRAMCopyOffset_0300192C
 _080280B8:
@@ -1341,7 +1341,7 @@ _08028504:
 	beq _0802850E
 	mov r5, #1
 _0802850E:
-	ldr r0, _08028540  @ =gSomeKeys_030012E8
+	ldr r0, _08028540  @ =gNewKeys
 	ldrh r1, [r0]
 	mov r0, #8
 	and r0, r0, r1
@@ -1367,7 +1367,7 @@ _08028522:
 	.byte 0x00
 	.byte 0x00
 _08028540:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08028544:
 	.4byte 0x030000FC
 _08028548:
@@ -2036,7 +2036,7 @@ _08028A1A:
 	ldr r0, _08028BC0  @ =gObjVRAMCopyOffset_0300192C
 	mov r1, #0
 	strh r1, [r0]
-	ldr r0, _08028BC4  @ =gUnknown_03001930
+	ldr r0, _08028BC4  @ =gVRAMCurrTileNum_03001930
 	strh r1, [r0]
 	mov r5, #0
 	mov r0, #2
@@ -2235,7 +2235,7 @@ _08028BBC:
 _08028BC0:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08028BC4:
-	.4byte gUnknown_03001930
+	.4byte gVRAMCurrTileNum_03001930
 _08028BC8:
 	.4byte gUnknown_08079998
 _08028BCC:
@@ -2307,7 +2307,7 @@ _08028C48:
 	ldr r0, _08028C80  @ =0x00001124
 	add r2, r1, r0
 	ldr r7, [r2]
-	ldr r0, _08028C84  @ =gSomeKeys_030012E8
+	ldr r0, _08028C84  @ =gNewKeys
 	ldrh r1, [r0]
 	add r0, r1, #0
 	and r5, r5, r0
@@ -2336,7 +2336,7 @@ _08028C7C:
 _08028C80:
 	.4byte 0x00001124
 _08028C84:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _08028C88:
 	ldrb r0, [r3]
 	sub r0, r0, #1

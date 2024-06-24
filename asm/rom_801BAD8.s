@@ -60,7 +60,7 @@ _0801BB34:
 _0801BB40:
 	.4byte gUnknown_030000B6
 _0801BB44:
-	ldr r2, _0801BB74  @ =gSomeKeys_030012E8
+	ldr r2, _0801BB74  @ =gNewKeys
 	ldrh r1, [r2]
 	mov r0, #64
 	and r0, r0, r1
@@ -85,7 +85,7 @@ _0801BB44:
 	.byte 0x00
 	.byte 0x00
 _0801BB74:
-	.4byte gSomeKeys_030012E8
+	.4byte gNewKeys
 _0801BB78:
 	.4byte gUnknown_030000B4
 _0801BB7C:

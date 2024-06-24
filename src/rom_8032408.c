@@ -106,7 +106,7 @@ void game_init_main(void)
         break;
       case 6:
         sub_08011428(1);
-        CpuFill16(0, gUnknown_0807CA94, 0x68);
+        CpuFill16(0, gEWorldLevelCountPtr, 0x68);
         sub_0802A164();
         sub_0802F1D4();
         gUnknown_0300029C->unk1000 = 1;
@@ -114,11 +114,11 @@ void game_init_main(void)
       case 7:
         sub_08011428(1);
         gUnknown_03000B50 = 2;
-        CpuFill16(0, gUnknown_0807CA94, 0x68);
+        CpuFill16(0, gEWorldLevelCountPtr, 0x68);
         gUnknown_0300029C->unk1000 = 3;
         break;
       case 8:
-        if (gSomeKeys_030012E8 & 11)
+        if (gNewKeys & 11)
         {
             play_sound_effect_08071990(35, 8, 16, 64, 0, 128, 0);
             gUnknown_0300029C->unk1000 = gUnknown_0300029C->unk1008->unk4;
@@ -144,7 +144,7 @@ void game_init_end(void)
 {
 }
 
-void load_predefined_palette(u32 paletteNum, u32 flags)
+void load_predefined_palette(enum PaletteID paletteNum, u32 flags)
 {
     // I have to do this stupid cast for it to match.
     bool32 isGBPlayer = ((*(u8 *)gScreenModeRelatedPtr & 24) != 0);

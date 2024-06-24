@@ -42,7 +42,7 @@ void sub_08007170(void)
     gLevelEndTimer = -1;
     gUnknown_03000B60 = 0;
     sub_080386DC();
-    sub_08031BF0(&gObjVRAMCopyOffset_0300192C, &gUnknown_03001930);
+    sub_08031BF0(&gObjVRAMCopyOffset_0300192C, &gVRAMCurrTileNum_03001930);
     if (gNextLevelInLevelTable.levelType & 8)
     {
         gCurrentPresentScore = gPreviousPresentScore;
@@ -407,7 +407,7 @@ void level_play_main(void) {
     
     sub_08029C20();
     process_input();
-    sub_08038414(gSomeKeys_030012E8, gHeldKeys);
+    sub_08038414(gNewKeys, gHeldKeys);
     sub_08039C44();
     var1 = (gUnknown_03001A1C & 0x1b08) == 0;
     gUnknown_03001A00 = var1;
@@ -564,7 +564,7 @@ void level_play_main(void) {
         sub_0801B310();
     }
     if (gLevelEndTimer < 0) {
-        if ((((gSomeKeys_030012E8 == 8) && (0 < gGeneralTimer)) && (gUnknown_03000B5C == 0x0)) &&
+        if ((((gNewKeys == 8) && (0 < gGeneralTimer)) && (gUnknown_03000B5C == 0x0)) &&
         (((gUnknown_03001A1C & 0x2000) != 0 && ((gUnknown_030019A0 & 0x20000000) == 0)))) {
             change_main_state(MAIN_STATE_PAUSE, NO_FADE);
             sub_08071C24();
@@ -587,7 +587,7 @@ void level_demo_main(void) {
     sub_08029C20();
     process_input();
     if (0 == (gUnknown_03001938 & 0x800) != 0) {
-        sub_08038414(gSomeKeys_030012E8, gHeldKeys);
+        sub_08038414(gNewKeys, gHeldKeys);
         sub_08039C44();
         if (gNextMainState == 0x21) {
             return;
