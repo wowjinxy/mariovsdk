@@ -20635,7 +20635,7 @@ _08053F74:
 	bl sub_08055FB8
 	ldr r0, _08054204  @ =gUnknown_082F52A4
 	str r0, [sp]
-	ldr r0, _08054208  @ =gUnknown_082F52AC
+	ldr r0, _08054208  @ =gfxMiniMarioKey4bpp
 	str r0, [sp, #4]
 	ldr r0, _0805420C  @ =gUnknown_082F513C
 	str r0, [sp, #8]
@@ -20780,7 +20780,7 @@ _08054200:
 _08054204:
 	.4byte gUnknown_082F52A4
 _08054208:
-	.4byte gUnknown_082F52AC
+	.4byte gfxMiniMarioKey4bpp
 _0805420C:
 	.4byte gUnknown_082F513C
 _08054210:
@@ -20969,9 +20969,9 @@ _0805421C:
 	str r0, [sp, #76]
 	mov r0, sp
 	bl sub_08055FB8
-	ldr r0, _08054638  @ =gUnknown_08439A4C
+	ldr r0, _08054638  @ =gfxMiniMarioCrystalBallOAM
 	str r0, [sp]
-	ldr r0, _0805463C  @ =gUnknown_08439A54
+	ldr r0, _0805463C  @ =gfxMiniMarioCrystalBall8bpp
 	str r0, [sp, #4]
 	ldr r0, _08054640  @ =gUnknown_0843980C
 	str r0, [sp, #8]
@@ -21311,9 +21311,9 @@ _08054630:
 _08054634:
 	.4byte gUnknown_0865FAC0
 _08054638:
-	.4byte gUnknown_08439A4C
+	.4byte gfxMiniMarioCrystalBallOAM
 _0805463C:
-	.4byte gUnknown_08439A54
+	.4byte gfxMiniMarioCrystalBall8bpp
 _08054640:
 	.4byte gUnknown_0843980C
 _08054644:
@@ -22652,7 +22652,7 @@ _08054EE6:
 	bl sub_08055B2C
 	ldr r0, _08055198  @ =gUnknown_082F52A4
 	str r0, [sp, #4]
-	ldr r0, _0805519C  @ =gUnknown_082F52AC
+	ldr r0, _0805519C  @ =gfxMiniMarioKey4bpp
 	str r0, [sp, #8]
 	ldr r0, _080551A0  @ =gUnknown_082F513C
 	str r0, [sp, #12]
@@ -22806,7 +22806,7 @@ _08055194:
 _08055198:
 	.4byte gUnknown_082F52A4
 _0805519C:
-	.4byte gUnknown_082F52AC
+	.4byte gfxMiniMarioKey4bpp
 _080551A0:
 	.4byte gUnknown_082F513C
 _080551A4:
@@ -23002,9 +23002,9 @@ _080551B0:
 	ldr r2, [sp, #92]
 	ldr r3, [sp, #96]
 	bl sub_08055B2C
-	ldr r0, _080555CC  @ =gUnknown_08439A4C
+	ldr r0, _080555CC  @ =gfxMiniMarioCrystalBallOAM
 	str r0, [sp, #4]
-	ldr r0, _080555D0  @ =gUnknown_08439A54
+	ldr r0, _080555D0  @ =gfxMiniMarioCrystalBall8bpp
 	str r0, [sp, #8]
 	ldr r0, _080555D4  @ =gUnknown_0843980C
 	str r0, [sp, #12]
@@ -23337,9 +23337,9 @@ _080555C4:
 _080555C8:
 	.4byte gUnknown_0865FAC0
 _080555CC:
-	.4byte gUnknown_08439A4C
+	.4byte gfxMiniMarioCrystalBallOAM
 _080555D0:
-	.4byte gUnknown_08439A54
+	.4byte gfxMiniMarioCrystalBall8bpp
 _080555D4:
 	.4byte gUnknown_0843980C
 _080555D8:

@@ -1223,7 +1223,7 @@ _080096A4:
 	mov r0, #6
 	strb r0, [r1]
 	mov r2, #0
-	ldr r3, _08009740  @ =gUnknown_082EC2E0
+	ldr r3, _08009740  @ =gfxMiniMarioIcon8bpp
 	mov r12, r3
 	mov r7, #99
 	add r7, r7, r4
@@ -1273,7 +1273,7 @@ _080096F8:
 	strh r0, [r7]
 	b _08009840
 _08009740:
-	.4byte gUnknown_082EC2E0
+	.4byte gfxMiniMarioIcon8bpp
 _08009744:
 	.4byte 0x00000101
 _08009748:
@@ -1304,7 +1304,7 @@ _08009754:
 	and r0, r0, r1
 	str r0, [r2]
 	mov r2, #0
-	ldr r0, _08009858  @ =gUnknown_082EC2E0
+	ldr r0, _08009858  @ =gfxMiniMarioIcon8bpp
 	mov r12, r0
 	add r5, r4, #0
 	mov r3, #0
@@ -1416,7 +1416,7 @@ _08009850:
 _08009854:
 	.4byte 0xFFFDFFFF
 _08009858:
-	.4byte gUnknown_082EC2E0
+	.4byte gfxMiniMarioIcon8bpp
 _0800985C:
 	.4byte 0x00000101
 _08009860:
@@ -4805,7 +4805,7 @@ _0800B14C:
 _0800B15C:
 	ldr r5, _0800B1D8  @ =REG_DMA3SAD
 	ldr r4, _0800B1CC  @ =gOamBuffer
-	ldr r0, _0800B1DC  @ =gUnknown_082EC2D8
+	ldr r0, _0800B1DC  @ =gfxMiniMarioIconOAM
 	mov r10, r0
 	ldr r1, _0800B1E0  @ =0x84000002
 	mov r8, r1
@@ -4870,7 +4870,7 @@ _0800B1D4:
 _0800B1D8:
 	.4byte REG_DMA3SAD
 _0800B1DC:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800B1E0:
 	.4byte 0x84000002
 _0800B1E4:
@@ -5037,7 +5037,7 @@ _0800B286:
 	ldrh r0, [r4]
 	add r0, r0, #32
 	strh r0, [r4]
-	ldr r0, _0800B3A0  @ =gUnknown_082EC2D8
+	ldr r0, _0800B3A0  @ =gfxMiniMarioIconOAM
 	str r0, [r5]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5101,7 +5101,7 @@ _0800B398:
 _0800B39C:
 	.4byte 0x84000002
 _0800B3A0:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800B3A4:
 	ldrh r2, [r7]
 	lsl r2, r2, #3
@@ -5124,7 +5124,7 @@ _0800B3B6:
 _0800B3C4:
 	.4byte gOamBuffer
 _0800B3C8:
-	ldr r0, _0800B434  @ =gUnknown_082EC2D8
+	ldr r0, _0800B434  @ =gfxMiniMarioIconOAM
 	str r0, [r5]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5181,7 +5181,7 @@ _0800B42E:
 	.byte 0x00
 	.byte 0x00
 _0800B434:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800B438:
 	.4byte 0x84000002
 _0800B43C:
@@ -5206,7 +5206,7 @@ _0800B44C:
 	ldr r4, _0800B4C4  @ =gOamBuffer
 	ldr r2, _0800B4C8  @ =0xFFFFFC00
 	mov r10, r2
-	ldr r3, _0800B4CC  @ =gUnknown_082EC2D8
+	ldr r3, _0800B4CC  @ =gfxMiniMarioIconOAM
 	mov r8, r3
 	ldr r6, _0800B4D0  @ =0x84000002
 _0800B46C:
@@ -5260,7 +5260,7 @@ _0800B4C4:
 _0800B4C8:
 	.4byte 0xFFFFFC00
 _0800B4CC:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800B4D0:
 	.4byte 0x84000002
 _0800B4D4:
@@ -5335,7 +5335,7 @@ _0800B552:
 	mov r8, r0
 	ldr r6, _0800B5E4  @ =0xFFFFFC00
 _0800B55C:
-	ldr r0, _0800B5E8  @ =gUnknown_082EC2D8
+	ldr r0, _0800B5E8  @ =gfxMiniMarioIconOAM
 	str r0, [r5]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5406,7 +5406,7 @@ _0800B5E0:
 _0800B5E4:
 	.4byte 0xFFFFFC00
 _0800B5E8:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800B5EC:
 	.4byte 0x84000002
 _0800B5F0:
@@ -5457,7 +5457,7 @@ _0800B636:
 	lsl r0, r0, #1
 	cmp r1, r0
 	bgt _0800B69C
-	ldr r3, _0800B930  @ =gUnknown_082EC2D8
+	ldr r3, _0800B930  @ =gfxMiniMarioIconOAM
 	mov r4, r8
 	str r3, [r4]
 	ldrh r0, [r7]
@@ -5594,7 +5594,7 @@ _0800B6A8:
 	ldrb r0, [r1]
 	cmp r0, #6
 	bhi _0800B7AC
-	ldr r2, _0800B930  @ =gUnknown_082EC2D8
+	ldr r2, _0800B930  @ =gfxMiniMarioIconOAM
 	str r2, [r5]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -5834,7 +5834,7 @@ _0800B928:
 _0800B92C:
 	.4byte gOamBuffer
 _0800B930:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800B934:
 	.4byte 0x84000002
 _0800B938:
@@ -5909,7 +5909,7 @@ _0800B9A2:
 	ldr r4, _0800BAFC  @ =gOamBuffer
 	ldr r0, _0800BB14  @ =0xFFFFFC00
 	mov r10, r0
-	ldr r1, _0800BB18  @ =gUnknown_082EC2D8
+	ldr r1, _0800BB18  @ =gfxMiniMarioIconOAM
 	mov r8, r1
 _0800B9C4:
 	mov r2, r8
@@ -6085,7 +6085,7 @@ _0800BB10:
 _0800BB14:
 	.4byte 0xFFFFFC00
 _0800BB18:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800BB1C:
 	.4byte 0x84000002
 _0800BB20:
@@ -6110,7 +6110,7 @@ _0800BB3C:
 	str r0, [sp, #16]
 	mov r2, #0
 	mov r12, r2
-	ldr r3, _0800BC40  @ =gUnknown_082EC2D8
+	ldr r3, _0800BC40  @ =gfxMiniMarioIconOAM
 	mov r10, r3
 	ldr r4, _0800BC44  @ =gMiniMariosRescued_03001BA0
 	ldrb r4, [r4]
@@ -6240,7 +6240,7 @@ _0800BBE0:
 	.byte 0x00
 	.byte 0x00
 _0800BC40:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800BC44:
 	.4byte gMiniMariosRescued_03001BA0
 _0800BC48:
@@ -6320,7 +6320,7 @@ _0800BCA4:
 	ldr r1, _0800BD58  @ =0xFFFFFC00
 	mov r10, r1
 _0800BCD8:
-	ldr r0, _0800BD5C  @ =gUnknown_082EC2D8
+	ldr r0, _0800BD5C  @ =gfxMiniMarioIconOAM
 	str r0, [r5]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -6388,7 +6388,7 @@ _0800BD54:
 _0800BD58:
 	.4byte 0xFFFFFC00
 _0800BD5C:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800BD60:
 	.4byte 0x84000002
 _0800BD64:
@@ -6499,7 +6499,7 @@ _0800BD96:
 	ldrh r0, [r4]
 	add r0, r0, #32
 	strh r0, [r4]
-	ldr r0, _0800BEB4  @ =gUnknown_082EC2D8
+	ldr r0, _0800BEB4  @ =gfxMiniMarioIconOAM
 	str r0, [r5]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -6565,7 +6565,7 @@ _0800BEAC:
 _0800BEB0:
 	.4byte 0xFFFFFC00
 _0800BEB4:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800BEB8:
 	ldrh r2, [r7]
 	lsl r2, r2, #3
@@ -6588,7 +6588,7 @@ _0800BECA:
 _0800BED8:
 	.4byte gOamBuffer
 _0800BEDC:
-	ldr r0, _0800BF48  @ =gUnknown_082EC2D8
+	ldr r0, _0800BF48  @ =gfxMiniMarioIconOAM
 	str r0, [r5]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -6645,7 +6645,7 @@ _0800BF2C:
 _0800BF46:
 	b _0800C06E
 _0800BF48:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800BF4C:
 	.4byte 0x84000002
 _0800BF50:
@@ -6672,7 +6672,7 @@ _0800BF64:
 	ldr r4, _0800C21C  @ =gOamBuffer
 	ldr r2, _0800C220  @ =0x000003FF
 	mov r10, r2
-	ldr r3, _0800C224  @ =gUnknown_082EC2D8
+	ldr r3, _0800C224  @ =gfxMiniMarioIconOAM
 	mov r8, r3
 	ldr r6, _0800C228  @ =0xFFFFFC00
 _0800BF84:
@@ -6740,7 +6740,7 @@ _0800BFF2:
 	ldr r4, _0800C21C  @ =gOamBuffer
 	ldr r0, _0800C228  @ =0xFFFFFC00
 	mov r10, r0
-	ldr r1, _0800C224  @ =gUnknown_082EC2D8
+	ldr r1, _0800C224  @ =gfxMiniMarioIconOAM
 	mov r8, r1
 _0800C006:
 	mov r2, r8
@@ -7023,7 +7023,7 @@ _0800C21C:
 _0800C220:
 	.4byte 0x000003FF
 _0800C224:
-	.4byte gUnknown_082EC2D8
+	.4byte gfxMiniMarioIconOAM
 _0800C228:
 	.4byte 0xFFFFFC00
 _0800C22C:

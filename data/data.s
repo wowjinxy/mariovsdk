@@ -2147,9 +2147,9 @@ gUnknown_080B8584:
 gUnknown_080B889C:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=2, affineParam=0
 
-	.GLOBAL gUnknown_080B88A4
-gUnknown_080B88A4:
-	.INCBIN "assets/sprites/gUnknown_080B88A4.4bpp"
+	.GLOBAL gfxBobombExplosion4bpp
+gfxBobombExplosion4bpp:
+	.INCBIN "assets/sprites/BobombExplosion.4bpp"
 
 	.GLOBAL gUnknown_080B90A4
 gUnknown_080B90A4:
@@ -2707,9 +2707,9 @@ gUnknown_081004C0:
 gUnknown_08100700:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_08100708
-gUnknown_08100708:
-	.INCBIN "assets/sprites/gUnknown_08100708.4bpp"
+	.GLOBAL gfxPolterguyMask4bpp
+gfxPolterguyMask4bpp:
+	.INCBIN "assets/sprites/PolterguyMask.4bpp"
 
 	.GLOBAL gUnknown_08100B08
 gUnknown_08100B08:
@@ -6291,25 +6291,25 @@ gUnknown_082AC2B0:
 gUnknown_082ADAB0:
 	.INCBIN "baserom.gba", 0x2ADAB0, 0x2ADAD4-0x2ADAB0
 
-	.GLOBAL gUnknown_082ADAD4
-gUnknown_082ADAD4:
+	.GLOBAL gfxTrashCanOAM
+gfxTrashCanOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=5, affineParam=0
 
-	.GLOBAL gUnknown_082ADADC
-gUnknown_082ADADC:
-	.INCBIN "assets/sprites/gUnknown_082ADADC.4bpp"
+	.GLOBAL gfxTrashCan4bpp
+gfxTrashCan4bpp:
+	.INCBIN "assets/sprites/TrashCan.4bpp"
 
 	.GLOBAL gUnknown_082ADBDC
 gUnknown_082ADBDC:
 	.INCBIN "baserom.gba", 0x2ADBDC, 0x2ADE1C-0x2ADBDC
 
-	.GLOBAL gUnknown_082ADE1C
-gUnknown_082ADE1C:
+	.GLOBAL gfxTrashCanFlipOAM
+gfxTrashCanFlipOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=10, affineParam=0
 
-	.GLOBAL gUnknown_082ADE24
-gUnknown_082ADE24:
-	.INCBIN "assets/sprites/gUnknown_082ADE24.4bpp"
+	.GLOBAL gfxTrashCanFlip4bpp
+gfxTrashCanFlip4bpp:
+	.INCBIN "assets/sprites/TrashCanFlip.4bpp"
 
 	.GLOBAL gUnknown_082AEE24
 gUnknown_082AEE24:
@@ -6583,9 +6583,9 @@ gUnknown_082C7FB4:
 gUnknown_082C7FD8:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082C7FE0
-gUnknown_082C7FE0:
-	.INCBIN "assets/sprites/gUnknown_082C7FE0.4bpp"
+	.GLOBAL gfxSpringJumpText14bpp
+gfxSpringJumpText14bpp:
+	.INCBIN "assets/sprites/SpringJumpText1.4bpp"
 
 	.GLOBAL gUnknown_082C80E0
 gUnknown_082C80E0:
@@ -6595,9 +6595,9 @@ gUnknown_082C80E0:
 gUnknown_082C8104:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082C810C
-gUnknown_082C810C:
-	.INCBIN "assets/sprites/gUnknown_082C810C.4bpp"
+	.GLOBAL gfxSpringJumpText24bpp
+gfxSpringJumpText24bpp:
+	.INCBIN "assets/sprites/SpringJumpText2.4bpp"
 
 	.GLOBAL gUnknown_082C820C
 gUnknown_082C820C:
@@ -6607,9 +6607,9 @@ gUnknown_082C820C:
 gUnknown_082C8230:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082C8238
-gUnknown_082C8238:
-	.INCBIN "assets/sprites/gUnknown_082C8238.4bpp"
+	.GLOBAL gfxSpringJumpText34bpp
+gfxSpringJumpText34bpp:
+	.INCBIN "assets/sprites/SpringJumpText3.4bpp"
 
 	.GLOBAL gUnknown_082C82B8
 gUnknown_082C82B8:
@@ -6723,49 +6723,49 @@ gUnknown_082CB144:
 gUnknown_082CB544:
 	.INCBIN "baserom.gba", 0x2CB544, 0x2CB568-0x2CB544
 
-	.GLOBAL gUnknown_082CB568
-gUnknown_082CB568:
+	.GLOBAL gfxHandstandJumpText1OAM
+gfxHandstandJumpText1OAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, x=0, matrixNum=0, size=0, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082CB570
-gUnknown_082CB570:
-	.INCBIN "assets/sprites/gUnknown_082CB570.4bpp"
+	.GLOBAL gfxHandstandJumpText14bpp
+gfxHandstandJumpText14bpp:
+	.INCBIN "assets/sprites/HandstandJumpText1.4bpp"
 
 	.GLOBAL gUnknown_082CB5B0
 gUnknown_082CB5B0:
 	.INCBIN "baserom.gba", 0x2CB5B0, 0x2CB5D4-0x2CB5B0
 
-	.GLOBAL gUnknown_082CB5D4
-gUnknown_082CB5D4:
+	.GLOBAL gfxHandstandJumpText2OAM
+gfxHandstandJumpText2OAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082CB5DC
-gUnknown_082CB5DC:
-	.INCBIN "assets/sprites/gUnknown_082CB5DC.4bpp"
+	.GLOBAL gfxHandstandJumpText24bpp
+gfxHandstandJumpText24bpp:
+	.INCBIN "assets/sprites/HandstandJumpText2.4bpp"
 
 	.GLOBAL gUnknown_082CB6DC
 gUnknown_082CB6DC:
 	.INCBIN "baserom.gba", 0x2CB6DC, 0x2CB700-0x2CB6DC
 
-	.GLOBAL gUnknown_082CB700
-gUnknown_082CB700:
+	.GLOBAL gfxHandstandJumpText3OAM
+gfxHandstandJumpText3OAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082CB708
-gUnknown_082CB708:
-	.INCBIN "assets/sprites/gUnknown_082CB708.4bpp"
+	.GLOBAL gfxHandstandJumpText34bpp
+gfxHandstandJumpText34bpp:
+	.INCBIN "assets/sprites/HandstandJumpText3.4bpp"
 
 	.GLOBAL gUnknown_082CB808
 gUnknown_082CB808:
 	.INCBIN "baserom.gba", 0x2CB808, 0x2CB82C-0x2CB808
 
-	.GLOBAL gUnknown_082CB82C
-gUnknown_082CB82C:
+	.GLOBAL gfxHandstandJumpText4OAM
+gfxHandstandJumpText4OAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082CB834
-gUnknown_082CB834:
-	.INCBIN "assets/sprites/gUnknown_082CB834.4bpp"
+	.GLOBAL gfxHandstandJumpText44bpp
+gfxHandstandJumpText44bpp:
+	.INCBIN "assets/sprites/HandstandJumpText4.4bpp"
 
 	.GLOBAL gUnknown_082CB934
 gUnknown_082CB934:
@@ -6859,9 +6859,9 @@ gUnknown_082CD8E8:
 gUnknown_082CD90C:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082CD914
-gUnknown_082CD914:
-	.INCBIN "assets/sprites/gUnknown_082CD914.4bpp"
+	.GLOBAL gfxHandstandDoubleJumpText14bpp
+gfxHandstandDoubleJumpText14bpp:
+	.INCBIN "assets/sprites/HandstandDoubleJumpText1.4bpp"
 
 	.GLOBAL gUnknown_082CDA14
 gUnknown_082CDA14:
@@ -6883,9 +6883,9 @@ gUnknown_082CDB40:
 gUnknown_082CDB64:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082CDB6C
-gUnknown_082CDB6C:
-	.INCBIN "assets/sprites/gUnknown_082CDB6C.4bpp"
+	.GLOBAL gfxHandstandDoubleJumpText34bpp
+gfxHandstandDoubleJumpText34bpp:
+	.INCBIN "assets/sprites/HandstandDoubleJumpText3.4bpp"
 
 	.GLOBAL gUnknown_082CDC6C
 gUnknown_082CDC6C:
@@ -6907,9 +6907,9 @@ gUnknown_082CDD98:
 gUnknown_082CDDBC:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082CDDC4
-gUnknown_082CDDC4:
-	.INCBIN "assets/sprites/gUnknown_082CDDC4.4bpp"
+	.GLOBAL gfxHandstandDoubleJumpText44bpp
+gfxHandstandDoubleJumpText44bpp:
+	.INCBIN "assets/sprites/HandstandDoubleJumpText4.4bpp"
 
 	.GLOBAL gUnknown_082CDEC4
 gUnknown_082CDEC4:
@@ -7039,9 +7039,9 @@ gUnknown_082D0B7C:
 gUnknown_082D0BA0:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082D0BA8
-gUnknown_082D0BA8:
-	.INCBIN "assets/sprites/gUnknown_082D0BA8.4bpp"
+	.GLOBAL gfxBackflipText14bpp
+gfxBackflipText14bpp:
+	.INCBIN "assets/sprites/BackflipText1.4bpp"
 
 	.GLOBAL gUnknown_082D0CA8
 gUnknown_082D0CA8:
@@ -7051,9 +7051,9 @@ gUnknown_082D0CA8:
 gUnknown_082D0CCC:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_082D0CD4
-gUnknown_082D0CD4:
-	.INCBIN "assets/sprites/gUnknown_082D0CD4.4bpp"
+	.GLOBAL gfxBackflipText24bpp
+gfxBackflipText24bpp:
+	.INCBIN "assets/sprites/BackflipText2.4bpp"
 
 	.GLOBAL gUnknown_082D0DD4
 gUnknown_082D0DD4:
@@ -8311,13 +8311,13 @@ gUnknown_082EC1EC:
 gUnknown_082EC26C:
 	.INCBIN "baserom.gba", 0x2EC26C, 0x2EC2D8-0x2EC26C
 
-	.GLOBAL gUnknown_082EC2D8
-gUnknown_082EC2D8:
+	.GLOBAL gfxMiniMarioIconOAM
+gfxMiniMarioIconOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_082EC2E0
-gUnknown_082EC2E0:
-	.INCBIN "assets/sprites/gUnknown_082EC2E0.8bpp"
+	.GLOBAL gfxMiniMarioIcon8bpp
+gfxMiniMarioIcon8bpp:
+	.INCBIN "assets/sprites/MiniMarioIcon.8bpp"
 
 	.GLOBAL gUnknown_082EC5E0
 gUnknown_082EC5E0:
@@ -9327,13 +9327,13 @@ gUnknown_082F39F8:
 gUnknown_082F3D78:
 	.INCBIN "baserom.gba", 0x2F3D78, 0x2F3FB8-0x2F3D78
 
-	.GLOBAL gUnknown_082F3FB8
-gUnknown_082F3FB8:
+	.GLOBAL gfxKeyFlipOAM
+gfxKeyFlipOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=2, affineParam=0
 
-	.GLOBAL gUnknown_082F3FC0
-gUnknown_082F3FC0:
-	.INCBIN "assets/sprites/gUnknown_082F3FC0.4bpp"
+	.GLOBAL gfxKeyFlip4bpp
+gfxKeyFlip4bpp:
+	.INCBIN "assets/sprites/KeyFlip.4bpp"
 
 	.GLOBAL gUnknown_082F43C0
 gUnknown_082F43C0:
@@ -9367,9 +9367,9 @@ gUnknown_082F513C:
 gUnknown_082F52A4:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=2, affineParam=0
 
-	.GLOBAL gUnknown_082F52AC
-gUnknown_082F52AC:
-	.INCBIN "assets/sprites/gUnknown_082F52AC.4bpp"
+	.GLOBAL gfxMiniMarioKey4bpp
+gfxMiniMarioKey4bpp:
+	.INCBIN "assets/sprites/MiniMarioKey.4bpp"
 
 	.GLOBAL gUnknown_082F57AC
 gUnknown_082F57AC:
@@ -10131,13 +10131,13 @@ gUnknown_0843580C:
 gUnknown_0843980C:
 	.INCBIN "baserom.gba", 0x43980C, 0x439A4C-0x43980C
 
-	.GLOBAL gUnknown_08439A4C
-gUnknown_08439A4C:
+	.GLOBAL gfxMiniMarioCrystalBallOAM
+gfxMiniMarioCrystalBallOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_08439A54
-gUnknown_08439A54:
-	.INCBIN "assets/sprites/gUnknown_08439A54.8bpp"
+	.GLOBAL gfxMiniMarioCrystalBall8bpp
+gfxMiniMarioCrystalBall8bpp:
+	.INCBIN "assets/sprites/MiniMarioCrystalBall.8bpp"
 
 	.GLOBAL gUnknown_0843DA54
 gUnknown_0843DA54:
@@ -12147,25 +12147,25 @@ gUnknown_085CF0CC:
 gUnknown_085CF8CC:
 	.INCBIN "baserom.gba", 0x5CF8CC, 0x5CF9C8-0x5CF8CC
 
-	.GLOBAL gUnknown_085CF9C8
-gUnknown_085CF9C8:
+	.GLOBAL gfxMainWorldSelectTabsOAM
+gfxMainWorldSelectTabsOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=9, affineParam=0
 
-	.GLOBAL gUnknown_085CF9D0
-gUnknown_085CF9D0:
-	.INCBIN "assets/sprites/gUnknown_085CF9D0.4bpp"
+	.GLOBAL gfxMainWorldSelectTabs4bpp
+gfxMainWorldSelectTabs4bpp:
+	.INCBIN "assets/sprites/MainWorldSelectTabs.4bpp"
 
 	.GLOBAL gUnknown_085D00D0
 gUnknown_085D00D0:
 	.INCBIN "baserom.gba", 0x5D00D0, 0x5D01CC-0x5D00D0
 
-	.GLOBAL gUnknown_085D01CC
-gUnknown_085D01CC:
+	.GLOBAL gfxPlusWorldSelectTabsOAM
+gfxPlusWorldSelectTabsOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=9, affineParam=0
 
-	.GLOBAL gUnknown_085D01D4
-gUnknown_085D01D4:
-	.INCBIN "assets/sprites/gUnknown_085D01D4.4bpp"
+	.GLOBAL gfxPlusWorldSelectTabs4bpp
+gfxPlusWorldSelectTabs4bpp:
+	.INCBIN "assets/sprites/PlusWorldSelectTabs.4bpp"
 
 	.GLOBAL gUnknown_085D08D4
 gUnknown_085D08D4:
@@ -12195,13 +12195,13 @@ gfxMainLevelIconPics4bpp:
 gUnknown_085D70C8:
 	.INCBIN "baserom.gba", 0x5D70C8, 0x5D76B0-0x5D70C8
 
-	.GLOBAL gUnknown_085D76B0
-gUnknown_085D76B0:
+	.GLOBAL gfxPlusLevelIconPicsOAM
+gfxPlusLevelIconPicsOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=2, tileNum=0, priority=0, paletteNum=13, affineParam=0
 
-	.GLOBAL gUnknown_085D76B8
-gUnknown_085D76B8:
-	.INCBIN "assets/sprites/gUnknown_085D76B8.4bpp"
+	.GLOBAL gfxPlusLevelIconPics4bpp
+gfxPlusLevelIconPics4bpp:
+	.INCBIN "assets/sprites/PlusLevelIconPics.4bpp"
 
 	.GLOBAL gUnknown_085DCAB8
 gUnknown_085DCAB8:
@@ -12867,109 +12867,109 @@ gUnknown_085EBC70:
 gUnknown_085ECC70:
 	.INCBIN "baserom.gba", 0x5ECC70, 0x5ECC94-0x5ECC70
 
-	.GLOBAL gUnknown_085ECC94
-gUnknown_085ECC94:
+	.GLOBAL gfxMovie1PreviewOAM
+gfxMovie1PreviewOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085ECC9C
-gUnknown_085ECC9C:
-	.INCBIN "assets/sprites/gUnknown_085ECC9C.8bpp"
+	.GLOBAL gfxMovie1Preview8bpp
+gfxMovie1Preview8bpp:
+	.INCBIN "assets/sprites/Movie1Preview.8bpp"
 
 	.GLOBAL gUnknown_085ED49C
 gUnknown_085ED49C:
 	.INCBIN "baserom.gba", 0x5ED49C, 0x5ED4C0-0x5ED49C
 
-	.GLOBAL gUnknown_085ED4C0
-gUnknown_085ED4C0:
+	.GLOBAL gfxMovie2PreviewOAM
+gfxMovie2PreviewOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085ED4C8
-gUnknown_085ED4C8:
-	.INCBIN "assets/sprites/gUnknown_085ED4C8.8bpp"
+	.GLOBAL gfxMovie2Preview8bpp
+gfxMovie2Preview8bpp:
+	.INCBIN "assets/sprites/Movie2Preview.8bpp"
 
 	.GLOBAL gUnknown_085EDCC8
 gUnknown_085EDCC8:
 	.INCBIN "baserom.gba", 0x5EDCC8, 0x5EDCEC-0x5EDCC8
 
-	.GLOBAL gUnknown_085EDCEC
-gUnknown_085EDCEC:
+	.GLOBAL gfxMovie3PreviewOAM
+gfxMovie3PreviewOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085EDCF4
-gUnknown_085EDCF4:
-	.INCBIN "assets/sprites/gUnknown_085EDCF4.8bpp"
+	.GLOBAL gfxMovie3Preview8bpp
+gfxMovie3Preview8bpp:
+	.INCBIN "assets/sprites/Movie3Preview.8bpp"
 
 	.GLOBAL gUnknown_085EE4F4
 gUnknown_085EE4F4:
 	.INCBIN "baserom.gba", 0x5EE4F4, 0x5EE518-0x5EE4F4
 
-	.GLOBAL gUnknown_085EE518
-gUnknown_085EE518:
+	.GLOBAL gfxMovie4PreviewOAM
+gfxMovie4PreviewOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085EE520
-gUnknown_085EE520:
-	.INCBIN "assets/sprites/gUnknown_085EE520.8bpp"
+	.GLOBAL gfxMovie4Preview8bpp
+gfxMovie4Preview8bpp:
+	.INCBIN "assets/sprites/Movie4Preview.8bpp"
 
 	.GLOBAL gUnknown_085EED20
 gUnknown_085EED20:
 	.INCBIN "baserom.gba", 0x5EED20, 0x5EED44-0x5EED20
 
-	.GLOBAL gUnknown_085EED44
-gUnknown_085EED44:
+	.GLOBAL gfxMovie5PreviewOAM
+gfxMovie5PreviewOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085EED4C
-gUnknown_085EED4C:
-	.INCBIN "assets/sprites/gUnknown_085EED4C.8bpp"
+	.GLOBAL gfxMovie5Preview8bpp
+gfxMovie5Preview8bpp:
+	.INCBIN "assets/sprites/Movie5Preview.8bpp"
 
-	.GLOBAL gUnknown_085EF54C
-gUnknown_085EF54C:
+	.GLOBAL gfxMovie6PreviewOAM
+gfxMovie6PreviewOAM:
 	.INCBIN "baserom.gba", 0x5EF54C, 0x5EF570-0x5EF54C
 
 	.GLOBAL gUnknown_085EF570
 gUnknown_085EF570:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085EF578
-gUnknown_085EF578:
-	.INCBIN "assets/sprites/gUnknown_085EF578.8bpp"
+	.GLOBAL gfxMovie6Preview8bpp
+gfxMovie6Preview8bpp:
+	.INCBIN "assets/sprites/Movie6Preview.8bpp"
 
 	.GLOBAL gUnknown_085EFD78
 gUnknown_085EFD78:
 	.INCBIN "baserom.gba", 0x5EFD78, 0x5EFD9C-0x5EFD78
 
-	.GLOBAL gUnknown_085EFD9C
-gUnknown_085EFD9C:
+	.GLOBAL gfxMovie7PreviewOAM
+gfxMovie7PreviewOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085EFDA4
-gUnknown_085EFDA4:
-	.INCBIN "assets/sprites/gUnknown_085EFDA4.8bpp"
+	.GLOBAL gfxMovie7Preview8bpp
+gfxMovie7Preview8bpp:
+	.INCBIN "assets/sprites/Movie7Preview.8bpp"
 
 	.GLOBAL gUnknown_085F05A4
 gUnknown_085F05A4:
 	.INCBIN "baserom.gba", 0x5F05A4, 0x5F05C8-0x5F05A4
 
-	.GLOBAL gUnknown_085F05C8
-gUnknown_085F05C8:
+	.GLOBAL gfxMovie8PreviewOAM
+gfxMovie8PreviewOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085F05D0
-gUnknown_085F05D0:
-	.INCBIN "assets/sprites/gUnknown_085F05D0.8bpp"
+	.GLOBAL gfxMovie8Preview8bpp
+gfxMovie8Preview8bpp:
+	.INCBIN "assets/sprites/Movie8Preview.8bpp"
 
 	.GLOBAL gUnknown_085F0DD0
 gUnknown_085F0DD0:
 	.INCBIN "baserom.gba", 0x5F0DD0, 0x5F0DF4-0x5F0DD0
 
-	.GLOBAL gUnknown_085F0DF4
-gUnknown_085F0DF4:
+	.GLOBAL gfxMovie8PreviewAltOAM
+gfxMovie8PreviewAltOAM:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, x=0, matrixNum=0, size=3, tileNum=0, priority=0, paletteNum=0, affineParam=0
 
-	.GLOBAL gUnknown_085F0DFC
-gUnknown_085F0DFC:
-	.INCBIN "assets/sprites/gUnknown_085F0DFC.8bpp"
+	.GLOBAL gfxMovie8PreviewAlt8bpp
+gfxMovie8PreviewAlt8bpp:
+	.INCBIN "assets/sprites/Movie8PreviewAlt.8bpp"
 
 	.GLOBAL gUnknown_085F15FC
 gUnknown_085F15FC:
@@ -13819,9 +13819,9 @@ gUnknown_08622950:
 gUnknown_08622974:
 	OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, x=0, matrixNum=0, size=1, tileNum=0, priority=0, paletteNum=4, affineParam=0
 
-	.GLOBAL gUnknown_0862297C
-gUnknown_0862297C:
-	.INCBIN "assets/sprites/gUnknown_0862297C.4bpp"
+	.GLOBAL gfxPolterguyBlock4bpp
+gfxPolterguyBlock4bpp:
+	.INCBIN "assets/sprites/PolterguyBlock.4bpp"
 
 	.GLOBAL gUnknown_086229FC
 gUnknown_086229FC:
@@ -14773,7 +14773,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_080B8584 @ Sprite Data 1
 	.4byte gUnknown_080B889C @ OAM
-	.4byte gUnknown_080B88A4 @ Sprite Graphics
+	.4byte gfxBobombExplosion4bpp @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0100 @ Y position
@@ -15233,7 +15233,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_081004C0 @ Sprite Data 1
 	.4byte gUnknown_08100700 @ OAM
-	.4byte gUnknown_08100708 @ Sprite Graphics
+	.4byte gfxPolterguyMask4bpp @ Sprite Graphics
 
 	.2byte 0x000C @ X Position
 	.2byte 0x0080 @ Y position
@@ -18222,8 +18222,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082ADAB0 @ Sprite Data 1
-	.4byte gUnknown_082ADAD4 @ OAM
-	.4byte gUnknown_082ADADC @ Sprite Graphics
+	.4byte gfxTrashCanOAM @ OAM
+	.4byte gfxTrashCan4bpp @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18232,8 +18232,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082ADBDC @ Sprite Data 1
-	.4byte gUnknown_082ADE1C @ OAM
-	.4byte gUnknown_082ADE24 @ Sprite Graphics
+	.4byte gfxTrashCanFlipOAM @ OAM
+	.4byte gfxTrashCanFlip4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18463,7 +18463,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082C7FB4 @ Sprite Data 1
 	.4byte gUnknown_082C7FD8 @ OAM
-	.4byte gUnknown_082C7FE0 @ Sprite Graphics
+	.4byte gfxSpringJumpText14bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18473,7 +18473,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082C80E0 @ Sprite Data 1
 	.4byte gUnknown_082C8104 @ OAM
-	.4byte gUnknown_082C810C @ Sprite Graphics
+	.4byte gfxSpringJumpText24bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0080 @ Y position
@@ -18483,7 +18483,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082C820C @ Sprite Data 1
 	.4byte gUnknown_082C8230 @ OAM
-	.4byte gUnknown_082C8238 @ Sprite Graphics
+	.4byte gfxSpringJumpText34bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -18582,8 +18582,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082CB544 @ Sprite Data 1
-	.4byte gUnknown_082CB568 @ OAM
-	.4byte gUnknown_082CB570 @ Sprite Graphics
+	.4byte gfxHandstandJumpText1OAM @ OAM
+	.4byte gfxHandstandJumpText14bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18592,8 +18592,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082CB5B0 @ Sprite Data 1
-	.4byte gUnknown_082CB5D4 @ OAM
-	.4byte gUnknown_082CB5DC @ Sprite Graphics
+	.4byte gfxHandstandJumpText2OAM @ OAM
+	.4byte gfxHandstandJumpText24bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18602,8 +18602,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082CB6DC @ Sprite Data 1
-	.4byte gUnknown_082CB700 @ OAM
-	.4byte gUnknown_082CB708 @ Sprite Graphics
+	.4byte gfxHandstandJumpText3OAM @ OAM
+	.4byte gfxHandstandJumpText34bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18612,8 +18612,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082CB808 @ Sprite Data 1
-	.4byte gUnknown_082CB82C @ OAM
-	.4byte gUnknown_082CB834 @ Sprite Graphics
+	.4byte gfxHandstandJumpText4OAM @ OAM
+	.4byte gfxHandstandJumpText44bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -18693,7 +18693,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082CD8E8 @ Sprite Data 1
 	.4byte gUnknown_082CD90C @ OAM
-	.4byte gUnknown_082CD914 @ Sprite Graphics
+	.4byte gfxHandstandDoubleJumpText14bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18713,7 +18713,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082CDB40 @ Sprite Data 1
 	.4byte gUnknown_082CDB64 @ OAM
-	.4byte gUnknown_082CDB6C @ Sprite Graphics
+	.4byte gfxHandstandDoubleJumpText34bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18733,7 +18733,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082CDD98 @ Sprite Data 1
 	.4byte gUnknown_082CDDBC @ OAM
-	.4byte gUnknown_082CDDC4 @ Sprite Graphics
+	.4byte gfxHandstandDoubleJumpText44bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0400 @ Y position
@@ -18843,7 +18843,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082D0B7C @ Sprite Data 1
 	.4byte gUnknown_082D0BA0 @ OAM
-	.4byte gUnknown_082D0BA8 @ Sprite Graphics
+	.4byte gfxBackflipText14bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18853,7 +18853,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082D0CA8 @ Sprite Data 1
 	.4byte gUnknown_082D0CCC @ OAM
-	.4byte gUnknown_082D0CD4 @ Sprite Graphics
+	.4byte gfxBackflipText24bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0400 @ Y position
@@ -19902,8 +19902,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082EC26C @ Sprite Data 1
-	.4byte gUnknown_082EC2D8 @ OAM
-	.4byte gUnknown_082EC2E0 @ Sprite Graphics
+	.4byte gfxMiniMarioIconOAM @ OAM
+	.4byte gfxMiniMarioIcon8bpp @ Sprite Graphics
 
 	.2byte 0x000A @ X Position
 	.2byte 0x0040 @ Y position
@@ -20742,8 +20742,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082F3D78 @ Sprite Data 1
-	.4byte gUnknown_082F3FB8 @ OAM
-	.4byte gUnknown_082F3FC0 @ Sprite Graphics
+	.4byte gfxKeyFlipOAM @ OAM
+	.4byte gfxKeyFlip4bpp @ Sprite Graphics
 
 	.2byte 0x0034 @ X Position
 	.2byte 0x0100 @ Y position
@@ -20773,7 +20773,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082F513C @ Sprite Data 1
 	.4byte gUnknown_082F52A4 @ OAM
-	.4byte gUnknown_082F52AC @ Sprite Graphics
+	.4byte gfxMiniMarioKey4bpp @ Sprite Graphics
 
 	.2byte 0x001C @ X Position
 	.2byte 0x0080 @ Y position
@@ -21412,8 +21412,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_0843980C @ Sprite Data 1
-	.4byte gUnknown_08439A4C @ OAM
-	.4byte gUnknown_08439A54 @ Sprite Graphics
+	.4byte gfxMiniMarioCrystalBallOAM @ OAM
+	.4byte gfxMiniMarioCrystalBall8bpp @ Sprite Graphics
 
 	.2byte 0x0020 @ X Position
 	.2byte 0x0400 @ Y position
@@ -23092,8 +23092,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085CF8CC @ Sprite Data 1
-	.4byte gUnknown_085CF9C8 @ OAM
-	.4byte gUnknown_085CF9D0 @ Sprite Graphics
+	.4byte gfxMainWorldSelectTabsOAM @ OAM
+	.4byte gfxMainWorldSelectTabs4bpp @ Sprite Graphics
 
 	.2byte 0x0007 @ X Position
 	.2byte 0x0100 @ Y position
@@ -23102,8 +23102,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085D00D0 @ Sprite Data 1
-	.4byte gUnknown_085D01CC @ OAM
-	.4byte gUnknown_085D01D4 @ Sprite Graphics
+	.4byte gfxPlusWorldSelectTabsOAM @ OAM
+	.4byte gfxPlusWorldSelectTabs4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -23132,8 +23132,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085D70C8 @ Sprite Data 1
-	.4byte gUnknown_085D76B0 @ OAM
-	.4byte gUnknown_085D76B8 @ Sprite Graphics
+	.4byte gfxPlusLevelIconPicsOAM @ OAM
+	.4byte gfxPlusLevelIconPics4bpp @ Sprite Graphics
 
 	.2byte 0x0005 @ X Position
 	.2byte 0x0040 @ Y position
@@ -23692,8 +23692,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085ECC70 @ Sprite Data 1
-	.4byte gUnknown_085ECC94 @ OAM
-	.4byte gUnknown_085ECC9C @ Sprite Graphics
+	.4byte gfxMovie1PreviewOAM @ OAM
+	.4byte gfxMovie1Preview8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -23702,8 +23702,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085ED49C @ Sprite Data 1
-	.4byte gUnknown_085ED4C0 @ OAM
-	.4byte gUnknown_085ED4C8 @ Sprite Graphics
+	.4byte gfxMovie2PreviewOAM @ OAM
+	.4byte gfxMovie2Preview8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -23712,8 +23712,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085EDCC8 @ Sprite Data 1
-	.4byte gUnknown_085EDCEC @ OAM
-	.4byte gUnknown_085EDCF4 @ Sprite Graphics
+	.4byte gfxMovie3PreviewOAM @ OAM
+	.4byte gfxMovie3Preview8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -23722,8 +23722,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085EE4F4 @ Sprite Data 1
-	.4byte gUnknown_085EE518 @ OAM
-	.4byte gUnknown_085EE520 @ Sprite Graphics
+	.4byte gfxMovie4PreviewOAM @ OAM
+	.4byte gfxMovie4Preview8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -23732,8 +23732,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085EED20 @ Sprite Data 1
-	.4byte gUnknown_085EED44 @ OAM
-	.4byte gUnknown_085EED4C @ Sprite Graphics
+	.4byte gfxMovie5PreviewOAM @ OAM
+	.4byte gfxMovie5Preview8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -23741,9 +23741,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EF54C @ Sprite Data 1
+	.4byte gfxMovie6PreviewOAM @ Sprite Data 1
 	.4byte gUnknown_085EF570 @ OAM
-	.4byte gUnknown_085EF578 @ Sprite Graphics
+	.4byte gfxMovie6Preview8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -23752,8 +23752,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085EFD78 @ Sprite Data 1
-	.4byte gUnknown_085EFD9C @ OAM
-	.4byte gUnknown_085EFDA4 @ Sprite Graphics
+	.4byte gfxMovie7PreviewOAM @ OAM
+	.4byte gfxMovie7Preview8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -23762,8 +23762,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085F05A4 @ Sprite Data 1
-	.4byte gUnknown_085F05C8 @ OAM
-	.4byte gUnknown_085F05D0 @ Sprite Graphics
+	.4byte gfxMovie8PreviewOAM @ OAM
+	.4byte gfxMovie8Preview8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -23772,8 +23772,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085F0DD0 @ Sprite Data 1
-	.4byte gUnknown_085F0DF4 @ OAM
-	.4byte gUnknown_085F0DFC @ Sprite Graphics
+	.4byte gfxMovie8PreviewAltOAM @ OAM
+	.4byte gfxMovie8PreviewAlt8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0800 @ Y position
@@ -24483,7 +24483,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_08622950 @ Sprite Data 1
 	.4byte gUnknown_08622974 @ OAM
-	.4byte gUnknown_0862297C @ Sprite Graphics
+	.4byte gfxPolterguyBlock4bpp @ Sprite Graphics
 
 	.2byte 0x0011 @ X Position
 	.2byte 0x0200 @ Y position
