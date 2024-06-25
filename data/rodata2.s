@@ -841,7 +841,6 @@ gSFXNameLookUp:
 gSFXNameBlank:
 	.ASCII "BLANK\0\0\0"
 	
-	
 	.GLOBAL gSFXNameReturn
 gSFXNameReturn:
 	.ASCII "RETURN\0\0"
