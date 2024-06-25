@@ -30347,7 +30347,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000C82 @ Sample size in bytes
 	.4byte 0x08B3C038 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077F24 @ Sample name pointer
+	.4byte gSFXNameClimb @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -30360,7 +30360,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000741 @ Sample size in bytes
 	.4byte 0x08B3CCBA @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077F1C @ Sample name pointer
+	.4byte gSFXNameSkid @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30373,7 +30373,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000347F @ Sample size in bytes
 	.4byte 0x08B3D3FB @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077F14 @ Sample name pointer
+	.4byte gSFXNamePound @ Sample name pointer
 	.2byte 0x005A @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30386,7 +30386,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000BE8 @ Sample size in bytes
 	.4byte 0x08B4087A @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077F0C @ Sample name pointer
+	.4byte gSFXNameTumble1 @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x03 @ ???
 	.byte 0x00 @ ???
@@ -30399,7 +30399,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002D9F @ Sample size in bytes
 	.4byte 0x08B41462 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077F04 @ Sample name pointer
+	.4byte gSFXNameStun @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x03 @ ???
 	.byte 0x00 @ ???
@@ -30412,7 +30412,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001903 @ Sample size in bytes
 	.4byte 0x08B44201 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EFC @ Sample name pointer
+	.4byte gSFXNameBurn1 @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x03 @ ???
 	.byte 0x00 @ ???
@@ -30425,7 +30425,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000EB5 @ Sample size in bytes
 	.4byte 0x08B45B04 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EF4 @ Sample name pointer
+	.4byte gSFXNameJump1 @ Sample name pointer
 	.2byte 0x008C @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -30438,7 +30438,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000067A @ Sample size in bytes
 	.4byte 0x08B469B9 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EEC @ Sample name pointer
+	.4byte gSFXNameGrunt2 @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -30451,7 +30451,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000217B @ Sample size in bytes
 	.4byte 0x08B47033 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EE4 @ Sample name pointer
+	.4byte gSFXNameJump4 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -30464,7 +30464,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000018B0 @ Sample size in bytes
 	.4byte 0x08B491AE @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EDC @ Sample name pointer
+	.4byte gSFXNameJump3 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -30477,7 +30477,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000BBC @ Sample size in bytes
 	.4byte 0x08B4AA5E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077ED4 @ Sample name pointer
+	.4byte gSFXNamePickup @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -30490,7 +30490,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001F47 @ Sample size in bytes
 	.4byte 0x08B4B61A @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077ECC @ Sample name pointer
+	.4byte gSFXNameJump5 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -30503,7 +30503,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000181 @ Sample size in bytes
 	.4byte 0x08B4D561 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EC4 @ Sample name pointer
+	.4byte gSFXNameCounter @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30516,7 +30516,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001686 @ Sample size in bytes
 	.4byte 0x08B4D6E2 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EBC @ Sample name pointer
+	.4byte gSFXNameItem1 @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -30529,7 +30529,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000C80 @ Sample size in bytes
 	.4byte 0x08B4ED68 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EB4 @ Sample name pointer
+	.4byte gSFXNameSteps2 @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30542,7 +30542,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000EE0 @ Sample size in bytes
 	.4byte 0x08B4F9E8 @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077EAC @ Sample name pointer
+	.4byte gSFXNameKey1 @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x08 @ ???
 	.byte 0x00 @ ???
@@ -30555,7 +30555,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000013FC @ Sample size in bytes
 	.4byte 0x08B508C8 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077EA4 @ Sample name pointer
+	.4byte gSFXNameCrash @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -30568,7 +30568,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000110C @ Sample size in bytes
 	.4byte 0x08B51CC4 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E9C @ Sample name pointer
+	.4byte gSFXNameThrow @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x03 @ ???
 	.byte 0x00 @ ???
@@ -30581,7 +30581,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001143 @ Sample size in bytes
 	.4byte 0x08B52DD0 @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077E94 @ Sample name pointer
+	.4byte gSFXNameWalk @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30594,7 +30594,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002506 @ Sample size in bytes
 	.4byte 0x08B53F13 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E84 @ Sample name pointer
+	.4byte gSFXNamePickupCrystal @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x0F @ ???
 	.byte 0x00 @ ???
@@ -30607,7 +30607,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000068BB @ Sample size in bytes
 	.4byte 0x08B56419 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E78 @ Sample name pointer
+	.4byte gSFXNameHereWeGo @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x02 @ ???
 	.byte 0x01 @ ???
@@ -30620,7 +30620,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000362C @ Sample size in bytes
 	.4byte 0x08B5CCD4 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E70 @ Sample name pointer
+	.4byte gSFXNameLetsGo @ Sample name pointer
 	.2byte 0x005A @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -30633,7 +30633,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000013FD @ Sample size in bytes
 	.4byte 0x08B60300 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E68 @ Sample name pointer
+	.4byte gSFXNameBack @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30646,7 +30646,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000056A @ Sample size in bytes
 	.4byte 0x08B616FD @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E5C @ Sample name pointer
+	.4byte gSFXNameCursorE @ Sample name pointer
 	.2byte 0x00C8 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30659,7 +30659,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000C15 @ Sample size in bytes
 	.4byte 0x08B61C67 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E50 @ Sample name pointer
+	.4byte gSFXNameCursorM @ Sample name pointer
 	.2byte 0x0032 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30672,7 +30672,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000812 @ Sample size in bytes
 	.4byte 0x08B6287C @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E44 @ Sample name pointer
+	.4byte gSFXNameCursorS @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30685,7 +30685,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000009D7 @ Sample size in bytes
 	.4byte 0x08B6308E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E3C @ Sample name pointer
+	.4byte gSFXNameErase @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -30698,7 +30698,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000006C7 @ Sample size in bytes
 	.4byte 0x08B63A65 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077E34 @ Sample name pointer
+	.4byte gSFXNameError @ Sample name pointer
 	.2byte 0x0046 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31439,7 +31439,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00005237 @ Sample size in bytes
 	.4byte 0x08BA2A12 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077C38 @ Sample name pointer
+	.4byte gSFXNameWarpIn @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31452,7 +31452,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002701 @ Sample size in bytes
 	.4byte 0x08BA7C49 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077C30 @ Sample name pointer
+	.4byte gSFXNameSqueeze @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31465,7 +31465,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00006ECD @ Sample size in bytes
 	.4byte 0x08BAA34A @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077C28 @ Sample name pointer
+	.4byte gSFXNameGlass @ Sample name pointer
 	.2byte 0x00AF @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31478,7 +31478,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000009C1 @ Sample size in bytes
 	.4byte 0x08BB1217 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077C20 @ Sample name pointer
+	.4byte gSFXNameLift @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31491,7 +31491,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000220F @ Sample size in bytes
 	.4byte 0x08BB1BD8 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077C14 @ Sample name pointer
+	.4byte gSFXNameMMOhNo @ Sample name pointer
 	.2byte 0x0028 @ ???
 	.byte 0x0A @ ???
 	.byte 0x00 @ ???
@@ -31504,7 +31504,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000035C8 @ Sample size in bytes
 	.4byte 0x08BB3DE7 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077C0C @ Sample name pointer
+	.4byte gSFXNameJump7 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31517,7 +31517,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002A44 @ Sample size in bytes
 	.4byte 0x08BB73AF @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077C00 @ Sample name pointer
+	.4byte gSFXNameLevelStart @ Sample name pointer
 	.2byte 0x005A @ ???
 	.byte 0x0F @ ???
 	.byte 0x00 @ ???
@@ -31530,7 +31530,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001F34 @ Sample size in bytes
 	.4byte 0x08BB9DF3 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077BF8 @ Sample name pointer
+	.4byte gSFXNameElevGo @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x08 @ ???
 	.byte 0x00 @ ???
@@ -31543,7 +31543,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000BEE @ Sample size in bytes
 	.4byte 0x08BBBD27 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077BEC @ Sample name pointer
+	.4byte gSFXNameElevStop @ Sample name pointer
 	.2byte 0x00A0 @ ???
 	.byte 0x08 @ ???
 	.byte 0x00 @ ???
@@ -31556,7 +31556,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000026F3 @ Sample size in bytes
 	.4byte 0x08BBC915 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077BE0 @ Sample name pointer
+	.4byte gSFXNameEggFall @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x08 @ ???
 	.byte 0x00 @ ???
@@ -31569,7 +31569,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001191 @ Sample size in bytes
 	.4byte 0x08BBF008 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077BD4 @ Sample name pointer
+	.4byte gSFXNameDKExit1 @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31582,7 +31582,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00003DA0 @ Sample size in bytes
 	.4byte 0x08BC0199 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077BC8 @ Sample name pointer
+	.4byte gSFXNameDKBlubber @ Sample name pointer
 	.2byte 0x00A0 @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -31595,7 +31595,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000CC5 @ Sample size in bytes
 	.4byte 0x08BC3F39 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077BBC @ Sample name pointer
+	.4byte gSFXNameMovie02 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -31608,7 +31608,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000046A0 @ Sample size in bytes
 	.4byte 0x08BC4BFE @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077BB0 @ Sample name pointer
+	.4byte gSFXNameMovie03 @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -31621,7 +31621,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00006078 @ Sample size in bytes
 	.4byte 0x08BC929E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077BA4 @ Sample name pointer
+	.4byte gSFXNameMovie04 @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -31634,7 +31634,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002F2B @ Sample size in bytes
 	.4byte 0x08BCF316 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B98 @ Sample name pointer
+	.4byte gSFXNameMovie05 @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -31647,7 +31647,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000043F9 @ Sample size in bytes
 	.4byte 0x08BD2241 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B8C @ Sample name pointer
+	.4byte gSFXNameMovie06 @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -31660,7 +31660,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000924 @ Sample size in bytes
 	.4byte 0x08BD663A @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B84 @ Sample name pointer
+	.4byte gSFXNameKey2 @ Sample name pointer
 	.2byte 0x0041 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31673,7 +31673,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000016A @ Sample size in bytes
 	.4byte 0x08BD6F5E @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077B7C @ Sample name pointer
+	.4byte gSFXNameKey3 @ Sample name pointer
 	.2byte 0x0032 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31686,7 +31686,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000334 @ Sample size in bytes
 	.4byte 0x08BD70C8 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B70 @ Sample name pointer
+	.4byte gSFXNameGrabWire @ Sample name pointer
 	.2byte 0x00AA @ ???
 	.byte 0x01 @ ???
 	.byte 0x00 @ ???
@@ -31699,7 +31699,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000002A3 @ Sample size in bytes
 	.4byte 0x08BD73FC @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B64 @ Sample name pointer
+	.4byte gSFXNameGrabRope @ Sample name pointer
 	.2byte 0x00AA @ ???
 	.byte 0x01 @ ???
 	.byte 0x00 @ ???
@@ -31712,7 +31712,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000070E @ Sample size in bytes
 	.4byte 0x08BD769F @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B58 @ Sample name pointer
+	.4byte gSFXNameGrabLadder @ Sample name pointer
 	.2byte 0x00AA @ ???
 	.byte 0x01 @ ???
 	.byte 0x00 @ ???
@@ -31725,7 +31725,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000D18 @ Sample size in bytes
 	.4byte 0x08BD7DAD @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B50 @ Sample name pointer
+	.4byte gSFXNameCrush @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x03 @ ???
 	.byte 0x00 @ ???
@@ -31738,7 +31738,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000046DB @ Sample size in bytes
 	.4byte 0x08BD8AC5 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B44 @ Sample name pointer
+	.4byte gSFXNameSpitfire @ Sample name pointer
 	.2byte 0x0019 @ ???
 	.byte 0x03 @ ???
 	.byte 0x01 @ ???
@@ -31751,7 +31751,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000719 @ Sample size in bytes
 	.4byte 0x08BDD1A0 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B3C @ Sample name pointer
+	.4byte gSFXNameNinji @ Sample name pointer
 	.2byte 0x001E @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -31764,7 +31764,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002B3F @ Sample size in bytes
 	.4byte 0x08BDD8B9 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B34 @ Sample name pointer
+	.4byte gSFXNameCrumble @ Sample name pointer
 	.2byte 0x0023 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -31777,7 +31777,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000060DE @ Sample size in bytes
 	.4byte 0x08BE03F8 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B2C @ Sample name pointer
+	.4byte gSFXNameLava @ Sample name pointer
 	.2byte 0x0055 @ ???
 	.byte 0x04 @ ???
 	.byte 0x00 @ ???
@@ -31790,7 +31790,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000A62 @ Sample size in bytes
 	.4byte 0x08BE64D6 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B24 @ Sample name pointer
+	.4byte gSFXNameBubble @ Sample name pointer
 	.2byte 0x0055 @ ???
 	.byte 0x01 @ ???
 	.byte 0x00 @ ???
@@ -31803,7 +31803,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00004D10 @ Sample size in bytes
 	.4byte 0x08BE6F38 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B18 @ Sample name pointer
+	.4byte gSFXNameFountain @ Sample name pointer
 	.2byte 0x0014 @ ???
 	.byte 0x06 @ ???
 	.byte 0x00 @ ???
@@ -31829,7 +31829,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000015EE @ Sample size in bytes
 	.4byte 0x08BEBC49 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077B08 @ Sample name pointer
+	.4byte gSFXNameRestart @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x01 @ ???
 	.byte 0x00 @ ???
@@ -31842,7 +31842,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001D07 @ Sample size in bytes
 	.4byte 0x08BED237 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077AFC @ Sample name pointer
+	.4byte gSFXNameMetalRoll @ Sample name pointer
 	.2byte 0x0023 @ ???
 	.byte 0x03 @ ???
 	.byte 0x00 @ ???
@@ -31855,7 +31855,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000F77 @ Sample size in bytes
 	.4byte 0x08BEEF3E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077AF4 @ Sample name pointer
+	.4byte gSFXNameShwing @ Sample name pointer
 	.2byte 0x0055 @ ???
 	.byte 0x04 @ ???
 	.byte 0x00 @ ???
@@ -31868,7 +31868,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000035A @ Sample size in bytes
 	.4byte 0x08BEFEB5 @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077AEC @ Sample name pointer
+	.4byte gSFXNameKick @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -31881,7 +31881,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002502 @ Sample size in bytes
 	.4byte 0x08BF020F @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077AE0 @ Sample name pointer
+	.4byte gSFXNameBrickman @ Sample name pointer
 	.2byte 0x0046 @ ???
 	.byte 0x04 @ ???
 	.byte 0x00 @ ???
@@ -31894,7 +31894,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000020BF @ Sample size in bytes
 	.4byte 0x08BF2711 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077AD8 @ Sample name pointer
+	.4byte gSFXNameSpit @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x04 @ ???
 	.byte 0x00 @ ???
@@ -31907,7 +31907,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001D00 @ Sample size in bytes
 	.4byte 0x08BF47D0 @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077AD4 @ Sample name pointer
+	.4byte gSFXNamePop @ Sample name pointer
 	.2byte 0x006E @ ???
 	.byte 0x08 @ ???
 	.byte 0x00 @ ???
@@ -31920,7 +31920,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001434 @ Sample size in bytes
 	.4byte 0x08BF64D0 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077ACC @ Sample name pointer
+	.4byte gSFXNameGrowl @ Sample name pointer
 	.2byte 0x001E @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -31933,7 +31933,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001F65 @ Sample size in bytes
 	.4byte 0x08BF7904 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077AC4 @ Sample name pointer
+	.4byte gSFXNameGrowl2 @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -31946,7 +31946,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000BC5 @ Sample size in bytes
 	.4byte 0x08BF9869 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077ABC @ Sample name pointer
+	.4byte gSFXNameGhost @ Sample name pointer
 	.2byte 0x0019 @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -31959,7 +31959,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000B8A @ Sample size in bytes
 	.4byte 0x08BFA42E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077AB0 @ Sample name pointer
+	.4byte gSFXNameShyWake @ Sample name pointer
 	.2byte 0x0032 @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -31972,7 +31972,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000098D @ Sample size in bytes
 	.4byte 0x08BFAFB8 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077AA8 @ Sample name pointer
+	.4byte gSFXNameShyRun @ Sample name pointer
 	.2byte 0x0032 @ ???
 	.byte 0x04 @ ???
 	.byte 0x00 @ ???
@@ -31985,7 +31985,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000089F @ Sample size in bytes
 	.4byte 0x08BFB945 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A9C @ Sample name pointer
+	.4byte gSFXNameBombPeep @ Sample name pointer
 	.2byte 0x002D @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -31998,7 +31998,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000018DB @ Sample size in bytes
 	.4byte 0x08BFC1E4 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A90 @ Sample name pointer
+	.4byte gSFXNameBombJump @ Sample name pointer
 	.2byte 0x002D @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -32010,8 +32010,8 @@ gUnknown_08B3A4E0:
 
 	.4byte 0x00000408 @ Sample size in bytes
 	.4byte 0x08BFDABF @ Sample pointer
-	.4byte 0x00003E80 @ ???
-	.4byte 0x08077A84 @ Sample name pointer
+	.4byte 16000 @ Sample rate in Hz
+	.4byte gSFXNameBombFlash @ Sample name pointer
 	.2byte 0x0032 @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -32024,7 +32024,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001FBD @ Sample size in bytes
 	.4byte 0x08BFDEC7 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A78 @ Sample name pointer
+	.4byte gSFXNameBombBlow @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -32037,7 +32037,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000018D9 @ Sample size in bytes
 	.4byte 0x08BFFE84 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A6C @ Sample name pointer
+	.4byte gSFXNameVaporize @ Sample name pointer
 	.2byte 0x006E @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -32050,7 +32050,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000016B7 @ Sample size in bytes
 	.4byte 0x08C0175D @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A68 @ Sample name pointer
+	.4byte gSFXNameBat @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -32063,7 +32063,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002485 @ Sample size in bytes
 	.4byte 0x08C02E14 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A60 @ Sample name pointer
+	.4byte gSFXNameCannon @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -32089,7 +32089,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00004804 @ Sample size in bytes
 	.4byte 0x08C0529A @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A50 @ Sample name pointer
+	.4byte gSFXNameScatter @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32102,7 +32102,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000009D8 @ Sample size in bytes
 	.4byte 0x08C09A9E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A48 @ Sample name pointer
+	.4byte gSFXNameReach @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32115,7 +32115,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000213F @ Sample size in bytes
 	.4byte 0x08C0A476 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A40 @ Sample name pointer
+	.4byte gSFXNameDKHead @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32128,7 +32128,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000023C1 @ Sample size in bytes
 	.4byte 0x08C0C5B5 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A38 @ Sample name pointer
+	.4byte gSFXNameGotcha @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32141,7 +32141,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000C81 @ Sample size in bytes
 	.4byte 0x08C0E976 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A2C @ Sample name pointer
+	.4byte gSFXNameToadWalk @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x0D @ ???
 	.byte 0x00 @ ???
@@ -32154,7 +32154,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000037F0 @ Sample size in bytes
 	.4byte 0x08C0F5F7 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A20 @ Sample name pointer
+	.4byte gSFXNameToadToss @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x0D @ ???
 	.byte 0x00 @ ???
@@ -32167,7 +32167,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00006441 @ Sample size in bytes
 	.4byte 0x08C12DE7 @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077A14 @ Sample name pointer
+	.4byte gSFXNameBoxFall @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32180,7 +32180,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000016EF @ Sample size in bytes
 	.4byte 0x08C19228 @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077A08 @ Sample name pointer
+	.4byte gSFXNameSparkyLoop @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x04 @ ???
 	.byte 0x00 @ ???
@@ -32193,7 +32193,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001485 @ Sample size in bytes
 	.4byte 0x08C1A917 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077A00 @ Sample name pointer
+	.4byte gSFXNameDKBlub @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x04 @ ???
 	.byte 0x00 @ ???
@@ -32206,7 +32206,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001A92 @ Sample size in bytes
 	.4byte 0x08C1BD9C @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779F8 @ Sample name pointer
+	.4byte gSFXNameYank @ Sample name pointer
 	.2byte 0x0096 @ ???
 	.byte 0x06 @ ???
 	.byte 0x00 @ ???
@@ -32219,7 +32219,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001B7A @ Sample size in bytes
 	.4byte 0x08C1D82E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779F0 @ Sample name pointer
+	.4byte gSFXNameSpike @ Sample name pointer
 	.2byte 0x0032 @ ???
 	.byte 0x06 @ ???
 	.byte 0x00 @ ???
@@ -32232,7 +32232,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000458F @ Sample size in bytes
 	.4byte 0x08C1F3A8 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779E8 @ Sample name pointer
+	.4byte gSFXNameBone @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -32245,7 +32245,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000054D @ Sample size in bytes
 	.4byte 0x08C23937 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779DC @ Sample name pointer
+	.4byte gSFXNameMMBoingUp @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32258,7 +32258,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001E70 @ Sample size in bytes
 	.4byte 0x08C23E84 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779D4 @ Sample name pointer
+	.4byte gSFXNameLaser @ Sample name pointer
 	.2byte 0x0010 @ ???
 	.byte 0x0D @ ???
 	.byte 0x00 @ ???
@@ -32271,7 +32271,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001D4B @ Sample size in bytes
 	.4byte 0x08C25CF4 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779CC @ Sample name pointer
+	.4byte gSFXNameDKJump @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x08 @ ???
 	.byte 0x00 @ ???
@@ -32284,7 +32284,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000009FA @ Sample size in bytes
 	.4byte 0x08C27A3F @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779C4 @ Sample name pointer
+	.4byte gSFXNameJump8 @ Sample name pointer
 	.2byte 0x0078 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32297,7 +32297,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000013AD @ Sample size in bytes
 	.4byte 0x08C28439 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779B8 @ Sample name pointer
+	.4byte gSFXNameTrashcan @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???
@@ -32310,7 +32310,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000023ED @ Sample size in bytes
 	.4byte 0x08C297E6 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080779AC @ Sample name pointer
+	.4byte gSFXNameKeyToad @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x08 @ ???
 	.byte 0x01 @ ???
@@ -32323,7 +32323,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000032EA @ Sample size in bytes
 	.4byte 0x08C2BBD3 @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x080779A4 @ Sample name pointer
+	.4byte gSFXNameShatter @ Sample name pointer
 	.2byte 0x008C @ ???
 	.byte 0x08 @ ???
 	.byte 0x00 @ ???
@@ -32336,7 +32336,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000010B0 @ Sample size in bytes
 	.4byte 0x08C2EEBD @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077998 @ Sample name pointer
+	.4byte gSFXNameToadCarry @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x0D @ ???
 	.byte 0x00 @ ???
@@ -32349,7 +32349,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000191E @ Sample size in bytes
 	.4byte 0x08C2FF6D @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x0807798C @ Sample name pointer
+	.4byte gSFXNameToadSet @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x0D @ ???
 	.byte 0x00 @ ???
@@ -32362,7 +32362,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000004BB @ Sample size in bytes
 	.4byte 0x08C3188B @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077984 @ Sample name pointer
+	.4byte gSFXNameJumpA @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32375,7 +32375,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000420 @ Sample size in bytes
 	.4byte 0x08C31D46 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x0807797C @ Sample name pointer
+	.4byte gSFXNameJumpB @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32388,7 +32388,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000496 @ Sample size in bytes
 	.4byte 0x08C32166 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077974 @ Sample name pointer
+	.4byte gSFXNameJumpC @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32401,7 +32401,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000533 @ Sample size in bytes
 	.4byte 0x08C325FC @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x0807796C @ Sample name pointer
+	.4byte gSFXNameJumpD @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32414,7 +32414,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000820 @ Sample size in bytes
 	.4byte 0x08C32B2F @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077964 @ Sample name pointer
+	.4byte gSFXNameShuffle @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32427,7 +32427,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00018EE3 @ Sample size in bytes
 	.4byte 0x08C3334F @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077958 @ Sample name pointer
+	.4byte gSFXNameMovie07 @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32440,7 +32440,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00007D80 @ Sample size in bytes
 	.4byte 0x08C4C232 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x0807794C @ Sample name pointer
+	.4byte gSFXNameMovie01 @ Sample name pointer
 	.2byte 0x003C @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32453,7 +32453,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00009639 @ Sample size in bytes
 	.4byte 0x08C53FB2 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077940 @ Sample name pointer
+	.4byte gSFXNameMiniKey @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x0F @ ???
 	.byte 0x00 @ ???
@@ -32466,7 +32466,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000027B3 @ Sample size in bytes
 	.4byte 0x08C5D5EB @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077934 @ Sample name pointer
+	.4byte gSFXNameMovie21 @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32479,7 +32479,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00005100 @ Sample size in bytes
 	.4byte 0x08C5FD9E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077928 @ Sample name pointer
+	.4byte gSFXNameMovie22 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32492,7 +32492,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00003790 @ Sample size in bytes
 	.4byte 0x08C64E9E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x0807791C @ Sample name pointer
+	.4byte gSFXNameMovie23 @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32505,7 +32505,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00004C3C @ Sample size in bytes
 	.4byte 0x08C6862E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077910 @ Sample name pointer
+	.4byte gSFXNameMovie24 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32518,7 +32518,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00003568 @ Sample size in bytes
 	.4byte 0x08C6D26A @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077904 @ Sample name pointer
+	.4byte gSFXNameMovie25 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32531,7 +32531,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00004D58 @ Sample size in bytes
 	.4byte 0x08C707D2 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080778F8 @ Sample name pointer
+	.4byte gSFXNameMovie26 @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32544,7 +32544,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002B20 @ Sample size in bytes
 	.4byte 0x08C7552A @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080778EC @ Sample name pointer
+	.4byte gSFXNameMovie27 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32557,7 +32557,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00005599 @ Sample size in bytes
 	.4byte 0x08C7804A @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080778E0 @ Sample name pointer
+	.4byte gSFXNameMovie28 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x00 @ ???
 	.byte 0x01 @ ???
@@ -32570,7 +32570,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000022B9 @ Sample size in bytes
 	.4byte 0x08C7D5E3 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080778D4 @ Sample name pointer
+	.4byte gSFXNameBossArm @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32583,7 +32583,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000198D @ Sample size in bytes
 	.4byte 0x08C7F89C @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080778C8 @ Sample name pointer
+	.4byte gSFXNameBossArm2 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32596,7 +32596,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000216F @ Sample size in bytes
 	.4byte 0x08C81229 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080778BC @ Sample name pointer
+	.4byte gSFXNameBossArm3 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32609,7 +32609,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000015D6 @ Sample size in bytes
 	.4byte 0x08C83398 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080778B0 @ Sample name pointer
+	.4byte gSFXNameBossArm4 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32622,7 +32622,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00002F19 @ Sample size in bytes
 	.4byte 0x08C8496E @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x080778A4 @ Sample name pointer
+	.4byte gSFXNameBossArm5 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32635,7 +32635,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001F16 @ Sample size in bytes
 	.4byte 0x08C87887 @ Sample pointer
 	.4byte 11025 @ Sample rate in Hz
-	.4byte 0x08077898 @ Sample name pointer
+	.4byte gSFXNameBossSwitch @ Sample name pointer
 	.2byte 0x006E @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32648,7 +32648,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x0000107E @ Sample size in bytes
 	.4byte 0x08C8979D @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077888 @ Sample name pointer
+	.4byte gSFXNameCursorWorld @ Sample name pointer
 	.2byte 0x0080 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32661,7 +32661,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000742 @ Sample size in bytes
 	.4byte 0x08C8A81B @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077878 @ Sample name pointer
+	.4byte gSFXNameCursorUPDN @ Sample name pointer
 	.2byte 0x0050 @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32674,7 +32674,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001F40 @ Sample size in bytes
 	.4byte 0x08C8AF5D @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x0807786C @ Sample name pointer
+	.4byte gSFXNameBossDie1 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32687,7 +32687,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00006220 @ Sample size in bytes
 	.4byte 0x08C8CE9D @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077860 @ Sample name pointer
+	.4byte gSFXNameBossDie2 @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32700,7 +32700,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00004037 @ Sample size in bytes
 	.4byte 0x08C930BD @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077854 @ Sample name pointer
+	.4byte gSFXNameBossIntro1 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32713,7 +32713,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00007B18 @ Sample size in bytes
 	.4byte 0x08C970F4 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077848 @ Sample name pointer
+	.4byte gSFXNameBossIntro3 @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x02 @ ???
 	.byte 0x00 @ ???
@@ -32726,7 +32726,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x000017E6 @ Sample size in bytes
 	.4byte 0x08C9EC0C @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x0807783C @ Sample name pointer
+	.4byte gSFXNamePlusMain @ Sample name pointer
 	.2byte 0x007F @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32739,7 +32739,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001026 @ Sample size in bytes
 	.4byte 0x08CA03F2 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077834 @ Sample name pointer
+	.4byte gSFXNameBarrel @ Sample name pointer
 	.2byte 0x005A @ ???
 	.byte 0x00 @ ???
 	.byte 0x00 @ ???
@@ -32752,7 +32752,7 @@ gUnknown_08B3A4E0:
 	.4byte 0x00001678 @ Sample size in bytes
 	.4byte 0x08CA1418 @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.4byte 0x08077828 @ Sample name pointer
+	.4byte gSFXNameSpikeHit @ Sample name pointer
 	.2byte 0x00A0 @ ???
 	.byte 0x05 @ ???
 	.byte 0x00 @ ???

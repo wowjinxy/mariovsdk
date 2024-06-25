@@ -361,115 +361,412 @@ gSFXNameBigBarrelFall:
 gSFXNameBigBarrelHit:
 	.ASCII "BIGBARREL_HIT\0\0\0"
 	
+	.GLOBAL gSFXNameSpikeHit
+gSFXNameSpikeHit:
 	.ASCII "SPIKE_HIT\0\0\0"
+	
+	.GLOBAL gSFXNameBarrel
+gSFXNameBarrel:
 	.ASCII "BARREL\0\0"
+	
+	.GLOBAL gSFXNamePlusMain
+gSFXNamePlusMain:
 	.ASCII "PLUS_MAIN\0\0\0"
+	
+	.GLOBAL gSFXNameBossIntro3
+gSFXNameBossIntro3:
 	.ASCII "BOSS_INTRO3\0"
+	
+	.GLOBAL gSFXNameBossIntro1
+gSFXNameBossIntro1:
 	.ASCII "BOSS_INTRO1\0"
+	
+	.GLOBAL gSFXNameBossDie2
+gSFXNameBossDie2:
 	.ASCII "BOSS_DIE2\0\0\0"
+	
+	.GLOBAL gSFXNameBossDie1
+gSFXNameBossDie1:
 	.ASCII "BOSS_DIE1\0\0\0"
+	
+	.GLOBAL gSFXNameCursorUPDN
+gSFXNameCursorUPDN:
 	.ASCII "CURSOR_UP_DN\0\0\0\0"
+	
+	.GLOBAL gSFXNameCursorWorld
+gSFXNameCursorWorld:
 	.ASCII "CURSOR_WORLD\0\0\0\0"
+	
+	.GLOBAL gSFXNameBossSwitch
+gSFXNameBossSwitch:
 	.ASCII "BOSS_SWITCH\0"
+	
+	.GLOBAL gSFXNameBossArm5
+gSFXNameBossArm5:
 	.ASCII "BOSS_ARM5\0\0\0"
+	
+	.GLOBAL gSFXNameBossArm4
+gSFXNameBossArm4:
 	.ASCII "BOSS_ARM4\0\0\0"
+	
+	.GLOBAL gSFXNameBossArm3
+gSFXNameBossArm3:
 	.ASCII "BOSS_ARM3\0\0\0"
+	
+	.GLOBAL gSFXNameBossArm2
+gSFXNameBossArm2:
 	.ASCII "BOSS_ARM2\0\0\0"
+	
+	.GLOBAL gSFXNameBossArm
+gSFXNameBossArm:
 	.ASCII "BOSS_ARM\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie28
+gSFXNameMovie28:
 	.ASCII "MOVIE2_8\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie27
+gSFXNameMovie27:
 	.ASCII "MOVIE2_7\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie26
+gSFXNameMovie26:
 	.ASCII "MOVIE2_6\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie25
+gSFXNameMovie25:
 	.ASCII "MOVIE2_5\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie24
+gSFXNameMovie24:
 	.ASCII "MOVIE2_4\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie23
+gSFXNameMovie23:
 	.ASCII "MOVIE2_3\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie22
+gSFXNameMovie22:
 	.ASCII "MOVIE2_2\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie21
+gSFXNameMovie21:
 	.ASCII "MOVIE2_1\0\0\0\0"
+	
+	.GLOBAL gSFXNameMiniKey
+gSFXNameMiniKey:
 	.ASCII "MINI_KEY\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie01
+gSFXNameMovie01:
 	.ASCII "MOVIE_01\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie07
+gSFXNameMovie07:
 	.ASCII "MOVIE_07\0\0\0\0"
+	
+	.GLOBAL gSFXNameShuffle
+gSFXNameShuffle:
 	.ASCII "SHUFFLE\0"
+	
+	.GLOBAL gSFXNameJumpD
+gSFXNameJumpD:
 	.ASCII "JUMP_D\0\0"
+	
+	.GLOBAL gSFXNameJumpC
+gSFXNameJumpC:
 	.ASCII "JUMP_C\0\0"
+	
+	.GLOBAL gSFXNameJumpB
+gSFXNameJumpB:
 	.ASCII "JUMP_B\0\0"
+	
+	.GLOBAL gSFXNameJumpA
+gSFXNameJumpA:
 	.ASCII "JUMP_A\0\0"
+	
+	.GLOBAL gSFXNameToadSet
+gSFXNameToadSet:
 	.ASCII "TOAD_SET\0\0\0\0"
+	
+	.GLOBAL gSFXNameToadCarry
+gSFXNameToadCarry:
 	.ASCII "TOAD_CARRY\0\0"
+	
+	.GLOBAL gSFXNameShatter
+gSFXNameShatter:
 	.ASCII "SHATTER\0"
+	
+	.GLOBAL gSFXNameKeyToad
+gSFXNameKeyToad:
 	.ASCII "KEY_TOAD\0\0\0\0"
+	
+	.GLOBAL gSFXNameTrashcan
+gSFXNameTrashcan:
 	.ASCII "TRASHCAN\0\0\0\0"
+	
+	.GLOBAL gSFXNameJump8
+gSFXNameJump8:
 	.ASCII "JUMP_8\0\0"
+	
+	.GLOBAL gSFXNameDKJump
+gSFXNameDKJump:
 	.ASCII "DK_JUMP\0"
+	
+	.GLOBAL gSFXNameLaser
+gSFXNameLaser:
 	.ASCII "LASER\0\0\0"
+	
+	.GLOBAL gSFXNameMMBoingUp
+gSFXNameMMBoingUp:
 	.ASCII "MM_BOINGUP\0\0"
+	
+	.GLOBAL gSFXNameBone
+gSFXNameBone:
 	.ASCII "BONE\0\0\0\0"
+	
+	.GLOBAL gSFXNameSpike
+gSFXNameSpike:
 	.ASCII "SPIKE\0\0\0"
+	
+	.GLOBAL gSFXNameYank
+gSFXNameYank:
 	.ASCII "YANK\0\0\0\0"
+	
+	.GLOBAL gSFXNameDKBlub
+gSFXNameDKBlub:
 	.ASCII "DK_BLUB\0"
+	
+	.GLOBAL gSFXNameSparkyLoop
+gSFXNameSparkyLoop:
 	.ASCII "SPARKY_LOOP\0"
+	
+	.GLOBAL gSFXNameBoxFall
+gSFXNameBoxFall:
 	.ASCII "BOX_FALL\0\0\0\0"
+	
+	.GLOBAL gSFXNameToadToss
+gSFXNameToadToss:
 	.ASCII "TOAD_TOSS\0\0\0"
+	
+	.GLOBAL gSFXNameToadWalk
+gSFXNameToadWalk:
 	.ASCII "TOAD_WALK\0\0\0"
+	
+	.GLOBAL gSFXNameGotcha
+gSFXNameGotcha:
 	.ASCII "GOTCHA\0\0"
+	
+	.GLOBAL gSFXNameDKHead
+gSFXNameDKHead:
 	.ASCII "DK_HEAD\0"
+	
+	.GLOBAL gSFXNameReach
+gSFXNameReach:
 	.ASCII "REACH\0\0\0"
+	
+	.GLOBAL gSFXNameScatter
+gSFXNameScatter:
 	.ASCII "SCATTER\0"
 	
 	.GLOBAL gSFXNameCrouch
 gSFXNameCrouch:
 	.ASCII "CROUCH\0\0"
 	
+	.GLOBAL gSFXNameCannon
+gSFXNameCannon:
 	.ASCII "CANNON\0\0"
+	
+	.GLOBAL gSFXNameBat
+gSFXNameBat:
 	.ASCII "BAT\0"
+	
+	.GLOBAL gSFXNameVaporize
+gSFXNameVaporize:
 	.ASCII "VAPORIZE\0\0\0\0"
+	
+	.GLOBAL gSFXNameBombBlow
+gSFXNameBombBlow:
 	.ASCII "BOMB_BLOW\0\0\0"
+	
+	.GLOBAL gSFXNameBombFlash
+gSFXNameBombFlash:
 	.ASCII "BOMB_FLASH\0\0"
+	
+	.GLOBAL gSFXNameBombJump
+gSFXNameBombJump:
 	.ASCII "BOMB_JUMP\0\0\0"
+	
+	.GLOBAL gSFXNameBombPeep
+gSFXNameBombPeep:
 	.ASCII "BOMB_PEEP\0\0\0"
+	
+	.GLOBAL gSFXNameShyRun
+gSFXNameShyRun:
 	.ASCII "SHY_RUN\0"
+	
+	.GLOBAL gSFXNameShyWake
+gSFXNameShyWake:
 	.ASCII "SHY_WAKE\0\0\0\0"
+	
+	.GLOBAL gSFXNameGhost
+gSFXNameGhost:
 	.ASCII "GHOST\0\0\0"
+	
+	.GLOBAL gSFXNameGrowl2
+gSFXNameGrowl2:
 	.ASCII "GROWL2\0\0"
+	
+	.GLOBAL gSFXNameGrowl
+gSFXNameGrowl:
 	.ASCII "GROWL\0\0\0"
+	
+	.GLOBAL gSFXNamePop
+gSFXNamePop:
 	.ASCII "POP\0"
+	
+	.GLOBAL gSFXNameSpit
+gSFXNameSpit:
 	.ASCII "SPIT\0\0\0\0"
+	
+	.GLOBAL gSFXNameBrickman
+gSFXNameBrickman:
 	.ASCII "BRICKMAN\0\0\0\0"
+	
+	.GLOBAL gSFXNameKick
+gSFXNameKick:
 	.ASCII "KICK\0\0\0\0"
+	
+	.GLOBAL gSFXNameShwing
+gSFXNameShwing:
 	.ASCII "SHWING\0\0"
+	
+	.GLOBAL gSFXNameMetalRoll
+gSFXNameMetalRoll:
 	.ASCII "METALROLL\0\0\0"
+	
+	.GLOBAL gSFXNameRestart
+gSFXNameRestart:
 	.ASCII "RESTART\0"
 	
 	.GLOBAL gSFXNameOuch
 gSFXNameOuch:
 	.ASCII "OUCH\0\0\0\0"
 	
+	.GLOBAL gSFXNameFountain
+gSFXNameFountain:
 	.ASCII "FOUNTAIN\0\0\0\0"
+	
+	.GLOBAL gSFXNameBubble
+gSFXNameBubble:
 	.ASCII "BUBBLE\0\0"
+	
+	.GLOBAL gSFXNameLava
+gSFXNameLava:
 	.ASCII "LAVA\0\0\0\0"
+	
+	.GLOBAL gSFXNameCrumble
+gSFXNameCrumble:
 	.ASCII "CRUMBLE\0"
+	
+	.GLOBAL gSFXNameNinji
+gSFXNameNinji:
 	.ASCII "NINJI\0\0\0"
+	
+	.GLOBAL gSFXNameSpitfire
+gSFXNameSpitfire:
 	.ASCII "SPITFIRE\0\0\0\0"
+	
+	.GLOBAL gSFXNameCrush
+gSFXNameCrush:
 	.ASCII "CRUSH\0\0\0"
+	
+	.GLOBAL gSFXNameGrabLadder
+gSFXNameGrabLadder:
 	.ASCII "GRAB_LADDER\0"
+	
+	.GLOBAL gSFXNameGrabRope
+gSFXNameGrabRope:
 	.ASCII "GRAB_ROPE\0\0\0"
+	
+	.GLOBAL gSFXNameGrabWire
+gSFXNameGrabWire:
 	.ASCII "GRAB_WIRE\0\0\0"
+	
+	.GLOBAL gSFXNameKey3
+gSFXNameKey3:
 	.ASCII "KEY3\0\0\0\0"
+	
+	.GLOBAL gSFXNameKey2
+gSFXNameKey2:
 	.ASCII "KEY2\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie06
+gSFXNameMovie06:
 	.ASCII "MOVIE_06\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie05
+gSFXNameMovie05:
 	.ASCII "MOVIE_05\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie04
+gSFXNameMovie04:
 	.ASCII "MOVIE_04\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie03
+gSFXNameMovie03:
 	.ASCII "MOVIE_03\0\0\0\0"
+	
+	.GLOBAL gSFXNameMovie02
+gSFXNameMovie02:
 	.ASCII "MOVIE_02\0\0\0\0"
+	
+	.GLOBAL gSFXNameDKBlubber
+gSFXNameDKBlubber:
 	.ASCII "DK_BLUBBER\0\0"
+	
+	.GLOBAL gSFXNameDKExit1
+gSFXNameDKExit1:
 	.ASCII "DK_EXIT1\0\0\0\0"
+	
+	.GLOBAL gSFXNameEggFall
+gSFXNameEggFall:
 	.ASCII "EGG_FALL\0\0\0\0"
+	
+	.GLOBAL gSFXNameElevStop
+gSFXNameElevStop:
 	.ASCII "ELEV_STOP\0\0\0"
+	
+	.GLOBAL gSFXNameElevGo
+gSFXNameElevGo:
 	.ASCII "ELEV_GO\0"
+	
+	.GLOBAL gSFXNameLevelStart
+gSFXNameLevelStart:
 	.ASCII "LEVEL_START\0"
+	
+	.GLOBAL gSFXNameJump7
+gSFXNameJump7:
 	.ASCII "JUMP_7\0\0"
+	
+	.GLOBAL gSFXNameMMOhNo
+gSFXNameMMOhNo:
 	.ASCII "MM_OH_NO\0\0\0\0"
+	
+	.GLOBAL gSFXNameLift
+gSFXNameLift:
 	.ASCII "LIFT\0\0\0\0"
+	
+	.GLOBAL gSFXNameGlass
+gSFXNameGlass:
 	.ASCII "GLASS\0\0\0"
+	
+	.GLOBAL gSFXNameSqueeze
+gSFXNameSqueeze:
 	.ASCII "SQUEEZE\0"
+	
+	.GLOBAL gSFXNameWarpIn
+gSFXNameWarpIn:
 	.ASCII "WARP_IN\0"
 	
 	.GLOBAL gSFXNameWarpOut
@@ -696,34 +993,117 @@ gSFXNameField:
 	.GLOBAL gSFXNameExitEd
 gSFXNameExitEd:
 	.ASCII "EXIT_ED\0"
-	
+
+	.GLOBAL gSFXNameError
+gSFXNameError:
 	.ASCII "ERROR\0\0\0"
+	
+	.GLOBAL gSFXNameErase
+gSFXNameErase:
 	.ASCII "ERASE\0\0\0"
+	
+	.GLOBAL gSFXNameCursorS
+gSFXNameCursorS:
 	.ASCII "CURSOR_S\0\0\0\0"
+	
+	.GLOBAL gSFXNameCursorM
+gSFXNameCursorM:
 	.ASCII "CURSOR_M\0\0\0\0"
+	
+	.GLOBAL gSFXNameCursorE
+gSFXNameCursorE:
 	.ASCII "CURSOR_E\0\0\0\0"
+	
+	.GLOBAL gSFXNameBack
+gSFXNameBack:
 	.ASCII "BACK\0\0\0\0"
+	
+	.GLOBAL gSFXNameLetsGo
+gSFXNameLetsGo:
 	.ASCII "LETS_GO\0"
+	
+	.GLOBAL gSFXNameHereWeGo
+gSFXNameHereWeGo:
 	.ASCII "HERE_WEGO\0\0\0"
+	
+	.GLOBAL gSFXNamePickupCrystal
+gSFXNamePickupCrystal:
 	.ASCII "PICKUP_CRYSTAL\0\0"
+	
+	.GLOBAL gSFXNameWalk
+gSFXNameWalk:
 	.ASCII "WALK\0\0\0\0"
+	
+	.GLOBAL gSFXNameThrow
+gSFXNameThrow:
 	.ASCII "THROW\0\0\0"
+	
+	.GLOBAL gSFXNameCrash
+gSFXNameCrash:
 	.ASCII "CRASH\0\0\0"
+	
+	.GLOBAL gSFXNameKey1
+gSFXNameKey1:
 	.ASCII "KEY1\0\0\0\0"
+	
+	.GLOBAL gSFXNameSteps2
+gSFXNameSteps2:
 	.ASCII "STEPS2\0\0"
+	
+	.GLOBAL gSFXNameItem1
+gSFXNameItem1:
 	.ASCII "ITEM1\0\0\0"
+	
+	.GLOBAL gSFXNameCounter
+gSFXNameCounter:
 	.ASCII "COUNTER\0"
+	
+	.GLOBAL gSFXNameJump5
+gSFXNameJump5:
 	.ASCII "JUMP_5\0\0"
+	
+	.GLOBAL gSFXNamePickup
+gSFXNamePickup:
 	.ASCII "PICKUP\0\0"
+	
+	.GLOBAL gSFXNameJump3
+gSFXNameJump3:
 	.ASCII "JUMP_3\0\0"
+	
+	.GLOBAL gSFXNameJump4
+gSFXNameJump4:
 	.ASCII "JUMP_4\0\0"
+	
+	.GLOBAL gSFXNameGrunt2
+gSFXNameGrunt2:
 	.ASCII "GRUNT2\0\0"
+	
+	.GLOBAL gSFXNameJump1
+gSFXNameJump1:
 	.ASCII "JUMP_1\0\0"
+	
+	.GLOBAL gSFXNameBurn1
+gSFXNameBurn1:
 	.ASCII "BURN1\0\0\0"
+	
+	.GLOBAL gSFXNameStun
+gSFXNameStun:
 	.ASCII "STUN\0\0\0\0"
+	
+	.GLOBAL gSFXNameTumble1
+gSFXNameTumble1:
 	.ASCII "TUMBLE1\0"
+	
+	.GLOBAL gSFXNamePound
+gSFXNamePound:
 	.ASCII "POUND\0\0\0"
+	
+	.GLOBAL gSFXNameSkid
+gSFXNameSkid:
 	.ASCII "SKID\0\0\0\0"
+	
+	.GLOBAL gSFXNameClimb
+gSFXNameClimb:
 	.ASCII "CLIMB\0\0\0"
 
 	.GLOBAL gUnknown_08077F2C
