@@ -98,8 +98,12 @@ gUnknown_08076FD0:
 	.GLOBAL gUnknown_08076FD4
 gUnknown_08076FD4:
 	.4byte 0xFFF00000
-
-	.INCBIN "assets/unused/DKPlusLeftoverPalette.bin"
+	.4byte 0x00000010
+	
+	.2byte 0x0002 @ ??? 
+	.INCBIN "assets/unused/DKPlusLeftoverPalette.bin" @ header says size of 0x2A6, seems to include the header
+	.2byte 0x0004 @ ???
+	.INCBIN "assets/unused/DKPlusLeftoverPalette2.bin" @ header says size of 0x2AE, seems to include header
 
 	.GLOBAL gUnknown_08077534
 gUnknown_08077534:
