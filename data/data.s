@@ -31140,8 +31140,6 @@ gUnknown_08B3A4E0:
 	.4byte 0x00000965 @ Sample size in bytes
 	.4byte gUnknown_08B86A9A @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz
-	.global asdfasdf
-asdfasdf:
 	.4byte gSFXNameRopeUp @ Sample name pointer
 	.2byte 0x0064 @ ???
 	.byte 0x00 @ ???

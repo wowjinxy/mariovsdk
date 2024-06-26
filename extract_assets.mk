@@ -5694,8 +5694,6 @@ assets/%.pal: $(TMPDIR)/%.gbapal $(GBAGFX)
 	$(GBAGFX) $< $@ $(GBAGFX_FLAGS)
 
 # convert sounds to AIFF
-%.aif: $(TMPDIR)/sounds/%.pcm $(AIF2PCM)
-	$(AIF2PCM) $< $@
 assets/sounds/%.aif: $(TMPDIR)/sounds/%.pcm $(AIF2PCM)
 	$(AIF2PCM) $< $@
 
