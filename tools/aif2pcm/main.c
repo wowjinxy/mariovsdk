@@ -567,12 +567,16 @@ do { \
 	(var) |= (*((src) + 3) << 24); \
 } while (0)
 
+int pitchAdjust = 0;
+
 // Reads an .aif file and produces a .pcm file containing an array of 8-bit samples.
 void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress)
 {
 	struct Bytes *aif = read_bytearray(aif_filename);
 	AifData aif_data = {0};
 	read_aif(aif, &aif_data);
+	
+	printf("samples: %lu\n", aif_data.real_num_samples);
 	
 	// Convert 16-bit to 8-bit if necessary
 	if (aif_data.sample_size == 16)
@@ -587,12 +591,13 @@ void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress)
 		aif_data.samples8 = converted_samples;
 	}
 
-	int header_size = 0x10;
+	int header_size = 0;
 	struct Bytes *pcm;
 	struct Bytes output = {0,0};
 
 	if (compress)
 	{
+		puts("compress");
 		struct Bytes *input = malloc(sizeof(struct Bytes));
 		input->data = aif_data.samples8;
 		input->length = aif_data.real_num_samples;
@@ -608,17 +613,19 @@ void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress)
 	output.length = header_size + pcm->length;
 	output.data = malloc(output.length);
 
-	uint32_t pitch_adjust = 0;//(uint32_t)(aif_data.sample_rate * 1024);
-	uint32_t loop_offset = (uint32_t)(aif_data.loop_offset);
-	uint32_t adjusted_num_samples = (uint32_t)(aif_data.num_samples - 1);
+	printf("pitch_adjust = %i\n", pitchAdjust);
+
+	//uint32_t pitch_adjust = pitchAdjust;//(uint32_t)(aif_data.sample_rate * 1024);
+	//uint32_t loop_offset = (uint32_t)(aif_data.loop_offset);
+	//uint32_t adjusted_num_samples = (uint32_t)(aif_data.num_samples - 1);
 	uint32_t flags = 0;
 	if (aif_data.has_loop) flags |= 0x40000000;
 	if (compress) flags |= 1;
-	STORE_U32_LE(output.data + 0, flags);
+	/*STORE_U32_LE(output.data + 0, flags);
 	STORE_U32_LE(output.data + 4, pitch_adjust);
 	STORE_U32_LE(output.data + 8, loop_offset);
-	STORE_U32_LE(output.data + 12, adjusted_num_samples);
-	memcpy(&output.data[header_size], pcm->data, pcm->length);
+	STORE_U32_LE(output.data + 12, adjusted_num_samples);*/
+	memcpy(output.data, pcm->data, pcm->length);
 	write_bytearray(pcm_filename, &output);
 
 	free(aif->data);
@@ -636,17 +643,19 @@ void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_n
 
 	AifData *aif_data = malloc(sizeof(AifData));
 
-	uint32_t flags;
-	LOAD_U32_LE(flags, pcm->data + 0);
+	uint32_t flags = 0;
+	//LOAD_U32_LE(flags, pcm->data + 0);
 	aif_data->has_loop = flags & 0x40000000;
 	bool compressed = flags & 1;
 
-	uint32_t pitch_adjust;
-	LOAD_U32_LE(pitch_adjust, pcm->data + 4);
+	//uint32_t pitch_adjust = 0;
+	//LOAD_U32_LE(pitch_adjust, pcm->data + 4);
 	aif_data->sample_rate = 8000;//pitch_adjust / 1024.0;
 
-	LOAD_U32_LE(aif_data->loop_offset, pcm->data + 8);
-	LOAD_U32_LE(aif_data->num_samples, pcm->data + 12);
+	aif_data->loop_offset = 0;
+	aif_data->num_samples = pcm->length;
+	//LOAD_U32_LE(aif_data->loop_offset, pcm->data + 8);
+	//LOAD_U32_LE(aif_data->num_samples, pcm->data + 12);
 	aif_data->num_samples += 1;
 
 	if (compressed)
@@ -658,13 +667,11 @@ void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_n
 		pcm = delta_decompress(delta, aif_data->num_samples);
 		free(pcm_data);
 		free(delta);
-		puts("compressed");
 	}
 	else
 	{
-		pcm->length -= 0x10;
-		pcm->data += 0x10;
-		puts("not compressed");
+		//pcm->length -= 0x10;
+		//pcm->data += 0x10;
 	}
 
 	printf("length: %li\n", pcm->length);

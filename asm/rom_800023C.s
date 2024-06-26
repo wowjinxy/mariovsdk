@@ -16,8 +16,8 @@ sub_0800023C:
 ARM_FUNC_END sub_0800023C
 
 
-	ARM_FUNC_START sub_08000260
-sub_08000260:
+	ARM_FUNC_START sound_related_08000260
+sound_related_08000260:
 	add r3, r0, r3, lsl #2
   1:
 	ldrsh r12, [r0], #2
@@ -35,7 +35,7 @@ sub_08000260:
 	cmp r0, r3
 	blt 1b
 	bx lr
-ARM_FUNC_END sub_08000260
+ARM_FUNC_END sound_related_08000260
 
 
 	ARM_FUNC_START sub_080002A0
@@ -1636,8 +1636,8 @@ ARM_FUNC_END sub_08001760
 	.GLOBAL sub_08001760_end
 sub_08001760_end:
 
-	ARM_FUNC_START sub_08001840
-sub_08001840:
+	ARM_FUNC_START audio_related_08001840
+audio_related_08001840:
 _08001840:
 	push {r4-r11}
 	mov r12, r0
@@ -1650,7 +1650,7 @@ _08001840:
 	bge _080018C0
 _08001864:
 	lsr r10, r2, #14
-	ldrsb r9, [r1, r10]
+	ldrsb r9, [r1, r10]  @ read PCM header byte
 	ldrsh r10, [r0]
 	mul r11, r7, r9
 	add r10, r10, r11, asr #6
@@ -1870,7 +1870,7 @@ _08001B84:
 	pop {r4-r11,lr}
 	bx lr
 	.pool
-ARM_FUNC_END sub_08001840
+ARM_FUNC_END audio_related_08001840
 
 	.SECTION .data
 
