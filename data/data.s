@@ -33601,731 +33601,731 @@ asdfasdf:
 
 	.GLOBAL CLIMB_8000Hz
 CLIMB_8000Hz:
-	.INCBIN "assets/sounds/CLIMB_8000Hz.pcm"
+	.INCBIN "assets/sounds/climb.pcm"
 
 	.GLOBAL SKID_8000Hz
 SKID_8000Hz:
-	.INCBIN "assets/sounds/SKID_8000Hz.pcm"
+	.INCBIN "assets/sounds/skid.pcm"
 
 	.GLOBAL POUND_8000Hz
 POUND_8000Hz:
-	.INCBIN "assets/sounds/POUND_8000Hz.pcm"
+	.INCBIN "assets/sounds/pound.pcm"
 
 	.GLOBAL TUMBLE1_8000Hz
 TUMBLE1_8000Hz:
-	.INCBIN "assets/sounds/TUMBLE1_8000Hz.pcm"
+	.INCBIN "assets/sounds/tumble1.pcm"
 
 	.GLOBAL STUN_8000Hz
 STUN_8000Hz:
-	.INCBIN "assets/sounds/STUN_8000Hz.pcm"
+	.INCBIN "assets/sounds/stun.pcm"
 
 	.GLOBAL BURN1_8000Hz
 BURN1_8000Hz:
-	.INCBIN "assets/sounds/BURN1_8000Hz.pcm"
+	.INCBIN "assets/sounds/burn1.pcm"
 
 	.GLOBAL JUMP1_8000Hz
 JUMP1_8000Hz:
-	.INCBIN "assets/sounds/JUMP1_8000Hz.pcm"
+	.INCBIN "assets/sounds/jump_1.pcm"
 
 	.GLOBAL GRUNT2
 GRUNT2:
-	.INCBIN "assets/sounds/GRUNT2.pcm"
+	.INCBIN "assets/sounds/grunt2.pcm"
 
 	.GLOBAL JUMP_4_8000Hz
 JUMP_4_8000Hz:
-	.INCBIN "assets/sounds/JUMP_4_8000Hz.pcm"
+	.INCBIN "assets/sounds/jump_4.pcm"
 
 	.GLOBAL JUMP_3_8000Hz
 JUMP_3_8000Hz:
-	.INCBIN "assets/sounds/JUMP_3_8000Hz.pcm"
+	.INCBIN "assets/sounds/jump_3.pcm"
 
 	.GLOBAL PICKUP_8000Hz
 PICKUP_8000Hz:
-	.INCBIN "assets/sounds/PICKUP_8000Hz.pcm"
+	.INCBIN "assets/sounds/pickup.pcm"
 
 	.GLOBAL JUMP_5_8000Hz
 JUMP_5_8000Hz:
-	.INCBIN "assets/sounds/JUMP_5_8000Hz.pcm"
+	.INCBIN "assets/sounds/jump_5.pcm"
 
 	.GLOBAL COUNTER_8000Hz
 COUNTER_8000Hz:
-	.INCBIN "assets/sounds/COUNTER_8000Hz.pcm"
+	.INCBIN "assets/sounds/counter.pcm"
 
 	.GLOBAL ITEM1_8000Hz
 ITEM1_8000Hz:
-	.INCBIN "assets/sounds/ITEM1_8000Hz.pcm"
+	.INCBIN "assets/sounds/item1.pcm"
 
 	.GLOBAL STEPS2_8000Hz
 STEPS2_8000Hz:
-	.INCBIN "assets/sounds/STEPS2_8000Hz.pcm"
+	.INCBIN "assets/sounds/steps2.pcm"
 
 	.GLOBAL KEY1_11025Hz
 KEY1_11025Hz:
-	.INCBIN "assets/sounds/KEY1_11025Hz.pcm"
+	.INCBIN "assets/sounds/key1.pcm"
 
 	.GLOBAL CRASH_8000Hz
 CRASH_8000Hz:
-	.INCBIN "assets/sounds/CRASH_8000Hz.pcm"
+	.INCBIN "assets/sounds/crash.pcm"
 
 	.GLOBAL THROW_8000Hz
 THROW_8000Hz:
-	.INCBIN "assets/sounds/THROW_8000Hz.pcm"
+	.INCBIN "assets/sounds/throw.pcm"
 
 	.GLOBAL WALK_11025Hz
 WALK_11025Hz:
-	.INCBIN "assets/sounds/WALK_11025Hz.pcm"
+	.INCBIN "assets/sounds/walk.pcm"
 
 	.GLOBAL PICKUP_CRYSTAL_8000Hz
 PICKUP_CRYSTAL_8000Hz:
-	.INCBIN "assets/sounds/PICKUP_CRYSTAL_8000Hz.pcm"
+	.INCBIN "assets/sounds/pickup_crystal.pcm"
 
 	.GLOBAL HERE_WEGO_8000Hz
 HERE_WEGO_8000Hz:
-	.INCBIN "assets/sounds/HERE_WEGO_8000Hz.pcm"
+	.INCBIN "assets/sounds/here_wego.pcm"
 
 	.GLOBAL LETS_GO_8000Hz
 LETS_GO_8000Hz:
-	.INCBIN "assets/sounds/LETS_GO_8000Hz.pcm"
+	.INCBIN "assets/sounds/lets_go.pcm"
 
 	.GLOBAL BACK_8000Hz
 BACK_8000Hz:
-	.INCBIN "assets/sounds/BACK_8000Hz.pcm"
+	.INCBIN "assets/sounds/back.pcm"
 
 	.GLOBAL CURSOR_E_8000Hz
 CURSOR_E_8000Hz:
-	.INCBIN "assets/sounds/CURSOR_E_8000Hz.pcm"
+	.INCBIN "assets/sounds/cursor_e.pcm"
 
 	.GLOBAL CURSOR_M_8000Hz
 CURSOR_M_8000Hz:
-	.INCBIN "assets/sounds/CURSOR_M_8000Hz.pcm"
+	.INCBIN "assets/sounds/cursor_m.pcm"
 
 	.GLOBAL CURSOR_S_8000Hz
 CURSOR_S_8000Hz:
-	.INCBIN "assets/sounds/CURSOR_S_8000Hz.pcm"
+	.INCBIN "assets/sounds/cursor_s.pcm"
 
 	.GLOBAL gUnknown_08B6308E
 gUnknown_08B6308E:
-	.INCBIN "assets/sounds/gUnknown_08B6308E.pcm"
+	.INCBIN "assets/sounds/erase.pcm"
 
 	.GLOBAL ERROR_8000Hz
 ERROR_8000Hz:
-	.INCBIN "assets/sounds/ERROR_8000Hz.pcm"
+	.INCBIN "assets/sounds/error.pcm"
 
 	.GLOBAL EXIT_ED_8000Hz
 EXIT_ED_8000Hz:
-	.INCBIN "assets/sounds/EXIT_ED_8000Hz.pcm"
+	.INCBIN "assets/sounds/exit_ed.pcm"
 
 	.GLOBAL FIELD_8000Hz
 FIELD_8000Hz:
-	.INCBIN "assets/sounds/FIELD_8000Hz.pcm"
+	.INCBIN "assets/sounds/field.pcm"
 
 	.GLOBAL GRID_8000Hz
 GRID_8000Hz:
-	.INCBIN "assets/sounds/GRID_8000Hz.pcm"
+	.INCBIN "assets/sounds/grid.pcm"
 
 	.GLOBAL ITEM_8000Hz
 ITEM_8000Hz:
-	.INCBIN "assets/sounds/ITEM_8000Hz.pcm"
+	.INCBIN "assets/sounds/item.pcm"
 
 	.GLOBAL SELECT_M_8000Hz
 SELECT_M_8000Hz:
-	.INCBIN "assets/sounds/SELECT_M_8000Hz.pcm"
+	.INCBIN "assets/sounds/select_m.pcm"
 
 	.GLOBAL SELECT_S_8000Hz
 SELECT_S_8000Hz:
-	.INCBIN "assets/sounds/SELECT_S_8000Hz.pcm"
+	.INCBIN "assets/sounds/select_s.pcm"
 
 	.GLOBAL STAMP_8000Hz
 STAMP_8000Hz:
-	.INCBIN "assets/sounds/STAMP_8000Hz.pcm"
+	.INCBIN "assets/sounds/stamp.pcm"
 
 	.GLOBAL START_8000Hz
 START_8000Hz:
-	.INCBIN "assets/sounds/START_8000Hz.pcm"
+	.INCBIN "assets/sounds/start.pcm"
 
 	.GLOBAL BEAM_8000Hz
 BEAM_8000Hz:
-	.INCBIN "assets/sounds/BEAM_8000Hz.pcm"
+	.INCBIN "assets/sounds/beam.pcm"
 
 	.GLOBAL BURN2_8000Hz
 BURN2_8000Hz:
-	.INCBIN "assets/sounds/BURN2_8000Hz.pcm"
+	.INCBIN "assets/sounds/burn2.pcm"
 
 	.GLOBAL BLOCK_8000Hz
 BLOCK_8000Hz:
-	.INCBIN "assets/sounds/BLOCK_8000Hz.pcm"
+	.INCBIN "assets/sounds/block.pcm"
 
 	.GLOBAL EXIT_8000Hz
 EXIT_8000Hz:
-	.INCBIN "assets/sounds/EXIT_8000Hz.pcm"
+	.INCBIN "assets/sounds/exit.pcm"
 
 	.GLOBAL HURT_8000Hz
 HURT_8000Hz:
-	.INCBIN "assets/sounds/HURT_8000Hz.pcm"
+	.INCBIN "assets/sounds/hurt.pcm"
 
 	.GLOBAL ITEMLAST_8000Hz
 ITEMLAST_8000Hz:
-	.INCBIN "assets/sounds/ITEMLAST_8000Hz.pcm"
+	.INCBIN "assets/sounds/itemlast.pcm"
 
 	.GLOBAL POUND2_8000Hz
 POUND2_8000Hz:
-	.INCBIN "assets/sounds/POUND2_8000Hz.pcm"
+	.INCBIN "assets/sounds/pound2.pcm"
 
 	.GLOBAL SCUFF_8000Hz
 SCUFF_8000Hz:
-	.INCBIN "assets/sounds/SCUFF_8000Hz.pcm"
+	.INCBIN "assets/sounds/scuff.pcm"
 
 	.GLOBAL SHOCK_8000Hz
 SHOCK_8000Hz:
-	.INCBIN "assets/sounds/SHOCK_8000Hz.pcm"
+	.INCBIN "assets/sounds/shock.pcm"
 
 	.GLOBAL KEY_DOOR_8000Hz
 KEY_DOOR_8000Hz:
-	.INCBIN "assets/sounds/KEY_DOOR_8000Hz.pcm"
+	.INCBIN "assets/sounds/key_door.pcm"
 
 @ doesn't match
 	.GLOBAL gUnknown_08B72F4A
 gUnknown_08B72F4A:
-	.INCBIN "assets/sounds/gUnknown_08B72F4A.pcm"
+	.INCBIN "assets/sounds/spin.pcm"
 
 	.GLOBAL gUnknown_08B7348F
 gUnknown_08B7348F:
-	.INCBIN "assets/sounds/gUnknown_08B7348F.pcm"
+	.INCBIN "assets/sounds/splat.pcm"
 
 	.GLOBAL gUnknown_08B74894
 gUnknown_08B74894:
-	.INCBIN "assets/sounds/gUnknown_08B74894.pcm"
+	.INCBIN "assets/sounds/squeak.pcm"
 
 	.GLOBAL gUnknown_08B75584
 gUnknown_08B75584:
-	.INCBIN "assets/sounds/gUnknown_08B75584.pcm"
+	.INCBIN "assets/sounds/unlock.pcm"
 
 	.GLOBAL gUnknown_08B75585
 gUnknown_08B75585:
-	.INCBIN "assets/sounds/gUnknown_08B75585.pcm"
+	.INCBIN "assets/sounds/wirejump.pcm"
 
 @ doesn't match
 	.GLOBAL gUnknown_08B76A87
 gUnknown_08B76A87:
-	.INCBIN "assets/sounds/gUnknown_08B76A87.pcm"
+	.INCBIN "assets/sounds/spin_1.pcm"
 
 	.GLOBAL gUnknown_08B76FCC
 gUnknown_08B76FCC:
-	.INCBIN "assets/sounds/gUnknown_08B76FCC.pcm"
+	.INCBIN "assets/sounds/one_up.pcm"
 
 	.GLOBAL gUnknown_08B79E8C
 gUnknown_08B79E8C:
-	.INCBIN "assets/sounds/gUnknown_08B79E8C.pcm"
+	.INCBIN "assets/sounds/help.pcm"
 
 	.GLOBAL gUnknown_08B79E8D
 gUnknown_08B79E8D:
-	.INCBIN "assets/sounds/gUnknown_08B79E8D.pcm"
+	.INCBIN "assets/sounds/silence.pcm"
 
 	.GLOBAL gUnknown_08B79E8E
 gUnknown_08B79E8E:
-	.INCBIN "assets/sounds/gUnknown_08B79E8E.pcm"
+	.INCBIN "assets/sounds/skidshort.pcm"
 
 	.GLOBAL gUnknown_08B79FB8
 gUnknown_08B79FB8:
-	.INCBIN "assets/sounds/gUnknown_08B79FB8.pcm"
+	.INCBIN "assets/sounds/switch1.pcm"
 
 	.GLOBAL gUnknown_08B7DA77
 gUnknown_08B7DA77:
-	.INCBIN "assets/sounds/gUnknown_08B7DA77.pcm"
+	.INCBIN "assets/sounds/switch2.pcm"
 
 	.GLOBAL gUnknown_08B80E46
 gUnknown_08B80E46:
-	.INCBIN "assets/sounds/gUnknown_08B80E46.pcm"
+	.INCBIN "assets/sounds/switch3.pcm"
 
 	.GLOBAL gUnknown_08B83DE5
 gUnknown_08B83DE5:
-	.INCBIN "assets/sounds/gUnknown_08B83DE5.pcm"
+	.INCBIN "assets/sounds/boing.pcm"
 
 	.GLOBAL gUnknown_08B84E7E
 gUnknown_08B84E7E:
-	.INCBIN "assets/sounds/gUnknown_08B84E7E.pcm"
+	.INCBIN "assets/sounds/jump_6.pcm"
 
 	.GLOBAL gUnknown_08B86A9A
 gUnknown_08B86A9A:
-	.INCBIN "assets/sounds/gUnknown_08B86A9A.pcm"
+	.INCBIN "assets/sounds/rope_up.pcm"
 
 	.GLOBAL gUnknown_08B873FF
 gUnknown_08B873FF:
-	.INCBIN "assets/sounds/gUnknown_08B873FF.pcm"
+	.INCBIN "assets/sounds/rope_down.pcm"
 
 	.GLOBAL gUnknown_08B87F58
 gUnknown_08B87F58:
-	.INCBIN "assets/sounds/gUnknown_08B87F58.pcm"
+	.INCBIN "assets/sounds/door.pcm"
 
 	.GLOBAL gUnknown_08B87F59
 gUnknown_08B87F59:
-	.INCBIN "assets/sounds/gUnknown_08B87F59.pcm"
+	.INCBIN "assets/sounds/scroll.pcm"
 
 	.GLOBAL gUnknown_08B883DD
 gUnknown_08B883DD:
-	.INCBIN "assets/sounds/gUnknown_08B883DD.pcm"
+	.INCBIN "assets/sounds/return.pcm"
 
 	.GLOBAL gUnknown_08B8B4F7
 gUnknown_08B8B4F7:
-	.INCBIN "assets/sounds/gUnknown_08B8B4F7.pcm"
+	.INCBIN "assets/sounds/blank.pcm"
 
 	.GLOBAL gUnknown_08B8B4F8
 gUnknown_08B8B4F8:
-	.INCBIN "assets/sounds/gUnknown_08B8B4F8.pcm"
+	.INCBIN "assets/sounds/look_up.pcm"
 
 	.GLOBAL gUnknown_08B8C20E
 gUnknown_08B8C20E:
-	.INCBIN "assets/sounds/gUnknown_08B8C20E.pcm"
+	.INCBIN "assets/sounds/mm_die.pcm"
 
 	.GLOBAL gUnknown_08B8D80E
 gUnknown_08B8D80E:
-	.INCBIN "assets/sounds/gUnknown_08B8D80E.pcm"
+	.INCBIN "assets/sounds/mm_boing.pcm"
 
 	.GLOBAL gUnknown_08B8DD50
 gUnknown_08B8DD50:
-	.INCBIN "assets/sounds/gUnknown_08B8DD50.pcm"
+	.INCBIN "assets/sounds/mm_protect.pcm"
 
 	.GLOBAL gUnknown_08B916E9
 gUnknown_08B916E9:
-	.INCBIN "assets/sounds/gUnknown_08B916E9.pcm"
+	.INCBIN "assets/sounds/chest_open.pcm"
 
 	.GLOBAL gUnknown_08B92D76
 gUnknown_08B92D76:
-	.INCBIN "assets/sounds/gUnknown_08B92D76.pcm"
+	.INCBIN "assets/sounds/chest_close.pcm"
 
 	.GLOBAL gUnknown_08B93BDC
 gUnknown_08B93BDC:
-	.INCBIN "assets/sounds/gUnknown_08B93BDC.pcm"
+	.INCBIN "assets/sounds/oof.pcm"
 
 	.GLOBAL gUnknown_08B95DEE
 gUnknown_08B95DEE:
-	.INCBIN "assets/sounds/gUnknown_08B95DEE.pcm"
+	.INCBIN "assets/sounds/dk_hurt.pcm"
 
 	.GLOBAL gUnknown_08B97C9B
 gUnknown_08B97C9B:
-	.INCBIN "assets/sounds/gUnknown_08B97C9B.pcm"
+	.INCBIN "assets/sounds/dk_bellow.pcm"
 
 	.GLOBAL gUnknown_08B9AC39
 gUnknown_08B9AC39:
-	.INCBIN "assets/sounds/gUnknown_08B9AC39.pcm"
+	.INCBIN "assets/sounds/slam2.pcm"
 
 	.GLOBAL gUnknown_08B9AC3A
 gUnknown_08B9AC3A:
-	.INCBIN "assets/sounds/gUnknown_08B9AC3A.pcm"
+	.INCBIN "assets/sounds/fruit_fall.pcm"
 
 	.GLOBAL gUnknown_08B9D6D7
 gUnknown_08B9D6D7:
-	.INCBIN "assets/sounds/gUnknown_08B9D6D7.pcm"
+	.INCBIN "assets/sounds/pointer.pcm"
 
 	.GLOBAL gUnknown_08B9D8FF
 gUnknown_08B9D8FF:
-	.INCBIN "assets/sounds/gUnknown_08B9D8FF.pcm"
+	.INCBIN "assets/sounds/choose.pcm"
 
 	.GLOBAL gUnknown_08B9EED5
 gUnknown_08B9EED5:
-	.INCBIN "assets/sounds/gUnknown_08B9EED5.pcm"
+	.INCBIN "assets/sounds/empty.pcm"
 
 	.GLOBAL gUnknown_08B9FD23
 gUnknown_08B9FD23:
-	.INCBIN "assets/sounds/gUnknown_08B9FD23.pcm"
+	.INCBIN "assets/sounds/toy1.pcm"
 
 	.GLOBAL gUnknown_08BA118A
 gUnknown_08BA118A:
-	.INCBIN "assets/sounds/gUnknown_08BA118A.pcm"
+	.INCBIN "assets/sounds/toylast.pcm"
 
 	.GLOBAL gUnknown_08BA2A11
 gUnknown_08BA2A11:
-	.INCBIN "assets/sounds/gUnknown_08BA2A11.pcm"
+	.INCBIN "assets/sounds/warp_out.pcm"
 
 	.GLOBAL gUnknown_08BA2A12
 gUnknown_08BA2A12:
-	.INCBIN "assets/sounds/gUnknown_08BA2A12.pcm"
+	.INCBIN "assets/sounds/warp_in.pcm"
 
 	.GLOBAL gUnknown_08BA7C49
 gUnknown_08BA7C49:
-	.INCBIN "assets/sounds/gUnknown_08BA7C49.pcm"
+	.INCBIN "assets/sounds/squeeze.pcm"
 
 	.GLOBAL gUnknown_08BAA34A
 gUnknown_08BAA34A:
-	.INCBIN "assets/sounds/gUnknown_08BAA34A.pcm"
+	.INCBIN "assets/sounds/glass.pcm"
 
 	.GLOBAL gUnknown_08BB1217
 gUnknown_08BB1217:
-	.INCBIN "assets/sounds/gUnknown_08BB1217.pcm"
+	.INCBIN "assets/sounds/lift.pcm"
 
 	.GLOBAL gUnknown_08BB1BD8
 gUnknown_08BB1BD8:
-	.INCBIN "assets/sounds/gUnknown_08BB1BD8.pcm"
+	.INCBIN "assets/sounds/mm_oh_no.pcm"
 
 	.GLOBAL gUnknown_08BB3DE7
 gUnknown_08BB3DE7:
-	.INCBIN "assets/sounds/gUnknown_08BB3DE7.pcm"
+	.INCBIN "assets/sounds/jump_7.pcm"
 
 	.GLOBAL gUnknown_08BB73AF
 gUnknown_08BB73AF:
-	.INCBIN "assets/sounds/gUnknown_08BB73AF.pcm"
+	.INCBIN "assets/sounds/level_start.pcm"
 
 	.GLOBAL gUnknown_08BB9DF3
 gUnknown_08BB9DF3:
-	.INCBIN "assets/sounds/gUnknown_08BB9DF3.pcm"
+	.INCBIN "assets/sounds/elev_go.pcm"
 
 	.GLOBAL gUnknown_08BBBD27
 gUnknown_08BBBD27:
-	.INCBIN "assets/sounds/gUnknown_08BBBD27.pcm"
+	.INCBIN "assets/sounds/elev_stop.pcm"
 
 	.GLOBAL gUnknown_08BBC915
 gUnknown_08BBC915:
-	.INCBIN "assets/sounds/gUnknown_08BBC915.pcm"
+	.INCBIN "assets/sounds/egg_fall.pcm"
 
 	.GLOBAL gUnknown_08BBF008
 gUnknown_08BBF008:
-	.INCBIN "assets/sounds/gUnknown_08BBF008.pcm"
+	.INCBIN "assets/sounds/dk_exit1.pcm"
 
 	.GLOBAL gUnknown_08BC0199
 gUnknown_08BC0199:
-	.INCBIN "assets/sounds/gUnknown_08BC0199.pcm"
+	.INCBIN "assets/sounds/dk_blubber.pcm"
 
 	.GLOBAL gUnknown_08BC3F39
 gUnknown_08BC3F39:
-	.INCBIN "assets/sounds/gUnknown_08BC3F39.pcm"
+	.INCBIN "assets/sounds/movie_02.pcm"
 
 	.GLOBAL gUnknown_08BC4BFE
 gUnknown_08BC4BFE:
-	.INCBIN "assets/sounds/gUnknown_08BC4BFE.pcm"
+	.INCBIN "assets/sounds/movie_03.pcm"
 
 	.GLOBAL gUnknown_08BC929E
 gUnknown_08BC929E:
-	.INCBIN "assets/sounds/gUnknown_08BC929E.pcm"
+	.INCBIN "assets/sounds/movie_04.pcm"
 
 	.GLOBAL gUnknown_08BCF316
 gUnknown_08BCF316:
-	.INCBIN "assets/sounds/gUnknown_08BCF316.pcm"
+	.INCBIN "assets/sounds/movie_05.pcm"
 
 	.GLOBAL gUnknown_08BD2241
 gUnknown_08BD2241:
-	.INCBIN "assets/sounds/gUnknown_08BD2241.pcm"
+	.INCBIN "assets/sounds/movie_06.pcm"
 
 	.GLOBAL gUnknown_08BD663A
 gUnknown_08BD663A:
-	.INCBIN "assets/sounds/gUnknown_08BD663A.pcm"
+	.INCBIN "assets/sounds/key2.pcm"
 
 	.GLOBAL gUnknown_08BD6F5E
 gUnknown_08BD6F5E:
-	.INCBIN "assets/sounds/gUnknown_08BD6F5E.pcm"
+	.INCBIN "assets/sounds/key3.pcm"
 
 	.GLOBAL gUnknown_08BD70C8
 gUnknown_08BD70C8:
-	.INCBIN "assets/sounds/gUnknown_08BD70C8.pcm"
+	.INCBIN "assets/sounds/grab_wire.pcm"
 
 	.GLOBAL gUnknown_08BD73FC
 gUnknown_08BD73FC:
-	.INCBIN "assets/sounds/gUnknown_08BD73FC.pcm"
+	.INCBIN "assets/sounds/grab_rope.pcm"
 
 	.GLOBAL gUnknown_08BD769F
 gUnknown_08BD769F:
-	.INCBIN "assets/sounds/gUnknown_08BD769F.pcm"
+	.INCBIN "assets/sounds/grab_ladder.pcm"
 
 	.GLOBAL gUnknown_08BD7DAD
 gUnknown_08BD7DAD:
-	.INCBIN "assets/sounds/gUnknown_08BD7DAD.pcm"
+	.INCBIN "assets/sounds/crush.pcm"
 
 	.GLOBAL gUnknown_08BD8AC5
 gUnknown_08BD8AC5:
-	.INCBIN "assets/sounds/gUnknown_08BD8AC5.pcm"
+	.INCBIN "assets/sounds/spitfire.pcm"
 
 	.GLOBAL gUnknown_08BDD1A0
 gUnknown_08BDD1A0:
-	.INCBIN "assets/sounds/gUnknown_08BDD1A0.pcm"
+	.INCBIN "assets/sounds/ninji.pcm"
 
 	.GLOBAL gUnknown_08BDD8B9
 gUnknown_08BDD8B9:
-	.INCBIN "assets/sounds/gUnknown_08BDD8B9.pcm"
+	.INCBIN "assets/sounds/crumble.pcm"
 
 	.GLOBAL gUnknown_08BE03F8
 gUnknown_08BE03F8:
-	.INCBIN "assets/sounds/gUnknown_08BE03F8.pcm"
+	.INCBIN "assets/sounds/lava.pcm"
 
 	.GLOBAL gUnknown_08BE64D6
 gUnknown_08BE64D6:
-	.INCBIN "assets/sounds/gUnknown_08BE64D6.pcm"
+	.INCBIN "assets/sounds/bubble.pcm"
 
 	.GLOBAL gUnknown_08BE6F38
 gUnknown_08BE6F38:
-	.INCBIN "assets/sounds/gUnknown_08BE6F38.pcm"
+	.INCBIN "assets/sounds/fountain.pcm"
 
 	.GLOBAL gUnknown_08BEBC48
 gUnknown_08BEBC48:
-	.INCBIN "assets/sounds/gUnknown_08BEBC48.pcm"
+	.INCBIN "assets/sounds/ouch.pcm"
 
 	.GLOBAL gUnknown_08BEBC49
 gUnknown_08BEBC49:
-	.INCBIN "assets/sounds/gUnknown_08BEBC49.pcm"
+	.INCBIN "assets/sounds/restart.pcm"
 
 	.GLOBAL gUnknown_08BED237
 gUnknown_08BED237:
-	.INCBIN "assets/sounds/gUnknown_08BED237.pcm"
+	.INCBIN "assets/sounds/metalroll.pcm"
 
 	.GLOBAL gUnknown_08BEEF3E
 gUnknown_08BEEF3E:
-	.INCBIN "assets/sounds/gUnknown_08BEEF3E.pcm"
+	.INCBIN "assets/sounds/shwing.pcm"
 
 	.GLOBAL gUnknown_08BEFEB5
 gUnknown_08BEFEB5:
-	.INCBIN "assets/sounds/gUnknown_08BEFEB5.pcm"
+	.INCBIN "assets/sounds/kick.pcm"
 
 	.GLOBAL gUnknown_08BF020F
 gUnknown_08BF020F:
-	.INCBIN "assets/sounds/gUnknown_08BF020F.pcm"
+	.INCBIN "assets/sounds/brickman.pcm"
 
 	.GLOBAL gUnknown_08BF2711
 gUnknown_08BF2711:
-	.INCBIN "assets/sounds/gUnknown_08BF2711.pcm"
+	.INCBIN "assets/sounds/spit.pcm"
 
 	.GLOBAL gUnknown_08BF47D0
 gUnknown_08BF47D0:
-	.INCBIN "assets/sounds/gUnknown_08BF47D0.pcm"
+	.INCBIN "assets/sounds/pop.pcm"
 
 	.GLOBAL gUnknown_08BF64D0
 gUnknown_08BF64D0:
-	.INCBIN "assets/sounds/gUnknown_08BF64D0.pcm"
+	.INCBIN "assets/sounds/growl.pcm"
 
 	.GLOBAL gUnknown_08BF7904
 gUnknown_08BF7904:
-	.INCBIN "assets/sounds/gUnknown_08BF7904.pcm"
+	.INCBIN "assets/sounds/growl2.pcm"
 
 	.GLOBAL gUnknown_08BF9869
 gUnknown_08BF9869:
-	.INCBIN "assets/sounds/gUnknown_08BF9869.pcm"
+	.INCBIN "assets/sounds/ghost.pcm"
 
 	.GLOBAL gUnknown_08BFA42E
 gUnknown_08BFA42E:
-	.INCBIN "assets/sounds/gUnknown_08BFA42E.pcm"
+	.INCBIN "assets/sounds/shy_wake.pcm"
 
 	.GLOBAL gUnknown_08BFAFB8
 gUnknown_08BFAFB8:
-	.INCBIN "assets/sounds/gUnknown_08BFAFB8.pcm"
+	.INCBIN "assets/sounds/shy_run.pcm"
 
 	.GLOBAL gUnknown_08BFB945
 gUnknown_08BFB945:
-	.INCBIN "assets/sounds/gUnknown_08BFB945.pcm"
+	.INCBIN "assets/sounds/bomb_peep.pcm"
 
 	.GLOBAL gUnknown_08BFC1E4
 gUnknown_08BFC1E4:
-	.INCBIN "assets/sounds/gUnknown_08BFC1E4.pcm"
+	.INCBIN "assets/sounds/bomb_jump.pcm"
 
 	.GLOBAL gUnknown_08BFDABF
 gUnknown_08BFDABF:
-	.INCBIN "assets/sounds/gUnknown_08BFDABF.pcm"
+	.INCBIN "assets/sounds/bomb_flash.pcm"
 
 	.GLOBAL gUnknown_08BFDEC7
 gUnknown_08BFDEC7:
-	.INCBIN "assets/sounds/gUnknown_08BFDEC7.pcm"
+	.INCBIN "assets/sounds/bomb_blow.pcm"
 
 	.GLOBAL gUnknown_08BFFE84
 gUnknown_08BFFE84:
-	.INCBIN "assets/sounds/gUnknown_08BFFE84.pcm"
+	.INCBIN "assets/sounds/vaporize.pcm"
 
 	.GLOBAL gUnknown_08C0175D
 gUnknown_08C0175D:
-	.INCBIN "assets/sounds/gUnknown_08C0175D.pcm"
+	.INCBIN "assets/sounds/bat.pcm"
 
 	.GLOBAL gUnknown_08C02E14
 gUnknown_08C02E14:
-	.INCBIN "assets/sounds/gUnknown_08C02E14.pcm"
+	.INCBIN "assets/sounds/cannon.pcm"
 
 	.GLOBAL gUnknown_08C05299
 gUnknown_08C05299:
-	.INCBIN "assets/sounds/gUnknown_08C05299.pcm"
+	.INCBIN "assets/sounds/crouch.pcm"
 
 	.GLOBAL gUnknown_08C0529A
 gUnknown_08C0529A:
-	.INCBIN "assets/sounds/gUnknown_08C0529A.pcm"
+	.INCBIN "assets/sounds/scatter.pcm"
 
 	.GLOBAL gUnknown_08C09A9E
 gUnknown_08C09A9E:
-	.INCBIN "assets/sounds/gUnknown_08C09A9E.pcm"
+	.INCBIN "assets/sounds/reach.pcm"
 
 	.GLOBAL gUnknown_08C0A476
 gUnknown_08C0A476:
-	.INCBIN "assets/sounds/gUnknown_08C0A476.pcm"
+	.INCBIN "assets/sounds/dk_head.pcm"
 
 	.GLOBAL gUnknown_08C0C5B5
 gUnknown_08C0C5B5:
-	.INCBIN "assets/sounds/gUnknown_08C0C5B5.pcm"
+	.INCBIN "assets/sounds/gotcha.pcm"
 
 	.GLOBAL gUnknown_08C0E976
 gUnknown_08C0E976:
-	.INCBIN "assets/sounds/gUnknown_08C0E976.pcm"
+	.INCBIN "assets/sounds/toad_walk.pcm"
 
 	.GLOBAL gUnknown_08C0F5F7
 gUnknown_08C0F5F7:
-	.INCBIN "assets/sounds/gUnknown_08C0F5F7.pcm"
+	.INCBIN "assets/sounds/toad_toss.pcm"
 
 	.GLOBAL gUnknown_08C12DE7
 gUnknown_08C12DE7:
-	.INCBIN "assets/sounds/gUnknown_08C12DE7.pcm"
+	.INCBIN "assets/sounds/box_fall.pcm"
 
 	.GLOBAL gUnknown_08C19228
 gUnknown_08C19228:
-	.INCBIN "assets/sounds/gUnknown_08C19228.pcm"
+	.INCBIN "assets/sounds/sparky_loop.pcm"
 
 	.GLOBAL gUnknown_08C1A917
 gUnknown_08C1A917:
-	.INCBIN "assets/sounds/gUnknown_08C1A917.pcm"
+	.INCBIN "assets/sounds/dk_blub.pcm"
 
 	.GLOBAL gUnknown_08C1BD9C
 gUnknown_08C1BD9C:
-	.INCBIN "assets/sounds/gUnknown_08C1BD9C.pcm"
+	.INCBIN "assets/sounds/yank.pcm"
 
 	.GLOBAL gUnknown_08C1D82E
 gUnknown_08C1D82E:
-	.INCBIN "assets/sounds/gUnknown_08C1D82E.pcm"
+	.INCBIN "assets/sounds/spike.pcm"
 
 	.GLOBAL gUnknown_08C1F3A8
 gUnknown_08C1F3A8:
-	.INCBIN "assets/sounds/gUnknown_08C1F3A8.pcm"
+	.INCBIN "assets/sounds/bone.pcm"
 
 	.GLOBAL gUnknown_08C23937
 gUnknown_08C23937:
-	.INCBIN "assets/sounds/gUnknown_08C23937.pcm"
+	.INCBIN "assets/sounds/mm_boingup.pcm"
 
 	.GLOBAL gUnknown_08C23E84
 gUnknown_08C23E84:
-	.INCBIN "assets/sounds/gUnknown_08C23E84.pcm"
+	.INCBIN "assets/sounds/laser.pcm"
 
 	.GLOBAL gUnknown_08C25CF4
 gUnknown_08C25CF4:
-	.INCBIN "assets/sounds/gUnknown_08C25CF4.pcm"
+	.INCBIN "assets/sounds/dk_jump.pcm"
 
 	.GLOBAL gUnknown_08C27A3F
 gUnknown_08C27A3F:
-	.INCBIN "assets/sounds/gUnknown_08C27A3F.pcm"
+	.INCBIN "assets/sounds/jump_8.pcm"
 
 	.GLOBAL gUnknown_08C28439
 gUnknown_08C28439:
-	.INCBIN "assets/sounds/gUnknown_08C28439.pcm"
+	.INCBIN "assets/sounds/trashcan.pcm"
 
 	.GLOBAL gUnknown_08C297E6
 gUnknown_08C297E6:
-	.INCBIN "assets/sounds/gUnknown_08C297E6.pcm"
+	.INCBIN "assets/sounds/key_toad.pcm"
 
 	.GLOBAL gUnknown_08C2BBD3
 gUnknown_08C2BBD3:
-	.INCBIN "assets/sounds/gUnknown_08C2BBD3.pcm"
+	.INCBIN "assets/sounds/shatter.pcm"
 
 	.GLOBAL gUnknown_08C2EEBD
 gUnknown_08C2EEBD:
-	.INCBIN "assets/sounds/gUnknown_08C2EEBD.pcm"
+	.INCBIN "assets/sounds/toad_carry.pcm"
 
 	.GLOBAL gUnknown_08C2FF6D
 gUnknown_08C2FF6D:
-	.INCBIN "assets/sounds/gUnknown_08C2FF6D.pcm"
+	.INCBIN "assets/sounds/toad_set.pcm"
 
 	.GLOBAL gUnknown_08C3188B
 gUnknown_08C3188B:
-	.INCBIN "assets/sounds/gUnknown_08C3188B.pcm"
+	.INCBIN "assets/sounds/jump_a.pcm"
 
 	.GLOBAL gUnknown_08C31D46
 gUnknown_08C31D46:
-	.INCBIN "assets/sounds/gUnknown_08C31D46.pcm"
+	.INCBIN "assets/sounds/jump_b.pcm"
 
 	.GLOBAL gUnknown_08C32166
 gUnknown_08C32166:
-	.INCBIN "assets/sounds/gUnknown_08C32166.pcm"
+	.INCBIN "assets/sounds/jump_c.pcm"
 
 	.GLOBAL gUnknown_08C325FC
 gUnknown_08C325FC:
-	.INCBIN "assets/sounds/gUnknown_08C325FC.pcm"
+	.INCBIN "assets/sounds/jump_d.pcm"
 
 	.GLOBAL gUnknown_08C32B2F
 gUnknown_08C32B2F:
-	.INCBIN "assets/sounds/gUnknown_08C32B2F.pcm"
+	.INCBIN "assets/sounds/shuffle.pcm"
 
 	.GLOBAL gUnknown_08C3334F
 gUnknown_08C3334F:
-	.INCBIN "assets/sounds/gUnknown_08C3334F.pcm"
+	.INCBIN "assets/sounds/movie_07.pcm"
 
 	.GLOBAL gUnknown_08C4C232
 gUnknown_08C4C232:
-	.INCBIN "assets/sounds/gUnknown_08C4C232.pcm"
+	.INCBIN "assets/sounds/movie_01.pcm"
 
 	.GLOBAL gUnknown_08C53FB2
 gUnknown_08C53FB2:
-	.INCBIN "assets/sounds/gUnknown_08C53FB2.pcm"
+	.INCBIN "assets/sounds/mini_key.pcm"
 
 	.GLOBAL gUnknown_08C5D5EB
 gUnknown_08C5D5EB:
-	.INCBIN "assets/sounds/gUnknown_08C5D5EB.pcm"
+	.INCBIN "assets/sounds/movie2_1.pcm"
 
 	.GLOBAL gUnknown_08C5FD9E
 gUnknown_08C5FD9E:
-	.INCBIN "assets/sounds/gUnknown_08C5FD9E.pcm"
+	.INCBIN "assets/sounds/movie2_2.pcm"
 
 	.GLOBAL gUnknown_08C64E9E
 gUnknown_08C64E9E:
-	.INCBIN "assets/sounds/gUnknown_08C64E9E.pcm"
+	.INCBIN "assets/sounds/movie2_3.pcm"
 
 	.GLOBAL gUnknown_08C6862E
 gUnknown_08C6862E:
-	.INCBIN "assets/sounds/gUnknown_08C6862E.pcm"
+	.INCBIN "assets/sounds/movie2_4.pcm"
 
 	.GLOBAL gUnknown_08C6D26A
 gUnknown_08C6D26A:
-	.INCBIN "assets/sounds/gUnknown_08C6D26A.pcm"
+	.INCBIN "assets/sounds/movie2_5.pcm"
 
 	.GLOBAL gUnknown_08C707D2
 gUnknown_08C707D2:
-	.INCBIN "assets/sounds/gUnknown_08C707D2.pcm"
+	.INCBIN "assets/sounds/movie2_6.pcm"
 
 	.GLOBAL gUnknown_08C7552A
 gUnknown_08C7552A:
-	.INCBIN "assets/sounds/gUnknown_08C7552A.pcm"
+	.INCBIN "assets/sounds/movie2_7.pcm"
 
 	.GLOBAL gUnknown_08C7804A
 gUnknown_08C7804A:
-	.INCBIN "assets/sounds/gUnknown_08C7804A.pcm"
+	.INCBIN "assets/sounds/movie2_8.pcm"
 
 	.GLOBAL gUnknown_08C7D5E3
 gUnknown_08C7D5E3:
-	.INCBIN "assets/sounds/gUnknown_08C7D5E3.pcm"
+	.INCBIN "assets/sounds/boss_arm.pcm"
 
 	.GLOBAL gUnknown_08C7F89C
 gUnknown_08C7F89C:
-	.INCBIN "assets/sounds/gUnknown_08C7F89C.pcm"
+	.INCBIN "assets/sounds/boss_arm2.pcm"
 
 @ doesn't match
 	.GLOBAL gUnknown_08C81229
 gUnknown_08C81229:
-	.INCBIN "assets/sounds/gUnknown_08C81229.pcm"
+	.INCBIN "assets/sounds/boss_arm3.pcm"
 
 	.GLOBAL gUnknown_08C83398
 gUnknown_08C83398:
-	.INCBIN "assets/sounds/gUnknown_08C83398.pcm"
+	.INCBIN "assets/sounds/boss_arm4.pcm"
 
 	.GLOBAL gUnknown_08C8496E
 gUnknown_08C8496E:
-	.INCBIN "assets/sounds/gUnknown_08C8496E.pcm"
+	.INCBIN "assets/sounds/boss_arm5.pcm"
 
 	.GLOBAL gUnknown_08C87887
 gUnknown_08C87887:
-	.INCBIN "assets/sounds/gUnknown_08C87887.pcm"
+	.INCBIN "assets/sounds/boss_switch.pcm"
 
 	.GLOBAL gUnknown_08C8979D
 gUnknown_08C8979D:
-	.INCBIN "assets/sounds/gUnknown_08C8979D.pcm"
+	.INCBIN "assets/sounds/cursor_world.pcm"
 
 	.GLOBAL gUnknown_08C8A81B
 gUnknown_08C8A81B:
-	.INCBIN "assets/sounds/gUnknown_08C8A81B.pcm"
+	.INCBIN "assets/sounds/cursor_up_dn.pcm"
 
 @ crashes
 	.GLOBAL gUnknown_08C8AF5D
 gUnknown_08C8AF5D:
-	.INCBIN "assets/sounds/gUnknown_08C8AF5D.pcm"
+	.INCBIN "assets/sounds/boss_die1.pcm"
 
 	.GLOBAL gUnknown_08C8CE9D
 gUnknown_08C8CE9D:
-	.INCBIN "assets/sounds/gUnknown_08C8CE9D.pcm"
+	.INCBIN "assets/sounds/boss_die2.pcm"
 
 	.GLOBAL sfxBossIntro1
 sfxBossIntro1:
@@ -34333,276 +34333,276 @@ sfxBossIntro1:
 
 	.GLOBAL gUnknown_08C970F4
 gUnknown_08C970F4:
-	.INCBIN "assets/sounds/gUnknown_08C970F4.pcm"
+	.INCBIN "assets/sounds/boss_intro3.pcm"
 
 	.GLOBAL gUnknown_08C9EC0C
 gUnknown_08C9EC0C:
-	.INCBIN "assets/sounds/gUnknown_08C9EC0C.pcm"
+	.INCBIN "assets/sounds/plus_main.pcm"
 
 	.GLOBAL gUnknown_08CA03F2
 gUnknown_08CA03F2:
-	.INCBIN "assets/sounds/gUnknown_08CA03F2.pcm"
+	.INCBIN "assets/sounds/barrel.pcm"
 
 	.GLOBAL gUnknown_08CA1418
 gUnknown_08CA1418:
-	.INCBIN "assets/sounds/gUnknown_08CA1418.pcm"
+	.INCBIN "assets/sounds/spike_hit.pcm"
 
 	.GLOBAL gUnknown_08CA2A90
 gUnknown_08CA2A90:
-	.INCBIN "assets/sounds/gUnknown_08CA2A90.pcm"
+	.INCBIN "assets/sounds/bigbarrel_hit.pcm"
 
 	.GLOBAL gUnknown_08CA4430
 gUnknown_08CA4430:
-	.INCBIN "assets/sounds/gUnknown_08CA4430.pcm"
+	.INCBIN "assets/sounds/bigbarrel_fall.pcm"
 
 	.GLOBAL gUnknown_08CA4431
 gUnknown_08CA4431:
-	.INCBIN "assets/sounds/gUnknown_08CA4431.pcm"
+	.INCBIN "assets/sounds/toads_jump.pcm"
 
 	.GLOBAL gUnknown_08CAD0E3
 gUnknown_08CAD0E3:
-	.INCBIN "assets/sounds/gUnknown_08CAD0E3.pcm"
+	.INCBIN "assets/sounds/toads_grab.pcm"
 
 	.GLOBAL gUnknown_08CAEF5E
 gUnknown_08CAEF5E:
-	.INCBIN "assets/sounds/gUnknown_08CAEF5E.pcm"
+	.INCBIN "assets/sounds/movie3_01.pcm"
 
 	.GLOBAL gUnknown_08CAEF5F
 gUnknown_08CAEF5F:
-	.INCBIN "assets/sounds/gUnknown_08CAEF5F.pcm"
+	.INCBIN "assets/sounds/movie3_02.pcm"
 
 	.GLOBAL gUnknown_08CB18A2
 gUnknown_08CB18A2:
-	.INCBIN "assets/sounds/gUnknown_08CB18A2.pcm"
+	.INCBIN "assets/sounds/movie3_03.pcm"
 
 	.GLOBAL gUnknown_08CB326A
 gUnknown_08CB326A:
-	.INCBIN "assets/sounds/gUnknown_08CB326A.pcm"
+	.INCBIN "assets/sounds/movie3_04.pcm"
 
 	.GLOBAL gUnknown_08CB7226
 gUnknown_08CB7226:
-	.INCBIN "assets/sounds/gUnknown_08CB7226.pcm"
+	.INCBIN "assets/sounds/movie3_05.pcm"
 
 	.GLOBAL gUnknown_08CBB266
 gUnknown_08CBB266:
-	.INCBIN "assets/sounds/gUnknown_08CBB266.pcm"
+	.INCBIN "assets/sounds/movie3_06.pcm"
 
 	.GLOBAL gUnknown_08CBEBA6
 gUnknown_08CBEBA6:
-	.INCBIN "assets/sounds/gUnknown_08CBEBA6.pcm"
+	.INCBIN "assets/sounds/movie3_07.pcm"
 
 	.GLOBAL gUnknown_08CC3C86
 gUnknown_08CC3C86:
-	.INCBIN "assets/sounds/gUnknown_08CC3C86.pcm"
+	.INCBIN "assets/sounds/movie3_08.pcm"
 
 	.GLOBAL gUnknown_08CC87A6
 gUnknown_08CC87A6:
-	.INCBIN "assets/sounds/gUnknown_08CC87A6.pcm"
+	.INCBIN "assets/sounds/movie3_09.pcm"
 
 	.GLOBAL gUnknown_08CCCE46
 gUnknown_08CCCE46:
-	.INCBIN "assets/sounds/gUnknown_08CCCE46.pcm"
+	.INCBIN "assets/sounds/movie3_10.pcm"
 
 	.GLOBAL gUnknown_08CD0EA6
 gUnknown_08CD0EA6:
-	.INCBIN "assets/sounds/gUnknown_08CD0EA6.pcm"
+	.INCBIN "assets/sounds/movie3_11.pcm"
 
 	.GLOBAL gUnknown_08CD5526
 gUnknown_08CD5526:
-	.INCBIN "assets/sounds/gUnknown_08CD5526.pcm"
+	.INCBIN "assets/sounds/movie3_12.pcm"
 
 	.GLOBAL gUnknown_08CD5527
 gUnknown_08CD5527:
-	.INCBIN "assets/sounds/gUnknown_08CD5527.pcm"
+	.INCBIN "assets/sounds/movie3_13.pcm"
 
 	.GLOBAL gUnknown_08CD5528
 gUnknown_08CD5528:
-	.INCBIN "assets/sounds/gUnknown_08CD5528.pcm"
+	.INCBIN "assets/sounds/movie3_14.pcm"
 
 	.GLOBAL gUnknown_08CDAFB8
 gUnknown_08CDAFB8:
-	.INCBIN "assets/sounds/gUnknown_08CDAFB8.pcm"
+	.INCBIN "assets/sounds/movie4_01.pcm"
 
 	.GLOBAL gUnknown_08CDFDB8
 gUnknown_08CDFDB8:
-	.INCBIN "assets/sounds/gUnknown_08CDFDB8.pcm"
+	.INCBIN "assets/sounds/movie4_02.pcm"
 
 	.GLOBAL gUnknown_08CE7BE4
 gUnknown_08CE7BE4:
-	.INCBIN "assets/sounds/gUnknown_08CE7BE4.pcm"
+	.INCBIN "assets/sounds/movie4_03.pcm"
 
 	.GLOBAL gUnknown_08CEC044
 gUnknown_08CEC044:
-	.INCBIN "assets/sounds/gUnknown_08CEC044.pcm"
+	.INCBIN "assets/sounds/movie4_04.pcm"
 
 	.GLOBAL gUnknown_08CFB2AF
 gUnknown_08CFB2AF:
-	.INCBIN "assets/sounds/gUnknown_08CFB2AF.pcm"
+	.INCBIN "assets/sounds/movie4_06.pcm"
 
 	.GLOBAL gUnknown_08CFB2B0
 gUnknown_08CFB2B0:
-	.INCBIN "assets/sounds/gUnknown_08CFB2B0.pcm"
+	.INCBIN "assets/sounds/movie4_07.pcm"
 
 	.GLOBAL gUnknown_08CFFFBF
 gUnknown_08CFFFBF:
-	.INCBIN "assets/sounds/gUnknown_08CFFFBF.pcm"
+	.INCBIN "assets/sounds/movie4_08.pcm"
 
 	.GLOBAL gUnknown_08D04F93
 gUnknown_08D04F93:
-	.INCBIN "assets/sounds/gUnknown_08D04F93.pcm"
+	.INCBIN "assets/sounds/movie4_09.pcm"
 
 	.GLOBAL gUnknown_08D0931A
 gUnknown_08D0931A:
-	.INCBIN "assets/sounds/gUnknown_08D0931A.pcm"
+	.INCBIN "assets/sounds/movie4_10.pcm"
 
 	.GLOBAL gUnknown_08D0E1BA
 gUnknown_08D0E1BA:
-	.INCBIN "assets/sounds/gUnknown_08D0E1BA.pcm"
+	.INCBIN "assets/sounds/movie5_01.pcm"
 
 	.GLOBAL gUnknown_08D122AA
 gUnknown_08D122AA:
-	.INCBIN "assets/sounds/gUnknown_08D122AA.pcm"
+	.INCBIN "assets/sounds/movie5_05.pcm"
 
 	.GLOBAL gUnknown_08D1306F
 gUnknown_08D1306F:
-	.INCBIN "assets/sounds/gUnknown_08D1306F.pcm"
+	.INCBIN "assets/sounds/movie5_07.pcm"
 
 	.GLOBAL gUnknown_08D17C04
 gUnknown_08D17C04:
-	.INCBIN "assets/sounds/gUnknown_08D17C04.pcm"
+	.INCBIN "assets/sounds/movie6_01.pcm"
 
 @ doesn't match
 	.GLOBAL gUnknown_08D1CFB3
 gUnknown_08D1CFB3:
-	.INCBIN "assets/sounds/gUnknown_08D1CFB3.pcm"
+	.INCBIN "assets/sounds/movie6_02.pcm"
 
 	.GLOBAL gUnknown_08D1E402
 gUnknown_08D1E402:
-	.INCBIN "assets/sounds/gUnknown_08D1E402.pcm"
+	.INCBIN "assets/sounds/movie6_03.pcm"
 
 	.GLOBAL gUnknown_08D241F1
 gUnknown_08D241F1:
-	.INCBIN "assets/sounds/gUnknown_08D241F1.pcm"
+	.INCBIN "assets/sounds/movie6_04.pcm"
 
 	.GLOBAL gUnknown_08D294EB
 gUnknown_08D294EB:
-	.INCBIN "assets/sounds/gUnknown_08D294EB.pcm"
+	.INCBIN "assets/sounds/movie6_05.pcm"
 
 	.GLOBAL gUnknown_08D2EEAB
 gUnknown_08D2EEAB:
-	.INCBIN "assets/sounds/gUnknown_08D2EEAB.pcm"
+	.INCBIN "assets/sounds/movie6_06.pcm"
 
 	.GLOBAL gUnknown_08D32950
 gUnknown_08D32950:
-	.INCBIN "assets/sounds/gUnknown_08D32950.pcm"
+	.INCBIN "assets/sounds/movie6_07.pcm"
 
 	.GLOBAL gUnknown_08D380F5
 gUnknown_08D380F5:
-	.INCBIN "assets/sounds/gUnknown_08D380F5.pcm"
+	.INCBIN "assets/sounds/movie6_08.pcm"
 
 	.GLOBAL gUnknown_08D3D62F
 gUnknown_08D3D62F:
-	.INCBIN "assets/sounds/gUnknown_08D3D62F.pcm"
+	.INCBIN "assets/sounds/movie6_09.pcm"
 
 	.GLOBAL gUnknown_08D42F92
 gUnknown_08D42F92:
-	.INCBIN "assets/sounds/gUnknown_08D42F92.pcm"
+	.INCBIN "assets/sounds/movie6_10.pcm"
 
 	.GLOBAL gUnknown_08D491B7
 gUnknown_08D491B7:
-	.INCBIN "assets/sounds/gUnknown_08D491B7.pcm"
+	.INCBIN "assets/sounds/movie2_9.pcm"
 
 	.GLOBAL gUnknown_08D4D502
 gUnknown_08D4D502:
-	.INCBIN "assets/sounds/gUnknown_08D4D502.pcm"
+	.INCBIN "assets/sounds/movie2_10.pcm"
 
 	.GLOBAL gUnknown_08D4D503
 gUnknown_08D4D503:
-	.INCBIN "assets/sounds/gUnknown_08D4D503.pcm"
+	.INCBIN "assets/sounds/movie_08.pcm"
 
 	.GLOBAL gUnknown_08D4E3A0
 gUnknown_08D4E3A0:
-	.INCBIN "assets/sounds/gUnknown_08D4E3A0.pcm"
+	.INCBIN "assets/sounds/title.pcm"
 
 	.GLOBAL gUnknown_08D52983
 gUnknown_08D52983:
-	.INCBIN "assets/sounds/gUnknown_08D52983.pcm"
+	.INCBIN "assets/sounds/you_won1.pcm"
 
 	.GLOBAL gUnknown_08D54DD2
 gUnknown_08D54DD2:
-	.INCBIN "assets/sounds/gUnknown_08D54DD2.pcm"
+	.INCBIN "assets/sounds/you_won2.pcm"
 
 	.GLOBAL gUnknown_08D56FB8
 gUnknown_08D56FB8:
-	.INCBIN "assets/sounds/gUnknown_08D56FB8.pcm"
+	.INCBIN "assets/sounds/you_won3.pcm"
 
 	.GLOBAL gUnknown_08D5A761
 gUnknown_08D5A761:
-	.INCBIN "assets/sounds/gUnknown_08D5A761.pcm"
+	.INCBIN "assets/sounds/star.pcm"
 
 	.GLOBAL gUnknown_08D5BA85
 gUnknown_08D5BA85:
-	.INCBIN "assets/sounds/gUnknown_08D5BA85.pcm"
+	.INCBIN "assets/sounds/dk_walk.pcm"
 
 	.GLOBAL gUnknown_08D5C709
 gUnknown_08D5C709:
-	.INCBIN "assets/sounds/gUnknown_08D5C709.pcm"
+	.INCBIN "assets/sounds/scuff2.pcm"
 
 	.GLOBAL gUnknown_08D5D451
 gUnknown_08D5D451:
-	.INCBIN "assets/sounds/gUnknown_08D5D451.pcm"
+	.INCBIN "assets/sounds/world_start.pcm"
 
 	.GLOBAL gUnknown_08D5FF00
 gUnknown_08D5FF00:
-	.INCBIN "assets/sounds/gUnknown_08D5FF00.pcm"
+	.INCBIN "assets/sounds/mm_wakeup.pcm"
 
 	.GLOBAL gUnknown_08D62C0E
 gUnknown_08D62C0E:
-	.INCBIN "assets/sounds/gUnknown_08D62C0E.pcm"
+	.INCBIN "assets/sounds/mm_free.pcm"
 
 	.GLOBAL gUnknown_08D65883
 gUnknown_08D65883:
-	.INCBIN "assets/sounds/gUnknown_08D65883.pcm"
+	.INCBIN "assets/sounds/mm_mamamias.pcm"
 
 	.GLOBAL gUnknown_08D689DB
 gUnknown_08D689DB:
-	.INCBIN "assets/sounds/gUnknown_08D689DB.pcm"
+	.INCBIN "assets/sounds/spike_vanish.pcm"
 
 	.GLOBAL gUnknown_08D698AA
 gUnknown_08D698AA:
-	.INCBIN "assets/sounds/gUnknown_08D698AA.pcm"
+	.INCBIN "assets/sounds/spike_appear.pcm"
 
 	.GLOBAL gUnknown_08D6B08E
 gUnknown_08D6B08E:
-	.INCBIN "assets/sounds/gUnknown_08D6B08E.pcm"
+	.INCBIN "assets/sounds/boss_die3.pcm"
 
 	.GLOBAL gUnknown_08D7356D
 gUnknown_08D7356D:
-	.INCBIN "assets/sounds/gUnknown_08D7356D.pcm"
+	.INCBIN "assets/sounds/barrel_bounce.pcm"
 
 	.GLOBAL gUnknown_08D739A1
 gUnknown_08D739A1:
-	.INCBIN "assets/sounds/gUnknown_08D739A1.pcm"
+	.INCBIN "assets/sounds/rock_bounce.pcm"
 
 	.GLOBAL gUnknown_08D73B63
 gUnknown_08D73B63:
-	.INCBIN "assets/sounds/gUnknown_08D73B63.pcm"
+	.INCBIN "assets/sounds/mm_walk.pcm"
 
 	.GLOBAL gUnknown_08D74657
 gUnknown_08D74657:
-	.INCBIN "assets/sounds/gUnknown_08D74657.pcm"
+	.INCBIN "assets/sounds/dk_grunt.pcm"
 
 	.GLOBAL gUnknown_08D75609
 gUnknown_08D75609:
-	.INCBIN "assets/sounds/gUnknown_08D75609.pcm"
+	.INCBIN "assets/sounds/ribbon.pcm"
 
 	.GLOBAL gUnknown_08D7644C
 gUnknown_08D7644C:
-	.INCBIN "assets/sounds/gUnknown_08D7644C.pcm"
+	.INCBIN "assets/sounds/won_text.pcm"
 
 	.GLOBAL gUnknown_08D79836
 gUnknown_08D79836:
-	.INCBIN "assets/sounds/gUnknown_08D79836.pcm"
+	.INCBIN "assets/sounds/dk_fall.pcm"
 
 	.GLOBAL gUnknown_08D7B10C @ Number of songs
 gUnknown_08D7B10C:
