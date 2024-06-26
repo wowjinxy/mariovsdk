@@ -423,7 +423,7 @@ void aif2pcm(const char *aif_filename, const char *pcm_filename)
 
 // Reads a .pcm file containing an array of 8-bit samples and produces an .aif file.
 // See http://www-mmsp.ece.mcgill.ca/documents/audioformats/aiff/Docs/AIFF-1.3.pdf for .aif file specification.
-void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_note)
+void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_note, int sample_rate)
 {
 	struct Bytes *pcm = read_bytearray(pcm_filename);
 
@@ -432,7 +432,7 @@ void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_n
 	uint32_t flags = 0;
 	aif_data->has_loop = flags & 0x40000000;
 
-	aif_data->sample_rate = 8000;
+	aif_data->sample_rate = sample_rate;
 	aif_data->loop_offset = 0;
 	aif_data->num_samples = pcm->length;
 	aif_data->num_samples += 1;
@@ -652,27 +652,57 @@ void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_n
 
 void usage(void)
 {
-	fprintf(stderr, "Usage: aif2pcm bin_file [aif_file]\n");
-	fprintf(stderr, "       aif2pcm aif_file [bin_file]\n");
+	fputs("Usage: aif2pcm bin_file [aif_file]\n"
+		  "       aif2pcm aif_file [bin_file] [-s sample_rate]\n"
+		  "Options:\n"
+		  "       -s,--sample_rate    Specifies the sample rate of the PCM file when\n"
+		  "                           converting to AIF (default 8000)\n",
+		  stderr);
 }
 
 int main(int argc, char **argv)
 {
 	if (argc < 2)
 	{
+arg_error:
 		usage();
 		exit(1);
 	}
 
-	char *input_file = argv[1];
-	char *extension = get_file_extension(input_file);
-	char *output_file;
+	char *input_file = NULL;
+	char *output_file = NULL;
+	char *extension;
+	int sample_rate = 8000;
 
+	for (int i = 1; i < argc; i++)
+	{
+		char *arg = argv[i];
+
+		if (arg[0] == '-')
+		{
+			if ((strcmp(arg, "--sample_rate") == 0 || strcmp(arg, "-s") == 0)
+			 && ++i < argc)
+			{
+				sample_rate = strtol(argv[i], NULL, 0);
+				if (sample_rate == 0)
+					goto arg_error;
+			}
+			else
+				goto arg_error;
+		}
+		else if (input_file == NULL)
+			input_file = arg;
+		else if (output_file == NULL)
+			output_file = arg;
+		else
+			goto arg_error;
+	}
+
+	extension = get_file_extension(input_file);
 	if (strcmp(extension, "aif") == 0 || strcmp(extension, "aiff") == 0)
 	{
-		if (argc >= 3)
+		if (output_file != NULL)
 		{
-			output_file = argv[2];
 			aif2pcm(input_file, output_file);
 		}
 		else
@@ -684,15 +714,14 @@ int main(int argc, char **argv)
 	}
 	else if (strcmp(extension, "bin") == 0 || strcmp(extension, "pcm") == 0)
 	{
-		if (argc >= 3)
+		if (input_file != NULL)
 		{
-			output_file = argv[2];
-			pcm2aif(input_file, output_file, 60);
+			pcm2aif(input_file, output_file, 60, sample_rate);
 		}
 		else
 		{
 			output_file = new_file_extension(input_file, "aif");
-			pcm2aif(input_file, output_file, 60);
+			pcm2aif(input_file, output_file, 60, sample_rate);
 			free(output_file);
 		}
 	}

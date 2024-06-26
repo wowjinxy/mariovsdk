@@ -5430,6 +5430,25 @@ $(TMPDIR)/sprites/gUnknown_08659320.4bpp: baserom.gba ; $(call dump_data,0x65932
 
 ### Sounds ###
 
+SAMPLE_RATE := 8000
+
+assets/sounds/key1.aif:        SAMPLE_RATE := 11025
+assets/sounds/walk.aif:        SAMPLE_RATE := 11025
+assets/sounds/one_up.aif:      SAMPLE_RATE := 11025
+assets/sounds/switch1.aif:     SAMPLE_RATE := 11025
+assets/sounds/switch2.aif:     SAMPLE_RATE := 11025
+assets/sounds/switch3.aif:     SAMPLE_RATE := 11025
+assets/sounds/squeeze.aif:     SAMPLE_RATE := 11025
+assets/sounds/key3.aif:        SAMPLE_RATE := 11025
+assets/sounds/kick.aif:        SAMPLE_RATE := 11025
+assets/sounds/pop.aif:         SAMPLE_RATE := 11025
+assets/sounds/bomb_flash.aif:  SAMPLE_RATE := 16000
+assets/sounds/box_fall.aif:    SAMPLE_RATE := 11025
+assets/sounds/sparky_loop.aif: SAMPLE_RATE := 11025
+assets/sounds/shatter.aif:     SAMPLE_RATE := 11025
+assets/sounds/boss_switch.aif: SAMPLE_RATE := 11025
+assets/sounds/mm_walk.aif:     SAMPLE_RATE := 11025
+
 $(TMPDIR)/sounds/climb.pcm: baserom.gba ; $(call dump_data,0xB3C038,0xC82)
 $(TMPDIR)/sounds/skid.pcm: baserom.gba ; $(call dump_data,0xB3CCBA,0x741)
 $(TMPDIR)/sounds/pound.pcm: baserom.gba ; $(call dump_data,0xB3D3FB,0x347F)
@@ -5695,7 +5714,8 @@ assets/%.pal: $(TMPDIR)/%.gbapal $(GBAGFX)
 
 # convert sounds to AIFF
 assets/sounds/%.aif: $(TMPDIR)/sounds/%.pcm $(AIF2PCM)
-	$(AIF2PCM) $< $@
+	@mkdir -p $(@D)
+	$(AIF2PCM) -s $(SAMPLE_RATE) $< $@
 
 # build tools
 $(GBAGFX):  ; $(MAKE) -C $(@D)
