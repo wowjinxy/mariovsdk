@@ -47,6 +47,8 @@
 	X(src/rom_8033C38.o) \
 	X(src/arena.o) \
 	X(data/rodata2.o) \
+	X(data/sound.o) \
+	X(data/rodata3.o) \
 	X(asm/rom_8034928.o) \
 	X(asm/expert_levels.o) \
 	X(asm/world_start.o) \
