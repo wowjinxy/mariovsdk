@@ -1,6 +1,6 @@
 CC ?= gcc
 
-CFLAGS = -Wall -Wextra -Wno-switch -Werror -std=c11 -O2 -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Wno-switch -Werror -std=c11 -O2
 
 LIBS = -lm
 

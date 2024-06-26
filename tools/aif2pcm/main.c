@@ -933,7 +933,7 @@ int main(int argc, char **argv)
 			free(output_file);
 		}
 	}
-	else if (strcmp(extension, "bin") == 0)
+	else if (strcmp(extension, "bin") == 0 || strcmp(extension, "pcm") == 0)
 	{
 		if (argc >= 3)
 		{

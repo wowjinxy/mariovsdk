@@ -52,7 +52,7 @@ clean:
 	find . -name '*.4bpp' -exec rm {} +
 	find . -name '*.8bpp' -exec rm {} +
 	find . -name '*.gbapal' -exec rm {} +
-	$(RM) assets/sounds/*.bin
+	$(RM) assets/sounds/*.pcm
 	$(MAKE) -C tools/gbagfx clean
 
 # Compile a set of baserom objects for use with objdiff
@@ -88,7 +88,7 @@ ldscript.txt: ldscript.in
 %.8bpp:   %.png $(GBAGFX) ; $(GBAGFX) $< $@
 %.gbapal: %.pal $(GBAGFX) ; $(GBAGFX) $< $@
 
-%.bin:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
+%.pcm:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
 
 $(GBAGFX):  ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)
