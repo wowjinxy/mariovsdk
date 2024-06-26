@@ -4,13 +4,15 @@
 
 TMPDIR := .extract
 
-GBAGFX := tools/gbagfx/gbagfx
+GBAGFX  := tools/gbagfx/gbagfx
+AIF2PCM := tools/aif2pcm/aif2pcm
 
 # canned recipe to extract bytes from binary file
 # parameters: offset, size
 define dump_data
+	@echo 'Extracting $@ from $< ($(2) bytes at $(1))'
 	@mkdir -p $(@D)
-	dd if=$< of=$@ bs=1 skip=$$(($(1))) count=$$(($(2))) status=none
+	@dd if=$< of=$@ bs=1 skip=$$(($(1))) count=$$(($(2))) status=none
 endef
 
 FILES := \
@@ -1156,7 +1158,258 @@ FILES := \
 	assets/sprites/gUnknown_0865911C.png \
 	assets/sprites/gUnknown_086591C8.png \
 	assets/sprites/gUnknown_08659274.png \
-	assets/sprites/gUnknown_08659320.png
+	assets/sprites/gUnknown_08659320.png \
+	assets/sounds/CLIMB_8000Hz.bin \
+	assets/sounds/SKID_8000Hz.bin \
+	assets/sounds/POUND_8000Hz.bin \
+	assets/sounds/TUMBLE1_8000Hz.bin \
+	assets/sounds/STUN_8000Hz.bin \
+	assets/sounds/BURN1_8000Hz.bin \
+	assets/sounds/JUMP1_8000Hz.bin \
+	assets/sounds/GRUNT2.bin \
+	assets/sounds/JUMP_4_8000Hz.bin \
+	assets/sounds/JUMP_3_8000Hz.bin \
+	assets/sounds/PICKUP_8000Hz.bin \
+	assets/sounds/JUMP_5_8000Hz.bin \
+	assets/sounds/COUNTER_8000Hz.bin \
+	assets/sounds/ITEM1_8000Hz.bin \
+	assets/sounds/STEPS2_8000Hz.bin \
+	assets/sounds/KEY1_11025Hz.bin \
+	assets/sounds/CRASH_8000Hz.bin \
+	assets/sounds/THROW_8000Hz.bin \
+	assets/sounds/WALK_11025Hz.bin \
+	assets/sounds/PICKUP_CRYSTAL_8000Hz.bin \
+	assets/sounds/HERE_WEGO_8000Hz.bin \
+	assets/sounds/LETS_GO_8000Hz.bin \
+	assets/sounds/BACK_8000Hz.bin \
+	assets/sounds/CURSOR_E_8000Hz.bin \
+	assets/sounds/CURSOR_M_8000Hz.bin \
+	assets/sounds/CURSOR_S_8000Hz.bin \
+	assets/sounds/gUnknown_08B6308E.bin \
+	assets/sounds/ERROR_8000Hz.bin \
+	assets/sounds/EXIT_ED_8000Hz.bin \
+	assets/sounds/FIELD_8000Hz.bin \
+	assets/sounds/GRID_8000Hz.bin \
+	assets/sounds/ITEM_8000Hz.bin \
+	assets/sounds/SELECT_M_8000Hz.bin \
+	assets/sounds/SELECT_S_8000Hz.bin \
+	assets/sounds/STAMP_8000Hz.bin \
+	assets/sounds/START_8000Hz.bin \
+	assets/sounds/BEAM_8000Hz.bin \
+	assets/sounds/BURN2_8000Hz.bin \
+	assets/sounds/BLOCK_8000Hz.bin \
+	assets/sounds/EXIT_8000Hz.bin \
+	assets/sounds/HURT_8000Hz.bin \
+	assets/sounds/ITEMLAST_8000Hz.bin \
+	assets/sounds/POUND2_8000Hz.bin \
+	assets/sounds/SCUFF_8000Hz.bin \
+	assets/sounds/SHOCK_8000Hz.bin \
+	assets/sounds/KEY_DOOR_8000Hz.bin \
+	assets/sounds/gUnknown_08B72F4A.bin \
+	assets/sounds/gUnknown_08B7348F.bin \
+	assets/sounds/gUnknown_08B74894.bin \
+	assets/sounds/gUnknown_08B75584.bin \
+	assets/sounds/gUnknown_08B75585.bin \
+	assets/sounds/gUnknown_08B76A87.bin \
+	assets/sounds/gUnknown_08B76FCC.bin \
+	assets/sounds/gUnknown_08B79E8C.bin \
+	assets/sounds/gUnknown_08B79E8D.bin \
+	assets/sounds/gUnknown_08B79E8E.bin \
+	assets/sounds/gUnknown_08B79FB8.bin \
+	assets/sounds/gUnknown_08B7DA77.bin \
+	assets/sounds/gUnknown_08B80E46.bin \
+	assets/sounds/gUnknown_08B83DE5.bin \
+	assets/sounds/gUnknown_08B84E7E.bin \
+	assets/sounds/gUnknown_08B86A9A.bin \
+	assets/sounds/gUnknown_08B873FF.bin \
+	assets/sounds/gUnknown_08B87F58.bin \
+	assets/sounds/gUnknown_08B87F59.bin \
+	assets/sounds/gUnknown_08B883DD.bin \
+	assets/sounds/gUnknown_08B8B4F7.bin \
+	assets/sounds/gUnknown_08B8B4F8.bin \
+	assets/sounds/gUnknown_08B8C20E.bin \
+	assets/sounds/gUnknown_08B8D80E.bin \
+	assets/sounds/gUnknown_08B8DD50.bin \
+	assets/sounds/gUnknown_08B916E9.bin \
+	assets/sounds/gUnknown_08B92D76.bin \
+	assets/sounds/gUnknown_08B93BDC.bin \
+	assets/sounds/gUnknown_08B95DEE.bin \
+	assets/sounds/gUnknown_08B97C9B.bin \
+	assets/sounds/gUnknown_08B9AC39.bin \
+	assets/sounds/gUnknown_08B9AC3A.bin \
+	assets/sounds/gUnknown_08B9D6D7.bin \
+	assets/sounds/gUnknown_08B9D8FF.bin \
+	assets/sounds/gUnknown_08B9EED5.bin \
+	assets/sounds/gUnknown_08B9FD23.bin \
+	assets/sounds/gUnknown_08BA118A.bin \
+	assets/sounds/gUnknown_08BA2A11.bin \
+	assets/sounds/gUnknown_08BA2A12.bin \
+	assets/sounds/gUnknown_08BA7C49.bin \
+	assets/sounds/gUnknown_08BAA34A.bin \
+	assets/sounds/gUnknown_08BB1217.bin \
+	assets/sounds/gUnknown_08BB1BD8.bin \
+	assets/sounds/gUnknown_08BB3DE7.bin \
+	assets/sounds/gUnknown_08BB73AF.bin \
+	assets/sounds/gUnknown_08BB9DF3.bin \
+	assets/sounds/gUnknown_08BBBD27.bin \
+	assets/sounds/gUnknown_08BBC915.bin \
+	assets/sounds/gUnknown_08BBF008.bin \
+	assets/sounds/gUnknown_08BC0199.bin \
+	assets/sounds/gUnknown_08BC3F39.bin \
+	assets/sounds/gUnknown_08BC4BFE.bin \
+	assets/sounds/gUnknown_08BC929E.bin \
+	assets/sounds/gUnknown_08BCF316.bin \
+	assets/sounds/gUnknown_08BD2241.bin \
+	assets/sounds/gUnknown_08BD663A.bin \
+	assets/sounds/gUnknown_08BD6F5E.bin \
+	assets/sounds/gUnknown_08BD70C8.bin \
+	assets/sounds/gUnknown_08BD73FC.bin \
+	assets/sounds/gUnknown_08BD769F.bin \
+	assets/sounds/gUnknown_08BD7DAD.bin \
+	assets/sounds/gUnknown_08BD8AC5.bin \
+	assets/sounds/gUnknown_08BDD1A0.bin \
+	assets/sounds/gUnknown_08BDD8B9.bin \
+	assets/sounds/gUnknown_08BE03F8.bin \
+	assets/sounds/gUnknown_08BE64D6.bin \
+	assets/sounds/gUnknown_08BE6F38.bin \
+	assets/sounds/gUnknown_08BEBC48.bin \
+	assets/sounds/gUnknown_08BEBC49.bin \
+	assets/sounds/gUnknown_08BED237.bin \
+	assets/sounds/gUnknown_08BEEF3E.bin \
+	assets/sounds/gUnknown_08BEFEB5.bin \
+	assets/sounds/gUnknown_08BF020F.bin \
+	assets/sounds/gUnknown_08BF2711.bin \
+	assets/sounds/gUnknown_08BF47D0.bin \
+	assets/sounds/gUnknown_08BF64D0.bin \
+	assets/sounds/gUnknown_08BF7904.bin \
+	assets/sounds/gUnknown_08BF9869.bin \
+	assets/sounds/gUnknown_08BFA42E.bin \
+	assets/sounds/gUnknown_08BFAFB8.bin \
+	assets/sounds/gUnknown_08BFB945.bin \
+	assets/sounds/gUnknown_08BFC1E4.bin \
+	assets/sounds/gUnknown_08BFDABF.bin \
+	assets/sounds/gUnknown_08BFDEC7.bin \
+	assets/sounds/gUnknown_08BFFE84.bin \
+	assets/sounds/gUnknown_08C0175D.bin \
+	assets/sounds/gUnknown_08C02E14.bin \
+	assets/sounds/gUnknown_08C05299.bin \
+	assets/sounds/gUnknown_08C0529A.bin \
+	assets/sounds/gUnknown_08C09A9E.bin \
+	assets/sounds/gUnknown_08C0A476.bin \
+	assets/sounds/gUnknown_08C0C5B5.bin \
+	assets/sounds/gUnknown_08C0E976.bin \
+	assets/sounds/gUnknown_08C0F5F7.bin \
+	assets/sounds/gUnknown_08C12DE7.bin \
+	assets/sounds/gUnknown_08C19228.bin \
+	assets/sounds/gUnknown_08C1A917.bin \
+	assets/sounds/gUnknown_08C1BD9C.bin \
+	assets/sounds/gUnknown_08C1D82E.bin \
+	assets/sounds/gUnknown_08C1F3A8.bin \
+	assets/sounds/gUnknown_08C23937.bin \
+	assets/sounds/gUnknown_08C23E84.bin \
+	assets/sounds/gUnknown_08C25CF4.bin \
+	assets/sounds/gUnknown_08C27A3F.bin \
+	assets/sounds/gUnknown_08C28439.bin \
+	assets/sounds/gUnknown_08C297E6.bin \
+	assets/sounds/gUnknown_08C2BBD3.bin \
+	assets/sounds/gUnknown_08C2EEBD.bin \
+	assets/sounds/gUnknown_08C2FF6D.bin \
+	assets/sounds/gUnknown_08C3188B.bin \
+	assets/sounds/gUnknown_08C31D46.bin \
+	assets/sounds/gUnknown_08C32166.bin \
+	assets/sounds/gUnknown_08C325FC.bin \
+	assets/sounds/gUnknown_08C32B2F.bin \
+	assets/sounds/gUnknown_08C3334F.bin \
+	assets/sounds/gUnknown_08C4C232.bin \
+	assets/sounds/gUnknown_08C53FB2.bin \
+	assets/sounds/gUnknown_08C5D5EB.bin \
+	assets/sounds/gUnknown_08C5FD9E.bin \
+	assets/sounds/gUnknown_08C64E9E.bin \
+	assets/sounds/gUnknown_08C6862E.bin \
+	assets/sounds/gUnknown_08C6D26A.bin \
+	assets/sounds/gUnknown_08C707D2.bin \
+	assets/sounds/gUnknown_08C7552A.bin \
+	assets/sounds/gUnknown_08C7804A.bin \
+	assets/sounds/gUnknown_08C7D5E3.bin \
+	assets/sounds/gUnknown_08C7F89C.bin \
+	assets/sounds/gUnknown_08C81229.bin \
+	assets/sounds/gUnknown_08C83398.bin \
+	assets/sounds/gUnknown_08C8496E.bin \
+	assets/sounds/gUnknown_08C87887.bin \
+	assets/sounds/gUnknown_08C8979D.bin \
+	assets/sounds/gUnknown_08C8A81B.bin \
+	assets/sounds/gUnknown_08C8AF5D.bin \
+	assets/sounds/gUnknown_08C8CE9D.bin \
+	assets/sounds/gUnknown_08C930BD.bin \
+	assets/sounds/gUnknown_08C970F4.bin \
+	assets/sounds/gUnknown_08C9EC0C.bin \
+	assets/sounds/gUnknown_08CA03F2.bin \
+	assets/sounds/gUnknown_08CA1418.bin \
+	assets/sounds/gUnknown_08CA2A90.bin \
+	assets/sounds/gUnknown_08CA4430.bin \
+	assets/sounds/gUnknown_08CA4431.bin \
+	assets/sounds/gUnknown_08CAD0E3.bin \
+	assets/sounds/gUnknown_08CAEF5E.bin \
+	assets/sounds/gUnknown_08CAEF5F.bin \
+	assets/sounds/gUnknown_08CB18A2.bin \
+	assets/sounds/gUnknown_08CB326A.bin \
+	assets/sounds/gUnknown_08CB7226.bin \
+	assets/sounds/gUnknown_08CBB266.bin \
+	assets/sounds/gUnknown_08CBEBA6.bin \
+	assets/sounds/gUnknown_08CC3C86.bin \
+	assets/sounds/gUnknown_08CC87A6.bin \
+	assets/sounds/gUnknown_08CCCE46.bin \
+	assets/sounds/gUnknown_08CD0EA6.bin \
+	assets/sounds/gUnknown_08CD5526.bin \
+	assets/sounds/gUnknown_08CD5527.bin \
+	assets/sounds/gUnknown_08CD5528.bin \
+	assets/sounds/gUnknown_08CDAFB8.bin \
+	assets/sounds/gUnknown_08CDFDB8.bin \
+	assets/sounds/gUnknown_08CE7BE4.bin \
+	assets/sounds/gUnknown_08CEC044.bin \
+	assets/sounds/gUnknown_08CFB2AF.bin \
+	assets/sounds/gUnknown_08CFB2B0.bin \
+	assets/sounds/gUnknown_08CFFFBF.bin \
+	assets/sounds/gUnknown_08D04F93.bin \
+	assets/sounds/gUnknown_08D0931A.bin \
+	assets/sounds/gUnknown_08D0E1BA.bin \
+	assets/sounds/gUnknown_08D122AA.bin \
+	assets/sounds/gUnknown_08D1306F.bin \
+	assets/sounds/gUnknown_08D17C04.bin \
+	assets/sounds/gUnknown_08D1CFB3.bin \
+	assets/sounds/gUnknown_08D1E402.bin \
+	assets/sounds/gUnknown_08D241F1.bin \
+	assets/sounds/gUnknown_08D294EB.bin \
+	assets/sounds/gUnknown_08D2EEAB.bin \
+	assets/sounds/gUnknown_08D32950.bin \
+	assets/sounds/gUnknown_08D380F5.bin \
+	assets/sounds/gUnknown_08D3D62F.bin \
+	assets/sounds/gUnknown_08D42F92.bin \
+	assets/sounds/gUnknown_08D491B7.bin \
+	assets/sounds/gUnknown_08D4D502.bin \
+	assets/sounds/gUnknown_08D4D503.bin \
+	assets/sounds/gUnknown_08D4E3A0.bin \
+	assets/sounds/gUnknown_08D52983.bin \
+	assets/sounds/gUnknown_08D54DD2.bin \
+	assets/sounds/gUnknown_08D56FB8.bin \
+	assets/sounds/gUnknown_08D5A761.bin \
+	assets/sounds/gUnknown_08D5BA85.bin \
+	assets/sounds/gUnknown_08D5C709.bin \
+	assets/sounds/gUnknown_08D5D451.bin \
+	assets/sounds/gUnknown_08D5FF00.bin \
+	assets/sounds/gUnknown_08D62C0E.bin \
+	assets/sounds/gUnknown_08D65883.bin \
+	assets/sounds/gUnknown_08D689DB.bin \
+	assets/sounds/gUnknown_08D698AA.bin \
+	assets/sounds/gUnknown_08D6B08E.bin \
+	assets/sounds/gUnknown_08D7356D.bin \
+	assets/sounds/gUnknown_08D739A1.bin \
+	assets/sounds/gUnknown_08D73B63.bin \
+	assets/sounds/gUnknown_08D74657.bin \
+	assets/sounds/gUnknown_08D75609.bin \
+	assets/sounds/gUnknown_08D7644C.bin \
+	assets/sounds/gUnknown_08D79836.bin \
+
 
 all: $(FILES)
 
@@ -1561,11 +1814,13 @@ assets/sprites/gUnknown_081018B0.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_081018B0.4bpp: baserom.gba ; $(call dump_data,0x1018B0,0x80)
 
 assets/sprites/gUnknown_08101A58.png: GBAGFX_FLAGS := -width 1
-$(TMPDIR)/sprites/gUnknown_08101A58.4bpp: baserom.gba ; $(call dump_data,0x101A58,0x80) @ spear shyguy spear tip
+# spear shyguy spear tip
+$(TMPDIR)/sprites/gUnknown_08101A58.4bpp: baserom.gba ; $(call dump_data,0x101A58,0x80)
 assets/sprites/gUnknown_08101A58.png: $(TMPDIR)/palettes/41_world_five_obj.5.gbapal
 
 assets/sprites/gUnknown_08101CD8.png: GBAGFX_FLAGS := -width 2
-$(TMPDIR)/sprites/gUnknown_08101CD8.4bpp: baserom.gba ; $(call dump_data,0x101CD8,0x680) @ spear guy sleeping
+# spear guy sleeping
+$(TMPDIR)/sprites/gUnknown_08101CD8.4bpp: baserom.gba ; $(call dump_data,0x101CD8,0x680)
 assets/sprites/gUnknown_08101CD8.png: $(TMPDIR)/palettes/41_world_five_obj.5.gbapal
 
 assets/sprites/gUnknown_08102438.png: GBAGFX_FLAGS := -width 2
@@ -5173,13 +5428,260 @@ $(TMPDIR)/sprites/gUnknown_08659274.4bpp: baserom.gba ; $(call dump_data,0x65927
 assets/sprites/gUnknown_08659320.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_08659320.4bpp: baserom.gba ; $(call dump_data,0x659320,0x80)
 
+### Sounds ###
+
+assets/sounds/CLIMB_8000Hz.bin: baserom.gba ; $(call dump_data,0xB3C038,0xC82)
+assets/sounds/SKID_8000Hz.bin: baserom.gba ; $(call dump_data,0xB3CCBA,0x741)
+assets/sounds/POUND_8000Hz.bin: baserom.gba ; $(call dump_data,0xB3D3FB,0x347F)
+assets/sounds/TUMBLE1_8000Hz.bin: baserom.gba ; $(call dump_data,0xB4087A,0xBE8)
+assets/sounds/STUN_8000Hz.bin: baserom.gba ; $(call dump_data,0xB41462,0x2D9F)
+assets/sounds/BURN1_8000Hz.bin: baserom.gba ; $(call dump_data,0xB44201,0x1903)
+assets/sounds/JUMP1_8000Hz.bin: baserom.gba ; $(call dump_data,0xB45B04,0xEB5)
+assets/sounds/GRUNT2.bin: baserom.gba ; $(call dump_data,0xB469B9,0x67A)
+assets/sounds/JUMP_4_8000Hz.bin: baserom.gba ; $(call dump_data,0xB47033,0x217B)
+assets/sounds/JUMP_3_8000Hz.bin: baserom.gba ; $(call dump_data,0xB491AE,0x18B0)
+assets/sounds/PICKUP_8000Hz.bin: baserom.gba ; $(call dump_data,0xB4AA5E,0xBBC)
+assets/sounds/JUMP_5_8000Hz.bin: baserom.gba ; $(call dump_data,0xB4B61A,0x1F47)
+assets/sounds/COUNTER_8000Hz.bin: baserom.gba ; $(call dump_data,0xB4D561,0x181)
+assets/sounds/ITEM1_8000Hz.bin: baserom.gba ; $(call dump_data,0xB4D6E2,0x1686)
+assets/sounds/STEPS2_8000Hz.bin: baserom.gba ; $(call dump_data,0xB4ED68,0xC80)
+assets/sounds/KEY1_11025Hz.bin: baserom.gba ; $(call dump_data,0xB4F9E8,0xEE0)
+assets/sounds/CRASH_8000Hz.bin: baserom.gba ; $(call dump_data,0xB508C8,0x13FC)
+assets/sounds/THROW_8000Hz.bin: baserom.gba ; $(call dump_data,0xB51CC4,0x110C)
+assets/sounds/WALK_11025Hz.bin: baserom.gba ; $(call dump_data,0xB52DD0,0x1143)
+assets/sounds/PICKUP_CRYSTAL_8000Hz.bin: baserom.gba ; $(call dump_data,0xB53F13,0x2506)
+assets/sounds/HERE_WEGO_8000Hz.bin: baserom.gba ; $(call dump_data,0xB56419,0x68BB)
+assets/sounds/LETS_GO_8000Hz.bin: baserom.gba ; $(call dump_data,0xB5CCD4,0x362C)
+assets/sounds/BACK_8000Hz.bin: baserom.gba ; $(call dump_data,0xB60300,0x13FD)
+assets/sounds/CURSOR_E_8000Hz.bin: baserom.gba ; $(call dump_data,0xB616FD,0x56A)
+assets/sounds/CURSOR_M_8000Hz.bin: baserom.gba ; $(call dump_data,0xB61C67,0xC15)
+assets/sounds/CURSOR_S_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6287C,0x812)
+assets/sounds/gUnknown_08B6308E.bin: baserom.gba ; $(call dump_data,0xB6308E,0x9D7)
+assets/sounds/ERROR_8000Hz.bin: baserom.gba ; $(call dump_data,0xB63A65,0x6C7)
+assets/sounds/EXIT_ED_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6412C,0x1)
+assets/sounds/FIELD_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6412D,0x1)
+assets/sounds/GRID_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6412E,0x1)
+assets/sounds/ITEM_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6412F,0x1)
+assets/sounds/SELECT_M_8000Hz.bin: baserom.gba ; $(call dump_data,0xB64130,0x1)
+assets/sounds/SELECT_S_8000Hz.bin: baserom.gba ; $(call dump_data,0xB64131,0x1)
+assets/sounds/STAMP_8000Hz.bin: baserom.gba ; $(call dump_data,0xB64132,0x1)
+assets/sounds/START_8000Hz.bin: baserom.gba ; $(call dump_data,0xB64133,0x15AD)
+assets/sounds/BEAM_8000Hz.bin: baserom.gba ; $(call dump_data,0xB656E0,0x1)
+assets/sounds/BURN2_8000Hz.bin: baserom.gba ; $(call dump_data,0xB656E1,0x8BF)
+assets/sounds/BLOCK_8000Hz.bin: baserom.gba ; $(call dump_data,0xB65FA0,0xDD4)
+assets/sounds/EXIT_8000Hz.bin: baserom.gba ; $(call dump_data,0xB66D74,0x1)
+assets/sounds/HURT_8000Hz.bin: baserom.gba ; $(call dump_data,0xB66D75,0xF2F)
+assets/sounds/ITEMLAST_8000Hz.bin: baserom.gba ; $(call dump_data,0xB67CA4,0x2587)
+assets/sounds/POUND2_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6A22B,0x854)
+assets/sounds/SCUFF_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6AA7F,0x708)
+assets/sounds/SHOCK_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6B187,0x3494)
+assets/sounds/KEY_DOOR_8000Hz.bin: baserom.gba ; $(call dump_data,0xB6E61B,0x492F)
+assets/sounds/gUnknown_08B72F4A.bin: baserom.gba ; $(call dump_data,0xB72F4A,0x545)
+assets/sounds/gUnknown_08B7348F.bin: baserom.gba ; $(call dump_data,0xB7348F,0x1405)
+assets/sounds/gUnknown_08B74894.bin: baserom.gba ; $(call dump_data,0xB74894,0xCF0)
+assets/sounds/gUnknown_08B75584.bin: baserom.gba ; $(call dump_data,0xB75584,0x1)
+assets/sounds/gUnknown_08B75585.bin: baserom.gba ; $(call dump_data,0xB75585,0x1502)
+assets/sounds/gUnknown_08B76A87.bin: baserom.gba ; $(call dump_data,0xB76A87,0x545)
+assets/sounds/gUnknown_08B76FCC.bin: baserom.gba ; $(call dump_data,0xB76FCC,0x2EC0)
+assets/sounds/gUnknown_08B79E8C.bin: baserom.gba ; $(call dump_data,0xB79E8C,0x1)
+assets/sounds/gUnknown_08B79E8D.bin: baserom.gba ; $(call dump_data,0xB79E8D,0x1)
+assets/sounds/gUnknown_08B79E8E.bin: baserom.gba ; $(call dump_data,0xB79E8E,0x12A)
+assets/sounds/gUnknown_08B79FB8.bin: baserom.gba ; $(call dump_data,0xB79FB8,0x3ABF)
+assets/sounds/gUnknown_08B7DA77.bin: baserom.gba ; $(call dump_data,0xB7DA77,0x33CF)
+assets/sounds/gUnknown_08B80E46.bin: baserom.gba ; $(call dump_data,0xB80E46,0x2F9F)
+assets/sounds/gUnknown_08B83DE5.bin: baserom.gba ; $(call dump_data,0xB83DE5,0x1099)
+assets/sounds/gUnknown_08B84E7E.bin: baserom.gba ; $(call dump_data,0xB84E7E,0x1C1C)
+assets/sounds/gUnknown_08B86A9A.bin: baserom.gba ; $(call dump_data,0xB86A9A,0x965)
+assets/sounds/gUnknown_08B873FF.bin: baserom.gba ; $(call dump_data,0xB873FF,0xB59)
+assets/sounds/gUnknown_08B87F58.bin: baserom.gba ; $(call dump_data,0xB87F58,0x1)
+assets/sounds/gUnknown_08B87F59.bin: baserom.gba ; $(call dump_data,0xB87F59,0x484)
+assets/sounds/gUnknown_08B883DD.bin: baserom.gba ; $(call dump_data,0xB883DD,0x311A)
+assets/sounds/gUnknown_08B8B4F7.bin: baserom.gba ; $(call dump_data,0xB8B4F7,0x1)
+assets/sounds/gUnknown_08B8B4F8.bin: baserom.gba ; $(call dump_data,0xB8B4F8,0xD16)
+assets/sounds/gUnknown_08B8C20E.bin: baserom.gba ; $(call dump_data,0xB8C20E,0x1600)
+assets/sounds/gUnknown_08B8D80E.bin: baserom.gba ; $(call dump_data,0xB8D80E,0x542)
+assets/sounds/gUnknown_08B8DD50.bin: baserom.gba ; $(call dump_data,0xB8DD50,0x3999)
+assets/sounds/gUnknown_08B916E9.bin: baserom.gba ; $(call dump_data,0xB916E9,0x168D)
+assets/sounds/gUnknown_08B92D76.bin: baserom.gba ; $(call dump_data,0xB92D76,0xE66)
+assets/sounds/gUnknown_08B93BDC.bin: baserom.gba ; $(call dump_data,0xB93BDC,0x2212)
+assets/sounds/gUnknown_08B95DEE.bin: baserom.gba ; $(call dump_data,0xB95DEE,0x1EAD)
+assets/sounds/gUnknown_08B97C9B.bin: baserom.gba ; $(call dump_data,0xB97C9B,0x2F9E)
+assets/sounds/gUnknown_08B9AC39.bin: baserom.gba ; $(call dump_data,0xB9AC39,0x1)
+assets/sounds/gUnknown_08B9AC3A.bin: baserom.gba ; $(call dump_data,0xB9AC3A,0x2A9D)
+assets/sounds/gUnknown_08B9D6D7.bin: baserom.gba ; $(call dump_data,0xB9D6D7,0x228)
+assets/sounds/gUnknown_08B9D8FF.bin: baserom.gba ; $(call dump_data,0xB9D8FF,0x15D6)
+assets/sounds/gUnknown_08B9EED5.bin: baserom.gba ; $(call dump_data,0xB9EED5,0xE4E)
+assets/sounds/gUnknown_08B9FD23.bin: baserom.gba ; $(call dump_data,0xB9FD23,0x1467)
+assets/sounds/gUnknown_08BA118A.bin: baserom.gba ; $(call dump_data,0xBA118A,0x1887)
+assets/sounds/gUnknown_08BA2A11.bin: baserom.gba ; $(call dump_data,0xBA2A11,0x1)
+assets/sounds/gUnknown_08BA2A12.bin: baserom.gba ; $(call dump_data,0xBA2A12,0x5237)
+assets/sounds/gUnknown_08BA7C49.bin: baserom.gba ; $(call dump_data,0xBA7C49,0x2701)
+assets/sounds/gUnknown_08BAA34A.bin: baserom.gba ; $(call dump_data,0xBAA34A,0x6ECD)
+assets/sounds/gUnknown_08BB1217.bin: baserom.gba ; $(call dump_data,0xBB1217,0x9C1)
+assets/sounds/gUnknown_08BB1BD8.bin: baserom.gba ; $(call dump_data,0xBB1BD8,0x220F)
+assets/sounds/gUnknown_08BB3DE7.bin: baserom.gba ; $(call dump_data,0xBB3DE7,0x35C8)
+assets/sounds/gUnknown_08BB73AF.bin: baserom.gba ; $(call dump_data,0xBB73AF,0x2A44)
+assets/sounds/gUnknown_08BB9DF3.bin: baserom.gba ; $(call dump_data,0xBB9DF3,0x1F34)
+assets/sounds/gUnknown_08BBBD27.bin: baserom.gba ; $(call dump_data,0xBBBD27,0xBEE)
+assets/sounds/gUnknown_08BBC915.bin: baserom.gba ; $(call dump_data,0xBBC915,0x26F3)
+assets/sounds/gUnknown_08BBF008.bin: baserom.gba ; $(call dump_data,0xBBF008,0x1191)
+assets/sounds/gUnknown_08BC0199.bin: baserom.gba ; $(call dump_data,0xBC0199,0x3DA0)
+assets/sounds/gUnknown_08BC3F39.bin: baserom.gba ; $(call dump_data,0xBC3F39,0xCC5)
+assets/sounds/gUnknown_08BC4BFE.bin: baserom.gba ; $(call dump_data,0xBC4BFE,0x46A0)
+assets/sounds/gUnknown_08BC929E.bin: baserom.gba ; $(call dump_data,0xBC929E,0x6078)
+assets/sounds/gUnknown_08BCF316.bin: baserom.gba ; $(call dump_data,0xBCF316,0x2F2B)
+assets/sounds/gUnknown_08BD2241.bin: baserom.gba ; $(call dump_data,0xBD2241,0x43F9)
+assets/sounds/gUnknown_08BD663A.bin: baserom.gba ; $(call dump_data,0xBD663A,0x924)
+assets/sounds/gUnknown_08BD6F5E.bin: baserom.gba ; $(call dump_data,0xBD6F5E,0x16A)
+assets/sounds/gUnknown_08BD70C8.bin: baserom.gba ; $(call dump_data,0xBD70C8,0x334)
+assets/sounds/gUnknown_08BD73FC.bin: baserom.gba ; $(call dump_data,0xBD73FC,0x2A3)
+assets/sounds/gUnknown_08BD769F.bin: baserom.gba ; $(call dump_data,0xBD769F,0x70E)
+assets/sounds/gUnknown_08BD7DAD.bin: baserom.gba ; $(call dump_data,0xBD7DAD,0xD18)
+assets/sounds/gUnknown_08BD8AC5.bin: baserom.gba ; $(call dump_data,0xBD8AC5,0x46DB)
+assets/sounds/gUnknown_08BDD1A0.bin: baserom.gba ; $(call dump_data,0xBDD1A0,0x719)
+assets/sounds/gUnknown_08BDD8B9.bin: baserom.gba ; $(call dump_data,0xBDD8B9,0x2B3F)
+assets/sounds/gUnknown_08BE03F8.bin: baserom.gba ; $(call dump_data,0xBE03F8,0x60DE)
+assets/sounds/gUnknown_08BE64D6.bin: baserom.gba ; $(call dump_data,0xBE64D6,0xA62)
+assets/sounds/gUnknown_08BE6F38.bin: baserom.gba ; $(call dump_data,0xBE6F38,0x4D10)
+assets/sounds/gUnknown_08BEBC48.bin: baserom.gba ; $(call dump_data,0xBEBC48,0x1)
+assets/sounds/gUnknown_08BEBC49.bin: baserom.gba ; $(call dump_data,0xBEBC49,0x15EE)
+assets/sounds/gUnknown_08BED237.bin: baserom.gba ; $(call dump_data,0xBED237,0x1D07)
+assets/sounds/gUnknown_08BEEF3E.bin: baserom.gba ; $(call dump_data,0xBEEF3E,0xF77)
+assets/sounds/gUnknown_08BEFEB5.bin: baserom.gba ; $(call dump_data,0xBEFEB5,0x35A)
+assets/sounds/gUnknown_08BF020F.bin: baserom.gba ; $(call dump_data,0xBF020F,0x2502)
+assets/sounds/gUnknown_08BF2711.bin: baserom.gba ; $(call dump_data,0xBF2711,0x20BF)
+assets/sounds/gUnknown_08BF47D0.bin: baserom.gba ; $(call dump_data,0xBF47D0,0x1D00)
+assets/sounds/gUnknown_08BF64D0.bin: baserom.gba ; $(call dump_data,0xBF64D0,0x1434)
+assets/sounds/gUnknown_08BF7904.bin: baserom.gba ; $(call dump_data,0xBF7904,0x1F65)
+assets/sounds/gUnknown_08BF9869.bin: baserom.gba ; $(call dump_data,0xBF9869,0xBC5)
+assets/sounds/gUnknown_08BFA42E.bin: baserom.gba ; $(call dump_data,0xBFA42E,0xB8A)
+assets/sounds/gUnknown_08BFAFB8.bin: baserom.gba ; $(call dump_data,0xBFAFB8,0x98D)
+assets/sounds/gUnknown_08BFB945.bin: baserom.gba ; $(call dump_data,0xBFB945,0x89F)
+assets/sounds/gUnknown_08BFC1E4.bin: baserom.gba ; $(call dump_data,0xBFC1E4,0x18DB)
+assets/sounds/gUnknown_08BFDABF.bin: baserom.gba ; $(call dump_data,0xBFDABF,0x408)
+assets/sounds/gUnknown_08BFDEC7.bin: baserom.gba ; $(call dump_data,0xBFDEC7,0x1FBD)
+assets/sounds/gUnknown_08BFFE84.bin: baserom.gba ; $(call dump_data,0xBFFE84,0x18D9)
+assets/sounds/gUnknown_08C0175D.bin: baserom.gba ; $(call dump_data,0xC0175D,0x16B7)
+assets/sounds/gUnknown_08C02E14.bin: baserom.gba ; $(call dump_data,0xC02E14,0x2485)
+assets/sounds/gUnknown_08C05299.bin: baserom.gba ; $(call dump_data,0xC05299,0x1)
+assets/sounds/gUnknown_08C0529A.bin: baserom.gba ; $(call dump_data,0xC0529A,0x4804)
+assets/sounds/gUnknown_08C09A9E.bin: baserom.gba ; $(call dump_data,0xC09A9E,0x9D8)
+assets/sounds/gUnknown_08C0A476.bin: baserom.gba ; $(call dump_data,0xC0A476,0x213F)
+assets/sounds/gUnknown_08C0C5B5.bin: baserom.gba ; $(call dump_data,0xC0C5B5,0x23C1)
+assets/sounds/gUnknown_08C0E976.bin: baserom.gba ; $(call dump_data,0xC0E976,0xC81)
+assets/sounds/gUnknown_08C0F5F7.bin: baserom.gba ; $(call dump_data,0xC0F5F7,0x37F0)
+assets/sounds/gUnknown_08C12DE7.bin: baserom.gba ; $(call dump_data,0xC12DE7,0x6441)
+assets/sounds/gUnknown_08C19228.bin: baserom.gba ; $(call dump_data,0xC19228,0x16EF)
+assets/sounds/gUnknown_08C1A917.bin: baserom.gba ; $(call dump_data,0xC1A917,0x1485)
+assets/sounds/gUnknown_08C1BD9C.bin: baserom.gba ; $(call dump_data,0xC1BD9C,0x1A92)
+assets/sounds/gUnknown_08C1D82E.bin: baserom.gba ; $(call dump_data,0xC1D82E,0x1B7A)
+assets/sounds/gUnknown_08C1F3A8.bin: baserom.gba ; $(call dump_data,0xC1F3A8,0x458F)
+assets/sounds/gUnknown_08C23937.bin: baserom.gba ; $(call dump_data,0xC23937,0x54D)
+assets/sounds/gUnknown_08C23E84.bin: baserom.gba ; $(call dump_data,0xC23E84,0x1E70)
+assets/sounds/gUnknown_08C25CF4.bin: baserom.gba ; $(call dump_data,0xC25CF4,0x1D4B)
+assets/sounds/gUnknown_08C27A3F.bin: baserom.gba ; $(call dump_data,0xC27A3F,0x9FA)
+assets/sounds/gUnknown_08C28439.bin: baserom.gba ; $(call dump_data,0xC28439,0x13AD)
+assets/sounds/gUnknown_08C297E6.bin: baserom.gba ; $(call dump_data,0xC297E6,0x23ED)
+assets/sounds/gUnknown_08C2BBD3.bin: baserom.gba ; $(call dump_data,0xC2BBD3,0x32EA)
+assets/sounds/gUnknown_08C2EEBD.bin: baserom.gba ; $(call dump_data,0xC2EEBD,0x10B0)
+assets/sounds/gUnknown_08C2FF6D.bin: baserom.gba ; $(call dump_data,0xC2FF6D,0x191E)
+assets/sounds/gUnknown_08C3188B.bin: baserom.gba ; $(call dump_data,0xC3188B,0x4BB)
+assets/sounds/gUnknown_08C31D46.bin: baserom.gba ; $(call dump_data,0xC31D46,0x420)
+assets/sounds/gUnknown_08C32166.bin: baserom.gba ; $(call dump_data,0xC32166,0x496)
+assets/sounds/gUnknown_08C325FC.bin: baserom.gba ; $(call dump_data,0xC325FC,0x533)
+assets/sounds/gUnknown_08C32B2F.bin: baserom.gba ; $(call dump_data,0xC32B2F,0x820)
+assets/sounds/gUnknown_08C3334F.bin: baserom.gba ; $(call dump_data,0xC3334F,0x18EE3)
+assets/sounds/gUnknown_08C4C232.bin: baserom.gba ; $(call dump_data,0xC4C232,0x7D80)
+assets/sounds/gUnknown_08C53FB2.bin: baserom.gba ; $(call dump_data,0xC53FB2,0x9639)
+assets/sounds/gUnknown_08C5D5EB.bin: baserom.gba ; $(call dump_data,0xC5D5EB,0x27B3)
+assets/sounds/gUnknown_08C5FD9E.bin: baserom.gba ; $(call dump_data,0xC5FD9E,0x5100)
+assets/sounds/gUnknown_08C64E9E.bin: baserom.gba ; $(call dump_data,0xC64E9E,0x3790)
+assets/sounds/gUnknown_08C6862E.bin: baserom.gba ; $(call dump_data,0xC6862E,0x4C3C)
+assets/sounds/gUnknown_08C6D26A.bin: baserom.gba ; $(call dump_data,0xC6D26A,0x3568)
+assets/sounds/gUnknown_08C707D2.bin: baserom.gba ; $(call dump_data,0xC707D2,0x4D58)
+assets/sounds/gUnknown_08C7552A.bin: baserom.gba ; $(call dump_data,0xC7552A,0x2B20)
+assets/sounds/gUnknown_08C7804A.bin: baserom.gba ; $(call dump_data,0xC7804A,0x5599)
+assets/sounds/gUnknown_08C7D5E3.bin: baserom.gba ; $(call dump_data,0xC7D5E3,0x22B9)
+assets/sounds/gUnknown_08C7F89C.bin: baserom.gba ; $(call dump_data,0xC7F89C,0x198D)
+assets/sounds/gUnknown_08C81229.bin: baserom.gba ; $(call dump_data,0xC81229,0x216F)
+assets/sounds/gUnknown_08C83398.bin: baserom.gba ; $(call dump_data,0xC83398,0x15D6)
+assets/sounds/gUnknown_08C8496E.bin: baserom.gba ; $(call dump_data,0xC8496E,0x2F19)
+assets/sounds/gUnknown_08C87887.bin: baserom.gba ; $(call dump_data,0xC87887,0x1F16)
+assets/sounds/gUnknown_08C8979D.bin: baserom.gba ; $(call dump_data,0xC8979D,0x107E)
+assets/sounds/gUnknown_08C8A81B.bin: baserom.gba ; $(call dump_data,0xC8A81B,0x742)
+assets/sounds/gUnknown_08C8AF5D.bin: baserom.gba ; $(call dump_data,0xC8AF5D,0x1F40)
+assets/sounds/gUnknown_08C8CE9D.bin: baserom.gba ; $(call dump_data,0xC8CE9D,0x6220)
+assets/sounds/gUnknown_08C930BD.bin: baserom.gba ; $(call dump_data,0xC930BD,0x4037)
+assets/sounds/gUnknown_08C970F4.bin: baserom.gba ; $(call dump_data,0xC970F4,0x7B18)
+assets/sounds/gUnknown_08C9EC0C.bin: baserom.gba ; $(call dump_data,0xC9EC0C,0x17E6)
+assets/sounds/gUnknown_08CA03F2.bin: baserom.gba ; $(call dump_data,0xCA03F2,0x1026)
+assets/sounds/gUnknown_08CA1418.bin: baserom.gba ; $(call dump_data,0xCA1418,0x1678)
+assets/sounds/gUnknown_08CA2A90.bin: baserom.gba ; $(call dump_data,0xCA2A90,0x19A0)
+assets/sounds/gUnknown_08CA4430.bin: baserom.gba ; $(call dump_data,0xCA4430,0x1)
+assets/sounds/gUnknown_08CA4431.bin: baserom.gba ; $(call dump_data,0xCA4431,0x8CB2)
+assets/sounds/gUnknown_08CAD0E3.bin: baserom.gba ; $(call dump_data,0xCAD0E3,0x1E7B)
+assets/sounds/gUnknown_08CAEF5E.bin: baserom.gba ; $(call dump_data,0xCAEF5E,0x1)
+assets/sounds/gUnknown_08CAEF5F.bin: baserom.gba ; $(call dump_data,0xCAEF5F,0x2943)
+assets/sounds/gUnknown_08CB18A2.bin: baserom.gba ; $(call dump_data,0xCB18A2,0x19C8)
+assets/sounds/gUnknown_08CB326A.bin: baserom.gba ; $(call dump_data,0xCB326A,0x3FBC)
+assets/sounds/gUnknown_08CB7226.bin: baserom.gba ; $(call dump_data,0xCB7226,0x4040)
+assets/sounds/gUnknown_08CBB266.bin: baserom.gba ; $(call dump_data,0xCBB266,0x3940)
+assets/sounds/gUnknown_08CBEBA6.bin: baserom.gba ; $(call dump_data,0xCBEBA6,0x50E0)
+assets/sounds/gUnknown_08CC3C86.bin: baserom.gba ; $(call dump_data,0xCC3C86,0x4B20)
+assets/sounds/gUnknown_08CC87A6.bin: baserom.gba ; $(call dump_data,0xCC87A6,0x46A0)
+assets/sounds/gUnknown_08CCCE46.bin: baserom.gba ; $(call dump_data,0xCCCE46,0x4060)
+assets/sounds/gUnknown_08CD0EA6.bin: baserom.gba ; $(call dump_data,0xCD0EA6,0x4680)
+assets/sounds/gUnknown_08CD5526.bin: baserom.gba ; $(call dump_data,0xCD5526,0x1)
+assets/sounds/gUnknown_08CD5527.bin: baserom.gba ; $(call dump_data,0xCD5527,0x1)
+assets/sounds/gUnknown_08CD5528.bin: baserom.gba ; $(call dump_data,0xCD5528,0x5A90)
+assets/sounds/gUnknown_08CDAFB8.bin: baserom.gba ; $(call dump_data,0xCDAFB8,0x4E00)
+assets/sounds/gUnknown_08CDFDB8.bin: baserom.gba ; $(call dump_data,0xCDFDB8,0x7E2C)
+assets/sounds/gUnknown_08CE7BE4.bin: baserom.gba ; $(call dump_data,0xCE7BE4,0x4460)
+assets/sounds/gUnknown_08CEC044.bin: baserom.gba ; $(call dump_data,0xCEC044,0xF26B)
+assets/sounds/gUnknown_08CFB2AF.bin: baserom.gba ; $(call dump_data,0xCFB2AF,0x1)
+assets/sounds/gUnknown_08CFB2B0.bin: baserom.gba ; $(call dump_data,0xCFB2B0,0x4D0F)
+assets/sounds/gUnknown_08CFFFBF.bin: baserom.gba ; $(call dump_data,0xCFFFBF,0x4FD4)
+assets/sounds/gUnknown_08D04F93.bin: baserom.gba ; $(call dump_data,0xD04F93,0x4387)
+assets/sounds/gUnknown_08D0931A.bin: baserom.gba ; $(call dump_data,0xD0931A,0x4EA0)
+assets/sounds/gUnknown_08D0E1BA.bin: baserom.gba ; $(call dump_data,0xD0E1BA,0x40F0)
+assets/sounds/gUnknown_08D122AA.bin: baserom.gba ; $(call dump_data,0xD122AA,0xDC5)
+assets/sounds/gUnknown_08D1306F.bin: baserom.gba ; $(call dump_data,0xD1306F,0x4B95)
+assets/sounds/gUnknown_08D17C04.bin: baserom.gba ; $(call dump_data,0xD17C04,0x53AF)
+assets/sounds/gUnknown_08D1CFB3.bin: baserom.gba ; $(call dump_data,0xD1CFB3,0x144F)
+assets/sounds/gUnknown_08D1E402.bin: baserom.gba ; $(call dump_data,0xD1E402,0x5DEF)
+assets/sounds/gUnknown_08D241F1.bin: baserom.gba ; $(call dump_data,0xD241F1,0x52FA)
+assets/sounds/gUnknown_08D294EB.bin: baserom.gba ; $(call dump_data,0xD294EB,0x59C0)
+assets/sounds/gUnknown_08D2EEAB.bin: baserom.gba ; $(call dump_data,0xD2EEAB,0x3AA5)
+assets/sounds/gUnknown_08D32950.bin: baserom.gba ; $(call dump_data,0xD32950,0x57A5)
+assets/sounds/gUnknown_08D380F5.bin: baserom.gba ; $(call dump_data,0xD380F5,0x553A)
+assets/sounds/gUnknown_08D3D62F.bin: baserom.gba ; $(call dump_data,0xD3D62F,0x5963)
+assets/sounds/gUnknown_08D42F92.bin: baserom.gba ; $(call dump_data,0xD42F92,0x6225)
+assets/sounds/gUnknown_08D491B7.bin: baserom.gba ; $(call dump_data,0xD491B7,0x434B)
+assets/sounds/gUnknown_08D4D502.bin: baserom.gba ; $(call dump_data,0xD4D502,0x1)
+assets/sounds/gUnknown_08D4D503.bin: baserom.gba ; $(call dump_data,0xD4D503,0xE9D)
+assets/sounds/gUnknown_08D4E3A0.bin: baserom.gba ; $(call dump_data,0xD4E3A0,0x45E3)
+assets/sounds/gUnknown_08D52983.bin: baserom.gba ; $(call dump_data,0xD52983,0x244F)
+assets/sounds/gUnknown_08D54DD2.bin: baserom.gba ; $(call dump_data,0xD54DD2,0x21E6)
+assets/sounds/gUnknown_08D56FB8.bin: baserom.gba ; $(call dump_data,0xD56FB8,0x37A9)
+assets/sounds/gUnknown_08D5A761.bin: baserom.gba ; $(call dump_data,0xD5A761,0x1324)
+assets/sounds/gUnknown_08D5BA85.bin: baserom.gba ; $(call dump_data,0xD5BA85,0xC84)
+assets/sounds/gUnknown_08D5C709.bin: baserom.gba ; $(call dump_data,0xD5C709,0xD48)
+assets/sounds/gUnknown_08D5D451.bin: baserom.gba ; $(call dump_data,0xD5D451,0x2AAF)
+assets/sounds/gUnknown_08D5FF00.bin: baserom.gba ; $(call dump_data,0xD5FF00,0x2D0E)
+assets/sounds/gUnknown_08D62C0E.bin: baserom.gba ; $(call dump_data,0xD62C0E,0x2C75)
+assets/sounds/gUnknown_08D65883.bin: baserom.gba ; $(call dump_data,0xD65883,0x3158)
+assets/sounds/gUnknown_08D689DB.bin: baserom.gba ; $(call dump_data,0xD689DB,0xECF)
+assets/sounds/gUnknown_08D698AA.bin: baserom.gba ; $(call dump_data,0xD698AA,0x17E4)
+assets/sounds/gUnknown_08D6B08E.bin: baserom.gba ; $(call dump_data,0xD6B08E,0x84DF)
+assets/sounds/gUnknown_08D7356D.bin: baserom.gba ; $(call dump_data,0xD7356D,0x434)
+assets/sounds/gUnknown_08D739A1.bin: baserom.gba ; $(call dump_data,0xD739A1,0x1C2)
+assets/sounds/gUnknown_08D73B63.bin: baserom.gba ; $(call dump_data,0xD73B63,0xAF4)
+assets/sounds/gUnknown_08D74657.bin: baserom.gba ; $(call dump_data,0xD74657,0xFB2)
+assets/sounds/gUnknown_08D75609.bin: baserom.gba ; $(call dump_data,0xD75609,0xE43)
+assets/sounds/gUnknown_08D7644C.bin: baserom.gba ; $(call dump_data,0xD7644C,0x33EA)
+assets/sounds/gUnknown_08D79836.bin: baserom.gba ; $(call dump_data,0xD79836,0x18D6)
+
 # convert files to PNG (with optional palette)
-#assets/%.png: $(TMPDIR)/%.4bpp $(TMPDIR)/%.gbapal $(GBAGFX)
-#	@mkdir -p $(@D)
-#	$(GBAGFX) $< $@ $(GBAGFX_FLAGS) -palette $(filter %.gbapal,$^)
-#assets/%.png: $(TMPDIR)/%.8bpp $(TMPDIR)/%.gbapal $(GBAGFX)
-#	@mkdir -p $(@D)
-#	$(GBAGFX) $< $@ $(GBAGFX_FLAGS) -palette $(filter %.gbapal,$^)
 assets/%.png: $(TMPDIR)/%.4bpp $(GBAGFX)
 	@mkdir -p $(@D)
 	$(GBAGFX) $< $@ $(GBAGFX_FLAGS) $(addprefix -palette ,$(filter %.gbapal,$^))
@@ -5191,6 +5693,12 @@ assets/%.pal: $(TMPDIR)/%.gbapal $(GBAGFX)
 	@mkdir -p $(@D)
 	$(GBAGFX) $< $@ $(GBAGFX_FLAGS)
 
+# convert sounds to AIFF
+%.aif: assets/sounds/%.bin $(AIF2PCM)
+	$(AIF2PCM) $< $@
+assets/sounds/%.aif: assets/sounds/%.bin $(AIF2PCM)
+	$(AIF2PCM) $< $@
+
 # build tools
-$(GBAGFX):
-	$(MAKE) -C $(@D)
+$(GBAGFX):  ; $(MAKE) -C $(@D)
+$(AIF2PCM): ; $(MAKE) -C $(@D)
