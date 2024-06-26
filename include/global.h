@@ -287,14 +287,14 @@ struct MoviePlayerParamaters
 
 struct backgroundLayerOffset
 {
-    u16 bg0_x;
-    u16 bg0_y;
-    u16 bg1_x;
-    u16 bg1_y;
-    u16 bg2_x;
-    u16 bg2_y;
-    u16 bg3_x;
-    u16 bg3_y;
+    /*0x00*/ u16 bg0_x;
+    /*0x02*/ u16 bg0_y;
+    /*0x04*/ u16 bg1_x;
+    /*0x06*/ u16 bg1_y;
+    /*0x08*/ u16 bg2_x;
+    /*0x0A*/ u16 bg2_y;
+    /*0x0C*/ u16 bg3_x;
+    /*0x0E*/ u16 bg3_y;
 };
 
 typedef struct test {

@@ -15,7 +15,7 @@ world_start_init_callback: @ 0x08037050
 	mov r2, #1
 	bl sub_0807204C
 _0803706C:
-	ldr r4, _08037094  @ =0x030002FC
+	ldr r4, _08037094  @ =gUnknown_030002FC
 	mov r0, #16
 	bl arena_allocate
 	str r0, [r4]
@@ -36,7 +36,7 @@ _08037090:
 	ldr r2, _080370A0  @ =gWorldStartTable
 	b _080370A6
 _08037094:
-	.4byte 0x030002FC
+	.4byte gUnknown_030002FC
 _08037098:
 	.4byte gUnknown_03000BE0
 _0803709C:
@@ -86,7 +86,7 @@ _080370E8:
 	add r0, r0, r1
 	ldr r0, [r0]
 	bl sub_08006968
-	ldr r1, _08037124  @ =0x030002F0
+	ldr r1, _08037124  @ =gUnknown_030002F0
 	str r0, [r1]
 	ldr r1, _08037128  @ =gUnknown_080A8674
 	mov r0, #0
@@ -108,7 +108,7 @@ _0803711C:
 _08037120:
 	.4byte gWorldStartTable
 _08037124:
-	.4byte 0x030002F0
+	.4byte gUnknown_030002F0
 _08037128:
 	.4byte gUnknown_080A8674
 _0803712C:
@@ -120,7 +120,7 @@ _0803712C:
 	add r0, r0, r1
 	ldr r0, [r0]
 	bl sub_08006968
-	ldr r1, _080371BC  @ =0x030002F0
+	ldr r1, _080371BC  @ =gUnknown_030002F0
 	str r0, [r1]
 	ldr r1, _080371C0  @ =gUnknown_080A868C
 	mov r0, #0
@@ -144,7 +144,7 @@ _08037166:
 	ldrsb r5, [r0, r5]
 	cmp r5, #0
 	bne _080371D0
-	ldr r1, _080371C8  @ =0x030002F4
+	ldr r1, _080371C8  @ =gUnknown_030002F4
 	mov r0, #1
 	strb r0, [r1]
 	str r5, [sp]
@@ -156,7 +156,7 @@ _08037166:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _080371CC  @ =0x03000300
+	ldr r1, _080371CC  @ =gUnknown_03000300
 	ldr r1, [r1]
 	str r0, [r1, #16]
 	ldr r1, [r1]
@@ -180,17 +180,17 @@ _080371B4:
 _080371B8:
 	.4byte gCurrentWorld
 _080371BC:
-	.4byte 0x030002F0
+	.4byte gUnknown_030002F0
 _080371C0:
 	.4byte gUnknown_080A868C
 _080371C4:
 	.4byte gUnknown_080A8674
 _080371C8:
-	.4byte 0x030002F4
+	.4byte gUnknown_030002F4
 _080371CC:
-	.4byte 0x03000300
+	.4byte gUnknown_03000300
 _080371D0:
-	ldr r1, _08037218  @ =0x030002F4
+	ldr r1, _08037218  @ =gUnknown_030002F4
 	mov r0, #0
 	strb r0, [r1]
 	mov r0, #1
@@ -212,7 +212,7 @@ _080371E6:
 	ldr r2, _08037224  @ =0x01000008
 	add r1, r4, #0
 	bl CpuSet
-	ldr r1, _08037228  @ =0x030002F8
+	ldr r1, _08037228  @ =gUnknown_030002F8
 	ldr r2, _0803722C  @ =0xFFFFCE00
 	add r0, r2, #0
 	strh r0, [r1]
@@ -224,7 +224,7 @@ _080371E6:
 	pop {r0}
 	bx r0
 _08037218:
-	.4byte 0x030002F4
+	.4byte gUnknown_030002F4
 _0803721C:
 	.4byte gWorldOneStartData
 _08037220:
@@ -232,7 +232,7 @@ _08037220:
 _08037224:
 	.4byte 0x01000008
 _08037228:
-	.4byte 0x030002F8
+	.4byte gUnknown_030002F8
 _0803722C:
 	.4byte 0xFFFFCE00
 	THUMB_FUNC_END world_start_init_callback
@@ -240,7 +240,7 @@ _0803722C:
 	THUMB_FUNC_START sub_08037230
 sub_08037230: @ 0x08037230
 	push {r4,r5,lr}
-	ldr r4, _08037284  @ =0x03000300
+	ldr r4, _08037284  @ =gUnknown_03000300
 	mov r0, #20
 	bl arena_allocate
 	str r0, [r4]
@@ -258,7 +258,7 @@ sub_08037230: @ 0x08037230
 	mov r1, #128
 	lsl r1, r1, #2
 	strh r1, [r0, #10]
-	ldr r4, _08037290  @ =0x03000304
+	ldr r4, _08037290  @ =gUnknown_03000304
 	mov r0, #20
 	bl arena_allocate
 	str r0, [r4]
@@ -281,13 +281,13 @@ sub_08037230: @ 0x08037230
 	.byte 0x00
 	.byte 0x00
 _08037284:
-	.4byte 0x03000300
+	.4byte gUnknown_03000300
 _08037288:
 	.4byte gUnknown_08251EC0
 _0803728C:
 	.4byte 0xFFFFC100
 _08037290:
-	.4byte 0x03000304
+	.4byte gUnknown_03000304
 _08037294:
 	.4byte gUnknown_0854301C
 _08037298:
@@ -300,7 +300,7 @@ _0803729C:
 sub_080372A0: @ 0x080372A0
 	push {r4-r6,lr}
 	sub sp, sp, #12
-	ldr r6, _080372B8  @ =0x030002F4
+	ldr r6, _080372B8  @ =gUnknown_030002F4
 	ldrb r0, [r6]
 	cmp r0, #1
 	beq _08037330
@@ -312,7 +312,7 @@ sub_080372A0: @ 0x080372A0
 	.byte 0x00
 	.byte 0x00
 _080372B8:
-	.4byte 0x030002F4
+	.4byte gUnknown_030002F4
 _080372BC:
 	cmp r0, #2
 	bne _080372C2
@@ -323,8 +323,8 @@ _080372C2:
 	b _080374B0
 _080372C8:
 	b _080374D0
-_080372CA:
-	ldr r0, _080372EC  @ =0x030002FC
+_080372CA:  @ 0
+	ldr r0, _080372EC  @ =gUnknown_030002FC
 	ldr r4, [r0]
 	ldrb r0, [r4, #1]
 	sub r0, r0, #1
@@ -343,7 +343,7 @@ _080372DE:
 	add r0, r1, #1
 	b _080373CC
 _080372EC:
-	.4byte 0x030002FC
+	.4byte gUnknown_030002FC
 _080372F0:
 	mov r1, #1
 	mov r0, #1
@@ -358,7 +358,7 @@ _080372F0:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _0803732C  @ =0x03000300
+	ldr r1, _0803732C  @ =gUnknown_03000300
 	ldr r1, [r1]
 	str r0, [r1, #16]
 	ldr r1, [r1]
@@ -373,13 +373,13 @@ _080372F0:
 	bl play_sound_effect_08071990
 	b _080374D0
 _0803732C:
-	.4byte 0x03000300
-_08037330:
-	ldr r0, _08037354  @ =0x030002FC
+	.4byte gUnknown_03000300
+_08037330: @ 1
+	ldr r0, _08037354  @ =gUnknown_030002FC
 	ldr r0, [r0]
 	add r4, r0, #0
 	add r4, r4, #8
-	ldr r0, _08037358  @ =0x03000300
+	ldr r0, _08037358  @ =gUnknown_03000300
 	ldr r2, [r0]
 	ldr r3, [r2]
 	ldr r0, _0803735C  @ =0x0000EFFF
@@ -393,9 +393,9 @@ _08037330:
 	bl sub_08040FC0
 	b _0803738C
 _08037354:
-	.4byte 0x030002FC
+	.4byte gUnknown_030002FC
 _08037358:
-	.4byte 0x03000300
+	.4byte gUnknown_03000300
 _0803735C:
 	.4byte 0x0000EFFF
 _08037360:
@@ -413,7 +413,7 @@ _08037360:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _080373EC  @ =0x03000304
+	ldr r1, _080373EC  @ =gUnknown_03000304
 	ldr r1, [r1]
 	str r0, [r1, #16]
 	ldr r1, [r1]
@@ -455,7 +455,7 @@ _080373C8:
 	add r0, r0, #1
 _080373CC:
 	strb r0, [r4]
-	ldr r0, _080373F0  @ =0x030002F0
+	ldr r0, _080373F0  @ =gUnknown_030002F0
 	ldr r2, [r0]
 	ldrb r0, [r4]
 	ldrb r1, [r4, #4]
@@ -472,15 +472,15 @@ _080373CC:
 	.byte 0x00
 	.byte 0x00
 _080373EC:
-	.4byte 0x03000304
+	.4byte gUnknown_03000304
 _080373F0:
-	.4byte 0x030002F0
+	.4byte gUnknown_030002F0
 _080373F4:
 	mov r0, #1
 	strh r0, [r4, #6]
 	b _080374D0
-_080373FA:
-	ldr r0, _08037418  @ =0x03000304
+_080373FA:  @ 2
+	ldr r0, _08037418  @ =gUnknown_03000304
 	ldr r2, [r0]
 	ldr r3, [r2]
 	ldr r0, _0803741C  @ =0x000063FF
@@ -496,13 +496,13 @@ _080373FA:
 	.byte 0x00
 	.byte 0x00
 _08037418:
-	.4byte 0x03000304
+	.4byte gUnknown_03000304
 _0803741C:
 	.4byte 0x000063FF
 _08037420:
 	ldr r0, _08037454  @ =0x000002D7
 	strh r0, [r2, #8]
-	ldr r1, _08037458  @ =0x030002F8
+	ldr r1, _08037458  @ =gUnknown_030002F8
 	ldr r2, _0803745C  @ =0xFFFFCE00
 	add r0, r2, #0
 	strh r0, [r1]
@@ -530,7 +530,7 @@ _0803744E:
 _08037454:
 	.4byte 0x000002D7
 _08037458:
-	.4byte 0x030002F8
+	.4byte gUnknown_030002F8
 _0803745C:
 	.4byte 0xFFFFCE00
 _08037460:
@@ -575,8 +575,8 @@ _080374A8:
 	.4byte gUnknown_080A86D4
 _080374AC:
 	.4byte gCurrentWorld
-_080374B0:
-	ldr r2, _080374D8  @ =0x030002F8
+_080374B0:  @ 3
+	ldr r2, _080374D8  @ =gUnknown_030002F8
 	ldrh r0, [r2]
 	add r0, r0, #128
 	strh r0, [r2]
@@ -599,7 +599,7 @@ _080374D0:
 	pop {r0}
 	bx r0
 _080374D8:
-	.4byte 0x030002F8
+	.4byte gUnknown_030002F8
 _080374DC:
 	.4byte gBGLayerOffsets 
 	THUMB_FUNC_END sub_080372A0
@@ -610,7 +610,7 @@ world_start_main: @ 0x080374E0
 	sub sp, sp, #12
 	bl sub_08029C20
 	bl process_input
-	ldr r0, _0803753C  @ =0x030002F4
+	ldr r0, _0803753C  @ =gUnknown_030002F4
 	ldrb r0, [r0]
 	cmp r0, #4
 	bne _08037550
@@ -647,7 +647,7 @@ world_start_main: @ 0x080374E0
 	bl sub_080148A4
 	b _08037550
 _0803753C:
-	.4byte 0x030002F4
+	.4byte gUnknown_030002F4
 _08037540:
 	.4byte gNewKeys
 _08037544:
@@ -657,7 +657,7 @@ _08037548:
 	mov r1, #1
 	bl change_main_state
 _08037550:
-	ldr r0, _080375E0  @ =0x03000304
+	ldr r0, _080375E0  @ =gUnknown_03000304
 	ldr r3, [r0]
 	mov r0, #8
 	ldrsh r1, [r3, r0]
@@ -694,7 +694,7 @@ _08037584:
 	ldrb r0, [r0, #1]
 	strh r0, [r3, #14]
 _08037596:
-	ldr r0, _080375E8  @ =0x03000300
+	ldr r0, _080375E8  @ =gUnknown_03000300
 	ldr r3, [r0]
 	mov r0, #8
 	ldrsh r1, [r3, r0]
@@ -734,11 +734,11 @@ _080375D8:
 	pop {r0}
 	bx r0
 _080375E0:
-	.4byte 0x03000304
+	.4byte gUnknown_03000304
 _080375E4:
 	.4byte gUncompressedGraphicsTable
 _080375E8:
-	.4byte 0x03000300
+	.4byte gUnknown_03000300
 	THUMB_FUNC_END world_start_main
 
 	THUMB_FUNC_START sub_080375EC
@@ -764,7 +764,7 @@ sub_080375EC: @ 0x080375EC
 	ldr r0, [r1, #8]
 	ldr r3, _08037648  @ =gObjVRAMCopyOffset_0300192C
 	mov r10, r3
-	ldr r4, _0803764C  @ =0x030002F6
+	ldr r4, _0803764C  @ =gUnknown_030002F6
 	ldr r5, _08037650  @ =gOamBuffer
 	ldr r6, _08037654  @ =gVRAMCurrTileNum_03001930
 	cmp r0, #0
@@ -793,7 +793,7 @@ _08037644:
 _08037648:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0803764C:
-	.4byte 0x030002F6
+	.4byte gUnknown_030002F6
 _08037650:
 	.4byte gOamBuffer
 _08037654:
@@ -843,7 +843,7 @@ _0803769C:
 	ldr r0, [r3, #8]
 	ldr r0, [r5, #16]
 	str r0, [r3]
-	ldr r4, _0803782C  @ =0x030002F6
+	ldr r4, _0803782C  @ =gUnknown_030002F6
 	ldrh r0, [r4]
 	lsl r0, r0, #3
 	ldr r5, _08037830  @ =gOamBuffer
@@ -1037,7 +1037,7 @@ _08037824:
 _08037828:
 	.4byte OBJ_VRAM0
 _0803782C:
-	.4byte 0x030002F6
+	.4byte gUnknown_030002F6
 _08037830:
 	.4byte gOamBuffer
 _08037834:
@@ -1083,18 +1083,18 @@ world_start_loop: @ 0x08037848
 	ldr r0, [r1, #8]
 	ldr r3, _080378B4  @ =gVRAMCurrTileNum_03001930
 	ldr r2, _080378B8  @ =gObjVRAMCopyOffset_0300192C
-	ldr r1, _080378BC  @ =0x030002F6
+	ldr r1, _080378BC  @ =gUnknown_030002F6
 	mov r0, #0
 	strh r0, [r1]
 	strh r0, [r2]
 	strh r0, [r3]
-	ldr r0, _080378C0  @ =0x030002F4
+	ldr r0, _080378C0  @ =gUnknown_030002F4
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _080378C8
 	cmp r0, #1
 	beq _08037930
-	ldr r0, _080378C4  @ =0x03000304
+	ldr r0, _080378C4  @ =gUnknown_03000304
 	ldr r0, [r0]
 	mov r1, #1
 	b _08037964
@@ -1113,18 +1113,18 @@ _080378B4:
 _080378B8:
 	.4byte gObjVRAMCopyOffset_0300192C
 _080378BC:
-	.4byte 0x030002F6
+	.4byte gUnknown_030002F6
 _080378C0:
-	.4byte 0x030002F4
+	.4byte gUnknown_030002F4
 _080378C4:
-	.4byte 0x03000304
+	.4byte gUnknown_03000304
 _080378C8:
-	ldr r2, _08037924  @ =0x030002FC
+	ldr r2, _08037924  @ =gUnknown_030002FC
 	mov r8, r2
 	ldr r3, [r2]
 	ldrb r0, [r3, #2]
 	ldrb r1, [r3, #3]
-	ldr r7, _08037928  @ =0x030002F0
+	ldr r7, _08037928  @ =gUnknown_030002F0
 	mov r9, r7
 	mov r2, r9
 	ldr r4, [r2]
@@ -1164,19 +1164,19 @@ _080378C8:
 	bl sub_08006548
 	b _08037968
 _08037924:
-	.4byte 0x030002FC
+	.4byte gUnknown_030002FC
 _08037928:
-	.4byte 0x030002F0
+	.4byte gUnknown_030002F0
 _0803792C:
 	.4byte gWorldOneStartData
 _08037930:
-	ldr r0, _08037998  @ =0x030002FC
+	ldr r0, _08037998  @ =gUnknown_030002FC
 	ldr r5, [r0]
 	add r3, r5, #0
 	add r3, r3, #8
 	ldrb r0, [r3, #2]
 	ldrb r1, [r3, #3]
-	ldr r2, _0803799C  @ =0x030002F0
+	ldr r2, _0803799C  @ =gUnknown_030002F0
 	ldr r4, [r2]
 	ldrb r2, [r5, #8]
 	ldrb r3, [r3, #4]
@@ -1192,7 +1192,7 @@ _08037930:
 	mov r4, #5
 	str r4, [sp]
 	bl sub_08006548
-	ldr r0, _080379A4  @ =0x03000300
+	ldr r0, _080379A4  @ =gUnknown_03000300
 	ldr r0, [r0]
 	mov r1, #0
 _08037964:
@@ -1223,13 +1223,13 @@ _08037986:
 	pop {r0}
 	bx r0
 _08037998:
-	.4byte 0x030002FC
+	.4byte gUnknown_030002FC
 _0803799C:
-	.4byte 0x030002F0
+	.4byte gUnknown_030002F0
 _080379A0:
 	.4byte gWorldOneStartData
 _080379A4:
-	.4byte 0x03000300
+	.4byte gUnknown_03000300
 _080379A8:
 	.4byte REG_DMA3SAD
 _080379AC:

@@ -7,13 +7,13 @@ sub_080379BC: @ 0x080379BC
 	lsl r0, r0, #24
 	lsl r1, r1, #24
 	lsr r1, r1, #24
-	ldr r2, _080379FC  @ =0x030002FC
+	ldr r2, _080379FC  @ =gUnknown_030002FC
 	lsr r0, r0, #21
 	ldr r2, [r2]
 	add r2, r2, r0
 	mov r4, #0
 	strb r4, [r2]
-	ldr r0, _08037A00  @ =0x030002F0
+	ldr r0, _08037A00  @ =gUnknown_030002F0
 	ldr r0, [r0]
 	lsl r3, r1, #2
 	mov r5, #132
@@ -37,9 +37,9 @@ sub_080379BC: @ 0x080379BC
 	.byte 0x00
 	.byte 0x00
 _080379FC:
-	.4byte 0x030002FC
+	.4byte gUnknown_030002FC
 _08037A00:
-	.4byte 0x030002F0
+	.4byte gUnknown_030002F0
 	THUMB_FUNC_END sub_080379BC
 
 		THUMB_FUNC_START print_error_message
