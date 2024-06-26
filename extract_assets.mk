@@ -4,13 +4,15 @@
 
 TMPDIR := .extract
 
-GBAGFX := tools/gbagfx/gbagfx
+GBAGFX  := tools/gbagfx/gbagfx
+AIF2PCM := tools/aif2pcm/aif2pcm
 
 # canned recipe to extract bytes from binary file
 # parameters: offset, size
 define dump_data
+	@echo 'Extracting $(@F) from $< ($(2) bytes at $(1))'
 	@mkdir -p $(@D)
-	dd if=$< of=$@ bs=1 skip=$$(($(1))) count=$$(($(2))) status=none
+	@dd if=$< of=$@ bs=1 skip=$$(($(1))) count=$$(($(2))) status=none
 endef
 
 FILES := \
@@ -1156,12 +1158,263 @@ FILES := \
 	assets/sprites/gUnknown_0865911C.png \
 	assets/sprites/gUnknown_086591C8.png \
 	assets/sprites/gUnknown_08659274.png \
-	assets/sprites/gUnknown_08659320.png
+	assets/sprites/gUnknown_08659320.png \
+	assets/sounds/climb.aif \
+	assets/sounds/skid.aif \
+	assets/sounds/pound.aif \
+	assets/sounds/tumble1.aif \
+	assets/sounds/stun.aif \
+	assets/sounds/burn1.aif \
+	assets/sounds/jump_1.aif \
+	assets/sounds/grunt2.aif \
+	assets/sounds/jump_4.aif \
+	assets/sounds/jump_3.aif \
+	assets/sounds/pickup.aif \
+	assets/sounds/jump_5.aif \
+	assets/sounds/counter.aif \
+	assets/sounds/item1.aif \
+	assets/sounds/steps2.aif \
+	assets/sounds/key1.aif \
+	assets/sounds/crash.aif \
+	assets/sounds/throw.aif \
+	assets/sounds/walk.aif \
+	assets/sounds/pickup_crystal.aif \
+	assets/sounds/here_wego.aif \
+	assets/sounds/lets_go.aif \
+	assets/sounds/back.aif \
+	assets/sounds/cursor_e.aif \
+	assets/sounds/cursor_m.aif \
+	assets/sounds/cursor_s.aif \
+	assets/sounds/erase.aif \
+	assets/sounds/error.aif \
+	assets/sounds/exit_ed.aif \
+	assets/sounds/field.aif \
+	assets/sounds/grid.aif \
+	assets/sounds/item.aif \
+	assets/sounds/select_m.aif \
+	assets/sounds/select_s.aif \
+	assets/sounds/stamp.aif \
+	assets/sounds/start.aif \
+	assets/sounds/beam.aif \
+	assets/sounds/burn2.aif \
+	assets/sounds/block.aif \
+	assets/sounds/exit.aif \
+	assets/sounds/hurt.aif \
+	assets/sounds/itemlast.aif \
+	assets/sounds/pound2.aif \
+	assets/sounds/scuff.aif \
+	assets/sounds/shock.aif \
+	assets/sounds/key_door.aif \
+	assets/sounds/spin.aif \
+	assets/sounds/splat.aif \
+	assets/sounds/squeak.aif \
+	assets/sounds/unlock.aif \
+	assets/sounds/wirejump.aif \
+	assets/sounds/spin_1.aif \
+	assets/sounds/one_up.aif \
+	assets/sounds/help.aif \
+	assets/sounds/silence.aif \
+	assets/sounds/skidshort.aif \
+	assets/sounds/switch1.aif \
+	assets/sounds/switch2.aif \
+	assets/sounds/switch3.aif \
+	assets/sounds/boing.aif \
+	assets/sounds/jump_6.aif \
+	assets/sounds/rope_up.aif \
+	assets/sounds/rope_down.aif \
+	assets/sounds/door.aif \
+	assets/sounds/scroll.aif \
+	assets/sounds/return.aif \
+	assets/sounds/blank.aif \
+	assets/sounds/look_up.aif \
+	assets/sounds/mm_die.aif \
+	assets/sounds/mm_boing.aif \
+	assets/sounds/mm_protect.aif \
+	assets/sounds/chest_open.aif \
+	assets/sounds/chest_close.aif \
+	assets/sounds/oof.aif \
+	assets/sounds/dk_hurt.aif \
+	assets/sounds/dk_bellow.aif \
+	assets/sounds/slam2.aif \
+	assets/sounds/fruit_fall.aif \
+	assets/sounds/pointer.aif \
+	assets/sounds/choose.aif \
+	assets/sounds/empty.aif \
+	assets/sounds/toy1.aif \
+	assets/sounds/toylast.aif \
+	assets/sounds/warp_out.aif \
+	assets/sounds/warp_in.aif \
+	assets/sounds/squeeze.aif \
+	assets/sounds/glass.aif \
+	assets/sounds/lift.aif \
+	assets/sounds/mm_oh_no.aif \
+	assets/sounds/jump_7.aif \
+	assets/sounds/level_start.aif \
+	assets/sounds/elev_go.aif \
+	assets/sounds/elev_stop.aif \
+	assets/sounds/egg_fall.aif \
+	assets/sounds/dk_exit1.aif \
+	assets/sounds/dk_blubber.aif \
+	assets/sounds/movie_02.aif \
+	assets/sounds/movie_03.aif \
+	assets/sounds/movie_04.aif \
+	assets/sounds/movie_05.aif \
+	assets/sounds/movie_06.aif \
+	assets/sounds/key2.aif \
+	assets/sounds/key3.aif \
+	assets/sounds/grab_wire.aif \
+	assets/sounds/grab_rope.aif \
+	assets/sounds/grab_ladder.aif \
+	assets/sounds/crush.aif \
+	assets/sounds/spitfire.aif \
+	assets/sounds/ninji.aif \
+	assets/sounds/crumble.aif \
+	assets/sounds/lava.aif \
+	assets/sounds/bubble.aif \
+	assets/sounds/fountain.aif \
+	assets/sounds/ouch.aif \
+	assets/sounds/restart.aif \
+	assets/sounds/metalroll.aif \
+	assets/sounds/shwing.aif \
+	assets/sounds/kick.aif \
+	assets/sounds/brickman.aif \
+	assets/sounds/spit.aif \
+	assets/sounds/pop.aif \
+	assets/sounds/growl.aif \
+	assets/sounds/growl2.aif \
+	assets/sounds/ghost.aif \
+	assets/sounds/shy_wake.aif \
+	assets/sounds/shy_run.aif \
+	assets/sounds/bomb_peep.aif \
+	assets/sounds/bomb_jump.aif \
+	assets/sounds/bomb_flash.aif \
+	assets/sounds/bomb_blow.aif \
+	assets/sounds/vaporize.aif \
+	assets/sounds/bat.aif \
+	assets/sounds/cannon.aif \
+	assets/sounds/crouch.aif \
+	assets/sounds/scatter.aif \
+	assets/sounds/reach.aif \
+	assets/sounds/dk_head.aif \
+	assets/sounds/gotcha.aif \
+	assets/sounds/toad_walk.aif \
+	assets/sounds/toad_toss.aif \
+	assets/sounds/box_fall.aif \
+	assets/sounds/sparky_loop.aif \
+	assets/sounds/dk_blub.aif \
+	assets/sounds/yank.aif \
+	assets/sounds/spike.aif \
+	assets/sounds/bone.aif \
+	assets/sounds/mm_boingup.aif \
+	assets/sounds/laser.aif \
+	assets/sounds/dk_jump.aif \
+	assets/sounds/jump_8.aif \
+	assets/sounds/trashcan.aif \
+	assets/sounds/key_toad.aif \
+	assets/sounds/shatter.aif \
+	assets/sounds/toad_carry.aif \
+	assets/sounds/toad_set.aif \
+	assets/sounds/jump_a.aif \
+	assets/sounds/jump_b.aif \
+	assets/sounds/jump_c.aif \
+	assets/sounds/jump_d.aif \
+	assets/sounds/shuffle.aif \
+	assets/sounds/movie_07.aif \
+	assets/sounds/movie_01.aif \
+	assets/sounds/mini_key.aif \
+	assets/sounds/movie2_1.aif \
+	assets/sounds/movie2_2.aif \
+	assets/sounds/movie2_3.aif \
+	assets/sounds/movie2_4.aif \
+	assets/sounds/movie2_5.aif \
+	assets/sounds/movie2_6.aif \
+	assets/sounds/movie2_7.aif \
+	assets/sounds/movie2_8.aif \
+	assets/sounds/boss_arm.aif \
+	assets/sounds/boss_arm2.aif \
+	assets/sounds/boss_arm3.aif \
+	assets/sounds/boss_arm4.aif \
+	assets/sounds/boss_arm5.aif \
+	assets/sounds/boss_switch.aif \
+	assets/sounds/cursor_world.aif \
+	assets/sounds/cursor_up_dn.aif \
+	assets/sounds/boss_die1.aif \
+	assets/sounds/boss_die2.aif \
+	assets/sounds/boss_intro1.aif \
+	assets/sounds/boss_intro3.aif \
+	assets/sounds/plus_main.aif \
+	assets/sounds/barrel.aif \
+	assets/sounds/spike_hit.aif \
+	assets/sounds/bigbarrel_hit.aif \
+	assets/sounds/bigbarrel_fall.aif \
+	assets/sounds/toads_jump.aif \
+	assets/sounds/toads_grab.aif \
+	assets/sounds/movie3_01.aif \
+	assets/sounds/movie3_02.aif \
+	assets/sounds/movie3_03.aif \
+	assets/sounds/movie3_04.aif \
+	assets/sounds/movie3_05.aif \
+	assets/sounds/movie3_06.aif \
+	assets/sounds/movie3_07.aif \
+	assets/sounds/movie3_08.aif \
+	assets/sounds/movie3_09.aif \
+	assets/sounds/movie3_10.aif \
+	assets/sounds/movie3_11.aif \
+	assets/sounds/movie3_12.aif \
+	assets/sounds/movie3_13.aif \
+	assets/sounds/movie3_14.aif \
+	assets/sounds/movie4_01.aif \
+	assets/sounds/movie4_02.aif \
+	assets/sounds/movie4_03.aif \
+	assets/sounds/movie4_04.aif \
+	assets/sounds/movie4_06.aif \
+	assets/sounds/movie4_07.aif \
+	assets/sounds/movie4_08.aif \
+	assets/sounds/movie4_09.aif \
+	assets/sounds/movie4_10.aif \
+	assets/sounds/movie5_01.aif \
+	assets/sounds/movie5_05.aif \
+	assets/sounds/movie5_07.aif \
+	assets/sounds/movie6_01.aif \
+	assets/sounds/movie6_02.aif \
+	assets/sounds/movie6_03.aif \
+	assets/sounds/movie6_04.aif \
+	assets/sounds/movie6_05.aif \
+	assets/sounds/movie6_06.aif \
+	assets/sounds/movie6_07.aif \
+	assets/sounds/movie6_08.aif \
+	assets/sounds/movie6_09.aif \
+	assets/sounds/movie6_10.aif \
+	assets/sounds/movie2_9.aif \
+	assets/sounds/movie2_10.aif \
+	assets/sounds/movie_08.aif \
+	assets/sounds/title.aif \
+	assets/sounds/you_won1.aif \
+	assets/sounds/you_won2.aif \
+	assets/sounds/you_won3.aif \
+	assets/sounds/star.aif \
+	assets/sounds/dk_walk.aif \
+	assets/sounds/scuff2.aif \
+	assets/sounds/world_start.aif \
+	assets/sounds/mm_wakeup.aif \
+	assets/sounds/mm_free.aif \
+	assets/sounds/mm_mamamias.aif \
+	assets/sounds/spike_vanish.aif \
+	assets/sounds/spike_appear.aif \
+	assets/sounds/boss_die3.aif \
+	assets/sounds/barrel_bounce.aif \
+	assets/sounds/rock_bounce.aif \
+	assets/sounds/mm_walk.aif \
+	assets/sounds/dk_grunt.aif \
+	assets/sounds/ribbon.aif \
+	assets/sounds/won_text.aif \
+	assets/sounds/dk_fall.aif \
+
 
 all: $(FILES)
 
 clean:
-	$(RM) -r $(FILES) $(TMPDIR) assets/sprites/*
+	$(RM) -r $(FILES) $(TMPDIR) assets/sprites/* assets/sounds/*
 
 ### Predefined palettes ###
 
@@ -1561,11 +1814,13 @@ assets/sprites/gUnknown_081018B0.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_081018B0.4bpp: baserom.gba ; $(call dump_data,0x1018B0,0x80)
 
 assets/sprites/gUnknown_08101A58.png: GBAGFX_FLAGS := -width 1
-$(TMPDIR)/sprites/gUnknown_08101A58.4bpp: baserom.gba ; $(call dump_data,0x101A58,0x80) @ spear shyguy spear tip
+# spear shyguy spear tip
+$(TMPDIR)/sprites/gUnknown_08101A58.4bpp: baserom.gba ; $(call dump_data,0x101A58,0x80)
 assets/sprites/gUnknown_08101A58.png: $(TMPDIR)/palettes/41_world_five_obj.5.gbapal
 
 assets/sprites/gUnknown_08101CD8.png: GBAGFX_FLAGS := -width 2
-$(TMPDIR)/sprites/gUnknown_08101CD8.4bpp: baserom.gba ; $(call dump_data,0x101CD8,0x680) @ spear guy sleeping
+# spear guy sleeping
+$(TMPDIR)/sprites/gUnknown_08101CD8.4bpp: baserom.gba ; $(call dump_data,0x101CD8,0x680)
 assets/sprites/gUnknown_08101CD8.png: $(TMPDIR)/palettes/41_world_five_obj.5.gbapal
 
 assets/sprites/gUnknown_08102438.png: GBAGFX_FLAGS := -width 2
@@ -5173,13 +5428,260 @@ $(TMPDIR)/sprites/gUnknown_08659274.4bpp: baserom.gba ; $(call dump_data,0x65927
 assets/sprites/gUnknown_08659320.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_08659320.4bpp: baserom.gba ; $(call dump_data,0x659320,0x80)
 
+### Sounds ###
+
+$(TMPDIR)/sounds/climb.pcm: baserom.gba ; $(call dump_data,0xB3C038,0xC82)
+$(TMPDIR)/sounds/skid.pcm: baserom.gba ; $(call dump_data,0xB3CCBA,0x741)
+$(TMPDIR)/sounds/pound.pcm: baserom.gba ; $(call dump_data,0xB3D3FB,0x347F)
+$(TMPDIR)/sounds/tumble1.pcm: baserom.gba ; $(call dump_data,0xB4087A,0xBE8)
+$(TMPDIR)/sounds/stun.pcm: baserom.gba ; $(call dump_data,0xB41462,0x2D9F)
+$(TMPDIR)/sounds/burn1.pcm: baserom.gba ; $(call dump_data,0xB44201,0x1903)
+$(TMPDIR)/sounds/jump_1.pcm: baserom.gba ; $(call dump_data,0xB45B04,0xEB5)
+$(TMPDIR)/sounds/grunt2.pcm: baserom.gba ; $(call dump_data,0xB469B9,0x67A)
+$(TMPDIR)/sounds/jump_4.pcm: baserom.gba ; $(call dump_data,0xB47033,0x217B)
+$(TMPDIR)/sounds/jump_3.pcm: baserom.gba ; $(call dump_data,0xB491AE,0x18B0)
+$(TMPDIR)/sounds/pickup.pcm: baserom.gba ; $(call dump_data,0xB4AA5E,0xBBC)
+$(TMPDIR)/sounds/jump_5.pcm: baserom.gba ; $(call dump_data,0xB4B61A,0x1F47)
+$(TMPDIR)/sounds/counter.pcm: baserom.gba ; $(call dump_data,0xB4D561,0x181)
+$(TMPDIR)/sounds/item1.pcm: baserom.gba ; $(call dump_data,0xB4D6E2,0x1686)
+$(TMPDIR)/sounds/steps2.pcm: baserom.gba ; $(call dump_data,0xB4ED68,0xC80)
+$(TMPDIR)/sounds/key1.pcm: baserom.gba ; $(call dump_data,0xB4F9E8,0xEE0)
+$(TMPDIR)/sounds/crash.pcm: baserom.gba ; $(call dump_data,0xB508C8,0x13FC)
+$(TMPDIR)/sounds/throw.pcm: baserom.gba ; $(call dump_data,0xB51CC4,0x110C)
+$(TMPDIR)/sounds/walk.pcm: baserom.gba ; $(call dump_data,0xB52DD0,0x1143)
+$(TMPDIR)/sounds/pickup_crystal.pcm: baserom.gba ; $(call dump_data,0xB53F13,0x2506)
+$(TMPDIR)/sounds/here_wego.pcm: baserom.gba ; $(call dump_data,0xB56419,0x68BB)
+$(TMPDIR)/sounds/lets_go.pcm: baserom.gba ; $(call dump_data,0xB5CCD4,0x362C)
+$(TMPDIR)/sounds/back.pcm: baserom.gba ; $(call dump_data,0xB60300,0x13FD)
+$(TMPDIR)/sounds/cursor_e.pcm: baserom.gba ; $(call dump_data,0xB616FD,0x56A)
+$(TMPDIR)/sounds/cursor_m.pcm: baserom.gba ; $(call dump_data,0xB61C67,0xC15)
+$(TMPDIR)/sounds/cursor_s.pcm: baserom.gba ; $(call dump_data,0xB6287C,0x812)
+$(TMPDIR)/sounds/erase.pcm: baserom.gba ; $(call dump_data,0xB6308E,0x9D7)
+$(TMPDIR)/sounds/error.pcm: baserom.gba ; $(call dump_data,0xB63A65,0x6C7)
+$(TMPDIR)/sounds/exit_ed.pcm: baserom.gba ; $(call dump_data,0xB6412C,0x1)
+$(TMPDIR)/sounds/field.pcm: baserom.gba ; $(call dump_data,0xB6412D,0x1)
+$(TMPDIR)/sounds/grid.pcm: baserom.gba ; $(call dump_data,0xB6412E,0x1)
+$(TMPDIR)/sounds/item.pcm: baserom.gba ; $(call dump_data,0xB6412F,0x1)
+$(TMPDIR)/sounds/select_m.pcm: baserom.gba ; $(call dump_data,0xB64130,0x1)
+$(TMPDIR)/sounds/select_s.pcm: baserom.gba ; $(call dump_data,0xB64131,0x1)
+$(TMPDIR)/sounds/stamp.pcm: baserom.gba ; $(call dump_data,0xB64132,0x1)
+$(TMPDIR)/sounds/start.pcm: baserom.gba ; $(call dump_data,0xB64133,0x15AD)
+$(TMPDIR)/sounds/beam.pcm: baserom.gba ; $(call dump_data,0xB656E0,0x1)
+$(TMPDIR)/sounds/burn2.pcm: baserom.gba ; $(call dump_data,0xB656E1,0x8BF)
+$(TMPDIR)/sounds/block.pcm: baserom.gba ; $(call dump_data,0xB65FA0,0xDD4)
+$(TMPDIR)/sounds/exit.pcm: baserom.gba ; $(call dump_data,0xB66D74,0x1)
+$(TMPDIR)/sounds/hurt.pcm: baserom.gba ; $(call dump_data,0xB66D75,0xF2F)
+$(TMPDIR)/sounds/itemlast.pcm: baserom.gba ; $(call dump_data,0xB67CA4,0x2587)
+$(TMPDIR)/sounds/pound2.pcm: baserom.gba ; $(call dump_data,0xB6A22B,0x854)
+$(TMPDIR)/sounds/scuff.pcm: baserom.gba ; $(call dump_data,0xB6AA7F,0x708)
+$(TMPDIR)/sounds/shock.pcm: baserom.gba ; $(call dump_data,0xB6B187,0x3494)
+$(TMPDIR)/sounds/key_door.pcm: baserom.gba ; $(call dump_data,0xB6E61B,0x492F)
+$(TMPDIR)/sounds/spin.pcm: baserom.gba ; $(call dump_data,0xB72F4A,0x545)
+$(TMPDIR)/sounds/splat.pcm: baserom.gba ; $(call dump_data,0xB7348F,0x1405)
+$(TMPDIR)/sounds/squeak.pcm: baserom.gba ; $(call dump_data,0xB74894,0xCF0)
+$(TMPDIR)/sounds/unlock.pcm: baserom.gba ; $(call dump_data,0xB75584,0x1)
+$(TMPDIR)/sounds/wirejump.pcm: baserom.gba ; $(call dump_data,0xB75585,0x1502)
+$(TMPDIR)/sounds/spin_1.pcm: baserom.gba ; $(call dump_data,0xB76A87,0x545)
+$(TMPDIR)/sounds/one_up.pcm: baserom.gba ; $(call dump_data,0xB76FCC,0x2EC0)
+$(TMPDIR)/sounds/help.pcm: baserom.gba ; $(call dump_data,0xB79E8C,0x1)
+$(TMPDIR)/sounds/silence.pcm: baserom.gba ; $(call dump_data,0xB79E8D,0x1)
+$(TMPDIR)/sounds/skidshort.pcm: baserom.gba ; $(call dump_data,0xB79E8E,0x12A)
+$(TMPDIR)/sounds/switch1.pcm: baserom.gba ; $(call dump_data,0xB79FB8,0x3ABF)
+$(TMPDIR)/sounds/switch2.pcm: baserom.gba ; $(call dump_data,0xB7DA77,0x33CF)
+$(TMPDIR)/sounds/switch3.pcm: baserom.gba ; $(call dump_data,0xB80E46,0x2F9F)
+$(TMPDIR)/sounds/boing.pcm: baserom.gba ; $(call dump_data,0xB83DE5,0x1099)
+$(TMPDIR)/sounds/jump_6.pcm: baserom.gba ; $(call dump_data,0xB84E7E,0x1C1C)
+$(TMPDIR)/sounds/rope_up.pcm: baserom.gba ; $(call dump_data,0xB86A9A,0x965)
+$(TMPDIR)/sounds/rope_down.pcm: baserom.gba ; $(call dump_data,0xB873FF,0xB59)
+$(TMPDIR)/sounds/door.pcm: baserom.gba ; $(call dump_data,0xB87F58,0x1)
+$(TMPDIR)/sounds/scroll.pcm: baserom.gba ; $(call dump_data,0xB87F59,0x484)
+$(TMPDIR)/sounds/return.pcm: baserom.gba ; $(call dump_data,0xB883DD,0x311A)
+$(TMPDIR)/sounds/blank.pcm: baserom.gba ; $(call dump_data,0xB8B4F7,0x1)
+$(TMPDIR)/sounds/look_up.pcm: baserom.gba ; $(call dump_data,0xB8B4F8,0xD16)
+$(TMPDIR)/sounds/mm_die.pcm: baserom.gba ; $(call dump_data,0xB8C20E,0x1600)
+$(TMPDIR)/sounds/mm_boing.pcm: baserom.gba ; $(call dump_data,0xB8D80E,0x542)
+$(TMPDIR)/sounds/mm_protect.pcm: baserom.gba ; $(call dump_data,0xB8DD50,0x3999)
+$(TMPDIR)/sounds/chest_open.pcm: baserom.gba ; $(call dump_data,0xB916E9,0x168D)
+$(TMPDIR)/sounds/chest_close.pcm: baserom.gba ; $(call dump_data,0xB92D76,0xE66)
+$(TMPDIR)/sounds/oof.pcm: baserom.gba ; $(call dump_data,0xB93BDC,0x2212)
+$(TMPDIR)/sounds/dk_hurt.pcm: baserom.gba ; $(call dump_data,0xB95DEE,0x1EAD)
+$(TMPDIR)/sounds/dk_bellow.pcm: baserom.gba ; $(call dump_data,0xB97C9B,0x2F9E)
+$(TMPDIR)/sounds/slam2.pcm: baserom.gba ; $(call dump_data,0xB9AC39,0x1)
+$(TMPDIR)/sounds/fruit_fall.pcm: baserom.gba ; $(call dump_data,0xB9AC3A,0x2A9D)
+$(TMPDIR)/sounds/pointer.pcm: baserom.gba ; $(call dump_data,0xB9D6D7,0x228)
+$(TMPDIR)/sounds/choose.pcm: baserom.gba ; $(call dump_data,0xB9D8FF,0x15D6)
+$(TMPDIR)/sounds/empty.pcm: baserom.gba ; $(call dump_data,0xB9EED5,0xE4E)
+$(TMPDIR)/sounds/toy1.pcm: baserom.gba ; $(call dump_data,0xB9FD23,0x1467)
+$(TMPDIR)/sounds/toylast.pcm: baserom.gba ; $(call dump_data,0xBA118A,0x1887)
+$(TMPDIR)/sounds/warp_out.pcm: baserom.gba ; $(call dump_data,0xBA2A11,0x1)
+$(TMPDIR)/sounds/warp_in.pcm: baserom.gba ; $(call dump_data,0xBA2A12,0x5237)
+$(TMPDIR)/sounds/squeeze.pcm: baserom.gba ; $(call dump_data,0xBA7C49,0x2701)
+$(TMPDIR)/sounds/glass.pcm: baserom.gba ; $(call dump_data,0xBAA34A,0x6ECD)
+$(TMPDIR)/sounds/lift.pcm: baserom.gba ; $(call dump_data,0xBB1217,0x9C1)
+$(TMPDIR)/sounds/mm_oh_no.pcm: baserom.gba ; $(call dump_data,0xBB1BD8,0x220F)
+$(TMPDIR)/sounds/jump_7.pcm: baserom.gba ; $(call dump_data,0xBB3DE7,0x35C8)
+$(TMPDIR)/sounds/level_start.pcm: baserom.gba ; $(call dump_data,0xBB73AF,0x2A44)
+$(TMPDIR)/sounds/elev_go.pcm: baserom.gba ; $(call dump_data,0xBB9DF3,0x1F34)
+$(TMPDIR)/sounds/elev_stop.pcm: baserom.gba ; $(call dump_data,0xBBBD27,0xBEE)
+$(TMPDIR)/sounds/egg_fall.pcm: baserom.gba ; $(call dump_data,0xBBC915,0x26F3)
+$(TMPDIR)/sounds/dk_exit1.pcm: baserom.gba ; $(call dump_data,0xBBF008,0x1191)
+$(TMPDIR)/sounds/dk_blubber.pcm: baserom.gba ; $(call dump_data,0xBC0199,0x3DA0)
+$(TMPDIR)/sounds/movie_02.pcm: baserom.gba ; $(call dump_data,0xBC3F39,0xCC5)
+$(TMPDIR)/sounds/movie_03.pcm: baserom.gba ; $(call dump_data,0xBC4BFE,0x46A0)
+$(TMPDIR)/sounds/movie_04.pcm: baserom.gba ; $(call dump_data,0xBC929E,0x6078)
+$(TMPDIR)/sounds/movie_05.pcm: baserom.gba ; $(call dump_data,0xBCF316,0x2F2B)
+$(TMPDIR)/sounds/movie_06.pcm: baserom.gba ; $(call dump_data,0xBD2241,0x43F9)
+$(TMPDIR)/sounds/key2.pcm: baserom.gba ; $(call dump_data,0xBD663A,0x924)
+$(TMPDIR)/sounds/key3.pcm: baserom.gba ; $(call dump_data,0xBD6F5E,0x16A)
+$(TMPDIR)/sounds/grab_wire.pcm: baserom.gba ; $(call dump_data,0xBD70C8,0x334)
+$(TMPDIR)/sounds/grab_rope.pcm: baserom.gba ; $(call dump_data,0xBD73FC,0x2A3)
+$(TMPDIR)/sounds/grab_ladder.pcm: baserom.gba ; $(call dump_data,0xBD769F,0x70E)
+$(TMPDIR)/sounds/crush.pcm: baserom.gba ; $(call dump_data,0xBD7DAD,0xD18)
+$(TMPDIR)/sounds/spitfire.pcm: baserom.gba ; $(call dump_data,0xBD8AC5,0x46DB)
+$(TMPDIR)/sounds/ninji.pcm: baserom.gba ; $(call dump_data,0xBDD1A0,0x719)
+$(TMPDIR)/sounds/crumble.pcm: baserom.gba ; $(call dump_data,0xBDD8B9,0x2B3F)
+$(TMPDIR)/sounds/lava.pcm: baserom.gba ; $(call dump_data,0xBE03F8,0x60DE)
+$(TMPDIR)/sounds/bubble.pcm: baserom.gba ; $(call dump_data,0xBE64D6,0xA62)
+$(TMPDIR)/sounds/fountain.pcm: baserom.gba ; $(call dump_data,0xBE6F38,0x4D10)
+$(TMPDIR)/sounds/ouch.pcm: baserom.gba ; $(call dump_data,0xBEBC48,0x1)
+$(TMPDIR)/sounds/restart.pcm: baserom.gba ; $(call dump_data,0xBEBC49,0x15EE)
+$(TMPDIR)/sounds/metalroll.pcm: baserom.gba ; $(call dump_data,0xBED237,0x1D07)
+$(TMPDIR)/sounds/shwing.pcm: baserom.gba ; $(call dump_data,0xBEEF3E,0xF77)
+$(TMPDIR)/sounds/kick.pcm: baserom.gba ; $(call dump_data,0xBEFEB5,0x35A)
+$(TMPDIR)/sounds/brickman.pcm: baserom.gba ; $(call dump_data,0xBF020F,0x2502)
+$(TMPDIR)/sounds/spit.pcm: baserom.gba ; $(call dump_data,0xBF2711,0x20BF)
+$(TMPDIR)/sounds/pop.pcm: baserom.gba ; $(call dump_data,0xBF47D0,0x1D00)
+$(TMPDIR)/sounds/growl.pcm: baserom.gba ; $(call dump_data,0xBF64D0,0x1434)
+$(TMPDIR)/sounds/growl2.pcm: baserom.gba ; $(call dump_data,0xBF7904,0x1F65)
+$(TMPDIR)/sounds/ghost.pcm: baserom.gba ; $(call dump_data,0xBF9869,0xBC5)
+$(TMPDIR)/sounds/shy_wake.pcm: baserom.gba ; $(call dump_data,0xBFA42E,0xB8A)
+$(TMPDIR)/sounds/shy_run.pcm: baserom.gba ; $(call dump_data,0xBFAFB8,0x98D)
+$(TMPDIR)/sounds/bomb_peep.pcm: baserom.gba ; $(call dump_data,0xBFB945,0x89F)
+$(TMPDIR)/sounds/bomb_jump.pcm: baserom.gba ; $(call dump_data,0xBFC1E4,0x18DB)
+$(TMPDIR)/sounds/bomb_flash.pcm: baserom.gba ; $(call dump_data,0xBFDABF,0x408)
+$(TMPDIR)/sounds/bomb_blow.pcm: baserom.gba ; $(call dump_data,0xBFDEC7,0x1FBD)
+$(TMPDIR)/sounds/vaporize.pcm: baserom.gba ; $(call dump_data,0xBFFE84,0x18D9)
+$(TMPDIR)/sounds/bat.pcm: baserom.gba ; $(call dump_data,0xC0175D,0x16B7)
+$(TMPDIR)/sounds/cannon.pcm: baserom.gba ; $(call dump_data,0xC02E14,0x2485)
+$(TMPDIR)/sounds/crouch.pcm: baserom.gba ; $(call dump_data,0xC05299,0x1)
+$(TMPDIR)/sounds/scatter.pcm: baserom.gba ; $(call dump_data,0xC0529A,0x4804)
+$(TMPDIR)/sounds/reach.pcm: baserom.gba ; $(call dump_data,0xC09A9E,0x9D8)
+$(TMPDIR)/sounds/dk_head.pcm: baserom.gba ; $(call dump_data,0xC0A476,0x213F)
+$(TMPDIR)/sounds/gotcha.pcm: baserom.gba ; $(call dump_data,0xC0C5B5,0x23C1)
+$(TMPDIR)/sounds/toad_walk.pcm: baserom.gba ; $(call dump_data,0xC0E976,0xC81)
+$(TMPDIR)/sounds/toad_toss.pcm: baserom.gba ; $(call dump_data,0xC0F5F7,0x37F0)
+$(TMPDIR)/sounds/box_fall.pcm: baserom.gba ; $(call dump_data,0xC12DE7,0x6441)
+$(TMPDIR)/sounds/sparky_loop.pcm: baserom.gba ; $(call dump_data,0xC19228,0x16EF)
+$(TMPDIR)/sounds/dk_blub.pcm: baserom.gba ; $(call dump_data,0xC1A917,0x1485)
+$(TMPDIR)/sounds/yank.pcm: baserom.gba ; $(call dump_data,0xC1BD9C,0x1A92)
+$(TMPDIR)/sounds/spike.pcm: baserom.gba ; $(call dump_data,0xC1D82E,0x1B7A)
+$(TMPDIR)/sounds/bone.pcm: baserom.gba ; $(call dump_data,0xC1F3A8,0x458F)
+$(TMPDIR)/sounds/mm_boingup.pcm: baserom.gba ; $(call dump_data,0xC23937,0x54D)
+$(TMPDIR)/sounds/laser.pcm: baserom.gba ; $(call dump_data,0xC23E84,0x1E70)
+$(TMPDIR)/sounds/dk_jump.pcm: baserom.gba ; $(call dump_data,0xC25CF4,0x1D4B)
+$(TMPDIR)/sounds/jump_8.pcm: baserom.gba ; $(call dump_data,0xC27A3F,0x9FA)
+$(TMPDIR)/sounds/trashcan.pcm: baserom.gba ; $(call dump_data,0xC28439,0x13AD)
+$(TMPDIR)/sounds/key_toad.pcm: baserom.gba ; $(call dump_data,0xC297E6,0x23ED)
+$(TMPDIR)/sounds/shatter.pcm: baserom.gba ; $(call dump_data,0xC2BBD3,0x32EA)
+$(TMPDIR)/sounds/toad_carry.pcm: baserom.gba ; $(call dump_data,0xC2EEBD,0x10B0)
+$(TMPDIR)/sounds/toad_set.pcm: baserom.gba ; $(call dump_data,0xC2FF6D,0x191E)
+$(TMPDIR)/sounds/jump_a.pcm: baserom.gba ; $(call dump_data,0xC3188B,0x4BB)
+$(TMPDIR)/sounds/jump_b.pcm: baserom.gba ; $(call dump_data,0xC31D46,0x420)
+$(TMPDIR)/sounds/jump_c.pcm: baserom.gba ; $(call dump_data,0xC32166,0x496)
+$(TMPDIR)/sounds/jump_d.pcm: baserom.gba ; $(call dump_data,0xC325FC,0x533)
+$(TMPDIR)/sounds/shuffle.pcm: baserom.gba ; $(call dump_data,0xC32B2F,0x820)
+$(TMPDIR)/sounds/movie_07.pcm: baserom.gba ; $(call dump_data,0xC3334F,0x18EE3)
+$(TMPDIR)/sounds/movie_01.pcm: baserom.gba ; $(call dump_data,0xC4C232,0x7D80)
+$(TMPDIR)/sounds/mini_key.pcm: baserom.gba ; $(call dump_data,0xC53FB2,0x9639)
+$(TMPDIR)/sounds/movie2_1.pcm: baserom.gba ; $(call dump_data,0xC5D5EB,0x27B3)
+$(TMPDIR)/sounds/movie2_2.pcm: baserom.gba ; $(call dump_data,0xC5FD9E,0x5100)
+$(TMPDIR)/sounds/movie2_3.pcm: baserom.gba ; $(call dump_data,0xC64E9E,0x3790)
+$(TMPDIR)/sounds/movie2_4.pcm: baserom.gba ; $(call dump_data,0xC6862E,0x4C3C)
+$(TMPDIR)/sounds/movie2_5.pcm: baserom.gba ; $(call dump_data,0xC6D26A,0x3568)
+$(TMPDIR)/sounds/movie2_6.pcm: baserom.gba ; $(call dump_data,0xC707D2,0x4D58)
+$(TMPDIR)/sounds/movie2_7.pcm: baserom.gba ; $(call dump_data,0xC7552A,0x2B20)
+$(TMPDIR)/sounds/movie2_8.pcm: baserom.gba ; $(call dump_data,0xC7804A,0x5599)
+$(TMPDIR)/sounds/boss_arm.pcm: baserom.gba ; $(call dump_data,0xC7D5E3,0x22B9)
+$(TMPDIR)/sounds/boss_arm2.pcm: baserom.gba ; $(call dump_data,0xC7F89C,0x198D)
+$(TMPDIR)/sounds/boss_arm3.pcm: baserom.gba ; $(call dump_data,0xC81229,0x216F)
+$(TMPDIR)/sounds/boss_arm4.pcm: baserom.gba ; $(call dump_data,0xC83398,0x15D6)
+$(TMPDIR)/sounds/boss_arm5.pcm: baserom.gba ; $(call dump_data,0xC8496E,0x2F19)
+$(TMPDIR)/sounds/boss_switch.pcm: baserom.gba ; $(call dump_data,0xC87887,0x1F16)
+$(TMPDIR)/sounds/cursor_world.pcm: baserom.gba ; $(call dump_data,0xC8979D,0x107E)
+$(TMPDIR)/sounds/cursor_up_dn.pcm: baserom.gba ; $(call dump_data,0xC8A81B,0x742)
+$(TMPDIR)/sounds/boss_die1.pcm: baserom.gba ; $(call dump_data,0xC8AF5D,0x1F40)
+$(TMPDIR)/sounds/boss_die2.pcm: baserom.gba ; $(call dump_data,0xC8CE9D,0x6220)
+$(TMPDIR)/sounds/boss_intro1.pcm: baserom.gba ; $(call dump_data,0xC930BD,0x4037)
+$(TMPDIR)/sounds/boss_intro3.pcm: baserom.gba ; $(call dump_data,0xC970F4,0x7B18)
+$(TMPDIR)/sounds/plus_main.pcm: baserom.gba ; $(call dump_data,0xC9EC0C,0x17E6)
+$(TMPDIR)/sounds/barrel.pcm: baserom.gba ; $(call dump_data,0xCA03F2,0x1026)
+$(TMPDIR)/sounds/spike_hit.pcm: baserom.gba ; $(call dump_data,0xCA1418,0x1678)
+$(TMPDIR)/sounds/bigbarrel_hit.pcm: baserom.gba ; $(call dump_data,0xCA2A90,0x19A0)
+$(TMPDIR)/sounds/bigbarrel_fall.pcm: baserom.gba ; $(call dump_data,0xCA4430,0x1)
+$(TMPDIR)/sounds/toads_jump.pcm: baserom.gba ; $(call dump_data,0xCA4431,0x8CB2)
+$(TMPDIR)/sounds/toads_grab.pcm: baserom.gba ; $(call dump_data,0xCAD0E3,0x1E7B)
+$(TMPDIR)/sounds/movie3_01.pcm: baserom.gba ; $(call dump_data,0xCAEF5E,0x1)
+$(TMPDIR)/sounds/movie3_02.pcm: baserom.gba ; $(call dump_data,0xCAEF5F,0x2943)
+$(TMPDIR)/sounds/movie3_03.pcm: baserom.gba ; $(call dump_data,0xCB18A2,0x19C8)
+$(TMPDIR)/sounds/movie3_04.pcm: baserom.gba ; $(call dump_data,0xCB326A,0x3FBC)
+$(TMPDIR)/sounds/movie3_05.pcm: baserom.gba ; $(call dump_data,0xCB7226,0x4040)
+$(TMPDIR)/sounds/movie3_06.pcm: baserom.gba ; $(call dump_data,0xCBB266,0x3940)
+$(TMPDIR)/sounds/movie3_07.pcm: baserom.gba ; $(call dump_data,0xCBEBA6,0x50E0)
+$(TMPDIR)/sounds/movie3_08.pcm: baserom.gba ; $(call dump_data,0xCC3C86,0x4B20)
+$(TMPDIR)/sounds/movie3_09.pcm: baserom.gba ; $(call dump_data,0xCC87A6,0x46A0)
+$(TMPDIR)/sounds/movie3_10.pcm: baserom.gba ; $(call dump_data,0xCCCE46,0x4060)
+$(TMPDIR)/sounds/movie3_11.pcm: baserom.gba ; $(call dump_data,0xCD0EA6,0x4680)
+$(TMPDIR)/sounds/movie3_12.pcm: baserom.gba ; $(call dump_data,0xCD5526,0x1)
+$(TMPDIR)/sounds/movie3_13.pcm: baserom.gba ; $(call dump_data,0xCD5527,0x1)
+$(TMPDIR)/sounds/movie3_14.pcm: baserom.gba ; $(call dump_data,0xCD5528,0x5A90)
+$(TMPDIR)/sounds/movie4_01.pcm: baserom.gba ; $(call dump_data,0xCDAFB8,0x4E00)
+$(TMPDIR)/sounds/movie4_02.pcm: baserom.gba ; $(call dump_data,0xCDFDB8,0x7E2C)
+$(TMPDIR)/sounds/movie4_03.pcm: baserom.gba ; $(call dump_data,0xCE7BE4,0x4460)
+$(TMPDIR)/sounds/movie4_04.pcm: baserom.gba ; $(call dump_data,0xCEC044,0xF26B)
+$(TMPDIR)/sounds/movie4_06.pcm: baserom.gba ; $(call dump_data,0xCFB2AF,0x1)
+$(TMPDIR)/sounds/movie4_07.pcm: baserom.gba ; $(call dump_data,0xCFB2B0,0x4D0F)
+$(TMPDIR)/sounds/movie4_08.pcm: baserom.gba ; $(call dump_data,0xCFFFBF,0x4FD4)
+$(TMPDIR)/sounds/movie4_09.pcm: baserom.gba ; $(call dump_data,0xD04F93,0x4387)
+$(TMPDIR)/sounds/movie4_10.pcm: baserom.gba ; $(call dump_data,0xD0931A,0x4EA0)
+$(TMPDIR)/sounds/movie5_01.pcm: baserom.gba ; $(call dump_data,0xD0E1BA,0x40F0)
+$(TMPDIR)/sounds/movie5_05.pcm: baserom.gba ; $(call dump_data,0xD122AA,0xDC5)
+$(TMPDIR)/sounds/movie5_07.pcm: baserom.gba ; $(call dump_data,0xD1306F,0x4B95)
+$(TMPDIR)/sounds/movie6_01.pcm: baserom.gba ; $(call dump_data,0xD17C04,0x53AF)
+$(TMPDIR)/sounds/movie6_02.pcm: baserom.gba ; $(call dump_data,0xD1CFB3,0x144F)
+$(TMPDIR)/sounds/movie6_03.pcm: baserom.gba ; $(call dump_data,0xD1E402,0x5DEF)
+$(TMPDIR)/sounds/movie6_04.pcm: baserom.gba ; $(call dump_data,0xD241F1,0x52FA)
+$(TMPDIR)/sounds/movie6_05.pcm: baserom.gba ; $(call dump_data,0xD294EB,0x59C0)
+$(TMPDIR)/sounds/movie6_06.pcm: baserom.gba ; $(call dump_data,0xD2EEAB,0x3AA5)
+$(TMPDIR)/sounds/movie6_07.pcm: baserom.gba ; $(call dump_data,0xD32950,0x57A5)
+$(TMPDIR)/sounds/movie6_08.pcm: baserom.gba ; $(call dump_data,0xD380F5,0x553A)
+$(TMPDIR)/sounds/movie6_09.pcm: baserom.gba ; $(call dump_data,0xD3D62F,0x5963)
+$(TMPDIR)/sounds/movie6_10.pcm: baserom.gba ; $(call dump_data,0xD42F92,0x6225)
+$(TMPDIR)/sounds/movie2_9.pcm: baserom.gba ; $(call dump_data,0xD491B7,0x434B)
+$(TMPDIR)/sounds/movie2_10.pcm: baserom.gba ; $(call dump_data,0xD4D502,0x1)
+$(TMPDIR)/sounds/movie_08.pcm: baserom.gba ; $(call dump_data,0xD4D503,0xE9D)
+$(TMPDIR)/sounds/title.pcm: baserom.gba ; $(call dump_data,0xD4E3A0,0x45E3)
+$(TMPDIR)/sounds/you_won1.pcm: baserom.gba ; $(call dump_data,0xD52983,0x244F)
+$(TMPDIR)/sounds/you_won2.pcm: baserom.gba ; $(call dump_data,0xD54DD2,0x21E6)
+$(TMPDIR)/sounds/you_won3.pcm: baserom.gba ; $(call dump_data,0xD56FB8,0x37A9)
+$(TMPDIR)/sounds/star.pcm: baserom.gba ; $(call dump_data,0xD5A761,0x1324)
+$(TMPDIR)/sounds/dk_walk.pcm: baserom.gba ; $(call dump_data,0xD5BA85,0xC84)
+$(TMPDIR)/sounds/scuff2.pcm: baserom.gba ; $(call dump_data,0xD5C709,0xD48)
+$(TMPDIR)/sounds/world_start.pcm: baserom.gba ; $(call dump_data,0xD5D451,0x2AAF)
+$(TMPDIR)/sounds/mm_wakeup.pcm: baserom.gba ; $(call dump_data,0xD5FF00,0x2D0E)
+$(TMPDIR)/sounds/mm_free.pcm: baserom.gba ; $(call dump_data,0xD62C0E,0x2C75)
+$(TMPDIR)/sounds/mm_mamamias.pcm: baserom.gba ; $(call dump_data,0xD65883,0x3158)
+$(TMPDIR)/sounds/spike_vanish.pcm: baserom.gba ; $(call dump_data,0xD689DB,0xECF)
+$(TMPDIR)/sounds/spike_appear.pcm: baserom.gba ; $(call dump_data,0xD698AA,0x17E4)
+$(TMPDIR)/sounds/boss_die3.pcm: baserom.gba ; $(call dump_data,0xD6B08E,0x84DF)
+$(TMPDIR)/sounds/barrel_bounce.pcm: baserom.gba ; $(call dump_data,0xD7356D,0x434)
+$(TMPDIR)/sounds/rock_bounce.pcm: baserom.gba ; $(call dump_data,0xD739A1,0x1C2)
+$(TMPDIR)/sounds/mm_walk.pcm: baserom.gba ; $(call dump_data,0xD73B63,0xAF4)
+$(TMPDIR)/sounds/dk_grunt.pcm: baserom.gba ; $(call dump_data,0xD74657,0xFB2)
+$(TMPDIR)/sounds/ribbon.pcm: baserom.gba ; $(call dump_data,0xD75609,0xE43)
+$(TMPDIR)/sounds/won_text.pcm: baserom.gba ; $(call dump_data,0xD7644C,0x33EA)
+$(TMPDIR)/sounds/dk_fall.pcm: baserom.gba ; $(call dump_data,0xD79836,0x18D6)
+
 # convert files to PNG (with optional palette)
-#assets/%.png: $(TMPDIR)/%.4bpp $(TMPDIR)/%.gbapal $(GBAGFX)
-#	@mkdir -p $(@D)
-#	$(GBAGFX) $< $@ $(GBAGFX_FLAGS) -palette $(filter %.gbapal,$^)
-#assets/%.png: $(TMPDIR)/%.8bpp $(TMPDIR)/%.gbapal $(GBAGFX)
-#	@mkdir -p $(@D)
-#	$(GBAGFX) $< $@ $(GBAGFX_FLAGS) -palette $(filter %.gbapal,$^)
 assets/%.png: $(TMPDIR)/%.4bpp $(GBAGFX)
 	@mkdir -p $(@D)
 	$(GBAGFX) $< $@ $(GBAGFX_FLAGS) $(addprefix -palette ,$(filter %.gbapal,$^))
@@ -5191,6 +5693,10 @@ assets/%.pal: $(TMPDIR)/%.gbapal $(GBAGFX)
 	@mkdir -p $(@D)
 	$(GBAGFX) $< $@ $(GBAGFX_FLAGS)
 
+# convert sounds to AIFF
+assets/sounds/%.aif: $(TMPDIR)/sounds/%.pcm $(AIF2PCM)
+	$(AIF2PCM) $< $@
+
 # build tools
-$(GBAGFX):
-	$(MAKE) -C $(@D)
+$(GBAGFX):  ; $(MAKE) -C $(@D)
+$(AIF2PCM): ; $(MAKE) -C $(@D)

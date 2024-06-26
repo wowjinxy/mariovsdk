@@ -366,191 +366,6 @@ void read_aif(struct Bytes *aif, AifData *aif_data)
 	}
 }
 
-// This is a table of deltas between sample values in compressed PCM data.
-const int gDeltaEncodingTable[] = {
-	0, 1, 4, 9, 16, 25, 36, 49,
-	-64, -49, -36, -25, -16, -9, -4, -1,
-};
-
-#define POSITIVE_DELTAS_START 0
-#define POSITIVE_DELTAS_END 8
-
-#define NEGATIVE_DELTAS_START 8
-#define NEGATIVE_DELTAS_END 16
-
-struct Bytes *delta_decompress(struct Bytes *delta, unsigned int expected_length)
-{
-	struct Bytes *pcm = malloc(sizeof(struct Bytes));
-	pcm->length = expected_length;
-	pcm->data = malloc(pcm->length + 0x40);
-
-	uint8_t hi, lo;
-	unsigned int i = 0;
-	unsigned int j = 0;
-	int k;
-	int8_t base;
-	while (i < delta->length)
-	{
-		base = (int8_t)delta->data[i++];
-		pcm->data[j++] = (uint8_t)base;
-		if (i >= delta->length)
-		{
-			break;
-		}
-		if (j >= pcm->length)
-		{
-			break;
-		}
-		lo = delta->data[i] & 0xf;
-		base += gDeltaEncodingTable[lo];
-		pcm->data[j++] = base;
-		i++;
-		if (i >= delta->length)
-		{
-			break;
-		}
-		if (j >= pcm->length)
-		{
-			break;
-		}
-		for (k = 0; k < 31; k++)
-		{
-			hi = (delta->data[i] >> 4) & 0xf;
-			base += gDeltaEncodingTable[hi];
-			pcm->data[j++] = base;
-			if (j >= pcm->length)
-			{
-				break;
-			}
-			lo = delta->data[i] & 0xf;
-			base += gDeltaEncodingTable[lo];
-			pcm->data[j++] = base;
-			i++;
-			if (i >= delta->length)
-			{
-				break;
-			}
-			if (j >= pcm->length)
-			{
-				break;
-			}
-		}
-		if (j >= pcm->length)
-		{
-			break;
-		}
-	}
-
-	pcm->length = j;
-	return pcm;
-}
-
-#define U8_TO_S8(value) ((value) < 128 ? (value) : (value) - 256)
-#define ABS(value) ((value) >= 0 ? (value) : -(value))
-
-int get_delta_index(uint8_t sample, uint8_t prev_sample)
-{
-	int best_error = INT_MAX;
-	int best_index = -1;
-	int delta_table_start_index;
-	int delta_table_end_index;
-	int sample_signed = U8_TO_S8(sample);
-	int prev_sample_signed = U8_TO_S8(prev_sample);
-
-    // if we're going up (or equal), only choose positive deltas
-	if (prev_sample_signed <= sample_signed) {
-		delta_table_start_index = POSITIVE_DELTAS_START;
-		delta_table_end_index = POSITIVE_DELTAS_END;
-	} else {
-		delta_table_start_index = NEGATIVE_DELTAS_START;
-		delta_table_end_index = NEGATIVE_DELTAS_END;
-	}
-
-	for (int i = delta_table_start_index; i < delta_table_end_index; i++)
-	{
-		uint8_t new_sample = prev_sample + gDeltaEncodingTable[i];
-		int new_sample_signed = U8_TO_S8(new_sample);
-		int error = ABS(new_sample_signed - sample_signed);
-
-		if (error < best_error)
-		{
-			best_error = error;
-			best_index = i;
-		}
-	}
-
-	return best_index;
-}
-
-struct Bytes *delta_compress(struct Bytes *pcm)
-{
-	struct Bytes *delta = malloc(sizeof(struct Bytes));
-	// estimate the length so we can malloc
-	int num_blocks = pcm->length / 64;
-	delta->length = num_blocks * 33;
-
-	int extra = pcm->length % 64;
-	if (extra)
-	{
-		delta->length += 1;
-		extra -= 1;
-	}
-	if (extra)
-	{
-		delta->length += 1;
-		extra -= 1;
-	}
-	if (extra)
-	{
-		delta->length += (extra + 1) / 2;
-	}
-
-	delta->data = malloc(delta->length + 33);
-
-	unsigned int i = 0;
-	unsigned int j = 0;
-	int k;
-	uint8_t base;
-	int delta_index;
-
-	while (i < pcm->length)
-	{
-		base = pcm->data[i++];
-		delta->data[j++] = base;
-
-		if (i >= pcm->length)
-		{
-			break;
-		}
-		delta_index = get_delta_index(pcm->data[i++], base);
-		base += gDeltaEncodingTable[delta_index];
-		delta->data[j++] = delta_index;
-
-		for (k = 0; k < 31; k++)
-		{
-			if (i >= pcm->length)
-			{
-				break;
-			}
-			delta_index = get_delta_index(pcm->data[i++], base);
-			base += gDeltaEncodingTable[delta_index];
-			delta->data[j] = (delta_index << 4);
-
-			if (i >= pcm->length)
-			{
-				break;
-			}
-			delta_index = get_delta_index(pcm->data[i++], base);
-			base += gDeltaEncodingTable[delta_index];
-			delta->data[j++] |= delta_index;
-		}
-	}
-
-	delta->length = j;
-
-	return delta;
-}
-
 #define STORE_U32_LE(dest, value) \
 do { \
 	*(dest) = (value) & 0xff; \
@@ -568,12 +383,12 @@ do { \
 } while (0)
 
 // Reads an .aif file and produces a .pcm file containing an array of 8-bit samples.
-void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress)
+void aif2pcm(const char *aif_filename, const char *pcm_filename)
 {
 	struct Bytes *aif = read_bytearray(aif_filename);
 	AifData aif_data = {0};
 	read_aif(aif, &aif_data);
-	
+
 	// Convert 16-bit to 8-bit if necessary
 	if (aif_data.sample_size == 16)
 	{
@@ -587,38 +402,16 @@ void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress)
 		aif_data.samples8 = converted_samples;
 	}
 
-	int header_size = 0x10;
 	struct Bytes *pcm;
 	struct Bytes output = {0,0};
 
-	if (compress)
-	{
-		struct Bytes *input = malloc(sizeof(struct Bytes));
-		input->data = aif_data.samples8;
-		input->length = aif_data.real_num_samples;
-		pcm = delta_compress(input);
-		free(input);
-	}
-	else
-	{
-		pcm = malloc(sizeof(struct Bytes));
-		pcm->data = aif_data.samples8;
-		pcm->length = aif_data.real_num_samples;
-	}
-	output.length = header_size + pcm->length;
+	pcm = malloc(sizeof(struct Bytes));
+	pcm->data = aif_data.samples8;
+	pcm->length = aif_data.real_num_samples;
+	output.length = pcm->length;
 	output.data = malloc(output.length);
 
-	uint32_t pitch_adjust = (uint32_t)(aif_data.sample_rate * 1024);
-	uint32_t loop_offset = (uint32_t)(aif_data.loop_offset);
-	uint32_t adjusted_num_samples = (uint32_t)(aif_data.num_samples - 1);
-	uint32_t flags = 0;
-	if (aif_data.has_loop) flags |= 0x40000000;
-	if (compress) flags |= 1;
-	STORE_U32_LE(output.data + 0, flags);
-	STORE_U32_LE(output.data + 4, pitch_adjust);
-	STORE_U32_LE(output.data + 8, loop_offset);
-	STORE_U32_LE(output.data + 12, adjusted_num_samples);
-	memcpy(&output.data[header_size], pcm->data, pcm->length);
+	memcpy(output.data, pcm->data, pcm->length);
 	write_bytearray(pcm_filename, &output);
 
 	free(aif->data);
@@ -636,34 +429,13 @@ void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_n
 
 	AifData *aif_data = malloc(sizeof(AifData));
 
-	uint32_t flags;
-	LOAD_U32_LE(flags, pcm->data + 0);
+	uint32_t flags = 0;
 	aif_data->has_loop = flags & 0x40000000;
-	bool compressed = flags & 1;
 
-	uint32_t pitch_adjust;
-	LOAD_U32_LE(pitch_adjust, pcm->data + 4);
-	aif_data->sample_rate = pitch_adjust / 1024.0;
-
-	LOAD_U32_LE(aif_data->loop_offset, pcm->data + 8);
-	LOAD_U32_LE(aif_data->num_samples, pcm->data + 12);
+	aif_data->sample_rate = 8000;
+	aif_data->loop_offset = 0;
+	aif_data->num_samples = pcm->length;
 	aif_data->num_samples += 1;
-
-	if (compressed)
-	{
-		struct Bytes *delta = pcm;
-		uint8_t *pcm_data = pcm->data;
-		delta->length -= 0x10;
-		delta->data += 0x10;
-		pcm = delta_decompress(delta, aif_data->num_samples);
-		free(pcm_data);
-		free(delta);
-	}
-	else
-	{
-		pcm->length -= 0x10;
-		pcm->data += 0x10;
-	}
 
 	aif_data->samples8 = malloc(pcm->length);
 	memcpy(aif_data->samples8, pcm->data, pcm->length);
@@ -881,7 +653,7 @@ void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_n
 void usage(void)
 {
 	fprintf(stderr, "Usage: aif2pcm bin_file [aif_file]\n");
-	fprintf(stderr, "       aif2pcm aif_file [bin_file] [--compress]\n");
+	fprintf(stderr, "       aif2pcm aif_file [bin_file]\n");
 }
 
 int main(int argc, char **argv)
@@ -895,34 +667,22 @@ int main(int argc, char **argv)
 	char *input_file = argv[1];
 	char *extension = get_file_extension(input_file);
 	char *output_file;
-	bool compressed = false;
-
-	if (argc > 3)
-	{
-		for (int i = 3; i < argc; i++)
-		{
-			if (strcmp(argv[i], "--compress") == 0)
-			{
-				compressed = true;
-			}
-		}
-	}
 
 	if (strcmp(extension, "aif") == 0 || strcmp(extension, "aiff") == 0)
 	{
 		if (argc >= 3)
 		{
 			output_file = argv[2];
-			aif2pcm(input_file, output_file, compressed);
+			aif2pcm(input_file, output_file);
 		}
 		else
 		{
 			output_file = new_file_extension(input_file, "bin");
-			aif2pcm(input_file, output_file, compressed);
+			aif2pcm(input_file, output_file);
 			free(output_file);
 		}
 	}
-	else if (strcmp(extension, "bin") == 0)
+	else if (strcmp(extension, "bin") == 0 || strcmp(extension, "pcm") == 0)
 	{
 		if (argc >= 3)
 		{
