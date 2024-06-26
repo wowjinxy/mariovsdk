@@ -17,6 +17,7 @@ LD       := $(DEVKITARM)/bin/arm-none-eabi-ld
 OBJCOPY  := $(DEVKITARM)/bin/arm-none-eabi-objcopy
 
 GBAGFX   := tools/gbagfx/gbagfx
+AIF2PCM  := tools/aif2pcm/aif2pcm
 
 CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -O2 -fhex-asm -fno-common
 CPPFLAGS := -I tools/agbcc/include -iquote include -nostdinc -undef
@@ -51,6 +52,7 @@ clean:
 	find . -name '*.4bpp' -exec rm {} +
 	find . -name '*.8bpp' -exec rm {} +
 	find . -name '*.gbapal' -exec rm {} +
+	$(RM) assets/sounds/*.bin
 	$(MAKE) -C tools/gbagfx clean
 
 # Compile a set of baserom objects for use with objdiff
@@ -86,7 +88,10 @@ ldscript.txt: ldscript.in
 %.8bpp:   %.png $(GBAGFX) ; $(GBAGFX) $< $@
 %.gbapal: %.pal $(GBAGFX) ; $(GBAGFX) $< $@
 
-$(GBAGFX): ; $(MAKE) -C $(@D)
+%.bin:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
+
+$(GBAGFX):  ; $(MAKE) -C $(@D)
+$(AIF2PCM): ; $(MAKE) -C $(@D)
 
 # Automatically scan files for incbins and add them as a dependency
 .SECONDEXPANSION:
