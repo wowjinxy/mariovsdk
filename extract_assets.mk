@@ -100,7 +100,7 @@ FILES := \
 		assets/palettes/74_$(t).pal \
 		assets/palettes/75_$(t).pal \
 	) \
-	assets/sprites/DKHurt.png \
+	assets/sprites/DK/DKHurt.png \
 	assets/sprites/MainLevelIconPics.png \
 	assets/sprites/PressStart.png \
 	assets/sprites/FileLetters.png \
@@ -153,16 +153,16 @@ FILES := \
 	assets/sprites/gUnknown_080C8E30.png \
 	assets/sprites/gUnknown_080CABB0.png \
 	assets/sprites/gUnknown_080CB7F0.png \
-	assets/sprites/MarioBurn.png \
-	assets/sprites/gUnknown_080D46C0.png \
-	assets/sprites/MarioFlail.png \
-	assets/sprites/gUnknown_080E4C70.png \
-	assets/sprites/gUnknown_080E6EB8.png \
-	assets/sprites/MarioElectrocute.png \
-	assets/sprites/MarioLand.png \
-	assets/sprites/gUnknown_080EF798.png \
-	assets/sprites/gUnknown_080F2020.png \
-	assets/sprites/gUnknown_080F4808.png \
+	assets/sprites/mario/MarioBurn.png \
+	assets/sprites/mario/gUnknown_080D46C0.png \
+	assets/sprites/mario/MarioFlail.png \
+	assets/sprites/mario/gUnknown_080E4C70.png \
+	assets/sprites/mario/gUnknown_080E6EB8.png \
+	assets/sprites/mario/MarioElectrocute.png \
+	assets/sprites/mario/MarioLand.png \
+	assets/sprites/mario/gUnknown_080EF798.png \
+	assets/sprites/mario/gUnknown_080F2020.png \
+	assets/sprites/mario/gUnknown_080F4808.png \
 	assets/sprites/gUnknown_080F7250.png \
 	assets/sprites/gUnknown_080F8378.png \
 	assets/sprites/gUnknown_080F8CA0.png \
@@ -305,23 +305,23 @@ FILES := \
 	assets/sprites/gUnknown_0813EC08.png \
 	assets/sprites/gUnknown_0813FE74.png \
 	assets/sprites/gUnknown_08145F30.png \
-	assets/sprites/gUnknown_081461D8.png \
-	assets/sprites/gUnknown_0814E348.png \
-	assets/sprites/gUnknown_08150BE0.png \
-	assets/sprites/gUnknown_08159634.png \
-	assets/sprites/gUnknown_0815FFEC.png \
-	assets/sprites/gUnknown_08163138.png \
-	assets/sprites/gUnknown_08167964.png \
-	assets/sprites/gUnknown_0816855C.png \
-	assets/sprites/gUnknown_08175714.png \
-	assets/sprites/gUnknown_081817F4.png \
-	assets/sprites/gUnknown_08187ACC.png \
-	assets/sprites/gUnknown_0818ADC8.png \
-	assets/sprites/gUnknown_0819EE60.png \
-	assets/sprites/gUnknown_081A2180.png \
-	assets/sprites/gUnknown_081B6380.png \
-	assets/sprites/gUnknown_081B90A8.png \
-	assets/sprites/gUnknown_081BD1F4.png \
+	assets/sprites/DK/gUnknown_081461D8.png \
+	assets/sprites/DK/gUnknown_0814E348.png \
+	assets/sprites/DK/gUnknown_08150BE0.png \
+	assets/sprites/DK/gUnknown_08159634.png \
+	assets/sprites/DK/gUnknown_0815FFEC.png \
+	assets/sprites/DK/gUnknown_08163138.png \
+	assets/sprites/DK/gUnknown_08167964.png \
+	assets/sprites/DK/gUnknown_0816855C.png \
+	assets/sprites/DK/gUnknown_08175714.png \
+	assets/sprites/DK/gUnknown_081817F4.png \
+	assets/sprites/DK/gUnknown_08187ACC.png \
+	assets/sprites/DK/gUnknown_0818ADC8.png \
+	assets/sprites/DK/gUnknown_0819EE60.png \
+	assets/sprites/DK/gUnknown_081A2180.png \
+	assets/sprites/DK/gUnknown_081B6380.png \
+	assets/sprites/DK/gUnknown_081B90A8.png \
+	assets/sprites/DK/gUnknown_081BD1F4.png \
 	assets/sprites/gUnknown_081C1A20.png \
 	assets/sprites/gUnknown_081C1C70.png \
 	assets/sprites/gUnknown_081C209C.png \
@@ -478,13 +478,13 @@ FILES := \
 	assets/sprites/TrashCanFlip.png \
 	assets/sprites/gUnknown_082AEE50.png \
 	assets/sprites/gUnknown_082AEF7C.png \
-	assets/sprites/BonusPresent.png \
-	assets/sprites/BonusPresentSquish.png \
-	assets/sprites/gUnknown_082B30B4.png \
-	assets/sprites/gUnknown_082B354C.png \
-	assets/sprites/gUnknown_082B45E4.png \
-	assets/sprites/gUnknown_082B567C.png \
-	assets/sprites/gUnknown_082B6714.png \
+	assets/sprites/bonus/BonusPresent.png \
+	assets/sprites/bonus/BonusPresentSquish.png \
+	assets/sprites/bonus/gUnknown_082B30B4.png \
+	assets/sprites/bonus/gUnknown_082B354C.png \
+	assets/sprites/bonus/gUnknown_082B45E4.png \
+	assets/sprites/bonus/gUnknown_082B567C.png \
+	assets/sprites/bonus/gUnknown_082B6714.png \
 	assets/sprites/gUnknown_082B7884.png \
 	assets/sprites/gUnknown_082B8F5C.png \
 	assets/sprites/gUnknown_082C32C4.png \
@@ -774,10 +774,10 @@ FILES := \
 	assets/sprites/gUnknown_083E17C4.png \
 	assets/sprites/gUnknown_083E7134.png \
 	assets/sprites/gUnknown_083E8A38.png \
-	assets/sprites/gUnknown_083EA73C.png \
-	assets/sprites/gUnknown_083ECC44.png \
+	assets/sprites/mario/gUnknown_083EA73C.png \
+	assets/sprites/mario/gUnknown_083ECC44.png \
 	assets/sprites/gUnknown_083F4E8C.png \
-	assets/sprites/gUnknown_083F9824.png \
+	assets/sprites/mario/gUnknown_083F9824.png \
 	assets/sprites/gUnknown_083FE4F4.png \
 	assets/sprites/gUnknown_084068EC.png \
 	assets/sprites/gUnknown_0840A9F0.png \
@@ -822,11 +822,11 @@ FILES := \
 	assets/sprites/gUnknown_084A05D8.png \
 	assets/sprites/gUnknown_084A27FC.png \
 	assets/sprites/gUnknown_084A668C.png \
-	assets/sprites/gUnknown_084AB314.png \
-	assets/sprites/gUnknown_084AB8CC.png \
-	assets/sprites/gUnknown_084ABE3C.png \
-	assets/sprites/gUnknown_084ADF64.png \
-	assets/sprites/gUnknown_084B0068.png \
+	assets/sprites/mario/gUnknown_084AB314.png \
+	assets/sprites/mario/gUnknown_084AB8CC.png \
+	assets/sprites/mario/gUnknown_084ABE3C.png \
+	assets/sprites/mario/gUnknown_084ADF64.png \
+	assets/sprites/mario/gUnknown_084B0068.png \
 	assets/sprites/gUnknown_084B1EB0.png \
 	assets/sprites/gUnknown_084B61F4.png \
 	assets/sprites/gUnknown_084BC27C.png \
@@ -1526,17 +1526,6 @@ $(TMPDIR)/palettes/%_obj_gbplayer.gbapal: baserom.gba ; $(call dump_data,0x81D98
 
 ### Sprites ###
 
-assets/sprites/test.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/test.8bpp: baserom.gba ; $(call dump_data,0x153188,0x800*12)
-
-assets/sprites/DKHurt.png: GBAGFX_FLAGS := -width 8
-assets/sprites/DKHurt.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
-$(TMPDIR)/sprites/DKHurt.8bpp: baserom.gba ; $(call dump_data,0x153188,0x800*12)
-
-assets/sprites/MainLevelIconPics.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/MainLevelIconPics.4bpp: baserom.gba ; $(call dump_data,0x5D10C8,0x200*48)
-assets/sprites/MainLevelIconPics.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.13.gbapal
-
 assets/sprites/PressStart.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/PressStart.4bpp: baserom.gba ; $(call dump_data,0x5F49D8,0x200)
 assets/sprites/PressStart.png: $(TMPDIR)/palettes/0_title_screen_obj.0.gbapal
@@ -1744,45 +1733,45 @@ assets/sprites/gUnknown_080CB7F0.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/sprites/gUnknown_080CB7F0.4bpp: baserom.gba ; $(call dump_data,0xCB7F0,0x5C0)
 assets/sprites/gUnknown_080CB7F0.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
-assets/sprites/MarioBurn.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/MarioBurn.8bpp: baserom.gba ; $(call dump_data,0xCC238,0x8000)
-assets/sprites/MarioBurn.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/MarioBurn.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/MarioBurn.8bpp: baserom.gba ; $(call dump_data,0xCC238,0x8000)
+assets/sprites/mario/MarioBurn.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080D46C0.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_080D46C0.8bpp: baserom.gba ; $(call dump_data,0xD46C0,0x8000)
-assets/sprites/gUnknown_080D46C0.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_080D46C0.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_080D46C0.8bpp: baserom.gba ; $(call dump_data,0xD46C0,0x8000)
+assets/sprites/mario/gUnknown_080D46C0.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/MarioFlail.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/MarioFlail.8bpp: baserom.gba ; $(call dump_data,0xDCB48,0x8000)
-assets/sprites/MarioFlail.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/MarioFlail.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/MarioFlail.8bpp: baserom.gba ; $(call dump_data,0xDCB48,0x8000)
+assets/sprites/mario/MarioFlail.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080E4C70.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_080E4C70.8bpp: baserom.gba ; $(call dump_data,0xE4C70,0x2000)
-assets/sprites/gUnknown_080E4C70.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_080E4C70.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_080E4C70.8bpp: baserom.gba ; $(call dump_data,0xE4C70,0x2000)
+assets/sprites/mario/gUnknown_080E4C70.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080E6EB8.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_080E6EB8.8bpp: baserom.gba ; $(call dump_data,0xE6EB8,0x4000)
-assets/sprites/gUnknown_080E6EB8.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_080E6EB8.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_080E6EB8.8bpp: baserom.gba ; $(call dump_data,0xE6EB8,0x4000)
+assets/sprites/mario/gUnknown_080E6EB8.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/MarioElectrocute.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/MarioElectrocute.8bpp: baserom.gba ; $(call dump_data,0xEB100,0x2000)
-assets/sprites/MarioElectrocute.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/MarioElectrocute.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/MarioElectrocute.8bpp: baserom.gba ; $(call dump_data,0xEB100,0x2000)
+assets/sprites/mario/MarioElectrocute.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/MarioLand.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/MarioLand.8bpp: baserom.gba ; $(call dump_data,0xED24C,0x2400)
-assets/sprites/MarioLand.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/MarioLand.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/MarioLand.8bpp: baserom.gba ; $(call dump_data,0xED24C,0x2400)
+assets/sprites/mario/MarioLand.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080EF798.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_080EF798.8bpp: baserom.gba ; $(call dump_data,0xEF798,0x2400)
-assets/sprites/gUnknown_080EF798.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_080EF798.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_080EF798.8bpp: baserom.gba ; $(call dump_data,0xEF798,0x2400)
+assets/sprites/mario/gUnknown_080EF798.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080F2020.png: GBAGFX_FLAGS := -width 2
-$(TMPDIR)/sprites/gUnknown_080F2020.8bpp: baserom.gba ; $(call dump_data,0xF2020,0x2000)
-assets/sprites/gUnknown_080F2020.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_080F2020.png: GBAGFX_FLAGS := -width 2
+$(TMPDIR)/sprites/mario/gUnknown_080F2020.8bpp: baserom.gba ; $(call dump_data,0xF2020,0x2000)
+assets/sprites/mario/gUnknown_080F2020.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_080F4808.png: GBAGFX_FLAGS := -width 2
-$(TMPDIR)/sprites/gUnknown_080F4808.8bpp: baserom.gba ; $(call dump_data,0xF4808,0x2800)
-assets/sprites/gUnknown_080F4808.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_080F4808.png: GBAGFX_FLAGS := -width 2
+$(TMPDIR)/sprites/mario/gUnknown_080F4808.8bpp: baserom.gba ; $(call dump_data,0xF4808,0x2800)
+assets/sprites/mario/gUnknown_080F4808.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_080F7250.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_080F7250.8bpp: baserom.gba ; $(call dump_data,0xF7250,0x1000)
@@ -2354,73 +2343,77 @@ assets/sprites/gUnknown_08145F30.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/gUnknown_08145F30.4bpp: baserom.gba ; $(call dump_data,0x145F30,0x180)
 assets/sprites/gUnknown_08145F30.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
-assets/sprites/gUnknown_081461D8.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_081461D8.8bpp: baserom.gba ; $(call dump_data,0x1461D8,0x8000)
-assets/sprites/gUnknown_081461D8.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/DK/gUnknown_081461D8.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_081461D8.8bpp: baserom.gba ; $(call dump_data,0x1461D8,0x8000)
+assets/sprites/DK/gUnknown_081461D8.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_0814E348.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_0814E348.8bpp: baserom.gba ; $(call dump_data,0x14E348,0x2800)
-assets/sprites/gUnknown_0814E348.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/DK/gUnknown_0814E348.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/DK/gUnknown_0814E348.8bpp: baserom.gba ; $(call dump_data,0x14E348,0x2800)
+assets/sprites/DK/gUnknown_0814E348.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_08150BE0.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_08150BE0.8bpp: baserom.gba ; $(call dump_data,0x150BE0,0x2000)
-assets/sprites/gUnknown_08150BE0.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_08150BE0.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/DK/gUnknown_08150BE0.8bpp: baserom.gba ; $(call dump_data,0x150BE0,0x2000)
+assets/sprites/DK/gUnknown_08150BE0.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_08159634.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_08159634.8bpp: baserom.gba ; $(call dump_data,0x159634,0x6800)
-assets/sprites/gUnknown_08159634.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/DKHurt.png: GBAGFX_FLAGS := -width 8
+assets/sprites/DK/DKHurt.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+$(TMPDIR)/sprites/DK/DKHurt.8bpp: baserom.gba ; $(call dump_data,0x153188,0x800*12)
 
-assets/sprites/gUnknown_0815FFEC.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_0815FFEC.8bpp: baserom.gba ; $(call dump_data,0x15FFEC,0x3000)
-assets/sprites/gUnknown_0815FFEC.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_08159634.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_08159634.8bpp: baserom.gba ; $(call dump_data,0x159634,0x6800)
+assets/sprites/DK/gUnknown_08159634.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_08163138.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_08163138.8bpp: baserom.gba ; $(call dump_data,0x163138,0x4800)
-assets/sprites/gUnknown_08163138.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_0815FFEC.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_0815FFEC.8bpp: baserom.gba ; $(call dump_data,0x15FFEC,0x3000)
+assets/sprites/DK/gUnknown_0815FFEC.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_08167964.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_08167964.8bpp: baserom.gba ; $(call dump_data,0x167964,0x800)
-assets/sprites/gUnknown_08167964.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_08163138.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_08163138.8bpp: baserom.gba ; $(call dump_data,0x163138,0x4800)
+assets/sprites/DK/gUnknown_08163138.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_0816855C.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_0816855C.8bpp: baserom.gba ; $(call dump_data,0x16855C,0xD000)
-assets/sprites/gUnknown_0816855C.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_08167964.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_08167964.8bpp: baserom.gba ; $(call dump_data,0x167964,0x800)
+assets/sprites/DK/gUnknown_08167964.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_08175714.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_08175714.8bpp: baserom.gba ; $(call dump_data,0x175714,0xC000)
-assets/sprites/gUnknown_08175714.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_0816855C.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_0816855C.8bpp: baserom.gba ; $(call dump_data,0x16855C,0xD000)
+assets/sprites/DK/gUnknown_0816855C.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_081817F4.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_081817F4.8bpp: baserom.gba ; $(call dump_data,0x1817F4,0x6000)
-assets/sprites/gUnknown_081817F4.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_08175714.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_08175714.8bpp: baserom.gba ; $(call dump_data,0x175714,0xC000)
+assets/sprites/DK/gUnknown_08175714.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_08187ACC.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_08187ACC.8bpp: baserom.gba ; $(call dump_data,0x187ACC,0x3000)
-assets/sprites/gUnknown_08187ACC.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_081817F4.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_081817F4.8bpp: baserom.gba ; $(call dump_data,0x1817F4,0x6000)
+assets/sprites/DK/gUnknown_081817F4.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_0818ADC8.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_0818ADC8.8bpp: baserom.gba ; $(call dump_data,0x18ADC8,0x14000)
-assets/sprites/gUnknown_0818ADC8.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_08187ACC.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_08187ACC.8bpp: baserom.gba ; $(call dump_data,0x187ACC,0x3000)
+assets/sprites/DK/gUnknown_08187ACC.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_0819EE60.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_0819EE60.8bpp: baserom.gba ; $(call dump_data,0x19EE60,0x3000)
-assets/sprites/gUnknown_0819EE60.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_0818ADC8.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_0818ADC8.8bpp: baserom.gba ; $(call dump_data,0x18ADC8,0x14000)
+assets/sprites/DK/gUnknown_0818ADC8.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_081A2180.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_081A2180.8bpp: baserom.gba ; $(call dump_data,0x1A2180,0x14000)
-assets/sprites/gUnknown_081A2180.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_0819EE60.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_0819EE60.8bpp: baserom.gba ; $(call dump_data,0x19EE60,0x3000)
+assets/sprites/DK/gUnknown_0819EE60.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_081B6380.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_081B6380.8bpp: baserom.gba ; $(call dump_data,0x1B6380,0x2C00)
-assets/sprites/gUnknown_081B6380.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/DK/gUnknown_081A2180.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_081A2180.8bpp: baserom.gba ; $(call dump_data,0x1A2180,0x14000)
+assets/sprites/DK/gUnknown_081A2180.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
 
-assets/sprites/gUnknown_081B90A8.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_081B90A8.8bpp: baserom.gba ; $(call dump_data,0x1B90A8,0x4000)
-assets/sprites/gUnknown_081B90A8.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+assets/sprites/DK/gUnknown_081B6380.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/DK/gUnknown_081B6380.8bpp: baserom.gba ; $(call dump_data,0x1B6380,0x2C00)
+assets/sprites/DK/gUnknown_081B6380.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_081BD1F4.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_081BD1F4.8bpp: baserom.gba ; $(call dump_data,0x1BD1F4,0x4800)
-assets/sprites/gUnknown_081BD1F4.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/DK/gUnknown_081B90A8.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_081B90A8.8bpp: baserom.gba ; $(call dump_data,0x1B90A8,0x4000)
+assets/sprites/DK/gUnknown_081B90A8.png: $(TMPDIR)/palettes/62_dk_boss_obj.gbapal
+
+assets/sprites/DK/gUnknown_081BD1F4.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/DK/gUnknown_081BD1F4.8bpp: baserom.gba ; $(call dump_data,0x1BD1F4,0x4800)
+assets/sprites/DK/gUnknown_081BD1F4.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_081C1A20.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_081C1A20.4bpp: baserom.gba ; $(call dump_data,0x1C1A20,0x200)
@@ -3047,33 +3040,33 @@ assets/sprites/gUnknown_082AEF7C.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/sprites/gUnknown_082AEF7C.4bpp: baserom.gba ; $(call dump_data,0x2AEF7C,0x800)
 assets/sprites/gUnknown_082AEF7C.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/BonusPresent.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/BonusPresent.4bpp: baserom.gba ; $(call dump_data,0x2AF7A8,0x800)
-assets/sprites/BonusPresent.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/bonus/BonusPresent.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/bonus/BonusPresent.4bpp: baserom.gba ; $(call dump_data,0x2AF7A8,0x800)
+assets/sprites/bonus/BonusPresent.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/BonusPresentSquish.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/BonusPresentSquish.4bpp: baserom.gba ; $(call dump_data,0x2B0088,0x3000)
-assets/sprites/BonusPresentSquish.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/bonus/BonusPresentSquish.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/bonus/BonusPresentSquish.4bpp: baserom.gba ; $(call dump_data,0x2B0088,0x3000)
+assets/sprites/bonus/BonusPresentSquish.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/gUnknown_082B30B4.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_082B30B4.4bpp: baserom.gba ; $(call dump_data,0x2B30B4,0x400)
-assets/sprites/gUnknown_082B30B4.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/bonus/gUnknown_082B30B4.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/bonus/gUnknown_082B30B4.4bpp: baserom.gba ; $(call dump_data,0x2B30B4,0x400)
+assets/sprites/bonus/gUnknown_082B30B4.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/gUnknown_082B354C.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_082B354C.4bpp: baserom.gba ; $(call dump_data,0x2B354C,0x1000)
-assets/sprites/gUnknown_082B354C.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/bonus/gUnknown_082B354C.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/bonus/gUnknown_082B354C.4bpp: baserom.gba ; $(call dump_data,0x2B354C,0x1000)
+assets/sprites/bonus/gUnknown_082B354C.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/gUnknown_082B45E4.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_082B45E4.4bpp: baserom.gba ; $(call dump_data,0x2B45E4,0x1000)
-assets/sprites/gUnknown_082B45E4.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/bonus/gUnknown_082B45E4.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/bonus/gUnknown_082B45E4.4bpp: baserom.gba ; $(call dump_data,0x2B45E4,0x1000)
+assets/sprites/bonus/gUnknown_082B45E4.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/gUnknown_082B567C.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_082B567C.4bpp: baserom.gba ; $(call dump_data,0x2B567C,0x1000)
-assets/sprites/gUnknown_082B567C.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/bonus/gUnknown_082B567C.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/bonus/gUnknown_082B567C.4bpp: baserom.gba ; $(call dump_data,0x2B567C,0x1000)
+assets/sprites/bonus/gUnknown_082B567C.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
-assets/sprites/gUnknown_082B6714.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/gUnknown_082B6714.4bpp: baserom.gba ; $(call dump_data,0x2B6714,0x1000)
-assets/sprites/gUnknown_082B6714.png: $(TMPDIR)/palettes/9_obj.8.gbapal
+assets/sprites/bonus/gUnknown_082B6714.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/bonus/gUnknown_082B6714.4bpp: baserom.gba ; $(call dump_data,0x2B6714,0x1000)
+assets/sprites/bonus/gUnknown_082B6714.png: $(TMPDIR)/palettes/9_obj.8.gbapal
 
 assets/sprites/gUnknown_082B7884.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_082B7884.4bpp: baserom.gba ; $(call dump_data,0x2B7884,0x1400)
@@ -4233,21 +4226,21 @@ assets/sprites/gUnknown_083E8A38.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_083E8A38.8bpp: baserom.gba ; $(call dump_data,0x3E8A38,0x1C00)
 assets/sprites/gUnknown_083E8A38.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_083EA73C.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_083EA73C.8bpp: baserom.gba ; $(call dump_data,0x3EA73C,0x1C00)
-assets/sprites/gUnknown_083EA73C.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_083EA73C.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_083EA73C.8bpp: baserom.gba ; $(call dump_data,0x3EA73C,0x1C00)
+assets/sprites/mario/gUnknown_083EA73C.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_083ECC44.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_083ECC44.8bpp: baserom.gba ; $(call dump_data,0x3ECC44,0x8000)
-assets/sprites/gUnknown_083ECC44.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_083ECC44.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_083ECC44.8bpp: baserom.gba ; $(call dump_data,0x3ECC44,0x8000)
+assets/sprites/mario/gUnknown_083ECC44.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_083F4E8C.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_083F4E8C.8bpp: baserom.gba ; $(call dump_data,0x3F4E8C,0x4000)
 assets/sprites/gUnknown_083F4E8C.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_083F9824.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_083F9824.8bpp: baserom.gba ; $(call dump_data,0x3F9824,0x4800)
-assets/sprites/gUnknown_083F9824.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_083F9824.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_083F9824.8bpp: baserom.gba ; $(call dump_data,0x3F9824,0x4800)
+assets/sprites/mario/gUnknown_083F9824.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_083FE4F4.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_083FE4F4.8bpp: baserom.gba ; $(call dump_data,0x3FE4F4,0x8000)
@@ -4425,25 +4418,25 @@ assets/sprites/gUnknown_084A668C.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_084A668C.8bpp: baserom.gba ; $(call dump_data,0x4A668C,0x4800)
 assets/sprites/gUnknown_084A668C.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_084AB314.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_084AB314.8bpp: baserom.gba ; $(call dump_data,0x4AB314,0x400)
-assets/sprites/gUnknown_084AB314.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_084AB314.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_084AB314.8bpp: baserom.gba ; $(call dump_data,0x4AB314,0x400)
+assets/sprites/mario/gUnknown_084AB314.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_084AB8CC.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_084AB8CC.8bpp: baserom.gba ; $(call dump_data,0x4AB8CC,0x400)
-assets/sprites/gUnknown_084AB8CC.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_084AB8CC.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_084AB8CC.8bpp: baserom.gba ; $(call dump_data,0x4AB8CC,0x400)
+assets/sprites/mario/gUnknown_084AB8CC.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_084ABE3C.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_084ABE3C.8bpp: baserom.gba ; $(call dump_data,0x4ABE3C,0x2000)
-assets/sprites/gUnknown_084ABE3C.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_084ABE3C.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_084ABE3C.8bpp: baserom.gba ; $(call dump_data,0x4ABE3C,0x2000)
+assets/sprites/mario/gUnknown_084ABE3C.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_084ADF64.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_084ADF64.8bpp: baserom.gba ; $(call dump_data,0x4ADF64,0x2000)
-assets/sprites/gUnknown_084ADF64.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_084ADF64.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_084ADF64.8bpp: baserom.gba ; $(call dump_data,0x4ADF64,0x2000)
+assets/sprites/mario/gUnknown_084ADF64.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
-assets/sprites/gUnknown_084B0068.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/gUnknown_084B0068.8bpp: baserom.gba ; $(call dump_data,0x4B0068,0x1C00)
-assets/sprites/gUnknown_084B0068.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
+assets/sprites/mario/gUnknown_084B0068.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/mario/gUnknown_084B0068.8bpp: baserom.gba ; $(call dump_data,0x4B0068,0x1C00)
+assets/sprites/mario/gUnknown_084B0068.png: $(TMPDIR)/palettes/37_world_one_obj.gbapal
 
 assets/sprites/gUnknown_084B1EB0.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_084B1EB0.8bpp: baserom.gba ; $(call dump_data,0x4B1EB0,0x4000)
@@ -4992,6 +4985,10 @@ assets/sprites/PlusWorldSelectTabs.png: $(TMPDIR)/palettes/18_level_select_world
 assets/sprites/gUnknown_085D0900.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/gUnknown_085D0900.4bpp: baserom.gba ; $(call dump_data,0x5D0900,0x100)
 assets/sprites/gUnknown_085D0900.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.12.gbapal
+
+assets/sprites/MainLevelIconPics.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/MainLevelIconPics.4bpp: baserom.gba ; $(call dump_data,0x5D10C8,0x200*48)
+assets/sprites/MainLevelIconPics.png: $(TMPDIR)/palettes/11_level_select_world_one_obj.13.gbapal
 
 assets/sprites/PlusLevelIconPics.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/PlusLevelIconPics.4bpp: baserom.gba ; $(call dump_data,0x5D76B8,0x5400)
