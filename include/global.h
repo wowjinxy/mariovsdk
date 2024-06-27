@@ -307,9 +307,33 @@ struct UnknownStruct17
     u8 unk1;
 };
 
+struct Movie_child
+{
+    u32 unk0;
+    u16 unk4;
+    struct Movie_child_child8 *unk8;
+    u16 unkC;
+    struct Movie_child_child10 *unk10;
+    u16 unk14;
+    struct Movie_child_child18 *unk18;
+    u16 unk1C;
+    struct Movie_child_child20 *unk20;
+    u16 unk24;
+    struct Movie_child_child28 *unk28;
+    u16 unk2C;
+    struct Movie_child_child30 *unk30;
+};  // size = 0x34
+
+struct Movie
+{
+    u16 unk0;
+    u8 filler2[2];
+    struct Movie_child *unk4;
+};
+
 struct MoviePlayerParamaters
 {
-    const u32 *movieData;
+    struct Movie *movieData;
     u8 unk4;
     u8 songID;
     u8 nextMode;
@@ -1294,16 +1318,16 @@ extern struct GraphicsConfig gNintendoSoftwareTechnologyLogo;
 extern struct GraphicsConfig gTitleScreenLeftData;
 extern struct GraphicsConfig gTitleScreenRightData;
 extern struct GraphicsConfig gTitleMarioDKEyes;  // non-const (likely in .data instead of .rodata)
-extern const u32 gUnknown_08B30768[]; // Movie player uses the below
-extern const u8 gUnknown_08B32118[];
-extern const u8 gUnknown_08B30F94[];
-extern const u8 gUnknown_08B2FFDC[];
-extern const u8 gUnknown_08B37168[];
-extern const u8 gUnknown_08B2F5B8[];
-extern const u8 gUnknown_08B2F070[];
-extern const u8 gUnknown_08B35FC0[];
-extern const u8 gUnknown_08B3732C[];
-extern const u8 gMovieUnusedPlusWorldsUnlocked[];
+extern struct Movie gMovie4; // Movie player uses the below
+extern struct Movie gMovie0;
+extern struct Movie gMovie1;
+extern struct Movie gMovie2;
+extern struct Movie gMovie3;
+extern struct Movie gMovie5;
+extern struct Movie gMovie6;
+extern struct Movie gMovie7;
+extern struct Movie gMovie8;
+extern struct Movie gMovie9;
 
 extern const s16 gUnknown_0807C118[][2];
 extern unkst24 gUnknown_0812E128[1];
@@ -1690,7 +1714,7 @@ u8 sub_08057420(u32);
 u8 sub_08038B18();
 void sub_0802D608(void);
 
-u8 sub_0805739C(const u32 *);
+u8 sub_0805739C(struct Movie *);
 void sub_0802BE50(void);
 u8 sub_0801B310();
 u32 update_quick_fade_from_black();

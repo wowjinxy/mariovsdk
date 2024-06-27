@@ -6,6 +6,8 @@ import sys
 ROM_BASE = 0x08000000
 
 def incbin(start, end):
+	if start == end:
+		return ''
 	return '\t.INCBIN "baserom.gba", 0x%X, 0x%X-0x%X\n' % (start, end, start)
 
 out = ''
@@ -25,7 +27,7 @@ with open(sys.argv[1], 'rt') as f:
 				nextAddr = int(m.group(2), 0) + ROM_BASE
 				# add labels
 				for addr in addrs:
-					if addr > currAddr and addr < nextAddr:
+					if addr >= currAddr and addr < nextAddr:
 						out += incbin(currAddr - ROM_BASE, addr - ROM_BASE)
 						label = 'gUnknown_%08X' % addr
 						out += '\n\t.GLOBAL %s\n%s:\n' % (label, label)

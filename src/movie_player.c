@@ -3,13 +3,22 @@
 #include "arena.h"
 #include "main.h"
 
+static inline void someinline(int arg0, int songID, int nextState, int movieID)
+{
+    gMoviePlayerParams.unk4 = arg0;
+    gMoviePlayerParams.songID = songID;
+    gMoviePlayerParams.nextMode = nextState;
+    gMoviePlayerParams.movieID = movieID;
+    gMoviePlayerParams.movieData = &gMovie4;
+}
+
 void movie_player_main(void) {
     u8 var1;
     u32 var2;
 
     if (gUnknown_03000DCC != 0) {
         update_quick_fade_from_black();
-        if (gIsFadeInProgress == 0) {
+        if (!gIsFadeInProgress) {
             gUnknown_03000DCC = gIsFadeInProgress;
         }
     }
@@ -24,7 +33,7 @@ void movie_player_main(void) {
 
     if (gPreviousMainState == 4) {
         if ((gMoviePlayerParams.unk4 & 1) != 0) {
-            if ((gNewKeys & 10) != 0) {
+            if ((gNewKeys & (B_BUTTON | START_BUTTON)) != 0) {
                 change_main_state(gMoviePlayerParams.nextMode, USE_FADE);
             }
         }
@@ -33,32 +42,14 @@ void movie_player_main(void) {
         }
     } else if (gMoviePlayerParams.movieID == 3) {
         if (((gMoviePlayerParams.unk4 & 1) != 0) && (0xB4 < gGeneralTimer)) {
-                if ((gNewKeys & 10) != 0) {
-                    // macro here?
-                    u32 temp = 3;
-                    u32 temp_1 = 0x2c; 
-                    u32 temp_2 = 8;
-                    u32 temp_3 = 4;
-                    gMoviePlayerParams.unk4 = temp;
-                    gMoviePlayerParams.songID = temp_1;
-                    gMoviePlayerParams.nextMode = temp_2;
-                    gMoviePlayerParams.movieID = temp_3;
-                    gMoviePlayerParams.movieData = gUnknown_08B30768;
+                if ((gNewKeys & (B_BUTTON | START_BUTTON)) != 0) {
+                    someinline(3, 44, 8, 4);
                     change_main_state(MAIN_STATE_MOVIE ,USE_FADE);
             }
         }
             
         if ((gMoviePlayerParams.unk4 & 2) == 0) {
-            // macro here?
-            u32 temp = 3;
-            u32 temp_1 = 0x2c; 
-            u32 temp_2 = 8;
-            u32 temp_3 = 4;
-            gMoviePlayerParams.unk4 = temp;
-            gMoviePlayerParams.songID = temp_1;
-            gMoviePlayerParams.nextMode = temp_2;
-            gMoviePlayerParams.movieID = temp_3;
-            gMoviePlayerParams.movieData = gUnknown_08B30768;
+            someinline(3, 44, 8, 4);
             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
         }
     }
@@ -108,7 +99,7 @@ void movie_player_main(void) {
     }
     else if (gMoviePlayerParams.movieID == 0) {
         if (((gMoviePlayerParams.unk4 & 1) != 0) && (0x5 < gGeneralTimer)) {
-            if ((gNewKeys & 10) != 0) {
+            if ((gNewKeys & (B_BUTTON | START_BUTTON)) != 0) {
                 change_main_state(gMoviePlayerParams.nextMode, USE_FADE);
             }
         }
@@ -118,7 +109,7 @@ void movie_player_main(void) {
     }
     else {
         if (((gMoviePlayerParams.unk4 & 1) != 0) && (0xb4 < gGeneralTimer)) {
-            if ((gNewKeys & 10) != 0) {
+            if ((gNewKeys & (B_BUTTON | START_BUTTON)) != 0) {
                 change_main_state(gMoviePlayerParams.nextMode, USE_FADE);
             }
         }
@@ -141,34 +132,34 @@ void movie_player_setup_data(u8 param_1, u8 songID, u8 nextMode, u8 movieID) {
 
   switch(movieID) {
   case 0: //Movie ID 0 (Intro)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B32118;
+    gMoviePlayerParams.movieData = &gMovie0;
     break;
   case 1: //Movie ID 1 (New Game)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B30F94;
+    gMoviePlayerParams.movieData = &gMovie1;
     break;
   case 2: //Movie ID 2 (Main levels final boss intro)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B2FFDC;
+    gMoviePlayerParams.movieData = &gMovie2;
     break;
   case 4: //Movie ID 4 (Plus worlds intro)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B30768;
+    gMoviePlayerParams.movieData = &gMovie4;
     break;
   case 5: //Movie ID 5 (Plus levels final boss intro)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B2F5B8;
+    gMoviePlayerParams.movieData = &gMovie5;
     break;
   case 6: //Movie ID 6 (Plus final boss ending cutscene)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B2F070;
+    gMoviePlayerParams.movieData = &gMovie6;
     break;
   case 7: //Movie ID 7 (Credits 2)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B35FC0;
+    gMoviePlayerParams.movieData = &gMovie7;
     break;
   case 3: //Movie ID 3 (Credits 1)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B37168;
+    gMoviePlayerParams.movieData = &gMovie3;
     break;
   case 8: //Movie ID 8 (Unused -- DK Falling)
-    gMoviePlayerParams.movieData = (u32*)&gUnknown_08B3732C;
+    gMoviePlayerParams.movieData = &gMovie8;
     break;
   case 9: //Movie ID 9 (Unused -- "Plus Worlds Unlocked!" message)
-    gMoviePlayerParams.movieData = (u32*)&gMovieUnusedPlusWorldsUnlocked;
+    gMoviePlayerParams.movieData = &gMovie9;
   }
     
 }

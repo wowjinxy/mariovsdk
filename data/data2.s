@@ -28274,104 +28274,348 @@ gUnknown_08B2E8D8:
 gUnknown_08B2E90C:
 	.4byte 0x00000001
 	.4byte gUnknown_08B2E8D8 @ Movie Data -- Early Opening Cutscene
-	.INCBIN "baserom.gba", 0xB2E914, 0xB2F03C-0xB2E914
+
+	.GLOBAL gUnknown_08B2E914
+gUnknown_08B2E914:
+	.INCBIN "baserom.gba", 0xB2E914, 0xB2EA24-0xB2E914
+
+	.GLOBAL gUnknown_08B2EA24
+gUnknown_08B2EA24:
+	.INCBIN "baserom.gba", 0xB2EA24, 0xB2F03C-0xB2EA24
 
 	.GLOBAL gUnknown_08B2F03C
 gUnknown_08B2F03C:
-	.INCBIN "baserom.gba", 0xB2F03C, 0xB2F070-0xB2F03C
+	.4byte 0x6CC
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0xA
+	.skip 2
+	.4byte gUnknown_08B2E914  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0xA
+	.skip 2
+	.4byte gUnknown_08B2EA24  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B2F070
-gUnknown_08B2F070:
+	.GLOBAL gMovie6
+gMovie6:
 	.4byte 0x00000001
 	.4byte gUnknown_08B2F03C @ Movie Data -- Movie ID 6
-	.INCBIN "baserom.gba", 0xB2F078, 0xB2F584-0xB2F078
+
+	.GLOBAL gUnknown_08B2F078
+gUnknown_08B2F078:
+	.INCBIN "baserom.gba", 0xB2F078, 0xB2F140-0xB2F078
+
+	.GLOBAL gUnknown_08B2F140
+gUnknown_08B2F140:
+	.INCBIN "baserom.gba", 0xB2F140, 0xB2F584-0xB2F140
 
 	.GLOBAL gUnknown_08B2F584
 gUnknown_08B2F584:
-	.INCBIN "baserom.gba", 0xB2F584, 0xB2F5B8-0xB2F584
+	.4byte 0x48D
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0x7
+	.skip 2
+	.4byte gUnknown_08B2F078  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0x7
+	.skip 2
+	.4byte gUnknown_08B2F140  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B2F5B8
-gUnknown_08B2F5B8:
+	.GLOBAL gMovie5
+gMovie5:
 	.4byte 0x00000001
 	.4byte gUnknown_08B2F584 @ Movie Data -- Movie ID 5
-	.INCBIN "baserom.gba", 0xB2F5C0, 0xB2FFA8-0xB2F5C0
+
+	.GLOBAL gUnknown_08B2F5C0
+gUnknown_08B2F5C0:
+	.INCBIN "baserom.gba", 0xB2F5C0, 0xB2F720-0xB2F5C0
+
+	.GLOBAL gUnknown_08B2F720
+gUnknown_08B2F720:
+	.INCBIN "baserom.gba", 0xB2F720, 0xB2FFA8-0xB2F720
 
 	.GLOBAL gUnknown_08B2FFA8
 gUnknown_08B2FFA8:
-	.INCBIN "baserom.gba", 0xB2FFA8, 0xB2FFDC-0xB2FFA8
+	.4byte 0x77B
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0xD
+	.skip 2
+	.4byte gUnknown_08B2F5C0  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0xE
+	.skip 2
+	.4byte gUnknown_08B2F720  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B2FFDC
-gUnknown_08B2FFDC:
+	.GLOBAL gMovie2
+gMovie2:
 	.4byte 0x00000001
 	.4byte gUnknown_08B2FFA8 @ Movie Data -- Movie ID 2
-	.INCBIN "baserom.gba", 0xB2FFE4, 0xB30734-0xB2FFE4
+
+	.GLOBAL gUnknown_08B2FFE4
+gUnknown_08B2FFE4:
+	.INCBIN "baserom.gba", 0xB2FFE4, 0xB3011C-0xB2FFE4
+
+	.GLOBAL gUnknown_08B3011C
+gUnknown_08B3011C:
+	.INCBIN "baserom.gba", 0xB3011C, 0xB30734-0xB3011C
 
 	.GLOBAL gUnknown_08B30734
 gUnknown_08B30734:
-	.INCBIN "baserom.gba", 0xB30734, 0xB30768-0xB30734
+	.4byte 0x6D6
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0x8
+	.skip 2
+	.4byte gUnknown_08B2FFE4  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0xA
+	.skip 2
+	.4byte gUnknown_08B3011C  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B30768
-gUnknown_08B30768:
+	.GLOBAL gMovie4
+gMovie4:
 	.4byte 0x00000001
 	.4byte gUnknown_08B30734 @ Movie Data -- Movie ID 4
-	.INCBIN "baserom.gba", 0xB30770, 0xB30F60-0xB30770
+
+	.GLOBAL gUnknown_08B30770
+gUnknown_08B30770:
+	.INCBIN "baserom.gba", 0xB30770, 0xB308AC-0xB30770
+
+	.GLOBAL gUnknown_08B308AC
+gUnknown_08B308AC:
+	.INCBIN "baserom.gba", 0xB308AC, 0xB30F60-0xB308AC
 
 	.GLOBAL gUnknown_08B30F60
 gUnknown_08B30F60:
-	.INCBIN "baserom.gba", 0xB30F60, 0xB30F94-0xB30F60
+	.4byte 0x73A
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0xA
+	.skip 2
+	.4byte gUnknown_08B30770  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0xB
+	.skip 2
+	.4byte gUnknown_08B308AC  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B30F94
-gUnknown_08B30F94:
+	.GLOBAL gMovie1
+gMovie1:
 	.4byte 0x00000001
 	.4byte gUnknown_08B30F60 @ Movie Data -- Movie ID 1
-	.INCBIN "baserom.gba", 0xB30F9C, 0xB320E4-0xB30F9C
+
+	.GLOBAL gUnknown_08B30F9C
+gUnknown_08B30F9C:
+	.INCBIN "baserom.gba", 0xB30F9C, 0xB311A8-0xB30F9C
+
+	.GLOBAL gUnknown_08B311A8
+gUnknown_08B311A8:
+	.INCBIN "baserom.gba", 0xB311A8, 0xB320E4-0xB311A8
 
 	.GLOBAL gUnknown_08B320E4
 gUnknown_08B320E4:
-	.INCBIN "baserom.gba", 0xB320E4, 0xB32118-0xB320E4
+	.4byte 0xB81
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0xC
+	.skip 2
+	.4byte gUnknown_08B30F9C  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0x19
+	.skip 2
+	.4byte gUnknown_08B311A8  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B32118
-gUnknown_08B32118:
+	.GLOBAL gMovie0
+gMovie0:
 	.4byte 0x00000001
 	.4byte gUnknown_08B320E4 @ Movie Data -- Movie ID 0
-	.INCBIN "baserom.gba", 0xB32120, 0xB35F8C-0xB32120
+
+	.GLOBAL gUnknown_08B32120
+gUnknown_08B32120:
+	.INCBIN "baserom.gba", 0xB32120, 0xB34F18-0xB32120
+
+	.GLOBAL gUnknown_08B34F18
+gUnknown_08B34F18:
+	.INCBIN "baserom.gba", 0xB34F18, 0xB35F8C-0xB34F18
 
 	.GLOBAL gUnknown_08B35F8C
 gUnknown_08B35F8C:
-	.INCBIN "baserom.gba", 0xB35F8C, 0xB35FC0-0xB35F8C
+	.4byte 0x1C20
+	.2byte 0x90
+	.skip 2
+	.4byte gUnknown_08B32120  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0x1B
+	.skip 2
+	.4byte gUnknown_08B34F18  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B35FC0
-gUnknown_08B35FC0:
+	.GLOBAL gMovie7
+gMovie7:
 	.4byte 0x00000001
 	.4byte gUnknown_08B35F8C @ Movie Data -- Movie ID 7
-	.INCBIN "baserom.gba", 0xB35FC8, 0xB37134-0xB35FC8
+	.INCBIN "baserom.gba", 0xB35FC8, 0xB360C0-0xB35FC8
+
+	.GLOBAL gUnknown_08B360C0
+gUnknown_08B360C0:
+	.INCBIN "baserom.gba", 0xB360C0, 0xB37134-0xB360C0
 
 	.GLOBAL gUnknown_08B37134
 gUnknown_08B37134:
-	.INCBIN "baserom.gba", 0xB37134, 0xB37168-0xB37134
+	.4byte 0x1518
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0x1B
+	.skip 2
+	.4byte gUnknown_08B360C0  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B37168
-gUnknown_08B37168:
+	.GLOBAL gMovie3
+gMovie3:
 	.4byte 0x00000001
 	.4byte gUnknown_08B37134 @ Movie Data -- Movie ID 3
-	.INCBIN "baserom.gba", 0xB37170, 0xB372F8-0xB37170
+
+	.GLOBAL gUnknown_08B37170
+gUnknown_08B37170:
+	.INCBIN "baserom.gba", 0xB37170, 0xB371C0-0xB37170
+
+	.GLOBAL gUnknown_08B371C0
+gUnknown_08B371C0:
+	.INCBIN "baserom.gba", 0xB371C0, 0xB372F8-0xB371C0
 
 	.GLOBAL gUnknown_08B372F8
 gUnknown_08B372F8:
-	.INCBIN "baserom.gba", 0xB372F8, 0xB3732C-0xB372F8
+	.4byte 0x1CC
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0x1
+	.skip 2
+	.4byte gUnknown_08B37170  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0x2
+	.skip 2
+	.4byte gUnknown_08B371C0  @ ptr offset 0x30
 
-	.GLOBAL gUnknown_08B3732C
-gUnknown_08B3732C:
+	.GLOBAL gMovie8
+gMovie8:
 	.4byte 0x00000001
 	.4byte gUnknown_08B372F8 @ Movie Data -- Movie ID 8
-	.INCBIN "baserom.gba", 0xB37334, 0xB373F0-0xB37334
+	.INCBIN "baserom.gba", 0xB37334, 0xB37354-0xB37334
+
+	.GLOBAL gUnknown_08B37354
+gUnknown_08B37354:
+	.INCBIN "baserom.gba", 0xB37354, 0xB373F0-0xB37354
 
 	.GLOBAL gUnknown_08B373F0
 gUnknown_08B373F0:
-	.INCBIN "baserom.gba", 0xB373F0, 0xB37424-0xB373F0
+	.4byte 0xC8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x18
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x28
+	.2byte 0x1
+	.skip 2
+	.4byte gUnknown_08B37354  @ ptr offset 0x30
 
-	.GLOBAL gMovieUnusedPlusWorldsUnlocked
-gMovieUnusedPlusWorldsUnlocked:
+	.GLOBAL gMovie9
+gMovie9:
 	.4byte 0x00000001
 	.4byte gUnknown_08B373F0 @ Movie Data -- Unused Plus Worlds Unlocked Screen
 	
