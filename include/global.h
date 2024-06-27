@@ -775,7 +775,7 @@ struct SubSpriteTemplate
 
 struct SpriteTemplate
 {
-    /*0x00*/ u16 x;
+    /*0x00*/ u16 x;  // might actually be the number of subsprites instead?
     /*0x02*/ u16 y;
     u16 unk4;
     u16 unk6;  // number of tiles used? not sure...
@@ -1008,17 +1008,6 @@ struct Struct1C0
     u8 unk10;  // unknown type
 };
 
-struct Struct2FC
-{
-    u8 unk0;
-    u8 unk1;
-    u8 unk2;
-    u8 unk3;
-    u8 unk4;
-    u8 unk5;
-    u16 unk6;
-};  // size = 0x8
-
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
@@ -1087,11 +1076,6 @@ extern struct Struct30002B8 gUnknown_030002B8;
 extern struct Struct30002B8 gUnknown_030002C0;
 extern struct Struct30002B8 gUnknown_030002C8;
 extern struct UnknownStruct11 *gUnknown_0300029C;
-extern struct UnknownStruct15 *gUnknown_030002F0;
-extern u8 gUnknown_030002F4;
-extern u16 gUnknown_030002F6;
-extern s16 gUnknown_030002F8;
-extern struct Struct2FC *gUnknown_030002FC;
 
 //new for sub_0804A794
 extern u8 gUnknown_03000368;
@@ -1663,11 +1647,11 @@ void expert_levels_loop(void);
 void expert_levels_loop(void);
 void expert_levels_end(void);
 void world_start_init_callback(void);
-void sub_08037230(void);
+
 void world_start_main(void);
 void world_start_loop(void);
 void world_start_end(void);
-void sub_080379BC(u8, u8);
+
 void print_error_message(char *);
 void sub_08038130(int);
 void sub_080381E4(int, int);

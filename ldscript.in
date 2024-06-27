@@ -193,12 +193,7 @@ SECTIONS
 		. = 0x2B8;		gUnknown_030002B8 = .;
 		. = 0x2C0;		gUnknown_030002C0 = .;
 		. = 0x2C8;		gUnknown_030002C8 = .;
-		. = 0x2F0;		gUnknown_030002F0 = .;
-		. = 0x2F4;		gUnknown_030002F4 = .;
-		. = 0x2F6;		gUnknown_030002F6 = .;
-		. = 0x2F8;		gUnknown_030002F8 = .;
-		. = 0x2FC;		gUnknown_030002FC = .;
-		. = 0x300;		src/world_start.o(.bss);
+		. = 0x2F0;		src/world_start.o(.bss);
 		. = 0x368;		gUnknown_03000368 = .;
 		. = 0x374;		gUnknown_03000374 = .;
 		. = 0x378;		gUnknown_03000378 = .;
