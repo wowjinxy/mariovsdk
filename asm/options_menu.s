@@ -1945,7 +1945,7 @@ options_init_callback: @ 0x0802895C
 	ldrh r0, [r4, #48]
 	ldrh r1, [r4, #50]
 	ldrh r2, [r4, #52]
-	bl set_blend_regs_08029CDC
+	bl save_blend_regs
 	add r0, r4, #0
 	bl load_graphics_config_bg2_08032EB8
 	mov r2, #128
@@ -2595,7 +2595,7 @@ options_loop: @ 0x08028E44
 	bne _08028E80
 	add r5, r5, #80
 _08028E80:
-	bl sub_08029C20
+	bl update_fade_from_black
 	cmp r0, #0
 	bne _08028E9E
 	ldr r0, [r5]

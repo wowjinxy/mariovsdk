@@ -70,7 +70,7 @@ _0801BF64:
 	ldrh r0, [r4, #48]
 	ldrh r1, [r4, #50]
 	ldrh r2, [r4, #52]
-	bl set_blend_regs_08029CDC
+	bl save_blend_regs
 	b _0801C1B4
 	.byte 0x00
 	.byte 0x00
@@ -337,7 +337,7 @@ _0801C19C:
 	ldrh r0, [r2, #48]
 	ldrh r1, [r2, #50]
 	ldrh r2, [r2, #52]
-	bl set_blend_regs_08029CDC
+	bl save_blend_regs
 _0801C1B4:
 	add r2, sp, #32
 	mov r0, #160
@@ -445,7 +445,7 @@ _0801C274:
 boss_clear_main: @ 0x0801C278
 	push {r4,r5,lr}
 	sub sp, sp, #12
-	bl sub_08029C20
+	bl update_fade_from_black
 	bl process_input
 	ldr r0, _0801C328  @ =0x030000C6
 	ldrb r1, [r0]

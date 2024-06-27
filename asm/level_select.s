@@ -635,7 +635,7 @@ _08015566:
 	bl sub_0807204C
 _080155CE:
 	ldr r0, _08015600  @ =gLevelSelectData
-	bl sub_08029C9C
+	bl save_blend_regs_from_graphicsconfig
 	mov r1, #128
 	lsl r1, r1, #19
 	mov r2, #234
@@ -3576,7 +3576,7 @@ _08016BE4:
 level_select_main: @ 0x08016BEC
 	push {r4,r5,lr}
 	sub sp, sp, #40
-	bl sub_08029C20
+	bl update_fade_from_black
 	bl process_input
 	ldr r3, _08016C28  @ =gLevelSelect_03000083
 	mov r2, #0
@@ -3881,7 +3881,7 @@ _08016E30:
 _08016E40:
 	.4byte gLevelSelect_03000083
 _08016E44:
-	bl sub_08029F7C
+	bl update_fade_to_black_08029F7C
 	lsl r0, r0, #24
 	cmp r0, #0
 	bne _08016E50
@@ -3948,7 +3948,7 @@ _08016EC8:
 _08016ECC:
 	.4byte gLevelSelect_03000083
 _08016ED0:
-	ldr r0, _08016EEC  @ =gUnknown_03000C28
+	ldr r0, _08016EEC  @ =gIsFadeInProgress
 	ldrb r2, [r0]
 	cmp r2, #0
 	beq _08016EDA
@@ -3965,7 +3965,7 @@ _08016EDA:
 	.byte 0x00
 	.byte 0x00
 _08016EEC:
-	.4byte gUnknown_03000C28
+	.4byte gIsFadeInProgress
 _08016EF0:
 	.4byte gLevelType
 _08016EF4:
@@ -3973,7 +3973,7 @@ _08016EF4:
 _08016EF8:
 	.4byte gLevelSelectMode
 _08016EFC:
-	bl sub_08029F7C
+	bl update_fade_to_black_08029F7C
 	lsl r0, r0, #24
 	cmp r0, #0
 	bne _08016F08
@@ -4014,7 +4014,7 @@ _08016F4C:
 	ldr r0, _08016F74  @ =0x00003D42
 	ldr r1, _08016F78  @ =0x0000A0A0
 	mov r2, #0
-	bl set_blend_regs_08029CDC
+	bl save_blend_regs
 	b _0801706A
 	.byte 0x00
 	.byte 0x00
@@ -4035,7 +4035,7 @@ _08016F74:
 _08016F78:
 	.4byte 0x0000A0A0
 _08016F7C:
-	ldr r0, _08016FA0  @ =gUnknown_03000C28
+	ldr r0, _08016FA0  @ =gIsFadeInProgress
 	ldrb r1, [r0]
 	cmp r1, #0
 	bne _0801706A
@@ -4055,7 +4055,7 @@ _08016F90:
 	strh r0, [r1]
 	b _0801706A
 _08016FA0:
-	.4byte gUnknown_03000C28
+	.4byte gIsFadeInProgress
 _08016FA4:
 	.4byte gLevelType
 _08016FA8:
@@ -4355,7 +4355,7 @@ sub_080171C8: @ 0x080171C8
 	beq _080171F4
 	b _080174DA
 _080171F4:
-	ldr r0, _08017244  @ =gUnknown_03000C28
+	ldr r0, _08017244  @ =gIsFadeInProgress
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _080171FE
@@ -4398,7 +4398,7 @@ _0801723C:
 _08017240:
 	.4byte gLevelSelect_03000083
 _08017244:
-	.4byte gUnknown_03000C28
+	.4byte gIsFadeInProgress
 _08017248:
 	.4byte gLevelSelectMode
 _0801724C:
@@ -4914,7 +4914,7 @@ sub_08017600: @ 0x08017600
 	beq _0801762C
 	b _08017922
 _0801762C:
-	ldr r0, _08017688  @ =gUnknown_03000C28
+	ldr r0, _08017688  @ =gIsFadeInProgress
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08017636
@@ -4965,7 +4965,7 @@ _08017680:
 _08017684:
 	.4byte gLevelSelect_03000083
 _08017688:
-	.4byte gUnknown_03000C28
+	.4byte gIsFadeInProgress
 _0801768C:
 	.4byte gLevelSelectMode
 _08017690:

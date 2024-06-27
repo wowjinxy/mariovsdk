@@ -86,7 +86,7 @@ expert_levels_init_callback: @ 0x08035388
 	strh r4, [r0, #10]
 	strh r4, [r0, #14]
 	add r0, r5, #0
-	bl sub_08029C9C
+	bl save_blend_regs_from_graphicsconfig
 	mov r0, #2
 	mov r1, #3
 	bl load_predefined_palette
@@ -736,8 +736,8 @@ _08035904:
 	THUMB_FUNC_START expert_levels_main
 expert_levels_main: @ 0x08035908
 	push {r4,lr}
-	bl sub_08029C20
-	ldr r0, _08035940  @ =gUnknown_03000C28
+	bl update_fade_from_black
+	ldr r0, _08035940  @ =gIsFadeInProgress
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _0803591A
@@ -761,7 +761,7 @@ _0803591A:
 	bl sub_0803549C
 	b _08035958
 _08035940:
-	.4byte gUnknown_03000C28
+	.4byte gIsFadeInProgress
 _08035944:
 	.4byte 0x030002D2
 _08035948:
@@ -2372,7 +2372,7 @@ sub_08036564: @ 0x08036564
 	push {r5-r7}
 	lsl r0, r0, #24
 	lsr r4, r0, #24
-	ldr r0, _08036688  @ =gUnknown_03000C28
+	ldr r0, _08036688  @ =gIsFadeInProgress
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _08036592
@@ -2512,7 +2512,7 @@ _08036592:
 	pop {r0}
 	bx r0
 _08036688:
-	.4byte gUnknown_03000C28
+	.4byte gIsFadeInProgress
 _0803668C:
 	.4byte gUnknown_085C2F90
 _08036690:

@@ -405,7 +405,7 @@ void level_play_main(void) {
     u8 modeNext;
     u32 var3;
     
-    sub_08029C20();
+    update_fade_from_black();
     process_input();
     sub_08038414(gNewKeys, gHeldKeys);
     sub_08039C44();
@@ -584,7 +584,7 @@ void level_demo_main(void) {
 
     u8 bVar1;
 
-    sub_08029C20();
+    update_fade_from_black();
     process_input();
     if (0 == (gUnknown_03001938 & 0x800) != 0) {
         sub_08038414(gNewKeys, gHeldKeys);

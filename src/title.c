@@ -38,7 +38,7 @@ void title_init_callback(void)
     if (sub_08071FE4() != 10)
         sub_0807204C(10, 128, 1);
     sub_08033C74();
-    set_blend_regs_08029CDC(gTitleScreenLeftData.bldCnt, gTitleScreenLeftData.bldAlpha, gTitleScreenLeftData.bldY);
+    save_blend_regs(gTitleScreenLeftData.bldCnt, gTitleScreenLeftData.bldAlpha, gTitleScreenLeftData.bldY);
     load_predefined_palette(0, 3);
     gPressStartFadeDir = FADE_UP;
     gTitleScreenFrameCounter = 3;
@@ -52,8 +52,8 @@ void title_main(void)
     u32 r6;
 
     process_input();
-    sub_08029C20();
-    if (gUnknown_030000AC == 0 && gUnknown_03000C28 == 0 && gUnknown_030000B0 == -1)
+    update_fade_from_black();
+    if (gUnknown_030000AC == 0 && gIsFadeInProgress == 0 && gUnknown_030000B0 == -1)
         gUnknown_030000B0 = play_sound_effect_08071990(229, 8, 16, 64, 0, 128, 0);
     if (gUnknown_03000BE0 > 5)
         REG_DISPCNT = 0x1740;
@@ -93,7 +93,7 @@ void title_main(void)
         gUnknown_03000B64++;
         gUnknown_03000B64 = (gUnknown_03000B64 < 8) ? gUnknown_03000B64 : 0;
     }
-    if (gUnknown_03000C28 == 0 && sub_080721A8(gUnknown_030000B0) != 0)
+    if (gIsFadeInProgress == 0 && sub_080721A8(gUnknown_030000B0) != 0)
     {
         if (pressed_a_or_start_08034004() != 0 && !(gNewKeys & 2) && !(gHeldKeys & 2))
         {
@@ -151,7 +151,7 @@ void title_loop(void)
 {
     gGeneralTimer++;
     DmaFill32(3, 0xA0, gOamBuffer, 0x400);
-    if (gUnknown_03000C28 == 0 && sub_080721A8(gUnknown_030000B0) != 0)
+    if (gIsFadeInProgress == 0 && sub_080721A8(gUnknown_030000B0) != 0)
     {
         u8 var;
 

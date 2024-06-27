@@ -121,9 +121,9 @@ u16 setup_graphics_08032814(struct UnkStruct1 *arg0, int arg1)
         if (config != NULL)
         {
             if (gNextLevelInLevelTable.unk12 != 2 || (gUnknown_030009D0 & 0x10))
-                set_blend_regs_08029CDC(config->bldCnt, config->bldAlpha, config->bldY);
+                save_blend_regs(config->bldCnt, config->bldAlpha, config->bldY);
             else
-                set_blend_regs_08029CDC(config->bldCnt | BLDCNT_EFF_ALPHA, config->bldAlpha, config->bldY);
+                save_blend_regs(config->bldCnt | BLDCNT_EFF_ALPHA, config->bldAlpha, config->bldY);
         }
     }
     return dispcnt;

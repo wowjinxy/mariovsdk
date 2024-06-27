@@ -10006,7 +10006,7 @@ _0802177E:
 	ldrh r0, [r4, #48]
 	ldrh r1, [r4, #50]
 	ldrh r2, [r4, #52]
-	bl set_blend_regs_08029CDC
+	bl save_blend_regs
 	mov r0, #0
 	mov r8, r0
 	strh r0, [r5]
@@ -10185,7 +10185,7 @@ bonus_stoparrow_main: @ 0x08021924
 	sub sp, sp, #4
 	ldr r0, _08021990  @ =gLivesCount
 	ldrb r4, [r0]
-	bl sub_08029C20
+	bl update_fade_from_black
 	bl sub_0800881C
 	mov r1, sp
 	mov r0, #0

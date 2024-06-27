@@ -238,7 +238,7 @@ void main_menu_init_callback(void)
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
     if (sub_08071FE4() != 10)
         sub_0807204C(10, 0x80, 1);
-    set_blend_regs_08029CDC(gMainMenuData.bldCnt, gMainMenuData.bldAlpha, gMainMenuData.bldY);
+    save_blend_regs(gMainMenuData.bldCnt, gMainMenuData.bldAlpha, gMainMenuData.bldY);
     REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG0_ON | DISPCNT_BG1_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     load_predefined_palette(PALETTE_1_MAIN_MENU, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
     CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));
@@ -730,8 +730,8 @@ void main_menu_main(void)
     u8 r5;
 
     process_input();
-    sub_08029C20();
-    if (gUnknown_03000C28 == 0)
+    update_fade_from_black();
+    if (gIsFadeInProgress == 0)
         sub_0801B310();
     if (gMainMenuInitDelayTimer > 20)
     {
@@ -753,7 +753,7 @@ void main_menu_main(void)
     }
     r5 = gIsEWorldVisible_0300005D;
     sub_08038130(0);
-    if (gUnknown_03000C28 == 0)
+    if (gIsFadeInProgress == 0)
     {
         if (sub_08038228(0) != 0 || *gEWorldLevelCountPtr != 0)
             gIsEWorldVisible_0300005D = 1;
@@ -1389,7 +1389,7 @@ void main_menu_loop(void)
     gVRAMCurrTileNum_03001930 = gObjVRAMCopyOffset_0300192C = gSomeOamIndex_03000040 = 0;
     DmaFill32(3, 0xA0, gOamBuffer, sizeof(gOamBuffer));
     copy_main_menu_sprite_tiles_to_vram();
-    if (gUnknown_03000C28 == 0)
+    if (gIsFadeInProgress == 0)
         sub_0801B2CC(gUnknown_085FEFE4[gMainMenuSpriteFrameNum].unk8);
     if (gMainMenuState == MAIN_MENU_STATE_ERASE_DATA_CONFIRM)
         sub_080128EC();

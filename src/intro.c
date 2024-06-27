@@ -21,7 +21,7 @@ void intro_init_callback(void)
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
     REG_DISPCNT = 0x100;
     gGeneralTimer = 0;
-    set_blend_regs_08029CDC(gNintendoSoftwareTechnologyLogo.bldCnt, gNintendoSoftwareTechnologyLogo.bldAlpha, gNintendoSoftwareTechnologyLogo.bldY);
+    save_blend_regs(gNintendoSoftwareTechnologyLogo.bldCnt, gNintendoSoftwareTechnologyLogo.bldAlpha, gNintendoSoftwareTechnologyLogo.bldY);
 }
 
 void title_end(void)
@@ -33,7 +33,7 @@ void title_end(void)
 
 void intro_main(void)
 {
-    sub_08029C20();
+    update_fade_from_black();
     gUnknown_03000BE0++;
     if (gUnknown_03000BE0 > 180)
     {

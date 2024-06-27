@@ -19811,7 +19811,7 @@ sub_08053A70: @ 0x08053A70
 	ldr r0, [r0]
 	cmp r0, #3
 	bne _08053A88
-	bl sub_08029E7C
+	bl end_fade_08029E7C
 _08053A88:
 	ldr r0, _08053BA0  @ =gUnknown_082EB2B0
 	str r0, [sp]
@@ -20166,7 +20166,7 @@ sub_08053CD0: @ 0x08053CD0
 	orr r1, r1, r2
 	str r1, [r0]
 _08053D46:
-	ldr r0, _08053DEC  @ =gUnknown_03000C28
+	ldr r0, _08053DEC  @ =gIsFadeInProgress
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _08053D64
@@ -20250,7 +20250,7 @@ _08053DE4:
 _08053DE8:
 	.4byte gUnknown_03001938
 _08053DEC:
-	.4byte gUnknown_03000C28
+	.4byte gIsFadeInProgress
 _08053DF0:
 	.4byte gLevelEWorldFlag
 _08053DF4:
@@ -80730,7 +80730,7 @@ _0806FDBC:
 	ldrh r0, [r0]
 	strh r0, [r1]
 	strb r5, [r2]
-	bl sub_08029E7C
+	bl end_fade_08029E7C
 	ldr r2, _0806FE34  @ =gSpriteHorizontalOffset
 	ldr r0, _0806FE38  @ =0x0300074E
 	ldrh r1, [r0]
@@ -80818,7 +80818,7 @@ _0806FE7A:
 	bl sub_0806F9D0
 	b _0806FEAA
 _0806FE80:
-	ldr r0, _0806FE98  @ =gUnknown_03000C28
+	ldr r0, _0806FE98  @ =gIsFadeInProgress
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _0806FEAA
@@ -80831,7 +80831,7 @@ _0806FE80:
 	strh r0, [r1]
 	b _0806FEAA
 _0806FE98:
-	.4byte gUnknown_03000C28
+	.4byte gIsFadeInProgress
 _0806FE9C:
 	.4byte 0x03000740
 _0806FEA0:

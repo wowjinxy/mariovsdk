@@ -193,7 +193,7 @@ void process_input(void)
             gUnknown_030002AA = gHeldKeys;
             sub_08033148();
         }
-        else if (gUnknown_03000C28 != 0)
+        else if (gIsFadeInProgress != 0)
         {
             gNewKeys = gHeldKeys = 0;
         }

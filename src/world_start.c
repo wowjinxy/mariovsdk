@@ -145,7 +145,7 @@ void world_start_init_callback(void)
         sub_080379BC(1, 0);
         sub_080379BC(0, 22);
     }
-    set_blend_regs_08029CDC(gWorldOneStartData.bldCnt, gWorldOneStartData.bldAlpha, gWorldOneStartData.bldY);
+    save_blend_regs(gWorldOneStartData.bldCnt, gWorldOneStartData.bldAlpha, gWorldOneStartData.bldY);
     CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));
     sWorldIntroTextYPos = -50 << 8;
     gBGLayerOffsets.bg2_y = sWorldIntroTextYPos >> 8;
@@ -271,7 +271,7 @@ static inline void update_sprite_animation(struct WorldIntroCharacter *character
 
 void world_start_main(void)
 {
-    sub_08029C20();
+    update_fade_from_black();
     process_input();
     if (sWorldIntroState == STATE_IDLE && (gNewKeys & (A_BUTTON | START_BUTTON)))
     {
@@ -377,7 +377,7 @@ void world_start_loop(void)
         break;
     }
     DmaCopy32(3, gOamBuffer, (void *)OAM, OAM_SIZE);
-    if (gUnknown_03000C28 == 0)
+    if (gIsFadeInProgress == 0)
         sub_080372A0();
 }
 

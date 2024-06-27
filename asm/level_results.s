@@ -383,7 +383,7 @@ _08029456:
 	ldrh r0, [r2, #48]
 	ldrh r1, [r2, #50]
 	ldrh r2, [r2, #52]
-	bl set_blend_regs_08029CDC
+	bl save_blend_regs
 	bl sub_08071FE4
 	cmp r0, #11
 	beq _0802947E
@@ -669,7 +669,7 @@ level_results_main: @ 0x080296A4
 	push {r4-r7,lr}
 	sub sp, sp, #12
 	mov r4, #0
-	bl sub_08029C20
+	bl update_fade_from_black
 	ldr r1, _08029774  @ =0x03000C14
 	ldrb r0, [r1]
 	cmp r0, #30

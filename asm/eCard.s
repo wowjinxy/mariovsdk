@@ -6,7 +6,7 @@ e_card_scan_main: @ 0x0802D6DC
 	push {r4,r5,lr}
 	sub sp, sp, #12
 	bl process_input
-	bl sub_08029C20
+	bl update_fade_from_black
 	mov r1, #0
 	ldr r4, _0802D710  @ =gUnknown_030001A8
 	ldr r0, [r4]
@@ -1128,7 +1128,7 @@ e_world_main: @ 0x0802DF50
 	push {r5-r7}
 	sub sp, sp, #12
 	bl process_input
-	bl sub_08029C20
+	bl update_fade_from_black
 	ldr r6, _0802DFA0  @ =gUnknown_030001C4
 	mov r5, #0
 	mov r4, #8
@@ -2384,7 +2384,7 @@ e_world_loop: @ 0x0802E888
 	ldrb r0, [r0]
 	add r0, r0, #1
 	strb r0, [r5, #12]
-	bl sub_08029C20
+	bl update_fade_from_black
 	cmp r0, #0
 	bne _0802E926
 	mov r2, r8
@@ -2857,7 +2857,7 @@ e_world_init_callback: @ 0x0802EC34
 	mov r1, #3
 	bl load_predefined_palette
 	add r0, r4, #0
-	bl sub_08029C9C
+	bl save_blend_regs_from_graphicsconfig
 	ldr r5, _0802ECB4  @ =gLevelEWorldFlag
 	mov r0, #0
 	ldrsb r0, [r5, r0]
@@ -9905,7 +9905,7 @@ e_world_from_menu_main: @ 0x08031EE8
 	push {r4-r6,lr}
 	sub sp, sp, #4
 	bl process_input
-	bl sub_08029C20
+	bl update_fade_from_black
 	bl sub_0802A458
 	cmp r0, #0
 	bne _08031F06

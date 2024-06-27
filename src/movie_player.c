@@ -8,13 +8,13 @@ void movie_player_main(void) {
     u32 var2;
 
     if (gUnknown_03000DCC != 0) {
-        sub_08029EB4();
-        if (gUnknown_03000C28 == 0) {
-            gUnknown_03000DCC = gUnknown_03000C28;
+        update_quick_fade_from_black();
+        if (gIsFadeInProgress == 0) {
+            gUnknown_03000DCC = gIsFadeInProgress;
         }
     }
     else {
-        sub_08029C20();    
+        update_fade_from_black();    
     }
     
     sub_0805739C(gMoviePlayerParams.movieData);
