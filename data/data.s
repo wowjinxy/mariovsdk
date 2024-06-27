@@ -1732,6 +1732,8 @@ gUnknown_080A8668:
 	.byte 0x5A
 	.byte 0x5A
 
+@ world_start
+
 	.GLOBAL gUnknown_080A8674
 gUnknown_080A8674:
 	.4byte 0x00000040

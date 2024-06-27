@@ -1129,28 +1129,6 @@ static void add_sprite_0801369C(struct SpriteTemplate *template, u16 baseTileNum
     gSomeOamIndex_03000040++;
 }
 
-// OamData, but with explicit bit fields for hflip and vflip
-struct OamData_alt
-{
-    /*0x00*/ u32 y:8;
-    /*0x01*/ u32 affineMode:2;
-             u32 objMode:2;
-             u32 mosaic:1;
-             u32 bpp:1;
-             u32 shape:2;
-
-    /*0x02*/ u32 x:9;
-             u32 matrixNum_b0_2:3;
-             u32 matrixNum_hflip:1;
-             u32 matrixNum_vflip:1;
-             u32 size:2;
-
-    /*0x04*/ u16 tileNum:10;
-             u16 priority:2;
-             u16 paletteNum:4;
-    /*0x06*/ u16 affineParam;
-};
-
 static void add_sprite_080137A0(struct SpriteTemplate *template, u16 baseTileNum, u8 index, s8 paletteNum, u8 hFlip, s16 x, s16 y)
 {
     DmaCopy32(3, template->oamData, &gOamBuffer[gSomeOamIndex_03000040], 8);

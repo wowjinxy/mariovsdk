@@ -52,7 +52,6 @@
 	X(asm/rom_8034928.o) \
 	X(asm/expert_levels.o) \
 	X(src/world_start.o) \
-	X(asm/world_start.o) \
 	X(asm/rom_80379BC.o) \
 	X(src/rom_8038414.o) \
 	X(asm/rom_8038600.o) \
