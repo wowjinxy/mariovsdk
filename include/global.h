@@ -18,6 +18,28 @@
 // Types
 //------------------------------------------------------------------------------
 
+// OamData, but with explicit bit fields for hflip and vflip
+struct OamData_alt
+{
+    /*0x00*/ u32 y:8;
+    /*0x01*/ u32 affineMode:2;
+             u32 objMode:2;
+             u32 mosaic:1;
+             u32 bpp:1;
+             u32 shape:2;
+
+    /*0x02*/ u32 x:9;
+             u32 matrixNum_b0_2:3;
+             u32 matrixNum_hflip:1;
+             u32 matrixNum_vflip:1;
+             u32 size:2;
+
+    /*0x04*/ u16 tileNum:10;
+             u16 priority:2;
+             u16 paletteNum:4;
+    /*0x06*/ u16 affineParam;
+};
+
 struct Coords32
 {
     s32 x;
@@ -264,10 +286,19 @@ struct UnknownStruct9
     u16 unk28;
 };
 
+struct UnknownStruct15_child
+{
+    u8 filler0[0xA];
+    u8 unkA;
+    u8 unkB;
+    u8 unkC;
+    u8 unkD;
+};
+
 struct UnknownStruct15
 {
     u8 unk0[0x108];
-    u32 unk108[0];
+    struct UnknownStruct15_child *unk108[0];
 };
 
 struct UnknownStruct17
@@ -287,14 +318,14 @@ struct MoviePlayerParamaters
 
 struct backgroundLayerOffset
 {
-    u16 bg0_x;
-    u16 bg0_y;
-    u16 bg1_x;
-    u16 bg1_y;
-    u16 bg2_x;
-    u16 bg2_y;
-    u16 bg3_x;
-    u16 bg3_y;
+    /*0x00*/ u16 bg0_x;
+    /*0x02*/ u16 bg0_y;
+    /*0x04*/ u16 bg1_x;
+    /*0x06*/ u16 bg1_y;
+    /*0x08*/ u16 bg2_x;
+    /*0x0A*/ u16 bg2_y;
+    /*0x0C*/ u16 bg3_x;
+    /*0x0E*/ u16 bg3_y;
 };
 
 typedef struct test {
@@ -431,7 +462,7 @@ struct struct_0807820C
     u32 unkC00C;
 };
 
-enum SoundEffect
+enum SoundID
 {
     SE_CLIMB          = 0,
     SE_SKID           = 1,
@@ -453,8 +484,8 @@ enum SoundEffect
     SE_THROW          = 17,
     SE_WALK           = 18,
     SE_PICKUP_CRYSTAL = 19,
-    SE_HERE_WEGO      = 20,
-    SE_LETS_GO        = 21,
+    SE_HERE_WEGO      = 20,  // "Okey-dokey! Let's a-go!"
+    SE_LETS_GO        = 21,  // "Let's a-go, you guys!"
     SE_BACK           = 22,
     SE_CURSOR_E       = 23,
     SE_CURSOR_M       = 24,
@@ -602,7 +633,7 @@ enum SoundEffect
     SE_MOVIE2_4       = 166,
     SE_MOVIE2_5       = 167,
     SE_MOVIE2_6       = 168,
-    SE_MOVIE2_7       = 169,
+    SE_MOVIE2_7       = 169,  // "Hey! Come back here!"
     SE_MOVIE2_8       = 170,
     SE_BOSS_ARM       = 171,
     SE_BOSS_ARM2      = 172,
@@ -644,18 +675,18 @@ enum SoundEffect
     SE_MOVIE4_06      = 208,
     SE_MOVIE4_07      = 209,
     SE_MOVIE4_08      = 210,
-    SE_MOVIE4_09      = 211,
-    SE_MOVIE4_10      = 212,
-    SE_MOVIE5_01      = 213,
-    SE_MOVIE5_05      = 214,
-    SE_MOVIE5_07      = 215,
-    SE_MOVIE6_01      = 216,
+    SE_MOVIE4_09      = 211,  // "Stop! Not again?"
+    SE_MOVIE4_10      = 212,  // "Here we go again! Hoo-hooo!"
+    SE_MOVIE5_01      = 213,  // "Come back here, you big monkey!"
+    SE_MOVIE5_05      = 214,  // "Oh?"
+    SE_MOVIE5_07      = 215,  // "Here we go! Again? Again?"
+    SE_MOVIE6_01      = 216,  // DK crying
     SE_MOVIE6_02      = 217,
-    SE_MOVIE6_03      = 218,
+    SE_MOVIE6_03      = 218,  // "Ohh you mum-mummy, you (Italian gibberish)!"
     SE_MOVIE6_04      = 219,
-    SE_MOVIE6_05      = 220,
-    SE_MOVIE6_06      = 221,
-    SE_MOVIE6_07      = 222,
+    SE_MOVIE6_05      = 220,  // "Hey, it's okay. Don't cry."
+    SE_MOVIE6_06      = 221,  // "Here, you like?"
+    SE_MOVIE6_07      = 222,  // "It's a mini Mario."
     SE_MOVIE6_08      = 223,
     SE_MOVIE6_09      = 224,
     SE_MOVIE6_10      = 225,
@@ -669,7 +700,7 @@ enum SoundEffect
     SE_STAR           = 233,
     SE_DK_WALK        = 234,
     SE_SCUFF2         = 235,
-    SE_WORLD_START    = 236,
+    SE_WORLD_START    = 236,  // "Let's a-get going!"
     SE_MM_WAKEUP      = 237,
     SE_MM_FREE        = 238,
     SE_MM_MAMAMIAS    = 239,
@@ -683,6 +714,13 @@ enum SoundEffect
     SE_RIBBON         = 247,
     SE_WON_TEXT       = 248,
     SE_DK_FALL        = 249,
+};
+
+enum SpriteID  // Index of sprites in gUncompressedGraphicsTable
+{
+    SPRITE_ID_DK_WORLD_INTRO = 241,
+    SPRITE_ID_MARIO_STAND    = 727,
+    SPRITE_ID_MARIO_RUN      = 737,
 };
 
 struct UnknownStruct13
@@ -731,12 +769,13 @@ struct SubSpriteTemplate
     /*0x03*/ s8 y_offset;  // y offset from sprite position
     u8 filler4[4];
     u32 unk8;  // some kind of flags?
-    u8 fillerC[0x24-0xC];
+    void *unkC;
+    u8 filler10[0x24-0x10];
 };
 
 struct SpriteTemplate
 {
-    /*0x00*/ u16 x;
+    /*0x00*/ u16 x;  // might actually be the number of subsprites instead?
     /*0x02*/ u16 y;
     u16 unk4;
     u16 unk6;  // number of tiles used? not sure...
@@ -946,6 +985,19 @@ enum PaletteID
     PALETTE_1_MAIN_MENU,
     PALETTE_2_EXPERT_LEVELS,
     PALETTE_3_OPTIONS_MENU,
+    
+    PALETTE_64 = 64,
+    PALETTE_65,
+    PALETTE_66,
+    PALETTE_67,
+    PALETTE_68,
+    PALETTE_69,
+    PALETTE_70,
+    PALETTE_71,
+    PALETTE_72,
+    PALETTE_73,
+    PALETTE_74,
+    PALETTE_75,
 };
 
 struct Struct1C0
@@ -1014,16 +1066,16 @@ extern struct MoviePlayerParamaters gMoviePlayerParams;
 extern u32 gUnknown_030001A8;
 extern u32 gUnknown_030001AC;
 extern u32 gUnknown_030001B0;
+extern u32 gUnknown_030001B4;
+extern u32 gUnknown_030001B8;
+extern u8 *gUnknown_030001BC;
+extern struct Struct1C0 *gUnknown_030001C0;
 extern u8 gUnknown_030002A0[];
 extern u16 gUnknown_030002AA;
 extern struct Struct30002B8 gUnknown_030002B0;
 extern struct Struct30002B8 gUnknown_030002B8;
 extern struct Struct30002B8 gUnknown_030002C0;
 extern struct Struct30002B8 gUnknown_030002C8;
-extern u32 gUnknown_030001B4;
-extern u32 gUnknown_030001B8;
-extern u8 *gUnknown_030001BC;
-extern struct Struct1C0 *gUnknown_030001C0;
 extern struct UnknownStruct11 *gUnknown_0300029C;
 
 //new for sub_0804A794
@@ -1031,6 +1083,9 @@ extern u8 gUnknown_03000368;
 extern u8 gUnknown_03000374;
 extern u8 gUnknown_03000378;
 extern u8 gUnknown_03000380;
+extern u8 gUnknown_03000387;
+extern u8 gUnknown_0300038B;
+extern u8 gUnknown_0300038C;
 extern u8 gUnknown_03000394;
 extern u8 gUnknown_03000395;
 extern u8 gUnknown_03000396;
@@ -1042,7 +1097,6 @@ extern u8 gUnknown_03000924;
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
 extern void *gUnknown_03000970[];
 extern struct Struct30009B0 gUnknown_030009B0;
-
 extern u8 gUnknown_030009D0;
 extern u8 gUnknown_030009D4;
 extern u16 gUnknown_030009D8;
@@ -1051,7 +1105,9 @@ extern u16 gUnknown_030009E0;
 extern u8 gUnknown_030009E4[];  // unknown type
 extern u8 gLevelTimerOnOffFlag;
 extern u8 gUnknown_030009EC;
+extern u8 gUnknown_030009FC;
 extern u32 gUnknown_03000A00;
+extern u16 gUnknown_03000A0C;
 extern struct Struct3000A10 gUnknown_03000A10;
 extern s32 gUnknown_03000B44;
 extern u32 gPreviousPresentScore;
@@ -1150,7 +1206,6 @@ extern struct backgroundLayerOffset gBGLayerOffsets;  // no idea what type this 
 extern u8 gUnknown_03001740;
 extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
-
 extern struct UnknownStruct9 gUnknown_03001770;
 extern u16 gObjVRAMCopyOffset_0300192C;  // unknown type
 extern u16 gVRAMCurrTileNum_03001930; // unknown type
@@ -1158,35 +1213,20 @@ extern u32 gUnknown_03001938;
 extern struct StructD7C *gUnknown_03001940;
 extern u8 gCurrentSwitchState;
 extern u16 gMarioIdleTimer;
-
 extern u8 gUnknown_03001994;
 extern u8 gUnknown_0300199C;
-
-//extern u32 gUnknown_030019A0;
-
+extern struct_030019AC* gUnknown_030019AC;
 extern u8 gUnknown_030019B0;
 extern u8 gPreviousSwitchState;
 extern u8 gUnknown_030019E4;
 extern u8 gUnknown_030019E8;
-
-// extern u32 gUnknown_03001A1C;
-
 extern struct levelCollectableFlags gLevelCollectableFlags;
-
 extern u8 gUnknown_03001A38;
 extern struct UnknownStruct8 gUnknown_03001B30;
-
-//new -- unknown type
-
-
-extern u8 gUnknown_03000387;
-
-extern struct_030019AC* gUnknown_030019AC;
 extern s32 gUnknown_03001B88;
+extern u8 gUnknown_03001B98;
 extern s32 gUnknown_03001BA4;
 extern struct_03001BD0* gUnknown_03001BD0;
-extern u8 gUnknown_0300038B;
-extern u8 gUnknown_0300038C;
 extern u8 gUnknown_03001B8C;
 extern u8 gUnknown_03001B84;
 extern u8 gUnknown_03001B80;
@@ -1197,8 +1237,6 @@ extern u8 gUnknown_03001B90;
 extern u8 gUnknown_03001BB0;
 extern u8 gUnknown_03001BC8;
 extern u8 gUnknown_03001BCC;
-
-
 extern u8 gUnknown_03001BDC;
 extern s32 gUnknown_03001BE4;
 extern s32 gUnknown_03001BEC;
@@ -1213,10 +1251,7 @@ extern u16 gUnknown_03001C48;
 extern s8 gUnknown_03001C80;
 extern s8 gUnknown_03001C84;
 extern s16 gUnknown_03001D60;
-
 extern u8 gUnknown_03001A00;
-extern u8 gUnknown_03000B78;
-
 extern u32 gUnknown_03001A1C;
 extern u16 gUnknown_03001A3C;
 extern u8 gUnknown_03001A4C;
@@ -1228,14 +1263,11 @@ extern s8 gUnknown_030019D8;
 extern u8 gUnknown_03001944;
 extern u8 gUnknown_030019F4;
 extern u8 gUnknown_030019A4;
-
 extern struct UnknownStruct7 *gUnknown_03001C78;
-
 extern u8 gUnknown_03001E38;
 extern u8 gUnknown_03001E3C;
 extern u8 gUnknown_03001F50[];  // unknown type
 extern u8 gUnknown_03007AB0[];  // unknown type
-
 extern void *gUnknown_03007FFC;
 
 extern struct Struct08078210
@@ -1373,11 +1405,23 @@ extern struct OamData gfxBronzeCrownOAM;
 extern u8 gfxBronzeCrown4bpp[];
 extern struct Struct0807C0E0 gUnknown_0807C0D8;
 extern u8 gUnknown_080A8668;
+extern struct SpriteTemplate gUncompressedGraphicsTable[];
 
-extern u8 gUnknown_03001B98;
-extern u16 gUnknown_03000A0C;
-extern u8 gUnknown_030009FC;
+extern struct GraphicsConfig gWorldOneStartData;
+extern struct GraphicsConfig gWorldTwoStartData;
+extern struct GraphicsConfig gWorldThreeStartData;
+extern struct GraphicsConfig gWorldFourStartData;
+extern struct GraphicsConfig gWorldFiveStartData;
+extern struct GraphicsConfig gWorldSixStartData;
+extern struct GraphicsConfig gWorldOnePlusStartData;
+extern struct GraphicsConfig gWorldTwoPlusStartData;
+extern struct GraphicsConfig gWorldThreePlusStartData;
+extern struct GraphicsConfig gWorldFourPlusStartData;
+extern struct GraphicsConfig gWorldFivePlusStartData;
+extern struct GraphicsConfig gWorldSixPlusStartData;
 
+extern struct { u8 filler0; u8 unk1; } gUnknown_08251EC0;
+extern struct { u8 filler0; u8 unk1; } gUnknown_0854301C;
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
 extern struct UnknownStruct16 gEWorldMenuData2;
@@ -1416,6 +1460,7 @@ void sub_08004428();
 void sub_08004634();
 void sub_08006388(void);
 void sub_080064D4();
+void sub_08006548();
 int sub_080066FC(u32 *, int, int, int);
 struct UnknownStruct15 *sub_08006968();
 void sub_08006D44(void);
@@ -1603,9 +1648,11 @@ void expert_levels_loop(void);
 void expert_levels_loop(void);
 void expert_levels_end(void);
 void world_start_init_callback(void);
+
 void world_start_main(void);
 void world_start_loop(void);
 void world_start_end(void);
+
 void print_error_message(char *);
 void sub_08038130(int);
 void sub_080381E4(int, int);
@@ -1615,6 +1662,7 @@ void sub_080386DC(void);
 extern u8 sub_08038DF4(u8, u8, int, u16, u16, int);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);
+void sub_08040FC0(int, int);
 extern void sub_08041F2C(s8);
 void sub_0804138C(int, int, u32, u32);
 u16 sub_0806C2C4(void);
@@ -1623,7 +1671,7 @@ void sub_080714A8(void);
 void sub_0807166C();
 void sub_08071800(void);
 void sub_0807194C(void);
-int play_sound_effect_08071990(u8, u8, u8, u8, u8, u8, u8);
+int play_sound_effect_08071990(int, u8, u8, u8, u8, u8, u8);
 void sub_08071C24(void);
 void sub_08071CD4(void);
 void sub_08071D9C(void);

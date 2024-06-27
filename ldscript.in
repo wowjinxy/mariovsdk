@@ -46,12 +46,13 @@
 	X(src/rom_8033C38.o) \
 	X(src/arena.o) \
 	X(data/rodata2.o) \
-	X(data/sound.o) \
-	X(data/rodata3.o) \
 	X(asm/rom_8034928.o) \
 	X(asm/expert_levels.o) \
-	X(asm/world_start.o) \
+	X(src/world_start.o) \
 	X(asm/rom_80379BC.o) \
+	X(data/data2.o) \
+	X(data/sound.o) \
+	X(data/rodata3.o) \
 	X(src/rom_8038414.o) \
 	X(asm/rom_8038600.o) \
 	X(src/rom_804A8E8.o) \
@@ -192,6 +193,7 @@ SECTIONS
 		. = 0x2B8;		gUnknown_030002B8 = .;
 		. = 0x2C0;		gUnknown_030002C0 = .;
 		. = 0x2C8;		gUnknown_030002C8 = .;
+		. = 0x2F0;		src/world_start.o(.bss);
 		. = 0x368;		gUnknown_03000368 = .;
 		. = 0x374;		gUnknown_03000374 = .;
 		. = 0x378;		gUnknown_03000378 = .;

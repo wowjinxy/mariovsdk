@@ -30,3 +30,4 @@ objects:
 -   path: savefile.o
 -   path: title.o
 -   path: rom_802B798.o
+-   path: world_start.o

@@ -1,48 +1,7 @@
 	.INCLUDE "macro.inc"
 	.INCLUDE "gba.inc"
 
-	THUMB_FUNC_START sub_080379BC
-sub_080379BC: @ 0x080379BC
-	push {r4,r5,lr}
-	lsl r0, r0, #24
-	lsl r1, r1, #24
-	lsr r1, r1, #24
-	ldr r2, _080379FC  @ =0x030002FC
-	lsr r0, r0, #21
-	ldr r2, [r2]
-	add r2, r2, r0
-	mov r4, #0
-	strb r4, [r2]
-	ldr r0, _08037A00  @ =0x030002F0
-	ldr r0, [r0]
-	lsl r3, r1, #2
-	mov r5, #132
-	lsl r5, r5, #1
-	add r0, r0, r5
-	add r0, r0, r3
-	ldr r3, [r0]
-	ldrb r0, [r3, #11]
-	strb r0, [r2, #1]
-	ldrb r0, [r3, #10]
-	strb r0, [r2, #5]
-	strb r1, [r2, #4]
-	strh r4, [r2, #6]
-	ldrb r0, [r3, #12]
-	strb r0, [r2, #2]
-	ldrb r0, [r3, #13]
-	strb r0, [r2, #3]
-	pop {r4,r5}
-	pop {r0}
-	bx r0
-	.byte 0x00
-	.byte 0x00
-_080379FC:
-	.4byte 0x030002FC
-_08037A00:
-	.4byte 0x030002F0
-	THUMB_FUNC_END sub_080379BC
-
-		THUMB_FUNC_START print_error_message
+	THUMB_FUNC_START print_error_message
 print_error_message: @ 0x08037A04
 	push {r4-r7,lr}
 	mov r7, r10
@@ -164,7 +123,7 @@ _08037AFC:
 _08037B00:
 	.4byte REG_BLDCNT
 
-		THUMB_FUNC_START sub_08037B04
+	THUMB_FUNC_START sub_08037B04
 sub_08037B04: @ 0x08037B04
 	push {r4-r6,lr}
 	sub sp, sp, #12
