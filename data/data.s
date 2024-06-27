@@ -1,3 +1,6 @@
+	.INCLUDE "gba.inc"
+	.INCLUDE "macro.inc"
+
 	.SECTION .data
 
 	.GLOBAL gUnknown_080788B0

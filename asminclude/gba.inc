@@ -467,7 +467,7 @@ INTR_FLAG_GAMEPAK  = (1 << 13)
 @ Structures
 @-------------------------------------------------------------------------------
 
-.MACRO OamData y, affineMode, objMode, mosaic, bpp, shape, x, matrixNum, size, tileNum, priority, paletteNum, affineParam=0
+.MACRO OamData y=0, affineMode=ST_OAM_AFFINE_OFF, objMode=ST_OAM_OBJ_NORMAL, mosaic=0, bpp, shape, x=0, matrixNum=0, size, tileNum=0, priority=0, paletteNum, affineParam=0
 	.BYTE \y
 	.BYTE (\affineMode & 3) | ((\objMode & 3) << 2) | ((\mosaic & 1) << 4) | ((\bpp & 1) << 5) | ((\shape & 3) << 6)
 	.2BYTE (\x & 0x1FF) | ((\matrixNum & 0x1F) << 9) | ((\size & 3) << 14)
