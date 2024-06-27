@@ -307,6 +307,16 @@ struct UnknownStruct17
     u8 unk1;
 };
 
+struct MovieSoundEffect  // Movie sound effects
+{
+    /*0x00*/ u32 soundID;  // sound ID
+    u8 filler4[2];
+    u8 unk6;
+    u8 unk7;  // maybe volume related?
+    /*0x08*/ u32 startTime;  // start time?
+    /*0x0C*/ u32 endTime;  // end time?
+};  // size = 0x10
+
 struct Movie_child
 {
     u32 unk0;
@@ -314,14 +324,14 @@ struct Movie_child
     struct Movie_child_child8 *unk8;
     u16 unkC;
     struct Movie_child_child10 *unk10;
-    u16 unk14;
-    struct Movie_child_child18 *unk18;
+    /*0x14*/ u16 soundEffectsCount;
+    /*0x18*/ struct MovieSoundEffect *soundEffects;
     u16 unk1C;
     struct Movie_child_child20 *unk20;
     u16 unk24;
     struct Movie_child_child28 *unk28;
     u16 unk2C;
-    struct Movie_child_child30 *unk30;
+    struct Movie_child_child30 *unk30;  // video?
 };  // size = 0x34
 
 struct Movie

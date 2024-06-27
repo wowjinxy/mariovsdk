@@ -28277,7 +28277,77 @@ gUnknown_08B2E90C:
 
 	.GLOBAL gUnknown_08B2E914
 gUnknown_08B2E914:
-	.INCBIN "baserom.gba", 0xB2E914, 0xB2EA24-0xB2E914
+	.4byte 216  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 0  @ Start Time
+	.4byte 175  @ End Time
+
+	.4byte 217  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 175  @ Start Time
+	.4byte 285  @ End Time
+
+	.4byte 218  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 285  @ Start Time
+	.4byte 465  @ End Time
+
+	.4byte 219  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 465  @ Start Time
+	.4byte 625  @ End Time
+
+	.4byte 220  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 625  @ Start Time
+	.4byte 805  @ End Time
+
+	.4byte 221  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 805  @ Start Time
+	.4byte 985  @ End Time
+
+	.4byte 222  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 985  @ Start Time
+	.4byte 1155  @ End Time
+
+	.4byte 223  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1155  @ Start Time
+	.4byte 1320  @ End Time
+
+	.4byte 224  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1320  @ Start Time
+	.4byte 1460  @ End Time
+
+	.4byte 225  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1460  @ Start Time
+	.4byte 1740  @ End Time
+
+	.INCBIN "baserom.gba", 0xB2E9B4, 0xB2EA24-0xB2E9B4
 
 	.GLOBAL gUnknown_08B2EA24
 gUnknown_08B2EA24:
@@ -28294,7 +28364,7 @@ gUnknown_08B2F03C:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0xA
 	.skip 2
-	.4byte gUnknown_08B2E914  @ ptr offset 0x18
+	.4byte gUnknown_08B2E914  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28312,7 +28382,56 @@ gMovie6:
 
 	.GLOBAL gUnknown_08B2F078
 gUnknown_08B2F078:
-	.INCBIN "baserom.gba", 0xB2F078, 0xB2F140-0xB2F078
+	.4byte 213  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 12  @ Start Time
+	.4byte 180  @ End Time
+
+	.4byte 191  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 180  @ Start Time
+	.4byte 310  @ End Time
+
+	.4byte 192  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 310  @ Start Time
+	.4byte 460  @ End Time
+
+	.4byte 194  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 460  @ Start Time
+	.4byte 600  @ End Time
+
+	.4byte 214  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 600  @ Start Time
+	.4byte 765  @ End Time
+
+	.4byte 210  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 765  @ Start Time
+	.4byte 925  @ End Time
+
+	.4byte 215  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 925  @ Start Time
+	.4byte 1165  @ End Time
+
+	.INCBIN "baserom.gba", 0xB2F0E8, 0xB2F140-0xB2F0E8
 
 	.GLOBAL gUnknown_08B2F140
 gUnknown_08B2F140:
@@ -28329,7 +28448,7 @@ gUnknown_08B2F584:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0x7
 	.skip 2
-	.4byte gUnknown_08B2F078  @ ptr offset 0x18
+	.4byte gUnknown_08B2F078  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28347,7 +28466,98 @@ gMovie5:
 
 	.GLOBAL gUnknown_08B2F5C0
 gUnknown_08B2F5C0:
-	.INCBIN "baserom.gba", 0xB2F5C0, 0xB2F720-0xB2F5C0
+	.4byte 213  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 12  @ Start Time
+	.4byte 180  @ End Time
+
+	.4byte 191  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 180  @ Start Time
+	.4byte 310  @ End Time
+
+	.4byte 192  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 310  @ Start Time
+	.4byte 460  @ End Time
+
+	.4byte 193  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 460  @ Start Time
+	.4byte 635  @ End Time
+
+	.4byte 194  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 635  @ Start Time
+	.4byte 760  @ End Time
+
+	.4byte 195  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 760  @ Start Time
+	.4byte 870  @ End Time
+
+	.4byte 196  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 870  @ Start Time
+	.4byte 1020  @ End Time
+
+	.4byte 197  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1020  @ Start Time
+	.4byte 1160  @ End Time
+
+	.4byte 198  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1160  @ Start Time
+	.4byte 1300  @ End Time
+
+	.4byte 199  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1300  @ Start Time
+	.4byte 1450  @ End Time
+
+	.4byte 200  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1450  @ Start Time
+	.4byte 1615  @ End Time
+
+	.4byte 169  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1615  @ Start Time
+	.4byte 1695  @ End Time
+
+	.4byte 203  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1695  @ Start Time
+	.4byte 1915  @ End Time
+
+	.INCBIN "baserom.gba", 0xB2F690, 0xB2F720-0xB2F690
 
 	.GLOBAL gUnknown_08B2F720
 gUnknown_08B2F720:
@@ -28364,7 +28574,7 @@ gUnknown_08B2FFA8:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0xD
 	.skip 2
-	.4byte gUnknown_08B2F5C0  @ ptr offset 0x18
+	.4byte gUnknown_08B2F5C0  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28382,7 +28592,63 @@ gMovie2:
 
 	.GLOBAL gUnknown_08B2FFE4
 gUnknown_08B2FFE4:
-	.INCBIN "baserom.gba", 0xB2FFE4, 0xB3011C-0xB2FFE4
+	.4byte 204  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 5  @ Start Time
+	.4byte 195  @ End Time
+
+	.4byte 205  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 195  @ Start Time
+	.4byte 435  @ End Time
+
+	.4byte 206  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 435  @ Start Time
+	.4byte 565  @ End Time
+
+	.4byte 207  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 565  @ Start Time
+	.4byte 1035  @ End Time
+
+	.4byte 209  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1035  @ Start Time
+	.4byte 1185  @ End Time
+
+	.4byte 210  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1200  @ Start Time
+	.4byte 1360  @ End Time
+
+	.4byte 211  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1360  @ Start Time
+	.4byte 1490  @ End Time
+
+	.4byte 212  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1520  @ Start Time
+	.4byte 1750  @ End Time
+
+	.INCBIN "baserom.gba", 0xB30064, 0xB3011C-0xB30064
 
 	.GLOBAL gUnknown_08B3011C
 gUnknown_08B3011C:
@@ -28399,7 +28665,7 @@ gUnknown_08B30734:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0x8
 	.skip 2
-	.4byte gUnknown_08B2FFE4  @ ptr offset 0x18
+	.4byte gUnknown_08B2FFE4  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28417,7 +28683,77 @@ gMovie4:
 
 	.GLOBAL gUnknown_08B30770
 gUnknown_08B30770:
-	.INCBIN "baserom.gba", 0xB30770, 0xB308AC-0xB30770
+	.4byte 163  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 130  @ Start Time
+	.4byte 290  @ End Time
+
+	.4byte 164  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 290  @ Start Time
+	.4byte 450  @ End Time
+
+	.4byte 165  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 470  @ Start Time
+	.4byte 730  @ End Time
+
+	.4byte 166  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 585  @ Start Time
+	.4byte 730  @ End Time
+
+	.4byte 167  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 805  @ Start Time
+	.4byte 990  @ End Time
+
+	.4byte 168  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 990  @ Start Time
+	.4byte 1150  @ End Time
+
+	.4byte 169  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1150  @ Start Time
+	.4byte 1270  @ End Time
+
+	.4byte 170  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1270  @ Start Time
+	.4byte 1510  @ End Time
+
+	.4byte 226  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1510  @ Start Time
+	.4byte 1670  @ End Time
+
+	.4byte 218  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1670  @ Start Time
+	.4byte 1850  @ End Time
+
+	.INCBIN "baserom.gba", 0xB30810, 0xB308AC-0xB30810
 
 	.GLOBAL gUnknown_08B308AC
 gUnknown_08B308AC:
@@ -28434,7 +28770,7 @@ gUnknown_08B30F60:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0xA
 	.skip 2
-	.4byte gUnknown_08B30770  @ ptr offset 0x18
+	.4byte gUnknown_08B30770  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28452,7 +28788,91 @@ gMovie1:
 
 	.GLOBAL gUnknown_08B30F9C
 gUnknown_08B30F9C:
-	.INCBIN "baserom.gba", 0xB30F9C, 0xB311A8-0xB30F9C
+	.4byte 161  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 0  @ Start Time
+	.4byte 240  @ End Time
+
+	.4byte 96  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 240  @ Start Time
+	.4byte 255  @ End Time
+
+	.4byte 97  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 255  @ Start Time
+	.4byte 390  @ End Time
+
+	.4byte 96  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 390  @ Start Time
+	.4byte 405  @ End Time
+
+	.4byte 98  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 405  @ Start Time
+	.4byte 590  @ End Time
+
+	.4byte 96  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 590  @ Start Time
+	.4byte 605  @ End Time
+
+	.4byte 99  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 605  @ Start Time
+	.4byte 695  @ End Time
+
+	.4byte 96  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 695  @ Start Time
+	.4byte 710  @ End Time
+
+	.4byte 100  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 710  @ Start Time
+	.4byte 840  @ End Time
+
+	.4byte 96  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 840  @ Start Time
+	.4byte 855  @ End Time
+
+	.4byte 160  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 855  @ Start Time
+	.4byte 1630  @ End Time
+
+	.4byte 228  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 2285  @ Start Time
+	.4byte 2400  @ End Time
+
+	.INCBIN "baserom.gba", 0xB3105C, 0xB311A8-0xB3105C
 
 	.GLOBAL gUnknown_08B311A8
 gUnknown_08B311A8:
@@ -28469,7 +28889,7 @@ gUnknown_08B320E4:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0xC
 	.skip 2
-	.4byte gUnknown_08B30F9C  @ ptr offset 0x18
+	.4byte gUnknown_08B30F9C  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28480,6 +28900,7 @@ gUnknown_08B320E4:
 	.skip 2
 	.4byte gUnknown_08B311A8  @ ptr offset 0x30
 
+@ Intro movie
 	.GLOBAL gMovie0
 gMovie0:
 	.4byte 0x00000001
@@ -28504,7 +28925,7 @@ gUnknown_08B35F8C:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0x0
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x18
+	.4byte 0x00000000  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28536,7 +28957,7 @@ gUnknown_08B37134:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0x0
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x18
+	.4byte 0x00000000  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28554,7 +28975,14 @@ gMovie3:
 
 	.GLOBAL gUnknown_08B37170
 gUnknown_08B37170:
-	.INCBIN "baserom.gba", 0xB37170, 0xB371C0-0xB37170
+	.4byte 204  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 0  @ Start Time
+	.4byte 360  @ End Time
+
+	.INCBIN "baserom.gba", 0xB37180, 0xB371C0-0xB37180
 
 	.GLOBAL gUnknown_08B371C0
 gUnknown_08B371C0:
@@ -28571,7 +28999,7 @@ gUnknown_08B372F8:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0x1
 	.skip 2
-	.4byte gUnknown_08B37170  @ ptr offset 0x18
+	.4byte gUnknown_08B37170  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
@@ -28603,7 +29031,7 @@ gUnknown_08B373F0:
 	.4byte 0x00000000  @ ptr offset 0x10
 	.2byte 0x0
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x18
+	.4byte 0x00000000  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
