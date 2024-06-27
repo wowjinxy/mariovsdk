@@ -3,6 +3,70 @@
 #include "arena.h"
 #include "main.h"
 
+static enum PaletteID gUnknown_080A8674[] =
+{
+    PALETTE_64,
+    PALETTE_65,
+    PALETTE_66,
+    PALETTE_67,
+    PALETTE_68,
+    PALETTE_69,
+};
+
+static enum PaletteID gUnknown_080A868C[] =
+{
+    PALETTE_70,
+    PALETTE_71,
+    PALETTE_72,
+    PALETTE_73,
+    PALETTE_74,
+    PALETTE_75,
+};
+
+static struct GraphicsConfig *sWorldStartTable[] =
+{
+    &gWorldOneStartData,
+    &gWorldTwoStartData,
+    &gWorldThreeStartData,
+    &gWorldFourStartData,
+    &gWorldFiveStartData,
+    &gWorldSixStartData,
+};
+
+static struct GraphicsConfig *sWorldPlusStartTable[] =
+{
+    &gWorldOnePlusStartData,
+    &gWorldTwoPlusStartData,
+    &gWorldThreePlusStartData,
+    &gWorldFourPlusStartData,
+    &gWorldFivePlusStartData,
+    &gWorldSixPlusStartData,
+};
+
+static s16 gUnknown_080A86D4[][2] =
+{
+    { SE_WORLD_START, SE_WORLD_START },
+    { SE_MOVIE2_7,    SE_MOVIE5_07 },
+    { SE_MOVIE5_01,   SE_MOVIE5_01 },
+    { SE_MOVIE6_03,   SE_MOVIE6_03 },
+    { SE_MOVIE4_09,   SE_MOVIE6_03 },
+    { SE_MOVIE4_10,   SE_MOVIE4_10 },
+};
+
+struct Struct300
+{
+    s32 unk0;
+    u32 unk4;
+    s16 spriteId;
+    s16 unkA;
+    s16 subSpriteIndex;
+    s16 unkE;
+    u32 unk10;
+};
+
+static struct Struct300 *gUnknown_03000300;
+static struct Struct300 *gUnknown_03000304;
+
 void world_start_init_callback(void)
 {
     struct GraphicsConfig *spC[4];
@@ -16,25 +80,25 @@ void world_start_init_callback(void)
     spC[1] = NULL;
     if (gLevelType == LEVEL_TYPE_MAIN || gLevelType == LEVEL_TYPE_MAIN_BOSS)
     {
-        spC[2] = gWorldStartTable[gCurrentWorld];
-        spC[3] = gWorldStartTable[gCurrentWorld];
+        spC[2] = sWorldStartTable[gCurrentWorld];
+        spC[3] = sWorldStartTable[gCurrentWorld];
     }
     else
     {
-        spC[2] = gWorldPlusStartTable[gCurrentWorld];
-        spC[3] = gWorldPlusStartTable[gCurrentWorld];
+        spC[2] = sWorldPlusStartTable[gCurrentWorld];
+        spC[3] = sWorldPlusStartTable[gCurrentWorld];
     }
     load_graphics_config_08032F24(spC, 3);
     sub_08037230();
     REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     if (gLevelType == LEVEL_TYPE_MAIN || gLevelType == LEVEL_TYPE_MAIN_BOSS)
     {
-        gUnknown_030002F0 = sub_08006968(gWorldStartTable[gCurrentWorld]);
+        gUnknown_030002F0 = sub_08006968(sWorldStartTable[gCurrentWorld]);
         load_predefined_palette(gUnknown_080A8674[gCurrentWorld], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
     }
     else
     {
-        gUnknown_030002F0 = sub_08006968(gWorldPlusStartTable[gCurrentWorld]);
+        gUnknown_030002F0 = sub_08006968(sWorldPlusStartTable[gCurrentWorld]);
         load_predefined_palette(gUnknown_080A868C[gCurrentWorld], LOAD_BG_PALETTE);
         load_predefined_palette(gUnknown_080A8674[gCurrentWorld], LOAD_OBJ_PALETTE);
     }
@@ -61,26 +125,26 @@ void world_start_init_callback(void)
 void sub_08037230(void)
 {
     gUnknown_03000300 = arena_allocate(sizeof(*gUnknown_03000300));
-    gUnknown_03000300->unkC = 0;
+    gUnknown_03000300->subSpriteIndex = 0;
     gUnknown_03000300->unkE = gUnknown_08251EC0.unk1;
     gUnknown_03000300->unk0 = -0x3F00;
     gUnknown_03000300->unk4 = 56;
-    gUnknown_03000300->unk8 = 241;
+    gUnknown_03000300->spriteId = SPRITE_ID_DK_WORLD_INTRO;
     gUnknown_03000300->unkA = 0x200;
 
     gUnknown_03000304 = arena_allocate(sizeof(*gUnknown_03000304));
-    gUnknown_03000304->unkC = 0;
+    gUnknown_03000304->subSpriteIndex = 0;
     gUnknown_03000304->unkE = gUnknown_0854301C.unk1;
     gUnknown_03000304->unk0 = -0x2000;
     gUnknown_03000304->unk4 = 88;
-    gUnknown_03000304->unk8 = 737;
+    gUnknown_03000304->spriteId = SPRITE_ID_MARIO_RUN;
     gUnknown_03000304->unkA = 336;
 }
 
 void sub_080372A0(void)
 {
     struct Struct2FC *r4;
-    int r1;
+    int isPlus;
 
     switch (gUnknown_030002F4)
     {
@@ -138,16 +202,16 @@ void sub_080372A0(void)
         }
         else
         {
-            gUnknown_03000304->unk8 = 0x2D7;
+            gUnknown_03000304->spriteId = SPRITE_ID_MARIO_STAND;
             gUnknown_030002F8 = -0x3200;
             gBGLayerOffsets.bg2_y = gUnknown_030002F8 >> 8;
             gUnknown_030002F4 = 3;
             sub_08071E14(18);
             if (gLevelType == LEVEL_TYPE_MAIN || gLevelType == LEVEL_TYPE_MAIN_BOSS)
-                r1 = 0;
+                isPlus = 0;
             else
-                r1 = 1;
-            play_sound_effect_08071990(gUnknown_080A86D4[gCurrentWorld][r1], 8, 16, 64, 0, 128, 0);
+                isPlus = 1;
+            play_sound_effect_08071990(gUnknown_080A86D4[gCurrentWorld][isPlus], 8, 16, 64, 0, 128, 0);
             REG_DISPCNT |= DISPCNT_BG2_ON;
         }
         break;
@@ -184,23 +248,23 @@ void world_start_main(void)
     }
 
     r3 = gUnknown_03000304;
-    r2 = &gUncompressedGraphicsTable[r3->unk8];
+    r2 = &gUncompressedGraphicsTable[r3->spriteId];
     if (--r3->unkE <= 0)
     {
-        r3->unkC++;
-        if (r3->unkC >= r2->x)
-            r3->unkC = 0;
-        r3->unkE = r2->subSprites[r3->unkC].duration;
+        r3->subSpriteIndex++;
+        if (r3->subSpriteIndex >= r2->x)
+            r3->subSpriteIndex = 0;
+        r3->unkE = r2->subSprites[r3->subSpriteIndex].duration;
     }
 
     r3 = gUnknown_03000300;
-    r2 = &gUncompressedGraphicsTable[gUnknown_03000300->unk8];
+    r2 = &gUncompressedGraphicsTable[r3->spriteId];
     if (--r3->unkE <= 0)
     {
-        r3->unkC++;
-        if (r3->unkC >= r2->x)
-            r3->unkC = 0;
-        r3->unkE = r2->subSprites[r3->unkC].duration;
+        r3->subSpriteIndex++;
+        if (r3->subSpriteIndex >= r2->x)
+            r3->subSpriteIndex = 0;
+        r3->unkE = r2->subSprites[r3->subSpriteIndex].duration;
     }
 }
 
@@ -218,7 +282,7 @@ struct SubSpriteTemplate2
 
 void sub_080375EC(struct Struct300 *arg0, u8 arg1)  // unreferenced
 {
-    struct SpriteTemplate *r7 = &gUncompressedGraphicsTable[arg0->unk8];
+    struct SpriteTemplate *r7 = &gUncompressedGraphicsTable[arg0->spriteId];
 
     if ((s32)r7->subSprites[0].unk8 < 0)
     {
@@ -230,7 +294,7 @@ void sub_080375EC(struct Struct300 *arg0, u8 arg1)  // unreferenced
         s16 r0_ = (r1 & 0x40) ? r9 >> 2 : r9 >> 3;
 
         DmaCopy32(3,
-            r5->tileData + ((struct SubSpriteTemplate2 *)r5->subSprites)[arg0->unkC].index * r0_ * 4,
+            r5->tileData + ((struct SubSpriteTemplate2 *)r5->subSprites)[arg0->subSpriteIndex].index * r0_ * 4,
             (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C),
             r9 / 1);
         DmaCopy32(3, ((struct SpriteTemplate *)r5)->oamData /* hmm */, &gOamBuffer[gUnknown_030002F6], 8);
@@ -244,7 +308,7 @@ void sub_080375EC(struct Struct300 *arg0, u8 arg1)  // unreferenced
         gUnknown_030002F6++;
     }
     DmaCopy32(3,
-        r7->tileData + ((struct SubSpriteTemplate2 *)r7->subSprites)[arg0->unkC].index * r7->unk6 * 4,
+        r7->tileData + ((struct SubSpriteTemplate2 *)r7->subSprites)[arg0->subSpriteIndex].index * r7->unk6 * 4,
         (void *)(OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C),
         r7->y);
     DmaCopy32(3, r7->oamData, &gOamBuffer[gUnknown_030002F6], 8);
@@ -294,6 +358,21 @@ void world_start_loop(void)
 
 void world_start_end(void)
 {
+}
+
+void sub_080379BC(u8 arg0, u8 arg1)
+{
+    struct Struct2FC *r2 = &gUnknown_030002FC[arg0];
+    struct UnknownStruct15_child *r3;
+
+    r2->unk0 = 0;
+    r3 = gUnknown_030002F0->unk108[arg1];
+    r2->unk1 = r3->unkB;
+    r2->unk5 = r3->unkA;
+    r2->unk4 = arg1;
+    r2->unk6 = 0;
+    r2->unk2 = r3->unkC;
+    r2->unk3 = r3->unkD;
 }
 
 asm(".balign 4, 0");

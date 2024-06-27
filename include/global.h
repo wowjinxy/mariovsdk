@@ -288,8 +288,11 @@ struct UnknownStruct9
 
 struct UnknownStruct15_child
 {
-    u8 filler0[0xB];
+    u8 filler0[0xA];
+    u8 unkA;
     u8 unkB;
+    u8 unkC;
+    u8 unkD;
 };
 
 struct UnknownStruct15
@@ -459,7 +462,7 @@ struct struct_0807820C
     u32 unkC00C;
 };
 
-enum SoundEffect
+enum SoundID
 {
     SE_CLIMB          = 0,
     SE_SKID           = 1,
@@ -481,8 +484,8 @@ enum SoundEffect
     SE_THROW          = 17,
     SE_WALK           = 18,
     SE_PICKUP_CRYSTAL = 19,
-    SE_HERE_WEGO      = 20,
-    SE_LETS_GO        = 21,
+    SE_HERE_WEGO      = 20,  // "Okey-dokey! Let's a-go!"
+    SE_LETS_GO        = 21,  // "Let's a-go, you guys!"
     SE_BACK           = 22,
     SE_CURSOR_E       = 23,
     SE_CURSOR_M       = 24,
@@ -630,7 +633,7 @@ enum SoundEffect
     SE_MOVIE2_4       = 166,
     SE_MOVIE2_5       = 167,
     SE_MOVIE2_6       = 168,
-    SE_MOVIE2_7       = 169,
+    SE_MOVIE2_7       = 169,  // "Hey! Come back here!"
     SE_MOVIE2_8       = 170,
     SE_BOSS_ARM       = 171,
     SE_BOSS_ARM2      = 172,
@@ -672,18 +675,18 @@ enum SoundEffect
     SE_MOVIE4_06      = 208,
     SE_MOVIE4_07      = 209,
     SE_MOVIE4_08      = 210,
-    SE_MOVIE4_09      = 211,
-    SE_MOVIE4_10      = 212,
-    SE_MOVIE5_01      = 213,
-    SE_MOVIE5_05      = 214,
-    SE_MOVIE5_07      = 215,
-    SE_MOVIE6_01      = 216,
+    SE_MOVIE4_09      = 211,  // "Stop! Not again?"
+    SE_MOVIE4_10      = 212,  // "Here we go again! Hoo-hooo!"
+    SE_MOVIE5_01      = 213,  // "Come back here, you big monkey!"
+    SE_MOVIE5_05      = 214,  // "Oh?"
+    SE_MOVIE5_07      = 215,  // "Here we go! Again? Again?"
+    SE_MOVIE6_01      = 216,  // DK crying
     SE_MOVIE6_02      = 217,
-    SE_MOVIE6_03      = 218,
+    SE_MOVIE6_03      = 218,  // "Ohh you mum-mummy, you (Italian gibberish)!"
     SE_MOVIE6_04      = 219,
-    SE_MOVIE6_05      = 220,
-    SE_MOVIE6_06      = 221,
-    SE_MOVIE6_07      = 222,
+    SE_MOVIE6_05      = 220,  // "Hey, it's okay. Don't cry."
+    SE_MOVIE6_06      = 221,  // "Here, you like?"
+    SE_MOVIE6_07      = 222,  // "It's a mini Mario."
     SE_MOVIE6_08      = 223,
     SE_MOVIE6_09      = 224,
     SE_MOVIE6_10      = 225,
@@ -697,7 +700,7 @@ enum SoundEffect
     SE_STAR           = 233,
     SE_DK_WALK        = 234,
     SE_SCUFF2         = 235,
-    SE_WORLD_START    = 236,
+    SE_WORLD_START    = 236,  // "Let's a-get going!"
     SE_MM_WAKEUP      = 237,
     SE_MM_FREE        = 238,
     SE_MM_MAMAMIAS    = 239,
@@ -711,6 +714,13 @@ enum SoundEffect
     SE_RIBBON         = 247,
     SE_WON_TEXT       = 248,
     SE_DK_FALL        = 249,
+};
+
+enum SpriteID  // Index of sprites in gUncompressedGraphicsTable
+{
+    SPRITE_ID_DK_WORLD_INTRO = 241,
+    SPRITE_ID_MARIO_STAND    = 727,
+    SPRITE_ID_MARIO_RUN      = 737,
 };
 
 struct UnknownStruct13
@@ -975,6 +985,19 @@ enum PaletteID
     PALETTE_1_MAIN_MENU,
     PALETTE_2_EXPERT_LEVELS,
     PALETTE_3_OPTIONS_MENU,
+    
+    PALETTE_64 = 64,
+    PALETTE_65,
+    PALETTE_66,
+    PALETTE_67,
+    PALETTE_68,
+    PALETTE_69,
+    PALETTE_70,
+    PALETTE_71,
+    PALETTE_72,
+    PALETTE_73,
+    PALETTE_74,
+    PALETTE_75,
 };
 
 struct Struct1C0
@@ -995,17 +1018,6 @@ struct Struct2FC
     u8 unk5;
     u16 unk6;
 };  // size = 0x8
-
-struct Struct300
-{
-    s32 unk0;
-    u32 unk4;
-    s16 unk8;
-    s16 unkA;
-    s16 unkC;
-    s16 unkE;
-    u32 unk10;
-};
 
 //------------------------------------------------------------------------------
 // Variables
@@ -1080,8 +1092,6 @@ extern u8 gUnknown_030002F4;
 extern u16 gUnknown_030002F6;
 extern s16 gUnknown_030002F8;
 extern struct Struct2FC *gUnknown_030002FC;
-extern struct Struct300 *gUnknown_03000300;
-extern struct Struct300 *gUnknown_03000304;
 
 //new for sub_0804A794
 extern u8 gUnknown_03000368;
@@ -1413,14 +1423,20 @@ extern u8 gUnknown_080A8668;
 extern struct SpriteTemplate gUncompressedGraphicsTable[];
 
 extern struct GraphicsConfig gWorldOneStartData;
-extern struct GraphicsConfig *gWorldStartTable[];
-extern struct GraphicsConfig *gWorldPlusStartTable[];
+extern struct GraphicsConfig gWorldTwoStartData;
+extern struct GraphicsConfig gWorldThreeStartData;
+extern struct GraphicsConfig gWorldFourStartData;
+extern struct GraphicsConfig gWorldFiveStartData;
+extern struct GraphicsConfig gWorldSixStartData;
+extern struct GraphicsConfig gWorldOnePlusStartData;
+extern struct GraphicsConfig gWorldTwoPlusStartData;
+extern struct GraphicsConfig gWorldThreePlusStartData;
+extern struct GraphicsConfig gWorldFourPlusStartData;
+extern struct GraphicsConfig gWorldFivePlusStartData;
+extern struct GraphicsConfig gWorldSixPlusStartData;
 
-extern enum PaletteID gUnknown_080A8674[];
-extern enum PaletteID gUnknown_080A868C[];
 extern struct { u8 filler0; u8 unk1; } gUnknown_08251EC0;
 extern struct { u8 filler0; u8 unk1; } gUnknown_0854301C;
-extern s16 gUnknown_080A86D4[][2];
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
 extern struct UnknownStruct16 gEWorldMenuData2;
@@ -1651,7 +1667,7 @@ void sub_08037230(void);
 void world_start_main(void);
 void world_start_loop(void);
 void world_start_end(void);
-void sub_080379BC(int, int);
+void sub_080379BC(u8, u8);
 void print_error_message(char *);
 void sub_08038130(int);
 void sub_080381E4(int, int);
