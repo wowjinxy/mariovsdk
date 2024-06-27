@@ -29,7 +29,6 @@
 	X(asm/options_menu.o) \
 	X(asm/level_results.o) \
 	X(src/level_results.o) \
-	X(asm/fade_in_out.o) \
 	X(src/fade_in_out.o) \
 	X(asm/rom_8029FD0.o) \
 	X(asm/level_help.o) \
@@ -163,6 +162,7 @@ SECTIONS
 		. = 0x111;		gUnknown_03000111 = .;
 		. = 0x112;		gUnknown_03000112 = .;
 		. = 0x114;		gUnknown_03000114 = .;
+		. = 0x116;		gUnknown_03000116 = .;
 		. = 0x15A;		gUnknown_0300015A = .;
 		. = 0x15C;		gUnknown_0300015C = .;
 		. = 0x160;		gUnknown_03000160 = .;
