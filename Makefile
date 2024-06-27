@@ -90,6 +90,8 @@ ldscript.txt: ldscript.in
 
 %.pcm:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
 
+%.lz:     %     $(GBAGFX) ; $(GBAGFX) $< $@
+
 $(GBAGFX):  ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)
 

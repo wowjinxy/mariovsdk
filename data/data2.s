@@ -25777,8 +25777,8 @@ gLevel65Tutorial:
 	
 	.GLOBAL gLevel66A
 gLevel66A:
-	.INCBIN "assets/level/level_data/world_six/6_6A.bin"
-	
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_6A.bin.lz"
+
 	.GLOBAL gLevel66B
 gLevel66B:
 	.INCBIN "assets/level/level_data/world_six/6_6B.bin"

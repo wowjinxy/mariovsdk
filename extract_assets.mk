@@ -1415,7 +1415,7 @@ FILES := \
 	assets/sounds/ribbon.aif \
 	assets/sounds/won_text.aif \
 	assets/sounds/dk_fall.aif \
-
+	assets/level/level_data/world_six/6_6A.bin
 
 all: $(FILES)
 
@@ -6028,6 +6028,10 @@ $(TMPDIR)/sounds/ribbon.pcm: baserom.gba ; $(call dump_data,0xD75609,0xE43)
 $(TMPDIR)/sounds/won_text.pcm: baserom.gba ; $(call dump_data,0xD7644C,0x33EA)
 $(TMPDIR)/sounds/dk_fall.pcm: baserom.gba ; $(call dump_data,0xD79836,0x18D6)
 
+### Levels ###
+
+$(TMPDIR)/level/level_data/world_six/6_6A.bin.lz: baserom.gba ; $(call dump_data,0xB0C6F4,0x5E8)
+
 # convert files to PNG (with optional palette)
 assets/%.png: $(TMPDIR)/%.4bpp $(GBAGFX)
 	@echo Converting $(<F) to $(@F)
@@ -6048,6 +6052,12 @@ assets/sounds/%.aif: $(TMPDIR)/sounds/%.pcm $(AIF2PCM)
 	@echo Converting $(<F) to $(@F)
 	@mkdir -p $(@D)
 	$(QUIET) $(AIF2PCM) -s $(SAMPLE_RATE) $< $@
+
+# decompress files
+assets/%: $(TMPDIR)/%.lz
+	@echo Decompressing $<
+	@mkdir -p $(@D)
+	$(QUIET) $(GBAGFX) $< $@
 
 # build tools
 $(GBAGFX):  ; $(MAKE) -C $(@D)

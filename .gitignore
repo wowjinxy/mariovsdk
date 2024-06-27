@@ -12,6 +12,7 @@ tools/agbcc
 *.4bpp
 *.8bpp
 *.gbapal
+*.lz
 baserom-objs/
 assets/sounds/*.pcm
 
