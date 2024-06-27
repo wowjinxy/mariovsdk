@@ -30,7 +30,7 @@
 	X(asm/level_results.o) \
 	X(src/level_results.o) \
 	X(src/fade_in_out.o) \
-	X(asm/rom_8029FD0.o) \
+	X(asm/load.o) \
 	X(asm/level_help.o) \
 	X(asm/level_retry.o) \
 	X(src/rom_802B798.o) \
