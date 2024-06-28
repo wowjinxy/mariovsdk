@@ -408,7 +408,7 @@ void level_play_main(void) {
     update_fade_from_black();
     process_input();
     sub_08038414(gNewKeys, gHeldKeys);
-    sub_08039C44();
+    update_level_08039C44();
     var1 = (gUnknown_03001A1C & 0x1b08) == 0;
     gUnknown_03001A00 = var1;
     gUnknown_03000038 = gUnknown_03001A1C & (gUnknown_03000034 ^ gUnknown_03001A1C);
@@ -417,22 +417,22 @@ void level_play_main(void) {
     if (gLevelEndTimer < 0){
         sub_08007544();
     }
-    else if (0 < gLevelEndTimer) {
+    else if (gLevelEndTimer > 0) {
         gLevelEndTimer--;
     }
-    else if (((gUnknown_03000B68 & 2) != 0) && ((gNextLevelInLevelTable.levelType & 4) == 0)) {
+    else if ((gUnknown_03000B68 & 2) && !(gNextLevelInLevelTable.levelType & 4)) {
         gNextLevelID++;
         change_main_state(MAIN_STATE_UKNOWN_12, USE_FADE);
     }
     else if ((gNextLevelInLevelTable.levelType & 2) != 0) {
         gUnknown_030009D8++;
         if (0x3C < gUnknown_030009D8) {
-            if (gLevelType == 0x0) {
-                if ((gCurrentWorld == 0x5) && (sub_080148F0(2) == 0)) {
+            if (gLevelType == LEVEL_TYPE_MAIN) {
+                if (gCurrentWorld == 0x5 && (sub_080148F0(2) == 0)) {
                     sub_080148A4(2, 1);
                 }
             }
-            else if (((gLevelType == 0x1) && (gCurrentWorld == 0x5)) && (sub_080148F0(0x10) == 0)) {
+            else if (gLevelType == LEVEL_TYPE_PLUS && gCurrentWorld == 0x5 && sub_080148F0(0x10) == 0) {
                 sub_080148A4(0x10, 1);
             }
             change_main_state(MAIN_STATE_CLEAR_GAMEOVER, USE_FADE);
@@ -441,8 +441,8 @@ void level_play_main(void) {
             gUnknown_03000BD0 = 0x0;
             
             if ((gNextLevelInLevelTable.levelType & 4) != 0) {
-                if (gCurrentWorld > 0x4) {
-                    gCurrentWorld = 0x0;
+                if (gCurrentWorld > 4) {
+                    gCurrentWorld = 0;
                 }
                 else {
                     gCurrentWorld++;
@@ -458,7 +458,7 @@ void level_play_main(void) {
         gNextLevelID++;
         gUnknown_03000BD0 = 0x0;
     }
-    else if (gLevelType == 4) {
+    else if (gLevelType == LEVEL_TYPE_MAIN_BOSS) {
         sub_080149F8(gLivesCount);
         set_level_flags_08010534(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10, &gLevelCollectableFlags.redPresent);
         sub_08010BE0(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10);
@@ -468,13 +468,13 @@ void level_play_main(void) {
         if (sub_080148F0(4) == 0) {
             sub_080148A4(4,1);
         }
-        gLevelType = 0x1;
+        gLevelType = LEVEL_TYPE_PLUS;
         gCurrentWorld = gNextLevelID = 0x00;
         gUnknown_03000BD0 = 0x00;
         movie_player_setup_data(3, 0x3e, 1, 8);
         change_main_state(MAIN_STATE_MOVIE, USE_FADE);
     }
-    else if (gLevelType == '\x05') {
+    else if (gLevelType == LEVEL_TYPE_PLUS_BOSS) {
         sub_080149F8(gLivesCount);
         sub_08010BE0(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10);
         set_level_flags_08010534(gNextLevelInLevelTable.unk12,gNextLevelInLevelTable.unk10, &gLevelCollectableFlags.redPresent);
@@ -484,12 +484,12 @@ void level_play_main(void) {
         if (sub_080148F0(0x40) == 0) {
             sub_080148A4(0x40, 1);
         }
-        gLevelType = 0x00;
+        gLevelType = LEVEL_TYPE_MAIN;
         gCurrentWorld = gNextLevelID = 0x00;
         gUnknown_03000BD0 = 0x01;
         movie_player_setup_data(3, 0x2e, 1, 6);
         change_main_state(MAIN_STATE_MOVIE, USE_FADE);
-    } else if (gLevelType == 0x1) {
+    } else if (gLevelType == LEVEL_TYPE_PLUS) {
         gNextLevelID++;
         gUnknown_03000BD0 = 0;
         if ((gNextLevelInLevelTable.levelType & 4) != 0) {
@@ -505,7 +505,7 @@ void level_play_main(void) {
             change_main_state(MAIN_STATE_LEVEL_RESULTS, USE_FADE);
         }
     }
-    else if (((gLevelType == 2) || gLevelType == 3) || (gLevelEWorldFlag != 0)) {
+    else if (gLevelType == LEVEL_TYPE_EXPERT_1_6 || gLevelType == LEVEL_TYPE_EXPERT_7_12 || (gLevelEWorldFlag != 0)) {
         change_main_state(MAIN_STATE_LEVEL_RESULTS, USE_FADE);
     }
     else if ((gNextLevelInLevelTable.levelType & 8) != 0) {
@@ -588,7 +588,7 @@ void level_demo_main(void) {
     process_input();
     if (0 == (gUnknown_03001938 & 0x800) != 0) {
         sub_08038414(gNewKeys, gHeldKeys);
-        sub_08039C44();
+        update_level_08039C44();
         if (gNextMainState == 0x21) {
             return;
         }

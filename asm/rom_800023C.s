@@ -569,24 +569,25 @@ sub_08000984:
 	movne r3, #2
 	moveq r3, #0
 	bx r12
+
 _080009BC:
 	mov r0, r4
 	mov r1, r9
-	ldr r12, _08001674  @ =sub_0802B798
+	ldr r12, _08001674  @ =hit_switch_0802B798
 	bx r12
 _080009CC:
 	lsr r0, r9, #16
-	ldr r1, _08001678  @ =0x0802BC01
+	ldr r1, _08001678  @ =sub_0802BC00
 	bx r1
 _080009D8:
 	mov r0, r4
 	mov r1, r9
-	ldr r12, _0800167C  @ =0x0802B985
+	ldr r12, _0800167C  @ =sub_0802B984
 	bx r12
 _080009E8:
 	mov r0, sp
 	lsr r1, r9, #16
-	ldr r2, _08001680  @ =0x0802D141
+	ldr r2, _08001680  @ =sub_0802D1D0
 	bx r2
 _080009F8:
 	ldr r3, _08001684  @ =gUnknown_03001A1C
@@ -1488,7 +1489,7 @@ _08001668:
 _08001670:
 	.4byte 0x03000964
 _08001674:
-	.4byte sub_0802B798
+	.4byte hit_switch_0802B798
 _08001678:
 	.4byte sub_0802BC00
 _0800167C:

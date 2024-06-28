@@ -3052,8 +3052,8 @@ _08039C40:
 	.4byte 0x03001980
 	THUMB_FUNC_END sub_08039B64
 
-	THUMB_FUNC_START sub_08039C44
-sub_08039C44: @ 0x08039C44
+	THUMB_FUNC_START update_level_08039C44
+update_level_08039C44: @ 0x08039C44
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -4224,7 +4224,7 @@ _0803A4FC:
 	bx r0
 _0803A50C:
 	.4byte gLevelType
-	THUMB_FUNC_END sub_08039C44
+	THUMB_FUNC_END update_level_08039C44
 
 	THUMB_FUNC_START sub_0803A510
 sub_0803A510: @ 0x0803A510
@@ -9736,8 +9736,8 @@ _0803CE18:
 	.4byte 0xFFFFFE00
 	THUMB_FUNC_END sub_0803CD7C
 
-	THUMB_FUNC_START sub_0803CE1C
-sub_0803CE1C: @ 0x0803CE1C
+	THUMB_FUNC_START update_level_object_sprites_0803CE1C
+update_level_object_sprites_0803CE1C: @ 0x0803CE1C
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -10291,7 +10291,7 @@ _0803D212:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0803CE1C
+	THUMB_FUNC_END update_level_object_sprites_0803CE1C
 
 	.byte 0x00
 	.byte 0x00
@@ -10409,7 +10409,7 @@ _0803D322:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl sub_0800A810
+	bl draw_hud_0800A810
 _0803D330:
 	ldr r6, _0803D388  @ =gMainState
 	ldr r0, [r6]
@@ -10632,7 +10632,7 @@ _0803D4BC:
 	add r1, r5, #0
 	add r2, r7, #0
 	mov r3, r8
-	bl sub_0803CE1C
+	bl update_level_object_sprites_0803CE1C
 _0803D4F2:
 	add r0, r4, #1
 	lsl r0, r0, #16

@@ -9,7 +9,7 @@ struct Struct0802B798
     s16 unk32;
 };
 
-void sub_0802B798(struct Struct0802B798 *arg0, u32 arg1)
+void hit_switch_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 {
     s16 r0_;
     u32 r4;

@@ -3556,8 +3556,9 @@ _0800A80C:
 	.4byte 0xFFFFFC00
 	THUMB_FUNC_END sub_0800A4B4
 
-	THUMB_FUNC_START sub_0800A810
-sub_0800A810: @ 0x0800A810
+@ Draws HUD, except for life counter
+	THUMB_FUNC_START draw_hud_0800A810
+draw_hud_0800A810: @ 0x0800A810
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -7486,7 +7487,7 @@ _0800C59C:
 	.4byte gUnknown_082EC748
 _0800C5A0:
 	.4byte gUnknown_03001B30
-	THUMB_FUNC_END sub_0800A810
+	THUMB_FUNC_END draw_hud_0800A810
 
 	THUMB_FUNC_START sub_0800C5A4
 sub_0800C5A4: @ 0x0800C5A4

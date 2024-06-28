@@ -186,7 +186,7 @@ u32 update_fade_to_black_08029F7C(void) {
 }
 
 // unreferenced
-static void sub_08029FC8(void){
+void sub_08029FC8(void){
 
 }
 

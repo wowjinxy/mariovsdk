@@ -1763,7 +1763,7 @@ void sub_08008600();
 void sub_080086A4();
 
 
-void sub_08039C44();
+void update_level_08039C44();
 void sub_08038414(u16, u16);
 void sub_08007544();
 void sub_080149F8(u32);
