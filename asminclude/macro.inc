@@ -38,3 +38,12 @@
 	b \name			@ Now in ARM mode, jump to the actual function
 	.SECTION .text
 .ENDM
+
+@ Includes a compressed level file and adds a header
+.MACRO INCBIN_LEVEL filename
+	.2byte 2f - 1f
+	.2byte 0x8000
+1:
+	.INCBIN "\filename"
+2:
+.ENDM
