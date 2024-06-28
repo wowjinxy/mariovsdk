@@ -486,7 +486,10 @@ struct struct_0807820C_sub
 
 struct struct_0807820C
 {
-    u8 filler0[0x8];
+    u16 backgroundHorizontalShift;
+    u16 backgroundVerticalShift;
+    u16 levelWidthPixels;
+    u16 levelHeightPixels;
     struct struct_0807820C_sub8 unk8[1];
     struct struct_0807820C_sub unkC[1];
     u8 filler10[0x400C-0x10];
@@ -727,7 +730,7 @@ enum SoundID
     SE_MOVIE2_9       = 226,
     SE_MOVIE2_10      = 227,
     SE_MOVIE_08       = 228,
-    SE_TITLE          = 229,
+    SE_TITLE          = 229,  // "Mario vs. Donkey Kong!"
     SE_YOU_WON1       = 230,
     SE_YOU_WON2       = 231,
     SE_YOU_WON3       = 232,

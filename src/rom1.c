@@ -186,7 +186,7 @@ void sub_08007544()
     }
     
     if (gUnknown_03000038 & 0x2000000)
-        play_sound_effect_08071990(68, 8, 16, 64, 0, 128, 0);
+        play_sound_effect_08071990(SE_MM_DIE, 8, 16, 64, 0, 128, 0);
     
     if (r7 && gGeneralTimer <= 0x708 && !(gUnknown_03001A1C & 0x80))
     {
@@ -568,14 +568,14 @@ void level_play_main(void) {
         (((gUnknown_03001A1C & 0x2000) != 0 && ((gUnknown_030019A0 & 0x20000000) == 0)))) {
             change_main_state(MAIN_STATE_PAUSE, NO_FADE);
             sub_08071C24();
-            play_sound_effect_08071990(0x18, 8, 0x10, 0x40, 0, 0x80, 0);
+            play_sound_effect_08071990(SE_CURSOR_M, 8, 0x10, 0x40, 0, 0x80, 0);
         }
         if ((((gUnknown_03001A1C & 0x800) == 0) && ((gUnknown_03001938 & 1) == 0)) &&
         ((gUnknown_03001938 & 0x50fe) != 0)) {
             gUnknown_03001938 = gUnknown_03001938 | 1;
             change_main_state(MAIN_STATE_HELP, NO_FADE);
             sub_08071C24();
-            play_sound_effect_08071990(0x18, 8, 0x10, 0x40, 0, 0x80, 0);
+            play_sound_effect_08071990(SE_CURSOR_M, 8, 0x10, 0x40, 0, 0x80, 0);
         }
     }
 }

@@ -120,7 +120,7 @@ void game_init_main(void)
       case 8:
         if (gNewKeys & 11)
         {
-            play_sound_effect_08071990(35, 8, 16, 64, 0, 128, 0);
+            play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
             gUnknown_0300029C->unk1000 = gUnknown_0300029C->unk1008->unk4;
             gUnknown_0300029C->unk1008 = NULL;
         }

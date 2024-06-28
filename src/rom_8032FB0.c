@@ -38,7 +38,7 @@ void sub_08033024(void)
         gUnknown_030012F8 = 0;
         gHeldKeys = 0;
         gNewKeys = 0;
-        play_sound_effect_08071990(22, 8, 16, 64, 0, 128, 0);
+        play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
         return;
     }
 
@@ -88,7 +88,7 @@ void sub_08033148(void)
         gUnknown_030012F8 = 0;
         gHeldKeys = 0;
         gNewKeys = 0;
-        play_sound_effect_08071990(22, 8, 16, 64, 0, 128, 0);
+        play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
         return;
     }
 

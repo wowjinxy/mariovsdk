@@ -54,7 +54,7 @@ void title_main(void)
     process_input();
     update_fade_from_black();
     if (gUnknown_030000AC == 0 && gIsFadeInProgress == 0 && gUnknown_030000B0 == -1)
-        gUnknown_030000B0 = play_sound_effect_08071990(229, 8, 16, 64, 0, 128, 0);
+        gUnknown_030000B0 = play_sound_effect_08071990(SE_TITLE, 8, 16, 64, 0, 128, 0);
     if (gUnknown_03000BE0 > 5)
         REG_DISPCNT = 0x1740;
     arr[0] = 0;
@@ -97,7 +97,7 @@ void title_main(void)
     {
         if (pressed_a_or_start_08034004() != 0 && !(gNewKeys & 2) && !(gHeldKeys & 2))
         {
-            play_sound_effect_08071990(35, 8, 16, 64, 0, 128, 0);
+            play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
             change_main_state(MAIN_STATE_FILE_SELECT, USE_FADE);
             gUnknown_03000BD0 = 1;
         }

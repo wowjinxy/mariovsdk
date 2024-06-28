@@ -53,7 +53,7 @@ void level_view_init_callback(void) {
 	sub_08040F54();
 	gUnknown_03001A38 = 1; 
 	sub_08071C24();
-	play_sound_effect_08071990(0x1a,8,0x10,0x40,0,0x80,0);
+	play_sound_effect_08071990(SE_ERASE,8,0x10,0x40,0,0x80,0);
 	gUnknown_030019A0 = gUnknown_030019A0 & 0xbfffffff;
 	gUnknown_03000B78 = 1;
 	gUnknown_03001A00 = 0;
