@@ -1637,18 +1637,7 @@ FILES += \
 	assets/level/level_data/world_one/1_5_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_mm_tutorial.bin.lz.orig \
-	assets/level/level_data/world_two/2_1_tutorial.bin.lz.orig \
-	assets/level/level_data/world_two/2_2_tutorial.bin.lz.orig \
-	assets/level/level_data/world_two/2_4_tutorial.bin.lz.orig \
 	assets/level/level_data/world_two/2_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_three/3_1_tutorial.bin.lz.orig \
-	assets/level/level_data/world_three/3_2_tutorial.bin.lz.orig \
-	assets/level/level_data/world_three/3_3_tutorial.bin.lz.orig \
-	assets/level/level_data/world_three/3_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_three/3_6_tutorial.bin.lz.orig \
-	assets/level/level_data/world_three/3_mm_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_1_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_2_tutorial.bin.lz.orig \
 	assets/level/level_data/world_four/4_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_four/4_4_tutorial.bin.lz.orig \
 	assets/level/level_data/world_four/4_5_tutorial.bin.lz.orig \

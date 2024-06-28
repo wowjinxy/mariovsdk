@@ -25352,7 +25352,7 @@ gLevel21B:
 	
 	.GLOBAL gLevel21Tutorial
 gLevel21Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_two/2_1_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_1_tutorial.bin.lz"
 
 
 	.GLOBAL gLevel22A
@@ -25365,7 +25365,7 @@ gLevel22B:
 
 	.GLOBAL gLevel22Tutorial
 gLevel22Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_two/2_2_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_2_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel23A
@@ -25391,7 +25391,7 @@ gLevel24B:
 
 	.GLOBAL gLevel24Tutorial
 gLevel24Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_two/2_4_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_4_tutorial.bin.lz"
 	
 	
 	.GLOBAL gLevel25A
@@ -25444,7 +25444,7 @@ gLevel31B:
 
 	.GLOBAL gLevel31Tutorial
 gLevel31Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_three/3_1_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_1_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel32A
@@ -25457,7 +25457,7 @@ gLevel32B:
 
 	.GLOBAL gLevel32Tutorial
 gLevel32Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_three/3_2_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_2_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel33A
@@ -25470,7 +25470,7 @@ gLevel33B:
 
 	.GLOBAL gLevel33Tutorial
 gLevel33Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_three/3_3_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_3_tutorial.bin.lz"
 	
 	
 	.GLOBAL gLevel34A
@@ -25496,7 +25496,7 @@ gLevel35B:
 
 	.GLOBAL gLevel35Tutorial
 gLevel35Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_three/3_5_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_5_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel36A
@@ -25509,7 +25509,7 @@ gLevel36B:
 
 	.GLOBAL gLevel36Tutorial
 gLevel36Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_three/3_6_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_6_tutorial.bin.lz"
 
 
 	.GLOBAL gLevel3MM
@@ -25522,7 +25522,7 @@ gLevel3DK:
 
 	.GLOBAL gLevel3MMTutorial
 gLevel3MMTutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_three/3_mm_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_mm_tutorial.bin.lz"
 	
 @ World 4	
 
@@ -25536,7 +25536,7 @@ gLevel41B:
 
 	.GLOBAL gLevel41Tutorial
 gLevel41Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_four/4_1_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_1_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel42A
@@ -25549,7 +25549,7 @@ gLevel42B:
 
 	.GLOBAL gLevel42Tutorial
 gLevel42Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_four/4_2_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_2_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel43A
