@@ -1630,24 +1630,16 @@ FILES := \
 
 # Level files that don't match
 FILES += \
-	assets/level/level_data/world_one/1_1B.bin.lz.orig \
 	assets/level/level_data/world_one/1_1_tutorial.bin.lz.orig \
-	assets/level/level_data/world_one/1_2A.bin.lz.orig \
-	assets/level/level_data/world_one/1_2B.bin.lz.orig \
 	assets/level/level_data/world_one/1_2_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_one/1_5B.bin.lz.orig \
 	assets/level/level_data/world_one/1_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_one/1_6A.bin.lz.orig \
 	assets/level/level_data/world_one/1_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_mm_tutorial.bin.lz.orig \
-	assets/level/level_data/world_two/2_1B.bin.lz.orig \
 	assets/level/level_data/world_two/2_1_tutorial.bin.lz.orig \
 	assets/level/level_data/world_two/2_2_tutorial.bin.lz.orig \
-	assets/level/level_data/world_two/2_4A.bin.lz.orig \
 	assets/level/level_data/world_two/2_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_two/2_5B.bin.lz.orig \
 	assets/level/level_data/world_two/2_5_tutorial.bin.lz.orig \
 	assets/level/level_data/world_three/3_1_tutorial.bin.lz.orig \
 	assets/level/level_data/world_three/3_2_tutorial.bin.lz.orig \
@@ -1655,7 +1647,6 @@ FILES += \
 	assets/level/level_data/world_three/3_5_tutorial.bin.lz.orig \
 	assets/level/level_data/world_three/3_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_three/3_mm_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_1A.bin.lz.orig \
 	assets/level/level_data/world_four/4_1_tutorial.bin.lz.orig \
 	assets/level/level_data/world_four/4_2_tutorial.bin.lz.orig \
 	assets/level/level_data/world_four/4_3_tutorial.bin.lz.orig \
@@ -1674,25 +1665,9 @@ FILES += \
 	assets/level/level_data/world_six/6_2_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_5B.bin.lz.orig \
 	assets/level/level_data/world_six/6_5_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_mm_tutorial.bin.lz.orig \
-	assets/level/level_data/world_one_plus/1_2_plus.bin.lz.orig \
-	assets/level/level_data/world_one_plus/1_unused_revenge.bin.lz.orig \
-	assets/level/level_data/world_one_plus/1_5_plus.bin.lz.orig \
-	assets/level/level_data/world_one_plus/1_6_plus.bin.lz.orig \
-	assets/level/level_data/world_two_plus/2_1_plus.bin.lz.orig \
-	assets/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin.lz.orig \
-	assets/level/level_data/world_three_plus/3_unused_1.bin.lz.orig \
-	assets/level/level_data/world_three_plus/3_DK_plus.bin.lz.orig \
-	assets/level/level_data/world_four_plus/4_1_plus.bin.lz.orig \
-	assets/level/level_data/expert/expert_4.bin.lz.orig \
-	assets/level/level_data/expert/expert_11.bin.lz.orig \
-	assets/level/level_data/world_five_plus/5_unused_danger_flowers_W5.bin.lz.orig \
-	assets/level/level_data/world_six_plus/6_3_plus.bin.lz.orig \
-	assets/level/level_data/world_six_plus/6_unused_climb_and_fall_1.bin.lz.orig \
-	assets/level/level_data/world_six_plus/6_unused_climb_and_fall_2.bin.lz.orig \
 
 all: $(FILES)
 

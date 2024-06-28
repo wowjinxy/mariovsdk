@@ -25256,7 +25256,7 @@ gLevel11A:
 	
 	.GLOBAL gLevel11B
 gLevel11B:
-	INCBIN_LEVEL "assets/level/level_data/world_one/1_1B.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_1B.bin.lz"
 	
 	.GLOBAL gLevel11Tutorial
 gLevel11Tutorial:
@@ -25265,11 +25265,11 @@ gLevel11Tutorial:
 	
 	.GLOBAL gLevel12A
 gLevel12A:
-	INCBIN_LEVEL "assets/level/level_data/world_one/1_2A.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_2A.bin.lz"
 	
 	.GLOBAL gLevel12B
 gLevel12B:
-	INCBIN_LEVEL "assets/level/level_data/world_one/1_2B.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_2B.bin.lz"
 	
 	.GLOBAL gLevel12Tutorial
 gLevel12Tutorial:
@@ -25308,7 +25308,7 @@ gLevel15A:
 	
 	.GLOBAL gLevel15B
 gLevel15B:
-	INCBIN_LEVEL "assets/level/level_data/world_one/1_5B.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_5B.bin.lz"
 	
 	.GLOBAL gLevel15Tutorial
 gLevel15Tutorial:
@@ -25317,7 +25317,7 @@ gLevel15Tutorial:
 	
 	.GLOBAL gLevel16A
 gLevel16A:
-	INCBIN_LEVEL "assets/level/level_data/world_one/1_6A.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_6A.bin.lz"
 	
 	.GLOBAL gLevel16B
 gLevel16B:
@@ -25348,7 +25348,7 @@ gLevel21A:
 
 	.GLOBAL gLevel21B
 gLevel21B:
-	INCBIN_LEVEL "assets/level/level_data/world_two/2_1B.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_1B.bin.lz"
 	
 	.GLOBAL gLevel21Tutorial
 gLevel21Tutorial:
@@ -25383,7 +25383,7 @@ gLevel23Tutorial:
 	
 	.GLOBAL gLevel24A
 gLevel24A:
-	INCBIN_LEVEL "assets/level/level_data/world_two/2_4A.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_4A.bin.lz"
 	
 	.GLOBAL gLevel24B
 gLevel24B:
@@ -25400,7 +25400,7 @@ gLevel25A:
 	
 	.GLOBAL gLevel25B
 gLevel25B:
-	INCBIN_LEVEL "assets/level/level_data/world_two/2_5B.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_5B.bin.lz"
 
 	.GLOBAL gLevel25Tutorial
 gLevel25Tutorial:
@@ -25528,7 +25528,7 @@ gLevel3MMTutorial:
 
 	.GLOBAL gLevel41A
 gLevel41A:
-	INCBIN_LEVEL "assets/level/level_data/world_four/4_1A.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_1A.bin.lz"
 	
 	.GLOBAL gLevel41B
 gLevel41B:
@@ -25768,7 +25768,7 @@ gLevel65A:
 	
 	.GLOBAL gLevel65B
 gLevel65B:
-	INCBIN_LEVEL "assets/level/level_data/world_six/6_5B.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_5B.bin.lz"
 	
 	.GLOBAL gLevel65Tutorial
 gLevel65Tutorial:
@@ -25813,7 +25813,7 @@ gLevelExpert1:
 	
 	.GLOBAL gLevel12Plus
 gLevel12Plus:
-	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_2_plus.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_2_plus.bin.lz"
 	
 	.GLOBAL gLevelExpert7
 gLevelExpert7:
@@ -25826,7 +25826,7 @@ gLevel13Plus:
 	
 	.GLOBAL gLevelUnusedRevenge
 gLevelUnusedRevenge:
-	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_unused_revenge.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_unused_revenge.bin.lz"
 	
 	
 	.GLOBAL gLevel14Plus
@@ -25840,7 +25840,7 @@ gLevelUnusedTheLongWay:
 	
 	.GLOBAL gLevel15Plus
 gLevel15Plus:
-	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_5_plus.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_5_plus.bin.lz"
 	
 	.GLOBAL gLevelUnused1
 gLevelUnused1:
@@ -25849,7 +25849,7 @@ gLevelUnused1:
 	
 	.GLOBAL gLevel16Plus
 gLevel16Plus:
-	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_6_plus.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_6_plus.bin.lz"
 	
 	.GLOBAL gLevelUnused2
 gLevelUnused2:
@@ -25868,7 +25868,7 @@ gLevelUnusedDK1:
 	
 	.GLOBAL gLevel21Plus
 gLevel21Plus:
-	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_1_plus.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_1_plus.bin.lz"
 	
 	.GLOBAL gLevelExpert2
 gLevelExpert2:
@@ -25908,7 +25908,7 @@ gLevel25Plus:
 	
 	.GLOBAL gLevelUnusedDangerFlowersW2
 gLevelUnusedDangerFlowersW2:
-	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin.lz.orig"	
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin.lz"	
 	
 	
 	.GLOBAL gLevel26Plus 
@@ -25963,7 +25963,7 @@ gLevel34Plus:
 	
 	.GLOBAL gLevelUnused3
 gLevelUnused3:
-	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_unused_1.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_unused_1.bin.lz"
 	
 
 	.GLOBAL gLevel35Plus
@@ -25986,7 +25986,7 @@ gLevelUnused5:
 	
 	.GLOBAL gLevel3DKPlus
 gLevel3DKPlus:
-	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_DK_plus.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_DK_plus.bin.lz"
 	
 	.GLOBAL gLevelUnusedDK3
 gLevelUnusedDK3:
@@ -25996,11 +25996,11 @@ gLevelUnusedDK3:
 
 	.GLOBAL gLevel41Plus
 gLevel41Plus:
-	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_1_plus.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_1_plus.bin.lz"
 	
 	.GLOBAL gLevelExpert4
 gLevelExpert4:
-	INCBIN_LEVEL "assets/level/level_data/expert/expert_4.bin.lz.orig"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_4.bin.lz"	
 	
 	
 	.GLOBAL gLevel42Plus
@@ -26073,7 +26073,7 @@ gLevel52Plus:
 	
 	.GLOBAL gLevelExpert11
 gLevelExpert11:
-	INCBIN_LEVEL "assets/level/level_data/expert/expert_11.bin.lz.orig"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_11.bin.lz"	
 	
 	
 	.GLOBAL gLevel53Plus
@@ -26091,7 +26091,7 @@ gLevel54Plus:
 	
 	.GLOBAL gLevelUnusedDangerFlowersW5
 gLevelUnusedDangerFlowersW5:
-	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_unused_danger_flowers_W5.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_unused_danger_flowers_W5.bin.lz"
 	
 	
 	.GLOBAL gLevel55Plus
@@ -26142,11 +26142,11 @@ gLevelExpert12:
 	
 	.GLOBAL gLevel63Plus
 gLevel63Plus:
-	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_3_plus.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_3_plus.bin.lz"
 	
 	.GLOBAL gLevelUnusedClimbAndFall
 gLevelUnusedClimbAndFall:
-	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_1.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_1.bin.lz"
 	
 	
 	.GLOBAL gLevel64Plus
@@ -26173,7 +26173,7 @@ gLevel66Plus:
 	
 	.GLOBAL gLevelUnusedClimbAndFall2
 gLevelUnusedClimbAndFall2:
-	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_2.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_2.bin.lz"
 	
 	
 	.GLOBAL gLevel6DKPlus

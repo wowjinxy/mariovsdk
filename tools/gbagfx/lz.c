@@ -1,5 +1,6 @@
 // Copyright (c) 2015 YamaArashi
 
+#include <assert.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include "global.h"
@@ -53,6 +54,8 @@ unsigned char *LZDecompress(unsigned char *src, int srcSize, int *uncompressedSi
 				if (blockPos < 0)
 				{
 					printf("negative blockPos %i\n", blockPos);
+					printf("blockSize: %i\n", blockSize);
+					printf("blockDistance: %i\n", blockDistance);
 					goto fail;
 				}
 #if DEBUG
@@ -153,19 +156,25 @@ unsigned char *LZCompress(unsigned char *src, int srcSize, int *compressedSize, 
 			do
 			{
 				int blockSize = 0;
+				int test = blockPos;
 				while (blockSize < 18
 				 && srcPos + blockSize < srcSize  // don't go past end of file
-				 && src[blockPos + blockSize] == src[srcPos + blockSize]
-				 && blockPos + blockSize <= srcPos)
+				 && src[test] == src[srcPos + blockSize]
+				 && blockSize <= srcPos /* seems to be the case? */)
+				{
 					blockSize++;
-
-				/*printf("found length %i at 0x%X: ", blockSize, blockPos);
+					test++;
+					if (test >= srcPos)
+						test = blockPos;
+				}
+/*
+				printf("found length %i at 0x%X: ", blockSize, blockPos);
 				for (int i = 0; i < blockSize; i++)
 				{
 					printf("%02X ", src[blockPos + i]);
 				}
-				puts("");*/
-
+				puts("");
+*/
 				if (blockSize > bestBlockSize)
 				{
 					bestBlockDistance = srcPos - blockPos;
@@ -192,7 +201,7 @@ unsigned char *LZCompress(unsigned char *src, int srcSize, int *compressedSize, 
 			}
 			blockPos = srcPos - bestBlockDistance;
 #endif
-
+			assert(blockPos >= 0);
 			if (bestBlockSize >= 3) {
 #if DEBUG
 				printf("copy %i bytes at 0x%X to 0x%X: ", bestBlockSize, blockPos, destPos - 5);
