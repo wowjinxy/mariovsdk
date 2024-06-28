@@ -1415,7 +1415,218 @@ FILES := \
 	assets/sounds/ribbon.aif \
 	assets/sounds/won_text.aif \
 	assets/sounds/dk_fall.aif \
-	assets/level/level_data/world_six/6_6A.bin
+	assets/level/level_data/world_one/1_1A.bin.lz \
+	assets/level/level_data/world_one/1_1B.bin.lz.keep \
+	assets/level/level_data/world_one/1_1_tutorial.bin.lz.keep \
+	assets/level/level_data/world_one/1_2A.bin.lz.keep \
+	assets/level/level_data/world_one/1_2B.bin.lz.keep \
+	assets/level/level_data/world_one/1_2_tutorial.bin.lz.keep \
+	assets/level/level_data/world_one/1_3A.bin.lz \
+	assets/level/level_data/world_one/1_3B.bin.lz.keep \
+	assets/level/level_data/world_one/1_3_tutorial.bin.lz.keep \
+	assets/level/level_data/world_one/1_4A.bin.lz.keep \
+	assets/level/level_data/world_one/1_4B.bin.lz.keep \
+	assets/level/level_data/world_one/1_4_tutorial.bin.lz.keep \
+	assets/level/level_data/world_one/1_5A.bin.lz.keep \
+	assets/level/level_data/world_one/1_5B.bin.lz.keep \
+	assets/level/level_data/world_one/1_5_tutorial.bin.lz.keep \
+	assets/level/level_data/world_one/1_6A.bin.lz.keep \
+	assets/level/level_data/world_one/1_6B.bin.lz.keep \
+	assets/level/level_data/world_one/1_6_tutorial.bin.lz.keep \
+	assets/level/level_data/world_one/1_mm.bin.lz.keep \
+	assets/level/level_data/world_one/1_DK.bin.lz.keep \
+	assets/level/level_data/world_one/1_mm_tutorial.bin.lz.keep \
+	assets/level/level_data/world_two/2_1A.bin.lz.keep \
+	assets/level/level_data/world_two/2_1B.bin.lz.keep \
+	assets/level/level_data/world_two/2_1_tutorial.bin.lz.keep \
+	assets/level/level_data/world_two/2_2A.bin.lz.keep \
+	assets/level/level_data/world_two/2_2B.bin.lz.keep \
+	assets/level/level_data/world_two/2_2_tutorial.bin.lz.keep \
+	assets/level/level_data/world_two/2_3A.bin.lz.keep \
+	assets/level/level_data/world_two/2_3B.bin.lz.keep \
+	assets/level/level_data/world_two/2_3_tutorial.bin.lz.keep \
+	assets/level/level_data/world_two/2_4A.bin.lz.keep \
+	assets/level/level_data/world_two/2_4B.bin.lz.keep \
+	assets/level/level_data/world_two/2_4_tutorial.bin.lz.keep \
+	assets/level/level_data/world_two/2_5A.bin.lz.keep \
+	assets/level/level_data/world_two/2_5B.bin.lz.keep \
+	assets/level/level_data/world_two/2_5_tutorial.bin.lz.keep \
+	assets/level/level_data/world_two/2_6A.bin.lz.keep \
+	assets/level/level_data/world_two/2_6B.bin.lz.keep \
+	assets/level/level_data/world_two/2_6_tutorial.bin.lz.keep \
+	assets/level/level_data/world_two/2_mm.bin.lz.keep \
+	assets/level/level_data/world_two/2_DK.bin.lz.keep \
+	assets/level/level_data/world_two/2_mm_tutorial.bin.lz.keep \
+	assets/level/level_data/world_three/3_1A.bin.lz.keep \
+	assets/level/level_data/world_three/3_1B.bin.lz.keep \
+	assets/level/level_data/world_three/3_1_tutorial.bin.lz.keep \
+	assets/level/level_data/world_three/3_2A.bin \
+	assets/level/level_data/world_three/3_2B.bin.lz.keep \
+	assets/level/level_data/world_three/3_2_tutorial.bin.lz.keep \
+	assets/level/level_data/world_three/3_3A.bin.lz.keep \
+	assets/level/level_data/world_three/3_3B.bin.lz.keep \
+	assets/level/level_data/world_three/3_3_tutorial.bin.lz.keep \
+	assets/level/level_data/world_three/3_4A.bin.lz.keep \
+	assets/level/level_data/world_three/3_4B.bin.lz.keep \
+	assets/level/level_data/world_three/3_4_tutorial.bin.lz.keep \
+	assets/level/level_data/world_three/3_5A.bin.lz.keep \
+	assets/level/level_data/world_three/3_5B.bin.lz.keep \
+	assets/level/level_data/world_three/3_5_tutorial.bin.lz.keep \
+	assets/level/level_data/world_three/3_6A.bin.lz.keep \
+	assets/level/level_data/world_three/3_6B.bin.lz.keep \
+	assets/level/level_data/world_three/3_6_tutorial.bin.lz.keep \
+	assets/level/level_data/world_three/3_mm.bin.lz.keep \
+	assets/level/level_data/world_three/3_DK.bin.lz.keep \
+	assets/level/level_data/world_three/3_mm_tutorial.bin.lz.keep \
+	assets/level/level_data/world_four/4_1A.bin.lz.keep \
+	assets/level/level_data/world_four/4_1B.bin.lz.keep \
+	assets/level/level_data/world_four/4_1_tutorial.bin.lz.keep \
+	assets/level/level_data/world_four/4_2A.bin.lz.keep \
+	assets/level/level_data/world_four/4_2B.bin.lz.keep \
+	assets/level/level_data/world_four/4_2_tutorial.bin.lz.keep \
+	assets/level/level_data/world_four/4_3A.bin.lz.keep \
+	assets/level/level_data/world_four/4_3B.bin.lz.keep \
+	assets/level/level_data/world_four/4_3_tutorial.bin.lz.keep \
+	assets/level/level_data/world_four/4_4A.bin.lz.keep \
+	assets/level/level_data/world_four/4_4B.bin.lz.keep \
+	assets/level/level_data/world_four/4_4_tutorial.bin.lz.keep \
+	assets/level/level_data/world_four/4_5A.bin.lz.keep \
+	assets/level/level_data/world_four/4_5B.bin.lz.keep \
+	assets/level/level_data/world_four/4_5_tutorial.bin.lz.keep \
+	assets/level/level_data/world_four/4_6A.bin.lz.keep \
+	assets/level/level_data/world_four/4_6B.bin.lz.keep \
+	assets/level/level_data/world_four/4_6_tutorial.bin.lz.keep \
+	assets/level/level_data/world_four/4_mm.bin.lz.keep \
+	assets/level/level_data/world_four/4_DK.bin.lz.keep \
+	assets/level/level_data/world_four/4_mm_tutorial.bin.lz.keep \
+	assets/level/level_data/world_five/5_1A.bin.lz.keep \
+	assets/level/level_data/world_five/5_1B.bin.lz.keep \
+	assets/level/level_data/world_five/5_1_tutorial.bin.lz.keep \
+	assets/level/level_data/world_five/5_2A.bin.lz.keep \
+	assets/level/level_data/world_five/5_2B.bin.lz.keep \
+	assets/level/level_data/world_five/5_2_tutorial.bin.lz.keep \
+	assets/level/level_data/world_five/5_3A.bin.lz.keep \
+	assets/level/level_data/world_five/5_3B.bin.lz.keep \
+	assets/level/level_data/world_five/5_3_tutorial.bin.lz.keep \
+	assets/level/level_data/world_five/5_4A.bin.lz.keep \
+	assets/level/level_data/world_five/5_4B.bin.lz.keep \
+	assets/level/level_data/world_five/5_4_tutorial.bin.lz.keep \
+	assets/level/level_data/world_five/5_5A.bin.lz.keep \
+	assets/level/level_data/world_five/5_5B.bin.lz.keep \
+	assets/level/level_data/world_five/5_5_tutorial.bin.lz.keep \
+	assets/level/level_data/world_five/5_6A.bin.lz.keep \
+	assets/level/level_data/world_five/5_6B.bin.lz.keep \
+	assets/level/level_data/world_five/5_6_tutorial.bin.lz.keep \
+	assets/level/level_data/world_five/5_mm.bin.lz.keep \
+	assets/level/level_data/world_five/5_DK.bin.lz.keep \
+	assets/level/level_data/world_five/5_mm_tutorial.bin.lz.keep \
+	assets/level/level_data/world_six/6_1A.bin.lz.keep \
+	assets/level/level_data/world_six/6_1B.bin.lz.keep \
+	assets/level/level_data/world_six/6_1_tutorial.bin.lz.keep \
+	assets/level/level_data/world_six/6_2A.bin.lz.keep \
+	assets/level/level_data/world_six/6_2B.bin.lz.keep \
+	assets/level/level_data/world_six/6_2_tutorial.bin.lz.keep \
+	assets/level/level_data/world_six/6_3A.bin.lz.keep \
+	assets/level/level_data/world_six/6_3B.bin.lz.keep \
+	assets/level/level_data/world_six/6_3_tutorial.bin.lz.keep \
+	assets/level/level_data/world_six/6_4A.bin.lz.keep \
+	assets/level/level_data/world_six/6_4B.bin.lz.keep \
+	assets/level/level_data/world_six/6_4_tutorial.bin.lz.keep \
+	assets/level/level_data/world_six/6_5A.bin.lz.keep \
+	assets/level/level_data/world_six/6_5B.bin.lz.keep \
+	assets/level/level_data/world_six/6_5_tutorial.bin.lz.keep \
+	assets/level/level_data/world_six/6_6A.bin.lz.keep \
+	assets/level/level_data/world_six/6_6B.bin.lz.keep \
+	assets/level/level_data/world_six/6_6_tutorial.bin.lz.keep \
+	assets/level/level_data/world_six/6_mm.bin.lz.keep \
+	assets/level/level_data/world_six/6_DK.bin.lz.keep \
+	assets/level/level_data/world_six/6_mm_tutorial.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_1_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_1.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_2_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_7.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_3_plus.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_unused_revenge.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_4_plus.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_unused_the_long_way.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_5_plus.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_unused_1.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_6_plus.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_unused_2.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_DK_plus.bin.lz.keep \
+	assets/level/level_data/world_one_plus/1_unused_DK.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_1_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_2.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_2_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_8.bin \
+	assets/level/level_data/world_two_plus/2_3_plus.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_unused_one_shot_blue.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_4_plus.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_unused_egg_attack.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_5_plus.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_6_plus.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_unused_later_gator.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_DK_plus.bin.lz.keep \
+	assets/level/level_data/world_two_plus/2_unused_DK.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_1_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_3.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_2_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_9.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_3_plus.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_unused_hot_feet.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_4_plus.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_unused_1.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_5_plus.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_unused_2.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_6_plus.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_unused_3.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_DK_plus.bin.lz.keep \
+	assets/level/level_data/world_three_plus/3_unused_DK.bin \
+	assets/level/level_data/world_four_plus/4_1_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_4.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_2_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_10.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_3_plus.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_unused_boo_in_a_box.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_4_plus.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_unused_the_thwamplet.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_5_plus.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_unused_a_tricky_candle.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_6_plus.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_unused_1.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_DK_plus.bin.lz.keep \
+	assets/level/level_data/world_four_plus/4_unused_DK.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_1_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_5.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_2_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_11.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_3_plus.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_unused_key_to_the_key.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_4_plus.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_unused_danger_flowers_W5.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_5_plus.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_unused_hitasura_kawase.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_6_plus.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_unused_1.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_DK_plus.bin.lz.keep \
+	assets/level/level_data/world_five_plus/5_unused_DK.bin.lz \
+	assets/level/level_data/world_six_plus/6_1_plus.bin.lz \
+	assets/level/level_data/expert/expert_6.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_2_plus.bin.lz.keep \
+	assets/level/level_data/expert/expert_12.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_3_plus.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_unused_climb_and_fall_1.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_4_plus.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_unused_1.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_5_plus.bin \
+	assets/level/level_data/world_six_plus/6_unused_2.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_6_plus.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_unused_climb_and_fall_2.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_DK_plus.bin.lz.keep \
+	assets/level/level_data/world_six_plus/6_unused_DK.bin.lz.keep \
+	assets/level/level_data/boss/DK_boss.bin.lz.keep \
+	assets/level/level_data/boss/DK_boss_plus.bin.lz.keep \
 
 all: $(FILES)
 
@@ -6030,7 +6241,221 @@ $(TMPDIR)/sounds/dk_fall.pcm: baserom.gba ; $(call dump_data,0xD79836,0x18D6)
 
 ### Levels ###
 
+$(TMPDIR)/level/level_data/world_one/1_1A.bin.lz: baserom.gba ; $(call dump_data,0xAF63EC,0x164)
+$(TMPDIR)/level/level_data/world_one/1_1B.bin.lz: baserom.gba ; $(call dump_data,0xAF6554,0x158)
+$(TMPDIR)/level/level_data/world_one/1_1_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAF66B0,0x3E0)
+$(TMPDIR)/level/level_data/world_one/1_2A.bin.lz: baserom.gba ; $(call dump_data,0xAF6A94,0x25C)
+$(TMPDIR)/level/level_data/world_one/1_2B.bin.lz: baserom.gba ; $(call dump_data,0xAF6CF4,0x1D4)
+$(TMPDIR)/level/level_data/world_one/1_2_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAF6ECC,0x374)
+$(TMPDIR)/level/level_data/world_one/1_3A.bin.lz: baserom.gba ; $(call dump_data,0xAF7244,0x294)
+$(TMPDIR)/level/level_data/world_one/1_3B.bin.lz: baserom.gba ; $(call dump_data,0xAF74DC,0x23C)
+$(TMPDIR)/level/level_data/world_one/1_3_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAF771C,0x4DC)
+$(TMPDIR)/level/level_data/world_one/1_4A.bin.lz: baserom.gba ; $(call dump_data,0xAF7BFC,0x12C)
+$(TMPDIR)/level/level_data/world_one/1_4B.bin.lz: baserom.gba ; $(call dump_data,0xAF7D2C,0x280)
+$(TMPDIR)/level/level_data/world_one/1_4_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAF7FB0,0x56C)
+$(TMPDIR)/level/level_data/world_one/1_5A.bin.lz: baserom.gba ; $(call dump_data,0xAF8520,0x1D0)
+$(TMPDIR)/level/level_data/world_one/1_5B.bin.lz: baserom.gba ; $(call dump_data,0xAF86F4,0x188)
+$(TMPDIR)/level/level_data/world_one/1_5_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAF8880,0x4B0)
+$(TMPDIR)/level/level_data/world_one/1_6A.bin.lz: baserom.gba ; $(call dump_data,0xAF8D34,0x2E4)
+$(TMPDIR)/level/level_data/world_one/1_6B.bin.lz: baserom.gba ; $(call dump_data,0xAF901C,0x188)
+$(TMPDIR)/level/level_data/world_one/1_6_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAF91A8,0x4AC)
+$(TMPDIR)/level/level_data/world_one/1_mm.bin.lz: baserom.gba ; $(call dump_data,0xAF9658,0x210)
+$(TMPDIR)/level/level_data/world_one/1_DK.bin.lz: baserom.gba ; $(call dump_data,0xAF986C,0xF0)
+$(TMPDIR)/level/level_data/world_one/1_mm_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAF9960,0x418)
+$(TMPDIR)/level/level_data/world_two/2_1A.bin.lz: baserom.gba ; $(call dump_data,0xAF9D7C,0x3C4)
+$(TMPDIR)/level/level_data/world_two/2_1B.bin.lz: baserom.gba ; $(call dump_data,0xAFA144,0x320)
+$(TMPDIR)/level/level_data/world_two/2_1_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFA468,0x478)
+$(TMPDIR)/level/level_data/world_two/2_2A.bin.lz: baserom.gba ; $(call dump_data,0xAFA8E4,0x484)
+$(TMPDIR)/level/level_data/world_two/2_2B.bin.lz: baserom.gba ; $(call dump_data,0xAFAD6C,0x340)
+$(TMPDIR)/level/level_data/world_two/2_2_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFB0B0,0x460)
+$(TMPDIR)/level/level_data/world_two/2_3A.bin.lz: baserom.gba ; $(call dump_data,0xAFB514,0x244)
+$(TMPDIR)/level/level_data/world_two/2_3B.bin.lz: baserom.gba ; $(call dump_data,0xAFB75C,0x13C)
+$(TMPDIR)/level/level_data/world_two/2_3_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFB89C,0x3B0)
+$(TMPDIR)/level/level_data/world_two/2_4A.bin.lz: baserom.gba ; $(call dump_data,0xAFBC50,0x180)
+$(TMPDIR)/level/level_data/world_two/2_4B.bin.lz: baserom.gba ; $(call dump_data,0xAFBDD4,0x1C0)
+$(TMPDIR)/level/level_data/world_two/2_4_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFBF98,0x400)
+$(TMPDIR)/level/level_data/world_two/2_5A.bin.lz: baserom.gba ; $(call dump_data,0xAFC39C,0x41C)
+$(TMPDIR)/level/level_data/world_two/2_5B.bin.lz: baserom.gba ; $(call dump_data,0xAFC7BC,0x34C)
+$(TMPDIR)/level/level_data/world_two/2_5_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFCB0C,0x47C)
+$(TMPDIR)/level/level_data/world_two/2_6A.bin.lz: baserom.gba ; $(call dump_data,0xAFCF8C,0x3AC)
+$(TMPDIR)/level/level_data/world_two/2_6B.bin.lz: baserom.gba ; $(call dump_data,0xAFD33C,0x48C)
+$(TMPDIR)/level/level_data/world_two/2_6_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFD7CC,0x460)
+$(TMPDIR)/level/level_data/world_two/2_mm.bin.lz: baserom.gba ; $(call dump_data,0xAFDC30,0x3FC)
+$(TMPDIR)/level/level_data/world_two/2_DK.bin.lz: baserom.gba ; $(call dump_data,0xAFE030,0x310)
+$(TMPDIR)/level/level_data/world_two/2_mm_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFE344,0x3D8)
+$(TMPDIR)/level/level_data/world_three/3_1A.bin.lz: baserom.gba ; $(call dump_data,0xAFE720,0xEC)
+$(TMPDIR)/level/level_data/world_three/3_1B.bin.lz: baserom.gba ; $(call dump_data,0xAFE810,0x164)
+$(TMPDIR)/level/level_data/world_three/3_1_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFE978,0x358)
+assets/level/level_data/world_three/3_2A.bin: baserom.gba ; $(call dump_data,0xAFECD4,0xD8)
+$(TMPDIR)/level/level_data/world_three/3_2B.bin.lz: baserom.gba ; $(call dump_data,0xAFEDB0,0x194)
+$(TMPDIR)/level/level_data/world_three/3_2_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFEF48,0x3C0)
+$(TMPDIR)/level/level_data/world_three/3_3A.bin.lz: baserom.gba ; $(call dump_data,0xAFF30C,0x2C8)
+$(TMPDIR)/level/level_data/world_three/3_3B.bin.lz: baserom.gba ; $(call dump_data,0xAFF5D8,0x214)
+$(TMPDIR)/level/level_data/world_three/3_3_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xAFF7F0,0x3F8)
+$(TMPDIR)/level/level_data/world_three/3_4A.bin.lz: baserom.gba ; $(call dump_data,0xAFFBEC,0x254)
+$(TMPDIR)/level/level_data/world_three/3_4B.bin.lz: baserom.gba ; $(call dump_data,0xAFFE44,0x2D0)
+$(TMPDIR)/level/level_data/world_three/3_4_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB00118,0x36C)
+$(TMPDIR)/level/level_data/world_three/3_5A.bin.lz: baserom.gba ; $(call dump_data,0xB00488,0x18C)
+$(TMPDIR)/level/level_data/world_three/3_5B.bin.lz: baserom.gba ; $(call dump_data,0xB00618,0x1F4)
+$(TMPDIR)/level/level_data/world_three/3_5_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB00810,0x408)
+$(TMPDIR)/level/level_data/world_three/3_6A.bin.lz: baserom.gba ; $(call dump_data,0xB00C1C,0x1F0)
+$(TMPDIR)/level/level_data/world_three/3_6B.bin.lz: baserom.gba ; $(call dump_data,0xB00E10,0x2F4)
+$(TMPDIR)/level/level_data/world_three/3_6_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB01108,0x3E4)
+$(TMPDIR)/level/level_data/world_three/3_mm.bin.lz: baserom.gba ; $(call dump_data,0xB014F0,0x328)
+$(TMPDIR)/level/level_data/world_three/3_DK.bin.lz: baserom.gba ; $(call dump_data,0xB0181C,0x90)
+$(TMPDIR)/level/level_data/world_three/3_mm_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB018B0,0x430)
+$(TMPDIR)/level/level_data/world_four/4_1A.bin.lz: baserom.gba ; $(call dump_data,0xB01CE4,0x158)
+$(TMPDIR)/level/level_data/world_four/4_1B.bin.lz: baserom.gba ; $(call dump_data,0xB01E40,0x19C)
+$(TMPDIR)/level/level_data/world_four/4_1_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB01FE0,0x3A0)
+$(TMPDIR)/level/level_data/world_four/4_2A.bin.lz: baserom.gba ; $(call dump_data,0xB02384,0x18C)
+$(TMPDIR)/level/level_data/world_four/4_2B.bin.lz: baserom.gba ; $(call dump_data,0xB02514,0x168)
+$(TMPDIR)/level/level_data/world_four/4_2_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB02680,0x390)
+$(TMPDIR)/level/level_data/world_four/4_3A.bin.lz: baserom.gba ; $(call dump_data,0xB02A14,0x29C)
+$(TMPDIR)/level/level_data/world_four/4_3B.bin.lz: baserom.gba ; $(call dump_data,0xB02CB4,0x1CC)
+$(TMPDIR)/level/level_data/world_four/4_3_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB02E84,0x3CC)
+$(TMPDIR)/level/level_data/world_four/4_4A.bin.lz: baserom.gba ; $(call dump_data,0xB03254,0x1BC)
+$(TMPDIR)/level/level_data/world_four/4_4B.bin.lz: baserom.gba ; $(call dump_data,0xB03414,0x204)
+$(TMPDIR)/level/level_data/world_four/4_4_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB0361C,0x358)
+$(TMPDIR)/level/level_data/world_four/4_5A.bin.lz: baserom.gba ; $(call dump_data,0xB03978,0x194)
+$(TMPDIR)/level/level_data/world_four/4_5B.bin.lz: baserom.gba ; $(call dump_data,0xB03B10,0x2A0)
+$(TMPDIR)/level/level_data/world_four/4_5_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB03DB4,0x3A0)
+$(TMPDIR)/level/level_data/world_four/4_6A.bin.lz: baserom.gba ; $(call dump_data,0xB04158,0x2BC)
+$(TMPDIR)/level/level_data/world_four/4_6B.bin.lz: baserom.gba ; $(call dump_data,0xB04418,0x25C)
+$(TMPDIR)/level/level_data/world_four/4_6_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB04678,0x358)
+$(TMPDIR)/level/level_data/world_four/4_mm.bin.lz: baserom.gba ; $(call dump_data,0xB049D4,0x2F8)
+$(TMPDIR)/level/level_data/world_four/4_DK.bin.lz: baserom.gba ; $(call dump_data,0xB04CD0,0xDC)
+$(TMPDIR)/level/level_data/world_four/4_mm_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB04DB0,0x380)
+$(TMPDIR)/level/level_data/world_five/5_1A.bin.lz: baserom.gba ; $(call dump_data,0xB05134,0x15C)
+$(TMPDIR)/level/level_data/world_five/5_1B.bin.lz: baserom.gba ; $(call dump_data,0xB05294,0x25C)
+$(TMPDIR)/level/level_data/world_five/5_1_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB054F4,0x398)
+$(TMPDIR)/level/level_data/world_five/5_2A.bin.lz: baserom.gba ; $(call dump_data,0xB05890,0x288)
+$(TMPDIR)/level/level_data/world_five/5_2B.bin.lz: baserom.gba ; $(call dump_data,0xB05B1C,0x2A0)
+$(TMPDIR)/level/level_data/world_five/5_2_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB05DC0,0x3B8)
+$(TMPDIR)/level/level_data/world_five/5_3A.bin.lz: baserom.gba ; $(call dump_data,0xB0617C,0x180)
+$(TMPDIR)/level/level_data/world_five/5_3B.bin.lz: baserom.gba ; $(call dump_data,0xB06300,0x218)
+$(TMPDIR)/level/level_data/world_five/5_3_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB0651C,0x3E8)
+$(TMPDIR)/level/level_data/world_five/5_4A.bin.lz: baserom.gba ; $(call dump_data,0xB06908,0x49C)
+$(TMPDIR)/level/level_data/world_five/5_4B.bin.lz: baserom.gba ; $(call dump_data,0xB06DA8,0x424)
+$(TMPDIR)/level/level_data/world_five/5_4_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB071D0,0x47C)
+$(TMPDIR)/level/level_data/world_five/5_5A.bin.lz: baserom.gba ; $(call dump_data,0xB07650,0x2E4)
+$(TMPDIR)/level/level_data/world_five/5_5B.bin.lz: baserom.gba ; $(call dump_data,0xB07938,0x290)
+$(TMPDIR)/level/level_data/world_five/5_5_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB07BCC,0x3AC)
+$(TMPDIR)/level/level_data/world_five/5_6A.bin.lz: baserom.gba ; $(call dump_data,0xB07F7C,0x460)
+$(TMPDIR)/level/level_data/world_five/5_6B.bin.lz: baserom.gba ; $(call dump_data,0xB083E0,0x290)
+$(TMPDIR)/level/level_data/world_five/5_6_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB08674,0x3F0)
+$(TMPDIR)/level/level_data/world_five/5_mm.bin.lz: baserom.gba ; $(call dump_data,0xB08A68,0x270)
+$(TMPDIR)/level/level_data/world_five/5_DK.bin.lz: baserom.gba ; $(call dump_data,0xB08CDC,0x130)
+$(TMPDIR)/level/level_data/world_five/5_mm_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB08E10,0x460)
+$(TMPDIR)/level/level_data/world_six/6_1A.bin.lz: baserom.gba ; $(call dump_data,0xB09274,0x24C)
+$(TMPDIR)/level/level_data/world_six/6_1B.bin.lz: baserom.gba ; $(call dump_data,0xB094C4,0x3EC)
+$(TMPDIR)/level/level_data/world_six/6_1_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB098B4,0x3E8)
+$(TMPDIR)/level/level_data/world_six/6_2A.bin.lz: baserom.gba ; $(call dump_data,0xB09CA0,0x394)
+$(TMPDIR)/level/level_data/world_six/6_2B.bin.lz: baserom.gba ; $(call dump_data,0xB0A038,0x2CC)
+$(TMPDIR)/level/level_data/world_six/6_2_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB0A308,0x38C)
+$(TMPDIR)/level/level_data/world_six/6_3A.bin.lz: baserom.gba ; $(call dump_data,0xB0A698,0x150)
+$(TMPDIR)/level/level_data/world_six/6_3B.bin.lz: baserom.gba ; $(call dump_data,0xB0A7EC,0x394)
+$(TMPDIR)/level/level_data/world_six/6_3_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB0AB84,0x3EC)
+$(TMPDIR)/level/level_data/world_six/6_4A.bin.lz: baserom.gba ; $(call dump_data,0xB0AF74,0x588)
+$(TMPDIR)/level/level_data/world_six/6_4B.bin.lz: baserom.gba ; $(call dump_data,0xB0B500,0x29C)
+$(TMPDIR)/level/level_data/world_six/6_4_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB0B7A0,0x3AC)
+$(TMPDIR)/level/level_data/world_six/6_5A.bin.lz: baserom.gba ; $(call dump_data,0xB0BB50,0x274)
+$(TMPDIR)/level/level_data/world_six/6_5B.bin.lz: baserom.gba ; $(call dump_data,0xB0BDC8,0x4E8)
+$(TMPDIR)/level/level_data/world_six/6_5_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB0C2B4,0x43C)
 $(TMPDIR)/level/level_data/world_six/6_6A.bin.lz: baserom.gba ; $(call dump_data,0xB0C6F4,0x5E8)
+$(TMPDIR)/level/level_data/world_six/6_6B.bin.lz: baserom.gba ; $(call dump_data,0xB0CCE0,0x3C0)
+$(TMPDIR)/level/level_data/world_six/6_6_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB0D0A4,0x450)
+$(TMPDIR)/level/level_data/world_six/6_mm.bin.lz: baserom.gba ; $(call dump_data,0xB0D4F8,0x3A4)
+$(TMPDIR)/level/level_data/world_six/6_DK.bin.lz: baserom.gba ; $(call dump_data,0xB0D8A0,0x194)
+$(TMPDIR)/level/level_data/world_six/6_mm_tutorial.bin.lz: baserom.gba ; $(call dump_data,0xB0DA38,0x3E8)
+$(TMPDIR)/level/level_data/world_one_plus/1_1_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0DE24,0x2C0)
+$(TMPDIR)/level/level_data/expert/expert_1.bin.lz: baserom.gba ; $(call dump_data,0xB0E0E8,0x274)
+$(TMPDIR)/level/level_data/world_one_plus/1_2_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0E360,0x1D8)
+$(TMPDIR)/level/level_data/expert/expert_7.bin.lz: baserom.gba ; $(call dump_data,0xB0E53C,0x3D4)
+$(TMPDIR)/level/level_data/world_one_plus/1_3_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0E914,0x118)
+$(TMPDIR)/level/level_data/world_one_plus/1_unused_revenge.bin.lz: baserom.gba ; $(call dump_data,0xB0EA30,0x1A0)
+$(TMPDIR)/level/level_data/world_one_plus/1_4_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0EBD4,0x218)
+$(TMPDIR)/level/level_data/world_one_plus/1_unused_the_long_way.bin.lz: baserom.gba ; $(call dump_data,0xB0EDF0,0x360)
+$(TMPDIR)/level/level_data/world_one_plus/1_5_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0F154,0x1AC)
+$(TMPDIR)/level/level_data/world_one_plus/1_unused_1.bin.lz: baserom.gba ; $(call dump_data,0xB0F304,0x18C)
+$(TMPDIR)/level/level_data/world_one_plus/1_6_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0F494,0x19C)
+$(TMPDIR)/level/level_data/world_one_plus/1_unused_2.bin.lz: baserom.gba ; $(call dump_data,0xB0F634,0x16C)
+$(TMPDIR)/level/level_data/world_one_plus/1_DK_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0F7A4,0x100)
+$(TMPDIR)/level/level_data/world_one_plus/1_unused_DK.bin.lz: baserom.gba ; $(call dump_data,0xB0F8A8,0xF0)
+$(TMPDIR)/level/level_data/world_two_plus/2_1_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0F99C,0x264)
+$(TMPDIR)/level/level_data/expert/expert_2.bin.lz: baserom.gba ; $(call dump_data,0xB0FC04,0x334)
+$(TMPDIR)/level/level_data/world_two_plus/2_2_plus.bin.lz: baserom.gba ; $(call dump_data,0xB0FF3C,0x268)
+assets/level/level_data/expert/expert_8.bin: baserom.gba ; $(call dump_data,0xB101A8,0x158)
+$(TMPDIR)/level/level_data/world_two_plus/2_3_plus.bin.lz: baserom.gba ; $(call dump_data,0xB10304,0x280)
+$(TMPDIR)/level/level_data/world_two_plus/2_unused_one_shot_blue.bin.lz: baserom.gba ; $(call dump_data,0xB10588,0x2BC)
+$(TMPDIR)/level/level_data/world_two_plus/2_4_plus.bin.lz: baserom.gba ; $(call dump_data,0xB10848,0x2B0)
+$(TMPDIR)/level/level_data/world_two_plus/2_unused_egg_attack.bin.lz: baserom.gba ; $(call dump_data,0xB10AFC,0x194)
+$(TMPDIR)/level/level_data/world_two_plus/2_5_plus.bin.lz: baserom.gba ; $(call dump_data,0xB10C94,0x46C)
+$(TMPDIR)/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin.lz: baserom.gba ; $(call dump_data,0xB11104,0x194)
+$(TMPDIR)/level/level_data/world_two_plus/2_6_plus.bin.lz: baserom.gba ; $(call dump_data,0xB1129C,0x160)
+$(TMPDIR)/level/level_data/world_two_plus/2_unused_later_gator.bin.lz: baserom.gba ; $(call dump_data,0xB11400,0x208)
+$(TMPDIR)/level/level_data/world_two_plus/2_DK_plus.bin.lz: baserom.gba ; $(call dump_data,0xB1160C,0x310)
+$(TMPDIR)/level/level_data/world_two_plus/2_unused_DK.bin.lz: baserom.gba ; $(call dump_data,0xB11920,0x2FC)
+$(TMPDIR)/level/level_data/world_three_plus/3_1_plus.bin.lz: baserom.gba ; $(call dump_data,0xB11C20,0x248)
+$(TMPDIR)/level/level_data/expert/expert_3.bin.lz: baserom.gba ; $(call dump_data,0xB11E6C,0x290)
+$(TMPDIR)/level/level_data/world_three_plus/3_2_plus.bin.lz: baserom.gba ; $(call dump_data,0xB12100,0x194)
+$(TMPDIR)/level/level_data/expert/expert_9.bin.lz: baserom.gba ; $(call dump_data,0xB12298,0x2E0)
+$(TMPDIR)/level/level_data/world_three_plus/3_3_plus.bin.lz: baserom.gba ; $(call dump_data,0xB1257C,0x104)
+$(TMPDIR)/level/level_data/world_three_plus/3_unused_hot_feet.bin.lz: baserom.gba ; $(call dump_data,0xB12684,0x29C)
+$(TMPDIR)/level/level_data/world_three_plus/3_4_plus.bin.lz: baserom.gba ; $(call dump_data,0xB12924,0x1A4)
+$(TMPDIR)/level/level_data/world_three_plus/3_unused_1.bin.lz: baserom.gba ; $(call dump_data,0xB12ACC,0x2DC)
+$(TMPDIR)/level/level_data/world_three_plus/3_5_plus.bin.lz: baserom.gba ; $(call dump_data,0xB12DAC,0x14C)
+$(TMPDIR)/level/level_data/world_three_plus/3_unused_2.bin.lz: baserom.gba ; $(call dump_data,0xB12EFC,0x188)
+$(TMPDIR)/level/level_data/world_three_plus/3_6_plus.bin.lz: baserom.gba ; $(call dump_data,0xB13088,0x2B8)
+$(TMPDIR)/level/level_data/world_three_plus/3_unused_3.bin.lz: baserom.gba ; $(call dump_data,0xB13344,0x368)
+$(TMPDIR)/level/level_data/world_three_plus/3_DK_plus.bin.lz: baserom.gba ; $(call dump_data,0xB136B0,0x2F8)
+assets/level/level_data/world_three_plus/3_unused_DK.bin: baserom.gba ; $(call dump_data,0xB139AC,0x9C)
+$(TMPDIR)/level/level_data/world_four_plus/4_1_plus.bin.lz: baserom.gba ; $(call dump_data,0xB13A4C,0x234)
+$(TMPDIR)/level/level_data/expert/expert_4.bin.lz: baserom.gba ; $(call dump_data,0xB13C84,0x28C)
+$(TMPDIR)/level/level_data/world_four_plus/4_2_plus.bin.lz: baserom.gba ; $(call dump_data,0xB13F14,0x280)
+$(TMPDIR)/level/level_data/expert/expert_10.bin.lz: baserom.gba ; $(call dump_data,0xB14198,0x1E4)
+$(TMPDIR)/level/level_data/world_four_plus/4_3_plus.bin.lz: baserom.gba ; $(call dump_data,0xB14380,0x258)
+$(TMPDIR)/level/level_data/world_four_plus/4_unused_boo_in_a_box.bin.lz: baserom.gba ; $(call dump_data,0xB145DC,0x1F8)
+$(TMPDIR)/level/level_data/world_four_plus/4_4_plus.bin.lz: baserom.gba ; $(call dump_data,0xB147D8,0x1E0)
+$(TMPDIR)/level/level_data/world_four_plus/4_unused_the_thwamplet.bin.lz: baserom.gba ; $(call dump_data,0xB149BC,0x2CC)
+$(TMPDIR)/level/level_data/world_four_plus/4_5_plus.bin.lz: baserom.gba ; $(call dump_data,0xB14C8C,0x238)
+$(TMPDIR)/level/level_data/world_four_plus/4_unused_a_tricky_candle.bin.lz: baserom.gba ; $(call dump_data,0xB14EC8,0x224)
+$(TMPDIR)/level/level_data/world_four_plus/4_6_plus.bin.lz: baserom.gba ; $(call dump_data,0xB150F0,0x10C)
+$(TMPDIR)/level/level_data/world_four_plus/4_unused_1.bin.lz: baserom.gba ; $(call dump_data,0xB15200,0x1E8)
+$(TMPDIR)/level/level_data/world_four_plus/4_DK_plus.bin.lz: baserom.gba ; $(call dump_data,0xB153EC,0xD8)
+$(TMPDIR)/level/level_data/world_four_plus/4_unused_DK.bin.lz: baserom.gba ; $(call dump_data,0xB154C8,0x10C)
+$(TMPDIR)/level/level_data/world_five_plus/5_1_plus.bin.lz: baserom.gba ; $(call dump_data,0xB155D8,0x22C)
+$(TMPDIR)/level/level_data/expert/expert_5.bin.lz: baserom.gba ; $(call dump_data,0xB15808,0x19C)
+$(TMPDIR)/level/level_data/world_five_plus/5_2_plus.bin.lz: baserom.gba ; $(call dump_data,0xB159A8,0x1FC)
+$(TMPDIR)/level/level_data/expert/expert_11.bin.lz: baserom.gba ; $(call dump_data,0xB15BA8,0x284)
+$(TMPDIR)/level/level_data/world_five_plus/5_3_plus.bin.lz: baserom.gba ; $(call dump_data,0xB15E30,0x1D0)
+$(TMPDIR)/level/level_data/world_five_plus/5_unused_key_to_the_key.bin.lz: baserom.gba ; $(call dump_data,0xB16004,0x460)
+$(TMPDIR)/level/level_data/world_five_plus/5_4_plus.bin.lz: baserom.gba ; $(call dump_data,0xB16468,0x1E0)
+$(TMPDIR)/level/level_data/world_five_plus/5_unused_danger_flowers_W5.bin.lz: baserom.gba ; $(call dump_data,0xB1664C,0x190)
+$(TMPDIR)/level/level_data/world_five_plus/5_5_plus.bin.lz: baserom.gba ; $(call dump_data,0xB167E0,0x3EC)
+$(TMPDIR)/level/level_data/world_five_plus/5_unused_hitasura_kawase.bin.lz: baserom.gba ; $(call dump_data,0xB16BD0,0x240)
+$(TMPDIR)/level/level_data/world_five_plus/5_6_plus.bin.lz: baserom.gba ; $(call dump_data,0xB16E14,0x2B0)
+$(TMPDIR)/level/level_data/world_five_plus/5_unused_1.bin.lz: baserom.gba ; $(call dump_data,0xB170C8,0x190)
+$(TMPDIR)/level/level_data/world_five_plus/5_DK_plus.bin.lz: baserom.gba ; $(call dump_data,0xB1725C,0x130)
+$(TMPDIR)/level/level_data/world_five_plus/5_unused_DK.bin.lz: baserom.gba ; $(call dump_data,0xB0F8A8,0xF0)
+$(TMPDIR)/level/level_data/world_six_plus/6_1_plus.bin.lz: baserom.gba ; $(call dump_data,0xB17484,0x25C)
+$(TMPDIR)/level/level_data/expert/expert_6.bin.lz: baserom.gba ; $(call dump_data,0xB176E4,0x468)
+$(TMPDIR)/level/level_data/world_six_plus/6_2_plus.bin.lz: baserom.gba ; $(call dump_data,0xB17B50,0x270)
+$(TMPDIR)/level/level_data/expert/expert_12.bin.lz: baserom.gba ; $(call dump_data,0xB17DC4,0x3D0)
+$(TMPDIR)/level/level_data/world_six_plus/6_3_plus.bin.lz: baserom.gba ; $(call dump_data,0xB18198,0x258)
+$(TMPDIR)/level/level_data/world_six_plus/6_unused_climb_and_fall_1.bin.lz: baserom.gba ; $(call dump_data,0xB183F4,0x414)
+$(TMPDIR)/level/level_data/world_six_plus/6_4_plus.bin.lz: baserom.gba ; $(call dump_data,0xB1880C,0x1F8)
+$(TMPDIR)/level/level_data/world_six_plus/6_unused_1.bin.lz: baserom.gba ; $(call dump_data,0xB18A08,0x208)
+assets/level/level_data/world_six_plus/6_5_plus.bin: baserom.gba ; $(call dump_data,0xB18C14,0x17C)
+$(TMPDIR)/level/level_data/world_six_plus/6_unused_2.bin.lz: baserom.gba ; $(call dump_data,0xB18D94,0x344)
+$(TMPDIR)/level/level_data/world_six_plus/6_6_plus.bin.lz: baserom.gba ; $(call dump_data,0xB190DC,0x288)
+$(TMPDIR)/level/level_data/world_six_plus/6_unused_climb_and_fall_2.bin.lz: baserom.gba ; $(call dump_data,0xB183F4,0x414)
+$(TMPDIR)/level/level_data/world_six_plus/6_DK_plus.bin.lz: baserom.gba ; $(call dump_data,0xB19780,0x174)
+$(TMPDIR)/level/level_data/world_six_plus/6_unused_DK.bin.lz: baserom.gba ; $(call dump_data,0xB0F8A8,0xF0)
+$(TMPDIR)/level/level_data/boss/DK_boss.bin.lz: baserom.gba ; $(call dump_data,0xB199EC,0x170)
+$(TMPDIR)/level/level_data/boss/DK_boss_plus.bin.lz: baserom.gba ; $(call dump_data,0xB19B60,0xB8)
+
+assets/%.keep: $(TMPDIR)/%
+	cp $< $@
 
 # convert files to PNG (with optional palette)
 assets/%.png: $(TMPDIR)/%.4bpp $(GBAGFX)

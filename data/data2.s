@@ -25252,947 +25252,947 @@ gUnknown_08AF43E4:
 
 	.GLOBAL gLevel11A
 gLevel11A:
-	.INCBIN "assets/level/level_data/world_one/1_1A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_1A.bin.lz"
 	
 	.GLOBAL gLevel11B
 gLevel11B:
-	.INCBIN "assets/level/level_data/world_one/1_1B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_1B.bin.lz.keep"
 	
 	.GLOBAL gLevel11Tutorial
 gLevel11Tutorial:
-	.INCBIN "assets/level/level_data/world_one/1_1_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_1_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel12A
 gLevel12A:
-	.INCBIN "assets/level/level_data/world_one/1_2A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_2A.bin.lz.keep"
 	
 	.GLOBAL gLevel12B
 gLevel12B:
-	.INCBIN "assets/level/level_data/world_one/1_2B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_2B.bin.lz.keep"
 	
 	.GLOBAL gLevel12Tutorial
 gLevel12Tutorial:
-	.INCBIN "assets/level/level_data/world_one/1_2_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_2_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel13A
 gLevel13A:
-	.INCBIN "assets/level/level_data/world_one/1_3A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_3A.bin.lz"
 	
 	.GLOBAL gLevel13B
 gLevel13B:
-	.INCBIN "assets/level/level_data/world_one/1_3B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_3B.bin.lz.keep"
 	
 	.GLOBAL gLevel13Tutorial
 gLevel13Tutorial:
-	.INCBIN "assets/level/level_data/world_one/1_3_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_3_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel14A
 gLevel14A:
-	.INCBIN "assets/level/level_data/world_one/1_4A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_4A.bin.lz.keep"
 	
 	.GLOBAL gLevel14B
 gLevel14B:
-	.INCBIN "assets/level/level_data/world_one/1_4B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_4B.bin.lz.keep"
 	
 	.GLOBAL gLevel14Tutorial
 gLevel14Tutorial:
-	.INCBIN "assets/level/level_data/world_one/1_4_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_4_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel15A
 gLevel15A:
-	.INCBIN "assets/level/level_data/world_one/1_5A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_5A.bin.lz.keep"
 	
 	.GLOBAL gLevel15B
 gLevel15B:
-	.INCBIN "assets/level/level_data/world_one/1_5B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_5B.bin.lz.keep"
 	
 	.GLOBAL gLevel15Tutorial
 gLevel15Tutorial:
-	.INCBIN "assets/level/level_data/world_one/1_5_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_5_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel16A
 gLevel16A:
-	.INCBIN "assets/level/level_data/world_one/1_6A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_6A.bin.lz.keep"
 	
 	.GLOBAL gLevel16B
 gLevel16B:
-	.INCBIN "assets/level/level_data/world_one/1_6B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_6B.bin.lz.keep"
 
 	.GLOBAL gLevel16Tutorial
 gLevel16Tutorial:
-	.INCBIN "assets/level/level_data/world_one/1_6_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_6_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel1MM
 gLevel1MM:
-	.INCBIN "assets/level/level_data/world_one/1_mm.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_mm.bin.lz.keep"
 	
 	.GLOBAL gLevel1DK
 gLevel1DK:
-	.INCBIN "assets/level/level_data/world_one/1_DK.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_DK.bin.lz.keep"
 
 	.GLOBAL gLevel1MMTutorial
 gLevel1MMTutorial:
-	.INCBIN "assets/level/level_data/world_one/1_mm_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_mm_tutorial.bin.lz.keep"
 	
 @ World 2
 	
 	.GLOBAL gLevel21A
 gLevel21A:
-	.INCBIN "assets/level/level_data/world_two/2_1A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_1A.bin.lz.keep"
 
 	.GLOBAL gLevel21B
 gLevel21B:
-	.INCBIN "assets/level/level_data/world_two/2_1B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_1B.bin.lz.keep"
 	
 	.GLOBAL gLevel21Tutorial
 gLevel21Tutorial:
-	.INCBIN "assets/level/level_data/world_two/2_1_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_1_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel22A
 gLevel22A:
-	.INCBIN "assets/level/level_data/world_two/2_2A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_2A.bin.lz.keep"
 	
 	.GLOBAL gLevel22B
 gLevel22B:
-	.INCBIN "assets/level/level_data/world_two/2_2B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_2B.bin.lz.keep"
 
 	.GLOBAL gLevel22Tutorial
 gLevel22Tutorial:
-	.INCBIN "assets/level/level_data/world_two/2_2_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_2_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel23A
 gLevel23A:
-	.INCBIN "assets/level/level_data/world_two/2_3A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_3A.bin.lz.keep"
 	
 	.GLOBAL gLevel23B
 gLevel23B:
-	.INCBIN "assets/level/level_data/world_two/2_3B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_3B.bin.lz.keep"
 
 	.GLOBAL gLevel23Tutorial
 gLevel23Tutorial:
-	.INCBIN "assets/level/level_data/world_two/2_3_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_3_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel24A
 gLevel24A:
-	.INCBIN "assets/level/level_data/world_two/2_4A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_4A.bin.lz.keep"
 	
 	.GLOBAL gLevel24B
 gLevel24B:
-	.INCBIN "assets/level/level_data/world_two/2_4B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_4B.bin.lz.keep"
 
 	.GLOBAL gLevel24Tutorial
 gLevel24Tutorial:
-	.INCBIN "assets/level/level_data/world_two/2_4_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_4_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel25A
 gLevel25A:
-	.INCBIN "assets/level/level_data/world_two/2_5A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_5A.bin.lz.keep"
 	
 	.GLOBAL gLevel25B
 gLevel25B:
-	.INCBIN "assets/level/level_data/world_two/2_5B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_5B.bin.lz.keep"
 
 	.GLOBAL gLevel25Tutorial
 gLevel25Tutorial:
-	.INCBIN "assets/level/level_data/world_two/2_5_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_5_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel26A
 gLevel26A:
-	.INCBIN "assets/level/level_data/world_two/2_6A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_6A.bin.lz.keep"
 	
 	.GLOBAL gLevel26B
 gLevel26B:
-	.INCBIN "assets/level/level_data/world_two/2_6B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_6B.bin.lz.keep"
 
 	.GLOBAL gLevel26Tutorial
 gLevel26Tutorial:
-	.INCBIN "assets/level/level_data/world_two/2_6_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_6_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel2MM
 gLevel2MM:
-	.INCBIN "assets/level/level_data/world_two/2_mm.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_mm.bin.lz.keep"
 	
 	.GLOBAL gLevel2DK
 gLevel2DK:
-	.INCBIN "assets/level/level_data/world_two/2_DK.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_DK.bin.lz.keep"
 
 	.GLOBAL gLevel2MMTutorial
 gLevel2MMTutorial:
-	.INCBIN "assets/level/level_data/world_two/2_mm_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_mm_tutorial.bin.lz.keep"
 	
 @ World 3
 
 	.GLOBAL gLevel31A
 gLevel31A:
-	.INCBIN "assets/level/level_data/world_three/3_1A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_1A.bin.lz.keep"
 	
 	.GLOBAL gLevel31B
 gLevel31B:
-	.INCBIN "assets/level/level_data/world_three/3_1B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_1B.bin.lz.keep"
 
 	.GLOBAL gLevel31Tutorial
 gLevel31Tutorial:
-	.INCBIN "assets/level/level_data/world_three/3_1_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_1_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel32A
 gLevel32A:
-	.INCBIN "assets/level/level_data/world_three/3_2A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_2A.bin"
 	
 	.GLOBAL gLevel32B
 gLevel32B:
-	.INCBIN "assets/level/level_data/world_three/3_2B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_2B.bin.lz.keep"
 
 	.GLOBAL gLevel32Tutorial
 gLevel32Tutorial:
-	.INCBIN "assets/level/level_data/world_three/3_2_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_2_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel33A
 gLevel33A:
-	.INCBIN "assets/level/level_data/world_three/3_3A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_3A.bin.lz.keep"
 	
 	.GLOBAL gLevel33B
 gLevel33B:
-	.INCBIN "assets/level/level_data/world_three/3_3B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_3B.bin.lz.keep"
 
 	.GLOBAL gLevel33Tutorial
 gLevel33Tutorial:
-	.INCBIN "assets/level/level_data/world_three/3_3_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_3_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel34A
 gLevel34A:
-	.INCBIN "assets/level/level_data/world_three/3_4A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_4A.bin.lz.keep"
 	
 	.GLOBAL gLevel34B
 gLevel34B:
-	.INCBIN "assets/level/level_data/world_three/3_4B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_4B.bin.lz.keep"
 
 	.GLOBAL gLevel34Tutorial
 gLevel34Tutorial:
-	.INCBIN "assets/level/level_data/world_three/3_4_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_4_tutorial.bin.lz.keep"
 
 	
 	.GLOBAL gLevel35A
 gLevel35A:
-	.INCBIN "assets/level/level_data/world_three/3_5A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_5A.bin.lz.keep"
 	
 	.GLOBAL gLevel35B
 gLevel35B:
-	.INCBIN "assets/level/level_data/world_three/3_5B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_5B.bin.lz.keep"
 
 	.GLOBAL gLevel35Tutorial
 gLevel35Tutorial:
-	.INCBIN "assets/level/level_data/world_three/3_5_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_5_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel36A
 gLevel36A:
-	.INCBIN "assets/level/level_data/world_three/3_6A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_6A.bin.lz.keep"
 	
 	.GLOBAL gLevel36B
 gLevel36B:
-	.INCBIN "assets/level/level_data/world_three/3_6B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_6B.bin.lz.keep"
 
 	.GLOBAL gLevel36Tutorial
 gLevel36Tutorial:
-	.INCBIN "assets/level/level_data/world_three/3_6_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_6_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel3MM
 gLevel3MM:
-	.INCBIN "assets/level/level_data/world_three/3_mm.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_mm.bin.lz.keep"
 	
 	.GLOBAL gLevel3DK
 gLevel3DK:
-	.INCBIN "assets/level/level_data/world_three/3_DK.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_DK.bin.lz.keep"
 
 	.GLOBAL gLevel3MMTutorial
 gLevel3MMTutorial:
-	.INCBIN "assets/level/level_data/world_three/3_mm_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three/3_mm_tutorial.bin.lz.keep"
 	
 @ World 4	
 
 	.GLOBAL gLevel41A
 gLevel41A:
-	.INCBIN "assets/level/level_data/world_four/4_1A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_1A.bin.lz.keep"
 	
 	.GLOBAL gLevel41B
 gLevel41B:
-	.INCBIN "assets/level/level_data/world_four/4_1B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_1B.bin.lz.keep"
 
 	.GLOBAL gLevel41Tutorial
 gLevel41Tutorial:
-	.INCBIN "assets/level/level_data/world_four/4_1_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_1_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel42A
 gLevel42A:
-	.INCBIN "assets/level/level_data/world_four/4_2A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_2A.bin.lz.keep"
 	
 	.GLOBAL gLevel42B
 gLevel42B:
-	.INCBIN "assets/level/level_data/world_four/4_2B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_2B.bin.lz.keep"
 
 	.GLOBAL gLevel42Tutorial
 gLevel42Tutorial:
-	.INCBIN "assets/level/level_data/world_four/4_2_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_2_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel43A
 gLevel43A:
-	.INCBIN "assets/level/level_data/world_four/4_3A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_3A.bin.lz.keep"
 	
 	.GLOBAL gLevel43B
 gLevel43B:
-	.INCBIN "assets/level/level_data/world_four/4_3B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_3B.bin.lz.keep"
 
 	.GLOBAL gLevel43Tutorial
 gLevel43Tutorial:
-	.INCBIN "assets/level/level_data/world_four/4_3_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_3_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel44A
 gLevel44A:
-	.INCBIN "assets/level/level_data/world_four/4_4A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_4A.bin.lz.keep"
 	
 	.GLOBAL gLevel44B
 gLevel44B:
-	.INCBIN "assets/level/level_data/world_four/4_4B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_4B.bin.lz.keep"
 
 	.GLOBAL gLevel44Tutorial
 gLevel44Tutorial:
-	.INCBIN "assets/level/level_data/world_four/4_4_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_4_tutorial.bin.lz.keep"
 
 	
 	.GLOBAL gLevel45A
 gLevel45A:
-	.INCBIN "assets/level/level_data/world_four/4_5A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_5A.bin.lz.keep"
 	
 	.GLOBAL gLevel45B
 gLevel45B:
-	.INCBIN "assets/level/level_data/world_four/4_5B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_5B.bin.lz.keep"
 
 	.GLOBAL gLevel45Tutorial
 gLevel45Tutorial:
-	.INCBIN "assets/level/level_data/world_four/4_5_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_5_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel46A
 gLevel46A:
-	.INCBIN "assets/level/level_data/world_four/4_6A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_6A.bin.lz.keep"
 	
 	.GLOBAL gLevel46B
 gLevel46B:
-	.INCBIN "assets/level/level_data/world_four/4_6B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_6B.bin.lz.keep"
 
 	.GLOBAL gLevel46Tutorial
 gLevel46Tutorial:
-	.INCBIN "assets/level/level_data/world_four/4_6_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_6_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel4MM
 gLevel4MM:
-	.INCBIN "assets/level/level_data/world_four/4_mm.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_mm.bin.lz.keep"
 	
 	.GLOBAL gLevel4DK
 gLevel4DK:
-	.INCBIN "assets/level/level_data/world_four/4_DK.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_DK.bin.lz.keep"
 
 	.GLOBAL gLevel4MMTutorial
 gLevel4MMTutorial:
-	.INCBIN "assets/level/level_data/world_four/4_mm_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_mm_tutorial.bin.lz.keep"
 	
 @ World 5
 
 	.GLOBAL gLevel51A
 gLevel51A:
-	.INCBIN "assets/level/level_data/world_five/5_1A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_1A.bin.lz.keep"
 	
 	.GLOBAL gLevel51B
 gLevel51B:
-	.INCBIN "assets/level/level_data/world_five/5_1B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_1B.bin.lz.keep"
 
 	.GLOBAL gLevel51Tutorial
 gLevel51Tutorial:
-	.INCBIN "assets/level/level_data/world_five/5_1_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_1_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel52A
 gLevel52A:
-	.INCBIN "assets/level/level_data/world_five/5_2A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_2A.bin.lz.keep"
 	
 	.GLOBAL gLevel52B
 gLevel52B:
-	.INCBIN "assets/level/level_data/world_five/5_2B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_2B.bin.lz.keep"
 
 	.GLOBAL gLevel52Tutorial
 gLevel52Tutorial:
-	.INCBIN "assets/level/level_data/world_five/5_2_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_2_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel53A
 gLevel53A:
-	.INCBIN "assets/level/level_data/world_five/5_3A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_3A.bin.lz.keep"
 	
 	.GLOBAL gLevel53B
 gLevel53B:
-	.INCBIN "assets/level/level_data/world_five/5_3B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_3B.bin.lz.keep"
 
 	.GLOBAL gLevel53Tutorial
 gLevel53Tutorial:
-	.INCBIN "assets/level/level_data/world_five/5_3_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_3_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel54A
 gLevel54A:
-	.INCBIN "assets/level/level_data/world_five/5_4A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_4A.bin.lz.keep"
 	
 	.GLOBAL gLevel54B
 gLevel54B:
-	.INCBIN "assets/level/level_data/world_five/5_4B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_4B.bin.lz.keep"
 
 	.GLOBAL gLevel54Tutorial
 gLevel54Tutorial:
-	.INCBIN "assets/level/level_data/world_five/5_4_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_4_tutorial.bin.lz.keep"
 
 	
 	.GLOBAL gLevel55A
 gLevel55A:
-	.INCBIN "assets/level/level_data/world_five/5_5A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_5A.bin.lz.keep"
 	
 	.GLOBAL gLevel55B
 gLevel55B:
-	.INCBIN "assets/level/level_data/world_five/5_5B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_5B.bin.lz.keep"
 
 	.GLOBAL gLevel55Tutorial
 gLevel55Tutorial:
-	.INCBIN "assets/level/level_data/world_five/5_5_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_5_tutorial.bin.lz.keep"
 	
 
 	.GLOBAL gLevel56A
 gLevel56A:
-	.INCBIN "assets/level/level_data/world_five/5_6A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_6A.bin.lz.keep"
 	
 	.GLOBAL gLevel56B
 gLevel56B:
-	.INCBIN "assets/level/level_data/world_five/5_6B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_6B.bin.lz.keep"
 
 	.GLOBAL gLevel56Tutorial
 gLevel56Tutorial:
-	.INCBIN "assets/level/level_data/world_five/5_6_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_6_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel5MM
 gLevel5MM:
-	.INCBIN "assets/level/level_data/world_five/5_mm.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_mm.bin.lz.keep"
 	
 	.GLOBAL gLevel5DK
 gLevel5DK:
-	.INCBIN "assets/level/level_data/world_five/5_DK.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_DK.bin.lz.keep"
 
 	.GLOBAL gLevel5MMTutorial
 gLevel5MMTutorial:
-	.INCBIN "assets/level/level_data/world_five/5_mm_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_mm_tutorial.bin.lz.keep"
 	
 @ World 6
 	
 	.GLOBAL gLevel61A
 gLevel61A:
-	.INCBIN "assets/level/level_data/world_six/6_1A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_1A.bin.lz.keep"
 
 	.GLOBAL gLevel61B
 gLevel61B:
-	.INCBIN "assets/level/level_data/world_six/6_1B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_1B.bin.lz.keep"
 
 	.GLOBAL gLevel61Tutorial
 gLevel61Tutorial:
-	.INCBIN "assets/level/level_data/world_six/6_1_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_1_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel62A
 gLevel62A:
-	.INCBIN "assets/level/level_data/world_six/6_2A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_2A.bin.lz.keep"
 
 	.GLOBAL gLevel62B
 gLevel62B:
-	.INCBIN "assets/level/level_data/world_six/6_2B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_2B.bin.lz.keep"
 
 	.GLOBAL gLevel62Tutorial
 gLevel62Tutorial:
-	.INCBIN "assets/level/level_data/world_six/6_2_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_2_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel63A
 gLevel63A:
-	.INCBIN "assets/level/level_data/world_six/6_3A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_3A.bin.lz.keep"
 
 	.GLOBAL gLevel63B
 gLevel63B:
-	.INCBIN "assets/level/level_data/world_six/6_3B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_3B.bin.lz.keep"
 
 	.GLOBAL gLevel63Tutorial 
 gLevel63Tutorial:
-	.INCBIN "assets/level/level_data/world_six/6_3_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_3_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel64A
 gLevel64A:
-	.INCBIN "assets/level/level_data/world_six/6_4A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_4A.bin.lz.keep"
 	
 	.GLOBAL gLevel64B
 gLevel64B:
-	.INCBIN "assets/level/level_data/world_six/6_4B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_4B.bin.lz.keep"
 	
 	.GLOBAL gLevel64Tutorial
 gLevel64Tutorial:
-	.INCBIN "assets/level/level_data/world_six/6_4_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_4_tutorial.bin.lz.keep"
 
 
 	.GLOBAL gLevel65A
 gLevel65A:
-	.INCBIN "assets/level/level_data/world_six/6_5A.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_5A.bin.lz.keep"
 	
 	.GLOBAL gLevel65B
 gLevel65B:
-	.INCBIN "assets/level/level_data/world_six/6_5B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_5B.bin.lz.keep"
 	
 	.GLOBAL gLevel65Tutorial
 gLevel65Tutorial:
-	.INCBIN "assets/level/level_data/world_six/6_5_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_5_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel66A
 gLevel66A:
-	INCBIN_LEVEL "assets/level/level_data/world_six/6_6A.bin.lz"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_6A.bin.lz.keep"
 
 	.GLOBAL gLevel66B
 gLevel66B:
-	.INCBIN "assets/level/level_data/world_six/6_6B.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_6B.bin.lz.keep"
 	
 	.GLOBAL gLevel66Tutorial
 gLevel66Tutorial:
-	.INCBIN "assets/level/level_data/world_six/6_6_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_6_tutorial.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel6MM
 gLevel6MM:
-	.INCBIN "assets/level/level_data/world_six/6_mm.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_mm.bin.lz.keep"
 	
 	.GLOBAL gLevel6DK
 gLevel6DK:
-	.INCBIN "assets/level/level_data/world_six/6_DK.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_DK.bin.lz.keep"
 	
 	.GLOBAL gLevel6MMTutorial
 gLevel6MMTutorial:
-	.INCBIN "assets/level/level_data/world_six/6_mm_tutorial.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_mm_tutorial.bin.lz.keep"
 
 @ World 1+
 	
 	.GLOBAL gLevel11Plus
 gLevel11Plus:
-	.INCBIN "assets/level/level_data/world_one_plus/1_1_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_1_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert1
 gLevelExpert1:
-	.INCBIN "assets/level/level_data/expert/expert_1.bin"
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_1.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel12Plus
 gLevel12Plus:
-	.INCBIN "assets/level/level_data/world_one_plus/1_2_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_2_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert7
 gLevelExpert7:
-	.INCBIN "assets/level/level_data/expert/expert_7.bin"
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_7.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel13Plus
 gLevel13Plus:
-	.INCBIN "assets/level/level_data/world_one_plus/1_3_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_3_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedRevenge
 gLevelUnusedRevenge:
-	.INCBIN "assets/level/level_data/world_one_plus/1_unused_revenge.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_unused_revenge.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel14Plus
 gLevel14Plus:
-	.INCBIN "assets/level/level_data/world_one_plus/1_4_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_4_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedTheLongWay
 gLevelUnusedTheLongWay:
-	.INCBIN "assets/level/level_data/world_one_plus/1_unused_the_long_way.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_unused_the_long_way.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel15Plus
 gLevel15Plus:
-	.INCBIN "assets/level/level_data/world_one_plus/1_5_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_5_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnused1
 gLevelUnused1:
-	.INCBIN "assets/level/level_data/world_one_plus/1_unused_1.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_unused_1.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel16Plus
 gLevel16Plus:
-	.INCBIN "assets/level/level_data/world_one_plus/1_6_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_6_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnused2
 gLevelUnused2:
-	.INCBIN "assets/level/level_data/world_one_plus/1_unused_2.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_unused_2.bin.lz.keep"
 	
 
 	.GLOBAL gLevel1DKPlus
 gLevel1DKPlus:
-	.INCBIN "assets/level/level_data/world_one_plus/1_DK_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_DK_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedDK1
 gLevelUnusedDK1:
-	.INCBIN "assets/level/level_data/world_one_plus/1_unused_DK.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_one_plus/1_unused_DK.bin.lz.keep"
 	
 @ World 2+
 	
 	.GLOBAL gLevel21Plus
 gLevel21Plus:
-	.INCBIN "assets/level/level_data/world_two_plus/2_1_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_1_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert2
 gLevelExpert2:
-	.INCBIN "assets/level/level_data/expert/expert_2.bin"
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_2.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel22Plus
 gLevel22Plus:
-	.INCBIN "assets/level/level_data/world_two_plus/2_2_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_2_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert8
 gLevelExpert8:
-	.INCBIN "assets/level/level_data/expert/expert_8.bin"
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_8.bin"
 	
 	
 	.GLOBAL gLevel23Plus
 gLevel23Plus:
-	.INCBIN "assets/level/level_data/world_two_plus/2_3_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_3_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedOneShotBlue
 gLevelUnusedOneShotBlue:
-	.INCBIN "assets/level/level_data/world_two_plus/2_unused_one_shot_blue.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_unused_one_shot_blue.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel24Plus 
 gLevel24Plus: 
-	.INCBIN "assets/level/level_data/world_two_plus/2_4_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_4_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedEggAttack
 gLevelUnusedEggAttack:
-	.INCBIN "assets/level/level_data/world_two_plus/2_unused_egg_attack.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_unused_egg_attack.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel25Plus 
 gLevel25Plus: 
-	.INCBIN "assets/level/level_data/world_two_plus/2_5_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_5_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedDangerFlowersW2
 gLevelUnusedDangerFlowersW2:
-	.INCBIN "assets/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_unused_danger_flowers_W2.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel26Plus 
 gLevel26Plus: 
-	.INCBIN "assets/level/level_data/world_two_plus/2_6_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_6_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedLaterGator
 gLevelUnusedLaterGator:
-	.INCBIN "assets/level/level_data/world_two_plus/2_unused_later_gator.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_unused_later_gator.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel2DKPlus
 gLevel2DKPlus:
-	.INCBIN "assets/level/level_data/world_two_plus/2_DK_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_DK_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedDK2
 gLevelUnusedDK2:
-	.INCBIN "assets/level/level_data/world_two_plus/2_unused_DK.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_two_plus/2_unused_DK.bin.lz.keep"	
 	
 @ World 3+
 
 	.GLOBAL gLevel31Plus
 gLevel31Plus:
-	.INCBIN "assets/level/level_data/world_three_plus/3_1_plus.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_1_plus.bin.lz.keep"	
 	
 	.GLOBAL gLevelExpert3
 gLevelExpert3:
-	.INCBIN "assets/level/level_data/expert/expert_3.bin"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_3.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel32Plus
 gLevel32Plus:
-	.INCBIN "assets/level/level_data/world_three_plus/3_2_plus.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_2_plus.bin.lz.keep"	
 	
 	.GLOBAL gLevelExpert9
 gLevelExpert9:
-	.INCBIN "assets/level/level_data/expert/expert_9.bin"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_9.bin.lz.keep"	
 
 
 	.GLOBAL gLevel33Plus
 gLevel33Plus:
-	.INCBIN "assets/level/level_data/world_three_plus/3_3_plus.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_3_plus.bin.lz.keep"	
 	
 	.GLOBAL gLevelUnusedHotFeet
 gLevelUnusedHotFeet:
-	.INCBIN "assets/level/level_data/world_three_plus/3_unused_hot_feet.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_unused_hot_feet.bin.lz.keep"
 	
 
 	.GLOBAL gLevel34Plus
 gLevel34Plus:
-	.INCBIN "assets/level/level_data/world_three_plus/3_4_plus.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_4_plus.bin.lz.keep"	
 	
 	.GLOBAL gLevelUnused3
 gLevelUnused3:
-	.INCBIN "assets/level/level_data/world_three_plus/3_unused_1.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_unused_1.bin.lz.keep"
 	
 
 	.GLOBAL gLevel35Plus
 gLevel35Plus:
-	.INCBIN "assets/level/level_data/world_three_plus/3_5_plus.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_5_plus.bin.lz.keep"	
 	
 	.GLOBAL gLevelUnused4
 gLevelUnused4:
-	.INCBIN "assets/level/level_data/world_three_plus/3_unused_2.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_unused_2.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel36Plus
 gLevel36Plus:
-	.INCBIN "assets/level/level_data/world_three_plus/3_6_plus.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_6_plus.bin.lz.keep"	
 	
 	.GLOBAL gLevelUnused5
 gLevelUnused5:
-	.INCBIN "assets/level/level_data/world_three_plus/3_unused_3.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_unused_3.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel3DKPlus
 gLevel3DKPlus:
-	.INCBIN "assets/level/level_data/world_three_plus/3_DK_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_DK_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedDK3
 gLevelUnusedDK3:
-	.INCBIN "assets/level/level_data/world_three_plus/3_unused_DK.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_three_plus/3_unused_DK.bin"	
 	
 @ World 4+
 
 	.GLOBAL gLevel41Plus
 gLevel41Plus:
-	.INCBIN "assets/level/level_data/world_four_plus/4_1_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_1_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert4
 gLevelExpert4:
-	.INCBIN "assets/level/level_data/expert/expert_4.bin"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_4.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel42Plus
 gLevel42Plus:
-	.INCBIN "assets/level/level_data/world_four_plus/4_2_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_2_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert10
 gLevelExpert10:
-	.INCBIN "assets/level/level_data/expert/expert_10.bin"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_10.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel43Plus
 gLevel43Plus:
-	.INCBIN "assets/level/level_data/world_four_plus/4_3_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_3_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedBooInABox
 gLevelUnusedBooInABox:
-	.INCBIN "assets/level/level_data/world_four_plus/4_unused_boo_in_a_box.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_unused_boo_in_a_box.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel44Plus
 gLevel44Plus:
-	.INCBIN "assets/level/level_data/world_four_plus/4_4_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_4_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedTheThwamplet
 gLevelUnusedTheThwamplet:
-	.INCBIN "assets/level/level_data/world_four_plus/4_unused_the_thwamplet.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_unused_the_thwamplet.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel45Plus
 gLevel45Plus:
-	.INCBIN "assets/level/level_data/world_four_plus/4_5_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_5_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedATrickyCandle
 gLevelUnusedATrickyCandle:
-	.INCBIN "assets/level/level_data/world_four_plus/4_unused_a_tricky_candle.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_unused_a_tricky_candle.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel46Plus
 gLevel46Plus:
-	.INCBIN "assets/level/level_data/world_four_plus/4_6_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_6_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnused6
 gLevelUnused6:
-	.INCBIN "assets/level/level_data/world_four_plus/4_unused_1.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_unused_1.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel4DKPlus
 gLevel4DKPlus:
-	.INCBIN "assets/level/level_data/world_four_plus/4_DK_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_DK_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedDK4
 gLevelUnusedDK4:
-	.INCBIN "assets/level/level_data/world_four_plus/4_unused_DK.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_four_plus/4_unused_DK.bin.lz.keep"	
 	
 @ World 5+
 
 	.GLOBAL gLevel51Plus
 gLevel51Plus:
-	.INCBIN "assets/level/level_data/world_five_plus/5_1_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_1_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert5
 gLevelExpert5:
-	.INCBIN "assets/level/level_data/expert/expert_5.bin"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_5.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel52Plus
 gLevel52Plus:
-	.INCBIN "assets/level/level_data/world_five_plus/5_2_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_2_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert11
 gLevelExpert11:
-	.INCBIN "assets/level/level_data/expert/expert_11.bin"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_11.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel53Plus
 gLevel53Plus:
-	.INCBIN "assets/level/level_data/world_five_plus/5_3_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_3_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedKeyToTheKey
 gLevelUnusedKeyToTheKey:
-	.INCBIN "assets/level/level_data/world_five_plus/5_unused_key_to_the_key.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_unused_key_to_the_key.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel54Plus
 gLevel54Plus:
-	.INCBIN "assets/level/level_data/world_five_plus/5_4_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_4_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedDangerFlowersW5
 gLevelUnusedDangerFlowersW5:
-	.INCBIN "assets/level/level_data/world_five_plus/5_unused_danger_flowers_W5.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_unused_danger_flowers_W5.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel55Plus
 gLevel55Plus:
-	.INCBIN "assets/level/level_data/world_five_plus/5_5_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_5_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedHitasuraKawase
 gLevelUnusedHitasuraKawase:
-	.INCBIN "assets/level/level_data/world_five_plus/5_unused_hitasura_kawase.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_unused_hitasura_kawase.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel56Plus
 gLevel56Plus:
-	.INCBIN "assets/level/level_data/world_five_plus/5_6_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_6_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnused7
 gLevelUnused7:
-	.INCBIN "assets/level/level_data/world_five_plus/5_unused_1.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_unused_1.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel5DKPlus
 gLevel5DKPlus:
-	.INCBIN "assets/level/level_data/world_five_plus/5_DK_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_DK_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedDK5
 gLevelUnusedDK5:
-	.INCBIN "assets/level/level_data/world_five_plus/5_unused_DK.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_five_plus/5_unused_DK.bin.lz"	
 	
 @ World 6+
 
 	.GLOBAL gLevel61Plus
 gLevel61Plus:
-	.INCBIN "assets/level/level_data/world_six_plus/6_1_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_1_plus.bin.lz"
 	
 	.GLOBAL gLevelExpert6
 gLevelExpert6:
-	.INCBIN "assets/level/level_data/expert/expert_6.bin"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_6.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel62Plus
 gLevel62Plus:
-	.INCBIN "assets/level/level_data/world_six_plus/6_2_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_2_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelExpert12
 gLevelExpert12:
-	.INCBIN "assets/level/level_data/expert/expert_12.bin"	
+	INCBIN_LEVEL "assets/level/level_data/expert/expert_12.bin.lz.keep"	
 	
 	
 	.GLOBAL gLevel63Plus
 gLevel63Plus:
-	.INCBIN "assets/level/level_data/world_six_plus/6_3_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_3_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedClimbAndFall
 gLevelUnusedClimbAndFall:
-	.INCBIN "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_1.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_1.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel64Plus
 gLevel64Plus:
-	.INCBIN "assets/level/level_data/world_six_plus/6_4_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_4_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnused8
 gLevelUnused8:
-	.INCBIN "assets/level/level_data/world_six_plus/6_unused_1.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_1.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel65Plus
 gLevel65Plus:
-	.INCBIN "assets/level/level_data/world_six_plus/6_5_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_5_plus.bin"
 	
 	.GLOBAL gLevelUnused9
 gLevelUnused9:
-	.INCBIN "assets/level/level_data/world_six_plus/6_unused_2.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_2.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel66Plus
 gLevel66Plus:
-	.INCBIN "assets/level/level_data/world_six_plus/6_6_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_6_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedClimbAndFall2
 gLevelUnusedClimbAndFall2:
-	.INCBIN "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_2.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_climb_and_fall_2.bin.lz.keep"
 	
 	
 	.GLOBAL gLevel6DKPlus
 gLevel6DKPlus:
-	.INCBIN "assets/level/level_data/world_six_plus/6_DK_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_DK_plus.bin.lz.keep"
 	
 	.GLOBAL gLevelUnusedDK6
 gLevelUnusedDK6:
-	.INCBIN "assets/level/level_data/world_six_plus/6_unused_DK.bin"	
+	INCBIN_LEVEL "assets/level/level_data/world_six_plus/6_unused_DK.bin.lz.keep"	
 	
 @ Boss Levels
 
 	.GLOBAL gLevelDKBoss
 gLevelDKBoss:
-	.INCBIN "assets/level/level_data/boss/DK_boss.bin"
+	INCBIN_LEVEL "assets/level/level_data/boss/DK_boss.bin.lz.keep"
 	
 	.GLOBAL gLevelDKBossPlus
 gLevelDKBossPlus:
-	.INCBIN "assets/level/level_data/boss/DK_boss_plus.bin"
+	INCBIN_LEVEL "assets/level/level_data/boss/DK_boss_plus.bin.lz.keep"
 	
 @ Title demo/Tutorial Input data
 	
