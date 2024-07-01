@@ -471,17 +471,17 @@ u32 base[0];
 
 struct struct_0807820C_sub8
 {
-    u32 filler0_0:16;
+    u32 objectID:16;
     u32 unk2_0:7;
     u32 filler2_7:1;
     u32 unk3:8;
 };
 
-struct struct_0807820C_sub
+struct LevelObject
 {
-    u16 unk0;
-    u8 unk2;
-    u8 unk3;
+    u16 objectID;
+    u8 x;
+    u8 y;
 };
 
 struct struct_0807820C
@@ -490,8 +490,9 @@ struct struct_0807820C
     u16 backgroundVerticalShift;
     u16 levelWidthPixels;
     u16 levelHeightPixels;
-    struct struct_0807820C_sub8 unk8[1];
-    struct struct_0807820C_sub unkC[1];
+    u16 unk8;
+    u16 unkA;
+    struct LevelObject unkC[1];
     u8 filler10[0x400C-0x10];
     u16 unk400C[0x1000];
     u16 unk600C[0x1000];
@@ -1488,7 +1489,7 @@ extern u8 sub_08001760[]; extern u8 sub_08001760_end[];
 
 void sub_08001BA4(void *, void *);
 void level_edit_delete_object(struct Struct802C31C *);
-void sub_080035C0(int, int);
+void press_color_switch(int, int);
 void sub_08004428();
 void sub_08004634();
 void sub_08006388(void);

@@ -11,9 +11,9 @@ struct Struct0802B798
 
 void hit_switch_0802B798(struct Struct0802B798 *arg0, u32 arg1)
 {
-    s16 r0_;
-    u32 r4;
-    u32 r5;
+    s16 index;
+    u32 x;
+    u32 y;
 
     if (arg0->unk32 > 0)
     {
@@ -22,21 +22,21 @@ void hit_switch_0802B798(struct Struct0802B798 *arg0, u32 arg1)
         {
             if (gCurrentSwitchState != 1)
             {
-                r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-                r4 = gEWRAMBasePtr->unkC[r0_].unk2;
-                r4 <<= 25;
-                r4 >>= 22;
-                r5 = gEWRAMBasePtr->unkC[r0_].unk3;
-                r5 <<= 3;
+                index = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
+                x = gEWRAMBasePtr->unkC[index].x;
+                x <<= 25;
+                x >>= 22;
+                y = gEWRAMBasePtr->unkC[index].y;
+                y <<= 3;
                 gPreviousSwitchState = gCurrentSwitchState;
                 gCurrentSwitchState = 1;
                 gUnknown_030019A0 |= 0x20000;
-                sub_080035C0(1, gPreviousSwitchState);
+                press_color_switch(1, gPreviousSwitchState);
                 sub_0801B50C(1);
                 sub_08041F2C(gUnknown_030019E4);
-                r4 -= 8;
-                r5 += 8;
-                sub_0804138C(3, 0, r4, r5);
+                x -= 8;
+                y += 8;
+                sub_0804138C(3, 0, x, y);
                 play_sound_effect_08071990(SE_SWITCH1, 8, 16, 64, 0, 128, 0);
             }
         }
@@ -44,21 +44,21 @@ void hit_switch_0802B798(struct Struct0802B798 *arg0, u32 arg1)
         {
             if (gCurrentSwitchState != 2)
             {
-                r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-                r4 = gEWRAMBasePtr->unkC[r0_].unk2;
-                r4 <<= 25;
-                r4 >>= 22;
-                r5 = gEWRAMBasePtr->unkC[r0_].unk3;
-                r5 <<= 3;
+                index = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
+                x = gEWRAMBasePtr->unkC[index].x;
+                x <<= 25;
+                x >>= 22;
+                y = gEWRAMBasePtr->unkC[index].y;
+                y <<= 3;
                 gPreviousSwitchState = gCurrentSwitchState;
                 gCurrentSwitchState = 2;
                 gUnknown_030019A0 |= 0x20000;
-                sub_080035C0(2, gPreviousSwitchState);
+                press_color_switch(2, gPreviousSwitchState);
                 sub_0801B50C(1);
                 sub_08041F2C(gUnknown_030019E4);
-                r4 -= 8;
-                r5 += 8;
-                sub_0804138C(4, 0, r4, r5);
+                x -= 8;
+                y += 8;
+                sub_0804138C(4, 0, x, y);
                 play_sound_effect_08071990(SE_SWITCH2, 8, 16, 64, 0, 128, 0);
             }
         }
@@ -66,21 +66,21 @@ void hit_switch_0802B798(struct Struct0802B798 *arg0, u32 arg1)
         {
             if (gCurrentSwitchState != 3)
             {
-                r0_ = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-                r4 = gEWRAMBasePtr->unkC[r0_].unk2;
-                r4 <<= 25;
-                r4 >>= 22;
-                r5 = gEWRAMBasePtr->unkC[r0_].unk3;
-                r5 <<= 3;
+                index = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
+                x = gEWRAMBasePtr->unkC[index].x;
+                x <<= 25;
+                x >>= 22;
+                y = gEWRAMBasePtr->unkC[index].y;
+                y <<= 3;
                 gPreviousSwitchState = gCurrentSwitchState;
                 gCurrentSwitchState = 3;
                 gUnknown_030019A0 |= 0x20000;
-                sub_080035C0(3, gPreviousSwitchState);
+                press_color_switch(3, gPreviousSwitchState);
                 sub_0801B50C(1);
                 sub_08041F2C(gUnknown_030019E4);
-                r4 -= 8;
-                r5 += 8;
-                sub_0804138C(5, 0, r4, r5);
+                x -= 8;
+                y += 8;
+                sub_0804138C(5, 0, x, y);
                 play_sound_effect_08071990(SE_SWITCH3, 8, 16, 64, 0, 128, 0);
             }
         }
@@ -613,16 +613,16 @@ void sub_0802C31C(void)
         r0 = gEWRAMBasePtr->unk600C[index];
         if (r0 != 0)
         {
-            int r6 = gEWRAMBasePtr->unkC[r0 - 1].unk0;
-            if (gObjectTileDataRAMPtr->unk108[r6 - 1]->unk4 == 40)
+            int objectID = gEWRAMBasePtr->unkC[r0 - 1].objectID;
+            if (gObjectTileDataRAMPtr->unk108[objectID - 1]->unk4 == 40)
             {
-                struct Struct08078210_sub *r0 = gObjectTileDataRAMPtr->unk108[r6];
+                struct Struct08078210_sub *r0 = gObjectTileDataRAMPtr->unk108[objectID];
                 struct Struct802C31C sp0;
 
                 sp0.unk0 = i;
                 sp0.unk4 = j - r0->unk2 + 1;
                 level_edit_delete_object(&sp0);
-                sub_080063E4(&sp0, r6, gEWRAMBasePtr->unk800C);
+                sub_080063E4(&sp0, objectID, gEWRAMBasePtr->unk800C);
                 gUnknown_030009EC = 1;
                 sub_0801B50C(40);
                 gUnknown_03000D3C = 1;
@@ -635,21 +635,21 @@ void sub_0802C31C(void)
                     r0 = gEWRAMBasePtr->unk600C[index];
                     if (r0 != 0)
                     {
-                        r6 = gEWRAMBasePtr->unkC[r0 - 1].unk0;
-                        if (gObjectTileDataRAMPtr->unk108[r6 - 1]->unk4 == 41)
+                        objectID = gEWRAMBasePtr->unkC[r0 - 1].objectID;
+                        if (gObjectTileDataRAMPtr->unk108[objectID - 1]->unk4 == 41)
                         {
-                            struct Struct08078210_sub *r4 = gObjectTileDataRAMPtr->unk108[r6];
+                            struct Struct08078210_sub *r4 = gObjectTileDataRAMPtr->unk108[objectID];
                             struct Struct802C31C sp8;
 
                             sp8.unk0 = i;
                             sp8.unk4 = j - r4->unk2 + 1;
                             level_edit_delete_object(&sp8);
-                            sub_080063E4(&sp8, r6, gEWRAMBasePtr->unk800C);
+                            sub_080063E4(&sp8, objectID, gEWRAMBasePtr->unk800C);
                             sub_08001BA4(&sp8, r4);
                             index = (j - r4->unk2) * 0x40 + i;
                             if (gEWRAMBasePtr->unk600C[index] == 0)
                             {
-                                r4 = gObjectTileDataRAMPtr->unk108[r6 + 2];
+                                r4 = gObjectTileDataRAMPtr->unk108[objectID + 2];
                                 sp8.unk4 -= r4->unk2;
                                 sub_080064D4(&sp8, r4, gEWRAMBasePtr->unk800C, 6);
                             }
@@ -1214,7 +1214,7 @@ void sub_0802D140(struct Struct0802D140 *arg0, u32 arg1)
 
         if (r2 == 6 && r5 != r12)
         {
-            struct struct_0807820C_sub8 *r3 = &gEWRAMBasePtr->unk8[r5];
+            struct struct_0807820C_sub8 *r3 = &gEWRAMBasePtr->unkC[r5 - 1];
             struct LinkedListHeaderMaybe *ptr = gUnknown_03000170.unk1C;
             struct LinkedListHeaderMaybe *endptr = ptr + 12;
 

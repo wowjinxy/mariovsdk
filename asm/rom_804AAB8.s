@@ -29574,7 +29574,7 @@ sub_08058350: @ 0x08058350
 	strb r5, [r0]
 	ldrb r0, [r0]
 	ldrb r1, [r2]
-	bl sub_080035C0
+	bl press_color_switch
 	mov r0, sp
 	add r0, r0, r6
 	add r0, r0, #12
@@ -44619,7 +44619,7 @@ sub_0805F210: @ 0x0805F210
 	strb r5, [r0]
 	ldrb r0, [r0]
 	ldrb r1, [r2]
-	bl sub_080035C0
+	bl press_color_switch
 	mov r0, sp
 	add r0, r0, r6
 	add r0, r0, #12
@@ -53268,7 +53268,7 @@ sub_080631FC: @ 0x080631FC
 	strb r5, [r0]
 	ldrb r0, [r0]
 	ldrb r1, [r2]
-	bl sub_080035C0
+	bl press_color_switch
 	mov r0, sp
 	add r0, r0, r6
 	add r0, r0, #12
@@ -56316,7 +56316,7 @@ sub_08064894: @ 0x08064894
 	strb r5, [r0]
 	ldrb r0, [r0]
 	ldrb r1, [r2]
-	bl sub_080035C0
+	bl press_color_switch
 	mov r0, sp
 	add r0, r0, r6
 	add r0, r0, #12

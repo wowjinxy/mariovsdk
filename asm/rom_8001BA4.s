@@ -3655,8 +3655,8 @@ _080035BC:
 	.4byte 0xFFFFAF00
 	THUMB_FUNC_END sub_08003458
 
-	THUMB_FUNC_START sub_080035C0
-sub_080035C0: @ 0x080035C0
+	THUMB_FUNC_START press_color_switch
+press_color_switch: @ 0x080035C0
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -4431,7 +4431,7 @@ _08003B70:
 	.4byte 0x0000C00C
 _08003B74:
 	.4byte gUnknown_030009EC
-	THUMB_FUNC_END sub_080035C0
+	THUMB_FUNC_END press_color_switch
 
 	THUMB_FUNC_START sub_08003B78
 sub_08003B78: @ 0x08003B78

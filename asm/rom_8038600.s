@@ -18332,7 +18332,7 @@ _08040CA2:
 	ldrb r0, [r0]
 	ldr r1, _08040CB4  @ =gPreviousSwitchState
 	ldrb r1, [r1]
-	bl sub_080035C0
+	bl press_color_switch
 	b _08040D36
 _08040CB0:
 	.4byte gCurrentSwitchState

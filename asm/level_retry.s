@@ -300,7 +300,7 @@ _0802AD16:
 	strb r0, [r2]
 	mov r0, #1
 	mov r1, #1
-	bl sub_080035C0
+	bl press_color_switch
 	b _0802ADA4
 	.byte 0x00
 	.byte 0x00
