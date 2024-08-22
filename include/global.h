@@ -1046,11 +1046,21 @@ struct Struct1C0
     u8 unk10;  // unknown type
 };
 
+struct Struct03000008 {
+	u32 unk0;
+    u32 unk4;
+	s32 unk8;
+	u32 unkC;
+	u32 unk10;
+	u32 unk14;
+};
+
 //------------------------------------------------------------------------------
 // Variables
 //------------------------------------------------------------------------------
 
 extern u32 gUnknown_03000004;
+extern struct Struct03000008 gUnknown_03000008;
 extern u32 gUnknown_03000020;
 extern u32 gUnknown_03000024;
 extern u8 gUnknown_03000028;
@@ -1129,6 +1139,7 @@ extern u8 gUnknown_030008D8;
 extern u8 gUnknown_030008E8;
 extern u8 gUnknown_03000924;
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
+extern int (*gUnknown_03000968)(u32 *);
 extern void *gUnknown_03000970[];
 extern struct Struct30009B0 gUnknown_030009B0;
 extern u8 gUnknown_030009D0;
@@ -1483,6 +1494,7 @@ void irq_disable_t(void);
 void interrupt_main(void);
 
 // ARM code (copied to RAM)
+extern u8 sub_080003D0[];
 extern u8 sub_080006D8[];
 extern u8 sub_0800169C[]; extern u8 sub_0800169C_end[];
 extern u8 sub_08001760[]; extern u8 sub_08001760_end[];

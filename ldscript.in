@@ -5,6 +5,7 @@
 	X(asm/rom_8001BA4.o) \
 	X(src/rom_80066FC.o) \
 	X(asm/rom_80067F0.o) \
+	X(src/rom_80067F0.o) \
 	X(src/main.o) \
 	X(src/rom1.o) \
 	X(src/rom_80088F0.o) \
@@ -120,6 +121,7 @@ SECTIONS
 	{
 		. = 0x0; 		gUnknown_03000000 = .;
 		. = 0x4; 		gUnknown_03000004 = .;
+		. = 0x8; 		gUnknown_03000008 = .;
 		. = 0x20;		gUnknown_03000020 = .;
 		. = 0x24;		gUnknown_03000024 = .;
 		. = 0x28;		gUnknown_03000028 = .;
@@ -222,6 +224,7 @@ SECTIONS
 		. = 0x92C;		gUnknown_0300092C = .;
 		. = 0x934;		gUnknown_03000934 = .;
 		. = 0x964;		gUnknown_03000964 = .;
+		. = 0x968;		gUnknown_03000968 = .;
 		. = 0x970;		gUnknown_03000970 = .;
 		. = 0x9B0;		gUnknown_030009B0 = .;
 		. = 0x9C0;		src/main.o(.bss);

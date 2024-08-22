@@ -206,6 +206,14 @@ static void (*gUnknown_0807846C[])(void) =
 
 static void main_loop(void);
 
+
+void sub_08006DD8(void) { // possible inline for AgbMain?
+
+	gUnknown_03000B64 = 0;
+	gUnknown_03000B78 = 0;
+	gNextMainState = MAIN_STATE_INIT;
+}
+
 // 0x08006DF8
 void AgbMain(void)
 {
