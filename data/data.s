@@ -5,15 +5,34 @@
 
 	.GLOBAL gUnknown_080788B0
 gUnknown_080788B0:
-	.INCBIN "baserom.gba", 0x788B0, 0x788C8-0x788B0
+	.4byte 0x01000000
+	.4byte 0x02000000
+	.4byte 0x04000000
+	.4byte 0x08000000
+	.4byte 0x00100000
+	.4byte 0x00200000
 
 	.GLOBAL gUnknown_080788C8
 gUnknown_080788C8:
-	.INCBIN "baserom.gba", 0x788C8, 0x788E0-0x788C8
+	.4byte 0x00400000
+	.4byte 0x00800000
+	.4byte 0x00010000
+	.4byte 0x00020000
+	.4byte 0x00040000
+	.4byte 0x00080000
 
 	.GLOBAL gUnknown_080788E0
 gUnknown_080788E0:
-	.INCBIN "baserom.gba", 0x788E0, 0x788F4-0x788E0
+	.2byte 0x0002
+	.2byte 0x0001
+	.2byte 0x0100
+	.2byte 0x0010
+	.2byte 0x0200
+	.2byte 0x0020
+	.2byte 0x0001
+	.2byte 0x0080
+	.2byte 0x0080
+	.2byte 0x0100
 
 	.GLOBAL gSelectedSaveFileNumPtr
 gSelectedSaveFileNumPtr:
@@ -33,11 +52,40 @@ gSaveFilesPtr:
 
 	.GLOBAL gUnknown_08078904
 gUnknown_08078904:
-	.INCBIN "baserom.gba", 0x78904, 0x78944-0x78904
+	.4byte 0x00000016
+	.4byte 0x00000030
+	.4byte 0x00000048
+	.4byte 0x00000030
+	.4byte 0x0000007A
+	.4byte 0x00000030
+	.4byte 0x000000AC
+	.4byte 0x00000030
+	.4byte 0x00000016
+	.4byte 0x0000005D
+	.4byte 0x00000048
+	.4byte 0x0000005D
+	.4byte 0x0000007A
+	.4byte 0x0000005D
+	.4byte 0x000000AC
+	.4byte 0x0000005D
 
 	.GLOBAL gUnknown_08078944
 gUnknown_08078944:
-	.INCBIN "baserom.gba", 0x78944, 0x7897C-0x78944
+	.4byte 0x00000016
+	.4byte 0x00000030
+	.4byte 0x00000048
+	.4byte 0x00000030
+	.4byte 0x0000007A
+	.4byte 0x00000030
+	.4byte 0x00000016
+	.4byte 0x0000005D
+	.4byte 0x00000048
+	.4byte 0x0000005D
+	.4byte 0x0000007A
+	.4byte 0x0000005D
+	.4byte 0x000000AC
+	.4byte 0x0000005D
+
 
 	.GLOBAL gUnknown_0807897C
 gUnknown_0807897C:
@@ -367,27 +415,91 @@ gUnknown_08079790:
 
 	.GLOBAL gUnknown_080797A8
 gUnknown_080797A8:
-	.INCBIN "baserom.gba", 0x797A8, 0x797B0-0x797A8
+	.byte 0x35
+	.byte 0x45
+	.byte 0x56
+	.byte 0x67
+	.byte 0x7E
+	.byte 0x8D
+	.byte 0x9D
+	.byte 0xAD
 
 	.GLOBAL gUnknown_080797B0
 gUnknown_080797B0:
-	.INCBIN "baserom.gba", 0x797B0, 0x797B8-0x797B0
+	.byte 0x06
+	.byte 0x00
+	.byte 0x0C
+	.byte 0x04
+	.byte 0x0E
+	.byte 0x15
+	.byte 0x04
+	.byte 0x11
 
 	.GLOBAL gUnknown_080797B8
 gUnknown_080797B8:
-	.INCBIN "baserom.gba", 0x797B8, 0x797C8-0x797B8
+	.byte 0x00
+	.byte 0x0C
+	.byte 0x18
+	.byte 0x24
+	.byte 0x30
+	.byte 0x3F
+	.byte 0x49
+	.byte 0x55
+	.byte 0x61
+	.byte 0x71
+	.byte 0x7F
+	.byte 0x8B
+	.byte 0x9A
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
 
 	.GLOBAL gUnknown_080797C8
 gUnknown_080797C8:
-	.INCBIN "baserom.gba", 0x797C8, 0x797E0-0x797C8
+	.2byte 0x0011
+	.2byte 0x000D
+	.2byte 0x000D
+	.2byte 0x000D
+	.2byte 0x0027
+	.2byte 0x000D
+	.2byte 0x0045
+	.2byte 0x000D
+	.2byte 0x0048
+	.2byte 0x000D
+	.2byte 0x0027
+	.2byte 0x000D
 
 	.GLOBAL gUnknown_080797E0
 gUnknown_080797E0:
-	.INCBIN "baserom.gba", 0x797E0, 0x79868-0x797E0
+	.2byte 0x0027
+	.2byte 0x000D
+	.2byte 0x0027
+	.2byte 0x000D
+	.2byte 0x0027
+	.2byte 0x000D
+	.2byte 0x0027
+	.2byte 0x000D
+	.2byte 0x0027
+	.2byte 0x000D
+	.2byte 0x0027
+	.2byte 0x000D
 
+	.GLOBAL gUnknown_080797F8
+gUnknown_080797F8: 
+	.INCBIN "baserom.gba", 0x797F8, 0x79838-0x797F8
+	
+	.GLOBAL gUnknown_08079838
+gUnknown_08079838: 
+	.INCBIN "baserom.gba", 0x79838, 0x79868-0x79838
+	
 	.GLOBAL gUnknown_08079868
 gUnknown_08079868:
-	.INCBIN "baserom.gba", 0x79868, 0x79878-0x79868
+	.4byte gUnknown_080797F8
+	.2byte 0x0008
+	.2byte 0x0000
+	.4byte gUnknown_08079838
+	.2byte 0x0006
+	.2byte 0x0000
 
 	.GLOBAL gUnknown_08079878
 gUnknown_08079878:
@@ -448,11 +560,31 @@ gUnknown_08079990:
 
 	.GLOBAL gUnknown_08079998
 gUnknown_08079998:
-	.INCBIN "baserom.gba", 0x79998, 0x799D0-0x79998
+	.4byte 0x0000034D
+	.4byte 0x0000034F
+	.4byte 0x0000034E
+	.4byte 0x00000386
+	.4byte 0x000003A3
+	.4byte 0x0000037C
+	.4byte 0x0000037D
+	.4byte 0x0000037E
+	.4byte 0x0000037F
+	.4byte 0x00000380
+	.4byte 0x00000381
+	.4byte 0x00000382
+	.4byte 0x00000383
+	.4byte 0x00000385
 
 	.GLOBAL gUnknown_080799D0
 gUnknown_080799D0:
-	.INCBIN "baserom.gba", 0x799D0, 0x799F0-0x799D0
+	.4byte 0xFFFFFFFF
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000004
+	.4byte 0x00000008
+	.4byte 0x00000010
+	.4byte 0x00000020
+	.4byte 0x00000040
 
 	.GLOBAL gUnknown_080799F0
 gUnknown_080799F0:
@@ -566,7 +698,18 @@ gUnknown_08079EB8:
 
 	.GLOBAL gUnknown_08079ED0 	@ Level help screen sprite table pointers
 gUnknown_08079ED0:
-	.INCBIN "baserom.gba", 0x79ED0, 0x79F00-0x79ED0
+	.4byte gUnknown_08079DB0
+	.4byte gUnknown_08079DC8
+	.4byte gUnknown_08079DE0
+	.4byte gUnknown_08079DF8
+	.4byte gUnknown_08079E10
+	.4byte gUnknown_08079E28
+	.4byte gUnknown_08079E40
+	.4byte gUnknown_08079E58
+	.4byte gUnknown_08079E70
+	.4byte gUnknown_08079E88
+	.4byte gUnknown_08079EA0
+	.4byte gUnknown_08079EB8
 
 	.GLOBAL gHelpScreenBaseSpriteLayout
 gHelpScreenBaseSpriteLayout:
@@ -888,7 +1031,11 @@ gUnknown_0807C0E0:
 
 	.GLOBAL gUnknown_0807C118
 gUnknown_0807C118:
-	.INCBIN "baserom.gba", 0x7C118, 0x7C7A8-0x7C118
+	.INCBIN "baserom.gba", 0x7C118, 0x7C358-0x7C118
+	
+	.GLOBAL gUnknown_0807C358
+gUnknown_0807C358:
+	.INCBIN "baserom.gba", 0x7C358, 0x7C7A8-0x7C358
 
 	.GLOBAL gUnknown_0807C7A8
 gUnknown_0807C7A8:
@@ -911,11 +1058,31 @@ gUnknown_0807C7CC:
 
 	.GLOBAL gUnknown_0807C804
 gUnknown_0807C804:
-	.INCBIN "baserom.gba", 0x7C804, 0x7C814-0x7C804
-
+	.byte 0x03
+	.byte 0x02
+	.byte 0x04
+	.byte 0x02
+	.byte 0x01
+	.byte 0x00
+	.byte 0x01
+	.byte 0x01
+	.byte 0x01
+	.byte 0x00
+	.byte 0x01
+	.byte 0x00
+	.byte 0x01
+	.byte 0x02
+	.byte 0x00
+	.byte 0x00
+	
 	.GLOBAL gUnknown_0807C814
 gUnknown_0807C814:
-	.INCBIN "baserom.gba", 0x7C814, 0x7C82C-0x7C814
+	.4byte 0x0807C310 @ TODO
+	.4byte 0x0807C430
+	.4byte 0x0807C4C0
+	.4byte 0x0807C568
+	.4byte 0x0807C5F8
+	.4byte 0x0807C688
 
 	.GLOBAL gUnknown_0807C82C
 gUnknown_0807C82C:
@@ -930,7 +1097,7 @@ gUnknown_0807C82C:
 
 	.GLOBAL gUnknown_0807C834
 gUnknown_0807C834:
-	.INCBIN "baserom.gba", 0x7C834, 0x7C838-0x7C834
+	.4byte 0x0807C358 @ TODO
 
 	.GLOBAL gUnknown_0807C838
 gUnknown_0807C838:
@@ -958,7 +1125,7 @@ gUnknown_0807C850:
 	.4byte 0x00000002
 	.4byte 0x00000001
 	.4byte gTextRetry
-	.4byte 0x000000C
+	.4byte 0x0000000C
 	.4byte gTextCancel
 	.4byte 0x00000000
 	.4byte 0x00000000

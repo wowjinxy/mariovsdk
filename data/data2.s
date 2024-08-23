@@ -229,15 +229,52 @@ gUnknown_080B51BC:
 
 	.GLOBAL gUnknown_080B51C0
 gUnknown_080B51C0:
-	.INCBIN "baserom.gba", 0xB51C0, 0xB51D8-0xB51C0
+	.4byte 0x00000006
+	.4byte 0x00000006
+	.4byte 0x0000009B
+	.4byte 0x0000009C
+	.4byte 0x0000009D
+	.4byte 0x0000009E
 
 	.GLOBAL gUnknown_080B51D8
 gUnknown_080B51D8:
-	.INCBIN "baserom.gba", 0xB51D8, 0xB51F8-0xB51D8
+	.2byte 0x0000
+	.2byte 0x0019
+	.2byte 0x0032
+	.2byte 0x004D
+	.2byte 0x006A
+	.2byte 0x0088
+	.2byte 0x00AB
+	.2byte 0x00D2
+	.2byte 0x00FF
+	.2byte 0x0137
+	.2byte 0x017F
+	.2byte 0x01DE
+	.2byte 0x026A
+	.2byte 0x034B
+	.2byte 0x0506
+	.2byte 0x0A00
 
 	.GLOBAL gUnknown_080B51F8
 gUnknown_080B51F8:
-	.INCBIN "baserom.gba", 0xB51F8, 0xB521C-0xB51F8
+	.2byte 0x0000
+	.2byte 0x0019
+	.2byte 0x0031
+	.2byte 0x004A
+	.2byte 0x0061
+	.2byte 0x0078
+	.2byte 0x008E
+	.2byte 0x00A2
+	.2byte 0x00B5
+	.2byte 0x00C5
+	.2byte 0x00D4
+	.2byte 0x00E1
+	.2byte 0x00EC
+	.2byte 0x00F4
+	.2byte 0x00FB
+	.2byte 0x00FE
+	.2byte 0x0100
+	.2byte 0x0000
 
 	.GLOBAL gUnknown_080B521C
 gUnknown_080B521C:
@@ -245,15 +282,35 @@ gUnknown_080B521C:
 
 	.GLOBAL gUnknown_080B5300
 gUnknown_080B5300:
-	.INCBIN "baserom.gba", 0xB5300, 0xB5328-0xB5300
+	.4byte 0x00002000
+	.4byte 0x00003000
+	.4byte 0x00004000
+	.4byte 0x00003800
+	.4byte 0x00002800
+	.4byte 0x00003000
+	.4byte 0x00002800
+	.4byte 0x00003800
+	.4byte 0x00002000
+	.4byte 0x00004000
 
 	.GLOBAL gUnknown_080B5328
 gUnknown_080B5328:
-	.INCBIN "baserom.gba", 0xB5328, 0xB53F4-0xB5328
+	.INCBIN "assets/gUnknown_080B5328.bin"
 
 	.GLOBAL gUnknown_080B53F4
 gUnknown_080B53F4:
-	.INCBIN "baserom.gba", 0xB53F4, 0xB5424-0xB53F4
+	.4byte 0x080aa178
+	.4byte 0x00000000
+	.4byte 0x080abe4c
+	.4byte 0x00000000
+	.4byte 0x080ade10
+	.4byte 0x00000000
+	.4byte 0x080b00ec
+	.4byte 0x00000000
+	.4byte 0x080b25e0
+	.4byte 0x00000000
+	.4byte 0x080b496c
+	.4byte 0x00000000
 
 	.GLOBAL gUnknown_080B5424
 gUnknown_080B5424:
@@ -23489,7 +23546,66 @@ gUncompressedGraphicsTable:
 
 	.GLOBAL gUnknown_0865F610
 gUnknown_0865F610:
-	.INCBIN "baserom.gba", 0x65F610, 0x65F700-0x65F610
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
+	.4byte 0x000000CC
 
 	.GLOBAL gUnknown_0865F700
 gUnknown_0865F700:
@@ -28264,11 +28380,84 @@ gUnknown_08B2DC74:
 	
 	.GLOBAL gUnknown_08B2DEBC
 gUnknown_08B2DEBC:
-	.INCBIN "baserom.gba", 0xB2DEBC, 0xB2E8D8-0xB2DEBC
+	.4byte 75  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 260  @ Start Time
+	.4byte 400  @ End Time
 
+	.4byte 96  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 462  @ Start Time
+	.4byte 576  @ End Time
+	
+	.4byte 97  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 576  @ Start Time
+	.4byte 736  @ End Time
+	
+	.4byte 98  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 780  @ Start Time
+	.4byte 960  @ End Time
+	
+	.4byte 99  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 980 @ Start Time
+	.4byte 1240  @ End Time
+	
+	.4byte 100  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1250 @ Start Time
+	.4byte 1430  @ End Time
+	
+	.4byte 90  @ Sound ID
+	.2byte 0x0000
+	.byte 0x0
+	.byte 0xC
+	.4byte 1340 @ Start Time
+	.4byte 1430  @ End Time
+	
+	.GLOBAL gUnknown_08B2DF2C
+gUnknown_08B2DF2C:
+	.INCBIN "baserom.gba", 0xb2df2c, 0xB2E7A0-0xb2df2c
+	
+	.GLOBAL gUnknown_08B2E7A0
+gUnknown_08B2E7A0:
+	.INCBIN "baserom.gba", 0xB2E7A0, 0xB2E8D8-0xB2E7A0
+	
 	.GLOBAL gUnknown_08B2E8D8
 gUnknown_08B2E8D8:
-	.INCBIN "baserom.gba", 0xB2E8D8, 0xB2E90C-0xB2E8D8
+	.4byte 0x5BB
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x8
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x10
+	.2byte 7 @ Sound Effect count
+	.skip 2
+	.4byte gUnknown_08B2DEBC  @ Sound Effects
+	.2byte 0x0
+	.skip 2
+	.4byte 0x00000000  @ ptr offset 0x20
+	.2byte 7 @ Text Banks in text bank
+	.skip 2
+	.4byte gUnknown_08B2DF2C @ Text Bank
+	.2byte 0x2
+	.skip 2
+	.4byte gUnknown_08B2E7A0  @ ptr offset 0x30
 	
 	.GLOBAL gUnknown_08B2E90C
 gUnknown_08B2E90C:
@@ -28362,16 +28551,16 @@ gUnknown_08B2F03C:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0xA
+	.2byte 10  @ Sound Effect count
 	.skip 2
 	.4byte gUnknown_08B2E914  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
-	.2byte 0xA
+	.4byte 0x00000000  @ Text Bank
+	.2byte 10
 	.skip 2
 	.4byte gUnknown_08B2EA24  @ ptr offset 0x30
 
@@ -28446,15 +28635,15 @@ gUnknown_08B2F584:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0x7
+	.2byte 0x7 @ Sound Effect count
 	.skip 2
 	.4byte gUnknown_08B2F078  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0x7
 	.skip 2
 	.4byte gUnknown_08B2F140  @ ptr offset 0x30
@@ -28572,15 +28761,15 @@ gUnknown_08B2FFA8:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0xD
+	.2byte 0xD @ Sound Effect count
 	.skip 2
 	.4byte gUnknown_08B2F5C0  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0xE
 	.skip 2
 	.4byte gUnknown_08B2F720  @ ptr offset 0x30
@@ -28663,15 +28852,15 @@ gUnknown_08B30734:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0x8
+	.2byte 0x8 @ Sound Effect count
 	.skip 2
 	.4byte gUnknown_08B2FFE4  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0xA
 	.skip 2
 	.4byte gUnknown_08B3011C  @ ptr offset 0x30
@@ -28768,15 +28957,15 @@ gUnknown_08B30F60:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0xA
+	.2byte 0xA @ Sound Effect count
 	.skip 2
 	.4byte gUnknown_08B30770  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0xB
 	.skip 2
 	.4byte gUnknown_08B308AC  @ ptr offset 0x30
@@ -28893,9 +29082,9 @@ gUnknown_08B320E4:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0x19
 	.skip 2
 	.4byte gUnknown_08B311A8  @ ptr offset 0x30
@@ -28923,15 +29112,15 @@ gUnknown_08B35F8C:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0x0
+	.2byte 0x0 @ Sound Effect count
 	.skip 2
 	.4byte 0x00000000  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0x1B
 	.skip 2
 	.4byte gUnknown_08B34F18  @ ptr offset 0x30
@@ -28955,15 +29144,15 @@ gUnknown_08B37134:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0x0
+	.2byte 0x0 @ Sound Effect count
 	.skip 2
 	.4byte 0x00000000  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0x1B
 	.skip 2
 	.4byte gUnknown_08B360C0  @ ptr offset 0x30
@@ -28997,15 +29186,15 @@ gUnknown_08B372F8:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0x1
+	.2byte 0x1 @ Sound Effect count
 	.skip 2
 	.4byte gUnknown_08B37170  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0x2
 	.skip 2
 	.4byte gUnknown_08B371C0  @ ptr offset 0x30
@@ -29029,15 +29218,15 @@ gUnknown_08B373F0:
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
-	.2byte 0x0
+	.2byte 0x0 @ Sound Effect count
 	.skip 2
 	.4byte 0x00000000  @ Sound Effects
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x20
-	.2byte 0x0
+	.2byte 0x0 @ Text Banks in text bank
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x28
+	.4byte 0x00000000  @ Text Bank
 	.2byte 0x1
 	.skip 2
 	.4byte gUnknown_08B37354  @ ptr offset 0x30
