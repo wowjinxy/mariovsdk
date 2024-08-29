@@ -2048,7 +2048,7 @@ _08028A48:
 	lsl r2, r5, #2
 	ldr r0, [r6]
 	add r0, r0, r4
-	ldr r1, _08028BC8  @ =gUnknown_08079998
+	ldr r1, _08028BC8  @ =gOptionsMenuSpriteIDTable
 	add r2, r2, r1
 	ldr r1, [r2]
 	bl sub_08028068
@@ -2237,7 +2237,7 @@ _08028BC0:
 _08028BC4:
 	.4byte gVRAMCurrTileNum_03001930
 _08028BC8:
-	.4byte gUnknown_08079998
+	.4byte gOptionsMenuSpriteIDTable
 _08028BCC:
 	.4byte gScreenModeRelatedPtr
 _08028BD0:
@@ -2955,7 +2955,7 @@ _08029124:
 options_menu_play_movie: @ 0x08029128
 	push {r4,r5,lr}
 	sub sp, sp, #12
-	ldr r1, _0802917C  @ =gUnknown_08079990
+	ldr r1, _0802917C  @ =gOptionsMenuMovieSongIDTable
 	ldr r5, _08029180  @ =0x030000FC
 	ldr r0, [r5]
 	ldr r4, _08029184  @ =0x00001134
@@ -2993,7 +2993,7 @@ options_menu_play_movie: @ 0x08029128
 	pop {r0}
 	bx r0
 _0802917C:
-	.4byte gUnknown_08079990
+	.4byte gOptionsMenuMovieSongIDTable
 _08029180:
 	.4byte 0x030000FC
 _08029184:

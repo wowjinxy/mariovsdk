@@ -50,87 +50,141 @@ gScreenModeRelatedPtr:
 gSaveFilesPtr:
 	.4byte 0x02032110
 
-	.GLOBAL gUnknown_08078904
+	.GLOBAL gUnknown_08078904 @ Main levels selection cursor location
 gUnknown_08078904:
 	.4byte 0x00000016
 	.4byte 0x00000030
+	
 	.4byte 0x00000048
 	.4byte 0x00000030
+	
 	.4byte 0x0000007A
 	.4byte 0x00000030
+	
 	.4byte 0x000000AC
 	.4byte 0x00000030
+	
 	.4byte 0x00000016
 	.4byte 0x0000005D
+	
 	.4byte 0x00000048
 	.4byte 0x0000005D
+	
 	.4byte 0x0000007A
 	.4byte 0x0000005D
+	
 	.4byte 0x000000AC
 	.4byte 0x0000005D
 
-	.GLOBAL gUnknown_08078944
+	.GLOBAL gUnknown_08078944 @ Plus levels selection cursor location
 gUnknown_08078944:
 	.4byte 0x00000016
 	.4byte 0x00000030
+	
 	.4byte 0x00000048
 	.4byte 0x00000030
+	
 	.4byte 0x0000007A
 	.4byte 0x00000030
+	
 	.4byte 0x00000016
 	.4byte 0x0000005D
+	
 	.4byte 0x00000048
 	.4byte 0x0000005D
+	
 	.4byte 0x0000007A
 	.4byte 0x0000005D
+	
 	.4byte 0x000000AC
 	.4byte 0x0000005D
 
 
-	.GLOBAL gUnknown_0807897C
+	.GLOBAL gUnknown_0807897C @ Main levels top UI (presents, stars, level number)
 gUnknown_0807897C:
-	.INCBIN "baserom.gba", 0x7897C, 0x789BC-0x7897C
+	.4byte 0x00000018
+	.4byte 0x00000033
+	
+	.4byte 0x0000004A
+	.4byte 0x00000033
+	
+	.4byte 0x0000007C
+	.4byte 0x00000033
+	
+	.4byte 0x000000AE
+	.4byte 0x00000033
+	
+	.4byte 0x00000018
+	.4byte 0x00000060
+	
+	.4byte 0x0000004A
+	.4byte 0x00000060
+	
+	.4byte 0x0000007C
+	.4byte 0x00000060
+	
+	.4byte 0x000000AE
+	.4byte 0x00000060
 
-	.GLOBAL gUnknown_080789BC
+	.GLOBAL gUnknown_080789BC @ Plus levels top UI (presents, stars, level number)
 gUnknown_080789BC:
-	.INCBIN "baserom.gba", 0x789BC, 0x789F4-0x789BC
+	.4byte 0x00000018
+	.4byte 0x00000033
+	
+	.4byte 0x0000004A
+	.4byte 0x00000033
+	
+	.4byte 0x0000007C
+	.4byte 0x00000033
+	
+	.4byte 0x00000018
+	.4byte 0x00000060
+	
+	.4byte 0x0000004A
+	.4byte 0x00000060
+	
+	.4byte 0x0000007C
+	.4byte 0x00000060
+	
+	.4byte 0x000000AE
+	.4byte 0x00000060
 
-	.GLOBAL gUnknown_080789F4
+	.GLOBAL gUnknown_080789F4 @ Main world selection cursor
 gUnknown_080789F4:
 	.INCBIN "baserom.gba", 0x789F4, 0x78AB4-0x789F4
 
-	.GLOBAL gUnknown_08078AB4
+	.GLOBAL gUnknown_08078AB4 @ Plus world selection cursor
 gUnknown_08078AB4:
 	.INCBIN "baserom.gba", 0x78AB4, 0x78B74-0x78AB4
 
-	.GLOBAL gUnknown_08078B74
+	.GLOBAL gUnknown_08078B74 @ Locked main world tabs
 gUnknown_08078B74:
 	.INCBIN "baserom.gba", 0x78B74, 0x78C1C-0x78B74
 
-	.GLOBAL gUnknown_08078C1C
+	.GLOBAL gUnknown_08078C1C @ Locked plus world tabs
 gUnknown_08078C1C:
 	.INCBIN "baserom.gba", 0x78C1C, 0x78CC4-0x78C1C
 
-	.GLOBAL gUnknown_08078CC4
+	.GLOBAL gUnknown_08078CC4 @ Unused plus button selection
 gUnknown_08078CC4:
 	.INCBIN "baserom.gba", 0x78CC4, 0x78CF4-0x78CC4
 
-	.GLOBAL gUnknown_08078CF4
+	.GLOBAL gUnknown_08078CF4 @ Unused main button selection
 gUnknown_08078CF4:
 	.INCBIN "baserom.gba", 0x78CF4, 0x78D24-0x78CF4
 
-	.GLOBAL gUnknown_08078D24
+	.GLOBAL gUnknown_08078D24 @ Main world level select arrows
 gUnknown_08078D24:
 	.INCBIN "baserom.gba", 0x78D24, 0x78DE4-0x78D24
 
-	.GLOBAL gUnknown_08078DE4
+	.GLOBAL gUnknown_08078DE4 @ Plus world level select arrows
 gUnknown_08078DE4:
 	.INCBIN "baserom.gba", 0x78DE4, 0x78E8C-0x78DE4
 
 	.GLOBAL gLevelSelectLevelArtSpriteLayout
 gLevelSelectLevelArtSpriteLayout:
-	.2byte 0x001C @ X Position
-	.2byte 0x0034 @ Y position
+	.2byte 28 @ X Position
+	.2byte 52 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count? doesnt affect this first one
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -139,8 +193,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
-	.2byte 0x004E @ X Position
-	.2byte 0x0034 @ Y position
+	.2byte 78 @ X Position
+	.2byte 52 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -149,8 +203,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
-	.2byte 0x0080 @ X Position
-	.2byte 0x0034 @ Y position
+	.2byte 128 @ X Position
+	.2byte 52 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -159,8 +213,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
-	.2byte 0x00B2 @ X Position
-	.2byte 0x0034 @ Y position
+	.2byte 178 @ X Position
+	.2byte 52 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -169,8 +223,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
-	.2byte 0x001C @ X Position
-	.2byte 0x0061 @ Y position
+	.2byte 28 @ X Position
+	.2byte 97 @ Y position
 	.2byte 0x0080 @ Graphics Size in Bytes
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Skip 4 pixels count?
@@ -179,8 +233,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
-	.2byte 0x004E @ X Position
-	.2byte 0x0061 @ Y position
+	.2byte 78 @ X Position
+	.2byte 97 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -189,8 +243,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
-	.2byte 0x0080 @ X Position
-	.2byte 0x0061 @ Y position
+	.2byte 128 @ X Position
+	.2byte 97 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -199,8 +253,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
-	.2byte 0x00B2 @ X Position
-	.2byte 0x0061 @ Y position
+	.2byte 178 @ X Position
+	.2byte 97 @ Y position
 	.2byte 0x0080 @ Skip 4 pixels count?
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
@@ -319,7 +373,14 @@ gUnknown_080794BC:
 
 	.GLOBAL gUnknown_080794D4
 gUnknown_080794D4:
-	.INCBIN "baserom.gba", 0x794D4, 0x794EC-0x794D4
+	.4byte 0x00000000
+	.2byte 0x0040
+	.2byte 0x0008
+	.2byte 0x0100
+	.2byte 0x0000
+	.4byte gUnknown_085DD108 @ Sprite Data 1
+	.4byte gUnknown_085DD150 @ OAM
+	.4byte gUnknown_085DD158 @ Sprite Graphics
 
 	.GLOBAL gLevelSelectPaletteIDs
 gLevelSelectPaletteIDs:
@@ -511,7 +572,26 @@ gUnknown_080798B0:
 
 	.GLOBAL gUnknown_080798E8
 gUnknown_080798E8:
-	.INCBIN "baserom.gba", 0x798E8, 0x79938-0x798E8
+	.4byte sub_08027B9C
+	.4byte sub_08027BE8
+	.4byte sub_08027C78
+	.4byte sub_080258A8
+	.4byte sub_08025914
+	.4byte sub_08027D84
+	.4byte sub_080259C4
+	.4byte sub_08025A60
+	.4byte sub_08025FA8
+	.4byte sub_0802606C
+	.4byte sub_08026164
+	.4byte sub_08026640
+	.4byte sub_080266EC
+	.4byte sub_080267E4
+	.4byte sub_080268E0
+	.4byte sub_0802698C
+	.4byte sub_08027F0C
+	.4byte sub_080269E4
+	.4byte sub_08026AD8
+	.4byte sub_08026FE8
 
 	.GLOBAL gUnknown_08079938
 gUnknown_08079938:
@@ -547,8 +627,8 @@ gOptionsMenuMovieIDTable:
 	.byte 0x6
 	.byte 0x7
 
-	.GLOBAL gUnknown_08079990 @ potentally movie song ID table?
-gUnknown_08079990:
+	.GLOBAL gOptionsMenuMovieSongIDTable
+gOptionsMenuMovieSongIDTable:
 	.byte 0x17
 	.byte 0x29
 	.byte 0x2B
@@ -558,22 +638,22 @@ gUnknown_08079990:
 	.byte 0x2E
 	.byte 0x2F
 
-	.GLOBAL gUnknown_08079998
-gUnknown_08079998:
-	.4byte 0x0000034D
-	.4byte 0x0000034F
-	.4byte 0x0000034E
-	.4byte 0x00000386
-	.4byte 0x000003A3
-	.4byte 0x0000037C
-	.4byte 0x0000037D
-	.4byte 0x0000037E
-	.4byte 0x0000037F
-	.4byte 0x00000380
-	.4byte 0x00000381
-	.4byte 0x00000382
-	.4byte 0x00000383
-	.4byte 0x00000385
+	.GLOBAL gOptionsMenuSpriteIDTable
+gOptionsMenuSpriteIDTable:
+	.4byte 0x0000034D @ Selction box left side sprite ID 
+	.4byte 0x0000034F @ Selction box right side sprite ID 
+	.4byte 0x0000034E @ Selction box center sprite ID 
+	.4byte 0x00000386 @ Movie selction box sprite ID 
+	.4byte 0x000003A3 @ Erase save data selection box sprite ID 
+	.4byte 0x0000037C @ Movie 1 preview sprite ID 
+	.4byte 0x0000037D @ Movie 2 preview sprite ID 
+	.4byte 0x0000037E @ Movie 3 preview sprite ID 
+	.4byte 0x0000037F @ Credits 1 preview sprite ID (movie 4)
+	.4byte 0x00000380 @ Movie 5 preview sprite ID 
+	.4byte 0x00000381 @ Movie 6 preview sprite ID 
+	.4byte 0x00000382 @ Movie 7 preview sprite ID 
+	.4byte 0x00000383 @ Credits 2 preview sprite ID (movie 8) -- sprite ID 0x0384 is a unsued alternate of this one
+	.4byte 0x00000385 @ Unused movie preview sprite ID
 
 	.GLOBAL gUnknown_080799D0
 gUnknown_080799D0:
@@ -586,19 +666,323 @@ gUnknown_080799D0:
 	.4byte 0x00000020
 	.4byte 0x00000040
 
-	.GLOBAL gUnknown_080799F0
+	.GLOBAL gUnknown_080799F0 @ Options menu buttons related
 gUnknown_080799F0:
-	.INCBIN "baserom.gba", 0x799F0, 0x79D20-0x799F0
+	@ Options top menu
+	.byte 3 			@ Number of options in sub menu
+	.byte 4 			@ Total tile objects (A to select and related)
+	.2byte 0x0000 		@ Unknown
+	
+	.4byte 19 			@ Audio options button tile object ID
+	.byte 7 			@ Audio options button X position in tiles
+	.byte 4 			@ Audio options button Y position in tiles
+	.byte 16 			@ Audio options selction box width
+	.byte 0x00 			@ Unknown
+	.4byte 1 			@ Sub menu to go to on selection
+	.4byte 0x00000000 	@ Function to trigger when pressing A
+	.2byte 0 			@ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000 		@ Unknown
+	
+	.4byte 20 			@ Visual options button tile object ID
+	.byte 7 			@ Visual options button X position in tiles
+	.byte 8 			@ Visual options button Y position in tiles
+	.byte 16 			@ Visual options selction box width
+	.byte 0x00 			@ Unknown
+	.4byte 2			@ Sub menu to go to on selection
+	.4byte 0x00000000 	@ Function to trigger when pressing A
+	.2byte 0 			@ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000 		@ Unknown
+	
+	.4byte 21 			@ Erase all save data button tile object ID
+	.byte 5 			@ Erase all save data button X position in tiles
+	.byte 12 			@ Erase all save data button Y position in tiles
+	.byte 20 			@ Erase all save data selction box width
+	.byte 0x00 			@ Unknown
+	.4byte 3 			@ Sub menu to go to on selection
+	.4byte 0x00000000 	@ Function to trigger when pressing A
+	.2byte 0 			@ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000 		@ Unknown
+	
+	.4byte 58			@ Back text tile object ID
+	.byte 8             @ Back text X position in tiles
+	.byte 17            @ Back text Y position in tiles
+	.byte 4             @ Back text selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000       @ Unknown
+	
+	.4byte 56			@ B button tile object ID
+	.byte 19 			@ B button X position in tiles
+	.byte 17 			@ B button Y position in tiles
+	.byte 5 			@ B button selction box width
+	.byte 0x00			@ Unknown
+	.4byte 0			@ Sub menu to go to on selection
+	.4byte 0x00000000	@ Function to trigger when pressing A
+	.2byte 0 			@ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000 		@ Unknown
+	
+	.4byte 55			@ Select text tile object ID
+	.byte 6             @ Select text X position in tiles
+	.byte 17            @ Select text Y position in tiles
+	.byte 0             @ Select text selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000       @ Unknown
+	
+	.4byte 54 			@ A button tile object ID
+	.byte 17            @ A button X position in tiles
+	.byte 17            @ A button Y position in tiles
+	.byte 0             @ A button selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000       @ Unknown
+	
+	.4byte 0			@ Empty tile object ID
+	.byte 0				@ Empty X position in tiles
+	.byte 0				@ Empty Y position in tiles
+	.byte 0				@ Empty selction box width
+	.byte 0x00			@ Unknown
+	.4byte 0	        @ Sub menu to go to on selection
+	.4byte 0x00000000	@ Function to trigger when pressing A
+	.2byte 0			@ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000		@ Unknown
+	
+	.4byte 0			@ Empty tile object ID
+	.byte 0				@ Empty X position in tiles
+	.byte 0				@ Empty Y position in tiles
+	.byte 0				@ Empty selction box width
+	.byte 0x00			@ Unknown
+	.4byte 0	        @ Sub menu to go to on selection
+	.4byte 0x00000000	@ Function to trigger when pressing A
+	.2byte 0			@ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000		@ Unknown
+	
+	.4byte 0xFFFFFFFF	@ Exit to menu type (0xFFFFFFFF returns to previous main state)
+	.4byte 0x00000000	@ Option to select on exit
+	.4byte 0x00000000   @ Option 1 function
+	.4byte 0x00000000	@ Option 2 function
+	.4byte 0x00000000	@ Option 3 function
+	
+	@ Audio options sub menu
+	.byte 3             @ Number of options in sub menu
+	.byte 5             @ Total tile objects (A to select and related)
+	.2byte 0x0000       @ Unknown
+
+	.4byte 0			@ System menu option tile object ID
+	.byte 2             @ System menu option X position in tiles
+	.byte 4             @ System menu option Y position in tiles
+	.byte 26            @ System menu option selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0xFFFFFFFF   @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 3            @ Tile objects shown at bottom? 
+	.2byte 0x0000       @ Unknown
+
+	.4byte 1                            @ Music menu option tile object ID
+	.byte 2                             @ Music menu option X position in tiles
+	.byte 8                             @ Music menu option Y position in tiles
+	.byte 26                            @ Music menu option selction box width
+	.byte 0x00                          @ Unknown
+	.4byte 0xFFFFFFFF                   @ Sub menu to go to on selection (does 0xFFFFFFFF mean trigger function below?)
+	.4byte options_menu_play_music		@ Function to trigger when pressing A
+	.2byte 0                            @ Tile objects shown at bottom? 
+	.2byte 0x0000                       @ Unknown
+
+	.4byte 2                                @ FX menu option tile object ID
+	.byte 2                                 @ FX menu option X position in tiles
+	.byte 12                                @ FX menu option Y position in tiles
+	.byte 26                                @ FX menu option selction box width
+	.byte 0x00                              @ Unknown
+	.4byte 0xFFFFFFFF                       @ Sub menu to go to on selection (does 0xFFFFFFFF mean trigger function below?)
+	.4byte options_menu_play_sound_effect   @ Function to trigger when pressing A
+	.2byte 0                                @ Tile objects shown at bottom? 
+	.2byte 0x0000                           @ Unknown
+
+	.4byte 58 			@ Back text tile object ID
+	.byte 8             @ Back text X position in tiles
+	.byte 17            @ Back text Y position in tiles
+	.byte 4             @ Back text selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom? 
+	.2byte 0x0000       @ Unknown
+
+	.4byte 55 			@ Select text tile object ID
+	.byte 6             @ Select text X position in tiles
+	.byte 17            @ Select text Y position in tiles
+	.byte 0             @ Select text selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom? 
+	.2byte 0x0000       @ Unknown
+
+	.4byte 59			@ Audio options title bar
+	.byte 8 			@ Audio options title bar X position in tiles
+	.byte 1 			@ Audio options title bar Y position in tiles
+	.byte 5 			@ Audio options title bar selection box width
+	.byte 0x00			@ Unknown
+	.4byte 0			@ Sub menu to go to on selection
+	.4byte 0x00000000 	@ Function to trigger when pressing A
+	.2byte 0 			@ Tile objects shown at bottom?
+	.2byte 0x0000 		@ Unknown
+
+	.4byte 57			@ Play text tile object ID
+	.byte 19			@ Play text X position in tiles
+	.byte 17			@ Play text Y position in tiles
+	.byte 3 			@ Play text Y selction box width
+	.byte 0x00 			@ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 54			@ A button tile object ID
+	.byte 17            @ A button X position in tiles
+	.byte 17            @ A button Y position in tiles
+	.byte 0             @ A button selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 0            @ Empty tile object ID
+	.byte 0             @ Empty X position in tiles
+	.byte 0             @ Empty Y position in tiles
+	.byte 0             @ Empty selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 0x00000000 	@ Exit to menu type (0xFFFFFFFF returns to previous main state)
+	.4byte 0x00000000   @ Option to select on exit
+	.4byte 0x00000000   @ Option 1 function
+	.4byte sub_080284E8 @ Option 2 function
+	.4byte sub_08028604 @ Option 3 function
+	
+	@ Visual options submenu
+	.INCBIN "baserom.gba", 0x79B88, 0x79C54-0x79B88
+	
+	@ Delete all save data sub menu
+	.byte 2 			@ Number of options in sub menu
+	.byte 5             @ Total tile objects (A to select and related)
+	.2byte 0x0000       @ Unknown
+	
+	.4byte 0xFFFFFFFF 	@ Tile object ID (does 0xFFFFFFFF mean sprite used instead of tile object?)
+	.byte 68			@ Delete data "no" selection box X postion in pixels
+	.byte 80 			@ Delete data "no" selection box y postion in pixels
+	.byte 4 			@ Selction box width
+	.byte 0x00			@ Unknown
+	.4byte 0 			@ Sub menu to go to on selection -- unknown what this does for the sprite type
+	.4byte 0x00000000	@ Function to trigger when pressing A
+	.2byte 0 			@ Tile objects shown at bottom?
+	.2byte 0x0000		@ Unknown
+	
+	.4byte 0xFFFFFFFF	@ Tile object ID (does 0xFFFFFFFF mean sprite used instead of tile object?)
+	.byte 115           @ Delete data "yes" selection box X postion in pixels
+	.byte 80            @ Delete data "yes" selection box y postion in pixels
+	.byte 4             @ Selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection -- unknown what this does for the sprite type
+	.4byte sub_08029190 @ Function to trigger when pressing A
+	.2byte 0       		@ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown	
+	
+	.4byte 0			@ Tile object ID
+	.byte 0          	@ X position
+	.byte 0          	@ Y Position
+	.byte 0             @ Selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection -- unknown what this does for the sprite type
+	.4byte 0x00000000 	@ Function to trigger when pressing A
+	.2byte 0      		@ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+	
+	.4byte 58			@ Select text tile object ID
+	.byte 8             @ Select text X position in tiles
+	.byte 17            @ Select text Y position in tiles
+	.byte 4             @ Select text selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+	
+	.4byte 56			@ B button tile object ID
+	.byte 19 			@ B button X position in tiles
+	.byte 17 			@ B button Y position in tiles
+	.byte 5 			@ B button selction box width
+	.byte 0x00			@ Unknown
+	.4byte 0			@ Sub menu to go to on selection
+	.4byte 0x00000000	@ Function to trigger when pressing A
+	.2byte 0 			@ Tile objects shown at bottom? (acts weird in the top menu here)
+	.2byte 0x0000 		@ Unknown
+	
+	.4byte 62			@ Erase all save data question box tile object ID
+	.byte 7             @ Erase all save data question box X position in tiles
+	.byte 6            	@ Erase all save data question box Y position in tiles
+	.byte 0             @ Select text selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+	
+	.4byte 55 			@ Select text tile object ID
+	.byte 6	            @ Select text X position in tiles
+	.byte 17            @ Select text Y position in tiles
+	.byte 0             @ Select text button selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+	
+	.4byte 54 			@ A button tile object ID
+	.byte 17            @ A button X position in tiles
+	.byte 17            @ A button Y position in tiles
+	.byte 0             @ A button selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 00000000     @ Function to trigger when pressing A
+	.2byte 0000         @ Tile objects shown at bottom?
+	.2byte 0000         @ Unknown
+	
+	.4byte 0			@ Tile object	
+	.byte 0          	@ X position	
+	.byte 0          	@ Y Position	
+	.byte 0             @ Selction box width
+	.byte 0x00          @ Unknown	
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000 	@ Function to trigger when pressing A	
+	.2byte 0      		@ Tile objects shown at bottom?	
+	.2byte 0x0000       @ Unknown	
+	
+	.4byte 0x00000000	@ Exit to menu type (0xFFFFFFFF returns to previous main state)
+	.4byte 0x00000002	@ Option to select on exit
+	.4byte 0x00000003   @ Option 1 function
+	.4byte 0x00000000	@ Option 2 function
+	.4byte 0x00000000	@ Option 3 function
 
 	.GLOBAL gUnknown_08079D20
 gUnknown_08079D20:
-	.4byte 0x00000004
-	.4byte 0x00000003
+	.4byte 0x00000004 @ Audio options "Mono" system tile object ID
+	.4byte 0x00000003 @ Audio options "Stereo" system tile object ID
 
 	.GLOBAL gUnknown_08079D28
 gUnknown_08079D28:
-	.4byte 0x00000012
-	.4byte 0x00000011
+	.4byte 0x00000012 @ Visual options "GBA Mode" screen tile object ID
+	.4byte 0x00000011 @ Visual options "GB Player mode" screen tile object ID
 	
 	.GLOBAL gUnknown_08079D30
 gUnknown_08079D30:
@@ -690,11 +1074,27 @@ gUnknown_08079E88:
 
 	.GLOBAL gUnknown_08079EA0
 gUnknown_08079EA0:
-	.INCBIN "baserom.gba", 0x79EA0, 0x79EB8-0x79EA0
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0040
+	.2byte 0x0008
+	.2byte 0x0100
+	.2byte 0x0000
+	.4byte gUnknown_082E3EEC
+	.4byte gUnknown_082E3F10
+	.4byte gUnknown_082E3F18
 
 	.GLOBAL gUnknown_08079EB8
 gUnknown_08079EB8:
-	.INCBIN "baserom.gba", 0x79EB8, 0x79ED0-0x79EB8
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0080
+	.2byte 0x0010
+	.2byte 0x0200
+	.2byte 0x0000
+	.4byte gUnknown_082E3A94
+	.4byte gUnknown_082E3AB8
+	.4byte gUnknown_082E3AC0
 
 	.GLOBAL gUnknown_08079ED0 	@ Level help screen sprite table pointers
 gUnknown_08079ED0:
@@ -1031,11 +1431,91 @@ gUnknown_0807C0E0:
 
 	.GLOBAL gUnknown_0807C118
 gUnknown_0807C118:
-	.INCBIN "baserom.gba", 0x7C118, 0x7C358-0x7C118
+	.INCBIN "baserom.gba", 0x7C118, 0x7C280-0x7C118
+	
+	.GLOBAL gUnknown_0807C280
+gUnknown_0807C280:
+	.INCBIN "baserom.gba", 0x7C280, 0x7C2C8-0x7C280
+	
+	.GLOBAL gUnknown_0807C2C8
+gUnknown_0807C2C8:
+	.INCBIN "baserom.gba", 0x7C2C8, 0x7C310-0x7C2C8
+	
+	.GLOBAL gUnknown_0807C310
+gUnknown_0807C310:
+	.INCBIN "baserom.gba", 0x7C310, 0x7C358-0x7C310
 	
 	.GLOBAL gUnknown_0807C358
 gUnknown_0807C358:
-	.INCBIN "baserom.gba", 0x7C358, 0x7C7A8-0x7C358
+	.INCBIN "baserom.gba", 0x7C358, 0x7C388-0x7C358
+	
+	.GLOBAL gUnknown_0807C388
+gUnknown_0807C388:
+	.INCBIN "baserom.gba", 0x7C388, 0x7C3E8-0x7C388
+	
+	.GLOBAL gUnknown_0807C3E8
+gUnknown_0807C3E8:
+	.INCBIN "baserom.gba", 0x7C3E8, 0x7C430-0x7C3E8
+	
+	.GLOBAL gUnknown_0807C430
+gUnknown_0807C430:
+	.INCBIN "baserom.gba", 0x7C430, 0x7C490-0x7C430
+	
+	.GLOBAL gUnknown_0807C490
+gUnknown_0807C490:
+	.INCBIN "baserom.gba", 0x7C490, 0x7C4A8-0x7C490
+	
+	.GLOBAL gUnknown_0807C4A8
+gUnknown_0807C4A8:
+	.INCBIN "baserom.gba", 0x7C4A8, 0x7C4C0-0x7C4A8
+	
+	.GLOBAL gUnknown_0807C4C0
+gUnknown_0807C4C0:
+	.INCBIN "baserom.gba", 0x7C4C0, 0x7C520-0x7C4C0
+
+	.GLOBAL gUnknown_0807C520
+gUnknown_0807C520:
+	.INCBIN "baserom.gba", 0x7C520, 0x7C538-0x7C520
+	
+	.GLOBAL gUnknown_0807C538
+gUnknown_0807C538:
+	.INCBIN "baserom.gba", 0x7C538, 0x7C568-0x7C538
+	
+	.GLOBAL gUnknown_0807C568
+gUnknown_0807C568:
+	.INCBIN "baserom.gba", 0x7C568, 0x7C5C8-0x7C568
+	
+	.GLOBAL gUnknown_0807C5C8
+gUnknown_0807C5C8:
+	.INCBIN "baserom.gba", 0x7C5C8, 0x7C5E0-0x7C5C8
+	
+	.GLOBAL gUnknown_0807C5E0
+gUnknown_0807C5E0:
+	.INCBIN "baserom.gba", 0x7C5E0, 0x7C5F8-0x7C5E0
+	
+	.GLOBAL gUnknown_0807C5F8
+gUnknown_0807C5F8:
+	.INCBIN "baserom.gba", 0x7C5F8, 0x7C658-0x7C5F8
+
+	.GLOBAL gUnknown_0807C658
+gUnknown_0807C658:
+	.INCBIN "baserom.gba", 0x7C658, 0x7C670-0x7C658
+
+	.GLOBAL gUnknown_0807C670
+gUnknown_0807C670:
+	.INCBIN "baserom.gba", 0x7C670, 0x7C688-0x7C670
+
+	.GLOBAL gUnknown_0807C688
+gUnknown_0807C688:
+	.INCBIN "baserom.gba", 0x7C688, 0x7C6E8-0x7C688
+
+	.GLOBAL gUnknown_0807C6E8
+gUnknown_0807C6E8:
+	.INCBIN "baserom.gba", 0x7C6E8, 0x7C700-0x7C6E8
+
+	.GLOBAL gUnknown_0807C700
+gUnknown_0807C700:
+	.INCBIN "baserom.gba", 0x7C700, 0x7C7A8-0x7C700
 
 	.GLOBAL gUnknown_0807C7A8
 gUnknown_0807C7A8:
@@ -1054,7 +1534,20 @@ gUnknown_0807C7C4:
 
 	.GLOBAL gUnknown_0807C7CC
 gUnknown_0807C7CC:
-	.INCBIN "baserom.gba", 0x7C7CC, 0x7C804-0x7C7CC
+	.4byte gUnknown_0807C280
+	.4byte gUnknown_0807C2C8
+	.4byte gUnknown_0807C388
+	.4byte gUnknown_0807C3E8
+	.4byte gUnknown_0807C490
+	.4byte gUnknown_0807C4A8
+	.4byte gUnknown_0807C520
+	.4byte gUnknown_0807C538
+	.4byte gUnknown_0807C5C8
+	.4byte gUnknown_0807C5E0
+	.4byte gUnknown_0807C658
+	.4byte gUnknown_0807C670
+	.4byte gUnknown_0807C6E8
+	.4byte gUnknown_0807C700
 
 	.GLOBAL gUnknown_0807C804
 gUnknown_0807C804:
@@ -1077,12 +1570,12 @@ gUnknown_0807C804:
 	
 	.GLOBAL gUnknown_0807C814
 gUnknown_0807C814:
-	.4byte 0x0807C310 @ TODO
-	.4byte 0x0807C430
-	.4byte 0x0807C4C0
-	.4byte 0x0807C568
-	.4byte 0x0807C5F8
-	.4byte 0x0807C688
+	.4byte gUnknown_0807C310
+	.4byte gUnknown_0807C430
+	.4byte gUnknown_0807C4C0
+	.4byte gUnknown_0807C568
+	.4byte gUnknown_0807C5F8
+	.4byte gUnknown_0807C688
 
 	.GLOBAL gUnknown_0807C82C
 gUnknown_0807C82C:
@@ -1097,7 +1590,7 @@ gUnknown_0807C82C:
 
 	.GLOBAL gUnknown_0807C834
 gUnknown_0807C834:
-	.4byte 0x0807C358 @ TODO
+	.4byte gUnknown_0807C358 @ TODO
 
 	.GLOBAL gUnknown_0807C838
 gUnknown_0807C838:
@@ -1244,11 +1737,11 @@ gUnknown_0807C9CC:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-	.GLOBAL gUnknown_0807CA08
+	.GLOBAL gUnknown_0807CA08 @ e-Reader sprite IDs
 gUnknown_0807CA08:
-	.4byte 0x00000334
-	.4byte 0x000003A3
-	.4byte 0x00000097
+	.4byte 0x00000334 @ Sprite ID used for the standard selection box
+	.4byte 0x000003A3 @ Sprite ID used for the delete yes/no selection box
+	.4byte 0x00000097 
 	.4byte 0x00000359
 	.4byte 0x0000035D
 	.4byte 0x00000354
@@ -1256,47 +1749,55 @@ gUnknown_0807CA08:
 	.4byte 0x0000035B
 	.4byte 0x00000352
 
-	.GLOBAL gUnknown_0807CA2C
+	.GLOBAL gUnknown_0807CA2C @ e-Reader menu palette lines
 gUnknown_0807CA2C:
 	.byte 0x05
-	.byte 0x00
-	.byte 0x06
-	.byte 0x00
-	.byte 0x07
-	.byte 0x05
-	.byte 0x08
-	.byte 0x06
-	.byte 0x09
-	.byte 0x07
-	.byte 0x0A
-	.byte 0x08
-	.byte 0x0B
-	.byte 0x0D
-	.byte 0x0C
-	.byte 0x0E
-	.byte 0x0D
-	.byte 0x0F
+	.byte 0x00 @ palette line used for add/erase level selection box
+	.byte 0x06 @ palette line used for not added levels
+	.byte 0x00 @ palette line used for not added levels selection
+	.byte 0x07 @ palette line used for world 1 type level
+	.byte 0x05 @ palette line used for world 1 type level selection
+	.byte 0x08 @ palette line used for world 2 type level
+	.byte 0x06 @ palette line used for world 2 type level selection
+	.byte 0x09 @ palette line used for world 3 type level
+	.byte 0x07 @ palette line used for world 3 type level selection
+	.byte 0x0A @ palette line used for world 4 type level
+	.byte 0x08 @ palette line used for world 4 type level selection
+	.byte 0x0B @ palette line used for world 5 type level
+	.byte 0x0D @ palette line used for world 5 type level selection
+	.byte 0x0C @ palette line used for world 6 type level
+	.byte 0x0E @ palette line used for world 6 type level selection
+	.byte 0x0D @ palette line used for boss type level -- unused
+	.byte 0x0F @ palette line used for boss type level selection -- unused
 	.byte 0x00
 	.byte 0x00
 
 	.GLOBAL gUnknown_0807CA40
 gUnknown_0807CA40:
+	.4byte 0x00000001 @ Level text X location in tiles
+	.4byte 0x00000011 @ Level text Y location in tiles
+	
+	.4byte 0x00000015 @ Skill text X location in tiles
+	.4byte 0x00000011 @ Skill text Y location in tiles
+	
+	.4byte 0x00000018 @ Skill level 1 banana X location in tiles
+	.4byte 0x00000011 @ Skill level 1 banana Y location in tiles
+	
+	.4byte 0x00000018 @ Skill level 2 banana X location in tiles
+	.4byte 0x00000011 @ Skill level 2 banana Y location in tiles
+	
+	.4byte 0x00000018 @ Skill level 3 banana X location in tiles
+	.4byte 0x00000011 @ Skill level 3 banana Y location in tiles
+	
 	.4byte 0x00000001
 	.4byte 0x00000011
+	
 	.4byte 0x00000015
 	.4byte 0x00000011
-	.4byte 0x00000018
-	.4byte 0x00000011
-	.4byte 0x00000018
-	.4byte 0x00000011
-	.4byte 0x00000018
-	.4byte 0x00000011
-	.4byte 0x00000001
-	.4byte 0x00000011
-	.4byte 0x00000015
-	.4byte 0x00000011
-	.4byte 0x00000007
-	.4byte 0x00000006
+	
+	.4byte 0x00000007 @ X position for the delete e-level sprites
+	.4byte 0x00000006 @ Y position for the delete e-level sprites
+	
 	.4byte 0x00000007
 	.4byte 0x00000003
 	
@@ -1307,8 +1808,8 @@ gUnknown_0807CA88:
 
 	.GLOBAL gUnknown_0807CA90
 gUnknown_0807CA90:
-	.2byte 0x0044
-	.2byte 0x0073
+	.2byte 0x0044 @ X Position for the delete e-level no selection cursor
+	.2byte 0x0073 @ X Position for the delete e-level yes selection cursor
 
 	.GLOBAL gEWorldLevelCountPtr
 gEWorldLevelCountPtr:
@@ -1371,24 +1872,78 @@ gUnknown_0807D298:
 
 	.GLOBAL gUnknown_0807DC70
 gUnknown_0807DC70:
-	.INCBIN "baserom.gba", 0x7DC70, 0x7DC88-0x7DC70
+	.2byte 0xFFC0
+	.2byte 0x0000
+	.2byte 0xFFFF
+	.2byte 0x0040
+	.2byte 0x0000
+	.2byte 0x0001
+	.2byte 0x0001
+	.2byte 0x0001
+	.2byte 0x0000
+	.2byte 0xFFFF
+	.2byte 0xFFFF
+	.2byte 0x0000
 
 	.GLOBAL gUnknown_0807DC88
 gUnknown_0807DC88:
-	.INCBIN "baserom.gba", 0x7DC88, 0x7DC8C-0x7DC88
+	.byte 0x00
+	.byte 0x00
+	.byte 0x01
+	.byte 0x01
 
 	.GLOBAL gUnknown_0807DC8C
 gUnknown_0807DC8C:
-	.INCBIN "baserom.gba", 0x7DC8C, 0x7DC90-0x7DC8C
+	.4byte 0x02038000
 
 	.GLOBAL gUnknown_0807DC90
 gUnknown_0807DC90:
-	.INCBIN "baserom.gba", 0x7DC90, 0x7DC9C-0x7DC90
+	.byte 0x06
+	.byte 0x05
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x06
+	.byte 0x00
+	.byte 0x00
 
 	.GLOBAL gUnknown_0807DC9C
 gUnknown_0807DC9C:
-	.INCBIN "baserom.gba", 0x7DC9C, 0x7DD14-0x7DC9C
-
+	.4byte 0x00000000
+	.4byte gUnknown_080769D4
+	.4byte 0x00000003
+	.4byte 0x00000000
+	.4byte gUnknown_080769CC
+	.4byte 0x00000002
+	.4byte gUnknown_080769C4
+	.4byte 0x00000003
+	.4byte gUnknown_080769BC
+	.4byte 0x0F000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	
 	.GLOBAL gUnknown_0807DD14
 gUnknown_0807DD14:
 	.4byte 0x7FFF0000
@@ -1830,11 +2385,27 @@ gUnknown_080A7DF8:
 
 	.GLOBAL gUnknown_080A7EB8
 gUnknown_080A7EB8:
-	.INCBIN "baserom.gba", 0xA7EB8, 0xA7ED0-0xA7EB8
-
+	.2byte 8 @ X Position
+	.2byte 18 @ Y Position
+	.2byte 0x0400 @ Skip 4 pixels count?
+	.2byte 128 @ Total tiles
+	.2byte 0x1000 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte gUnknown_0829A7F8 @ Sprite Data 1
+	.4byte gUnknown_0829A81C @ OAM
+	.4byte gUnknown_0829A824 @ Sprite Graphics
+	
 	.GLOBAL gUnknown_080A7ED0
 gUnknown_080A7ED0:
-	.INCBIN "baserom.gba", 0xA7ED0, 0xA7EE8-0xA7ED0
+	.2byte 0 @ X Position
+	.2byte 0 @ Y Position
+	.2byte 0x0040 @ Skip 4 pixels count?
+	.2byte 8 @ Total tiles
+	.2byte 0x0100 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte gUnknown_08299A40 @ Sprite Data 1
+	.4byte gUnknown_08299BF0 @ OAM
+	.4byte gUnknown_08299BF8 @ Sprite Graphics
 
 	.GLOBAL gUnknown_080A7EE8
 gUnknown_080A7EE8:

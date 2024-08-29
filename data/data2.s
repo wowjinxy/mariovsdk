@@ -24326,11 +24326,97 @@ gUnknown_08669D6C:
 
 	.GLOBAL gUnknown_08669DAC
 gUnknown_08669DAC:
-	.INCBIN "baserom.gba", 0x669DAC, 0x706FC8-0x669DAC
+	.INCBIN "baserom.gba", 0x669DAC, 0x6EE9D4-0x669DAC
+	
+	.GLOBAL gUnknown_086EE9D4
+gUnknown_086EE9D4:
+	.INCBIN "baserom.gba", 0x6EE9D4, 0x6F29E0-0x6EE9D4
+	
+	.GLOBAL gUnknown_086F29E0
+gUnknown_086F29E0:
+	.INCBIN "baserom.gba", 0x6F29E0, 0x6F2BE8-0x6F29E0
+
+	.GLOBAL gUnknown_086F2BE8
+gUnknown_086F2BE8:
+	.INCBIN "baserom.gba", 0x6F2BE8, 0x6f8a8c-0x6F2BE8
+	
+	.GLOBAL gUnknown_086F8A8C
+gUnknown_086f8a8c:
+	.INCBIN "baserom.gba", 0x6F8A8C, 0x6F910C-0x6F8A8C
+	
+	.GLOBAL gUnknown_086F910C
+gUnknown_086F910C:
+	.INCBIN "baserom.gba", 0x6F910C, 0x6f9150-0x6F910C
+	
+	.GLOBAL gUnknown_086F9150
+gUnknown_086F9150:
+	.INCBIN "baserom.gba", 0x6F9150, 0x6FB230-0x6F9150
+	
+	.GLOBAL gUnknown_086FB230
+gUnknown_086FB230:
+	.INCBIN "baserom.gba", 0x6FB230, 0x6FD670-0x6FB230
+	
+	.GLOBAL gUnknown_086FD670
+gUnknown_086FD670:
+	.INCBIN "baserom.gba", 0x6FD670, 0x6FFAD8-0x6FD670
+	
+	.GLOBAL gUnknown_086FFAD8
+gUnknown_086FFAD8:
+	.INCBIN "baserom.gba", 0x6FFAD8, 0x7001C0-0x6FFAD8
+	
+	.GLOBAL gUnknown_087001C0
+gUnknown_087001C0:
+	.INCBIN "baserom.gba", 0x7001C0, 0x70043c-0x7001C0
+	
+	.GLOBAL gUnknown_0870043C
+gUnknown_0870043C:
+	.INCBIN "baserom.gba", 0x70043C, 0x7006A0-0x70043C
+	
+	.GLOBAL gUnknown_087006A0
+gUnknown_087006A0:
+	.INCBIN "baserom.gba", 0x7006A0, 0x70660C-0x7006A0
+	
+	.GLOBAL gUnknown_0870660C
+gUnknown_0870660C:
+	.INCBIN "baserom.gba", 0x70660C, 0x706BF0-0x70660C
+	
+	.GLOBAL gUnknown_08706BF0
+gUnknown_08706BF0:
+	.INCBIN "baserom.gba", 0x706BF0, 0x706EA0-0x706BF0
+	
+	.GLOBAL gUnknown_08706EA0
+gUnknown_08706EA0:
+	.INCBIN "baserom.gba", 0x706EA0, 0x706FB0-0x706EA0
+	
+	.GLOBAL gUnknown_08706FB0
+gUnknown_08706FB0:
+	.INCBIN "baserom.gba", 0x706FB0, 0x706FC8-0x706FB0
 
 	.GLOBAL gUnknown_08706FC8
 gUnknown_08706FC8:
-	.INCBIN "baserom.gba", 0x706FC8, 0x707E30-0x706FC8
+	.4byte gUnknown_086EE9D4
+	.2byte 0x0000
+	.byte 0x0D
+	.byte 0x00
+	.2byte 0x0000
+	.2byte 0x0289
+	.2byte 0x0000
+	.2byte 0x0108
+	.2byte 0x0001
+	.2byte 0x0000
+	.2byte 0x0900
+	.2byte 0x2000
+	.2byte 0x0B00
+	.2byte 0x1500
+	.2byte 0x0680
+	.2byte 0x2000
+	.2byte 0x0000
+	.2byte 0x0000
+	.INCBIN "baserom.gba", 0x706FEC, 0x707208-0x706FEC
+	
+	.INCBIN "baserom.gba", 0x707208, 0x707408-0x707208  @ unused palette
+	
+	.INCBIN "baserom.gba", 0x707408, 0x707E30-0x707408
 
 	.GLOBAL gUnknown_08707E30
 gUnknown_08707E30:
@@ -27126,7 +27212,7 @@ gWorldFiveTable:
 	.4byte gWorldFiveBossBG @ Background Data
 	.4byte gLevel5DK @ Level Data
 	.2byte 150 @ Timer
-	.byte 0x42 @ Song ID
+	.byte 66 @ Song ID
 	.byte 4 @ Level Type (Unused)
 	.4byte 0x00000007 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
@@ -27466,7 +27552,7 @@ gWorldFourPlusTable:
 	.4byte gWorldFourPlusHorizontalBG @ Background Data
 	.4byte gLevel43Plus @ Level Data
 	.2byte 150 @ Timer
-	.byte 0x1D @ Song ID
+	.byte 29 @ Song ID
 	.byte 2 @ Level Type (Unused)
 	.4byte 0x000000E0 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
@@ -27490,7 +27576,7 @@ gWorldFourPlusTable:
 	.4byte gWorldFourPlusHorizontalBG @ Background Data
 	.4byte gLevel46Plus @ Level Data
 	.2byte 150 @ Timer
-	.byte 0x1D @ Song ID
+	.byte 29 @ Song ID
 	.byte 2 @ Level Type (Unused)
 	.4byte 0x000000E1 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused
@@ -27498,7 +27584,7 @@ gWorldFourPlusTable:
 	.4byte gWorldFourBossBG @ Background Data
 	.4byte gLevel4DKPlus @ Level Data
 	.2byte 120 @ Timer
-	.byte 0x0D @ Song ID
+	.byte 13 @ Song ID
 	.byte 2 @ Level Type (Unused)
 	.4byte 0x00000001 @ Level Flags (Binary)
 	.4byte 0x00000000 @ Unused

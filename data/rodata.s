@@ -243,9 +243,21 @@ gUnknown_080769B0:
 	.GLOBAL gUnknown_080769B8
 gUnknown_080769B8:
 	.ASCII "\0\0\0\0"
+	
+	.GLOBAL gUnknown_080769BC
+gUnknown_080769BC:
 	.ASCII "Erase\0\0\0"
+	
+	.GLOBAL gUnknown_080769C4
+gUnknown_080769C4:
 	.ASCII "Cancel\0\0"
+	
+	.GLOBAL gUnknown_080769CC
+gUnknown_080769CC:
 	.ASCII "Retry\0\0\0"
+	
+	.GLOBAL gUnknown_080769D4
+gUnknown_080769D4:
 	.ASCII "Data in memory\nis corrupted!\0\0\0\0"
 
 	.GLOBAL gTextErasing

@@ -24,39 +24,39 @@ GLOBAL_BSS u8 gMainMenuState = 0;
 
 static struct Coords32 gUnknown_080785B0[] =
 {
-    { 14, 52 },
-    { 71, 52 },
-    { 128, 52 },
-    { 128, 52 },
-    { 185, 52 },
-    { 185, 95 },
+    { 14, 52 }, 	// Save slot A - no e-Reader
+    { 71, 52 }, 	// Save slot B - no e-Reader
+    { 128, 52 }, 	// Save slot C - no e-Reader
+    { 128, 52 },	// e-Reader save slot - no e-Reader
+    { 185, 52 },	// Options button - no e-Reader
+    { 185, 95 },	// Erase data button - no e-Reader
 };
 
 static struct Coords32 gUnknown_080785E0[] =
 {
-    { 4, 52 },
-    { 52, 52 },
-    { 100, 52 },
-    { 148, 52 },
-    { 196, 52 },
-    { 196, 95 },
+    { 4, 52 }, 		// Save slot A - with e-Reader unlocked
+    { 52, 52 },		// Save slot B - with e-Reader unlocked
+    { 100, 52 },	// Save slot C - with e-Reader unlocked
+    { 148, 52 },	// e-Reader save slot - with e-Reader unlocked
+    { 196, 52 },	// Options button - with e-Reader unlocked
+    { 196, 95 },	// Erase data button - with e-Reader unlocked
 };
 
 static struct Coords32 gUnknown_08078610[] =
 {
-    { 14, 138 },
-    { 71, 138 },
-    { 128, 138 },
+    { 14, 138 },	// Save slot A expert button - no e-Reader
+    { 71, 138 },    // Save slot B expert button - no e-Reader
+    { 128, 138 },   // Save slot C expert button - no e-Reader
 };
 
 static struct Coords32 gUnknown_08078628[] =
 {
-    { 4, 138 },
-    { 52, 138 },
-    { 100, 138 },
+    { 4, 138 }, 	// Save slot A expert button - with e-Reader unlocked
+    { 52, 138 },	// Save slot B expert button - with e-Reader unlocked
+    { 100, 138 },	// Save slot C expert button - with e-Reader unlocked
 };
 
-static struct Coords32 gUnknown_08078640[] =
+static struct Coords32 gUnknown_08078640[] = // the world number
 {
     { 10, 33 },
     { 10, 33 },
@@ -68,7 +68,7 @@ static struct Coords32 gUnknown_08078640[] =
     { 7, 33 },
 };
 
-static struct Coords32 gUnknown_08078680[] =
+static struct Coords32 gUnknown_08078680[] = // the dot for the level numbers in for example 1-1 using the - as the dot
 {
     { 18, 33 },
     { 18, 33 },
@@ -80,7 +80,7 @@ static struct Coords32 gUnknown_08078680[] =
     { 15, 33 },
 };
 
-static struct Coords32 gUnknown_080786C0[] =
+static struct Coords32 gUnknown_080786C0[] = // the level number
 {
     { 26, 33 },
     { 26, 33 },
