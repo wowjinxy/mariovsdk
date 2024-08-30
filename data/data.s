@@ -871,7 +871,105 @@ gUnknown_080799F0:
 	.4byte sub_08028604 @ Option 3 function
 	
 	@ Visual options submenu
-	.INCBIN "baserom.gba", 0x79B88, 0x79C54-0x79B88
+	.byte 02 
+	.byte 05 
+	.2byte 0x0000 
+
+	.4byte 15			@ Screen type option tile object ID
+	.byte 1             @ Screen type option X position in tiles
+	.byte 4             @ Screen type option Y position in tiles
+	.byte 28            @ Screen type option selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0xFFFFFFFF   @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 3            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 16						@ Movie option tile object ID
+	.byte 1                         @ Movie option X position in tiles
+	.byte 8                         @ Movie option Y position in tiles
+	.byte 28                        @ Movie option selction box width
+	.byte 0x00                      @ Unknown
+	.4byte 0xFFFFFFFF               @ Sub menu to go to on selection
+	.4byte options_menu_play_movie  @ Function to trigger when pressing A
+	.2byte 0                        @ Tile objects shown at bottom?
+	.2byte 0x0000                   @ Unknown
+
+	.4byte 0			@ Empty tile object ID
+	.byte 0             @ Empty X position in tiles
+	.byte 0             @ Empty Y position in tiles
+	.byte 0             @ Empty selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 58			@ Back text tile object ID
+	.byte 8             @ Back text X position in tiles
+	.byte 17            @ Back text Y position in tiles
+	.byte 4             @ Back text selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom? 
+	.2byte 0x0000       @ Unknown
+
+	.4byte 60			@ Visual options title bar
+	.byte 7             @ Visual options title bar X position in tiles
+	.byte 1             @ Visual options title bar Y position in tiles
+	.byte 6             @ Visual options title bar selection box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 55			@ Select text tile object ID
+	.byte 6             @ Select text X position in tiles
+	.byte 17            @ Select text Y position in tiles
+	.byte 0             @ Select text selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom? 
+	.2byte 0x0000       @ Unknown
+
+	.4byte 57			@ Play text tile object ID
+	.byte 19            @ Play text X position in tiles
+	.byte 17            @ Play text Y position in tiles
+	.byte 3             @ Play text Y selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 54			@ A button tile object ID
+	.byte 17            @ A button X position in tiles
+	.byte 17            @ A button Y position in tiles
+	.byte 0             @ A button selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 0			@ Empty tile object ID
+	.byte 0             @ Empty X position in tiles
+	.byte 0             @ Empty Y position in tiles
+	.byte 0             @ Empty selction box width
+	.byte 0x00          @ Unknown
+	.4byte 0            @ Sub menu to go to on selection
+	.4byte 0x00000000   @ Function to trigger when pressing A
+	.2byte 0            @ Tile objects shown at bottom?
+	.2byte 0x0000       @ Unknown
+
+	.4byte 0x00000000 	@ Exit to menu type (0xFFFFFFFF returns to previous main state)
+	.4byte 0x00000001   @ Option to select on exit
+	.4byte 0x00000000   @ Option 1 function
+	.4byte sub_08028740 @ Option 2 function
+	.4byte sub_08028824 @ Option 3 function
 	
 	@ Delete all save data sub menu
 	.byte 2 			@ Number of options in sub menu
