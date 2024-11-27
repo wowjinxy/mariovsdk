@@ -8,7 +8,7 @@ sub_0801488C: @ 0x0801488C
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _0801489A
-	bl sub_0802A164
+	bl write_flash_sector_0802A164
 _0801489A:
 	pop {r0}
 	bx r0
@@ -54,7 +54,7 @@ _080148D8:
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _080148E6
-	bl sub_0802A164
+	bl write_flash_sector_0802A164
 _080148E6:
 	pop {r4}
 	pop {r0}
@@ -428,7 +428,7 @@ sub_08014B28: @ 0x08014B28
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _08014B62
-	bl sub_0802A164
+	bl write_flash_sector_0802A164
 _08014B62:
 	add sp, sp, #4
 	pop {r4,r5}

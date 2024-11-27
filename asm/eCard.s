@@ -575,7 +575,7 @@ _0802DB3C:
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
-	bl sub_0802A370
+	bl write_flash_sector_0802A370
 	ldr r1, _0802DB54  @ =gUnknown_030001A8
 	mov r0, #10
 	str r0, [r1]
@@ -599,7 +599,7 @@ _0802DB58:
 	add r1, r1, r2
 	mov r2, #192
 	lsl r2, r2, #4
-	bl sub_0802A370
+	bl write_flash_sector_0802A370
 	b _0802DB92
 	.byte 0x00
 	.byte 0x00
@@ -2157,7 +2157,7 @@ _0802E6FE:
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
-	bl sub_0802A370
+	bl write_flash_sector_0802A370
 	b _0802E758
 _0802E70C:
 	.4byte gEWorldLevelCountPtr
@@ -3649,7 +3649,7 @@ sub_0802F1D4: @ 0x0802F1D4
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
-	bl sub_0802A370
+	bl write_flash_sector_0802A370
 	pop {r0}
 	bx r0
 	.byte 0x00
@@ -9788,7 +9788,7 @@ sub_08031E04: @ 0x08031E04
 	ldr r4, _08031E90  @ =gEWorldLevelCountPtr
 	ldr r1, [r4]
 	mov r2, #104
-	bl sub_0802A430
+	bl read_flash_sector_0802A430
 	ldr r7, [r4]
 	ldr r0, [r7]
 	cmp r0, #12
@@ -9804,7 +9804,7 @@ _08031E2C:
 	add r0, r6, #0
 	mov r2, #192
 	lsl r2, r2, #4
-	bl sub_0802A430
+	bl read_flash_sector_0802A430
 	mov r0, #192
 	lsl r0, r0, #4
 	add r4, r4, r0
@@ -9977,7 +9977,7 @@ _08031F68:
 _08031F7E:
 	ldrb r0, [r4]
 	add r0, r0, #2
-	bl sub_0802A430
+	bl read_flash_sector_0802A430
 	ldrb r0, [r4]
 	add r0, r0, #1
 	strb r0, [r4]
@@ -10131,7 +10131,7 @@ _080320A0:
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
-	bl sub_0802A290
+	bl write_flash_sector_0802A290
 	ldr r1, _080320B8  @ =gUnknown_0300028C
 	mov r0, #5
 	b _080320D0
@@ -10146,7 +10146,7 @@ _080320BC:
 	neg r2, r2
 	add r0, r2, #0
 	mov r1, #0
-	bl sub_0802A290
+	bl write_flash_sector_0802A290
 	cmp r0, #0
 	beq _080320D2
 	ldr r1, _080320E0  @ =gUnknown_0300028C

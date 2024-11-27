@@ -1059,6 +1059,13 @@ struct Struct03000008 {
 // Variables
 //------------------------------------------------------------------------------
 
+#define gUnknown_02032000 ((u8 *)0x02032000)
+#define gUnknown_02032FF8 ((u8 *)0x02032FF8)
+#define gUnknown_02032FFA ((u8 *)0x02032FFA)
+#define gUnknown_02032FFC ((u8 *)0x02032FFC)
+#define gUnknown_02032FFE ((u8 *)0x02032FFE)
+#define gUnknown_02032FFF ((u8 *)0x02032FFF)
+
 extern u32 gUnknown_03000004;
 extern struct Struct03000008 gUnknown_03000008;
 extern u32 gUnknown_03000020;
@@ -1582,7 +1589,7 @@ void fade_transition_end(void);
 void fade_transition_main(void);
 int sub_08029FD0(void);
 int sub_0802A0A8(void);
-void sub_0802A164(void);
+int write_flash_sector_0802A164(void);
 int sub_0802A464(void);
 void help_init_callback(void);
 void help_end(void);
@@ -1817,7 +1824,7 @@ void sub_08004FBC();
 void sub_08005FA0();
 u32 sub_08006A34();
 void e_world_init_callback();
-u32 sub_0802A458();
+u32 sub_0802A458(void);
 void sub_0802F06C();
 void sub_080062D0();
 void sub_08006A00();
@@ -1831,5 +1838,7 @@ void sub_0806E594(u32, u32, u32);
 void sub_0800F0A8(u32);
 u32 update_fade_to_black_08029F7C(void);
 void sub_08007154(void);
+
+u32 VerifyFlashSector(u16 sectorNum, u8 *src);
 
 #endif  // GUARD_GLOBAL_H

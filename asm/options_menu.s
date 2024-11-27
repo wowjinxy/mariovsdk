@@ -2843,7 +2843,7 @@ options_end: @ 0x0802904C
 	and r1, r1, r2
 	cmp r0, r1
 	beq _0802906E
-	bl sub_0802A164
+	bl write_flash_sector_0802A164
 _0802906E:
 	pop {r0}
 	bx r0

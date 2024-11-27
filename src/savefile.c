@@ -626,7 +626,7 @@ static void init_current_save_file_080102B4(u8 world)  // unreferenced
         update_star_and_completion_count(gFileSelectMenuSel);
     }
     if (gUnknown_03000B50 == 1)
-        sub_0802A164();
+        write_flash_sector_0802A164();
 }
 
 // If levelType is LEVEL_TYPE_MAIN or LEVEL_TYPE_PLUS, returns TRUE if the last
@@ -1040,7 +1040,7 @@ void sub_08010A3C(u8 arg0, u8 arg1)
     if (saveFile->lives <= 0)
         saveFile->lives = 1;
     if (gUnknown_03000B50 == 1)
-        sub_0802A164();
+        write_flash_sector_0802A164();
 }
 
 void sub_08010BE0(u8 arg0, u8 arg1)
@@ -1054,7 +1054,7 @@ void sub_08010BE0(u8 arg0, u8 arg1)
     {
         sub_0802F1D4();
         *gUnknown_080788F8 |= 1;
-        sub_0802A164();
+        write_flash_sector_0802A164();
         return;
     }
     *gUnknown_080788F8 &= ~1;
@@ -1123,7 +1123,7 @@ void sub_08010BE0(u8 arg0, u8 arg1)
     if (saveFile->lives <= 0)
         saveFile->lives = 1;
     if (gUnknown_03000B50 == 1)
-        sub_0802A164();
+        write_flash_sector_0802A164();
 }
 
 void init_level_highscores_08010DEC(struct SaveFile *saveFile)
@@ -1213,7 +1213,7 @@ static void unlock_everything(void)  // unreferenced?
     update_star_and_completion_count(gFileSelectMenuSel);
     sub_08014D08();
     if (gUnknown_03000B50 == 1)
-        sub_0802A164();
+        write_flash_sector_0802A164();
 }
 
 static void init_current_save_file_08011098(void)  // unreferenced
@@ -1247,7 +1247,7 @@ static void init_current_save_file_08011098(void)  // unreferenced
     update_star_and_completion_count(gFileSelectMenuSel);
     sub_08014D08();
     if (gUnknown_03000B50 == 1)
-        sub_0802A164();
+        write_flash_sector_0802A164();
 }
 
 u8 sub_080111B4(u8 fileNum)
@@ -1349,5 +1349,5 @@ void sub_08011428(u32 arg0)
     for (i = 0; i < 3; i++)
         gUnknown_03000066[i] = sub_080111B4(i);
     if (gUnknown_03000B50 == 1)
-        sub_0802A164();
+        write_flash_sector_0802A164();
 }

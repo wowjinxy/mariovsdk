@@ -31,7 +31,7 @@
 	X(asm/level_results.o) \
 	X(src/level_results.o) \
 	X(src/fade_in_out.o) \
-	X(asm/load.o) \
+	X(src/load.o) \
 	X(asm/level_help.o) \
 	X(asm/level_retry.o) \
 	X(src/rom_802B798.o) \
@@ -115,6 +115,17 @@ SECTIONS
 #undef X
 	}
 
+	. = 0x02000000;
+	.ewram (NOLOAD) :
+	ALIGN(4)
+	{
+		. = 0x32000;	gUnknown_02032000 = .;
+		. = 0x32FF8;	gUnknown_02032FF8 = .;
+		. = 0x32FFA;	gUnknown_02032FFA = .;
+		. = 0x32FFC;	gUnknown_02032FFC = .;
+		. = 0x32FFE;	gUnknown_02032FFE = .;
+	}
+
 	. = 0x03000000;
 	.bss (NOLOAD) :
 	ALIGN(4)
@@ -162,6 +173,12 @@ SECTIONS
 		. = 0xB6;		gUnknown_030000B6 = .;
 		. = 0x100;		gPreviousMovieOption = .;
 		. = 0x110;		src/fade_in_out.o(.bss);
+		. = 0x118;		gSectorData_03000118 = .;
+		. = 0x11C;		gFlashWriteSize_0300011C = .;
+		. = 0x120;		gSectorNum_03000120 = .;
+		. = 0x124;		gUnknown_03000124 = .;
+		. = 0x128;		gUnknown_03000128 = .;
+		. = 0x12A;		gUnknown_0300012A = .;
 		. = 0x15A;		gUnknown_0300015A = .;
 		. = 0x15C;		gUnknown_0300015C = .;
 		. = 0x160;		gUnknown_03000160 = .;
