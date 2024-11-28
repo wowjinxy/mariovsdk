@@ -146,7 +146,7 @@ static inline u8 is_expert_unlocked(u8 menuSel)
     struct SaveFile *saveFile = &gSaveFilesPtr[menuSel];
     if (menuSel != FILE_SELECT_EWORLD
      && (saveFile->mainBossLevel.flags & LEVEL_FLAG_COMPLETE)
-     && saveFile->stars >= gUnknown_080A8668)
+     && saveFile->stars >= gExpertLevelsStarsNeeded)
         return TRUE;
     else
         return FALSE;

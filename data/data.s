@@ -189,8 +189,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
-	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
 	.2byte 78 @ X Position
@@ -199,8 +199,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
-	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 128 @ X Position
@@ -209,8 +209,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
-	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 178 @ X Position
@@ -219,8 +219,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
-	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 28 @ X Position
@@ -229,8 +229,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Skip 4 pixels count?
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
-	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 78 @ X Position
@@ -239,8 +239,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
-	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 128 @ X Position
@@ -249,8 +249,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
-	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 	
 	.2byte 178 @ X Position
@@ -259,8 +259,8 @@ gLevelSelectLevelArtSpriteLayout:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0200 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
-	.4byte gfxMainLevelIconPicsOAM @ Sprite Data 2
+	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
 	.GLOBAL gLevelSelectLevelPlusArtSpriteLayout
@@ -369,16 +369,25 @@ gUnknown_080794A4:
 
 	.GLOBAL gUnknown_080794BC
 gUnknown_080794BC:
-	.INCBIN "baserom.gba", 0x794BC, 0x794D4-0x794BC
+	.2byte 224 @ X Position
+	.2byte 80 @ Y position
+	.2byte 0x0020 @ Skip 4 pixels count?
+	.2byte 0x0004 @ Total tiles
+	.2byte 0x0080 @ Graphics Size in Bytes
+	.2byte 0x0000 @ unused
+	.4byte gUnknown_085C2608 @ Animation Data
+	.4byte gUnknown_085C262C @ OAM
+	.4byte gUnknown_085C2634 @ Sprite Graphics
 
 	.GLOBAL gUnknown_080794D4
 gUnknown_080794D4:
-	.4byte 0x00000000
+	.2byte 0
+	.2byte 0
 	.2byte 0x0040
 	.2byte 0x0008
 	.2byte 0x0100
 	.2byte 0x0000
-	.4byte gUnknown_085DD108 @ Sprite Data 1
+	.4byte gUnknown_085DD108 @ Animation Data
 	.4byte gUnknown_085DD150 @ OAM
 	.4byte gUnknown_085DD158 @ Sprite Graphics
 
@@ -2405,79 +2414,115 @@ gPredefinedPalettes:
 
 	.GLOBAL gUnknown_080A7D98
 gUnknown_080A7D98:
+	@ expert 1 selection box
 	.4byte 0x00000048
 	.4byte 0x00000010
+	@ expert 2 selection box
 	.4byte 0x00000070
 	.4byte 0x00000010
+	@ expert 3 selection box
 	.4byte 0x00000098
 	.4byte 0x00000010
+	@ expert 4 selection box
 	.4byte 0x000000C0
 	.4byte 0x00000010
+	@ expert 5 selection box
 	.4byte 0x00000048
 	.4byte 0x00000038
+	@ expert 6 selection box
 	.4byte 0x00000070
 	.4byte 0x00000038
+	@ expert 7 selection box
 	.4byte 0x00000098
 	.4byte 0x00000038
+	@ expert 8 selection box
 	.4byte 0x000000C0
 	.4byte 0x00000038
+	@ expert 9 selection box
 	.4byte 0x00000048
 	.4byte 0x00000060
+	@ expert 10 selection box
 	.4byte 0x00000070
 	.4byte 0x00000060
+	@ expert 11 selection box
 	.4byte 0x00000098
 	.4byte 0x00000060
+	@ expert 12 selection box
 	.4byte 0x000000C0
 	.4byte 0x00000060
 
 	.GLOBAL gUnknown_080A7DF8
 gUnknown_080A7DF8:
+	@ expert 1 menu presents 
 	.4byte 0x0000004A
 	.4byte 0x00000013
+	@ expert 2 menu presents 
 	.4byte 0x00000072
 	.4byte 0x00000013
+	@ expert 3 menu presents 
 	.4byte 0x0000009A
 	.4byte 0x00000013
+	@ expert 4 menu presents 
 	.4byte 0x000000C2
 	.4byte 0x00000013
+	@ expert 5 menu presents 
 	.4byte 0x0000004A
 	.4byte 0x0000003B
+	@ expert 6 menu presents 
 	.4byte 0x00000072
 	.4byte 0x0000003B
+	@ expert 7 menu presents 
 	.4byte 0x0000009A
 	.4byte 0x0000003B
+	@ expert 8 menu presents 
 	.4byte 0x000000C2
 	.4byte 0x0000003B
+	@ expert 9 menu presents 
 	.4byte 0x0000004A
 	.4byte 0x00000063
+	@ expert 10 menu presents
 	.4byte 0x00000072
 	.4byte 0x00000063
+	@ expert 11 menu presents
 	.4byte 0x0000009A
 	.4byte 0x00000063
+	@ expert 12 menu presents
 	.4byte 0x000000C2
 	.4byte 0x00000063
+	@ unknown -- seems to copy the selection boxes
 	.4byte 0x00000048
 	.4byte 0x00000010
+	
 	.4byte 0x00000070
 	.4byte 0x00000010
+	
 	.4byte 0x00000098
 	.4byte 0x00000010
+	
 	.4byte 0x000000C0
 	.4byte 0x00000010
+	
 	.4byte 0x00000048
 	.4byte 0x00000038
+	
 	.4byte 0x00000070
 	.4byte 0x00000038
+	
 	.4byte 0x00000098
 	.4byte 0x00000038
+	
 	.4byte 0x000000C0
 	.4byte 0x00000038
+	
 	.4byte 0x00000048
 	.4byte 0x00000060
+	
 	.4byte 0x00000070
 	.4byte 0x00000060
+	
 	.4byte 0x00000098
 	.4byte 0x00000060
+	
 	.4byte 0x000000C0
 	.4byte 0x00000060
 
@@ -2489,7 +2534,7 @@ gUnknown_080A7EB8:
 	.2byte 128 @ Total tiles
 	.2byte 0x1000 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829A7F8 @ Sprite Data 1
+	.4byte gUnknown_0829A7F8 @ Animation Data
 	.4byte gUnknown_0829A81C @ OAM
 	.4byte gUnknown_0829A824 @ Sprite Graphics
 	
@@ -2501,7 +2546,7 @@ gUnknown_080A7ED0:
 	.2byte 8 @ Total tiles
 	.2byte 0x0100 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08299A40 @ Sprite Data 1
+	.4byte gUnknown_08299A40 @ Animation Data
 	.4byte gUnknown_08299BF0 @ OAM
 	.4byte gUnknown_08299BF8 @ Sprite Graphics
 
@@ -2553,17 +2598,17 @@ gUnknown_080A8428:
 gUnknown_080A8548:
 	.INCBIN "baserom.gba", 0xA8548, 0xA8668-0xA8548
 
-	.GLOBAL gUnknown_080A8668
-gUnknown_080A8668:
-	.byte 0x09
-	.byte 0x12
-	.byte 0x1B
-	.byte 0x24
-	.byte 0x2D
-	.byte 0x36
-	.byte 0x3F
-	.byte 0x48
-	.byte 0x51
-	.byte 0x5A
-	.byte 0x5A
-	.byte 0x5A
+	.GLOBAL gExpertLevelsStarsNeeded
+gExpertLevelsStarsNeeded:
+	.byte 9
+	.byte 18
+	.byte 27
+	.byte 36
+	.byte 45
+	.byte 54
+	.byte 63
+	.byte 72
+	.byte 81
+	.byte 90
+	.byte 90
+	.byte 90

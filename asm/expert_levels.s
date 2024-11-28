@@ -3342,7 +3342,7 @@ _08036CBC:
 _08036CEA:
 	cmp r8, r9
 	blt _08036D12
-	ldr r0, _08036D34  @ =gUnknown_080A8668
+	ldr r0, _08036D34  @ =gExpertLevelsStarsNeeded
 	add r0, r0, r8
 	ldrb r3, [r0]
 	mov r0, #40
@@ -3378,7 +3378,7 @@ _08036D2C:
 _08036D30:
 	.4byte gUnknown_080A7ED0
 _08036D34:
-	.4byte gUnknown_080A8668
+	.4byte gExpertLevelsStarsNeeded
 _08036D38:
 	.4byte gUnknown_080A7EB8
 	THUMB_FUNC_END sub_08036858

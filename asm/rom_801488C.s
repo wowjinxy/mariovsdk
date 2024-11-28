@@ -567,7 +567,7 @@ sub_08014C18: @ 0x08014C18
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08014C64
-	ldr r0, _08014C60  @ =gUnknown_080A8668
+	ldr r0, _08014C60  @ =gExpertLevelsStarsNeeded
 	add r0, r3, r0
 	ldrb r1, [r2, #8]
 	ldrb r0, [r0]
@@ -584,7 +584,7 @@ _08014C58:
 _08014C5C:
 	.4byte 0x00000313
 _08014C60:
-	.4byte gUnknown_080A8668
+	.4byte gExpertLevelsStarsNeeded
 _08014C64:
 	mov r0, #0
 _08014C66:
@@ -616,7 +616,7 @@ sub_08014C6C: @ 0x08014C6C
 	cmp r0, #0
 	beq _08014CCC
 	mov r2, #0
-	ldr r1, _08014CC8  @ =gUnknown_080A8668
+	ldr r1, _08014CC8  @ =gExpertLevelsStarsNeeded
 	ldrb r0, [r3, #8]
 	ldrb r3, [r1]
 	cmp r0, r3
@@ -645,7 +645,7 @@ _08014CC0:
 _08014CC4:
 	.4byte 0x00000313
 _08014CC8:
-	.4byte gUnknown_080A8668
+	.4byte gExpertLevelsStarsNeeded
 _08014CCC:
 	mov r0, #0
 _08014CCE:
@@ -775,7 +775,7 @@ sub_08014D74: @ 0x08014D74
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08014DB8
-	ldr r1, _08014DB4  @ =gUnknown_080A8668
+	ldr r1, _08014DB4  @ =gExpertLevelsStarsNeeded
 	ldrb r0, [r2, #8]
 	ldrb r1, [r1]
 	cmp r0, r1
@@ -789,7 +789,7 @@ _08014DAC:
 _08014DB0:
 	.4byte 0x00000313
 _08014DB4:
-	.4byte gUnknown_080A8668
+	.4byte gExpertLevelsStarsNeeded
 _08014DB8:
 	mov r0, #0
 _08014DBA:

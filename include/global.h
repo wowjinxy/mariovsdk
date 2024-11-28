@@ -1456,7 +1456,7 @@ extern struct SubSpriteTemplate gUnknown_08618064[];
 extern struct OamData gfxBronzeCrownOAM;
 extern u8 gfxBronzeCrown4bpp[];
 extern struct Struct0807C0E0 gUnknown_0807C0D8;
-extern u8 gUnknown_080A8668;
+extern u8 gExpertLevelsStarsNeeded;
 extern struct SpriteTemplate gUncompressedGraphicsTable[];
 
 extern struct GraphicsConfig gWorldOneStartData;
