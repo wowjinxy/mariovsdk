@@ -876,7 +876,7 @@ gUnknown_080B92E4:
 
 	.GLOBAL gUnknown_080B92EC
 gUnknown_080B92EC:
-	.INCBIN "assets/sprites/gUnknown_080B92EC.4bpp"
+	.INCBIN "assets/sprites/candle/gUnknown_080B92EC.4bpp"
 
 	.GLOBAL gUnknown_080B9AEC
 gUnknown_080B9AEC:
@@ -888,7 +888,7 @@ gUnknown_080B9B7C:
 
 	.GLOBAL gUnknown_080B9B84
 gUnknown_080B9B84:
-	.INCBIN "assets/sprites/gUnknown_080B9B84.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_080B9B84.4bpp"
 
 	.GLOBAL gUnknown_080B9C84
 gUnknown_080B9C84:
@@ -900,7 +900,7 @@ gUnknown_080B9DA4:
 
 	.GLOBAL gUnknown_080B9DAC
 gUnknown_080B9DAC:
-	.INCBIN "assets/sprites/gUnknown_080B9DAC.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_080B9DAC.4bpp"
 
 	.GLOBAL gUnknown_080B9FAC
 gUnknown_080B9FAC:
@@ -912,7 +912,7 @@ gUnknown_080BA1A4:
 
 	.GLOBAL gUnknown_080BA1AC
 gUnknown_080BA1AC:
-	.INCBIN "assets/sprites/gUnknown_080BA1AC.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_080BA1AC.4bpp"
 
 	.GLOBAL gUnknown_080BA8AC
 gUnknown_080BA8AC:
@@ -924,7 +924,7 @@ gUnknown_080BA9CC:
 
 	.GLOBAL gUnknown_080BA9D4
 gUnknown_080BA9D4:
-	.INCBIN "assets/sprites/gUnknown_080BA9D4.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_080BA9D4.4bpp"
 
 	.GLOBAL gfxDKPackAnimation
 gfxDKPackAnimation:
@@ -1106,7 +1106,7 @@ gUnknown_080BF03C:
 
 	.GLOBAL gUnknown_080BF044
 gUnknown_080BF044:
-	.INCBIN "assets/sprites/gUnknown_080BF044.4bpp"
+	.INCBIN "assets/sprites/fireball/gUnknown_080BF044.4bpp"
 
 	.GLOBAL gUnknown_080C0044
 gUnknown_080C0044:
@@ -1118,7 +1118,7 @@ gUnknown_080C0140:
 
 	.GLOBAL gUnknown_080C0148
 gUnknown_080C0148:
-	.INCBIN "assets/sprites/gUnknown_080C0148.4bpp"
+	.INCBIN "assets/sprites/fireball/gUnknown_080C0148.4bpp"
 
 	.GLOBAL gUnknown_080C0848
 gUnknown_080C0848:
@@ -1130,7 +1130,7 @@ gUnknown_080C09F8:
 
 	.GLOBAL gUnknown_080C0A00
 gUnknown_080C0A00:
-	.INCBIN "assets/sprites/gUnknown_080C0A00.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C0A00.4bpp"
 
 	.GLOBAL gUnknown_080C2200
 gUnknown_080C2200:
@@ -1142,7 +1142,7 @@ gUnknown_080C2320:
 
 	.GLOBAL gUnknown_080C2328
 gUnknown_080C2328:
-	.INCBIN "assets/sprites/gUnknown_080C2328.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C2328.4bpp"
 
 	.GLOBAL gUnknown_080C2728
 gUnknown_080C2728:
@@ -1154,7 +1154,7 @@ gUnknown_080C2800:
 
 	.GLOBAL gUnknown_080C2808
 gUnknown_080C2808:
-	.INCBIN "assets/sprites/gUnknown_080C2808.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C2808.4bpp"
 
 	.GLOBAL gUnknown_080C3408
 gUnknown_080C3408:
@@ -1166,7 +1166,7 @@ gUnknown_080C3648:
 
 	.GLOBAL gUnknown_080C3650
 gUnknown_080C3650:
-	.INCBIN "assets/sprites/gUnknown_080C3650.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C3650.4bpp"
 
 	.GLOBAL gUnknown_080C5650
 gUnknown_080C5650:
@@ -1178,7 +1178,7 @@ gUnknown_080C56E0:
 
 	.GLOBAL gUnknown_080C56E8
 gUnknown_080C56E8:
-	.INCBIN "assets/sprites/gUnknown_080C56E8.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C56E8.4bpp"
 
 	.GLOBAL gUnknown_080C5EE8
 gUnknown_080C5EE8:
@@ -1190,7 +1190,7 @@ gUnknown_080C6008:
 
 	.GLOBAL gUnknown_080C6010
 gUnknown_080C6010:
-	.INCBIN "assets/sprites/gUnknown_080C6010.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C6010.4bpp"
 
 	.GLOBAL gUnknown_080C7010
 gUnknown_080C7010:
@@ -1486,7 +1486,7 @@ gUnknown_080FDD28:
 
 	.GLOBAL gUnknown_080FDD30
 gUnknown_080FDD30:
-	.INCBIN "assets/sprites/gUnknown_080FDD30.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_080FDD30.4bpp"
 
 	.GLOBAL gUnknown_080FE0B0
 gUnknown_080FE0B0:
@@ -1498,7 +1498,7 @@ gUnknown_080FE1D0:
 
 	.GLOBAL gUnknown_080FE1D8
 gUnknown_080FE1D8:
-	.INCBIN "assets/sprites/gUnknown_080FE1D8.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_080FE1D8.4bpp"
 
 	.GLOBAL gUnknown_080FE5D8
 gUnknown_080FE5D8:
@@ -1510,7 +1510,7 @@ gUnknown_080FE6F8:
 
 	.GLOBAL gUnknown_080FE700
 gUnknown_080FE700:
-	.INCBIN "assets/sprites/gUnknown_080FE700.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_080FE700.4bpp"
 
 	.GLOBAL gUnknown_080FEB00
 gUnknown_080FEB00:
@@ -1618,7 +1618,7 @@ gUnknown_081018A8:
 
 	.GLOBAL gUnknown_081018B0
 gUnknown_081018B0:
-	.INCBIN "assets/sprites/gUnknown_081018B0.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_081018B0.4bpp"
 
 	.GLOBAL gUnknown_08101930
 gUnknown_08101930:
@@ -1630,7 +1630,7 @@ gUnknown_08101A50:
 
 	.GLOBAL gUnknown_08101A58
 gUnknown_08101A58:
-	.INCBIN "assets/sprites/gUnknown_08101A58.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08101A58.4bpp"
 
 	.GLOBAL gUnknown_08101AD8
 gUnknown_08101AD8:
@@ -1642,7 +1642,7 @@ gUnknown_08101CD0:
 
 	.GLOBAL gUnknown_08101CD8
 gUnknown_08101CD8:
-	.INCBIN "assets/sprites/gUnknown_08101CD8.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08101CD8.4bpp"
 
 	.GLOBAL gUnknown_08102358
 gUnknown_08102358:
@@ -1654,7 +1654,7 @@ gUnknown_08102430:
 
 	.GLOBAL gUnknown_08102438
 gUnknown_08102438:
-	.INCBIN "assets/sprites/gUnknown_08102438.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08102438.4bpp"
 
 	.GLOBAL gUnknown_08102738
 gUnknown_08102738:
@@ -1678,7 +1678,7 @@ gUnknown_08103C98:
 
 	.GLOBAL gUnknown_08103CA0
 gUnknown_08103CA0:
-	.INCBIN "assets/sprites/gUnknown_08103CA0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_08103CA0.4bpp"
 
 	.GLOBAL gUnknown_081054A0
 gUnknown_081054A0:
@@ -1702,7 +1702,7 @@ gUnknown_0810566C:
 
 	.GLOBAL gUnknown_08105674
 gUnknown_08105674:
-	.INCBIN "assets/sprites/gUnknown_08105674.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08105674.4bpp"
 
 	.GLOBAL gUnknown_08105A74
 gUnknown_08105A74:
@@ -1714,7 +1714,7 @@ gUnknown_08105B04:
 
 	.GLOBAL gUnknown_08105B0C
 gUnknown_08105B0C:
-	.INCBIN "assets/sprites/gUnknown_08105B0C.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08105B0C.4bpp"
 
 	.GLOBAL gUnknown_08105D0C
 gUnknown_08105D0C:
@@ -1726,7 +1726,7 @@ gUnknown_08105E2C:
 
 	.GLOBAL gUnknown_08105E34
 gUnknown_08105E34:
-	.INCBIN "assets/sprites/gUnknown_08105E34.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08105E34.4bpp"
 
 	.GLOBAL gUnknown_08106234
 gUnknown_08106234:
@@ -1738,7 +1738,7 @@ gUnknown_08106450:
 
 	.GLOBAL gUnknown_08106458
 gUnknown_08106458:
-	.INCBIN "assets/sprites/gUnknown_08106458.4bpp"
+	.INCBIN "assets/sprites/falling_objects/gUnknown_08106458.4bpp"
 
 	.GLOBAL gUnknown_08106BD8
 gUnknown_08106BD8:
@@ -1750,7 +1750,7 @@ gUnknown_08106BFC:
 
 	.GLOBAL gUnknown_08106C04
 gUnknown_08106C04:
-	.INCBIN "assets/sprites/gUnknown_08106C04.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_08106C04.4bpp"
 
 	.GLOBAL gUnknown_08106D04
 gUnknown_08106D04:
@@ -1762,7 +1762,7 @@ gUnknown_08106E24:
 
 	.GLOBAL gUnknown_08106E2C
 gUnknown_08106E2C:
-	.INCBIN "assets/sprites/gUnknown_08106E2C.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_08106E2C.4bpp"
 
 	.GLOBAL gUnknown_0810722C
 gUnknown_0810722C:
@@ -1774,7 +1774,7 @@ gUnknown_0810746C:
 
 	.GLOBAL gUnknown_08107474
 gUnknown_08107474:
-	.INCBIN "assets/sprites/gUnknown_08107474.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_08107474.4bpp"
 
 	.GLOBAL gUnknown_08108474
 gUnknown_08108474:
@@ -1786,7 +1786,7 @@ gUnknown_08108498:
 
 	.GLOBAL gUnknown_081084A0
 gUnknown_081084A0:
-	.INCBIN "assets/sprites/gUnknown_081084A0.4bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_081084A0.4bpp"
 
 	.GLOBAL gUnknown_081086A0
 gUnknown_081086A0:
@@ -1798,7 +1798,7 @@ gUnknown_081088E0:
 
 	.GLOBAL gUnknown_081088E8
 gUnknown_081088E8:
-	.INCBIN "assets/sprites/gUnknown_081088E8.4bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_081088E8.4bpp"
 
 	.GLOBAL gUnknown_0810C8E8
 gUnknown_0810C8E8:
@@ -1810,7 +1810,7 @@ gUnknown_0810CAE0:
 
 	.GLOBAL gUnknown_0810CAE8
 gUnknown_0810CAE8:
-	.INCBIN "assets/sprites/gUnknown_0810CAE8.4bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_0810CAE8.4bpp"
 
 	.GLOBAL gUnknown_0810E6E8
 gUnknown_0810E6E8:
@@ -1822,7 +1822,7 @@ gUnknown_0810E70C:
 
 	.GLOBAL gUnknown_0810E714
 gUnknown_0810E714:
-	.INCBIN "assets/sprites/gUnknown_0810E714.4bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_0810E714.4bpp"
 
 	.GLOBAL gUnknown_0810E914
 gUnknown_0810E914:
@@ -1834,7 +1834,7 @@ gUnknown_0810EA34:
 
 	.GLOBAL gUnknown_0810EA3C
 gUnknown_0810EA3C:
-	.INCBIN "assets/sprites/gUnknown_0810EA3C.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_0810EA3C.4bpp"
 
 	.GLOBAL gUnknown_0810F23C
 gUnknown_0810F23C:
@@ -1846,7 +1846,7 @@ gUnknown_0810F35C:
 
 	.GLOBAL gUnknown_0810F364
 gUnknown_0810F364:
-	.INCBIN "assets/sprites/gUnknown_0810F364.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_0810F364.4bpp"
 
 	.GLOBAL gUnknown_0810F764
 gUnknown_0810F764:
@@ -1858,7 +1858,7 @@ gUnknown_0810F788:
 
 	.GLOBAL gUnknown_0810F790
 gUnknown_0810F790:
-	.INCBIN "assets/sprites/gUnknown_0810F790.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_0810F790.4bpp"
 
 	.GLOBAL gUnknown_0810F890
 gUnknown_0810F890:
@@ -1870,7 +1870,7 @@ gUnknown_0810F968:
 
 	.GLOBAL gUnknown_0810F970
 gUnknown_0810F970:
-	.INCBIN "assets/sprites/gUnknown_0810F970.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_0810F970.4bpp"
 
 	.GLOBAL gUnknown_0810FC70
 gUnknown_0810FC70:
@@ -1882,7 +1882,7 @@ gUnknown_0810FD48:
 
 	.GLOBAL gUnknown_0810FD50
 gUnknown_0810FD50:
-	.INCBIN "assets/sprites/gUnknown_0810FD50.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_0810FD50.4bpp"
 
 	.GLOBAL gUnknown_08110050
 gUnknown_08110050:
@@ -1894,7 +1894,7 @@ gUnknown_081100E0:
 
 	.GLOBAL gUnknown_081100E8
 gUnknown_081100E8:
-	.INCBIN "assets/sprites/gUnknown_081100E8.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_081100E8.4bpp"
 
 	.GLOBAL gUnknown_081102E8
 gUnknown_081102E8:
@@ -1906,7 +1906,7 @@ gUnknown_081104E0:
 
 	.GLOBAL gUnknown_081104E8
 gUnknown_081104E8:
-	.INCBIN "assets/sprites/gUnknown_081104E8.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_081104E8.4bpp"
 
 	.GLOBAL gUnknown_08110BE8
 gUnknown_08110BE8:
@@ -1918,7 +1918,7 @@ gUnknown_08110CE4:
 
 	.GLOBAL gUnknown_08110CEC
 gUnknown_08110CEC:
-	.INCBIN "assets/sprites/gUnknown_08110CEC.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_08110CEC.4bpp"
 
 	.GLOBAL gUnknown_0811106C
 gUnknown_0811106C:
@@ -1930,7 +1930,7 @@ gUnknown_0811121C:
 
 	.GLOBAL gUnknown_08111224
 gUnknown_08111224:
-	.INCBIN "assets/sprites/gUnknown_08111224.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08111224.4bpp"
 
 	.GLOBAL gUnknown_08112A24
 gUnknown_08112A24:
@@ -1942,7 +1942,7 @@ gUnknown_08112B44:
 
 	.GLOBAL gUnknown_08112B4C
 gUnknown_08112B4C:
-	.INCBIN "assets/sprites/gUnknown_08112B4C.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08112B4C.4bpp"
 
 	.GLOBAL gUnknown_08112C4C
 gUnknown_08112C4C:
@@ -1954,7 +1954,7 @@ gUnknown_08112D24:
 
 	.GLOBAL gUnknown_08112D2C
 gUnknown_08112D2C:
-	.INCBIN "assets/sprites/gUnknown_08112D2C.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08112D2C.4bpp"
 
 	.GLOBAL gUnknown_0811392C
 gUnknown_0811392C:
@@ -1966,7 +1966,7 @@ gUnknown_08113ADC:
 
 	.GLOBAL gUnknown_08113AE4
 gUnknown_08113AE4:
-	.INCBIN "assets/sprites/gUnknown_08113AE4.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08113AE4.4bpp"
 
 	.GLOBAL gUnknown_081152E4
 gUnknown_081152E4:
@@ -1978,7 +1978,7 @@ gUnknown_08115404:
 
 	.GLOBAL gUnknown_0811540C
 gUnknown_0811540C:
-	.INCBIN "assets/sprites/gUnknown_0811540C.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_0811540C.4bpp"
 
 	.GLOBAL gUnknown_0811640C
 gUnknown_0811640C:
@@ -1990,7 +1990,7 @@ gUnknown_0811649C:
 
 	.GLOBAL gUnknown_081164A4
 gUnknown_081164A4:
-	.INCBIN "assets/sprites/gUnknown_081164A4.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_081164A4.4bpp"
 
 	.GLOBAL gUnknown_08116CA4
 gUnknown_08116CA4:
@@ -2002,7 +2002,7 @@ gUnknown_08116E54:
 
 	.GLOBAL gUnknown_08116E5C
 gUnknown_08116E5C:
-	.INCBIN "assets/sprites/gUnknown_08116E5C.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08116E5C.4bpp"
 
 	.GLOBAL gUnknown_0811865C
 gUnknown_0811865C:
@@ -2074,7 +2074,7 @@ gUnknown_081196E8:
 
 	.GLOBAL gUnknown_081196F0
 gUnknown_081196F0:
-	.INCBIN "assets/sprites/gUnknown_081196F0.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_081196F0.4bpp"
 
 	.GLOBAL gUnknown_081198F0
 gUnknown_081198F0:
@@ -2398,7 +2398,7 @@ gUnknown_08129804:
 
 	.GLOBAL gUnknown_0812980C
 gUnknown_0812980C:
-	.INCBIN "assets/sprites/gUnknown_0812980C.4bpp"
+	.INCBIN "assets/sprites/falling_objects/gUnknown_0812980C.4bpp"
 
 	.GLOBAL gUnknown_0812A80C
 gUnknown_0812A80C:
@@ -2410,7 +2410,7 @@ gUnknown_0812A950:
 
 	.GLOBAL gUnknown_0812A958
 gUnknown_0812A958:
-	.INCBIN "assets/sprites/gUnknown_0812A958.4bpp"
+	.INCBIN "assets/sprites/brickman/gUnknown_0812A958.4bpp"
 
 	.GLOBAL gUnknown_0812B558
 gUnknown_0812B558:
@@ -2422,7 +2422,7 @@ gUnknown_0812BA68:
 
 	.GLOBAL gUnknown_0812BA70
 gUnknown_0812BA70:
-	.INCBIN "assets/sprites/gUnknown_0812BA70.4bpp"
+	.INCBIN "assets/sprites/brickman/gUnknown_0812BA70.4bpp"
 
 	.GLOBAL gUnknown_0812CA70
 gUnknown_0812CA70:
@@ -2794,7 +2794,7 @@ gUnknown_0812EA10:
 
 	.GLOBAL gUnknown_0812EA18
 gUnknown_0812EA18:
-	.INCBIN "assets/sprites/gUnknown_0812EA18.4bpp"
+	.INCBIN "assets/sprites/candle/gUnknown_0812EA18.4bpp"
 
 	.GLOBAL gUnknown_0812FA18
 gUnknown_0812FA18:
@@ -2866,7 +2866,7 @@ gUnknown_081312A0:
 
 	.GLOBAL gUnknown_081312A8
 gUnknown_081312A8:
-	.INCBIN "assets/sprites/gUnknown_081312A8.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_081312A8.4bpp"
 
 	.GLOBAL gUnknown_08131EA8
 gUnknown_08131EA8:
@@ -2878,7 +2878,7 @@ gUnknown_08131F38:
 
 	.GLOBAL gUnknown_08131F40
 gUnknown_08131F40:
-	.INCBIN "assets/sprites/gUnknown_08131F40.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_08131F40.4bpp"
 
 	.GLOBAL gUnknown_08132740
 gUnknown_08132740:
@@ -2890,7 +2890,7 @@ gUnknown_08132860:
 
 	.GLOBAL gUnknown_08132868
 gUnknown_08132868:
-	.INCBIN "assets/sprites/gUnknown_08132868.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_08132868.4bpp"
 
 	.GLOBAL gUnknown_08133868
 gUnknown_08133868:
@@ -2902,7 +2902,7 @@ gUnknown_08133A60:
 
 	.GLOBAL gUnknown_08133A68
 gUnknown_08133A68:
-	.INCBIN "assets/sprites/gUnknown_08133A68.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_08133A68.4bpp"
 
 	.GLOBAL gUnknown_08135668
 gUnknown_08135668:
@@ -2914,7 +2914,7 @@ gUnknown_08135788:
 
 	.GLOBAL gUnknown_08135790
 gUnknown_08135790:
-	.INCBIN "assets/sprites/gUnknown_08135790.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08135790.4bpp"
 
 	.GLOBAL gUnknown_08135B90
 gUnknown_08135B90:
@@ -2926,7 +2926,7 @@ gUnknown_08135C20:
 
 	.GLOBAL gUnknown_08135C28
 gUnknown_08135C28:
-	.INCBIN "assets/sprites/gUnknown_08135C28.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08135C28.4bpp"
 
 	.GLOBAL gUnknown_08135E28
 gUnknown_08135E28:
@@ -2938,7 +2938,7 @@ gUnknown_08135F48:
 
 	.GLOBAL gUnknown_08135F50
 gUnknown_08135F50:
-	.INCBIN "assets/sprites/gUnknown_08135F50.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08135F50.4bpp"
 
 	.GLOBAL gUnknown_08136350
 gUnknown_08136350:
@@ -2950,7 +2950,7 @@ gUnknown_08136500:
 
 	.GLOBAL gUnknown_08136508
 gUnknown_08136508:
-	.INCBIN "assets/sprites/gUnknown_08136508.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08136508.4bpp"
 
 	.GLOBAL gUnknown_08136B08
 gUnknown_08136B08:
@@ -2962,7 +2962,7 @@ gUnknown_08136C28:
 
 	.GLOBAL gUnknown_08136C30
 gUnknown_08136C30:
-	.INCBIN "assets/sprites/gUnknown_08136C30.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08136C30.4bpp"
 
 	.GLOBAL gUnknown_08137030
 gUnknown_08137030:
@@ -2974,7 +2974,7 @@ gUnknown_08137150:
 
 	.GLOBAL gUnknown_08137158
 gUnknown_08137158:
-	.INCBIN "assets/sprites/gUnknown_08137158.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08137158.4bpp"
 
 	.GLOBAL gUnknown_08137558
 gUnknown_08137558:
@@ -2986,7 +2986,7 @@ gUnknown_081375E8:
 
 	.GLOBAL gUnknown_081375F0
 gUnknown_081375F0:
-	.INCBIN "assets/sprites/gUnknown_081375F0.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_081375F0.4bpp"
 
 	.GLOBAL gUnknown_081377F0
 gUnknown_081377F0:
@@ -2998,7 +2998,7 @@ gUnknown_081379A0:
 
 	.GLOBAL gUnknown_081379A8
 gUnknown_081379A8:
-	.INCBIN "assets/sprites/gUnknown_081379A8.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_081379A8.4bpp"
 
 	.GLOBAL gUnknown_08137FA8
 gUnknown_08137FA8:
@@ -3010,7 +3010,7 @@ gUnknown_081381E8:
 
 	.GLOBAL gUnknown_081381F0
 gUnknown_081381F0:
-	.INCBIN "assets/sprites/gUnknown_081381F0.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_081381F0.4bpp"
 
 	.GLOBAL gUnknown_081389F0
 gUnknown_081389F0:
@@ -3022,7 +3022,7 @@ gUnknown_08138B10:
 
 	.GLOBAL gUnknown_08138B18
 gUnknown_08138B18:
-	.INCBIN "assets/sprites/gUnknown_08138B18.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08138B18.4bpp"
 
 	.GLOBAL gUnknown_08138F18
 gUnknown_08138F18:
@@ -3034,7 +3034,7 @@ gUnknown_08139038:
 
 	.GLOBAL gUnknown_08139040
 gUnknown_08139040:
-	.INCBIN "assets/sprites/gUnknown_08139040.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08139040.4bpp"
 
 	.GLOBAL gUnknown_08139440
 gUnknown_08139440:
@@ -3046,7 +3046,7 @@ gUnknown_081394D0:
 
 	.GLOBAL gUnknown_081394D8
 gUnknown_081394D8:
-	.INCBIN "assets/sprites/gUnknown_081394D8.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_081394D8.4bpp"
 
 	.GLOBAL gUnknown_081396D8
 gUnknown_081396D8:
@@ -3058,7 +3058,7 @@ gUnknown_08139918:
 
 	.GLOBAL gUnknown_08139920
 gUnknown_08139920:
-	.INCBIN "assets/sprites/gUnknown_08139920.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08139920.4bpp"
 
 	.GLOBAL gUnknown_0813A120
 gUnknown_0813A120:
@@ -3742,7 +3742,7 @@ gUnknown_08223D40:
 
 	.GLOBAL gUnknown_08223D48
 gUnknown_08223D48:
-	.INCBIN "assets/sprites/gUnknown_08223D48.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223D48.4bpp"
 
 	.GLOBAL gUnknown_08223D68
 gUnknown_08223D68:
@@ -3754,7 +3754,7 @@ gUnknown_08223D8C:
 
 	.GLOBAL gUnknown_08223D94
 gUnknown_08223D94:
-	.INCBIN "assets/sprites/gUnknown_08223D94.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223D94.4bpp"
 
 	.GLOBAL gUnknown_08223E14
 gUnknown_08223E14:
@@ -3766,7 +3766,7 @@ gUnknown_08223E38:
 
 	.GLOBAL gUnknown_08223E40
 gUnknown_08223E40:
-	.INCBIN "assets/sprites/gUnknown_08223E40.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223E40.4bpp"
 
 	.GLOBAL gUnknown_08223EC0
 gUnknown_08223EC0:
@@ -3778,7 +3778,7 @@ gUnknown_08223EE4:
 
 	.GLOBAL gUnknown_08223EEC
 gUnknown_08223EEC:
-	.INCBIN "assets/sprites/gUnknown_08223EEC.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223EEC.4bpp"
 
 	.GLOBAL gUnknown_08223F6C
 gUnknown_08223F6C:
@@ -3790,7 +3790,7 @@ gUnknown_08223F90:
 
 	.GLOBAL gUnknown_08223F98
 gUnknown_08223F98:
-	.INCBIN "assets/sprites/gUnknown_08223F98.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223F98.4bpp"
 
 	.GLOBAL gUnknown_08224018
 gUnknown_08224018:
@@ -3802,7 +3802,7 @@ gUnknown_0822403C:
 
 	.GLOBAL gUnknown_08224044
 gUnknown_08224044:
-	.INCBIN "assets/sprites/gUnknown_08224044.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08224044.4bpp"
 
 	.GLOBAL gUnknown_08224064
 gUnknown_08224064:
@@ -3814,7 +3814,7 @@ gUnknown_08224088:
 
 	.GLOBAL gUnknown_08224090
 gUnknown_08224090:
-	.INCBIN "assets/sprites/gUnknown_08224090.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08224090.4bpp"
 
 	.GLOBAL gUnknown_08224190
 gUnknown_08224190:
@@ -4030,7 +4030,7 @@ gUnknown_0827D898:
 
 	.GLOBAL gUnknown_0827D8A0
 gUnknown_0827D8A0:
-	.INCBIN "assets/sprites/gUnknown_0827D8A0.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_0827D8A0.4bpp"
 
 	.GLOBAL gUnknown_0827E8A0
 gUnknown_0827E8A0:
@@ -4042,7 +4042,7 @@ gUnknown_0827E9E4:
 
 	.GLOBAL gUnknown_0827E9EC
 gUnknown_0827E9EC:
-	.INCBIN "assets/sprites/gUnknown_0827E9EC.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_0827E9EC.4bpp"
 
 	.GLOBAL gUnknown_0827FBEC
 gUnknown_0827FBEC:
@@ -4054,7 +4054,7 @@ gUnknown_0827FDE4:
 
 	.GLOBAL gUnknown_0827FDEC
 gUnknown_0827FDEC:
-	.INCBIN "assets/sprites/gUnknown_0827FDEC.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_0827FDEC.4bpp"
 
 	.GLOBAL gUnknown_08280BEC
 gUnknown_08280BEC:
@@ -4066,7 +4066,7 @@ gUnknown_08280DE4:
 
 	.GLOBAL gUnknown_08280DEC
 gUnknown_08280DEC:
-	.INCBIN "assets/sprites/gUnknown_08280DEC.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_08280DEC.4bpp"
 
 	.GLOBAL gUnknown_08281BEC
 gUnknown_08281BEC:
@@ -4078,7 +4078,7 @@ gUnknown_08281D54:
 
 	.GLOBAL gUnknown_08281D5C
 gUnknown_08281D5C:
-	.INCBIN "assets/sprites/gUnknown_08281D5C.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_08281D5C.4bpp"
 
 	.GLOBAL gUnknown_0828315C
 gUnknown_0828315C:
@@ -4090,7 +4090,7 @@ gUnknown_0828339C:
 
 	.GLOBAL gUnknown_082833A4
 gUnknown_082833A4:
-	.INCBIN "assets/sprites/gUnknown_082833A4.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_082833A4.4bpp"
 
 	.GLOBAL gUnknown_082853A4
 gUnknown_082853A4:
@@ -4102,7 +4102,7 @@ gUnknown_08285554:
 
 	.GLOBAL gUnknown_0828555C
 gUnknown_0828555C:
-	.INCBIN "assets/sprites/gUnknown_0828555C.8bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_0828555C.8bpp"
 
 	.GLOBAL gUnknown_0828855C
 gUnknown_0828855C:
@@ -4210,7 +4210,7 @@ gUnknown_0828FF5C:
 
 	.GLOBAL gUnknown_0828FF64
 gUnknown_0828FF64:
-	.INCBIN "assets/sprites/gUnknown_0828FF64.4bpp"
+	.INCBIN "assets/sprites/points/gUnknown_0828FF64.4bpp"
 
 	.GLOBAL gUnknown_0828FFE4
 gUnknown_0828FFE4:
@@ -4222,7 +4222,7 @@ gUnknown_08290224:
 
 	.GLOBAL gUnknown_0829022C
 gUnknown_0829022C:
-	.INCBIN "assets/sprites/gUnknown_0829022C.4bpp"
+	.INCBIN "assets/sprites/points/gUnknown_0829022C.4bpp"
 
 	.GLOBAL gUnknown_082902AC
 gUnknown_082902AC:
@@ -4234,7 +4234,7 @@ gUnknown_082904EC:
 
 	.GLOBAL gUnknown_082904F4
 gUnknown_082904F4:
-	.INCBIN "assets/sprites/gUnknown_082904F4.4bpp"
+	.INCBIN "assets/sprites/points/gUnknown_082904F4.4bpp"
 
 	.GLOBAL gUnknown_08290574
 gUnknown_08290574:
@@ -4246,7 +4246,7 @@ gUnknown_082907B4:
 
 	.GLOBAL gUnknown_082907BC
 gUnknown_082907BC:
-	.INCBIN "assets/sprites/gUnknown_082907BC.4bpp"
+	.INCBIN "assets/sprites/points/gUnknown_082907BC.4bpp"
 
 	.GLOBAL gUnknown_0829083C
 gUnknown_0829083C:
@@ -4318,7 +4318,7 @@ gUnknown_08295508:
 
 	.GLOBAL gUnknown_08295510
 gUnknown_08295510:
-	.INCBIN "assets/sprites/gUnknown_08295510.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08295510.4bpp"
 
 	.GLOBAL gUnknown_08295530
 gUnknown_08295530:
@@ -4330,7 +4330,7 @@ gUnknown_08295554:
 
 	.GLOBAL gUnknown_0829555C
 gUnknown_0829555C:
-	.INCBIN "assets/sprites/gUnknown_0829555C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_0829555C.4bpp"
 
 	.GLOBAL gUnknown_0829557C
 gUnknown_0829557C:
@@ -4342,7 +4342,7 @@ gUnknown_082955A0:
 
 	.GLOBAL gUnknown_082955A8
 gUnknown_082955A8:
-	.INCBIN "assets/sprites/gUnknown_082955A8.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082955A8.4bpp"
 
 	.GLOBAL gUnknown_082955C8
 gUnknown_082955C8:
@@ -4354,7 +4354,7 @@ gUnknown_082955EC:
 
 	.GLOBAL gUnknown_082955F4
 gUnknown_082955F4:
-	.INCBIN "assets/sprites/gUnknown_082955F4.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082955F4.4bpp"
 
 	.GLOBAL gUnknown_08295614
 gUnknown_08295614:
@@ -4366,7 +4366,7 @@ gUnknown_08295638:
 
 	.GLOBAL gUnknown_08295640
 gUnknown_08295640:
-	.INCBIN "assets/sprites/gUnknown_08295640.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08295640.4bpp"
 
 	.GLOBAL gUnknown_08295660
 gUnknown_08295660:
@@ -4390,7 +4390,7 @@ gUnknown_082957B0:
 
 	.GLOBAL gUnknown_082957B8
 gUnknown_082957B8:
-	.INCBIN "assets/sprites/gUnknown_082957B8.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082957B8.4bpp"
 
 	.GLOBAL gUnknown_08295FB8
 gUnknown_08295FB8:
@@ -4402,7 +4402,7 @@ gUnknown_08295FDC:
 
 	.GLOBAL gUnknown_08295FE4
 gUnknown_08295FE4:
-	.INCBIN "assets/sprites/gUnknown_08295FE4.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08295FE4.4bpp"
 
 	.GLOBAL gUnknown_082967E4
 gUnknown_082967E4:
@@ -4414,7 +4414,7 @@ gUnknown_08296808:
 
 	.GLOBAL gUnknown_08296810
 gUnknown_08296810:
-	.INCBIN "assets/sprites/gUnknown_08296810.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08296810.4bpp"
 
 	.GLOBAL gUnknown_08297010
 gUnknown_08297010:
@@ -4426,7 +4426,7 @@ gUnknown_08297034:
 
 	.GLOBAL gUnknown_0829703C
 gUnknown_0829703C:
-	.INCBIN "assets/sprites/gUnknown_0829703C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_0829703C.4bpp"
 
 	.GLOBAL gUnknown_0829713C
 gUnknown_0829713C:
@@ -4438,7 +4438,7 @@ gUnknown_08297160:
 
 	.GLOBAL gUnknown_08297168
 gUnknown_08297168:
-	.INCBIN "assets/sprites/gUnknown_08297168.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297168.4bpp"
 
 	.GLOBAL gUnknown_08297268
 gUnknown_08297268:
@@ -4450,7 +4450,7 @@ gUnknown_0829728C:
 
 	.GLOBAL gUnknown_08297294
 gUnknown_08297294:
-	.INCBIN "assets/sprites/gUnknown_08297294.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297294.4bpp"
 
 	.GLOBAL gUnknown_08297394
 gUnknown_08297394:
@@ -4462,7 +4462,7 @@ gUnknown_082973B8:
 
 	.GLOBAL gUnknown_082973C0
 gUnknown_082973C0:
-	.INCBIN "assets/sprites/gUnknown_082973C0.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082973C0.4bpp"
 
 	.GLOBAL gUnknown_082974C0
 gUnknown_082974C0:
@@ -4474,7 +4474,7 @@ gUnknown_082974E4:
 
 	.GLOBAL gUnknown_082974EC
 gUnknown_082974EC:
-	.INCBIN "assets/sprites/gUnknown_082974EC.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082974EC.4bpp"
 
 	.GLOBAL gUnknown_082975EC
 gUnknown_082975EC:
@@ -4486,7 +4486,7 @@ gUnknown_08297610:
 
 	.GLOBAL gUnknown_08297618
 gUnknown_08297618:
-	.INCBIN "assets/sprites/gUnknown_08297618.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297618.4bpp"
 
 	.GLOBAL gUnknown_08297718
 gUnknown_08297718:
@@ -4498,7 +4498,7 @@ gUnknown_0829773C:
 
 	.GLOBAL gUnknown_08297744
 gUnknown_08297744:
-	.INCBIN "assets/sprites/gUnknown_08297744.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297744.4bpp"
 
 	.GLOBAL gUnknown_08297844
 gUnknown_08297844:
@@ -4510,7 +4510,7 @@ gUnknown_08297868:
 
 	.GLOBAL gUnknown_08297870
 gUnknown_08297870:
-	.INCBIN "assets/sprites/gUnknown_08297870.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297870.4bpp"
 
 	.GLOBAL gUnknown_08297970
 gUnknown_08297970:
@@ -4522,7 +4522,7 @@ gUnknown_08297994:
 
 	.GLOBAL gUnknown_0829799C
 gUnknown_0829799C:
-	.INCBIN "assets/sprites/gUnknown_0829799C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_0829799C.4bpp"
 
 	.GLOBAL gUnknown_08297A9C
 gUnknown_08297A9C:
@@ -4534,7 +4534,7 @@ gUnknown_08297AC0:
 
 	.GLOBAL gUnknown_08297AC8
 gUnknown_08297AC8:
-	.INCBIN "assets/sprites/gUnknown_08297AC8.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297AC8.4bpp"
 
 	.GLOBAL gUnknown_08297BC8
 gUnknown_08297BC8:
@@ -4546,7 +4546,7 @@ gUnknown_08297BEC:
 
 	.GLOBAL gUnknown_08297BF4
 gUnknown_08297BF4:
-	.INCBIN "assets/sprites/gUnknown_08297BF4.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297BF4.4bpp"
 
 	.GLOBAL gUnknown_08297CF4
 gUnknown_08297CF4:
@@ -4558,7 +4558,7 @@ gUnknown_08297D18:
 
 	.GLOBAL gUnknown_08297D20
 gUnknown_08297D20:
-	.INCBIN "assets/sprites/gUnknown_08297D20.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297D20.4bpp"
 
 	.GLOBAL gUnknown_08297E20
 gUnknown_08297E20:
@@ -4570,7 +4570,7 @@ gUnknown_08297E44:
 
 	.GLOBAL gUnknown_08297E4C
 gUnknown_08297E4C:
-	.INCBIN "assets/sprites/gUnknown_08297E4C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297E4C.4bpp"
 
 	.GLOBAL gUnknown_08297F4C
 gUnknown_08297F4C:
@@ -4582,7 +4582,7 @@ gUnknown_08297F70:
 
 	.GLOBAL gUnknown_08297F78
 gUnknown_08297F78:
-	.INCBIN "assets/sprites/gUnknown_08297F78.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297F78.4bpp"
 
 	.GLOBAL gUnknown_08298078
 gUnknown_08298078:
@@ -4594,7 +4594,7 @@ gUnknown_0829809C:
 
 	.GLOBAL gUnknown_082980A4
 gUnknown_082980A4:
-	.INCBIN "assets/sprites/gUnknown_082980A4.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082980A4.4bpp"
 
 	.GLOBAL gUnknown_082981A4
 gUnknown_082981A4:
@@ -4606,7 +4606,7 @@ gUnknown_082981C8:
 
 	.GLOBAL gUnknown_082981D0
 gUnknown_082981D0:
-	.INCBIN "assets/sprites/gUnknown_082981D0.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082981D0.4bpp"
 
 	.GLOBAL gUnknown_082982D0
 gUnknown_082982D0:
@@ -4618,7 +4618,7 @@ gUnknown_082982F4:
 
 	.GLOBAL gUnknown_082982FC
 gUnknown_082982FC:
-	.INCBIN "assets/sprites/gUnknown_082982FC.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082982FC.4bpp"
 
 	.GLOBAL gUnknown_082983FC
 gUnknown_082983FC:
@@ -4630,7 +4630,7 @@ gUnknown_08298420:
 
 	.GLOBAL gUnknown_08298428
 gUnknown_08298428:
-	.INCBIN "assets/sprites/gUnknown_08298428.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298428.4bpp"
 
 	.GLOBAL gUnknown_08298528
 gUnknown_08298528:
@@ -4642,7 +4642,7 @@ gUnknown_0829854C:
 
 	.GLOBAL gUnknown_08298554
 gUnknown_08298554:
-	.INCBIN "assets/sprites/gUnknown_08298554.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298554.4bpp"
 
 	.GLOBAL gUnknown_08298654
 gUnknown_08298654:
@@ -4654,7 +4654,7 @@ gUnknown_08298678:
 
 	.GLOBAL gUnknown_08298680
 gUnknown_08298680:
-	.INCBIN "assets/sprites/gUnknown_08298680.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298680.4bpp"
 
 	.GLOBAL gUnknown_08298780
 gUnknown_08298780:
@@ -4666,7 +4666,7 @@ gUnknown_082987A4:
 
 	.GLOBAL gUnknown_082987AC
 gUnknown_082987AC:
-	.INCBIN "assets/sprites/gUnknown_082987AC.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082987AC.4bpp"
 
 	.GLOBAL gUnknown_082988AC
 gUnknown_082988AC:
@@ -4678,7 +4678,7 @@ gUnknown_082988D0:
 
 	.GLOBAL gUnknown_082988D8
 gUnknown_082988D8:
-	.INCBIN "assets/sprites/gUnknown_082988D8.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082988D8.4bpp"
 
 	.GLOBAL gUnknown_082989D8
 gUnknown_082989D8:
@@ -4690,7 +4690,7 @@ gUnknown_082989FC:
 
 	.GLOBAL gUnknown_08298A04
 gUnknown_08298A04:
-	.INCBIN "assets/sprites/gUnknown_08298A04.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298A04.4bpp"
 
 	.GLOBAL gUnknown_08298B04
 gUnknown_08298B04:
@@ -4702,7 +4702,7 @@ gUnknown_08298B28:
 
 	.GLOBAL gUnknown_08298B30
 gUnknown_08298B30:
-	.INCBIN "assets/sprites/gUnknown_08298B30.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298B30.4bpp"
 
 	.GLOBAL gUnknown_08298C30
 gUnknown_08298C30:
@@ -4714,7 +4714,7 @@ gUnknown_08298C54:
 
 	.GLOBAL gUnknown_08298C5C
 gUnknown_08298C5C:
-	.INCBIN "assets/sprites/gUnknown_08298C5C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298C5C.4bpp"
 
 	.GLOBAL gUnknown_08298D5C
 gUnknown_08298D5C:
@@ -4726,7 +4726,7 @@ gUnknown_08298D80:
 
 	.GLOBAL gUnknown_08298D88
 gUnknown_08298D88:
-	.INCBIN "assets/sprites/gUnknown_08298D88.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298D88.4bpp"
 
 	.GLOBAL gUnknown_08298E88
 gUnknown_08298E88:
@@ -4738,7 +4738,7 @@ gUnknown_08298EAC:
 
 	.GLOBAL gUnknown_08298EB4
 gUnknown_08298EB4:
-	.INCBIN "assets/sprites/gUnknown_08298EB4.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298EB4.4bpp"
 
 	.GLOBAL gUnknown_08298FB4
 gUnknown_08298FB4:
@@ -4750,7 +4750,7 @@ gUnknown_08298FD8:
 
 	.GLOBAL gUnknown_08298FE0
 gUnknown_08298FE0:
-	.INCBIN "assets/sprites/gUnknown_08298FE0.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298FE0.4bpp"
 
 	.GLOBAL gUnknown_082990E0
 gUnknown_082990E0:
@@ -4762,7 +4762,7 @@ gUnknown_08299104:
 
 	.GLOBAL gUnknown_0829910C
 gUnknown_0829910C:
-	.INCBIN "assets/sprites/gUnknown_0829910C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_0829910C.4bpp"
 
 	.GLOBAL gUnknown_0829920C
 gUnknown_0829920C:
@@ -4774,7 +4774,7 @@ gUnknown_08299230:
 
 	.GLOBAL gUnknown_08299238
 gUnknown_08299238:
-	.INCBIN "assets/sprites/gUnknown_08299238.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299238.4bpp"
 
 	.GLOBAL gUnknown_08299338
 gUnknown_08299338:
@@ -4786,7 +4786,7 @@ gUnknown_0829935C:
 
 	.GLOBAL gUnknown_08299364
 gUnknown_08299364:
-	.INCBIN "assets/sprites/gUnknown_08299364.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299364.4bpp"
 
 	.GLOBAL gUnknown_08299464
 gUnknown_08299464:
@@ -4798,7 +4798,7 @@ gUnknown_08299488:
 
 	.GLOBAL gUnknown_08299490
 gUnknown_08299490:
-	.INCBIN "assets/sprites/gUnknown_08299490.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299490.4bpp"
 
 	.GLOBAL gUnknown_08299590
 gUnknown_08299590:
@@ -4810,7 +4810,7 @@ gUnknown_082995B4:
 
 	.GLOBAL gUnknown_082995BC
 gUnknown_082995BC:
-	.INCBIN "assets/sprites/gUnknown_082995BC.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082995BC.4bpp"
 
 	.GLOBAL gUnknown_082996BC
 gUnknown_082996BC:
@@ -4822,7 +4822,7 @@ gUnknown_082996E0:
 
 	.GLOBAL gUnknown_082996E8
 gUnknown_082996E8:
-	.INCBIN "assets/sprites/gUnknown_082996E8.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082996E8.4bpp"
 
 	.GLOBAL gUnknown_082997E8
 gUnknown_082997E8:
@@ -4834,7 +4834,7 @@ gUnknown_0829980C:
 
 	.GLOBAL gUnknown_08299814
 gUnknown_08299814:
-	.INCBIN "assets/sprites/gUnknown_08299814.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299814.4bpp"
 
 	.GLOBAL gUnknown_08299914
 gUnknown_08299914:
@@ -4846,22 +4846,22 @@ gUnknown_08299938:
 
 	.GLOBAL gUnknown_08299940
 gUnknown_08299940:
-	.INCBIN "assets/sprites/gUnknown_08299940.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299940.4bpp"
 
-	.GLOBAL gUnknown_08299A40
-gUnknown_08299A40:
+	.GLOBAL gfxExpertLevelIconPicsAnimation
+gfxExpertLevelIconPicsAnimation:
 	.INCBIN "baserom.gba", 0x299A40, 0x299BF0-0x299A40
 
-	.GLOBAL gUnknown_08299BF0
-gUnknown_08299BF0:
+	.GLOBAL gfxExpertLevelIconPicsOAM
+gfxExpertLevelIconPicsOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_08299BF8
-gUnknown_08299BF8:
-	.INCBIN "assets/sprites/gUnknown_08299BF8.4bpp"
+	.GLOBAL gfxExpertLevelIconPics
+gfxExpertLevelIconPics:
+	.INCBIN "assets/sprites/expert_levels/ExpertLevelIconPics.4bpp"
 
 	.GLOBAL gUnknown_0829A7F8
-gUnknown_0829A7F8:
+gUnknown_0829A7F8:	
 	.INCBIN "baserom.gba", 0x29A7F8, 0x29A81C-0x29A7F8
 
 	.GLOBAL gUnknown_0829A81C
@@ -4870,7 +4870,7 @@ gUnknown_0829A81C:
 
 	.GLOBAL gUnknown_0829A824
 gUnknown_0829A824:
-	.INCBIN "assets/sprites/gUnknown_0829A824.8bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_0829A824.8bpp"
 
 	.GLOBAL gUnknown_0829B824
 gUnknown_0829B824:
@@ -4882,7 +4882,7 @@ gUnknown_0829BA64:
 
 	.GLOBAL gUnknown_0829BA6C
 gUnknown_0829BA6C:
-	.INCBIN "assets/sprites/gUnknown_0829BA6C.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829BA6C.4bpp"
 
 	.GLOBAL gUnknown_0829C26C
 gUnknown_0829C26C:
@@ -4894,7 +4894,7 @@ gUnknown_0829C4AC:
 
 	.GLOBAL gUnknown_0829C4B4
 gUnknown_0829C4B4:
-	.INCBIN "assets/sprites/gUnknown_0829C4B4.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829C4B4.4bpp"
 
 	.GLOBAL gUnknown_0829CCB4
 gUnknown_0829CCB4:
@@ -4906,7 +4906,7 @@ gUnknown_0829CEF4:
 
 	.GLOBAL gUnknown_0829CEFC
 gUnknown_0829CEFC:
-	.INCBIN "assets/sprites/gUnknown_0829CEFC.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829CEFC.4bpp"
 
 	.GLOBAL gUnknown_0829CF7C
 gUnknown_0829CF7C:
@@ -4918,7 +4918,7 @@ gUnknown_0829D1BC:
 
 	.GLOBAL gUnknown_0829D1C4
 gUnknown_0829D1C4:
-	.INCBIN "assets/sprites/gUnknown_0829D1C4.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829D1C4.4bpp"
 
 	.GLOBAL gUnknown_0829D9C4
 gUnknown_0829D9C4:
@@ -4930,7 +4930,7 @@ gUnknown_0829D9E8:
 
 	.GLOBAL gUnknown_0829D9F0
 gUnknown_0829D9F0:
-	.INCBIN "assets/sprites/gUnknown_0829D9F0.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829D9F0.4bpp"
 
 	.GLOBAL gUnknown_0829DA70
 gUnknown_0829DA70:
@@ -4942,7 +4942,7 @@ gUnknown_0829DCB0:
 
 	.GLOBAL gUnknown_0829DCB8
 gUnknown_0829DCB8:
-	.INCBIN "assets/sprites/gUnknown_0829DCB8.4bpp"
+	.INCBIN "assets/sprites/fireball/gUnknown_0829DCB8.4bpp"
 
 	.GLOBAL gUnknown_0829ECB8
 gUnknown_0829ECB8:
@@ -4954,7 +4954,7 @@ gUnknown_0829EDB4:
 
 	.GLOBAL gUnknown_0829EDBC
 gUnknown_0829EDBC:
-	.INCBIN "assets/sprites/gUnknown_0829EDBC.4bpp"
+	.INCBIN "assets/sprites/fireball/gUnknown_0829EDBC.4bpp"
 
 	.GLOBAL gUnknown_0829F4BC
 gUnknown_0829F4BC:
@@ -4966,7 +4966,7 @@ gUnknown_0829F66C:
 
 	.GLOBAL gUnknown_0829F674
 gUnknown_0829F674:
-	.INCBIN "assets/sprites/gUnknown_0829F674.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_0829F674.4bpp"
 
 	.GLOBAL gUnknown_082A0E74
 gUnknown_082A0E74:
@@ -4978,7 +4978,7 @@ gUnknown_082A0F94:
 
 	.GLOBAL gUnknown_082A0F9C
 gUnknown_082A0F9C:
-	.INCBIN "assets/sprites/gUnknown_082A0F9C.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A0F9C.4bpp"
 
 	.GLOBAL gUnknown_082A139C
 gUnknown_082A139C:
@@ -4990,7 +4990,7 @@ gUnknown_082A1474:
 
 	.GLOBAL gUnknown_082A147C
 gUnknown_082A147C:
-	.INCBIN "assets/sprites/gUnknown_082A147C.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A147C.4bpp"
 
 	.GLOBAL gUnknown_082A207C
 gUnknown_082A207C:
@@ -5002,7 +5002,7 @@ gUnknown_082A22BC:
 
 	.GLOBAL gUnknown_082A22C4
 gUnknown_082A22C4:
-	.INCBIN "assets/sprites/gUnknown_082A22C4.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A22C4.4bpp"
 
 	.GLOBAL gUnknown_082A42C4
 gUnknown_082A42C4:
@@ -5014,7 +5014,7 @@ gUnknown_082A4354:
 
 	.GLOBAL gUnknown_082A435C
 gUnknown_082A435C:
-	.INCBIN "assets/sprites/gUnknown_082A435C.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A435C.4bpp"
 
 	.GLOBAL gUnknown_082A4B5C
 gUnknown_082A4B5C:
@@ -5026,7 +5026,7 @@ gUnknown_082A4C7C:
 
 	.GLOBAL gUnknown_082A4C84
 gUnknown_082A4C84:
-	.INCBIN "assets/sprites/gUnknown_082A4C84.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A4C84.4bpp"
 
 	.GLOBAL gUnknown_082A5C84
 gUnknown_082A5C84:
@@ -5086,7 +5086,7 @@ gUnknown_082A70AC:
 
 	.GLOBAL gUnknown_082A70B4
 gUnknown_082A70B4:
-	.INCBIN "assets/sprites/gUnknown_082A70B4.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_082A70B4.4bpp"
 
 	.GLOBAL gUnknown_082A7334
 gUnknown_082A7334:
@@ -5098,7 +5098,7 @@ gUnknown_082A7454:
 
 	.GLOBAL gUnknown_082A745C
 gUnknown_082A745C:
-	.INCBIN "assets/sprites/gUnknown_082A745C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_082A745C.4bpp"
 
 	.GLOBAL gUnknown_082A785C
 gUnknown_082A785C:
@@ -5110,7 +5110,7 @@ gUnknown_082A7934:
 
 	.GLOBAL gUnknown_082A793C
 gUnknown_082A793C:
-	.INCBIN "assets/sprites/gUnknown_082A793C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_082A793C.4bpp"
 
 	.GLOBAL gUnknown_082A7C3C
 gUnknown_082A7C3C:
@@ -5170,7 +5170,7 @@ gfxTrashCanOAM:
 
 	.GLOBAL gfxTrashCan4bpp
 gfxTrashCan4bpp:
-	.INCBIN "assets/sprites/TrashCan.4bpp"
+	.INCBIN "assets/sprites/trashcan/TrashCan.4bpp"
 
 	.GLOBAL gUnknown_082ADBDC
 gUnknown_082ADBDC:
@@ -5182,7 +5182,7 @@ gfxTrashCanFlipOAM:
 
 	.GLOBAL gfxTrashCanFlip4bpp
 gfxTrashCanFlip4bpp:
-	.INCBIN "assets/sprites/TrashCanFlip.4bpp"
+	.INCBIN "assets/sprites/trashcan/TrashCanFlip.4bpp"
 
 	.GLOBAL gUnknown_082AEE24
 gUnknown_082AEE24:
@@ -5194,7 +5194,7 @@ gUnknown_082AEE48:
 
 	.GLOBAL gUnknown_082AEE50
 gUnknown_082AEE50:
-	.INCBIN "assets/sprites/gUnknown_082AEE50.4bpp"
+	.INCBIN "assets/sprites/trashcan/gUnknown_082AEE50.4bpp"
 
 	.GLOBAL gUnknown_082AEF50
 gUnknown_082AEF50:
@@ -5302,7 +5302,7 @@ gUnknown_082B787C:
 
 	.GLOBAL gUnknown_082B7884
 gUnknown_082B7884:
-	.INCBIN "assets/sprites/gUnknown_082B7884.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_082B7884.4bpp"
 
 	.GLOBAL gUnknown_082B8C84
 gUnknown_082B8C84:
@@ -5314,7 +5314,7 @@ gUnknown_082B8F54:
 
 	.GLOBAL gUnknown_082B8F5C
 gUnknown_082B8F5C:
-	.INCBIN "assets/sprites/gUnknown_082B8F5C.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_082B8F5C.4bpp"
 
 	.GLOBAL gUnknown_082C2F5C
 gUnknown_082C2F5C:
@@ -8518,7 +8518,7 @@ gUnknown_0835DAC4:
 
 	.GLOBAL gUnknown_0835DACC
 gUnknown_0835DACC:
-	.INCBIN "assets/sprites/gUnknown_0835DACC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0835DACC.8bpp"
 
 	.GLOBAL gUnknown_08365ACC
 gUnknown_08365ACC:
@@ -8866,7 +8866,7 @@ gUnknown_0840C734:
 
 	.GLOBAL gUnknown_0840C73C
 gUnknown_0840C73C:
-	.INCBIN "assets/sprites/gUnknown_0840C73C.8bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_0840C73C.8bpp"
 
 	.GLOBAL gUnknown_0840D93C
 gUnknown_0840D93C:
@@ -8890,7 +8890,7 @@ gUnknown_0840E6F4:
 
 	.GLOBAL gUnknown_0840E6FC
 gUnknown_0840E6FC:
-	.INCBIN "assets/sprites/gUnknown_0840E6FC.8bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_0840E6FC.8bpp"
 
 	.GLOBAL gUnknown_0840F8FC
 gUnknown_0840F8FC:
@@ -10714,7 +10714,7 @@ gUnknown_085BE2B0:
 
 	.GLOBAL gUnknown_085BE2B8
 gUnknown_085BE2B8:
-	.INCBIN "assets/sprites/gUnknown_085BE2B8.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_085BE2B8.4bpp"
 
 	.GLOBAL gUnknown_085BF2B8
 gUnknown_085BF2B8:
@@ -10726,7 +10726,7 @@ gUnknown_085BF3B4:
 
 	.GLOBAL gUnknown_085BF3BC
 gUnknown_085BF3BC:
-	.INCBIN "assets/sprites/gUnknown_085BF3BC.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_085BF3BC.4bpp"
 
 	.GLOBAL gUnknown_085C01BC
 gUnknown_085C01BC:
@@ -10738,7 +10738,7 @@ gUnknown_085C02DC:
 
 	.GLOBAL gUnknown_085C02E4
 gUnknown_085C02E4:
-	.INCBIN "assets/sprites/gUnknown_085C02E4.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_085C02E4.4bpp"
 
 	.GLOBAL gUnknown_085C12E4
 gUnknown_085C12E4:
@@ -10750,7 +10750,7 @@ gUnknown_085C1404:
 
 	.GLOBAL gUnknown_085C140C
 gUnknown_085C140C:
-	.INCBIN "assets/sprites/gUnknown_085C140C.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_085C140C.4bpp"
 
 	.GLOBAL gUnknown_085C240C
 gUnknown_085C240C:
@@ -10762,7 +10762,7 @@ gUnknown_085C2454:
 
 	.GLOBAL gUnknown_085C245C
 gUnknown_085C245C:
-	.INCBIN "assets/sprites/gUnknown_085C245C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085C245C.4bpp"
 
 	.GLOBAL gUnknown_085C255C
 gUnknown_085C255C:
@@ -10774,7 +10774,7 @@ gUnknown_085C2580:
 
 	.GLOBAL gUnknown_085C2588
 gUnknown_085C2588:
-	.INCBIN "assets/sprites/gUnknown_085C2588.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2588.4bpp"
 
 	.GLOBAL gUnknown_085C2608
 gUnknown_085C2608:
@@ -10786,7 +10786,7 @@ gUnknown_085C262C:
 
 	.GLOBAL gUnknown_085C2634
 gUnknown_085C2634:
-	.INCBIN "assets/sprites/gUnknown_085C2634.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2634.4bpp"
 
 	.GLOBAL gUnknown_085C26B4
 gUnknown_085C26B4:
@@ -10798,7 +10798,7 @@ gUnknown_085C26D8:
 
 	.GLOBAL gUnknown_085C26E0
 gUnknown_085C26E0:
-	.INCBIN "assets/sprites/gUnknown_085C26E0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C26E0.4bpp"
 
 	.GLOBAL gUnknown_085C2760
 gUnknown_085C2760:
@@ -10810,7 +10810,7 @@ gUnknown_085C2784:
 
 	.GLOBAL gUnknown_085C278C
 gUnknown_085C278C:
-	.INCBIN "assets/sprites/gUnknown_085C278C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C278C.4bpp"
 
 	.GLOBAL gUnknown_085C280C
 gUnknown_085C280C:
@@ -10822,7 +10822,7 @@ gUnknown_085C2830:
 
 	.GLOBAL gUnknown_085C2838
 gUnknown_085C2838:
-	.INCBIN "assets/sprites/gUnknown_085C2838.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2838.4bpp"
 
 	.GLOBAL gUnknown_085C2858
 gUnknown_085C2858:
@@ -10834,7 +10834,7 @@ gUnknown_085C28A0:
 
 	.GLOBAL gUnknown_085C28A8
 gUnknown_085C28A8:
-	.INCBIN "assets/sprites/gUnknown_085C28A8.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C28A8.4bpp"
 
 	.GLOBAL gUnknown_085C29A8
 gUnknown_085C29A8:
@@ -10846,7 +10846,7 @@ gUnknown_085C29F0:
 
 	.GLOBAL gUnknown_085C29F8
 gUnknown_085C29F8:
-	.INCBIN "assets/sprites/gUnknown_085C29F8.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085C29F8.4bpp"
 
 	.GLOBAL gUnknown_085C2AF8
 gUnknown_085C2AF8:
@@ -10858,7 +10858,7 @@ gUnknown_085C2BAC:
 
 	.GLOBAL gUnknown_085C2BB4
 gUnknown_085C2BB4:
-	.INCBIN "assets/sprites/gUnknown_085C2BB4.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2BB4.4bpp"
 
 	.GLOBAL gUnknown_085C2E34
 gUnknown_085C2E34:
@@ -10870,7 +10870,7 @@ gUnknown_085C2EE8:
 
 	.GLOBAL gUnknown_085C2EF0
 gUnknown_085C2EF0:
-	.INCBIN "assets/sprites/gUnknown_085C2EF0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2EF0.4bpp"
 
 	.GLOBAL gUnknown_085C2F90
 gUnknown_085C2F90:
@@ -10882,7 +10882,7 @@ gUnknown_085C3218:
 
 	.GLOBAL gUnknown_085C3220
 gUnknown_085C3220:
-	.INCBIN "assets/sprites/gUnknown_085C3220.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085C3220.4bpp"
 
 	.GLOBAL gUnknown_085C7220
 gUnknown_085C7220:
@@ -10894,7 +10894,7 @@ gUnknown_085C7244:
 
 	.GLOBAL gUnknown_085C724C
 gUnknown_085C724C:
-	.INCBIN "assets/sprites/gUnknown_085C724C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C724C.4bpp"
 
 	.GLOBAL gUnknown_085C764C
 gUnknown_085C764C:
@@ -10906,7 +10906,7 @@ gUnknown_085C7670:
 
 	.GLOBAL gUnknown_085C7678
 gUnknown_085C7678:
-	.INCBIN "assets/sprites/gUnknown_085C7678.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C7678.4bpp"
 
 	.GLOBAL gUnknown_085C7A78
 gUnknown_085C7A78:
@@ -10918,7 +10918,7 @@ gUnknown_085C7D00:
 
 	.GLOBAL gUnknown_085C7D08
 gUnknown_085C7D08:
-	.INCBIN "assets/sprites/gUnknown_085C7D08.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C7D08.4bpp"
 
 	.GLOBAL gUnknown_085CBD08
 gUnknown_085CBD08:
@@ -10942,7 +10942,7 @@ gUnknown_085CC158:
 
 	.GLOBAL gUnknown_085CC160
 gUnknown_085CC160:
-	.INCBIN "assets/sprites/gUnknown_085CC160.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CC160.4bpp"
 
 	.GLOBAL gUnknown_085CC960
 gUnknown_085CC960:
@@ -10954,7 +10954,7 @@ gUnknown_085CC984:
 
 	.GLOBAL gUnknown_085CC98C
 gUnknown_085CC98C:
-	.INCBIN "assets/sprites/gUnknown_085CC98C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CC98C.4bpp"
 
 	.GLOBAL gUnknown_085CD18C
 gUnknown_085CD18C:
@@ -10978,7 +10978,7 @@ gUnknown_085CD840:
 
 	.GLOBAL gUnknown_085CD848
 gUnknown_085CD848:
-	.INCBIN "assets/sprites/gUnknown_085CD848.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CD848.4bpp"
 
 	.GLOBAL gUnknown_085CE048
 gUnknown_085CE048:
@@ -10990,7 +10990,7 @@ gUnknown_085CE06C:
 
 	.GLOBAL gUnknown_085CE074
 gUnknown_085CE074:
-	.INCBIN "assets/sprites/gUnknown_085CE074.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CE074.4bpp"
 
 	.GLOBAL gUnknown_085CE874
 gUnknown_085CE874:
@@ -11002,7 +11002,7 @@ gUnknown_085CE898:
 
 	.GLOBAL gUnknown_085CE8A0
 gUnknown_085CE8A0:
-	.INCBIN "assets/sprites/gUnknown_085CE8A0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CE8A0.4bpp"
 
 	.GLOBAL gUnknown_085CF0A0
 gUnknown_085CF0A0:
@@ -11014,7 +11014,7 @@ gUnknown_085CF0C4:
 
 	.GLOBAL gUnknown_085CF0CC
 gUnknown_085CF0CC:
-	.INCBIN "assets/sprites/gUnknown_085CF0CC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CF0CC.4bpp"
 
 	.GLOBAL gUnknown_085CF8CC
 gUnknown_085CF8CC:
@@ -11026,7 +11026,7 @@ gfxMainWorldSelectTabsOAM:
 
 	.GLOBAL gfxMainWorldSelectTabs4bpp
 gfxMainWorldSelectTabs4bpp:
-	.INCBIN "assets/sprites/MainWorldSelectTabs.4bpp"
+	.INCBIN "assets/sprites/level_select/MainWorldSelectTabs.4bpp"
 
 	.GLOBAL gUnknown_085D00D0
 gUnknown_085D00D0:
@@ -11038,7 +11038,7 @@ gfxPlusWorldSelectTabsOAM:
 
 	.GLOBAL gfxPlusWorldSelectTabs4bpp
 gfxPlusWorldSelectTabs4bpp:
-	.INCBIN "assets/sprites/PlusWorldSelectTabs.4bpp"
+	.INCBIN "assets/sprites/level_select/PlusWorldSelectTabs.4bpp"
 
 	.GLOBAL gUnknown_085D08D4
 gUnknown_085D08D4:
@@ -11050,7 +11050,7 @@ gUnknown_085D08F8:
 
 	.GLOBAL gUnknown_085D0900
 gUnknown_085D0900:
-	.INCBIN "assets/sprites/gUnknown_085D0900.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085D0900.4bpp"
 
 	.GLOBAL gUnknown_085D0A00
 gUnknown_085D0A00:
@@ -11062,7 +11062,7 @@ gfxMainLevelIconPicsOAM:
 
 	.GLOBAL gfxMainLevelIconPics4bpp
 gfxMainLevelIconPics4bpp:
-	.INCBIN "assets/sprites/MainLevelIconPics.4bpp"
+	.INCBIN "assets/sprites/level_select/MainLevelIconPics.4bpp"
 
 	.GLOBAL gUnknown_085D70C8
 gUnknown_085D70C8:
@@ -11074,7 +11074,7 @@ gfxPlusLevelIconPicsOAM:
 
 	.GLOBAL gfxPlusLevelIconPics4bpp
 gfxPlusLevelIconPics4bpp:
-	.INCBIN "assets/sprites/PlusLevelIconPics.4bpp"
+	.INCBIN "assets/sprites/level_select/PlusLevelIconPics.4bpp"
 
 	.GLOBAL gUnknown_085DCAB8
 gUnknown_085DCAB8:
@@ -11086,7 +11086,7 @@ gUnknown_085DCB6C:
 
 	.GLOBAL gUnknown_085DCB74
 gUnknown_085DCB74:
-	.INCBIN "assets/sprites/gUnknown_085DCB74.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DCB74.4bpp"
 
 	.GLOBAL gUnknown_085DCC34
 gUnknown_085DCC34:
@@ -11098,7 +11098,7 @@ gUnknown_085DCCC4:
 
 	.GLOBAL gUnknown_085DCCCC
 gUnknown_085DCCCC:
-	.INCBIN "assets/sprites/gUnknown_085DCCCC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DCCCC.4bpp"
 
 	.GLOBAL gUnknown_085DCECC
 gUnknown_085DCECC:
@@ -11110,7 +11110,7 @@ gUnknown_085DCF80:
 
 	.GLOBAL gUnknown_085DCF88
 gUnknown_085DCF88:
-	.INCBIN "assets/sprites/gUnknown_085DCF88.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DCF88.4bpp"
 
 	.GLOBAL gUnknown_085DD108
 gUnknown_085DD108:
@@ -11122,7 +11122,7 @@ gUnknown_085DD150:
 
 	.GLOBAL gUnknown_085DD158
 gUnknown_085DD158:
-	.INCBIN "assets/sprites/gUnknown_085DD158.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DD158.4bpp"
 
 	.GLOBAL gUnknown_085DD258
 gUnknown_085DD258:
@@ -11134,7 +11134,7 @@ gUnknown_085DD744:
 
 	.GLOBAL gUnknown_085DD74C
 gUnknown_085DD74C:
-	.INCBIN "assets/sprites/gUnknown_085DD74C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DD74C.4bpp"
 
 	.GLOBAL gUnknown_085DD9EC
 gUnknown_085DD9EC:
@@ -11146,7 +11146,7 @@ gUnknown_085DDE24:
 
 	.GLOBAL gUnknown_085DDE2C
 gUnknown_085DDE2C:
-	.INCBIN "assets/sprites/gUnknown_085DDE2C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DDE2C.4bpp"
 
 	.GLOBAL gUnknown_085DE06C
 gUnknown_085DE06C:
@@ -11158,7 +11158,7 @@ gUnknown_085DE4A4:
 
 	.GLOBAL gUnknown_085DE4AC
 gUnknown_085DE4AC:
-	.INCBIN "assets/sprites/gUnknown_085DE4AC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DE4AC.4bpp"
 
 	.GLOBAL gUnknown_085DE92C
 gUnknown_085DE92C:
@@ -11170,7 +11170,7 @@ gUnknown_085DEA94:
 
 	.GLOBAL gUnknown_085DEA9C
 gUnknown_085DEA9C:
-	.INCBIN "assets/sprites/gUnknown_085DEA9C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DEA9C.4bpp"
 
 	.GLOBAL gUnknown_085DED1C
 gUnknown_085DED1C:
@@ -11218,7 +11218,7 @@ gUnknown_085E015C:
 
 	.GLOBAL gUnknown_085E0164
 gUnknown_085E0164:
-	.INCBIN "assets/sprites/gUnknown_085E0164.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E0164.4bpp"
 
 	.GLOBAL gUnknown_085E0564
 gUnknown_085E0564:
@@ -11230,7 +11230,7 @@ gUnknown_085E05F4:
 
 	.GLOBAL gUnknown_085E05FC
 gUnknown_085E05FC:
-	.INCBIN "assets/sprites/gUnknown_085E05FC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E05FC.4bpp"
 
 	.GLOBAL gUnknown_085E063C
 gUnknown_085E063C:
@@ -11242,7 +11242,7 @@ gUnknown_085E0684:
 
 	.GLOBAL gUnknown_085E068C
 gUnknown_085E068C:
-	.INCBIN "assets/sprites/gUnknown_085E068C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E068C.4bpp"
 
 	.GLOBAL gUnknown_085E078C
 gUnknown_085E078C:
@@ -11254,7 +11254,7 @@ gUnknown_085E07D4:
 
 	.GLOBAL gUnknown_085E07DC
 gUnknown_085E07DC:
-	.INCBIN "assets/sprites/gUnknown_085E07DC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E07DC.4bpp"
 
 	.GLOBAL gUnknown_085E08DC
 gUnknown_085E08DC:
@@ -11266,7 +11266,7 @@ gUnknown_085E0900:
 
 	.GLOBAL gUnknown_085E0908
 gUnknown_085E0908:
-	.INCBIN "assets/sprites/gUnknown_085E0908.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0908.4bpp"
 
 	.GLOBAL gUnknown_085E0988
 gUnknown_085E0988:
@@ -11278,7 +11278,7 @@ gUnknown_085E09AC:
 
 	.GLOBAL gUnknown_085E09B4
 gUnknown_085E09B4:
-	.INCBIN "assets/sprites/gUnknown_085E09B4.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E09B4.4bpp"
 
 	.GLOBAL gUnknown_085E0A34
 gUnknown_085E0A34:
@@ -11290,7 +11290,7 @@ gUnknown_085E0A7C:
 
 	.GLOBAL gUnknown_085E0A84
 gUnknown_085E0A84:
-	.INCBIN "assets/sprites/gUnknown_085E0A84.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E0A84.4bpp"
 
 	.GLOBAL gUnknown_085E0AC4
 gUnknown_085E0AC4:
@@ -11302,7 +11302,7 @@ gUnknown_085E0B0C:
 
 	.GLOBAL gUnknown_085E0B14
 gUnknown_085E0B14:
-	.INCBIN "assets/sprites/gUnknown_085E0B14.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0B14.4bpp"
 
 	.GLOBAL gUnknown_085E0C14
 gUnknown_085E0C14:
@@ -11314,7 +11314,7 @@ gUnknown_085E0C5C:
 
 	.GLOBAL gUnknown_085E0C64
 gUnknown_085E0C64:
-	.INCBIN "assets/sprites/gUnknown_085E0C64.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E0C64.4bpp"
 
 	.GLOBAL gUnknown_085E0D64
 gUnknown_085E0D64:
@@ -11326,7 +11326,7 @@ gUnknown_085E0D88:
 
 	.GLOBAL gUnknown_085E0D90
 gUnknown_085E0D90:
-	.INCBIN "assets/sprites/gUnknown_085E0D90.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0D90.4bpp"
 
 	.GLOBAL gUnknown_085E0E10
 gUnknown_085E0E10:
@@ -11338,7 +11338,7 @@ gUnknown_085E0E34:
 
 	.GLOBAL gUnknown_085E0E3C
 gUnknown_085E0E3C:
-	.INCBIN "assets/sprites/gUnknown_085E0E3C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E0E3C.4bpp"
 
 	.GLOBAL gUnknown_085E0EBC
 gUnknown_085E0EBC:
@@ -11350,7 +11350,7 @@ gUnknown_085E0F04:
 
 	.GLOBAL gUnknown_085E0F0C
 gUnknown_085E0F0C:
-	.INCBIN "assets/sprites/gUnknown_085E0F0C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0F0C.4bpp"
 
 	.GLOBAL gUnknown_085E100C
 gUnknown_085E100C:
@@ -11362,7 +11362,7 @@ gUnknown_085E1054:
 
 	.GLOBAL gUnknown_085E105C
 gUnknown_085E105C:
-	.INCBIN "assets/sprites/gUnknown_085E105C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E105C.4bpp"
 
 	.GLOBAL gUnknown_085E115C
 gUnknown_085E115C:
@@ -11374,7 +11374,7 @@ gUnknown_085E1180:
 
 	.GLOBAL gUnknown_085E1188
 gUnknown_085E1188:
-	.INCBIN "assets/sprites/gUnknown_085E1188.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E1188.4bpp"
 
 	.GLOBAL gUnknown_085E1208
 gUnknown_085E1208:
@@ -11386,7 +11386,7 @@ gUnknown_085E122C:
 
 	.GLOBAL gUnknown_085E1234
 gUnknown_085E1234:
-	.INCBIN "assets/sprites/gUnknown_085E1234.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E1234.4bpp"
 
 	.GLOBAL gUnknown_085E12B4
 gUnknown_085E12B4:
@@ -11398,7 +11398,7 @@ gUnknown_085E1344:
 
 	.GLOBAL gUnknown_085E134C
 gUnknown_085E134C:
-	.INCBIN "assets/sprites/gUnknown_085E134C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E134C.4bpp"
 
 	.GLOBAL gUnknown_085E1B4C
 gUnknown_085E1B4C:
@@ -11410,7 +11410,7 @@ gUnknown_085E1C24:
 
 	.GLOBAL gUnknown_085E1C2C
 gUnknown_085E1C2C:
-	.INCBIN "assets/sprites/gUnknown_085E1C2C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E1C2C.4bpp"
 
 	.GLOBAL gUnknown_085E1F2C
 gUnknown_085E1F2C:
@@ -11422,7 +11422,7 @@ gUnknown_085E2004:
 
 	.GLOBAL gUnknown_085E200C
 gUnknown_085E200C:
-	.INCBIN "assets/sprites/gUnknown_085E200C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E200C.4bpp"
 
 	.GLOBAL gUnknown_085E230C
 gUnknown_085E230C:
@@ -11434,7 +11434,7 @@ gUnknown_085E2330:
 
 	.GLOBAL gUnknown_085E2338
 gUnknown_085E2338:
-	.INCBIN "assets/sprites/gUnknown_085E2338.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2338.4bpp"
 
 	.GLOBAL gUnknown_085E2438
 gUnknown_085E2438:
@@ -11446,7 +11446,7 @@ gUnknown_085E245C:
 
 	.GLOBAL gUnknown_085E2464
 gUnknown_085E2464:
-	.INCBIN "assets/sprites/gUnknown_085E2464.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2464.4bpp"
 
 	.GLOBAL gUnknown_085E24A4
 gUnknown_085E24A4:
@@ -11458,7 +11458,7 @@ gUnknown_085E24C8:
 
 	.GLOBAL gUnknown_085E24D0
 gUnknown_085E24D0:
-	.INCBIN "assets/sprites/gUnknown_085E24D0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E24D0.4bpp"
 
 	.GLOBAL gUnknown_085E2510
 gUnknown_085E2510:
@@ -11470,7 +11470,7 @@ gUnknown_085E2534:
 
 	.GLOBAL gUnknown_085E253C
 gUnknown_085E253C:
-	.INCBIN "assets/sprites/gUnknown_085E253C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E253C.4bpp"
 
 	.GLOBAL gUnknown_085E257C
 gUnknown_085E257C:
@@ -11482,7 +11482,7 @@ gUnknown_085E25A0:
 
 	.GLOBAL gUnknown_085E25A8
 gUnknown_085E25A8:
-	.INCBIN "assets/sprites/gUnknown_085E25A8.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E25A8.4bpp"
 
 	.GLOBAL gUnknown_085E25E8
 gUnknown_085E25E8:
@@ -11494,7 +11494,7 @@ gUnknown_085E260C:
 
 	.GLOBAL gUnknown_085E2614
 gUnknown_085E2614:
-	.INCBIN "assets/sprites/gUnknown_085E2614.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2614.4bpp"
 
 	.GLOBAL gUnknown_085E2654
 gUnknown_085E2654:
@@ -11506,7 +11506,7 @@ gUnknown_085E2678:
 
 	.GLOBAL gUnknown_085E2680
 gUnknown_085E2680:
-	.INCBIN "assets/sprites/gUnknown_085E2680.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2680.4bpp"
 
 	.GLOBAL gUnknown_085E26C0
 gUnknown_085E26C0:
@@ -11518,7 +11518,7 @@ gUnknown_085E26E4:
 
 	.GLOBAL gUnknown_085E26EC
 gUnknown_085E26EC:
-	.INCBIN "assets/sprites/gUnknown_085E26EC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E26EC.4bpp"
 
 	.GLOBAL gUnknown_085E272C
 gUnknown_085E272C:
@@ -11530,7 +11530,7 @@ gUnknown_085E2750:
 
 	.GLOBAL gUnknown_085E2758
 gUnknown_085E2758:
-	.INCBIN "assets/sprites/gUnknown_085E2758.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2758.4bpp"
 
 	.GLOBAL gUnknown_085E2798
 gUnknown_085E2798:
@@ -11542,7 +11542,7 @@ gUnknown_085E27BC:
 
 	.GLOBAL gUnknown_085E27C4
 gUnknown_085E27C4:
-	.INCBIN "assets/sprites/gUnknown_085E27C4.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E27C4.4bpp"
 
 	.GLOBAL gUnknown_085E2804
 gUnknown_085E2804:
@@ -11554,7 +11554,7 @@ gUnknown_085E2828:
 
 	.GLOBAL gUnknown_085E2830
 gUnknown_085E2830:
-	.INCBIN "assets/sprites/gUnknown_085E2830.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2830.4bpp"
 
 	.GLOBAL gUnknown_085E2870
 gUnknown_085E2870:
@@ -11566,7 +11566,7 @@ gUnknown_085E2AF8:
 
 	.GLOBAL gUnknown_085E2B00
 gUnknown_085E2B00:
-	.INCBIN "assets/sprites/gUnknown_085E2B00.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2B00.4bpp"
 
 	.GLOBAL gUnknown_085E2F00
 gUnknown_085E2F00:
@@ -11578,7 +11578,7 @@ gUnknown_085E3188:
 
 	.GLOBAL gUnknown_085E3190
 gUnknown_085E3190:
-	.INCBIN "assets/sprites/gUnknown_085E3190.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E3190.4bpp"
 
 	.GLOBAL gUnknown_085E3590
 gUnknown_085E3590:
@@ -11590,7 +11590,7 @@ gUnknown_085E3818:
 
 	.GLOBAL gUnknown_085E3820
 gUnknown_085E3820:
-	.INCBIN "assets/sprites/gUnknown_085E3820.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E3820.4bpp"
 
 	.GLOBAL gUnknown_085E8020
 gUnknown_085E8020:
@@ -11602,7 +11602,7 @@ gUnknown_085E8044:
 
 	.GLOBAL gUnknown_085E804C
 gUnknown_085E804C:
-	.INCBIN "assets/sprites/gUnknown_085E804C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E804C.4bpp"
 
 	.GLOBAL gUnknown_085E844C
 gUnknown_085E844C:
@@ -11614,7 +11614,7 @@ gUnknown_085E8470:
 
 	.GLOBAL gUnknown_085E8478
 gUnknown_085E8478:
-	.INCBIN "assets/sprites/gUnknown_085E8478.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E8478.4bpp"
 
 	.GLOBAL gUnknown_085E8878
 gUnknown_085E8878:
@@ -11626,7 +11626,7 @@ gUnknown_085E889C:
 
 	.GLOBAL gUnknown_085E88A4
 gUnknown_085E88A4:
-	.INCBIN "assets/sprites/gUnknown_085E88A4.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E88A4.4bpp"
 
 	.GLOBAL gUnknown_085E8CA4
 gUnknown_085E8CA4:
@@ -11638,7 +11638,7 @@ gUnknown_085E8CC8:
 
 	.GLOBAL gUnknown_085E8CD0
 gUnknown_085E8CD0:
-	.INCBIN "assets/sprites/gUnknown_085E8CD0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E8CD0.4bpp"
 
 	.GLOBAL gUnknown_085E90D0
 gUnknown_085E90D0:
@@ -11650,7 +11650,7 @@ gUnknown_085E9358:
 
 	.GLOBAL gUnknown_085E9360
 gUnknown_085E9360:
-	.INCBIN "assets/sprites/gUnknown_085E9360.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E9360.4bpp"
 
 	.GLOBAL gUnknown_085EAB60
 gUnknown_085EAB60:
@@ -11662,7 +11662,7 @@ gUnknown_085EAB84:
 
 	.GLOBAL gUnknown_085EAB8C
 gUnknown_085EAB8C:
-	.INCBIN "assets/sprites/gUnknown_085EAB8C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085EAB8C.4bpp"
 
 	.GLOBAL gUnknown_085EAC8C
 gUnknown_085EAC8C:
@@ -11746,7 +11746,7 @@ gfxMovie1PreviewOAM:
 
 	.GLOBAL gfxMovie1Preview8bpp
 gfxMovie1Preview8bpp:
-	.INCBIN "assets/sprites/Movie1Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie1Preview.8bpp"
 
 	.GLOBAL gUnknown_085ED49C
 gUnknown_085ED49C:
@@ -11758,7 +11758,7 @@ gfxMovie2PreviewOAM:
 
 	.GLOBAL gfxMovie2Preview8bpp
 gfxMovie2Preview8bpp:
-	.INCBIN "assets/sprites/Movie2Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie2Preview.8bpp"
 
 	.GLOBAL gUnknown_085EDCC8
 gUnknown_085EDCC8:
@@ -11770,7 +11770,7 @@ gfxMovie3PreviewOAM:
 
 	.GLOBAL gfxMovie3Preview8bpp
 gfxMovie3Preview8bpp:
-	.INCBIN "assets/sprites/Movie3Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie3Preview.8bpp"
 
 	.GLOBAL gUnknown_085EE4F4
 gUnknown_085EE4F4:
@@ -11782,7 +11782,7 @@ gfxMovie4PreviewOAM:
 
 	.GLOBAL gfxMovie4Preview8bpp
 gfxMovie4Preview8bpp:
-	.INCBIN "assets/sprites/Movie4Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie4Preview.8bpp"
 
 	.GLOBAL gUnknown_085EED20
 gUnknown_085EED20:
@@ -11794,7 +11794,7 @@ gfxMovie5PreviewOAM:
 
 	.GLOBAL gfxMovie5Preview8bpp
 gfxMovie5Preview8bpp:
-	.INCBIN "assets/sprites/Movie5Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie5Preview.8bpp"
 
 	.GLOBAL gfxMovie6PreviewOAM
 gfxMovie6PreviewOAM:
@@ -11806,7 +11806,7 @@ gUnknown_085EF570:
 
 	.GLOBAL gfxMovie6Preview8bpp
 gfxMovie6Preview8bpp:
-	.INCBIN "assets/sprites/Movie6Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie6Preview.8bpp"
 
 	.GLOBAL gUnknown_085EFD78
 gUnknown_085EFD78:
@@ -11818,7 +11818,7 @@ gfxMovie7PreviewOAM:
 
 	.GLOBAL gfxMovie7Preview8bpp
 gfxMovie7Preview8bpp:
-	.INCBIN "assets/sprites/Movie7Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie7Preview.8bpp"
 
 	.GLOBAL gUnknown_085F05A4
 gUnknown_085F05A4:
@@ -11830,7 +11830,7 @@ gfxMovie8PreviewOAM:
 
 	.GLOBAL gfxMovie8Preview8bpp
 gfxMovie8Preview8bpp:
-	.INCBIN "assets/sprites/Movie8Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie8Preview.8bpp"
 
 	.GLOBAL gUnknown_085F0DD0
 gUnknown_085F0DD0:
@@ -11842,7 +11842,7 @@ gfxMovie8PreviewAltOAM:
 
 	.GLOBAL gfxMovie8PreviewAlt8bpp
 gfxMovie8PreviewAlt8bpp:
-	.INCBIN "assets/sprites/Movie8PreviewAlt.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie8PreviewAlt.8bpp"
 
 	.GLOBAL gUnknown_085F15FC
 gUnknown_085F15FC:
@@ -11854,7 +11854,7 @@ gUnknown_085F1620:
 
 	.GLOBAL gfxMoviePreviewStatic
 gfxMoviePreviewStatic:
-	.INCBIN "assets/sprites/MoviePreviewStatic.8bpp"
+	.INCBIN "assets/sprites/main_menu/MoviePreviewStatic.8bpp"
 
 	.GLOBAL gUnknown_085F1E28
 gUnknown_085F1E28:
@@ -11902,7 +11902,7 @@ gUnknown_085F24A8:
 
 	.GLOBAL gUnknown_085F24B0
 gUnknown_085F24B0:
-	.INCBIN "assets/sprites/gUnknown_085F24B0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F24B0.4bpp"
 
 	.GLOBAL gUnknown_085F2AB0
 gUnknown_085F2AB0:
@@ -11914,7 +11914,7 @@ gUnknown_085F2D80:
 
 	.GLOBAL gUnknown_085F2D88
 gUnknown_085F2D88:
-	.INCBIN "assets/sprites/gUnknown_085F2D88.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F2D88.4bpp"
 
 	.GLOBAL gUnknown_085F2F88
 gUnknown_085F2F88:
@@ -11926,7 +11926,7 @@ gUnknown_085F3138:
 
 	.GLOBAL gUnknown_085F3140
 gUnknown_085F3140:
-	.INCBIN "assets/sprites/gUnknown_085F3140.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F3140.4bpp"
 
 	.GLOBAL gUnknown_085F3940
 gUnknown_085F3940:
@@ -11938,7 +11938,7 @@ gUnknown_085F3C7C:
 
 	.GLOBAL gUnknown_085F3C84
 gUnknown_085F3C84:
-	.INCBIN "assets/sprites/gUnknown_085F3C84.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F3C84.4bpp"
 
 	.GLOBAL gUnknown_085F4084
 gUnknown_085F4084:
@@ -11950,7 +11950,7 @@ gUnknown_085F41A4:
 
 	.GLOBAL gUnknown_085F41AC
 gUnknown_085F41AC:
-	.INCBIN "assets/sprites/gUnknown_085F41AC.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F41AC.4bpp"
 
 	.GLOBAL gUnknown_085F49AC
 gUnknown_085F49AC:
@@ -11974,7 +11974,7 @@ gUnknown_085F4CD4:
 
 	.GLOBAL gUnknown_085F4CDC
 gUnknown_085F4CDC:
-	.INCBIN "assets/sprites/gUnknown_085F4CDC.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F4CDC.4bpp"
 
 	.GLOBAL gUnknown_085F4EDC
 gUnknown_085F4EDC:
@@ -11986,7 +11986,7 @@ gUnknown_085F4F6C:
 
 	.GLOBAL gUnknown_085F4F74
 gUnknown_085F4F74:
-	.INCBIN "assets/sprites/gUnknown_085F4F74.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F4F74.4bpp"
 
 	.GLOBAL gUnknown_085F5174
 gUnknown_085F5174:
@@ -11998,7 +11998,7 @@ gUnknown_085F5294:
 
 	.GLOBAL gUnknown_085F529C
 gUnknown_085F529C:
-	.INCBIN "assets/sprites/gUnknown_085F529C.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F529C.4bpp"
 
 	.GLOBAL gUnknown_085F569C
 gUnknown_085F569C:
@@ -12010,7 +12010,7 @@ gUnknown_085F58DC:
 
 	.GLOBAL gUnknown_085F58E4
 gUnknown_085F58E4:
-	.INCBIN "assets/sprites/gUnknown_085F58E4.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F58E4.4bpp"
 
 	.GLOBAL gUnknown_085F60E4
 gUnknown_085F60E4:
@@ -12022,7 +12022,7 @@ gUnknown_085F612C:
 
 	.GLOBAL gUnknown_085F6134
 gUnknown_085F6134:
-	.INCBIN "assets/sprites/gUnknown_085F6134.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F6134.4bpp"
 
 	.GLOBAL gUnknown_085F61B4
 gUnknown_085F61B4:
@@ -12106,7 +12106,7 @@ gUnknown_085FA358:
 
 	.GLOBAL gUnknown_085FA360
 gUnknown_085FA360:
-	.INCBIN "assets/sprites/gUnknown_085FA360.4bpp"
+	.INCBIN "assets/sprites/falling_objects/gUnknown_085FA360.4bpp"
 
 	.GLOBAL gUnknown_085FB360
 gUnknown_085FB360:
@@ -12334,7 +12334,7 @@ gfxMainMenuDigitsLargeOAM:
 
 	.GLOBAL gfxMainMenuDigitsLarge4bpp
 gfxMainMenuDigitsLarge4bpp:
-	.INCBIN "assets/sprites/MainMenuDigitsLarge.4bpp"
+	.INCBIN "assets/sprites/main_menu/MainMenuDigitsLarge.4bpp"
 
 	.GLOBAL gUnknown_08617570
 gUnknown_08617570:
@@ -12358,7 +12358,7 @@ gfxUnusedDigitsOAM:
 
 	.GLOBAL gfxUnusedDigits4bpp
 gfxUnusedDigits4bpp:
-	.INCBIN "assets/sprites/UnusedDigits.4bpp"
+	.INCBIN "assets/sprites/main_menu/UnusedDigits.4bpp"
 
 	.GLOBAL gUnknown_08617970
 gUnknown_08617970:
@@ -12370,7 +12370,7 @@ gfxMainMenuDigitsMediumOAM:
 
 	.GLOBAL gfxMainMenuDigitsMedium4bpp
 gfxMainMenuDigitsMedium4bpp:
-	.INCBIN "assets/sprites/MainMenuDigitsMedium.4bpp"
+	.INCBIN "assets/sprites/main_menu/MainMenuDigitsMedium.4bpp"
 
 	.GLOBAL sMMDKSpriteTemplate
 sMMDKSpriteTemplate:
@@ -12382,7 +12382,7 @@ gfxMMDKOAM:
 
 	.GLOBAL gfxMMDK4bpp
 gfxMMDK4bpp:
-	.INCBIN "assets/sprites/MMDK.4bpp"
+	.INCBIN "assets/sprites/main_menu/MMDK.4bpp"
 
 	.GLOBAL gUnknown_08617DB4
 gUnknown_08617DB4:
@@ -12394,7 +12394,7 @@ gfxMainMenuDigitsSmallOAM:
 
 	.GLOBAL gfxMainMenuDigitsSmall4bpp
 gfxMainMenuDigitsSmall4bpp:
-	.INCBIN "assets/sprites/MainMenuDigitsSmall.4bpp"
+	.INCBIN "assets/sprites/main_menu/MainMenuDigitsSmall.4bpp"
 
 	.GLOBAL gUnknown_08618064
 gUnknown_08618064:
@@ -12418,7 +12418,7 @@ gUnknown_086183F4:
 
 	.GLOBAL gUnknown_086183FC
 gUnknown_086183FC:
-	.INCBIN "assets/sprites/gUnknown_086183FC.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_086183FC.4bpp"
 
 	.GLOBAL gUnknown_086187FC
 gUnknown_086187FC:
@@ -12466,7 +12466,7 @@ gUnknown_08619AD8:
 
 	.GLOBAL gUnknown_08619AE0
 gUnknown_08619AE0:
-	.INCBIN "assets/sprites/gUnknown_08619AE0.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_08619AE0.4bpp"
 
 	.GLOBAL gUnknown_08619B60
 gUnknown_08619B60:
@@ -12478,7 +12478,7 @@ gUnknown_08619C80:
 
 	.GLOBAL gUnknown_08619C88
 gUnknown_08619C88:
-	.INCBIN "assets/sprites/gUnknown_08619C88.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_08619C88.4bpp"
 
 	.GLOBAL gUnknown_0861AC88
 gUnknown_0861AC88:
@@ -12490,7 +12490,7 @@ gUnknown_0861ADA8:
 
 	.GLOBAL gUnknown_0861ADB0
 gUnknown_0861ADB0:
-	.INCBIN "assets/sprites/gUnknown_0861ADB0.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_0861ADB0.4bpp"
 
 	.GLOBAL gUnknown_0861AE30
 gUnknown_0861AE30:
@@ -12502,7 +12502,7 @@ gUnknown_0861AF08:
 
 	.GLOBAL gUnknown_0861AF10
 gUnknown_0861AF10:
-	.INCBIN "assets/sprites/gUnknown_0861AF10.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_0861AF10.4bpp"
 
 	.GLOBAL gUnknown_0861B210
 gUnknown_0861B210:
@@ -12538,7 +12538,7 @@ gUnknown_0861BA24:
 
 	.GLOBAL gUnknown_0861BA2C
 gUnknown_0861BA2C:
-	.INCBIN "assets/sprites/gUnknown_0861BA2C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861BA2C.4bpp"
 
 	.GLOBAL gUnknown_0861BE2C
 gUnknown_0861BE2C:
@@ -12550,7 +12550,7 @@ gUnknown_0861BEBC:
 
 	.GLOBAL gUnknown_0861BEC4
 gUnknown_0861BEC4:
-	.INCBIN "assets/sprites/gUnknown_0861BEC4.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861BEC4.4bpp"
 
 	.GLOBAL gUnknown_0861C0C4
 gUnknown_0861C0C4:
@@ -12562,7 +12562,7 @@ gUnknown_0861C154:
 
 	.GLOBAL gUnknown_0861C15C
 gUnknown_0861C15C:
-	.INCBIN "assets/sprites/gUnknown_0861C15C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861C15C.4bpp"
 
 	.GLOBAL gUnknown_0861C35C
 gUnknown_0861C35C:
@@ -12574,7 +12574,7 @@ gUnknown_0861C47C:
 
 	.GLOBAL gUnknown_0861C484
 gUnknown_0861C484:
-	.INCBIN "assets/sprites/gUnknown_0861C484.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861C484.4bpp"
 
 	.GLOBAL gUnknown_0861C884
 gUnknown_0861C884:
@@ -12586,7 +12586,7 @@ gUnknown_0861C95C:
 
 	.GLOBAL gUnknown_0861C964
 gUnknown_0861C964:
-	.INCBIN "assets/sprites/gUnknown_0861C964.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861C964.4bpp"
 
 	.GLOBAL gUnknown_0861CC64
 gUnknown_0861CC64:
@@ -12598,7 +12598,7 @@ gUnknown_0861CE14:
 
 	.GLOBAL gUnknown_0861CE1C
 gUnknown_0861CE1C:
-	.INCBIN "assets/sprites/gUnknown_0861CE1C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861CE1C.4bpp"
 
 	.GLOBAL gUnknown_0861D41C
 gUnknown_0861D41C:
@@ -12706,7 +12706,7 @@ gUnknown_08622C60:
 
 	.GLOBAL gUnknown_08622C68
 gUnknown_08622C68:
-	.INCBIN "assets/sprites/gUnknown_08622C68.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_08622C68.4bpp"
 
 	.GLOBAL gUnknown_08624E68
 gUnknown_08624E68:
@@ -12766,7 +12766,7 @@ gUnknown_086269D8:
 
 	.GLOBAL gUnknown_086269E0
 gUnknown_086269E0:
-	.INCBIN "assets/sprites/gUnknown_086269E0.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_086269E0.4bpp"
 
 	.GLOBAL gUnknown_08626BE0
 gUnknown_08626BE0:
@@ -12778,7 +12778,7 @@ gUnknown_08626D00:
 
 	.GLOBAL gUnknown_08626D08
 gUnknown_08626D08:
-	.INCBIN "assets/sprites/gUnknown_08626D08.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08626D08.4bpp"
 
 	.GLOBAL gUnknown_08627108
 gUnknown_08627108:
@@ -12790,7 +12790,7 @@ gUnknown_08627300:
 
 	.GLOBAL gUnknown_08627308
 gUnknown_08627308:
-	.INCBIN "assets/sprites/gUnknown_08627308.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08627308.4bpp"
 
 	.GLOBAL gUnknown_08627588
 gUnknown_08627588:
@@ -12802,7 +12802,7 @@ gUnknown_08627660:
 
 	.GLOBAL gUnknown_08627668
 gUnknown_08627668:
-	.INCBIN "assets/sprites/gUnknown_08627668.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08627668.4bpp"
 
 	.GLOBAL gUnknown_08627968
 gUnknown_08627968:
@@ -12814,7 +12814,7 @@ gUnknown_08627BA8:
 
 	.GLOBAL gUnknown_08627BB0
 gUnknown_08627BB0:
-	.INCBIN "assets/sprites/gUnknown_08627BB0.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_08627BB0.4bpp"
 
 	.GLOBAL gUnknown_08627FB0
 gUnknown_08627FB0:
@@ -12838,7 +12838,7 @@ gUnknown_086283E8:
 
 	.GLOBAL gUnknown_086283F0
 gUnknown_086283F0:
-	.INCBIN "assets/sprites/gUnknown_086283F0.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_086283F0.4bpp"
 
 	.GLOBAL gUnknown_086285F0
 gUnknown_086285F0:
@@ -12850,7 +12850,7 @@ gUnknown_08628710:
 
 	.GLOBAL gUnknown_08628718
 gUnknown_08628718:
-	.INCBIN "assets/sprites/gUnknown_08628718.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_08628718.4bpp"
 
 	.GLOBAL gUnknown_08628B18
 gUnknown_08628B18:
@@ -12862,7 +12862,7 @@ gUnknown_08628CA4:
 
 	.GLOBAL gUnknown_08628CAC
 gUnknown_08628CAC:
-	.INCBIN "assets/sprites/gUnknown_08628CAC.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_08628CAC.4bpp"
 
 	.GLOBAL gUnknown_0862922C
 gUnknown_0862922C:
@@ -12874,7 +12874,7 @@ gUnknown_08629304:
 
 	.GLOBAL gUnknown_0862930C
 gUnknown_0862930C:
-	.INCBIN "assets/sprites/gUnknown_0862930C.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_0862930C.4bpp"
 
 	.GLOBAL gUnknown_0862960C
 gUnknown_0862960C:
@@ -12886,7 +12886,7 @@ gUnknown_086297BC:
 
 	.GLOBAL gUnknown_086297C4
 gUnknown_086297C4:
-	.INCBIN "assets/sprites/gUnknown_086297C4.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_086297C4.4bpp"
 
 	.GLOBAL gUnknown_08629DC4
 gUnknown_08629DC4:
@@ -12898,7 +12898,7 @@ gUnknown_08629EE4:
 
 	.GLOBAL gUnknown_08629EEC
 gUnknown_08629EEC:
-	.INCBIN "assets/sprites/gUnknown_08629EEC.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_08629EEC.4bpp"
 
 	.GLOBAL gUnknown_08629FAC
 gUnknown_08629FAC:
@@ -12922,7 +12922,7 @@ gUnknown_0862A348:
 
 	.GLOBAL gUnknown_0862A350
 gUnknown_0862A350:
-	.INCBIN "assets/sprites/gUnknown_0862A350.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862A350.4bpp"
 
 	.GLOBAL gUnknown_0862A750
 gUnknown_0862A750:
@@ -12934,7 +12934,7 @@ gUnknown_0862A7E0:
 
 	.GLOBAL gUnknown_0862A7E8
 gUnknown_0862A7E8:
-	.INCBIN "assets/sprites/gUnknown_0862A7E8.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862A7E8.4bpp"
 
 	.GLOBAL gUnknown_0862A9E8
 gUnknown_0862A9E8:
@@ -12946,7 +12946,7 @@ gUnknown_0862AB08:
 
 	.GLOBAL gUnknown_0862AB10
 gUnknown_0862AB10:
-	.INCBIN "assets/sprites/gUnknown_0862AB10.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862AB10.4bpp"
 
 	.GLOBAL gUnknown_0862AF10
 gUnknown_0862AF10:
@@ -12958,7 +12958,7 @@ gUnknown_0862AFE8:
 
 	.GLOBAL gUnknown_0862AFF0
 gUnknown_0862AFF0:
-	.INCBIN "assets/sprites/gUnknown_0862AFF0.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862AFF0.4bpp"
 
 	.GLOBAL gUnknown_0862B2F0
 gUnknown_0862B2F0:
@@ -12970,7 +12970,7 @@ gUnknown_0862B4A0:
 
 	.GLOBAL gUnknown_0862B4A8
 gUnknown_0862B4A8:
-	.INCBIN "assets/sprites/gUnknown_0862B4A8.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862B4A8.4bpp"
 
 	.GLOBAL gUnknown_0862BAA8
 gUnknown_0862BAA8:
@@ -13126,7 +13126,7 @@ gUnknown_0862E9C8:
 
 	.GLOBAL gUnknown_0862E9D0
 gUnknown_0862E9D0:
-	.INCBIN "assets/sprites/gUnknown_0862E9D0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0862E9D0.4bpp"
 
 	.GLOBAL gUnknown_0862EBD0
 gUnknown_0862EBD0:
@@ -13138,7 +13138,7 @@ gUnknown_0862F008:
 
 	.GLOBAL gUnknown_0862F010
 gUnknown_0862F010:
-	.INCBIN "assets/sprites/gUnknown_0862F010.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0862F010.4bpp"
 
 	.GLOBAL gUnknown_0862FC10
 gUnknown_0862FC10:
@@ -13150,7 +13150,7 @@ gUnknown_0862FE50:
 
 	.GLOBAL gUnknown_0862FE58
 gUnknown_0862FE58:
-	.INCBIN "assets/sprites/gUnknown_0862FE58.8bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_0862FE58.8bpp"
 
 	.GLOBAL gUnknown_0863FE58
 gUnknown_0863FE58:
@@ -13162,7 +13162,7 @@ gUnknown_086400E0:
 
 	.GLOBAL gUnknown_086400E8
 gUnknown_086400E8:
-	.INCBIN "assets/sprites/gUnknown_086400E8.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_086400E8.4bpp"
 
 	.GLOBAL gUnknown_08640DE8
 gUnknown_08640DE8:
@@ -13174,7 +13174,7 @@ gUnknown_08640F2C:
 
 	.GLOBAL gUnknown_08640F34
 gUnknown_08640F34:
-	.INCBIN "assets/sprites/gUnknown_08640F34.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_08640F34.4bpp"
 
 	.GLOBAL gUnknown_08642134
 gUnknown_08642134:
@@ -13186,7 +13186,7 @@ gUnknown_086421E8:
 
 	.GLOBAL gUnknown_086421F0
 gUnknown_086421F0:
-	.INCBIN "assets/sprites/gUnknown_086421F0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_086421F0.4bpp"
 
 	.GLOBAL gUnknown_08642BF0
 gUnknown_08642BF0:
@@ -13198,7 +13198,7 @@ gUnknown_08642D34:
 
 	.GLOBAL gUnknown_08642D3C
 gUnknown_08642D3C:
-	.INCBIN "assets/sprites/gUnknown_08642D3C.8bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_08642D3C.8bpp"
 
 	.GLOBAL gUnknown_0864BD3C
 gUnknown_0864BD3C:
@@ -13210,7 +13210,7 @@ gUnknown_0864BF58:
 
 	.GLOBAL gUnknown_0864BF60
 gUnknown_0864BF60:
-	.INCBIN "assets/sprites/gUnknown_0864BF60.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864BF60.4bpp"
 
 	.GLOBAL gUnknown_0864CC60
 gUnknown_0864CC60:
@@ -13222,7 +13222,7 @@ gUnknown_0864CF30:
 
 	.GLOBAL gUnknown_0864CF38
 gUnknown_0864CF38:
-	.INCBIN "assets/sprites/gUnknown_0864CF38.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864CF38.4bpp"
 
 	.GLOBAL gUnknown_0864D138
 gUnknown_0864D138:
@@ -13234,7 +13234,7 @@ gUnknown_0864D2E8:
 
 	.GLOBAL gUnknown_0864D2F0
 gUnknown_0864D2F0:
-	.INCBIN "assets/sprites/gUnknown_0864D2F0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864D2F0.4bpp"
 
 	.GLOBAL gUnknown_0864DAF0
 gUnknown_0864DAF0:
@@ -13246,7 +13246,7 @@ gUnknown_0864DC10:
 
 	.GLOBAL gUnknown_0864DC18
 gUnknown_0864DC18:
-	.INCBIN "assets/sprites/gUnknown_0864DC18.8bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864DC18.8bpp"
 
 	.GLOBAL gUnknown_0864EC18
 gUnknown_0864EC18:
@@ -13258,7 +13258,7 @@ gUnknown_0864ED38:
 
 	.GLOBAL gUnknown_0864ED40
 gUnknown_0864ED40:
-	.INCBIN "assets/sprites/gUnknown_0864ED40.8bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864ED40.8bpp"
 
 	.GLOBAL gUnknown_0864FD40
 gUnknown_0864FD40:
@@ -13270,7 +13270,7 @@ gUnknown_0864FE60:
 
 	.GLOBAL gUnknown_0864FE68
 gUnknown_0864FE68:
-	.INCBIN "assets/sprites/gUnknown_0864FE68.8bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864FE68.8bpp"
 
 	.GLOBAL gUnknown_08650E68
 gUnknown_08650E68:
@@ -13282,7 +13282,7 @@ gUnknown_08650F88:
 
 	.GLOBAL gUnknown_08650F90
 gUnknown_08650F90:
-	.INCBIN "assets/sprites/gUnknown_08650F90.8bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_08650F90.8bpp"
 
 	.GLOBAL gUnknown_08651F90
 gUnknown_08651F90:
@@ -13294,7 +13294,7 @@ gUnknown_08651FFC:
 
 	.GLOBAL gUnknown_08652004
 gUnknown_08652004:
-	.INCBIN "assets/sprites/gUnknown_08652004.4bpp"
+	.INCBIN "assets/sprites/belt_switch/gUnknown_08652004.4bpp"
 
 	.GLOBAL gUnknown_08652184
 gUnknown_08652184:
@@ -13306,7 +13306,7 @@ gUnknown_086521F0:
 
 	.GLOBAL gUnknown_086521F8
 gUnknown_086521F8:
-	.INCBIN "assets/sprites/gUnknown_086521F8.4bpp"
+	.INCBIN "assets/sprites/belt_switch/gUnknown_086521F8.4bpp"
 
 	.GLOBAL gUnknown_08652378
 gUnknown_08652378:
@@ -13442,7 +13442,7 @@ gUnknown_086575A8:
 
 	.GLOBAL gUnknown_086575B0
 gUnknown_086575B0:
-	.INCBIN "assets/sprites/gUnknown_086575B0.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_086575B0.4bpp"
 
 	.GLOBAL gUnknown_08657630
 gUnknown_08657630:
@@ -13490,7 +13490,7 @@ gUnknown_08657CD4:
 
 	.GLOBAL gUnknown_08657CDC
 gUnknown_08657CDC:
-	.INCBIN "assets/sprites/gUnknown_08657CDC.4bpp"
+	.INCBIN "assets/sprites/donut_block/gUnknown_08657CDC.4bpp"
 
 	.GLOBAL gUnknown_08657F5C
 gUnknown_08657F5C:
@@ -13502,7 +13502,7 @@ gUnknown_08657FC8:
 
 	.GLOBAL gUnknown_08657FD0
 gUnknown_08657FD0:
-	.INCBIN "assets/sprites/gUnknown_08657FD0.4bpp"
+	.INCBIN "assets/sprites/donut_block/gUnknown_08657FD0.4bpp"
 
 	.GLOBAL gUnknown_08658150
 gUnknown_08658150:
@@ -13514,7 +13514,7 @@ gUnknown_086581E0:
 
 	.GLOBAL gUnknown_086581E8
 gUnknown_086581E8:
-	.INCBIN "assets/sprites/gUnknown_086581E8.4bpp"
+	.INCBIN "assets/sprites/donut_block/gUnknown_086581E8.4bpp"
 
 	.GLOBAL gUnknown_08658268
 gUnknown_08658268:
@@ -13526,7 +13526,7 @@ gUnknown_0865828C:
 
 	.GLOBAL gUnknown_08658294
 gUnknown_08658294:
-	.INCBIN "assets/sprites/gUnknown_08658294.4bpp"
+	.INCBIN "assets/sprites/donut_block/gUnknown_08658294.4bpp"
 
 	.GLOBAL gUnknown_08658314
 gUnknown_08658314:
@@ -13538,7 +13538,7 @@ gUnknown_086583A4:
 
 	.GLOBAL gUnknown_086583AC
 gUnknown_086583AC:
-	.INCBIN "assets/sprites/gUnknown_086583AC.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_086583AC.4bpp"
 
 	.GLOBAL gUnknown_086585AC
 gUnknown_086585AC:
@@ -13550,7 +13550,7 @@ gUnknown_086588A0:
 
 	.GLOBAL gUnknown_086588A8
 gUnknown_086588A8:
-	.INCBIN "assets/sprites/gUnknown_086588A8.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_086588A8.4bpp"
 
 	.GLOBAL gUnknown_08658C28
 gUnknown_08658C28:
@@ -13562,7 +13562,7 @@ gUnknown_08658CB8:
 
 	.GLOBAL gUnknown_08658CC0
 gUnknown_08658CC0:
-	.INCBIN "assets/sprites/gUnknown_08658CC0.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_08658CC0.4bpp"
 
 	.GLOBAL gUnknown_08658EC0
 gUnknown_08658EC0:
@@ -13574,7 +13574,7 @@ gUnknown_08658F50:
 
 	.GLOBAL gUnknown_08658F58
 gUnknown_08658F58:
-	.INCBIN "assets/sprites/gUnknown_08658F58.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_08658F58.4bpp"
 
 	.GLOBAL gUnknown_08658FD8
 gUnknown_08658FD8:
@@ -13586,7 +13586,7 @@ gUnknown_08658FFC:
 
 	.GLOBAL gUnknown_08659004
 gUnknown_08659004:
-	.INCBIN "assets/sprites/gUnknown_08659004.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_08659004.4bpp"
 
 	.GLOBAL gUnknown_08659084
 gUnknown_08659084:
@@ -13598,7 +13598,7 @@ gUnknown_08659114:
 
 	.GLOBAL gUnknown_0865911C
 gUnknown_0865911C:
-	.INCBIN "assets/sprites/gUnknown_0865911C.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_0865911C.4bpp"
 
 	.GLOBAL gUnknown_0865919C
 gUnknown_0865919C:
@@ -16835,9 +16835,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08299A40 @ Animation Data
-	.4byte gUnknown_08299BF0 @ OAM
-	.4byte gUnknown_08299BF8 @ Sprite Graphics
+	.4byte gfxExpertLevelIconPicsAnimation @ Animation Data
+	.4byte gfxExpertLevelIconPicsOAM @ OAM
+	.4byte gfxExpertLevelIconPics @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x1000 @ Y position
