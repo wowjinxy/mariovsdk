@@ -807,7 +807,7 @@ struct SubSpriteTemplate
     /*0x01*/ u8 duration;  // animation frame duration
     /*0x02*/ s8 x_offset;  // x offset from sprite position
     /*0x03*/ s8 y_offset;  // y offset from sprite position
-    u8 filler4[4];
+    /*0x04*/ u32 unk4;  // unknown/unused
     u32 unk8;  // some kind of flags?
     void *unkC;
     u8 filler10[0x24-0x10];
@@ -1366,10 +1366,6 @@ extern struct Movie gMovie8;
 extern struct Movie gMovie9;
 
 extern const s16 gUnknown_0807C118[][2];
-extern unkst24 gUnknown_0812E128[1];
-
-extern u8 gUnknown_082E8908[];
-extern u8 gUnknown_082E8900[];
 
 extern struct worldTableStruct gUnknown_08B2CFC0[0];
 extern struct worldTableStruct gUnknown_08B2CF84[0];
@@ -1393,77 +1389,8 @@ extern u8 gUnknown_0807C838[];
 
 extern struct GraphicsConfig gMainMenuData;
 
-extern struct OamData gUnknown_082E4C44;
-extern u8 gUnknown_082E4C4C[];
-extern struct SubSpriteTemplate gUnknown_085FB360;
-extern struct OamData gfxFileLettersOAM;
-extern u8 gfxFileLetters4bpp[];
-extern struct SubSpriteTemplate gUnknown_085FB554[];
-extern struct OamData gUnknown_085FB7DC;
-extern u8 gUnknown_085FB7E4[];
-extern struct SubSpriteTemplate gUnknown_085FEFE4[];
-extern struct OamData gUnknown_085FF26C;
-extern u8 gUnknown_085FF274[];
-extern struct SubSpriteTemplate gUnknown_08600E74[];
-extern struct OamData gfxFileFrameNewGameBottomOAM;
-extern u8 gfxFileFrameNewGameBottom4bpp[];
-extern struct SubSpriteTemplate gUnknown_08602D04[];
-extern struct OamData gfxFileFrameNewGameTopOAM;
-extern u8 gfxFileFrameNewGameTop4bpp[];
-extern struct OamData gUnknown_08606A1C;
-extern u8 gUnknown_08606A24[];
-extern struct SubSpriteTemplate gUnknown_08606794[];
-extern struct SubSpriteTemplate gUnknown_0860A224[];
-extern struct OamData gfxFileFrameNormalBottomOAM;
-extern u8 gfxFileFrameNormalBottom4bpp[];
-extern struct SubSpriteTemplate gUnknown_0860C0B4[];
-extern struct OamData gfxFileFrameNormalTopOAM;
-extern u8 gfxFileFrameNormalTop4bpp[];
-extern struct SubSpriteTemplate gUnknown_0860FB44[];
-extern struct OamData gUnknown_0860FDCC;
-extern u8 gUnknown_0860FDD4[];
-extern struct SubSpriteTemplate gUnknown_086119D4;
-extern struct OamData gUnknown_08611A40;
-extern u8 gUnknown_08611A48[];
-extern struct SubSpriteTemplate gUnknown_08612648;
-extern struct OamData gfxFileInfoBoxOAM;
-extern u8 gfxFileInfoBox4bpp[];
-extern struct SubSpriteTemplate gUnknown_08613EBC;
-extern struct OamData gfxEReaderLogoOAM;
-extern u8 gfxEReaderLogo4bpp[];
-extern struct SubSpriteTemplate gUnknown_08614738;
-extern struct OamData gfxExpertOAM;
-extern u8 gfxExpert4bpp[];
-extern struct SubSpriteTemplate gUnknown_08614B64;
-extern struct OamData gfxOptionMenuEraseDataButtonsOAM;
-extern u8 gfxOptionMenuEraseDataButtons4bpp[];
-extern struct SubSpriteTemplate gUnknown_08615BB4[];
-extern struct OamData gfxFileBackgroundOAM;
-extern u8 gfxFileBackground4bpp[];
-extern struct SubSpriteTemplate gUnknown_08617030[];
-extern struct OamData gfxGoldCrownOAM;
-extern u8 gfxGoldCrown4bpp[];
-extern struct OamData gfxMainMenuDigitsLargeOAM;
-extern u8 gfxMainMenuDigitsLarge4bpp[];
-extern struct SubSpriteTemplate gUnknown_08617570;
-extern struct OamData gfxPlusMainOAM;
-extern u8 gfxPlusMain4bpp[];
-extern struct OamData gfxUnusedDigitsOAM;
-extern u8 gfxUnusedDigits4bpp[];
-extern struct SubSpriteTemplate gUnknown_08617970;
-extern struct OamData gfxMainMenuDigitsMediumOAM;
-extern u8 gfxMainMenuDigitsMedium4bpp[];
-extern struct SubSpriteTemplate sMMDKSpriteTemplate;
-extern u8 gfxMMDK4bpp[];
-extern struct OamData gfxMMDKOAM;
-extern struct OamData gfxMainMenuDigitsSmallOAM;
-extern u8 gfxMainMenuDigitsSmall4bpp[];
-extern struct SubSpriteTemplate gUnknown_08618064[];
-extern struct OamData gfxBronzeCrownOAM;
-extern u8 gfxBronzeCrown4bpp[];
 extern struct Struct0807C0E0 gUnknown_0807C0D8;
 extern u8 gExpertLevelsStarsNeeded;
-extern struct SpriteTemplate gUncompressedGraphicsTable[];
 
 extern struct GraphicsConfig gWorldOneStartData;
 extern struct GraphicsConfig gWorldTwoStartData;
@@ -1478,8 +1405,6 @@ extern struct GraphicsConfig gWorldFourPlusStartData;
 extern struct GraphicsConfig gWorldFivePlusStartData;
 extern struct GraphicsConfig gWorldSixPlusStartData;
 
-extern struct { u8 filler0; u8 unk1; } gUnknown_08251EC0;
-extern struct { u8 filler0; u8 unk1; } gUnknown_0854301C;
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
 extern struct UnknownStruct16 gEWorldMenuData2;

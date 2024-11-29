@@ -4,6 +4,7 @@
 #include "main.h"
 #include "main_menu.h"
 #include "savefile.h"
+#include "sprites.h"
 
 static u16 gSomeOamIndex_03000040;
 static u16 gUnknown_03000042;
@@ -94,19 +95,19 @@ static struct Coords32 gUnknown_080786C0[] = // the level number
 
 static struct SpriteTemplate sFileIconSpriteTemplates[] =
 {
-    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
-    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
-    { 0, 0, 0x20, 0x04, 0x080, &gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
-    { 0, 0, 0x80, 0x10, 0x200, &gUnknown_08613EBC, &gfxEReaderLogoOAM, gfxEReaderLogo4bpp },
+    { 0, 0, 0x20, 0x04, 0x080, gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
+    { 0, 0, 0x20, 0x04, 0x080, gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
+    { 0, 0, 0x20, 0x04, 0x080, gUnknown_085FB360, &gfxFileLettersOAM, gfxFileLetters4bpp },
+    { 0, 0, 0x80, 0x10, 0x200, gUnknown_08613EBC, &gfxEReaderLogoOAM, gfxEReaderLogo4bpp },
 };
-static struct SpriteTemplate gUnknown_08078760 = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_086119D4, &gUnknown_08611A40, gUnknown_08611A48 };
-static struct SpriteTemplate sFileInfoBoxSpriteTemplate = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08612648, &gfxFileInfoBoxOAM, gfxFileInfoBox4bpp };
-static struct SpriteTemplate sPlusMainSpriteTemplate = { 0, 0, 0x020, 0x04, 0x080, &gUnknown_08617570, &gfxPlusMainOAM, gfxPlusMain4bpp };
+static struct SpriteTemplate gUnknown_08078760 = { 0, 0, 0x100, 0x20, 0x400, gUnknown_086119D4, &gUnknown_08611A40, gUnknown_08611A48 };
+static struct SpriteTemplate sFileInfoBoxSpriteTemplate = { 0, 0, 0x200, 0x40, 0x800, gUnknown_08612648, &gfxFileInfoBoxOAM, gfxFileInfoBox4bpp };
+static struct SpriteTemplate sPlusMainSpriteTemplate = { 0, 0, 0x020, 0x04, 0x080, gUnknown_08617570, &gfxPlusMainOAM, gfxPlusMain4bpp };
 static struct SpriteTemplate sFileBackgroundSpriteTemplate = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08615BB4[0], &gfxFileBackgroundOAM, gfxFileBackground4bpp };
-static struct SpriteTemplate sOptionMenuEraseDataButtonsSpriteTemplate = { 0, 0, 0x200, 0x40, 0x800, &gUnknown_08614B64, &gfxOptionMenuEraseDataButtonsOAM, gfxOptionMenuEraseDataButtons4bpp };
-static struct SpriteTemplate sExpertSpriteTemplate = { 0, 0, 0x100, 0x20, 0x400, &gUnknown_08614738, &gfxExpertOAM, gfxExpert4bpp };
-static struct SpriteTemplate gUnknown_080787F0 = { 0, 0, 0x008, 0x01, 0x020, &gUnknown_08617970, &gfxMainMenuDigitsMediumOAM, gfxMainMenuDigitsMedium4bpp };
-static struct SpriteTemplate gUnknown_08078808 = { 0, 0, 0x020, 0x04, 0x080, &sMMDKSpriteTemplate, &gfxMMDKOAM, gfxMMDK4bpp };
+static struct SpriteTemplate sOptionMenuEraseDataButtonsSpriteTemplate = { 0, 0, 0x200, 0x40, 0x800, gUnknown_08614B64, &gfxOptionMenuEraseDataButtonsOAM, gfxOptionMenuEraseDataButtons4bpp };
+static struct SpriteTemplate sExpertSpriteTemplate = { 0, 0, 0x100, 0x20, 0x400, gUnknown_08614738, &gfxExpertOAM, gfxExpert4bpp };
+static struct SpriteTemplate gUnknown_080787F0 = { 0, 0, 0x008, 0x01, 0x020, gUnknown_08617970, &gfxMainMenuDigitsMediumOAM, gfxMainMenuDigitsMedium4bpp };
+static struct SpriteTemplate gUnknown_08078808 = { 0, 0, 0x020, 0x04, 0x080, sMMDKSpriteTemplate, &gfxMMDKOAM, gfxMMDK4bpp };
 static struct SpriteTemplate sCrownSpriteTemplate1[] =
 {
     {  20, 33, 0x020, 0x04, 0x080, &gUnknown_08618064[0], &gfxBronzeCrownOAM, gfxBronzeCrown4bpp },

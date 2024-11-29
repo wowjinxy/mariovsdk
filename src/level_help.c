@@ -1,6 +1,7 @@
 #include "gba/gba.h"
 #include "global.h"
 #include "main.h"
+#include "sprites.h"
 
 static u8 sHelpState;
 static u8 gUnknown_03000131;
