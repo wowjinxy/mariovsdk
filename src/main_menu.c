@@ -146,7 +146,7 @@ static inline u8 is_expert_unlocked(u8 menuSel)
     struct SaveFile *saveFile = &gSaveFilesPtr[menuSel];
     if (menuSel != FILE_SELECT_EWORLD
      && (saveFile->mainBossLevel.flags & LEVEL_FLAG_COMPLETE)
-     && saveFile->stars >= gUnknown_080A8668)
+     && saveFile->stars >= gExpertLevelsStarsNeeded)
         return TRUE;
     else
         return FALSE;
@@ -358,7 +358,7 @@ static void handle_main_menu_input(void)
                 one = 1;
                 inlinefunc3(*gSelectedSaveFileNumPtr, one);
                 if (gUnknown_03000B50 == 1)
-                    sub_0802A164();
+                    write_flash_sector_0802A164();
             }
             return;
         }
@@ -676,7 +676,7 @@ static void handle_erase_data_confirm_input(void)
                 CpuFill16(0, &gSaveFilesPtr[fileNum], sizeof(struct SaveFile));
                 init_level_highscores_08010DEC(&gSaveFilesPtr[fileNum]);
                 if (gUnknown_03000B50 == 1)
-                    sub_0802A164();
+                    write_flash_sector_0802A164();
                 for (i = 0; i < 3; i++)
                     gUnknown_03000066[i] = sub_080111B4(i);
             }

@@ -97,7 +97,7 @@ void game_init_main(void)
         break;
       case 4:
         sub_08011428(1);
-        sub_0802A164();
+        write_flash_sector_0802A164();
         gUnknown_0300029C->unk1000 = 2;
         break;
       case 5:
@@ -107,7 +107,7 @@ void game_init_main(void)
       case 6:
         sub_08011428(1);
         CpuFill16(0, gEWorldLevelCountPtr, 0x68);
-        sub_0802A164();
+        write_flash_sector_0802A164();
         sub_0802F1D4();
         gUnknown_0300029C->unk1000 = 1;
         break;

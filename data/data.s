@@ -927,79 +927,115 @@ gPredefinedPalettes:
 
 	.GLOBAL gUnknown_080A7D98
 gUnknown_080A7D98:
+	@ expert 1 selection box
 	.4byte 0x00000048
 	.4byte 0x00000010
+	@ expert 2 selection box
 	.4byte 0x00000070
 	.4byte 0x00000010
+	@ expert 3 selection box
 	.4byte 0x00000098
 	.4byte 0x00000010
+	@ expert 4 selection box
 	.4byte 0x000000C0
 	.4byte 0x00000010
+	@ expert 5 selection box
 	.4byte 0x00000048
 	.4byte 0x00000038
+	@ expert 6 selection box
 	.4byte 0x00000070
 	.4byte 0x00000038
+	@ expert 7 selection box
 	.4byte 0x00000098
 	.4byte 0x00000038
+	@ expert 8 selection box
 	.4byte 0x000000C0
 	.4byte 0x00000038
+	@ expert 9 selection box
 	.4byte 0x00000048
 	.4byte 0x00000060
+	@ expert 10 selection box
 	.4byte 0x00000070
 	.4byte 0x00000060
+	@ expert 11 selection box
 	.4byte 0x00000098
 	.4byte 0x00000060
+	@ expert 12 selection box
 	.4byte 0x000000C0
 	.4byte 0x00000060
 
 	.GLOBAL gUnknown_080A7DF8
 gUnknown_080A7DF8:
+	@ expert 1 menu presents 
 	.4byte 0x0000004A
 	.4byte 0x00000013
+	@ expert 2 menu presents 
 	.4byte 0x00000072
 	.4byte 0x00000013
+	@ expert 3 menu presents 
 	.4byte 0x0000009A
 	.4byte 0x00000013
+	@ expert 4 menu presents 
 	.4byte 0x000000C2
 	.4byte 0x00000013
+	@ expert 5 menu presents 
 	.4byte 0x0000004A
 	.4byte 0x0000003B
+	@ expert 6 menu presents 
 	.4byte 0x00000072
 	.4byte 0x0000003B
+	@ expert 7 menu presents 
 	.4byte 0x0000009A
 	.4byte 0x0000003B
+	@ expert 8 menu presents 
 	.4byte 0x000000C2
 	.4byte 0x0000003B
+	@ expert 9 menu presents 
 	.4byte 0x0000004A
 	.4byte 0x00000063
+	@ expert 10 menu presents
 	.4byte 0x00000072
 	.4byte 0x00000063
+	@ expert 11 menu presents
 	.4byte 0x0000009A
 	.4byte 0x00000063
+	@ expert 12 menu presents
 	.4byte 0x000000C2
 	.4byte 0x00000063
+	@ unknown -- seems to copy the selection boxes
 	.4byte 0x00000048
 	.4byte 0x00000010
+	
 	.4byte 0x00000070
 	.4byte 0x00000010
+	
 	.4byte 0x00000098
 	.4byte 0x00000010
+	
 	.4byte 0x000000C0
 	.4byte 0x00000010
+	
 	.4byte 0x00000048
 	.4byte 0x00000038
+	
 	.4byte 0x00000070
 	.4byte 0x00000038
+	
 	.4byte 0x00000098
 	.4byte 0x00000038
+	
 	.4byte 0x000000C0
 	.4byte 0x00000038
+	
 	.4byte 0x00000048
 	.4byte 0x00000060
+	
 	.4byte 0x00000070
 	.4byte 0x00000060
+	
 	.4byte 0x00000098
 	.4byte 0x00000060
+	
 	.4byte 0x000000C0
 	.4byte 0x00000060
 
@@ -1011,7 +1047,7 @@ gUnknown_080A7EB8:
 	.2byte 128 @ Total tiles
 	.2byte 0x1000 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829A7F8 @ Sprite Data 1
+	.4byte gUnknown_0829A7F8 @ Animation Data
 	.4byte gUnknown_0829A81C @ OAM
 	.4byte gUnknown_0829A824 @ Sprite Graphics
 	
@@ -1023,9 +1059,9 @@ gUnknown_080A7ED0:
 	.2byte 8 @ Total tiles
 	.2byte 0x0100 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08299A40 @ Sprite Data 1
-	.4byte gUnknown_08299BF0 @ OAM
-	.4byte gUnknown_08299BF8 @ Sprite Graphics
+	.4byte gfxExpertLevelIconPicsAnimation @ Animation Data
+	.4byte gfxExpertLevelIconPicsOAM @ OAM
+	.4byte gfxExpertLevelIconPics @ Sprite Graphics
 
 	.GLOBAL gUnknown_080A7EE8
 gUnknown_080A7EE8:
@@ -1075,17 +1111,17 @@ gUnknown_080A8428:
 gUnknown_080A8548:
 	.INCBIN "baserom.gba", 0xA8548, 0xA8668-0xA8548
 
-	.GLOBAL gUnknown_080A8668
-gUnknown_080A8668:
-	.byte 0x09
-	.byte 0x12
-	.byte 0x1B
-	.byte 0x24
-	.byte 0x2D
-	.byte 0x36
-	.byte 0x3F
-	.byte 0x48
-	.byte 0x51
-	.byte 0x5A
-	.byte 0x5A
-	.byte 0x5A
+	.GLOBAL gExpertLevelsStarsNeeded
+gExpertLevelsStarsNeeded:
+	.byte 9
+	.byte 18
+	.byte 27
+	.byte 36
+	.byte 45
+	.byte 54
+	.byte 63
+	.byte 72
+	.byte 81
+	.byte 90
+	.byte 90
+	.byte 90

@@ -416,9 +416,447 @@ gUnknown_080B6C30:
 gUnknown_080B77F4:
 	.INCBIN "baserom.gba", 0xB77F4, 0xB8584-0xB77F4
 
-	.GLOBAL gUnknown_080B8584
-gUnknown_080B8584:
-	.INCBIN "baserom.gba", 0xB8584, 0xB889C-0xB8584
+	.GLOBAL gfxBobombExplosionAnimation
+gfxBobombExplosionAnimation:
+	.byte 0 @ gfx frame
+	.byte 1 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 1 @ gfx frame
+	.byte 1 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 1 @ gfx frame
+	.byte 1 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 0 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 1 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 2 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x20 @ unknown
+	.byte 0x20 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
 
 	.GLOBAL gUnknown_080B889C
 gUnknown_080B889C:
@@ -426,7 +864,7 @@ gUnknown_080B889C:
 
 	.GLOBAL gfxBobombExplosion4bpp
 gfxBobombExplosion4bpp:
-	.INCBIN "assets/sprites/BobombExplosion.4bpp"
+	.INCBIN "assets/sprites/bobomb/BobombExplosion.4bpp"
 
 	.GLOBAL gUnknown_080B90A4
 gUnknown_080B90A4:
@@ -438,7 +876,7 @@ gUnknown_080B92E4:
 
 	.GLOBAL gUnknown_080B92EC
 gUnknown_080B92EC:
-	.INCBIN "assets/sprites/gUnknown_080B92EC.4bpp"
+	.INCBIN "assets/sprites/candle/gUnknown_080B92EC.4bpp"
 
 	.GLOBAL gUnknown_080B9AEC
 gUnknown_080B9AEC:
@@ -450,7 +888,7 @@ gUnknown_080B9B7C:
 
 	.GLOBAL gUnknown_080B9B84
 gUnknown_080B9B84:
-	.INCBIN "assets/sprites/gUnknown_080B9B84.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_080B9B84.4bpp"
 
 	.GLOBAL gUnknown_080B9C84
 gUnknown_080B9C84:
@@ -462,7 +900,7 @@ gUnknown_080B9DA4:
 
 	.GLOBAL gUnknown_080B9DAC
 gUnknown_080B9DAC:
-	.INCBIN "assets/sprites/gUnknown_080B9DAC.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_080B9DAC.4bpp"
 
 	.GLOBAL gUnknown_080B9FAC
 gUnknown_080B9FAC:
@@ -474,7 +912,7 @@ gUnknown_080BA1A4:
 
 	.GLOBAL gUnknown_080BA1AC
 gUnknown_080BA1AC:
-	.INCBIN "assets/sprites/gUnknown_080BA1AC.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_080BA1AC.4bpp"
 
 	.GLOBAL gUnknown_080BA8AC
 gUnknown_080BA8AC:
@@ -486,11 +924,169 @@ gUnknown_080BA9CC:
 
 	.GLOBAL gUnknown_080BA9D4
 gUnknown_080BA9D4:
-	.INCBIN "assets/sprites/gUnknown_080BA9D4.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_080BA9D4.4bpp"
 
-	.GLOBAL gUnknown_080BACD4
-gUnknown_080BACD4:
-	.INCBIN "baserom.gba", 0xBACD4, 0xBADF4-0xBACD4
+	.GLOBAL gfxDKPackAnimation
+gfxDKPackAnimation:
+	.byte 0 @ gfx frame
+	.byte 3 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x04 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x40 @ unknown
+	.byte 0x40 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 1 @ gfx frame
+	.byte 3 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x04 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x40 @ unknown
+	.byte 0x40 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 2 @ gfx frame
+	.byte 3 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x04 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x40 @ unknown
+	.byte 0x40 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 3 @ gfx frame
+	.byte 3 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x04 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x40 @ unknown
+	.byte 0x40 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 4 @ gfx frame
+	.byte 3 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x04 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x40 @ unknown
+	.byte 0x40 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 5 @ gfx frame
+	.byte 3 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x04 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x40 @ unknown
+	.byte 0x40 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 6 @ gfx frame
+	.byte 3 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x04 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x40 @ unknown
+	.byte 0x40 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
+	
+	.byte 7 @ gfx frame
+	.byte 3 @ frames held
+	.byte 0 @ X position
+	.byte 0 @ Y position
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x04 @ bitmasked animation/sprite paramaters: bit1: ?, bit2: ?, bit3: loop, bit4: ?, bit5: affine, bit6: affine double?, bit7: ?, bit8: blending
+	.byte 0x00 @ unknown
+	.byte 0x40 @ unknown
+	.byte 0x40 @ unknown
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.4byte 0x00000000 @ unknown/unused
+	.byte 0x00 @ affine X
+	.byte 0x00 @ affine Y
+	.2byte 0x0000 @ affine 1
+	.2byte 0x0000 @ affine 2
+	.2byte 0x0000 @ affine 3
+	.2byte 0x0000 @ affine 4
+	.2byte 0x0000 @ unknown/unused 
 
 	.GLOBAL gfxDKPackOAM
 gfxDKPackOAM:
@@ -498,7 +1094,7 @@ gfxDKPackOAM:
 
 	.GLOBAL gfxDKPack4bpp
 gfxDKPack4bpp:
-	.INCBIN "assets/sprites/DKPack.4bpp"
+	.INCBIN "assets/sprites/DK/DKPack.4bpp"
 
 	.GLOBAL gUnknown_080BEDFC
 gUnknown_080BEDFC:
@@ -510,7 +1106,7 @@ gUnknown_080BF03C:
 
 	.GLOBAL gUnknown_080BF044
 gUnknown_080BF044:
-	.INCBIN "assets/sprites/gUnknown_080BF044.4bpp"
+	.INCBIN "assets/sprites/fireball/gUnknown_080BF044.4bpp"
 
 	.GLOBAL gUnknown_080C0044
 gUnknown_080C0044:
@@ -522,7 +1118,7 @@ gUnknown_080C0140:
 
 	.GLOBAL gUnknown_080C0148
 gUnknown_080C0148:
-	.INCBIN "assets/sprites/gUnknown_080C0148.4bpp"
+	.INCBIN "assets/sprites/fireball/gUnknown_080C0148.4bpp"
 
 	.GLOBAL gUnknown_080C0848
 gUnknown_080C0848:
@@ -534,7 +1130,7 @@ gUnknown_080C09F8:
 
 	.GLOBAL gUnknown_080C0A00
 gUnknown_080C0A00:
-	.INCBIN "assets/sprites/gUnknown_080C0A00.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C0A00.4bpp"
 
 	.GLOBAL gUnknown_080C2200
 gUnknown_080C2200:
@@ -546,7 +1142,7 @@ gUnknown_080C2320:
 
 	.GLOBAL gUnknown_080C2328
 gUnknown_080C2328:
-	.INCBIN "assets/sprites/gUnknown_080C2328.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C2328.4bpp"
 
 	.GLOBAL gUnknown_080C2728
 gUnknown_080C2728:
@@ -558,7 +1154,7 @@ gUnknown_080C2800:
 
 	.GLOBAL gUnknown_080C2808
 gUnknown_080C2808:
-	.INCBIN "assets/sprites/gUnknown_080C2808.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C2808.4bpp"
 
 	.GLOBAL gUnknown_080C3408
 gUnknown_080C3408:
@@ -570,7 +1166,7 @@ gUnknown_080C3648:
 
 	.GLOBAL gUnknown_080C3650
 gUnknown_080C3650:
-	.INCBIN "assets/sprites/gUnknown_080C3650.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C3650.4bpp"
 
 	.GLOBAL gUnknown_080C5650
 gUnknown_080C5650:
@@ -582,7 +1178,7 @@ gUnknown_080C56E0:
 
 	.GLOBAL gUnknown_080C56E8
 gUnknown_080C56E8:
-	.INCBIN "assets/sprites/gUnknown_080C56E8.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C56E8.4bpp"
 
 	.GLOBAL gUnknown_080C5EE8
 gUnknown_080C5EE8:
@@ -594,7 +1190,7 @@ gUnknown_080C6008:
 
 	.GLOBAL gUnknown_080C6010
 gUnknown_080C6010:
-	.INCBIN "assets/sprites/gUnknown_080C6010.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_080C6010.4bpp"
 
 	.GLOBAL gUnknown_080C7010
 gUnknown_080C7010:
@@ -606,7 +1202,7 @@ gUnknown_080C70E8:
 
 	.GLOBAL gUnknown_080C70F0
 gUnknown_080C70F0:
-	.INCBIN "assets/sprites/gUnknown_080C70F0.4bpp"
+	.INCBIN "assets/sprites/podoboo/gUnknown_080C70F0.4bpp"
 
 	.GLOBAL gUnknown_080C73F0
 gUnknown_080C73F0:
@@ -618,7 +1214,7 @@ gUnknown_080C7774:
 
 	.GLOBAL gUnknown_080C777C
 gUnknown_080C777C:
-	.INCBIN "assets/sprites/gUnknown_080C777C.4bpp"
+	.INCBIN "assets/sprites/podoboo/gUnknown_080C777C.4bpp"
 
 	.GLOBAL gUnknown_080C7B7C
 gUnknown_080C7B7C:
@@ -630,7 +1226,7 @@ gUnknown_080C7C54:
 
 	.GLOBAL gUnknown_080C7C5C
 gUnknown_080C7C5C:
-	.INCBIN "assets/sprites/gUnknown_080C7C5C.4bpp"
+	.INCBIN "assets/sprites/podoboo/gUnknown_080C7C5C.4bpp"
 
 	.GLOBAL gUnknown_080C7F5C
 gUnknown_080C7F5C:
@@ -642,7 +1238,7 @@ gUnknown_080C8034:
 
 	.GLOBAL gUnknown_080C803C
 gUnknown_080C803C:
-	.INCBIN "assets/sprites/gUnknown_080C803C.4bpp"
+	.INCBIN "assets/sprites/podoboo/gUnknown_080C803C.4bpp"
 
 	.GLOBAL gUnknown_080C833C
 gUnknown_080C833C:
@@ -654,7 +1250,7 @@ gUnknown_080C83A8:
 
 	.GLOBAL gUnknown_080C83B0
 gUnknown_080C83B0:
-	.INCBIN "assets/sprites/gUnknown_080C83B0.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_080C83B0.4bpp"
 
 	.GLOBAL gUnknown_080C87B0
 gUnknown_080C87B0:
@@ -666,7 +1262,7 @@ gUnknown_080C8E28:
 
 	.GLOBAL gUnknown_080C8E30
 gUnknown_080C8E30:
-	.INCBIN "assets/sprites/gUnknown_080C8E30.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_080C8E30.4bpp"
 
 	.GLOBAL gUnknown_080C9B30
 gUnknown_080C9B30:
@@ -686,7 +1282,7 @@ gUnknown_080CABA8:
 
 	.GLOBAL gUnknown_080CABB0
 gUnknown_080CABB0:
-	.INCBIN "assets/sprites/gUnknown_080CABB0.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_080CABB0.4bpp"
 
 	.GLOBAL gUnknown_080CB170
 gUnknown_080CB170:
@@ -698,7 +1294,7 @@ gUnknown_080CB7E8:
 
 	.GLOBAL gUnknown_080CB7F0
 gUnknown_080CB7F0:
-	.INCBIN "assets/sprites/gUnknown_080CB7F0.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_080CB7F0.4bpp"
 
 	.GLOBAL gUnknown_080CBDB0
 gUnknown_080CBDB0:
@@ -776,13 +1372,13 @@ gfxMarioElectrocute8bpp:
 gUnknown_080ED100:
 	.INCBIN "baserom.gba", 0xED100, 0xED244-0xED100
 
-	.GLOBAL gfxMarioLandOAM
-gfxMarioLandOAM:
+	.GLOBAL gfxMarioHammerOAM
+gfxMarioHammerOAM:
 	OamData bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=0
 
-	.GLOBAL gfxMarioLand8bpp
-gfxMarioLand8bpp:
-	.INCBIN "assets/sprites/mario/MarioLand.8bpp"
+	.GLOBAL gfxMarioHammer8bpp
+gfxMarioHammer8bpp:
+	.INCBIN "assets/sprites/mario/MarioHammer.8bpp"
 
 	.GLOBAL gUnknown_080EF64C
 gUnknown_080EF64C:
@@ -806,7 +1402,7 @@ gUnknown_080F2018:
 
 	.GLOBAL gUnknown_080F2020
 gUnknown_080F2020:
-	.INCBIN "assets/sprites/mario/gUnknown_080F2020.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_080F2020.8bpp"
 
 	.GLOBAL gUnknown_080F4020
 gUnknown_080F4020:
@@ -818,7 +1414,7 @@ gUnknown_080F4800:
 
 	.GLOBAL gUnknown_080F4808
 gUnknown_080F4808:
-	.INCBIN "assets/sprites/mario/gUnknown_080F4808.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_080F4808.8bpp"
 
 	.GLOBAL gUnknown_080F7008
 gUnknown_080F7008:
@@ -830,7 +1426,7 @@ gUnknown_080F7248:
 
 	.GLOBAL gUnknown_080F7250
 gUnknown_080F7250:
-	.INCBIN "assets/sprites/gUnknown_080F7250.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_080F7250.8bpp"
 
 	.GLOBAL gUnknown_080F8250
 gUnknown_080F8250:
@@ -842,7 +1438,7 @@ gUnknown_080F8370:
 
 	.GLOBAL gUnknown_080F8378
 gUnknown_080F8378:
-	.INCBIN "assets/sprites/gUnknown_080F8378.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_080F8378.8bpp"
 
 	.GLOBAL gUnknown_080F8B78
 gUnknown_080F8B78:
@@ -854,7 +1450,7 @@ gUnknown_080F8C98:
 
 	.GLOBAL gUnknown_080F8CA0
 gUnknown_080F8CA0:
-	.INCBIN "assets/sprites/gUnknown_080F8CA0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_080F8CA0.8bpp"
 
 	.GLOBAL gUnknown_080F94A0
 gUnknown_080F94A0:
@@ -866,7 +1462,7 @@ gUnknown_080F96E0:
 
 	.GLOBAL gUnknown_080F96E8
 gUnknown_080F96E8:
-	.INCBIN "assets/sprites/gUnknown_080F96E8.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_080F96E8.8bpp"
 
 	.GLOBAL gUnknown_080FA4E8
 gUnknown_080FA4E8:
@@ -890,7 +1486,7 @@ gUnknown_080FDD28:
 
 	.GLOBAL gUnknown_080FDD30
 gUnknown_080FDD30:
-	.INCBIN "assets/sprites/gUnknown_080FDD30.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_080FDD30.4bpp"
 
 	.GLOBAL gUnknown_080FE0B0
 gUnknown_080FE0B0:
@@ -902,7 +1498,7 @@ gUnknown_080FE1D0:
 
 	.GLOBAL gUnknown_080FE1D8
 gUnknown_080FE1D8:
-	.INCBIN "assets/sprites/gUnknown_080FE1D8.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_080FE1D8.4bpp"
 
 	.GLOBAL gUnknown_080FE5D8
 gUnknown_080FE5D8:
@@ -914,7 +1510,7 @@ gUnknown_080FE6F8:
 
 	.GLOBAL gUnknown_080FE700
 gUnknown_080FE700:
-	.INCBIN "assets/sprites/gUnknown_080FE700.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_080FE700.4bpp"
 
 	.GLOBAL gUnknown_080FEB00
 gUnknown_080FEB00:
@@ -926,7 +1522,7 @@ gUnknown_080FED40:
 
 	.GLOBAL gUnknown_080FED48
 gUnknown_080FED48:
-	.INCBIN "assets/sprites/gUnknown_080FED48.4bpp"
+	.INCBIN "assets/sprites/oil_barrel/gUnknown_080FED48.4bpp"
 
 	.GLOBAL gUnknown_080FF548
 gUnknown_080FF548:
@@ -938,7 +1534,7 @@ gUnknown_080FF56C:
 
 	.GLOBAL gUnknown_080FF574
 gUnknown_080FF574:
-	.INCBIN "assets/sprites/gUnknown_080FF574.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_080FF574.4bpp"
 
 	.GLOBAL gUnknown_080FF5F4
 gUnknown_080FF5F4:
@@ -950,7 +1546,7 @@ gUnknown_080FF858:
 
 	.GLOBAL gUnknown_080FF860
 gUnknown_080FF860:
-	.INCBIN "assets/sprites/gUnknown_080FF860.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_080FF860.4bpp"
 
 	.GLOBAL gUnknown_080FFBE0
 gUnknown_080FFBE0:
@@ -962,7 +1558,7 @@ gUnknown_080FFE20:
 
 	.GLOBAL gUnknown_080FFE28
 gUnknown_080FFE28:
-	.INCBIN "assets/sprites/gUnknown_080FFE28.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_080FFE28.4bpp"
 
 	.GLOBAL gUnknown_08100228
 gUnknown_08100228:
@@ -974,7 +1570,7 @@ gUnknown_081002B8:
 
 	.GLOBAL gUnknown_081002C0
 gUnknown_081002C0:
-	.INCBIN "assets/sprites/gUnknown_081002C0.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_081002C0.4bpp"
 
 	.GLOBAL gUnknown_081004C0
 gUnknown_081004C0:
@@ -986,7 +1582,7 @@ gUnknown_08100700:
 
 	.GLOBAL gfxPolterguyMask4bpp
 gfxPolterguyMask4bpp:
-	.INCBIN "assets/sprites/PolterguyMask.4bpp"
+	.INCBIN "assets/sprites/polterguy/PolterguyMask.4bpp"
 
 	.GLOBAL gUnknown_08100B08
 gUnknown_08100B08:
@@ -998,7 +1594,7 @@ gUnknown_08100CB8:
 
 	.GLOBAL gUnknown_08100CC0
 gUnknown_08100CC0:
-	.INCBIN "assets/sprites/gUnknown_08100CC0.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_08100CC0.4bpp"
 
 	.GLOBAL gUnknown_08100D40
 gUnknown_08100D40:
@@ -1010,7 +1606,7 @@ gUnknown_08100F80:
 
 	.GLOBAL gUnknown_08100F88
 gUnknown_08100F88:
-	.INCBIN "assets/sprites/gUnknown_08100F88.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_08100F88.4bpp"
 
 	.GLOBAL gUnknown_08101788
 gUnknown_08101788:
@@ -1022,7 +1618,7 @@ gUnknown_081018A8:
 
 	.GLOBAL gUnknown_081018B0
 gUnknown_081018B0:
-	.INCBIN "assets/sprites/gUnknown_081018B0.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_081018B0.4bpp"
 
 	.GLOBAL gUnknown_08101930
 gUnknown_08101930:
@@ -1034,7 +1630,7 @@ gUnknown_08101A50:
 
 	.GLOBAL gUnknown_08101A58
 gUnknown_08101A58:
-	.INCBIN "assets/sprites/gUnknown_08101A58.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08101A58.4bpp"
 
 	.GLOBAL gUnknown_08101AD8
 gUnknown_08101AD8:
@@ -1046,7 +1642,7 @@ gUnknown_08101CD0:
 
 	.GLOBAL gUnknown_08101CD8
 gUnknown_08101CD8:
-	.INCBIN "assets/sprites/gUnknown_08101CD8.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08101CD8.4bpp"
 
 	.GLOBAL gUnknown_08102358
 gUnknown_08102358:
@@ -1058,7 +1654,7 @@ gUnknown_08102430:
 
 	.GLOBAL gUnknown_08102438
 gUnknown_08102438:
-	.INCBIN "assets/sprites/gUnknown_08102438.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08102438.4bpp"
 
 	.GLOBAL gUnknown_08102738
 gUnknown_08102738:
@@ -1082,7 +1678,7 @@ gUnknown_08103C98:
 
 	.GLOBAL gUnknown_08103CA0
 gUnknown_08103CA0:
-	.INCBIN "assets/sprites/gUnknown_08103CA0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_08103CA0.4bpp"
 
 	.GLOBAL gUnknown_081054A0
 gUnknown_081054A0:
@@ -1094,7 +1690,7 @@ gUnknown_081054C4:
 
 	.GLOBAL gUnknown_081054CC
 gUnknown_081054CC:
-	.INCBIN "assets/sprites/gUnknown_081054CC.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_081054CC.4bpp"
 
 	.GLOBAL gUnknown_0810554C
 gUnknown_0810554C:
@@ -1106,7 +1702,7 @@ gUnknown_0810566C:
 
 	.GLOBAL gUnknown_08105674
 gUnknown_08105674:
-	.INCBIN "assets/sprites/gUnknown_08105674.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08105674.4bpp"
 
 	.GLOBAL gUnknown_08105A74
 gUnknown_08105A74:
@@ -1118,7 +1714,7 @@ gUnknown_08105B04:
 
 	.GLOBAL gUnknown_08105B0C
 gUnknown_08105B0C:
-	.INCBIN "assets/sprites/gUnknown_08105B0C.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08105B0C.4bpp"
 
 	.GLOBAL gUnknown_08105D0C
 gUnknown_08105D0C:
@@ -1130,7 +1726,7 @@ gUnknown_08105E2C:
 
 	.GLOBAL gUnknown_08105E34
 gUnknown_08105E34:
-	.INCBIN "assets/sprites/gUnknown_08105E34.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08105E34.4bpp"
 
 	.GLOBAL gUnknown_08106234
 gUnknown_08106234:
@@ -1142,7 +1738,7 @@ gUnknown_08106450:
 
 	.GLOBAL gUnknown_08106458
 gUnknown_08106458:
-	.INCBIN "assets/sprites/gUnknown_08106458.4bpp"
+	.INCBIN "assets/sprites/falling_objects/gUnknown_08106458.4bpp"
 
 	.GLOBAL gUnknown_08106BD8
 gUnknown_08106BD8:
@@ -1154,7 +1750,7 @@ gUnknown_08106BFC:
 
 	.GLOBAL gUnknown_08106C04
 gUnknown_08106C04:
-	.INCBIN "assets/sprites/gUnknown_08106C04.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_08106C04.4bpp"
 
 	.GLOBAL gUnknown_08106D04
 gUnknown_08106D04:
@@ -1166,7 +1762,7 @@ gUnknown_08106E24:
 
 	.GLOBAL gUnknown_08106E2C
 gUnknown_08106E2C:
-	.INCBIN "assets/sprites/gUnknown_08106E2C.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_08106E2C.4bpp"
 
 	.GLOBAL gUnknown_0810722C
 gUnknown_0810722C:
@@ -1178,7 +1774,7 @@ gUnknown_0810746C:
 
 	.GLOBAL gUnknown_08107474
 gUnknown_08107474:
-	.INCBIN "assets/sprites/gUnknown_08107474.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_08107474.4bpp"
 
 	.GLOBAL gUnknown_08108474
 gUnknown_08108474:
@@ -1190,7 +1786,7 @@ gUnknown_08108498:
 
 	.GLOBAL gUnknown_081084A0
 gUnknown_081084A0:
-	.INCBIN "assets/sprites/gUnknown_081084A0.4bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_081084A0.4bpp"
 
 	.GLOBAL gUnknown_081086A0
 gUnknown_081086A0:
@@ -1202,7 +1798,7 @@ gUnknown_081088E0:
 
 	.GLOBAL gUnknown_081088E8
 gUnknown_081088E8:
-	.INCBIN "assets/sprites/gUnknown_081088E8.4bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_081088E8.4bpp"
 
 	.GLOBAL gUnknown_0810C8E8
 gUnknown_0810C8E8:
@@ -1214,7 +1810,7 @@ gUnknown_0810CAE0:
 
 	.GLOBAL gUnknown_0810CAE8
 gUnknown_0810CAE8:
-	.INCBIN "assets/sprites/gUnknown_0810CAE8.4bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_0810CAE8.4bpp"
 
 	.GLOBAL gUnknown_0810E6E8
 gUnknown_0810E6E8:
@@ -1226,7 +1822,7 @@ gUnknown_0810E70C:
 
 	.GLOBAL gUnknown_0810E714
 gUnknown_0810E714:
-	.INCBIN "assets/sprites/gUnknown_0810E714.4bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_0810E714.4bpp"
 
 	.GLOBAL gUnknown_0810E914
 gUnknown_0810E914:
@@ -1238,7 +1834,7 @@ gUnknown_0810EA34:
 
 	.GLOBAL gUnknown_0810EA3C
 gUnknown_0810EA3C:
-	.INCBIN "assets/sprites/gUnknown_0810EA3C.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_0810EA3C.4bpp"
 
 	.GLOBAL gUnknown_0810F23C
 gUnknown_0810F23C:
@@ -1250,7 +1846,7 @@ gUnknown_0810F35C:
 
 	.GLOBAL gUnknown_0810F364
 gUnknown_0810F364:
-	.INCBIN "assets/sprites/gUnknown_0810F364.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_0810F364.4bpp"
 
 	.GLOBAL gUnknown_0810F764
 gUnknown_0810F764:
@@ -1262,7 +1858,7 @@ gUnknown_0810F788:
 
 	.GLOBAL gUnknown_0810F790
 gUnknown_0810F790:
-	.INCBIN "assets/sprites/gUnknown_0810F790.4bpp"
+	.INCBIN "assets/sprites/barrel/gUnknown_0810F790.4bpp"
 
 	.GLOBAL gUnknown_0810F890
 gUnknown_0810F890:
@@ -1274,7 +1870,7 @@ gUnknown_0810F968:
 
 	.GLOBAL gUnknown_0810F970
 gUnknown_0810F970:
-	.INCBIN "assets/sprites/gUnknown_0810F970.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_0810F970.4bpp"
 
 	.GLOBAL gUnknown_0810FC70
 gUnknown_0810FC70:
@@ -1286,7 +1882,7 @@ gUnknown_0810FD48:
 
 	.GLOBAL gUnknown_0810FD50
 gUnknown_0810FD50:
-	.INCBIN "assets/sprites/gUnknown_0810FD50.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_0810FD50.4bpp"
 
 	.GLOBAL gUnknown_08110050
 gUnknown_08110050:
@@ -1298,7 +1894,7 @@ gUnknown_081100E0:
 
 	.GLOBAL gUnknown_081100E8
 gUnknown_081100E8:
-	.INCBIN "assets/sprites/gUnknown_081100E8.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_081100E8.4bpp"
 
 	.GLOBAL gUnknown_081102E8
 gUnknown_081102E8:
@@ -1310,7 +1906,7 @@ gUnknown_081104E0:
 
 	.GLOBAL gUnknown_081104E8
 gUnknown_081104E8:
-	.INCBIN "assets/sprites/gUnknown_081104E8.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_081104E8.4bpp"
 
 	.GLOBAL gUnknown_08110BE8
 gUnknown_08110BE8:
@@ -1322,7 +1918,7 @@ gUnknown_08110CE4:
 
 	.GLOBAL gUnknown_08110CEC
 gUnknown_08110CEC:
-	.INCBIN "assets/sprites/gUnknown_08110CEC.4bpp"
+	.INCBIN "assets/sprites/bat/gUnknown_08110CEC.4bpp"
 
 	.GLOBAL gUnknown_0811106C
 gUnknown_0811106C:
@@ -1334,7 +1930,7 @@ gUnknown_0811121C:
 
 	.GLOBAL gUnknown_08111224
 gUnknown_08111224:
-	.INCBIN "assets/sprites/gUnknown_08111224.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08111224.4bpp"
 
 	.GLOBAL gUnknown_08112A24
 gUnknown_08112A24:
@@ -1346,7 +1942,7 @@ gUnknown_08112B44:
 
 	.GLOBAL gUnknown_08112B4C
 gUnknown_08112B4C:
-	.INCBIN "assets/sprites/gUnknown_08112B4C.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08112B4C.4bpp"
 
 	.GLOBAL gUnknown_08112C4C
 gUnknown_08112C4C:
@@ -1358,7 +1954,7 @@ gUnknown_08112D24:
 
 	.GLOBAL gUnknown_08112D2C
 gUnknown_08112D2C:
-	.INCBIN "assets/sprites/gUnknown_08112D2C.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08112D2C.4bpp"
 
 	.GLOBAL gUnknown_0811392C
 gUnknown_0811392C:
@@ -1370,7 +1966,7 @@ gUnknown_08113ADC:
 
 	.GLOBAL gUnknown_08113AE4
 gUnknown_08113AE4:
-	.INCBIN "assets/sprites/gUnknown_08113AE4.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08113AE4.4bpp"
 
 	.GLOBAL gUnknown_081152E4
 gUnknown_081152E4:
@@ -1382,7 +1978,7 @@ gUnknown_08115404:
 
 	.GLOBAL gUnknown_0811540C
 gUnknown_0811540C:
-	.INCBIN "assets/sprites/gUnknown_0811540C.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_0811540C.4bpp"
 
 	.GLOBAL gUnknown_0811640C
 gUnknown_0811640C:
@@ -1394,7 +1990,7 @@ gUnknown_0811649C:
 
 	.GLOBAL gUnknown_081164A4
 gUnknown_081164A4:
-	.INCBIN "assets/sprites/gUnknown_081164A4.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_081164A4.4bpp"
 
 	.GLOBAL gUnknown_08116CA4
 gUnknown_08116CA4:
@@ -1406,7 +2002,7 @@ gUnknown_08116E54:
 
 	.GLOBAL gUnknown_08116E5C
 gUnknown_08116E5C:
-	.INCBIN "assets/sprites/gUnknown_08116E5C.4bpp"
+	.INCBIN "assets/sprites/bird/gUnknown_08116E5C.4bpp"
 
 	.GLOBAL gUnknown_0811865C
 gUnknown_0811865C:
@@ -1430,7 +2026,7 @@ gUnknown_08118948:
 
 	.GLOBAL gUnknown_08118950
 gUnknown_08118950:
-	.INCBIN "assets/sprites/gUnknown_08118950.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_08118950.4bpp"
 
 	.GLOBAL gUnknown_08118D50
 gUnknown_08118D50:
@@ -1442,7 +2038,7 @@ gUnknown_08118D74:
 
 	.GLOBAL gUnknown_08118D7C
 gUnknown_08118D7C:
-	.INCBIN "assets/sprites/gUnknown_08118D7C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08118D7C.4bpp"
 
 	.GLOBAL gUnknown_08118DFC
 gUnknown_08118DFC:
@@ -1454,7 +2050,7 @@ gUnknown_08118EB0:
 
 	.GLOBAL gUnknown_08118EB8
 gUnknown_08118EB8:
-	.INCBIN "assets/sprites/gUnknown_08118EB8.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_08118EB8.4bpp"
 
 	.GLOBAL gUnknown_08119138
 gUnknown_08119138:
@@ -1478,7 +2074,7 @@ gUnknown_081196E8:
 
 	.GLOBAL gUnknown_081196F0
 gUnknown_081196F0:
-	.INCBIN "assets/sprites/gUnknown_081196F0.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_081196F0.4bpp"
 
 	.GLOBAL gUnknown_081198F0
 gUnknown_081198F0:
@@ -1490,7 +2086,7 @@ gUnknown_08119938:
 
 	.GLOBAL gUnknown_08119940
 gUnknown_08119940:
-	.INCBIN "assets/sprites/gUnknown_08119940.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_08119940.4bpp"
 
 	.GLOBAL gUnknown_08119A40
 gUnknown_08119A40:
@@ -1502,7 +2098,7 @@ gUnknown_08119A88:
 
 	.GLOBAL gUnknown_08119A90
 gUnknown_08119A90:
-	.INCBIN "assets/sprites/gUnknown_08119A90.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_08119A90.4bpp"
 
 	.GLOBAL gUnknown_08119B90
 gUnknown_08119B90:
@@ -1514,7 +2110,7 @@ gUnknown_08119CB0:
 
 	.GLOBAL gUnknown_08119CB8
 gUnknown_08119CB8:
-	.INCBIN "assets/sprites/gUnknown_08119CB8.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_08119CB8.4bpp"
 
 	.GLOBAL gUnknown_0811A038
 gUnknown_0811A038:
@@ -1526,7 +2122,7 @@ gUnknown_0811A1E8:
 
 	.GLOBAL gUnknown_0811A1F0
 gUnknown_0811A1F0:
-	.INCBIN "assets/sprites/gUnknown_0811A1F0.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_0811A1F0.4bpp"
 
 	.GLOBAL gUnknown_0811A570
 gUnknown_0811A570:
@@ -1538,7 +2134,7 @@ gUnknown_0811A600:
 
 	.GLOBAL gUnknown_0811A608
 gUnknown_0811A608:
-	.INCBIN "assets/sprites/gUnknown_0811A608.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_0811A608.4bpp"
 
 	.GLOBAL gUnknown_0811A688
 gUnknown_0811A688:
@@ -1550,7 +2146,7 @@ gUnknown_0811A718:
 
 	.GLOBAL gUnknown_0811A720
 gUnknown_0811A720:
-	.INCBIN "assets/sprites/gUnknown_0811A720.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_0811A720.4bpp"
 
 	.GLOBAL gUnknown_0811A7A0
 gUnknown_0811A7A0:
@@ -1574,7 +2170,7 @@ gUnknown_0811AA20:
 
 	.GLOBAL gUnknown_0811AA28
 gUnknown_0811AA28:
-	.INCBIN "assets/sprites/gUnknown_0811AA28.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_0811AA28.4bpp"
 
 	.GLOBAL gUnknown_0811AD28
 gUnknown_0811AD28:
@@ -1586,7 +2182,7 @@ gUnknown_0811AE90:
 
 	.GLOBAL gUnknown_0811AE98
 gUnknown_0811AE98:
-	.INCBIN "assets/sprites/gUnknown_0811AE98.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_0811AE98.4bpp"
 
 	.GLOBAL gUnknown_0811B198
 gUnknown_0811B198:
@@ -1598,7 +2194,7 @@ gUnknown_0811B3D8:
 
 	.GLOBAL gUnknown_0811B3E0
 gUnknown_0811B3E0:
-	.INCBIN "assets/sprites/gUnknown_0811B3E0.4bpp"
+	.INCBIN "assets/sprites/bobomb/gUnknown_0811B3E0.4bpp"
 
 	.GLOBAL gUnknown_0811BBE0
 gUnknown_0811BBE0:
@@ -1610,7 +2206,7 @@ gUnknown_0811BC04:
 
 	.GLOBAL gUnknown_0811BC0C
 gUnknown_0811BC0C:
-	.INCBIN "assets/sprites/gUnknown_0811BC0C.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_0811BC0C.4bpp"
 
 	.GLOBAL gUnknown_0811BC8C
 gUnknown_0811BC8C:
@@ -1622,7 +2218,7 @@ gUnknown_0811BCB0:
 
 	.GLOBAL gUnknown_0811BCB8
 gUnknown_0811BCB8:
-	.INCBIN "assets/sprites/gUnknown_0811BCB8.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_0811BCB8.4bpp"
 
 	.GLOBAL gUnknown_0811BD38
 gUnknown_0811BD38:
@@ -1634,7 +2230,7 @@ gUnknown_0811BD5C:
 
 	.GLOBAL gUnknown_0811BD64
 gUnknown_0811BD64:
-	.INCBIN "assets/sprites/gUnknown_0811BD64.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_0811BD64.4bpp"
 
 	.GLOBAL gUnknown_0811BDE4
 gUnknown_0811BDE4:
@@ -1646,7 +2242,7 @@ gUnknown_0811BE08:
 
 	.GLOBAL gUnknown_0811BE10
 gUnknown_0811BE10:
-	.INCBIN "assets/sprites/gUnknown_0811BE10.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_0811BE10.4bpp"
 
 	.GLOBAL gUnknown_0811C010
 gUnknown_0811C010:
@@ -1658,7 +2254,7 @@ gUnknown_0811C1C0:
 
 	.GLOBAL gUnknown_0811C1C8
 gUnknown_0811C1C8:
-	.INCBIN "assets/sprites/gUnknown_0811C1C8.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_0811C1C8.4bpp"
 
 	.GLOBAL gUnknown_0811F1C8
 gUnknown_0811F1C8:
@@ -1670,7 +2266,7 @@ gUnknown_0811F1EC:
 
 	.GLOBAL gUnknown_0811F1F4
 gUnknown_0811F1F4:
-	.INCBIN "assets/sprites/gUnknown_0811F1F4.8bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_0811F1F4.8bpp"
 
 	.GLOBAL gUnknown_0811F5F4
 gUnknown_0811F5F4:
@@ -1682,7 +2278,7 @@ gUnknown_0811F7A4:
 
 	.GLOBAL gUnknown_0811F7AC
 gUnknown_0811F7AC:
-	.INCBIN "assets/sprites/gUnknown_0811F7AC.8bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_0811F7AC.8bpp"
 
 	.GLOBAL gUnknown_081257AC
 gUnknown_081257AC:
@@ -1694,7 +2290,7 @@ gUnknown_081257D0:
 
 	.GLOBAL gUnknown_081257D8
 gUnknown_081257D8:
-	.INCBIN "assets/sprites/gUnknown_081257D8.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_081257D8.4bpp"
 
 	.GLOBAL gUnknown_08125858
 gUnknown_08125858:
@@ -1706,7 +2302,7 @@ gUnknown_0812587C:
 
 	.GLOBAL gUnknown_08125884
 gUnknown_08125884:
-	.INCBIN "assets/sprites/gUnknown_08125884.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_08125884.4bpp"
 
 	.GLOBAL gUnknown_08125904
 gUnknown_08125904:
@@ -1718,7 +2314,7 @@ gUnknown_08125928:
 
 	.GLOBAL gUnknown_08125930
 gUnknown_08125930:
-	.INCBIN "assets/sprites/gUnknown_08125930.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_08125930.4bpp"
 
 	.GLOBAL gUnknown_081259B0
 gUnknown_081259B0:
@@ -1730,7 +2326,7 @@ gUnknown_08125A40:
 
 	.GLOBAL gUnknown_08125A48
 gUnknown_08125A48:
-	.INCBIN "assets/sprites/gUnknown_08125A48.4bpp"
+	.INCBIN "assets/sprites/boo/gUnknown_08125A48.4bpp"
 
 	.GLOBAL gUnknown_08125C48
 gUnknown_08125C48:
@@ -1742,7 +2338,7 @@ gUnknown_08125DF8:
 
 	.GLOBAL gUnknown_08125E00
 gUnknown_08125E00:
-	.INCBIN "assets/sprites/gUnknown_08125E00.4bpp"
+	.INCBIN "assets/sprites/boo/gUnknown_08125E00.4bpp"
 
 	.GLOBAL gUnknown_08126400
 gUnknown_08126400:
@@ -1754,7 +2350,7 @@ gUnknown_08126AC0:
 
 	.GLOBAL gUnknown_08126AC8
 gUnknown_08126AC8:
-	.INCBIN "assets/sprites/gUnknown_08126AC8.4bpp"
+	.INCBIN "assets/sprites/boo/gUnknown_08126AC8.4bpp"
 
 	.GLOBAL gUnknown_08128AC8
 gUnknown_08128AC8:
@@ -1766,7 +2362,7 @@ gUnknown_08128BE8:
 
 	.GLOBAL gUnknown_08128BF0
 gUnknown_08128BF0:
-	.INCBIN "assets/sprites/gUnknown_08128BF0.4bpp"
+	.INCBIN "assets/sprites/boo/gUnknown_08128BF0.4bpp"
 
 	.GLOBAL gUnknown_08128FF0
 gUnknown_08128FF0:
@@ -1778,7 +2374,7 @@ gUnknown_08129110:
 
 	.GLOBAL gUnknown_08129118
 gUnknown_08129118:
-	.INCBIN "assets/sprites/gUnknown_08129118.4bpp"
+	.INCBIN "assets/sprites/boo/gUnknown_08129118.4bpp"
 
 	.GLOBAL gUnknown_08129518
 gUnknown_08129518:
@@ -1802,7 +2398,7 @@ gUnknown_08129804:
 
 	.GLOBAL gUnknown_0812980C
 gUnknown_0812980C:
-	.INCBIN "assets/sprites/gUnknown_0812980C.4bpp"
+	.INCBIN "assets/sprites/falling_objects/gUnknown_0812980C.4bpp"
 
 	.GLOBAL gUnknown_0812A80C
 gUnknown_0812A80C:
@@ -1814,7 +2410,7 @@ gUnknown_0812A950:
 
 	.GLOBAL gUnknown_0812A958
 gUnknown_0812A958:
-	.INCBIN "assets/sprites/gUnknown_0812A958.4bpp"
+	.INCBIN "assets/sprites/brickman/gUnknown_0812A958.4bpp"
 
 	.GLOBAL gUnknown_0812B558
 gUnknown_0812B558:
@@ -1826,7 +2422,7 @@ gUnknown_0812BA68:
 
 	.GLOBAL gUnknown_0812BA70
 gUnknown_0812BA70:
-	.INCBIN "assets/sprites/gUnknown_0812BA70.4bpp"
+	.INCBIN "assets/sprites/brickman/gUnknown_0812BA70.4bpp"
 
 	.GLOBAL gUnknown_0812CA70
 gUnknown_0812CA70:
@@ -1838,7 +2434,7 @@ gUnknown_0812CA94:
 
 	.GLOBAL gUnknown_0812CA9C
 gUnknown_0812CA9C:
-	.INCBIN "assets/sprites/gUnknown_0812CA9C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812CA9C.4bpp"
 
 	.GLOBAL gUnknown_0812CB1C
 gUnknown_0812CB1C:
@@ -1850,7 +2446,7 @@ gUnknown_0812CB40:
 
 	.GLOBAL gUnknown_0812CB48
 gUnknown_0812CB48:
-	.INCBIN "assets/sprites/gUnknown_0812CB48.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812CB48.4bpp"
 
 	.GLOBAL gUnknown_0812CBC8
 gUnknown_0812CBC8:
@@ -1862,7 +2458,7 @@ gUnknown_0812CBEC:
 
 	.GLOBAL gUnknown_0812CBF4
 gUnknown_0812CBF4:
-	.INCBIN "assets/sprites/gUnknown_0812CBF4.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812CBF4.4bpp"
 
 	.GLOBAL gUnknown_0812CC74
 gUnknown_0812CC74:
@@ -1874,7 +2470,7 @@ gUnknown_0812CC98:
 
 	.GLOBAL gUnknown_0812CCA0
 gUnknown_0812CCA0:
-	.INCBIN "assets/sprites/gUnknown_0812CCA0.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812CCA0.4bpp"
 
 	.GLOBAL gUnknown_0812CCE0
 gUnknown_0812CCE0:
@@ -1886,7 +2482,7 @@ gUnknown_0812CD04:
 
 	.GLOBAL gUnknown_0812CD0C
 gUnknown_0812CD0C:
-	.INCBIN "assets/sprites/gUnknown_0812CD0C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812CD0C.4bpp"
 
 	.GLOBAL gUnknown_0812CD2C
 gUnknown_0812CD2C:
@@ -1898,7 +2494,7 @@ gUnknown_0812CD50:
 
 	.GLOBAL gUnknown_0812CD58
 gUnknown_0812CD58:
-	.INCBIN "assets/sprites/gUnknown_0812CD58.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812CD58.4bpp"
 
 	.GLOBAL gUnknown_0812CDD8
 gUnknown_0812CDD8:
@@ -1910,7 +2506,7 @@ gUnknown_0812CDFC:
 
 	.GLOBAL gUnknown_0812CE04
 gUnknown_0812CE04:
-	.INCBIN "assets/sprites/gUnknown_0812CE04.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812CE04.4bpp"
 
 	.GLOBAL gUnknown_0812D004
 gUnknown_0812D004:
@@ -1922,7 +2518,7 @@ gUnknown_0812D028:
 
 	.GLOBAL gUnknown_0812D030
 gUnknown_0812D030:
-	.INCBIN "assets/sprites/gUnknown_0812D030.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D030.4bpp"
 
 	.GLOBAL gUnknown_0812D130
 gUnknown_0812D130:
@@ -1934,7 +2530,7 @@ gUnknown_0812D154:
 
 	.GLOBAL gUnknown_0812D15C
 gUnknown_0812D15C:
-	.INCBIN "assets/sprites/gUnknown_0812D15C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D15C.4bpp"
 
 	.GLOBAL gUnknown_0812D1DC
 gUnknown_0812D1DC:
@@ -1946,7 +2542,7 @@ gUnknown_0812D200:
 
 	.GLOBAL gUnknown_0812D208
 gUnknown_0812D208:
-	.INCBIN "assets/sprites/gUnknown_0812D208.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D208.4bpp"
 
 	.GLOBAL gUnknown_0812D288
 gUnknown_0812D288:
@@ -1958,7 +2554,7 @@ gUnknown_0812D2AC:
 
 	.GLOBAL gUnknown_0812D2B4
 gUnknown_0812D2B4:
-	.INCBIN "assets/sprites/gUnknown_0812D2B4.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D2B4.4bpp"
 
 	.GLOBAL gUnknown_0812D334
 gUnknown_0812D334:
@@ -1970,7 +2566,7 @@ gUnknown_0812D358:
 
 	.GLOBAL gUnknown_0812D360
 gUnknown_0812D360:
-	.INCBIN "assets/sprites/gUnknown_0812D360.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D360.4bpp"
 
 	.GLOBAL gUnknown_0812D3E0
 gUnknown_0812D3E0:
@@ -1982,7 +2578,7 @@ gUnknown_0812D404:
 
 	.GLOBAL gUnknown_0812D40C
 gUnknown_0812D40C:
-	.INCBIN "assets/sprites/gUnknown_0812D40C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D40C.4bpp"
 
 	.GLOBAL gUnknown_0812D48C
 gUnknown_0812D48C:
@@ -1994,7 +2590,7 @@ gUnknown_0812D4B0:
 
 	.GLOBAL gUnknown_0812D4B8
 gUnknown_0812D4B8:
-	.INCBIN "assets/sprites/gUnknown_0812D4B8.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D4B8.4bpp"
 
 	.GLOBAL gUnknown_0812D538
 gUnknown_0812D538:
@@ -2006,7 +2602,7 @@ gUnknown_0812D55C:
 
 	.GLOBAL gUnknown_0812D564
 gUnknown_0812D564:
-	.INCBIN "assets/sprites/gUnknown_0812D564.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D564.4bpp"
 
 	.GLOBAL gUnknown_0812D5E4
 gUnknown_0812D5E4:
@@ -2018,7 +2614,7 @@ gUnknown_0812D608:
 
 	.GLOBAL gUnknown_0812D610
 gUnknown_0812D610:
-	.INCBIN "assets/sprites/gUnknown_0812D610.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D610.4bpp"
 
 	.GLOBAL gUnknown_0812D690
 gUnknown_0812D690:
@@ -2030,7 +2626,7 @@ gUnknown_0812D6B4:
 
 	.GLOBAL gUnknown_0812D6BC
 gUnknown_0812D6BC:
-	.INCBIN "assets/sprites/gUnknown_0812D6BC.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D6BC.4bpp"
 
 	.GLOBAL gUnknown_0812D73C
 gUnknown_0812D73C:
@@ -2042,7 +2638,7 @@ gUnknown_0812D760:
 
 	.GLOBAL gUnknown_0812D768
 gUnknown_0812D768:
-	.INCBIN "assets/sprites/gUnknown_0812D768.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D768.4bpp"
 
 	.GLOBAL gUnknown_0812D7E8
 gUnknown_0812D7E8:
@@ -2054,7 +2650,7 @@ gUnknown_0812D80C:
 
 	.GLOBAL gUnknown_0812D814
 gUnknown_0812D814:
-	.INCBIN "assets/sprites/gUnknown_0812D814.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D814.4bpp"
 
 	.GLOBAL gUnknown_0812D894
 gUnknown_0812D894:
@@ -2066,7 +2662,7 @@ gUnknown_0812D8B8:
 
 	.GLOBAL gUnknown_0812D8C0
 gUnknown_0812D8C0:
-	.INCBIN "assets/sprites/gUnknown_0812D8C0.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D8C0.4bpp"
 
 	.GLOBAL gUnknown_0812D940
 gUnknown_0812D940:
@@ -2078,7 +2674,7 @@ gUnknown_0812D964:
 
 	.GLOBAL gUnknown_0812D96C
 gUnknown_0812D96C:
-	.INCBIN "assets/sprites/gUnknown_0812D96C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812D96C.4bpp"
 
 	.GLOBAL gUnknown_0812D9EC
 gUnknown_0812D9EC:
@@ -2090,7 +2686,7 @@ gUnknown_0812DA10:
 
 	.GLOBAL gUnknown_0812DA18
 gUnknown_0812DA18:
-	.INCBIN "assets/sprites/gUnknown_0812DA18.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812DA18.4bpp"
 
 	.GLOBAL gUnknown_0812DA98
 gUnknown_0812DA98:
@@ -2102,7 +2698,7 @@ gUnknown_0812DABC:
 
 	.GLOBAL gUnknown_0812DAC4
 gUnknown_0812DAC4:
-	.INCBIN "assets/sprites/gUnknown_0812DAC4.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812DAC4.4bpp"
 
 	.GLOBAL gUnknown_0812DB44
 gUnknown_0812DB44:
@@ -2114,7 +2710,7 @@ gUnknown_0812DB68:
 
 	.GLOBAL gUnknown_0812DB70
 gUnknown_0812DB70:
-	.INCBIN "assets/sprites/gUnknown_0812DB70.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812DB70.4bpp"
 
 	.GLOBAL gUnknown_0812DBF0
 gUnknown_0812DBF0:
@@ -2126,7 +2722,7 @@ gUnknown_0812DC14:
 
 	.GLOBAL gUnknown_0812DC1C
 gUnknown_0812DC1C:
-	.INCBIN "assets/sprites/gUnknown_0812DC1C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812DC1C.4bpp"
 
 	.GLOBAL gUnknown_0812DC9C
 gUnknown_0812DC9C:
@@ -2138,7 +2734,7 @@ gUnknown_0812DCC0:
 
 	.GLOBAL gUnknown_0812DCC8
 gUnknown_0812DCC8:
-	.INCBIN "assets/sprites/gUnknown_0812DCC8.4bpp"
+	.INCBIN "assets/sprites/cannon/gUnknown_0812DCC8.4bpp"
 
 	.GLOBAL gUnknown_0812DD48
 gUnknown_0812DD48:
@@ -2150,7 +2746,7 @@ gUnknown_0812DE20:
 
 	.GLOBAL gUnknown_0812DE28
 gUnknown_0812DE28:
-	.INCBIN "assets/sprites/gUnknown_0812DE28.4bpp"
+	.INCBIN "assets/sprites/cannon/gUnknown_0812DE28.4bpp"
 
 	.GLOBAL gUnknown_0812E128
 gUnknown_0812E128:
@@ -2162,7 +2758,7 @@ gUnknown_0812E170:
 
 	.GLOBAL gUnknown_0812E178
 gUnknown_0812E178:
-	.INCBIN "assets/sprites/gUnknown_0812E178.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_0812E178.4bpp"
 
 	.GLOBAL gUnknown_0812E378
 gUnknown_0812E378:
@@ -2174,7 +2770,7 @@ gUnknown_0812E39C:
 
 	.GLOBAL gUnknown_0812E3A4
 gUnknown_0812E3A4:
-	.INCBIN "assets/sprites/gUnknown_0812E3A4.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_0812E3A4.4bpp"
 
 	.GLOBAL gUnknown_0812E5A4
 gUnknown_0812E5A4:
@@ -2186,7 +2782,7 @@ gUnknown_0812E5C8:
 
 	.GLOBAL gUnknown_0812E5D0
 gUnknown_0812E5D0:
-	.INCBIN "assets/sprites/gUnknown_0812E5D0.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_0812E5D0.4bpp"
 
 	.GLOBAL gUnknown_0812E7D0
 gUnknown_0812E7D0:
@@ -2198,7 +2794,7 @@ gUnknown_0812EA10:
 
 	.GLOBAL gUnknown_0812EA18
 gUnknown_0812EA18:
-	.INCBIN "assets/sprites/gUnknown_0812EA18.4bpp"
+	.INCBIN "assets/sprites/candle/gUnknown_0812EA18.4bpp"
 
 	.GLOBAL gUnknown_0812FA18
 gUnknown_0812FA18:
@@ -2210,7 +2806,7 @@ gUnknown_0812FA84:
 
 	.GLOBAL gUnknown_0812FA8C
 gUnknown_0812FA8C:
-	.INCBIN "assets/sprites/gUnknown_0812FA8C.4bpp"
+	.INCBIN "assets/sprites/cannon/gUnknown_0812FA8C.4bpp"
 
 	.GLOBAL gUnknown_0812FB8C
 gUnknown_0812FB8C:
@@ -2222,7 +2818,7 @@ gUnknown_0812FBF8:
 
 	.GLOBAL gUnknown_0812FC00
 gUnknown_0812FC00:
-	.INCBIN "assets/sprites/gUnknown_0812FC00.4bpp"
+	.INCBIN "assets/sprites/cannon/gUnknown_0812FC00.4bpp"
 
 	.GLOBAL gUnknown_0812FD00
 gUnknown_0812FD00:
@@ -2234,7 +2830,7 @@ gUnknown_0812FD6C:
 
 	.GLOBAL gUnknown_0812FD74
 gUnknown_0812FD74:
-	.INCBIN "assets/sprites/gUnknown_0812FD74.4bpp"
+	.INCBIN "assets/sprites/cannon/gUnknown_0812FD74.4bpp"
 
 	.GLOBAL gUnknown_0812FE74
 gUnknown_0812FE74:
@@ -2270,7 +2866,7 @@ gUnknown_081312A0:
 
 	.GLOBAL gUnknown_081312A8
 gUnknown_081312A8:
-	.INCBIN "assets/sprites/gUnknown_081312A8.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_081312A8.4bpp"
 
 	.GLOBAL gUnknown_08131EA8
 gUnknown_08131EA8:
@@ -2282,7 +2878,7 @@ gUnknown_08131F38:
 
 	.GLOBAL gUnknown_08131F40
 gUnknown_08131F40:
-	.INCBIN "assets/sprites/gUnknown_08131F40.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_08131F40.4bpp"
 
 	.GLOBAL gUnknown_08132740
 gUnknown_08132740:
@@ -2294,7 +2890,7 @@ gUnknown_08132860:
 
 	.GLOBAL gUnknown_08132868
 gUnknown_08132868:
-	.INCBIN "assets/sprites/gUnknown_08132868.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_08132868.4bpp"
 
 	.GLOBAL gUnknown_08133868
 gUnknown_08133868:
@@ -2306,7 +2902,7 @@ gUnknown_08133A60:
 
 	.GLOBAL gUnknown_08133A68
 gUnknown_08133A68:
-	.INCBIN "assets/sprites/gUnknown_08133A68.4bpp"
+	.INCBIN "assets/sprites/robomonchee/gUnknown_08133A68.4bpp"
 
 	.GLOBAL gUnknown_08135668
 gUnknown_08135668:
@@ -2318,7 +2914,7 @@ gUnknown_08135788:
 
 	.GLOBAL gUnknown_08135790
 gUnknown_08135790:
-	.INCBIN "assets/sprites/gUnknown_08135790.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08135790.4bpp"
 
 	.GLOBAL gUnknown_08135B90
 gUnknown_08135B90:
@@ -2330,7 +2926,7 @@ gUnknown_08135C20:
 
 	.GLOBAL gUnknown_08135C28
 gUnknown_08135C28:
-	.INCBIN "assets/sprites/gUnknown_08135C28.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08135C28.4bpp"
 
 	.GLOBAL gUnknown_08135E28
 gUnknown_08135E28:
@@ -2342,7 +2938,7 @@ gUnknown_08135F48:
 
 	.GLOBAL gUnknown_08135F50
 gUnknown_08135F50:
-	.INCBIN "assets/sprites/gUnknown_08135F50.4bpp"
+	.INCBIN "assets/sprites/fruit/gUnknown_08135F50.4bpp"
 
 	.GLOBAL gUnknown_08136350
 gUnknown_08136350:
@@ -2354,7 +2950,7 @@ gUnknown_08136500:
 
 	.GLOBAL gUnknown_08136508
 gUnknown_08136508:
-	.INCBIN "assets/sprites/gUnknown_08136508.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08136508.4bpp"
 
 	.GLOBAL gUnknown_08136B08
 gUnknown_08136B08:
@@ -2366,7 +2962,7 @@ gUnknown_08136C28:
 
 	.GLOBAL gUnknown_08136C30
 gUnknown_08136C30:
-	.INCBIN "assets/sprites/gUnknown_08136C30.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08136C30.4bpp"
 
 	.GLOBAL gUnknown_08137030
 gUnknown_08137030:
@@ -2378,7 +2974,7 @@ gUnknown_08137150:
 
 	.GLOBAL gUnknown_08137158
 gUnknown_08137158:
-	.INCBIN "assets/sprites/gUnknown_08137158.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08137158.4bpp"
 
 	.GLOBAL gUnknown_08137558
 gUnknown_08137558:
@@ -2390,7 +2986,7 @@ gUnknown_081375E8:
 
 	.GLOBAL gUnknown_081375F0
 gUnknown_081375F0:
-	.INCBIN "assets/sprites/gUnknown_081375F0.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_081375F0.4bpp"
 
 	.GLOBAL gUnknown_081377F0
 gUnknown_081377F0:
@@ -2402,7 +2998,7 @@ gUnknown_081379A0:
 
 	.GLOBAL gUnknown_081379A8
 gUnknown_081379A8:
-	.INCBIN "assets/sprites/gUnknown_081379A8.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_081379A8.4bpp"
 
 	.GLOBAL gUnknown_08137FA8
 gUnknown_08137FA8:
@@ -2414,7 +3010,7 @@ gUnknown_081381E8:
 
 	.GLOBAL gUnknown_081381F0
 gUnknown_081381F0:
-	.INCBIN "assets/sprites/gUnknown_081381F0.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_081381F0.4bpp"
 
 	.GLOBAL gUnknown_081389F0
 gUnknown_081389F0:
@@ -2426,7 +3022,7 @@ gUnknown_08138B10:
 
 	.GLOBAL gUnknown_08138B18
 gUnknown_08138B18:
-	.INCBIN "assets/sprites/gUnknown_08138B18.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08138B18.4bpp"
 
 	.GLOBAL gUnknown_08138F18
 gUnknown_08138F18:
@@ -2438,7 +3034,7 @@ gUnknown_08139038:
 
 	.GLOBAL gUnknown_08139040
 gUnknown_08139040:
-	.INCBIN "assets/sprites/gUnknown_08139040.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08139040.4bpp"
 
 	.GLOBAL gUnknown_08139440
 gUnknown_08139440:
@@ -2450,7 +3046,7 @@ gUnknown_081394D0:
 
 	.GLOBAL gUnknown_081394D8
 gUnknown_081394D8:
-	.INCBIN "assets/sprites/gUnknown_081394D8.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_081394D8.4bpp"
 
 	.GLOBAL gUnknown_081396D8
 gUnknown_081396D8:
@@ -2462,7 +3058,7 @@ gUnknown_08139918:
 
 	.GLOBAL gUnknown_08139920
 gUnknown_08139920:
-	.INCBIN "assets/sprites/gUnknown_08139920.4bpp"
+	.INCBIN "assets/sprites/snapjaw/gUnknown_08139920.4bpp"
 
 	.GLOBAL gUnknown_0813A120
 gUnknown_0813A120:
@@ -2474,7 +3070,7 @@ gUnknown_0813A168:
 
 	.GLOBAL gUnknown_0813A170
 gUnknown_0813A170:
-	.INCBIN "assets/sprites/gUnknown_0813A170.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_0813A170.8bpp"
 
 	.GLOBAL gUnknown_0813B170
 gUnknown_0813B170:
@@ -2486,7 +3082,7 @@ gUnknown_0813B3B0:
 
 	.GLOBAL gUnknown_0813B3B8
 gUnknown_0813B3B8:
-	.INCBIN "assets/sprites/gUnknown_0813B3B8.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_0813B3B8.8bpp"
 
 	.GLOBAL gUnknown_0813EBB8
 gUnknown_0813EBB8:
@@ -2498,7 +3094,7 @@ gUnknown_0813EC00:
 
 	.GLOBAL gUnknown_0813EC08
 gUnknown_0813EC08:
-	.INCBIN "assets/sprites/gUnknown_0813EC08.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_0813EC08.8bpp"
 
 	.GLOBAL gUnknown_0813FC08
 gUnknown_0813FC08:
@@ -2510,7 +3106,7 @@ gUnknown_0813FE6C:
 
 	.GLOBAL gUnknown_0813FE74
 gUnknown_0813FE74:
-	.INCBIN "assets/sprites/gUnknown_0813FE74.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_0813FE74.8bpp"
 
 	.GLOBAL gUnknown_08145E74
 gUnknown_08145E74:
@@ -2522,7 +3118,7 @@ gUnknown_08145F28:
 
 	.GLOBAL gUnknown_08145F30
 gUnknown_08145F30:
-	.INCBIN "assets/sprites/gUnknown_08145F30.4bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_08145F30.4bpp"
 
 	.GLOBAL gUnknown_081460B0
 gUnknown_081460B0:
@@ -2750,7 +3346,7 @@ gUnknown_081C1A18:
 
 	.GLOBAL gUnknown_081C1A20
 gUnknown_081C1A20:
-	.INCBIN "assets/sprites/gUnknown_081C1A20.4bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081C1A20.4bpp"
 
 	.GLOBAL gUnknown_081C1C20
 gUnknown_081C1C20:
@@ -2762,7 +3358,7 @@ gUnknown_081C1C68:
 
 	.GLOBAL gUnknown_081C1C70
 gUnknown_081C1C70:
-	.INCBIN "assets/sprites/gUnknown_081C1C70.4bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081C1C70.4bpp"
 
 	.GLOBAL gUnknown_081C2070
 gUnknown_081C2070:
@@ -2774,7 +3370,7 @@ gUnknown_081C2094:
 
 	.GLOBAL gUnknown_081C209C
 gUnknown_081C209C:
-	.INCBIN "assets/sprites/gUnknown_081C209C.4bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081C209C.4bpp"
 
 	.GLOBAL gUnknown_081C211C
 gUnknown_081C211C:
@@ -2786,7 +3382,7 @@ gUnknown_081C2164:
 
 	.GLOBAL gUnknown_081C216C
 gUnknown_081C216C:
-	.INCBIN "assets/sprites/gUnknown_081C216C.4bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081C216C.4bpp"
 
 	.GLOBAL gUnknown_081C226C
 gUnknown_081C226C:
@@ -2798,7 +3394,7 @@ gUnknown_081C22B4:
 
 	.GLOBAL gUnknown_081C22BC
 gUnknown_081C22BC:
-	.INCBIN "assets/sprites/gUnknown_081C22BC.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081C22BC.8bpp"
 
 	.GLOBAL gUnknown_081C32BC
 gUnknown_081C32BC:
@@ -2810,7 +3406,7 @@ gUnknown_081C3304:
 
 	.GLOBAL gUnknown_081C330C
 gUnknown_081C330C:
-	.INCBIN "assets/sprites/gUnknown_081C330C.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081C330C.8bpp"
 
 	.GLOBAL gUnknown_081C430C
 gUnknown_081C430C:
@@ -2822,7 +3418,7 @@ gUnknown_081C4378:
 
 	.GLOBAL gUnknown_081C4380
 gUnknown_081C4380:
-	.INCBIN "assets/sprites/gUnknown_081C4380.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_081C4380.8bpp"
 
 	.GLOBAL gUnknown_081C7380
 gUnknown_081C7380:
@@ -2834,7 +3430,7 @@ gUnknown_081C7410:
 
 	.GLOBAL gUnknown_081C7418
 gUnknown_081C7418:
-	.INCBIN "assets/sprites/gUnknown_081C7418.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_081C7418.8bpp"
 
 	.GLOBAL gUnknown_081CB418
 gUnknown_081CB418:
@@ -2846,7 +3442,7 @@ gUnknown_081CB538:
 
 	.GLOBAL gUnknown_081CB540
 gUnknown_081CB540:
-	.INCBIN "assets/sprites/gUnknown_081CB540.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081CB540.8bpp"
 
 	.GLOBAL gUnknown_081CD540
 gUnknown_081CD540:
@@ -2858,7 +3454,7 @@ gUnknown_081CD564:
 
 	.GLOBAL gUnknown_081CD56C
 gUnknown_081CD56C:
-	.INCBIN "assets/sprites/gUnknown_081CD56C.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081CD56C.8bpp"
 
 	.GLOBAL gUnknown_081CD96C
 gUnknown_081CD96C:
@@ -2870,7 +3466,7 @@ gUnknown_081CDA8C:
 
 	.GLOBAL gUnknown_081CDA94
 gUnknown_081CDA94:
-	.INCBIN "assets/sprites/gUnknown_081CDA94.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081CDA94.8bpp"
 
 	.GLOBAL gUnknown_081CFA94
 gUnknown_081CFA94:
@@ -2882,7 +3478,7 @@ gUnknown_081CFAB8:
 
 	.GLOBAL gUnknown_081CFAC0
 gUnknown_081CFAC0:
-	.INCBIN "assets/sprites/gUnknown_081CFAC0.8bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_081CFAC0.8bpp"
 
 	.GLOBAL gUnknown_081CFEC0
 gUnknown_081CFEC0:
@@ -2894,7 +3490,7 @@ gUnknown_081CFFE0:
 
 	.GLOBAL gUnknown_081CFFE8
 gUnknown_081CFFE8:
-	.INCBIN "assets/sprites/gUnknown_081CFFE8.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081CFFE8.8bpp"
 
 	.GLOBAL gUnknown_081D1FE8
 gUnknown_081D1FE8:
@@ -2906,7 +3502,7 @@ gUnknown_081D2204:
 
 	.GLOBAL gUnknown_081D220C
 gUnknown_081D220C:
-	.INCBIN "assets/sprites/gUnknown_081D220C.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081D220C.8bpp"
 
 	.GLOBAL gUnknown_081D360C
 gUnknown_081D360C:
@@ -2918,7 +3514,7 @@ gUnknown_081D384C:
 
 	.GLOBAL gUnknown_081D3854
 gUnknown_081D3854:
-	.INCBIN "assets/sprites/gUnknown_081D3854.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081D3854.8bpp"
 
 	.GLOBAL gUnknown_081D4854
 gUnknown_081D4854:
@@ -2930,7 +3526,7 @@ gUnknown_081D4A94:
 
 	.GLOBAL gUnknown_081D4A9C
 gUnknown_081D4A9C:
-	.INCBIN "assets/sprites/gUnknown_081D4A9C.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081D4A9C.8bpp"
 
 	.GLOBAL gUnknown_081D5A9C
 gUnknown_081D5A9C:
@@ -2942,7 +3538,7 @@ gUnknown_081D5CB8:
 
 	.GLOBAL gUnknown_081D5CC0
 gUnknown_081D5CC0:
-	.INCBIN "assets/sprites/gUnknown_081D5CC0.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081D5CC0.8bpp"
 
 	.GLOBAL gUnknown_081D70C0
 gUnknown_081D70C0:
@@ -2954,7 +3550,7 @@ gUnknown_081D71E0:
 
 	.GLOBAL gUnknown_081D71E8
 gUnknown_081D71E8:
-	.INCBIN "assets/sprites/gUnknown_081D71E8.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081D71E8.8bpp"
 
 	.GLOBAL gUnknown_081D91E8
 gUnknown_081D91E8:
@@ -2966,7 +3562,7 @@ gUnknown_081D920C:
 
 	.GLOBAL gUnknown_081D9214
 gUnknown_081D9214:
-	.INCBIN "assets/sprites/gUnknown_081D9214.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081D9214.8bpp"
 
 	.GLOBAL gUnknown_081D9614
 gUnknown_081D9614:
@@ -2978,7 +3574,7 @@ gUnknown_081D96EC:
 
 	.GLOBAL gUnknown_081D96F4
 gUnknown_081D96F4:
-	.INCBIN "assets/sprites/gUnknown_081D96F4.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081D96F4.8bpp"
 
 	.GLOBAL gUnknown_081DF6F4
 gUnknown_081DF6F4:
@@ -2990,7 +3586,7 @@ gUnknown_081DF718:
 
 	.GLOBAL gUnknown_081DF720
 gUnknown_081DF720:
-	.INCBIN "assets/sprites/gUnknown_081DF720.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081DF720.8bpp"
 
 	.GLOBAL gUnknown_081DFF20
 gUnknown_081DFF20:
@@ -3002,7 +3598,7 @@ gUnknown_081DFF68:
 
 	.GLOBAL gUnknown_081DFF70
 gUnknown_081DFF70:
-	.INCBIN "assets/sprites/gUnknown_081DFF70.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081DFF70.8bpp"
 
 	.GLOBAL gUnknown_081E0070
 gUnknown_081E0070:
@@ -3014,7 +3610,7 @@ gUnknown_081E0094:
 
 	.GLOBAL gUnknown_081E009C
 gUnknown_081E009C:
-	.INCBIN "assets/sprites/gUnknown_081E009C.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081E009C.8bpp"
 
 	.GLOBAL gUnknown_081E019C
 gUnknown_081E019C:
@@ -3026,7 +3622,7 @@ gUnknown_081E0274:
 
 	.GLOBAL gUnknown_081E027C
 gUnknown_081E027C:
-	.INCBIN "assets/sprites/gUnknown_081E027C.4bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081E027C.4bpp"
 
 	.GLOBAL gUnknown_081E327C
 gUnknown_081E327C:
@@ -3038,7 +3634,7 @@ gUnknown_081E3378:
 
 	.GLOBAL gUnknown_081E3380
 gUnknown_081E3380:
-	.INCBIN "assets/sprites/gUnknown_081E3380.4bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081E3380.4bpp"
 
 	.GLOBAL gUnknown_081E6B80
 gUnknown_081E6B80:
@@ -3050,7 +3646,7 @@ gUnknown_081E6DC0:
 
 	.GLOBAL gUnknown_081E6DC8
 gUnknown_081E6DC8:
-	.INCBIN "assets/sprites/gUnknown_081E6DC8.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081E6DC8.8bpp"
 
 	.GLOBAL gUnknown_081EADC8
 gUnknown_081EADC8:
@@ -3062,7 +3658,7 @@ gUnknown_081EAEE8:
 
 	.GLOBAL gUnknown_081EAEF0
 gUnknown_081EAEF0:
-	.INCBIN "assets/sprites/gUnknown_081EAEF0.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_081EAEF0.8bpp"
 
 	.GLOBAL gUnknown_081F2EF0
 gUnknown_081F2EF0:
@@ -3074,7 +3670,7 @@ gUnknown_081F31E4:
 
 	.GLOBAL gUnknown_081F31EC
 gUnknown_081F31EC:
-	.INCBIN "assets/sprites/gUnknown_081F31EC.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_081F31EC.8bpp"
 
 	.GLOBAL gUnknown_082031EC
 gUnknown_082031EC:
@@ -3086,7 +3682,7 @@ gUnknown_082034E0:
 
 	.GLOBAL gUnknown_082034E8
 gUnknown_082034E8:
-	.INCBIN "assets/sprites/gUnknown_082034E8.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_082034E8.8bpp"
 
 	.GLOBAL gUnknown_082084E8
 gUnknown_082084E8:
@@ -3098,7 +3694,7 @@ gUnknown_0820850C:
 
 	.GLOBAL gUnknown_08208514
 gUnknown_08208514:
-	.INCBIN "assets/sprites/gUnknown_08208514.4bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_08208514.4bpp"
 
 	.GLOBAL gUnknown_08208914
 gUnknown_08208914:
@@ -3110,7 +3706,7 @@ gUnknown_08208A34:
 
 	.GLOBAL gUnknown_08208A3C
 gUnknown_08208A3C:
-	.INCBIN "assets/sprites/gUnknown_08208A3C.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_08208A3C.8bpp"
 
 	.GLOBAL gUnknown_08210A3C
 gUnknown_08210A3C:
@@ -3122,7 +3718,7 @@ gUnknown_08210ACC:
 
 	.GLOBAL gUnknown_08210AD4
 gUnknown_08210AD4:
-	.INCBIN "assets/sprites/gUnknown_08210AD4.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_08210AD4.8bpp"
 
 	.GLOBAL gUnknown_08213AD4
 gUnknown_08213AD4:
@@ -3134,7 +3730,7 @@ gUnknown_08213D14:
 
 	.GLOBAL gUnknown_08213D1C
 gUnknown_08213D1C:
-	.INCBIN "assets/sprites/gUnknown_08213D1C.8bpp"
+	.INCBIN "assets/sprites/final_boss/gUnknown_08213D1C.8bpp"
 
 	.GLOBAL gUnknown_08223D1C
 gUnknown_08223D1C:
@@ -3146,7 +3742,7 @@ gUnknown_08223D40:
 
 	.GLOBAL gUnknown_08223D48
 gUnknown_08223D48:
-	.INCBIN "assets/sprites/gUnknown_08223D48.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223D48.4bpp"
 
 	.GLOBAL gUnknown_08223D68
 gUnknown_08223D68:
@@ -3158,7 +3754,7 @@ gUnknown_08223D8C:
 
 	.GLOBAL gUnknown_08223D94
 gUnknown_08223D94:
-	.INCBIN "assets/sprites/gUnknown_08223D94.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223D94.4bpp"
 
 	.GLOBAL gUnknown_08223E14
 gUnknown_08223E14:
@@ -3170,7 +3766,7 @@ gUnknown_08223E38:
 
 	.GLOBAL gUnknown_08223E40
 gUnknown_08223E40:
-	.INCBIN "assets/sprites/gUnknown_08223E40.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223E40.4bpp"
 
 	.GLOBAL gUnknown_08223EC0
 gUnknown_08223EC0:
@@ -3182,7 +3778,7 @@ gUnknown_08223EE4:
 
 	.GLOBAL gUnknown_08223EEC
 gUnknown_08223EEC:
-	.INCBIN "assets/sprites/gUnknown_08223EEC.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223EEC.4bpp"
 
 	.GLOBAL gUnknown_08223F6C
 gUnknown_08223F6C:
@@ -3194,7 +3790,7 @@ gUnknown_08223F90:
 
 	.GLOBAL gUnknown_08223F98
 gUnknown_08223F98:
-	.INCBIN "assets/sprites/gUnknown_08223F98.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08223F98.4bpp"
 
 	.GLOBAL gUnknown_08224018
 gUnknown_08224018:
@@ -3206,7 +3802,7 @@ gUnknown_0822403C:
 
 	.GLOBAL gUnknown_08224044
 gUnknown_08224044:
-	.INCBIN "assets/sprites/gUnknown_08224044.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08224044.4bpp"
 
 	.GLOBAL gUnknown_08224064
 gUnknown_08224064:
@@ -3218,7 +3814,7 @@ gUnknown_08224088:
 
 	.GLOBAL gUnknown_08224090
 gUnknown_08224090:
-	.INCBIN "assets/sprites/gUnknown_08224090.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08224090.4bpp"
 
 	.GLOBAL gUnknown_08224190
 gUnknown_08224190:
@@ -3230,7 +3826,7 @@ gUnknown_08224514:
 
 	.GLOBAL gUnknown_0822451C
 gUnknown_0822451C:
-	.INCBIN "assets/sprites/gUnknown_0822451C.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_0822451C.8bpp"
 
 	.GLOBAL gUnknown_08227D1C
 gUnknown_08227D1C:
@@ -3242,7 +3838,7 @@ gUnknown_08227D40:
 
 	.GLOBAL gUnknown_08227D48
 gUnknown_08227D48:
-	.INCBIN "assets/sprites/gUnknown_08227D48.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_08227D48.8bpp"
 
 	.GLOBAL gUnknown_08228D48
 gUnknown_08228D48:
@@ -3254,7 +3850,7 @@ gUnknown_08228ED4:
 
 	.GLOBAL gUnknown_08228EDC
 gUnknown_08228EDC:
-	.INCBIN "assets/sprites/gUnknown_08228EDC.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_08228EDC.8bpp"
 
 	.GLOBAL gUnknown_08230EDC
 gUnknown_08230EDC:
@@ -3266,7 +3862,7 @@ gUnknown_082310D4:
 
 	.GLOBAL gUnknown_082310DC
 gUnknown_082310DC:
-	.INCBIN "assets/sprites/gUnknown_082310DC.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_082310DC.8bpp"
 
 	.GLOBAL gUnknown_082380DC
 gUnknown_082380DC:
@@ -3278,7 +3874,7 @@ gUnknown_082382D4:
 
 	.GLOBAL gUnknown_082382DC
 gUnknown_082382DC:
-	.INCBIN "assets/sprites/gUnknown_082382DC.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_082382DC.8bpp"
 
 	.GLOBAL gUnknown_0823F2DC
 gUnknown_0823F2DC:
@@ -3290,7 +3886,7 @@ gUnknown_0823F3FC:
 
 	.GLOBAL gUnknown_0823F404
 gUnknown_0823F404:
-	.INCBIN "assets/sprites/gUnknown_0823F404.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_0823F404.8bpp"
 
 	.GLOBAL gUnknown_08243404
 gUnknown_08243404:
@@ -3302,7 +3898,7 @@ gUnknown_0824356C:
 
 	.GLOBAL gUnknown_08243574
 gUnknown_08243574:
-	.INCBIN "assets/sprites/gUnknown_08243574.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_08243574.8bpp"
 
 	.GLOBAL gUnknown_0824D574
 gUnknown_0824D574:
@@ -3314,7 +3910,7 @@ gUnknown_0824D6B8:
 
 	.GLOBAL gUnknown_0824D6C0
 gUnknown_0824D6C0:
-	.INCBIN "assets/sprites/gUnknown_0824D6C0.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_0824D6C0.8bpp"
 
 	.GLOBAL gUnknown_08251EC0
 gUnknown_08251EC0:
@@ -3326,7 +3922,7 @@ gUnknown_08251FE0:
 
 	.GLOBAL gUnknown_08251FE8
 gUnknown_08251FE8:
-	.INCBIN "assets/sprites/gUnknown_08251FE8.8bpp"
+	.INCBIN "assets/sprites/DK/gUnknown_08251FE8.8bpp"
 
 	.GLOBAL gUnknown_08259FE8
 gUnknown_08259FE8:
@@ -3338,7 +3934,7 @@ gUnknown_0825A00C:
 
 	.GLOBAL gUnknown_0825A014
 gUnknown_0825A014:
-	.INCBIN "assets/sprites/gUnknown_0825A014.8bpp"
+	.INCBIN "assets/sprites/key_door/gUnknown_0825A014.8bpp"
 
 	.GLOBAL gUnknown_0825A814
 gUnknown_0825A814:
@@ -3350,7 +3946,7 @@ gUnknown_0825AA78:
 
 	.GLOBAL gUnknown_0825AA80
 gUnknown_0825AA80:
-	.INCBIN "assets/sprites/gUnknown_0825AA80.8bpp"
+	.INCBIN "assets/sprites/key_door/gUnknown_0825AA80.8bpp"
 
 	.GLOBAL gUnknown_0826BA80
 gUnknown_0826BA80:
@@ -3362,7 +3958,7 @@ gUnknown_0826BAA4:
 
 	.GLOBAL gUnknown_0826BAAC
 gUnknown_0826BAAC:
-	.INCBIN "assets/sprites/gUnknown_0826BAAC.8bpp"
+	.INCBIN "assets/sprites/key_door/gUnknown_0826BAAC.8bpp"
 
 	.GLOBAL gUnknown_0826C2AC
 gUnknown_0826C2AC:
@@ -3374,7 +3970,7 @@ gUnknown_0826C33C:
 
 	.GLOBAL gUnknown_0826C344
 gUnknown_0826C344:
-	.INCBIN "assets/sprites/gUnknown_0826C344.8bpp"
+	.INCBIN "assets/sprites/key_door/gUnknown_0826C344.8bpp"
 
 	.GLOBAL gUnknown_08270344
 gUnknown_08270344:
@@ -3386,7 +3982,7 @@ gUnknown_082705F0:
 
 	.GLOBAL gUnknown_082705F8
 gUnknown_082705F8:
-	.INCBIN "assets/sprites/gUnknown_082705F8.8bpp"
+	.INCBIN "assets/sprites/key_door/gUnknown_082705F8.8bpp"
 
 	.GLOBAL gUnknown_08275DF8
 gUnknown_08275DF8:
@@ -3398,7 +3994,7 @@ gUnknown_08275E88:
 
 	.GLOBAL gUnknown_08275E90
 gUnknown_08275E90:
-	.INCBIN "assets/sprites/gUnknown_08275E90.8bpp"
+	.INCBIN "assets/sprites/key_door/gUnknown_08275E90.8bpp"
 
 	.GLOBAL gUnknown_08277E90
 gUnknown_08277E90:
@@ -3410,7 +4006,7 @@ gUnknown_08277F44:
 
 	.GLOBAL gUnknown_08277F4C
 gUnknown_08277F4C:
-	.INCBIN "assets/sprites/gUnknown_08277F4C.8bpp"
+	.INCBIN "assets/sprites/key_door/gUnknown_08277F4C.8bpp"
 
 	.GLOBAL gUnknown_0827CF4C
 gUnknown_0827CF4C:
@@ -3422,7 +4018,7 @@ gUnknown_0827CF70:
 
 	.GLOBAL gUnknown_0827CF78
 gUnknown_0827CF78:
-	.INCBIN "assets/sprites/gUnknown_0827CF78.8bpp"
+	.INCBIN "assets/sprites/key_door/gUnknown_0827CF78.8bpp"
 
 	.GLOBAL gUnknown_0827D778
 gUnknown_0827D778:
@@ -3434,7 +4030,7 @@ gUnknown_0827D898:
 
 	.GLOBAL gUnknown_0827D8A0
 gUnknown_0827D8A0:
-	.INCBIN "assets/sprites/gUnknown_0827D8A0.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_0827D8A0.4bpp"
 
 	.GLOBAL gUnknown_0827E8A0
 gUnknown_0827E8A0:
@@ -3446,7 +4042,7 @@ gUnknown_0827E9E4:
 
 	.GLOBAL gUnknown_0827E9EC
 gUnknown_0827E9EC:
-	.INCBIN "assets/sprites/gUnknown_0827E9EC.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_0827E9EC.4bpp"
 
 	.GLOBAL gUnknown_0827FBEC
 gUnknown_0827FBEC:
@@ -3458,7 +4054,7 @@ gUnknown_0827FDE4:
 
 	.GLOBAL gUnknown_0827FDEC
 gUnknown_0827FDEC:
-	.INCBIN "assets/sprites/gUnknown_0827FDEC.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_0827FDEC.4bpp"
 
 	.GLOBAL gUnknown_08280BEC
 gUnknown_08280BEC:
@@ -3470,7 +4066,7 @@ gUnknown_08280DE4:
 
 	.GLOBAL gUnknown_08280DEC
 gUnknown_08280DEC:
-	.INCBIN "assets/sprites/gUnknown_08280DEC.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_08280DEC.4bpp"
 
 	.GLOBAL gUnknown_08281BEC
 gUnknown_08281BEC:
@@ -3482,7 +4078,7 @@ gUnknown_08281D54:
 
 	.GLOBAL gUnknown_08281D5C
 gUnknown_08281D5C:
-	.INCBIN "assets/sprites/gUnknown_08281D5C.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_08281D5C.4bpp"
 
 	.GLOBAL gUnknown_0828315C
 gUnknown_0828315C:
@@ -3494,7 +4090,7 @@ gUnknown_0828339C:
 
 	.GLOBAL gUnknown_082833A4
 gUnknown_082833A4:
-	.INCBIN "assets/sprites/gUnknown_082833A4.4bpp"
+	.INCBIN "assets/sprites/bucket_man/gUnknown_082833A4.4bpp"
 
 	.GLOBAL gUnknown_082853A4
 gUnknown_082853A4:
@@ -3506,7 +4102,7 @@ gUnknown_08285554:
 
 	.GLOBAL gUnknown_0828555C
 gUnknown_0828555C:
-	.INCBIN "assets/sprites/gUnknown_0828555C.8bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_0828555C.8bpp"
 
 	.GLOBAL gUnknown_0828855C
 gUnknown_0828855C:
@@ -3578,7 +4174,7 @@ gUnknown_0828DD64:
 
 	.GLOBAL gUnknown_0828DD6C
 gUnknown_0828DD6C:
-	.INCBIN "assets/sprites/gUnknown_0828DD6C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_0828DD6C.4bpp"
 
 	.GLOBAL gUnknown_0828E46C
 gUnknown_0828E46C:
@@ -3590,7 +4186,7 @@ gUnknown_0828E6AC:
 
 	.GLOBAL gUnknown_0828E6B4
 gUnknown_0828E6B4:
-	.INCBIN "assets/sprites/gUnknown_0828E6B4.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_0828E6B4.4bpp"
 
 	.GLOBAL gUnknown_0828EDB4
 gUnknown_0828EDB4:
@@ -3614,7 +4210,7 @@ gUnknown_0828FF5C:
 
 	.GLOBAL gUnknown_0828FF64
 gUnknown_0828FF64:
-	.INCBIN "assets/sprites/gUnknown_0828FF64.4bpp"
+	.INCBIN "assets/sprites/points/gUnknown_0828FF64.4bpp"
 
 	.GLOBAL gUnknown_0828FFE4
 gUnknown_0828FFE4:
@@ -3626,7 +4222,7 @@ gUnknown_08290224:
 
 	.GLOBAL gUnknown_0829022C
 gUnknown_0829022C:
-	.INCBIN "assets/sprites/gUnknown_0829022C.4bpp"
+	.INCBIN "assets/sprites/points/gUnknown_0829022C.4bpp"
 
 	.GLOBAL gUnknown_082902AC
 gUnknown_082902AC:
@@ -3638,7 +4234,7 @@ gUnknown_082904EC:
 
 	.GLOBAL gUnknown_082904F4
 gUnknown_082904F4:
-	.INCBIN "assets/sprites/gUnknown_082904F4.4bpp"
+	.INCBIN "assets/sprites/points/gUnknown_082904F4.4bpp"
 
 	.GLOBAL gUnknown_08290574
 gUnknown_08290574:
@@ -3650,7 +4246,7 @@ gUnknown_082907B4:
 
 	.GLOBAL gUnknown_082907BC
 gUnknown_082907BC:
-	.INCBIN "assets/sprites/gUnknown_082907BC.4bpp"
+	.INCBIN "assets/sprites/points/gUnknown_082907BC.4bpp"
 
 	.GLOBAL gUnknown_0829083C
 gUnknown_0829083C:
@@ -3722,7 +4318,7 @@ gUnknown_08295508:
 
 	.GLOBAL gUnknown_08295510
 gUnknown_08295510:
-	.INCBIN "assets/sprites/gUnknown_08295510.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08295510.4bpp"
 
 	.GLOBAL gUnknown_08295530
 gUnknown_08295530:
@@ -3734,7 +4330,7 @@ gUnknown_08295554:
 
 	.GLOBAL gUnknown_0829555C
 gUnknown_0829555C:
-	.INCBIN "assets/sprites/gUnknown_0829555C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_0829555C.4bpp"
 
 	.GLOBAL gUnknown_0829557C
 gUnknown_0829557C:
@@ -3746,7 +4342,7 @@ gUnknown_082955A0:
 
 	.GLOBAL gUnknown_082955A8
 gUnknown_082955A8:
-	.INCBIN "assets/sprites/gUnknown_082955A8.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082955A8.4bpp"
 
 	.GLOBAL gUnknown_082955C8
 gUnknown_082955C8:
@@ -3758,7 +4354,7 @@ gUnknown_082955EC:
 
 	.GLOBAL gUnknown_082955F4
 gUnknown_082955F4:
-	.INCBIN "assets/sprites/gUnknown_082955F4.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082955F4.4bpp"
 
 	.GLOBAL gUnknown_08295614
 gUnknown_08295614:
@@ -3770,7 +4366,7 @@ gUnknown_08295638:
 
 	.GLOBAL gUnknown_08295640
 gUnknown_08295640:
-	.INCBIN "assets/sprites/gUnknown_08295640.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08295640.4bpp"
 
 	.GLOBAL gUnknown_08295660
 gUnknown_08295660:
@@ -3794,7 +4390,7 @@ gUnknown_082957B0:
 
 	.GLOBAL gUnknown_082957B8
 gUnknown_082957B8:
-	.INCBIN "assets/sprites/gUnknown_082957B8.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082957B8.4bpp"
 
 	.GLOBAL gUnknown_08295FB8
 gUnknown_08295FB8:
@@ -3806,7 +4402,7 @@ gUnknown_08295FDC:
 
 	.GLOBAL gUnknown_08295FE4
 gUnknown_08295FE4:
-	.INCBIN "assets/sprites/gUnknown_08295FE4.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08295FE4.4bpp"
 
 	.GLOBAL gUnknown_082967E4
 gUnknown_082967E4:
@@ -3818,7 +4414,7 @@ gUnknown_08296808:
 
 	.GLOBAL gUnknown_08296810
 gUnknown_08296810:
-	.INCBIN "assets/sprites/gUnknown_08296810.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08296810.4bpp"
 
 	.GLOBAL gUnknown_08297010
 gUnknown_08297010:
@@ -3830,7 +4426,7 @@ gUnknown_08297034:
 
 	.GLOBAL gUnknown_0829703C
 gUnknown_0829703C:
-	.INCBIN "assets/sprites/gUnknown_0829703C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_0829703C.4bpp"
 
 	.GLOBAL gUnknown_0829713C
 gUnknown_0829713C:
@@ -3842,7 +4438,7 @@ gUnknown_08297160:
 
 	.GLOBAL gUnknown_08297168
 gUnknown_08297168:
-	.INCBIN "assets/sprites/gUnknown_08297168.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297168.4bpp"
 
 	.GLOBAL gUnknown_08297268
 gUnknown_08297268:
@@ -3854,7 +4450,7 @@ gUnknown_0829728C:
 
 	.GLOBAL gUnknown_08297294
 gUnknown_08297294:
-	.INCBIN "assets/sprites/gUnknown_08297294.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297294.4bpp"
 
 	.GLOBAL gUnknown_08297394
 gUnknown_08297394:
@@ -3866,7 +4462,7 @@ gUnknown_082973B8:
 
 	.GLOBAL gUnknown_082973C0
 gUnknown_082973C0:
-	.INCBIN "assets/sprites/gUnknown_082973C0.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082973C0.4bpp"
 
 	.GLOBAL gUnknown_082974C0
 gUnknown_082974C0:
@@ -3878,7 +4474,7 @@ gUnknown_082974E4:
 
 	.GLOBAL gUnknown_082974EC
 gUnknown_082974EC:
-	.INCBIN "assets/sprites/gUnknown_082974EC.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082974EC.4bpp"
 
 	.GLOBAL gUnknown_082975EC
 gUnknown_082975EC:
@@ -3890,7 +4486,7 @@ gUnknown_08297610:
 
 	.GLOBAL gUnknown_08297618
 gUnknown_08297618:
-	.INCBIN "assets/sprites/gUnknown_08297618.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297618.4bpp"
 
 	.GLOBAL gUnknown_08297718
 gUnknown_08297718:
@@ -3902,7 +4498,7 @@ gUnknown_0829773C:
 
 	.GLOBAL gUnknown_08297744
 gUnknown_08297744:
-	.INCBIN "assets/sprites/gUnknown_08297744.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297744.4bpp"
 
 	.GLOBAL gUnknown_08297844
 gUnknown_08297844:
@@ -3914,7 +4510,7 @@ gUnknown_08297868:
 
 	.GLOBAL gUnknown_08297870
 gUnknown_08297870:
-	.INCBIN "assets/sprites/gUnknown_08297870.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297870.4bpp"
 
 	.GLOBAL gUnknown_08297970
 gUnknown_08297970:
@@ -3926,7 +4522,7 @@ gUnknown_08297994:
 
 	.GLOBAL gUnknown_0829799C
 gUnknown_0829799C:
-	.INCBIN "assets/sprites/gUnknown_0829799C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_0829799C.4bpp"
 
 	.GLOBAL gUnknown_08297A9C
 gUnknown_08297A9C:
@@ -3938,7 +4534,7 @@ gUnknown_08297AC0:
 
 	.GLOBAL gUnknown_08297AC8
 gUnknown_08297AC8:
-	.INCBIN "assets/sprites/gUnknown_08297AC8.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297AC8.4bpp"
 
 	.GLOBAL gUnknown_08297BC8
 gUnknown_08297BC8:
@@ -3950,7 +4546,7 @@ gUnknown_08297BEC:
 
 	.GLOBAL gUnknown_08297BF4
 gUnknown_08297BF4:
-	.INCBIN "assets/sprites/gUnknown_08297BF4.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297BF4.4bpp"
 
 	.GLOBAL gUnknown_08297CF4
 gUnknown_08297CF4:
@@ -3962,7 +4558,7 @@ gUnknown_08297D18:
 
 	.GLOBAL gUnknown_08297D20
 gUnknown_08297D20:
-	.INCBIN "assets/sprites/gUnknown_08297D20.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297D20.4bpp"
 
 	.GLOBAL gUnknown_08297E20
 gUnknown_08297E20:
@@ -3974,7 +4570,7 @@ gUnknown_08297E44:
 
 	.GLOBAL gUnknown_08297E4C
 gUnknown_08297E4C:
-	.INCBIN "assets/sprites/gUnknown_08297E4C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297E4C.4bpp"
 
 	.GLOBAL gUnknown_08297F4C
 gUnknown_08297F4C:
@@ -3986,7 +4582,7 @@ gUnknown_08297F70:
 
 	.GLOBAL gUnknown_08297F78
 gUnknown_08297F78:
-	.INCBIN "assets/sprites/gUnknown_08297F78.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08297F78.4bpp"
 
 	.GLOBAL gUnknown_08298078
 gUnknown_08298078:
@@ -3998,7 +4594,7 @@ gUnknown_0829809C:
 
 	.GLOBAL gUnknown_082980A4
 gUnknown_082980A4:
-	.INCBIN "assets/sprites/gUnknown_082980A4.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082980A4.4bpp"
 
 	.GLOBAL gUnknown_082981A4
 gUnknown_082981A4:
@@ -4010,7 +4606,7 @@ gUnknown_082981C8:
 
 	.GLOBAL gUnknown_082981D0
 gUnknown_082981D0:
-	.INCBIN "assets/sprites/gUnknown_082981D0.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082981D0.4bpp"
 
 	.GLOBAL gUnknown_082982D0
 gUnknown_082982D0:
@@ -4022,7 +4618,7 @@ gUnknown_082982F4:
 
 	.GLOBAL gUnknown_082982FC
 gUnknown_082982FC:
-	.INCBIN "assets/sprites/gUnknown_082982FC.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082982FC.4bpp"
 
 	.GLOBAL gUnknown_082983FC
 gUnknown_082983FC:
@@ -4034,7 +4630,7 @@ gUnknown_08298420:
 
 	.GLOBAL gUnknown_08298428
 gUnknown_08298428:
-	.INCBIN "assets/sprites/gUnknown_08298428.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298428.4bpp"
 
 	.GLOBAL gUnknown_08298528
 gUnknown_08298528:
@@ -4046,7 +4642,7 @@ gUnknown_0829854C:
 
 	.GLOBAL gUnknown_08298554
 gUnknown_08298554:
-	.INCBIN "assets/sprites/gUnknown_08298554.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298554.4bpp"
 
 	.GLOBAL gUnknown_08298654
 gUnknown_08298654:
@@ -4058,7 +4654,7 @@ gUnknown_08298678:
 
 	.GLOBAL gUnknown_08298680
 gUnknown_08298680:
-	.INCBIN "assets/sprites/gUnknown_08298680.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298680.4bpp"
 
 	.GLOBAL gUnknown_08298780
 gUnknown_08298780:
@@ -4070,7 +4666,7 @@ gUnknown_082987A4:
 
 	.GLOBAL gUnknown_082987AC
 gUnknown_082987AC:
-	.INCBIN "assets/sprites/gUnknown_082987AC.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082987AC.4bpp"
 
 	.GLOBAL gUnknown_082988AC
 gUnknown_082988AC:
@@ -4082,7 +4678,7 @@ gUnknown_082988D0:
 
 	.GLOBAL gUnknown_082988D8
 gUnknown_082988D8:
-	.INCBIN "assets/sprites/gUnknown_082988D8.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082988D8.4bpp"
 
 	.GLOBAL gUnknown_082989D8
 gUnknown_082989D8:
@@ -4094,7 +4690,7 @@ gUnknown_082989FC:
 
 	.GLOBAL gUnknown_08298A04
 gUnknown_08298A04:
-	.INCBIN "assets/sprites/gUnknown_08298A04.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298A04.4bpp"
 
 	.GLOBAL gUnknown_08298B04
 gUnknown_08298B04:
@@ -4106,7 +4702,7 @@ gUnknown_08298B28:
 
 	.GLOBAL gUnknown_08298B30
 gUnknown_08298B30:
-	.INCBIN "assets/sprites/gUnknown_08298B30.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298B30.4bpp"
 
 	.GLOBAL gUnknown_08298C30
 gUnknown_08298C30:
@@ -4118,7 +4714,7 @@ gUnknown_08298C54:
 
 	.GLOBAL gUnknown_08298C5C
 gUnknown_08298C5C:
-	.INCBIN "assets/sprites/gUnknown_08298C5C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298C5C.4bpp"
 
 	.GLOBAL gUnknown_08298D5C
 gUnknown_08298D5C:
@@ -4130,7 +4726,7 @@ gUnknown_08298D80:
 
 	.GLOBAL gUnknown_08298D88
 gUnknown_08298D88:
-	.INCBIN "assets/sprites/gUnknown_08298D88.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298D88.4bpp"
 
 	.GLOBAL gUnknown_08298E88
 gUnknown_08298E88:
@@ -4142,7 +4738,7 @@ gUnknown_08298EAC:
 
 	.GLOBAL gUnknown_08298EB4
 gUnknown_08298EB4:
-	.INCBIN "assets/sprites/gUnknown_08298EB4.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298EB4.4bpp"
 
 	.GLOBAL gUnknown_08298FB4
 gUnknown_08298FB4:
@@ -4154,7 +4750,7 @@ gUnknown_08298FD8:
 
 	.GLOBAL gUnknown_08298FE0
 gUnknown_08298FE0:
-	.INCBIN "assets/sprites/gUnknown_08298FE0.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08298FE0.4bpp"
 
 	.GLOBAL gUnknown_082990E0
 gUnknown_082990E0:
@@ -4166,7 +4762,7 @@ gUnknown_08299104:
 
 	.GLOBAL gUnknown_0829910C
 gUnknown_0829910C:
-	.INCBIN "assets/sprites/gUnknown_0829910C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_0829910C.4bpp"
 
 	.GLOBAL gUnknown_0829920C
 gUnknown_0829920C:
@@ -4178,7 +4774,7 @@ gUnknown_08299230:
 
 	.GLOBAL gUnknown_08299238
 gUnknown_08299238:
-	.INCBIN "assets/sprites/gUnknown_08299238.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299238.4bpp"
 
 	.GLOBAL gUnknown_08299338
 gUnknown_08299338:
@@ -4190,7 +4786,7 @@ gUnknown_0829935C:
 
 	.GLOBAL gUnknown_08299364
 gUnknown_08299364:
-	.INCBIN "assets/sprites/gUnknown_08299364.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299364.4bpp"
 
 	.GLOBAL gUnknown_08299464
 gUnknown_08299464:
@@ -4202,7 +4798,7 @@ gUnknown_08299488:
 
 	.GLOBAL gUnknown_08299490
 gUnknown_08299490:
-	.INCBIN "assets/sprites/gUnknown_08299490.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299490.4bpp"
 
 	.GLOBAL gUnknown_08299590
 gUnknown_08299590:
@@ -4214,7 +4810,7 @@ gUnknown_082995B4:
 
 	.GLOBAL gUnknown_082995BC
 gUnknown_082995BC:
-	.INCBIN "assets/sprites/gUnknown_082995BC.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082995BC.4bpp"
 
 	.GLOBAL gUnknown_082996BC
 gUnknown_082996BC:
@@ -4226,7 +4822,7 @@ gUnknown_082996E0:
 
 	.GLOBAL gUnknown_082996E8
 gUnknown_082996E8:
-	.INCBIN "assets/sprites/gUnknown_082996E8.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_082996E8.4bpp"
 
 	.GLOBAL gUnknown_082997E8
 gUnknown_082997E8:
@@ -4238,7 +4834,7 @@ gUnknown_0829980C:
 
 	.GLOBAL gUnknown_08299814
 gUnknown_08299814:
-	.INCBIN "assets/sprites/gUnknown_08299814.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299814.4bpp"
 
 	.GLOBAL gUnknown_08299914
 gUnknown_08299914:
@@ -4250,22 +4846,22 @@ gUnknown_08299938:
 
 	.GLOBAL gUnknown_08299940
 gUnknown_08299940:
-	.INCBIN "assets/sprites/gUnknown_08299940.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_08299940.4bpp"
 
-	.GLOBAL gUnknown_08299A40
-gUnknown_08299A40:
+	.GLOBAL gfxExpertLevelIconPicsAnimation
+gfxExpertLevelIconPicsAnimation:
 	.INCBIN "baserom.gba", 0x299A40, 0x299BF0-0x299A40
 
-	.GLOBAL gUnknown_08299BF0
-gUnknown_08299BF0:
+	.GLOBAL gfxExpertLevelIconPicsOAM
+gfxExpertLevelIconPicsOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_08299BF8
-gUnknown_08299BF8:
-	.INCBIN "assets/sprites/gUnknown_08299BF8.4bpp"
+	.GLOBAL gfxExpertLevelIconPics
+gfxExpertLevelIconPics:
+	.INCBIN "assets/sprites/expert_levels/ExpertLevelIconPics.4bpp"
 
 	.GLOBAL gUnknown_0829A7F8
-gUnknown_0829A7F8:
+gUnknown_0829A7F8:	
 	.INCBIN "baserom.gba", 0x29A7F8, 0x29A81C-0x29A7F8
 
 	.GLOBAL gUnknown_0829A81C
@@ -4274,7 +4870,7 @@ gUnknown_0829A81C:
 
 	.GLOBAL gUnknown_0829A824
 gUnknown_0829A824:
-	.INCBIN "assets/sprites/gUnknown_0829A824.8bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_0829A824.8bpp"
 
 	.GLOBAL gUnknown_0829B824
 gUnknown_0829B824:
@@ -4286,7 +4882,7 @@ gUnknown_0829BA64:
 
 	.GLOBAL gUnknown_0829BA6C
 gUnknown_0829BA6C:
-	.INCBIN "assets/sprites/gUnknown_0829BA6C.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829BA6C.4bpp"
 
 	.GLOBAL gUnknown_0829C26C
 gUnknown_0829C26C:
@@ -4298,7 +4894,7 @@ gUnknown_0829C4AC:
 
 	.GLOBAL gUnknown_0829C4B4
 gUnknown_0829C4B4:
-	.INCBIN "assets/sprites/gUnknown_0829C4B4.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829C4B4.4bpp"
 
 	.GLOBAL gUnknown_0829CCB4
 gUnknown_0829CCB4:
@@ -4310,7 +4906,7 @@ gUnknown_0829CEF4:
 
 	.GLOBAL gUnknown_0829CEFC
 gUnknown_0829CEFC:
-	.INCBIN "assets/sprites/gUnknown_0829CEFC.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829CEFC.4bpp"
 
 	.GLOBAL gUnknown_0829CF7C
 gUnknown_0829CF7C:
@@ -4322,7 +4918,7 @@ gUnknown_0829D1BC:
 
 	.GLOBAL gUnknown_0829D1C4
 gUnknown_0829D1C4:
-	.INCBIN "assets/sprites/gUnknown_0829D1C4.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829D1C4.4bpp"
 
 	.GLOBAL gUnknown_0829D9C4
 gUnknown_0829D9C4:
@@ -4334,7 +4930,7 @@ gUnknown_0829D9E8:
 
 	.GLOBAL gUnknown_0829D9F0
 gUnknown_0829D9F0:
-	.INCBIN "assets/sprites/gUnknown_0829D9F0.4bpp"
+	.INCBIN "assets/sprites/lava_rock/gUnknown_0829D9F0.4bpp"
 
 	.GLOBAL gUnknown_0829DA70
 gUnknown_0829DA70:
@@ -4346,7 +4942,7 @@ gUnknown_0829DCB0:
 
 	.GLOBAL gUnknown_0829DCB8
 gUnknown_0829DCB8:
-	.INCBIN "assets/sprites/gUnknown_0829DCB8.4bpp"
+	.INCBIN "assets/sprites/fireball/gUnknown_0829DCB8.4bpp"
 
 	.GLOBAL gUnknown_0829ECB8
 gUnknown_0829ECB8:
@@ -4358,7 +4954,7 @@ gUnknown_0829EDB4:
 
 	.GLOBAL gUnknown_0829EDBC
 gUnknown_0829EDBC:
-	.INCBIN "assets/sprites/gUnknown_0829EDBC.4bpp"
+	.INCBIN "assets/sprites/fireball/gUnknown_0829EDBC.4bpp"
 
 	.GLOBAL gUnknown_0829F4BC
 gUnknown_0829F4BC:
@@ -4370,7 +4966,7 @@ gUnknown_0829F66C:
 
 	.GLOBAL gUnknown_0829F674
 gUnknown_0829F674:
-	.INCBIN "assets/sprites/gUnknown_0829F674.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_0829F674.4bpp"
 
 	.GLOBAL gUnknown_082A0E74
 gUnknown_082A0E74:
@@ -4382,7 +4978,7 @@ gUnknown_082A0F94:
 
 	.GLOBAL gUnknown_082A0F9C
 gUnknown_082A0F9C:
-	.INCBIN "assets/sprites/gUnknown_082A0F9C.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A0F9C.4bpp"
 
 	.GLOBAL gUnknown_082A139C
 gUnknown_082A139C:
@@ -4394,7 +4990,7 @@ gUnknown_082A1474:
 
 	.GLOBAL gUnknown_082A147C
 gUnknown_082A147C:
-	.INCBIN "assets/sprites/gUnknown_082A147C.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A147C.4bpp"
 
 	.GLOBAL gUnknown_082A207C
 gUnknown_082A207C:
@@ -4406,7 +5002,7 @@ gUnknown_082A22BC:
 
 	.GLOBAL gUnknown_082A22C4
 gUnknown_082A22C4:
-	.INCBIN "assets/sprites/gUnknown_082A22C4.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A22C4.4bpp"
 
 	.GLOBAL gUnknown_082A42C4
 gUnknown_082A42C4:
@@ -4418,7 +5014,7 @@ gUnknown_082A4354:
 
 	.GLOBAL gUnknown_082A435C
 gUnknown_082A435C:
-	.INCBIN "assets/sprites/gUnknown_082A435C.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A435C.4bpp"
 
 	.GLOBAL gUnknown_082A4B5C
 gUnknown_082A4B5C:
@@ -4430,7 +5026,7 @@ gUnknown_082A4C7C:
 
 	.GLOBAL gUnknown_082A4C84
 gUnknown_082A4C84:
-	.INCBIN "assets/sprites/gUnknown_082A4C84.4bpp"
+	.INCBIN "assets/sprites/fire_bird/gUnknown_082A4C84.4bpp"
 
 	.GLOBAL gUnknown_082A5C84
 gUnknown_082A5C84:
@@ -4442,7 +5038,7 @@ gUnknown_082A5D5C:
 
 	.GLOBAL gUnknown_082A5D64
 gUnknown_082A5D64:
-	.INCBIN "assets/sprites/gUnknown_082A5D64.4bpp"
+	.INCBIN "assets/sprites/podoboo/gUnknown_082A5D64.4bpp"
 
 	.GLOBAL gUnknown_082A6064
 gUnknown_082A6064:
@@ -4454,7 +5050,7 @@ gUnknown_082A6184:
 
 	.GLOBAL gUnknown_082A618C
 gUnknown_082A618C:
-	.INCBIN "assets/sprites/gUnknown_082A618C.4bpp"
+	.INCBIN "assets/sprites/podoboo/gUnknown_082A618C.4bpp"
 
 	.GLOBAL gUnknown_082A658C
 gUnknown_082A658C:
@@ -4466,7 +5062,7 @@ gUnknown_082A6910:
 
 	.GLOBAL gUnknown_082A6918
 gUnknown_082A6918:
-	.INCBIN "assets/sprites/gUnknown_082A6918.4bpp"
+	.INCBIN "assets/sprites/podoboo/gUnknown_082A6918.4bpp"
 
 	.GLOBAL gUnknown_082A6C18
 gUnknown_082A6C18:
@@ -4478,7 +5074,7 @@ gUnknown_082A6CF0:
 
 	.GLOBAL gUnknown_082A6CF8
 gUnknown_082A6CF8:
-	.INCBIN "assets/sprites/gUnknown_082A6CF8.4bpp"
+	.INCBIN "assets/sprites/podoboo/gUnknown_082A6CF8.4bpp"
 
 	.GLOBAL gUnknown_082A6FF8
 gUnknown_082A6FF8:
@@ -4490,7 +5086,7 @@ gUnknown_082A70AC:
 
 	.GLOBAL gUnknown_082A70B4
 gUnknown_082A70B4:
-	.INCBIN "assets/sprites/gUnknown_082A70B4.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_082A70B4.4bpp"
 
 	.GLOBAL gUnknown_082A7334
 gUnknown_082A7334:
@@ -4502,7 +5098,7 @@ gUnknown_082A7454:
 
 	.GLOBAL gUnknown_082A745C
 gUnknown_082A745C:
-	.INCBIN "assets/sprites/gUnknown_082A745C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_082A745C.4bpp"
 
 	.GLOBAL gUnknown_082A785C
 gUnknown_082A785C:
@@ -4514,7 +5110,7 @@ gUnknown_082A7934:
 
 	.GLOBAL gUnknown_082A793C
 gUnknown_082A793C:
-	.INCBIN "assets/sprites/gUnknown_082A793C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_082A793C.4bpp"
 
 	.GLOBAL gUnknown_082A7C3C
 gUnknown_082A7C3C:
@@ -4526,7 +5122,7 @@ gUnknown_082A7DEC:
 
 	.GLOBAL gUnknown_082A7DF4
 gUnknown_082A7DF4:
-	.INCBIN "assets/sprites/gUnknown_082A7DF4.4bpp"
+	.INCBIN "assets/sprites/tane_pakkun/gUnknown_082A7DF4.4bpp"
 
 	.GLOBAL gUnknown_082A95F4
 gUnknown_082A95F4:
@@ -4538,7 +5134,7 @@ gUnknown_082A9834:
 
 	.GLOBAL gUnknown_082A983C
 gUnknown_082A983C:
-	.INCBIN "assets/sprites/gUnknown_082A983C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082A983C.4bpp"
 
 	.GLOBAL gUnknown_082AB83C
 gUnknown_082AB83C:
@@ -4550,7 +5146,7 @@ gUnknown_082AB8CC:
 
 	.GLOBAL gUnknown_082AB8D4
 gUnknown_082AB8D4:
-	.INCBIN "assets/sprites/gUnknown_082AB8D4.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082AB8D4.4bpp"
 
 	.GLOBAL gUnknown_082AC0D4
 gUnknown_082AC0D4:
@@ -4562,7 +5158,7 @@ gUnknown_082AC2A8:
 
 	.GLOBAL gUnknown_082AC2B0
 gUnknown_082AC2B0:
-	.INCBIN "assets/sprites/gUnknown_082AC2B0.4bpp"
+	.INCBIN "assets/sprites/tane_pakkun/gUnknown_082AC2B0.4bpp"
 
 	.GLOBAL gUnknown_082ADAB0
 gUnknown_082ADAB0:
@@ -4574,7 +5170,7 @@ gfxTrashCanOAM:
 
 	.GLOBAL gfxTrashCan4bpp
 gfxTrashCan4bpp:
-	.INCBIN "assets/sprites/TrashCan.4bpp"
+	.INCBIN "assets/sprites/trashcan/TrashCan.4bpp"
 
 	.GLOBAL gUnknown_082ADBDC
 gUnknown_082ADBDC:
@@ -4586,7 +5182,7 @@ gfxTrashCanFlipOAM:
 
 	.GLOBAL gfxTrashCanFlip4bpp
 gfxTrashCanFlip4bpp:
-	.INCBIN "assets/sprites/TrashCanFlip.4bpp"
+	.INCBIN "assets/sprites/trashcan/TrashCanFlip.4bpp"
 
 	.GLOBAL gUnknown_082AEE24
 gUnknown_082AEE24:
@@ -4598,7 +5194,7 @@ gUnknown_082AEE48:
 
 	.GLOBAL gUnknown_082AEE50
 gUnknown_082AEE50:
-	.INCBIN "assets/sprites/gUnknown_082AEE50.4bpp"
+	.INCBIN "assets/sprites/trashcan/gUnknown_082AEE50.4bpp"
 
 	.GLOBAL gUnknown_082AEF50
 gUnknown_082AEF50:
@@ -4610,7 +5206,7 @@ gUnknown_082AEF74:
 
 	.GLOBAL gUnknown_082AEF7C
 gUnknown_082AEF7C:
-	.INCBIN "assets/sprites/gUnknown_082AEF7C.4bpp"
+	.INCBIN "assets/sprites/bonus/gUnknown_082AEF7C.4bpp"
 
 	.GLOBAL gUnknown_082AF77C
 gUnknown_082AF77C:
@@ -4706,7 +5302,7 @@ gUnknown_082B787C:
 
 	.GLOBAL gUnknown_082B7884
 gUnknown_082B7884:
-	.INCBIN "assets/sprites/gUnknown_082B7884.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_082B7884.4bpp"
 
 	.GLOBAL gUnknown_082B8C84
 gUnknown_082B8C84:
@@ -4718,7 +5314,7 @@ gUnknown_082B8F54:
 
 	.GLOBAL gUnknown_082B8F5C
 gUnknown_082B8F5C:
-	.INCBIN "assets/sprites/gUnknown_082B8F5C.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_082B8F5C.4bpp"
 
 	.GLOBAL gUnknown_082C2F5C
 gUnknown_082C2F5C:
@@ -4730,7 +5326,7 @@ gUnknown_082C32BC:
 
 	.GLOBAL gUnknown_082C32C4
 gUnknown_082C32C4:
-	.INCBIN "assets/sprites/gUnknown_082C32C4.8bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_082C32C4.8bpp"
 
 	.GLOBAL gUnknown_082C36C4
 gUnknown_082C36C4:
@@ -4742,7 +5338,7 @@ gUnknown_082C37C0:
 
 	.GLOBAL gUnknown_082C37C8
 gUnknown_082C37C8:
-	.INCBIN "assets/sprites/gUnknown_082C37C8.4bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_082C37C8.4bpp"
 
 	.GLOBAL gUnknown_082C45C8
 gUnknown_082C45C8:
@@ -4754,7 +5350,7 @@ gUnknown_082C470C:
 
 	.GLOBAL gUnknown_082C4714
 gUnknown_082C4714:
-	.INCBIN "assets/sprites/gUnknown_082C4714.8bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_082C4714.8bpp"
 
 	.GLOBAL gUnknown_082C6B14
 gUnknown_082C6B14:
@@ -6302,7 +6898,7 @@ gUnknown_082E6478:
 
 	.GLOBAL gUnknown_082E6480
 gUnknown_082E6480:
-	.INCBIN "assets/sprites/gUnknown_082E6480.8bpp"
+	.INCBIN "assets/sprites/help/gUnknown_082E6480.8bpp"
 
 	.GLOBAL gUnknown_082E6580
 gUnknown_082E6580:
@@ -6314,7 +6910,7 @@ gUnknown_082E65A4:
 
 	.GLOBAL gUnknown_082E65AC
 gUnknown_082E65AC:
-	.INCBIN "assets/sprites/gUnknown_082E65AC.8bpp"
+	.INCBIN "assets/sprites/help/gUnknown_082E65AC.8bpp"
 
 	.GLOBAL gUnknown_082E66AC
 gUnknown_082E66AC:
@@ -6326,7 +6922,7 @@ gUnknown_082E66D0:
 
 	.GLOBAL gUnknown_082E66D8
 gUnknown_082E66D8:
-	.INCBIN "assets/sprites/gUnknown_082E66D8.8bpp"
+	.INCBIN "assets/sprites/help/gUnknown_082E66D8.8bpp"
 
 	.GLOBAL gUnknown_082E6718
 gUnknown_082E6718:
@@ -6338,7 +6934,7 @@ gUnknown_082E6760:
 
 	.GLOBAL gUnknown_082E6768
 gUnknown_082E6768:
-	.INCBIN "assets/sprites/gUnknown_082E6768.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E6768.4bpp"
 
 	.GLOBAL gUnknown_082E6868
 gUnknown_082E6868:
@@ -6350,7 +6946,7 @@ gUnknown_082E6940:
 
 	.GLOBAL gUnknown_082E6948
 gUnknown_082E6948:
-	.INCBIN "assets/sprites/gUnknown_082E6948.8bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E6948.8bpp"
 
 	.GLOBAL gUnknown_082E8148
 gUnknown_082E8148:
@@ -6362,7 +6958,7 @@ gUnknown_082E8190:
 
 	.GLOBAL gUnknown_082E8198
 gUnknown_082E8198:
-	.INCBIN "assets/sprites/gUnknown_082E8198.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E8198.4bpp"
 
 	.GLOBAL gUnknown_082E8298
 gUnknown_082E8298:
@@ -6374,7 +6970,7 @@ gUnknown_082E8304:
 
 	.GLOBAL gUnknown_082E830C
 gUnknown_082E830C:
-	.INCBIN "assets/sprites/gUnknown_082E830C.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E830C.4bpp"
 
 	.GLOBAL gUnknown_082E848C
 gUnknown_082E848C:
@@ -6386,7 +6982,7 @@ gUnknown_082E84D4:
 
 	.GLOBAL gUnknown_082E84DC
 gUnknown_082E84DC:
-	.INCBIN "assets/sprites/gUnknown_082E84DC.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E84DC.4bpp"
 
 	.GLOBAL gUnknown_082E88DC
 gUnknown_082E88DC:
@@ -6398,7 +6994,7 @@ gUnknown_082E8900:
 
 	.GLOBAL gUnknown_082E8908
 gUnknown_082E8908:
-	.INCBIN "assets/sprites/gUnknown_082E8908.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E8908.4bpp"
 
 	.GLOBAL gUnknown_082E8A08
 gUnknown_082E8A08:
@@ -6410,7 +7006,7 @@ gUnknown_082E8A50:
 
 	.GLOBAL gUnknown_082E8A58
 gUnknown_082E8A58:
-	.INCBIN "assets/sprites/gUnknown_082E8A58.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E8A58.4bpp"
 
 	.GLOBAL gUnknown_082E8E58
 gUnknown_082E8E58:
@@ -6422,7 +7018,7 @@ gUnknown_082E8EA0:
 
 	.GLOBAL gUnknown_082E8EA8
 gUnknown_082E8EA8:
-	.INCBIN "assets/sprites/gUnknown_082E8EA8.8bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E8EA8.8bpp"
 
 	.GLOBAL gUnknown_082E90A8
 gUnknown_082E90A8:
@@ -6434,7 +7030,7 @@ gUnknown_082E9114:
 
 	.GLOBAL gUnknown_082E911C
 gUnknown_082E911C:
-	.INCBIN "assets/sprites/gUnknown_082E911C.8bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E911C.8bpp"
 
 	.GLOBAL gUnknown_082E929C
 gUnknown_082E929C:
@@ -6446,7 +7042,7 @@ gUnknown_082E92C0:
 
 	.GLOBAL gUnknown_082E92C8
 gUnknown_082E92C8:
-	.INCBIN "assets/sprites/gUnknown_082E92C8.8bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E92C8.8bpp"
 
 	.GLOBAL gUnknown_082E94C8
 gUnknown_082E94C8:
@@ -6458,7 +7054,7 @@ gUnknown_082E94EC:
 
 	.GLOBAL gUnknown_082E94F4
 gUnknown_082E94F4:
-	.INCBIN "assets/sprites/gUnknown_082E94F4.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E94F4.4bpp"
 
 	.GLOBAL gUnknown_082E9574
 gUnknown_082E9574:
@@ -6470,7 +7066,7 @@ gUnknown_082E964C:
 
 	.GLOBAL gUnknown_082E9654
 gUnknown_082E9654:
-	.INCBIN "assets/sprites/gUnknown_082E9654.8bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082E9654.8bpp"
 
 	.GLOBAL gUnknown_082EAE54
 gUnknown_082EAE54:
@@ -6482,7 +7078,7 @@ gUnknown_082EAE78:
 
 	.GLOBAL gUnknown_082EAE80
 gUnknown_082EAE80:
-	.INCBIN "assets/sprites/gUnknown_082EAE80.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EAE80.4bpp"
 
 	.GLOBAL gUnknown_082EAF00
 gUnknown_082EAF00:
@@ -6494,7 +7090,7 @@ gUnknown_082EAF90:
 
 	.GLOBAL gUnknown_082EAF98
 gUnknown_082EAF98:
-	.INCBIN "assets/sprites/gUnknown_082EAF98.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EAF98.4bpp"
 
 	.GLOBAL gUnknown_082EB118
 gUnknown_082EB118:
@@ -6510,7 +7106,7 @@ gUnknown_082EB1BC:
 
 	.GLOBAL gUnknown_082EB1C4
 gUnknown_082EB1C4:
-	.INCBIN "assets/sprites/gUnknown_082EB1C4.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EB1C4.4bpp"
 
 	.GLOBAL gUnknown_082EB244
 gUnknown_082EB244:
@@ -6522,7 +7118,7 @@ gUnknown_082EB2B0:
 
 	.GLOBAL gUnknown_082EB2B8
 gUnknown_082EB2B8:
-	.INCBIN "assets/sprites/gUnknown_082EB2B8.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EB2B8.4bpp"
 
 	.GLOBAL gUnknown_082EBAB8
 gUnknown_082EBAB8:
@@ -6534,7 +7130,7 @@ gUnknown_082EBB00:
 
 	.GLOBAL gUnknown_082EBB08
 gUnknown_082EBB08:
-	.INCBIN "assets/sprites/gUnknown_082EBB08.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EBB08.4bpp"
 
 	.GLOBAL gUnknown_082EBC08
 gUnknown_082EBC08:
@@ -6546,7 +7142,7 @@ gUnknown_082EBC2C:
 
 	.GLOBAL gUnknown_082EBC34
 gUnknown_082EBC34:
-	.INCBIN "assets/sprites/gUnknown_082EBC34.8bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EBC34.8bpp"
 
 	.GLOBAL gUnknown_082EBE34
 gUnknown_082EBE34:
@@ -6558,7 +7154,7 @@ gUnknown_082EBE58:
 
 	.GLOBAL gUnknown_082EBE60
 gUnknown_082EBE60:
-	.INCBIN "assets/sprites/gUnknown_082EBE60.8bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EBE60.8bpp"
 
 	.GLOBAL gUnknown_082EC060
 gUnknown_082EC060:
@@ -6570,7 +7166,7 @@ gUnknown_082EC0CC:
 
 	.GLOBAL gUnknown_082EC0D4
 gUnknown_082EC0D4:
-	.INCBIN "assets/sprites/gUnknown_082EC0D4.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EC0D4.4bpp"
 
 	.GLOBAL gUnknown_082EC154
 gUnknown_082EC154:
@@ -6582,7 +7178,7 @@ gUnknown_082EC1E4:
 
 	.GLOBAL gUnknown_082EC1EC
 gUnknown_082EC1EC:
-	.INCBIN "assets/sprites/gUnknown_082EC1EC.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EC1EC.4bpp"
 
 	.GLOBAL gUnknown_082EC26C
 gUnknown_082EC26C:
@@ -6594,7 +7190,7 @@ gfxMiniMarioIconOAM:
 
 	.GLOBAL gfxMiniMarioIcon8bpp
 gfxMiniMarioIcon8bpp:
-	.INCBIN "assets/sprites/MiniMarioIcon.8bpp"
+	.INCBIN "assets/sprites/ui/MiniMarioIcon.8bpp"
 
 	.GLOBAL gUnknown_082EC5E0
 gUnknown_082EC5E0:
@@ -6606,7 +7202,7 @@ gUnknown_082EC748:
 
 	.GLOBAL gUnknown_082EC750
 gUnknown_082EC750:
-	.INCBIN "assets/sprites/gUnknown_082EC750.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082EC750.4bpp"
 
 	.GLOBAL gUnknown_082EC9D0
 gUnknown_082EC9D0:
@@ -6618,7 +7214,7 @@ gUnknown_082ECB38:
 
 	.GLOBAL gUnknown_082ECB40
 gUnknown_082ECB40:
-	.INCBIN "assets/sprites/gUnknown_082ECB40.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082ECB40.4bpp"
 
 	.GLOBAL gUnknown_082ECDC0
 gUnknown_082ECDC0:
@@ -6630,7 +7226,7 @@ gUnknown_082ECF94:
 
 	.GLOBAL gUnknown_082ECF9C
 gUnknown_082ECF9C:
-	.INCBIN "assets/sprites/gUnknown_082ECF9C.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082ECF9C.4bpp"
 
 	.GLOBAL gUnknown_082ED13C
 gUnknown_082ED13C:
@@ -6642,7 +7238,7 @@ gUnknown_082ED280:
 
 	.GLOBAL gUnknown_082ED288
 gUnknown_082ED288:
-	.INCBIN "assets/sprites/gUnknown_082ED288.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082ED288.4bpp"
 
 	.GLOBAL gUnknown_082ED4C8
 gUnknown_082ED4C8:
@@ -6654,7 +7250,7 @@ gUnknown_082ED4EC:
 
 	.GLOBAL gUnknown_082ED4F4
 gUnknown_082ED4F4:
-	.INCBIN "assets/sprites/gUnknown_082ED4F4.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082ED4F4.4bpp"
 
 	.GLOBAL gUnknown_082ED574
 gUnknown_082ED574:
@@ -6666,7 +7262,7 @@ gUnknown_082ED5BC:
 
 	.GLOBAL gUnknown_082ED5C4
 gUnknown_082ED5C4:
-	.INCBIN "assets/sprites/gUnknown_082ED5C4.8bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082ED5C4.8bpp"
 
 	.GLOBAL gUnknown_082ED644
 gUnknown_082ED644:
@@ -6678,7 +7274,7 @@ gUnknown_082ED668:
 
 	.GLOBAL gUnknown_082ED670
 gUnknown_082ED670:
-	.INCBIN "assets/sprites/gUnknown_082ED670.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082ED670.4bpp"
 
 	.GLOBAL gUnknown_082ED770
 gUnknown_082ED770:
@@ -6690,7 +7286,7 @@ gUnknown_082ED794:
 
 	.GLOBAL gUnknown_082ED79C
 gUnknown_082ED79C:
-	.INCBIN "assets/sprites/gUnknown_082ED79C.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082ED79C.4bpp"
 
 	.GLOBAL gUnknown_082ED89C
 gUnknown_082ED89C:
@@ -6702,7 +7298,7 @@ gUnknown_082ED8C0:
 
 	.GLOBAL gUnknown_082ED8C8
 gUnknown_082ED8C8:
-	.INCBIN "assets/sprites/gUnknown_082ED8C8.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082ED8C8.4bpp"
 
 	.GLOBAL gUnknown_082ED9C8
 gUnknown_082ED9C8:
@@ -6714,7 +7310,7 @@ gUnknown_082ED9EC:
 
 	.GLOBAL gUnknown_082ED9F4
 gUnknown_082ED9F4:
-	.INCBIN "assets/sprites/gUnknown_082ED9F4.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082ED9F4.4bpp"
 
 	.GLOBAL gUnknown_082EDAF4
 gUnknown_082EDAF4:
@@ -6726,7 +7322,7 @@ gUnknown_082EDB18:
 
 	.GLOBAL gUnknown_082EDB20
 gUnknown_082EDB20:
-	.INCBIN "assets/sprites/gUnknown_082EDB20.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EDB20.4bpp"
 
 	.GLOBAL gUnknown_082EDC20
 gUnknown_082EDC20:
@@ -6738,7 +7334,7 @@ gUnknown_082EDC44:
 
 	.GLOBAL gUnknown_082EDC4C
 gUnknown_082EDC4C:
-	.INCBIN "assets/sprites/gUnknown_082EDC4C.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EDC4C.4bpp"
 
 	.GLOBAL gUnknown_082EDCCC
 gUnknown_082EDCCC:
@@ -6750,7 +7346,7 @@ gUnknown_082EDCF0:
 
 	.GLOBAL gUnknown_082EDCF8
 gUnknown_082EDCF8:
-	.INCBIN "assets/sprites/gUnknown_082EDCF8.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EDCF8.4bpp"
 
 	.GLOBAL gUnknown_082EDDF8
 gUnknown_082EDDF8:
@@ -6762,7 +7358,7 @@ gUnknown_082EDE1C:
 
 	.GLOBAL gUnknown_082EDE24
 gUnknown_082EDE24:
-	.INCBIN "assets/sprites/gUnknown_082EDE24.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EDE24.4bpp"
 
 	.GLOBAL gUnknown_082EDF24
 gUnknown_082EDF24:
@@ -6774,7 +7370,7 @@ gUnknown_082EDF48:
 
 	.GLOBAL gUnknown_082EDF50
 gUnknown_082EDF50:
-	.INCBIN "assets/sprites/gUnknown_082EDF50.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EDF50.4bpp"
 
 	.GLOBAL gUnknown_082EE050
 gUnknown_082EE050:
@@ -6786,7 +7382,7 @@ gUnknown_082EE074:
 
 	.GLOBAL gUnknown_082EE07C
 gUnknown_082EE07C:
-	.INCBIN "assets/sprites/gUnknown_082EE07C.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EE07C.4bpp"
 
 	.GLOBAL gUnknown_082EE0FC
 gUnknown_082EE0FC:
@@ -6798,7 +7394,7 @@ gUnknown_082EE120:
 
 	.GLOBAL gUnknown_082EE128
 gUnknown_082EE128:
-	.INCBIN "assets/sprites/gUnknown_082EE128.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EE128.4bpp"
 
 	.GLOBAL gUnknown_082EE168
 gUnknown_082EE168:
@@ -6810,7 +7406,7 @@ gUnknown_082EE18C:
 
 	.GLOBAL gUnknown_082EE194
 gUnknown_082EE194:
-	.INCBIN "assets/sprites/gUnknown_082EE194.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EE194.4bpp"
 
 	.GLOBAL gUnknown_082EE214
 gUnknown_082EE214:
@@ -6822,7 +7418,7 @@ gUnknown_082EE25C:
 
 	.GLOBAL gUnknown_082EE264
 gUnknown_082EE264:
-	.INCBIN "assets/sprites/gUnknown_082EE264.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EE264.4bpp"
 
 	.GLOBAL gUnknown_082EE464
 gUnknown_082EE464:
@@ -6834,7 +7430,7 @@ gUnknown_082EE4AC:
 
 	.GLOBAL gUnknown_082EE4B4
 gUnknown_082EE4B4:
-	.INCBIN "assets/sprites/gUnknown_082EE4B4.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EE4B4.4bpp"
 
 	.GLOBAL gUnknown_082EE6B4
 gUnknown_082EE6B4:
@@ -6846,7 +7442,7 @@ gUnknown_082EE6FC:
 
 	.GLOBAL gUnknown_082EE704
 gUnknown_082EE704:
-	.INCBIN "assets/sprites/gUnknown_082EE704.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EE704.4bpp"
 
 	.GLOBAL gUnknown_082EE904
 gUnknown_082EE904:
@@ -6858,7 +7454,7 @@ gUnknown_082EE94C:
 
 	.GLOBAL gUnknown_082EE954
 gUnknown_082EE954:
-	.INCBIN "assets/sprites/gUnknown_082EE954.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EE954.4bpp"
 
 	.GLOBAL gUnknown_082EEB54
 gUnknown_082EEB54:
@@ -6870,7 +7466,7 @@ gUnknown_082EEB9C:
 
 	.GLOBAL gUnknown_082EEBA4
 gUnknown_082EEBA4:
-	.INCBIN "assets/sprites/gUnknown_082EEBA4.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EEBA4.4bpp"
 
 	.GLOBAL gUnknown_082EEDA4
 gUnknown_082EEDA4:
@@ -6882,7 +7478,7 @@ gUnknown_082EEDEC:
 
 	.GLOBAL gUnknown_082EEDF4
 gUnknown_082EEDF4:
-	.INCBIN "assets/sprites/gUnknown_082EEDF4.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EEDF4.4bpp"
 
 	.GLOBAL gUnknown_082EEEF4
 gUnknown_082EEEF4:
@@ -6894,7 +7490,7 @@ gUnknown_082EEF3C:
 
 	.GLOBAL gUnknown_082EEF44
 gUnknown_082EEF44:
-	.INCBIN "assets/sprites/gUnknown_082EEF44.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EEF44.4bpp"
 
 	.GLOBAL gUnknown_082EF144
 gUnknown_082EF144:
@@ -6906,7 +7502,7 @@ gUnknown_082EF18C:
 
 	.GLOBAL gUnknown_082EF194
 gUnknown_082EF194:
-	.INCBIN "assets/sprites/gUnknown_082EF194.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EF194.4bpp"
 
 	.GLOBAL gUnknown_082EF394
 gUnknown_082EF394:
@@ -6918,7 +7514,7 @@ gUnknown_082EF3DC:
 
 	.GLOBAL gUnknown_082EF3E4
 gUnknown_082EF3E4:
-	.INCBIN "assets/sprites/gUnknown_082EF3E4.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EF3E4.4bpp"
 
 	.GLOBAL gUnknown_082EF5E4
 gUnknown_082EF5E4:
@@ -6930,7 +7526,7 @@ gUnknown_082EF62C:
 
 	.GLOBAL gUnknown_082EF634
 gUnknown_082EF634:
-	.INCBIN "assets/sprites/gUnknown_082EF634.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EF634.4bpp"
 
 	.GLOBAL gUnknown_082EF734
 gUnknown_082EF734:
@@ -6942,7 +7538,7 @@ gUnknown_082EF77C:
 
 	.GLOBAL gUnknown_082EF784
 gUnknown_082EF784:
-	.INCBIN "assets/sprites/gUnknown_082EF784.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EF784.4bpp"
 
 	.GLOBAL gUnknown_082EF804
 gUnknown_082EF804:
@@ -6954,7 +7550,7 @@ gUnknown_082EF924:
 
 	.GLOBAL gUnknown_082EF92C
 gUnknown_082EF92C:
-	.INCBIN "assets/sprites/gUnknown_082EF92C.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EF92C.4bpp"
 
 	.GLOBAL gUnknown_082EFB2C
 gUnknown_082EFB2C:
@@ -6966,7 +7562,7 @@ gUnknown_082EFB50:
 
 	.GLOBAL gUnknown_082EFB58
 gUnknown_082EFB58:
-	.INCBIN "assets/sprites/gUnknown_082EFB58.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFB58.4bpp"
 
 	.GLOBAL gUnknown_082EFBD8
 gUnknown_082EFBD8:
@@ -6978,7 +7574,7 @@ gUnknown_082EFBFC:
 
 	.GLOBAL gUnknown_082EFC04
 gUnknown_082EFC04:
-	.INCBIN "assets/sprites/gUnknown_082EFC04.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFC04.4bpp"
 
 	.GLOBAL gUnknown_082EFC44
 gUnknown_082EFC44:
@@ -6990,7 +7586,7 @@ gUnknown_082EFC68:
 
 	.GLOBAL gUnknown_082EFC70
 gUnknown_082EFC70:
-	.INCBIN "assets/sprites/gUnknown_082EFC70.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFC70.4bpp"
 
 	.GLOBAL gUnknown_082EFC90
 gUnknown_082EFC90:
@@ -7002,7 +7598,7 @@ gUnknown_082EFCB4:
 
 	.GLOBAL gUnknown_082EFCBC
 gUnknown_082EFCBC:
-	.INCBIN "assets/sprites/gUnknown_082EFCBC.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFCBC.4bpp"
 
 	.GLOBAL gUnknown_082EFCDC
 gUnknown_082EFCDC:
@@ -7014,7 +7610,7 @@ gUnknown_082EFD00:
 
 	.GLOBAL gUnknown_082EFD08
 gUnknown_082EFD08:
-	.INCBIN "assets/sprites/gUnknown_082EFD08.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFD08.4bpp"
 
 	.GLOBAL gUnknown_082EFD88
 gUnknown_082EFD88:
@@ -7026,7 +7622,7 @@ gUnknown_082EFDAC:
 
 	.GLOBAL gUnknown_082EFDB4
 gUnknown_082EFDB4:
-	.INCBIN "assets/sprites/gUnknown_082EFDB4.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFDB4.4bpp"
 
 	.GLOBAL gUnknown_082EFDD4
 gUnknown_082EFDD4:
@@ -7038,7 +7634,7 @@ gUnknown_082EFDF8:
 
 	.GLOBAL gUnknown_082EFE00
 gUnknown_082EFE00:
-	.INCBIN "assets/sprites/gUnknown_082EFE00.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFE00.4bpp"
 
 	.GLOBAL gUnknown_082EFE20
 gUnknown_082EFE20:
@@ -7050,7 +7646,7 @@ gUnknown_082EFE44:
 
 	.GLOBAL gUnknown_082EFE4C
 gUnknown_082EFE4C:
-	.INCBIN "assets/sprites/gUnknown_082EFE4C.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFE4C.4bpp"
 
 	.GLOBAL gUnknown_082EFE6C
 gUnknown_082EFE6C:
@@ -7062,7 +7658,7 @@ gUnknown_082EFE90:
 
 	.GLOBAL gUnknown_082EFE98
 gUnknown_082EFE98:
-	.INCBIN "assets/sprites/gUnknown_082EFE98.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFE98.4bpp"
 
 	.GLOBAL gUnknown_082EFEB8
 gUnknown_082EFEB8:
@@ -7074,7 +7670,7 @@ gUnknown_082EFF24:
 
 	.GLOBAL gUnknown_082EFF2C
 gUnknown_082EFF2C:
-	.INCBIN "assets/sprites/gUnknown_082EFF2C.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFF2C.4bpp"
 
 	.GLOBAL gUnknown_082EFF4C
 gUnknown_082EFF4C:
@@ -7094,7 +7690,7 @@ gUnknown_082EFFB0:
 
 	.GLOBAL gUnknown_082EFFB8
 gUnknown_082EFFB8:
-	.INCBIN "assets/sprites/gUnknown_082EFFB8.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFFB8.4bpp"
 
 	.GLOBAL gUnknown_082EFFD8
 gUnknown_082EFFD8:
@@ -7106,7 +7702,7 @@ gUnknown_082EFFFC:
 
 	.GLOBAL gUnknown_082F0004
 gUnknown_082F0004:
-	.INCBIN "assets/sprites/gUnknown_082F0004.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0004.4bpp"
 
 	.GLOBAL gUnknown_082F0024
 gUnknown_082F0024:
@@ -7118,7 +7714,7 @@ gUnknown_082F01B0:
 
 	.GLOBAL gUnknown_082F01B8
 gUnknown_082F01B8:
-	.INCBIN "assets/sprites/gUnknown_082F01B8.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F01B8.4bpp"
 
 	.GLOBAL gUnknown_082F0318
 gUnknown_082F0318:
@@ -7130,19 +7726,19 @@ gUnknown_082F033C:
 
 	.GLOBAL gUnknown_082F0344
 gUnknown_082F0344:
-	.INCBIN "assets/sprites/gUnknown_082F0344.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0344.4bpp"
 
 	.GLOBAL gUnknown_082F0364
 gUnknown_082F0364:
 	.INCBIN "baserom.gba", 0x2F0364, 0x2F043C-0x2F0364
-
+	
 	.GLOBAL gUnknown_082F043C
 gUnknown_082F043C:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=10
 
 	.GLOBAL gUnknown_082F0444
 gUnknown_082F0444:
-	.INCBIN "assets/sprites/gUnknown_082F0444.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0444.4bpp"
 
 	.GLOBAL gUnknown_082F0744
 gUnknown_082F0744:
@@ -7154,7 +7750,7 @@ gUnknown_082F0768:
 
 	.GLOBAL gUnknown_082F0770
 gUnknown_082F0770:
-	.INCBIN "assets/sprites/gUnknown_082F0770.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0770.4bpp"
 
 	.GLOBAL gUnknown_082F0790
 gUnknown_082F0790:
@@ -7166,7 +7762,7 @@ gUnknown_082F07B4:
 
 	.GLOBAL gUnknown_082F07BC
 gUnknown_082F07BC:
-	.INCBIN "assets/sprites/gUnknown_082F07BC.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F07BC.4bpp"
 
 	.GLOBAL gUnknown_082F07DC
 gUnknown_082F07DC:
@@ -7178,7 +7774,7 @@ gUnknown_082F0800:
 
 	.GLOBAL gUnknown_082F0808
 gUnknown_082F0808:
-	.INCBIN "assets/sprites/gUnknown_082F0808.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0808.4bpp"
 
 	.GLOBAL gUnknown_082F0828
 gUnknown_082F0828:
@@ -7190,7 +7786,7 @@ gUnknown_082F084C:
 
 	.GLOBAL gUnknown_082F0854
 gUnknown_082F0854:
-	.INCBIN "assets/sprites/gUnknown_082F0854.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0854.4bpp"
 
 	.GLOBAL gUnknown_082F0874
 gUnknown_082F0874:
@@ -7202,7 +7798,7 @@ gUnknown_082F0898:
 
 	.GLOBAL gUnknown_082F08A0
 gUnknown_082F08A0:
-	.INCBIN "assets/sprites/gUnknown_082F08A0.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F08A0.4bpp"
 
 	.GLOBAL gUnknown_082F0920
 gUnknown_082F0920:
@@ -7214,7 +7810,7 @@ gUnknown_082F0944:
 
 	.GLOBAL gUnknown_082F094C
 gUnknown_082F094C:
-	.INCBIN "assets/sprites/gUnknown_082F094C.4bpp"
+	.INCBIN "assets/sprites/pause_menu/gUnknown_082F094C.4bpp"
 
 	.GLOBAL gUnknown_082F096C
 gUnknown_082F096C:
@@ -7226,7 +7822,7 @@ gUnknown_082F0990:
 
 	.GLOBAL gUnknown_082F0998
 gUnknown_082F0998:
-	.INCBIN "assets/sprites/gUnknown_082F0998.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F0998.4bpp"
 
 	.GLOBAL gUnknown_082F0A18
 gUnknown_082F0A18:
@@ -7238,7 +7834,7 @@ gUnknown_082F0A60:
 
 	.GLOBAL gUnknown_082F0A68
 gUnknown_082F0A68:
-	.INCBIN "assets/sprites/gUnknown_082F0A68.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F0A68.4bpp"
 
 	.GLOBAL gUnknown_082F0AE8
 gUnknown_082F0AE8:
@@ -7250,7 +7846,7 @@ gUnknown_082F0B30:
 
 	.GLOBAL gUnknown_082F0B38
 gUnknown_082F0B38:
-	.INCBIN "assets/sprites/gUnknown_082F0B38.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F0B38.4bpp"
 
 	.GLOBAL gUnknown_082F0BB8
 gUnknown_082F0BB8:
@@ -7262,7 +7858,7 @@ gUnknown_082F0BDC:
 
 	.GLOBAL gUnknown_082F0BE4
 gUnknown_082F0BE4:
-	.INCBIN "assets/sprites/gUnknown_082F0BE4.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F0BE4.4bpp"
 
 	.GLOBAL gUnknown_082F0C64
 gUnknown_082F0C64:
@@ -7274,7 +7870,7 @@ gUnknown_082F0C88:
 
 	.GLOBAL gUnknown_082F0C90
 gUnknown_082F0C90:
-	.INCBIN "assets/sprites/gUnknown_082F0C90.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F0C90.4bpp"
 
 	.GLOBAL gUnknown_082F0CD0
 gUnknown_082F0CD0:
@@ -7286,7 +7882,7 @@ gUnknown_082F0CF4:
 
 	.GLOBAL gUnknown_082F0CFC
 gUnknown_082F0CFC:
-	.INCBIN "assets/sprites/gUnknown_082F0CFC.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F0CFC.4bpp"
 
 	.GLOBAL gUnknown_082F0D7C
 gUnknown_082F0D7C:
@@ -7298,7 +7894,7 @@ gUnknown_082F0DA0:
 
 	.GLOBAL gUnknown_082F0DA8
 gUnknown_082F0DA8:
-	.INCBIN "assets/sprites/gUnknown_082F0DA8.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F0DA8.4bpp"
 
 	.GLOBAL gUnknown_082F11A8
 gUnknown_082F11A8:
@@ -7310,7 +7906,7 @@ gUnknown_082F11CC:
 
 	.GLOBAL gUnknown_082F11D4
 gUnknown_082F11D4:
-	.INCBIN "assets/sprites/gUnknown_082F11D4.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F11D4.4bpp"
 
 	.GLOBAL gUnknown_082F15D4
 gUnknown_082F15D4:
@@ -7322,7 +7918,7 @@ gUnknown_082F15F8:
 
 	.GLOBAL gUnknown_082F1600
 gUnknown_082F1600:
-	.INCBIN "assets/sprites/gUnknown_082F1600.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F1600.4bpp"
 
 	.GLOBAL gUnknown_082F1680
 gUnknown_082F1680:
@@ -7334,7 +7930,7 @@ gUnknown_082F1710:
 
 	.GLOBAL gUnknown_082F1718
 gUnknown_082F1718:
-	.INCBIN "assets/sprites/gUnknown_082F1718.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F1718.4bpp"
 
 	.GLOBAL gUnknown_082F1898
 gUnknown_082F1898:
@@ -7346,7 +7942,7 @@ gUnknown_082F1928:
 
 	.GLOBAL gUnknown_082F1930
 gUnknown_082F1930:
-	.INCBIN "assets/sprites/gUnknown_082F1930.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F1930.4bpp"
 
 	.GLOBAL gUnknown_082F1AB0
 gUnknown_082F1AB0:
@@ -7358,7 +7954,7 @@ gUnknown_082F1B40:
 
 	.GLOBAL gUnknown_082F1B48
 gUnknown_082F1B48:
-	.INCBIN "assets/sprites/gUnknown_082F1B48.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F1B48.4bpp"
 
 	.GLOBAL gUnknown_082F1CC8
 gUnknown_082F1CC8:
@@ -7370,7 +7966,7 @@ gUnknown_082F1CEC:
 
 	.GLOBAL gUnknown_082F1CF4
 gUnknown_082F1CF4:
-	.INCBIN "assets/sprites/gUnknown_082F1CF4.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F1CF4.4bpp"
 
 	.GLOBAL gUnknown_082F1DF4
 gUnknown_082F1DF4:
@@ -7382,7 +7978,7 @@ gUnknown_082F1E60:
 
 	.GLOBAL gUnknown_082F1E68
 gUnknown_082F1E68:
-	.INCBIN "assets/sprites/gUnknown_082F1E68.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_082F1E68.4bpp"
 
 	.GLOBAL gUnknown_082F1FE8
 gUnknown_082F1FE8:
@@ -7394,7 +7990,7 @@ gUnknown_082F200C:
 
 	.GLOBAL gUnknown_082F2014
 gUnknown_082F2014:
-	.INCBIN "assets/sprites/gUnknown_082F2014.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F2014.4bpp"
 
 	.GLOBAL gUnknown_082F2094
 gUnknown_082F2094:
@@ -7406,7 +8002,7 @@ gUnknown_082F20B8:
 
 	.GLOBAL gUnknown_082F20C0
 gUnknown_082F20C0:
-	.INCBIN "assets/sprites/gUnknown_082F20C0.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F20C0.4bpp"
 
 	.GLOBAL gUnknown_082F2140
 gUnknown_082F2140:
@@ -7418,7 +8014,7 @@ gUnknown_082F2164:
 
 	.GLOBAL gUnknown_082F216C
 gUnknown_082F216C:
-	.INCBIN "assets/sprites/gUnknown_082F216C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F216C.4bpp"
 
 	.GLOBAL gUnknown_082F21EC
 gUnknown_082F21EC:
@@ -7430,7 +8026,7 @@ gUnknown_082F2210:
 
 	.GLOBAL gUnknown_082F2218
 gUnknown_082F2218:
-	.INCBIN "assets/sprites/gUnknown_082F2218.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F2218.4bpp"
 
 	.GLOBAL gUnknown_082F2298
 gUnknown_082F2298:
@@ -7442,7 +8038,7 @@ gUnknown_082F22BC:
 
 	.GLOBAL gUnknown_082F22C4
 gUnknown_082F22C4:
-	.INCBIN "assets/sprites/gUnknown_082F22C4.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F22C4.4bpp"
 
 	.GLOBAL gUnknown_082F2344
 gUnknown_082F2344:
@@ -7454,7 +8050,7 @@ gUnknown_082F2368:
 
 	.GLOBAL gUnknown_082F2370
 gUnknown_082F2370:
-	.INCBIN "assets/sprites/gUnknown_082F2370.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F2370.4bpp"
 
 	.GLOBAL gUnknown_082F23F0
 gUnknown_082F23F0:
@@ -7466,7 +8062,7 @@ gUnknown_082F2414:
 
 	.GLOBAL gUnknown_082F241C
 gUnknown_082F241C:
-	.INCBIN "assets/sprites/gUnknown_082F241C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F241C.4bpp"
 
 	.GLOBAL gUnknown_082F261C
 gUnknown_082F261C:
@@ -7478,7 +8074,7 @@ gUnknown_082F2640:
 
 	.GLOBAL gUnknown_082F2648
 gUnknown_082F2648:
-	.INCBIN "assets/sprites/gUnknown_082F2648.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F2648.4bpp"
 
 	.GLOBAL gUnknown_082F2848
 gUnknown_082F2848:
@@ -7490,7 +8086,7 @@ gUnknown_082F286C:
 
 	.GLOBAL gUnknown_082F2874
 gUnknown_082F2874:
-	.INCBIN "assets/sprites/gUnknown_082F2874.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F2874.4bpp"
 
 	.GLOBAL gUnknown_082F2A74
 gUnknown_082F2A74:
@@ -7502,7 +8098,7 @@ gUnknown_082F2A98:
 
 	.GLOBAL gUnknown_082F2AA0
 gUnknown_082F2AA0:
-	.INCBIN "assets/sprites/gUnknown_082F2AA0.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F2AA0.4bpp"
 
 	.GLOBAL gUnknown_082F2CA0
 gUnknown_082F2CA0:
@@ -7514,7 +8110,7 @@ gUnknown_082F2CC4:
 
 	.GLOBAL gUnknown_082F2CCC
 gUnknown_082F2CCC:
-	.INCBIN "assets/sprites/gUnknown_082F2CCC.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F2CCC.4bpp"
 
 	.GLOBAL gUnknown_082F2ECC
 gUnknown_082F2ECC:
@@ -7526,7 +8122,7 @@ gUnknown_082F2EF0:
 
 	.GLOBAL gUnknown_082F2EF8
 gUnknown_082F2EF8:
-	.INCBIN "assets/sprites/gUnknown_082F2EF8.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F2EF8.4bpp"
 
 	.GLOBAL gUnknown_082F30F8
 gUnknown_082F30F8:
@@ -7538,7 +8134,7 @@ gUnknown_082F311C:
 
 	.GLOBAL gUnknown_082F3124
 gUnknown_082F3124:
-	.INCBIN "assets/sprites/gUnknown_082F3124.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F3124.4bpp"
 
 	.GLOBAL gUnknown_082F3324
 gUnknown_082F3324:
@@ -7550,7 +8146,7 @@ gUnknown_082F3348:
 
 	.GLOBAL gUnknown_082F3350
 gUnknown_082F3350:
-	.INCBIN "assets/sprites/gUnknown_082F3350.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F3350.4bpp"
 
 	.GLOBAL gUnknown_082F3550
 gUnknown_082F3550:
@@ -7562,7 +8158,7 @@ gUnknown_082F3574:
 
 	.GLOBAL gUnknown_082F357C
 gUnknown_082F357C:
-	.INCBIN "assets/sprites/gUnknown_082F357C.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F357C.4bpp"
 
 	.GLOBAL gUnknown_082F377C
 gUnknown_082F377C:
@@ -7574,7 +8170,7 @@ gUnknown_082F37A0:
 
 	.GLOBAL gUnknown_082F37A8
 gUnknown_082F37A8:
-	.INCBIN "assets/sprites/gUnknown_082F37A8.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F37A8.4bpp"
 
 	.GLOBAL gUnknown_082F37C8
 gUnknown_082F37C8:
@@ -7586,7 +8182,7 @@ gUnknown_082F37EC:
 
 	.GLOBAL gUnknown_082F37F4
 gUnknown_082F37F4:
-	.INCBIN "assets/sprites/gUnknown_082F37F4.4bpp"
+	.INCBIN "assets/sprites/tutorial/gUnknown_082F37F4.4bpp"
 
 	.GLOBAL gUnknown_082F38F4
 gUnknown_082F38F4:
@@ -7598,7 +8194,7 @@ gUnknown_082F39F0:
 
 	.GLOBAL gUnknown_082F39F8
 gUnknown_082F39F8:
-	.INCBIN "assets/sprites/gUnknown_082F39F8.4bpp"
+	.INCBIN "assets/sprites/key/gUnknown_082F39F8.4bpp"
 
 	.GLOBAL gUnknown_082F3D78
 gUnknown_082F3D78:
@@ -7610,7 +8206,7 @@ gfxKeyFlipOAM:
 
 	.GLOBAL gfxKeyFlip4bpp
 gfxKeyFlip4bpp:
-	.INCBIN "assets/sprites/KeyFlip.4bpp"
+	.INCBIN "assets/sprites/key/KeyFlip.4bpp"
 
 	.GLOBAL gUnknown_082F43C0
 gUnknown_082F43C0:
@@ -7622,7 +8218,7 @@ gUnknown_082F4B10:
 
 	.GLOBAL gUnknown_082F4B18
 gUnknown_082F4B18:
-	.INCBIN "assets/sprites/gUnknown_082F4B18.8bpp"
+	.INCBIN "assets/sprites/key/gUnknown_082F4B18.8bpp"
 
 	.GLOBAL gUnknown_082F4D18
 gUnknown_082F4D18:
@@ -7634,7 +8230,7 @@ gUnknown_082F4F34:
 
 	.GLOBAL gUnknown_082F4F3C
 gUnknown_082F4F3C:
-	.INCBIN "assets/sprites/gUnknown_082F4F3C.8bpp"
+	.INCBIN "assets/sprites/key/gUnknown_082F4F3C.8bpp"
 
 	.GLOBAL gUnknown_082F513C
 gUnknown_082F513C:
@@ -7646,7 +8242,7 @@ gUnknown_082F52A4:
 
 	.GLOBAL gfxMiniMarioKey4bpp
 gfxMiniMarioKey4bpp:
-	.INCBIN "assets/sprites/MiniMarioKey.4bpp"
+	.INCBIN "assets/sprites/key/MiniMarioKey.4bpp"
 
 	.GLOBAL gUnknown_082F57AC
 gUnknown_082F57AC:
@@ -7658,7 +8254,7 @@ gUnknown_082F5B9C:
 
 	.GLOBAL gUnknown_082F5BA4
 gUnknown_082F5BA4:
-	.INCBIN "assets/sprites/gUnknown_082F5BA4.4bpp"
+	.INCBIN "assets/sprites/key/gUnknown_082F5BA4.4bpp"
 
 	.GLOBAL gUnknown_082F67A4
 gUnknown_082F67A4:
@@ -7670,7 +8266,7 @@ gUnknown_082F67C8:
 
 	.GLOBAL gUnknown_082F67D0
 gUnknown_082F67D0:
-	.INCBIN "assets/sprites/gUnknown_082F67D0.4bpp"
+	.INCBIN "assets/sprites/key/gUnknown_082F67D0.4bpp"
 
 	.GLOBAL gUnknown_082F6850
 gUnknown_082F6850:
@@ -7682,7 +8278,7 @@ gUnknown_082F6AD8:
 
 	.GLOBAL gUnknown_082F6AE0
 gUnknown_082F6AE0:
-	.INCBIN "assets/sprites/gUnknown_082F6AE0.4bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_082F6AE0.4bpp"
 
 	.GLOBAL gUnknown_082F8EE0
 gUnknown_082F8EE0:
@@ -7694,7 +8290,7 @@ gUnknown_082F8F04:
 
 	.GLOBAL gUnknown_082F8F0C
 gUnknown_082F8F0C:
-	.INCBIN "assets/sprites/gUnknown_082F8F0C.4bpp"
+	.INCBIN "assets/sprites/key/gUnknown_082F8F0C.4bpp"
 
 	.GLOBAL gUnknown_082F8F8C
 gUnknown_082F8F8C:
@@ -7706,7 +8302,7 @@ gUnknown_082F8FB0:
 
 	.GLOBAL gUnknown_082F8FB8
 gUnknown_082F8FB8:
-	.INCBIN "assets/sprites/gUnknown_082F8FB8.4bpp"
+	.INCBIN "assets/sprites/key/gUnknown_082F8FB8.4bpp"
 
 	.GLOBAL gUnknown_082F9038
 gUnknown_082F9038:
@@ -7718,7 +8314,7 @@ gUnknown_082F917C:
 
 	.GLOBAL gUnknown_082F9184
 gUnknown_082F9184:
-	.INCBIN "assets/sprites/gUnknown_082F9184.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082F9184.4bpp"
 
 	.GLOBAL gUnknown_082F9A84
 gUnknown_082F9A84:
@@ -7730,7 +8326,7 @@ gUnknown_082F9B14:
 
 	.GLOBAL gUnknown_082F9B1C
 gUnknown_082F9B1C:
-	.INCBIN "assets/sprites/gUnknown_082F9B1C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082F9B1C.4bpp"
 
 	.GLOBAL gUnknown_082F9C9C
 gUnknown_082F9C9C:
@@ -7742,7 +8338,7 @@ gUnknown_082F9E4C:
 
 	.GLOBAL gUnknown_082F9E54
 gUnknown_082F9E54:
-	.INCBIN "assets/sprites/gUnknown_082F9E54.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_082F9E54.4bpp"
 
 	.GLOBAL gUnknown_082FA454
 gUnknown_082FA454:
@@ -7754,7 +8350,7 @@ gUnknown_082FA5BC:
 
 	.GLOBAL gUnknown_082FA5C4
 gUnknown_082FA5C4:
-	.INCBIN "assets/sprites/gUnknown_082FA5C4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_082FA5C4.8bpp"
 
 	.GLOBAL gUnknown_082FCDC4
 gUnknown_082FCDC4:
@@ -7766,7 +8362,7 @@ gUnknown_082FD16C:
 
 	.GLOBAL gUnknown_082FD174
 gUnknown_082FD174:
-	.INCBIN "assets/sprites/gUnknown_082FD174.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_082FD174.8bpp"
 
 	.GLOBAL gUnknown_08303974
 gUnknown_08303974:
@@ -7778,7 +8374,7 @@ gUnknown_08303A94:
 
 	.GLOBAL gUnknown_08303A9C
 gUnknown_08303A9C:
-	.INCBIN "assets/sprites/gUnknown_08303A9C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08303A9C.8bpp"
 
 	.GLOBAL gUnknown_08305A9C
 gUnknown_08305A9C:
@@ -7790,7 +8386,7 @@ gUnknown_083060A8:
 
 	.GLOBAL gUnknown_083060B0
 gUnknown_083060B0:
-	.INCBIN "assets/sprites/gUnknown_083060B0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_083060B0.8bpp"
 
 	.GLOBAL gUnknown_0830E0B0
 gUnknown_0830E0B0:
@@ -7802,7 +8398,7 @@ gUnknown_0830E8D8:
 
 	.GLOBAL gUnknown_0830E8E0
 gUnknown_0830E8E0:
-	.INCBIN "assets/sprites/gUnknown_0830E8E0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0830E8E0.8bpp"
 
 	.GLOBAL gUnknown_0833E8E0
 gUnknown_0833E8E0:
@@ -7814,7 +8410,7 @@ gUnknown_0833EE80:
 
 	.GLOBAL gUnknown_0833EE88
 gUnknown_0833EE88:
-	.INCBIN "assets/sprites/gUnknown_0833EE88.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0833EE88.8bpp"
 
 	.GLOBAL gUnknown_08342E88
 gUnknown_08342E88:
@@ -7838,7 +8434,7 @@ gUnknown_08343260:
 
 	.GLOBAL gUnknown_08343268
 gUnknown_08343268:
-	.INCBIN "assets/sprites/gUnknown_08343268.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08343268.8bpp"
 
 	.GLOBAL gUnknown_08347E68
 gUnknown_08347E68:
@@ -7850,7 +8446,7 @@ gUnknown_08348114:
 
 	.GLOBAL gUnknown_0834811C
 gUnknown_0834811C:
-	.INCBIN "assets/sprites/gUnknown_0834811C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0834811C.8bpp"
 
 	.GLOBAL gUnknown_0834CD1C
 gUnknown_0834CD1C:
@@ -7862,7 +8458,7 @@ gUnknown_0834CD40:
 
 	.GLOBAL gUnknown_0834CD48
 gUnknown_0834CD48:
-	.INCBIN "assets/sprites/gUnknown_0834CD48.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0834CD48.8bpp"
 
 	.GLOBAL gUnknown_0834D148
 gUnknown_0834D148:
@@ -7874,7 +8470,7 @@ gUnknown_0834D244:
 
 	.GLOBAL gUnknown_0834D24C
 gUnknown_0834D24C:
-	.INCBIN "assets/sprites/gUnknown_0834D24C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0834D24C.8bpp"
 
 	.GLOBAL gUnknown_0834EE4C
 gUnknown_0834EE4C:
@@ -7886,7 +8482,7 @@ gUnknown_0834EF48:
 
 	.GLOBAL gUnknown_0834EF50
 gUnknown_0834EF50:
-	.INCBIN "assets/sprites/gUnknown_0834EF50.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0834EF50.8bpp"
 
 	.GLOBAL gUnknown_08350B50
 gUnknown_08350B50:
@@ -7898,7 +8494,7 @@ gUnknown_08350DB4:
 
 	.GLOBAL gUnknown_08350DBC
 gUnknown_08350DBC:
-	.INCBIN "assets/sprites/gUnknown_08350DBC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08350DBC.8bpp"
 
 	.GLOBAL gUnknown_083551BC
 gUnknown_083551BC:
@@ -7910,7 +8506,7 @@ gUnknown_0835563C:
 
 	.GLOBAL gUnknown_08355644
 gUnknown_08355644:
-	.INCBIN "assets/sprites/gUnknown_08355644.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08355644.8bpp"
 
 	.GLOBAL gUnknown_0835D644
 gUnknown_0835D644:
@@ -7922,7 +8518,7 @@ gUnknown_0835DAC4:
 
 	.GLOBAL gUnknown_0835DACC
 gUnknown_0835DACC:
-	.INCBIN "assets/sprites/gUnknown_0835DACC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0835DACC.8bpp"
 
 	.GLOBAL gUnknown_08365ACC
 gUnknown_08365ACC:
@@ -7934,7 +8530,7 @@ gUnknown_08365AF0:
 
 	.GLOBAL gUnknown_08365AF8
 gUnknown_08365AF8:
-	.INCBIN "assets/sprites/gUnknown_08365AF8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08365AF8.8bpp"
 
 	.GLOBAL gUnknown_08365EF8
 gUnknown_08365EF8:
@@ -7946,7 +8542,7 @@ gUnknown_08366378:
 
 	.GLOBAL gUnknown_08366380
 gUnknown_08366380:
-	.INCBIN "assets/sprites/gUnknown_08366380.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08366380.8bpp"
 
 	.GLOBAL gUnknown_0836E380
 gUnknown_0836E380:
@@ -7958,7 +8554,7 @@ gUnknown_0836E4A0:
 
 	.GLOBAL gUnknown_0836E4A8
 gUnknown_0836E4A8:
-	.INCBIN "assets/sprites/gUnknown_0836E4A8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0836E4A8.8bpp"
 
 	.GLOBAL gUnknown_083704A8
 gUnknown_083704A8:
@@ -7970,7 +8566,7 @@ gUnknown_083706E8:
 
 	.GLOBAL gUnknown_083706F0
 gUnknown_083706F0:
-	.INCBIN "assets/sprites/gUnknown_083706F0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_083706F0.8bpp"
 
 	.GLOBAL gUnknown_083746F0
 gUnknown_083746F0:
@@ -7982,7 +8578,7 @@ gUnknown_08374930:
 
 	.GLOBAL gUnknown_08374938
 gUnknown_08374938:
-	.INCBIN "assets/sprites/gUnknown_08374938.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08374938.8bpp"
 
 	.GLOBAL gUnknown_08376938
 gUnknown_08376938:
@@ -7994,7 +8590,7 @@ gUnknown_08376B78:
 
 	.GLOBAL gUnknown_08376B80
 gUnknown_08376B80:
-	.INCBIN "assets/sprites/gUnknown_08376B80.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08376B80.8bpp"
 
 	.GLOBAL gUnknown_0837AB80
 gUnknown_0837AB80:
@@ -8006,7 +8602,7 @@ gUnknown_0837ACA0:
 
 	.GLOBAL gUnknown_0837ACA8
 gUnknown_0837ACA8:
-	.INCBIN "assets/sprites/gUnknown_0837ACA8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0837ACA8.8bpp"
 
 	.GLOBAL gUnknown_0837CCA8
 gUnknown_0837CCA8:
@@ -8018,7 +8614,7 @@ gUnknown_0837CEE8:
 
 	.GLOBAL gUnknown_0837CEF0
 gUnknown_0837CEF0:
-	.INCBIN "assets/sprites/gUnknown_0837CEF0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0837CEF0.8bpp"
 
 	.GLOBAL gUnknown_08380EF0
 gUnknown_08380EF0:
@@ -8030,7 +8626,7 @@ gUnknown_08381010:
 
 	.GLOBAL gUnknown_08381018
 gUnknown_08381018:
-	.INCBIN "assets/sprites/gUnknown_08381018.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08381018.8bpp"
 
 	.GLOBAL gUnknown_08383018
 gUnknown_08383018:
@@ -8042,7 +8638,7 @@ gUnknown_08383744:
 
 	.GLOBAL gUnknown_0838374C
 gUnknown_0838374C:
-	.INCBIN "assets/sprites/gUnknown_0838374C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0838374C.8bpp"
 
 	.GLOBAL gUnknown_0838434C
 gUnknown_0838434C:
@@ -8054,7 +8650,7 @@ gUnknown_083844FC:
 
 	.GLOBAL gUnknown_08384504
 gUnknown_08384504:
-	.INCBIN "assets/sprites/gUnknown_08384504.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08384504.8bpp"
 
 	.GLOBAL gUnknown_08387504
 gUnknown_08387504:
@@ -8066,7 +8662,7 @@ gUnknown_08387864:
 
 	.GLOBAL gUnknown_0838786C
 gUnknown_0838786C:
-	.INCBIN "assets/sprites/gUnknown_0838786C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0838786C.8bpp"
 
 	.GLOBAL gUnknown_0838D86C
 gUnknown_0838D86C:
@@ -8078,7 +8674,7 @@ gUnknown_0838DB3C:
 
 	.GLOBAL gUnknown_0838DB44
 gUnknown_0838DB44:
-	.INCBIN "assets/sprites/gUnknown_0838DB44.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0838DB44.8bpp"
 
 	.GLOBAL gUnknown_08392B44
 gUnknown_08392B44:
@@ -8090,7 +8686,7 @@ gUnknown_08392C64:
 
 	.GLOBAL gUnknown_08392C6C
 gUnknown_08392C6C:
-	.INCBIN "assets/sprites/gUnknown_08392C6C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08392C6C.8bpp"
 
 	.GLOBAL gUnknown_08394C6C
 gUnknown_08394C6C:
@@ -8102,7 +8698,7 @@ gUnknown_08394EAC:
 
 	.GLOBAL gUnknown_08394EB4
 gUnknown_08394EB4:
-	.INCBIN "assets/sprites/gUnknown_08394EB4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08394EB4.8bpp"
 
 	.GLOBAL gUnknown_083A4EB4
 gUnknown_083A4EB4:
@@ -8114,7 +8710,7 @@ gUnknown_083A52A4:
 
 	.GLOBAL gUnknown_083A52AC
 gUnknown_083A52AC:
-	.INCBIN "assets/sprites/gUnknown_083A52AC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_083A52AC.8bpp"
 
 	.GLOBAL gUnknown_083C12AC
 gUnknown_083C12AC:
@@ -8126,7 +8722,7 @@ gUnknown_083C1708:
 
 	.GLOBAL gUnknown_083C1710
 gUnknown_083C1710:
-	.INCBIN "assets/sprites/gUnknown_083C1710.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_083C1710.8bpp"
 
 	.GLOBAL gUnknown_083DE710
 gUnknown_083DE710:
@@ -8138,7 +8734,7 @@ gUnknown_083DE89C:
 
 	.GLOBAL gUnknown_083DE8A4
 gUnknown_083DE8A4:
-	.INCBIN "assets/sprites/gUnknown_083DE8A4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_083DE8A4.8bpp"
 
 	.GLOBAL gUnknown_083E14A4
 gUnknown_083E14A4:
@@ -8150,7 +8746,7 @@ gUnknown_083E17BC:
 
 	.GLOBAL gUnknown_083E17C4
 gUnknown_083E17C4:
-	.INCBIN "assets/sprites/gUnknown_083E17C4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_083E17C4.8bpp"
 
 	.GLOBAL gUnknown_083E6FC4
 gUnknown_083E6FC4:
@@ -8162,7 +8758,7 @@ gUnknown_083E712C:
 
 	.GLOBAL gUnknown_083E7134
 gUnknown_083E7134:
-	.INCBIN "assets/sprites/gUnknown_083E7134.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_083E7134.8bpp"
 
 	.GLOBAL gUnknown_083E8934
 gUnknown_083E8934:
@@ -8174,7 +8770,7 @@ gUnknown_083E8A30:
 
 	.GLOBAL gUnknown_083E8A38
 gUnknown_083E8A38:
-	.INCBIN "assets/sprites/gUnknown_083E8A38.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_083E8A38.8bpp"
 
 	.GLOBAL gUnknown_083EA638
 gUnknown_083EA638:
@@ -8210,7 +8806,7 @@ gUnknown_083F4E84:
 
 	.GLOBAL gUnknown_083F4E8C
 gUnknown_083F4E8C:
-	.INCBIN "assets/sprites/gUnknown_083F4E8C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_083F4E8C.8bpp"
 
 	.GLOBAL gUnknown_083F8E8C
 gUnknown_083F8E8C:
@@ -8234,7 +8830,7 @@ gUnknown_083FE4EC:
 
 	.GLOBAL gUnknown_083FE4F4
 gUnknown_083FE4F4:
-	.INCBIN "assets/sprites/gUnknown_083FE4F4.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_083FE4F4.8bpp"
 
 	.GLOBAL gUnknown_084064F4
 gUnknown_084064F4:
@@ -8246,7 +8842,7 @@ gUnknown_084068E4:
 
 	.GLOBAL gUnknown_084068EC
 gUnknown_084068EC:
-	.INCBIN "assets/sprites/gUnknown_084068EC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084068EC.8bpp"
 
 	.GLOBAL gUnknown_0840A8EC
 gUnknown_0840A8EC:
@@ -8258,7 +8854,7 @@ gUnknown_0840A9E8:
 
 	.GLOBAL gUnknown_0840A9F0
 gUnknown_0840A9F0:
-	.INCBIN "assets/sprites/gUnknown_0840A9F0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0840A9F0.8bpp"
 
 	.GLOBAL gUnknown_0840C5F0
 gUnknown_0840C5F0:
@@ -8270,7 +8866,7 @@ gUnknown_0840C734:
 
 	.GLOBAL gUnknown_0840C73C
 gUnknown_0840C73C:
-	.INCBIN "assets/sprites/gUnknown_0840C73C.8bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_0840C73C.8bpp"
 
 	.GLOBAL gUnknown_0840D93C
 gUnknown_0840D93C:
@@ -8282,7 +8878,7 @@ gUnknown_0840D9A8:
 
 	.GLOBAL gUnknown_0840D9B0
 gUnknown_0840D9B0:
-	.INCBIN "assets/sprites/gUnknown_0840D9B0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0840D9B0.8bpp"
 
 	.GLOBAL gUnknown_0840E5B0
 gUnknown_0840E5B0:
@@ -8294,7 +8890,7 @@ gUnknown_0840E6F4:
 
 	.GLOBAL gUnknown_0840E6FC
 gUnknown_0840E6FC:
-	.INCBIN "assets/sprites/gUnknown_0840E6FC.8bpp"
+	.INCBIN "assets/sprites/hammer/gUnknown_0840E6FC.8bpp"
 
 	.GLOBAL gUnknown_0840F8FC
 gUnknown_0840F8FC:
@@ -8306,7 +8902,7 @@ gUnknown_0840FC5C:
 
 	.GLOBAL gUnknown_0840FC64
 gUnknown_0840FC64:
-	.INCBIN "assets/sprites/gUnknown_0840FC64.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0840FC64.8bpp"
 
 	.GLOBAL gUnknown_08415C64
 gUnknown_08415C64:
@@ -8318,7 +8914,7 @@ gUnknown_08415EA4:
 
 	.GLOBAL gUnknown_08415EAC
 gUnknown_08415EAC:
-	.INCBIN "assets/sprites/gUnknown_08415EAC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08415EAC.8bpp"
 
 	.GLOBAL gUnknown_08419EAC
 gUnknown_08419EAC:
@@ -8330,7 +8926,7 @@ gUnknown_0841A0EC:
 
 	.GLOBAL gUnknown_0841A0F4
 gUnknown_0841A0F4:
-	.INCBIN "assets/sprites/gUnknown_0841A0F4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0841A0F4.8bpp"
 
 	.GLOBAL gUnknown_0841E0F4
 gUnknown_0841E0F4:
@@ -8342,7 +8938,7 @@ gUnknown_0841E454:
 
 	.GLOBAL gUnknown_0841E45C
 gUnknown_0841E45C:
-	.INCBIN "assets/sprites/gUnknown_0841E45C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0841E45C.8bpp"
 
 	.GLOBAL gUnknown_0842445C
 gUnknown_0842445C:
@@ -8354,7 +8950,7 @@ gUnknown_08424558:
 
 	.GLOBAL gUnknown_08424560
 gUnknown_08424560:
-	.INCBIN "assets/sprites/gUnknown_08424560.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08424560.8bpp"
 
 	.GLOBAL gUnknown_08426160
 gUnknown_08426160:
@@ -8366,7 +8962,7 @@ gUnknown_08426508:
 
 	.GLOBAL gUnknown_08426510
 gUnknown_08426510:
-	.INCBIN "assets/sprites/gUnknown_08426510.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08426510.8bpp"
 
 	.GLOBAL gUnknown_0842CD10
 gUnknown_0842CD10:
@@ -8378,7 +8974,7 @@ gUnknown_0842D004:
 
 	.GLOBAL gUnknown_0842D00C
 gUnknown_0842D00C:
-	.INCBIN "assets/sprites/gUnknown_0842D00C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0842D00C.8bpp"
 
 	.GLOBAL gUnknown_0843240C
 gUnknown_0843240C:
@@ -8390,7 +8986,7 @@ gUnknown_084325BC:
 
 	.GLOBAL gUnknown_084325C4
 gUnknown_084325C4:
-	.INCBIN "assets/sprites/gUnknown_084325C4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084325C4.8bpp"
 
 	.GLOBAL gUnknown_084355C4
 gUnknown_084355C4:
@@ -8402,7 +8998,7 @@ gUnknown_08435804:
 
 	.GLOBAL gUnknown_0843580C
 gUnknown_0843580C:
-	.INCBIN "assets/sprites/gUnknown_0843580C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0843580C.8bpp"
 
 	.GLOBAL gUnknown_0843980C
 gUnknown_0843980C:
@@ -8414,7 +9010,7 @@ gfxMiniMarioCrystalBallOAM:
 
 	.GLOBAL gfxMiniMarioCrystalBall8bpp
 gfxMiniMarioCrystalBall8bpp:
-	.INCBIN "assets/sprites/MiniMarioCrystalBall.8bpp"
+	.INCBIN "assets/sprites/mini_mario/MiniMarioCrystalBall.8bpp"
 
 	.GLOBAL gUnknown_0843DA54
 gUnknown_0843DA54:
@@ -8426,7 +9022,7 @@ gUnknown_0843DED4:
 
 	.GLOBAL gUnknown_0843DEDC
 gUnknown_0843DEDC:
-	.INCBIN "assets/sprites/gUnknown_0843DEDC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0843DEDC.8bpp"
 
 	.GLOBAL gUnknown_08445EDC
 gUnknown_08445EDC:
@@ -8438,7 +9034,7 @@ gUnknown_08446314:
 
 	.GLOBAL gUnknown_0844631C
 gUnknown_0844631C:
-	.INCBIN "assets/sprites/gUnknown_0844631C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0844631C.8bpp"
 
 	.GLOBAL gUnknown_0844DB1C
 gUnknown_0844DB1C:
@@ -8450,7 +9046,7 @@ gUnknown_0844DE58:
 
 	.GLOBAL gUnknown_0844DE60
 gUnknown_0844DE60:
-	.INCBIN "assets/sprites/gUnknown_0844DE60.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0844DE60.8bpp"
 
 	.GLOBAL gUnknown_08453A60
 gUnknown_08453A60:
@@ -8462,7 +9058,7 @@ gUnknown_08453CA0:
 
 	.GLOBAL gUnknown_08453CA8
 gUnknown_08453CA8:
-	.INCBIN "assets/sprites/gUnknown_08453CA8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08453CA8.8bpp"
 
 	.GLOBAL gUnknown_08457CA8
 gUnknown_08457CA8:
@@ -8474,7 +9070,7 @@ gUnknown_08457D38:
 
 	.GLOBAL gUnknown_08457D40
 gUnknown_08457D40:
-	.INCBIN "assets/sprites/gUnknown_08457D40.8bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08457D40.8bpp"
 
 	.GLOBAL gUnknown_08458D40
 gUnknown_08458D40:
@@ -8486,7 +9082,7 @@ gUnknown_08458F14:
 
 	.GLOBAL gUnknown_08458F1C
 gUnknown_08458F1C:
-	.INCBIN "assets/sprites/gUnknown_08458F1C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08458F1C.8bpp"
 
 	.GLOBAL gUnknown_0845C31C
 gUnknown_0845C31C:
@@ -8498,7 +9094,7 @@ gUnknown_0845C43C:
 
 	.GLOBAL gUnknown_0845C444
 gUnknown_0845C444:
-	.INCBIN "assets/sprites/gUnknown_0845C444.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0845C444.8bpp"
 
 	.GLOBAL gUnknown_0845E444
 gUnknown_0845E444:
@@ -8510,7 +9106,7 @@ gUnknown_0845E564:
 
 	.GLOBAL gUnknown_0845E56C
 gUnknown_0845E56C:
-	.INCBIN "assets/sprites/gUnknown_0845E56C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0845E56C.8bpp"
 
 	.GLOBAL gUnknown_0846056C
 gUnknown_0846056C:
@@ -8522,7 +9118,7 @@ gUnknown_084608CC:
 
 	.GLOBAL gUnknown_084608D4
 gUnknown_084608D4:
-	.INCBIN "assets/sprites/gUnknown_084608D4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084608D4.8bpp"
 
 	.GLOBAL gUnknown_084668D4
 gUnknown_084668D4:
@@ -8534,7 +9130,7 @@ gUnknown_08466B14:
 
 	.GLOBAL gUnknown_08466B1C
 gUnknown_08466B1C:
-	.INCBIN "assets/sprites/gUnknown_08466B1C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08466B1C.8bpp"
 
 	.GLOBAL gUnknown_0846AB1C
 gUnknown_0846AB1C:
@@ -8546,7 +9142,7 @@ gUnknown_0846ACCC:
 
 	.GLOBAL gUnknown_0846ACD4
 gUnknown_0846ACD4:
-	.INCBIN "assets/sprites/gUnknown_0846ACD4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0846ACD4.8bpp"
 
 	.GLOBAL gUnknown_0846DCD4
 gUnknown_0846DCD4:
@@ -8558,7 +9154,7 @@ gUnknown_0846DEA8:
 
 	.GLOBAL gUnknown_0846DEB0
 gUnknown_0846DEB0:
-	.INCBIN "assets/sprites/gUnknown_0846DEB0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0846DEB0.8bpp"
 
 	.GLOBAL gUnknown_084712B0
 gUnknown_084712B0:
@@ -8570,7 +9166,7 @@ gUnknown_084714F0:
 
 	.GLOBAL gUnknown_084714F8
 gUnknown_084714F8:
-	.INCBIN "assets/sprites/gUnknown_084714F8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084714F8.8bpp"
 
 	.GLOBAL gUnknown_084754F8
 gUnknown_084754F8:
@@ -8582,7 +9178,7 @@ gUnknown_08475A08:
 
 	.GLOBAL gUnknown_08475A10
 gUnknown_08475A10:
-	.INCBIN "assets/sprites/gUnknown_08475A10.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08475A10.8bpp"
 
 	.GLOBAL gUnknown_0847EA10
 gUnknown_0847EA10:
@@ -8594,7 +9190,7 @@ gUnknown_0847EB78:
 
 	.GLOBAL gUnknown_0847EB80
 gUnknown_0847EB80:
-	.INCBIN "assets/sprites/gUnknown_0847EB80.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0847EB80.8bpp"
 
 	.GLOBAL gUnknown_08481380
 gUnknown_08481380:
@@ -8606,7 +9202,7 @@ gUnknown_084816E0:
 
 	.GLOBAL gUnknown_084816E8
 gUnknown_084816E8:
-	.INCBIN "assets/sprites/gUnknown_084816E8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084816E8.8bpp"
 
 	.GLOBAL gUnknown_084876E8
 gUnknown_084876E8:
@@ -8618,7 +9214,7 @@ gUnknown_08487808:
 
 	.GLOBAL gUnknown_08487810
 gUnknown_08487810:
-	.INCBIN "assets/sprites/gUnknown_08487810.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08487810.8bpp"
 
 	.GLOBAL gUnknown_08489810
 gUnknown_08489810:
@@ -8630,7 +9226,7 @@ gUnknown_08489B70:
 
 	.GLOBAL gUnknown_08489B78
 gUnknown_08489B78:
-	.INCBIN "assets/sprites/gUnknown_08489B78.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08489B78.8bpp"
 
 	.GLOBAL gUnknown_0848FB78
 gUnknown_0848FB78:
@@ -8642,7 +9238,7 @@ gUnknown_0848FB9C:
 
 	.GLOBAL gUnknown_0848FBA4
 gUnknown_0848FBA4:
-	.INCBIN "assets/sprites/gUnknown_0848FBA4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0848FBA4.8bpp"
 
 	.GLOBAL gUnknown_0848FFA4
 gUnknown_0848FFA4:
@@ -8654,7 +9250,7 @@ gUnknown_084900A0:
 
 	.GLOBAL gUnknown_084900A8
 gUnknown_084900A8:
-	.INCBIN "assets/sprites/gUnknown_084900A8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084900A8.8bpp"
 
 	.GLOBAL gUnknown_08491CA8
 gUnknown_08491CA8:
@@ -8666,7 +9262,7 @@ gUnknown_08491EE8:
 
 	.GLOBAL gUnknown_08491EF0
 gUnknown_08491EF0:
-	.INCBIN "assets/sprites/gUnknown_08491EF0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08491EF0.8bpp"
 
 	.GLOBAL gUnknown_08495EF0
 gUnknown_08495EF0:
@@ -8678,7 +9274,7 @@ gUnknown_084960A0:
 
 	.GLOBAL gUnknown_084960A8
 gUnknown_084960A8:
-	.INCBIN "assets/sprites/gUnknown_084960A8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084960A8.8bpp" 
 
 	.GLOBAL gUnknown_084990A8
 gUnknown_084990A8:
@@ -8690,7 +9286,7 @@ gUnknown_084992E8:
 
 	.GLOBAL gUnknown_084992F0
 gUnknown_084992F0:
-	.INCBIN "assets/sprites/gUnknown_084992F0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084992F0.8bpp"
 
 	.GLOBAL gUnknown_0849D2F0
 gUnknown_0849D2F0:
@@ -8702,7 +9298,7 @@ gUnknown_0849D380:
 
 	.GLOBAL gUnknown_0849D388
 gUnknown_0849D388:
-	.INCBIN "assets/sprites/gUnknown_0849D388.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0849D388.8bpp"
 
 	.GLOBAL gUnknown_0849E388
 gUnknown_0849E388:
@@ -8714,7 +9310,7 @@ gUnknown_0849E4A8:
 
 	.GLOBAL gUnknown_0849E4B0
 gUnknown_0849E4B0:
-	.INCBIN "assets/sprites/gUnknown_0849E4B0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0849E4B0.8bpp"
 
 	.GLOBAL gUnknown_084A04B0
 gUnknown_084A04B0:
@@ -8726,7 +9322,7 @@ gUnknown_084A05D0:
 
 	.GLOBAL gUnknown_084A05D8
 gUnknown_084A05D8:
-	.INCBIN "assets/sprites/gUnknown_084A05D8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084A05D8.8bpp"
 
 	.GLOBAL gUnknown_084A25D8
 gUnknown_084A25D8:
@@ -8738,7 +9334,7 @@ gUnknown_084A27F4:
 
 	.GLOBAL gUnknown_084A27FC
 gUnknown_084A27FC:
-	.INCBIN "assets/sprites/gUnknown_084A27FC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084A27FC.8bpp"
 
 	.GLOBAL gUnknown_084A63FC
 gUnknown_084A63FC:
@@ -8750,7 +9346,7 @@ gUnknown_084A6684:
 
 	.GLOBAL gUnknown_084A668C
 gUnknown_084A668C:
-	.INCBIN "assets/sprites/gUnknown_084A668C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084A668C.8bpp"
 
 	.GLOBAL gUnknown_084AAE8C
 gUnknown_084AAE8C:
@@ -8822,7 +9418,7 @@ gUnknown_084B1EA8:
 
 	.GLOBAL gUnknown_084B1EB0
 gUnknown_084B1EB0:
-	.INCBIN "assets/sprites/gUnknown_084B1EB0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084B1EB0.8bpp"
 
 	.GLOBAL gUnknown_084B5EB0
 gUnknown_084B5EB0:
@@ -8834,7 +9430,7 @@ gUnknown_084B61EC:
 
 	.GLOBAL gUnknown_084B61F4
 gUnknown_084B61F4:
-	.INCBIN "assets/sprites/gUnknown_084B61F4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084B61F4.8bpp"
 
 	.GLOBAL gUnknown_084BBDF4
 gUnknown_084BBDF4:
@@ -8846,7 +9442,7 @@ gUnknown_084BC274:
 
 	.GLOBAL gUnknown_084BC27C
 gUnknown_084BC27C:
-	.INCBIN "assets/sprites/gUnknown_084BC27C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084BC27C.8bpp"
 
 	.GLOBAL gUnknown_084C427C
 gUnknown_084C427C:
@@ -8858,7 +9454,7 @@ gUnknown_084C4624:
 
 	.GLOBAL gUnknown_084C462C
 gUnknown_084C462C:
-	.INCBIN "assets/sprites/gUnknown_084C462C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084C462C.8bpp"
 
 	.GLOBAL gUnknown_084DE62C
 gUnknown_084DE62C:
@@ -8870,7 +9466,7 @@ gUnknown_084DE7DC:
 
 	.GLOBAL gUnknown_084DE7E4
 gUnknown_084DE7E4:
-	.INCBIN "assets/sprites/gUnknown_084DE7E4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084DE7E4.8bpp"
 
 	.GLOBAL gUnknown_084E17E4
 gUnknown_084E17E4:
@@ -8882,7 +9478,7 @@ gUnknown_084E1904:
 
 	.GLOBAL gUnknown_084E190C
 gUnknown_084E190C:
-	.INCBIN "assets/sprites/gUnknown_084E190C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084E190C.8bpp"
 
 	.GLOBAL gUnknown_084E390C
 gUnknown_084E390C:
@@ -8894,7 +9490,7 @@ gUnknown_084E3B4C:
 
 	.GLOBAL gUnknown_084E3B54
 gUnknown_084E3B54:
-	.INCBIN "assets/sprites/gUnknown_084E3B54.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084E3B54.8bpp"
 
 	.GLOBAL gUnknown_084E7B54
 gUnknown_084E7B54:
@@ -8906,10 +9502,10 @@ gUnknown_084E7C50:
 
 	.GLOBAL gUnknown_084E7C58
 gUnknown_084E7C58:
-	.INCBIN "assets/sprites/gUnknown_084E7C58.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084E7C58.8bpp"
 
 	.GLOBAL gUnknown_084E9858
-gUnknown_084E9858:
+gUnknown_084E9858:	
 	.INCBIN "baserom.gba", 0x4E9858, 0x4E9954-0x4E9858
 
 	.GLOBAL gUnknown_084E9954
@@ -8918,7 +9514,7 @@ gUnknown_084E9954:
 
 	.GLOBAL gUnknown_084E995C
 gUnknown_084E995C:
-	.INCBIN "assets/sprites/gUnknown_084E995C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084E995C.8bpp"
 
 	.GLOBAL gUnknown_084EB55C
 gUnknown_084EB55C:
@@ -8930,7 +9526,7 @@ gUnknown_084EB7E4:
 
 	.GLOBAL gUnknown_084EB7EC
 gUnknown_084EB7EC:
-	.INCBIN "assets/sprites/gUnknown_084EB7EC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084EB7EC.8bpp"
 
 	.GLOBAL gUnknown_084EFFEC
 gUnknown_084EFFEC:
@@ -8942,7 +9538,7 @@ gUnknown_084F010C:
 
 	.GLOBAL gUnknown_084F0114
 gUnknown_084F0114:
-	.INCBIN "assets/sprites/gUnknown_084F0114.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084F0114.8bpp"
 
 	.GLOBAL gUnknown_084F2114
 gUnknown_084F2114:
@@ -8954,7 +9550,7 @@ gUnknown_084F2210:
 
 	.GLOBAL gUnknown_084F2218
 gUnknown_084F2218:
-	.INCBIN "assets/sprites/gUnknown_084F2218.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084F2218.8bpp"
 
 	.GLOBAL gUnknown_084F3E18
 gUnknown_084F3E18:
@@ -8966,7 +9562,7 @@ gUnknown_084F3F38:
 
 	.GLOBAL gUnknown_084F3F40
 gUnknown_084F3F40:
-	.INCBIN "assets/sprites/gUnknown_084F3F40.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084F3F40.8bpp"
 
 	.GLOBAL gUnknown_084F5F40
 gUnknown_084F5F40:
@@ -8978,7 +9574,7 @@ gUnknown_084F61C8:
 
 	.GLOBAL gUnknown_084F61D0
 gUnknown_084F61D0:
-	.INCBIN "assets/sprites/gUnknown_084F61D0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084F61D0.8bpp"
 
 	.GLOBAL gUnknown_084FA9D0
 gUnknown_084FA9D0:
@@ -8990,7 +9586,7 @@ gUnknown_084FAACC:
 
 	.GLOBAL gUnknown_084FAAD4
 gUnknown_084FAAD4:
-	.INCBIN "assets/sprites/gUnknown_084FAAD4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084FAAD4.8bpp"
 
 	.GLOBAL gUnknown_084FC6D4
 gUnknown_084FC6D4:
@@ -9002,7 +9598,7 @@ gUnknown_084FC7D0:
 
 	.GLOBAL gUnknown_084FC7D8
 gUnknown_084FC7D8:
-	.INCBIN "assets/sprites/gUnknown_084FC7D8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084FC7D8.8bpp"
 
 	.GLOBAL gUnknown_084FE3D8
 gUnknown_084FE3D8:
@@ -9014,7 +9610,7 @@ gUnknown_084FE660:
 
 	.GLOBAL gUnknown_084FE668
 gUnknown_084FE668:
-	.INCBIN "assets/sprites/gUnknown_084FE668.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_084FE668.8bpp"
 
 	.GLOBAL gUnknown_08502E68
 gUnknown_08502E68:
@@ -9026,7 +9622,7 @@ gUnknown_08502F64:
 
 	.GLOBAL gUnknown_08502F6C
 gUnknown_08502F6C:
-	.INCBIN "assets/sprites/gUnknown_08502F6C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08502F6C.8bpp"
 
 	.GLOBAL gUnknown_08504B6C
 gUnknown_08504B6C:
@@ -9038,7 +9634,7 @@ gUnknown_08504C68:
 
 	.GLOBAL gUnknown_08504C70
 gUnknown_08504C70:
-	.INCBIN "assets/sprites/gUnknown_08504C70.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08504C70.8bpp"
 
 	.GLOBAL gUnknown_08506870
 gUnknown_08506870:
@@ -9050,7 +9646,7 @@ gUnknown_08506AB0:
 
 	.GLOBAL gUnknown_08506AB8
 gUnknown_08506AB8:
-	.INCBIN "assets/sprites/gUnknown_08506AB8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08506AB8.8bpp"
 
 	.GLOBAL gUnknown_0850AAB8
 gUnknown_0850AAB8:
@@ -9062,7 +9658,7 @@ gUnknown_0850AB90:
 
 	.GLOBAL gUnknown_0850AB98
 gUnknown_0850AB98:
-	.INCBIN "assets/sprites/gUnknown_0850AB98.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0850AB98.8bpp"
 
 	.GLOBAL gUnknown_0850C398
 gUnknown_0850C398:
@@ -9074,7 +9670,7 @@ gUnknown_0850C5D8:
 
 	.GLOBAL gUnknown_0850C5E0
 gUnknown_0850C5E0:
-	.INCBIN "assets/sprites/gUnknown_0850C5E0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0850C5E0.8bpp"
 
 	.GLOBAL gUnknown_085105E0
 gUnknown_085105E0:
@@ -9086,7 +9682,7 @@ gUnknown_085106DC:
 
 	.GLOBAL gUnknown_085106E4
 gUnknown_085106E4:
-	.INCBIN "assets/sprites/gUnknown_085106E4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_085106E4.8bpp"
 
 	.GLOBAL gUnknown_085122E4
 gUnknown_085122E4:
@@ -9098,7 +9694,7 @@ gUnknown_085123E0:
 
 	.GLOBAL gUnknown_085123E8
 gUnknown_085123E8:
-	.INCBIN "assets/sprites/gUnknown_085123E8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_085123E8.8bpp"
 
 	.GLOBAL gUnknown_08513FE8
 gUnknown_08513FE8:
@@ -9110,7 +9706,7 @@ gUnknown_0851400C:
 
 	.GLOBAL gUnknown_08514014
 gUnknown_08514014:
-	.INCBIN "assets/sprites/gUnknown_08514014.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_08514014.4bpp"
 
 	.GLOBAL gUnknown_08514214
 gUnknown_08514214:
@@ -9122,7 +9718,7 @@ gUnknown_08514478:
 
 	.GLOBAL gUnknown_08514480
 gUnknown_08514480:
-	.INCBIN "assets/sprites/gUnknown_08514480.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08514480.8bpp"
 
 	.GLOBAL gUnknown_08518880
 gUnknown_08518880:
@@ -9134,7 +9730,7 @@ gUnknown_085188C8:
 
 	.GLOBAL gUnknown_085188D0
 gUnknown_085188D0:
-	.INCBIN "assets/sprites/gUnknown_085188D0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_085188D0.8bpp"
 
 	.GLOBAL gUnknown_085190D0
 gUnknown_085190D0:
@@ -9146,7 +9742,7 @@ gUnknown_085191F0:
 
 	.GLOBAL gUnknown_085191F8
 gUnknown_085191F8:
-	.INCBIN "assets/sprites/gUnknown_085191F8.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085191F8.8bpp"
 
 	.GLOBAL gUnknown_0851B1F8
 gUnknown_0851B1F8:
@@ -9158,7 +9754,7 @@ gUnknown_0851B438:
 
 	.GLOBAL gUnknown_0851B440
 gUnknown_0851B440:
-	.INCBIN "assets/sprites/gUnknown_0851B440.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0851B440.8bpp"
 
 	.GLOBAL gUnknown_0851F440
 gUnknown_0851F440:
@@ -9170,7 +9766,7 @@ gUnknown_0851F560:
 
 	.GLOBAL gUnknown_0851F568
 gUnknown_0851F568:
-	.INCBIN "assets/sprites/gUnknown_0851F568.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0851F568.8bpp"
 
 	.GLOBAL gUnknown_08521568
 gUnknown_08521568:
@@ -9182,7 +9778,7 @@ gUnknown_08521688:
 
 	.GLOBAL gUnknown_08521690
 gUnknown_08521690:
-	.INCBIN "assets/sprites/gUnknown_08521690.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08521690.8bpp"
 
 	.GLOBAL gUnknown_08523690
 gUnknown_08523690:
@@ -9194,7 +9790,7 @@ gUnknown_085238D0:
 
 	.GLOBAL gUnknown_085238D8
 gUnknown_085238D8:
-	.INCBIN "assets/sprites/gUnknown_085238D8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_085238D8.8bpp"
 
 	.GLOBAL gUnknown_085278D8
 gUnknown_085278D8:
@@ -9206,7 +9802,7 @@ gUnknown_08527B18:
 
 	.GLOBAL gUnknown_08527B20
 gUnknown_08527B20:
-	.INCBIN "assets/sprites/gUnknown_08527B20.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08527B20.8bpp"
 
 	.GLOBAL gUnknown_0852BB20
 gUnknown_0852BB20:
@@ -9218,7 +9814,7 @@ gUnknown_0852BD60:
 
 	.GLOBAL gUnknown_0852BD68
 gUnknown_0852BD68:
-	.INCBIN "assets/sprites/gUnknown_0852BD68.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0852BD68.8bpp"
 
 	.GLOBAL gUnknown_0852FD68
 gUnknown_0852FD68:
@@ -9230,7 +9826,7 @@ gUnknown_0852FFA8:
 
 	.GLOBAL gUnknown_0852FFB0
 gUnknown_0852FFB0:
-	.INCBIN "assets/sprites/gUnknown_0852FFB0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0852FFB0.8bpp"
 
 	.GLOBAL gUnknown_08533FB0
 gUnknown_08533FB0:
@@ -9242,7 +9838,7 @@ gUnknown_085341F0:
 
 	.GLOBAL gUnknown_085341F8
 gUnknown_085341F8:
-	.INCBIN "assets/sprites/gUnknown_085341F8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_085341F8.8bpp"
 
 	.GLOBAL gUnknown_08537DF8
 gUnknown_08537DF8:
@@ -9254,7 +9850,7 @@ gUnknown_08538038:
 
 	.GLOBAL gUnknown_08538040
 gUnknown_08538040:
-	.INCBIN "assets/sprites/gUnknown_08538040.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08538040.8bpp"
 
 	.GLOBAL gUnknown_0853C040
 gUnknown_0853C040:
@@ -9266,7 +9862,7 @@ gUnknown_0853C3A0:
 
 	.GLOBAL gUnknown_0853C3A8
 gUnknown_0853C3A8:
-	.INCBIN "assets/sprites/gUnknown_0853C3A8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0853C3A8.8bpp"
 
 	.GLOBAL gUnknown_085423A8
 gUnknown_085423A8:
@@ -9278,7 +9874,7 @@ gUnknown_08542414:
 
 	.GLOBAL gUnknown_0854241C
 gUnknown_0854241C:
-	.INCBIN "assets/sprites/gUnknown_0854241C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0854241C.8bpp"
 
 	.GLOBAL gUnknown_0854301C
 gUnknown_0854301C:
@@ -9290,7 +9886,7 @@ gUnknown_0854337C:
 
 	.GLOBAL gUnknown_08543384
 gUnknown_08543384:
-	.INCBIN "assets/sprites/gUnknown_08543384.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08543384.8bpp"
 
 	.GLOBAL gUnknown_08549384
 gUnknown_08549384:
@@ -9302,7 +9898,7 @@ gUnknown_08549534:
 
 	.GLOBAL gUnknown_0854953C
 gUnknown_0854953C:
-	.INCBIN "assets/sprites/gUnknown_0854953C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0854953C.8bpp"
 
 	.GLOBAL gUnknown_0854C53C
 gUnknown_0854C53C:
@@ -9314,7 +9910,7 @@ gUnknown_0854C77C:
 
 	.GLOBAL gUnknown_0854C784
 gUnknown_0854C784:
-	.INCBIN "assets/sprites/gUnknown_0854C784.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0854C784.8bpp"
 
 	.GLOBAL gUnknown_08550784
 gUnknown_08550784:
@@ -9326,7 +9922,7 @@ gUnknown_085509C4:
 
 	.GLOBAL gUnknown_085509CC
 gUnknown_085509CC:
-	.INCBIN "assets/sprites/gUnknown_085509CC.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_085509CC.8bpp"
 
 	.GLOBAL gUnknown_085549CC
 gUnknown_085549CC:
@@ -9338,7 +9934,7 @@ gUnknown_08554D74:
 
 	.GLOBAL gUnknown_08554D7C
 gUnknown_08554D7C:
-	.INCBIN "assets/sprites/gUnknown_08554D7C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08554D7C.8bpp"
 
 	.GLOBAL gUnknown_0855B57C
 gUnknown_0855B57C:
@@ -9350,7 +9946,7 @@ gUnknown_0855B84C:
 
 	.GLOBAL gUnknown_0855B854
 gUnknown_0855B854:
-	.INCBIN "assets/sprites/gUnknown_0855B854.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0855B854.8bpp"
 
 	.GLOBAL gUnknown_08560854
 gUnknown_08560854:
@@ -9362,7 +9958,7 @@ gUnknown_08560ADC:
 
 	.GLOBAL gUnknown_08560AE4
 gUnknown_08560AE4:
-	.INCBIN "assets/sprites/gUnknown_08560AE4.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08560AE4.8bpp"
 
 	.GLOBAL gUnknown_085652E4
 gUnknown_085652E4:
@@ -9374,7 +9970,7 @@ gUnknown_08565524:
 
 	.GLOBAL gUnknown_0856552C
 gUnknown_0856552C:
-	.INCBIN "assets/sprites/gUnknown_0856552C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0856552C.8bpp"
 
 	.GLOBAL gUnknown_0856952C
 gUnknown_0856952C:
@@ -9386,7 +9982,7 @@ gUnknown_0856976C:
 
 	.GLOBAL gUnknown_08569774
 gUnknown_08569774:
-	.INCBIN "assets/sprites/gUnknown_08569774.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08569774.8bpp"
 
 	.GLOBAL gUnknown_0856D774
 gUnknown_0856D774:
@@ -9398,7 +9994,7 @@ gUnknown_0856D924:
 
 	.GLOBAL gUnknown_0856D92C
 gUnknown_0856D92C:
-	.INCBIN "assets/sprites/gUnknown_0856D92C.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_0856D92C.8bpp"
 
 	.GLOBAL gUnknown_0857092C
 gUnknown_0857092C:
@@ -9410,7 +10006,7 @@ gUnknown_08570AB8:
 
 	.GLOBAL gUnknown_08570AC0
 gUnknown_08570AC0:
-	.INCBIN "assets/sprites/gUnknown_08570AC0.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08570AC0.8bpp"
 
 	.GLOBAL gUnknown_085736C0
 gUnknown_085736C0:
@@ -9422,7 +10018,7 @@ gUnknown_085737E0:
 
 	.GLOBAL gUnknown_085737E8
 gUnknown_085737E8:
-	.INCBIN "assets/sprites/gUnknown_085737E8.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_085737E8.8bpp"
 
 	.GLOBAL gUnknown_085757E8
 gUnknown_085757E8:
@@ -9434,7 +10030,7 @@ gUnknown_08575908:
 
 	.GLOBAL gUnknown_08575910
 gUnknown_08575910:
-	.INCBIN "assets/sprites/gUnknown_08575910.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08575910.8bpp"
 
 	.GLOBAL gUnknown_08577910
 gUnknown_08577910:
@@ -9446,7 +10042,7 @@ gUnknown_08577A30:
 
 	.GLOBAL gUnknown_08577A38
 gUnknown_08577A38:
-	.INCBIN "assets/sprites/gUnknown_08577A38.8bpp"
+	.INCBIN "assets/sprites/mario/gUnknown_08577A38.8bpp"
 
 	.GLOBAL gUnknown_08579A38
 gUnknown_08579A38:
@@ -9458,7 +10054,7 @@ gUnknown_08579C78:
 
 	.GLOBAL gUnknown_08579C80
 gUnknown_08579C80:
-	.INCBIN "assets/sprites/gUnknown_08579C80.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08579C80.8bpp"
 
 	.GLOBAL gUnknown_0857A480
 gUnknown_0857A480:
@@ -9470,7 +10066,7 @@ gUnknown_0857A5A0:
 
 	.GLOBAL gUnknown_0857A5A8
 gUnknown_0857A5A8:
-	.INCBIN "assets/sprites/gUnknown_0857A5A8.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0857A5A8.8bpp"
 
 	.GLOBAL gUnknown_0857ADA8
 gUnknown_0857ADA8:
@@ -9482,7 +10078,7 @@ gUnknown_0857AFE8:
 
 	.GLOBAL gUnknown_0857AFF0
 gUnknown_0857AFF0:
-	.INCBIN "assets/sprites/gUnknown_0857AFF0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0857AFF0.8bpp"
 
 	.GLOBAL gUnknown_0857BFF0
 gUnknown_0857BFF0:
@@ -9494,7 +10090,7 @@ gUnknown_0857C350:
 
 	.GLOBAL gUnknown_0857C358
 gUnknown_0857C358:
-	.INCBIN "assets/sprites/gUnknown_0857C358.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0857C358.8bpp"
 
 	.GLOBAL gUnknown_0857DB58
 gUnknown_0857DB58:
@@ -9506,7 +10102,7 @@ gUnknown_0857E08C:
 
 	.GLOBAL gUnknown_0857E094
 gUnknown_0857E094:
-	.INCBIN "assets/sprites/gUnknown_0857E094.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0857E094.8bpp"
 
 	.GLOBAL gUnknown_08580094
 gUnknown_08580094:
@@ -9518,7 +10114,7 @@ gUnknown_085809B8:
 
 	.GLOBAL gUnknown_085809C0
 gUnknown_085809C0:
-	.INCBIN "assets/sprites/gUnknown_085809C0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085809C0.8bpp"
 
 	.GLOBAL gUnknown_085829C0
 gUnknown_085829C0:
@@ -9530,7 +10126,7 @@ gUnknown_08582FA8:
 
 	.GLOBAL gUnknown_08582FB0
 gUnknown_08582FB0:
-	.INCBIN "assets/sprites/gUnknown_08582FB0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08582FB0.8bpp"
 
 	.GLOBAL gUnknown_08583BB0
 gUnknown_08583BB0:
@@ -9542,7 +10138,7 @@ gUnknown_08583E80:
 
 	.GLOBAL gUnknown_08583E88
 gUnknown_08583E88:
-	.INCBIN "assets/sprites/gUnknown_08583E88.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08583E88.8bpp"
 
 	.GLOBAL gUnknown_08585088
 gUnknown_08585088:
@@ -9554,7 +10150,7 @@ gUnknown_085852C8:
 
 	.GLOBAL gUnknown_085852D0
 gUnknown_085852D0:
-	.INCBIN "assets/sprites/gUnknown_085852D0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085852D0.8bpp"
 
 	.GLOBAL gUnknown_085862D0
 gUnknown_085862D0:
@@ -9566,7 +10162,7 @@ gUnknown_08586630:
 
 	.GLOBAL gUnknown_08586638
 gUnknown_08586638:
-	.INCBIN "assets/sprites/gUnknown_08586638.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08586638.8bpp"
 
 	.GLOBAL gUnknown_08587E38
 gUnknown_08587E38:
@@ -9578,7 +10174,7 @@ gUnknown_085882B8:
 
 	.GLOBAL gUnknown_085882C0
 gUnknown_085882C0:
-	.INCBIN "assets/sprites/gUnknown_085882C0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085882C0.8bpp"
 
 	.GLOBAL gUnknown_085902C0
 gUnknown_085902C0:
@@ -9590,7 +10186,7 @@ gUnknown_08590740:
 
 	.GLOBAL gUnknown_08590748
 gUnknown_08590748:
-	.INCBIN "assets/sprites/gUnknown_08590748.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08590748.8bpp"
 
 	.GLOBAL gUnknown_08592748
 gUnknown_08592748:
@@ -9602,7 +10198,7 @@ gUnknown_08592F28:
 
 	.GLOBAL gUnknown_08592F30
 gUnknown_08592F30:
-	.INCBIN "assets/sprites/gUnknown_08592F30.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08592F30.8bpp"
 
 	.GLOBAL gUnknown_08595730
 gUnknown_08595730:
@@ -9614,7 +10210,7 @@ gUnknown_08595970:
 
 	.GLOBAL gUnknown_08595978
 gUnknown_08595978:
-	.INCBIN "assets/sprites/gUnknown_08595978.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08595978.8bpp"
 
 	.GLOBAL gUnknown_08596978
 gUnknown_08596978:
@@ -9626,7 +10222,7 @@ gUnknown_08596A98:
 
 	.GLOBAL gUnknown_08596AA0
 gUnknown_08596AA0:
-	.INCBIN "assets/sprites/gUnknown_08596AA0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08596AA0.8bpp"
 
 	.GLOBAL gUnknown_085972A0
 gUnknown_085972A0:
@@ -9638,7 +10234,7 @@ gUnknown_085973C0:
 
 	.GLOBAL gUnknown_085973C8
 gUnknown_085973C8:
-	.INCBIN "assets/sprites/gUnknown_085973C8.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085973C8.8bpp"
 
 	.GLOBAL gUnknown_08597BC8
 gUnknown_08597BC8:
@@ -9650,7 +10246,7 @@ gUnknown_08597E08:
 
 	.GLOBAL gUnknown_08597E10
 gUnknown_08597E10:
-	.INCBIN "assets/sprites/gUnknown_08597E10.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08597E10.8bpp"
 
 	.GLOBAL gUnknown_08598C10
 gUnknown_08598C10:
@@ -9662,7 +10258,7 @@ gUnknown_08599090:
 
 	.GLOBAL gUnknown_08599098
 gUnknown_08599098:
-	.INCBIN "assets/sprites/gUnknown_08599098.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08599098.8bpp"
 
 	.GLOBAL gUnknown_0859B098
 gUnknown_0859B098:
@@ -9674,7 +10270,7 @@ gUnknown_0859B3F8:
 
 	.GLOBAL gUnknown_0859B400
 gUnknown_0859B400:
-	.INCBIN "assets/sprites/gUnknown_0859B400.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0859B400.8bpp"
 
 	.GLOBAL gUnknown_0859CC00
 gUnknown_0859CC00:
@@ -9686,7 +10282,7 @@ gUnknown_0859CE40:
 
 	.GLOBAL gUnknown_0859CE48
 gUnknown_0859CE48:
-	.INCBIN "assets/sprites/gUnknown_0859CE48.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0859CE48.8bpp"
 
 	.GLOBAL gUnknown_0859DD48
 gUnknown_0859DD48:
@@ -9698,7 +10294,7 @@ gUnknown_0859E114:
 
 	.GLOBAL gUnknown_0859E11C
 gUnknown_0859E11C:
-	.INCBIN "assets/sprites/gUnknown_0859E11C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0859E11C.8bpp"
 
 	.GLOBAL gUnknown_0859FC1C
 gUnknown_0859FC1C:
@@ -9710,7 +10306,7 @@ gUnknown_0859FD3C:
 
 	.GLOBAL gUnknown_0859FD44
 gUnknown_0859FD44:
-	.INCBIN "assets/sprites/gUnknown_0859FD44.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_0859FD44.8bpp"
 
 	.GLOBAL gUnknown_085A0544
 gUnknown_085A0544:
@@ -9722,7 +10318,7 @@ gUnknown_085A0568:
 
 	.GLOBAL gUnknown_085A0570
 gUnknown_085A0570:
-	.INCBIN "assets/sprites/gUnknown_085A0570.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A0570.8bpp"
 
 	.GLOBAL gUnknown_085A0770
 gUnknown_085A0770:
@@ -9734,7 +10330,7 @@ gUnknown_085A0794:
 
 	.GLOBAL gUnknown_085A079C
 gUnknown_085A079C:
-	.INCBIN "assets/sprites/gUnknown_085A079C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A079C.8bpp"
 
 	.GLOBAL gUnknown_085A099C
 gUnknown_085A099C:
@@ -9746,7 +10342,7 @@ gUnknown_085A09C0:
 
 	.GLOBAL gUnknown_085A09C8
 gUnknown_085A09C8:
-	.INCBIN "assets/sprites/gUnknown_085A09C8.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A09C8.8bpp"
 
 	.GLOBAL gUnknown_085A0BC8
 gUnknown_085A0BC8:
@@ -9758,7 +10354,7 @@ gUnknown_085A0C58:
 
 	.GLOBAL gUnknown_085A0C60
 gUnknown_085A0C60:
-	.INCBIN "assets/sprites/gUnknown_085A0C60.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A0C60.8bpp"
 
 	.GLOBAL gUnknown_085A1060
 gUnknown_085A1060:
@@ -9770,7 +10366,7 @@ gUnknown_085A10A8:
 
 	.GLOBAL gUnknown_085A10B0
 gUnknown_085A10B0:
-	.INCBIN "assets/sprites/gUnknown_085A10B0.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085A10B0.4bpp"
 
 	.GLOBAL gUnknown_085A11B0
 gUnknown_085A11B0:
@@ -9782,7 +10378,7 @@ gUnknown_085A121C:
 
 	.GLOBAL gUnknown_085A1224
 gUnknown_085A1224:
-	.INCBIN "assets/sprites/gUnknown_085A1224.8bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085A1224.8bpp"
 
 	.GLOBAL gUnknown_085A1E24
 gUnknown_085A1E24:
@@ -9794,7 +10390,7 @@ gUnknown_085A1F44:
 
 	.GLOBAL gUnknown_085A1F4C
 gUnknown_085A1F4C:
-	.INCBIN "assets/sprites/gUnknown_085A1F4C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A1F4C.8bpp"
 
 	.GLOBAL gUnknown_085A274C
 gUnknown_085A274C:
@@ -9806,7 +10402,7 @@ gUnknown_085A298C:
 
 	.GLOBAL gUnknown_085A2994
 gUnknown_085A2994:
-	.INCBIN "assets/sprites/gUnknown_085A2994.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A2994.8bpp"
 
 	.GLOBAL gUnknown_085A3994
 gUnknown_085A3994:
@@ -9818,7 +10414,7 @@ gUnknown_085A3BD4:
 
 	.GLOBAL gUnknown_085A3BDC
 gUnknown_085A3BDC:
-	.INCBIN "assets/sprites/gUnknown_085A3BDC.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A3BDC.8bpp"
 
 	.GLOBAL gUnknown_085A4BDC
 gUnknown_085A4BDC:
@@ -9830,7 +10426,7 @@ gUnknown_085A5CBC:
 
 	.GLOBAL gUnknown_085A5CC4
 gUnknown_085A5CC4:
-	.INCBIN "assets/sprites/gUnknown_085A5CC4.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A5CC4.8bpp"
 
 	.GLOBAL gUnknown_085A74C4
 gUnknown_085A74C4:
@@ -9842,7 +10438,7 @@ gUnknown_085A7674:
 
 	.GLOBAL gUnknown_085A767C
 gUnknown_085A767C:
-	.INCBIN "assets/sprites/gUnknown_085A767C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A767C.8bpp"
 
 	.GLOBAL gUnknown_085A827C
 gUnknown_085A827C:
@@ -9854,7 +10450,7 @@ gUnknown_085A842C:
 
 	.GLOBAL gUnknown_085A8434
 gUnknown_085A8434:
-	.INCBIN "assets/sprites/gUnknown_085A8434.4bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A8434.4bpp"
 
 	.GLOBAL gUnknown_085A8A34
 gUnknown_085A8A34:
@@ -9866,7 +10462,7 @@ gUnknown_085A8BE4:
 
 	.GLOBAL gUnknown_085A8BEC
 gUnknown_085A8BEC:
-	.INCBIN "assets/sprites/gUnknown_085A8BEC.4bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A8BEC.4bpp"
 
 	.GLOBAL gUnknown_085A91EC
 gUnknown_085A91EC:
@@ -9878,7 +10474,7 @@ gUnknown_085A930C:
 
 	.GLOBAL gUnknown_085A9314
 gUnknown_085A9314:
-	.INCBIN "assets/sprites/gUnknown_085A9314.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A9314.8bpp"
 
 	.GLOBAL gUnknown_085A9B14
 gUnknown_085A9B14:
@@ -9890,7 +10486,7 @@ gUnknown_085A9CE8:
 
 	.GLOBAL gUnknown_085A9CF0
 gUnknown_085A9CF0:
-	.INCBIN "assets/sprites/gUnknown_085A9CF0.4bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085A9CF0.4bpp"
 
 	.GLOBAL gUnknown_085AA070
 gUnknown_085AA070:
@@ -9902,7 +10498,7 @@ gUnknown_085AA220:
 
 	.GLOBAL gUnknown_085AA228
 gUnknown_085AA228:
-	.INCBIN "assets/sprites/gUnknown_085AA228.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085AA228.8bpp"
 
 	.GLOBAL gUnknown_085AAE28
 gUnknown_085AAE28:
@@ -9914,7 +10510,7 @@ gUnknown_085AB068:
 
 	.GLOBAL gUnknown_085AB070
 gUnknown_085AB070:
-	.INCBIN "assets/sprites/gUnknown_085AB070.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085AB070.8bpp"
 
 	.GLOBAL gUnknown_085ABF70
 gUnknown_085ABF70:
@@ -9926,7 +10522,7 @@ gUnknown_085AC1B0:
 
 	.GLOBAL gUnknown_085AC1B8
 gUnknown_085AC1B8:
-	.INCBIN "assets/sprites/gUnknown_085AC1B8.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085AC1B8.8bpp"
 
 	.GLOBAL gUnknown_085AD1B8
 gUnknown_085AD1B8:
@@ -9938,7 +10534,7 @@ gUnknown_085AD224:
 
 	.GLOBAL gUnknown_085AD22C
 gUnknown_085AD22C:
-	.INCBIN "assets/sprites/gUnknown_085AD22C.4bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085AD22C.4bpp"
 
 	.GLOBAL gUnknown_085AD3AC
 gUnknown_085AD3AC:
@@ -9950,7 +10546,7 @@ gUnknown_085AD67C:
 
 	.GLOBAL gUnknown_085AD684
 gUnknown_085AD684:
-	.INCBIN "assets/sprites/gUnknown_085AD684.4bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085AD684.4bpp"
 
 	.GLOBAL gUnknown_085AE084
 gUnknown_085AE084:
@@ -9962,7 +10558,7 @@ gUnknown_085AE0A8:
 
 	.GLOBAL gUnknown_085AE0B0
 gUnknown_085AE0B0:
-	.INCBIN "assets/sprites/gUnknown_085AE0B0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085AE0B0.8bpp"
 
 	.GLOBAL gUnknown_085AE1B0
 gUnknown_085AE1B0:
@@ -9974,7 +10570,7 @@ gUnknown_085AE510:
 
 	.GLOBAL gUnknown_085AE518
 gUnknown_085AE518:
-	.INCBIN "assets/sprites/gUnknown_085AE518.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085AE518.8bpp"
 
 	.GLOBAL gUnknown_085AFD18
 gUnknown_085AFD18:
@@ -9986,7 +10582,7 @@ gUnknown_085B0078:
 
 	.GLOBAL gUnknown_085B0080
 gUnknown_085B0080:
-	.INCBIN "assets/sprites/gUnknown_085B0080.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085B0080.8bpp"
 
 	.GLOBAL gUnknown_085B1880
 gUnknown_085B1880:
@@ -9998,7 +10594,7 @@ gUnknown_085B18A4:
 
 	.GLOBAL gUnknown_085B18AC
 gUnknown_085B18AC:
-	.INCBIN "assets/sprites/gUnknown_085B18AC.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085B18AC.4bpp"
 
 	.GLOBAL gUnknown_085B192C
 gUnknown_085B192C:
@@ -10010,7 +10606,7 @@ gUnknown_085B1A4C:
 
 	.GLOBAL gUnknown_085B1A54
 gUnknown_085B1A54:
-	.INCBIN "assets/sprites/gUnknown_085B1A54.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085B1A54.8bpp"
 
 	.GLOBAL gUnknown_085B2254
 gUnknown_085B2254:
@@ -10022,7 +10618,7 @@ gUnknown_085B2764:
 
 	.GLOBAL gUnknown_085B276C
 gUnknown_085B276C:
-	.INCBIN "assets/sprites/gUnknown_085B276C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085B276C.8bpp"
 
 	.GLOBAL gUnknown_085B496C
 gUnknown_085B496C:
@@ -10034,7 +10630,7 @@ gUnknown_085B4CA8:
 
 	.GLOBAL gUnknown_085B4CB0
 gUnknown_085B4CB0:
-	.INCBIN "assets/sprites/gUnknown_085B4CB0.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085B4CB0.8bpp"
 
 	.GLOBAL gUnknown_085B60B0
 gUnknown_085B60B0:
@@ -10046,7 +10642,7 @@ gUnknown_085B61D0:
 
 	.GLOBAL gUnknown_085B61D8
 gUnknown_085B61D8:
-	.INCBIN "assets/sprites/gUnknown_085B61D8.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085B61D8.8bpp"
 
 	.GLOBAL gUnknown_085B81D8
 gUnknown_085B81D8:
@@ -10058,7 +10654,7 @@ gUnknown_085B8364:
 
 	.GLOBAL gUnknown_085B836C
 gUnknown_085B836C:
-	.INCBIN "assets/sprites/gUnknown_085B836C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085B836C.8bpp"
 
 	.GLOBAL gUnknown_085B8E6C
 gUnknown_085B8E6C:
@@ -10070,7 +10666,7 @@ gUnknown_085B8F44:
 
 	.GLOBAL gUnknown_085B8F4C
 gUnknown_085B8F4C:
-	.INCBIN "assets/sprites/gUnknown_085B8F4C.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085B8F4C.8bpp"
 
 	.GLOBAL gUnknown_085B954C
 gUnknown_085B954C:
@@ -10079,22 +10675,22 @@ gUnknown_085B954C:
 	.GLOBAL gUnknown_085BA188
 gUnknown_085BA188:
 	OamData bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=0
-
+	
 	.GLOBAL gUnknown_085BA190
 gUnknown_085BA190:
-	.INCBIN "assets/sprites/gUnknown_085BA190.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085BA190.8bpp"
 
 	.GLOBAL gUnknown_085BC190
 gUnknown_085BC190:
 	.INCBIN "baserom.gba", 0x5BC190, 0x5BC3D0-0x5BC190
 
 	.GLOBAL gUnknown_085BC3D0
-gUnknown_085BC3D0:
+gUnknown_085BC3D0:	
 	OamData bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=0
 
 	.GLOBAL gUnknown_085BC3D8
 gUnknown_085BC3D8:
-	.INCBIN "assets/sprites/gUnknown_085BC3D8.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085BC3D8.8bpp"
 
 	.GLOBAL gUnknown_085BD3D8
 gUnknown_085BD3D8:
@@ -10106,7 +10702,7 @@ gUnknown_085BD588:
 
 	.GLOBAL gUnknown_085BD590
 gUnknown_085BD590:
-	.INCBIN "assets/sprites/gUnknown_085BD590.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_085BD590.8bpp"
 
 	.GLOBAL gUnknown_085BE190
 gUnknown_085BE190:
@@ -10118,7 +10714,7 @@ gUnknown_085BE2B0:
 
 	.GLOBAL gUnknown_085BE2B8
 gUnknown_085BE2B8:
-	.INCBIN "assets/sprites/gUnknown_085BE2B8.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_085BE2B8.4bpp"
 
 	.GLOBAL gUnknown_085BF2B8
 gUnknown_085BF2B8:
@@ -10130,7 +10726,7 @@ gUnknown_085BF3B4:
 
 	.GLOBAL gUnknown_085BF3BC
 gUnknown_085BF3BC:
-	.INCBIN "assets/sprites/gUnknown_085BF3BC.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_085BF3BC.4bpp"
 
 	.GLOBAL gUnknown_085C01BC
 gUnknown_085C01BC:
@@ -10142,7 +10738,7 @@ gUnknown_085C02DC:
 
 	.GLOBAL gUnknown_085C02E4
 gUnknown_085C02E4:
-	.INCBIN "assets/sprites/gUnknown_085C02E4.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_085C02E4.4bpp"
 
 	.GLOBAL gUnknown_085C12E4
 gUnknown_085C12E4:
@@ -10154,7 +10750,7 @@ gUnknown_085C1404:
 
 	.GLOBAL gUnknown_085C140C
 gUnknown_085C140C:
-	.INCBIN "assets/sprites/gUnknown_085C140C.4bpp"
+	.INCBIN "assets/sprites/monchee/gUnknown_085C140C.4bpp"
 
 	.GLOBAL gUnknown_085C240C
 gUnknown_085C240C:
@@ -10166,7 +10762,7 @@ gUnknown_085C2454:
 
 	.GLOBAL gUnknown_085C245C
 gUnknown_085C245C:
-	.INCBIN "assets/sprites/gUnknown_085C245C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085C245C.4bpp"
 
 	.GLOBAL gUnknown_085C255C
 gUnknown_085C255C:
@@ -10178,7 +10774,7 @@ gUnknown_085C2580:
 
 	.GLOBAL gUnknown_085C2588
 gUnknown_085C2588:
-	.INCBIN "assets/sprites/gUnknown_085C2588.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2588.4bpp"
 
 	.GLOBAL gUnknown_085C2608
 gUnknown_085C2608:
@@ -10190,7 +10786,7 @@ gUnknown_085C262C:
 
 	.GLOBAL gUnknown_085C2634
 gUnknown_085C2634:
-	.INCBIN "assets/sprites/gUnknown_085C2634.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2634.4bpp"
 
 	.GLOBAL gUnknown_085C26B4
 gUnknown_085C26B4:
@@ -10202,7 +10798,7 @@ gUnknown_085C26D8:
 
 	.GLOBAL gUnknown_085C26E0
 gUnknown_085C26E0:
-	.INCBIN "assets/sprites/gUnknown_085C26E0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C26E0.4bpp"
 
 	.GLOBAL gUnknown_085C2760
 gUnknown_085C2760:
@@ -10214,7 +10810,7 @@ gUnknown_085C2784:
 
 	.GLOBAL gUnknown_085C278C
 gUnknown_085C278C:
-	.INCBIN "assets/sprites/gUnknown_085C278C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C278C.4bpp"
 
 	.GLOBAL gUnknown_085C280C
 gUnknown_085C280C:
@@ -10226,7 +10822,7 @@ gUnknown_085C2830:
 
 	.GLOBAL gUnknown_085C2838
 gUnknown_085C2838:
-	.INCBIN "assets/sprites/gUnknown_085C2838.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2838.4bpp"
 
 	.GLOBAL gUnknown_085C2858
 gUnknown_085C2858:
@@ -10238,7 +10834,7 @@ gUnknown_085C28A0:
 
 	.GLOBAL gUnknown_085C28A8
 gUnknown_085C28A8:
-	.INCBIN "assets/sprites/gUnknown_085C28A8.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C28A8.4bpp"
 
 	.GLOBAL gUnknown_085C29A8
 gUnknown_085C29A8:
@@ -10250,7 +10846,7 @@ gUnknown_085C29F0:
 
 	.GLOBAL gUnknown_085C29F8
 gUnknown_085C29F8:
-	.INCBIN "assets/sprites/gUnknown_085C29F8.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085C29F8.4bpp"
 
 	.GLOBAL gUnknown_085C2AF8
 gUnknown_085C2AF8:
@@ -10262,7 +10858,7 @@ gUnknown_085C2BAC:
 
 	.GLOBAL gUnknown_085C2BB4
 gUnknown_085C2BB4:
-	.INCBIN "assets/sprites/gUnknown_085C2BB4.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2BB4.4bpp"
 
 	.GLOBAL gUnknown_085C2E34
 gUnknown_085C2E34:
@@ -10274,7 +10870,7 @@ gUnknown_085C2EE8:
 
 	.GLOBAL gUnknown_085C2EF0
 gUnknown_085C2EF0:
-	.INCBIN "assets/sprites/gUnknown_085C2EF0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C2EF0.4bpp"
 
 	.GLOBAL gUnknown_085C2F90
 gUnknown_085C2F90:
@@ -10286,7 +10882,7 @@ gUnknown_085C3218:
 
 	.GLOBAL gUnknown_085C3220
 gUnknown_085C3220:
-	.INCBIN "assets/sprites/gUnknown_085C3220.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085C3220.4bpp"
 
 	.GLOBAL gUnknown_085C7220
 gUnknown_085C7220:
@@ -10298,7 +10894,7 @@ gUnknown_085C7244:
 
 	.GLOBAL gUnknown_085C724C
 gUnknown_085C724C:
-	.INCBIN "assets/sprites/gUnknown_085C724C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C724C.4bpp"
 
 	.GLOBAL gUnknown_085C764C
 gUnknown_085C764C:
@@ -10310,7 +10906,7 @@ gUnknown_085C7670:
 
 	.GLOBAL gUnknown_085C7678
 gUnknown_085C7678:
-	.INCBIN "assets/sprites/gUnknown_085C7678.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C7678.4bpp"
 
 	.GLOBAL gUnknown_085C7A78
 gUnknown_085C7A78:
@@ -10322,7 +10918,7 @@ gUnknown_085C7D00:
 
 	.GLOBAL gUnknown_085C7D08
 gUnknown_085C7D08:
-	.INCBIN "assets/sprites/gUnknown_085C7D08.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085C7D08.4bpp"
 
 	.GLOBAL gUnknown_085CBD08
 gUnknown_085CBD08:
@@ -10334,7 +10930,7 @@ gUnknown_085CBD2C:
 
 	.GLOBAL gUnknown_085CBD34
 gUnknown_085CBD34:
-	.INCBIN "assets/sprites/gUnknown_085CBD34.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085CBD34.4bpp"
 
 	.GLOBAL gUnknown_085CC134
 gUnknown_085CC134:
@@ -10346,7 +10942,7 @@ gUnknown_085CC158:
 
 	.GLOBAL gUnknown_085CC160
 gUnknown_085CC160:
-	.INCBIN "assets/sprites/gUnknown_085CC160.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CC160.4bpp"
 
 	.GLOBAL gUnknown_085CC960
 gUnknown_085CC960:
@@ -10358,7 +10954,7 @@ gUnknown_085CC984:
 
 	.GLOBAL gUnknown_085CC98C
 gUnknown_085CC98C:
-	.INCBIN "assets/sprites/gUnknown_085CC98C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CC98C.4bpp"
 
 	.GLOBAL gUnknown_085CD18C
 gUnknown_085CD18C:
@@ -10370,7 +10966,7 @@ gUnknown_085CD414:
 
 	.GLOBAL gUnknown_085CD41C
 gUnknown_085CD41C:
-	.INCBIN "assets/sprites/gUnknown_085CD41C.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_085CD41C.4bpp"
 
 	.GLOBAL gUnknown_085CD81C
 gUnknown_085CD81C:
@@ -10382,7 +10978,7 @@ gUnknown_085CD840:
 
 	.GLOBAL gUnknown_085CD848
 gUnknown_085CD848:
-	.INCBIN "assets/sprites/gUnknown_085CD848.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CD848.4bpp"
 
 	.GLOBAL gUnknown_085CE048
 gUnknown_085CE048:
@@ -10394,7 +10990,7 @@ gUnknown_085CE06C:
 
 	.GLOBAL gUnknown_085CE074
 gUnknown_085CE074:
-	.INCBIN "assets/sprites/gUnknown_085CE074.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CE074.4bpp"
 
 	.GLOBAL gUnknown_085CE874
 gUnknown_085CE874:
@@ -10406,7 +11002,7 @@ gUnknown_085CE898:
 
 	.GLOBAL gUnknown_085CE8A0
 gUnknown_085CE8A0:
-	.INCBIN "assets/sprites/gUnknown_085CE8A0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CE8A0.4bpp"
 
 	.GLOBAL gUnknown_085CF0A0
 gUnknown_085CF0A0:
@@ -10418,7 +11014,7 @@ gUnknown_085CF0C4:
 
 	.GLOBAL gUnknown_085CF0CC
 gUnknown_085CF0CC:
-	.INCBIN "assets/sprites/gUnknown_085CF0CC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085CF0CC.4bpp"
 
 	.GLOBAL gUnknown_085CF8CC
 gUnknown_085CF8CC:
@@ -10430,7 +11026,7 @@ gfxMainWorldSelectTabsOAM:
 
 	.GLOBAL gfxMainWorldSelectTabs4bpp
 gfxMainWorldSelectTabs4bpp:
-	.INCBIN "assets/sprites/MainWorldSelectTabs.4bpp"
+	.INCBIN "assets/sprites/level_select/MainWorldSelectTabs.4bpp"
 
 	.GLOBAL gUnknown_085D00D0
 gUnknown_085D00D0:
@@ -10442,7 +11038,7 @@ gfxPlusWorldSelectTabsOAM:
 
 	.GLOBAL gfxPlusWorldSelectTabs4bpp
 gfxPlusWorldSelectTabs4bpp:
-	.INCBIN "assets/sprites/PlusWorldSelectTabs.4bpp"
+	.INCBIN "assets/sprites/level_select/PlusWorldSelectTabs.4bpp"
 
 	.GLOBAL gUnknown_085D08D4
 gUnknown_085D08D4:
@@ -10454,7 +11050,7 @@ gUnknown_085D08F8:
 
 	.GLOBAL gUnknown_085D0900
 gUnknown_085D0900:
-	.INCBIN "assets/sprites/gUnknown_085D0900.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085D0900.4bpp"
 
 	.GLOBAL gUnknown_085D0A00
 gUnknown_085D0A00:
@@ -10466,7 +11062,7 @@ gfxMainLevelIconPicsOAM:
 
 	.GLOBAL gfxMainLevelIconPics4bpp
 gfxMainLevelIconPics4bpp:
-	.INCBIN "assets/sprites/MainLevelIconPics.4bpp"
+	.INCBIN "assets/sprites/level_select/MainLevelIconPics.4bpp"
 
 	.GLOBAL gUnknown_085D70C8
 gUnknown_085D70C8:
@@ -10478,7 +11074,7 @@ gfxPlusLevelIconPicsOAM:
 
 	.GLOBAL gfxPlusLevelIconPics4bpp
 gfxPlusLevelIconPics4bpp:
-	.INCBIN "assets/sprites/PlusLevelIconPics.4bpp"
+	.INCBIN "assets/sprites/level_select/PlusLevelIconPics.4bpp"
 
 	.GLOBAL gUnknown_085DCAB8
 gUnknown_085DCAB8:
@@ -10490,7 +11086,7 @@ gUnknown_085DCB6C:
 
 	.GLOBAL gUnknown_085DCB74
 gUnknown_085DCB74:
-	.INCBIN "assets/sprites/gUnknown_085DCB74.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DCB74.4bpp"
 
 	.GLOBAL gUnknown_085DCC34
 gUnknown_085DCC34:
@@ -10502,7 +11098,7 @@ gUnknown_085DCCC4:
 
 	.GLOBAL gUnknown_085DCCCC
 gUnknown_085DCCCC:
-	.INCBIN "assets/sprites/gUnknown_085DCCCC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DCCCC.4bpp"
 
 	.GLOBAL gUnknown_085DCECC
 gUnknown_085DCECC:
@@ -10514,7 +11110,7 @@ gUnknown_085DCF80:
 
 	.GLOBAL gUnknown_085DCF88
 gUnknown_085DCF88:
-	.INCBIN "assets/sprites/gUnknown_085DCF88.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DCF88.4bpp"
 
 	.GLOBAL gUnknown_085DD108
 gUnknown_085DD108:
@@ -10526,7 +11122,7 @@ gUnknown_085DD150:
 
 	.GLOBAL gUnknown_085DD158
 gUnknown_085DD158:
-	.INCBIN "assets/sprites/gUnknown_085DD158.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DD158.4bpp"
 
 	.GLOBAL gUnknown_085DD258
 gUnknown_085DD258:
@@ -10538,7 +11134,7 @@ gUnknown_085DD744:
 
 	.GLOBAL gUnknown_085DD74C
 gUnknown_085DD74C:
-	.INCBIN "assets/sprites/gUnknown_085DD74C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DD74C.4bpp"
 
 	.GLOBAL gUnknown_085DD9EC
 gUnknown_085DD9EC:
@@ -10550,7 +11146,7 @@ gUnknown_085DDE24:
 
 	.GLOBAL gUnknown_085DDE2C
 gUnknown_085DDE2C:
-	.INCBIN "assets/sprites/gUnknown_085DDE2C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DDE2C.4bpp"
 
 	.GLOBAL gUnknown_085DE06C
 gUnknown_085DE06C:
@@ -10562,7 +11158,7 @@ gUnknown_085DE4A4:
 
 	.GLOBAL gUnknown_085DE4AC
 gUnknown_085DE4AC:
-	.INCBIN "assets/sprites/gUnknown_085DE4AC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DE4AC.4bpp"
 
 	.GLOBAL gUnknown_085DE92C
 gUnknown_085DE92C:
@@ -10574,7 +11170,7 @@ gUnknown_085DEA94:
 
 	.GLOBAL gUnknown_085DEA9C
 gUnknown_085DEA9C:
-	.INCBIN "assets/sprites/gUnknown_085DEA9C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085DEA9C.4bpp"
 
 	.GLOBAL gUnknown_085DED1C
 gUnknown_085DED1C:
@@ -10584,9 +11180,9 @@ gUnknown_085DED1C:
 gUnknown_085DEFA4:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, size=1, paletteNum=0
 
-	.GLOBAL gUnknown_085DEFAC
-gUnknown_085DEFAC:
-	.INCBIN "assets/sprites/gUnknown_085DEFAC.4bpp"
+	.GLOBAL gfxOptionsMenuSelectLeft
+gfxOptionsMenuSelectLeft:
+	.INCBIN "assets/sprites/main_menu/OptionsMenuSelectLeft.4bpp"
 
 	.GLOBAL gUnknown_085DF3AC
 gUnknown_085DF3AC:
@@ -10596,9 +11192,9 @@ gUnknown_085DF3AC:
 gUnknown_085DF634:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, size=1, paletteNum=0
 
-	.GLOBAL gUnknown_085DF63C
-gUnknown_085DF63C:
-	.INCBIN "assets/sprites/gUnknown_085DF63C.4bpp"
+	.GLOBAL gfxOptionsMenuSelectCenter
+gfxOptionsMenuSelectCenter:
+	.INCBIN "assets/sprites/main_menu/OptionsMenuSelectCenter.4bpp"
 
 	.GLOBAL gUnknown_085DFA3C
 gUnknown_085DFA3C:
@@ -10608,9 +11204,9 @@ gUnknown_085DFA3C:
 gUnknown_085DFCC4:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, size=1, paletteNum=0
 
-	.GLOBAL gUnknown_085DFCCC
-gUnknown_085DFCCC:
-	.INCBIN "assets/sprites/gUnknown_085DFCCC.4bpp"
+	.GLOBAL gfxOptionsMenuSelectRight
+gfxOptionsMenuSelectRight:
+	.INCBIN "assets/sprites/main_menu/OptionsMenuSelectRight.4bpp"
 
 	.GLOBAL gUnknown_085E00CC
 gUnknown_085E00CC:
@@ -10622,7 +11218,7 @@ gUnknown_085E015C:
 
 	.GLOBAL gUnknown_085E0164
 gUnknown_085E0164:
-	.INCBIN "assets/sprites/gUnknown_085E0164.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E0164.4bpp"
 
 	.GLOBAL gUnknown_085E0564
 gUnknown_085E0564:
@@ -10634,7 +11230,7 @@ gUnknown_085E05F4:
 
 	.GLOBAL gUnknown_085E05FC
 gUnknown_085E05FC:
-	.INCBIN "assets/sprites/gUnknown_085E05FC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E05FC.4bpp"
 
 	.GLOBAL gUnknown_085E063C
 gUnknown_085E063C:
@@ -10646,7 +11242,7 @@ gUnknown_085E0684:
 
 	.GLOBAL gUnknown_085E068C
 gUnknown_085E068C:
-	.INCBIN "assets/sprites/gUnknown_085E068C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E068C.4bpp"
 
 	.GLOBAL gUnknown_085E078C
 gUnknown_085E078C:
@@ -10658,7 +11254,7 @@ gUnknown_085E07D4:
 
 	.GLOBAL gUnknown_085E07DC
 gUnknown_085E07DC:
-	.INCBIN "assets/sprites/gUnknown_085E07DC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E07DC.4bpp"
 
 	.GLOBAL gUnknown_085E08DC
 gUnknown_085E08DC:
@@ -10670,7 +11266,7 @@ gUnknown_085E0900:
 
 	.GLOBAL gUnknown_085E0908
 gUnknown_085E0908:
-	.INCBIN "assets/sprites/gUnknown_085E0908.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0908.4bpp"
 
 	.GLOBAL gUnknown_085E0988
 gUnknown_085E0988:
@@ -10682,7 +11278,7 @@ gUnknown_085E09AC:
 
 	.GLOBAL gUnknown_085E09B4
 gUnknown_085E09B4:
-	.INCBIN "assets/sprites/gUnknown_085E09B4.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E09B4.4bpp"
 
 	.GLOBAL gUnknown_085E0A34
 gUnknown_085E0A34:
@@ -10694,7 +11290,7 @@ gUnknown_085E0A7C:
 
 	.GLOBAL gUnknown_085E0A84
 gUnknown_085E0A84:
-	.INCBIN "assets/sprites/gUnknown_085E0A84.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E0A84.4bpp"
 
 	.GLOBAL gUnknown_085E0AC4
 gUnknown_085E0AC4:
@@ -10706,7 +11302,7 @@ gUnknown_085E0B0C:
 
 	.GLOBAL gUnknown_085E0B14
 gUnknown_085E0B14:
-	.INCBIN "assets/sprites/gUnknown_085E0B14.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0B14.4bpp"
 
 	.GLOBAL gUnknown_085E0C14
 gUnknown_085E0C14:
@@ -10718,7 +11314,7 @@ gUnknown_085E0C5C:
 
 	.GLOBAL gUnknown_085E0C64
 gUnknown_085E0C64:
-	.INCBIN "assets/sprites/gUnknown_085E0C64.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E0C64.4bpp"
 
 	.GLOBAL gUnknown_085E0D64
 gUnknown_085E0D64:
@@ -10730,7 +11326,7 @@ gUnknown_085E0D88:
 
 	.GLOBAL gUnknown_085E0D90
 gUnknown_085E0D90:
-	.INCBIN "assets/sprites/gUnknown_085E0D90.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0D90.4bpp"
 
 	.GLOBAL gUnknown_085E0E10
 gUnknown_085E0E10:
@@ -10742,7 +11338,7 @@ gUnknown_085E0E34:
 
 	.GLOBAL gUnknown_085E0E3C
 gUnknown_085E0E3C:
-	.INCBIN "assets/sprites/gUnknown_085E0E3C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E0E3C.4bpp"
 
 	.GLOBAL gUnknown_085E0EBC
 gUnknown_085E0EBC:
@@ -10754,7 +11350,7 @@ gUnknown_085E0F04:
 
 	.GLOBAL gUnknown_085E0F0C
 gUnknown_085E0F0C:
-	.INCBIN "assets/sprites/gUnknown_085E0F0C.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0F0C.4bpp"
 
 	.GLOBAL gUnknown_085E100C
 gUnknown_085E100C:
@@ -10766,7 +11362,7 @@ gUnknown_085E1054:
 
 	.GLOBAL gUnknown_085E105C
 gUnknown_085E105C:
-	.INCBIN "assets/sprites/gUnknown_085E105C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E105C.4bpp"
 
 	.GLOBAL gUnknown_085E115C
 gUnknown_085E115C:
@@ -10778,7 +11374,7 @@ gUnknown_085E1180:
 
 	.GLOBAL gUnknown_085E1188
 gUnknown_085E1188:
-	.INCBIN "assets/sprites/gUnknown_085E1188.4bpp"
+	.INCBIN "assets/sprites/expert_levels/gUnknown_085E1188.4bpp"
 
 	.GLOBAL gUnknown_085E1208
 gUnknown_085E1208:
@@ -10790,7 +11386,7 @@ gUnknown_085E122C:
 
 	.GLOBAL gUnknown_085E1234
 gUnknown_085E1234:
-	.INCBIN "assets/sprites/gUnknown_085E1234.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E1234.4bpp"
 
 	.GLOBAL gUnknown_085E12B4
 gUnknown_085E12B4:
@@ -10802,7 +11398,7 @@ gUnknown_085E1344:
 
 	.GLOBAL gUnknown_085E134C
 gUnknown_085E134C:
-	.INCBIN "assets/sprites/gUnknown_085E134C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E134C.4bpp"
 
 	.GLOBAL gUnknown_085E1B4C
 gUnknown_085E1B4C:
@@ -10814,7 +11410,7 @@ gUnknown_085E1C24:
 
 	.GLOBAL gUnknown_085E1C2C
 gUnknown_085E1C2C:
-	.INCBIN "assets/sprites/gUnknown_085E1C2C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E1C2C.4bpp"
 
 	.GLOBAL gUnknown_085E1F2C
 gUnknown_085E1F2C:
@@ -10826,7 +11422,7 @@ gUnknown_085E2004:
 
 	.GLOBAL gUnknown_085E200C
 gUnknown_085E200C:
-	.INCBIN "assets/sprites/gUnknown_085E200C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E200C.4bpp"
 
 	.GLOBAL gUnknown_085E230C
 gUnknown_085E230C:
@@ -10838,7 +11434,7 @@ gUnknown_085E2330:
 
 	.GLOBAL gUnknown_085E2338
 gUnknown_085E2338:
-	.INCBIN "assets/sprites/gUnknown_085E2338.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2338.4bpp"
 
 	.GLOBAL gUnknown_085E2438
 gUnknown_085E2438:
@@ -10850,7 +11446,7 @@ gUnknown_085E245C:
 
 	.GLOBAL gUnknown_085E2464
 gUnknown_085E2464:
-	.INCBIN "assets/sprites/gUnknown_085E2464.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2464.4bpp"
 
 	.GLOBAL gUnknown_085E24A4
 gUnknown_085E24A4:
@@ -10862,7 +11458,7 @@ gUnknown_085E24C8:
 
 	.GLOBAL gUnknown_085E24D0
 gUnknown_085E24D0:
-	.INCBIN "assets/sprites/gUnknown_085E24D0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E24D0.4bpp"
 
 	.GLOBAL gUnknown_085E2510
 gUnknown_085E2510:
@@ -10874,7 +11470,7 @@ gUnknown_085E2534:
 
 	.GLOBAL gUnknown_085E253C
 gUnknown_085E253C:
-	.INCBIN "assets/sprites/gUnknown_085E253C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E253C.4bpp"
 
 	.GLOBAL gUnknown_085E257C
 gUnknown_085E257C:
@@ -10886,7 +11482,7 @@ gUnknown_085E25A0:
 
 	.GLOBAL gUnknown_085E25A8
 gUnknown_085E25A8:
-	.INCBIN "assets/sprites/gUnknown_085E25A8.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E25A8.4bpp"
 
 	.GLOBAL gUnknown_085E25E8
 gUnknown_085E25E8:
@@ -10898,7 +11494,7 @@ gUnknown_085E260C:
 
 	.GLOBAL gUnknown_085E2614
 gUnknown_085E2614:
-	.INCBIN "assets/sprites/gUnknown_085E2614.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2614.4bpp"
 
 	.GLOBAL gUnknown_085E2654
 gUnknown_085E2654:
@@ -10910,7 +11506,7 @@ gUnknown_085E2678:
 
 	.GLOBAL gUnknown_085E2680
 gUnknown_085E2680:
-	.INCBIN "assets/sprites/gUnknown_085E2680.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2680.4bpp"
 
 	.GLOBAL gUnknown_085E26C0
 gUnknown_085E26C0:
@@ -10922,7 +11518,7 @@ gUnknown_085E26E4:
 
 	.GLOBAL gUnknown_085E26EC
 gUnknown_085E26EC:
-	.INCBIN "assets/sprites/gUnknown_085E26EC.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E26EC.4bpp"
 
 	.GLOBAL gUnknown_085E272C
 gUnknown_085E272C:
@@ -10934,7 +11530,7 @@ gUnknown_085E2750:
 
 	.GLOBAL gUnknown_085E2758
 gUnknown_085E2758:
-	.INCBIN "assets/sprites/gUnknown_085E2758.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2758.4bpp"
 
 	.GLOBAL gUnknown_085E2798
 gUnknown_085E2798:
@@ -10946,7 +11542,7 @@ gUnknown_085E27BC:
 
 	.GLOBAL gUnknown_085E27C4
 gUnknown_085E27C4:
-	.INCBIN "assets/sprites/gUnknown_085E27C4.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E27C4.4bpp"
 
 	.GLOBAL gUnknown_085E2804
 gUnknown_085E2804:
@@ -10958,7 +11554,7 @@ gUnknown_085E2828:
 
 	.GLOBAL gUnknown_085E2830
 gUnknown_085E2830:
-	.INCBIN "assets/sprites/gUnknown_085E2830.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2830.4bpp"
 
 	.GLOBAL gUnknown_085E2870
 gUnknown_085E2870:
@@ -10970,7 +11566,7 @@ gUnknown_085E2AF8:
 
 	.GLOBAL gUnknown_085E2B00
 gUnknown_085E2B00:
-	.INCBIN "assets/sprites/gUnknown_085E2B00.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E2B00.4bpp"
 
 	.GLOBAL gUnknown_085E2F00
 gUnknown_085E2F00:
@@ -10982,7 +11578,7 @@ gUnknown_085E3188:
 
 	.GLOBAL gUnknown_085E3190
 gUnknown_085E3190:
-	.INCBIN "assets/sprites/gUnknown_085E3190.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E3190.4bpp"
 
 	.GLOBAL gUnknown_085E3590
 gUnknown_085E3590:
@@ -10994,7 +11590,7 @@ gUnknown_085E3818:
 
 	.GLOBAL gUnknown_085E3820
 gUnknown_085E3820:
-	.INCBIN "assets/sprites/gUnknown_085E3820.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E3820.4bpp"
 
 	.GLOBAL gUnknown_085E8020
 gUnknown_085E8020:
@@ -11006,7 +11602,7 @@ gUnknown_085E8044:
 
 	.GLOBAL gUnknown_085E804C
 gUnknown_085E804C:
-	.INCBIN "assets/sprites/gUnknown_085E804C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E804C.4bpp"
 
 	.GLOBAL gUnknown_085E844C
 gUnknown_085E844C:
@@ -11018,7 +11614,7 @@ gUnknown_085E8470:
 
 	.GLOBAL gUnknown_085E8478
 gUnknown_085E8478:
-	.INCBIN "assets/sprites/gUnknown_085E8478.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E8478.4bpp"
 
 	.GLOBAL gUnknown_085E8878
 gUnknown_085E8878:
@@ -11030,7 +11626,7 @@ gUnknown_085E889C:
 
 	.GLOBAL gUnknown_085E88A4
 gUnknown_085E88A4:
-	.INCBIN "assets/sprites/gUnknown_085E88A4.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E88A4.4bpp"
 
 	.GLOBAL gUnknown_085E8CA4
 gUnknown_085E8CA4:
@@ -11042,7 +11638,7 @@ gUnknown_085E8CC8:
 
 	.GLOBAL gUnknown_085E8CD0
 gUnknown_085E8CD0:
-	.INCBIN "assets/sprites/gUnknown_085E8CD0.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E8CD0.4bpp"
 
 	.GLOBAL gUnknown_085E90D0
 gUnknown_085E90D0:
@@ -11054,7 +11650,7 @@ gUnknown_085E9358:
 
 	.GLOBAL gUnknown_085E9360
 gUnknown_085E9360:
-	.INCBIN "assets/sprites/gUnknown_085E9360.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085E9360.4bpp"
 
 	.GLOBAL gUnknown_085EAB60
 gUnknown_085EAB60:
@@ -11066,7 +11662,7 @@ gUnknown_085EAB84:
 
 	.GLOBAL gUnknown_085EAB8C
 gUnknown_085EAB8C:
-	.INCBIN "assets/sprites/gUnknown_085EAB8C.4bpp"
+	.INCBIN "assets/sprites/level_select/gUnknown_085EAB8C.4bpp"
 
 	.GLOBAL gUnknown_085EAC8C
 gUnknown_085EAC8C:
@@ -11078,7 +11674,7 @@ gUnknown_085EAD1C:
 
 	.GLOBAL gUnknown_085EAD24
 gUnknown_085EAD24:
-	.INCBIN "assets/sprites/gUnknown_085EAD24.4bpp"
+	.INCBIN "assets/sprites/ninji/gUnknown_085EAD24.4bpp"
 
 	.GLOBAL gUnknown_085EAF24
 gUnknown_085EAF24:
@@ -11090,7 +11686,7 @@ gUnknown_085EAF48:
 
 	.GLOBAL gUnknown_085EAF50
 gUnknown_085EAF50:
-	.INCBIN "assets/sprites/gUnknown_085EAF50.4bpp"
+	.INCBIN "assets/sprites/ninji/gUnknown_085EAF50.4bpp"
 
 	.GLOBAL gUnknown_085EAFD0
 gUnknown_085EAFD0:
@@ -11102,7 +11698,7 @@ gUnknown_085EB0A8:
 
 	.GLOBAL gUnknown_085EB0B0
 gUnknown_085EB0B0:
-	.INCBIN "assets/sprites/gUnknown_085EB0B0.4bpp"
+	.INCBIN "assets/sprites/ninji/gUnknown_085EB0B0.4bpp"
 
 	.GLOBAL gUnknown_085EB3B0
 gUnknown_085EB3B0:
@@ -11114,7 +11710,7 @@ gUnknown_085EB488:
 
 	.GLOBAL gUnknown_085EB490
 gUnknown_085EB490:
-	.INCBIN "assets/sprites/gUnknown_085EB490.4bpp"
+	.INCBIN "assets/sprites/ninji/gUnknown_085EB490.4bpp"
 
 	.GLOBAL gUnknown_085EB790
 gUnknown_085EB790:
@@ -11126,7 +11722,7 @@ gUnknown_085EB820:
 
 	.GLOBAL gUnknown_085EB828
 gUnknown_085EB828:
-	.INCBIN "assets/sprites/gUnknown_085EB828.4bpp"
+	.INCBIN "assets/sprites/ninji/gUnknown_085EB828.4bpp"
 
 	.GLOBAL gUnknown_085EBA28
 gUnknown_085EBA28:
@@ -11138,7 +11734,7 @@ gUnknown_085EBC68:
 
 	.GLOBAL gUnknown_085EBC70
 gUnknown_085EBC70:
-	.INCBIN "assets/sprites/gUnknown_085EBC70.4bpp"
+	.INCBIN "assets/sprites/oil_barrel/gUnknown_085EBC70.4bpp"
 
 	.GLOBAL gUnknown_085ECC70
 gUnknown_085ECC70:
@@ -11150,7 +11746,7 @@ gfxMovie1PreviewOAM:
 
 	.GLOBAL gfxMovie1Preview8bpp
 gfxMovie1Preview8bpp:
-	.INCBIN "assets/sprites/Movie1Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie1Preview.8bpp"
 
 	.GLOBAL gUnknown_085ED49C
 gUnknown_085ED49C:
@@ -11162,7 +11758,7 @@ gfxMovie2PreviewOAM:
 
 	.GLOBAL gfxMovie2Preview8bpp
 gfxMovie2Preview8bpp:
-	.INCBIN "assets/sprites/Movie2Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie2Preview.8bpp"
 
 	.GLOBAL gUnknown_085EDCC8
 gUnknown_085EDCC8:
@@ -11174,7 +11770,7 @@ gfxMovie3PreviewOAM:
 
 	.GLOBAL gfxMovie3Preview8bpp
 gfxMovie3Preview8bpp:
-	.INCBIN "assets/sprites/Movie3Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie3Preview.8bpp"
 
 	.GLOBAL gUnknown_085EE4F4
 gUnknown_085EE4F4:
@@ -11186,7 +11782,7 @@ gfxMovie4PreviewOAM:
 
 	.GLOBAL gfxMovie4Preview8bpp
 gfxMovie4Preview8bpp:
-	.INCBIN "assets/sprites/Movie4Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie4Preview.8bpp"
 
 	.GLOBAL gUnknown_085EED20
 gUnknown_085EED20:
@@ -11198,7 +11794,7 @@ gfxMovie5PreviewOAM:
 
 	.GLOBAL gfxMovie5Preview8bpp
 gfxMovie5Preview8bpp:
-	.INCBIN "assets/sprites/Movie5Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie5Preview.8bpp"
 
 	.GLOBAL gfxMovie6PreviewOAM
 gfxMovie6PreviewOAM:
@@ -11210,7 +11806,7 @@ gUnknown_085EF570:
 
 	.GLOBAL gfxMovie6Preview8bpp
 gfxMovie6Preview8bpp:
-	.INCBIN "assets/sprites/Movie6Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie6Preview.8bpp"
 
 	.GLOBAL gUnknown_085EFD78
 gUnknown_085EFD78:
@@ -11222,7 +11818,7 @@ gfxMovie7PreviewOAM:
 
 	.GLOBAL gfxMovie7Preview8bpp
 gfxMovie7Preview8bpp:
-	.INCBIN "assets/sprites/Movie7Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie7Preview.8bpp"
 
 	.GLOBAL gUnknown_085F05A4
 gUnknown_085F05A4:
@@ -11234,7 +11830,7 @@ gfxMovie8PreviewOAM:
 
 	.GLOBAL gfxMovie8Preview8bpp
 gfxMovie8Preview8bpp:
-	.INCBIN "assets/sprites/Movie8Preview.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie8Preview.8bpp"
 
 	.GLOBAL gUnknown_085F0DD0
 gUnknown_085F0DD0:
@@ -11246,7 +11842,7 @@ gfxMovie8PreviewAltOAM:
 
 	.GLOBAL gfxMovie8PreviewAlt8bpp
 gfxMovie8PreviewAlt8bpp:
-	.INCBIN "assets/sprites/Movie8PreviewAlt.8bpp"
+	.INCBIN "assets/sprites/main_menu/Movie8PreviewAlt.8bpp"
 
 	.GLOBAL gUnknown_085F15FC
 gUnknown_085F15FC:
@@ -11256,9 +11852,9 @@ gUnknown_085F15FC:
 gUnknown_085F1620:
 	OamData bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, size=3, paletteNum=0
 
-	.GLOBAL gUnknown_085F1628
-gUnknown_085F1628:
-	.INCBIN "assets/sprites/gUnknown_085F1628.8bpp"
+	.GLOBAL gfxMoviePreviewStatic
+gfxMoviePreviewStatic:
+	.INCBIN "assets/sprites/main_menu/MoviePreviewStatic.8bpp"
 
 	.GLOBAL gUnknown_085F1E28
 gUnknown_085F1E28:
@@ -11270,7 +11866,7 @@ gUnknown_085F1E70:
 
 	.GLOBAL gUnknown_085F1E78
 gUnknown_085F1E78:
-	.INCBIN "assets/sprites/gUnknown_085F1E78.4bpp"
+	.INCBIN "assets/sprites/main_menu/gUnknown_085F1E78.4bpp"
 
 	.GLOBAL gUnknown_085F2278
 gUnknown_085F2278:
@@ -11282,7 +11878,7 @@ gUnknown_085F229C:
 
 	.GLOBAL gUnknown_085F22A4
 gUnknown_085F22A4:
-	.INCBIN "assets/sprites/gUnknown_085F22A4.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_085F22A4.4bpp"
 
 	.GLOBAL gUnknown_085F2324
 gUnknown_085F2324:
@@ -11294,7 +11890,7 @@ gUnknown_085F2348:
 
 	.GLOBAL gUnknown_085F2350
 gUnknown_085F2350:
-	.INCBIN "assets/sprites/gUnknown_085F2350.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_085F2350.4bpp"
 
 	.GLOBAL gUnknown_085F23D0
 gUnknown_085F23D0:
@@ -11306,7 +11902,7 @@ gUnknown_085F24A8:
 
 	.GLOBAL gUnknown_085F24B0
 gUnknown_085F24B0:
-	.INCBIN "assets/sprites/gUnknown_085F24B0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F24B0.4bpp"
 
 	.GLOBAL gUnknown_085F2AB0
 gUnknown_085F2AB0:
@@ -11318,7 +11914,7 @@ gUnknown_085F2D80:
 
 	.GLOBAL gUnknown_085F2D88
 gUnknown_085F2D88:
-	.INCBIN "assets/sprites/gUnknown_085F2D88.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F2D88.4bpp"
 
 	.GLOBAL gUnknown_085F2F88
 gUnknown_085F2F88:
@@ -11330,7 +11926,7 @@ gUnknown_085F3138:
 
 	.GLOBAL gUnknown_085F3140
 gUnknown_085F3140:
-	.INCBIN "assets/sprites/gUnknown_085F3140.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F3140.4bpp"
 
 	.GLOBAL gUnknown_085F3940
 gUnknown_085F3940:
@@ -11342,7 +11938,7 @@ gUnknown_085F3C7C:
 
 	.GLOBAL gUnknown_085F3C84
 gUnknown_085F3C84:
-	.INCBIN "assets/sprites/gUnknown_085F3C84.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F3C84.4bpp"
 
 	.GLOBAL gUnknown_085F4084
 gUnknown_085F4084:
@@ -11354,7 +11950,7 @@ gUnknown_085F41A4:
 
 	.GLOBAL gUnknown_085F41AC
 gUnknown_085F41AC:
-	.INCBIN "assets/sprites/gUnknown_085F41AC.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_085F41AC.4bpp"
 
 	.GLOBAL gUnknown_085F49AC
 gUnknown_085F49AC:
@@ -11378,7 +11974,7 @@ gUnknown_085F4CD4:
 
 	.GLOBAL gUnknown_085F4CDC
 gUnknown_085F4CDC:
-	.INCBIN "assets/sprites/gUnknown_085F4CDC.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F4CDC.4bpp"
 
 	.GLOBAL gUnknown_085F4EDC
 gUnknown_085F4EDC:
@@ -11390,7 +11986,7 @@ gUnknown_085F4F6C:
 
 	.GLOBAL gUnknown_085F4F74
 gUnknown_085F4F74:
-	.INCBIN "assets/sprites/gUnknown_085F4F74.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F4F74.4bpp"
 
 	.GLOBAL gUnknown_085F5174
 gUnknown_085F5174:
@@ -11402,7 +11998,7 @@ gUnknown_085F5294:
 
 	.GLOBAL gUnknown_085F529C
 gUnknown_085F529C:
-	.INCBIN "assets/sprites/gUnknown_085F529C.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F529C.4bpp"
 
 	.GLOBAL gUnknown_085F569C
 gUnknown_085F569C:
@@ -11414,7 +12010,7 @@ gUnknown_085F58DC:
 
 	.GLOBAL gUnknown_085F58E4
 gUnknown_085F58E4:
-	.INCBIN "assets/sprites/gUnknown_085F58E4.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F58E4.4bpp"
 
 	.GLOBAL gUnknown_085F60E4
 gUnknown_085F60E4:
@@ -11426,7 +12022,7 @@ gUnknown_085F612C:
 
 	.GLOBAL gUnknown_085F6134
 gUnknown_085F6134:
-	.INCBIN "assets/sprites/gUnknown_085F6134.4bpp"
+	.INCBIN "assets/sprites/sir_shovalot/gUnknown_085F6134.4bpp"
 
 	.GLOBAL gUnknown_085F61B4
 gUnknown_085F61B4:
@@ -11436,9 +12032,9 @@ gUnknown_085F61B4:
 gUnknown_085F6388:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=6
 
-	.GLOBAL gUnknown_085F6390
-gUnknown_085F6390:
-	.INCBIN "assets/sprites/gUnknown_085F6390.4bpp"
+	.GLOBAL gfxGreatYouWon
+gfxGreatYouWon:
+	.INCBIN "assets/sprites/GreatYouWon.4bpp"
 
 	.GLOBAL gUnknown_085F6910
 gUnknown_085F6910:
@@ -11450,7 +12046,7 @@ gUnknown_085F6B50:
 
 	.GLOBAL gUnknown_085F6B58
 gUnknown_085F6B58:
-	.INCBIN "assets/sprites/gUnknown_085F6B58.4bpp"
+	.INCBIN "assets/sprites/ramram/gUnknown_085F6B58.4bpp"
 
 	.GLOBAL gUnknown_085F7358
 gUnknown_085F7358:
@@ -11462,7 +12058,7 @@ gUnknown_085F73E8:
 
 	.GLOBAL gUnknown_085F73F0
 gUnknown_085F73F0:
-	.INCBIN "assets/sprites/gUnknown_085F73F0.4bpp"
+	.INCBIN "assets/sprites/ramram/gUnknown_085F73F0.4bpp"
 
 	.GLOBAL gUnknown_085F77F0
 gUnknown_085F77F0:
@@ -11474,7 +12070,7 @@ gUnknown_085F79A0:
 
 	.GLOBAL gUnknown_085F79A8
 gUnknown_085F79A8:
-	.INCBIN "assets/sprites/gUnknown_085F79A8.4bpp"
+	.INCBIN "assets/sprites/ramram/gUnknown_085F79A8.4bpp"
 
 	.GLOBAL gUnknown_085F85A8
 gUnknown_085F85A8:
@@ -11486,7 +12082,7 @@ gUnknown_085F86C8:
 
 	.GLOBAL gUnknown_085F86D0
 gUnknown_085F86D0:
-	.INCBIN "assets/sprites/gUnknown_085F86D0.4bpp"
+	.INCBIN "assets/sprites/ramram/gUnknown_085F86D0.4bpp"
 
 	.GLOBAL gUnknown_085F8ED0
 gUnknown_085F8ED0:
@@ -11498,7 +12094,7 @@ gUnknown_085F9110:
 
 	.GLOBAL gUnknown_085F9118
 gUnknown_085F9118:
-	.INCBIN "assets/sprites/gUnknown_085F9118.4bpp"
+	.INCBIN "assets/sprites/ramram/gUnknown_085F9118.4bpp"
 
 	.GLOBAL gUnknown_085FA118
 gUnknown_085FA118:
@@ -11510,7 +12106,7 @@ gUnknown_085FA358:
 
 	.GLOBAL gUnknown_085FA360
 gUnknown_085FA360:
-	.INCBIN "assets/sprites/gUnknown_085FA360.4bpp"
+	.INCBIN "assets/sprites/falling_objects/gUnknown_085FA360.4bpp"
 
 	.GLOBAL gUnknown_085FB360
 gUnknown_085FB360:
@@ -11522,7 +12118,7 @@ gfxFileLettersOAM:
 
 	.GLOBAL gfxFileLetters4bpp
 gfxFileLetters4bpp:
-	.INCBIN "assets/sprites/FileLetters.4bpp"
+	.INCBIN "assets/sprites/main_menu/FileLetters.4bpp"
 
 	.GLOBAL gUnknown_085FB554
 gUnknown_085FB554:
@@ -11534,7 +12130,7 @@ gUnknown_085FB7DC:
 
 	.GLOBAL gUnknown_085FB7E4
 gUnknown_085FB7E4:
-	.INCBIN "assets/sprites/gUnknown_085FB7E4.4bpp"
+	.INCBIN "assets/sprites/main_menu/gUnknown_085FB7E4.4bpp"
 
 	.GLOBAL gUnknown_085FEFE4
 gUnknown_085FEFE4:
@@ -11546,7 +12142,7 @@ gUnknown_085FF26C:
 
 	.GLOBAL gUnknown_085FF274
 gUnknown_085FF274:
-	.INCBIN "assets/sprites/gUnknown_085FF274.4bpp"
+	.INCBIN "assets/sprites/main_menu/gUnknown_085FF274.4bpp"
 
 	.GLOBAL gUnknown_08600E74
 gUnknown_08600E74:
@@ -11558,7 +12154,7 @@ gfxFileFrameNewGameBottomOAM:
 
 	.GLOBAL gfxFileFrameNewGameBottom4bpp
 gfxFileFrameNewGameBottom4bpp:
-	.INCBIN "assets/sprites/FileFrameNewGameBottom.4bpp"
+	.INCBIN "assets/sprites/main_menu/FileFrameNewGameBottom.4bpp"
 
 	.GLOBAL gUnknown_08602D04
 gUnknown_08602D04:
@@ -11570,7 +12166,7 @@ gfxFileFrameNewGameTopOAM:
 
 	.GLOBAL gfxFileFrameNewGameTop4bpp
 gfxFileFrameNewGameTop4bpp:
-	.INCBIN "assets/sprites/FileFrameNewGameTop.4bpp"
+	.INCBIN "assets/sprites/main_menu/FileFrameNewGameTop.4bpp"
 
 	.GLOBAL gUnknown_08606794
 gUnknown_08606794:
@@ -11582,7 +12178,7 @@ gUnknown_08606A1C:
 
 	.GLOBAL gUnknown_08606A24
 gUnknown_08606A24:
-	.INCBIN "assets/sprites/gUnknown_08606A24.4bpp"
+	.INCBIN "assets/sprites/main_menu/gUnknown_08606A24.4bpp"
 
 	.GLOBAL gUnknown_0860A224
 gUnknown_0860A224:
@@ -11594,7 +12190,7 @@ gfxFileFrameNormalBottomOAM:
 
 	.GLOBAL gfxFileFrameNormalBottom4bpp
 gfxFileFrameNormalBottom4bpp:
-	.INCBIN "assets/sprites/FileFrameNormalBottom.4bpp"
+	.INCBIN "assets/sprites/main_menu/FileFrameNormalBottom.4bpp"
 
 	.GLOBAL gUnknown_0860C0B4
 gUnknown_0860C0B4:
@@ -11606,7 +12202,7 @@ gfxFileFrameNormalTopOAM:
 
 	.GLOBAL gfxFileFrameNormalTop4bpp
 gfxFileFrameNormalTop4bpp:
-	.INCBIN "assets/sprites/FileFrameNormalTop.4bpp"
+	.INCBIN "assets/sprites/main_menu/FileFrameNormalTop.4bpp"
 
 	.GLOBAL gUnknown_0860FB44
 gUnknown_0860FB44:
@@ -11618,7 +12214,7 @@ gUnknown_0860FDCC:
 
 	.GLOBAL gUnknown_0860FDD4
 gUnknown_0860FDD4:
-	.INCBIN "assets/sprites/gUnknown_0860FDD4.4bpp"
+	.INCBIN "assets/sprites/main_menu/gUnknown_0860FDD4.4bpp"
 
 	.GLOBAL gUnknown_086119D4
 gUnknown_086119D4:
@@ -11630,7 +12226,7 @@ gUnknown_08611A40:
 
 	.GLOBAL gUnknown_08611A48
 gUnknown_08611A48:
-	.INCBIN "assets/sprites/gUnknown_08611A48.4bpp"
+	.INCBIN "assets/sprites/main_menu/gUnknown_08611A48.4bpp"
 
 	.GLOBAL gUnknown_08612648
 gUnknown_08612648:
@@ -11642,7 +12238,7 @@ gfxFileInfoBoxOAM:
 
 	.GLOBAL gfxFileInfoBox4bpp
 gfxFileInfoBox4bpp:
-	.INCBIN "assets/sprites/FileInfoBox.4bpp"
+	.INCBIN "assets/sprites/main_menu/FileInfoBox.4bpp"
 
 	.GLOBAL gUnknown_08613EBC
 gUnknown_08613EBC:
@@ -11654,7 +12250,7 @@ gfxEReaderLogoOAM:
 
 	.GLOBAL gfxEReaderLogo4bpp
 gfxEReaderLogo4bpp:
-	.INCBIN "assets/sprites/EReaderLogo.4bpp"
+	.INCBIN "assets/sprites/main_menu/EReaderLogo.4bpp"
 
 	.GLOBAL gUnknown_0861430C
 gUnknown_0861430C:
@@ -11666,7 +12262,7 @@ gUnknown_08614330:
 
 	.GLOBAL gUnknown_08614338
 gUnknown_08614338:
-	.INCBIN "assets/sprites/gUnknown_08614338.4bpp"
+	.INCBIN "assets/sprites/main_menu/gUnknown_08614338.4bpp"
 
 	.GLOBAL gUnknown_08614738
 gUnknown_08614738:
@@ -11678,7 +12274,7 @@ gfxExpertOAM:
 
 	.GLOBAL gfxExpert4bpp
 gfxExpert4bpp:
-	.INCBIN "assets/sprites/Expert.4bpp"
+	.INCBIN "assets/sprites/main_menu/Expert.4bpp"
 
 	.GLOBAL gUnknown_08614B64
 gUnknown_08614B64:
@@ -11690,7 +12286,7 @@ gfxOptionMenuEraseDataButtonsOAM:
 
 	.GLOBAL gfxOptionMenuEraseDataButtons4bpp
 gfxOptionMenuEraseDataButtons4bpp:
-	.INCBIN "assets/sprites/OptionMenuEraseDataButtons.4bpp"
+	.INCBIN "assets/sprites/main_menu/OptionMenuEraseDataButtons.4bpp"
 
 	.GLOBAL gUnknown_08615BB4
 gUnknown_08615BB4:
@@ -11702,7 +12298,7 @@ gfxFileBackgroundOAM:
 
 	.GLOBAL gfxFileBackground4bpp
 gfxFileBackground4bpp:
-	.INCBIN "assets/sprites/FileBackground.4bpp"
+	.INCBIN "assets/sprites/main_menu/FileBackground.4bpp"
 
 	.GLOBAL gUnknown_08616C04
 gUnknown_08616C04:
@@ -11714,7 +12310,7 @@ gUnknown_08616C28:
 
 	.GLOBAL gUnknown_08616C30
 gUnknown_08616C30:
-	.INCBIN "assets/sprites/gUnknown_08616C30.4bpp"
+	.INCBIN "assets/sprites/main_menu/gUnknown_08616C30.4bpp"
 
 	.GLOBAL gUnknown_08617030
 gUnknown_08617030:
@@ -11726,7 +12322,7 @@ gfxGoldCrownOAM:
 
 	.GLOBAL gfxGoldCrown4bpp
 gfxGoldCrown4bpp:
-	.INCBIN "assets/sprites/GoldCrown.4bpp"
+	.INCBIN "assets/sprites/main_menu/GoldCrown.4bpp"
 
 	.GLOBAL gUnknown_08617180
 gUnknown_08617180:
@@ -11738,7 +12334,7 @@ gfxMainMenuDigitsLargeOAM:
 
 	.GLOBAL gfxMainMenuDigitsLarge4bpp
 gfxMainMenuDigitsLarge4bpp:
-	.INCBIN "assets/sprites/MainMenuDigitsLarge.4bpp"
+	.INCBIN "assets/sprites/main_menu/MainMenuDigitsLarge.4bpp"
 
 	.GLOBAL gUnknown_08617570
 gUnknown_08617570:
@@ -11750,7 +12346,7 @@ gfxPlusMainOAM:
 
 	.GLOBAL gfxPlusMain4bpp
 gfxPlusMain4bpp:
-	.INCBIN "assets/sprites/PlusMain.4bpp"
+	.INCBIN "assets/sprites/main_menu/PlusMain.4bpp"
 
 	.GLOBAL gUnknown_086176C0
 gUnknown_086176C0:
@@ -11762,7 +12358,7 @@ gfxUnusedDigitsOAM:
 
 	.GLOBAL gfxUnusedDigits4bpp
 gfxUnusedDigits4bpp:
-	.INCBIN "assets/sprites/UnusedDigits.4bpp"
+	.INCBIN "assets/sprites/main_menu/UnusedDigits.4bpp"
 
 	.GLOBAL gUnknown_08617970
 gUnknown_08617970:
@@ -11774,7 +12370,7 @@ gfxMainMenuDigitsMediumOAM:
 
 	.GLOBAL gfxMainMenuDigitsMedium4bpp
 gfxMainMenuDigitsMedium4bpp:
-	.INCBIN "assets/sprites/MainMenuDigitsMedium.4bpp"
+	.INCBIN "assets/sprites/main_menu/MainMenuDigitsMedium.4bpp"
 
 	.GLOBAL sMMDKSpriteTemplate
 sMMDKSpriteTemplate:
@@ -11786,7 +12382,7 @@ gfxMMDKOAM:
 
 	.GLOBAL gfxMMDK4bpp
 gfxMMDK4bpp:
-	.INCBIN "assets/sprites/MMDK.4bpp"
+	.INCBIN "assets/sprites/main_menu/MMDK.4bpp"
 
 	.GLOBAL gUnknown_08617DB4
 gUnknown_08617DB4:
@@ -11798,7 +12394,7 @@ gfxMainMenuDigitsSmallOAM:
 
 	.GLOBAL gfxMainMenuDigitsSmall4bpp
 gfxMainMenuDigitsSmall4bpp:
-	.INCBIN "assets/sprites/MainMenuDigitsSmall.4bpp"
+	.INCBIN "assets/sprites/main_menu/MainMenuDigitsSmall.4bpp"
 
 	.GLOBAL gUnknown_08618064
 gUnknown_08618064:
@@ -11810,7 +12406,7 @@ gfxBronzeCrownOAM:
 
 	.GLOBAL gfxBronzeCrown4bpp
 gfxBronzeCrown4bpp:
-	.INCBIN "assets/sprites/BronzeCrown.4bpp"
+	.INCBIN "assets/sprites/main_menu/BronzeCrown.4bpp"
 
 	.GLOBAL gUnknown_086181B4
 gUnknown_086181B4:
@@ -11822,7 +12418,7 @@ gUnknown_086183F4:
 
 	.GLOBAL gUnknown_086183FC
 gUnknown_086183FC:
-	.INCBIN "assets/sprites/gUnknown_086183FC.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_086183FC.4bpp"
 
 	.GLOBAL gUnknown_086187FC
 gUnknown_086187FC:
@@ -11834,7 +12430,7 @@ gUnknown_086188F8:
 
 	.GLOBAL gUnknown_08618900
 gUnknown_08618900:
-	.INCBIN "assets/sprites/gUnknown_08618900.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08618900.8bpp"
 
 	.GLOBAL gUnknown_08619000
 gUnknown_08619000:
@@ -11846,7 +12442,7 @@ gUnknown_086190FC:
 
 	.GLOBAL gUnknown_08619104
 gUnknown_08619104:
-	.INCBIN "assets/sprites/gUnknown_08619104.8bpp"
+	.INCBIN "assets/sprites/mini_mario/gUnknown_08619104.8bpp"
 
 	.GLOBAL gUnknown_08619804
 gUnknown_08619804:
@@ -11858,7 +12454,7 @@ gUnknown_0861996C:
 
 	.GLOBAL gUnknown_08619974
 gUnknown_08619974:
-	.INCBIN "assets/sprites/gUnknown_08619974.4bpp"
+	.INCBIN "assets/sprites/ui/gUnknown_08619974.4bpp"
 
 	.GLOBAL gUnknown_08619AB4
 gUnknown_08619AB4:
@@ -11870,7 +12466,7 @@ gUnknown_08619AD8:
 
 	.GLOBAL gUnknown_08619AE0
 gUnknown_08619AE0:
-	.INCBIN "assets/sprites/gUnknown_08619AE0.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_08619AE0.4bpp"
 
 	.GLOBAL gUnknown_08619B60
 gUnknown_08619B60:
@@ -11882,7 +12478,7 @@ gUnknown_08619C80:
 
 	.GLOBAL gUnknown_08619C88
 gUnknown_08619C88:
-	.INCBIN "assets/sprites/gUnknown_08619C88.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_08619C88.4bpp"
 
 	.GLOBAL gUnknown_0861AC88
 gUnknown_0861AC88:
@@ -11894,7 +12490,7 @@ gUnknown_0861ADA8:
 
 	.GLOBAL gUnknown_0861ADB0
 gUnknown_0861ADB0:
-	.INCBIN "assets/sprites/gUnknown_0861ADB0.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_0861ADB0.4bpp"
 
 	.GLOBAL gUnknown_0861AE30
 gUnknown_0861AE30:
@@ -11906,7 +12502,7 @@ gUnknown_0861AF08:
 
 	.GLOBAL gUnknown_0861AF10
 gUnknown_0861AF10:
-	.INCBIN "assets/sprites/gUnknown_0861AF10.4bpp"
+	.INCBIN "assets/sprites/level_results/gUnknown_0861AF10.4bpp"
 
 	.GLOBAL gUnknown_0861B210
 gUnknown_0861B210:
@@ -11918,7 +12514,7 @@ gUnknown_0861B2A0:
 
 	.GLOBAL gUnknown_0861B2A8
 gUnknown_0861B2A8:
-	.INCBIN "assets/sprites/gUnknown_0861B2A8.4bpp"
+	.INCBIN "assets/sprites/tane_pakkun/gUnknown_0861B2A8.4bpp"
 
 	.GLOBAL gUnknown_0861B4A8
 gUnknown_0861B4A8:
@@ -11930,7 +12526,7 @@ gUnknown_0861B55C:
 
 	.GLOBAL gUnknown_0861B564
 gUnknown_0861B564:
-	.INCBIN "assets/sprites/gUnknown_0861B564.4bpp"
+	.INCBIN "assets/sprites/tane_pakkun/gUnknown_0861B564.4bpp"
 
 	.GLOBAL gUnknown_0861B7E4
 gUnknown_0861B7E4:
@@ -11942,7 +12538,7 @@ gUnknown_0861BA24:
 
 	.GLOBAL gUnknown_0861BA2C
 gUnknown_0861BA2C:
-	.INCBIN "assets/sprites/gUnknown_0861BA2C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861BA2C.4bpp"
 
 	.GLOBAL gUnknown_0861BE2C
 gUnknown_0861BE2C:
@@ -11954,7 +12550,7 @@ gUnknown_0861BEBC:
 
 	.GLOBAL gUnknown_0861BEC4
 gUnknown_0861BEC4:
-	.INCBIN "assets/sprites/gUnknown_0861BEC4.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861BEC4.4bpp"
 
 	.GLOBAL gUnknown_0861C0C4
 gUnknown_0861C0C4:
@@ -11966,7 +12562,7 @@ gUnknown_0861C154:
 
 	.GLOBAL gUnknown_0861C15C
 gUnknown_0861C15C:
-	.INCBIN "assets/sprites/gUnknown_0861C15C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861C15C.4bpp"
 
 	.GLOBAL gUnknown_0861C35C
 gUnknown_0861C35C:
@@ -11978,7 +12574,7 @@ gUnknown_0861C47C:
 
 	.GLOBAL gUnknown_0861C484
 gUnknown_0861C484:
-	.INCBIN "assets/sprites/gUnknown_0861C484.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861C484.4bpp"
 
 	.GLOBAL gUnknown_0861C884
 gUnknown_0861C884:
@@ -11990,7 +12586,7 @@ gUnknown_0861C95C:
 
 	.GLOBAL gUnknown_0861C964
 gUnknown_0861C964:
-	.INCBIN "assets/sprites/gUnknown_0861C964.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861C964.4bpp"
 
 	.GLOBAL gUnknown_0861CC64
 gUnknown_0861CC64:
@@ -12002,7 +12598,7 @@ gUnknown_0861CE14:
 
 	.GLOBAL gUnknown_0861CE1C
 gUnknown_0861CE1C:
-	.INCBIN "assets/sprites/gUnknown_0861CE1C.4bpp"
+	.INCBIN "assets/sprites/fireguy/gUnknown_0861CE1C.4bpp"
 
 	.GLOBAL gUnknown_0861D41C
 gUnknown_0861D41C:
@@ -12014,7 +12610,7 @@ gUnknown_0861D488:
 
 	.GLOBAL gUnknown_0861D490
 gUnknown_0861D490:
-	.INCBIN "assets/sprites/gUnknown_0861D490.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_0861D490.4bpp"
 
 	.GLOBAL gUnknown_0861D610
 gUnknown_0861D610:
@@ -12026,7 +12622,7 @@ gUnknown_0861D67C:
 
 	.GLOBAL gUnknown_0861D684
 gUnknown_0861D684:
-	.INCBIN "assets/sprites/gUnknown_0861D684.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_0861D684.4bpp"
 
 	.GLOBAL gUnknown_0861D804
 gUnknown_0861D804:
@@ -12038,7 +12634,7 @@ gUnknown_0861DA68:
 
 	.GLOBAL gUnknown_0861DA70
 gUnknown_0861DA70:
-	.INCBIN "assets/sprites/gUnknown_0861DA70.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_0861DA70.4bpp"
 
 	.GLOBAL gUnknown_0861DE70
 gUnknown_0861DE70:
@@ -12050,7 +12646,7 @@ gUnknown_0861E0B0:
 
 	.GLOBAL gUnknown_0861E0B8
 gUnknown_0861E0B8:
-	.INCBIN "assets/sprites/gUnknown_0861E0B8.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_0861E0B8.4bpp"
 
 	.GLOBAL gUnknown_086200B8
 gUnknown_086200B8:
@@ -12062,7 +12658,7 @@ gUnknown_086201D8:
 
 	.GLOBAL gUnknown_086201E0
 gUnknown_086201E0:
-	.INCBIN "assets/sprites/gUnknown_086201E0.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_086201E0.4bpp"
 
 	.GLOBAL gUnknown_086211E0
 gUnknown_086211E0:
@@ -12074,7 +12670,7 @@ gUnknown_08621300:
 
 	.GLOBAL gUnknown_08621308
 gUnknown_08621308:
-	.INCBIN "assets/sprites/gUnknown_08621308.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_08621308.4bpp"
 
 	.GLOBAL gUnknown_08622308
 gUnknown_08622308:
@@ -12086,7 +12682,7 @@ gUnknown_08622548:
 
 	.GLOBAL gUnknown_08622550
 gUnknown_08622550:
-	.INCBIN "assets/sprites/gUnknown_08622550.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_08622550.4bpp"
 
 	.GLOBAL gUnknown_08622950
 gUnknown_08622950:
@@ -12098,7 +12694,7 @@ gUnknown_08622974:
 
 	.GLOBAL gfxPolterguyBlock4bpp
 gfxPolterguyBlock4bpp:
-	.INCBIN "assets/sprites/PolterguyBlock.4bpp"
+	.INCBIN "assets/sprites/polterguy/PolterguyBlock.4bpp"
 
 	.GLOBAL gUnknown_086229FC
 gUnknown_086229FC:
@@ -12110,7 +12706,7 @@ gUnknown_08622C60:
 
 	.GLOBAL gUnknown_08622C68
 gUnknown_08622C68:
-	.INCBIN "assets/sprites/gUnknown_08622C68.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_08622C68.4bpp"
 
 	.GLOBAL gUnknown_08624E68
 gUnknown_08624E68:
@@ -12122,7 +12718,7 @@ gUnknown_08624EF8:
 
 	.GLOBAL gUnknown_08624F00
 gUnknown_08624F00:
-	.INCBIN "assets/sprites/gUnknown_08624F00.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_08624F00.4bpp"
 
 	.GLOBAL gUnknown_08625100
 gUnknown_08625100:
@@ -12134,7 +12730,7 @@ gUnknown_08625340:
 
 	.GLOBAL gUnknown_08625348
 gUnknown_08625348:
-	.INCBIN "assets/sprites/gUnknown_08625348.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_08625348.4bpp"
 
 	.GLOBAL gUnknown_08625748
 gUnknown_08625748:
@@ -12146,7 +12742,7 @@ gUnknown_086258F8:
 
 	.GLOBAL gUnknown_08625900
 gUnknown_08625900:
-	.INCBIN "assets/sprites/gUnknown_08625900.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_08625900.4bpp"
 
 	.GLOBAL gUnknown_08625F00
 gUnknown_08625F00:
@@ -12158,7 +12754,7 @@ gUnknown_08626140:
 
 	.GLOBAL gUnknown_08626148
 gUnknown_08626148:
-	.INCBIN "assets/sprites/gUnknown_08626148.4bpp"
+	.INCBIN "assets/sprites/polterguy/gUnknown_08626148.4bpp"
 
 	.GLOBAL gUnknown_08626948
 gUnknown_08626948:
@@ -12170,7 +12766,7 @@ gUnknown_086269D8:
 
 	.GLOBAL gUnknown_086269E0
 gUnknown_086269E0:
-	.INCBIN "assets/sprites/gUnknown_086269E0.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_086269E0.4bpp"
 
 	.GLOBAL gUnknown_08626BE0
 gUnknown_08626BE0:
@@ -12182,7 +12778,7 @@ gUnknown_08626D00:
 
 	.GLOBAL gUnknown_08626D08
 gUnknown_08626D08:
-	.INCBIN "assets/sprites/gUnknown_08626D08.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08626D08.4bpp"
 
 	.GLOBAL gUnknown_08627108
 gUnknown_08627108:
@@ -12194,7 +12790,7 @@ gUnknown_08627300:
 
 	.GLOBAL gUnknown_08627308
 gUnknown_08627308:
-	.INCBIN "assets/sprites/gUnknown_08627308.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08627308.4bpp"
 
 	.GLOBAL gUnknown_08627588
 gUnknown_08627588:
@@ -12206,7 +12802,7 @@ gUnknown_08627660:
 
 	.GLOBAL gUnknown_08627668
 gUnknown_08627668:
-	.INCBIN "assets/sprites/gUnknown_08627668.4bpp"
+	.INCBIN "assets/sprites/spearguy/gUnknown_08627668.4bpp"
 
 	.GLOBAL gUnknown_08627968
 gUnknown_08627968:
@@ -12218,7 +12814,7 @@ gUnknown_08627BA8:
 
 	.GLOBAL gUnknown_08627BB0
 gUnknown_08627BB0:
-	.INCBIN "assets/sprites/gUnknown_08627BB0.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_08627BB0.4bpp"
 
 	.GLOBAL gUnknown_08627FB0
 gUnknown_08627FB0:
@@ -12242,7 +12838,7 @@ gUnknown_086283E8:
 
 	.GLOBAL gUnknown_086283F0
 gUnknown_086283F0:
-	.INCBIN "assets/sprites/gUnknown_086283F0.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_086283F0.4bpp"
 
 	.GLOBAL gUnknown_086285F0
 gUnknown_086285F0:
@@ -12254,7 +12850,7 @@ gUnknown_08628710:
 
 	.GLOBAL gUnknown_08628718
 gUnknown_08628718:
-	.INCBIN "assets/sprites/gUnknown_08628718.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_08628718.4bpp"
 
 	.GLOBAL gUnknown_08628B18
 gUnknown_08628B18:
@@ -12266,7 +12862,7 @@ gUnknown_08628CA4:
 
 	.GLOBAL gUnknown_08628CAC
 gUnknown_08628CAC:
-	.INCBIN "assets/sprites/gUnknown_08628CAC.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_08628CAC.4bpp"
 
 	.GLOBAL gUnknown_0862922C
 gUnknown_0862922C:
@@ -12278,7 +12874,7 @@ gUnknown_08629304:
 
 	.GLOBAL gUnknown_0862930C
 gUnknown_0862930C:
-	.INCBIN "assets/sprites/gUnknown_0862930C.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_0862930C.4bpp"
 
 	.GLOBAL gUnknown_0862960C
 gUnknown_0862960C:
@@ -12290,7 +12886,7 @@ gUnknown_086297BC:
 
 	.GLOBAL gUnknown_086297C4
 gUnknown_086297C4:
-	.INCBIN "assets/sprites/gUnknown_086297C4.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_086297C4.4bpp"
 
 	.GLOBAL gUnknown_08629DC4
 gUnknown_08629DC4:
@@ -12302,7 +12898,7 @@ gUnknown_08629EE4:
 
 	.GLOBAL gUnknown_08629EEC
 gUnknown_08629EEC:
-	.INCBIN "assets/sprites/gUnknown_08629EEC.4bpp"
+	.INCBIN "assets/sprites/wrenchguy/gUnknown_08629EEC.4bpp"
 
 	.GLOBAL gUnknown_08629FAC
 gUnknown_08629FAC:
@@ -12326,7 +12922,7 @@ gUnknown_0862A348:
 
 	.GLOBAL gUnknown_0862A350
 gUnknown_0862A350:
-	.INCBIN "assets/sprites/gUnknown_0862A350.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862A350.4bpp"
 
 	.GLOBAL gUnknown_0862A750
 gUnknown_0862A750:
@@ -12338,7 +12934,7 @@ gUnknown_0862A7E0:
 
 	.GLOBAL gUnknown_0862A7E8
 gUnknown_0862A7E8:
-	.INCBIN "assets/sprites/gUnknown_0862A7E8.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862A7E8.4bpp"
 
 	.GLOBAL gUnknown_0862A9E8
 gUnknown_0862A9E8:
@@ -12350,7 +12946,7 @@ gUnknown_0862AB08:
 
 	.GLOBAL gUnknown_0862AB10
 gUnknown_0862AB10:
-	.INCBIN "assets/sprites/gUnknown_0862AB10.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862AB10.4bpp"
 
 	.GLOBAL gUnknown_0862AF10
 gUnknown_0862AF10:
@@ -12362,7 +12958,7 @@ gUnknown_0862AFE8:
 
 	.GLOBAL gUnknown_0862AFF0
 gUnknown_0862AFF0:
-	.INCBIN "assets/sprites/gUnknown_0862AFF0.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862AFF0.4bpp"
 
 	.GLOBAL gUnknown_0862B2F0
 gUnknown_0862B2F0:
@@ -12374,7 +12970,7 @@ gUnknown_0862B4A0:
 
 	.GLOBAL gUnknown_0862B4A8
 gUnknown_0862B4A8:
-	.INCBIN "assets/sprites/gUnknown_0862B4A8.4bpp"
+	.INCBIN "assets/sprites/shyguy/gUnknown_0862B4A8.4bpp"
 
 	.GLOBAL gUnknown_0862BAA8
 gUnknown_0862BAA8:
@@ -12398,7 +12994,7 @@ gUnknown_0862CCF0:
 
 	.GLOBAL gUnknown_0862CCF8
 gUnknown_0862CCF8:
-	.INCBIN "assets/sprites/gUnknown_0862CCF8.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_0862CCF8.4bpp"
 
 	.GLOBAL gUnknown_0862D0F8
 gUnknown_0862D0F8:
@@ -12410,7 +13006,7 @@ gUnknown_0862D11C:
 
 	.GLOBAL gUnknown_0862D124
 gUnknown_0862D124:
-	.INCBIN "assets/sprites/gUnknown_0862D124.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_0862D124.4bpp"
 
 	.GLOBAL gUnknown_0862D1A4
 gUnknown_0862D1A4:
@@ -12422,7 +13018,7 @@ gUnknown_0862D1C8:
 
 	.GLOBAL gUnknown_0862D1D0
 gUnknown_0862D1D0:
-	.INCBIN "assets/sprites/gUnknown_0862D1D0.4bpp"
+	.INCBIN "assets/sprites/thwimp/gUnknown_0862D1D0.4bpp"
 
 	.GLOBAL gUnknown_0862D250
 gUnknown_0862D250:
@@ -12434,7 +13030,7 @@ gUnknown_0862D2BC:
 
 	.GLOBAL gUnknown_0862D2C4
 gUnknown_0862D2C4:
-	.INCBIN "assets/sprites/gUnknown_0862D2C4.4bpp"
+	.INCBIN "assets/sprites/thwimp/gUnknown_0862D2C4.4bpp"
 
 	.GLOBAL gUnknown_0862D444
 gUnknown_0862D444:
@@ -12446,7 +13042,7 @@ gUnknown_0862D4B0:
 
 	.GLOBAL gUnknown_0862D4B8
 gUnknown_0862D4B8:
-	.INCBIN "assets/sprites/gUnknown_0862D4B8.4bpp"
+	.INCBIN "assets/sprites/thwimp/gUnknown_0862D4B8.4bpp"
 
 	.GLOBAL gUnknown_0862D638
 gUnknown_0862D638:
@@ -12458,7 +13054,7 @@ gUnknown_0862D65C:
 
 	.GLOBAL gUnknown_0862D664
 gUnknown_0862D664:
-	.INCBIN "assets/sprites/gUnknown_0862D664.4bpp"
+	.INCBIN "assets/sprites/thwomp/gUnknown_0862D664.4bpp"
 
 	.GLOBAL gUnknown_0862D864
 gUnknown_0862D864:
@@ -12470,7 +13066,7 @@ gUnknown_0862D8F4:
 
 	.GLOBAL gUnknown_0862D8FC
 gUnknown_0862D8FC:
-	.INCBIN "assets/sprites/gUnknown_0862D8FC.4bpp"
+	.INCBIN "assets/sprites/thwomp/gUnknown_0862D8FC.4bpp"
 
 	.GLOBAL gUnknown_0862DCFC
 gUnknown_0862DCFC:
@@ -12482,7 +13078,7 @@ gUnknown_0862DD8C:
 
 	.GLOBAL gUnknown_0862DD94
 gUnknown_0862DD94:
-	.INCBIN "assets/sprites/gUnknown_0862DD94.4bpp"
+	.INCBIN "assets/sprites/thwomp/gUnknown_0862DD94.4bpp"
 
 	.GLOBAL gUnknown_0862E194
 gUnknown_0862E194:
@@ -12494,7 +13090,7 @@ gUnknown_0862E2B4:
 
 	.GLOBAL gUnknown_0862E2BC
 gUnknown_0862E2BC:
-	.INCBIN "assets/sprites/gUnknown_0862E2BC.4bpp"
+	.INCBIN "assets/sprites/thwomp/gUnknown_0862E2BC.4bpp"
 
 	.GLOBAL gUnknown_0862E4BC
 gUnknown_0862E4BC:
@@ -12506,7 +13102,7 @@ gUnknown_0862E54C:
 
 	.GLOBAL gUnknown_0862E554
 gUnknown_0862E554:
-	.INCBIN "assets/sprites/gUnknown_0862E554.4bpp"
+	.INCBIN "assets/sprites/thwomp/gUnknown_0862E554.4bpp"
 
 	.GLOBAL gUnknown_0862E754
 gUnknown_0862E754:
@@ -12518,7 +13114,7 @@ gUnknown_0862E778:
 
 	.GLOBAL gUnknown_0862E780
 gUnknown_0862E780:
-	.INCBIN "assets/sprites/gUnknown_0862E780.4bpp"
+	.INCBIN "assets/sprites/thwomp/gUnknown_0862E780.4bpp"
 
 	.GLOBAL gUnknown_0862E980
 gUnknown_0862E980:
@@ -12530,7 +13126,7 @@ gUnknown_0862E9C8:
 
 	.GLOBAL gUnknown_0862E9D0
 gUnknown_0862E9D0:
-	.INCBIN "assets/sprites/gUnknown_0862E9D0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0862E9D0.4bpp"
 
 	.GLOBAL gUnknown_0862EBD0
 gUnknown_0862EBD0:
@@ -12542,7 +13138,7 @@ gUnknown_0862F008:
 
 	.GLOBAL gUnknown_0862F010
 gUnknown_0862F010:
-	.INCBIN "assets/sprites/gUnknown_0862F010.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0862F010.4bpp"
 
 	.GLOBAL gUnknown_0862FC10
 gUnknown_0862FC10:
@@ -12554,7 +13150,7 @@ gUnknown_0862FE50:
 
 	.GLOBAL gUnknown_0862FE58
 gUnknown_0862FE58:
-	.INCBIN "assets/sprites/gUnknown_0862FE58.8bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_0862FE58.8bpp"
 
 	.GLOBAL gUnknown_0863FE58
 gUnknown_0863FE58:
@@ -12566,7 +13162,7 @@ gUnknown_086400E0:
 
 	.GLOBAL gUnknown_086400E8
 gUnknown_086400E8:
-	.INCBIN "assets/sprites/gUnknown_086400E8.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_086400E8.4bpp"
 
 	.GLOBAL gUnknown_08640DE8
 gUnknown_08640DE8:
@@ -12578,7 +13174,7 @@ gUnknown_08640F2C:
 
 	.GLOBAL gUnknown_08640F34
 gUnknown_08640F34:
-	.INCBIN "assets/sprites/gUnknown_08640F34.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_08640F34.4bpp"
 
 	.GLOBAL gUnknown_08642134
 gUnknown_08642134:
@@ -12590,7 +13186,7 @@ gUnknown_086421E8:
 
 	.GLOBAL gUnknown_086421F0
 gUnknown_086421F0:
-	.INCBIN "assets/sprites/gUnknown_086421F0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_086421F0.4bpp"
 
 	.GLOBAL gUnknown_08642BF0
 gUnknown_08642BF0:
@@ -12602,7 +13198,7 @@ gUnknown_08642D34:
 
 	.GLOBAL gUnknown_08642D3C
 gUnknown_08642D3C:
-	.INCBIN "assets/sprites/gUnknown_08642D3C.8bpp"
+	.INCBIN "assets/sprites/giant_barrel/gUnknown_08642D3C.8bpp"
 
 	.GLOBAL gUnknown_0864BD3C
 gUnknown_0864BD3C:
@@ -12614,7 +13210,7 @@ gUnknown_0864BF58:
 
 	.GLOBAL gUnknown_0864BF60
 gUnknown_0864BF60:
-	.INCBIN "assets/sprites/gUnknown_0864BF60.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864BF60.4bpp"
 
 	.GLOBAL gUnknown_0864CC60
 gUnknown_0864CC60:
@@ -12626,7 +13222,7 @@ gUnknown_0864CF30:
 
 	.GLOBAL gUnknown_0864CF38
 gUnknown_0864CF38:
-	.INCBIN "assets/sprites/gUnknown_0864CF38.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864CF38.4bpp"
 
 	.GLOBAL gUnknown_0864D138
 gUnknown_0864D138:
@@ -12638,7 +13234,7 @@ gUnknown_0864D2E8:
 
 	.GLOBAL gUnknown_0864D2F0
 gUnknown_0864D2F0:
-	.INCBIN "assets/sprites/gUnknown_0864D2F0.4bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864D2F0.4bpp"
 
 	.GLOBAL gUnknown_0864DAF0
 gUnknown_0864DAF0:
@@ -12650,7 +13246,7 @@ gUnknown_0864DC10:
 
 	.GLOBAL gUnknown_0864DC18
 gUnknown_0864DC18:
-	.INCBIN "assets/sprites/gUnknown_0864DC18.8bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864DC18.8bpp"
 
 	.GLOBAL gUnknown_0864EC18
 gUnknown_0864EC18:
@@ -12662,7 +13258,7 @@ gUnknown_0864ED38:
 
 	.GLOBAL gUnknown_0864ED40
 gUnknown_0864ED40:
-	.INCBIN "assets/sprites/gUnknown_0864ED40.8bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864ED40.8bpp"
 
 	.GLOBAL gUnknown_0864FD40
 gUnknown_0864FD40:
@@ -12674,7 +13270,7 @@ gUnknown_0864FE60:
 
 	.GLOBAL gUnknown_0864FE68
 gUnknown_0864FE68:
-	.INCBIN "assets/sprites/gUnknown_0864FE68.8bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_0864FE68.8bpp"
 
 	.GLOBAL gUnknown_08650E68
 gUnknown_08650E68:
@@ -12686,7 +13282,7 @@ gUnknown_08650F88:
 
 	.GLOBAL gUnknown_08650F90
 gUnknown_08650F90:
-	.INCBIN "assets/sprites/gUnknown_08650F90.8bpp"
+	.INCBIN "assets/sprites/toad/gUnknown_08650F90.8bpp"
 
 	.GLOBAL gUnknown_08651F90
 gUnknown_08651F90:
@@ -12698,7 +13294,7 @@ gUnknown_08651FFC:
 
 	.GLOBAL gUnknown_08652004
 gUnknown_08652004:
-	.INCBIN "assets/sprites/gUnknown_08652004.4bpp"
+	.INCBIN "assets/sprites/belt_switch/gUnknown_08652004.4bpp"
 
 	.GLOBAL gUnknown_08652184
 gUnknown_08652184:
@@ -12710,7 +13306,7 @@ gUnknown_086521F0:
 
 	.GLOBAL gUnknown_086521F8
 gUnknown_086521F8:
-	.INCBIN "assets/sprites/gUnknown_086521F8.4bpp"
+	.INCBIN "assets/sprites/belt_switch/gUnknown_086521F8.4bpp"
 
 	.GLOBAL gUnknown_08652378
 gUnknown_08652378:
@@ -12722,7 +13318,7 @@ gUnknown_08652720:
 
 	.GLOBAL gUnknown_08652728
 gUnknown_08652728:
-	.INCBIN "assets/sprites/gUnknown_08652728.4bpp"
+	.INCBIN "assets/sprites/toy_chest/gUnknown_08652728.4bpp"
 
 	.GLOBAL gUnknown_08654B28
 gUnknown_08654B28:
@@ -12734,7 +13330,7 @@ gUnknown_08654BDC:
 
 	.GLOBAL gUnknown_08654BE4
 gUnknown_08654BE4:
-	.INCBIN "assets/sprites/gUnknown_08654BE4.4bpp"
+	.INCBIN "assets/sprites/toy_chest/gUnknown_08654BE4.4bpp"
 
 	.GLOBAL gUnknown_086553E4
 gUnknown_086553E4:
@@ -12746,7 +13342,7 @@ gUnknown_08655624:
 
 	.GLOBAL gUnknown_0865562C
 gUnknown_0865562C:
-	.INCBIN "assets/sprites/gUnknown_0865562C.4bpp"
+	.INCBIN "assets/sprites/toy_chest/gUnknown_0865562C.4bpp"
 
 	.GLOBAL gUnknown_08656A2C
 gUnknown_08656A2C:
@@ -12758,7 +13354,7 @@ gUnknown_08656A50:
 
 	.GLOBAL gUnknown_08656A58
 gUnknown_08656A58:
-	.INCBIN "assets/sprites/gUnknown_08656A58.4bpp"
+	.INCBIN "assets/sprites/toy_chest/gUnknown_08656A58.4bpp"
 
 	.GLOBAL gUnknown_08656C58
 gUnknown_08656C58:
@@ -12770,7 +13366,7 @@ gUnknown_08656C7C:
 
 	.GLOBAL gUnknown_08656C84
 gUnknown_08656C84:
-	.INCBIN "assets/sprites/gUnknown_08656C84.4bpp"
+	.INCBIN "assets/sprites/toy_chest/gUnknown_08656C84.4bpp"
 
 	.GLOBAL gUnknown_08656E84
 gUnknown_08656E84:
@@ -12782,7 +13378,7 @@ gUnknown_08656EA8:
 
 	.GLOBAL gUnknown_08656EB0
 gUnknown_08656EB0:
-	.INCBIN "assets/sprites/gUnknown_08656EB0.4bpp"
+	.INCBIN "assets/sprites/toy_chest/gUnknown_08656EB0.4bpp"
 
 	.GLOBAL gUnknown_086570B0
 gUnknown_086570B0:
@@ -12794,7 +13390,7 @@ gUnknown_086570D4:
 
 	.GLOBAL gUnknown_086570DC
 gUnknown_086570DC:
-	.INCBIN "assets/sprites/gUnknown_086570DC.4bpp"
+	.INCBIN "assets/sprites/toy_chest/gUnknown_086570DC.4bpp"
 
 	.GLOBAL gUnknown_086572DC
 gUnknown_086572DC:
@@ -12822,7 +13418,7 @@ gUnknown_08657450:
 
 	.GLOBAL gUnknown_08657458
 gUnknown_08657458:
-	.INCBIN "assets/sprites/gUnknown_08657458.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_08657458.4bpp"
 
 	.GLOBAL gUnknown_086574D8
 gUnknown_086574D8:
@@ -12834,7 +13430,7 @@ gUnknown_086574FC:
 
 	.GLOBAL gUnknown_08657504
 gUnknown_08657504:
-	.INCBIN "assets/sprites/gUnknown_08657504.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_08657504.4bpp"
 
 	.GLOBAL gUnknown_08657584
 gUnknown_08657584:
@@ -12846,7 +13442,7 @@ gUnknown_086575A8:
 
 	.GLOBAL gUnknown_086575B0
 gUnknown_086575B0:
-	.INCBIN "assets/sprites/gUnknown_086575B0.4bpp"
+	.INCBIN "assets/sprites/unused/gUnknown_086575B0.4bpp"
 
 	.GLOBAL gUnknown_08657630
 gUnknown_08657630:
@@ -12870,7 +13466,7 @@ gUnknown_08657AEC:
 
 	.GLOBAL gUnknown_08657AF4
 gUnknown_08657AF4:
-	.INCBIN "assets/sprites/gUnknown_08657AF4.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_08657AF4.4bpp"
 
 	.GLOBAL gUnknown_08657B74
 gUnknown_08657B74:
@@ -12894,7 +13490,7 @@ gUnknown_08657CD4:
 
 	.GLOBAL gUnknown_08657CDC
 gUnknown_08657CDC:
-	.INCBIN "assets/sprites/gUnknown_08657CDC.4bpp"
+	.INCBIN "assets/sprites/donut_block/gUnknown_08657CDC.4bpp"
 
 	.GLOBAL gUnknown_08657F5C
 gUnknown_08657F5C:
@@ -12906,7 +13502,7 @@ gUnknown_08657FC8:
 
 	.GLOBAL gUnknown_08657FD0
 gUnknown_08657FD0:
-	.INCBIN "assets/sprites/gUnknown_08657FD0.4bpp"
+	.INCBIN "assets/sprites/donut_block/gUnknown_08657FD0.4bpp"
 
 	.GLOBAL gUnknown_08658150
 gUnknown_08658150:
@@ -12918,7 +13514,7 @@ gUnknown_086581E0:
 
 	.GLOBAL gUnknown_086581E8
 gUnknown_086581E8:
-	.INCBIN "assets/sprites/gUnknown_086581E8.4bpp"
+	.INCBIN "assets/sprites/donut_block/gUnknown_086581E8.4bpp"
 
 	.GLOBAL gUnknown_08658268
 gUnknown_08658268:
@@ -12930,7 +13526,7 @@ gUnknown_0865828C:
 
 	.GLOBAL gUnknown_08658294
 gUnknown_08658294:
-	.INCBIN "assets/sprites/gUnknown_08658294.4bpp"
+	.INCBIN "assets/sprites/donut_block/gUnknown_08658294.4bpp"
 
 	.GLOBAL gUnknown_08658314
 gUnknown_08658314:
@@ -12942,7 +13538,7 @@ gUnknown_086583A4:
 
 	.GLOBAL gUnknown_086583AC
 gUnknown_086583AC:
-	.INCBIN "assets/sprites/gUnknown_086583AC.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_086583AC.4bpp"
 
 	.GLOBAL gUnknown_086585AC
 gUnknown_086585AC:
@@ -12954,7 +13550,7 @@ gUnknown_086588A0:
 
 	.GLOBAL gUnknown_086588A8
 gUnknown_086588A8:
-	.INCBIN "assets/sprites/gUnknown_086588A8.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_086588A8.4bpp"
 
 	.GLOBAL gUnknown_08658C28
 gUnknown_08658C28:
@@ -12966,7 +13562,7 @@ gUnknown_08658CB8:
 
 	.GLOBAL gUnknown_08658CC0
 gUnknown_08658CC0:
-	.INCBIN "assets/sprites/gUnknown_08658CC0.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_08658CC0.4bpp"
 
 	.GLOBAL gUnknown_08658EC0
 gUnknown_08658EC0:
@@ -12978,7 +13574,7 @@ gUnknown_08658F50:
 
 	.GLOBAL gUnknown_08658F58
 gUnknown_08658F58:
-	.INCBIN "assets/sprites/gUnknown_08658F58.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_08658F58.4bpp"
 
 	.GLOBAL gUnknown_08658FD8
 gUnknown_08658FD8:
@@ -12990,7 +13586,7 @@ gUnknown_08658FFC:
 
 	.GLOBAL gUnknown_08659004
 gUnknown_08659004:
-	.INCBIN "assets/sprites/gUnknown_08659004.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_08659004.4bpp"
 
 	.GLOBAL gUnknown_08659084
 gUnknown_08659084:
@@ -13002,7 +13598,7 @@ gUnknown_08659114:
 
 	.GLOBAL gUnknown_0865911C
 gUnknown_0865911C:
-	.INCBIN "assets/sprites/gUnknown_0865911C.4bpp"
+	.INCBIN "assets/sprites/falling_spike/gUnknown_0865911C.4bpp"
 
 	.GLOBAL gUnknown_0865919C
 gUnknown_0865919C:
@@ -13014,7 +13610,7 @@ gUnknown_086591C0:
 
 	.GLOBAL gUnknown_086591C8
 gUnknown_086591C8:
-	.INCBIN "assets/sprites/gUnknown_086591C8.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_086591C8.4bpp"
 
 	.GLOBAL gUnknown_08659248
 gUnknown_08659248:
@@ -13026,7 +13622,7 @@ gUnknown_0865926C:
 
 	.GLOBAL gUnknown_08659274
 gUnknown_08659274:
-	.INCBIN "assets/sprites/gUnknown_08659274.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_08659274.4bpp"
 
 	.GLOBAL gUnknown_086592F4
 gUnknown_086592F4:
@@ -13038,7 +13634,7 @@ gUnknown_08659318:
 
 	.GLOBAL gUnknown_08659320
 gUnknown_08659320:
-	.INCBIN "assets/sprites/gUnknown_08659320.4bpp"
+	.INCBIN "assets/sprites/moving_platform/gUnknown_08659320.4bpp"
 
 
 	.GLOBAL gUncompressedGraphicsTable
@@ -13049,7 +13645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080B8584 @ Sprite Data 1
+	.4byte gfxBobombExplosionAnimation @ Animation Data
 	.4byte gUnknown_080B889C @ OAM
 	.4byte gfxBobombExplosion4bpp @ Sprite Graphics
 
@@ -13059,7 +13655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080B90A4 @ Sprite Data 1
+	.4byte gUnknown_080B90A4 @ Animation Data
 	.4byte gUnknown_080B92E4 @ OAM
 	.4byte gUnknown_080B92EC @ Sprite Graphics
 
@@ -13069,7 +13665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080B9AEC @ Sprite Data 1
+	.4byte gUnknown_080B9AEC @ Animation Data
 	.4byte gUnknown_080B9B7C @ OAM
 	.4byte gUnknown_080B9B84 @ Sprite Graphics
 
@@ -13079,7 +13675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080B9C84 @ Sprite Data 1
+	.4byte gUnknown_080B9C84 @ Animation Data
 	.4byte gUnknown_080B9DA4 @ OAM
 	.4byte gUnknown_080B9DAC @ Sprite Graphics
 
@@ -13089,7 +13685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080B9FAC @ Sprite Data 1
+	.4byte gUnknown_080B9FAC @ Animation Data
 	.4byte gUnknown_080BA1A4 @ OAM
 	.4byte gUnknown_080BA1AC @ Sprite Graphics
 
@@ -13099,7 +13695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080BA8AC @ Sprite Data 1
+	.4byte gUnknown_080BA8AC @ Animation Data
 	.4byte gUnknown_080BA9CC @ OAM
 	.4byte gUnknown_080BA9D4 @ Sprite Graphics
 
@@ -13109,7 +13705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080BACD4 @ Sprite Data 1
+	.4byte gfxDKPackAnimation @ Animation Data
 	.4byte gfxDKPackOAM @ OAM
 	.4byte gfxDKPack4bpp @ Sprite Graphics
 
@@ -13119,7 +13715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080BEDFC @ Sprite Data 1
+	.4byte gUnknown_080BEDFC @ Animation Data
 	.4byte gUnknown_080BF03C @ OAM
 	.4byte gUnknown_080BF044 @ Sprite Graphics
 
@@ -13129,7 +13725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C0044 @ Sprite Data 1
+	.4byte gUnknown_080C0044 @ Animation Data
 	.4byte gUnknown_080C0140 @ OAM
 	.4byte gUnknown_080C0148 @ Sprite Graphics
 
@@ -13139,7 +13735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C0848 @ Sprite Data 1
+	.4byte gUnknown_080C0848 @ Animation Data
 	.4byte gUnknown_080C09F8 @ OAM
 	.4byte gUnknown_080C0A00 @ Sprite Graphics
 
@@ -13149,7 +13745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C2200 @ Sprite Data 1
+	.4byte gUnknown_080C2200 @ Animation Data
 	.4byte gUnknown_080C2320 @ OAM
 	.4byte gUnknown_080C2328 @ Sprite Graphics
 
@@ -13159,7 +13755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C2728 @ Sprite Data 1
+	.4byte gUnknown_080C2728 @ Animation Data
 	.4byte gUnknown_080C2800 @ OAM
 	.4byte gUnknown_080C2808 @ Sprite Graphics
 
@@ -13169,7 +13765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C3408 @ Sprite Data 1
+	.4byte gUnknown_080C3408 @ Animation Data
 	.4byte gUnknown_080C3648 @ OAM
 	.4byte gUnknown_080C3650 @ Sprite Graphics
 
@@ -13179,7 +13775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C5650 @ Sprite Data 1
+	.4byte gUnknown_080C5650 @ Animation Data
 	.4byte gUnknown_080C56E0 @ OAM
 	.4byte gUnknown_080C56E8 @ Sprite Graphics
 
@@ -13189,7 +13785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C5EE8 @ Sprite Data 1
+	.4byte gUnknown_080C5EE8 @ Animation Data
 	.4byte gUnknown_080C6008 @ OAM
 	.4byte gUnknown_080C6010 @ Sprite Graphics
 
@@ -13199,7 +13795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C7010 @ Sprite Data 1
+	.4byte gUnknown_080C7010 @ Animation Data
 	.4byte gUnknown_080C70E8 @ OAM
 	.4byte gUnknown_080C70F0 @ Sprite Graphics
 
@@ -13209,7 +13805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C73F0 @ Sprite Data 1
+	.4byte gUnknown_080C73F0 @ Animation Data
 	.4byte gUnknown_080C7774 @ OAM
 	.4byte gUnknown_080C777C @ Sprite Graphics
 
@@ -13219,7 +13815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C7B7C @ Sprite Data 1
+	.4byte gUnknown_080C7B7C @ Animation Data
 	.4byte gUnknown_080C7C54 @ OAM
 	.4byte gUnknown_080C7C5C @ Sprite Graphics
 
@@ -13229,7 +13825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C7F5C @ Sprite Data 1
+	.4byte gUnknown_080C7F5C @ Animation Data
 	.4byte gUnknown_080C8034 @ OAM
 	.4byte gUnknown_080C803C @ Sprite Graphics
 
@@ -13239,7 +13835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C833C @ Sprite Data 1
+	.4byte gUnknown_080C833C @ Animation Data
 	.4byte gUnknown_080C83A8 @ OAM
 	.4byte gUnknown_080C83B0 @ Sprite Graphics
 
@@ -13249,7 +13845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080C87B0 @ Sprite Data 1
+	.4byte gUnknown_080C87B0 @ Animation Data
 	.4byte gUnknown_080C8E28 @ OAM
 	.4byte gUnknown_080C8E30 @ Sprite Graphics
 
@@ -13259,7 +13855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080CA530 @ Sprite Data 1
+	.4byte gUnknown_080CA530 @ Animation Data
 	.4byte gUnknown_080CABA8 @ OAM
 	.4byte gUnknown_080CABB0 @ Sprite Graphics
 
@@ -13269,7 +13865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080CB170 @ Sprite Data 1
+	.4byte gUnknown_080CB170 @ Animation Data
 	.4byte gUnknown_080CB7E8 @ OAM
 	.4byte gUnknown_080CB7F0 @ Sprite Graphics
 
@@ -13279,7 +13875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080CBDB0 @ Sprite Data 1
+	.4byte gUnknown_080CBDB0 @ Animation Data
 	.4byte gfxMarioBurnOAM @ OAM
 	.4byte gfxMarioBurn8bpp @ Sprite Graphics
 
@@ -13289,7 +13885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080D4238 @ Sprite Data 1
+	.4byte gUnknown_080D4238 @ Animation Data
 	.4byte gUnknown_080D46B8 @ OAM
 	.4byte gUnknown_080D46C0 @ Sprite Graphics
 
@@ -13299,7 +13895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080DC6C0 @ Sprite Data 1
+	.4byte gUnknown_080DC6C0 @ Animation Data
 	.4byte gfxMarioFlailOAM @ OAM
 	.4byte gfxMarioFlail8bpp @ Sprite Graphics
 
@@ -13309,7 +13905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080E4B48 @ Sprite Data 1
+	.4byte gUnknown_080E4B48 @ Animation Data
 	.4byte gUnknown_080E4C68 @ OAM
 	.4byte gUnknown_080E4C70 @ Sprite Graphics
 
@@ -13319,7 +13915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080E6C70 @ Sprite Data 1
+	.4byte gUnknown_080E6C70 @ Animation Data
 	.4byte gUnknown_080E6EB0 @ OAM
 	.4byte gUnknown_080E6EB8 @ Sprite Graphics
 
@@ -13329,7 +13925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080EAEB8 @ Sprite Data 1
+	.4byte gUnknown_080EAEB8 @ Animation Data
 	.4byte gfxMarioElectrocuteOAM @ OAM
 	.4byte gfxMarioElectrocute8bpp @ Sprite Graphics
 
@@ -13339,9 +13935,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080ED100 @ Sprite Data 1
-	.4byte gfxMarioLandOAM @ OAM
-	.4byte gfxMarioLand8bpp @ Sprite Graphics
+	.4byte gUnknown_080ED100 @ Animation Data
+	.4byte gfxMarioHammerOAM @ OAM
+	.4byte gfxMarioHammer8bpp @ Sprite Graphics
 
 	.2byte 0x0009 @ X Position
 	.2byte 0x0400 @ Y position
@@ -13349,7 +13945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080EF64C @ Sprite Data 1
+	.4byte gUnknown_080EF64C @ Animation Data
 	.4byte gUnknown_080EF790 @ OAM
 	.4byte gUnknown_080EF798 @ Sprite Graphics
 
@@ -13359,7 +13955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080F1B98 @ Sprite Data 1
+	.4byte gUnknown_080F1B98 @ Animation Data
 	.4byte gUnknown_080F2018 @ OAM
 	.4byte gUnknown_080F2020 @ Sprite Graphics
 
@@ -13369,7 +13965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080F4020 @ Sprite Data 1
+	.4byte gUnknown_080F4020 @ Animation Data
 	.4byte gUnknown_080F4800 @ OAM
 	.4byte gUnknown_080F4808 @ Sprite Graphics
 
@@ -13379,7 +13975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080F7008 @ Sprite Data 1
+	.4byte gUnknown_080F7008 @ Animation Data
 	.4byte gUnknown_080F7248 @ OAM
 	.4byte gUnknown_080F7250 @ Sprite Graphics
 
@@ -13389,7 +13985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080F8250 @ Sprite Data 1
+	.4byte gUnknown_080F8250 @ Animation Data
 	.4byte gUnknown_080F8370 @ OAM
 	.4byte gUnknown_080F8378 @ Sprite Graphics
 
@@ -13399,7 +13995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080F8B78 @ Sprite Data 1
+	.4byte gUnknown_080F8B78 @ Animation Data
 	.4byte gUnknown_080F8C98 @ OAM
 	.4byte gUnknown_080F8CA0 @ Sprite Graphics
 
@@ -13409,7 +14005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080F94A0 @ Sprite Data 1
+	.4byte gUnknown_080F94A0 @ Animation Data
 	.4byte gUnknown_080F96E0 @ OAM
 	.4byte gUnknown_080F96E8 @ Sprite Graphics
 
@@ -13419,7 +14015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FA4E8 @ Sprite Data 1
+	.4byte gUnknown_080FA4E8 @ Animation Data
 	.4byte gUnknown_080FA824 @ OAM
 	.4byte gUnknown_080FA82C @ Sprite Graphics
 
@@ -13429,7 +14025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FDC2C @ Sprite Data 1
+	.4byte gUnknown_080FDC2C @ Animation Data
 	.4byte gUnknown_080FDD28 @ OAM
 	.4byte gUnknown_080FDD30 @ Sprite Graphics
 
@@ -13439,7 +14035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FE0B0 @ Sprite Data 1
+	.4byte gUnknown_080FE0B0 @ Animation Data
 	.4byte gUnknown_080FE1D0 @ OAM
 	.4byte gUnknown_080FE1D8 @ Sprite Graphics
 
@@ -13449,7 +14045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FE5D8 @ Sprite Data 1
+	.4byte gUnknown_080FE5D8 @ Animation Data
 	.4byte gUnknown_080FE6F8 @ OAM
 	.4byte gUnknown_080FE700 @ Sprite Graphics
 
@@ -13459,7 +14055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FEB00 @ Sprite Data 1
+	.4byte gUnknown_080FEB00 @ Animation Data
 	.4byte gUnknown_080FED40 @ OAM
 	.4byte gUnknown_080FED48 @ Sprite Graphics
 
@@ -13469,7 +14065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FF548 @ Sprite Data 1
+	.4byte gUnknown_080FF548 @ Animation Data
 	.4byte gUnknown_080FF56C @ OAM
 	.4byte gUnknown_080FF574 @ Sprite Graphics
 
@@ -13479,7 +14075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FF5F4 @ Sprite Data 1
+	.4byte gUnknown_080FF5F4 @ Animation Data
 	.4byte gUnknown_080FF858 @ OAM
 	.4byte gUnknown_080FF860 @ Sprite Graphics
 
@@ -13489,7 +14085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FFBE0 @ Sprite Data 1
+	.4byte gUnknown_080FFBE0 @ Animation Data
 	.4byte gUnknown_080FFE20 @ OAM
 	.4byte gUnknown_080FFE28 @ Sprite Graphics
 
@@ -13499,7 +14095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08100228 @ Sprite Data 1
+	.4byte gUnknown_08100228 @ Animation Data
 	.4byte gUnknown_081002B8 @ OAM
 	.4byte gUnknown_081002C0 @ Sprite Graphics
 
@@ -13509,7 +14105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081004C0 @ Sprite Data 1
+	.4byte gUnknown_081004C0 @ Animation Data
 	.4byte gUnknown_08100700 @ OAM
 	.4byte gfxPolterguyMask4bpp @ Sprite Graphics
 
@@ -13519,7 +14115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08100B08 @ Sprite Data 1
+	.4byte gUnknown_08100B08 @ Animation Data
 	.4byte gUnknown_08100CB8 @ OAM
 	.4byte gUnknown_08100CC0 @ Sprite Graphics
 
@@ -13529,7 +14125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08100D40 @ Sprite Data 1
+	.4byte gUnknown_08100D40 @ Animation Data
 	.4byte gUnknown_08100F80 @ OAM
 	.4byte gUnknown_08100F88 @ Sprite Graphics
 
@@ -13539,7 +14135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08101788 @ Sprite Data 1
+	.4byte gUnknown_08101788 @ Animation Data
 	.4byte gUnknown_081018A8 @ OAM
 	.4byte gUnknown_081018B0 @ Sprite Graphics
 
@@ -13549,7 +14145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08101930 @ Sprite Data 1
+	.4byte gUnknown_08101930 @ Animation Data
 	.4byte gUnknown_08101A50 @ OAM
 	.4byte gUnknown_08101A58 @ Sprite Graphics
 
@@ -13559,7 +14155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08101AD8 @ Sprite Data 1
+	.4byte gUnknown_08101AD8 @ Animation Data
 	.4byte gUnknown_08101CD0 @ OAM
 	.4byte gUnknown_08101CD8 @ Sprite Graphics
 
@@ -13569,7 +14165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08102358 @ Sprite Data 1
+	.4byte gUnknown_08102358 @ Animation Data
 	.4byte gUnknown_08102430 @ OAM
 	.4byte gUnknown_08102438 @ Sprite Graphics
 
@@ -13579,7 +14175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08102738 @ Sprite Data 1
+	.4byte gUnknown_08102738 @ Animation Data
 	.4byte gUnknown_08102858 @ OAM
 	.4byte gUnknown_08102860 @ Sprite Graphics
 
@@ -13589,7 +14185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08103860 @ Sprite Data 1
+	.4byte gUnknown_08103860 @ Animation Data
 	.4byte gUnknown_08103C98 @ OAM
 	.4byte gUnknown_08103CA0 @ Sprite Graphics
 
@@ -13599,7 +14195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081054A0 @ Sprite Data 1
+	.4byte gUnknown_081054A0 @ Animation Data
 	.4byte gUnknown_081054C4 @ OAM
 	.4byte gUnknown_081054CC @ Sprite Graphics
 
@@ -13609,7 +14205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810554C @ Sprite Data 1
+	.4byte gUnknown_0810554C @ Animation Data
 	.4byte gUnknown_0810566C @ OAM
 	.4byte gUnknown_08105674 @ Sprite Graphics
 
@@ -13619,7 +14215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08105A74 @ Sprite Data 1
+	.4byte gUnknown_08105A74 @ Animation Data
 	.4byte gUnknown_08105B04 @ OAM
 	.4byte gUnknown_08105B0C @ Sprite Graphics
 
@@ -13629,7 +14225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08105D0C @ Sprite Data 1
+	.4byte gUnknown_08105D0C @ Animation Data
 	.4byte gUnknown_08105E2C @ OAM
 	.4byte gUnknown_08105E34 @ Sprite Graphics
 
@@ -13639,7 +14235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08106234 @ Sprite Data 1
+	.4byte gUnknown_08106234 @ Animation Data
 	.4byte gUnknown_08106450 @ OAM
 	.4byte gUnknown_08106458 @ Sprite Graphics
 
@@ -13649,7 +14245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08106BD8 @ Sprite Data 1
+	.4byte gUnknown_08106BD8 @ Animation Data
 	.4byte gUnknown_08106BFC @ OAM
 	.4byte gUnknown_08106C04 @ Sprite Graphics
 
@@ -13659,7 +14255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08106D04 @ Sprite Data 1
+	.4byte gUnknown_08106D04 @ Animation Data
 	.4byte gUnknown_08106E24 @ OAM
 	.4byte gUnknown_08106E2C @ Sprite Graphics
 
@@ -13669,7 +14265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810722C @ Sprite Data 1
+	.4byte gUnknown_0810722C @ Animation Data
 	.4byte gUnknown_0810746C @ OAM
 	.4byte gUnknown_08107474 @ Sprite Graphics
 
@@ -13679,7 +14275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08108474 @ Sprite Data 1
+	.4byte gUnknown_08108474 @ Animation Data
 	.4byte gUnknown_08108498 @ OAM
 	.4byte gUnknown_081084A0 @ Sprite Graphics
 
@@ -13689,7 +14285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x4020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081086A0 @ Sprite Data 1
+	.4byte gUnknown_081086A0 @ Animation Data
 	.4byte gUnknown_081088E0 @ OAM
 	.4byte gUnknown_081088E8 @ Sprite Graphics
 
@@ -13699,7 +14295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810C8E8 @ Sprite Data 1
+	.4byte gUnknown_0810C8E8 @ Animation Data
 	.4byte gUnknown_0810CAE0 @ OAM
 	.4byte gUnknown_0810CAE8 @ Sprite Graphics
 
@@ -13709,7 +14305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810E6E8 @ Sprite Data 1
+	.4byte gUnknown_0810E6E8 @ Animation Data
 	.4byte gUnknown_0810E70C @ OAM
 	.4byte gUnknown_0810E714 @ Sprite Graphics
 
@@ -13719,7 +14315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810E914 @ Sprite Data 1
+	.4byte gUnknown_0810E914 @ Animation Data
 	.4byte gUnknown_0810EA34 @ OAM
 	.4byte gUnknown_0810EA3C @ Sprite Graphics
 
@@ -13729,7 +14325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810F23C @ Sprite Data 1
+	.4byte gUnknown_0810F23C @ Animation Data
 	.4byte gUnknown_0810F35C @ OAM
 	.4byte gUnknown_0810F364 @ Sprite Graphics
 
@@ -13739,7 +14335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810F764 @ Sprite Data 1
+	.4byte gUnknown_0810F764 @ Animation Data
 	.4byte gUnknown_0810F788 @ OAM
 	.4byte gUnknown_0810F790 @ Sprite Graphics
 
@@ -13749,7 +14345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810F890 @ Sprite Data 1
+	.4byte gUnknown_0810F890 @ Animation Data
 	.4byte gUnknown_0810F968 @ OAM
 	.4byte gUnknown_0810F970 @ Sprite Graphics
 
@@ -13759,7 +14355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0810FC70 @ Sprite Data 1
+	.4byte gUnknown_0810FC70 @ Animation Data
 	.4byte gUnknown_0810FD48 @ OAM
 	.4byte gUnknown_0810FD50 @ Sprite Graphics
 
@@ -13769,7 +14365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08110050 @ Sprite Data 1
+	.4byte gUnknown_08110050 @ Animation Data
 	.4byte gUnknown_081100E0 @ OAM
 	.4byte gUnknown_081100E8 @ Sprite Graphics
 
@@ -13779,7 +14375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081102E8 @ Sprite Data 1
+	.4byte gUnknown_081102E8 @ Animation Data
 	.4byte gUnknown_081104E0 @ OAM
 	.4byte gUnknown_081104E8 @ Sprite Graphics
 
@@ -13789,7 +14385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08110BE8 @ Sprite Data 1
+	.4byte gUnknown_08110BE8 @ Animation Data
 	.4byte gUnknown_08110CE4 @ OAM
 	.4byte gUnknown_08110CEC @ Sprite Graphics
 
@@ -13799,7 +14395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811106C @ Sprite Data 1
+	.4byte gUnknown_0811106C @ Animation Data
 	.4byte gUnknown_0811121C @ OAM
 	.4byte gUnknown_08111224 @ Sprite Graphics
 
@@ -13809,7 +14405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08112A24 @ Sprite Data 1
+	.4byte gUnknown_08112A24 @ Animation Data
 	.4byte gUnknown_08112B44 @ OAM
 	.4byte gUnknown_08112B4C @ Sprite Graphics
 
@@ -13819,7 +14415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08112C4C @ Sprite Data 1
+	.4byte gUnknown_08112C4C @ Animation Data
 	.4byte gUnknown_08112D24 @ OAM
 	.4byte gUnknown_08112D2C @ Sprite Graphics
 
@@ -13829,7 +14425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811392C @ Sprite Data 1
+	.4byte gUnknown_0811392C @ Animation Data
 	.4byte gUnknown_08113ADC @ OAM
 	.4byte gUnknown_08113AE4 @ Sprite Graphics
 
@@ -13839,7 +14435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081152E4 @ Sprite Data 1
+	.4byte gUnknown_081152E4 @ Animation Data
 	.4byte gUnknown_08115404 @ OAM
 	.4byte gUnknown_0811540C @ Sprite Graphics
 
@@ -13849,7 +14445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811640C @ Sprite Data 1
+	.4byte gUnknown_0811640C @ Animation Data
 	.4byte gUnknown_0811649C @ OAM
 	.4byte gUnknown_081164A4 @ Sprite Graphics
 
@@ -13859,7 +14455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08116CA4 @ Sprite Data 1
+	.4byte gUnknown_08116CA4 @ Animation Data
 	.4byte gUnknown_08116E54 @ OAM
 	.4byte gUnknown_08116E5C @ Sprite Graphics
 
@@ -13869,7 +14465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811865C @ Sprite Data 1
+	.4byte gUnknown_0811865C @ Animation Data
 	.4byte gUnknown_08118680 @ OAM
 	.4byte gUnknown_08118688 @ Sprite Graphics
 
@@ -13879,7 +14475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08118708 @ Sprite Data 1
+	.4byte gUnknown_08118708 @ Animation Data
 	.4byte gUnknown_08118948 @ OAM
 	.4byte gUnknown_08118950 @ Sprite Graphics
 
@@ -13889,7 +14485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08118D50 @ Sprite Data 1
+	.4byte gUnknown_08118D50 @ Animation Data
 	.4byte gUnknown_08118D74 @ OAM
 	.4byte gUnknown_08118D7C @ Sprite Graphics
 
@@ -13899,7 +14495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08118DFC @ Sprite Data 1
+	.4byte gUnknown_08118DFC @ Animation Data
 	.4byte gUnknown_08118EB0 @ OAM
 	.4byte gUnknown_08118EB8 @ Sprite Graphics
 
@@ -13909,7 +14505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08119138 @ Sprite Data 1
+	.4byte gUnknown_08119138 @ Animation Data
 	.4byte gUnknown_08119450 @ OAM
 	.4byte gUnknown_08119458 @ Sprite Graphics
 
@@ -13919,7 +14515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08119658 @ Sprite Data 1
+	.4byte gUnknown_08119658 @ Animation Data
 	.4byte gUnknown_081196E8 @ OAM
 	.4byte gUnknown_081196F0 @ Sprite Graphics
 
@@ -13929,7 +14525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081198F0 @ Sprite Data 1
+	.4byte gUnknown_081198F0 @ Animation Data
 	.4byte gUnknown_08119938 @ OAM
 	.4byte gUnknown_08119940 @ Sprite Graphics
 
@@ -13939,7 +14535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08119A40 @ Sprite Data 1
+	.4byte gUnknown_08119A40 @ Animation Data
 	.4byte gUnknown_08119A88 @ OAM
 	.4byte gUnknown_08119A90 @ Sprite Graphics
 
@@ -13949,7 +14545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08119B90 @ Sprite Data 1
+	.4byte gUnknown_08119B90 @ Animation Data
 	.4byte gUnknown_08119CB0 @ OAM
 	.4byte gUnknown_08119CB8 @ Sprite Graphics
 
@@ -13959,7 +14555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811A038 @ Sprite Data 1
+	.4byte gUnknown_0811A038 @ Animation Data
 	.4byte gUnknown_0811A1E8 @ OAM
 	.4byte gUnknown_0811A1F0 @ Sprite Graphics
 
@@ -13969,7 +14565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811A570 @ Sprite Data 1
+	.4byte gUnknown_0811A570 @ Animation Data
 	.4byte gUnknown_0811A600 @ OAM
 	.4byte gUnknown_0811A608 @ Sprite Graphics
 
@@ -13979,7 +14575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811A688 @ Sprite Data 1
+	.4byte gUnknown_0811A688 @ Animation Data
 	.4byte gUnknown_0811A718 @ OAM
 	.4byte gUnknown_0811A720 @ Sprite Graphics
 
@@ -13989,7 +14585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811A7A0 @ Sprite Data 1
+	.4byte gUnknown_0811A7A0 @ Animation Data
 	.4byte gUnknown_0811A830 @ OAM
 	.4byte gUnknown_0811A838 @ Sprite Graphics
 
@@ -13999,7 +14595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811A8B8 @ Sprite Data 1
+	.4byte gUnknown_0811A8B8 @ Animation Data
 	.4byte gUnknown_0811AA20 @ OAM
 	.4byte gUnknown_0811AA28 @ Sprite Graphics
 
@@ -14009,7 +14605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811AD28 @ Sprite Data 1
+	.4byte gUnknown_0811AD28 @ Animation Data
 	.4byte gUnknown_0811AE90 @ OAM
 	.4byte gUnknown_0811AE98 @ Sprite Graphics
 
@@ -14019,7 +14615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811B198 @ Sprite Data 1
+	.4byte gUnknown_0811B198 @ Animation Data
 	.4byte gUnknown_0811B3D8 @ OAM
 	.4byte gUnknown_0811B3E0 @ Sprite Graphics
 
@@ -14029,7 +14625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811BBE0 @ Sprite Data 1
+	.4byte gUnknown_0811BBE0 @ Animation Data
 	.4byte gUnknown_0811BC04 @ OAM
 	.4byte gUnknown_0811BC0C @ Sprite Graphics
 
@@ -14039,7 +14635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811BC8C @ Sprite Data 1
+	.4byte gUnknown_0811BC8C @ Animation Data
 	.4byte gUnknown_0811BCB0 @ OAM
 	.4byte gUnknown_0811BCB8 @ Sprite Graphics
 
@@ -14049,7 +14645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811BD38 @ Sprite Data 1
+	.4byte gUnknown_0811BD38 @ Animation Data
 	.4byte gUnknown_0811BD5C @ OAM
 	.4byte gUnknown_0811BD64 @ Sprite Graphics
 
@@ -14059,7 +14655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811BDE4 @ Sprite Data 1
+	.4byte gUnknown_0811BDE4 @ Animation Data
 	.4byte gUnknown_0811BE08 @ OAM
 	.4byte gUnknown_0811BE10 @ Sprite Graphics
 
@@ -14069,7 +14665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811C010 @ Sprite Data 1
+	.4byte gUnknown_0811C010 @ Animation Data
 	.4byte gUnknown_0811C1C0 @ OAM
 	.4byte gUnknown_0811C1C8 @ Sprite Graphics
 
@@ -14079,7 +14675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811F1C8 @ Sprite Data 1
+	.4byte gUnknown_0811F1C8 @ Animation Data
 	.4byte gUnknown_0811F1EC @ OAM
 	.4byte gUnknown_0811F1F4 @ Sprite Graphics
 
@@ -14089,7 +14685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0811F5F4 @ Sprite Data 1
+	.4byte gUnknown_0811F5F4 @ Animation Data
 	.4byte gUnknown_0811F7A4 @ OAM
 	.4byte gUnknown_0811F7AC @ Sprite Graphics
 
@@ -14099,7 +14695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081257AC @ Sprite Data 1
+	.4byte gUnknown_081257AC @ Animation Data
 	.4byte gUnknown_081257D0 @ OAM
 	.4byte gUnknown_081257D8 @ Sprite Graphics
 
@@ -14109,7 +14705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08125858 @ Sprite Data 1
+	.4byte gUnknown_08125858 @ Animation Data
 	.4byte gUnknown_0812587C @ OAM
 	.4byte gUnknown_08125884 @ Sprite Graphics
 
@@ -14119,7 +14715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08125904 @ Sprite Data 1
+	.4byte gUnknown_08125904 @ Animation Data
 	.4byte gUnknown_08125928 @ OAM
 	.4byte gUnknown_08125930 @ Sprite Graphics
 
@@ -14129,7 +14725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081259B0 @ Sprite Data 1
+	.4byte gUnknown_081259B0 @ Animation Data
 	.4byte gUnknown_08125A40 @ OAM
 	.4byte gUnknown_08125A48 @ Sprite Graphics
 
@@ -14139,7 +14735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08125C48 @ Sprite Data 1
+	.4byte gUnknown_08125C48 @ Animation Data
 	.4byte gUnknown_08125DF8 @ OAM
 	.4byte gUnknown_08125E00 @ Sprite Graphics
 
@@ -14149,7 +14745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08126400 @ Sprite Data 1
+	.4byte gUnknown_08126400 @ Animation Data
 	.4byte gUnknown_08126AC0 @ OAM
 	.4byte gUnknown_08126AC8 @ Sprite Graphics
 
@@ -14159,7 +14755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08128AC8 @ Sprite Data 1
+	.4byte gUnknown_08128AC8 @ Animation Data
 	.4byte gUnknown_08128BE8 @ OAM
 	.4byte gUnknown_08128BF0 @ Sprite Graphics
 
@@ -14169,7 +14765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08128FF0 @ Sprite Data 1
+	.4byte gUnknown_08128FF0 @ Animation Data
 	.4byte gUnknown_08129110 @ OAM
 	.4byte gUnknown_08129118 @ Sprite Graphics
 
@@ -14179,7 +14775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08129518 @ Sprite Data 1
+	.4byte gUnknown_08129518 @ Animation Data
 	.4byte gUnknown_0812953C @ OAM
 	.4byte gUnknown_08129544 @ Sprite Graphics
 
@@ -14189,7 +14785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081295C4 @ Sprite Data 1
+	.4byte gUnknown_081295C4 @ Animation Data
 	.4byte gUnknown_08129804 @ OAM
 	.4byte gUnknown_0812980C @ Sprite Graphics
 
@@ -14199,7 +14795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812A80C @ Sprite Data 1
+	.4byte gUnknown_0812A80C @ Animation Data
 	.4byte gUnknown_0812A950 @ OAM
 	.4byte gUnknown_0812A958 @ Sprite Graphics
 
@@ -14209,7 +14805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812B558 @ Sprite Data 1
+	.4byte gUnknown_0812B558 @ Animation Data
 	.4byte gUnknown_0812BA68 @ OAM
 	.4byte gUnknown_0812BA70 @ Sprite Graphics
 
@@ -14219,7 +14815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812CA70 @ Sprite Data 1
+	.4byte gUnknown_0812CA70 @ Animation Data
 	.4byte gUnknown_0812CA94 @ OAM
 	.4byte gUnknown_0812CA9C @ Sprite Graphics
 
@@ -14229,7 +14825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812CB1C @ Sprite Data 1
+	.4byte gUnknown_0812CB1C @ Animation Data
 	.4byte gUnknown_0812CB40 @ OAM
 	.4byte gUnknown_0812CB48 @ Sprite Graphics
 
@@ -14239,7 +14835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812CBC8 @ Sprite Data 1
+	.4byte gUnknown_0812CBC8 @ Animation Data
 	.4byte gUnknown_0812CBEC @ OAM
 	.4byte gUnknown_0812CBF4 @ Sprite Graphics
 
@@ -14249,7 +14845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812CC74 @ Sprite Data 1
+	.4byte gUnknown_0812CC74 @ Animation Data
 	.4byte gUnknown_0812CC98 @ OAM
 	.4byte gUnknown_0812CCA0 @ Sprite Graphics
 
@@ -14259,7 +14855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812CCE0 @ Sprite Data 1
+	.4byte gUnknown_0812CCE0 @ Animation Data
 	.4byte gUnknown_0812CD04 @ OAM
 	.4byte gUnknown_0812CD0C @ Sprite Graphics
 
@@ -14269,7 +14865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812CD2C @ Sprite Data 1
+	.4byte gUnknown_0812CD2C @ Animation Data
 	.4byte gUnknown_0812CD50 @ OAM
 	.4byte gUnknown_0812CD58 @ Sprite Graphics
 
@@ -14279,7 +14875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812CDD8 @ Sprite Data 1
+	.4byte gUnknown_0812CDD8 @ Animation Data
 	.4byte gUnknown_0812CDFC @ OAM
 	.4byte gUnknown_0812CE04 @ Sprite Graphics
 
@@ -14289,7 +14885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D004 @ Sprite Data 1
+	.4byte gUnknown_0812D004 @ Animation Data
 	.4byte gUnknown_0812D028 @ OAM
 	.4byte gUnknown_0812D030 @ Sprite Graphics
 
@@ -14299,7 +14895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D130 @ Sprite Data 1
+	.4byte gUnknown_0812D130 @ Animation Data
 	.4byte gUnknown_0812D154 @ OAM
 	.4byte gUnknown_0812D15C @ Sprite Graphics
 
@@ -14309,7 +14905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D1DC @ Sprite Data 1
+	.4byte gUnknown_0812D1DC @ Animation Data
 	.4byte gUnknown_0812D200 @ OAM
 	.4byte gUnknown_0812D208 @ Sprite Graphics
 
@@ -14319,7 +14915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D288 @ Sprite Data 1
+	.4byte gUnknown_0812D288 @ Animation Data
 	.4byte gUnknown_0812D2AC @ OAM
 	.4byte gUnknown_0812D2B4 @ Sprite Graphics
 
@@ -14329,7 +14925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D334 @ Sprite Data 1
+	.4byte gUnknown_0812D334 @ Animation Data
 	.4byte gUnknown_0812D358 @ OAM
 	.4byte gUnknown_0812D360 @ Sprite Graphics
 
@@ -14339,7 +14935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D3E0 @ Sprite Data 1
+	.4byte gUnknown_0812D3E0 @ Animation Data
 	.4byte gUnknown_0812D404 @ OAM
 	.4byte gUnknown_0812D40C @ Sprite Graphics
 
@@ -14349,7 +14945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D48C @ Sprite Data 1
+	.4byte gUnknown_0812D48C @ Animation Data
 	.4byte gUnknown_0812D4B0 @ OAM
 	.4byte gUnknown_0812D4B8 @ Sprite Graphics
 
@@ -14359,7 +14955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D538 @ Sprite Data 1
+	.4byte gUnknown_0812D538 @ Animation Data
 	.4byte gUnknown_0812D55C @ OAM
 	.4byte gUnknown_0812D564 @ Sprite Graphics
 
@@ -14369,7 +14965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D5E4 @ Sprite Data 1
+	.4byte gUnknown_0812D5E4 @ Animation Data
 	.4byte gUnknown_0812D608 @ OAM
 	.4byte gUnknown_0812D610 @ Sprite Graphics
 
@@ -14379,7 +14975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D690 @ Sprite Data 1
+	.4byte gUnknown_0812D690 @ Animation Data
 	.4byte gUnknown_0812D6B4 @ OAM
 	.4byte gUnknown_0812D6BC @ Sprite Graphics
 
@@ -14389,7 +14985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D73C @ Sprite Data 1
+	.4byte gUnknown_0812D73C @ Animation Data
 	.4byte gUnknown_0812D760 @ OAM
 	.4byte gUnknown_0812D768 @ Sprite Graphics
 
@@ -14399,7 +14995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D7E8 @ Sprite Data 1
+	.4byte gUnknown_0812D7E8 @ Animation Data
 	.4byte gUnknown_0812D80C @ OAM
 	.4byte gUnknown_0812D814 @ Sprite Graphics
 
@@ -14409,7 +15005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D894 @ Sprite Data 1
+	.4byte gUnknown_0812D894 @ Animation Data
 	.4byte gUnknown_0812D8B8 @ OAM
 	.4byte gUnknown_0812D8C0 @ Sprite Graphics
 
@@ -14419,7 +15015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D940 @ Sprite Data 1
+	.4byte gUnknown_0812D940 @ Animation Data
 	.4byte gUnknown_0812D964 @ OAM
 	.4byte gUnknown_0812D96C @ Sprite Graphics
 
@@ -14429,7 +15025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812D9EC @ Sprite Data 1
+	.4byte gUnknown_0812D9EC @ Animation Data
 	.4byte gUnknown_0812DA10 @ OAM
 	.4byte gUnknown_0812DA18 @ Sprite Graphics
 
@@ -14439,7 +15035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812DA98 @ Sprite Data 1
+	.4byte gUnknown_0812DA98 @ Animation Data
 	.4byte gUnknown_0812DABC @ OAM
 	.4byte gUnknown_0812DAC4 @ Sprite Graphics
 
@@ -14449,7 +15045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812DB44 @ Sprite Data 1
+	.4byte gUnknown_0812DB44 @ Animation Data
 	.4byte gUnknown_0812DB68 @ OAM
 	.4byte gUnknown_0812DB70 @ Sprite Graphics
 
@@ -14459,7 +15055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812DBF0 @ Sprite Data 1
+	.4byte gUnknown_0812DBF0 @ Animation Data
 	.4byte gUnknown_0812DC14 @ OAM
 	.4byte gUnknown_0812DC1C @ Sprite Graphics
 
@@ -14469,7 +15065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812DC9C @ Sprite Data 1
+	.4byte gUnknown_0812DC9C @ Animation Data
 	.4byte gUnknown_0812DCC0 @ OAM
 	.4byte gUnknown_0812DCC8 @ Sprite Graphics
 
@@ -14479,7 +15075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812DD48 @ Sprite Data 1
+	.4byte gUnknown_0812DD48 @ Animation Data
 	.4byte gUnknown_0812DE20 @ OAM
 	.4byte gUnknown_0812DE28 @ Sprite Graphics
 
@@ -14489,7 +15085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812E128 @ Sprite Data 1
+	.4byte gUnknown_0812E128 @ Animation Data
 	.4byte gUnknown_0812E170 @ OAM
 	.4byte gUnknown_0812E178 @ Sprite Graphics
 
@@ -14499,7 +15095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812E378 @ Sprite Data 1
+	.4byte gUnknown_0812E378 @ Animation Data
 	.4byte gUnknown_0812E39C @ OAM
 	.4byte gUnknown_0812E3A4 @ Sprite Graphics
 
@@ -14509,7 +15105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812E5A4 @ Sprite Data 1
+	.4byte gUnknown_0812E5A4 @ Animation Data
 	.4byte gUnknown_0812E5C8 @ OAM
 	.4byte gUnknown_0812E5D0 @ Sprite Graphics
 
@@ -14519,7 +15115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812E7D0 @ Sprite Data 1
+	.4byte gUnknown_0812E7D0 @ Animation Data
 	.4byte gUnknown_0812EA10 @ OAM
 	.4byte gUnknown_0812EA18 @ Sprite Graphics
 
@@ -14529,7 +15125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812FA18 @ Sprite Data 1
+	.4byte gUnknown_0812FA18 @ Animation Data
 	.4byte gUnknown_0812FA84 @ OAM
 	.4byte gUnknown_0812FA8C @ Sprite Graphics
 
@@ -14539,7 +15135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812FB8C @ Sprite Data 1
+	.4byte gUnknown_0812FB8C @ Animation Data
 	.4byte gUnknown_0812FBF8 @ OAM
 	.4byte gUnknown_0812FC00 @ Sprite Graphics
 
@@ -14549,7 +15145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812FD00 @ Sprite Data 1
+	.4byte gUnknown_0812FD00 @ Animation Data
 	.4byte gUnknown_0812FD6C @ OAM
 	.4byte gUnknown_0812FD74 @ Sprite Graphics
 
@@ -14559,7 +15155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812FE74 @ Sprite Data 1
+	.4byte gUnknown_0812FE74 @ Animation Data
 	.4byte gUnknown_0812FEBC @ OAM
 	.4byte gUnknown_0812FEC4 @ Sprite Graphics
 
@@ -14569,7 +15165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08130EC4 @ Sprite Data 1
+	.4byte gUnknown_08130EC4 @ Animation Data
 	.4byte gUnknown_08130FC0 @ OAM
 	.4byte gUnknown_08130FC8 @ Sprite Graphics
 
@@ -14579,7 +15175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081311C8 @ Sprite Data 1
+	.4byte gUnknown_081311C8 @ Animation Data
 	.4byte gUnknown_081312A0 @ OAM
 	.4byte gUnknown_081312A8 @ Sprite Graphics
 
@@ -14589,7 +15185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08131EA8 @ Sprite Data 1
+	.4byte gUnknown_08131EA8 @ Animation Data
 	.4byte gUnknown_08131F38 @ OAM
 	.4byte gUnknown_08131F40 @ Sprite Graphics
 
@@ -14599,7 +15195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08132740 @ Sprite Data 1
+	.4byte gUnknown_08132740 @ Animation Data
 	.4byte gUnknown_08132860 @ OAM
 	.4byte gUnknown_08132868 @ Sprite Graphics
 
@@ -14609,7 +15205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08133868 @ Sprite Data 1
+	.4byte gUnknown_08133868 @ Animation Data
 	.4byte gUnknown_08133A60 @ OAM
 	.4byte gUnknown_08133A68 @ Sprite Graphics
 
@@ -14619,7 +15215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08135668 @ Sprite Data 1
+	.4byte gUnknown_08135668 @ Animation Data
 	.4byte gUnknown_08135788 @ OAM
 	.4byte gUnknown_08135790 @ Sprite Graphics
 
@@ -14629,7 +15225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08135B90 @ Sprite Data 1
+	.4byte gUnknown_08135B90 @ Animation Data
 	.4byte gUnknown_08135C20 @ OAM
 	.4byte gUnknown_08135C28 @ Sprite Graphics
 
@@ -14639,7 +15235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08135E28 @ Sprite Data 1
+	.4byte gUnknown_08135E28 @ Animation Data
 	.4byte gUnknown_08135F48 @ OAM
 	.4byte gUnknown_08135F50 @ Sprite Graphics
 
@@ -14649,7 +15245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08136350 @ Sprite Data 1
+	.4byte gUnknown_08136350 @ Animation Data
 	.4byte gUnknown_08136500 @ OAM
 	.4byte gUnknown_08136508 @ Sprite Graphics
 
@@ -14659,7 +15255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08136B08 @ Sprite Data 1
+	.4byte gUnknown_08136B08 @ Animation Data
 	.4byte gUnknown_08136C28 @ OAM
 	.4byte gUnknown_08136C30 @ Sprite Graphics
 
@@ -14669,7 +15265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08137030 @ Sprite Data 1
+	.4byte gUnknown_08137030 @ Animation Data
 	.4byte gUnknown_08137150 @ OAM
 	.4byte gUnknown_08137158 @ Sprite Graphics
 
@@ -14679,7 +15275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08137558 @ Sprite Data 1
+	.4byte gUnknown_08137558 @ Animation Data
 	.4byte gUnknown_081375E8 @ OAM
 	.4byte gUnknown_081375F0 @ Sprite Graphics
 
@@ -14689,7 +15285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081377F0 @ Sprite Data 1
+	.4byte gUnknown_081377F0 @ Animation Data
 	.4byte gUnknown_081379A0 @ OAM
 	.4byte gUnknown_081379A8 @ Sprite Graphics
 
@@ -14699,7 +15295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08137FA8 @ Sprite Data 1
+	.4byte gUnknown_08137FA8 @ Animation Data
 	.4byte gUnknown_081381E8 @ OAM
 	.4byte gUnknown_081381F0 @ Sprite Graphics
 
@@ -14709,7 +15305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081389F0 @ Sprite Data 1
+	.4byte gUnknown_081389F0 @ Animation Data
 	.4byte gUnknown_08138B10 @ OAM
 	.4byte gUnknown_08138B18 @ Sprite Graphics
 
@@ -14719,7 +15315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08138F18 @ Sprite Data 1
+	.4byte gUnknown_08138F18 @ Animation Data
 	.4byte gUnknown_08139038 @ OAM
 	.4byte gUnknown_08139040 @ Sprite Graphics
 
@@ -14729,7 +15325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08139440 @ Sprite Data 1
+	.4byte gUnknown_08139440 @ Animation Data
 	.4byte gUnknown_081394D0 @ OAM
 	.4byte gUnknown_081394D8 @ Sprite Graphics
 
@@ -14739,7 +15335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081396D8 @ Sprite Data 1
+	.4byte gUnknown_081396D8 @ Animation Data
 	.4byte gUnknown_08139918 @ OAM
 	.4byte gUnknown_08139920 @ Sprite Graphics
 
@@ -14749,7 +15345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0813A120 @ Sprite Data 1
+	.4byte gUnknown_0813A120 @ Animation Data
 	.4byte gUnknown_0813A168 @ OAM
 	.4byte gUnknown_0813A170 @ Sprite Graphics
 
@@ -14759,7 +15355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0813B170 @ Sprite Data 1
+	.4byte gUnknown_0813B170 @ Animation Data
 	.4byte gUnknown_0813B3B0 @ OAM
 	.4byte gUnknown_0813B3B8 @ Sprite Graphics
 
@@ -14769,7 +15365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0813EBB8 @ Sprite Data 1
+	.4byte gUnknown_0813EBB8 @ Animation Data
 	.4byte gUnknown_0813EC00 @ OAM
 	.4byte gUnknown_0813EC08 @ Sprite Graphics
 
@@ -14779,7 +15375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0813FC08 @ Sprite Data 1
+	.4byte gUnknown_0813FC08 @ Animation Data
 	.4byte gUnknown_0813FE6C @ OAM
 	.4byte gUnknown_0813FE74 @ Sprite Graphics
 
@@ -14789,7 +15385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08145E74 @ Sprite Data 1
+	.4byte gUnknown_08145E74 @ Animation Data
 	.4byte gUnknown_08145F28 @ OAM
 	.4byte gUnknown_08145F30 @ Sprite Graphics
 
@@ -14799,7 +15395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081460B0 @ Sprite Data 1
+	.4byte gUnknown_081460B0 @ Animation Data
 	.4byte gUnknown_081461D0 @ OAM
 	.4byte gUnknown_081461D8 @ Sprite Graphics
 
@@ -14809,7 +15405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0814E1D8 @ Sprite Data 1
+	.4byte gUnknown_0814E1D8 @ Animation Data
 	.4byte gUnknown_0814E340 @ OAM
 	.4byte gUnknown_0814E348 @ Sprite Graphics
 
@@ -14819,7 +15415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08150B48 @ Sprite Data 1
+	.4byte gUnknown_08150B48 @ Animation Data
 	.4byte gUnknown_08150BD8 @ OAM
 	.4byte gUnknown_08150BE0 @ Sprite Graphics
 
@@ -14829,7 +15425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08152BE0 @ Sprite Data 1
+	.4byte gUnknown_08152BE0 @ Animation Data
 	.4byte gfxDKHurtOAM @ OAM
 	.4byte gfxDKHurt8bpp @ Sprite Graphics
 
@@ -14839,7 +15435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08159188 @ Sprite Data 1
+	.4byte gUnknown_08159188 @ Animation Data
 	.4byte gUnknown_0815962C @ OAM
 	.4byte gUnknown_08159634 @ Sprite Graphics
 
@@ -14849,7 +15445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0815FE34 @ Sprite Data 1
+	.4byte gUnknown_0815FE34 @ Animation Data
 	.4byte gUnknown_0815FFE4 @ OAM
 	.4byte gUnknown_0815FFEC @ Sprite Graphics
 
@@ -14859,7 +15455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08162FEC @ Sprite Data 1
+	.4byte gUnknown_08162FEC @ Animation Data
 	.4byte gUnknown_08163130 @ OAM
 	.4byte gUnknown_08163138 @ Sprite Graphics
 
@@ -14869,7 +15465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08167938 @ Sprite Data 1
+	.4byte gUnknown_08167938 @ Animation Data
 	.4byte gUnknown_0816795C @ OAM
 	.4byte gUnknown_08167964 @ Sprite Graphics
 
@@ -14879,7 +15475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08168164 @ Sprite Data 1
+	.4byte gUnknown_08168164 @ Animation Data
 	.4byte gUnknown_08168554 @ OAM
 	.4byte gUnknown_0816855C @ Sprite Graphics
 
@@ -14889,7 +15485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0817555C @ Sprite Data 1
+	.4byte gUnknown_0817555C @ Animation Data
 	.4byte gUnknown_0817570C @ OAM
 	.4byte gUnknown_08175714 @ Sprite Graphics
 
@@ -14899,7 +15495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08181714 @ Sprite Data 1
+	.4byte gUnknown_08181714 @ Animation Data
 	.4byte gUnknown_081817EC @ OAM
 	.4byte gUnknown_081817F4 @ Sprite Graphics
 
@@ -14909,7 +15505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081877F4 @ Sprite Data 1
+	.4byte gUnknown_081877F4 @ Animation Data
 	.4byte gUnknown_08187AC4 @ OAM
 	.4byte gUnknown_08187ACC @ Sprite Graphics
 
@@ -14919,7 +15515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0818AACC @ Sprite Data 1
+	.4byte gUnknown_0818AACC @ Animation Data
 	.4byte gUnknown_0818ADC0 @ OAM
 	.4byte gUnknown_0818ADC8 @ Sprite Graphics
 
@@ -14929,7 +15525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0819EDC8 @ Sprite Data 1
+	.4byte gUnknown_0819EDC8 @ Animation Data
 	.4byte gUnknown_0819EE58 @ OAM
 	.4byte gUnknown_0819EE60 @ Sprite Graphics
 
@@ -14939,7 +15535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081A1E60 @ Sprite Data 1
+	.4byte gUnknown_081A1E60 @ Animation Data
 	.4byte gUnknown_081A2178 @ OAM
 	.4byte gUnknown_081A2180 @ Sprite Graphics
 
@@ -14949,7 +15545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081B6180 @ Sprite Data 1
+	.4byte gUnknown_081B6180 @ Animation Data
 	.4byte gUnknown_081B6378 @ OAM
 	.4byte gUnknown_081B6380 @ Sprite Graphics
 
@@ -14959,7 +15555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081B8F80 @ Sprite Data 1
+	.4byte gUnknown_081B8F80 @ Animation Data
 	.4byte gUnknown_081B90A0 @ OAM
 	.4byte gUnknown_081B90A8 @ Sprite Graphics
 
@@ -14969,7 +15565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081BD0A8 @ Sprite Data 1
+	.4byte gUnknown_081BD0A8 @ Animation Data
 	.4byte gUnknown_081BD1EC @ OAM
 	.4byte gUnknown_081BD1F4 @ Sprite Graphics
 
@@ -14979,7 +15575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081C19F4 @ Sprite Data 1
+	.4byte gUnknown_081C19F4 @ Animation Data
 	.4byte gUnknown_081C1A18 @ OAM
 	.4byte gUnknown_081C1A20 @ Sprite Graphics
 
@@ -14989,7 +15585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081C1C20 @ Sprite Data 1
+	.4byte gUnknown_081C1C20 @ Animation Data
 	.4byte gUnknown_081C1C68 @ OAM
 	.4byte gUnknown_081C1C70 @ Sprite Graphics
 
@@ -14999,7 +15595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081C2070 @ Sprite Data 1
+	.4byte gUnknown_081C2070 @ Animation Data
 	.4byte gUnknown_081C2094 @ OAM
 	.4byte gUnknown_081C209C @ Sprite Graphics
 
@@ -15009,7 +15605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081C211C @ Sprite Data 1
+	.4byte gUnknown_081C211C @ Animation Data
 	.4byte gUnknown_081C2164 @ OAM
 	.4byte gUnknown_081C216C @ Sprite Graphics
 
@@ -15019,7 +15615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081C226C @ Sprite Data 1
+	.4byte gUnknown_081C226C @ Animation Data
 	.4byte gUnknown_081C22B4 @ OAM
 	.4byte gUnknown_081C22BC @ Sprite Graphics
 
@@ -15029,7 +15625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081C32BC @ Sprite Data 1
+	.4byte gUnknown_081C32BC @ Animation Data
 	.4byte gUnknown_081C3304 @ OAM
 	.4byte gUnknown_081C330C @ Sprite Graphics
 
@@ -15039,7 +15635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081C430C @ Sprite Data 1
+	.4byte gUnknown_081C430C @ Animation Data
 	.4byte gUnknown_081C4378 @ OAM
 	.4byte gUnknown_081C4380 @ Sprite Graphics
 
@@ -15049,7 +15645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081C7380 @ Sprite Data 1
+	.4byte gUnknown_081C7380 @ Animation Data
 	.4byte gUnknown_081C7410 @ OAM
 	.4byte gUnknown_081C7418 @ Sprite Graphics
 
@@ -15059,7 +15655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081CB418 @ Sprite Data 1
+	.4byte gUnknown_081CB418 @ Animation Data
 	.4byte gUnknown_081CB538 @ OAM
 	.4byte gUnknown_081CB540 @ Sprite Graphics
 
@@ -15069,7 +15665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081CD540 @ Sprite Data 1
+	.4byte gUnknown_081CD540 @ Animation Data
 	.4byte gUnknown_081CD564 @ OAM
 	.4byte gUnknown_081CD56C @ Sprite Graphics
 
@@ -15079,7 +15675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081CD96C @ Sprite Data 1
+	.4byte gUnknown_081CD96C @ Animation Data
 	.4byte gUnknown_081CDA8C @ OAM
 	.4byte gUnknown_081CDA94 @ Sprite Graphics
 
@@ -15089,7 +15685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081CFA94 @ Sprite Data 1
+	.4byte gUnknown_081CFA94 @ Animation Data
 	.4byte gUnknown_081CFAB8 @ OAM
 	.4byte gUnknown_081CFAC0 @ Sprite Graphics
 
@@ -15099,7 +15695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081CFEC0 @ Sprite Data 1
+	.4byte gUnknown_081CFEC0 @ Animation Data
 	.4byte gUnknown_081CFFE0 @ OAM
 	.4byte gUnknown_081CFFE8 @ Sprite Graphics
 
@@ -15109,7 +15705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081D1FE8 @ Sprite Data 1
+	.4byte gUnknown_081D1FE8 @ Animation Data
 	.4byte gUnknown_081D2204 @ OAM
 	.4byte gUnknown_081D220C @ Sprite Graphics
 
@@ -15119,7 +15715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081D360C @ Sprite Data 1
+	.4byte gUnknown_081D360C @ Animation Data
 	.4byte gUnknown_081D384C @ OAM
 	.4byte gUnknown_081D3854 @ Sprite Graphics
 
@@ -15129,7 +15725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081D4854 @ Sprite Data 1
+	.4byte gUnknown_081D4854 @ Animation Data
 	.4byte gUnknown_081D4A94 @ OAM
 	.4byte gUnknown_081D4A9C @ Sprite Graphics
 
@@ -15139,7 +15735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081D5A9C @ Sprite Data 1
+	.4byte gUnknown_081D5A9C @ Animation Data
 	.4byte gUnknown_081D5CB8 @ OAM
 	.4byte gUnknown_081D5CC0 @ Sprite Graphics
 
@@ -15149,7 +15745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081D70C0 @ Sprite Data 1
+	.4byte gUnknown_081D70C0 @ Animation Data
 	.4byte gUnknown_081D71E0 @ OAM
 	.4byte gUnknown_081D71E8 @ Sprite Graphics
 
@@ -15159,7 +15755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081D91E8 @ Sprite Data 1
+	.4byte gUnknown_081D91E8 @ Animation Data
 	.4byte gUnknown_081D920C @ OAM
 	.4byte gUnknown_081D9214 @ Sprite Graphics
 
@@ -15169,7 +15765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081D9614 @ Sprite Data 1
+	.4byte gUnknown_081D9614 @ Animation Data
 	.4byte gUnknown_081D96EC @ OAM
 	.4byte gUnknown_081D96F4 @ Sprite Graphics
 
@@ -15179,7 +15775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081DF6F4 @ Sprite Data 1
+	.4byte gUnknown_081DF6F4 @ Animation Data
 	.4byte gUnknown_081DF718 @ OAM
 	.4byte gUnknown_081DF720 @ Sprite Graphics
 
@@ -15189,7 +15785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081DFF20 @ Sprite Data 1
+	.4byte gUnknown_081DFF20 @ Animation Data
 	.4byte gUnknown_081DFF68 @ OAM
 	.4byte gUnknown_081DFF70 @ Sprite Graphics
 
@@ -15199,7 +15795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081E0070 @ Sprite Data 1
+	.4byte gUnknown_081E0070 @ Animation Data
 	.4byte gUnknown_081E0094 @ OAM
 	.4byte gUnknown_081E009C @ Sprite Graphics
 
@@ -15209,7 +15805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081E019C @ Sprite Data 1
+	.4byte gUnknown_081E019C @ Animation Data
 	.4byte gUnknown_081E0274 @ OAM
 	.4byte gUnknown_081E027C @ Sprite Graphics
 
@@ -15219,7 +15815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081E327C @ Sprite Data 1
+	.4byte gUnknown_081E327C @ Animation Data
 	.4byte gUnknown_081E3378 @ OAM
 	.4byte gUnknown_081E3380 @ Sprite Graphics
 
@@ -15229,7 +15825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081E6B80 @ Sprite Data 1
+	.4byte gUnknown_081E6B80 @ Animation Data
 	.4byte gUnknown_081E6DC0 @ OAM
 	.4byte gUnknown_081E6DC8 @ Sprite Graphics
 
@@ -15239,7 +15835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081EADC8 @ Sprite Data 1
+	.4byte gUnknown_081EADC8 @ Animation Data
 	.4byte gUnknown_081EAEE8 @ OAM
 	.4byte gUnknown_081EAEF0 @ Sprite Graphics
 
@@ -15249,7 +15845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_081F2EF0 @ Sprite Data 1
+	.4byte gUnknown_081F2EF0 @ Animation Data
 	.4byte gUnknown_081F31E4 @ OAM
 	.4byte gUnknown_081F31EC @ Sprite Graphics
 
@@ -15259,7 +15855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082031EC @ Sprite Data 1
+	.4byte gUnknown_082031EC @ Animation Data
 	.4byte gUnknown_082034E0 @ OAM
 	.4byte gUnknown_082034E8 @ Sprite Graphics
 
@@ -15269,7 +15865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x4020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082084E8 @ Sprite Data 1
+	.4byte gUnknown_082084E8 @ Animation Data
 	.4byte gUnknown_0820850C @ OAM
 	.4byte gUnknown_08208514 @ Sprite Graphics
 
@@ -15279,7 +15875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08208914 @ Sprite Data 1
+	.4byte gUnknown_08208914 @ Animation Data
 	.4byte gUnknown_08208A34 @ OAM
 	.4byte gUnknown_08208A3C @ Sprite Graphics
 
@@ -15289,7 +15885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08210A3C @ Sprite Data 1
+	.4byte gUnknown_08210A3C @ Animation Data
 	.4byte gUnknown_08210ACC @ OAM
 	.4byte gUnknown_08210AD4 @ Sprite Graphics
 
@@ -15299,7 +15895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08213AD4 @ Sprite Data 1
+	.4byte gUnknown_08213AD4 @ Animation Data
 	.4byte gUnknown_08213D14 @ OAM
 	.4byte gUnknown_08213D1C @ Sprite Graphics
 
@@ -15309,7 +15905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08223D1C @ Sprite Data 1
+	.4byte gUnknown_08223D1C @ Animation Data
 	.4byte gUnknown_08223D40 @ OAM
 	.4byte gUnknown_08223D48 @ Sprite Graphics
 
@@ -15319,7 +15915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08223D68 @ Sprite Data 1
+	.4byte gUnknown_08223D68 @ Animation Data
 	.4byte gUnknown_08223D8C @ OAM
 	.4byte gUnknown_08223D94 @ Sprite Graphics
 
@@ -15329,7 +15925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08223E14 @ Sprite Data 1
+	.4byte gUnknown_08223E14 @ Animation Data
 	.4byte gUnknown_08223E38 @ OAM
 	.4byte gUnknown_08223E40 @ Sprite Graphics
 
@@ -15339,7 +15935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08223EC0 @ Sprite Data 1
+	.4byte gUnknown_08223EC0 @ Animation Data
 	.4byte gUnknown_08223EE4 @ OAM
 	.4byte gUnknown_08223EEC @ Sprite Graphics
 
@@ -15349,7 +15945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08223F6C @ Sprite Data 1
+	.4byte gUnknown_08223F6C @ Animation Data
 	.4byte gUnknown_08223F90 @ OAM
 	.4byte gUnknown_08223F98 @ Sprite Graphics
 
@@ -15359,7 +15955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08224018 @ Sprite Data 1
+	.4byte gUnknown_08224018 @ Animation Data
 	.4byte gUnknown_0822403C @ OAM
 	.4byte gUnknown_08224044 @ Sprite Graphics
 
@@ -15369,7 +15965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08224064 @ Sprite Data 1
+	.4byte gUnknown_08224064 @ Animation Data
 	.4byte gUnknown_08224088 @ OAM
 	.4byte gUnknown_08224090 @ Sprite Graphics
 
@@ -15379,7 +15975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08224190 @ Sprite Data 1
+	.4byte gUnknown_08224190 @ Animation Data
 	.4byte gUnknown_08224514 @ OAM
 	.4byte gUnknown_0822451C @ Sprite Graphics
 
@@ -15389,7 +15985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08227D1C @ Sprite Data 1
+	.4byte gUnknown_08227D1C @ Animation Data
 	.4byte gUnknown_08227D40 @ OAM
 	.4byte gUnknown_08227D48 @ Sprite Graphics
 
@@ -15399,7 +15995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08228D48 @ Sprite Data 1
+	.4byte gUnknown_08228D48 @ Animation Data
 	.4byte gUnknown_08228ED4 @ OAM
 	.4byte gUnknown_08228EDC @ Sprite Graphics
 
@@ -15409,7 +16005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08230EDC @ Sprite Data 1
+	.4byte gUnknown_08230EDC @ Animation Data
 	.4byte gUnknown_082310D4 @ OAM
 	.4byte gUnknown_082310DC @ Sprite Graphics
 
@@ -15419,7 +16015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082380DC @ Sprite Data 1
+	.4byte gUnknown_082380DC @ Animation Data
 	.4byte gUnknown_082382D4 @ OAM
 	.4byte gUnknown_082382DC @ Sprite Graphics
 
@@ -15429,7 +16025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0823F2DC @ Sprite Data 1
+	.4byte gUnknown_0823F2DC @ Animation Data
 	.4byte gUnknown_0823F3FC @ OAM
 	.4byte gUnknown_0823F404 @ Sprite Graphics
 
@@ -15439,7 +16035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08243404 @ Sprite Data 1
+	.4byte gUnknown_08243404 @ Animation Data
 	.4byte gUnknown_0824356C @ OAM
 	.4byte gUnknown_08243574 @ Sprite Graphics
 
@@ -15449,7 +16045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0824D574 @ Sprite Data 1
+	.4byte gUnknown_0824D574 @ Animation Data
 	.4byte gUnknown_0824D6B8 @ OAM
 	.4byte gUnknown_0824D6C0 @ Sprite Graphics
 
@@ -15459,7 +16055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08251EC0 @ Sprite Data 1
+	.4byte gUnknown_08251EC0 @ Animation Data
 	.4byte gUnknown_08251FE0 @ OAM
 	.4byte gUnknown_08251FE8 @ Sprite Graphics
 
@@ -15469,7 +16065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08259FE8 @ Sprite Data 1
+	.4byte gUnknown_08259FE8 @ Animation Data
 	.4byte gUnknown_0825A00C @ OAM
 	.4byte gUnknown_0825A014 @ Sprite Graphics
 
@@ -15479,7 +16075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0825A814 @ Sprite Data 1
+	.4byte gUnknown_0825A814 @ Animation Data
 	.4byte gUnknown_0825AA78 @ OAM
 	.4byte gUnknown_0825AA80 @ Sprite Graphics
 
@@ -15489,7 +16085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0826BA80 @ Sprite Data 1
+	.4byte gUnknown_0826BA80 @ Animation Data
 	.4byte gUnknown_0826BAA4 @ OAM
 	.4byte gUnknown_0826BAAC @ Sprite Graphics
 
@@ -15499,7 +16095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0826C2AC @ Sprite Data 1
+	.4byte gUnknown_0826C2AC @ Animation Data
 	.4byte gUnknown_0826C33C @ OAM
 	.4byte gUnknown_0826C344 @ Sprite Graphics
 
@@ -15509,7 +16105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08270344 @ Sprite Data 1
+	.4byte gUnknown_08270344 @ Animation Data
 	.4byte gUnknown_082705F0 @ OAM
 	.4byte gUnknown_082705F8 @ Sprite Graphics
 
@@ -15519,7 +16115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08275DF8 @ Sprite Data 1
+	.4byte gUnknown_08275DF8 @ Animation Data
 	.4byte gUnknown_08275E88 @ OAM
 	.4byte gUnknown_08275E90 @ Sprite Graphics
 
@@ -15529,7 +16125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08277E90 @ Sprite Data 1
+	.4byte gUnknown_08277E90 @ Animation Data
 	.4byte gUnknown_08277F44 @ OAM
 	.4byte gUnknown_08277F4C @ Sprite Graphics
 
@@ -15539,7 +16135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0827CF4C @ Sprite Data 1
+	.4byte gUnknown_0827CF4C @ Animation Data
 	.4byte gUnknown_0827CF70 @ OAM
 	.4byte gUnknown_0827CF78 @ Sprite Graphics
 
@@ -15549,7 +16145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0827D778 @ Sprite Data 1
+	.4byte gUnknown_0827D778 @ Animation Data
 	.4byte gUnknown_0827D898 @ OAM
 	.4byte gUnknown_0827D8A0 @ Sprite Graphics
 
@@ -15559,7 +16155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0827E8A0 @ Sprite Data 1
+	.4byte gUnknown_0827E8A0 @ Animation Data
 	.4byte gUnknown_0827E9E4 @ OAM
 	.4byte gUnknown_0827E9EC @ Sprite Graphics
 
@@ -15569,7 +16165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0827FBEC @ Sprite Data 1
+	.4byte gUnknown_0827FBEC @ Animation Data
 	.4byte gUnknown_0827FDE4 @ OAM
 	.4byte gUnknown_0827FDEC @ Sprite Graphics
 
@@ -15579,7 +16175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08280BEC @ Sprite Data 1
+	.4byte gUnknown_08280BEC @ Animation Data
 	.4byte gUnknown_08280DE4 @ OAM
 	.4byte gUnknown_08280DEC @ Sprite Graphics
 
@@ -15589,7 +16185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08281BEC @ Sprite Data 1
+	.4byte gUnknown_08281BEC @ Animation Data
 	.4byte gUnknown_08281D54 @ OAM
 	.4byte gUnknown_08281D5C @ Sprite Graphics
 
@@ -15599,7 +16195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828315C @ Sprite Data 1
+	.4byte gUnknown_0828315C @ Animation Data
 	.4byte gUnknown_0828339C @ OAM
 	.4byte gUnknown_082833A4 @ Sprite Graphics
 
@@ -15609,7 +16205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082853A4 @ Sprite Data 1
+	.4byte gUnknown_082853A4 @ Animation Data
 	.4byte gUnknown_08285554 @ OAM
 	.4byte gUnknown_0828555C @ Sprite Graphics
 
@@ -15619,7 +16215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828855C @ Sprite Data 1
+	.4byte gUnknown_0828855C @ Animation Data
 	.4byte gUnknown_08288634 @ OAM
 	.4byte gUnknown_0828863C @ Sprite Graphics
 
@@ -15629,7 +16225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828B63C @ Sprite Data 1
+	.4byte gUnknown_0828B63C @ Animation Data
 	.4byte gUnknown_0828B75C @ OAM
 	.4byte gUnknown_0828B764 @ Sprite Graphics
 
@@ -15639,7 +16235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828C764 @ Sprite Data 1
+	.4byte gUnknown_0828C764 @ Animation Data
 	.4byte gUnknown_0828C83C @ OAM
 	.4byte gUnknown_0828C844 @ Sprite Graphics
 
@@ -15649,7 +16245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828CE44 @ Sprite Data 1
+	.4byte gUnknown_0828CE44 @ Animation Data
 	.4byte gUnknown_0828D084 @ OAM
 	.4byte gUnknown_0828D08C @ Sprite Graphics
 
@@ -15659,7 +16255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828D28C @ Sprite Data 1
+	.4byte gUnknown_0828D28C @ Animation Data
 	.4byte gUnknown_0828D31C @ OAM
 	.4byte gUnknown_0828D324 @ Sprite Graphics
 
@@ -15669,7 +16265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828DB24 @ Sprite Data 1
+	.4byte gUnknown_0828DB24 @ Animation Data
 	.4byte gUnknown_0828DD64 @ OAM
 	.4byte gUnknown_0828DD6C @ Sprite Graphics
 
@@ -15679,7 +16275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828E46C @ Sprite Data 1
+	.4byte gUnknown_0828E46C @ Animation Data
 	.4byte gUnknown_0828E6AC @ OAM
 	.4byte gUnknown_0828E6B4 @ Sprite Graphics
 
@@ -15689,7 +16285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828EDB4 @ Sprite Data 1
+	.4byte gUnknown_0828EDB4 @ Animation Data
 	.4byte gUnknown_0828F114 @ OAM
 	.4byte gUnknown_0828F11C @ Sprite Graphics
 
@@ -15699,7 +16295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828FD1C @ Sprite Data 1
+	.4byte gUnknown_0828FD1C @ Animation Data
 	.4byte gUnknown_0828FF5C @ OAM
 	.4byte gUnknown_0828FF64 @ Sprite Graphics
 
@@ -15709,7 +16305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828FFE4 @ Sprite Data 1
+	.4byte gUnknown_0828FFE4 @ Animation Data
 	.4byte gUnknown_08290224 @ OAM
 	.4byte gUnknown_0829022C @ Sprite Graphics
 
@@ -15719,7 +16315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082902AC @ Sprite Data 1
+	.4byte gUnknown_082902AC @ Animation Data
 	.4byte gUnknown_082904EC @ OAM
 	.4byte gUnknown_082904F4 @ Sprite Graphics
 
@@ -15729,7 +16325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08290574 @ Sprite Data 1
+	.4byte gUnknown_08290574 @ Animation Data
 	.4byte gUnknown_082907B4 @ OAM
 	.4byte gUnknown_082907BC @ Sprite Graphics
 
@@ -15739,7 +16335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829083C @ Sprite Data 1
+	.4byte gUnknown_0829083C @ Animation Data
 	.4byte gUnknown_08290B9C @ OAM
 	.4byte gUnknown_08290BA4 @ Sprite Graphics
 
@@ -15749,7 +16345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082923A4 @ Sprite Data 1
+	.4byte gUnknown_082923A4 @ Animation Data
 	.4byte gUnknown_082925E4 @ OAM
 	.4byte gUnknown_082925EC @ Sprite Graphics
 
@@ -15759,7 +16355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082935EC @ Sprite Data 1
+	.4byte gUnknown_082935EC @ Animation Data
 	.4byte gUnknown_0829382C @ OAM
 	.4byte gUnknown_08293834 @ Sprite Graphics
 
@@ -15769,7 +16365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08293C34 @ Sprite Data 1
+	.4byte gUnknown_08293C34 @ Animation Data
 	.4byte gUnknown_08293F94 @ OAM
 	.4byte gUnknown_08293F9C @ Sprite Graphics
 
@@ -15779,7 +16375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829429C @ Sprite Data 1
+	.4byte gUnknown_0829429C @ Animation Data
 	.4byte gUnknown_082944DC @ OAM
 	.4byte gUnknown_082944E4 @ Sprite Graphics
 
@@ -15789,7 +16385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082954E4 @ Sprite Data 1
+	.4byte gUnknown_082954E4 @ Animation Data
 	.4byte gUnknown_08295508 @ OAM
 	.4byte gUnknown_08295510 @ Sprite Graphics
 
@@ -15799,7 +16395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08295530 @ Sprite Data 1
+	.4byte gUnknown_08295530 @ Animation Data
 	.4byte gUnknown_08295554 @ OAM
 	.4byte gUnknown_0829555C @ Sprite Graphics
 
@@ -15809,7 +16405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829557C @ Sprite Data 1
+	.4byte gUnknown_0829557C @ Animation Data
 	.4byte gUnknown_082955A0 @ OAM
 	.4byte gUnknown_082955A8 @ Sprite Graphics
 
@@ -15819,7 +16415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082955C8 @ Sprite Data 1
+	.4byte gUnknown_082955C8 @ Animation Data
 	.4byte gUnknown_082955EC @ OAM
 	.4byte gUnknown_082955F4 @ Sprite Graphics
 
@@ -15829,7 +16425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08295614 @ Sprite Data 1
+	.4byte gUnknown_08295614 @ Animation Data
 	.4byte gUnknown_08295638 @ OAM
 	.4byte gUnknown_08295640 @ Sprite Graphics
 
@@ -15839,7 +16435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08295660 @ Sprite Data 1
+	.4byte gUnknown_08295660 @ Animation Data
 	.4byte gUnknown_08295684 @ OAM
 	.4byte gUnknown_0829568C @ Sprite Graphics
 
@@ -15849,7 +16445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829578C @ Sprite Data 1
+	.4byte gUnknown_0829578C @ Animation Data
 	.4byte gUnknown_082957B0 @ OAM
 	.4byte gUnknown_082957B8 @ Sprite Graphics
 
@@ -15859,7 +16455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08295FB8 @ Sprite Data 1
+	.4byte gUnknown_08295FB8 @ Animation Data
 	.4byte gUnknown_08295FDC @ OAM
 	.4byte gUnknown_08295FE4 @ Sprite Graphics
 
@@ -15869,7 +16465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082967E4 @ Sprite Data 1
+	.4byte gUnknown_082967E4 @ Animation Data
 	.4byte gUnknown_08296808 @ OAM
 	.4byte gUnknown_08296810 @ Sprite Graphics
 
@@ -15879,7 +16475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297010 @ Sprite Data 1
+	.4byte gUnknown_08297010 @ Animation Data
 	.4byte gUnknown_08297034 @ OAM
 	.4byte gUnknown_0829703C @ Sprite Graphics
 
@@ -15889,7 +16485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829713C @ Sprite Data 1
+	.4byte gUnknown_0829713C @ Animation Data
 	.4byte gUnknown_08297160 @ OAM
 	.4byte gUnknown_08297168 @ Sprite Graphics
 
@@ -15899,7 +16495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297268 @ Sprite Data 1
+	.4byte gUnknown_08297268 @ Animation Data
 	.4byte gUnknown_0829728C @ OAM
 	.4byte gUnknown_08297294 @ Sprite Graphics
 
@@ -15909,7 +16505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297394 @ Sprite Data 1
+	.4byte gUnknown_08297394 @ Animation Data
 	.4byte gUnknown_082973B8 @ OAM
 	.4byte gUnknown_082973C0 @ Sprite Graphics
 
@@ -15919,7 +16515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082974C0 @ Sprite Data 1
+	.4byte gUnknown_082974C0 @ Animation Data
 	.4byte gUnknown_082974E4 @ OAM
 	.4byte gUnknown_082974EC @ Sprite Graphics
 
@@ -15929,7 +16525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082975EC @ Sprite Data 1
+	.4byte gUnknown_082975EC @ Animation Data
 	.4byte gUnknown_08297610 @ OAM
 	.4byte gUnknown_08297618 @ Sprite Graphics
 
@@ -15939,7 +16535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297718 @ Sprite Data 1
+	.4byte gUnknown_08297718 @ Animation Data
 	.4byte gUnknown_0829773C @ OAM
 	.4byte gUnknown_08297744 @ Sprite Graphics
 
@@ -15949,7 +16545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297844 @ Sprite Data 1
+	.4byte gUnknown_08297844 @ Animation Data
 	.4byte gUnknown_08297868 @ OAM
 	.4byte gUnknown_08297870 @ Sprite Graphics
 
@@ -15959,7 +16555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297970 @ Sprite Data 1
+	.4byte gUnknown_08297970 @ Animation Data
 	.4byte gUnknown_08297994 @ OAM
 	.4byte gUnknown_0829799C @ Sprite Graphics
 
@@ -15969,7 +16565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297A9C @ Sprite Data 1
+	.4byte gUnknown_08297A9C @ Animation Data
 	.4byte gUnknown_08297AC0 @ OAM
 	.4byte gUnknown_08297AC8 @ Sprite Graphics
 
@@ -15979,7 +16575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297BC8 @ Sprite Data 1
+	.4byte gUnknown_08297BC8 @ Animation Data
 	.4byte gUnknown_08297BEC @ OAM
 	.4byte gUnknown_08297BF4 @ Sprite Graphics
 
@@ -15989,7 +16585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297CF4 @ Sprite Data 1
+	.4byte gUnknown_08297CF4 @ Animation Data
 	.4byte gUnknown_08297D18 @ OAM
 	.4byte gUnknown_08297D20 @ Sprite Graphics
 
@@ -15999,7 +16595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297E20 @ Sprite Data 1
+	.4byte gUnknown_08297E20 @ Animation Data
 	.4byte gUnknown_08297E44 @ OAM
 	.4byte gUnknown_08297E4C @ Sprite Graphics
 
@@ -16009,7 +16605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08297F4C @ Sprite Data 1
+	.4byte gUnknown_08297F4C @ Animation Data
 	.4byte gUnknown_08297F70 @ OAM
 	.4byte gUnknown_08297F78 @ Sprite Graphics
 
@@ -16019,7 +16615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298078 @ Sprite Data 1
+	.4byte gUnknown_08298078 @ Animation Data
 	.4byte gUnknown_0829809C @ OAM
 	.4byte gUnknown_082980A4 @ Sprite Graphics
 
@@ -16029,7 +16625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082981A4 @ Sprite Data 1
+	.4byte gUnknown_082981A4 @ Animation Data
 	.4byte gUnknown_082981C8 @ OAM
 	.4byte gUnknown_082981D0 @ Sprite Graphics
 
@@ -16039,7 +16635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082982D0 @ Sprite Data 1
+	.4byte gUnknown_082982D0 @ Animation Data
 	.4byte gUnknown_082982F4 @ OAM
 	.4byte gUnknown_082982FC @ Sprite Graphics
 
@@ -16049,7 +16645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082983FC @ Sprite Data 1
+	.4byte gUnknown_082983FC @ Animation Data
 	.4byte gUnknown_08298420 @ OAM
 	.4byte gUnknown_08298428 @ Sprite Graphics
 
@@ -16059,7 +16655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298528 @ Sprite Data 1
+	.4byte gUnknown_08298528 @ Animation Data
 	.4byte gUnknown_0829854C @ OAM
 	.4byte gUnknown_08298554 @ Sprite Graphics
 
@@ -16069,7 +16665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298654 @ Sprite Data 1
+	.4byte gUnknown_08298654 @ Animation Data
 	.4byte gUnknown_08298678 @ OAM
 	.4byte gUnknown_08298680 @ Sprite Graphics
 
@@ -16079,7 +16675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298780 @ Sprite Data 1
+	.4byte gUnknown_08298780 @ Animation Data
 	.4byte gUnknown_082987A4 @ OAM
 	.4byte gUnknown_082987AC @ Sprite Graphics
 
@@ -16089,7 +16685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082988AC @ Sprite Data 1
+	.4byte gUnknown_082988AC @ Animation Data
 	.4byte gUnknown_082988D0 @ OAM
 	.4byte gUnknown_082988D8 @ Sprite Graphics
 
@@ -16099,7 +16695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082989D8 @ Sprite Data 1
+	.4byte gUnknown_082989D8 @ Animation Data
 	.4byte gUnknown_082989FC @ OAM
 	.4byte gUnknown_08298A04 @ Sprite Graphics
 
@@ -16109,7 +16705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298B04 @ Sprite Data 1
+	.4byte gUnknown_08298B04 @ Animation Data
 	.4byte gUnknown_08298B28 @ OAM
 	.4byte gUnknown_08298B30 @ Sprite Graphics
 
@@ -16119,7 +16715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298C30 @ Sprite Data 1
+	.4byte gUnknown_08298C30 @ Animation Data
 	.4byte gUnknown_08298C54 @ OAM
 	.4byte gUnknown_08298C5C @ Sprite Graphics
 
@@ -16129,7 +16725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298D5C @ Sprite Data 1
+	.4byte gUnknown_08298D5C @ Animation Data
 	.4byte gUnknown_08298D80 @ OAM
 	.4byte gUnknown_08298D88 @ Sprite Graphics
 
@@ -16139,7 +16735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298E88 @ Sprite Data 1
+	.4byte gUnknown_08298E88 @ Animation Data
 	.4byte gUnknown_08298EAC @ OAM
 	.4byte gUnknown_08298EB4 @ Sprite Graphics
 
@@ -16149,7 +16745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08298FB4 @ Sprite Data 1
+	.4byte gUnknown_08298FB4 @ Animation Data
 	.4byte gUnknown_08298FD8 @ OAM
 	.4byte gUnknown_08298FE0 @ Sprite Graphics
 
@@ -16159,7 +16755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082990E0 @ Sprite Data 1
+	.4byte gUnknown_082990E0 @ Animation Data
 	.4byte gUnknown_08299104 @ OAM
 	.4byte gUnknown_0829910C @ Sprite Graphics
 
@@ -16169,7 +16765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829920C @ Sprite Data 1
+	.4byte gUnknown_0829920C @ Animation Data
 	.4byte gUnknown_08299230 @ OAM
 	.4byte gUnknown_08299238 @ Sprite Graphics
 
@@ -16179,7 +16775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08299338 @ Sprite Data 1
+	.4byte gUnknown_08299338 @ Animation Data
 	.4byte gUnknown_0829935C @ OAM
 	.4byte gUnknown_08299364 @ Sprite Graphics
 
@@ -16189,7 +16785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08299464 @ Sprite Data 1
+	.4byte gUnknown_08299464 @ Animation Data
 	.4byte gUnknown_08299488 @ OAM
 	.4byte gUnknown_08299490 @ Sprite Graphics
 
@@ -16199,7 +16795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08299590 @ Sprite Data 1
+	.4byte gUnknown_08299590 @ Animation Data
 	.4byte gUnknown_082995B4 @ OAM
 	.4byte gUnknown_082995BC @ Sprite Graphics
 
@@ -16209,7 +16805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082996BC @ Sprite Data 1
+	.4byte gUnknown_082996BC @ Animation Data
 	.4byte gUnknown_082996E0 @ OAM
 	.4byte gUnknown_082996E8 @ Sprite Graphics
 
@@ -16219,7 +16815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082997E8 @ Sprite Data 1
+	.4byte gUnknown_082997E8 @ Animation Data
 	.4byte gUnknown_0829980C @ OAM
 	.4byte gUnknown_08299814 @ Sprite Graphics
 
@@ -16229,7 +16825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08299914 @ Sprite Data 1
+	.4byte gUnknown_08299914 @ Animation Data
 	.4byte gUnknown_08299938 @ OAM
 	.4byte gUnknown_08299940 @ Sprite Graphics
 
@@ -16239,9 +16835,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08299A40 @ Sprite Data 1
-	.4byte gUnknown_08299BF0 @ OAM
-	.4byte gUnknown_08299BF8 @ Sprite Graphics
+	.4byte gfxExpertLevelIconPicsAnimation @ Animation Data
+	.4byte gfxExpertLevelIconPicsOAM @ OAM
+	.4byte gfxExpertLevelIconPics @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x1000 @ Y position
@@ -16249,7 +16845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829A7F8 @ Sprite Data 1
+	.4byte gUnknown_0829A7F8 @ Animation Data
 	.4byte gUnknown_0829A81C @ OAM
 	.4byte gUnknown_0829A824 @ Sprite Graphics
 
@@ -16259,7 +16855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829B824 @ Sprite Data 1
+	.4byte gUnknown_0829B824 @ Animation Data
 	.4byte gUnknown_0829BA64 @ OAM
 	.4byte gUnknown_0829BA6C @ Sprite Graphics
 
@@ -16269,7 +16865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829C26C @ Sprite Data 1
+	.4byte gUnknown_0829C26C @ Animation Data
 	.4byte gUnknown_0829C4AC @ OAM
 	.4byte gUnknown_0829C4B4 @ Sprite Graphics
 
@@ -16279,7 +16875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829CCB4 @ Sprite Data 1
+	.4byte gUnknown_0829CCB4 @ Animation Data
 	.4byte gUnknown_0829CEF4 @ OAM
 	.4byte gUnknown_0829CEFC @ Sprite Graphics
 
@@ -16289,7 +16885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829CF7C @ Sprite Data 1
+	.4byte gUnknown_0829CF7C @ Animation Data
 	.4byte gUnknown_0829D1BC @ OAM
 	.4byte gUnknown_0829D1C4 @ Sprite Graphics
 
@@ -16299,7 +16895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829D9C4 @ Sprite Data 1
+	.4byte gUnknown_0829D9C4 @ Animation Data
 	.4byte gUnknown_0829D9E8 @ OAM
 	.4byte gUnknown_0829D9F0 @ Sprite Graphics
 
@@ -16309,7 +16905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829DA70 @ Sprite Data 1
+	.4byte gUnknown_0829DA70 @ Animation Data
 	.4byte gUnknown_0829DCB0 @ OAM
 	.4byte gUnknown_0829DCB8 @ Sprite Graphics
 
@@ -16319,7 +16915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829ECB8 @ Sprite Data 1
+	.4byte gUnknown_0829ECB8 @ Animation Data
 	.4byte gUnknown_0829EDB4 @ OAM
 	.4byte gUnknown_0829EDBC @ Sprite Graphics
 
@@ -16329,7 +16925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829F4BC @ Sprite Data 1
+	.4byte gUnknown_0829F4BC @ Animation Data
 	.4byte gUnknown_0829F66C @ OAM
 	.4byte gUnknown_0829F674 @ Sprite Graphics
 
@@ -16339,7 +16935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A0E74 @ Sprite Data 1
+	.4byte gUnknown_082A0E74 @ Animation Data
 	.4byte gUnknown_082A0F94 @ OAM
 	.4byte gUnknown_082A0F9C @ Sprite Graphics
 
@@ -16349,7 +16945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A139C @ Sprite Data 1
+	.4byte gUnknown_082A139C @ Animation Data
 	.4byte gUnknown_082A1474 @ OAM
 	.4byte gUnknown_082A147C @ Sprite Graphics
 
@@ -16359,7 +16955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A207C @ Sprite Data 1
+	.4byte gUnknown_082A207C @ Animation Data
 	.4byte gUnknown_082A22BC @ OAM
 	.4byte gUnknown_082A22C4 @ Sprite Graphics
 
@@ -16369,7 +16965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A42C4 @ Sprite Data 1
+	.4byte gUnknown_082A42C4 @ Animation Data
 	.4byte gUnknown_082A4354 @ OAM
 	.4byte gUnknown_082A435C @ Sprite Graphics
 
@@ -16379,7 +16975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A4B5C @ Sprite Data 1
+	.4byte gUnknown_082A4B5C @ Animation Data
 	.4byte gUnknown_082A4C7C @ OAM
 	.4byte gUnknown_082A4C84 @ Sprite Graphics
 
@@ -16389,7 +16985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A5C84 @ Sprite Data 1
+	.4byte gUnknown_082A5C84 @ Animation Data
 	.4byte gUnknown_082A5D5C @ OAM
 	.4byte gUnknown_082A5D64 @ Sprite Graphics
 
@@ -16399,7 +16995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A6064 @ Sprite Data 1
+	.4byte gUnknown_082A6064 @ Animation Data
 	.4byte gUnknown_082A6184 @ OAM
 	.4byte gUnknown_082A618C @ Sprite Graphics
 
@@ -16409,7 +17005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A658C @ Sprite Data 1
+	.4byte gUnknown_082A658C @ Animation Data
 	.4byte gUnknown_082A6910 @ OAM
 	.4byte gUnknown_082A6918 @ Sprite Graphics
 
@@ -16419,7 +17015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A6C18 @ Sprite Data 1
+	.4byte gUnknown_082A6C18 @ Animation Data
 	.4byte gUnknown_082A6CF0 @ OAM
 	.4byte gUnknown_082A6CF8 @ Sprite Graphics
 
@@ -16429,7 +17025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A6FF8 @ Sprite Data 1
+	.4byte gUnknown_082A6FF8 @ Animation Data
 	.4byte gUnknown_082A70AC @ OAM
 	.4byte gUnknown_082A70B4 @ Sprite Graphics
 
@@ -16439,7 +17035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A7334 @ Sprite Data 1
+	.4byte gUnknown_082A7334 @ Animation Data
 	.4byte gUnknown_082A7454 @ OAM
 	.4byte gUnknown_082A745C @ Sprite Graphics
 
@@ -16449,7 +17045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A785C @ Sprite Data 1
+	.4byte gUnknown_082A785C @ Animation Data
 	.4byte gUnknown_082A7934 @ OAM
 	.4byte gUnknown_082A793C @ Sprite Graphics
 
@@ -16459,7 +17055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A7C3C @ Sprite Data 1
+	.4byte gUnknown_082A7C3C @ Animation Data
 	.4byte gUnknown_082A7DEC @ OAM
 	.4byte gUnknown_082A7DF4 @ Sprite Graphics
 
@@ -16469,7 +17065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082A95F4 @ Sprite Data 1
+	.4byte gUnknown_082A95F4 @ Animation Data
 	.4byte gUnknown_082A9834 @ OAM
 	.4byte gUnknown_082A983C @ Sprite Graphics
 
@@ -16479,7 +17075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082AB83C @ Sprite Data 1
+	.4byte gUnknown_082AB83C @ Animation Data
 	.4byte gUnknown_082AB8CC @ OAM
 	.4byte gUnknown_082AB8D4 @ Sprite Graphics
 
@@ -16489,7 +17085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082AC0D4 @ Sprite Data 1
+	.4byte gUnknown_082AC0D4 @ Animation Data
 	.4byte gUnknown_082AC2A8 @ OAM
 	.4byte gUnknown_082AC2B0 @ Sprite Graphics
 
@@ -16499,7 +17095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ADAB0 @ Sprite Data 1
+	.4byte gUnknown_082ADAB0 @ Animation Data
 	.4byte gfxTrashCanOAM @ OAM
 	.4byte gfxTrashCan4bpp @ Sprite Graphics
 
@@ -16509,7 +17105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ADBDC @ Sprite Data 1
+	.4byte gUnknown_082ADBDC @ Animation Data
 	.4byte gfxTrashCanFlipOAM @ OAM
 	.4byte gfxTrashCanFlip4bpp @ Sprite Graphics
 
@@ -16519,7 +17115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082AEE24 @ Sprite Data 1
+	.4byte gUnknown_082AEE24 @ Animation Data
 	.4byte gUnknown_082AEE48 @ OAM
 	.4byte gUnknown_082AEE50 @ Sprite Graphics
 
@@ -16529,7 +17125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082AEF50 @ Sprite Data 1
+	.4byte gUnknown_082AEF50 @ Animation Data
 	.4byte gUnknown_082AEF74 @ OAM
 	.4byte gUnknown_082AEF7C @ Sprite Graphics
 
@@ -16539,7 +17135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082AF77C @ Sprite Data 1
+	.4byte gUnknown_082AF77C @ Animation Data
 	.4byte gfxBonusPresentOAM @ OAM
 	.4byte gfxBonusPresent4bpp @ Sprite Graphics
 
@@ -16549,7 +17145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082AFFA8 @ Sprite Data 1
+	.4byte gUnknown_082AFFA8 @ Animation Data
 	.4byte gfxBonusPresentSquishOAM @ OAM
 	.4byte gfxBonusPresentSquish4bpp @ Sprite Graphics
 
@@ -16559,7 +17155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082B3088 @ Sprite Data 1
+	.4byte gUnknown_082B3088 @ Animation Data
 	.4byte gUnknown_082B30AC @ OAM
 	.4byte gUnknown_082B30B4 @ Sprite Graphics
 
@@ -16569,7 +17165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x4020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082B34B4 @ Sprite Data 1
+	.4byte gUnknown_082B34B4 @ Animation Data
 	.4byte gUnknown_082B3544 @ OAM
 	.4byte gUnknown_082B354C @ Sprite Graphics
 
@@ -16579,7 +17175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x4020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082B454C @ Sprite Data 1
+	.4byte gUnknown_082B454C @ Animation Data
 	.4byte gUnknown_082B45DC @ OAM
 	.4byte gUnknown_082B45E4 @ Sprite Graphics
 
@@ -16589,7 +17185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082B55E4 @ Sprite Data 1
+	.4byte gUnknown_082B55E4 @ Animation Data
 	.4byte gUnknown_082B5674 @ OAM
 	.4byte gUnknown_082B567C @ Sprite Graphics
 
@@ -16599,7 +17195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082B667C @ Sprite Data 1
+	.4byte gUnknown_082B667C @ Animation Data
 	.4byte gUnknown_082B670C @ OAM
 	.4byte gUnknown_082B6714 @ Sprite Graphics
 
@@ -16609,7 +17205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082B7714 @ Sprite Data 1
+	.4byte gUnknown_082B7714 @ Animation Data
 	.4byte gUnknown_082B787C @ OAM
 	.4byte gUnknown_082B7884 @ Sprite Graphics
 
@@ -16619,7 +17215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082B8C84 @ Sprite Data 1
+	.4byte gUnknown_082B8C84 @ Animation Data
 	.4byte gUnknown_082B8F54 @ OAM
 	.4byte gUnknown_082B8F5C @ Sprite Graphics
 
@@ -16629,7 +17225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C2F5C @ Sprite Data 1
+	.4byte gUnknown_082C2F5C @ Animation Data
 	.4byte gUnknown_082C32BC @ OAM
 	.4byte gUnknown_082C32C4 @ Sprite Graphics
 
@@ -16639,7 +17235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C36C4 @ Sprite Data 1
+	.4byte gUnknown_082C36C4 @ Animation Data
 	.4byte gUnknown_082C37C0 @ OAM
 	.4byte gUnknown_082C37C8 @ Sprite Graphics
 
@@ -16649,7 +17245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C45C8 @ Sprite Data 1
+	.4byte gUnknown_082C45C8 @ Animation Data
 	.4byte gUnknown_082C470C @ OAM
 	.4byte gUnknown_082C4714 @ Sprite Graphics
 
@@ -16659,7 +17255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C6B14 @ Sprite Data 1
+	.4byte gUnknown_082C6B14 @ Animation Data
 	.4byte gUnknown_082C6B38 @ OAM
 	.4byte gUnknown_082C6B40 @ Sprite Graphics
 
@@ -16669,7 +17265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C6C40 @ Sprite Data 1
+	.4byte gUnknown_082C6C40 @ Animation Data
 	.4byte gUnknown_082C6C64 @ OAM
 	.4byte gUnknown_082C6C6C @ Sprite Graphics
 
@@ -16679,7 +17275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C6D6C @ Sprite Data 1
+	.4byte gUnknown_082C6D6C @ Animation Data
 	.4byte gUnknown_082C6D90 @ OAM
 	.4byte gUnknown_082C6D98 @ Sprite Graphics
 
@@ -16689,7 +17285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C6E98 @ Sprite Data 1
+	.4byte gUnknown_082C6E98 @ Animation Data
 	.4byte gUnknown_082C6EBC @ OAM
 	.4byte gUnknown_082C6EC4 @ Sprite Graphics
 
@@ -16699,7 +17295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C72C4 @ Sprite Data 1
+	.4byte gUnknown_082C72C4 @ Animation Data
 	.4byte gUnknown_082C72E8 @ OAM
 	.4byte gUnknown_082C72F0 @ Sprite Graphics
 
@@ -16709,7 +17305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C7330 @ Sprite Data 1
+	.4byte gUnknown_082C7330 @ Animation Data
 	.4byte gUnknown_082C7354 @ OAM
 	.4byte gUnknown_082C735C @ Sprite Graphics
 
@@ -16719,7 +17315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C775C @ Sprite Data 1
+	.4byte gUnknown_082C775C @ Animation Data
 	.4byte gUnknown_082C7780 @ OAM
 	.4byte gUnknown_082C7788 @ Sprite Graphics
 
@@ -16729,7 +17325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C7B88 @ Sprite Data 1
+	.4byte gUnknown_082C7B88 @ Animation Data
 	.4byte gUnknown_082C7BAC @ OAM
 	.4byte gUnknown_082C7BB4 @ Sprite Graphics
 
@@ -16739,7 +17335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C7FB4 @ Sprite Data 1
+	.4byte gUnknown_082C7FB4 @ Animation Data
 	.4byte gUnknown_082C7FD8 @ OAM
 	.4byte gfxSpringJumpText14bpp @ Sprite Graphics
 
@@ -16749,7 +17345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C80E0 @ Sprite Data 1
+	.4byte gUnknown_082C80E0 @ Animation Data
 	.4byte gUnknown_082C8104 @ OAM
 	.4byte gfxSpringJumpText24bpp @ Sprite Graphics
 
@@ -16759,7 +17355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C820C @ Sprite Data 1
+	.4byte gUnknown_082C820C @ Animation Data
 	.4byte gUnknown_082C8230 @ OAM
 	.4byte gfxSpringJumpText34bpp @ Sprite Graphics
 
@@ -16769,7 +17365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C82B8 @ Sprite Data 1
+	.4byte gUnknown_082C82B8 @ Animation Data
 	.4byte gUnknown_082C82DC @ OAM
 	.4byte gUnknown_082C82E4 @ Sprite Graphics
 
@@ -16779,7 +17375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C84E4 @ Sprite Data 1
+	.4byte gUnknown_082C84E4 @ Animation Data
 	.4byte gUnknown_082C8508 @ OAM
 	.4byte gUnknown_082C8510 @ Sprite Graphics
 
@@ -16789,7 +17385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C8710 @ Sprite Data 1
+	.4byte gUnknown_082C8710 @ Animation Data
 	.4byte gUnknown_082C8734 @ OAM
 	.4byte gUnknown_082C873C @ Sprite Graphics
 
@@ -16799,7 +17395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082C973C @ Sprite Data 1
+	.4byte gUnknown_082C973C @ Animation Data
 	.4byte gUnknown_082C9760 @ OAM
 	.4byte gUnknown_082C9768 @ Sprite Graphics
 
@@ -16809,7 +17405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CA768 @ Sprite Data 1
+	.4byte gUnknown_082CA768 @ Animation Data
 	.4byte gUnknown_082CA78C @ OAM
 	.4byte gUnknown_082CA794 @ Sprite Graphics
 
@@ -16819,7 +17415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CA994 @ Sprite Data 1
+	.4byte gUnknown_082CA994 @ Animation Data
 	.4byte gUnknown_082CA9B8 @ OAM
 	.4byte gUnknown_082CA9C0 @ Sprite Graphics
 
@@ -16829,7 +17425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CABC0 @ Sprite Data 1
+	.4byte gUnknown_082CABC0 @ Animation Data
 	.4byte gUnknown_082CABE4 @ OAM
 	.4byte gUnknown_082CABEC @ Sprite Graphics
 
@@ -16839,7 +17435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CACEC @ Sprite Data 1
+	.4byte gUnknown_082CACEC @ Animation Data
 	.4byte gUnknown_082CAD10 @ OAM
 	.4byte gUnknown_082CAD18 @ Sprite Graphics
 
@@ -16849,7 +17445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CB118 @ Sprite Data 1
+	.4byte gUnknown_082CB118 @ Animation Data
 	.4byte gUnknown_082CB13C @ OAM
 	.4byte gUnknown_082CB144 @ Sprite Graphics
 
@@ -16859,7 +17455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CB544 @ Sprite Data 1
+	.4byte gUnknown_082CB544 @ Animation Data
 	.4byte gfxHandstandJumpText1OAM @ OAM
 	.4byte gfxHandstandJumpText14bpp @ Sprite Graphics
 
@@ -16869,7 +17465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CB5B0 @ Sprite Data 1
+	.4byte gUnknown_082CB5B0 @ Animation Data
 	.4byte gfxHandstandJumpText2OAM @ OAM
 	.4byte gfxHandstandJumpText24bpp @ Sprite Graphics
 
@@ -16879,7 +17475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CB6DC @ Sprite Data 1
+	.4byte gUnknown_082CB6DC @ Animation Data
 	.4byte gfxHandstandJumpText3OAM @ OAM
 	.4byte gfxHandstandJumpText34bpp @ Sprite Graphics
 
@@ -16889,7 +17485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CB808 @ Sprite Data 1
+	.4byte gUnknown_082CB808 @ Animation Data
 	.4byte gfxHandstandJumpText4OAM @ OAM
 	.4byte gfxHandstandJumpText44bpp @ Sprite Graphics
 
@@ -16899,7 +17495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CB934 @ Sprite Data 1
+	.4byte gUnknown_082CB934 @ Animation Data
 	.4byte gUnknown_082CB958 @ OAM
 	.4byte gUnknown_082CB960 @ Sprite Graphics
 
@@ -16909,7 +17505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CBB60 @ Sprite Data 1
+	.4byte gUnknown_082CBB60 @ Animation Data
 	.4byte gUnknown_082CBB84 @ OAM
 	.4byte gUnknown_082CBB8C @ Sprite Graphics
 
@@ -16919,7 +17515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CBD8C @ Sprite Data 1
+	.4byte gUnknown_082CBD8C @ Animation Data
 	.4byte gUnknown_082CBDB0 @ OAM
 	.4byte gUnknown_082CBDB8 @ Sprite Graphics
 
@@ -16929,7 +17525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CBFB8 @ Sprite Data 1
+	.4byte gUnknown_082CBFB8 @ Animation Data
 	.4byte gUnknown_082CBFDC @ OAM
 	.4byte gUnknown_082CBFE4 @ Sprite Graphics
 
@@ -16939,7 +17535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CC064 @ Sprite Data 1
+	.4byte gUnknown_082CC064 @ Animation Data
 	.4byte gUnknown_082CC088 @ OAM
 	.4byte gUnknown_082CC090 @ Sprite Graphics
 
@@ -16949,7 +17545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CC490 @ Sprite Data 1
+	.4byte gUnknown_082CC490 @ Animation Data
 	.4byte gUnknown_082CC4B4 @ OAM
 	.4byte gUnknown_082CC4BC @ Sprite Graphics
 
@@ -16959,7 +17555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CC8BC @ Sprite Data 1
+	.4byte gUnknown_082CC8BC @ Animation Data
 	.4byte gUnknown_082CC8E0 @ OAM
 	.4byte gUnknown_082CC8E8 @ Sprite Graphics
 
@@ -16969,7 +17565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CD8E8 @ Sprite Data 1
+	.4byte gUnknown_082CD8E8 @ Animation Data
 	.4byte gUnknown_082CD90C @ OAM
 	.4byte gfxHandstandDoubleJumpText14bpp @ Sprite Graphics
 
@@ -16979,7 +17575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CDA14 @ Sprite Data 1
+	.4byte gUnknown_082CDA14 @ Animation Data
 	.4byte gUnknown_082CDA38 @ OAM
 	.4byte gUnknown_082CDA40 @ Sprite Graphics
 
@@ -16989,7 +17585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CDB40 @ Sprite Data 1
+	.4byte gUnknown_082CDB40 @ Animation Data
 	.4byte gUnknown_082CDB64 @ OAM
 	.4byte gfxHandstandDoubleJumpText34bpp @ Sprite Graphics
 
@@ -16999,7 +17595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CDC6C @ Sprite Data 1
+	.4byte gUnknown_082CDC6C @ Animation Data
 	.4byte gUnknown_082CDC90 @ OAM
 	.4byte gUnknown_082CDC98 @ Sprite Graphics
 
@@ -17009,7 +17605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CDD98 @ Sprite Data 1
+	.4byte gUnknown_082CDD98 @ Animation Data
 	.4byte gUnknown_082CDDBC @ OAM
 	.4byte gfxHandstandDoubleJumpText44bpp @ Sprite Graphics
 
@@ -17019,7 +17615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CDEC4 @ Sprite Data 1
+	.4byte gUnknown_082CDEC4 @ Animation Data
 	.4byte gUnknown_082CDEE8 @ OAM
 	.4byte gUnknown_082CDEF0 @ Sprite Graphics
 
@@ -17029,7 +17625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CE2F0 @ Sprite Data 1
+	.4byte gUnknown_082CE2F0 @ Animation Data
 	.4byte gUnknown_082CE314 @ OAM
 	.4byte gUnknown_082CE31C @ Sprite Graphics
 
@@ -17039,7 +17635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CE71C @ Sprite Data 1
+	.4byte gUnknown_082CE71C @ Animation Data
 	.4byte gUnknown_082CE740 @ OAM
 	.4byte gUnknown_082CE748 @ Sprite Graphics
 
@@ -17049,7 +17645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CE7C8 @ Sprite Data 1
+	.4byte gUnknown_082CE7C8 @ Animation Data
 	.4byte gUnknown_082CE7EC @ OAM
 	.4byte gUnknown_082CE7F4 @ Sprite Graphics
 
@@ -17059,7 +17655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CE8F4 @ Sprite Data 1
+	.4byte gUnknown_082CE8F4 @ Animation Data
 	.4byte gUnknown_082CE918 @ OAM
 	.4byte gUnknown_082CE920 @ Sprite Graphics
 
@@ -17069,7 +17665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CE9A0 @ Sprite Data 1
+	.4byte gUnknown_082CE9A0 @ Animation Data
 	.4byte gUnknown_082CE9C4 @ OAM
 	.4byte gUnknown_082CE9CC @ Sprite Graphics
 
@@ -17079,7 +17675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CEDCC @ Sprite Data 1
+	.4byte gUnknown_082CEDCC @ Animation Data
 	.4byte gUnknown_082CEDF0 @ OAM
 	.4byte gUnknown_082CEDF8 @ Sprite Graphics
 
@@ -17089,7 +17685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CF1F8 @ Sprite Data 1
+	.4byte gUnknown_082CF1F8 @ Animation Data
 	.4byte gUnknown_082CF21C @ OAM
 	.4byte gUnknown_082CF224 @ Sprite Graphics
 
@@ -17099,7 +17695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082CFA24 @ Sprite Data 1
+	.4byte gUnknown_082CFA24 @ Animation Data
 	.4byte gUnknown_082CFA48 @ OAM
 	.4byte gUnknown_082CFA50 @ Sprite Graphics
 
@@ -17109,7 +17705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D0A50 @ Sprite Data 1
+	.4byte gUnknown_082D0A50 @ Animation Data
 	.4byte gUnknown_082D0A74 @ OAM
 	.4byte gUnknown_082D0A7C @ Sprite Graphics
 
@@ -17119,7 +17715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D0B7C @ Sprite Data 1
+	.4byte gUnknown_082D0B7C @ Animation Data
 	.4byte gUnknown_082D0BA0 @ OAM
 	.4byte gfxBackflipText14bpp @ Sprite Graphics
 
@@ -17129,7 +17725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D0CA8 @ Sprite Data 1
+	.4byte gUnknown_082D0CA8 @ Animation Data
 	.4byte gUnknown_082D0CCC @ OAM
 	.4byte gfxBackflipText24bpp @ Sprite Graphics
 
@@ -17139,7 +17735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D0DD4 @ Sprite Data 1
+	.4byte gUnknown_082D0DD4 @ Animation Data
 	.4byte gUnknown_082D0DF8 @ OAM
 	.4byte gUnknown_082D0E00 @ Sprite Graphics
 
@@ -17149,7 +17745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D1200 @ Sprite Data 1
+	.4byte gUnknown_082D1200 @ Animation Data
 	.4byte gUnknown_082D1224 @ OAM
 	.4byte gUnknown_082D122C @ Sprite Graphics
 
@@ -17159,7 +17755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D132C @ Sprite Data 1
+	.4byte gUnknown_082D132C @ Animation Data
 	.4byte gUnknown_082D1350 @ OAM
 	.4byte gUnknown_082D1358 @ Sprite Graphics
 
@@ -17169,7 +17765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D13D8 @ Sprite Data 1
+	.4byte gUnknown_082D13D8 @ Animation Data
 	.4byte gUnknown_082D13FC @ OAM
 	.4byte gUnknown_082D1404 @ Sprite Graphics
 
@@ -17179,7 +17775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D2404 @ Sprite Data 1
+	.4byte gUnknown_082D2404 @ Animation Data
 	.4byte gUnknown_082D2428 @ OAM
 	.4byte gUnknown_082D2430 @ Sprite Graphics
 
@@ -17189,7 +17785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D3430 @ Sprite Data 1
+	.4byte gUnknown_082D3430 @ Animation Data
 	.4byte gUnknown_082D3454 @ OAM
 	.4byte gUnknown_082D345C @ Sprite Graphics
 
@@ -17199,7 +17795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D355C @ Sprite Data 1
+	.4byte gUnknown_082D355C @ Animation Data
 	.4byte gUnknown_082D3580 @ OAM
 	.4byte gUnknown_082D3588 @ Sprite Graphics
 
@@ -17209,7 +17805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D3688 @ Sprite Data 1
+	.4byte gUnknown_082D3688 @ Animation Data
 	.4byte gUnknown_082D36AC @ OAM
 	.4byte gUnknown_082D36B4 @ Sprite Graphics
 
@@ -17219,7 +17815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D37B4 @ Sprite Data 1
+	.4byte gUnknown_082D37B4 @ Animation Data
 	.4byte gUnknown_082D37D8 @ OAM
 	.4byte gUnknown_082D37E0 @ Sprite Graphics
 
@@ -17229,7 +17825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D38E0 @ Sprite Data 1
+	.4byte gUnknown_082D38E0 @ Animation Data
 	.4byte gUnknown_082D3904 @ OAM
 	.4byte gUnknown_082D390C @ Sprite Graphics
 
@@ -17239,7 +17835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D3D0C @ Sprite Data 1
+	.4byte gUnknown_082D3D0C @ Animation Data
 	.4byte gUnknown_082D3D30 @ OAM
 	.4byte gUnknown_082D3D38 @ Sprite Graphics
 
@@ -17249,7 +17845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D4D38 @ Sprite Data 1
+	.4byte gUnknown_082D4D38 @ Animation Data
 	.4byte gUnknown_082D4D5C @ OAM
 	.4byte gUnknown_082D4D64 @ Sprite Graphics
 
@@ -17259,7 +17855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D5D64 @ Sprite Data 1
+	.4byte gUnknown_082D5D64 @ Animation Data
 	.4byte gUnknown_082D5D88 @ OAM
 	.4byte gUnknown_082D5D90 @ Sprite Graphics
 
@@ -17269,7 +17865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D6D90 @ Sprite Data 1
+	.4byte gUnknown_082D6D90 @ Animation Data
 	.4byte gUnknown_082D6DB4 @ OAM
 	.4byte gUnknown_082D6DBC @ Sprite Graphics
 
@@ -17279,7 +17875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D6EBC @ Sprite Data 1
+	.4byte gUnknown_082D6EBC @ Animation Data
 	.4byte gUnknown_082D6EE0 @ OAM
 	.4byte gUnknown_082D6EE8 @ Sprite Graphics
 
@@ -17289,7 +17885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D6FE8 @ Sprite Data 1
+	.4byte gUnknown_082D6FE8 @ Animation Data
 	.4byte gUnknown_082D700C @ OAM
 	.4byte gUnknown_082D7014 @ Sprite Graphics
 
@@ -17299,7 +17895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D7114 @ Sprite Data 1
+	.4byte gUnknown_082D7114 @ Animation Data
 	.4byte gUnknown_082D7138 @ OAM
 	.4byte gUnknown_082D7140 @ Sprite Graphics
 
@@ -17309,7 +17905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D7240 @ Sprite Data 1
+	.4byte gUnknown_082D7240 @ Animation Data
 	.4byte gUnknown_082D7264 @ OAM
 	.4byte gUnknown_082D726C @ Sprite Graphics
 
@@ -17319,7 +17915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D766C @ Sprite Data 1
+	.4byte gUnknown_082D766C @ Animation Data
 	.4byte gUnknown_082D7690 @ OAM
 	.4byte gUnknown_082D7698 @ Sprite Graphics
 
@@ -17329,7 +17925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D7898 @ Sprite Data 1
+	.4byte gUnknown_082D7898 @ Animation Data
 	.4byte gUnknown_082D78BC @ OAM
 	.4byte gUnknown_082D78C4 @ Sprite Graphics
 
@@ -17339,7 +17935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D79C4 @ Sprite Data 1
+	.4byte gUnknown_082D79C4 @ Animation Data
 	.4byte gUnknown_082D79E8 @ OAM
 	.4byte gUnknown_082D79F0 @ Sprite Graphics
 
@@ -17349,7 +17945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D89F0 @ Sprite Data 1
+	.4byte gUnknown_082D89F0 @ Animation Data
 	.4byte gUnknown_082D8A14 @ OAM
 	.4byte gUnknown_082D8A1C @ Sprite Graphics
 
@@ -17359,7 +17955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082D9A1C @ Sprite Data 1
+	.4byte gUnknown_082D9A1C @ Animation Data
 	.4byte gUnknown_082D9A40 @ OAM
 	.4byte gUnknown_082D9A48 @ Sprite Graphics
 
@@ -17369,7 +17965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DAA48 @ Sprite Data 1
+	.4byte gUnknown_082DAA48 @ Animation Data
 	.4byte gUnknown_082DAA6C @ OAM
 	.4byte gUnknown_082DAA74 @ Sprite Graphics
 
@@ -17379,7 +17975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DAE74 @ Sprite Data 1
+	.4byte gUnknown_082DAE74 @ Animation Data
 	.4byte gUnknown_082DAE98 @ OAM
 	.4byte gUnknown_082DAEA0 @ Sprite Graphics
 
@@ -17389,7 +17985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DB2A0 @ Sprite Data 1
+	.4byte gUnknown_082DB2A0 @ Animation Data
 	.4byte gUnknown_082DB2C4 @ OAM
 	.4byte gUnknown_082DB2CC @ Sprite Graphics
 
@@ -17399,7 +17995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DB3CC @ Sprite Data 1
+	.4byte gUnknown_082DB3CC @ Animation Data
 	.4byte gUnknown_082DB3F0 @ OAM
 	.4byte gUnknown_082DB3F8 @ Sprite Graphics
 
@@ -17409,7 +18005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DB4F8 @ Sprite Data 1
+	.4byte gUnknown_082DB4F8 @ Animation Data
 	.4byte gUnknown_082DB51C @ OAM
 	.4byte gUnknown_082DB524 @ Sprite Graphics
 
@@ -17419,7 +18015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DB624 @ Sprite Data 1
+	.4byte gUnknown_082DB624 @ Animation Data
 	.4byte gUnknown_082DB648 @ OAM
 	.4byte gUnknown_082DB650 @ Sprite Graphics
 
@@ -17429,7 +18025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DB750 @ Sprite Data 1
+	.4byte gUnknown_082DB750 @ Animation Data
 	.4byte gUnknown_082DB774 @ OAM
 	.4byte gUnknown_082DB77C @ Sprite Graphics
 
@@ -17439,7 +18035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DB97C @ Sprite Data 1
+	.4byte gUnknown_082DB97C @ Animation Data
 	.4byte gUnknown_082DB9A0 @ OAM
 	.4byte gUnknown_082DB9A8 @ Sprite Graphics
 
@@ -17449,7 +18045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DBBA8 @ Sprite Data 1
+	.4byte gUnknown_082DBBA8 @ Animation Data
 	.4byte gUnknown_082DBBCC @ OAM
 	.4byte gUnknown_082DBBD4 @ Sprite Graphics
 
@@ -17459,7 +18055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DBCD4 @ Sprite Data 1
+	.4byte gUnknown_082DBCD4 @ Animation Data
 	.4byte gUnknown_082DBCF8 @ OAM
 	.4byte gUnknown_082DBD00 @ Sprite Graphics
 
@@ -17469,7 +18065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DC500 @ Sprite Data 1
+	.4byte gUnknown_082DC500 @ Animation Data
 	.4byte gUnknown_082DC524 @ OAM
 	.4byte gUnknown_082DC52C @ Sprite Graphics
 
@@ -17479,7 +18075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DCD2C @ Sprite Data 1
+	.4byte gUnknown_082DCD2C @ Animation Data
 	.4byte gUnknown_082DCD50 @ OAM
 	.4byte gUnknown_082DCD58 @ Sprite Graphics
 
@@ -17489,7 +18085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DCDD8 @ Sprite Data 1
+	.4byte gUnknown_082DCDD8 @ Animation Data
 	.4byte gUnknown_082DCDFC @ OAM
 	.4byte gUnknown_082DCE04 @ Sprite Graphics
 
@@ -17499,7 +18095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DD004 @ Sprite Data 1
+	.4byte gUnknown_082DD004 @ Animation Data
 	.4byte gUnknown_082DD028 @ OAM
 	.4byte gUnknown_082DD030 @ Sprite Graphics
 
@@ -17509,7 +18105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DD230 @ Sprite Data 1
+	.4byte gUnknown_082DD230 @ Animation Data
 	.4byte gUnknown_082DD254 @ OAM
 	.4byte gUnknown_082DD25C @ Sprite Graphics
 
@@ -17519,7 +18115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DD45C @ Sprite Data 1
+	.4byte gUnknown_082DD45C @ Animation Data
 	.4byte gUnknown_082DD480 @ OAM
 	.4byte gUnknown_082DD488 @ Sprite Graphics
 
@@ -17529,7 +18125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DD688 @ Sprite Data 1
+	.4byte gUnknown_082DD688 @ Animation Data
 	.4byte gUnknown_082DD6AC @ OAM
 	.4byte gUnknown_082DD6B4 @ Sprite Graphics
 
@@ -17539,7 +18135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DDAB4 @ Sprite Data 1
+	.4byte gUnknown_082DDAB4 @ Animation Data
 	.4byte gUnknown_082DDAD8 @ OAM
 	.4byte gUnknown_082DDAE0 @ Sprite Graphics
 
@@ -17549,7 +18145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DDEE0 @ Sprite Data 1
+	.4byte gUnknown_082DDEE0 @ Animation Data
 	.4byte gUnknown_082DDF04 @ OAM
 	.4byte gUnknown_082DDF0C @ Sprite Graphics
 
@@ -17559,7 +18155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DE30C @ Sprite Data 1
+	.4byte gUnknown_082DE30C @ Animation Data
 	.4byte gUnknown_082DE330 @ OAM
 	.4byte gUnknown_082DE338 @ Sprite Graphics
 
@@ -17569,7 +18165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DE438 @ Sprite Data 1
+	.4byte gUnknown_082DE438 @ Animation Data
 	.4byte gUnknown_082DE45C @ OAM
 	.4byte gUnknown_082DE464 @ Sprite Graphics
 
@@ -17579,7 +18175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DE564 @ Sprite Data 1
+	.4byte gUnknown_082DE564 @ Animation Data
 	.4byte gUnknown_082DE588 @ OAM
 	.4byte gUnknown_082DE590 @ Sprite Graphics
 
@@ -17589,7 +18185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DE690 @ Sprite Data 1
+	.4byte gUnknown_082DE690 @ Animation Data
 	.4byte gUnknown_082DE6B4 @ OAM
 	.4byte gUnknown_082DE6BC @ Sprite Graphics
 
@@ -17599,7 +18195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DE7BC @ Sprite Data 1
+	.4byte gUnknown_082DE7BC @ Animation Data
 	.4byte gUnknown_082DE7E0 @ OAM
 	.4byte gUnknown_082DE7E8 @ Sprite Graphics
 
@@ -17609,7 +18205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DEBE8 @ Sprite Data 1
+	.4byte gUnknown_082DEBE8 @ Animation Data
 	.4byte gUnknown_082DEC0C @ OAM
 	.4byte gUnknown_082DEC14 @ Sprite Graphics
 
@@ -17619,7 +18215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DF014 @ Sprite Data 1
+	.4byte gUnknown_082DF014 @ Animation Data
 	.4byte gUnknown_082DF038 @ OAM
 	.4byte gUnknown_082DF040 @ Sprite Graphics
 
@@ -17629,7 +18225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082DF440 @ Sprite Data 1
+	.4byte gUnknown_082DF440 @ Animation Data
 	.4byte gUnknown_082DF464 @ OAM
 	.4byte gUnknown_082DF46C @ Sprite Graphics
 
@@ -17639,7 +18235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E046C @ Sprite Data 1
+	.4byte gUnknown_082E046C @ Animation Data
 	.4byte gUnknown_082E0490 @ OAM
 	.4byte gUnknown_082E0498 @ Sprite Graphics
 
@@ -17649,7 +18245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E1498 @ Sprite Data 1
+	.4byte gUnknown_082E1498 @ Animation Data
 	.4byte gUnknown_082E14BC @ OAM
 	.4byte gUnknown_082E14C4 @ Sprite Graphics
 
@@ -17659,7 +18255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E1CC4 @ Sprite Data 1
+	.4byte gUnknown_082E1CC4 @ Animation Data
 	.4byte gUnknown_082E1CE8 @ OAM
 	.4byte gUnknown_082E1CF0 @ Sprite Graphics
 
@@ -17669,7 +18265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E20F0 @ Sprite Data 1
+	.4byte gUnknown_082E20F0 @ Animation Data
 	.4byte gUnknown_082E2114 @ OAM
 	.4byte gUnknown_082E211C @ Sprite Graphics
 
@@ -17679,7 +18275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E291C @ Sprite Data 1
+	.4byte gUnknown_082E291C @ Animation Data
 	.4byte gUnknown_082E2940 @ OAM
 	.4byte gUnknown_082E2948 @ Sprite Graphics
 
@@ -17689,7 +18285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E29C8 @ Sprite Data 1
+	.4byte gUnknown_082E29C8 @ Animation Data
 	.4byte gUnknown_082E29EC @ OAM
 	.4byte gUnknown_082E29F4 @ Sprite Graphics
 
@@ -17699,7 +18295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E2DF4 @ Sprite Data 1
+	.4byte gUnknown_082E2DF4 @ Animation Data
 	.4byte gUnknown_082E2E18 @ OAM
 	.4byte gUnknown_082E2E20 @ Sprite Graphics
 
@@ -17709,7 +18305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E2F20 @ Sprite Data 1
+	.4byte gUnknown_082E2F20 @ Animation Data
 	.4byte gUnknown_082E2F44 @ OAM
 	.4byte gUnknown_082E2F4C @ Sprite Graphics
 
@@ -17719,7 +18315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E304C @ Sprite Data 1
+	.4byte gUnknown_082E304C @ Animation Data
 	.4byte gUnknown_082E3070 @ OAM
 	.4byte gUnknown_082E3078 @ Sprite Graphics
 
@@ -17729,7 +18325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E3278 @ Sprite Data 1
+	.4byte gUnknown_082E3278 @ Animation Data
 	.4byte gUnknown_082E329C @ OAM
 	.4byte gUnknown_082E32A4 @ Sprite Graphics
 
@@ -17739,7 +18335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E33A4 @ Sprite Data 1
+	.4byte gUnknown_082E33A4 @ Animation Data
 	.4byte gUnknown_082E33C8 @ OAM
 	.4byte gUnknown_082E33D0 @ Sprite Graphics
 
@@ -17749,7 +18345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E3410 @ Sprite Data 1
+	.4byte gUnknown_082E3410 @ Animation Data
 	.4byte gUnknown_082E3434 @ OAM
 	.4byte gUnknown_082E343C @ Sprite Graphics
 
@@ -17759,7 +18355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E363C @ Sprite Data 1
+	.4byte gUnknown_082E363C @ Animation Data
 	.4byte gUnknown_082E3660 @ OAM
 	.4byte gUnknown_082E3668 @ Sprite Graphics
 
@@ -17769,7 +18365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E3868 @ Sprite Data 1
+	.4byte gUnknown_082E3868 @ Animation Data
 	.4byte gUnknown_082E388C @ OAM
 	.4byte gUnknown_082E3894 @ Sprite Graphics
 
@@ -17779,7 +18375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E3A94 @ Sprite Data 1
+	.4byte gUnknown_082E3A94 @ Animation Data
 	.4byte gUnknown_082E3AB8 @ OAM
 	.4byte gUnknown_082E3AC0 @ Sprite Graphics
 
@@ -17789,7 +18385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E3CC0 @ Sprite Data 1
+	.4byte gUnknown_082E3CC0 @ Animation Data
 	.4byte gUnknown_082E3CE4 @ OAM
 	.4byte gUnknown_082E3CEC @ Sprite Graphics
 
@@ -17799,7 +18395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E3EEC @ Sprite Data 1
+	.4byte gUnknown_082E3EEC @ Animation Data
 	.4byte gUnknown_082E3F10 @ OAM
 	.4byte gUnknown_082E3F18 @ Sprite Graphics
 
@@ -17809,7 +18405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E4018 @ Sprite Data 1
+	.4byte gUnknown_082E4018 @ Animation Data
 	.4byte gUnknown_082E403C @ OAM
 	.4byte gUnknown_082E4044 @ Sprite Graphics
 
@@ -17819,7 +18415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E4244 @ Sprite Data 1
+	.4byte gUnknown_082E4244 @ Animation Data
 	.4byte gUnknown_082E4268 @ OAM
 	.4byte gUnknown_082E4270 @ Sprite Graphics
 
@@ -17829,7 +18425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E4470 @ Sprite Data 1
+	.4byte gUnknown_082E4470 @ Animation Data
 	.4byte gUnknown_082E4494 @ OAM
 	.4byte gUnknown_082E449C @ Sprite Graphics
 
@@ -17839,7 +18435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E469C @ Sprite Data 1
+	.4byte gUnknown_082E469C @ Animation Data
 	.4byte gUnknown_082E46C0 @ OAM
 	.4byte gUnknown_082E46C8 @ Sprite Graphics
 
@@ -17849,7 +18445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E48C8 @ Sprite Data 1
+	.4byte gUnknown_082E48C8 @ Animation Data
 	.4byte gUnknown_082E48EC @ OAM
 	.4byte gUnknown_082E48F4 @ Sprite Graphics
 
@@ -17859,7 +18455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E4AF4 @ Sprite Data 1
+	.4byte gUnknown_082E4AF4 @ Animation Data
 	.4byte gUnknown_082E4B18 @ OAM
 	.4byte gUnknown_082E4B20 @ Sprite Graphics
 
@@ -17869,7 +18465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E4C20 @ Sprite Data 1
+	.4byte gUnknown_082E4C20 @ Animation Data
 	.4byte gUnknown_082E4C44 @ OAM
 	.4byte gUnknown_082E4C4C @ Sprite Graphics
 
@@ -17879,7 +18475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E4E4C @ Sprite Data 1
+	.4byte gUnknown_082E4E4C @ Animation Data
 	.4byte gUnknown_082E4E70 @ OAM
 	.4byte gUnknown_082E4E78 @ Sprite Graphics
 
@@ -17889,7 +18485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E4F78 @ Sprite Data 1
+	.4byte gUnknown_082E4F78 @ Animation Data
 	.4byte gUnknown_082E4F9C @ OAM
 	.4byte gUnknown_082E4FA4 @ Sprite Graphics
 
@@ -17899,7 +18495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E53A4 @ Sprite Data 1
+	.4byte gUnknown_082E53A4 @ Animation Data
 	.4byte gUnknown_082E53C8 @ OAM
 	.4byte gUnknown_082E53D0 @ Sprite Graphics
 
@@ -17909,7 +18505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E57D0 @ Sprite Data 1
+	.4byte gUnknown_082E57D0 @ Animation Data
 	.4byte gUnknown_082E57F4 @ OAM
 	.4byte gUnknown_082E57FC @ Sprite Graphics
 
@@ -17919,7 +18515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E5BFC @ Sprite Data 1
+	.4byte gUnknown_082E5BFC @ Animation Data
 	.4byte gUnknown_082E5C20 @ OAM
 	.4byte gUnknown_082E5C28 @ Sprite Graphics
 
@@ -17929,7 +18525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E6028 @ Sprite Data 1
+	.4byte gUnknown_082E6028 @ Animation Data
 	.4byte gUnknown_082E604C @ OAM
 	.4byte gUnknown_082E6054 @ Sprite Graphics
 
@@ -17939,7 +18535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E6454 @ Sprite Data 1
+	.4byte gUnknown_082E6454 @ Animation Data
 	.4byte gUnknown_082E6478 @ OAM
 	.4byte gUnknown_082E6480 @ Sprite Graphics
 
@@ -17949,7 +18545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E6580 @ Sprite Data 1
+	.4byte gUnknown_082E6580 @ Animation Data
 	.4byte gUnknown_082E65A4 @ OAM
 	.4byte gUnknown_082E65AC @ Sprite Graphics
 
@@ -17959,7 +18555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E66AC @ Sprite Data 1
+	.4byte gUnknown_082E66AC @ Animation Data
 	.4byte gUnknown_082E66D0 @ OAM
 	.4byte gUnknown_082E66D8 @ Sprite Graphics
 
@@ -17969,7 +18565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E6718 @ Sprite Data 1
+	.4byte gUnknown_082E6718 @ Animation Data
 	.4byte gUnknown_082E6760 @ OAM
 	.4byte gUnknown_082E6768 @ Sprite Graphics
 
@@ -17979,7 +18575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E6868 @ Sprite Data 1
+	.4byte gUnknown_082E6868 @ Animation Data
 	.4byte gUnknown_082E6940 @ OAM
 	.4byte gUnknown_082E6948 @ Sprite Graphics
 
@@ -17989,7 +18585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E8148 @ Sprite Data 1
+	.4byte gUnknown_082E8148 @ Animation Data
 	.4byte gUnknown_082E8190 @ OAM
 	.4byte gUnknown_082E8198 @ Sprite Graphics
 
@@ -17999,7 +18595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E8298 @ Sprite Data 1
+	.4byte gUnknown_082E8298 @ Animation Data
 	.4byte gUnknown_082E8304 @ OAM
 	.4byte gUnknown_082E830C @ Sprite Graphics
 
@@ -18009,7 +18605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E848C @ Sprite Data 1
+	.4byte gUnknown_082E848C @ Animation Data
 	.4byte gUnknown_082E84D4 @ OAM
 	.4byte gUnknown_082E84DC @ Sprite Graphics
 
@@ -18019,7 +18615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E88DC @ Sprite Data 1
+	.4byte gUnknown_082E88DC @ Animation Data
 	.4byte gUnknown_082E8900 @ OAM
 	.4byte gUnknown_082E8908 @ Sprite Graphics
 
@@ -18029,7 +18625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E8A08 @ Sprite Data 1
+	.4byte gUnknown_082E8A08 @ Animation Data
 	.4byte gUnknown_082E8A50 @ OAM
 	.4byte gUnknown_082E8A58 @ Sprite Graphics
 
@@ -18039,7 +18635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E8E58 @ Sprite Data 1
+	.4byte gUnknown_082E8E58 @ Animation Data
 	.4byte gUnknown_082E8EA0 @ OAM
 	.4byte gUnknown_082E8EA8 @ Sprite Graphics
 
@@ -18049,7 +18645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E90A8 @ Sprite Data 1
+	.4byte gUnknown_082E90A8 @ Animation Data
 	.4byte gUnknown_082E9114 @ OAM
 	.4byte gUnknown_082E911C @ Sprite Graphics
 
@@ -18059,7 +18655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E929C @ Sprite Data 1
+	.4byte gUnknown_082E929C @ Animation Data
 	.4byte gUnknown_082E92C0 @ OAM
 	.4byte gUnknown_082E92C8 @ Sprite Graphics
 
@@ -18069,7 +18665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E94C8 @ Sprite Data 1
+	.4byte gUnknown_082E94C8 @ Animation Data
 	.4byte gUnknown_082E94EC @ OAM
 	.4byte gUnknown_082E94F4 @ Sprite Graphics
 
@@ -18079,7 +18675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E9574 @ Sprite Data 1
+	.4byte gUnknown_082E9574 @ Animation Data
 	.4byte gUnknown_082E964C @ OAM
 	.4byte gUnknown_082E9654 @ Sprite Graphics
 
@@ -18089,7 +18685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EAE54 @ Sprite Data 1
+	.4byte gUnknown_082EAE54 @ Animation Data
 	.4byte gUnknown_082EAE78 @ OAM
 	.4byte gUnknown_082EAE80 @ Sprite Graphics
 
@@ -18099,7 +18695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EAF00 @ Sprite Data 1
+	.4byte gUnknown_082EAF00 @ Animation Data
 	.4byte gUnknown_082EAF90 @ OAM
 	.4byte gUnknown_082EAF98 @ Sprite Graphics
 
@@ -18109,7 +18705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EB198 @ Sprite Data 1
+	.4byte gUnknown_082EB198 @ Animation Data
 	.4byte gUnknown_082EB1BC @ OAM
 	.4byte gUnknown_082EB1C4 @ Sprite Graphics
 
@@ -18119,7 +18715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EB244 @ Sprite Data 1
+	.4byte gUnknown_082EB244 @ Animation Data
 	.4byte gUnknown_082EB2B0 @ OAM
 	.4byte gUnknown_082EB2B8 @ Sprite Graphics
 
@@ -18129,7 +18725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EBAB8 @ Sprite Data 1
+	.4byte gUnknown_082EBAB8 @ Animation Data
 	.4byte gUnknown_082EBB00 @ OAM
 	.4byte gUnknown_082EBB08 @ Sprite Graphics
 
@@ -18139,7 +18735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EBC08 @ Sprite Data 1
+	.4byte gUnknown_082EBC08 @ Animation Data
 	.4byte gUnknown_082EBC2C @ OAM
 	.4byte gUnknown_082EBC34 @ Sprite Graphics
 
@@ -18149,7 +18745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EBE34 @ Sprite Data 1
+	.4byte gUnknown_082EBE34 @ Animation Data
 	.4byte gUnknown_082EBE58 @ OAM
 	.4byte gUnknown_082EBE60 @ Sprite Graphics
 
@@ -18159,7 +18755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EC060 @ Sprite Data 1
+	.4byte gUnknown_082EC060 @ Animation Data
 	.4byte gUnknown_082EC0CC @ OAM
 	.4byte gUnknown_082EC0D4 @ Sprite Graphics
 
@@ -18169,7 +18765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EC154 @ Sprite Data 1
+	.4byte gUnknown_082EC154 @ Animation Data
 	.4byte gUnknown_082EC1E4 @ OAM
 	.4byte gUnknown_082EC1EC @ Sprite Graphics
 
@@ -18179,7 +18775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EC26C @ Sprite Data 1
+	.4byte gUnknown_082EC26C @ Animation Data
 	.4byte gfxMiniMarioIconOAM @ OAM
 	.4byte gfxMiniMarioIcon8bpp @ Sprite Graphics
 
@@ -18189,7 +18785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EC5E0 @ Sprite Data 1
+	.4byte gUnknown_082EC5E0 @ Animation Data
 	.4byte gUnknown_082EC748 @ OAM
 	.4byte gUnknown_082EC750 @ Sprite Graphics
 
@@ -18199,7 +18795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EC9D0 @ Sprite Data 1
+	.4byte gUnknown_082EC9D0 @ Animation Data
 	.4byte gUnknown_082ECB38 @ OAM
 	.4byte gUnknown_082ECB40 @ Sprite Graphics
 
@@ -18209,7 +18805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ECDC0 @ Sprite Data 1
+	.4byte gUnknown_082ECDC0 @ Animation Data
 	.4byte gUnknown_082ECF94 @ OAM
 	.4byte gUnknown_082ECF9C @ Sprite Graphics
 
@@ -18219,7 +18815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ED13C @ Sprite Data 1
+	.4byte gUnknown_082ED13C @ Animation Data
 	.4byte gUnknown_082ED280 @ OAM
 	.4byte gUnknown_082ED288 @ Sprite Graphics
 
@@ -18229,7 +18825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ED4C8 @ Sprite Data 1
+	.4byte gUnknown_082ED4C8 @ Animation Data
 	.4byte gUnknown_082ED4EC @ OAM
 	.4byte gUnknown_082ED4F4 @ Sprite Graphics
 
@@ -18239,7 +18835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ED574 @ Sprite Data 1
+	.4byte gUnknown_082ED574 @ Animation Data
 	.4byte gUnknown_082ED5BC @ OAM
 	.4byte gUnknown_082ED5C4 @ Sprite Graphics
 
@@ -18249,7 +18845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ED644 @ Sprite Data 1
+	.4byte gUnknown_082ED644 @ Animation Data
 	.4byte gUnknown_082ED668 @ OAM
 	.4byte gUnknown_082ED670 @ Sprite Graphics
 
@@ -18259,7 +18855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ED770 @ Sprite Data 1
+	.4byte gUnknown_082ED770 @ Animation Data
 	.4byte gUnknown_082ED794 @ OAM
 	.4byte gUnknown_082ED79C @ Sprite Graphics
 
@@ -18269,7 +18865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ED89C @ Sprite Data 1
+	.4byte gUnknown_082ED89C @ Animation Data
 	.4byte gUnknown_082ED8C0 @ OAM
 	.4byte gUnknown_082ED8C8 @ Sprite Graphics
 
@@ -18279,7 +18875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082ED9C8 @ Sprite Data 1
+	.4byte gUnknown_082ED9C8 @ Animation Data
 	.4byte gUnknown_082ED9EC @ OAM
 	.4byte gUnknown_082ED9F4 @ Sprite Graphics
 
@@ -18289,7 +18885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EDAF4 @ Sprite Data 1
+	.4byte gUnknown_082EDAF4 @ Animation Data
 	.4byte gUnknown_082EDB18 @ OAM
 	.4byte gUnknown_082EDB20 @ Sprite Graphics
 
@@ -18299,7 +18895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EDC20 @ Sprite Data 1
+	.4byte gUnknown_082EDC20 @ Animation Data
 	.4byte gUnknown_082EDC44 @ OAM
 	.4byte gUnknown_082EDC4C @ Sprite Graphics
 
@@ -18309,7 +18905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EDCCC @ Sprite Data 1
+	.4byte gUnknown_082EDCCC @ Animation Data
 	.4byte gUnknown_082EDCF0 @ OAM
 	.4byte gUnknown_082EDCF8 @ Sprite Graphics
 
@@ -18319,7 +18915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EDDF8 @ Sprite Data 1
+	.4byte gUnknown_082EDDF8 @ Animation Data
 	.4byte gUnknown_082EDE1C @ OAM
 	.4byte gUnknown_082EDE24 @ Sprite Graphics
 
@@ -18329,7 +18925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EDF24 @ Sprite Data 1
+	.4byte gUnknown_082EDF24 @ Animation Data
 	.4byte gUnknown_082EDF48 @ OAM
 	.4byte gUnknown_082EDF50 @ Sprite Graphics
 
@@ -18339,7 +18935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EE050 @ Sprite Data 1
+	.4byte gUnknown_082EE050 @ Animation Data
 	.4byte gUnknown_082EE074 @ OAM
 	.4byte gUnknown_082EE07C @ Sprite Graphics
 
@@ -18349,7 +18945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EE0FC @ Sprite Data 1
+	.4byte gUnknown_082EE0FC @ Animation Data
 	.4byte gUnknown_082EE120 @ OAM
 	.4byte gUnknown_082EE128 @ Sprite Graphics
 
@@ -18359,7 +18955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EE168 @ Sprite Data 1
+	.4byte gUnknown_082EE168 @ Animation Data
 	.4byte gUnknown_082EE18C @ OAM
 	.4byte gUnknown_082EE194 @ Sprite Graphics
 
@@ -18369,7 +18965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EE214 @ Sprite Data 1
+	.4byte gUnknown_082EE214 @ Animation Data
 	.4byte gUnknown_082EE25C @ OAM
 	.4byte gUnknown_082EE264 @ Sprite Graphics
 
@@ -18379,7 +18975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EE464 @ Sprite Data 1
+	.4byte gUnknown_082EE464 @ Animation Data
 	.4byte gUnknown_082EE4AC @ OAM
 	.4byte gUnknown_082EE4B4 @ Sprite Graphics
 
@@ -18389,7 +18985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EE6B4 @ Sprite Data 1
+	.4byte gUnknown_082EE6B4 @ Animation Data
 	.4byte gUnknown_082EE6FC @ OAM
 	.4byte gUnknown_082EE704 @ Sprite Graphics
 
@@ -18399,7 +18995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EE904 @ Sprite Data 1
+	.4byte gUnknown_082EE904 @ Animation Data
 	.4byte gUnknown_082EE94C @ OAM
 	.4byte gUnknown_082EE954 @ Sprite Graphics
 
@@ -18409,7 +19005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EEB54 @ Sprite Data 1
+	.4byte gUnknown_082EEB54 @ Animation Data
 	.4byte gUnknown_082EEB9C @ OAM
 	.4byte gUnknown_082EEBA4 @ Sprite Graphics
 
@@ -18419,7 +19015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EEDA4 @ Sprite Data 1
+	.4byte gUnknown_082EEDA4 @ Animation Data
 	.4byte gUnknown_082EEDEC @ OAM
 	.4byte gUnknown_082EEDF4 @ Sprite Graphics
 
@@ -18429,7 +19025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EEEF4 @ Sprite Data 1
+	.4byte gUnknown_082EEEF4 @ Animation Data
 	.4byte gUnknown_082EEF3C @ OAM
 	.4byte gUnknown_082EEF44 @ Sprite Graphics
 
@@ -18439,7 +19035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EF144 @ Sprite Data 1
+	.4byte gUnknown_082EF144 @ Animation Data
 	.4byte gUnknown_082EF18C @ OAM
 	.4byte gUnknown_082EF194 @ Sprite Graphics
 
@@ -18449,7 +19045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EF394 @ Sprite Data 1
+	.4byte gUnknown_082EF394 @ Animation Data
 	.4byte gUnknown_082EF3DC @ OAM
 	.4byte gUnknown_082EF3E4 @ Sprite Graphics
 
@@ -18459,7 +19055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EF5E4 @ Sprite Data 1
+	.4byte gUnknown_082EF5E4 @ Animation Data
 	.4byte gUnknown_082EF62C @ OAM
 	.4byte gUnknown_082EF634 @ Sprite Graphics
 
@@ -18469,7 +19065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EF734 @ Sprite Data 1
+	.4byte gUnknown_082EF734 @ Animation Data
 	.4byte gUnknown_082EF77C @ OAM
 	.4byte gUnknown_082EF784 @ Sprite Graphics
 
@@ -18479,7 +19075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EF804 @ Sprite Data 1
+	.4byte gUnknown_082EF804 @ Animation Data
 	.4byte gUnknown_082EF924 @ OAM
 	.4byte gUnknown_082EF92C @ Sprite Graphics
 
@@ -18489,7 +19085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFB2C @ Sprite Data 1
+	.4byte gUnknown_082EFB2C @ Animation Data
 	.4byte gUnknown_082EFB50 @ OAM
 	.4byte gUnknown_082EFB58 @ Sprite Graphics
 
@@ -18499,7 +19095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFBD8 @ Sprite Data 1
+	.4byte gUnknown_082EFBD8 @ Animation Data
 	.4byte gUnknown_082EFBFC @ OAM
 	.4byte gUnknown_082EFC04 @ Sprite Graphics
 
@@ -18509,7 +19105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFC44 @ Sprite Data 1
+	.4byte gUnknown_082EFC44 @ Animation Data
 	.4byte gUnknown_082EFC68 @ OAM
 	.4byte gUnknown_082EFC70 @ Sprite Graphics
 
@@ -18519,7 +19115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFC90 @ Sprite Data 1
+	.4byte gUnknown_082EFC90 @ Animation Data
 	.4byte gUnknown_082EFCB4 @ OAM
 	.4byte gUnknown_082EFCBC @ Sprite Graphics
 
@@ -18529,7 +19125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFCDC @ Sprite Data 1
+	.4byte gUnknown_082EFCDC @ Animation Data
 	.4byte gUnknown_082EFD00 @ OAM
 	.4byte gUnknown_082EFD08 @ Sprite Graphics
 
@@ -18539,7 +19135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFD88 @ Sprite Data 1
+	.4byte gUnknown_082EFD88 @ Animation Data
 	.4byte gUnknown_082EFDAC @ OAM
 	.4byte gUnknown_082EFDB4 @ Sprite Graphics
 
@@ -18549,7 +19145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFDD4 @ Sprite Data 1
+	.4byte gUnknown_082EFDD4 @ Animation Data
 	.4byte gUnknown_082EFDF8 @ OAM
 	.4byte gUnknown_082EFE00 @ Sprite Graphics
 
@@ -18559,7 +19155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFE20 @ Sprite Data 1
+	.4byte gUnknown_082EFE20 @ Animation Data
 	.4byte gUnknown_082EFE44 @ OAM
 	.4byte gUnknown_082EFE4C @ Sprite Graphics
 
@@ -18569,7 +19165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFE6C @ Sprite Data 1
+	.4byte gUnknown_082EFE6C @ Animation Data
 	.4byte gUnknown_082EFE90 @ OAM
 	.4byte gUnknown_082EFE98 @ Sprite Graphics
 
@@ -18579,7 +19175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFEB8 @ Sprite Data 1
+	.4byte gUnknown_082EFEB8 @ Animation Data
 	.4byte gUnknown_082EFF24 @ OAM
 	.4byte gUnknown_082EFF2C @ Sprite Graphics
 
@@ -18589,7 +19185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFF8C @ Sprite Data 1
+	.4byte gUnknown_082EFF8C @ Animation Data
 	.4byte gUnknown_082EFFB0 @ OAM
 	.4byte gUnknown_082EFFB8 @ Sprite Graphics
 
@@ -18599,7 +19195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082EFFD8 @ Sprite Data 1
+	.4byte gUnknown_082EFFD8 @ Animation Data
 	.4byte gUnknown_082EFFFC @ OAM
 	.4byte gUnknown_082F0004 @ Sprite Graphics
 
@@ -18609,7 +19205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0024 @ Sprite Data 1
+	.4byte gUnknown_082F0024 @ Animation Data
 	.4byte gUnknown_082F01B0 @ OAM
 	.4byte gUnknown_082F01B8 @ Sprite Graphics
 
@@ -18619,7 +19215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0318 @ Sprite Data 1
+	.4byte gUnknown_082F0318 @ Animation Data
 	.4byte gUnknown_082F033C @ OAM
 	.4byte gUnknown_082F0344 @ Sprite Graphics
 
@@ -18629,7 +19225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0364 @ Sprite Data 1
+	.4byte gUnknown_082F0364 @ Animation Data
 	.4byte gUnknown_082F043C @ OAM
 	.4byte gUnknown_082F0444 @ Sprite Graphics
 
@@ -18639,7 +19235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0744 @ Sprite Data 1
+	.4byte gUnknown_082F0744 @ Animation Data
 	.4byte gUnknown_082F0768 @ OAM
 	.4byte gUnknown_082F0770 @ Sprite Graphics
 
@@ -18649,7 +19245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0790 @ Sprite Data 1
+	.4byte gUnknown_082F0790 @ Animation Data
 	.4byte gUnknown_082F07B4 @ OAM
 	.4byte gUnknown_082F07BC @ Sprite Graphics
 
@@ -18659,7 +19255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F07DC @ Sprite Data 1
+	.4byte gUnknown_082F07DC @ Animation Data
 	.4byte gUnknown_082F0800 @ OAM
 	.4byte gUnknown_082F0808 @ Sprite Graphics
 
@@ -18669,7 +19265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0828 @ Sprite Data 1
+	.4byte gUnknown_082F0828 @ Animation Data
 	.4byte gUnknown_082F084C @ OAM
 	.4byte gUnknown_082F0854 @ Sprite Graphics
 
@@ -18679,7 +19275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0874 @ Sprite Data 1
+	.4byte gUnknown_082F0874 @ Animation Data
 	.4byte gUnknown_082F0898 @ OAM
 	.4byte gUnknown_082F08A0 @ Sprite Graphics
 
@@ -18689,7 +19285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0920 @ Sprite Data 1
+	.4byte gUnknown_082F0920 @ Animation Data
 	.4byte gUnknown_082F0944 @ OAM
 	.4byte gUnknown_082F094C @ Sprite Graphics
 
@@ -18699,7 +19295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F096C @ Sprite Data 1
+	.4byte gUnknown_082F096C @ Animation Data
 	.4byte gUnknown_082F0990 @ OAM
 	.4byte gUnknown_082F0998 @ Sprite Graphics
 
@@ -18709,7 +19305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0A18 @ Sprite Data 1
+	.4byte gUnknown_082F0A18 @ Animation Data
 	.4byte gUnknown_082F0A60 @ OAM
 	.4byte gUnknown_082F0A68 @ Sprite Graphics
 
@@ -18719,7 +19315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0AE8 @ Sprite Data 1
+	.4byte gUnknown_082F0AE8 @ Animation Data
 	.4byte gUnknown_082F0B30 @ OAM
 	.4byte gUnknown_082F0B38 @ Sprite Graphics
 
@@ -18729,7 +19325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0BB8 @ Sprite Data 1
+	.4byte gUnknown_082F0BB8 @ Animation Data
 	.4byte gUnknown_082F0BDC @ OAM
 	.4byte gUnknown_082F0BE4 @ Sprite Graphics
 
@@ -18739,7 +19335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0C64 @ Sprite Data 1
+	.4byte gUnknown_082F0C64 @ Animation Data
 	.4byte gUnknown_082F0C88 @ OAM
 	.4byte gUnknown_082F0C90 @ Sprite Graphics
 
@@ -18749,7 +19345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0CD0 @ Sprite Data 1
+	.4byte gUnknown_082F0CD0 @ Animation Data
 	.4byte gUnknown_082F0CF4 @ OAM
 	.4byte gUnknown_082F0CFC @ Sprite Graphics
 
@@ -18759,7 +19355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F0D7C @ Sprite Data 1
+	.4byte gUnknown_082F0D7C @ Animation Data
 	.4byte gUnknown_082F0DA0 @ OAM
 	.4byte gUnknown_082F0DA8 @ Sprite Graphics
 
@@ -18769,7 +19365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F11A8 @ Sprite Data 1
+	.4byte gUnknown_082F11A8 @ Animation Data
 	.4byte gUnknown_082F11CC @ OAM
 	.4byte gUnknown_082F11D4 @ Sprite Graphics
 
@@ -18779,7 +19375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F15D4 @ Sprite Data 1
+	.4byte gUnknown_082F15D4 @ Animation Data
 	.4byte gUnknown_082F15F8 @ OAM
 	.4byte gUnknown_082F1600 @ Sprite Graphics
 
@@ -18789,7 +19385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F1680 @ Sprite Data 1
+	.4byte gUnknown_082F1680 @ Animation Data
 	.4byte gUnknown_082F1710 @ OAM
 	.4byte gUnknown_082F1718 @ Sprite Graphics
 
@@ -18799,7 +19395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F1898 @ Sprite Data 1
+	.4byte gUnknown_082F1898 @ Animation Data
 	.4byte gUnknown_082F1928 @ OAM
 	.4byte gUnknown_082F1930 @ Sprite Graphics
 
@@ -18809,7 +19405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F1AB0 @ Sprite Data 1
+	.4byte gUnknown_082F1AB0 @ Animation Data
 	.4byte gUnknown_082F1B40 @ OAM
 	.4byte gUnknown_082F1B48 @ Sprite Graphics
 
@@ -18819,7 +19415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F1CC8 @ Sprite Data 1
+	.4byte gUnknown_082F1CC8 @ Animation Data
 	.4byte gUnknown_082F1CEC @ OAM
 	.4byte gUnknown_082F1CF4 @ Sprite Graphics
 
@@ -18829,7 +19425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F1DF4 @ Sprite Data 1
+	.4byte gUnknown_082F1DF4 @ Animation Data
 	.4byte gUnknown_082F1E60 @ OAM
 	.4byte gUnknown_082F1E68 @ Sprite Graphics
 
@@ -18839,7 +19435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F1FE8 @ Sprite Data 1
+	.4byte gUnknown_082F1FE8 @ Animation Data
 	.4byte gUnknown_082F200C @ OAM
 	.4byte gUnknown_082F2014 @ Sprite Graphics
 
@@ -18849,7 +19445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F2094 @ Sprite Data 1
+	.4byte gUnknown_082F2094 @ Animation Data
 	.4byte gUnknown_082F20B8 @ OAM
 	.4byte gUnknown_082F20C0 @ Sprite Graphics
 
@@ -18859,7 +19455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F2140 @ Sprite Data 1
+	.4byte gUnknown_082F2140 @ Animation Data
 	.4byte gUnknown_082F2164 @ OAM
 	.4byte gUnknown_082F216C @ Sprite Graphics
 
@@ -18869,7 +19465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F21EC @ Sprite Data 1
+	.4byte gUnknown_082F21EC @ Animation Data
 	.4byte gUnknown_082F2210 @ OAM
 	.4byte gUnknown_082F2218 @ Sprite Graphics
 
@@ -18879,7 +19475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F2298 @ Sprite Data 1
+	.4byte gUnknown_082F2298 @ Animation Data
 	.4byte gUnknown_082F22BC @ OAM
 	.4byte gUnknown_082F22C4 @ Sprite Graphics
 
@@ -18889,7 +19485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F2344 @ Sprite Data 1
+	.4byte gUnknown_082F2344 @ Animation Data
 	.4byte gUnknown_082F2368 @ OAM
 	.4byte gUnknown_082F2370 @ Sprite Graphics
 
@@ -18899,7 +19495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F23F0 @ Sprite Data 1
+	.4byte gUnknown_082F23F0 @ Animation Data
 	.4byte gUnknown_082F2414 @ OAM
 	.4byte gUnknown_082F241C @ Sprite Graphics
 
@@ -18909,7 +19505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F261C @ Sprite Data 1
+	.4byte gUnknown_082F261C @ Animation Data
 	.4byte gUnknown_082F2640 @ OAM
 	.4byte gUnknown_082F2648 @ Sprite Graphics
 
@@ -18919,7 +19515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F2848 @ Sprite Data 1
+	.4byte gUnknown_082F2848 @ Animation Data
 	.4byte gUnknown_082F286C @ OAM
 	.4byte gUnknown_082F2874 @ Sprite Graphics
 
@@ -18929,7 +19525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F2A74 @ Sprite Data 1
+	.4byte gUnknown_082F2A74 @ Animation Data
 	.4byte gUnknown_082F2A98 @ OAM
 	.4byte gUnknown_082F2AA0 @ Sprite Graphics
 
@@ -18939,7 +19535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F2CA0 @ Sprite Data 1
+	.4byte gUnknown_082F2CA0 @ Animation Data
 	.4byte gUnknown_082F2CC4 @ OAM
 	.4byte gUnknown_082F2CCC @ Sprite Graphics
 
@@ -18949,7 +19545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F2ECC @ Sprite Data 1
+	.4byte gUnknown_082F2ECC @ Animation Data
 	.4byte gUnknown_082F2EF0 @ OAM
 	.4byte gUnknown_082F2EF8 @ Sprite Graphics
 
@@ -18959,7 +19555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F30F8 @ Sprite Data 1
+	.4byte gUnknown_082F30F8 @ Animation Data
 	.4byte gUnknown_082F311C @ OAM
 	.4byte gUnknown_082F3124 @ Sprite Graphics
 
@@ -18969,7 +19565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F3324 @ Sprite Data 1
+	.4byte gUnknown_082F3324 @ Animation Data
 	.4byte gUnknown_082F3348 @ OAM
 	.4byte gUnknown_082F3350 @ Sprite Graphics
 
@@ -18979,7 +19575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F3550 @ Sprite Data 1
+	.4byte gUnknown_082F3550 @ Animation Data
 	.4byte gUnknown_082F3574 @ OAM
 	.4byte gUnknown_082F357C @ Sprite Graphics
 
@@ -18989,7 +19585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F377C @ Sprite Data 1
+	.4byte gUnknown_082F377C @ Animation Data
 	.4byte gUnknown_082F37A0 @ OAM
 	.4byte gUnknown_082F37A8 @ Sprite Graphics
 
@@ -18999,7 +19595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F37C8 @ Sprite Data 1
+	.4byte gUnknown_082F37C8 @ Animation Data
 	.4byte gUnknown_082F37EC @ OAM
 	.4byte gUnknown_082F37F4 @ Sprite Graphics
 
@@ -19009,7 +19605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F38F4 @ Sprite Data 1
+	.4byte gUnknown_082F38F4 @ Animation Data
 	.4byte gUnknown_082F39F0 @ OAM
 	.4byte gUnknown_082F39F8 @ Sprite Graphics
 
@@ -19019,7 +19615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F3D78 @ Sprite Data 1
+	.4byte gUnknown_082F3D78 @ Animation Data
 	.4byte gfxKeyFlipOAM @ OAM
 	.4byte gfxKeyFlip4bpp @ Sprite Graphics
 
@@ -19029,7 +19625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F43C0 @ Sprite Data 1
+	.4byte gUnknown_082F43C0 @ Animation Data
 	.4byte gUnknown_082F4B10 @ OAM
 	.4byte gUnknown_082F4B18 @ Sprite Graphics
 
@@ -19039,7 +19635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F4D18 @ Sprite Data 1
+	.4byte gUnknown_082F4D18 @ Animation Data
 	.4byte gUnknown_082F4F34 @ OAM
 	.4byte gUnknown_082F4F3C @ Sprite Graphics
 
@@ -19049,7 +19645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F513C @ Sprite Data 1
+	.4byte gUnknown_082F513C @ Animation Data
 	.4byte gUnknown_082F52A4 @ OAM
 	.4byte gfxMiniMarioKey4bpp @ Sprite Graphics
 
@@ -19059,7 +19655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F57AC @ Sprite Data 1
+	.4byte gUnknown_082F57AC @ Animation Data
 	.4byte gUnknown_082F5B9C @ OAM
 	.4byte gUnknown_082F5BA4 @ Sprite Graphics
 
@@ -19069,7 +19665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F67A4 @ Sprite Data 1
+	.4byte gUnknown_082F67A4 @ Animation Data
 	.4byte gUnknown_082F67C8 @ OAM
 	.4byte gUnknown_082F67D0 @ Sprite Graphics
 
@@ -19079,7 +19675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F6850 @ Sprite Data 1
+	.4byte gUnknown_082F6850 @ Animation Data
 	.4byte gUnknown_082F6AD8 @ OAM
 	.4byte gUnknown_082F6AE0 @ Sprite Graphics
 
@@ -19089,7 +19685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F8EE0 @ Sprite Data 1
+	.4byte gUnknown_082F8EE0 @ Animation Data
 	.4byte gUnknown_082F8F04 @ OAM
 	.4byte gUnknown_082F8F0C @ Sprite Graphics
 
@@ -19099,7 +19695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F8F8C @ Sprite Data 1
+	.4byte gUnknown_082F8F8C @ Animation Data
 	.4byte gUnknown_082F8FB0 @ OAM
 	.4byte gUnknown_082F8FB8 @ Sprite Graphics
 
@@ -19109,7 +19705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F9038 @ Sprite Data 1
+	.4byte gUnknown_082F9038 @ Animation Data
 	.4byte gUnknown_082F917C @ OAM
 	.4byte gUnknown_082F9184 @ Sprite Graphics
 
@@ -19119,7 +19715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F9A84 @ Sprite Data 1
+	.4byte gUnknown_082F9A84 @ Animation Data
 	.4byte gUnknown_082F9B14 @ OAM
 	.4byte gUnknown_082F9B1C @ Sprite Graphics
 
@@ -19129,7 +19725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082F9C9C @ Sprite Data 1
+	.4byte gUnknown_082F9C9C @ Animation Data
 	.4byte gUnknown_082F9E4C @ OAM
 	.4byte gUnknown_082F9E54 @ Sprite Graphics
 
@@ -19139,7 +19735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082FA454 @ Sprite Data 1
+	.4byte gUnknown_082FA454 @ Animation Data
 	.4byte gUnknown_082FA5BC @ OAM
 	.4byte gUnknown_082FA5C4 @ Sprite Graphics
 
@@ -19149,7 +19745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082FCDC4 @ Sprite Data 1
+	.4byte gUnknown_082FCDC4 @ Animation Data
 	.4byte gUnknown_082FD16C @ OAM
 	.4byte gUnknown_082FD174 @ Sprite Graphics
 
@@ -19159,7 +19755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08303974 @ Sprite Data 1
+	.4byte gUnknown_08303974 @ Animation Data
 	.4byte gUnknown_08303A94 @ OAM
 	.4byte gUnknown_08303A9C @ Sprite Graphics
 
@@ -19169,7 +19765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08305A9C @ Sprite Data 1
+	.4byte gUnknown_08305A9C @ Animation Data
 	.4byte gUnknown_083060A8 @ OAM
 	.4byte gUnknown_083060B0 @ Sprite Graphics
 
@@ -19179,7 +19775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0830E0B0 @ Sprite Data 1
+	.4byte gUnknown_0830E0B0 @ Animation Data
 	.4byte gUnknown_0830E8D8 @ OAM
 	.4byte gUnknown_0830E8E0 @ Sprite Graphics
 
@@ -19189,7 +19785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0833E8E0 @ Sprite Data 1
+	.4byte gUnknown_0833E8E0 @ Animation Data
 	.4byte gUnknown_0833EE80 @ OAM
 	.4byte gUnknown_0833EE88 @ Sprite Graphics
 
@@ -19199,7 +19795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08342E88 @ Sprite Data 1
+	.4byte gUnknown_08342E88 @ Animation Data
 	.4byte gUnknown_08342EAC @ OAM
 	.4byte gUnknown_08342EB4 @ Sprite Graphics
 
@@ -19209,7 +19805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08342FB4 @ Sprite Data 1
+	.4byte gUnknown_08342FB4 @ Animation Data
 	.4byte gUnknown_08343260 @ OAM
 	.4byte gUnknown_08343268 @ Sprite Graphics
 
@@ -19219,7 +19815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08347E68 @ Sprite Data 1
+	.4byte gUnknown_08347E68 @ Animation Data
 	.4byte gUnknown_08348114 @ OAM
 	.4byte gUnknown_0834811C @ Sprite Graphics
 
@@ -19229,7 +19825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0834CD1C @ Sprite Data 1
+	.4byte gUnknown_0834CD1C @ Animation Data
 	.4byte gUnknown_0834CD40 @ OAM
 	.4byte gUnknown_0834CD48 @ Sprite Graphics
 
@@ -19239,7 +19835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0834D148 @ Sprite Data 1
+	.4byte gUnknown_0834D148 @ Animation Data
 	.4byte gUnknown_0834D244 @ OAM
 	.4byte gUnknown_0834D24C @ Sprite Graphics
 
@@ -19249,7 +19845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0834EE4C @ Sprite Data 1
+	.4byte gUnknown_0834EE4C @ Animation Data
 	.4byte gUnknown_0834EF48 @ OAM
 	.4byte gUnknown_0834EF50 @ Sprite Graphics
 
@@ -19259,7 +19855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08350B50 @ Sprite Data 1
+	.4byte gUnknown_08350B50 @ Animation Data
 	.4byte gUnknown_08350DB4 @ OAM
 	.4byte gUnknown_08350DBC @ Sprite Graphics
 
@@ -19269,7 +19865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083551BC @ Sprite Data 1
+	.4byte gUnknown_083551BC @ Animation Data
 	.4byte gUnknown_0835563C @ OAM
 	.4byte gUnknown_08355644 @ Sprite Graphics
 
@@ -19279,7 +19875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0835D644 @ Sprite Data 1
+	.4byte gUnknown_0835D644 @ Animation Data
 	.4byte gUnknown_0835DAC4 @ OAM
 	.4byte gUnknown_0835DACC @ Sprite Graphics
 
@@ -19289,7 +19885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08365ACC @ Sprite Data 1
+	.4byte gUnknown_08365ACC @ Animation Data
 	.4byte gUnknown_08365AF0 @ OAM
 	.4byte gUnknown_08365AF8 @ Sprite Graphics
 
@@ -19299,7 +19895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08365EF8 @ Sprite Data 1
+	.4byte gUnknown_08365EF8 @ Animation Data
 	.4byte gUnknown_08366378 @ OAM
 	.4byte gUnknown_08366380 @ Sprite Graphics
 
@@ -19309,7 +19905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0836E380 @ Sprite Data 1
+	.4byte gUnknown_0836E380 @ Animation Data
 	.4byte gUnknown_0836E4A0 @ OAM
 	.4byte gUnknown_0836E4A8 @ Sprite Graphics
 
@@ -19319,7 +19915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083704A8 @ Sprite Data 1
+	.4byte gUnknown_083704A8 @ Animation Data
 	.4byte gUnknown_083706E8 @ OAM
 	.4byte gUnknown_083706F0 @ Sprite Graphics
 
@@ -19329,7 +19925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083746F0 @ Sprite Data 1
+	.4byte gUnknown_083746F0 @ Animation Data
 	.4byte gUnknown_08374930 @ OAM
 	.4byte gUnknown_08374938 @ Sprite Graphics
 
@@ -19339,7 +19935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08376938 @ Sprite Data 1
+	.4byte gUnknown_08376938 @ Animation Data
 	.4byte gUnknown_08376B78 @ OAM
 	.4byte gUnknown_08376B80 @ Sprite Graphics
 
@@ -19349,7 +19945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0837AB80 @ Sprite Data 1
+	.4byte gUnknown_0837AB80 @ Animation Data
 	.4byte gUnknown_0837ACA0 @ OAM
 	.4byte gUnknown_0837ACA8 @ Sprite Graphics
 
@@ -19359,7 +19955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0837CCA8 @ Sprite Data 1
+	.4byte gUnknown_0837CCA8 @ Animation Data
 	.4byte gUnknown_0837CEE8 @ OAM
 	.4byte gUnknown_0837CEF0 @ Sprite Graphics
 
@@ -19369,7 +19965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08380EF0 @ Sprite Data 1
+	.4byte gUnknown_08380EF0 @ Animation Data
 	.4byte gUnknown_08381010 @ OAM
 	.4byte gUnknown_08381018 @ Sprite Graphics
 
@@ -19379,7 +19975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08383018 @ Sprite Data 1
+	.4byte gUnknown_08383018 @ Animation Data
 	.4byte gUnknown_08383744 @ OAM
 	.4byte gUnknown_0838374C @ Sprite Graphics
 
@@ -19389,7 +19985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0838434C @ Sprite Data 1
+	.4byte gUnknown_0838434C @ Animation Data
 	.4byte gUnknown_083844FC @ OAM
 	.4byte gUnknown_08384504 @ Sprite Graphics
 
@@ -19399,7 +19995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08387504 @ Sprite Data 1
+	.4byte gUnknown_08387504 @ Animation Data
 	.4byte gUnknown_08387864 @ OAM
 	.4byte gUnknown_0838786C @ Sprite Graphics
 
@@ -19409,7 +20005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0838D86C @ Sprite Data 1
+	.4byte gUnknown_0838D86C @ Animation Data
 	.4byte gUnknown_0838DB3C @ OAM
 	.4byte gUnknown_0838DB44 @ Sprite Graphics
 
@@ -19419,7 +20015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08392B44 @ Sprite Data 1
+	.4byte gUnknown_08392B44 @ Animation Data
 	.4byte gUnknown_08392C64 @ OAM
 	.4byte gUnknown_08392C6C @ Sprite Graphics
 
@@ -19429,7 +20025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08394C6C @ Sprite Data 1
+	.4byte gUnknown_08394C6C @ Animation Data
 	.4byte gUnknown_08394EAC @ OAM
 	.4byte gUnknown_08394EB4 @ Sprite Graphics
 
@@ -19439,7 +20035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083A4EB4 @ Sprite Data 1
+	.4byte gUnknown_083A4EB4 @ Animation Data
 	.4byte gUnknown_083A52A4 @ OAM
 	.4byte gUnknown_083A52AC @ Sprite Graphics
 
@@ -19449,7 +20045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083C12AC @ Sprite Data 1
+	.4byte gUnknown_083C12AC @ Animation Data
 	.4byte gUnknown_083C1708 @ OAM
 	.4byte gUnknown_083C1710 @ Sprite Graphics
 
@@ -19459,7 +20055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083DE710 @ Sprite Data 1
+	.4byte gUnknown_083DE710 @ Animation Data
 	.4byte gUnknown_083DE89C @ OAM
 	.4byte gUnknown_083DE8A4 @ Sprite Graphics
 
@@ -19469,7 +20065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083E14A4 @ Sprite Data 1
+	.4byte gUnknown_083E14A4 @ Animation Data
 	.4byte gUnknown_083E17BC @ OAM
 	.4byte gUnknown_083E17C4 @ Sprite Graphics
 
@@ -19479,7 +20075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083E6FC4 @ Sprite Data 1
+	.4byte gUnknown_083E6FC4 @ Animation Data
 	.4byte gUnknown_083E712C @ OAM
 	.4byte gUnknown_083E7134 @ Sprite Graphics
 
@@ -19489,7 +20085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083E8934 @ Sprite Data 1
+	.4byte gUnknown_083E8934 @ Animation Data
 	.4byte gUnknown_083E8A30 @ OAM
 	.4byte gUnknown_083E8A38 @ Sprite Graphics
 
@@ -19499,7 +20095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083EA638 @ Sprite Data 1
+	.4byte gUnknown_083EA638 @ Animation Data
 	.4byte gUnknown_083EA734 @ OAM
 	.4byte gUnknown_083EA73C @ Sprite Graphics
 
@@ -19509,7 +20105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083EC33C @ Sprite Data 1
+	.4byte gUnknown_083EC33C @ Animation Data
 	.4byte gUnknown_083ECC3C @ OAM
 	.4byte gUnknown_083ECC44 @ Sprite Graphics
 
@@ -19519,7 +20115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083F4C44 @ Sprite Data 1
+	.4byte gUnknown_083F4C44 @ Animation Data
 	.4byte gUnknown_083F4E84 @ OAM
 	.4byte gUnknown_083F4E8C @ Sprite Graphics
 
@@ -19529,7 +20125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083F8E8C @ Sprite Data 1
+	.4byte gUnknown_083F8E8C @ Animation Data
 	.4byte gUnknown_083F981C @ OAM
 	.4byte gUnknown_083F9824 @ Sprite Graphics
 
@@ -19539,7 +20135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_083FE024 @ Sprite Data 1
+	.4byte gUnknown_083FE024 @ Animation Data
 	.4byte gUnknown_083FE4EC @ OAM
 	.4byte gUnknown_083FE4F4 @ Sprite Graphics
 
@@ -19549,7 +20145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084064F4 @ Sprite Data 1
+	.4byte gUnknown_084064F4 @ Animation Data
 	.4byte gUnknown_084068E4 @ OAM
 	.4byte gUnknown_084068EC @ Sprite Graphics
 
@@ -19559,7 +20155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0840A8EC @ Sprite Data 1
+	.4byte gUnknown_0840A8EC @ Animation Data
 	.4byte gUnknown_0840A9E8 @ OAM
 	.4byte gUnknown_0840A9F0 @ Sprite Graphics
 
@@ -19569,7 +20165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0840C5F0 @ Sprite Data 1
+	.4byte gUnknown_0840C5F0 @ Animation Data
 	.4byte gUnknown_0840C734 @ OAM
 	.4byte gUnknown_0840C73C @ Sprite Graphics
 
@@ -19579,7 +20175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0840D93C @ Sprite Data 1
+	.4byte gUnknown_0840D93C @ Animation Data
 	.4byte gUnknown_0840D9A8 @ OAM
 	.4byte gUnknown_0840D9B0 @ Sprite Graphics
 
@@ -19589,7 +20185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0840E5B0 @ Sprite Data 1
+	.4byte gUnknown_0840E5B0 @ Animation Data
 	.4byte gUnknown_0840E6F4 @ OAM
 	.4byte gUnknown_0840E6FC @ Sprite Graphics
 
@@ -19599,7 +20195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0840F8FC @ Sprite Data 1
+	.4byte gUnknown_0840F8FC @ Animation Data
 	.4byte gUnknown_0840FC5C @ OAM
 	.4byte gUnknown_0840FC64 @ Sprite Graphics
 
@@ -19609,7 +20205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08415C64 @ Sprite Data 1
+	.4byte gUnknown_08415C64 @ Animation Data
 	.4byte gUnknown_08415EA4 @ OAM
 	.4byte gUnknown_08415EAC @ Sprite Graphics
 
@@ -19619,7 +20215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08419EAC @ Sprite Data 1
+	.4byte gUnknown_08419EAC @ Animation Data
 	.4byte gUnknown_0841A0EC @ OAM
 	.4byte gUnknown_0841A0F4 @ Sprite Graphics
 
@@ -19629,7 +20225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0841E0F4 @ Sprite Data 1
+	.4byte gUnknown_0841E0F4 @ Animation Data
 	.4byte gUnknown_0841E454 @ OAM
 	.4byte gUnknown_0841E45C @ Sprite Graphics
 
@@ -19639,7 +20235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0842445C @ Sprite Data 1
+	.4byte gUnknown_0842445C @ Animation Data
 	.4byte gUnknown_08424558 @ OAM
 	.4byte gUnknown_08424560 @ Sprite Graphics
 
@@ -19649,7 +20245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08426160 @ Sprite Data 1
+	.4byte gUnknown_08426160 @ Animation Data
 	.4byte gUnknown_08426508 @ OAM
 	.4byte gUnknown_08426510 @ Sprite Graphics
 
@@ -19659,7 +20255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0842CD10 @ Sprite Data 1
+	.4byte gUnknown_0842CD10 @ Animation Data
 	.4byte gUnknown_0842D004 @ OAM
 	.4byte gUnknown_0842D00C @ Sprite Graphics
 
@@ -19669,7 +20265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0843240C @ Sprite Data 1
+	.4byte gUnknown_0843240C @ Animation Data
 	.4byte gUnknown_084325BC @ OAM
 	.4byte gUnknown_084325C4 @ Sprite Graphics
 
@@ -19679,7 +20275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084355C4 @ Sprite Data 1
+	.4byte gUnknown_084355C4 @ Animation Data
 	.4byte gUnknown_08435804 @ OAM
 	.4byte gUnknown_0843580C @ Sprite Graphics
 
@@ -19689,7 +20285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0843980C @ Sprite Data 1
+	.4byte gUnknown_0843980C @ Animation Data
 	.4byte gfxMiniMarioCrystalBallOAM @ OAM
 	.4byte gfxMiniMarioCrystalBall8bpp @ Sprite Graphics
 
@@ -19699,7 +20295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0843DA54 @ Sprite Data 1
+	.4byte gUnknown_0843DA54 @ Animation Data
 	.4byte gUnknown_0843DED4 @ OAM
 	.4byte gUnknown_0843DEDC @ Sprite Graphics
 
@@ -19709,7 +20305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08445EDC @ Sprite Data 1
+	.4byte gUnknown_08445EDC @ Animation Data
 	.4byte gUnknown_08446314 @ OAM
 	.4byte gUnknown_0844631C @ Sprite Graphics
 
@@ -19719,7 +20315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0844DB1C @ Sprite Data 1
+	.4byte gUnknown_0844DB1C @ Animation Data
 	.4byte gUnknown_0844DE58 @ OAM
 	.4byte gUnknown_0844DE60 @ Sprite Graphics
 
@@ -19729,7 +20325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08453A60 @ Sprite Data 1
+	.4byte gUnknown_08453A60 @ Animation Data
 	.4byte gUnknown_08453CA0 @ OAM
 	.4byte gUnknown_08453CA8 @ Sprite Graphics
 
@@ -19739,7 +20335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08457CA8 @ Sprite Data 1
+	.4byte gUnknown_08457CA8 @ Animation Data
 	.4byte gUnknown_08457D38 @ OAM
 	.4byte gUnknown_08457D40 @ Sprite Graphics
 
@@ -19749,7 +20345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08458D40 @ Sprite Data 1
+	.4byte gUnknown_08458D40 @ Animation Data
 	.4byte gUnknown_08458F14 @ OAM
 	.4byte gUnknown_08458F1C @ Sprite Graphics
 
@@ -19759,7 +20355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0845C31C @ Sprite Data 1
+	.4byte gUnknown_0845C31C @ Animation Data
 	.4byte gUnknown_0845C43C @ OAM
 	.4byte gUnknown_0845C444 @ Sprite Graphics
 
@@ -19769,7 +20365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0845E444 @ Sprite Data 1
+	.4byte gUnknown_0845E444 @ Animation Data
 	.4byte gUnknown_0845E564 @ OAM
 	.4byte gUnknown_0845E56C @ Sprite Graphics
 
@@ -19779,7 +20375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0846056C @ Sprite Data 1
+	.4byte gUnknown_0846056C @ Animation Data
 	.4byte gUnknown_084608CC @ OAM
 	.4byte gUnknown_084608D4 @ Sprite Graphics
 
@@ -19789,7 +20385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084668D4 @ Sprite Data 1
+	.4byte gUnknown_084668D4 @ Animation Data
 	.4byte gUnknown_08466B14 @ OAM
 	.4byte gUnknown_08466B1C @ Sprite Graphics
 
@@ -19799,7 +20395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0846AB1C @ Sprite Data 1
+	.4byte gUnknown_0846AB1C @ Animation Data
 	.4byte gUnknown_0846ACCC @ OAM
 	.4byte gUnknown_0846ACD4 @ Sprite Graphics
 
@@ -19809,7 +20405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0846DCD4 @ Sprite Data 1
+	.4byte gUnknown_0846DCD4 @ Animation Data
 	.4byte gUnknown_0846DEA8 @ OAM
 	.4byte gUnknown_0846DEB0 @ Sprite Graphics
 
@@ -19819,7 +20415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084712B0 @ Sprite Data 1
+	.4byte gUnknown_084712B0 @ Animation Data
 	.4byte gUnknown_084714F0 @ OAM
 	.4byte gUnknown_084714F8 @ Sprite Graphics
 
@@ -19829,7 +20425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084754F8 @ Sprite Data 1
+	.4byte gUnknown_084754F8 @ Animation Data
 	.4byte gUnknown_08475A08 @ OAM
 	.4byte gUnknown_08475A10 @ Sprite Graphics
 
@@ -19839,7 +20435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0847EA10 @ Sprite Data 1
+	.4byte gUnknown_0847EA10 @ Animation Data
 	.4byte gUnknown_0847EB78 @ OAM
 	.4byte gUnknown_0847EB80 @ Sprite Graphics
 
@@ -19849,7 +20445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08481380 @ Sprite Data 1
+	.4byte gUnknown_08481380 @ Animation Data
 	.4byte gUnknown_084816E0 @ OAM
 	.4byte gUnknown_084816E8 @ Sprite Graphics
 
@@ -19859,7 +20455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084876E8 @ Sprite Data 1
+	.4byte gUnknown_084876E8 @ Animation Data
 	.4byte gUnknown_08487808 @ OAM
 	.4byte gUnknown_08487810 @ Sprite Graphics
 
@@ -19869,7 +20465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08489810 @ Sprite Data 1
+	.4byte gUnknown_08489810 @ Animation Data
 	.4byte gUnknown_08489B70 @ OAM
 	.4byte gUnknown_08489B78 @ Sprite Graphics
 
@@ -19879,7 +20475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0848FB78 @ Sprite Data 1
+	.4byte gUnknown_0848FB78 @ Animation Data
 	.4byte gUnknown_0848FB9C @ OAM
 	.4byte gUnknown_0848FBA4 @ Sprite Graphics
 
@@ -19889,7 +20485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0848FFA4 @ Sprite Data 1
+	.4byte gUnknown_0848FFA4 @ Animation Data
 	.4byte gUnknown_084900A0 @ OAM
 	.4byte gUnknown_084900A8 @ Sprite Graphics
 
@@ -19899,7 +20495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08491CA8 @ Sprite Data 1
+	.4byte gUnknown_08491CA8 @ Animation Data
 	.4byte gUnknown_08491EE8 @ OAM
 	.4byte gUnknown_08491EF0 @ Sprite Graphics
 
@@ -19909,7 +20505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08495EF0 @ Sprite Data 1
+	.4byte gUnknown_08495EF0 @ Animation Data
 	.4byte gUnknown_084960A0 @ OAM
 	.4byte gUnknown_084960A8 @ Sprite Graphics
 
@@ -19919,7 +20515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084990A8 @ Sprite Data 1
+	.4byte gUnknown_084990A8 @ Animation Data
 	.4byte gUnknown_084992E8 @ OAM
 	.4byte gUnknown_084992F0 @ Sprite Graphics
 
@@ -19929,7 +20525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0849D2F0 @ Sprite Data 1
+	.4byte gUnknown_0849D2F0 @ Animation Data
 	.4byte gUnknown_0849D380 @ OAM
 	.4byte gUnknown_0849D388 @ Sprite Graphics
 
@@ -19939,7 +20535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0849E388 @ Sprite Data 1
+	.4byte gUnknown_0849E388 @ Animation Data
 	.4byte gUnknown_0849E4A8 @ OAM
 	.4byte gUnknown_0849E4B0 @ Sprite Graphics
 
@@ -19949,7 +20545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084A04B0 @ Sprite Data 1
+	.4byte gUnknown_084A04B0 @ Animation Data
 	.4byte gUnknown_084A05D0 @ OAM
 	.4byte gUnknown_084A05D8 @ Sprite Graphics
 
@@ -19959,7 +20555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084A25D8 @ Sprite Data 1
+	.4byte gUnknown_084A25D8 @ Animation Data
 	.4byte gUnknown_084A27F4 @ OAM
 	.4byte gUnknown_084A27FC @ Sprite Graphics
 
@@ -19969,7 +20565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084A63FC @ Sprite Data 1
+	.4byte gUnknown_084A63FC @ Animation Data
 	.4byte gUnknown_084A6684 @ OAM
 	.4byte gUnknown_084A668C @ Sprite Graphics
 
@@ -19979,7 +20575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084AAE8C @ Sprite Data 1
+	.4byte gUnknown_084AAE8C @ Animation Data
 	.4byte gUnknown_084AB30C @ OAM
 	.4byte gUnknown_084AB314 @ Sprite Graphics
 
@@ -19989,7 +20585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084AB714 @ Sprite Data 1
+	.4byte gUnknown_084AB714 @ Animation Data
 	.4byte gUnknown_084AB8C4 @ OAM
 	.4byte gUnknown_084AB8CC @ Sprite Graphics
 
@@ -19999,7 +20595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084ABCCC @ Sprite Data 1
+	.4byte gUnknown_084ABCCC @ Animation Data
 	.4byte gUnknown_084ABE34 @ OAM
 	.4byte gUnknown_084ABE3C @ Sprite Graphics
 
@@ -20009,7 +20605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084ADE3C @ Sprite Data 1
+	.4byte gUnknown_084ADE3C @ Animation Data
 	.4byte gUnknown_084ADF5C @ OAM
 	.4byte gUnknown_084ADF64 @ Sprite Graphics
 
@@ -20019,7 +20615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084AFF64 @ Sprite Data 1
+	.4byte gUnknown_084AFF64 @ Animation Data
 	.4byte gUnknown_084B0060 @ OAM
 	.4byte gUnknown_084B0068 @ Sprite Graphics
 
@@ -20029,7 +20625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084B1C68 @ Sprite Data 1
+	.4byte gUnknown_084B1C68 @ Animation Data
 	.4byte gUnknown_084B1EA8 @ OAM
 	.4byte gUnknown_084B1EB0 @ Sprite Graphics
 
@@ -20039,7 +20635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084B5EB0 @ Sprite Data 1
+	.4byte gUnknown_084B5EB0 @ Animation Data
 	.4byte gUnknown_084B61EC @ OAM
 	.4byte gUnknown_084B61F4 @ Sprite Graphics
 
@@ -20049,7 +20645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084BBDF4 @ Sprite Data 1
+	.4byte gUnknown_084BBDF4 @ Animation Data
 	.4byte gUnknown_084BC274 @ OAM
 	.4byte gUnknown_084BC27C @ Sprite Graphics
 
@@ -20059,7 +20655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084C427C @ Sprite Data 1
+	.4byte gUnknown_084C427C @ Animation Data
 	.4byte gUnknown_084C4624 @ OAM
 	.4byte gUnknown_084C462C @ Sprite Graphics
 
@@ -20069,7 +20665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084DE62C @ Sprite Data 1
+	.4byte gUnknown_084DE62C @ Animation Data
 	.4byte gUnknown_084DE7DC @ OAM
 	.4byte gUnknown_084DE7E4 @ Sprite Graphics
 
@@ -20079,7 +20675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084E17E4 @ Sprite Data 1
+	.4byte gUnknown_084E17E4 @ Animation Data
 	.4byte gUnknown_084E1904 @ OAM
 	.4byte gUnknown_084E190C @ Sprite Graphics
 
@@ -20089,7 +20685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084E390C @ Sprite Data 1
+	.4byte gUnknown_084E390C @ Animation Data
 	.4byte gUnknown_084E3B4C @ OAM
 	.4byte gUnknown_084E3B54 @ Sprite Graphics
 
@@ -20099,7 +20695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084E7B54 @ Sprite Data 1
+	.4byte gUnknown_084E7B54 @ Animation Data
 	.4byte gUnknown_084E7C50 @ OAM
 	.4byte gUnknown_084E7C58 @ Sprite Graphics
 
@@ -20109,7 +20705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084E9858 @ Sprite Data 1
+	.4byte gUnknown_084E9858 @ Animation Data
 	.4byte gUnknown_084E9954 @ OAM
 	.4byte gUnknown_084E995C @ Sprite Graphics
 
@@ -20119,7 +20715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084EB55C @ Sprite Data 1
+	.4byte gUnknown_084EB55C @ Animation Data
 	.4byte gUnknown_084EB7E4 @ OAM
 	.4byte gUnknown_084EB7EC @ Sprite Graphics
 
@@ -20129,7 +20725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084EFFEC @ Sprite Data 1
+	.4byte gUnknown_084EFFEC @ Animation Data
 	.4byte gUnknown_084F010C @ OAM
 	.4byte gUnknown_084F0114 @ Sprite Graphics
 
@@ -20139,7 +20735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084F2114 @ Sprite Data 1
+	.4byte gUnknown_084F2114 @ Animation Data
 	.4byte gUnknown_084F2210 @ OAM
 	.4byte gUnknown_084F2218 @ Sprite Graphics
 
@@ -20149,7 +20745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084F3E18 @ Sprite Data 1
+	.4byte gUnknown_084F3E18 @ Animation Data
 	.4byte gUnknown_084F3F38 @ OAM
 	.4byte gUnknown_084F3F40 @ Sprite Graphics
 
@@ -20159,7 +20755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084F5F40 @ Sprite Data 1
+	.4byte gUnknown_084F5F40 @ Animation Data
 	.4byte gUnknown_084F61C8 @ OAM
 	.4byte gUnknown_084F61D0 @ Sprite Graphics
 
@@ -20169,7 +20765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084FA9D0 @ Sprite Data 1
+	.4byte gUnknown_084FA9D0 @ Animation Data
 	.4byte gUnknown_084FAACC @ OAM
 	.4byte gUnknown_084FAAD4 @ Sprite Graphics
 
@@ -20179,7 +20775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084FC6D4 @ Sprite Data 1
+	.4byte gUnknown_084FC6D4 @ Animation Data
 	.4byte gUnknown_084FC7D0 @ OAM
 	.4byte gUnknown_084FC7D8 @ Sprite Graphics
 
@@ -20189,7 +20785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_084FE3D8 @ Sprite Data 1
+	.4byte gUnknown_084FE3D8 @ Animation Data
 	.4byte gUnknown_084FE660 @ OAM
 	.4byte gUnknown_084FE668 @ Sprite Graphics
 
@@ -20199,7 +20795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08502E68 @ Sprite Data 1
+	.4byte gUnknown_08502E68 @ Animation Data
 	.4byte gUnknown_08502F64 @ OAM
 	.4byte gUnknown_08502F6C @ Sprite Graphics
 
@@ -20209,7 +20805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08504B6C @ Sprite Data 1
+	.4byte gUnknown_08504B6C @ Animation Data
 	.4byte gUnknown_08504C68 @ OAM
 	.4byte gUnknown_08504C70 @ Sprite Graphics
 
@@ -20219,7 +20815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08506870 @ Sprite Data 1
+	.4byte gUnknown_08506870 @ Animation Data
 	.4byte gUnknown_08506AB0 @ OAM
 	.4byte gUnknown_08506AB8 @ Sprite Graphics
 
@@ -20229,7 +20825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0850AAB8 @ Sprite Data 1
+	.4byte gUnknown_0850AAB8 @ Animation Data
 	.4byte gUnknown_0850AB90 @ OAM
 	.4byte gUnknown_0850AB98 @ Sprite Graphics
 
@@ -20239,7 +20835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0850C398 @ Sprite Data 1
+	.4byte gUnknown_0850C398 @ Animation Data
 	.4byte gUnknown_0850C5D8 @ OAM
 	.4byte gUnknown_0850C5E0 @ Sprite Graphics
 
@@ -20249,7 +20845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085105E0 @ Sprite Data 1
+	.4byte gUnknown_085105E0 @ Animation Data
 	.4byte gUnknown_085106DC @ OAM
 	.4byte gUnknown_085106E4 @ Sprite Graphics
 
@@ -20259,7 +20855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085122E4 @ Sprite Data 1
+	.4byte gUnknown_085122E4 @ Animation Data
 	.4byte gUnknown_085123E0 @ OAM
 	.4byte gUnknown_085123E8 @ Sprite Graphics
 
@@ -20269,7 +20865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08513FE8 @ Sprite Data 1
+	.4byte gUnknown_08513FE8 @ Animation Data
 	.4byte gUnknown_0851400C @ OAM
 	.4byte gUnknown_08514014 @ Sprite Graphics
 
@@ -20279,7 +20875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08514214 @ Sprite Data 1
+	.4byte gUnknown_08514214 @ Animation Data
 	.4byte gUnknown_08514478 @ OAM
 	.4byte gUnknown_08514480 @ Sprite Graphics
 
@@ -20289,7 +20885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08518880 @ Sprite Data 1
+	.4byte gUnknown_08518880 @ Animation Data
 	.4byte gUnknown_085188C8 @ OAM
 	.4byte gUnknown_085188D0 @ Sprite Graphics
 
@@ -20299,7 +20895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085190D0 @ Sprite Data 1
+	.4byte gUnknown_085190D0 @ Animation Data
 	.4byte gUnknown_085191F0 @ OAM
 	.4byte gUnknown_085191F8 @ Sprite Graphics
 
@@ -20309,7 +20905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0851B1F8 @ Sprite Data 1
+	.4byte gUnknown_0851B1F8 @ Animation Data
 	.4byte gUnknown_0851B438 @ OAM
 	.4byte gUnknown_0851B440 @ Sprite Graphics
 
@@ -20319,7 +20915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0851F440 @ Sprite Data 1
+	.4byte gUnknown_0851F440 @ Animation Data
 	.4byte gUnknown_0851F560 @ OAM
 	.4byte gUnknown_0851F568 @ Sprite Graphics
 
@@ -20329,7 +20925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08521568 @ Sprite Data 1
+	.4byte gUnknown_08521568 @ Animation Data
 	.4byte gUnknown_08521688 @ OAM
 	.4byte gUnknown_08521690 @ Sprite Graphics
 
@@ -20339,7 +20935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08523690 @ Sprite Data 1
+	.4byte gUnknown_08523690 @ Animation Data
 	.4byte gUnknown_085238D0 @ OAM
 	.4byte gUnknown_085238D8 @ Sprite Graphics
 
@@ -20349,7 +20945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085278D8 @ Sprite Data 1
+	.4byte gUnknown_085278D8 @ Animation Data
 	.4byte gUnknown_08527B18 @ OAM
 	.4byte gUnknown_08527B20 @ Sprite Graphics
 
@@ -20359,7 +20955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0852BB20 @ Sprite Data 1
+	.4byte gUnknown_0852BB20 @ Animation Data
 	.4byte gUnknown_0852BD60 @ OAM
 	.4byte gUnknown_0852BD68 @ Sprite Graphics
 
@@ -20369,7 +20965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0852FD68 @ Sprite Data 1
+	.4byte gUnknown_0852FD68 @ Animation Data
 	.4byte gUnknown_0852FFA8 @ OAM
 	.4byte gUnknown_0852FFB0 @ Sprite Graphics
 
@@ -20379,7 +20975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08533FB0 @ Sprite Data 1
+	.4byte gUnknown_08533FB0 @ Animation Data
 	.4byte gUnknown_085341F0 @ OAM
 	.4byte gUnknown_085341F8 @ Sprite Graphics
 
@@ -20389,7 +20985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08537DF8 @ Sprite Data 1
+	.4byte gUnknown_08537DF8 @ Animation Data
 	.4byte gUnknown_08538038 @ OAM
 	.4byte gUnknown_08538040 @ Sprite Graphics
 
@@ -20399,7 +20995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0853C040 @ Sprite Data 1
+	.4byte gUnknown_0853C040 @ Animation Data
 	.4byte gUnknown_0853C3A0 @ OAM
 	.4byte gUnknown_0853C3A8 @ Sprite Graphics
 
@@ -20409,7 +21005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085423A8 @ Sprite Data 1
+	.4byte gUnknown_085423A8 @ Animation Data
 	.4byte gUnknown_08542414 @ OAM
 	.4byte gUnknown_0854241C @ Sprite Graphics
 
@@ -20419,7 +21015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0854301C @ Sprite Data 1
+	.4byte gUnknown_0854301C @ Animation Data
 	.4byte gUnknown_0854337C @ OAM
 	.4byte gUnknown_08543384 @ Sprite Graphics
 
@@ -20429,7 +21025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08549384 @ Sprite Data 1
+	.4byte gUnknown_08549384 @ Animation Data
 	.4byte gUnknown_08549534 @ OAM
 	.4byte gUnknown_0854953C @ Sprite Graphics
 
@@ -20439,7 +21035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0854C53C @ Sprite Data 1
+	.4byte gUnknown_0854C53C @ Animation Data
 	.4byte gUnknown_0854C77C @ OAM
 	.4byte gUnknown_0854C784 @ Sprite Graphics
 
@@ -20449,7 +21045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08550784 @ Sprite Data 1
+	.4byte gUnknown_08550784 @ Animation Data
 	.4byte gUnknown_085509C4 @ OAM
 	.4byte gUnknown_085509CC @ Sprite Graphics
 
@@ -20459,7 +21055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085549CC @ Sprite Data 1
+	.4byte gUnknown_085549CC @ Animation Data
 	.4byte gUnknown_08554D74 @ OAM
 	.4byte gUnknown_08554D7C @ Sprite Graphics
 
@@ -20469,7 +21065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0855B57C @ Sprite Data 1
+	.4byte gUnknown_0855B57C @ Animation Data
 	.4byte gUnknown_0855B84C @ OAM
 	.4byte gUnknown_0855B854 @ Sprite Graphics
 
@@ -20479,7 +21075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08560854 @ Sprite Data 1
+	.4byte gUnknown_08560854 @ Animation Data
 	.4byte gUnknown_08560ADC @ OAM
 	.4byte gUnknown_08560AE4 @ Sprite Graphics
 
@@ -20489,7 +21085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085652E4 @ Sprite Data 1
+	.4byte gUnknown_085652E4 @ Animation Data
 	.4byte gUnknown_08565524 @ OAM
 	.4byte gUnknown_0856552C @ Sprite Graphics
 
@@ -20499,7 +21095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0856952C @ Sprite Data 1
+	.4byte gUnknown_0856952C @ Animation Data
 	.4byte gUnknown_0856976C @ OAM
 	.4byte gUnknown_08569774 @ Sprite Graphics
 
@@ -20509,7 +21105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0856D774 @ Sprite Data 1
+	.4byte gUnknown_0856D774 @ Animation Data
 	.4byte gUnknown_0856D924 @ OAM
 	.4byte gUnknown_0856D92C @ Sprite Graphics
 
@@ -20519,7 +21115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0857092C @ Sprite Data 1
+	.4byte gUnknown_0857092C @ Animation Data
 	.4byte gUnknown_08570AB8 @ OAM
 	.4byte gUnknown_08570AC0 @ Sprite Graphics
 
@@ -20529,7 +21125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085736C0 @ Sprite Data 1
+	.4byte gUnknown_085736C0 @ Animation Data
 	.4byte gUnknown_085737E0 @ OAM
 	.4byte gUnknown_085737E8 @ Sprite Graphics
 
@@ -20539,7 +21135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085757E8 @ Sprite Data 1
+	.4byte gUnknown_085757E8 @ Animation Data
 	.4byte gUnknown_08575908 @ OAM
 	.4byte gUnknown_08575910 @ Sprite Graphics
 
@@ -20549,7 +21145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08577910 @ Sprite Data 1
+	.4byte gUnknown_08577910 @ Animation Data
 	.4byte gUnknown_08577A30 @ OAM
 	.4byte gUnknown_08577A38 @ Sprite Graphics
 
@@ -20559,7 +21155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08579A38 @ Sprite Data 1
+	.4byte gUnknown_08579A38 @ Animation Data
 	.4byte gUnknown_08579C78 @ OAM
 	.4byte gUnknown_08579C80 @ Sprite Graphics
 
@@ -20569,7 +21165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0857A480 @ Sprite Data 1
+	.4byte gUnknown_0857A480 @ Animation Data
 	.4byte gUnknown_0857A5A0 @ OAM
 	.4byte gUnknown_0857A5A8 @ Sprite Graphics
 
@@ -20579,7 +21175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0857ADA8 @ Sprite Data 1
+	.4byte gUnknown_0857ADA8 @ Animation Data
 	.4byte gUnknown_0857AFE8 @ OAM
 	.4byte gUnknown_0857AFF0 @ Sprite Graphics
 
@@ -20589,7 +21185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0857BFF0 @ Sprite Data 1
+	.4byte gUnknown_0857BFF0 @ Animation Data
 	.4byte gUnknown_0857C350 @ OAM
 	.4byte gUnknown_0857C358 @ Sprite Graphics
 
@@ -20599,7 +21195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0857DB58 @ Sprite Data 1
+	.4byte gUnknown_0857DB58 @ Animation Data
 	.4byte gUnknown_0857E08C @ OAM
 	.4byte gUnknown_0857E094 @ Sprite Graphics
 
@@ -20609,7 +21205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08580094 @ Sprite Data 1
+	.4byte gUnknown_08580094 @ Animation Data
 	.4byte gUnknown_085809B8 @ OAM
 	.4byte gUnknown_085809C0 @ Sprite Graphics
 
@@ -20619,7 +21215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085829C0 @ Sprite Data 1
+	.4byte gUnknown_085829C0 @ Animation Data
 	.4byte gUnknown_08582FA8 @ OAM
 	.4byte gUnknown_08582FB0 @ Sprite Graphics
 
@@ -20629,7 +21225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08583BB0 @ Sprite Data 1
+	.4byte gUnknown_08583BB0 @ Animation Data
 	.4byte gUnknown_08583E80 @ OAM
 	.4byte gUnknown_08583E88 @ Sprite Graphics
 
@@ -20639,7 +21235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08585088 @ Sprite Data 1
+	.4byte gUnknown_08585088 @ Animation Data
 	.4byte gUnknown_085852C8 @ OAM
 	.4byte gUnknown_085852D0 @ Sprite Graphics
 
@@ -20649,7 +21245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085862D0 @ Sprite Data 1
+	.4byte gUnknown_085862D0 @ Animation Data
 	.4byte gUnknown_08586630 @ OAM
 	.4byte gUnknown_08586638 @ Sprite Graphics
 
@@ -20659,7 +21255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08587E38 @ Sprite Data 1
+	.4byte gUnknown_08587E38 @ Animation Data
 	.4byte gUnknown_085882B8 @ OAM
 	.4byte gUnknown_085882C0 @ Sprite Graphics
 
@@ -20669,7 +21265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085902C0 @ Sprite Data 1
+	.4byte gUnknown_085902C0 @ Animation Data
 	.4byte gUnknown_08590740 @ OAM
 	.4byte gUnknown_08590748 @ Sprite Graphics
 
@@ -20679,7 +21275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08592748 @ Sprite Data 1
+	.4byte gUnknown_08592748 @ Animation Data
 	.4byte gUnknown_08592F28 @ OAM
 	.4byte gUnknown_08592F30 @ Sprite Graphics
 
@@ -20689,7 +21285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08595730 @ Sprite Data 1
+	.4byte gUnknown_08595730 @ Animation Data
 	.4byte gUnknown_08595970 @ OAM
 	.4byte gUnknown_08595978 @ Sprite Graphics
 
@@ -20699,7 +21295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08596978 @ Sprite Data 1
+	.4byte gUnknown_08596978 @ Animation Data
 	.4byte gUnknown_08596A98 @ OAM
 	.4byte gUnknown_08596AA0 @ Sprite Graphics
 
@@ -20709,7 +21305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085972A0 @ Sprite Data 1
+	.4byte gUnknown_085972A0 @ Animation Data
 	.4byte gUnknown_085973C0 @ OAM
 	.4byte gUnknown_085973C8 @ Sprite Graphics
 
@@ -20719,7 +21315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08597BC8 @ Sprite Data 1
+	.4byte gUnknown_08597BC8 @ Animation Data
 	.4byte gUnknown_08597E08 @ OAM
 	.4byte gUnknown_08597E10 @ Sprite Graphics
 
@@ -20729,7 +21325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08598C10 @ Sprite Data 1
+	.4byte gUnknown_08598C10 @ Animation Data
 	.4byte gUnknown_08599090 @ OAM
 	.4byte gUnknown_08599098 @ Sprite Graphics
 
@@ -20739,7 +21335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0859B098 @ Sprite Data 1
+	.4byte gUnknown_0859B098 @ Animation Data
 	.4byte gUnknown_0859B3F8 @ OAM
 	.4byte gUnknown_0859B400 @ Sprite Graphics
 
@@ -20749,7 +21345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0859CC00 @ Sprite Data 1
+	.4byte gUnknown_0859CC00 @ Animation Data
 	.4byte gUnknown_0859CE40 @ OAM
 	.4byte gUnknown_0859CE48 @ Sprite Graphics
 
@@ -20759,7 +21355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0859DD48 @ Sprite Data 1
+	.4byte gUnknown_0859DD48 @ Animation Data
 	.4byte gUnknown_0859E114 @ OAM
 	.4byte gUnknown_0859E11C @ Sprite Graphics
 
@@ -20769,7 +21365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0859FC1C @ Sprite Data 1
+	.4byte gUnknown_0859FC1C @ Animation Data
 	.4byte gUnknown_0859FD3C @ OAM
 	.4byte gUnknown_0859FD44 @ Sprite Graphics
 
@@ -20779,7 +21375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A0544 @ Sprite Data 1
+	.4byte gUnknown_085A0544 @ Animation Data
 	.4byte gUnknown_085A0568 @ OAM
 	.4byte gUnknown_085A0570 @ Sprite Graphics
 
@@ -20789,7 +21385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A0770 @ Sprite Data 1
+	.4byte gUnknown_085A0770 @ Animation Data
 	.4byte gUnknown_085A0794 @ OAM
 	.4byte gUnknown_085A079C @ Sprite Graphics
 
@@ -20799,7 +21395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A099C @ Sprite Data 1
+	.4byte gUnknown_085A099C @ Animation Data
 	.4byte gUnknown_085A09C0 @ OAM
 	.4byte gUnknown_085A09C8 @ Sprite Graphics
 
@@ -20809,7 +21405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A0BC8 @ Sprite Data 1
+	.4byte gUnknown_085A0BC8 @ Animation Data
 	.4byte gUnknown_085A0C58 @ OAM
 	.4byte gUnknown_085A0C60 @ Sprite Graphics
 
@@ -20819,7 +21415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A1060 @ Sprite Data 1
+	.4byte gUnknown_085A1060 @ Animation Data
 	.4byte gUnknown_085A10A8 @ OAM
 	.4byte gUnknown_085A10B0 @ Sprite Graphics
 
@@ -20829,7 +21425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A11B0 @ Sprite Data 1
+	.4byte gUnknown_085A11B0 @ Animation Data
 	.4byte gUnknown_085A121C @ OAM
 	.4byte gUnknown_085A1224 @ Sprite Graphics
 
@@ -20839,7 +21435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A1E24 @ Sprite Data 1
+	.4byte gUnknown_085A1E24 @ Animation Data
 	.4byte gUnknown_085A1F44 @ OAM
 	.4byte gUnknown_085A1F4C @ Sprite Graphics
 
@@ -20849,7 +21445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A274C @ Sprite Data 1
+	.4byte gUnknown_085A274C @ Animation Data
 	.4byte gUnknown_085A298C @ OAM
 	.4byte gUnknown_085A2994 @ Sprite Graphics
 
@@ -20859,7 +21455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A3994 @ Sprite Data 1
+	.4byte gUnknown_085A3994 @ Animation Data
 	.4byte gUnknown_085A3BD4 @ OAM
 	.4byte gUnknown_085A3BDC @ Sprite Graphics
 
@@ -20869,7 +21465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A4BDC @ Sprite Data 1
+	.4byte gUnknown_085A4BDC @ Animation Data
 	.4byte gUnknown_085A5CBC @ OAM
 	.4byte gUnknown_085A5CC4 @ Sprite Graphics
 
@@ -20879,7 +21475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A74C4 @ Sprite Data 1
+	.4byte gUnknown_085A74C4 @ Animation Data
 	.4byte gUnknown_085A7674 @ OAM
 	.4byte gUnknown_085A767C @ Sprite Graphics
 
@@ -20889,7 +21485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A827C @ Sprite Data 1
+	.4byte gUnknown_085A827C @ Animation Data
 	.4byte gUnknown_085A842C @ OAM
 	.4byte gUnknown_085A8434 @ Sprite Graphics
 
@@ -20899,7 +21495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A8A34 @ Sprite Data 1
+	.4byte gUnknown_085A8A34 @ Animation Data
 	.4byte gUnknown_085A8BE4 @ OAM
 	.4byte gUnknown_085A8BEC @ Sprite Graphics
 
@@ -20909,7 +21505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A91EC @ Sprite Data 1
+	.4byte gUnknown_085A91EC @ Animation Data
 	.4byte gUnknown_085A930C @ OAM
 	.4byte gUnknown_085A9314 @ Sprite Graphics
 
@@ -20919,7 +21515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085A9B14 @ Sprite Data 1
+	.4byte gUnknown_085A9B14 @ Animation Data
 	.4byte gUnknown_085A9CE8 @ OAM
 	.4byte gUnknown_085A9CF0 @ Sprite Graphics
 
@@ -20929,7 +21525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085AA070 @ Sprite Data 1
+	.4byte gUnknown_085AA070 @ Animation Data
 	.4byte gUnknown_085AA220 @ OAM
 	.4byte gUnknown_085AA228 @ Sprite Graphics
 
@@ -20939,7 +21535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085AAE28 @ Sprite Data 1
+	.4byte gUnknown_085AAE28 @ Animation Data
 	.4byte gUnknown_085AB068 @ OAM
 	.4byte gUnknown_085AB070 @ Sprite Graphics
 
@@ -20949,7 +21545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085ABF70 @ Sprite Data 1
+	.4byte gUnknown_085ABF70 @ Animation Data
 	.4byte gUnknown_085AC1B0 @ OAM
 	.4byte gUnknown_085AC1B8 @ Sprite Graphics
 
@@ -20959,7 +21555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085AD1B8 @ Sprite Data 1
+	.4byte gUnknown_085AD1B8 @ Animation Data
 	.4byte gUnknown_085AD224 @ OAM
 	.4byte gUnknown_085AD22C @ Sprite Graphics
 
@@ -20969,7 +21565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085AD3AC @ Sprite Data 1
+	.4byte gUnknown_085AD3AC @ Animation Data
 	.4byte gUnknown_085AD67C @ OAM
 	.4byte gUnknown_085AD684 @ Sprite Graphics
 
@@ -20979,7 +21575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085AE084 @ Sprite Data 1
+	.4byte gUnknown_085AE084 @ Animation Data
 	.4byte gUnknown_085AE0A8 @ OAM
 	.4byte gUnknown_085AE0B0 @ Sprite Graphics
 
@@ -20989,7 +21585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085AE1B0 @ Sprite Data 1
+	.4byte gUnknown_085AE1B0 @ Animation Data
 	.4byte gUnknown_085AE510 @ OAM
 	.4byte gUnknown_085AE518 @ Sprite Graphics
 
@@ -20999,7 +21595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085AFD18 @ Sprite Data 1
+	.4byte gUnknown_085AFD18 @ Animation Data
 	.4byte gUnknown_085B0078 @ OAM
 	.4byte gUnknown_085B0080 @ Sprite Graphics
 
@@ -21009,7 +21605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085B1880 @ Sprite Data 1
+	.4byte gUnknown_085B1880 @ Animation Data
 	.4byte gUnknown_085B18A4 @ OAM
 	.4byte gUnknown_085B18AC @ Sprite Graphics
 
@@ -21019,7 +21615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085B192C @ Sprite Data 1
+	.4byte gUnknown_085B192C @ Animation Data
 	.4byte gUnknown_085B1A4C @ OAM
 	.4byte gUnknown_085B1A54 @ Sprite Graphics
 
@@ -21029,7 +21625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085B2254 @ Sprite Data 1
+	.4byte gUnknown_085B2254 @ Animation Data
 	.4byte gUnknown_085B2764 @ OAM
 	.4byte gUnknown_085B276C @ Sprite Graphics
 
@@ -21039,7 +21635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085B496C @ Sprite Data 1
+	.4byte gUnknown_085B496C @ Animation Data
 	.4byte gUnknown_085B4CA8 @ OAM
 	.4byte gUnknown_085B4CB0 @ Sprite Graphics
 
@@ -21049,7 +21645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085B60B0 @ Sprite Data 1
+	.4byte gUnknown_085B60B0 @ Animation Data
 	.4byte gUnknown_085B61D0 @ OAM
 	.4byte gUnknown_085B61D8 @ Sprite Graphics
 
@@ -21059,7 +21655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085B81D8 @ Sprite Data 1
+	.4byte gUnknown_085B81D8 @ Animation Data
 	.4byte gUnknown_085B8364 @ OAM
 	.4byte gUnknown_085B836C @ Sprite Graphics
 
@@ -21069,7 +21665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085B8E6C @ Sprite Data 1
+	.4byte gUnknown_085B8E6C @ Animation Data
 	.4byte gUnknown_085B8F44 @ OAM
 	.4byte gUnknown_085B8F4C @ Sprite Graphics
 
@@ -21079,7 +21675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085B954C @ Sprite Data 1
+	.4byte gUnknown_085B954C @ Animation Data
 	.4byte gUnknown_085BA188 @ OAM
 	.4byte gUnknown_085BA190 @ Sprite Graphics
 
@@ -21089,7 +21685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085BC190 @ Sprite Data 1
+	.4byte gUnknown_085BC190 @ Animation Data
 	.4byte gUnknown_085BC3D0 @ OAM
 	.4byte gUnknown_085BC3D8 @ Sprite Graphics
 
@@ -21099,7 +21695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085BD3D8 @ Sprite Data 1
+	.4byte gUnknown_085BD3D8 @ Animation Data
 	.4byte gUnknown_085BD588 @ OAM
 	.4byte gUnknown_085BD590 @ Sprite Graphics
 
@@ -21109,7 +21705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085BE190 @ Sprite Data 1
+	.4byte gUnknown_085BE190 @ Animation Data
 	.4byte gUnknown_085BE2B0 @ OAM
 	.4byte gUnknown_085BE2B8 @ Sprite Graphics
 
@@ -21119,7 +21715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085BF2B8 @ Sprite Data 1
+	.4byte gUnknown_085BF2B8 @ Animation Data
 	.4byte gUnknown_085BF3B4 @ OAM
 	.4byte gUnknown_085BF3BC @ Sprite Graphics
 
@@ -21129,7 +21725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C01BC @ Sprite Data 1
+	.4byte gUnknown_085C01BC @ Animation Data
 	.4byte gUnknown_085C02DC @ OAM
 	.4byte gUnknown_085C02E4 @ Sprite Graphics
 
@@ -21139,7 +21735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C12E4 @ Sprite Data 1
+	.4byte gUnknown_085C12E4 @ Animation Data
 	.4byte gUnknown_085C1404 @ OAM
 	.4byte gUnknown_085C140C @ Sprite Graphics
 
@@ -21149,7 +21745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C240C @ Sprite Data 1
+	.4byte gUnknown_085C240C @ Animation Data
 	.4byte gUnknown_085C2454 @ OAM
 	.4byte gUnknown_085C245C @ Sprite Graphics
 
@@ -21159,7 +21755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C255C @ Sprite Data 1
+	.4byte gUnknown_085C255C @ Animation Data
 	.4byte gUnknown_085C2580 @ OAM
 	.4byte gUnknown_085C2588 @ Sprite Graphics
 
@@ -21169,7 +21765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C2608 @ Sprite Data 1
+	.4byte gUnknown_085C2608 @ Animation Data
 	.4byte gUnknown_085C262C @ OAM
 	.4byte gUnknown_085C2634 @ Sprite Graphics
 
@@ -21179,7 +21775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C26B4 @ Sprite Data 1
+	.4byte gUnknown_085C26B4 @ Animation Data
 	.4byte gUnknown_085C26D8 @ OAM
 	.4byte gUnknown_085C26E0 @ Sprite Graphics
 
@@ -21189,7 +21785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C2760 @ Sprite Data 1
+	.4byte gUnknown_085C2760 @ Animation Data
 	.4byte gUnknown_085C2784 @ OAM
 	.4byte gUnknown_085C278C @ Sprite Graphics
 
@@ -21199,7 +21795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C280C @ Sprite Data 1
+	.4byte gUnknown_085C280C @ Animation Data
 	.4byte gUnknown_085C2830 @ OAM
 	.4byte gUnknown_085C2838 @ Sprite Graphics
 
@@ -21209,7 +21805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C2858 @ Sprite Data 1
+	.4byte gUnknown_085C2858 @ Animation Data
 	.4byte gUnknown_085C28A0 @ OAM
 	.4byte gUnknown_085C28A8 @ Sprite Graphics
 
@@ -21219,7 +21815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C29A8 @ Sprite Data 1
+	.4byte gUnknown_085C29A8 @ Animation Data
 	.4byte gUnknown_085C29F0 @ OAM
 	.4byte gUnknown_085C29F8 @ Sprite Graphics
 
@@ -21229,7 +21825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C2AF8 @ Sprite Data 1
+	.4byte gUnknown_085C2AF8 @ Animation Data
 	.4byte gUnknown_085C2BAC @ OAM
 	.4byte gUnknown_085C2BB4 @ Sprite Graphics
 
@@ -21239,7 +21835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C2E34 @ Sprite Data 1
+	.4byte gUnknown_085C2E34 @ Animation Data
 	.4byte gUnknown_085C2EE8 @ OAM
 	.4byte gUnknown_085C2EF0 @ Sprite Graphics
 
@@ -21249,7 +21845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C2F90 @ Sprite Data 1
+	.4byte gUnknown_085C2F90 @ Animation Data
 	.4byte gUnknown_085C3218 @ OAM
 	.4byte gUnknown_085C3220 @ Sprite Graphics
 
@@ -21259,7 +21855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C7220 @ Sprite Data 1
+	.4byte gUnknown_085C7220 @ Animation Data
 	.4byte gUnknown_085C7244 @ OAM
 	.4byte gUnknown_085C724C @ Sprite Graphics
 
@@ -21269,7 +21865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C764C @ Sprite Data 1
+	.4byte gUnknown_085C764C @ Animation Data
 	.4byte gUnknown_085C7670 @ OAM
 	.4byte gUnknown_085C7678 @ Sprite Graphics
 
@@ -21279,7 +21875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C7A78 @ Sprite Data 1
+	.4byte gUnknown_085C7A78 @ Animation Data
 	.4byte gUnknown_085C7D00 @ OAM
 	.4byte gUnknown_085C7D08 @ Sprite Graphics
 
@@ -21289,7 +21885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CBD08 @ Sprite Data 1
+	.4byte gUnknown_085CBD08 @ Animation Data
 	.4byte gUnknown_085CBD2C @ OAM
 	.4byte gUnknown_085CBD34 @ Sprite Graphics
 
@@ -21299,7 +21895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CC134 @ Sprite Data 1
+	.4byte gUnknown_085CC134 @ Animation Data
 	.4byte gUnknown_085CC158 @ OAM
 	.4byte gUnknown_085CC160 @ Sprite Graphics
 
@@ -21309,7 +21905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CC960 @ Sprite Data 1
+	.4byte gUnknown_085CC960 @ Animation Data
 	.4byte gUnknown_085CC984 @ OAM
 	.4byte gUnknown_085CC98C @ Sprite Graphics
 
@@ -21319,7 +21915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CD18C @ Sprite Data 1
+	.4byte gUnknown_085CD18C @ Animation Data
 	.4byte gUnknown_085CD414 @ OAM
 	.4byte gUnknown_085CD41C @ Sprite Graphics
 
@@ -21329,7 +21925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CD81C @ Sprite Data 1
+	.4byte gUnknown_085CD81C @ Animation Data
 	.4byte gUnknown_085CD840 @ OAM
 	.4byte gUnknown_085CD848 @ Sprite Graphics
 
@@ -21339,7 +21935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CE048 @ Sprite Data 1
+	.4byte gUnknown_085CE048 @ Animation Data
 	.4byte gUnknown_085CE06C @ OAM
 	.4byte gUnknown_085CE074 @ Sprite Graphics
 
@@ -21349,7 +21945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CE874 @ Sprite Data 1
+	.4byte gUnknown_085CE874 @ Animation Data
 	.4byte gUnknown_085CE898 @ OAM
 	.4byte gUnknown_085CE8A0 @ Sprite Graphics
 
@@ -21359,7 +21955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CF0A0 @ Sprite Data 1
+	.4byte gUnknown_085CF0A0 @ Animation Data
 	.4byte gUnknown_085CF0C4 @ OAM
 	.4byte gUnknown_085CF0CC @ Sprite Graphics
 
@@ -21369,7 +21965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CF8CC @ Sprite Data 1
+	.4byte gUnknown_085CF8CC @ Animation Data
 	.4byte gfxMainWorldSelectTabsOAM @ OAM
 	.4byte gfxMainWorldSelectTabs4bpp @ Sprite Graphics
 
@@ -21379,7 +21975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D00D0 @ Sprite Data 1
+	.4byte gUnknown_085D00D0 @ Animation Data
 	.4byte gfxPlusWorldSelectTabsOAM @ OAM
 	.4byte gfxPlusWorldSelectTabs4bpp @ Sprite Graphics
 
@@ -21389,7 +21985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D08D4 @ Sprite Data 1
+	.4byte gUnknown_085D08D4 @ Animation Data
 	.4byte gUnknown_085D08F8 @ OAM
 	.4byte gUnknown_085D0900 @ Sprite Graphics
 
@@ -21399,7 +21995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Sprite Data 1
+	.4byte gUnknown_085D0A00 @ Animation Data
 	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
@@ -21409,7 +22005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D70C8 @ Sprite Data 1
+	.4byte gUnknown_085D70C8 @ Animation Data
 	.4byte gfxPlusLevelIconPicsOAM @ OAM
 	.4byte gfxPlusLevelIconPics4bpp @ Sprite Graphics
 
@@ -21419,7 +22015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DCAB8 @ Sprite Data 1
+	.4byte gUnknown_085DCAB8 @ Animation Data
 	.4byte gUnknown_085DCB6C @ OAM
 	.4byte gUnknown_085DCB74 @ Sprite Graphics
 
@@ -21429,7 +22025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DCC34 @ Sprite Data 1
+	.4byte gUnknown_085DCC34 @ Animation Data
 	.4byte gUnknown_085DCCC4 @ OAM
 	.4byte gUnknown_085DCCCC @ Sprite Graphics
 
@@ -21439,7 +22035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DCECC @ Sprite Data 1
+	.4byte gUnknown_085DCECC @ Animation Data
 	.4byte gUnknown_085DCF80 @ OAM
 	.4byte gUnknown_085DCF88 @ Sprite Graphics
 
@@ -21449,7 +22045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DD108 @ Sprite Data 1
+	.4byte gUnknown_085DD108 @ Animation Data
 	.4byte gUnknown_085DD150 @ OAM
 	.4byte gUnknown_085DD158 @ Sprite Graphics
 
@@ -21459,17 +22055,17 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DD258 @ Sprite Data 1
+	.4byte gUnknown_085DD258 @ Animation Data
 	.4byte gUnknown_085DD744 @ OAM
 	.4byte gUnknown_085DD74C @ Sprite Graphics
 
 	.2byte 0x001E @ X Position
-	.2byte 0x0020 @ Y position
+	.2byte 0x0020 @ Y ++
 	.2byte 0x0001 @ Skip 4 pixels count?
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DD9EC @ Sprite Data 1
+	.4byte gUnknown_085DD9EC @ Animation Data
 	.4byte gUnknown_085DDE24 @ OAM
 	.4byte gUnknown_085DDE2C @ Sprite Graphics
 
@@ -21479,7 +22075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x0810 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DE06C @ Sprite Data 1
+	.4byte gUnknown_085DE06C @ Animation Data
 	.4byte gUnknown_085DE4A4 @ OAM
 	.4byte gUnknown_085DE4AC @ Sprite Graphics
 
@@ -21489,7 +22085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DE92C @ Sprite Data 1
+	.4byte gUnknown_085DE92C @ Animation Data
 	.4byte gUnknown_085DEA94 @ OAM
 	.4byte gUnknown_085DEA9C @ Sprite Graphics
 
@@ -21499,9 +22095,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DED1C @ Sprite Data 1
+	.4byte gUnknown_085DED1C @ Animation Data
 	.4byte gUnknown_085DEFA4 @ OAM
-	.4byte gUnknown_085DEFAC @ Sprite Graphics
+	.4byte gfxOptionsMenuSelectLeft @ Sprite Graphics
 
 	.2byte 0x0012 @ X Position
 	.2byte 0x0080 @ Y position
@@ -21509,9 +22105,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DF3AC @ Sprite Data 1
+	.4byte gUnknown_085DF3AC @ Animation Data
 	.4byte gUnknown_085DF634 @ OAM
-	.4byte gUnknown_085DF63C @ Sprite Graphics
+	.4byte gfxOptionsMenuSelectCenter @ Sprite Graphics
 
 	.2byte 0x0012 @ X Position
 	.2byte 0x0080 @ Y position
@@ -21519,9 +22115,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DFA3C @ Sprite Data 1
+	.4byte gUnknown_085DFA3C @ Animation Data
 	.4byte gUnknown_085DFCC4 @ OAM
-	.4byte gUnknown_085DFCCC @ Sprite Graphics
+	.4byte gfxOptionsMenuSelectRight @ Sprite Graphics
 
 	.2byte 0x0004 @ X Position
 	.2byte 0x0100 @ Y position
@@ -21529,7 +22125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E00CC @ Sprite Data 1
+	.4byte gUnknown_085E00CC @ Animation Data
 	.4byte gUnknown_085E015C @ OAM
 	.4byte gUnknown_085E0164 @ Sprite Graphics
 
@@ -21539,7 +22135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0564 @ Sprite Data 1
+	.4byte gUnknown_085E0564 @ Animation Data
 	.4byte gUnknown_085E05F4 @ OAM
 	.4byte gUnknown_085E05FC @ Sprite Graphics
 
@@ -21549,7 +22145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E063C @ Sprite Data 1
+	.4byte gUnknown_085E063C @ Animation Data
 	.4byte gUnknown_085E0684 @ OAM
 	.4byte gUnknown_085E068C @ Sprite Graphics
 
@@ -21559,7 +22155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E078C @ Sprite Data 1
+	.4byte gUnknown_085E078C @ Animation Data
 	.4byte gUnknown_085E07D4 @ OAM
 	.4byte gUnknown_085E07DC @ Sprite Graphics
 
@@ -21569,7 +22165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E08DC @ Sprite Data 1
+	.4byte gUnknown_085E08DC @ Animation Data
 	.4byte gUnknown_085E0900 @ OAM
 	.4byte gUnknown_085E0908 @ Sprite Graphics
 
@@ -21579,7 +22175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0988 @ Sprite Data 1
+	.4byte gUnknown_085E0988 @ Animation Data
 	.4byte gUnknown_085E09AC @ OAM
 	.4byte gUnknown_085E09B4 @ Sprite Graphics
 
@@ -21589,7 +22185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0A34 @ Sprite Data 1
+	.4byte gUnknown_085E0A34 @ Animation Data
 	.4byte gUnknown_085E0A7C @ OAM
 	.4byte gUnknown_085E0A84 @ Sprite Graphics
 
@@ -21599,7 +22195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0AC4 @ Sprite Data 1
+	.4byte gUnknown_085E0AC4 @ Animation Data
 	.4byte gUnknown_085E0B0C @ OAM
 	.4byte gUnknown_085E0B14 @ Sprite Graphics
 
@@ -21609,7 +22205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0C14 @ Sprite Data 1
+	.4byte gUnknown_085E0C14 @ Animation Data
 	.4byte gUnknown_085E0C5C @ OAM
 	.4byte gUnknown_085E0C64 @ Sprite Graphics
 
@@ -21619,7 +22215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0D64 @ Sprite Data 1
+	.4byte gUnknown_085E0D64 @ Animation Data
 	.4byte gUnknown_085E0D88 @ OAM
 	.4byte gUnknown_085E0D90 @ Sprite Graphics
 
@@ -21629,7 +22225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0E10 @ Sprite Data 1
+	.4byte gUnknown_085E0E10 @ Animation Data
 	.4byte gUnknown_085E0E34 @ OAM
 	.4byte gUnknown_085E0E3C @ Sprite Graphics
 
@@ -21639,7 +22235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0EBC @ Sprite Data 1
+	.4byte gUnknown_085E0EBC @ Animation Data
 	.4byte gUnknown_085E0F04 @ OAM
 	.4byte gUnknown_085E0F0C @ Sprite Graphics
 
@@ -21649,7 +22245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E100C @ Sprite Data 1
+	.4byte gUnknown_085E100C @ Animation Data
 	.4byte gUnknown_085E1054 @ OAM
 	.4byte gUnknown_085E105C @ Sprite Graphics
 
@@ -21659,7 +22255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E115C @ Sprite Data 1
+	.4byte gUnknown_085E115C @ Animation Data
 	.4byte gUnknown_085E1180 @ OAM
 	.4byte gUnknown_085E1188 @ Sprite Graphics
 
@@ -21669,7 +22265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E1208 @ Sprite Data 1
+	.4byte gUnknown_085E1208 @ Animation Data
 	.4byte gUnknown_085E122C @ OAM
 	.4byte gUnknown_085E1234 @ Sprite Graphics
 
@@ -21679,7 +22275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E12B4 @ Sprite Data 1
+	.4byte gUnknown_085E12B4 @ Animation Data
 	.4byte gUnknown_085E1344 @ OAM
 	.4byte gUnknown_085E134C @ Sprite Graphics
 
@@ -21689,7 +22285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E1B4C @ Sprite Data 1
+	.4byte gUnknown_085E1B4C @ Animation Data
 	.4byte gUnknown_085E1C24 @ OAM
 	.4byte gUnknown_085E1C2C @ Sprite Graphics
 
@@ -21699,7 +22295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E1F2C @ Sprite Data 1
+	.4byte gUnknown_085E1F2C @ Animation Data
 	.4byte gUnknown_085E2004 @ OAM
 	.4byte gUnknown_085E200C @ Sprite Graphics
 
@@ -21709,7 +22305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E230C @ Sprite Data 1
+	.4byte gUnknown_085E230C @ Animation Data
 	.4byte gUnknown_085E2330 @ OAM
 	.4byte gUnknown_085E2338 @ Sprite Graphics
 
@@ -21719,7 +22315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E2438 @ Sprite Data 1
+	.4byte gUnknown_085E2438 @ Animation Data
 	.4byte gUnknown_085E245C @ OAM
 	.4byte gUnknown_085E2464 @ Sprite Graphics
 
@@ -21729,7 +22325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E24A4 @ Sprite Data 1
+	.4byte gUnknown_085E24A4 @ Animation Data
 	.4byte gUnknown_085E24C8 @ OAM
 	.4byte gUnknown_085E24D0 @ Sprite Graphics
 
@@ -21739,7 +22335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E2510 @ Sprite Data 1
+	.4byte gUnknown_085E2510 @ Animation Data
 	.4byte gUnknown_085E2534 @ OAM
 	.4byte gUnknown_085E253C @ Sprite Graphics
 
@@ -21749,7 +22345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E257C @ Sprite Data 1
+	.4byte gUnknown_085E257C @ Animation Data
 	.4byte gUnknown_085E25A0 @ OAM
 	.4byte gUnknown_085E25A8 @ Sprite Graphics
 
@@ -21759,7 +22355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E25E8 @ Sprite Data 1
+	.4byte gUnknown_085E25E8 @ Animation Data
 	.4byte gUnknown_085E260C @ OAM
 	.4byte gUnknown_085E2614 @ Sprite Graphics
 
@@ -21769,7 +22365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E2654 @ Sprite Data 1
+	.4byte gUnknown_085E2654 @ Animation Data
 	.4byte gUnknown_085E2678 @ OAM
 	.4byte gUnknown_085E2680 @ Sprite Graphics
 
@@ -21779,7 +22375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E26C0 @ Sprite Data 1
+	.4byte gUnknown_085E26C0 @ Animation Data
 	.4byte gUnknown_085E26E4 @ OAM
 	.4byte gUnknown_085E26EC @ Sprite Graphics
 
@@ -21789,7 +22385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E272C @ Sprite Data 1
+	.4byte gUnknown_085E272C @ Animation Data
 	.4byte gUnknown_085E2750 @ OAM
 	.4byte gUnknown_085E2758 @ Sprite Graphics
 
@@ -21799,7 +22395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E2798 @ Sprite Data 1
+	.4byte gUnknown_085E2798 @ Animation Data
 	.4byte gUnknown_085E27BC @ OAM
 	.4byte gUnknown_085E27C4 @ Sprite Graphics
 
@@ -21809,7 +22405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E2804 @ Sprite Data 1
+	.4byte gUnknown_085E2804 @ Animation Data
 	.4byte gUnknown_085E2828 @ OAM
 	.4byte gUnknown_085E2830 @ Sprite Graphics
 
@@ -21819,7 +22415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E2870 @ Sprite Data 1
+	.4byte gUnknown_085E2870 @ Animation Data
 	.4byte gUnknown_085E2AF8 @ OAM
 	.4byte gUnknown_085E2B00 @ Sprite Graphics
 
@@ -21829,7 +22425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E2F00 @ Sprite Data 1
+	.4byte gUnknown_085E2F00 @ Animation Data
 	.4byte gUnknown_085E3188 @ OAM
 	.4byte gUnknown_085E3190 @ Sprite Graphics
 
@@ -21839,7 +22435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E3590 @ Sprite Data 1
+	.4byte gUnknown_085E3590 @ Animation Data
 	.4byte gUnknown_085E3818 @ OAM
 	.4byte gUnknown_085E3820 @ Sprite Graphics
 
@@ -21849,7 +22445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E8020 @ Sprite Data 1
+	.4byte gUnknown_085E8020 @ Animation Data
 	.4byte gUnknown_085E8044 @ OAM
 	.4byte gUnknown_085E804C @ Sprite Graphics
 
@@ -21859,7 +22455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E844C @ Sprite Data 1
+	.4byte gUnknown_085E844C @ Animation Data
 	.4byte gUnknown_085E8470 @ OAM
 	.4byte gUnknown_085E8478 @ Sprite Graphics
 
@@ -21869,7 +22465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E8878 @ Sprite Data 1
+	.4byte gUnknown_085E8878 @ Animation Data
 	.4byte gUnknown_085E889C @ OAM
 	.4byte gUnknown_085E88A4 @ Sprite Graphics
 
@@ -21879,7 +22475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E8CA4 @ Sprite Data 1
+	.4byte gUnknown_085E8CA4 @ Animation Data
 	.4byte gUnknown_085E8CC8 @ OAM
 	.4byte gUnknown_085E8CD0 @ Sprite Graphics
 
@@ -21889,7 +22485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E90D0 @ Sprite Data 1
+	.4byte gUnknown_085E90D0 @ Animation Data
 	.4byte gUnknown_085E9358 @ OAM
 	.4byte gUnknown_085E9360 @ Sprite Graphics
 
@@ -21899,7 +22495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EAB60 @ Sprite Data 1
+	.4byte gUnknown_085EAB60 @ Animation Data
 	.4byte gUnknown_085EAB84 @ OAM
 	.4byte gUnknown_085EAB8C @ Sprite Graphics
 
@@ -21909,7 +22505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EAC8C @ Sprite Data 1
+	.4byte gUnknown_085EAC8C @ Animation Data
 	.4byte gUnknown_085EAD1C @ OAM
 	.4byte gUnknown_085EAD24 @ Sprite Graphics
 
@@ -21919,7 +22515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EAF24 @ Sprite Data 1
+	.4byte gUnknown_085EAF24 @ Animation Data
 	.4byte gUnknown_085EAF48 @ OAM
 	.4byte gUnknown_085EAF50 @ Sprite Graphics
 
@@ -21929,7 +22525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EAFD0 @ Sprite Data 1
+	.4byte gUnknown_085EAFD0 @ Animation Data
 	.4byte gUnknown_085EB0A8 @ OAM
 	.4byte gUnknown_085EB0B0 @ Sprite Graphics
 
@@ -21939,7 +22535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EB3B0 @ Sprite Data 1
+	.4byte gUnknown_085EB3B0 @ Animation Data
 	.4byte gUnknown_085EB488 @ OAM
 	.4byte gUnknown_085EB490 @ Sprite Graphics
 
@@ -21949,7 +22545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EB790 @ Sprite Data 1
+	.4byte gUnknown_085EB790 @ Animation Data
 	.4byte gUnknown_085EB820 @ OAM
 	.4byte gUnknown_085EB828 @ Sprite Graphics
 
@@ -21959,7 +22555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EBA28 @ Sprite Data 1
+	.4byte gUnknown_085EBA28 @ Animation Data
 	.4byte gUnknown_085EBC68 @ OAM
 	.4byte gUnknown_085EBC70 @ Sprite Graphics
 
@@ -21969,7 +22565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085ECC70 @ Sprite Data 1
+	.4byte gUnknown_085ECC70 @ Animation Data
 	.4byte gfxMovie1PreviewOAM @ OAM
 	.4byte gfxMovie1Preview8bpp @ Sprite Graphics
 
@@ -21979,7 +22575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085ED49C @ Sprite Data 1
+	.4byte gUnknown_085ED49C @ Animation Data
 	.4byte gfxMovie2PreviewOAM @ OAM
 	.4byte gfxMovie2Preview8bpp @ Sprite Graphics
 
@@ -21989,7 +22585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EDCC8 @ Sprite Data 1
+	.4byte gUnknown_085EDCC8 @ Animation Data
 	.4byte gfxMovie3PreviewOAM @ OAM
 	.4byte gfxMovie3Preview8bpp @ Sprite Graphics
 
@@ -21999,7 +22595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EE4F4 @ Sprite Data 1
+	.4byte gUnknown_085EE4F4 @ Animation Data
 	.4byte gfxMovie4PreviewOAM @ OAM
 	.4byte gfxMovie4Preview8bpp @ Sprite Graphics
 
@@ -22009,7 +22605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EED20 @ Sprite Data 1
+	.4byte gUnknown_085EED20 @ Animation Data
 	.4byte gfxMovie5PreviewOAM @ OAM
 	.4byte gfxMovie5Preview8bpp @ Sprite Graphics
 
@@ -22019,7 +22615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gfxMovie6PreviewOAM @ Sprite Data 1
+	.4byte gfxMovie6PreviewOAM @ Animation Data
 	.4byte gUnknown_085EF570 @ OAM
 	.4byte gfxMovie6Preview8bpp @ Sprite Graphics
 
@@ -22029,7 +22625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085EFD78 @ Sprite Data 1
+	.4byte gUnknown_085EFD78 @ Animation Data
 	.4byte gfxMovie7PreviewOAM @ OAM
 	.4byte gfxMovie7Preview8bpp @ Sprite Graphics
 
@@ -22039,7 +22635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F05A4 @ Sprite Data 1
+	.4byte gUnknown_085F05A4 @ Animation Data
 	.4byte gfxMovie8PreviewOAM @ OAM
 	.4byte gfxMovie8Preview8bpp @ Sprite Graphics
 
@@ -22049,7 +22645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F0DD0 @ Sprite Data 1
+	.4byte gUnknown_085F0DD0 @ Animation Data
 	.4byte gfxMovie8PreviewAltOAM @ OAM
 	.4byte gfxMovie8PreviewAlt8bpp @ Sprite Graphics
 
@@ -22059,9 +22655,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F15FC @ Sprite Data 1
+	.4byte gUnknown_085F15FC @ Animation Data
 	.4byte gUnknown_085F1620 @ OAM
-	.4byte gUnknown_085F1628 @ Sprite Graphics
+	.4byte gfxMoviePreviewStatic @ Sprite Graphics
 
 	.2byte 0x0002 @ X Position
 	.2byte 0x0200 @ Y position
@@ -22069,7 +22665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F1E28 @ Sprite Data 1
+	.4byte gUnknown_085F1E28 @ Animation Data
 	.4byte gUnknown_085F1E70 @ OAM
 	.4byte gUnknown_085F1E78 @ Sprite Graphics
 
@@ -22079,7 +22675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F2278 @ Sprite Data 1
+	.4byte gUnknown_085F2278 @ Animation Data
 	.4byte gUnknown_085F229C @ OAM
 	.4byte gUnknown_085F22A4 @ Sprite Graphics
 
@@ -22089,7 +22685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F2324 @ Sprite Data 1
+	.4byte gUnknown_085F2324 @ Animation Data
 	.4byte gUnknown_085F2348 @ OAM
 	.4byte gUnknown_085F2350 @ Sprite Graphics
 
@@ -22099,7 +22695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F23D0 @ Sprite Data 1
+	.4byte gUnknown_085F23D0 @ Animation Data
 	.4byte gUnknown_085F24A8 @ OAM
 	.4byte gUnknown_085F24B0 @ Sprite Graphics
 
@@ -22109,7 +22705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F2AB0 @ Sprite Data 1
+	.4byte gUnknown_085F2AB0 @ Animation Data
 	.4byte gUnknown_085F2D80 @ OAM
 	.4byte gUnknown_085F2D88 @ Sprite Graphics
 
@@ -22119,7 +22715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F2F88 @ Sprite Data 1
+	.4byte gUnknown_085F2F88 @ Animation Data
 	.4byte gUnknown_085F3138 @ OAM
 	.4byte gUnknown_085F3140 @ Sprite Graphics
 
@@ -22129,7 +22725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F3940 @ Sprite Data 1
+	.4byte gUnknown_085F3940 @ Animation Data
 	.4byte gUnknown_085F3C7C @ OAM
 	.4byte gUnknown_085F3C84 @ Sprite Graphics
 
@@ -22139,7 +22735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F4084 @ Sprite Data 1
+	.4byte gUnknown_085F4084 @ Animation Data
 	.4byte gUnknown_085F41A4 @ OAM
 	.4byte gUnknown_085F41AC @ Sprite Graphics
 
@@ -22149,7 +22745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F49AC @ Sprite Data 1
+	.4byte gUnknown_085F49AC @ Animation Data
 	.4byte gfxTitleScreenPressStartOAM @ OAM
 	.4byte gfxTitleScreenPressStart4bpp @ Sprite Graphics
 
@@ -22159,7 +22755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F4BD8 @ Sprite Data 1
+	.4byte gUnknown_085F4BD8 @ Animation Data
 	.4byte gUnknown_085F4CD4 @ OAM
 	.4byte gUnknown_085F4CDC @ Sprite Graphics
 
@@ -22169,7 +22765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F4EDC @ Sprite Data 1
+	.4byte gUnknown_085F4EDC @ Animation Data
 	.4byte gUnknown_085F4F6C @ OAM
 	.4byte gUnknown_085F4F74 @ Sprite Graphics
 
@@ -22179,7 +22775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F5174 @ Sprite Data 1
+	.4byte gUnknown_085F5174 @ Animation Data
 	.4byte gUnknown_085F5294 @ OAM
 	.4byte gUnknown_085F529C @ Sprite Graphics
 
@@ -22189,7 +22785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F569C @ Sprite Data 1
+	.4byte gUnknown_085F569C @ Animation Data
 	.4byte gUnknown_085F58DC @ OAM
 	.4byte gUnknown_085F58E4 @ Sprite Graphics
 
@@ -22199,7 +22795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F60E4 @ Sprite Data 1
+	.4byte gUnknown_085F60E4 @ Animation Data
 	.4byte gUnknown_085F612C @ OAM
 	.4byte gUnknown_085F6134 @ Sprite Graphics
 
@@ -22209,9 +22805,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F61B4 @ Sprite Data 1
+	.4byte gUnknown_085F61B4 @ Animation Data
 	.4byte gUnknown_085F6388 @ OAM
-	.4byte gUnknown_085F6390 @ Sprite Graphics
+	.4byte gfxGreatYouWon @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0100 @ Y position
@@ -22219,7 +22815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F6910 @ Sprite Data 1
+	.4byte gUnknown_085F6910 @ Animation Data
 	.4byte gUnknown_085F6B50 @ OAM
 	.4byte gUnknown_085F6B58 @ Sprite Graphics
 
@@ -22229,7 +22825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F7358 @ Sprite Data 1
+	.4byte gUnknown_085F7358 @ Animation Data
 	.4byte gUnknown_085F73E8 @ OAM
 	.4byte gUnknown_085F73F0 @ Sprite Graphics
 
@@ -22239,7 +22835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F77F0 @ Sprite Data 1
+	.4byte gUnknown_085F77F0 @ Animation Data
 	.4byte gUnknown_085F79A0 @ OAM
 	.4byte gUnknown_085F79A8 @ Sprite Graphics
 
@@ -22249,7 +22845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F85A8 @ Sprite Data 1
+	.4byte gUnknown_085F85A8 @ Animation Data
 	.4byte gUnknown_085F86C8 @ OAM
 	.4byte gUnknown_085F86D0 @ Sprite Graphics
 
@@ -22259,7 +22855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085F8ED0 @ Sprite Data 1
+	.4byte gUnknown_085F8ED0 @ Animation Data
 	.4byte gUnknown_085F9110 @ OAM
 	.4byte gUnknown_085F9118 @ Sprite Graphics
 
@@ -22269,7 +22865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085FA118 @ Sprite Data 1
+	.4byte gUnknown_085FA118 @ Animation Data
 	.4byte gUnknown_085FA358 @ OAM
 	.4byte gUnknown_085FA360 @ Sprite Graphics
 
@@ -22279,7 +22875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085FB360 @ Sprite Data 1
+	.4byte gUnknown_085FB360 @ Animation Data
 	.4byte gfxFileLettersOAM @ OAM
 	.4byte gfxFileLetters4bpp @ Sprite Graphics
 
@@ -22289,7 +22885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085FB554 @ Sprite Data 1
+	.4byte gUnknown_085FB554 @ Animation Data
 	.4byte gUnknown_085FB7DC @ OAM
 	.4byte gUnknown_085FB7E4 @ Sprite Graphics
 
@@ -22299,7 +22895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085FEFE4 @ Sprite Data 1
+	.4byte gUnknown_085FEFE4 @ Animation Data
 	.4byte gUnknown_085FF26C @ OAM
 	.4byte gUnknown_085FF274 @ Sprite Graphics
 
@@ -22309,7 +22905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08600E74 @ Sprite Data 1
+	.4byte gUnknown_08600E74 @ Animation Data
 	.4byte gfxFileFrameNewGameBottomOAM @ OAM
 	.4byte gfxFileFrameNewGameBottom4bpp @ Sprite Graphics
 
@@ -22319,7 +22915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08602D04 @ Sprite Data 1
+	.4byte gUnknown_08602D04 @ Animation Data
 	.4byte gfxFileFrameNewGameTopOAM @ OAM
 	.4byte gfxFileFrameNewGameTop4bpp @ Sprite Graphics
 
@@ -22329,7 +22925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08606794 @ Sprite Data 1
+	.4byte gUnknown_08606794 @ Animation Data
 	.4byte gUnknown_08606A1C @ OAM
 	.4byte gUnknown_08606A24 @ Sprite Graphics
 
@@ -22339,7 +22935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0860A224 @ Sprite Data 1
+	.4byte gUnknown_0860A224 @ Animation Data
 	.4byte gfxFileFrameNormalBottomOAM @ OAM
 	.4byte gfxFileFrameNormalBottom4bpp @ Sprite Graphics
 
@@ -22349,7 +22945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0860C0B4 @ Sprite Data 1
+	.4byte gUnknown_0860C0B4 @ Animation Data
 	.4byte gfxFileFrameNormalTopOAM @ OAM
 	.4byte gfxFileFrameNormalTop4bpp @ Sprite Graphics
 
@@ -22359,7 +22955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0860FB44 @ Sprite Data 1
+	.4byte gUnknown_0860FB44 @ Animation Data
 	.4byte gUnknown_0860FDCC @ OAM
 	.4byte gUnknown_0860FDD4 @ Sprite Graphics
 
@@ -22369,7 +22965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086119D4 @ Sprite Data 1
+	.4byte gUnknown_086119D4 @ Animation Data
 	.4byte gUnknown_08611A40 @ OAM
 	.4byte gUnknown_08611A48 @ Sprite Graphics
 
@@ -22379,7 +22975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08612648 @ Sprite Data 1
+	.4byte gUnknown_08612648 @ Animation Data
 	.4byte gfxFileInfoBoxOAM @ OAM
 	.4byte gfxFileInfoBox4bpp @ Sprite Graphics
 
@@ -22389,7 +22985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08613EBC @ Sprite Data 1
+	.4byte gUnknown_08613EBC @ Animation Data
 	.4byte gfxEReaderLogoOAM @ OAM
 	.4byte gfxEReaderLogo4bpp @ Sprite Graphics
 
@@ -22399,7 +22995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861430C @ Sprite Data 1
+	.4byte gUnknown_0861430C @ Animation Data
 	.4byte gUnknown_08614330 @ OAM
 	.4byte gUnknown_08614338 @ Sprite Graphics
 
@@ -22409,7 +23005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08614738 @ Sprite Data 1
+	.4byte gUnknown_08614738 @ Animation Data
 	.4byte gfxExpertOAM @ OAM
 	.4byte gfxExpert4bpp @ Sprite Graphics
 
@@ -22419,7 +23015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08614B64 @ Sprite Data 1
+	.4byte gUnknown_08614B64 @ Animation Data
 	.4byte gfxOptionMenuEraseDataButtonsOAM @ OAM
 	.4byte gfxOptionMenuEraseDataButtons4bpp @ Sprite Graphics
 
@@ -22429,7 +23025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08615BB4 @ Sprite Data 1
+	.4byte gUnknown_08615BB4 @ Animation Data
 	.4byte gfxFileBackgroundOAM @ OAM
 	.4byte gfxFileBackground4bpp @ Sprite Graphics
 
@@ -22439,7 +23035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08616C04 @ Sprite Data 1
+	.4byte gUnknown_08616C04 @ Animation Data
 	.4byte gUnknown_08616C28 @ OAM
 	.4byte gUnknown_08616C30 @ Sprite Graphics
 
@@ -22449,7 +23045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08617030 @ Sprite Data 1
+	.4byte gUnknown_08617030 @ Animation Data
 	.4byte gfxGoldCrownOAM @ OAM
 	.4byte gfxGoldCrown4bpp @ Sprite Graphics
 
@@ -22459,7 +23055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0010 @ Total tiles
 	.2byte 0x1008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08617180 @ Sprite Data 1
+	.4byte gUnknown_08617180 @ Animation Data
 	.4byte gfxMainMenuDigitsLargeOAM @ OAM
 	.4byte gfxMainMenuDigitsLarge4bpp @ Sprite Graphics
 
@@ -22469,7 +23065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08617570 @ Sprite Data 1
+	.4byte gUnknown_08617570 @ Animation Data
 	.4byte gfxPlusMainOAM @ OAM
 	.4byte gfxPlusMain4bpp @ Sprite Graphics
 
@@ -22479,7 +23075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086176C0 @ Sprite Data 1
+	.4byte gUnknown_086176C0 @ Animation Data
 	.4byte gfxUnusedDigitsOAM @ OAM
 	.4byte gfxUnusedDigits4bpp @ Sprite Graphics
 
@@ -22489,7 +23085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08617970 @ Sprite Data 1
+	.4byte gUnknown_08617970 @ Animation Data
 	.4byte gfxMainMenuDigitsMediumOAM @ OAM
 	.4byte gfxMainMenuDigitsMedium4bpp @ Sprite Graphics
 
@@ -22499,7 +23095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte sMMDKSpriteTemplate @ Sprite Data 1
+	.4byte sMMDKSpriteTemplate @ Animation Data
 	.4byte gfxMMDKOAM @ OAM
 	.4byte gfxMMDK4bpp @ Sprite Graphics
 
@@ -22509,7 +23105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08617DB4 @ Sprite Data 1
+	.4byte gUnknown_08617DB4 @ Animation Data
 	.4byte gfxMainMenuDigitsSmallOAM @ OAM
 	.4byte gfxMainMenuDigitsSmall4bpp @ Sprite Graphics
 
@@ -22519,7 +23115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08618064 @ Sprite Data 1
+	.4byte gUnknown_08618064 @ Animation Data
 	.4byte gfxBronzeCrownOAM @ OAM
 	.4byte gfxBronzeCrown4bpp @ Sprite Graphics
 
@@ -22529,7 +23125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086181B4 @ Sprite Data 1
+	.4byte gUnknown_086181B4 @ Animation Data
 	.4byte gUnknown_086183F4 @ OAM
 	.4byte gUnknown_086183FC @ Sprite Graphics
 
@@ -22539,7 +23135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086187FC @ Sprite Data 1
+	.4byte gUnknown_086187FC @ Animation Data
 	.4byte gUnknown_086188F8 @ OAM
 	.4byte gUnknown_08618900 @ Sprite Graphics
 
@@ -22549,7 +23145,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08619000 @ Sprite Data 1
+	.4byte gUnknown_08619000 @ Animation Data
 	.4byte gUnknown_086190FC @ OAM
 	.4byte gUnknown_08619104 @ Sprite Graphics
 
@@ -22559,7 +23155,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08619804 @ Sprite Data 1
+	.4byte gUnknown_08619804 @ Animation Data
 	.4byte gUnknown_0861996C @ OAM
 	.4byte gUnknown_08619974 @ Sprite Graphics
 
@@ -22569,7 +23165,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08619AB4 @ Sprite Data 1
+	.4byte gUnknown_08619AB4 @ Animation Data
 	.4byte gUnknown_08619AD8 @ OAM
 	.4byte gUnknown_08619AE0 @ Sprite Graphics
 
@@ -22579,7 +23175,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08619B60 @ Sprite Data 1
+	.4byte gUnknown_08619B60 @ Animation Data
 	.4byte gUnknown_08619C80 @ OAM
 	.4byte gUnknown_08619C88 @ Sprite Graphics
 
@@ -22589,7 +23185,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861AC88 @ Sprite Data 1
+	.4byte gUnknown_0861AC88 @ Animation Data
 	.4byte gUnknown_0861ADA8 @ OAM
 	.4byte gUnknown_0861ADB0 @ Sprite Graphics
 
@@ -22599,7 +23195,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861AE30 @ Sprite Data 1
+	.4byte gUnknown_0861AE30 @ Animation Data
 	.4byte gUnknown_0861AF08 @ OAM
 	.4byte gUnknown_0861AF10 @ Sprite Graphics
 
@@ -22609,7 +23205,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861B210 @ Sprite Data 1
+	.4byte gUnknown_0861B210 @ Animation Data
 	.4byte gUnknown_0861B2A0 @ OAM
 	.4byte gUnknown_0861B2A8 @ Sprite Graphics
 
@@ -22619,7 +23215,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861B4A8 @ Sprite Data 1
+	.4byte gUnknown_0861B4A8 @ Animation Data
 	.4byte gUnknown_0861B55C @ OAM
 	.4byte gUnknown_0861B564 @ Sprite Graphics
 
@@ -22629,7 +23225,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861B7E4 @ Sprite Data 1
+	.4byte gUnknown_0861B7E4 @ Animation Data
 	.4byte gUnknown_0861BA24 @ OAM
 	.4byte gUnknown_0861BA2C @ Sprite Graphics
 
@@ -22639,7 +23235,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861BE2C @ Sprite Data 1
+	.4byte gUnknown_0861BE2C @ Animation Data
 	.4byte gUnknown_0861BEBC @ OAM
 	.4byte gUnknown_0861BEC4 @ Sprite Graphics
 
@@ -22649,7 +23245,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861C0C4 @ Sprite Data 1
+	.4byte gUnknown_0861C0C4 @ Animation Data
 	.4byte gUnknown_0861C154 @ OAM
 	.4byte gUnknown_0861C15C @ Sprite Graphics
 
@@ -22659,7 +23255,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861C35C @ Sprite Data 1
+	.4byte gUnknown_0861C35C @ Animation Data
 	.4byte gUnknown_0861C47C @ OAM
 	.4byte gUnknown_0861C484 @ Sprite Graphics
 
@@ -22669,7 +23265,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861C884 @ Sprite Data 1
+	.4byte gUnknown_0861C884 @ Animation Data
 	.4byte gUnknown_0861C95C @ OAM
 	.4byte gUnknown_0861C964 @ Sprite Graphics
 
@@ -22679,7 +23275,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861CC64 @ Sprite Data 1
+	.4byte gUnknown_0861CC64 @ Animation Data
 	.4byte gUnknown_0861CE14 @ OAM
 	.4byte gUnknown_0861CE1C @ Sprite Graphics
 
@@ -22689,7 +23285,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861D41C @ Sprite Data 1
+	.4byte gUnknown_0861D41C @ Animation Data
 	.4byte gUnknown_0861D488 @ OAM
 	.4byte gUnknown_0861D490 @ Sprite Graphics
 
@@ -22699,7 +23295,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861D610 @ Sprite Data 1
+	.4byte gUnknown_0861D610 @ Animation Data
 	.4byte gUnknown_0861D67C @ OAM
 	.4byte gUnknown_0861D684 @ Sprite Graphics
 
@@ -22709,7 +23305,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861D804 @ Sprite Data 1
+	.4byte gUnknown_0861D804 @ Animation Data
 	.4byte gUnknown_0861DA68 @ OAM
 	.4byte gUnknown_0861DA70 @ Sprite Graphics
 
@@ -22719,7 +23315,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0861DE70 @ Sprite Data 1
+	.4byte gUnknown_0861DE70 @ Animation Data
 	.4byte gUnknown_0861E0B0 @ OAM
 	.4byte gUnknown_0861E0B8 @ Sprite Graphics
 
@@ -22729,7 +23325,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086200B8 @ Sprite Data 1
+	.4byte gUnknown_086200B8 @ Animation Data
 	.4byte gUnknown_086201D8 @ OAM
 	.4byte gUnknown_086201E0 @ Sprite Graphics
 
@@ -22739,7 +23335,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086211E0 @ Sprite Data 1
+	.4byte gUnknown_086211E0 @ Animation Data
 	.4byte gUnknown_08621300 @ OAM
 	.4byte gUnknown_08621308 @ Sprite Graphics
 
@@ -22749,7 +23345,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08622308 @ Sprite Data 1
+	.4byte gUnknown_08622308 @ Animation Data
 	.4byte gUnknown_08622548 @ OAM
 	.4byte gUnknown_08622550 @ Sprite Graphics
 
@@ -22759,7 +23355,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08622950 @ Sprite Data 1
+	.4byte gUnknown_08622950 @ Animation Data
 	.4byte gUnknown_08622974 @ OAM
 	.4byte gfxPolterguyBlock4bpp @ Sprite Graphics
 
@@ -22769,7 +23365,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086229FC @ Sprite Data 1
+	.4byte gUnknown_086229FC @ Animation Data
 	.4byte gUnknown_08622C60 @ OAM
 	.4byte gUnknown_08622C68 @ Sprite Graphics
 
@@ -22779,7 +23375,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08624E68 @ Sprite Data 1
+	.4byte gUnknown_08624E68 @ Animation Data
 	.4byte gUnknown_08624EF8 @ OAM
 	.4byte gUnknown_08624F00 @ Sprite Graphics
 
@@ -22789,7 +23385,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08625100 @ Sprite Data 1
+	.4byte gUnknown_08625100 @ Animation Data
 	.4byte gUnknown_08625340 @ OAM
 	.4byte gUnknown_08625348 @ Sprite Graphics
 
@@ -22799,7 +23395,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08625748 @ Sprite Data 1
+	.4byte gUnknown_08625748 @ Animation Data
 	.4byte gUnknown_086258F8 @ OAM
 	.4byte gUnknown_08625900 @ Sprite Graphics
 
@@ -22809,7 +23405,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08625F00 @ Sprite Data 1
+	.4byte gUnknown_08625F00 @ Animation Data
 	.4byte gUnknown_08626140 @ OAM
 	.4byte gUnknown_08626148 @ Sprite Graphics
 
@@ -22819,7 +23415,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08626948 @ Sprite Data 1
+	.4byte gUnknown_08626948 @ Animation Data
 	.4byte gUnknown_086269D8 @ OAM
 	.4byte gUnknown_086269E0 @ Sprite Graphics
 
@@ -22829,7 +23425,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08626BE0 @ Sprite Data 1
+	.4byte gUnknown_08626BE0 @ Animation Data
 	.4byte gUnknown_08626D00 @ OAM
 	.4byte gUnknown_08626D08 @ Sprite Graphics
 
@@ -22839,7 +23435,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08627108 @ Sprite Data 1
+	.4byte gUnknown_08627108 @ Animation Data
 	.4byte gUnknown_08627300 @ OAM
 	.4byte gUnknown_08627308 @ Sprite Graphics
 
@@ -22849,7 +23445,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08627588 @ Sprite Data 1
+	.4byte gUnknown_08627588 @ Animation Data
 	.4byte gUnknown_08627660 @ OAM
 	.4byte gUnknown_08627668 @ Sprite Graphics
 
@@ -22859,7 +23455,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08627968 @ Sprite Data 1
+	.4byte gUnknown_08627968 @ Animation Data
 	.4byte gUnknown_08627BA8 @ OAM
 	.4byte gUnknown_08627BB0 @ Sprite Graphics
 
@@ -22869,7 +23465,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08627FB0 @ Sprite Data 1
+	.4byte gUnknown_08627FB0 @ Animation Data
 	.4byte gUnknown_086280D0 @ OAM
 	.4byte gUnknown_086280D8 @ Sprite Graphics
 
@@ -22879,7 +23475,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08628358 @ Sprite Data 1
+	.4byte gUnknown_08628358 @ Animation Data
 	.4byte gUnknown_086283E8 @ OAM
 	.4byte gUnknown_086283F0 @ Sprite Graphics
 
@@ -22889,7 +23485,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086285F0 @ Sprite Data 1
+	.4byte gUnknown_086285F0 @ Animation Data
 	.4byte gUnknown_08628710 @ OAM
 	.4byte gUnknown_08628718 @ Sprite Graphics
 
@@ -22899,7 +23495,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08628B18 @ Sprite Data 1
+	.4byte gUnknown_08628B18 @ Animation Data
 	.4byte gUnknown_08628CA4 @ OAM
 	.4byte gUnknown_08628CAC @ Sprite Graphics
 
@@ -22909,7 +23505,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862922C @ Sprite Data 1
+	.4byte gUnknown_0862922C @ Animation Data
 	.4byte gUnknown_08629304 @ OAM
 	.4byte gUnknown_0862930C @ Sprite Graphics
 
@@ -22919,7 +23515,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862960C @ Sprite Data 1
+	.4byte gUnknown_0862960C @ Animation Data
 	.4byte gUnknown_086297BC @ OAM
 	.4byte gUnknown_086297C4 @ Sprite Graphics
 
@@ -22929,7 +23525,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08629DC4 @ Sprite Data 1
+	.4byte gUnknown_08629DC4 @ Animation Data
 	.4byte gUnknown_08629EE4 @ OAM
 	.4byte gUnknown_08629EEC @ Sprite Graphics
 
@@ -22939,7 +23535,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08629FAC @ Sprite Data 1
+	.4byte gUnknown_08629FAC @ Animation Data
 	.4byte gUnknown_0862A060 @ OAM
 	.4byte gUnknown_0862A068 @ Sprite Graphics
 
@@ -22949,7 +23545,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862A108 @ Sprite Data 1
+	.4byte gUnknown_0862A108 @ Animation Data
 	.4byte gUnknown_0862A348 @ OAM
 	.4byte gUnknown_0862A350 @ Sprite Graphics
 
@@ -22959,7 +23555,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862A750 @ Sprite Data 1
+	.4byte gUnknown_0862A750 @ Animation Data
 	.4byte gUnknown_0862A7E0 @ OAM
 	.4byte gUnknown_0862A7E8 @ Sprite Graphics
 
@@ -22969,7 +23565,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862A9E8 @ Sprite Data 1
+	.4byte gUnknown_0862A9E8 @ Animation Data
 	.4byte gUnknown_0862AB08 @ OAM
 	.4byte gUnknown_0862AB10 @ Sprite Graphics
 
@@ -22979,7 +23575,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862AF10 @ Sprite Data 1
+	.4byte gUnknown_0862AF10 @ Animation Data
 	.4byte gUnknown_0862AFE8 @ OAM
 	.4byte gUnknown_0862AFF0 @ Sprite Graphics
 
@@ -22989,7 +23585,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862B2F0 @ Sprite Data 1
+	.4byte gUnknown_0862B2F0 @ Animation Data
 	.4byte gUnknown_0862B4A0 @ OAM
 	.4byte gUnknown_0862B4A8 @ Sprite Graphics
 
@@ -22999,7 +23595,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862BAA8 @ Sprite Data 1
+	.4byte gUnknown_0862BAA8 @ Animation Data
 	.4byte gUnknown_0862BBC8 @ OAM
 	.4byte gUnknown_0862BBD0 @ Sprite Graphics
 
@@ -23009,7 +23605,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862CBD0 @ Sprite Data 1
+	.4byte gUnknown_0862CBD0 @ Animation Data
 	.4byte gUnknown_0862CCF0 @ OAM
 	.4byte gUnknown_0862CCF8 @ Sprite Graphics
 
@@ -23019,7 +23615,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862D0F8 @ Sprite Data 1
+	.4byte gUnknown_0862D0F8 @ Animation Data
 	.4byte gUnknown_0862D11C @ OAM
 	.4byte gUnknown_0862D124 @ Sprite Graphics
 
@@ -23029,7 +23625,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862D1A4 @ Sprite Data 1
+	.4byte gUnknown_0862D1A4 @ Animation Data
 	.4byte gUnknown_0862D1C8 @ OAM
 	.4byte gUnknown_0862D1D0 @ Sprite Graphics
 
@@ -23039,7 +23635,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862D250 @ Sprite Data 1
+	.4byte gUnknown_0862D250 @ Animation Data
 	.4byte gUnknown_0862D2BC @ OAM
 	.4byte gUnknown_0862D2C4 @ Sprite Graphics
 
@@ -23049,7 +23645,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862D444 @ Sprite Data 1
+	.4byte gUnknown_0862D444 @ Animation Data
 	.4byte gUnknown_0862D4B0 @ OAM
 	.4byte gUnknown_0862D4B8 @ Sprite Graphics
 
@@ -23059,7 +23655,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862D638 @ Sprite Data 1
+	.4byte gUnknown_0862D638 @ Animation Data
 	.4byte gUnknown_0862D65C @ OAM
 	.4byte gUnknown_0862D664 @ Sprite Graphics
 
@@ -23069,7 +23665,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862D864 @ Sprite Data 1
+	.4byte gUnknown_0862D864 @ Animation Data
 	.4byte gUnknown_0862D8F4 @ OAM
 	.4byte gUnknown_0862D8FC @ Sprite Graphics
 
@@ -23079,7 +23675,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862DCFC @ Sprite Data 1
+	.4byte gUnknown_0862DCFC @ Animation Data
 	.4byte gUnknown_0862DD8C @ OAM
 	.4byte gUnknown_0862DD94 @ Sprite Graphics
 
@@ -23089,7 +23685,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862E194 @ Sprite Data 1
+	.4byte gUnknown_0862E194 @ Animation Data
 	.4byte gUnknown_0862E2B4 @ OAM
 	.4byte gUnknown_0862E2BC @ Sprite Graphics
 
@@ -23099,7 +23695,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862E4BC @ Sprite Data 1
+	.4byte gUnknown_0862E4BC @ Animation Data
 	.4byte gUnknown_0862E54C @ OAM
 	.4byte gUnknown_0862E554 @ Sprite Graphics
 
@@ -23109,7 +23705,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862E754 @ Sprite Data 1
+	.4byte gUnknown_0862E754 @ Animation Data
 	.4byte gUnknown_0862E778 @ OAM
 	.4byte gUnknown_0862E780 @ Sprite Graphics
 
@@ -23119,7 +23715,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862E980 @ Sprite Data 1
+	.4byte gUnknown_0862E980 @ Animation Data
 	.4byte gUnknown_0862E9C8 @ OAM
 	.4byte gUnknown_0862E9D0 @ Sprite Graphics
 
@@ -23129,7 +23725,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862EBD0 @ Sprite Data 1
+	.4byte gUnknown_0862EBD0 @ Animation Data
 	.4byte gUnknown_0862F008 @ OAM
 	.4byte gUnknown_0862F010 @ Sprite Graphics
 
@@ -23139,7 +23735,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862FC10 @ Sprite Data 1
+	.4byte gUnknown_0862FC10 @ Animation Data
 	.4byte gUnknown_0862FE50 @ OAM
 	.4byte gUnknown_0862FE58 @ Sprite Graphics
 
@@ -23149,7 +23745,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0863FE58 @ Sprite Data 1
+	.4byte gUnknown_0863FE58 @ Animation Data
 	.4byte gUnknown_086400E0 @ OAM
 	.4byte gUnknown_086400E8 @ Sprite Graphics
 
@@ -23159,7 +23755,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08640DE8 @ Sprite Data 1
+	.4byte gUnknown_08640DE8 @ Animation Data
 	.4byte gUnknown_08640F2C @ OAM
 	.4byte gUnknown_08640F34 @ Sprite Graphics
 
@@ -23169,7 +23765,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08642134 @ Sprite Data 1
+	.4byte gUnknown_08642134 @ Animation Data
 	.4byte gUnknown_086421E8 @ OAM
 	.4byte gUnknown_086421F0 @ Sprite Graphics
 
@@ -23179,7 +23775,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0400 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08642BF0 @ Sprite Data 1
+	.4byte gUnknown_08642BF0 @ Animation Data
 	.4byte gUnknown_08642D34 @ OAM
 	.4byte gUnknown_08642D3C @ Sprite Graphics
 
@@ -23189,7 +23785,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0864BD3C @ Sprite Data 1
+	.4byte gUnknown_0864BD3C @ Animation Data
 	.4byte gUnknown_0864BF58 @ OAM
 	.4byte gUnknown_0864BF60 @ Sprite Graphics
 
@@ -23199,7 +23795,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0864CC60 @ Sprite Data 1
+	.4byte gUnknown_0864CC60 @ Animation Data
 	.4byte gUnknown_0864CF30 @ OAM
 	.4byte gUnknown_0864CF38 @ Sprite Graphics
 
@@ -23209,7 +23805,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0864D138 @ Sprite Data 1
+	.4byte gUnknown_0864D138 @ Animation Data
 	.4byte gUnknown_0864D2E8 @ OAM
 	.4byte gUnknown_0864D2F0 @ Sprite Graphics
 
@@ -23219,7 +23815,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0864DAF0 @ Sprite Data 1
+	.4byte gUnknown_0864DAF0 @ Animation Data
 	.4byte gUnknown_0864DC10 @ OAM
 	.4byte gUnknown_0864DC18 @ Sprite Graphics
 
@@ -23229,7 +23825,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0864EC18 @ Sprite Data 1
+	.4byte gUnknown_0864EC18 @ Animation Data
 	.4byte gUnknown_0864ED38 @ OAM
 	.4byte gUnknown_0864ED40 @ Sprite Graphics
 
@@ -23239,7 +23835,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0864FD40 @ Sprite Data 1
+	.4byte gUnknown_0864FD40 @ Animation Data
 	.4byte gUnknown_0864FE60 @ OAM
 	.4byte gUnknown_0864FE68 @ Sprite Graphics
 
@@ -23249,7 +23845,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08650E68 @ Sprite Data 1
+	.4byte gUnknown_08650E68 @ Animation Data
 	.4byte gUnknown_08650F88 @ OAM
 	.4byte gUnknown_08650F90 @ Sprite Graphics
 
@@ -23259,7 +23855,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08651F90 @ Sprite Data 1
+	.4byte gUnknown_08651F90 @ Animation Data
 	.4byte gUnknown_08651FFC @ OAM
 	.4byte gUnknown_08652004 @ Sprite Graphics
 
@@ -23269,7 +23865,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08652184 @ Sprite Data 1
+	.4byte gUnknown_08652184 @ Animation Data
 	.4byte gUnknown_086521F0 @ OAM
 	.4byte gUnknown_086521F8 @ Sprite Graphics
 
@@ -23279,7 +23875,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08652378 @ Sprite Data 1
+	.4byte gUnknown_08652378 @ Animation Data
 	.4byte gUnknown_08652720 @ OAM
 	.4byte gUnknown_08652728 @ Sprite Graphics
 
@@ -23289,7 +23885,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08654B28 @ Sprite Data 1
+	.4byte gUnknown_08654B28 @ Animation Data
 	.4byte gUnknown_08654BDC @ OAM
 	.4byte gUnknown_08654BE4 @ Sprite Graphics
 
@@ -23299,7 +23895,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086553E4 @ Sprite Data 1
+	.4byte gUnknown_086553E4 @ Animation Data
 	.4byte gUnknown_08655624 @ OAM
 	.4byte gUnknown_0865562C @ Sprite Graphics
 
@@ -23309,7 +23905,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08656A2C @ Sprite Data 1
+	.4byte gUnknown_08656A2C @ Animation Data
 	.4byte gUnknown_08656A50 @ OAM
 	.4byte gUnknown_08656A58 @ Sprite Graphics
 
@@ -23319,7 +23915,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08656C58 @ Sprite Data 1
+	.4byte gUnknown_08656C58 @ Animation Data
 	.4byte gUnknown_08656C7C @ OAM
 	.4byte gUnknown_08656C84 @ Sprite Graphics
 
@@ -23329,7 +23925,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08656E84 @ Sprite Data 1
+	.4byte gUnknown_08656E84 @ Animation Data
 	.4byte gUnknown_08656EA8 @ OAM
 	.4byte gUnknown_08656EB0 @ Sprite Graphics
 
@@ -23339,7 +23935,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086570B0 @ Sprite Data 1
+	.4byte gUnknown_086570B0 @ Animation Data
 	.4byte gUnknown_086570D4 @ OAM
 	.4byte gUnknown_086570DC @ Sprite Graphics
 
@@ -23349,7 +23945,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086572DC @ Sprite Data 1
+	.4byte gUnknown_086572DC @ Animation Data
 	.4byte gUnknown_08657324 @ OAM
 	.4byte gUnknown_0865732C @ Sprite Graphics
 
@@ -23359,7 +23955,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0865742C @ Sprite Data 1
+	.4byte gUnknown_0865742C @ Animation Data
 	.4byte gUnknown_08657450 @ OAM
 	.4byte gUnknown_08657458 @ Sprite Graphics
 
@@ -23369,7 +23965,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086574D8 @ Sprite Data 1
+	.4byte gUnknown_086574D8 @ Animation Data
 	.4byte gUnknown_086574FC @ OAM
 	.4byte gUnknown_08657504 @ Sprite Graphics
 
@@ -23379,7 +23975,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08657584 @ Sprite Data 1
+	.4byte gUnknown_08657584 @ Animation Data
 	.4byte gUnknown_086575A8 @ OAM
 	.4byte gUnknown_086575B0 @ Sprite Graphics
 
@@ -23389,7 +23985,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08657630 @ Sprite Data 1
+	.4byte gUnknown_08657630 @ Animation Data
 	.4byte gUnknown_086576C0 @ OAM
 	.4byte gUnknown_086576C8 @ Sprite Graphics
 
@@ -23399,7 +23995,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08657AC8 @ Sprite Data 1
+	.4byte gUnknown_08657AC8 @ Animation Data
 	.4byte gUnknown_08657AEC @ OAM
 	.4byte gUnknown_08657AF4 @ Sprite Graphics
 
@@ -23409,7 +24005,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08657B74 @ Sprite Data 1
+	.4byte gUnknown_08657B74 @ Animation Data
 	.4byte gUnknown_08657B98 @ OAM
 	.4byte gUnknown_08657BA0 @ Sprite Graphics
 
@@ -23419,7 +24015,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08657C20 @ Sprite Data 1
+	.4byte gUnknown_08657C20 @ Animation Data
 	.4byte gUnknown_08657CD4 @ OAM
 	.4byte gUnknown_08657CDC @ Sprite Graphics
 
@@ -23429,7 +24025,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08657F5C @ Sprite Data 1
+	.4byte gUnknown_08657F5C @ Animation Data
 	.4byte gUnknown_08657FC8 @ OAM
 	.4byte gUnknown_08657FD0 @ Sprite Graphics
 
@@ -23439,7 +24035,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08658150 @ Sprite Data 1
+	.4byte gUnknown_08658150 @ Animation Data
 	.4byte gUnknown_086581E0 @ OAM
 	.4byte gUnknown_086581E8 @ Sprite Graphics
 
@@ -23449,7 +24045,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08658268 @ Sprite Data 1
+	.4byte gUnknown_08658268 @ Animation Data
 	.4byte gUnknown_0865828C @ OAM
 	.4byte gUnknown_08658294 @ Sprite Graphics
 
@@ -23459,7 +24055,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08658314 @ Sprite Data 1
+	.4byte gUnknown_08658314 @ Animation Data
 	.4byte gUnknown_086583A4 @ OAM
 	.4byte gUnknown_086583AC @ Sprite Graphics
 
@@ -23469,7 +24065,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086585AC @ Sprite Data 1
+	.4byte gUnknown_086585AC @ Animation Data
 	.4byte gUnknown_086588A0 @ OAM
 	.4byte gUnknown_086588A8 @ Sprite Graphics
 
@@ -23479,7 +24075,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08658C28 @ Sprite Data 1
+	.4byte gUnknown_08658C28 @ Animation Data
 	.4byte gUnknown_08658CB8 @ OAM
 	.4byte gUnknown_08658CC0 @ Sprite Graphics
 
@@ -23489,7 +24085,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08658EC0 @ Sprite Data 1
+	.4byte gUnknown_08658EC0 @ Animation Data
 	.4byte gUnknown_08658F50 @ OAM
 	.4byte gUnknown_08658F58 @ Sprite Graphics
 
@@ -23499,7 +24095,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08658FD8 @ Sprite Data 1
+	.4byte gUnknown_08658FD8 @ Animation Data
 	.4byte gUnknown_08658FFC @ OAM
 	.4byte gUnknown_08659004 @ Sprite Graphics
 
@@ -23509,7 +24105,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08659084 @ Sprite Data 1
+	.4byte gUnknown_08659084 @ Animation Data
 	.4byte gUnknown_08659114 @ OAM
 	.4byte gUnknown_0865911C @ Sprite Graphics
 
@@ -23519,7 +24115,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0865919C @ Sprite Data 1
+	.4byte gUnknown_0865919C @ Animation Data
 	.4byte gUnknown_086591C0 @ OAM
 	.4byte gUnknown_086591C8 @ Sprite Graphics
 
@@ -23529,7 +24125,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08659248 @ Sprite Data 1
+	.4byte gUnknown_08659248 @ Animation Data
 	.4byte gUnknown_0865926C @ OAM
 	.4byte gUnknown_08659274 @ Sprite Graphics
 
@@ -23539,7 +24135,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x0820 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086592F4 @ Sprite Data 1
+	.4byte gUnknown_086592F4 @ Animation Data
 	.4byte gUnknown_08659318 @ OAM
 	.4byte gUnknown_08659320 @ Sprite Graphics
 
@@ -26613,7 +27209,429 @@ gEWorldMenuData2:
 
 	.GLOBAL gUnknown_08B2AD88
 gUnknown_08B2AD88:
-	.INCBIN "baserom.gba", 0xB2AD88, 0xB2C384-0xB2AD88
+	.4byte 0x000011d0 @ unknown
+	.2byte 580 @ character count?
+	.2byte 0x0080 @ unknown
+	.2byte 0x0047 @ unknown
+	.byte 0x04 @ color mode? -- changing off of 0x04 makes characters be a 256 color sprite
+	.byte 14 @ all characters height in pixels
+	
+	@ " " (space)
+	.4byte 0x00000344 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "0" 
+	.4byte 0x00000360 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "1"
+	.4byte 0x00000398 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000003 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "2"
+	.4byte 0x000003C2 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "3"
+	.4byte 0x000003FA @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "4"
+	.4byte 0x00000432 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "5"
+	.4byte 0x0000046A @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "6"
+	.4byte 0x000004A2 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "7"
+	.4byte 0x000004DA @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "8"
+	.4byte 0x00000512 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "9"
+	.4byte 0x0000054A @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "A"
+	.4byte 0x00000582 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "B"
+	.4byte 0x000005BA @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "C"
+	.4byte 0x000005F2 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "D"
+	.4byte 0x0000062A @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "E"
+	.4byte 0x00000662 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "F"
+	.4byte 0x0000069A @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "G"
+	.4byte 0x000006D2 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "H"
+	.4byte 0x0000070A @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "I"
+	.4byte 0x00000742 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "J"
+	.4byte 0x0000075E @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "K"
+	.4byte 0x00000796 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "L"
+	.4byte 0x000007CE @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "M"
+	.4byte 0x00000806 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000005 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "N"
+	.4byte 0x0000084C @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "O"
+	.4byte 0x00000884 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "P"
+	.4byte 0x000008BC @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "Q"
+	.4byte 0x000008F4 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "R"
+	.4byte 0x0000092C @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "S"
+	.4byte 0x00000964 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "T"
+	.4byte 0x0000099C @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "U"
+	.4byte 0x000009D4 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "V"
+	.4byte 0x00000A0C @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "W"
+	.4byte 0x00000A44 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000005 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "X"
+	.4byte 0x00000A8A @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "Y"
+	.4byte 0x00000AC2 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "Z"
+	.4byte 0x00000AFA @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ ":"
+	.4byte 0x00000B32 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ ";"
+	.4byte 0x00000B4E @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "?"
+	.4byte 0x00000B6A @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "!"
+	.4byte 0x00000BA2 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000003 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "."
+	.4byte 0x00000BCC @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ ","
+	.4byte 0x00000BE8 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "a" 
+	.4byte 0x00000C04 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "b" 
+	.4byte 0x00000C3C @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "c" 
+	.4byte 0x00000C74 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "d" 
+	.4byte 0x00000CAC @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "e" 
+	.4byte 0x00000CE4 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "f" 
+	.4byte 0x00000D1C @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000003 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "g" 
+	.4byte 0x00000D46 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "h"  
+	.4byte 0x00000D7E @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "i" 
+	.4byte 0x00000Db6 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "j" 
+	.4byte 0x00000DD2 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000003 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "k" 
+	.4byte 0x00000DFC @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "l" 
+	.4byte 0x00000E34 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "m" 
+	.4byte 0x00000E50 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000005 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "n" 
+	.4byte 0x00000E96 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "o" 
+	.4byte 0x00000ECE @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "p" 
+	.4byte 0x00000F06 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "q" 
+	.4byte 0x00000F3E @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "r" 
+	.4byte 0x00000F76 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "s" 
+	.4byte 0x00000FAE @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "t" 
+	.4byte 0x00000FE6 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000003 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "u" 
+	.4byte 0x00001010 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "v" 
+	.4byte 0x00001048 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "w" 
+	.4byte 0x00001080 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000005 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "x" 
+	.4byte 0x000010C6 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "y" 
+	.4byte 0x000010FE @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "z"
+	.4byte 0x00001136 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000004 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ Quotation Mark
+	.4byte 0x0000116E @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000005 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ "-" 
+	.4byte 0x000011B4 @ character offset from start of gUnknown_08B2AD88
+	.4byte 0x00000002 @ character size in half in color mode 0x04 -- the 256 color mode makes this the total width of the character
+	
+	@ ASCII -> Character ID table
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000 @ " " (space)
+	.2byte 0x0028 @ "!"
+	.2byte 0x0045 @ Quotation Mark
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x002A @ ","
+	.2byte 0x0046 @ "-"
+	.2byte 0x0029 @ "."
+	.2byte 0x0000
+	.2byte 0x0001 @ "0"
+	.2byte 0x0002 @ "1"
+	.2byte 0x0003 @ "2"
+	.2byte 0x0004 @ "3"
+	.2byte 0x0005 @ "4"
+	.2byte 0x0006 @ "5"
+	.2byte 0x0007 @ "6"
+	.2byte 0x0008 @ "7"
+	.2byte 0x0009 @ "8"
+	.2byte 0x000A @ "9"
+	.2byte 0x0025 @ ";"
+	.2byte 0x0026 @ ":"
+	.2byte 0x0000 
+	.2byte 0x0000 
+	.2byte 0x0000 
+	.2byte 0x0027 @ "?"
+	.2byte 0x0000 
+	.2byte 0x000B @ "A"
+	.2byte 0x000C @ "B"
+	.2byte 0x000D @ "C"
+	.2byte 0x000E @ "D"
+	.2byte 0x000F @ "E"
+	.2byte 0x0010 @ "F"
+	.2byte 0x0011 @ "G"
+	.2byte 0x0012 @ "H"
+	.2byte 0x0013 @ "I"
+	.2byte 0x0014 @ "J"
+	.2byte 0x0015 @ "K"
+	.2byte 0x0016 @ "L"
+	.2byte 0x0017 @ "M"
+	.2byte 0x0018 @ "N"
+	.2byte 0x0019 @ "O"
+	.2byte 0x001A @ "P"
+	.2byte 0x001B @ "Q"
+	.2byte 0x001C @ "R"
+	.2byte 0x001D @ "S"
+	.2byte 0x001E @ "T"
+	.2byte 0x001F @ "U"
+	.2byte 0x0020 @ "V"
+	.2byte 0x0021 @ "W"
+	.2byte 0x0022 @ "X"
+	.2byte 0x0023 @ "Y"
+	.2byte 0x0024 @ "Z"
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x002B @ "a"
+	.2byte 0x002C @ "b"
+	.2byte 0x002D @ "c"
+	.2byte 0x002E @ "d"
+	.2byte 0x002F @ "e"
+	.2byte 0x0030 @ "f"
+	.2byte 0x0031 @ "g"
+	.2byte 0x0032 @ "h"
+	.2byte 0x0033 @ "i"
+	.2byte 0x0034 @ "j"
+	.2byte 0x0035 @ "k"
+	.2byte 0x0036 @ "l"
+	.2byte 0x0037 @ "m"
+	.2byte 0x0038 @ "n"
+	.2byte 0x0039 @ "o"
+	.2byte 0x003A @ "p"
+	.2byte 0x003B @ "q"
+	.2byte 0x003C @ "r"
+	.2byte 0x003D @ "s"
+	.2byte 0x003E @ "t"
+	.2byte 0x003F @ "u"
+	.2byte 0x0040 @ "v"
+	.2byte 0x0041 @ "w"
+	.2byte 0x0042 @ "x"
+	.2byte 0x0043 @ "y"
+	.2byte 0x0044 @ "z"
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	
+	@ Font Graphics
+	.INCBIN "baserom.gba", 0xB2B0CC, 0xB2C384-0xB2B0CC
 	
 	
 	
@@ -28517,7 +29535,87 @@ gUnknown_08B2DEBC:
 	
 	.GLOBAL gUnknown_08B2DF2C
 gUnknown_08B2DF2C:
-	.INCBIN "baserom.gba", 0xb2df2c, 0xB2E7A0-0xb2df2c
+	.ASCII "GRRRROOOOOOWLLLL!!"
+	.skip 238 @ pad to 256 bytes for the text
+	.2byte 16 @ text position X
+	.2byte 128 @ text position Y
+	.4byte 256 @ text speed
+	.4byte 260 @ start frame
+	.4byte 400 @ end frame
+	
+	.ASCII "Gimmie all your toys!!"
+	.skip 234 @ pad to 256 bytes for the text
+	.2byte 16 @ text position X
+	.2byte 128 @ text position Y
+	.4byte 256 @ text speed
+	.4byte 462 @ start frame
+	.4byte 576 @ end frame
+	
+	.ASCII "WAAAAAAAAAH!"
+	.skip 244 @ pad to 256 bytes for the text
+	.2byte 16 @ text position X
+	.2byte 128 @ text position Y
+	.4byte 256 @ text speed
+	.4byte 576 @ start frame
+	.4byte 736 @ end frame
+	
+	.ASCII "Whats going on?"
+	.skip 241 @ pad to 256 bytes for the text
+	.2byte 16 @ text position X
+	.2byte 128 @ text position Y
+	.4byte 256 @ text speed
+	.4byte 780 @ start frame
+	.4byte 960 @ end frame
+	
+	.ASCII "Donkey Kong stole\nall the mini marios!!"
+	.skip 217 @ pad to 256 bytes for the text
+	.2byte 16 @ text position X
+	.2byte 128 @ text position Y
+	.4byte 256 @ text speed
+	.4byte 980 @ start frame
+	.4byte 1240 @ end frame
+	
+	.ASCII "I will get them back!!"
+	.skip 234 @ pad to 256 bytes for the text
+	.2byte 16 @ text position X
+	.2byte 128 @ text position Y
+	.4byte 256 @ text speed
+	.4byte 1250 @ start frame
+	.4byte 1430 @ end frame
+	
+	.ASCII "Here we go!!"
+	.skip 244 @ pad to 256 bytes for the text
+	.2byte 16 @ text position X
+	.2byte 144 @ text position Y
+	.4byte 256 @ text speed
+	.4byte 1340 @ start frame
+	.4byte 1430 @ end frame
+	
+	@ camera panning data
+	.INCBIN "baserom.gba", 0xB2E69C, 0xb2e768-0xB2E69C
+	
+	@ camera panning timers?
+	@b2e768
+	.4byte 462 @ start frame
+	.4byte 576 @ end frame
+	@b2e770
+	.4byte 200 @ start frame
+	.4byte 462 @ end frame
+	@b2e778
+	.4byte 0   @ start frame
+	.4byte 200 @ end frame
+	@b2e780
+	.4byte 764 @ start frame
+	.4byte 980 @ end frame
+	@b2e788
+	.4byte 1250 @ start frame
+	.4byte 1467 @ end frame
+	@b2e790
+	.4byte 576 @ start frame
+	.4byte 764 @ end frame
+	@b2e798
+	.4byte 980  @ start frame
+	.4byte 1250 @ end frame
 	
 	.GLOBAL gUnknown_08B2E7A0
 gUnknown_08B2E7A0:
@@ -28525,10 +29623,10 @@ gUnknown_08B2E7A0:
 	
 	.GLOBAL gUnknown_08B2E8D8
 gUnknown_08B2E8D8:
-	.4byte 0x5BB
-	.2byte 0x0
+	.4byte 0x5BB @ Movie Length
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -28541,7 +29639,7 @@ gUnknown_08B2E8D8:
 	.2byte 7 @ Text Banks in text bank
 	.skip 2
 	.4byte gUnknown_08B2DF2C @ Text Bank
-	.2byte 0x2
+	.2byte 0x2 @ 
 	.skip 2
 	.4byte gUnknown_08B2E7A0  @ ptr offset 0x30
 	
@@ -28631,9 +29729,9 @@ gUnknown_08B2EA24:
 	.GLOBAL gUnknown_08B2F03C
 gUnknown_08B2F03C:
 	.4byte 0x6CC
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -28715,9 +29813,9 @@ gUnknown_08B2F140:
 	.GLOBAL gUnknown_08B2F584
 gUnknown_08B2F584:
 	.4byte 0x48D
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -28841,9 +29939,9 @@ gUnknown_08B2F720:
 	.GLOBAL gUnknown_08B2FFA8
 gUnknown_08B2FFA8:
 	.4byte 0x77B
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -28932,9 +30030,9 @@ gUnknown_08B3011C:
 	.GLOBAL gUnknown_08B30734
 gUnknown_08B30734:
 	.4byte 0x6D6
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -29037,9 +30135,9 @@ gUnknown_08B308AC:
 	.GLOBAL gUnknown_08B30F60
 gUnknown_08B30F60:
 	.4byte 0x73A
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -29156,9 +30254,9 @@ gUnknown_08B311A8:
 	.GLOBAL gUnknown_08B320E4
 gUnknown_08B320E4:
 	.4byte 0xB81
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -29192,9 +30290,9 @@ gUnknown_08B34F18:
 	.GLOBAL gUnknown_08B35F8C
 gUnknown_08B35F8C:
 	.4byte 0x1C20
-	.2byte 0x90
+	.2byte 0x90 @ Sprite count
 	.skip 2
-	.4byte gUnknown_08B32120  @ ptr offset 0x8
+	.4byte gUnknown_08B32120  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -29224,9 +30322,9 @@ gUnknown_08B360C0:
 	.GLOBAL gUnknown_08B37134
 gUnknown_08B37134:
 	.4byte 0x1518
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -29266,9 +30364,9 @@ gUnknown_08B371C0:
 	.GLOBAL gUnknown_08B372F8
 gUnknown_08B372F8:
 	.4byte 0x1CC
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -29298,9 +30396,9 @@ gUnknown_08B37354:
 	.GLOBAL gUnknown_08B373F0
 gUnknown_08B373F0:
 	.4byte 0xC8
-	.2byte 0x0
+	.2byte 0x0 @ Sprite count
 	.skip 2
-	.4byte 0x00000000  @ ptr offset 0x8
+	.4byte 0x00000000  @ Sprite table
 	.2byte 0x0
 	.skip 2
 	.4byte 0x00000000  @ ptr offset 0x10
@@ -29384,7 +30482,50 @@ gUnknown_08B39C1C:
 
 	.GLOBAL gUnknown_08B39F1C
 gUnknown_08B39F1C:
-	.INCBIN "baserom.gba", 0xB39F1C, 0xB39F48-0xB39F1C
+	.byte 0x08
+	.byte 0x00
+	.byte 0x01
+	.byte 0x02
+	.byte 0x03
+	.byte 0x08
+	.byte 0x08
+	.byte 0x05
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x06
+	.byte 0x08
+	.byte 0x08
+	.byte 0x07
+	.byte 0x04
+	.byte 0x08
+	.byte 0x08
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
 
 	.GLOBAL gUnknown_08B39F48
 gUnknown_08B39F48:

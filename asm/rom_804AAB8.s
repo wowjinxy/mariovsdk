@@ -21092,7 +21092,7 @@ _08054478:
 	str r0, [sp]
 	ldr r0, _08054658  @ =gfxDKPack4bpp
 	str r0, [sp, #4]
-	ldr r0, _0805465C  @ =gUnknown_080BACD4
+	ldr r0, _0805465C  @ =gfxDKPackAnimation
 	str r0, [sp, #8]
 	mov r0, sp
 	mov r7, #0
@@ -21329,7 +21329,7 @@ _08054654:
 _08054658:
 	.4byte gfxDKPack4bpp
 _0805465C:
-	.4byte gUnknown_080BACD4
+	.4byte gfxDKPackAnimation
 _08054660:
 	.4byte 0xFFFF6800
 _08054664:
@@ -23131,7 +23131,7 @@ _08055426:
 	str r0, [sp, #4]
 	ldr r0, _080555EC  @ =gfxDKPack4bpp
 	str r0, [sp, #8]
-	ldr r0, _080555F0  @ =gUnknown_080BACD4
+	ldr r0, _080555F0  @ =gfxDKPackAnimation
 	str r0, [sp, #12]
 	add r0, sp, #4
 	mov r7, #0
@@ -23355,7 +23355,7 @@ _080555E8:
 _080555EC:
 	.4byte gfxDKPack4bpp
 _080555F0:
-	.4byte gUnknown_080BACD4
+	.4byte gfxDKPackAnimation
 _080555F4:
 	.4byte 0xFFFF6800
 _080555F8:
