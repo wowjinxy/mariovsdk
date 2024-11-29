@@ -6251,157 +6251,157 @@ gUnknown_082E33D0:
 gUnknown_082E3410:
 	.INCBIN "baserom.gba", 0x2E3410, 0x2E3434-0x2E3410
 
-	.GLOBAL gUnknown_082E3434
-gUnknown_082E3434:
+	.GLOBAL gfxHelpFrameBottomLeftOAM
+gfxHelpFrameBottomLeftOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E343C
-gUnknown_082E343C:
-	.INCBIN "assets/sprites/help/gUnknown_082E343C.4bpp"
+	.GLOBAL gfxHelpFrameBottomLeft4bpp
+gfxHelpFrameBottomLeft4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameBottomLeft.4bpp"
 
 	.GLOBAL gUnknown_082E363C
 gUnknown_082E363C:
 	.INCBIN "baserom.gba", 0x2E363C, 0x2E3660-0x2E363C
 
-	.GLOBAL gUnknown_082E3660
-gUnknown_082E3660:
+	.GLOBAL gfxHelpFrameBottomOAM
+gfxHelpFrameBottomOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E3668
-gUnknown_082E3668:
-	.INCBIN "assets/sprites/help/gUnknown_082E3668.4bpp"
+	.GLOBAL gfxHelpFrameBottom4bpp
+gfxHelpFrameBottom4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameBottom.4bpp"
 
 	.GLOBAL gUnknown_082E3868
 gUnknown_082E3868:
 	.INCBIN "baserom.gba", 0x2E3868, 0x2E388C-0x2E3868
 
-	.GLOBAL gUnknown_082E388C
-gUnknown_082E388C:
+	.GLOBAL gfxHelpFrameBottomRightOAM
+gfxHelpFrameBottomRightOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E3894
-gUnknown_082E3894:
-	.INCBIN "assets/sprites/help/gUnknown_082E3894.4bpp"
+	.GLOBAL gfxHelpFrameBottomRight4bpp
+gfxHelpFrameBottomRight4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameBottomRight.4bpp"
 
 	.GLOBAL gUnknown_082E3A94
 gUnknown_082E3A94:
 	.INCBIN "baserom.gba", 0x2E3A94, 0x2E3AB8-0x2E3A94
 
-	.GLOBAL gUnknown_082E3AB8
-gUnknown_082E3AB8:
+	.GLOBAL gfxHelpBExitOAM
+gfxHelpBExitOAM:
 	OamData bpp=ST_OAM_8BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=0
 
-	.GLOBAL gUnknown_082E3AC0
-gUnknown_082E3AC0:
-	.INCBIN "assets/sprites/help/gUnknown_082E3AC0.8bpp"
+	.GLOBAL gfxHelpBExit8bpp
+gfxHelpBExit8bpp:
+	.INCBIN "assets/sprites/help/HelpBExit.8bpp"
 
 	.GLOBAL gUnknown_082E3CC0
 gUnknown_082E3CC0:
 	.INCBIN "baserom.gba", 0x2E3CC0, 0x2E3CE4-0x2E3CC0
 
-	.GLOBAL gUnknown_082E3CE4
-gUnknown_082E3CE4:
+	.GLOBAL gfxHelpFrameBGOAM
+gfxHelpFrameBGOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E3CEC
-gUnknown_082E3CEC:
-	.INCBIN "assets/sprites/help/gUnknown_082E3CEC.4bpp"
+	.GLOBAL gfxHelpFrameBG4bpp
+gfxHelpFrameBG4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameBG.4bpp"
 
 	.GLOBAL gUnknown_082E3EEC
 gUnknown_082E3EEC:
 	.INCBIN "baserom.gba", 0x2E3EEC, 0x2E3F10-0x2E3EEC
 
-	.GLOBAL gUnknown_082E3F10
-gUnknown_082E3F10:
+	.GLOBAL gfxHelpTextOAM
+gfxHelpTextOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E3F18
-gUnknown_082E3F18:
-	.INCBIN "assets/sprites/help/gUnknown_082E3F18.4bpp"
+	.GLOBAL gfxHelpText4bpp
+gfxHelpText4bpp:
+	.INCBIN "assets/sprites/help/HelpText.4bpp"
 
 	.GLOBAL gUnknown_082E4018
 gUnknown_082E4018:
 	.INCBIN "baserom.gba", 0x2E4018, 0x2E403C-0x2E4018
 
-	.GLOBAL gUnknown_082E403C
-gUnknown_082E403C:
+	.GLOBAL gfxHelpFrameLeftOAM
+gfxHelpFrameLeftOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E4044
-gUnknown_082E4044:
-	.INCBIN "assets/sprites/help/gUnknown_082E4044.4bpp"
+	.GLOBAL gfxHelpFrameLeft4bpp
+gfxHelpFrameLeft4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameLeft.4bpp"
 
 	.GLOBAL gUnknown_082E4244
 gUnknown_082E4244:
 	.INCBIN "baserom.gba", 0x2E4244, 0x2E4268-0x2E4244
 
-	.GLOBAL gUnknown_082E4268
-gUnknown_082E4268:
+	.GLOBAL gfxHelpFrameRightOAM
+gfxHelpFrameRightOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E4270
-gUnknown_082E4270:
-	.INCBIN "assets/sprites/help/gUnknown_082E4270.4bpp"
+	.GLOBAL gfxHelpFrameRight4bpp
+gfxHelpFrameRight4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameRight.4bpp"
 
 	.GLOBAL gUnknown_082E4470
 gUnknown_082E4470:
 	.INCBIN "baserom.gba", 0x2E4470, 0x2E4494-0x2E4470
 
-	.GLOBAL gUnknown_082E4494
-gUnknown_082E4494:
+	.GLOBAL gfxHelpFrameTopLeftOAM
+gfxHelpFrameTopLeftOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E449C
-gUnknown_082E449C:
-	.INCBIN "assets/sprites/help/gUnknown_082E449C.4bpp"
+	.GLOBAL gfxHelpFrameTopLeft4bpp
+gfxHelpFrameTopLeft4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameTopLeft.4bpp"
 
 	.GLOBAL gUnknown_082E469C
 gUnknown_082E469C:
 	.INCBIN "baserom.gba", 0x2E469C, 0x2E46C0-0x2E469C
 
-	.GLOBAL gUnknown_082E46C0
-gUnknown_082E46C0:
+	.GLOBAL gfxHelpFrameTopOAM
+gfxHelpFrameTopOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E46C8
-gUnknown_082E46C8:
-	.INCBIN "assets/sprites/help/gUnknown_082E46C8.4bpp"
+	.GLOBAL gfxHelpFrameTop4bpp
+gfxHelpFrameTop4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameTop.4bpp"
 
 	.GLOBAL gUnknown_082E48C8
 gUnknown_082E48C8:
 	.INCBIN "baserom.gba", 0x2E48C8, 0x2E48EC-0x2E48C8
 
-	.GLOBAL gUnknown_082E48EC
-gUnknown_082E48EC:
+	.GLOBAL gfxHelpFrameTopRightOAM
+gfxHelpFrameTopRightOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E48F4
-gUnknown_082E48F4:
-	.INCBIN "assets/sprites/help/gUnknown_082E48F4.4bpp"
+	.GLOBAL gfxHelpFrameTopRight4bpp
+gfxHelpFrameTopRight4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameTopRight.4bpp"
 
 	.GLOBAL gUnknown_082E4AF4
 gUnknown_082E4AF4:
 	.INCBIN "baserom.gba", 0x2E4AF4, 0x2E4B18-0x2E4AF4
 
-	.GLOBAL gUnknown_082E4B18
-gUnknown_082E4B18:
+	.GLOBAL gfxHelpFrameOuterBGOAM
+gfxHelpFrameOuterBGOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E4B20
-gUnknown_082E4B20:
-	.INCBIN "assets/sprites/help/gUnknown_082E4B20.4bpp"
+	.GLOBAL gfxHelpFrameOuterBG4bpp
+gfxHelpFrameOuterBG4bpp:
+	.INCBIN "assets/sprites/help/HelpFrameOuterBG.4bpp"
 
 	.GLOBAL gUnknown_082E4C20
 gUnknown_082E4C20:
 	.INCBIN "baserom.gba", 0x2E4C20, 0x2E4C44-0x2E4C20
 
-	.GLOBAL gUnknown_082E4C44
-gUnknown_082E4C44:
+	.GLOBAL gfxHelpScreenBlankOAM
+gfxHelpScreenBlankOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=15
 
-	.GLOBAL gUnknown_082E4C4C
-gUnknown_082E4C4C:
-	.INCBIN "assets/sprites/help/gUnknown_082E4C4C.4bpp"
+	.GLOBAL gfxHelpScreenBlank4bpp
+gfxHelpScreenBlank4bpp:
+	.INCBIN "assets/sprites/help/HelpScreenBlank.4bpp"
 
 	.GLOBAL gUnknown_082E4E4C
 gUnknown_082E4E4C:
@@ -17933,8 +17933,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E3410 @ Animation Data
-	.4byte gUnknown_082E3434 @ OAM
-	.4byte gUnknown_082E343C @ Sprite Graphics
+	.4byte gfxHelpFrameBottomLeftOAM @ OAM
+	.4byte gfxHelpFrameBottomLeft4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -17943,8 +17943,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E363C @ Animation Data
-	.4byte gUnknown_082E3660 @ OAM
-	.4byte gUnknown_082E3668 @ Sprite Graphics
+	.4byte gfxHelpFrameBottomOAM @ OAM
+	.4byte gfxHelpFrameBottom4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -17953,8 +17953,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E3868 @ Animation Data
-	.4byte gUnknown_082E388C @ OAM
-	.4byte gUnknown_082E3894 @ Sprite Graphics
+	.4byte gfxHelpFrameBottomRightOAM @ OAM
+	.4byte gfxHelpFrameBottomRight4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -17963,8 +17963,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E3A94 @ Animation Data
-	.4byte gUnknown_082E3AB8 @ OAM
-	.4byte gUnknown_082E3AC0 @ Sprite Graphics
+	.4byte gfxHelpBExitOAM @ OAM
+	.4byte gfxHelpBExit8bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -17973,8 +17973,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E3CC0 @ Animation Data
-	.4byte gUnknown_082E3CE4 @ OAM
-	.4byte gUnknown_082E3CEC @ Sprite Graphics
+	.4byte gfxHelpFrameBGOAM @ OAM
+	.4byte gfxHelpFrameBG4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -17983,8 +17983,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E3EEC @ Animation Data
-	.4byte gUnknown_082E3F10 @ OAM
-	.4byte gUnknown_082E3F18 @ Sprite Graphics
+	.4byte gfxHelpTextOAM @ OAM
+	.4byte gfxHelpText4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -17993,8 +17993,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E4018 @ Animation Data
-	.4byte gUnknown_082E403C @ OAM
-	.4byte gUnknown_082E4044 @ Sprite Graphics
+	.4byte gfxHelpFrameLeftOAM @ OAM
+	.4byte gfxHelpFrameLeft4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -18003,8 +18003,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E4244 @ Animation Data
-	.4byte gUnknown_082E4268 @ OAM
-	.4byte gUnknown_082E4270 @ Sprite Graphics
+	.4byte gfxHelpFrameRightOAM @ OAM
+	.4byte gfxHelpFrameRight4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -18013,8 +18013,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E4470 @ Animation Data
-	.4byte gUnknown_082E4494 @ OAM
-	.4byte gUnknown_082E449C @ Sprite Graphics
+	.4byte gfxHelpFrameTopLeftOAM @ OAM
+	.4byte gfxHelpFrameTopLeft4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -18023,8 +18023,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E469C @ Animation Data
-	.4byte gUnknown_082E46C0 @ OAM
-	.4byte gUnknown_082E46C8 @ Sprite Graphics
+	.4byte gfxHelpFrameTopOAM @ OAM
+	.4byte gfxHelpFrameTop4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -18033,8 +18033,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E48C8 @ Animation Data
-	.4byte gUnknown_082E48EC @ OAM
-	.4byte gUnknown_082E48F4 @ Sprite Graphics
+	.4byte gfxHelpFrameTopRightOAM @ OAM
+	.4byte gfxHelpFrameTopRight4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position
@@ -18043,8 +18043,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E4AF4 @ Animation Data
-	.4byte gUnknown_082E4B18 @ OAM
-	.4byte gUnknown_082E4B20 @ Sprite Graphics
+	.4byte gfxHelpFrameOuterBGOAM @ OAM
+	.4byte gfxHelpFrameOuterBG4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0200 @ Y position
@@ -18053,8 +18053,8 @@ gUncompressedGraphicsTable:
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082E4C20 @ Animation Data
-	.4byte gUnknown_082E4C44 @ OAM
-	.4byte gUnknown_082E4C4C @ Sprite Graphics
+	.4byte gfxHelpScreenBlankOAM @ OAM
+	.4byte gfxHelpScreenBlank4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0100 @ Y position

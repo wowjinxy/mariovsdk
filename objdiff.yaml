@@ -8,6 +8,7 @@ units:
 - path: eCard.o
 - path: fade_in_out.o
 - path: intro.o
+- path: level_help.o
 - path: level_results.o
 - path: level_view.o
 - path: libc.o
