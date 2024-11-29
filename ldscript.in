@@ -52,6 +52,8 @@
 	X(src/world_start.o) \
 	X(asm/rom_80379BC.o) \
 	X(data/data2.o) \
+	X(data/sprites.o) \
+	X(data/data3.o) \
 	X(data/sound.o) \
 	X(data/rodata3.o) \
 	X(src/rom_8038414.o) \
