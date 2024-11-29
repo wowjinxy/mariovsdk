@@ -1023,6 +1023,8 @@ enum PaletteID
     PALETTE_1_MAIN_MENU,
     PALETTE_2_EXPERT_LEVELS,
     PALETTE_3_OPTIONS_MENU,
+    PALETTE_4,
+    PALETTE_5_LEVEL_HELP,
     
     PALETTE_64 = 64,
     PALETTE_65,
@@ -1511,7 +1513,7 @@ int sub_080066FC(u32 *, int, int, int);
 struct UnknownStruct15 *sub_08006968();
 void sub_08006D44(void);
 void sub_080063E4(struct Struct802C31C *, int, void *);
-void change_main_state(s32, s32);
+
 void sub_08007170(void);
 void level_play_main(void);
 void level_demo_main(void);

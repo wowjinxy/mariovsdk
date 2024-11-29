@@ -62,4 +62,6 @@ extern u32 gNextMainState;
 extern u32 gPreviousMainState;
 extern u32 gNextStateFromFade;
 
+void change_main_state(s32 newState, s32 useFadeFlag);
+
 #endif

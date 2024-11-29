@@ -32,7 +32,7 @@
 	X(src/level_results.o) \
 	X(src/fade_in_out.o) \
 	X(asm/load.o) \
-	X(asm/level_help.o) \
+	X(src/level_help.o) \
 	X(asm/level_retry.o) \
 	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \
@@ -162,6 +162,8 @@ SECTIONS
 		. = 0xB6;		gUnknown_030000B6 = .;
 		. = 0x100;		gPreviousMovieOption = .;
 		. = 0x110;		src/fade_in_out.o(.bss);
+		. = 0x130;		src/level_help.o(.bss);
+		/*. = 0x138;		gUnknown_03000138 = .;*/
 		. = 0x15A;		gUnknown_0300015A = .;
 		. = 0x15C;		gUnknown_0300015C = .;
 		. = 0x160;		gUnknown_03000160 = .;
