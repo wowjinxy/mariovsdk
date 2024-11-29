@@ -681,7 +681,7 @@ sub_0801C42C: @ 0x0801C42C
 	add r0, r0, r2
 	ldrb r0, [r0]
 	lsl r0, r0, #7
-	ldr r1, _0801C4F4  @ =gUnknown_085DEFAC
+	ldr r1, _0801C4F4  @ =gfxOptionsMenuSelectLeft
 	add r0, r0, r1
 	str r0, [r4]
 	ldr r5, _0801C4F8  @ =gObjVRAMCopyOffset_0300192C
@@ -713,7 +713,7 @@ sub_0801C42C: @ 0x0801C42C
 	add r0, r0, r6
 	ldrb r0, [r0]
 	lsl r0, r0, #7
-	ldr r1, _0801C510  @ =gUnknown_085DF63C
+	ldr r1, _0801C510  @ =gfxOptionsMenuSelectCenter
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r5]
@@ -737,7 +737,7 @@ sub_0801C42C: @ 0x0801C42C
 	add r0, r0, r6
 	ldrb r0, [r0]
 	lsl r0, r0, #7
-	ldr r1, _0801C518  @ =gUnknown_085DFCCC
+	ldr r1, _0801C518  @ =gfxOptionsMenuSelectRight
 	add r0, r0, r1
 	str r0, [r4]
 	ldrh r0, [r5]
@@ -767,7 +767,7 @@ _0801C4EC:
 _0801C4F0:
 	.4byte 0x030000C2
 _0801C4F4:
-	.4byte gUnknown_085DEFAC
+	.4byte gfxOptionsMenuSelectLeft
 _0801C4F8:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0801C4FC:
@@ -781,11 +781,11 @@ _0801C508:
 _0801C50C:
 	.4byte gUnknown_085DF3AC
 _0801C510:
-	.4byte gUnknown_085DF63C
+	.4byte gfxOptionsMenuSelectCenter
 _0801C514:
 	.4byte gUnknown_085DFA3C
 _0801C518:
-	.4byte gUnknown_085DFCCC
+	.4byte gfxOptionsMenuSelectRight
 	THUMB_FUNC_END sub_0801C42C
 
 	THUMB_FUNC_START sub_0801C51C
@@ -924,7 +924,7 @@ sub_0801C5E0: @ 0x0801C5E0
 	add r2, r2, r3
 	ldrb r2, [r2]
 	lsl r2, r2, #7
-	ldr r3, _0801C6D8  @ =gUnknown_085F6390
+	ldr r3, _0801C6D8  @ =gfxGreatYouWon
 	add r2, r2, r3
 	str r2, [r4]
 	ldr r7, _0801C6DC  @ =gObjVRAMCopyOffset_0300192C
@@ -1019,7 +1019,7 @@ _0801C6D0:
 _0801C6D4:
 	.4byte gUnknown_085F61B4
 _0801C6D8:
-	.4byte gUnknown_085F6390
+	.4byte gfxGreatYouWon
 _0801C6DC:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0801C6E0:
