@@ -14,6 +14,8 @@
 #define GLOBAL_BSS __attribute__((section(".bss_global")))
 #define BSS __attribute__((section(".bss")))
 
+#define ARRAY_COUNT(arr) (sizeof(arr)/sizeof((arr)[0]))
+
 //------------------------------------------------------------------------------
 // Types
 //------------------------------------------------------------------------------
@@ -1384,6 +1386,8 @@ extern u8 gUnknown_0807C838[];
 
 extern struct GraphicsConfig gMainMenuData;
 
+extern struct OamData gUnknown_082E4C44;
+extern u8 gUnknown_082E4C4C[];
 extern struct SubSpriteTemplate gUnknown_085FB360;
 extern struct OamData gfxFileLettersOAM;
 extern u8 gfxFileLetters4bpp[];

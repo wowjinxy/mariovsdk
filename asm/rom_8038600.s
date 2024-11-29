@@ -10361,7 +10361,7 @@ _0803D2BC:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, r8
-	bl sub_0802AA9C
+	bl help_load_sprites
 	b _0803D626
 _0803D2CC:
 	add r4, sp, #168

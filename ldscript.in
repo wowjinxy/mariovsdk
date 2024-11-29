@@ -15,10 +15,10 @@
 	X(src/rom_800F1E4.o) \
 	X(src/savefile.o) \
 	X(src/main_menu.o) \
-	X(data/data.o) \
-	X(data/rodata.o) \
+	X(data/data0.o) \
 	X(asm/rom_801488C.o) \
 	X(asm/level_select.o) \
+	X(data/rodata.o) \
 	X(asm/rom_801B310.o) \
 	X(src/title.o) \
 	X(src/intro.o) \
@@ -33,6 +33,7 @@
 	X(src/fade_in_out.o) \
 	X(asm/load.o) \
 	X(src/level_help.o) \
+	X(data/data.o) \
 	X(asm/level_retry.o) \
 	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \
@@ -163,7 +164,7 @@ SECTIONS
 		. = 0x100;		gPreviousMovieOption = .;
 		. = 0x110;		src/fade_in_out.o(.bss);
 		. = 0x130;		src/level_help.o(.bss);
-		/*. = 0x138;		gUnknown_03000138 = .;*/
+		/*. = 0x138;		sTileNumOffsets = .;*/
 		. = 0x15A;		gUnknown_0300015A = .;
 		. = 0x15C;		gUnknown_0300015C = .;
 		. = 0x160;		gUnknown_03000160 = .;
