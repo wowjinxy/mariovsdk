@@ -54,6 +54,18 @@
 	X(data/data2.o) \
 	X(data/sprites.o) \
 	X(data/data3.o) \
+	X(data/early_new_game_cutscene.o) \
+	X(data/movie6.o) \
+	X(data/movie5.o) \
+	X(data/movie2.o) \
+	X(data/movie4.o) \
+	X(data/movie1.o) \
+	X(data/movie0.o) \
+	X(data/movie7.o) \
+	X(data/movie3.o) \
+	X(data/movie8.o) \
+	X(data/unused_plus_worlds_unlocked.o) \
+	X(data/data4.o) \
 	X(data/sound.o) \
 	X(data/rodata3.o) \
 	X(src/rom_8038414.o) \
