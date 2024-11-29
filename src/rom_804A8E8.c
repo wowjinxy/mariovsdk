@@ -1,6 +1,7 @@
 #include "gba/gba.h"
 #include "global.h"
 #include "main.h"
+#include "sprites.h"
 
 void sub_0804A8E8(void) {
     u8 var_0;
@@ -41,7 +42,7 @@ void sub_0804A8E8(void) {
                 if ((gMiniMariosRescued_03001BA0 != 0x0) && (gUnknown_03001B80 == 0x1E)) {
                     gUnknown_03001B8C = 0x1;
                     gUnknown_03000389 = gUnknown_03001B84;
-                    gUnknown_0300038A = gUnknown_0812E128[0].pad[1];
+                    gUnknown_0300038A = gUnknown_0812E128[0].duration;
                 }
             }
             else {
@@ -53,7 +54,7 @@ void sub_0804A8E8(void) {
                     if (1 < gUnknown_03000389) {
                         gUnknown_03000389 = var_0;
                     }
-                    gUnknown_0300038A = gUnknown_0812E128[gUnknown_03000389].pad[1];
+                    gUnknown_0300038A = gUnknown_0812E128[gUnknown_03000389].duration;
                 }
             }
             

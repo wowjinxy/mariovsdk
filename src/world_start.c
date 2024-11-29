@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "sprites.h"
 
 static enum PaletteID sMainPalettes[] =
 {
@@ -155,7 +156,7 @@ static void sub_08037230(void)
 {
     sDonkeyKong = arena_allocate(sizeof(*sDonkeyKong));
     sDonkeyKong->subSpriteIndex = 0;
-    sDonkeyKong->frameTimer = gUnknown_08251EC0.unk1;
+    sDonkeyKong->frameTimer = gUnknown_08251EC0[0].duration;
     sDonkeyKong->x = -63 << 8;
     sDonkeyKong->y = 56;
     sDonkeyKong->spriteId = SPRITE_ID_DK_WORLD_INTRO;
@@ -163,7 +164,7 @@ static void sub_08037230(void)
 
     sMario = arena_allocate(sizeof(*sMario));
     sMario->subSpriteIndex = 0;
-    sMario->frameTimer = gUnknown_0854301C.unk1;
+    sMario->frameTimer = gUnknown_0854301C[0].duration;
     sMario->x = -32 << 8;
     sMario->y = 88;
     sMario->spriteId = SPRITE_ID_MARIO_RUN;

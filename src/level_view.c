@@ -2,6 +2,7 @@
 #include "global.h"
 #include "level_view.h"
 #include "main.h"
+#include "sprites.h"
 
 void level_view_main(void) {
 
@@ -34,19 +35,20 @@ void level_view_main(void) {
 
 u32 sub_080322A8(u16 *param1, u16 *param2, u16 *param3) {
     if (gUnknown_03000B78 != 0) {
-        DmaCopy32(3, gUnknown_082E8908, OBJ_VRAM0 + param3[0], 0x100);
-        DmaCopy32(3, gUnknown_082E8900, gOamBuffer + param1[0], 8);
+        DmaCopy32(3, gUnknown_082E8908, (u8 *)OBJ_VRAM0 + *param3, 0x100);
+        DmaCopy32(3, &gUnknown_082E8900, &gOamBuffer[*param1], 8);
 
-        (&gOamBuffer[param1[0]])->tileNum = param2[0];
-        (&gOamBuffer[param1[0]])->x = 0xc8;
-        (&gOamBuffer[param1[0]])->y = 0x8c;
-        (&gOamBuffer[param1[0]])->priority = 0;
+        gOamBuffer[*param1].tileNum = *param2;
+        gOamBuffer[*param1].x = 200;
+        gOamBuffer[*param1].y = 140;
+        gOamBuffer[*param1].priority = 0;
 
-        param2[0] += 8;
-        param3[0] += 0x100;
-        param1[0] += 1;
+        *param2 += 8;
+        *param3 += 0x100;
+        *param1 += 1;
     }
 }
+
 void level_view_init_callback(void) {
     
 	sub_080720E4();
