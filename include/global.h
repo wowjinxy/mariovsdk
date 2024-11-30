@@ -300,7 +300,10 @@ struct UnknownStruct15_child
 struct UnknownStruct15
 {
     u8 unk0[0x108];
-    struct UnknownStruct15_child *unk108[0];
+    struct UnknownStruct15_child *unk108[(0x168-0x108)/4];
+    u32 unk168;
+    u8 filler16C[4];
+    u32 unk170;
 };
 
 struct UnknownStruct17
@@ -1227,7 +1230,20 @@ extern u8 gUnknown_03000D90[];
 extern struct StructD7C *gUnknown_03000DA0[];
 extern u16 gUnknown_03000DC8;
 extern u8 gUnknown_03000DCC;
-extern u32 gUnknown_03000E00;
+
+struct Struct03000E00_sub
+{
+    u32 unk0;
+    u32 unk4;
+    u8 filler8[0x14-8];
+};  // size = 0x14
+extern struct
+{
+    //u8 filler0[4];
+    struct Struct03000E00_sub unk0[2];
+    u8 filler2C[0x50-0x2C+4];
+    u32 *unk50;
+} gUnknown_03000E00;
 extern u16 gUnknown_03000E60;
 extern struct UnkStruct1_sub_child_data *gUnknown_03000E70[];
 extern u8 *gUnknown_03000E88;
@@ -1463,6 +1479,7 @@ void unknown_0A_init_callback(void);
 void level_editor_init_callback(void);
 void level_edit_main(void);
 void level_editor_end(void);
+void sub_080091A8(void *, void *);
 void sub_0800EE70(void);
 void title_demo_setup(u32 titleDemoID);
 void sub_08014A58();
@@ -1508,7 +1525,7 @@ void options_main(void);
 void options_loop(void);
 void options_end(void);
 void sub_08029080(void);
-void sub_0802919C();
+//void sub_0802919C(int, s8);
 void level_results_init_callback(void);
 void level_results_main(void);
 void level_results_loop(void);
@@ -1577,8 +1594,17 @@ void e_world_debug_loop(void);
 void e_world_debug_init_callback(void);
 void e_world_debug_end(void);
 int sub_0802F5C0();
+void sub_0802F648(void *, int);
+int sub_0802F7B8(void *, int);
 void sub_0802F890(u32 *, u16 *, u16 *, u16 *);
+void sub_0802FC24(int, int);
+int sub_0802FC88(void);
+void sub_0802FCA4(void);
+void sub_080300CC(int);
+void sub_08030408(int);
 void sub_08030C84(u16 *, u16 *, u16 *);
+void sub_08030DA0(int);
+int sub_08030DE8(void);
 void sub_0803109C(void);
 void sub_080317F8(void);
 int sub_08031944(void *);
@@ -1647,8 +1673,9 @@ extern u8 sub_08038DF4(u8, u8, int, u16, u16, int);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);
 void sub_08040FC0(int, int);
-extern void sub_08041F2C(s8);
 void sub_0804138C(int, int, u32, u32);
+extern void sub_08041F2C(s8);
+void sub_08042FB0(void *, void *);
 u16 sub_0806C2C4(void);
 void sub_0806D1AC(u16, u16);
 void sub_080714A8(void);
@@ -1658,7 +1685,7 @@ void sub_0807194C(void);
 int play_sound_effect_08071990(int, u8, u8, u8, u8, u8, u8);
 void sub_08071C24(void);
 void sub_08071CD4(void);
-void sub_08071D9C(void);
+void sub_08071D9C(int);
 void sub_08071E14(u8);
 void sub_08071FA0();
 int sub_08071FE4(void);

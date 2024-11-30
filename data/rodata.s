@@ -2,22 +2,6 @@
 
 	.BALIGN 4
 
-	.GLOBAL gUnknown_080763F4
-gUnknown_080763F4:
-	.byte 0x1
-	.byte 0x2
-	.byte 0x3
-	.byte 0x4
-	.byte 0x5
-	.byte 0x6
-	.byte 0x7
-	.byte 0x9
-
-	.GLOBAL gUnknown_080763FC
-gUnknown_080763FC:
-	.4byte 0x0000000D
-	.4byte 0x00000002
-
 	.GLOBAL gTextNo
 gTextNo:
 	.ASCII "No\0\0"	

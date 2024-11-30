@@ -18,7 +18,6 @@
 	X(data/data0.o) \
 	X(asm/rom_801488C.o) \
 	X(asm/level_select.o) \
-	X(data/rodata.o) \
 	X(asm/rom_801B310.o) \
 	X(src/title.o) \
 	X(src/intro.o) \
@@ -28,8 +27,8 @@
 	X(asm/bonus_stoparrow.o) \
 	X(asm/bonus_swapboxes.o) \
 	X(asm/options_menu.o) \
-	X(asm/level_results.o) \
 	X(src/level_results.o) \
+	X(data/rodata.o) \
 	X(src/fade_in_out.o) \
 	X(src/load.o) \
 	X(src/level_help.o) \
@@ -187,6 +186,12 @@ SECTIONS
 		. = 0xB4;		gUnknown_030000B4 = .;
 		. = 0xB6;		gUnknown_030000B6 = .;
 		. = 0x100;		gPreviousMovieOption = .;
+		. = 0x104;		gUnknown_03000104 = .;
+		. = 0x108;		gUnknown_03000108 = .;
+		. = 0x10C;		gUnknown_0300010C = .;
+		. = 0x10D;		gUnknown_0300010D = .;
+		. = 0x10E;		gUnknown_0300010E = .;
+		. = 0x10F;		gUnknown_0300010F = .;
 		. = 0x110;		src/fade_in_out.o(.bss);
 		. = 0x118;		gSectorData_03000118 = .;
 		. = 0x11C;		gFlashWriteSize_0300011C = .;
@@ -312,8 +317,10 @@ SECTIONS
 		. = 0xC00;		gUnknown_03000C00 = .;
 		. = 0xC04;		gUnknown_03000C04 = .;
 		. = 0xC0C;		gUnknown_03000C0C = .;
+		. = 0xC14;		gUnknown_03000C14 = .;
 		. = 0xC1C;		gUnknown_03000C1C = .;
 		. = 0xC20;		gDKLevelMarioLivesLeft_03000C20 = .;
+		. = 0xC24;		gUnknown_03000C24 = .;
 		. = 0xC28;		gIsFadeInProgress = .;
 		. = 0xC2C;		gUnknown_03000C2C = .;
 		. = 0xC30;		gUnknown_03000C30 = .;
@@ -344,6 +351,10 @@ SECTIONS
 		. = 0xDA0;		gUnknown_03000DA0 = .;
 		. = 0xDC8;		gUnknown_03000DC8 = .;
 		. = 0xDCC;		gUnknown_03000DCC = .;
+		. = 0xDD0;		gUnknown_03000DD0 = .;
+		. = 0xDDC;		gUnknown_03000DDC = .;
+		. = 0xDF4;		gUnknown_03000DF4 = .;
+		. = 0xDF8;		gUnknown_03000DF8 = .;
 		. = 0xE00;		gUnknown_03000E00 = .;
 		. = 0xE60;		gUnknown_03000E60 = .;
 		. = 0xE70;		gUnknown_03000E70 = .;
