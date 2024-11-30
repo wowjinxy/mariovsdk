@@ -9440,7 +9440,7 @@ _0803CBE6:
 	ldr r0, _0803CC00  @ =0x03001A44
 	strb r1, [r0]
 	ldr r1, _0803CC04  @ =0x03001928
-	ldr r0, _0803CC08  @ =gUnknown_08657630
+	ldr r0, _0803CC08  @ =gfxLavaGeyserAnimation
 	ldrb r0, [r0, #1]
 	strb r0, [r1]
 	b _0803CD2C
@@ -9453,7 +9453,7 @@ _0803CC00:
 _0803CC04:
 	.4byte 0x03001928
 _0803CC08:
-	.4byte gUnknown_08657630
+	.4byte gfxLavaGeyserAnimation
 _0803CC0C:
 	ldr r0, _0803CC1C  @ =gUnknown_03000D84
 	ldrb r0, [r0]
@@ -9472,7 +9472,7 @@ _0803CC20:
 	lsl r0, r1, #3
 	add r0, r0, r1
 	lsl r0, r0, #2
-	ldr r4, _0803CD38  @ =gUnknown_08657630
+	ldr r4, _0803CD38  @ =gfxLavaGeyserAnimation
 	add r5, r0, r4
 	ldr r0, _0803CD3C  @ =gUnknown_03001A00
 	ldrb r0, [r0]
@@ -9504,7 +9504,7 @@ _0803CC56:
 	strb r0, [r3]
 _0803CC64:
 	ldr r2, _0803CD44  @ =REG_DMA3SAD
-	ldr r0, _0803CD48  @ =gUnknown_086576C0
+	ldr r0, _0803CD48  @ =gfxLavaGeyserOAM
 	str r0, [r2]
 	ldrh r0, [r6]
 	lsl r0, r0, #3
@@ -9516,7 +9516,7 @@ _0803CC64:
 	ldr r0, [r2, #8]
 	ldrb r0, [r5]
 	lsl r0, r0, #8
-	ldr r1, _0803CD54  @ =gUnknown_086576C8
+	ldr r1, _0803CD54  @ =gfxLavaGeyser
 	add r0, r0, r1
 	str r0, [r2]
 	mov r1, r12
@@ -9612,7 +9612,7 @@ _0803CD2C:
 _0803CD34:
 	.4byte 0x03001A44
 _0803CD38:
-	.4byte gUnknown_08657630
+	.4byte gfxLavaGeyserAnimation
 _0803CD3C:
 	.4byte gUnknown_03001A00
 _0803CD40:
@@ -9620,13 +9620,13 @@ _0803CD40:
 _0803CD44:
 	.4byte REG_DMA3SAD
 _0803CD48:
-	.4byte gUnknown_086576C0
+	.4byte gfxLavaGeyserOAM
 _0803CD4C:
 	.4byte gOamBuffer
 _0803CD50:
 	.4byte 0x84000002
 _0803CD54:
-	.4byte gUnknown_086576C8
+	.4byte gfxLavaGeyser
 _0803CD58:
 	.4byte OBJ_VRAM0
 _0803CD5C:

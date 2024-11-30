@@ -20453,11 +20453,11 @@ _08053F64:
 	beq _08053F74
 	b _0805421C
 _08053F74:
-	ldr r5, _080541D4  @ =gUnknown_0812953C
+	ldr r5, _080541D4  @ =gfxLevelStartPresentOAM
 	str r5, [sp]
-	ldr r0, _080541D8  @ =gUnknown_08129544
+	ldr r0, _080541D8  @ =gfxLevelStartPresent
 	str r0, [sp, #4]
-	ldr r1, _080541DC  @ =gUnknown_08129518
+	ldr r1, _080541DC  @ =gfxLevelStartPresentAnimation
 	str r1, [sp, #8]
 	mov r0, sp
 	mov r2, r10
@@ -20517,11 +20517,11 @@ _08053F74:
 	str r0, [sp, #76]
 	mov r0, sp
 	bl sub_08055FB8
-	ldr r1, _080541D4  @ =gUnknown_0812953C
+	ldr r1, _080541D4  @ =gfxLevelStartPresentOAM
 	str r1, [sp]
-	ldr r2, _080541D8  @ =gUnknown_08129544
+	ldr r2, _080541D8  @ =gfxLevelStartPresent
 	str r2, [sp, #4]
-	ldr r0, _080541DC  @ =gUnknown_08129518
+	ldr r0, _080541DC  @ =gfxLevelStartPresentAnimation
 	str r0, [sp, #8]
 	mov r0, sp
 	mov r1, r10
@@ -20689,11 +20689,11 @@ _08053F74:
 	str r0, [sp, #76]
 	mov r0, sp
 	bl sub_08055FB8
-	ldr r1, _080541D4  @ =gUnknown_0812953C
+	ldr r1, _080541D4  @ =gfxLevelStartPresentOAM
 	str r1, [sp]
-	ldr r2, _080541D8  @ =gUnknown_08129544
+	ldr r2, _080541D8  @ =gfxLevelStartPresent
 	str r2, [sp, #4]
-	ldr r0, _080541DC  @ =gUnknown_08129518
+	ldr r0, _080541DC  @ =gfxLevelStartPresentAnimation
 	str r0, [sp, #8]
 	mov r0, sp
 	mov r1, r10
@@ -20754,11 +20754,11 @@ _080541CC:
 _080541D0:
 	.4byte gLevelType
 _080541D4:
-	.4byte gUnknown_0812953C
+	.4byte gfxLevelStartPresentOAM
 _080541D8:
-	.4byte gUnknown_08129544
+	.4byte gfxLevelStartPresent
 _080541DC:
-	.4byte gUnknown_08129518
+	.4byte gfxLevelStartPresentAnimation
 _080541E0:
 	.4byte gUnknown_0865FBB0
 _080541E4:
@@ -20790,11 +20790,11 @@ _08054214:
 _08054218:
 	.4byte gUnknown_0865FE80
 _0805421C:
-	ldr r0, _08054608  @ =gUnknown_0812953C
+	ldr r0, _08054608  @ =gfxLevelStartPresentOAM
 	str r0, [sp]
-	ldr r1, _0805460C  @ =gUnknown_08129544
+	ldr r1, _0805460C  @ =gfxLevelStartPresent
 	str r1, [sp, #4]
-	ldr r2, _08054610  @ =gUnknown_08129518
+	ldr r2, _08054610  @ =gfxLevelStartPresentAnimation
 	str r2, [sp, #8]
 	mov r0, sp
 	mov r5, r10
@@ -20911,11 +20911,11 @@ _0805421C:
 	str r0, [sp, #76]
 	mov r0, sp
 	bl sub_08055FB8
-	ldr r1, _08054608  @ =gUnknown_0812953C
+	ldr r1, _08054608  @ =gfxLevelStartPresentOAM
 	str r1, [sp]
-	ldr r2, _0805460C  @ =gUnknown_08129544
+	ldr r2, _0805460C  @ =gfxLevelStartPresent
 	str r2, [sp, #4]
-	ldr r0, _08054610  @ =gUnknown_08129518
+	ldr r0, _08054610  @ =gfxLevelStartPresentAnimation
 	str r0, [sp, #8]
 	mov r0, sp
 	mov r1, r10
@@ -21030,11 +21030,11 @@ _0805421C:
 	str r1, [sp, #76]
 	mov r0, sp
 	bl sub_08055FB8
-	ldr r2, _08054608  @ =gUnknown_0812953C
+	ldr r2, _08054608  @ =gfxLevelStartPresentOAM
 	str r2, [sp]
-	ldr r0, _0805460C  @ =gUnknown_08129544
+	ldr r0, _0805460C  @ =gfxLevelStartPresent
 	str r0, [sp, #4]
-	ldr r1, _08054610  @ =gUnknown_08129518
+	ldr r1, _08054610  @ =gfxLevelStartPresentAnimation
 	str r1, [sp, #8]
 	mov r0, sp
 	mov r2, r10
@@ -21287,11 +21287,11 @@ _08054478:
 	.byte 0x00
 	.byte 0x00
 _08054608:
-	.4byte gUnknown_0812953C
+	.4byte gfxLevelStartPresentOAM
 _0805460C:
-	.4byte gUnknown_08129544
+	.4byte gfxLevelStartPresent
 _08054610:
-	.4byte gUnknown_08129518
+	.4byte gfxLevelStartPresentAnimation
 _08054614:
 	.4byte gUnknown_0865F610
 _08054618:
@@ -22462,11 +22462,11 @@ _08054ED6:
 	beq _08054EE6
 	b _080551B0
 _08054EE6:
-	ldr r4, _08055168  @ =gUnknown_0812953C
+	ldr r4, _08055168  @ =gfxLevelStartPresentOAM
 	str r4, [sp, #4]
-	ldr r0, _0805516C  @ =gUnknown_08129544
+	ldr r0, _0805516C  @ =gfxLevelStartPresent
 	str r0, [sp, #8]
-	ldr r1, _08055170  @ =gUnknown_08129518
+	ldr r1, _08055170  @ =gfxLevelStartPresentAnimation
 	str r1, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -22526,11 +22526,11 @@ _08054EE6:
 	ldr r2, [sp, #92]
 	ldr r3, [sp, #96]
 	bl sub_08055B2C
-	ldr r4, _08055168  @ =gUnknown_0812953C
+	ldr r4, _08055168  @ =gfxLevelStartPresentOAM
 	str r4, [sp, #4]
-	ldr r0, _0805516C  @ =gUnknown_08129544
+	ldr r0, _0805516C  @ =gfxLevelStartPresent
 	str r0, [sp, #8]
-	ldr r1, _08055170  @ =gUnknown_08129518
+	ldr r1, _08055170  @ =gfxLevelStartPresentAnimation
 	str r1, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -22710,11 +22710,11 @@ _08054EE6:
 	ldr r2, [sp, #92]
 	ldr r3, [sp, #96]
 	bl sub_08055B2C
-	ldr r3, _08055168  @ =gUnknown_0812953C
+	ldr r3, _08055168  @ =gfxLevelStartPresentOAM
 	str r3, [sp, #4]
-	ldr r4, _0805516C  @ =gUnknown_08129544
+	ldr r4, _0805516C  @ =gfxLevelStartPresent
 	str r4, [sp, #8]
-	ldr r0, _08055170  @ =gUnknown_08129518
+	ldr r0, _08055170  @ =gfxLevelStartPresentAnimation
 	str r0, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -22780,11 +22780,11 @@ _08055160:
 _08055164:
 	.4byte gLevelType
 _08055168:
-	.4byte gUnknown_0812953C
+	.4byte gfxLevelStartPresentOAM
 _0805516C:
-	.4byte gUnknown_08129544
+	.4byte gfxLevelStartPresent
 _08055170:
-	.4byte gUnknown_08129518
+	.4byte gfxLevelStartPresentAnimation
 _08055174:
 	.4byte gUnknown_0865F610
 _08055178:
@@ -22816,11 +22816,11 @@ _080551A8:
 _080551AC:
 	.4byte gUnknown_0865FCA0
 _080551B0:
-	ldr r3, _0805559C  @ =gUnknown_0812953C
+	ldr r3, _0805559C  @ =gfxLevelStartPresentOAM
 	str r3, [sp, #4]
-	ldr r4, _080555A0  @ =gUnknown_08129544
+	ldr r4, _080555A0  @ =gfxLevelStartPresent
 	str r4, [sp, #8]
-	ldr r0, _080555A4  @ =gUnknown_08129518
+	ldr r0, _080555A4  @ =gfxLevelStartPresentAnimation
 	str r0, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -22941,11 +22941,11 @@ _080551B0:
 	ldr r2, [sp, #92]
 	ldr r3, [sp, #96]
 	bl sub_08055B2C
-	ldr r4, _0805559C  @ =gUnknown_0812953C
+	ldr r4, _0805559C  @ =gfxLevelStartPresentOAM
 	str r4, [sp, #4]
-	ldr r0, _080555A0  @ =gUnknown_08129544
+	ldr r0, _080555A0  @ =gfxLevelStartPresent
 	str r0, [sp, #8]
-	ldr r1, _080555A4  @ =gUnknown_08129518
+	ldr r1, _080555A4  @ =gfxLevelStartPresentAnimation
 	str r1, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -23065,11 +23065,11 @@ _080551B0:
 	ldr r2, [sp, #92]
 	ldr r3, [sp, #96]
 	bl sub_08055B2C
-	ldr r1, _0805559C  @ =gUnknown_0812953C
+	ldr r1, _0805559C  @ =gfxLevelStartPresentOAM
 	str r1, [sp, #4]
-	ldr r2, _080555A0  @ =gUnknown_08129544
+	ldr r2, _080555A0  @ =gfxLevelStartPresent
 	str r2, [sp, #8]
-	ldr r3, _080555A4  @ =gUnknown_08129518
+	ldr r3, _080555A4  @ =gfxLevelStartPresentAnimation
 	str r3, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -23313,11 +23313,11 @@ _08055426:
 	.byte 0x00
 	.byte 0x00
 _0805559C:
-	.4byte gUnknown_0812953C
+	.4byte gfxLevelStartPresentOAM
 _080555A0:
-	.4byte gUnknown_08129544
+	.4byte gfxLevelStartPresent
 _080555A4:
-	.4byte gUnknown_08129518
+	.4byte gfxLevelStartPresentAnimation
 _080555A8:
 	.4byte gUnknown_0865F610
 _080555AC:
@@ -30941,7 +30941,7 @@ _08058DAC:
 	mov r10, r3
 _08058DB4:
 	ldr r6, _08058F98  @ =REG_DMA3SAD
-	ldr r0, _08058F9C  @ =gUnknown_08657324
+	ldr r0, _08058F9C  @ =gfxDKBossChainOAM
 	str r0, [r6]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -30952,7 +30952,7 @@ _08058DB4:
 	ldr r2, _08058FA4  @ =0x84000002
 	str r2, [r6, #8]
 	ldr r0, [r6, #8]
-	ldr r3, _08058FA8  @ =gUnknown_086573AC
+	ldr r3, _08058FA8  @ =gfxDKBossChain2
 	str r3, [r6]
 	ldrh r0, [r4]
 	ldr r1, _08058FAC  @ =OBJ_VRAM0
@@ -31016,7 +31016,7 @@ _08058DB4:
 	ldrh r0, [r4]
 	add r0, r0, #128
 	strh r0, [r4]
-	ldr r0, _08058F9C  @ =gUnknown_08657324
+	ldr r0, _08058F9C  @ =gfxDKBossChainOAM
 	str r0, [r6]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -31025,7 +31025,7 @@ _08058DB4:
 	ldr r1, _08058FA4  @ =0x84000002
 	str r1, [r6, #8]
 	ldr r0, [r6, #8]
-	ldr r2, _08058FD0  @ =gUnknown_0865732C
+	ldr r2, _08058FD0  @ =gfxDKBossChain1
 	str r2, [r6]
 	ldrh r0, [r4]
 	ldr r3, _08058FAC  @ =OBJ_VRAM0
@@ -31088,7 +31088,7 @@ _08058DB4:
 	ldrh r0, [r4]
 	add r0, r0, #128
 	strh r0, [r4]
-	ldr r0, _08058F9C  @ =gUnknown_08657324
+	ldr r0, _08058F9C  @ =gfxDKBossChainOAM
 	str r0, [r6]
 	ldrh r0, [r7]
 	lsl r0, r0, #3
@@ -31097,7 +31097,7 @@ _08058DB4:
 	ldr r1, _08058FA4  @ =0x84000002
 	str r1, [r6, #8]
 	ldr r0, [r6, #8]
-	ldr r2, _08058FD0  @ =gUnknown_0865732C
+	ldr r2, _08058FD0  @ =gfxDKBossChain1
 	str r2, [r6]
 	ldrh r0, [r4]
 	ldr r3, _08058FAC  @ =OBJ_VRAM0
@@ -31186,13 +31186,13 @@ _08058F94:
 _08058F98:
 	.4byte REG_DMA3SAD
 _08058F9C:
-	.4byte gUnknown_08657324
+	.4byte gfxDKBossChainOAM
 _08058FA0:
 	.4byte gOamBuffer
 _08058FA4:
 	.4byte 0x84000002
 _08058FA8:
-	.4byte gUnknown_086573AC
+	.4byte gfxDKBossChain2
 _08058FAC:
 	.4byte OBJ_VRAM0
 _08058FB0:
@@ -31212,7 +31212,7 @@ _08058FC8:
 _08058FCC:
 	.4byte gCameraVerticalOffset
 _08058FD0:
-	.4byte gUnknown_0865732C
+	.4byte gfxDKBossChain1
 _08058FD4:
 	.4byte 0x030003C8
 _08058FD8:

@@ -1051,17 +1051,17 @@ gUnknown_080F96E0:
 gUnknown_080F96E8:
 	.INCBIN "assets/sprites/mini_mario/gUnknown_080F96E8.8bpp"
 
-	.GLOBAL gUnknown_080FA4E8
-gUnknown_080FA4E8:
+	.GLOBAL gfxMiniMarioPickUpParticleAnimation
+gfxMiniMarioPickUpParticleAnimation:
 	.INCBIN "baserom.gba", 0xFA4E8, 0xFA824-0xFA4E8
 
-	.GLOBAL gUnknown_080FA824
-gUnknown_080FA824:
+	.GLOBAL gfxMiniMarioPickUpParticleOAM
+gfxMiniMarioPickUpParticleOAM:
 	OamData bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=0
 
-	.GLOBAL gUnknown_080FA82C
-gUnknown_080FA82C:
-	.INCBIN "assets/sprites/gUnknown_080FA82C.8bpp"
+	.GLOBAL gfxMiniMarioPickUpParticle
+gfxMiniMarioPickUpParticle:
+	.INCBIN "assets/sprites/MiniMarioPickUpParticle.8bpp"
 
 	.GLOBAL gUnknown_080FDC2C
 gUnknown_080FDC2C:
@@ -1963,17 +1963,17 @@ gUnknown_08129110:
 gUnknown_08129118:
 	.INCBIN "assets/sprites/boo/gUnknown_08129118.4bpp"
 
-	.GLOBAL gUnknown_08129518
-gUnknown_08129518:
+	.GLOBAL gfxLevelStartPresentAnimation
+gfxLevelStartPresentAnimation:
 	.INCBIN "baserom.gba", 0x129518, 0x12953C-0x129518
 
-	.GLOBAL gUnknown_0812953C
-gUnknown_0812953C:
+	.GLOBAL gfxLevelStartPresentOAM
+gfxLevelStartPresentOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=6
 
-	.GLOBAL gUnknown_08129544
-gUnknown_08129544:
-	.INCBIN "assets/sprites/gUnknown_08129544.4bpp"
+	.GLOBAL gfxLevelStartPresent
+gfxLevelStartPresent:
+	.INCBIN "assets/sprites/LevelStartPresent.4bpp"
 
 	.GLOBAL gUnknown_081295C4
 gUnknown_081295C4:
@@ -2419,17 +2419,17 @@ gUnknown_0812FD6C:
 gUnknown_0812FD74:
 	.INCBIN "assets/sprites/cannon/gUnknown_0812FD74.4bpp"
 
-	.GLOBAL gUnknown_0812FE74
-gUnknown_0812FE74:
+	.GLOBAL gfxEraseLevelEAnimation
+gfxEraseLevelEAnimation:
 	.INCBIN "baserom.gba", 0x12FE74, 0x12FEBC-0x12FE74
 
-	.GLOBAL gUnknown_0812FEBC
-gUnknown_0812FEBC:
+	.GLOBAL gfxEraseLevelEOAM
+gfxEraseLevelEOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=3, paletteNum=4
 
-	.GLOBAL gUnknown_0812FEC4
-gUnknown_0812FEC4:
-	.INCBIN "assets/sprites/gUnknown_0812FEC4.4bpp"
+	.GLOBAL gfxEraseLevelE
+gfxEraseLevelE:
+	.INCBIN "assets/sprites/EraseLevelE.4bpp"
 
 	.GLOBAL gUnknown_08130EC4
 gUnknown_08130EC4:
@@ -3699,57 +3699,57 @@ gUnknown_0828855C:
 gUnknown_08288634:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=3, paletteNum=10
 
-	.GLOBAL gUnknown_0828863C
-gUnknown_0828863C:
-	.INCBIN "assets/sprites/gUnknown_0828863C.4bpp"
+	.GLOBAL gfxMarioFarFallHit
+gfxMarioFarFallHit:
+	.INCBIN "assets/sprites/MarioFarFallHit.4bpp"
 
-	.GLOBAL gUnknown_0828B63C
-gUnknown_0828B63C:
+	.GLOBAL gfxMarioHitParticleAnimation
+gfxMarioHitParticleAnimation:
 	.INCBIN "baserom.gba", 0x28B63C, 0x28B75C-0x28B63C
 
-	.GLOBAL gUnknown_0828B75C
-gUnknown_0828B75C:
+	.GLOBAL gfxMarioHitParticleOAM
+gfxMarioHitParticleOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=10
 
-	.GLOBAL gUnknown_0828B764
-gUnknown_0828B764:
-	.INCBIN "assets/sprites/gUnknown_0828B764.4bpp"
+	.GLOBAL gfxMarioHitParticle
+gfxMarioHitParticle:
+	.INCBIN "assets/sprites/MarioHitParticle.4bpp"
 
-	.GLOBAL gUnknown_0828C764
-gUnknown_0828C764:
+	.GLOBAL gfxMarioSideFlipSparksAnimation
+gfxMarioSideFlipSparksAnimation:
 	.INCBIN "baserom.gba", 0x28C764, 0x28C83C-0x28C764
 
-	.GLOBAL gUnknown_0828C83C
-gUnknown_0828C83C:
+	.GLOBAL gfxMarioSideFlipSparksOAM
+gfxMarioSideFlipSparksOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=2
 
-	.GLOBAL gUnknown_0828C844
-gUnknown_0828C844:
-	.INCBIN "assets/sprites/gUnknown_0828C844.4bpp"
+	.GLOBAL gfxMarioSideFlipSparks
+gfxMarioSideFlipSparks:
+	.INCBIN "assets/sprites/MarioSideFlipSparks.4bpp"
 
-	.GLOBAL gUnknown_0828CE44
-gUnknown_0828CE44:
+	.GLOBAL gfxMarioTurnWalkDustAnimation
+gfxMarioTurnWalkDustAnimation:
 	.INCBIN "baserom.gba", 0x28CE44, 0x28D084-0x28CE44
 
-	.GLOBAL gUnknown_0828D084
-gUnknown_0828D084:
+	.GLOBAL gfxMarioTurnWalkDustOAM
+gfxMarioTurnWalkDustOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=2
 
-	.GLOBAL gUnknown_0828D08C
-gUnknown_0828D08C:
-	.INCBIN "assets/sprites/gUnknown_0828D08C.4bpp"
+	.GLOBAL gfxMarioTurnWalkDust
+gfxMarioTurnWalkDust:
+	.INCBIN "assets/sprites/MarioTurnWalkDust.4bpp"
 
-	.GLOBAL gUnknown_0828D28C
-gUnknown_0828D28C:
+	.GLOBAL gfxMarioDKHitParticleAnimation
+gfxMarioDKHitParticleAnimation:
 	.INCBIN "baserom.gba", 0x28D28C, 0x28D31C-0x28D28C
 
-	.GLOBAL gUnknown_0828D31C
-gUnknown_0828D31C:
+	.GLOBAL gfxMarioDKHitParticleOAM
+gfxMarioDKHitParticleOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=10
 
-	.GLOBAL gUnknown_0828D324
-gUnknown_0828D324:
-	.INCBIN "assets/sprites/gUnknown_0828D324.4bpp"
+	.GLOBAL gfxMarioDKHitParticle
+gfxMarioDKHitParticle:
+	.INCBIN "assets/sprites/MarioDKHitParticle.4bpp"
 
 	.GLOBAL gUnknown_0828DB24
 gUnknown_0828DB24:
@@ -3835,33 +3835,33 @@ gUnknown_082907B4:
 gUnknown_082907BC:
 	.INCBIN "assets/sprites/points/gUnknown_082907BC.4bpp"
 
-	.GLOBAL gUnknown_0829083C
-gUnknown_0829083C:
+	.GLOBAL gfxMarioHitLandDustAnimation
+gfxMarioHitLandDustAnimation:
 	.INCBIN "baserom.gba", 0x29083C, 0x290B9C-0x29083C
 
-	.GLOBAL gUnknown_08290B9C
-gUnknown_08290B9C:
+	.GLOBAL gfxMarioHitLandDustOAM
+gfxMarioHitLandDustOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=2
 
-	.GLOBAL gUnknown_08290BA4
-gUnknown_08290BA4:
-	.INCBIN "assets/sprites/gUnknown_08290BA4.4bpp"
+	.GLOBAL gfxMarioHitLandDust
+gfxMarioHitLandDust:
+	.INCBIN "assets/sprites/MarioHitLandDust.4bpp"
 
-	.GLOBAL gUnknown_082923A4
-gUnknown_082923A4:
+	.GLOBAL gfxMarioSoftLandingDustAnimation
+gfxMarioSoftLandingDustAnimation:
 	.INCBIN "baserom.gba", 0x2923A4, 0x2925E4-0x2923A4
 
-	.GLOBAL gUnknown_082925E4
-gUnknown_082925E4:
+	.GLOBAL gfxMarioSoftLandingDustOAM
+gfxMarioSoftLandingDustOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=2
 
-	.GLOBAL gUnknown_082925EC
-gUnknown_082925EC:
-	.INCBIN "assets/sprites/gUnknown_082925EC.4bpp"
+	.GLOBAL gfxMarioSoftLandingDust
+gfxMarioSoftLandingDust:
+	.INCBIN "assets/sprites/MarioSoftLandingDust.4bpp"
 
 	.GLOBAL gUnknown_082935EC
 gUnknown_082935EC:
-	.INCBIN "baserom.gba", 0x2935EC, 0x29382C-0x2935EC
+	.INCBIN "baserom.gba", 0x2935EC, 0x29382C-0x2935EC	
 
 	.GLOBAL gUnknown_0829382C
 gUnknown_0829382C:
@@ -3883,17 +3883,17 @@ gUnknown_08293F94:
 gUnknown_08293F9C:
 	.INCBIN "assets/sprites/gUnknown_08293F9C.4bpp"
 
-	.GLOBAL gUnknown_0829429C
-gUnknown_0829429C:
+	.GLOBAL gfxColorSwitchSplashAnimation
+gfxColorSwitchSplashAnimation:
 	.INCBIN "baserom.gba", 0x29429C, 0x2944DC-0x29429C
 
-	.GLOBAL gUnknown_082944DC
-gUnknown_082944DC:
+	.GLOBAL gfxColorSwitchSplashOAM
+gfxColorSwitchSplashOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=8
 
-	.GLOBAL gUnknown_082944E4
-gUnknown_082944E4:
-	.INCBIN "assets/sprites/gUnknown_082944E4.4bpp"
+	.GLOBAL gfxColorSwitchSplash
+gfxColorSwitchSplash:
+	.INCBIN "assets/sprites/ColorSwitchSplash.4bpp"
 
 	.GLOBAL gUnknown_082954E4
 gUnknown_082954E4:
@@ -12559,17 +12559,17 @@ gUnknown_0862B4A0:
 gUnknown_0862B4A8:
 	.INCBIN "assets/sprites/shyguy/gUnknown_0862B4A8.4bpp"
 
-	.GLOBAL gUnknown_0862BAA8
-gUnknown_0862BAA8:
+	.GLOBAL gfxSparkyAnimation
+gfxSparkyAnimation:
 	.INCBIN "baserom.gba", 0x62BAA8, 0x62BBC8-0x62BAA8
 
-	.GLOBAL gUnknown_0862BBC8
-gUnknown_0862BBC8:
+	.GLOBAL gfxSparkyOAM
+gfxSparkyOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=2, paletteNum=3
 
-	.GLOBAL gUnknown_0862BBD0
-gUnknown_0862BBD0:
-	.INCBIN "assets/sprites/gUnknown_0862BBD0.4bpp"
+	.GLOBAL gfxSparky
+gfxSparky:
+	.INCBIN "assets/sprites/sparky.4bpp"
 
 	.GLOBAL gUnknown_0862CBD0
 gUnknown_0862CBD0:
@@ -12979,21 +12979,23 @@ gUnknown_086570D4:
 gUnknown_086570DC:
 	.INCBIN "assets/sprites/toy_chest/gUnknown_086570DC.4bpp"
 
-	.GLOBAL gUnknown_086572DC
-gUnknown_086572DC:
+@ Split weirdly by code
+	.GLOBAL gfxDKBossChainAnimation
+gfxDKBossChainAnimation:
 	.INCBIN "baserom.gba", 0x6572DC, 0x657324-0x6572DC
 
-	.GLOBAL gUnknown_08657324
-gUnknown_08657324:
+	.GLOBAL gfxDKBossChainOAM
+gfxDKBossChainOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, size=1, paletteNum=2
 
-	.GLOBAL gUnknown_0865732C
-gUnknown_0865732C:
-	.INCBIN "assets/sprites/gUnknown_0865732C.4bpp"
+	.GLOBAL gfxDKBossChain1
+gfxDKBossChain1:
+	.INCBIN "assets/sprites/DKBossChain/DKBossChain1.4bpp"
 
-	.GLOBAL gUnknown_086573AC
-gUnknown_086573AC:
-	.INCBIN "baserom.gba", 0x6573AC, 0x65742C-0x6573AC
+	.GLOBAL gfxDKBossChain2
+gfxDKBossChain2:
+	.INCBIN "assets/sprites/DKBossChain/DKBossChain2.4bpp"
+
 
 	.GLOBAL gUnknown_0865742C
 gUnknown_0865742C:
@@ -13031,17 +13033,17 @@ gUnknown_086575A8:
 gUnknown_086575B0:
 	.INCBIN "assets/sprites/unused/gUnknown_086575B0.4bpp"
 
-	.GLOBAL gUnknown_08657630
-gUnknown_08657630:
+	.GLOBAL gfxLavaGeyserAnimation
+gfxLavaGeyserAnimation:
 	.INCBIN "baserom.gba", 0x657630, 0x6576C0-0x657630
 
-	.GLOBAL gUnknown_086576C0
-gUnknown_086576C0:
+	.GLOBAL gfxLavaGeyserOAM
+gfxLavaGeyserOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=7
 
-	.GLOBAL gUnknown_086576C8
-gUnknown_086576C8:
-	.INCBIN "assets/sprites/gUnknown_086576C8.4bpp"
+	.GLOBAL gfxLavaGeyser
+gfxLavaGeyser:
+	.INCBIN "assets/sprites/LavaGeyser.4bpp"
 
 	.GLOBAL gUnknown_08657AC8
 gUnknown_08657AC8:
@@ -13055,17 +13057,17 @@ gUnknown_08657AEC:
 gUnknown_08657AF4:
 	.INCBIN "assets/sprites/moving_platform/gUnknown_08657AF4.4bpp"
 
-	.GLOBAL gUnknown_08657B74
-gUnknown_08657B74:
+	.GLOBAL gfxThwompPlatformAnimation
+gfxThwompPlatformAnimation:
 	.INCBIN "baserom.gba", 0x657B74, 0x657B98-0x657B74
 
-	.GLOBAL gUnknown_08657B98
-gUnknown_08657B98:
+	.GLOBAL gfxThwompPlatformOAM
+gfxThwompPlatformOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=7
 
-	.GLOBAL gUnknown_08657BA0
-gUnknown_08657BA0:
-	.INCBIN "assets/sprites/gUnknown_08657BA0.4bpp"
+	.GLOBAL gfxThwompPlatform
+gfxThwompPlatform:
+	.INCBIN "assets/sprites/ThwompPlatform.4bpp"
 
 	.GLOBAL gUnknown_08657C20
 gUnknown_08657C20:
@@ -13602,9 +13604,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0100 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_080FA4E8 @ Animation Data
-	.4byte gUnknown_080FA824 @ OAM
-	.4byte gUnknown_080FA82C @ Sprite Graphics
+	.4byte gfxMiniMarioPickUpParticleAnimation @ Animation Data
+	.4byte gfxMiniMarioPickUpParticleOAM @ OAM
+	.4byte gfxMiniMarioPickUpParticle @ Sprite Graphics
 
 	.2byte 0x0007 @ X Position
 	.2byte 0x0080 @ Y position
@@ -14362,9 +14364,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08129518 @ Animation Data
-	.4byte gUnknown_0812953C @ OAM
-	.4byte gUnknown_08129544 @ Sprite Graphics
+	.4byte gfxLevelStartPresentAnimation @ Animation Data
+	.4byte gfxLevelStartPresentOAM @ OAM
+	.4byte gfxLevelStartPresent @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0100 @ Y position
@@ -14742,9 +14744,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0200 @ Total tiles
 	.2byte 0x4040 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0812FE74 @ Animation Data
-	.4byte gUnknown_0812FEBC @ OAM
-	.4byte gUnknown_0812FEC4 @ Sprite Graphics
+	.4byte gfxEraseLevelEAnimation @ Animation Data
+	.4byte gfxEraseLevelEOAM @ OAM
+	.4byte gfxEraseLevelE @ Sprite Graphics
 
 	.2byte 0x0007 @ X Position
 	.2byte 0x0080 @ Y position
@@ -15804,7 +15806,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_0828855C @ Animation Data
 	.4byte gUnknown_08288634 @ OAM
-	.4byte gUnknown_0828863C @ Sprite Graphics
+	.4byte gfxMarioFarFallHit @ Sprite Graphics
 
 	.2byte 0x0008 @ X Position
 	.2byte 0x0200 @ Y position
@@ -15812,9 +15814,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828B63C @ Animation Data
-	.4byte gUnknown_0828B75C @ OAM
-	.4byte gUnknown_0828B764 @ Sprite Graphics
+	.4byte gfxMarioHitParticleAnimation @ Animation Data
+	.4byte gfxMarioHitParticleOAM @ OAM
+	.4byte gfxMarioHitParticle @ Sprite Graphics
 
 	.2byte 0x0006 @ X Position
 	.2byte 0x0100 @ Y position
@@ -15822,9 +15824,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828C764 @ Animation Data
-	.4byte gUnknown_0828C83C @ OAM
-	.4byte gUnknown_0828C844 @ Sprite Graphics
+	.4byte gfxMarioSideFlipSparksAnimation @ Animation Data
+	.4byte gfxMarioSideFlipSparksOAM @ OAM
+	.4byte gfxMarioSideFlipSparks @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0020 @ Y position
@@ -15832,9 +15834,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0008 @ Total tiles
 	.2byte 0x0808 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828CE44 @ Animation Data
-	.4byte gUnknown_0828D084 @ OAM
-	.4byte gUnknown_0828D08C @ Sprite Graphics
+	.4byte gfxMarioTurnWalkDustAnimation @ Animation Data
+	.4byte gfxMarioTurnWalkDustOAM @ OAM
+	.4byte gfxMarioTurnWalkDust @ Sprite Graphics
 
 	.2byte 0x0004 @ X Position
 	.2byte 0x0200 @ Y position
@@ -15842,9 +15844,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0828D28C @ Animation Data
-	.4byte gUnknown_0828D31C @ OAM
-	.4byte gUnknown_0828D324 @ Sprite Graphics
+	.4byte gfxMarioDKHitParticleAnimation @ Animation Data
+	.4byte gfxMarioDKHitParticleOAM @ OAM
+	.4byte gfxMarioDKHitParticle @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0080 @ Y position
@@ -15922,9 +15924,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829083C @ Animation Data
-	.4byte gUnknown_08290B9C @ OAM
-	.4byte gUnknown_08290BA4 @ Sprite Graphics
+	.4byte gfxMarioHitLandDustAnimation @ Animation Data
+	.4byte gfxMarioHitLandDustOAM @ OAM
+	.4byte gfxMarioHitLandDust @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0100 @ Y position
@@ -15932,9 +15934,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082923A4 @ Animation Data
-	.4byte gUnknown_082925E4 @ OAM
-	.4byte gUnknown_082925EC @ Sprite Graphics
+	.4byte gfxMarioSoftLandingDustAnimation @ Animation Data
+	.4byte gfxMarioSoftLandingDustOAM @ OAM
+	.4byte gfxMarioSoftLandingDust @ Sprite Graphics
 
 	.2byte 0x0010 @ X Position
 	.2byte 0x0040 @ Y position
@@ -15962,9 +15964,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829429C @ Animation Data
-	.4byte gUnknown_082944DC @ OAM
-	.4byte gUnknown_082944E4 @ Sprite Graphics
+	.4byte gfxColorSwitchSplashAnimation @ Animation Data
+	.4byte gfxColorSwitchSplashOAM @ OAM
+	.4byte gfxColorSwitchSplash @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0020 @ Y position
@@ -23182,9 +23184,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0080 @ Total tiles
 	.2byte 0x2020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_0862BAA8 @ Animation Data
-	.4byte gUnknown_0862BBC8 @ OAM
-	.4byte gUnknown_0862BBD0 @ Sprite Graphics
+	.4byte gfxSparkyAnimation @ Animation Data
+	.4byte gfxSparkyOAM @ OAM
+	.4byte gfxSparky @ Sprite Graphics
 
 	.2byte 0x0008 @ X Position
 	.2byte 0x0080 @ Y position
@@ -23532,9 +23534,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x2008 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_086572DC @ Animation Data
-	.4byte gUnknown_08657324 @ OAM
-	.4byte gUnknown_0865732C @ Sprite Graphics
+	.4byte gfxDKBossChainAnimation @ Animation Data
+	.4byte gfxDKBossChainOAM @ OAM
+	.4byte gfxDKBossChain1 @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0080 @ Y position
@@ -23572,9 +23574,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0040 @ Total tiles
 	.2byte 0x1020 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08657630 @ Animation Data
-	.4byte gUnknown_086576C0 @ OAM
-	.4byte gUnknown_086576C8 @ Sprite Graphics
+	.4byte gfxLavaGeyserAnimation @ Animation Data
+	.4byte gfxLavaGeyserOAM @ OAM
+	.4byte gfxLavaGeyser @ Sprite Graphics
 
 	.2byte 0x0001 @ X Position
 	.2byte 0x0080 @ Y position
@@ -23592,9 +23594,9 @@ gUncompressedGraphicsTable:
 	.2byte 0x0020 @ Total tiles
 	.2byte 0x1010 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_08657B74 @ Animation Data
-	.4byte gUnknown_08657B98 @ OAM
-	.4byte gUnknown_08657BA0 @ Sprite Graphics
+	.4byte gfxThwompPlatformAnimation @ Animation Data
+	.4byte gfxThwompPlatformOAM @ OAM
+	.4byte gfxThwompPlatform @ Sprite Graphics
 
 	.2byte 0x0005 @ X Position
 	.2byte 0x0080 @ Y position
