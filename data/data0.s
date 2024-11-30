@@ -3,24 +3,6 @@
 
 	.SECTION .data
 
-	.GLOBAL gUnknown_080788B0
-gUnknown_080788B0:
-	.4byte 0x01000000
-	.4byte 0x02000000
-	.4byte 0x04000000
-	.4byte 0x08000000
-	.4byte 0x00100000
-	.4byte 0x00200000
-
-	.GLOBAL gUnknown_080788C8
-gUnknown_080788C8:
-	.4byte 0x00400000
-	.4byte 0x00800000
-	.4byte 0x00010000
-	.4byte 0x00020000
-	.4byte 0x00040000
-	.4byte 0x00080000
-
 	.GLOBAL gUnknown_080788E0
 gUnknown_080788E0:
 	.2byte 0x0002

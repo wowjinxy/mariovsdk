@@ -15,7 +15,6 @@
 	X(src/rom_800F1E4.o) \
 	X(src/savefile.o) \
 	X(src/main_menu.o) \
-	X(data/data0.o) \
 	X(asm/rom_801488C.o) \
 	X(asm/level_select.o) \
 	X(asm/rom_801B310.o) \
@@ -28,6 +27,7 @@
 	X(asm/bonus_swapboxes.o) \
 	X(asm/options_menu.o) \
 	X(src/level_results.o) \
+	X(data/data0.o) \
 	X(data/rodata.o) \
 	X(src/fade_in_out.o) \
 	X(src/load.o) \

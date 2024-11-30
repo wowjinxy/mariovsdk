@@ -1355,6 +1355,13 @@ extern u32 *gEWorldLevelCountPtr;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gTitleMarioEyesAnimationData[];
 extern const u8 gTitleDKEyesAnimationData[];
+extern struct
+{
+    u32 unk0;
+    u32 unk4;
+    u32 unk8;
+    u32 unkC;
+} gUnknown_08079DA0;
 extern void *gUnknown_0807AA1C[];
 extern struct UnkStruct1_sub_child_data68 gUnknown_0807BA58;
 extern u8 gUnknown_0807BA68[];
@@ -1420,6 +1427,8 @@ extern struct GraphicsConfig gWorldThreePlusStartData;
 extern struct GraphicsConfig gWorldFourPlusStartData;
 extern struct GraphicsConfig gWorldFivePlusStartData;
 extern struct GraphicsConfig gWorldSixPlusStartData;
+
+extern struct GraphicsConfig gLevelResultsData;
 
 extern const struct iwRAMBase *gUnknown_0807CA98;
 

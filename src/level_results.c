@@ -18,18 +18,25 @@ extern s8 gUnknown_03000DDC;
 extern s8 gUnknown_03000DF4;
 extern s8 gUnknown_03000DF8;
 
-extern u32 gUnknown_080788B0[];
-extern u32 gUnknown_080788C8[];
-
-extern struct GraphicsConfig gLevelResultsData;
-
-extern struct
+u32 gUnknown_080788B0[] =
 {
-    u32 unk0;
-    u32 unk4;
-    u32 unk8;
-    u32 unkC;
-} gUnknown_08079DA0;
+    0x01000000,
+    0x02000000,
+    0x04000000,
+    0x08000000,
+    0x00100000,
+    0x00200000,
+};
+
+u32 gUnknown_080788C8[] =
+{
+    0x00400000,
+    0x00800000,
+    0x00010000,
+    0x00020000,
+    0x00040000,
+    0x00080000,
+};
 
 static void sub_08029A80(void);
 
@@ -76,7 +83,7 @@ void sub_0802919C(int arg0, int arg1)
             }
             else if (gLevelType == LEVEL_TYPE_EXPERT_1_6 || gLevelType == LEVEL_TYPE_EXPERT_7_12)
             {
-                
+
                 gUnknown_03000DD0 = gUnknown_03000DF8 = arg0;
                 gUnknown_0300010C = 6;
                 gUnknown_03000DF4 = arg0;
@@ -110,247 +117,247 @@ __attribute__((naked))
 void sub_0802919C(int arg0, int arg1)
 {
     asm("push {r4-r7,lr}\n\
-	add r4, r0, #0\n\
-	add r3, r1, #0\n\
-	ldr r6, _080291D8  @ =gUnknown_0300010E\n\
-	mov r2, #0\n\
-	strb r2, [r6]\n\
-	ldr r0, _080291DC  @ =gLevelEWorldFlag\n\
-	ldrb r0, [r0]\n\
-	lsl r0, r0, #24\n\
-	asr r0, r0, #24\n\
-	cmp r0, #0\n\
-	beq _080291F0\n\
-	ldr r1, _080291E0  @ =gUnknown_0300010C\n\
-	mov r0, #7\n\
-	strb r0, [r1]\n\
-	ldr r0, _080291E4  @ =gUnknown_03000DF8\n\
-	ldr r1, _080291E8  @ =gUnknown_0300010D\n\
-	strb r3, [r1]\n\
-	strb r3, [r0]\n\
-	ldr r0, _080291EC  @ =gUnknown_03000DD0\n\
-	strb r2, [r0]\n\
-	lsl r0, r3, #24\n\
-	cmp r0, #0\n\
-	bge _080291CE\n\
-	strb r2, [r1]\n\
+    add r4, r0, #0\n\
+    add r3, r1, #0\n\
+    ldr r6, _080291D8  @ =gUnknown_0300010E\n\
+    mov r2, #0\n\
+    strb r2, [r6]\n\
+    ldr r0, _080291DC  @ =gLevelEWorldFlag\n\
+    ldrb r0, [r0]\n\
+    lsl r0, r0, #24\n\
+    asr r0, r0, #24\n\
+    cmp r0, #0\n\
+    beq _080291F0\n\
+    ldr r1, _080291E0  @ =gUnknown_0300010C\n\
+    mov r0, #7\n\
+    strb r0, [r1]\n\
+    ldr r0, _080291E4  @ =gUnknown_03000DF8\n\
+    ldr r1, _080291E8  @ =gUnknown_0300010D\n\
+    strb r3, [r1]\n\
+    strb r3, [r0]\n\
+    ldr r0, _080291EC  @ =gUnknown_03000DD0\n\
+    strb r2, [r0]\n\
+    lsl r0, r3, #24\n\
+    cmp r0, #0\n\
+    bge _080291CE\n\
+    strb r2, [r1]\n\
 _080291CE:\n\
-	ldrb r0, [r1]\n\
-	add r0, r0, #9\n\
-	strb r0, [r1]\n\
-	b _08029346\n\
-	.byte 0x00\n\
-	.byte 0x00\n\
+    ldrb r0, [r1]\n\
+    add r0, r0, #9\n\
+    strb r0, [r1]\n\
+    b _08029346\n\
+    .byte 0x00\n\
+    .byte 0x00\n\
 _080291D8:\n\
-	.4byte gUnknown_0300010E\n\
+    .4byte gUnknown_0300010E\n\
 _080291DC:\n\
-	.4byte gLevelEWorldFlag\n\
+    .4byte gLevelEWorldFlag\n\
 _080291E0:\n\
-	.4byte gUnknown_0300010C\n\
+    .4byte gUnknown_0300010C\n\
 _080291E4:\n\
-	.4byte gUnknown_03000DF8\n\
+    .4byte gUnknown_03000DF8\n\
 _080291E8:\n\
-	.4byte gUnknown_0300010D\n\
+    .4byte gUnknown_0300010D\n\
 _080291EC:\n\
-	.4byte gUnknown_03000DD0\n\
+    .4byte gUnknown_03000DD0\n\
 _080291F0:\n\
-	ldr r1, _08029218  @ =gNextLevelInLevelTable\n\
-	ldr r5, [r1, #32]\n\
-	mov r0, #2\n\
-	and r5, r5, r0\n\
-	add r7, r1, #0\n\
-	cmp r5, #0\n\
-	beq _08029278\n\
-	ldr r0, _0802921C  @ =gUnknown_03000DD0\n\
-	strb r4, [r0]\n\
-	ldr r1, _08029220  @ =gLevelType\n\
-	mov r2, #0\n\
-	ldrsb r2, [r1, r2]\n\
-	add r3, r0, #0\n\
-	add r4, r1, #0\n\
-	cmp r2, #0\n\
-	bne _08029228\n\
-	ldr r1, _08029224  @ =gUnknown_03000DF8\n\
-	mov r0, #13\n\
-	b _0802922C\n\
-	.byte 0x00\n\
-	.byte 0x00\n\
+    ldr r1, _08029218  @ =gNextLevelInLevelTable\n\
+    ldr r5, [r1, #32]\n\
+    mov r0, #2\n\
+    and r5, r5, r0\n\
+    add r7, r1, #0\n\
+    cmp r5, #0\n\
+    beq _08029278\n\
+    ldr r0, _0802921C  @ =gUnknown_03000DD0\n\
+    strb r4, [r0]\n\
+    ldr r1, _08029220  @ =gLevelType\n\
+    mov r2, #0\n\
+    ldrsb r2, [r1, r2]\n\
+    add r3, r0, #0\n\
+    add r4, r1, #0\n\
+    cmp r2, #0\n\
+    bne _08029228\n\
+    ldr r1, _08029224  @ =gUnknown_03000DF8\n\
+    mov r0, #13\n\
+    b _0802922C\n\
+    .byte 0x00\n\
+    .byte 0x00\n\
 _08029218:\n\
-	.4byte gNextLevelInLevelTable\n\
+    .4byte gNextLevelInLevelTable\n\
 _0802921C:\n\
-	.4byte gUnknown_03000DD0\n\
+    .4byte gUnknown_03000DD0\n\
 _08029220:\n\
-	.4byte gLevelType\n\
+    .4byte gLevelType\n\
 _08029224:\n\
-	.4byte gUnknown_03000DF8\n\
+    .4byte gUnknown_03000DF8\n\
 _08029228:\n\
-	ldr r1, _08029258  @ =gUnknown_03000DF8\n\
-	mov r0, #6\n\
+    ldr r1, _08029258  @ =gUnknown_03000DF8\n\
+    mov r0, #6\n\
 _0802922C:\n\
-	strb r0, [r1]\n\
-	mov r0, #0\n\
-	ldrsb r0, [r3, r0]\n\
-	cmp r0, #5\n\
-	bne _0802923C\n\
-	ldr r1, _0802925C  @ =gUnknown_0300010F\n\
-	mov r0, #1\n\
-	strb r0, [r1]\n\
+    strb r0, [r1]\n\
+    mov r0, #0\n\
+    ldrsb r0, [r3, r0]\n\
+    cmp r0, #5\n\
+    bne _0802923C\n\
+    ldr r1, _0802925C  @ =gUnknown_0300010F\n\
+    mov r0, #1\n\
+    strb r0, [r1]\n\
 _0802923C:\n\
-	ldr r1, _08029260  @ =gUnknown_03000DF4\n\
-	mov r0, #7\n\
-	strb r0, [r1]\n\
-	ldr r1, _08029264  @ =gUnknown_0300010C\n\
-	ldrb r0, [r3]\n\
-	strb r0, [r1]\n\
-	mov r0, #0\n\
-	ldrsb r0, [r4, r0]\n\
-	cmp r0, #1\n\
-	bne _0802926C\n\
-	ldr r1, _08029268  @ =gUnknown_0300010D\n\
-	mov r0, #25\n\
-	strb r0, [r1]\n\
-	b _08029346\n\
+    ldr r1, _08029260  @ =gUnknown_03000DF4\n\
+    mov r0, #7\n\
+    strb r0, [r1]\n\
+    ldr r1, _08029264  @ =gUnknown_0300010C\n\
+    ldrb r0, [r3]\n\
+    strb r0, [r1]\n\
+    mov r0, #0\n\
+    ldrsb r0, [r4, r0]\n\
+    cmp r0, #1\n\
+    bne _0802926C\n\
+    ldr r1, _08029268  @ =gUnknown_0300010D\n\
+    mov r0, #25\n\
+    strb r0, [r1]\n\
+    b _08029346\n\
 _08029258:\n\
-	.4byte gUnknown_03000DF8\n\
+    .4byte gUnknown_03000DF8\n\
 _0802925C:\n\
-	.4byte gUnknown_0300010F\n\
+    .4byte gUnknown_0300010F\n\
 _08029260:\n\
-	.4byte gUnknown_03000DF4\n\
+    .4byte gUnknown_03000DF4\n\
 _08029264:\n\
-	.4byte gUnknown_0300010C\n\
+    .4byte gUnknown_0300010C\n\
 _08029268:\n\
-	.4byte gUnknown_0300010D\n\
+    .4byte gUnknown_0300010D\n\
 _0802926C:\n\
-	ldr r1, _08029274  @ =gUnknown_0300010D\n\
-	mov r0, #22\n\
-	strb r0, [r1]\n\
-	b _08029346\n\
+    ldr r1, _08029274  @ =gUnknown_0300010D\n\
+    mov r0, #22\n\
+    strb r0, [r1]\n\
+    b _08029346\n\
 _08029274:\n\
-	.4byte gUnknown_0300010D\n\
+    .4byte gUnknown_0300010D\n\
 _08029278:\n\
-	ldr r1, _0802929C  @ =gUnknown_03000DD0\n\
-	strb r4, [r1]\n\
-	ldr r0, _080292A0  @ =gLevelType\n\
-	ldrb r2, [r0]\n\
-	sub r0, r2, #4\n\
-	lsl r0, r0, #24\n\
-	lsr r0, r0, #24\n\
-	cmp r0, #1\n\
-	bhi _080292B0\n\
-	ldr r1, _080292A4  @ =gUnknown_0300010C\n\
-	mov r0, #8\n\
-	strb r0, [r1]\n\
-	ldr r1, _080292A8  @ =gUnknown_0300010D\n\
-	mov r0, #23\n\
-	strb r0, [r1]\n\
-	add r2, r1, #0\n\
-	ldr r1, _080292AC  @ =gUnknown_03000DF4\n\
-	b _08029332\n\
+    ldr r1, _0802929C  @ =gUnknown_03000DD0\n\
+    strb r4, [r1]\n\
+    ldr r0, _080292A0  @ =gLevelType\n\
+    ldrb r2, [r0]\n\
+    sub r0, r2, #4\n\
+    lsl r0, r0, #24\n\
+    lsr r0, r0, #24\n\
+    cmp r0, #1\n\
+    bhi _080292B0\n\
+    ldr r1, _080292A4  @ =gUnknown_0300010C\n\
+    mov r0, #8\n\
+    strb r0, [r1]\n\
+    ldr r1, _080292A8  @ =gUnknown_0300010D\n\
+    mov r0, #23\n\
+    strb r0, [r1]\n\
+    add r2, r1, #0\n\
+    ldr r1, _080292AC  @ =gUnknown_03000DF4\n\
+    b _08029332\n\
 _0802929C:\n\
-	.4byte gUnknown_03000DD0\n\
+    .4byte gUnknown_03000DD0\n\
 _080292A0:\n\
-	.4byte gLevelType\n\
+    .4byte gLevelType\n\
 _080292A4:\n\
-	.4byte gUnknown_0300010C\n\
+    .4byte gUnknown_0300010C\n\
 _080292A8:\n\
-	.4byte gUnknown_0300010D\n\
+    .4byte gUnknown_0300010D\n\
 _080292AC:\n\
-	.4byte gUnknown_03000DF4\n\
+    .4byte gUnknown_03000DF4\n\
 _080292B0:\n\
-	sub r0, r2, #2\n\
-	lsl r0, r0, #24\n\
-	lsr r0, r0, #24\n\
-	cmp r0, #1\n\
-	bhi _080292EC\n\
-	ldr r0, _080292DC  @ =gUnknown_03000DF8\n\
-	strb r4, [r0]\n\
-	strb r4, [r1]\n\
-	ldr r1, _080292E0  @ =gUnknown_0300010C\n\
-	mov r0, #6\n\
-	strb r0, [r1]\n\
-	ldr r1, _080292E4  @ =gUnknown_03000DF4\n\
-	strb r4, [r1]\n\
-	lsl r0, r2, #24\n\
-	asr r0, r0, #24\n\
-	ldr r2, _080292E8  @ =gUnknown_0300010D\n\
-	cmp r0, #3\n\
-	bne _08029332\n\
-	add r0, r4, #6\n\
-	strb r0, [r1]\n\
-	b _08029332\n\
-	.byte 0x00\n\
-	.byte 0x00\n\
+    sub r0, r2, #2\n\
+    lsl r0, r0, #24\n\
+    lsr r0, r0, #24\n\
+    cmp r0, #1\n\
+    bhi _080292EC\n\
+    ldr r0, _080292DC  @ =gUnknown_03000DF8\n\
+    strb r4, [r0]\n\
+    strb r4, [r1]\n\
+    ldr r1, _080292E0  @ =gUnknown_0300010C\n\
+    mov r0, #6\n\
+    strb r0, [r1]\n\
+    ldr r1, _080292E4  @ =gUnknown_03000DF4\n\
+    strb r4, [r1]\n\
+    lsl r0, r2, #24\n\
+    asr r0, r0, #24\n\
+    ldr r2, _080292E8  @ =gUnknown_0300010D\n\
+    cmp r0, #3\n\
+    bne _08029332\n\
+    add r0, r4, #6\n\
+    strb r0, [r1]\n\
+    b _08029332\n\
+    .byte 0x00\n\
+    .byte 0x00\n\
 _080292DC:\n\
-	.4byte gUnknown_03000DF8\n\
+    .4byte gUnknown_03000DF8\n\
 _080292E0:\n\
-	.4byte gUnknown_0300010C\n\
+    .4byte gUnknown_0300010C\n\
 _080292E4:\n\
-	.4byte gUnknown_03000DF4\n\
+    .4byte gUnknown_03000DF4\n\
 _080292E8:\n\
-	.4byte gUnknown_0300010D\n\
+    .4byte gUnknown_0300010D\n\
 _080292EC:\n\
-	lsl r0, r2, #24\n\
-	asr r0, r0, #24\n\
-	cmp r0, #1\n\
-	bne _08029314\n\
-	strb r0, [r6]\n\
-	ldr r0, _08029308  @ =gUnknown_03000DF8\n\
-	strb r3, [r0]\n\
-	strb r4, [r1]\n\
-	ldr r0, _0802930C  @ =gUnknown_0300010C\n\
-	strb r4, [r0]\n\
-	ldr r0, _08029310  @ =gUnknown_03000DF4\n\
-	strb r3, [r0]\n\
-	b _0802932E\n\
-	.byte 0x00\n\
-	.byte 0x00\n\
+    lsl r0, r2, #24\n\
+    asr r0, r0, #24\n\
+    cmp r0, #1\n\
+    bne _08029314\n\
+    strb r0, [r6]\n\
+    ldr r0, _08029308  @ =gUnknown_03000DF8\n\
+    strb r3, [r0]\n\
+    strb r4, [r1]\n\
+    ldr r0, _0802930C  @ =gUnknown_0300010C\n\
+    strb r4, [r0]\n\
+    ldr r0, _08029310  @ =gUnknown_03000DF4\n\
+    strb r3, [r0]\n\
+    b _0802932E\n\
+    .byte 0x00\n\
+    .byte 0x00\n\
 _08029308:\n\
-	.4byte gUnknown_03000DF8\n\
+    .4byte gUnknown_03000DF8\n\
 _0802930C:\n\
-	.4byte gUnknown_0300010C\n\
+    .4byte gUnknown_0300010C\n\
 _08029310:\n\
-	.4byte gUnknown_03000DF4\n\
+    .4byte gUnknown_03000DF4\n\
 _08029314:\n\
-	ldr r1, _0802934C  @ =gUnknown_03000DF8\n\
-	strb r3, [r1]\n\
-	lsl r0, r3, #24\n\
-	cmp r0, #0\n\
-	bge _08029320\n\
-	strb r5, [r1]\n\
+    ldr r1, _0802934C  @ =gUnknown_03000DF8\n\
+    strb r3, [r1]\n\
+    lsl r0, r3, #24\n\
+    cmp r0, #0\n\
+    bge _08029320\n\
+    strb r5, [r1]\n\
 _08029320:\n\
-	ldr r0, _08029350  @ =gUnknown_03000DF4\n\
-	ldrb r1, [r1]\n\
-	lsl r1, r1, #24\n\
-	asr r1, r1, #25\n\
-	strb r1, [r0]\n\
-	ldr r1, _08029354  @ =gUnknown_0300010C\n\
-	strb r4, [r1]\n\
+    ldr r0, _08029350  @ =gUnknown_03000DF4\n\
+    ldrb r1, [r1]\n\
+    lsl r1, r1, #24\n\
+    asr r1, r1, #25\n\
+    strb r1, [r0]\n\
+    ldr r1, _08029354  @ =gUnknown_0300010C\n\
+    strb r4, [r1]\n\
 _0802932E:\n\
-	ldr r2, _08029358  @ =gUnknown_0300010D\n\
-	add r1, r0, #0\n\
+    ldr r2, _08029358  @ =gUnknown_0300010D\n\
+    add r1, r0, #0\n\
 _08029332:\n\
-	ldrb r0, [r1]\n\
-	add r0, r0, #9\n\
-	strb r0, [r2]\n\
-	ldr r0, [r7, #32]\n\
-	mov r1, #1\n\
-	and r0, r0, r1\n\
-	cmp r0, #0\n\
-	beq _08029346\n\
-	mov r0, #21\n\
-	strb r0, [r2]\n\
+    ldrb r0, [r1]\n\
+    add r0, r0, #9\n\
+    strb r0, [r2]\n\
+    ldr r0, [r7, #32]\n\
+    mov r1, #1\n\
+    and r0, r0, r1\n\
+    cmp r0, #0\n\
+    beq _08029346\n\
+    mov r0, #21\n\
+    strb r0, [r2]\n\
 _08029346:\n\
-	pop {r4-r7}\n\
-	pop {r0}\n\
-	bx r0\n\
+    pop {r4-r7}\n\
+    pop {r0}\n\
+    bx r0\n\
 _0802934C:\n\
-	.4byte gUnknown_03000DF8\n\
+    .4byte gUnknown_03000DF8\n\
 _08029350:\n\
-	.4byte gUnknown_03000DF4\n\
+    .4byte gUnknown_03000DF4\n\
 _08029354:\n\
-	.4byte gUnknown_0300010C\n\
+    .4byte gUnknown_0300010C\n\
 _08029358:\n\
-	.4byte gUnknown_0300010D\n");
+    .4byte gUnknown_0300010D\n");
 }
 #endif
 
@@ -675,7 +682,7 @@ void level_results_loop(void)
 }
 
 void level_results_end(void) {
-	return;
+    return;
 }
 
 asm(".2byte 0x0000");
