@@ -12999,3 +12999,17 @@ _0801B30C:
 	.4byte REG_BLDCNT
 	THUMB_FUNC_END sub_0801B2CC
 
+	.SECTION .rodata
+
+	.BALIGN 4
+
+	.GLOBAL gUnknown_080763F4
+gUnknown_080763F4:
+	.byte 0x1
+	.byte 0x2
+	.byte 0x3
+	.byte 0x4
+	.byte 0x5
+	.byte 0x6
+	.byte 0x7
+	.byte 0x9

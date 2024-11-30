@@ -1134,7 +1134,7 @@ void sub_0802CF78(void)
         }
         if (r8 == 0 && gUnknown_03000170.unk20 != -1)
         {
-            sub_08071D9C();
+            sub_08071D9C(gUnknown_03000170.unk20);
             gUnknown_03000170.unk20 = -1;
         }
     }
