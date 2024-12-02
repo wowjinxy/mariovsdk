@@ -16,6 +16,15 @@
 
 #define ARRAY_COUNT(arr) (sizeof(arr)/sizeof((arr)[0]))
 
+//#if __STDC_VERSION__ >= 201112L
+#if 0
+// The C11 way
+#define static_assert(cond, msg) _Static_assert(cond, #msg)
+#else
+// The old, hacky way
+#define static_assert(cond, msg) typedef char static_assertion_##msg[(cond)?1:-1]
+#endif
+
 //------------------------------------------------------------------------------
 // Types
 //------------------------------------------------------------------------------
@@ -783,9 +792,10 @@ struct UnknownStruct11
 
 struct UnknownStruct12
 {
-    u32 unk0_0:5;
+    u8 unk0_0:3;
+    u8 unk0_3:2;
     //u32 unk0_3:2;
-    u32 unk0_5:1;
+    u8 unk0_5:1;
 };
 
 enum LevelType
@@ -1009,7 +1019,7 @@ struct Struct802C31C
 
 struct Struct08078210_sub
 {
-    u8 filler0[2];
+    u16 unk0;
     u16 unk2;
     u8 unk4;
 };
@@ -1111,6 +1121,15 @@ extern u8 gUnknown_030000AC;
 extern s32 gUnknown_030000B0;
 extern s8 gUnknown_030000B4;
 extern s16 gUnknown_030000B6;
+extern u8 *gUnknown_030000E8;
+extern struct StructF4
+{
+    u8 filler0[0x17];
+    u8 unk17;
+    u8 filler18[0x28-0x18];
+    u16 unk28;
+} *gUnknown_030000F4;
+extern u16 gPreviousMovieOption;
 
 extern s16 gUnknown_0300015A;
 extern u32 gUnknown_0300015C;
@@ -1197,7 +1216,9 @@ extern u8 gUnknown_03000BF8;
 extern s8 gUnknown_03000BFC;
 extern s8 gUnknown_03000C00;
 extern u16 gUnknown_03000C04;
+extern void (*gUnknown_03000C08)(/*5 args*/);
 extern u16 gUnknown_03000C0C;
+extern void (*gUnknown_03000C10)(void);
 extern u8 gUnknown_03000C1C;
 extern u8 gDKLevelMarioLivesLeft_03000C20;
 extern u8 gIsFadeInProgress;
@@ -1357,10 +1378,10 @@ extern const u8 gTitleMarioEyesAnimData[];
 extern const u8 gTitleDKEyesAnimData[];
 extern struct
 {
-    u32 unk0;
-    u32 unk4;
-    u32 unk8;
-    u32 unkC;
+    void *unk0;
+    void *unk4;
+    void *unk8;
+    void *unkC;
 } gUnknown_08079DA0;
 extern void *gUnknown_0807AA1C[];
 extern struct UnkStruct1_sub_child_data68 gUnknown_0807BA58;
@@ -1411,6 +1432,7 @@ extern struct StructD78 *gUnknown_0807C834;
 extern u8 gUnknown_0807C838[];
 
 extern struct GraphicsConfig gMainMenuData;
+extern struct GraphicsConfig gOptionsMenuBGConfig;
 
 extern struct Struct0807C0E0 gUnknown_0807C0D8;
 extern u8 gExpertLevelsStarsNeeded;
@@ -1431,6 +1453,29 @@ extern struct GraphicsConfig gWorldSixPlusStartData;
 extern struct GraphicsConfig gLevelResultsData;
 
 extern const struct iwRAMBase *gUnknown_0807CA98;
+
+extern u16 gUnknown_08B3A4DC;
+extern u16 gUnknown_08D7B10C;
+
+extern struct
+{
+    /*0x00*/ u32 sampleSize;
+    /*0x04*/ void *samplePtr;
+    /*0x08*/ u32 sampleRate;
+    /*0x0C*/ char *sampleName;
+    /*0x10*/ u16 unk10;
+    /*0x12*/ u8 filler12[1];
+             u8 unk13;
+             u8 filler14[4];
+    /*0x18*/ u32 unk18;
+} gUnknown_08B3A4E0[];
+
+extern struct
+{
+    u8 filler0[0x9];
+    u8 unk9;
+    u8 fillerA[0xC-0xA];
+} gMusicTable1[];
 
 extern struct UnknownStruct16 gEWorldMenuData2;
 extern s32 gUnknown_03000288;
@@ -1470,8 +1515,9 @@ void sub_08004634();
 void sub_08006388(void);
 void sub_080064D4();
 void sub_08006548();
+void sub_080065B4();
 int sub_080066FC(u32 *, int, int, int);
-struct UnknownStruct15 *sub_08006968();
+struct UnknownStruct15 *sub_08006968(struct GraphicsConfig *);
 void sub_08006D44(void);
 void sub_080063E4(struct Struct802C31C *, int, void *);
 
@@ -1491,6 +1537,7 @@ void level_editor_end(void);
 void sub_080091A8(void *, void *);
 void sub_0800EE70(void);
 void title_demo_setup(u32 titleDemoID);
+int sub_08014950();
 void sub_08014A58();
 void sub_08014B78(int, s8 *, u8 *, s8 *);
 void sub_08014D08(void);
@@ -1525,6 +1572,16 @@ void bonus_stoparrow_init_callback(void);
 void bonus_stoparrow_main(void);
 void bonus_stoparrow_loop(void);
 void bonus_stoparrow_end(void);
+void sub_0802200C(/*5 args*/);
+void sub_08022340(/*5 args*/);
+void sub_08022890(/*5 args*/);
+void sub_0802363C(/*5 args*/);
+void sub_08023C08(/*5 args*/);
+void sub_080240D0(/*5 args*/);
+void sub_08024404(/*5 args*/);
+void sub_08024A04(/*5 args*/);
+void sub_08024E5C(/*5 args*/);
+void sub_080251A0(/*5 args*/);
 void bonus_swapboxes_init_callback(void);
 void bonus_swapboxes_main(void);
 void bonus_swapboxes_loop(void);
@@ -1539,7 +1596,7 @@ void level_results_init_callback(void);
 void level_results_main(void);
 void level_results_loop(void);
 void level_results_end(void);
-u8 update_fade_from_black(void);
+int update_fade_from_black(void);
 void save_blend_regs();
 void fade_transition_init_callback(void);
 void fade_transition_end(void);
@@ -1603,7 +1660,7 @@ void e_world_debug_loop(void);
 void e_world_debug_init_callback(void);
 void e_world_debug_end(void);
 int sub_0802F5C0();
-void sub_0802F648(void *, int);
+void sub_0802F648(void *, void *);
 int sub_0802F7B8(void *, int);
 void sub_0802F890(u32 *, u16 *, u16 *, u16 *);
 void sub_0802FC24(int, int);

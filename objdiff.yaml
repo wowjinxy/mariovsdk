@@ -15,6 +15,7 @@ units:
 - path: main.o
 - path: main_menu.o
 - path: movie_player.o
+- path: options_menu.o
 - path: pause_menu.o
 - path: rom1.o
 - path: rom_80066FC.o
