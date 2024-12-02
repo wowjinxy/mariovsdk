@@ -9,7 +9,7 @@ static s16 sSavedBLDCNT;
 static s16 sSavedBLDALPHA;
 static s16 sSavedBLDY;  // set but not used
 
-u8 update_fade_from_black(void) {
+int update_fade_from_black(void) {
 
   if (gIsFadeInProgress) {
     if (sInitialFadeDelay != 0) {

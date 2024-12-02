@@ -1181,8 +1181,8 @@ gTitleMarioDKEyes:
 gUnusedOptionsMenuData:
 	.INCBIN "assets/unused/EarlyOptionsMenu.bin"
 	
-	.GLOBAL gOptionsMenuData
-gOptionsMenuData:
+	.GLOBAL gOptionsMenuBGConfig
+gOptionsMenuBGConfig:
 	.INCBIN "assets/menu/OptionsMenuData.bin"
 
 	.GLOBAL gUnusedToadDKCutscene
