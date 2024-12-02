@@ -421,12 +421,12 @@ gUnknown_0807954C:
 	.2byte 0x0001 @ title screen plays intro cutscene
 	.2byte 0x0000
 
-	.GLOBAL gTitleMarioEyesAnimationData
-gTitleMarioEyesAnimationData:
+	.GLOBAL gTitleMarioEyesAnimData
+gTitleMarioEyesAnimData:
 	.INCBIN "baserom.gba", 0x7956C, 0x79698-0x7956C
 
-	.GLOBAL gTitleDKEyesAnimationData
-gTitleDKEyesAnimationData:
+	.GLOBAL gTitleDKEyesAnimData
+gTitleDKEyesAnimData:
 	.INCBIN "baserom.gba", 0x79698, 0x7976C-0x79698
 
 	.GLOBAL gUnknown_0807976C

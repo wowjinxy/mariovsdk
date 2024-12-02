@@ -9440,7 +9440,7 @@ _0803CBE6:
 	ldr r0, _0803CC00  @ =0x03001A44
 	strb r1, [r0]
 	ldr r1, _0803CC04  @ =0x03001928
-	ldr r0, _0803CC08  @ =gfxLavaGeyserAnimation
+	ldr r0, _0803CC08  @ =gfxLavaGeyserAnim
 	ldrb r0, [r0, #1]
 	strb r0, [r1]
 	b _0803CD2C
@@ -9453,7 +9453,7 @@ _0803CC00:
 _0803CC04:
 	.4byte 0x03001928
 _0803CC08:
-	.4byte gfxLavaGeyserAnimation
+	.4byte gfxLavaGeyserAnim
 _0803CC0C:
 	ldr r0, _0803CC1C  @ =gUnknown_03000D84
 	ldrb r0, [r0]
@@ -9472,7 +9472,7 @@ _0803CC20:
 	lsl r0, r1, #3
 	add r0, r0, r1
 	lsl r0, r0, #2
-	ldr r4, _0803CD38  @ =gfxLavaGeyserAnimation
+	ldr r4, _0803CD38  @ =gfxLavaGeyserAnim
 	add r5, r0, r4
 	ldr r0, _0803CD3C  @ =gUnknown_03001A00
 	ldrb r0, [r0]
@@ -9612,7 +9612,7 @@ _0803CD2C:
 _0803CD34:
 	.4byte 0x03001A44
 _0803CD38:
-	.4byte gfxLavaGeyserAnimation
+	.4byte gfxLavaGeyserAnim
 _0803CD3C:
 	.4byte gUnknown_03001A00
 _0803CD40:

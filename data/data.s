@@ -1059,7 +1059,7 @@ gUnknown_080A7ED0:
 	.2byte 8 @ Total tiles
 	.2byte 0x0100 @ Graphics Size in Bytes
 	.2byte 0x0000 @ unused
-	.4byte gfxExpertLevelIconPicsAnimation @ Animation Data
+	.4byte gfxExpertLevelIconPicsAnim @ Animation Data
 	.4byte gfxExpertLevelIconPicsOAM @ OAM
 	.4byte gfxExpertLevelIconPics @ Sprite Graphics
 

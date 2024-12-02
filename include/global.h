@@ -807,7 +807,7 @@ enum
 struct SubSpriteTemplate
 {
     /*0x00*/ u8 index;  // index into sprite sheet?
-    /*0x01*/ u8 duration;  // animation frame duration
+    /*0x01*/ u8 duration;  // Anim frame duration
     /*0x02*/ s8 x_offset;  // x offset from sprite position
     /*0x03*/ s8 y_offset;  // y offset from sprite position
     /*0x04*/ u32 unk4;  // unknown/unused
@@ -1353,8 +1353,8 @@ extern u16 gUnknown_080788E0[];
 extern struct UnknownStruct12 *gScreenModeRelatedPtr;
 extern u32 *gEWorldLevelCountPtr;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
-extern const u8 gTitleMarioEyesAnimationData[];
-extern const u8 gTitleDKEyesAnimationData[];
+extern const u8 gTitleMarioEyesAnimData[];
+extern const u8 gTitleDKEyesAnimData[];
 extern struct
 {
     u32 unk0;

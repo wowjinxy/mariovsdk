@@ -20457,7 +20457,7 @@ _08053F74:
 	str r5, [sp]
 	ldr r0, _080541D8  @ =gfxLevelStartPresent
 	str r0, [sp, #4]
-	ldr r1, _080541DC  @ =gfxLevelStartPresentAnimation
+	ldr r1, _080541DC  @ =gfxLevelStartPresentAnim
 	str r1, [sp, #8]
 	mov r0, sp
 	mov r2, r10
@@ -20521,7 +20521,7 @@ _08053F74:
 	str r1, [sp]
 	ldr r2, _080541D8  @ =gfxLevelStartPresent
 	str r2, [sp, #4]
-	ldr r0, _080541DC  @ =gfxLevelStartPresentAnimation
+	ldr r0, _080541DC  @ =gfxLevelStartPresentAnim
 	str r0, [sp, #8]
 	mov r0, sp
 	mov r1, r10
@@ -20693,7 +20693,7 @@ _08053F74:
 	str r1, [sp]
 	ldr r2, _080541D8  @ =gfxLevelStartPresent
 	str r2, [sp, #4]
-	ldr r0, _080541DC  @ =gfxLevelStartPresentAnimation
+	ldr r0, _080541DC  @ =gfxLevelStartPresentAnim
 	str r0, [sp, #8]
 	mov r0, sp
 	mov r1, r10
@@ -20758,7 +20758,7 @@ _080541D4:
 _080541D8:
 	.4byte gfxLevelStartPresent
 _080541DC:
-	.4byte gfxLevelStartPresentAnimation
+	.4byte gfxLevelStartPresentAnim
 _080541E0:
 	.4byte gUnknown_0865FBB0
 _080541E4:
@@ -20794,7 +20794,7 @@ _0805421C:
 	str r0, [sp]
 	ldr r1, _0805460C  @ =gfxLevelStartPresent
 	str r1, [sp, #4]
-	ldr r2, _08054610  @ =gfxLevelStartPresentAnimation
+	ldr r2, _08054610  @ =gfxLevelStartPresentAnim
 	str r2, [sp, #8]
 	mov r0, sp
 	mov r5, r10
@@ -20915,7 +20915,7 @@ _0805421C:
 	str r1, [sp]
 	ldr r2, _0805460C  @ =gfxLevelStartPresent
 	str r2, [sp, #4]
-	ldr r0, _08054610  @ =gfxLevelStartPresentAnimation
+	ldr r0, _08054610  @ =gfxLevelStartPresentAnim
 	str r0, [sp, #8]
 	mov r0, sp
 	mov r1, r10
@@ -21034,7 +21034,7 @@ _0805421C:
 	str r2, [sp]
 	ldr r0, _0805460C  @ =gfxLevelStartPresent
 	str r0, [sp, #4]
-	ldr r1, _08054610  @ =gfxLevelStartPresentAnimation
+	ldr r1, _08054610  @ =gfxLevelStartPresentAnim
 	str r1, [sp, #8]
 	mov r0, sp
 	mov r2, r10
@@ -21092,7 +21092,7 @@ _08054478:
 	str r0, [sp]
 	ldr r0, _08054658  @ =gfxDKPack4bpp
 	str r0, [sp, #4]
-	ldr r0, _0805465C  @ =gfxDKPackAnimation
+	ldr r0, _0805465C  @ =gfxDKPackAnim
 	str r0, [sp, #8]
 	mov r0, sp
 	mov r7, #0
@@ -21291,7 +21291,7 @@ _08054608:
 _0805460C:
 	.4byte gfxLevelStartPresent
 _08054610:
-	.4byte gfxLevelStartPresentAnimation
+	.4byte gfxLevelStartPresentAnim
 _08054614:
 	.4byte gUnknown_0865F610
 _08054618:
@@ -21329,7 +21329,7 @@ _08054654:
 _08054658:
 	.4byte gfxDKPack4bpp
 _0805465C:
-	.4byte gfxDKPackAnimation
+	.4byte gfxDKPackAnim
 _08054660:
 	.4byte 0xFFFF6800
 _08054664:
@@ -22466,7 +22466,7 @@ _08054EE6:
 	str r4, [sp, #4]
 	ldr r0, _0805516C  @ =gfxLevelStartPresent
 	str r0, [sp, #8]
-	ldr r1, _08055170  @ =gfxLevelStartPresentAnimation
+	ldr r1, _08055170  @ =gfxLevelStartPresentAnim
 	str r1, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -22530,7 +22530,7 @@ _08054EE6:
 	str r4, [sp, #4]
 	ldr r0, _0805516C  @ =gfxLevelStartPresent
 	str r0, [sp, #8]
-	ldr r1, _08055170  @ =gfxLevelStartPresentAnimation
+	ldr r1, _08055170  @ =gfxLevelStartPresentAnim
 	str r1, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -22714,7 +22714,7 @@ _08054EE6:
 	str r3, [sp, #4]
 	ldr r4, _0805516C  @ =gfxLevelStartPresent
 	str r4, [sp, #8]
-	ldr r0, _08055170  @ =gfxLevelStartPresentAnimation
+	ldr r0, _08055170  @ =gfxLevelStartPresentAnim
 	str r0, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -22784,7 +22784,7 @@ _08055168:
 _0805516C:
 	.4byte gfxLevelStartPresent
 _08055170:
-	.4byte gfxLevelStartPresentAnimation
+	.4byte gfxLevelStartPresentAnim
 _08055174:
 	.4byte gUnknown_0865F610
 _08055178:
@@ -22820,7 +22820,7 @@ _080551B0:
 	str r3, [sp, #4]
 	ldr r4, _080555A0  @ =gfxLevelStartPresent
 	str r4, [sp, #8]
-	ldr r0, _080555A4  @ =gfxLevelStartPresentAnimation
+	ldr r0, _080555A4  @ =gfxLevelStartPresentAnim
 	str r0, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -22945,7 +22945,7 @@ _080551B0:
 	str r4, [sp, #4]
 	ldr r0, _080555A0  @ =gfxLevelStartPresent
 	str r0, [sp, #8]
-	ldr r1, _080555A4  @ =gfxLevelStartPresentAnimation
+	ldr r1, _080555A4  @ =gfxLevelStartPresentAnim
 	str r1, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -23069,7 +23069,7 @@ _080551B0:
 	str r1, [sp, #4]
 	ldr r2, _080555A0  @ =gfxLevelStartPresent
 	str r2, [sp, #8]
-	ldr r3, _080555A4  @ =gfxLevelStartPresentAnimation
+	ldr r3, _080555A4  @ =gfxLevelStartPresentAnim
 	str r3, [sp, #12]
 	add r0, sp, #4
 	strh r6, [r0, #12]
@@ -23131,7 +23131,7 @@ _08055426:
 	str r0, [sp, #4]
 	ldr r0, _080555EC  @ =gfxDKPack4bpp
 	str r0, [sp, #8]
-	ldr r0, _080555F0  @ =gfxDKPackAnimation
+	ldr r0, _080555F0  @ =gfxDKPackAnim
 	str r0, [sp, #12]
 	add r0, sp, #4
 	mov r7, #0
@@ -23317,7 +23317,7 @@ _0805559C:
 _080555A0:
 	.4byte gfxLevelStartPresent
 _080555A4:
-	.4byte gfxLevelStartPresentAnimation
+	.4byte gfxLevelStartPresentAnim
 _080555A8:
 	.4byte gUnknown_0865F610
 _080555AC:
@@ -23355,7 +23355,7 @@ _080555E8:
 _080555EC:
 	.4byte gfxDKPack4bpp
 _080555F0:
-	.4byte gfxDKPackAnimation
+	.4byte gfxDKPackAnim
 _080555F4:
 	.4byte 0xFFFF6800
 _080555F8:
