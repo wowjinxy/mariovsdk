@@ -33,6 +33,7 @@
 	X(src/load.o) \
 	X(src/level_help.o) \
 	X(data/data.o) \
+	X(data/expert_levels_menu.o)\
 	X(asm/level_retry.o) \
 	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \

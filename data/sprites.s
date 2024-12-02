@@ -5825,9 +5825,9 @@ gUnknown_0829A7F8:
 gUnknown_0829A81C:
 	OamData bpp=ST_OAM_8BPP, shape=ST_OAM_SQUARE, size=3, paletteNum=0
 
-	.GLOBAL gUnknown_0829A824
-gUnknown_0829A824:
-	.INCBIN "assets/sprites/expert_levels/gUnknown_0829A824.8bpp"
+	.GLOBAL gfxNeedStarsToPlay
+gfxNeedStarsToPlay:
+	.INCBIN "assets/sprites/expert_levels/NeedStarsToPlay.8bpp"
 
 	.GLOBAL gUnknown_0829B824
 gUnknown_0829B824:
@@ -29191,7 +29191,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_0829A7F8 @ Animation Data
 	.4byte gUnknown_0829A81C @ OAM
-	.4byte gUnknown_0829A824 @ Sprite Graphics
+	.4byte gfxNeedStarsToPlay @ Sprite Graphics
 
 	.2byte 0x0010 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic

@@ -448,7 +448,7 @@ FILES := \
 	assets/sprites/expert_levels/gUnknown_08299814.png \
 	assets/sprites/expert_levels/gUnknown_08299940.png \
 	assets/sprites/expert_levels/ExpertLevelIconPics.png \
-	assets/sprites/expert_levels/gUnknown_0829A824.png \
+	assets/sprites/expert_levels/NeedStarsToPlay.png \
 	assets/sprites/lava_rock/gUnknown_0829BA6C.png \
 	assets/sprites/lava_rock/gUnknown_0829C4B4.png \
 	assets/sprites/lava_rock/gUnknown_0829CEFC.png \
@@ -3165,9 +3165,9 @@ assets/sprites/expert_levels/ExpertLevelIconPics.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/expert_levels/ExpertLevelIconPics.4bpp: baserom.gba ; $(call dump_data,0x299BF8,0xC00)
 assets/sprites/expert_levels/ExpertLevelIconPics.png: $(TMPDIR)/palettes/2_expert_levels_obj.15.gbapal
 
-assets/sprites/expert_levels/gUnknown_0829A824.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/sprites/expert_levels/gUnknown_0829A824.8bpp: baserom.gba ; $(call dump_data,0x29A824,0x1000)
-assets/sprites/expert_levels/gUnknown_0829A824.png: $(TMPDIR)/palettes/2_expert_levels_obj.gbapal
+assets/sprites/expert_levels/NeedStarsToPlay.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/sprites/expert_levels/NeedStarsToPlay.8bpp: baserom.gba ; $(call dump_data,0x29A824,0x1000)
+assets/sprites/expert_levels/NeedStarsToPlay.png: $(TMPDIR)/palettes/2_expert_levels_obj.gbapal
 
 assets/sprites/lava_rock/gUnknown_0829BA6C.png: GBAGFX_FLAGS := -width 2
 $(TMPDIR)/sprites/lava_rock/gUnknown_0829BA6C.4bpp: baserom.gba ; $(call dump_data,0x29BA6C,0x800)

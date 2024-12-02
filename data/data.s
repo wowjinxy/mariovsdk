@@ -11,7 +11,22 @@ gUnknown_0807A974:
 
 	.GLOBAL gUnknown_0807AA1C
 gUnknown_0807AA1C:
-	.INCBIN "baserom.gba", 0x7AA1C, 0x7AA58-0x7AA1C
+@ pointers to things in rom_800023C.s
+	.4byte 0x08001668
+	.4byte 0x080012BC
+	.4byte 0x08001514
+	.4byte 0x080014B0
+	.4byte 0x080013C4
+	.4byte 0x08001458
+	.4byte 0x08001478
+	.4byte 0x080014EC
+	.4byte 0x08001344
+	.4byte 0x080012D0
+	.4byte 0x0800125C
+	.4byte 0x08001284
+	.4byte 0x0800124C
+	.4byte 0x08001378
+	.4byte 0x0800142C
 
 	.GLOBAL gUnknown_0807AA58
 gUnknown_0807AA58:
@@ -924,204 +939,3 @@ gPredefinedPalettes:
 	.INCBIN "assets/palettes/75_obj.gbapal"
 	.INCBIN "assets/palettes/75_bg_gbplayer.gbapal"
 	.INCBIN "assets/palettes/75_obj_gbplayer.gbapal"
-
-	.GLOBAL gUnknown_080A7D98
-gUnknown_080A7D98:
-	@ expert 1 selection box
-	.4byte 0x00000048
-	.4byte 0x00000010
-	@ expert 2 selection box
-	.4byte 0x00000070
-	.4byte 0x00000010
-	@ expert 3 selection box
-	.4byte 0x00000098
-	.4byte 0x00000010
-	@ expert 4 selection box
-	.4byte 0x000000C0
-	.4byte 0x00000010
-	@ expert 5 selection box
-	.4byte 0x00000048
-	.4byte 0x00000038
-	@ expert 6 selection box
-	.4byte 0x00000070
-	.4byte 0x00000038
-	@ expert 7 selection box
-	.4byte 0x00000098
-	.4byte 0x00000038
-	@ expert 8 selection box
-	.4byte 0x000000C0
-	.4byte 0x00000038
-	@ expert 9 selection box
-	.4byte 0x00000048
-	.4byte 0x00000060
-	@ expert 10 selection box
-	.4byte 0x00000070
-	.4byte 0x00000060
-	@ expert 11 selection box
-	.4byte 0x00000098
-	.4byte 0x00000060
-	@ expert 12 selection box
-	.4byte 0x000000C0
-	.4byte 0x00000060
-
-	.GLOBAL gUnknown_080A7DF8
-gUnknown_080A7DF8:
-	@ expert 1 menu presents 
-	.4byte 0x0000004A
-	.4byte 0x00000013
-	@ expert 2 menu presents 
-	.4byte 0x00000072
-	.4byte 0x00000013
-	@ expert 3 menu presents 
-	.4byte 0x0000009A
-	.4byte 0x00000013
-	@ expert 4 menu presents 
-	.4byte 0x000000C2
-	.4byte 0x00000013
-	@ expert 5 menu presents 
-	.4byte 0x0000004A
-	.4byte 0x0000003B
-	@ expert 6 menu presents 
-	.4byte 0x00000072
-	.4byte 0x0000003B
-	@ expert 7 menu presents 
-	.4byte 0x0000009A
-	.4byte 0x0000003B
-	@ expert 8 menu presents 
-	.4byte 0x000000C2
-	.4byte 0x0000003B
-	@ expert 9 menu presents 
-	.4byte 0x0000004A
-	.4byte 0x00000063
-	@ expert 10 menu presents
-	.4byte 0x00000072
-	.4byte 0x00000063
-	@ expert 11 menu presents
-	.4byte 0x0000009A
-	.4byte 0x00000063
-	@ expert 12 menu presents
-	.4byte 0x000000C2
-	.4byte 0x00000063
-	@ unknown -- seems to copy the selection boxes
-	.4byte 0x00000048
-	.4byte 0x00000010
-	
-	.4byte 0x00000070
-	.4byte 0x00000010
-	
-	.4byte 0x00000098
-	.4byte 0x00000010
-	
-	.4byte 0x000000C0
-	.4byte 0x00000010
-	
-	.4byte 0x00000048
-	.4byte 0x00000038
-	
-	.4byte 0x00000070
-	.4byte 0x00000038
-	
-	.4byte 0x00000098
-	.4byte 0x00000038
-	
-	.4byte 0x000000C0
-	.4byte 0x00000038
-	
-	.4byte 0x00000048
-	.4byte 0x00000060
-	
-	.4byte 0x00000070
-	.4byte 0x00000060
-	
-	.4byte 0x00000098
-	.4byte 0x00000060
-	
-	.4byte 0x000000C0
-	.4byte 0x00000060
-
-	.GLOBAL gUnknown_080A7EB8
-gUnknown_080A7EB8:
-	.2byte 8 @ X Position
-	.2byte 18 @ Y Position
-	.2byte 0x0400 @ Skip 4 pixels count?
-	.2byte 128 @ Total tiles
-	.2byte 0x1000 @ Graphics Size in Bytes
-	.2byte 0x0000 @ unused
-	.4byte gUnknown_0829A7F8 @ Animation Data
-	.4byte gUnknown_0829A81C @ OAM
-	.4byte gUnknown_0829A824 @ Sprite Graphics
-	
-	.GLOBAL gUnknown_080A7ED0
-gUnknown_080A7ED0:
-	.2byte 0 @ X Position
-	.2byte 0 @ Y Position
-	.2byte 0x0040 @ Skip 4 pixels count?
-	.2byte 8 @ Total tiles
-	.2byte 0x0100 @ Graphics Size in Bytes
-	.2byte 0x0000 @ unused
-	.4byte gfxExpertLevelIconPicsAnim @ Animation Data
-	.4byte gfxExpertLevelIconPicsOAM @ OAM
-	.4byte gfxExpertLevelIconPics @ Sprite Graphics
-
-	.GLOBAL gUnknown_080A7EE8
-gUnknown_080A7EE8:
-	.INCBIN "baserom.gba", 0xA7EE8, 0xA8008-0xA7EE8
-
-	.GLOBAL gUnknown_080A8008
-gUnknown_080A8008:
-	.INCBIN "baserom.gba", 0xA8008, 0xA8128-0xA8008
-
-	.GLOBAL gUnknown_080A8128
-gUnknown_080A8128:
-	.INCBIN "baserom.gba", 0xA8128, 0xA8248-0xA8128
-
-	.GLOBAL gUnknown_080A8248
-gUnknown_080A8248:
-	.INCBIN "baserom.gba", 0xA8248, 0xA8260-0xA8248
-
-	.GLOBAL gUnknown_080A8260
-gUnknown_080A8260:
-	.INCBIN "baserom.gba", 0xA8260, 0xA8278-0xA8260
-
-	.GLOBAL gUnknown_080A8278
-gUnknown_080A8278:
-	.INCBIN "baserom.gba", 0xA8278, 0xA8290-0xA8278
-
-	.GLOBAL gUnknown_080A8290
-gUnknown_080A8290:
-	.INCBIN "baserom.gba", 0xA8290, 0xA82A8-0xA8290
-
-	.GLOBAL gUnknown_080A82A8
-gUnknown_080A82A8:
-	.INCBIN "baserom.gba", 0xA82A8, 0xA82C0-0xA82A8
-
-	.GLOBAL gUnknown_080A82C0
-gUnknown_080A82C0:
-	.INCBIN "baserom.gba", 0xA82C0, 0xA8308-0xA82C0
-
-	.GLOBAL gUnknown_080A8308
-gUnknown_080A8308:
-	.INCBIN "baserom.gba", 0xA8308, 0xA8428-0xA8308
-
-	.GLOBAL gUnknown_080A8428
-gUnknown_080A8428:
-	.INCBIN "baserom.gba", 0xA8428, 0xA8548-0xA8428
-
-	.GLOBAL gUnknown_080A8548
-gUnknown_080A8548:
-	.INCBIN "baserom.gba", 0xA8548, 0xA8668-0xA8548
-
-	.GLOBAL gExpertLevelsStarsNeeded
-gExpertLevelsStarsNeeded:
-	.byte 9
-	.byte 18
-	.byte 27
-	.byte 36
-	.byte 45
-	.byte 54
-	.byte 63
-	.byte 72
-	.byte 81
-	.byte 90
-	.byte 90
-	.byte 90
