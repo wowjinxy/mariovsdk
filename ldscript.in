@@ -34,9 +34,9 @@
 	X(src/fade_in_out.o) \
 	X(src/load.o) \
 	X(src/level_help.o) \
+	X(src/level_retry.o) \
 	X(data/data.o) \
 	X(data/expert_levels_menu.o)\
-	X(asm/level_retry.o) \
 	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \
 	X(src/rom_802D614.o) \
@@ -207,6 +207,7 @@ SECTIONS
 		. = 0x12A;		gUnknown_0300012A = .;
 		. = 0x130;		src/level_help.o(.bss);
 		/*. = 0x138;		sTileNumOffsets = .;*/
+		. = 0x150;		src/level_retry.o(.bss);
 		. = 0x15A;		gUnknown_0300015A = .;
 		. = 0x15C;		gUnknown_0300015C = .;
 		. = 0x160;		gUnknown_03000160 = .;

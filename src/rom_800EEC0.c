@@ -3,12 +3,12 @@
 #include "main.h"
 
 void sub_0800EEC0(void) {
-	
+
 	return;
 }
 
 void sub_0800EEC4(void) {
-	
+
 	return;
 }
 
@@ -22,11 +22,11 @@ void sub_0800EEC8(u8 param1) {
 }
 
 void sub_0800EF0C(void) {
-	
+
     gUnknown_03000A10.pad4[0x28] = 0;
 }
 void sub_0800EF1C(void) {
-	
+
      gUnknown_03000A10.padA[0x2] = 0;
      gUnknown_03000A10.padA[0x3] = 0;
 }
@@ -35,10 +35,10 @@ u8 sub_0800EF30() {
 
     u32 var1;
     u8 var2;
-    
+
     gUnknown_03000A10.unk39 = 0;
     sub_0801B310();
-    
+
     var1 = sub_08033658();
 
     if (var1 != 0) {
@@ -59,9 +59,9 @@ u8 sub_0800EF30() {
 u8 sub_0800EF8C() {
 
     u8 var1;
-    
+
     gUnknown_03000A10.unk39 = 0;
-    
+
     sub_0801B310();
     gUnknown_03000A10.unk2C++;
     if (gUnknown_03000A10.unk2C < 0xF) {
@@ -102,7 +102,7 @@ void sub_0800F060(void) {
 	gUnknown_03000A10.unkD6 = 0;
 }
 
-void sub_0800F070(u8 param_1) { 
+void sub_0800F070(u8 param_1) {
 
     if (param_1 != gUnknown_03000A10.unk122){
         gUnknown_03000A10.unk120 = 0;
@@ -111,12 +111,8 @@ void sub_0800F070(u8 param_1) {
     gUnknown_03000A10.unk122 = param_1;
 }
 
-void sub_0800F0A8(u32 param_1) {
-	
-    u32 temp1;
-    u32 temp2;
-    
- if (gUnknown_03000A10.unk28 == 0x01) {
-    sub_0806E594(param_1, temp1, temp2);
-  }
+void sub_0800F0A8(u16 *oamIndex, u16 *tileNum, u16 *vramOffset)
+{
+    if (gUnknown_03000A10.unk28 == 1)
+        sub_0806E594(oamIndex, tileNum, vramOffset);
 }

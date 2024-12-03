@@ -10,6 +10,7 @@ units:
 - path: intro.o
 - path: level_help.o
 - path: level_results.o
+- path: level_retry.o
 - path: level_view.o
 - path: libc.o
 - path: main.o

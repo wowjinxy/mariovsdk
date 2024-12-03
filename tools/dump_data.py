@@ -18,4 +18,3 @@ with open('baserom.gba', 'rb') as f:
 	for i in range(0, count):
 		values = struct.unpack(structFmt, data[i * structSize:(i + 1) * structSize])
 		print(cFmt % values)
-		print('')

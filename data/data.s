@@ -3,12 +3,6 @@
 
 	.SECTION .data
 
-@ level_retry
-
-	.GLOBAL gUnknown_0807A974
-gUnknown_0807A974:
-	.INCBIN "baserom.gba", 0x7A974, 0x7AA1C-0x7A974
-
 	.GLOBAL gUnknown_0807AA1C
 gUnknown_0807AA1C:
 @ pointers to things in rom_800023C.s
