@@ -2875,13 +2875,13 @@ _0802EC6E:
 	bl arena_allocate
 	str r0, [r4]
 	bl e_world_return_init_callback
-	bl sub_08071FE4
+	bl get_current_bgm
 	cmp r0, #10
 	beq _0802EC9A
 	mov r0, #10
 	mov r1, #128
 	mov r2, #1
-	bl sub_0807204C
+	bl play_bgm
 _0802EC9A:
 	mov r0, #1
 	strb r0, [r5]

@@ -960,7 +960,7 @@ extern struct OamData gfxExpertLevelIconPicsOAM;
 extern u8 gfxExpertLevelIconPics[];
 extern struct SubSpriteTemplate gUnknown_0829A7F8[];
 extern struct OamData gUnknown_0829A81C;
-extern u8 gUnknown_0829A824[];
+extern u8 gfxNeedStarsToPlay[];
 extern struct SubSpriteTemplate gUnknown_0829B824[];
 extern struct OamData gUnknown_0829BA64;
 extern u8 gUnknown_0829BA6C[];

@@ -235,13 +235,13 @@ level_select_init_callback: @ 0x08015280
 	strh r6, [r0]
 	ldr r2, _080153C8  @ =0x0100001C
 	bl CpuSet
-	bl sub_08071FE4
+	bl get_current_bgm
 	cmp r0, #11
 	beq _080152C4
 	mov r0, #11
 	mov r1, #128
 	mov r2, #1
-	bl sub_0807204C
+	bl play_bgm
 _080152C4:
 	ldr r0, [r4]
 	mov r1, #0
@@ -632,7 +632,7 @@ _08015566:
 	mov r0, #10
 	mov r1, #128
 	mov r2, #1
-	bl sub_0807204C
+	bl play_bgm
 _080155CE:
 	ldr r0, _08015600  @ =gLevelSelectData
 	bl save_blend_regs_from_graphicsconfig

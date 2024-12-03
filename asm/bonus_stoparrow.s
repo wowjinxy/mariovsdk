@@ -8215,7 +8215,7 @@ sub_080209B8: @ 0x080209B8
 	mov r0, #42
 	mov r1, #128
 	mov r2, #1
-	bl sub_0807204C
+	bl play_bgm
 _08020A46:
 	add sp, sp, #16
 	pop {r3}
@@ -8701,7 +8701,7 @@ _08020DB0:
 	mov r0, #69
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 _08020DF8:
 	add sp, sp, #20
 	pop {r3,r4}
@@ -9754,7 +9754,7 @@ bonus_stoparrow_init_callback: @ 0x080215B4
 	mov r0, #68
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	ldr r7, _08021648  @ =0x030000D0
 	mov r0, #12
 	bl arena_allocate

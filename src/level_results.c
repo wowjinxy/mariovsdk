@@ -400,8 +400,8 @@ void level_results_init_callback(void)
     sub_08029A80();
     sub_08030408(r4);
     save_blend_regs(gLevelResultsData.bldCnt, gLevelResultsData.bldAlpha, gLevelResultsData.bldY);
-    if (sub_08071FE4() != 11)
-        sub_0807204C(11, 128, 1);
+    if (get_current_bgm() != 11)
+        play_bgm(11, 128, 1);
     sub_08038B18();
     r4 = 0;
     CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));

@@ -28689,7 +28689,7 @@ _08057CEA:
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -32197,7 +32197,7 @@ _080596C6:
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	b _08059702
 _080596DC:
 	.4byte 0x03000444
@@ -32216,7 +32216,7 @@ _080596E8:
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 _08059702:
 	pop {r4-r6}
 	pop {r0}
@@ -38608,7 +38608,7 @@ _0805C5AE:
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -43860,7 +43860,7 @@ _0805EC96:
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -49938,7 +49938,7 @@ _08061966:
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -52581,7 +52581,7 @@ _08062CF2:
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -68726,7 +68726,7 @@ sub_0806A488: @ 0x0806A488
 	mov r0, #64
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	b _0806A584
 	.byte 0x00
 	.byte 0x00
@@ -68791,7 +68791,7 @@ _0806A518:
 	mov r0, #60
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 _0806A584:
 	add sp, sp, #8
 	pop {r4-r6}
