@@ -273,7 +273,7 @@ sub_080069BC: @ 0x080069BC
 	lsl r2, r2, #1
 	add r1, r4, #0
 	bl CpuSet
-	ldr r0, _080069E4  @ =0x03000964
+	ldr r0, _080069E4  @ =gUnknown_03000964
 	str r4, [r0]
 	pop {r4}
 	pop {r0}
@@ -283,7 +283,7 @@ sub_080069BC: @ 0x080069BC
 _080069E0:
 	.4byte sub_08000430
 _080069E4:
-	.4byte 0x03000964
+	.4byte gUnknown_03000964
 	THUMB_FUNC_END sub_080069BC
 
 	

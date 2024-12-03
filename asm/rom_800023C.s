@@ -559,7 +559,7 @@ sub_08000984:
 	ldr r3, [r4, #96]
 	ands r3, r3, #4096
 	movne r3, #1
-	ldr r12, _08001670  @ =0x03000964
+	ldr r12, _08001670  @ =gUnknown_03000964
 	ldr r12, [r12]
 	bxne r12
 	ldrb r3, [r4]
@@ -629,7 +629,7 @@ _08000A48:
 	ldrb r6, [r3, r6]
 	ldr r6, [r4, r6, lsl #2]
 	bx r6
-_08000A90:
+_common_ret_08000A90:
 	cmp r0, #0
 	bne _08000AA4
 _08000A98:
@@ -1197,15 +1197,17 @@ _0800123C:
 	bx lr
 THUMB_FUNC_END sub_080010E0
 
-@ What is this ?
-
+	ARM_FUNC_START sub_0800124C
+sub_0800124C:
 	push {r1-r4}
 	add r10, r12, #108
 	ldm r10, {r1-r4}
 	b _0800158C
-_0800125C:
+
+	ARM_FUNC_START sub_0800125C
+sub_0800125C:
 	bl sub_08000AB0
-	beq _08000A90
+	beq _common_ret_08000A90
 	ldr r6, [r12, #92]
 	ldr r7, [r5, #92]
 	orr r6, r6, #15
@@ -1213,14 +1215,16 @@ _0800125C:
 	str r6, [r12, #92]
 	str r7, [r5, #92]
 	pop {r1-r4}
-	b _08000A90
-_08001284:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_08001284
+sub_08001284:
 	ldr r6, [r5, #132]
 	ldrsb r6, [r6, #17]
 	cmp r6, #2
-	beq _08000A90
+	beq _common_ret_08000A90
 	bl sub_08000AB0
-	beq _08000A90
+	beq _common_ret_08000A90
 	ldr r6, [r12, #92]
 	ldr r7, [r5, #92]
 	orr r6, r6, #15
@@ -1228,17 +1232,21 @@ _08001284:
 	str r6, [r12, #92]
 	str r7, [r5, #92]
 	pop {r1-r4}
-	b _08000A90
-_080012BC:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_080012BC
+sub_080012BC:
 	bl sub_08000AB0
-	beq _08000A90
+	beq _common_ret_08000A90
 	bl sub_08000B14
 	pop {r1-r4}
-	b _08000A90
-_080012D0:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_080012D0
+sub_080012D0:
 	mov r0, #1
 	bl sub_08000AB0
-	beq _08000A90
+	beq _common_ret_08000A90
 	ldr r10, [r12, #132]
 	ldr r10, [r10, #12]
 	tst r10, #0x4000
@@ -1257,7 +1265,7 @@ _080012D0:
 	strneb r11, [r5, #66]
 	mov r0, #0
 	pop {r1-r4}
-	b _08000A90
+	b _common_ret_08000A90
 _08001328:
 	ldrb r10, [r5, #61]
 	str r10, [r12, #76]
@@ -1265,8 +1273,10 @@ _08001328:
 	str r10, [r5, #76]
 	bl sub_08000B14
 	pop {r1-r4}
-	b _08000A90
-_08001344:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_08001344
+sub_08001344:
 	ldr r10, [r12, #132]
 	ldr r10, [r10, #12]
 	tst r10, #0x4000
@@ -1274,18 +1284,20 @@ _08001344:
 	ldr r10, [r5, #132]
 	ldr r10, [r10, #12]
 	tst r10, #0x4000
-	bne _08000A90
+	bne _common_ret_08000A90
 _08001364:
 	bl sub_08000AB0
-	beq _08000A90
+	beq _common_ret_08000A90
 	bl sub_08000B14
 	pop {r1-r4}
-	b _08000A90
-_08001378:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_08001378
+sub_08001378:
 	ldr r8, [r5, #132]
 	ldrsb r6, [r8, #17]
 	cmp r6, #2
-	beq _08000A90
+	beq _common_ret_08000A90
 	ldr r6, [r5, #36]
 	ldr r7, [r12, #36]
 	ldr r9, [r12, #132]
@@ -1294,26 +1306,28 @@ _08001378:
 	add r6, r8, r6, asr #8
 	add r7, r9, r7, asr #8
 	cmp r7, r6
-	bgt _08000A90
+	bgt _common_ret_08000A90
 	mov r0, #2
 	bl sub_08000AB0
 	strb r11, [r12, #11]
 	bl sub_080010E0
 	pop {r1-r4}
-	b _08000A90
-_080013C4:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_080013C4
+sub_080013C4:
 	ldr r8, [r5, #132]
 	ldrsb r6, [r8, #17]
 	cmp r6, #2
-	beq _08000A90
-	bgt _08000A90
+	beq _common_ret_08000A90
+	bgt _common_ret_08000A90
 	mov r0, #2
 	bl sub_08000AB0
 	beq _080013F4
 	strb r11, [r12, #11]
 	bl _08000DB0
 	pop {r1-r4}
-	b _08000A90
+	b _common_ret_08000A90
 _080013F4:
 	add r2, r2, #256
 	add r4, r4, #256
@@ -1324,81 +1338,93 @@ _080013F4:
 	bne _08001424
 	mov r0, #0
 	bl _08000ABC
-	beq _08000A90
+	beq _common_ret_08000A90
 	mov r0, #0
 	strb r11, [r12, #11]
 _08001424:
 	pop {r1-r4}
-	b _08000A90
-_0800142C:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_0800142C
+sub_0800142C:
 	ldr r6, [r5, #132]
 	ldrsb r6, [r6, #17]
 	cmp r6, #2
-	beq _08000A90
+	beq _common_ret_08000A90
 	mov r0, #2
 	bl sub_08000AB0
 	beq _080013F4
 	strb r11, [r12, #11]
 	bl sub_08000F48
 	pop {r1-r4}
-	b _08000A90
-_08001458:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_08001458
+sub_08001458:
 	ldr r10, [r12, #96]
 	tst r10, #0x80000000
-	bne _08000A90
+	bne _common_ret_08000A90
 	bl sub_08000AB0
-	beq _08000A90
+	beq _common_ret_08000A90
 	bl sub_08000C04
 	pop {r1-r4}
-	b _08000A90
-_08001478:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_08001478
+sub_08001478:
 	ldr r10, [r12, #96]
 	tst r10, #0x80000000
-	bne _08000A90
+	bne _common_ret_08000A90
 	ldr r10, [r5, #36]
 	ldr r11, [r12, #36]
 	sub r10, r10, r11
 	cmp r10, #3584
-	blt _08000A90
+	blt _common_ret_08000A90
 	bl sub_08000AB0
-	beq _08000A90
+	beq _common_ret_08000A90
 	strb r11, [r12, #11]
 	bl _08000DB0
 	pop {r1-r4}
-	b _08000A90
-_080014B0:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_080014B0
+sub_080014B0:
 	ldr r10, [r12, #92]
 	tst r10, #0x2000000
-	bne _08000A90
+	bne _common_ret_08000A90
 	ldr r10, [r12, #96]
 	tst r10, #0x80000000
-	bne _08000A90
+	bne _common_ret_08000A90
 	ldr r10, [r5, #132]
 	ldrsb r10, [r10, #17]
 	cmp r10, #0
-	bne _08000A90
+	bne _common_ret_08000A90
 	bl sub_08000AB0
-	beq _08000A90
+	beq _common_ret_08000A90
 	bl sub_08000C04
 	pop {r1-r4}
-	b _08000A90
-_080014EC:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_080014EC
+sub_080014EC:
 	ldr r10, [r12, #96]
 	tst r10, #0x80000000
-	bne _08000A90
+	bne _common_ret_08000A90
 	mov r0, #2
 	bl sub_08000AB0
 	beq _080013F4
 	strb r11, [r12, #11]
 	bl _08000CF0
 	pop {r1-r4}
-	b _08000A90
-_08001514:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_08001514
+sub_08001514:
 	ldr r6, [r5, #132]
 	ldrsb r6, [r6, #17]
 	cmp r6, #0
 	cmpne r6, #1
-	bne _08000A90
+	bne _common_ret_08000A90
 	push {r1-r4}
 	add r10, r12, #108
 	ldm r10, {r1-r4}
@@ -1411,7 +1437,7 @@ _08001514:
 	strb r10, [r12, #11]
 	bl _08000DB0
 	pop {r1-r4}
-	b _08000A90
+	b _common_ret_08000A90
 _0800155C:
 	add r2, r2, #256
 	add r4, r4, #256
@@ -1422,7 +1448,7 @@ _0800155C:
 	bne _0800165C
 	mov r0, #0
 	bl _08000ABC
-	beq _08000A90
+	beq _common_ret_08000A90
 	strb r11, [r12, #11]
 	b _0800165C
 _0800158C:
@@ -1461,7 +1487,7 @@ _0800158C:
 	ldrb r6, [r12, #61]
 	str r6, [r5, #76]
 	pop {r1-r4}
-	b _08000A90
+	b _common_ret_08000A90
 _0800161C:
 	add r10, r5, #108
 	ldm r10, {r6-r8}
@@ -1482,12 +1508,15 @@ _0800161C:
 _0800165C:
 	pop {r1-r4}
 	mov r0, #0
-	b _08000A90
-_08001668:
+	b _common_ret_08000A90
+
+	ARM_FUNC_START sub_08001668
+sub_08001668:
 	mov r0, #0
-	b _08000A90
+	b _common_ret_08000A90
+
 _08001670:
-	.4byte 0x03000964
+	.4byte gUnknown_03000964
 _08001674:
 	.4byte hit_switch_0802B798
 _08001678:
