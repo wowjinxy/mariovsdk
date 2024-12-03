@@ -267,7 +267,9 @@ struct UnknownStruct7
 
 struct UnknownStruct8
 {
-    u8 filler0[0x14];
+    u8 filler0[4];
+    u32 unk4;
+    u8 filler8[0x14-0x8];
     u32 unk14;
 };
 

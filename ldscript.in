@@ -11,7 +11,7 @@
 	X(src/rom_80088F0.o) \
 	X(asm/rom_8008DA0.o) \
 	X(src/rom_800EEC0.o) \
-	X(asm/rom_800F0C4.o) \
+	X(src/rom_800F0C4.o) \
 	X(src/rom_800F1E4.o) \
 	X(src/savefile.o) \
 	X(src/main_menu.o) \

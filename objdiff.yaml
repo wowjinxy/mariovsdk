@@ -22,6 +22,7 @@ units:
 - path: rom_80066FC.o
 - path: rom_80088F0.o
 - path: rom_800EEC0.o
+- path: rom_800F0C4.o
 - path: rom_800F1E4.o
 - path: rom_802D614.o
 - path: rom_8032408.o
