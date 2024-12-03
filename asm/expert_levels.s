@@ -90,13 +90,13 @@ expert_levels_init_callback: @ 0x08035388
 	mov r0, #2
 	mov r1, #3
 	bl load_predefined_palette
-	bl sub_08071FE4
+	bl get_current_bgm
 	cmp r0, #11
 	beq _08035454
 	mov r0, #11
 	mov r1, #128
 	mov r2, #1
-	bl sub_0807204C
+	bl play_bgm
 _08035454:
 	add sp, sp, #20
 	pop {r3}

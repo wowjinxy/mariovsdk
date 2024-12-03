@@ -29,7 +29,7 @@ boss_clear_init_callback: @ 0x0801BF14
 	mov r0, #15
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	mov r0, #1
 	strb r0, [r6]
 	ldr r0, _0801BFC8  @ =gLevelEWorldFlag
@@ -104,7 +104,7 @@ _0801BFE0:
 	mov r0, #10
 	mov r1, #128
 	mov r2, #1
-	bl sub_0807204C
+	bl play_bgm
 	ldr r0, _0801C014  @ =0x030000C7
 	strb r5, [r0]
 	ldr r1, _0801C018  @ =0x030000C8

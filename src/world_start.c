@@ -102,8 +102,8 @@ void world_start_init_callback(void)
     struct GraphicsConfig *gfxConfig[4];
 
     arena_restore_head(0);
-    if (sub_08071FE4() != 11)
-        sub_0807204C(11, 128, 1);
+    if (get_current_bgm() != 11)
+        play_bgm(11, 128, 1);
     gUnknown_030002FC = arena_allocate(2 * sizeof(*gUnknown_030002FC));
     gUnknown_03000BE0 = 0;
     gfxConfig[0] = NULL;

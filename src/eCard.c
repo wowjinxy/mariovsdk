@@ -37,9 +37,9 @@ void e_world_from_menu_init_callback(void) {
     if (var1 != 0) {
         sub_0802F06C();
     }
-    var1 = sub_08071FE4();
+    var1 = get_current_bgm();
     if (var1 != 10) {
-        sub_0807204C(10, 0x80, 1);
+        play_bgm(10, 0x80, 1);
     }
     gUnknown_0300028C = gUnknown_03000288 = 0;
     gUnknown_03000290 = 0;

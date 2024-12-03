@@ -210,3 +210,4 @@ gUnknown_08B3A004:
 	.GLOBAL gUnknown_08B3A0A8
 gUnknown_08B3A0A8:
 	.INCBIN "assets/gUnknown_08B3A0A8.bin" @ counts from 0x0000 to 0x0200 with a padding 0x0000
+	

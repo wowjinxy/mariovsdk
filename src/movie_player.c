@@ -167,7 +167,7 @@ void movie_player_setup_data(u8 param_1, u8 songID, u8 nextMode, u8 movieID) {
 void movie_player_init_callback(void) {
 
     arena_restore_head(0);
-    sub_0807204C(gMoviePlayerParams.songID, 0x80, 1);
+    play_bgm(gMoviePlayerParams.songID, 0x80, 1);
     sub_0805727C();
     sub_08057420((u32)gMoviePlayerParams.movieData);
     gUnknown_030009EC = 0;

@@ -87,7 +87,7 @@ void sub_080072A4(void)
         if (gLevelType == 2 || gLevelType == 3 || gLevelEWorldFlag != 0)
         {
             gUnknown_03001BDC = 1;
-            sub_0807204C(17, 128, 0);
+            play_bgm(17, 128, 0);
         }
         else
         {
@@ -96,17 +96,17 @@ void sub_080072A4(void)
                 if (gNextLevelInLevelTable.unk10 > 0)
                     gUnknown_03001BDC = 1;
                 if (gUnknown_03001BDC == 0)
-                    sub_0807204C(7, 128, 0);
+                    play_bgm(7, 128, 0);
                 else
-                    sub_0807204C(17, 128, 0);
+                    play_bgm(17, 128, 0);
             }
             else if (gNextLevelInLevelTable.levelType & 1)
             {
-                sub_0807204C(32, 128, 1);
+                play_bgm(32, 128, 1);
             }
         }
         if ((gNextLevelInLevelTable.levelType & 2) || gLevelType == 4)
-            sub_0807204C(16, 128, 0);
+            play_bgm(16, 128, 0);
     }
     sub_08033FC8();
     gUnknown_03000034 = 0;
@@ -141,8 +141,8 @@ void level_demo_reset_init_callback(void)
     gUnknown_03000032 = 0;
     gUnknown_03000030 = 0;
     gUnknown_03000031 = 0;
-    if (sub_08071FE4() != 11)
-        sub_0807204C(11, 128, 1);
+    if (get_current_bgm() != 11)
+        play_bgm(11, 128, 1);
 }
 
 void sub_08007544()
@@ -180,7 +180,7 @@ void sub_08007544()
             if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
             {
                 sub_080720AC();
-                sub_0807204C(63, 128, 0);
+                play_bgm(63, 128, 0);
             }
         }
     }
@@ -194,7 +194,7 @@ void sub_08007544()
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
             sub_080720AC();
-            sub_0807204C(6, 128, 0);
+            play_bgm(6, 128, 0);
         }
     }
     
@@ -232,7 +232,7 @@ void sub_08007544()
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
             sub_080720AC();
-            sub_0807204C(3, 128, 0);
+            play_bgm(3, 128, 0);
         }
     }
     else
@@ -282,7 +282,7 @@ void sub_08007544()
         {
             sub_08071CD4();
             sub_080720AC();
-            sub_0807204C(3, 128, 0);
+            play_bgm(3, 128, 0);
         }
         gUnknown_03000B5C = 1;
     }
@@ -296,7 +296,7 @@ void sub_08007544()
         {
             sub_08071CD4();
             sub_080720AC();
-            sub_0807204C(4, 128, 0);
+            play_bgm(4, 128, 0);
         }
         gUnknown_03000B5C = 1;
     }
@@ -310,7 +310,7 @@ void sub_08007544()
         {
             sub_08071CD4();
             sub_080720AC();
-            sub_0807204C(5, 128, 0);
+            play_bgm(5, 128, 0);
         }
         gUnknown_03000B5C = 1;
     }
@@ -327,17 +327,17 @@ void sub_08007544()
             if (gNextLevelInLevelTable.levelType & 8)
             {
                 sub_080720AC();
-                sub_0807204C(21, 128, 0);
+                play_bgm(21, 128, 0);
             }
             else if (gLevelType == 5)
             {
                 sub_080720AC();
-                sub_0807204C(65, 128, 0);
+                play_bgm(65, 128, 0);
             }
             else if (!(gNextLevelInLevelTable.levelType & 1))
             {
                 sub_080720AC();
-                sub_0807204C(2, 128, 0);
+                play_bgm(2, 128, 0);
             }
         }
         gUnknown_03000B5C = 1;
@@ -352,7 +352,7 @@ void sub_08007544()
                 if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
                 {
                     sub_080720AC();
-                    sub_0807204C(14, 128, 1);
+                    play_bgm(14, 128, 1);
                 }
             }
             else if (gUnknown_0300003C & 0x4000000)
@@ -370,7 +370,7 @@ void sub_08007544()
              || ((gUnknown_03001A1C & 1) && (gUnknown_03000034 & 4) && !(gUnknown_03001A1C & 4)))
             {
                 sub_080720AC();
-                sub_0807204C(1, 128, 1);
+                play_bgm(1, 128, 1);
             }
             if ((gUnknown_03000038 & 4)
              || ((gUnknown_03000034 & 1) && !(gUnknown_03001A1C & 1)))

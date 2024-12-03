@@ -36159,7 +36159,7 @@ sub_08048ABC: @ 0x08048ABC
 	mov r0, #2
 	mov r1, #128
 	mov r2, #0
-	bl sub_0807204C
+	bl play_bgm
 	mov r0, #0
 	bl sub_0804F1E8
 	ldr r0, [r4, #92]
