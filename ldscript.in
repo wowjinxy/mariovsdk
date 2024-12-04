@@ -284,12 +284,12 @@ SECTIONS
 		. = 0x9D8;		gUnknown_030009D8 = .;
 		. = 0x9DC;		gUnknown_030009DC = .;
 		. = 0x9E0;		gUnknown_030009E0 = .;
-		. = 0x9E4;		gUnknown_030009E4 = .;
+		. = 0x9E4;		gCollectedLevelItemsBackup = .;
 		. = 0x9E8;		gLevelTimerOnOffFlag = .;
 		. = 0x9EC;		gUnknown_030009EC = .;
 		. = 0x9FC;		gUnknown_030009FC = .;
 		. = 0xA00;		gUnknown_03000A00 = .;
-		. = 0xA0C;		gUnknown_03000A0C = .;
+		. = 0xA0C;		gBG1CNT_03000A0C = .;
 		. = 0xA10;		gUnknown_03000A10 = .;
 		. = 0xA9E; 		gUnknown_03000A9E = .;
 		. = 0xB44;		gUnknown_03000B44 = .;
@@ -305,7 +305,7 @@ SECTIONS
 		. = 0xB6C;		gCurrentEnemyScore = .;
 		. = 0xB70;		gUnknown_03000B70 = .;
 		. = 0xB74;		gNextLevelID = .;
-		. = 0xB78;		gUnknown_03000B78 = .;
+		. = 0xB78;		gIsLevelViewActive = .;
 		. = 0xB80;		gLevelType = .;
 		. = 0xB90;		gNextLevelInLevelTable = .;
 		. = 0xBB4;		gLevelEWorldFlag = .;
@@ -426,7 +426,7 @@ SECTIONS
 		. = 0x1A00;		gUnknown_03001A00 = .;
 		. = 0x1A10;		gUnknown_03001A10 = .;
 		. = 0x1A1C;		gUnknown_03001A1C = .;
-		. = 0x1A30;		gLevelCollectableFlags = .;
+		. = 0x1A30;		gCollectedLevelItems = .;
 		. = 0x1A38;		gUnknown_03001A38 = .;
 		. = 0x1A3C;		gUnknown_03001A3C = .;
 		. = 0x1A4C;		gUnknown_03001A4C = .;

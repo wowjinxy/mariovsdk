@@ -20,6 +20,7 @@ units:
 - path: pause_menu.o
 - path: rom1.o
 - path: rom_80066FC.o
+- path: rom_80067F0.o
 - path: rom_80088F0.o
 - path: rom_800EEC0.o
 - path: rom_800F0C4.o

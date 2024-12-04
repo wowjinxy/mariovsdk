@@ -179,7 +179,7 @@ static void sub_080372A0(void)
     switch (sWorldIntroState)
     {
     case 0:
-        r4 = gUnknown_030002FC;
+        r4 = &gUnknown_030002FC[0];
         if (--r4->unk1 == 0)
         {
             if (r4->timer < r4->unk5 - 1)
@@ -198,7 +198,7 @@ static void sub_080372A0(void)
         }
         break;
     case STATE_DK_RUN:  // DK running
-        r4 = gUnknown_030002FC + 1;
+        r4 = &gUnknown_030002FC[1];
         if (sDonkeyKong->x < (240 << 8))
         {
             sDonkeyKong->x += sDonkeyKong->speed;
@@ -279,7 +279,7 @@ void world_start_main(void)
         play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
         if (gPreviousMainState == MAIN_STATE_FILE_SELECT)
         {
-            movie_player_setup_data(3, 41, 8, 1);
+            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 41, MAIN_STATE_LEVEL_SELECT, MOVIE_INTRO2);
             change_main_state(MAIN_STATE_MOVIE, TRUE);
             sub_080148A4(1, 1);
         }

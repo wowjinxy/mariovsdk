@@ -37,10 +37,10 @@ void intro_main(void)
     gUnknown_03000BE0++;
     if (gUnknown_03000BE0 > 180)
     {
-        movie_player_setup_data(3, 23, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
+        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 23, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
         gNextMainState = MAIN_STATE_MOVIE;
     }
-    sub_08008238();
+    level_callback_08008238();
     gUnknown_03000BE0 &= 0xFFFF;
 }
 
@@ -53,4 +53,4 @@ void intro_end(void)
 {
 }
 
-asm(".align 2, 0");
+FILE_PAD

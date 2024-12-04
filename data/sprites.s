@@ -9963,17 +9963,17 @@ gUnknown_082E84D4:
 gUnknown_082E84DC:
 	.INCBIN "assets/sprites/ui/gUnknown_082E84DC.4bpp"
 
-	.GLOBAL gUnknown_082E88DC
-gUnknown_082E88DC:
+	.GLOBAL gfxBBackToGameAnim
+gfxBBackToGameAnim:
 	.INCBIN "baserom.gba", 0x2E88DC, 0x2E8900-0x2E88DC
 
-	.GLOBAL gUnknown_082E8900
-gUnknown_082E8900:
+	.GLOBAL gfxBBackToGameOAM
+gfxBBackToGameOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=6
 
-	.GLOBAL gUnknown_082E8908
-gUnknown_082E8908:
-	.INCBIN "assets/sprites/ui/gUnknown_082E8908.4bpp"
+	.GLOBAL gfxBBackToGame4bpp
+gfxBBackToGame4bpp:
+	.INCBIN "assets/sprites/ui/BBackToGame.4bpp"
 
 	.GLOBAL gUnknown_082E8A08
 gUnknown_082E8A08:
@@ -31136,9 +31136,9 @@ gUncompressedGraphicsTable:
 	.byte 0x20 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_082E88DC @ Animation Data
-	.4byte gUnknown_082E8900 @ OAM
-	.4byte gUnknown_082E8908 @ Sprite Graphics
+	.4byte gfxBBackToGameAnim @ Animation Data
+	.4byte gfxBBackToGameOAM @ OAM
+	.4byte gfxBBackToGame4bpp @ Sprite Graphics
 
 	.2byte 0x0002 @ Number of Animation frames
 	.2byte 0x0200 @ Bytes per frame graphic

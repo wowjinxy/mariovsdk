@@ -2,9 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
-
-extern const u8 gfxTitleScreenPressStartOAM[];
-extern const u8 gfxTitleScreenPressStart4bpp[];
+#include "sprites.h"
 
 enum
 {
@@ -39,7 +37,7 @@ void title_init_callback(void)
         play_bgm(10, 128, 1);
     sub_08033C74();
     save_blend_regs(gTitleScreenLeftData.bldCnt, gTitleScreenLeftData.bldAlpha, gTitleScreenLeftData.bldY);
-    load_predefined_palette(0, 3);
+    load_predefined_palette(PALETTE_0_TITLE_SCREEN, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
     gPressStartFadeDir = FADE_UP;
     gTitleScreenFrameCounter = 3;
     gPressStartOpacity = 0;
@@ -78,12 +76,12 @@ void title_main(void)
         sub_08071E14(229);
         if (gUnknown_0807954C[gUnknown_03000B64].unk0 != 0)
         {
-            movie_player_setup_data(3, 23, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
+            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 23, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
         }
         else
         {
-            gLevelType = 0;
+            gLevelType = LEVEL_TYPE_MAIN;
             gCurrentWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
             title_demo_setup(gCurrentWorld);
             sub_08004428(gNextLevelInLevelTable.unk0->levelData);
@@ -93,9 +91,9 @@ void title_main(void)
         gUnknown_03000B64++;
         gUnknown_03000B64 = (gUnknown_03000B64 < 8) ? gUnknown_03000B64 : 0;
     }
-    if (gIsFadeInProgress == 0 && sub_080721A8(gUnknown_030000B0) != 0)
+    if (!gIsFadeInProgress && sub_080721A8(gUnknown_030000B0) != 0)
     {
-        if (pressed_a_or_start_08034004() != 0 && !(gNewKeys & 2) && !(gHeldKeys & 2))
+        if (pressed_a_or_start_08034004() && !(gNewKeys & B_BUTTON) && !(gHeldKeys & B_BUTTON))
         {
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
             change_main_state(MAIN_STATE_FILE_SELECT, USE_FADE);
@@ -103,7 +101,7 @@ void title_main(void)
         }
         sub_0801B88C();
     }
-    sub_08008238();
+    level_callback_08008238();
     gUnknown_03000BE0++;
     gUnknown_03000BE0 &= 0xFFFF;
 }
@@ -155,8 +153,8 @@ void title_loop(void)
     {
         u8 var;
 
-        DmaCopy32(3, gfxTitleScreenPressStartOAM, gOamBuffer, 8);
-        DmaCopy32(3, gfxTitleScreenPressStart4bpp, (void *)(VRAM + 0x10000), 0x200);
+        DmaCopy32(3, &gfxTitleScreenPressStartOAM, gOamBuffer, sizeof(struct OamData));
+        DmaCopy32(3, gfxTitleScreenPressStart4bpp, OBJ_VRAM0, 0x200);
         gOamBuffer[0].tileNum = 0;
         gOamBuffer[0].x = 204;
         gOamBuffer[0].y = 124;
@@ -164,5 +162,5 @@ void title_loop(void)
         gOamBuffer[0].objMode = 1;
         gOamBuffer[0].priority = 1;
     }
-    DmaCopy32(3, gOamBuffer, (void *)OAM, 0x400);
+    DmaCopy32(3, gOamBuffer, (void *)OAM, sizeof(gOamBuffer));
 }

@@ -4,11 +4,6 @@
 #include "main.h"
 #include "savefile.h"
 
-struct Foo
-{
-    u8 filler[8];
-};
-
 extern u16 gUnknown_0807DD14[];
 extern const struct UnknownStruct10 gUnknown_08B2AD88;
 extern struct UnknownStruct13 gUnknown_0807DD1C[];
@@ -18,7 +13,7 @@ void game_init_callback(void)
 {
     gUnknown_03000B50 = 0;
     gUnknown_03001704 = 0;
-    gLevelType = 0;
+    gLevelType = LEVEL_TYPE_MAIN;
     sub_08032F68();
     arena_init(gUnknown_03001F50, gUnknown_03007AB0);
     sub_0802F060();
@@ -30,7 +25,7 @@ void game_init_callback(void)
     gUnknown_0300029C = arena_allocate(0x100C);
     CpuFill16(0, gUnknown_0300029C, 0x100C);
     gUnknown_0300029C->unk1000 = 0;
-    REG_DISPCNT = 0x1140;
+    REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG0_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     process_input();
 }
 

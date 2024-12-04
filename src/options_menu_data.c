@@ -102,14 +102,14 @@ void (*gUnknown_08079938[])() =
 
 u8 gOptionsMenuMovieIDTable[] =
 {
-    0x0,
-    0x1,
-    0x2,
-    0x3,
-    0x4,
-    0x5,
-    0x6,
-    0x7,
+    MOVIE_INTRO,
+    MOVIE_INTRO2,
+    MOVIE_DK_BOSS_1,
+    MOVIE_CREDITS_1,
+    MOVIE_DK_BOSS_1_END,
+    MOVIE_DK_BOSS_2,
+    MOVIE_DK_BOSS_2_END,
+    MOVIE_CREDITS_2,
 };
 
 u8 gOptionsMenuMovieSongIDTable[] =
@@ -171,7 +171,7 @@ struct Submenu gOptionMenuSubMenus[] =
             { 0 },
             { 0 },
         },
-        -1,  // Exit to menu type (-1 returns to previous main state)
+        -1,  // return sub menu ID
         0,  // Option to select on exit
         0,  // flags
         NULL,  // Option 2 function
@@ -192,7 +192,7 @@ struct Submenu gOptionMenuSubMenus[] =
             { 54, 17, 17,  0,  0, NULL, 0 },
             { 0 },
         },
-        0,
+        0,  // return sub menu ID
         0,
         0,  // flags
         sub_080284E8,
@@ -213,7 +213,7 @@ struct Submenu gOptionMenuSubMenus[] =
             { 54, 17, 17,  0,  0, NULL, 0 },
             { 0 },
         },
-        0,
+        0,  // return sub menu ID
         1,
         0,  // flags
         sub_08028740,
@@ -234,7 +234,7 @@ struct Submenu gOptionMenuSubMenus[] =
             { 54,  17, 17, 0, 0, NULL, 0 },
             { 0 },
         },
-        0,
+        0,  // return sub menu ID
         2,
         MENU_HORIZONTAL | MENU_NOWRAP,  // flags
         NULL,

@@ -32,7 +32,7 @@ void load_some_oam(void)
 
 void sub_08033024(void)
 {
-    if (gNewKeys == 8 || gNewKeys == 2)
+    if (gNewKeys == START_BUTTON || gNewKeys == B_BUTTON)
     {
         change_main_state(MAIN_STATE_UKNOWN_12, USE_FADE);
         gUnknown_030012F8 = 0;
@@ -48,7 +48,7 @@ void sub_08033024(void)
         {
             gNewKeys = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 0];
             gHeldKeys = gUnknown_0807DD94[gUnknown_030012F8 * 2 + 1];
-            if ((gHeldKeys & 0x200) && (gNewKeys & 0x40))
+            if ((gHeldKeys & L_BUTTON) && (gNewKeys & DPAD_UP))
             {
                 change_main_state(MAIN_STATE_UNKNOWN_18, NO_FADE);
                 gUnknown_030012F8 = 0;
@@ -82,7 +82,7 @@ void sub_08033024(void)
 
 void sub_08033148(void)
 {
-    if (gNewKeys == 8 || gNewKeys == 2)
+    if (gNewKeys == START_BUTTON || gNewKeys == B_BUTTON)
     {
         change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
         gUnknown_030012F8 = 0;
@@ -114,7 +114,7 @@ void sub_08033148(void)
 // possibly sub_08034154
 static inline u16 inline_1(void)
 {
-    if (gLevelType == 5)
+    if (gLevelType == LEVEL_TYPE_PLUS_BOSS)
         return sub_0806C2C4();
     else
         return 0;
@@ -127,7 +127,7 @@ static inline bool32 inline_2(void)
      && gMainState != MAIN_STATE_TITLE_SCREEN && gMainState != MAIN_STATE_INIT)
     {
         change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
-        gLevelType = 0;
+        gLevelType = LEVEL_TYPE_MAIN;
         gCurrentWorld = 0;
         gNextLevelID = 0;
         gLevelEWorldFlag = 0;
@@ -432,4 +432,4 @@ void sub_08033588(int a, int b, int c)
     }
 }
 
-asm(".align 2, 0");
+FILE_PAD

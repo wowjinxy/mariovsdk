@@ -14,7 +14,7 @@ struct Submenu
     /*0x00*/ u8 numOptions;  // Number of options in sub menu
     /*0x01*/ u8 totalTileObjects;  // Total tile obects (A to select and related)
     /*0x04*/ struct MenuButton buttons[9];
-    s32 unkB8;  // Exit to menu type (-1 returns to previous main state)
+    /*0xB8*/ s32 returnSubMenuID;  // Menu ID to go to when B is pressed (or -1 to return to file select screen)
     u32 unkBC;  // Option to select on exit
     /*0xC0*/ u32 flags;  // flags
     void (*unkC4)(void);

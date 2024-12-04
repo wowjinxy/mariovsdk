@@ -414,7 +414,7 @@ _0801C23C:
 	ldrsh r0, [r4, r1]
 	mov r2, #16
 	ldrsh r1, [r4, r2]
-	bl sub_0800F6EC
+	bl level_setup
 	ldr r0, [r4]
 	ldr r0, [r0, #4]
 	bl sub_08004428
@@ -645,7 +645,7 @@ _0801C3B8:
 	mov r1, #1
 	bl change_main_state
 _0801C408:
-	bl sub_08008238
+	bl level_callback_08008238
 	add sp, sp, #12
 	pop {r4,r5}
 	pop {r0}

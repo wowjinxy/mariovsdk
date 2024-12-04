@@ -313,7 +313,7 @@ void sub_0803413C(void)
 // probably an inline function
 u16 sub_08034154(void)
 {
-    if (gLevelType == 5)
+    if (gLevelType == LEVEL_TYPE_PLUS_BOSS)
         return sub_0806C2C4();
     else
         return 0;
@@ -326,7 +326,7 @@ bool32 sub_08034178(void)
      && gMainState != MAIN_STATE_TITLE_SCREEN && gMainState != MAIN_STATE_INIT)
     {
         change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
-        gLevelType = 0;
+        gLevelType = LEVEL_TYPE_MAIN;
         gCurrentWorld = 0;
         gNextLevelID = 0;
         gLevelEWorldFlag = 0;
@@ -943,10 +943,10 @@ void goto_credits_init_callback(void)
     u8 arr[16];  // Needed to match. Probably some unused variable
     
     arena_restore_head(0);
-    if (gLevelType == 1)
-        movie_player_setup_data(3, 61, MAIN_STATE_LEVEL_SELECT, MOVIE_CREDITS_1); // ??, Song ID, Mode after movie finishes, Movie ID
+    if (gLevelType == LEVEL_TYPE_PLUS)
+        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 61, MAIN_STATE_LEVEL_SELECT, MOVIE_CREDITS_1); // ??, Song ID, Mode after movie finishes, Movie ID
     else
-        movie_player_setup_data(3, 47, MAIN_STATE_TITLE_SCREEN, MOVIE_CREDITS_2);
+        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 47, MAIN_STATE_TITLE_SCREEN, MOVIE_CREDITS_2);
     change_main_state(MAIN_STATE_MOVIE, USE_FADE);
 }
 
@@ -962,4 +962,4 @@ void goto_credits_end(void)
 {
 }
 
-asm(".align 2, 0");
+FILE_PAD

@@ -1179,7 +1179,7 @@ _080159D2:
 	ldrsb r0, [r5, r0]
 	mov r1, #0
 	ldrsb r1, [r2, r1]
-	bl sub_0800F6EC
+	bl level_setup
 	ldr r0, _08015A0C  @ =gNextLevelInLevelTable
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
@@ -1353,7 +1353,7 @@ world_dk_button:
 	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #0
-	bl sub_0800F6EC
+	bl level_setup
 	ldr r0, _08015B60  @ =gCurrentWorld
 	strb r4, [r0]
 	ldr r0, _08015B64  @ =gNextLevelID
@@ -1859,7 +1859,7 @@ _08015EBC:
 	mov r1, #0
 	ldrsb r1, [r5, r1]
 _08015F08:
-	bl sub_0800F6EC
+	bl level_setup
 	ldr r0, _08015F30  @ =gNextLevelInLevelTable
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
@@ -2046,7 +2046,7 @@ _08016044:
 	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #1
-	bl sub_0800F6EC
+	bl level_setup
 	ldr r1, _08016098  @ =gNextLevelID
 	mov r0, #1
 	strb r0, [r1]
@@ -3290,7 +3290,7 @@ _080169A0:
 	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #0
-	bl sub_0800F6EC
+	bl level_setup
 	ldr r0, _080169EC  @ =gCurrentWorld
 	strb r4, [r0]
 	ldr r0, _080169F0  @ =gNextLevelID
@@ -3526,7 +3526,7 @@ _08016B68:
 	bl play_sound_effect_08071990
 	mov r0, #0
 	mov r1, #1
-	bl sub_0800F6EC
+	bl level_setup
 	ldr r1, _08016BB4  @ =gNextLevelID
 	mov r0, #1
 	strb r0, [r1]

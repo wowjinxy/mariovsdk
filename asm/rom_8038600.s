@@ -329,7 +329,7 @@ _0803883A:
 	and r1, r1, r0
 	cmp r1, #0
 	bne _08038878
-	ldr r0, _080388C4  @ =gLevelCollectableFlags
+	ldr r0, _080388C4  @ =gCollectedLevelItems
 	strb r1, [r0, #5]
 	strb r1, [r0, #4]
 	strb r1, [r0, #3]
@@ -374,7 +374,7 @@ _080388BC:
 _080388C0:
 	.4byte gNextLevelInLevelTable
 _080388C4:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _080388C8:
 	.4byte gMainState
 _080388CC:

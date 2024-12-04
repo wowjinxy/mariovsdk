@@ -210,7 +210,7 @@ static void main_loop(void);
 void sub_08006DD8(void) { // possible inline for AgbMain?
 
 	gUnknown_03000B64 = 0;
-	gUnknown_03000B78 = 0;
+	gIsLevelViewActive = FALSE;
 	gNextMainState = MAIN_STATE_INIT;
 }
 
@@ -219,7 +219,7 @@ void AgbMain(void)
 {
     clear_ram();
     gUnknown_03000B64 = 0;
-    gUnknown_03000B78 = 0;
+    gIsLevelViewActive = FALSE;
     gNextMainState = MAIN_STATE_INIT;
     init_timer_regs();
     main_loop();

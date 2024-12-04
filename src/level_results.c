@@ -56,7 +56,7 @@ void sub_0802919C(int arg0, int arg1)
     }
     else
     {
-        if (gNextLevelInLevelTable.levelType & 2)
+        if (gNextLevelInLevelTable.levelFlags & 2)
         {
             asm("":::"r2");
             gUnknown_03000DD0 = arg0;
@@ -107,7 +107,7 @@ void sub_0802919C(int arg0, int arg1)
                 gUnknown_0300010C = arg1;
             }
             gUnknown_0300010D = gUnknown_03000DF4 + 9;
-            if (gNextLevelInLevelTable.levelType & 1)
+            if (gNextLevelInLevelTable.levelFlags & 1)
                 gUnknown_0300010D = 21;
         }
     }
@@ -381,14 +381,14 @@ void level_results_init_callback(void)
     r0 = sub_08006968(&gLevelResultsData);
     gUnknown_03000104 = r0;
     DmaFill16(3, 0xA0, OAM, OAM_SIZE/2);
-    if (gNextLevelInLevelTable.levelType & 3)
+    if (gNextLevelInLevelTable.levelFlags & 3)
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     else
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     gUnknown_03001A1C = 0;
-    if (gNextLevelInLevelTable.levelType & 2)
+    if (gNextLevelInLevelTable.levelFlags & 2)
         r4 = 3;
-    else if (gNextLevelInLevelTable.levelType & 1)
+    else if (gNextLevelInLevelTable.levelFlags & 1)
         r4 = 2;
     else
     {
@@ -405,15 +405,15 @@ void level_results_init_callback(void)
     sub_08038B18();
     r4 = 0;
     CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));
-    if (gNextLevelInLevelTable.levelType & 1)
+    if (gNextLevelInLevelTable.levelFlags & 1)
         sub_0802F648(&gUnknown_03000E00, gUnknown_08079DA0.unk4);
-    else if (gNextLevelInLevelTable.levelType & 2)
+    else if (gNextLevelInLevelTable.levelFlags & 2)
         sub_0802F648(&gUnknown_03000E00, gUnknown_08079DA0.unk8);
     else if (!gLevelEWorldFlag && gLevelType == LEVEL_TYPE_MAIN)
         sub_0802F648(&gUnknown_03000E00, gUnknown_08079DA0.unk0);
     else
         sub_0802F648(&gUnknown_03000E00, gUnknown_08079DA0.unkC);
-    if (gNextLevelInLevelTable.levelType & 1)
+    if (gNextLevelInLevelTable.levelFlags & 1)
     {
         if (gMiniMariosRescued_03001BA0 < 6)
             r4 += gMiniMariosRescued_03001BA0 * 1000;
@@ -434,10 +434,10 @@ void level_results_init_callback(void)
     sub_0802FCA4();
     sub_080149F8(gLivesCount);
     if (gUnknown_0300010F != 0)
-        set_level_flags_08010534(5, (u8)gUnknown_03000DF8, &gLevelCollectableFlags);
+        set_level_flags_08010534(5, (u8)gUnknown_03000DF8, &gCollectedLevelItems);
     else
-        set_level_flags_08010534((u8)gUnknown_03000DD0, (u8)gUnknown_03000DF8, &gLevelCollectableFlags);
-    if (gNextLevelInLevelTable.levelType & 2)
+        set_level_flags_08010534((u8)gUnknown_03000DD0, (u8)gUnknown_03000DF8, &gCollectedLevelItems);
+    if (gNextLevelInLevelTable.levelFlags & 2)
     {
         if ((s8)gUnknown_03000DD0 <= 4)
             sub_08010BE0((u8)(gUnknown_03000DD0 + 1), 0);
@@ -462,12 +462,12 @@ void level_results_main(void)
         process_input();
         if (gUnknown_03000DDC == 0)
         {
-            if (gNewKeys & 9)
+            if (gNewKeys & (A_BUTTON|START_BUTTON))
             {
-                if ((gNextLevelInLevelTable.levelType & 3) != 0
-                 || !gLevelCollectableFlags.redPresent
-                 || !gLevelCollectableFlags.yellowPresent
-                 || !gLevelCollectableFlags.bluePresent)
+                if ((gNextLevelInLevelTable.levelFlags & 3) != 0
+                 || !gCollectedLevelItems.redPresent
+                 || !gCollectedLevelItems.yellowPresent
+                 || !gCollectedLevelItems.bluePresent)
                     play_sound_effect_08071990(SE_SELECT_M, 8, 16, 64, 0, 128, 0);
                 r4 = 0xF423F;
                 gNewKeys = 0;
@@ -477,10 +477,10 @@ void level_results_main(void)
             {
                 if (gUnknown_03000108 != -1)
                     sub_08071D9C(gUnknown_03000108);
-                if ((gNextLevelInLevelTable.levelType & 3) == 0
-                 && gLevelCollectableFlags.redPresent
-                 && gLevelCollectableFlags.yellowPresent
-                 && gLevelCollectableFlags.bluePresent)
+                if ((gNextLevelInLevelTable.levelFlags & 3) == 0
+                 && gCollectedLevelItems.redPresent
+                 && gCollectedLevelItems.yellowPresent
+                 && gCollectedLevelItems.bluePresent)
                     play_sound_effect_08071990(SE_ITEMLAST, 8, 16, 64, 0, 128, 0);
             }
             else
@@ -505,7 +505,7 @@ void level_results_main(void)
     if (r4 != 0)
     {
         gUnknown_030009D8++;
-        if (sub_08030DE8() != 0 && (gNewKeys & 9))
+        if (sub_08030DE8() != 0 && (gNewKeys & (A_BUTTON|START_BUTTON)))
         {
             int r1 = *gUnknown_03000E00.unk50 - 1;
             gUnknown_03000E00.unk0[r1].unk0 = gUnknown_03000E00.unk0[r1].unk4;
@@ -521,7 +521,7 @@ void level_results_main(void)
                 change_main_state(MAIN_STATE_EXPERT_LEVEL_SELECT, USE_FADE);
             else
             {
-                if (gNextLevelInLevelTable.levelType & 4)
+                if (gNextLevelInLevelTable.levelFlags & 4)
                 {
                     if (gLevelType == LEVEL_TYPE_MAIN)
                     {
@@ -539,11 +539,11 @@ void level_results_main(void)
                         {
                             gLevelType = LEVEL_TYPE_MAIN_BOSS;
                             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
-                            sub_0800F6EC(0, 0);
+                            level_setup(0, 0);
                             gCurrentWorld = 0;
                             gNextLevelID = 0;
                             sub_08004428(gNextLevelInLevelTable.unk0->levelData);
-                            movie_player_setup_data(3, 43, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_1);
+                            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 43, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_1);
                             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
                         }
                     }
@@ -563,11 +563,11 @@ void level_results_main(void)
                         {
                             gLevelType = LEVEL_TYPE_PLUS_BOSS;
                             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
-                            sub_0800F6EC(0, 1);
+                            level_setup(0, 1);
                             gCurrentWorld = 0;
                             gNextLevelID = 1;
                             sub_08004428(gNextLevelInLevelTable.unk0->levelData);
-                            movie_player_setup_data(3, 45, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_2);
+                            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 45, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_2);
                             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
                         }
                     }
@@ -580,9 +580,9 @@ void level_results_main(void)
                 }
                 else
                 {
-                    if (gLevelCollectableFlags.redPresent
-                     && gLevelCollectableFlags.yellowPresent
-                     && gLevelCollectableFlags.bluePresent)
+                    if (gCollectedLevelItems.redPresent
+                     && gCollectedLevelItems.yellowPresent
+                     && gCollectedLevelItems.bluePresent)
                     {
                         if (gLevelType == LEVEL_TYPE_MAIN && gNextLevelInLevelTable.unk12 == 0)
                         {
@@ -602,7 +602,7 @@ void level_results_main(void)
                     }
                     else
                     {
-                        if (gNextLevelInLevelTable.levelType & 1)
+                        if (gNextLevelInLevelTable.levelFlags & 1)
                             change_main_state(MAIN_STATE_UKNOWN_12, USE_FADE);
                         else
                             change_main_state(MAIN_STATE_LEVEL_SELECT, USE_FADE);
@@ -672,7 +672,8 @@ void level_results_loop(void)
     sp6 = gVRAMCurrTileNum_03001930;
     sp8 = gObjVRAMCopyOffset_0300192C;
 
-    if (!gUnknown_03000C1C) {
+    if (!gUnknown_03000C1C)
+    {
         DmaFill32(3, 0xA0, &gOamBuffer, OAM_SIZE);
         sub_08031AD4(&sp4);
         sub_0802F890(&gUnknown_03000E00.unk0[0].unk0, &sp4, &sp6, &sp8);
@@ -681,8 +682,8 @@ void level_results_loop(void)
     }
 }
 
-void level_results_end(void) {
-    return;
+void level_results_end(void)
+{
 }
 
-asm(".2byte 0x0000");
+FILE_PAD

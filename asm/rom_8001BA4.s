@@ -3013,7 +3013,7 @@ _08003114:
 _08003118:
 	.4byte gLivesCount
 _0800311C:
-	ldr r2, _08003164  @ =gLevelCollectableFlags
+	ldr r2, _08003164  @ =gCollectedLevelItems
 	ldrb r0, [r4, #4]
 	sub r0, r0, #28
 	add r0, r0, r2
@@ -3051,7 +3051,7 @@ _08003146:
 	mov r0, #41
 	b _080031A6
 _08003164:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _08003168:
 	.4byte gUnknown_030008E4
 _0800316C:
@@ -3285,7 +3285,7 @@ _08003314:
 _08003318:
 	.4byte gLivesCount
 _0800331C:
-	ldr r2, _0800334C  @ =gLevelCollectableFlags
+	ldr r2, _0800334C  @ =gCollectedLevelItems
 	ldrb r0, [r4, #4]
 	sub r0, r0, #28
 	add r0, r0, r2
@@ -3311,7 +3311,7 @@ _0800331C:
 	.byte 0x00
 	.byte 0x00
 _0800334C:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _08003350:
 	ldrb r0, [r2, #3]
 	cmp r0, #0
@@ -7452,7 +7452,7 @@ _08005204:
 	add r0, r1, r0
 	str r0, [r3]
 	ldr r1, _0800525C  @ =REG_BG1CNT
-	ldr r0, _08005260  @ =gUnknown_03000A0C
+	ldr r0, _08005260  @ =gBG1CNT_03000A0C
 	ldrh r0, [r0]
 	strh r0, [r1]
 	b _0800526E
@@ -7471,7 +7471,7 @@ _08005258:
 _0800525C:
 	.4byte REG_BG1CNT
 _08005260:
-	.4byte gUnknown_03000A0C
+	.4byte gBG1CNT_03000A0C
 _08005264:
 	ldr r2, _080052E8  @ =REG_BG1CNT
 	ldrh r1, [r2]

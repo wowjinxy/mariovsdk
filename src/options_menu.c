@@ -633,7 +633,7 @@ void options_init_callback(void)
     gOptionsMenuData->unk0[4].unkC = 14;
     gOptionsMenuData->unk1136 = gScreenModeRelatedPtr->unk0_3;
     gOptionsMenuData->unk1138 = gScreenModeRelatedPtr->unk0_5;
-    load_predefined_palette(3, 3);
+    load_predefined_palette(PALETTE_3_OPTIONS_MENU, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
     gOptionsMenuData->unk1144 = arena_allocate(gUnknown_08B3A4DC * 2);
     gOptionsMenuData->unk113E = 0;
     for (i = 0; i < gUnknown_08B3A4DC; i++)
@@ -721,12 +721,12 @@ void options_main(void)
     }
     else if (gNewKeys & B_BUTTON)
     {
-        if (gOptionsMenuData->currSubMenu->unkB8 == -1)
+        if (gOptionsMenuData->currSubMenu->returnSubMenuID == -1)
             change_main_state(MAIN_STATE_FILE_SELECT, USE_FADE);
         else
         {
             sub_08071C24();
-            go_to_submenu(gOptionsMenuData->currSubMenu->unkB8);
+            go_to_submenu(gOptionsMenuData->currSubMenu->returnSubMenuID);
             if (get_current_bgm() != 10)
                 play_bgm(10, 128, 1);
         }
@@ -1162,9 +1162,9 @@ void options_menu_play_sound_effect(void)
 void options_menu_play_movie(void)
 {
     movie_player_setup_data(
-        3,
+        MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2,
         gOptionsMenuMovieSongIDTable[gOptionsMenuData->unk1134],
-        4,
+        MAIN_STATE_OPTION_MENU,
         gOptionsMenuMovieIDTable[gOptionsMenuData->unk1134]);
     change_main_state(MAIN_STATE_MOVIE, USE_FADE);
     gPreviousMovieOption = gOptionsMenuData->unk1134;

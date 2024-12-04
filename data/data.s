@@ -587,6 +587,8 @@ gUnknown_0807DD1C:
 	.4byte gErrorELevelCorruptedText
 	.4byte 0x00000005
 
+@ rom_8032814.c?
+
 	.GLOBAL gPaletteIndices_0807DD34
 gPaletteIndices_0807DD34:
 	.4byte 37 @ World 1 palette

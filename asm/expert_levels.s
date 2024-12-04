@@ -354,7 +354,7 @@ _080355EC:
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	mov r1, #0
-	bl sub_0800F6EC
+	bl level_setup
 	bl sub_08014A34
 	ldr r1, _0803565C  @ =gLivesCount
 	strb r0, [r1]
@@ -665,7 +665,7 @@ _08035838:
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	mov r1, #0
-	bl sub_0800F6EC
+	bl level_setup
 	bl sub_08014A34
 	ldr r1, _080358AC  @ =gLivesCount
 	strb r0, [r1]

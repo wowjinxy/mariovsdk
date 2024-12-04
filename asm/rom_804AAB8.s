@@ -27469,8 +27469,8 @@ _080573F6:
 	bx r0
 	THUMB_FUNC_END sub_0805739C
 
-	THUMB_FUNC_START sub_080573FC
-sub_080573FC: @ 0x080573FC
+	THUMB_FUNC_START move_player_update_sprites
+move_player_update_sprites: @ 0x080573FC
 	push {r4-r6,lr}
 	sub sp, sp, #4
 	ldr r6, [sp, #20]
@@ -27488,7 +27488,7 @@ sub_080573FC: @ 0x080573FC
 	bx r0
 _0805741C:
 	.4byte 0x03001BF8
-	THUMB_FUNC_END sub_080573FC
+	THUMB_FUNC_END move_player_update_sprites
 
 	THUMB_FUNC_START sub_08057420
 sub_08057420: @ 0x08057420

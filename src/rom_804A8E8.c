@@ -10,7 +10,7 @@ void sub_0804A8E8(void) {
     
     switch(gUnknown_03000387){
         case 0:
-            if ((2 < gLevelCollectableFlags.letterT + gLevelCollectableFlags.letterO + gLevelCollectableFlags.letterY)
+            if ((2 < gCollectedLevelItems.letterT + gCollectedLevelItems.letterO + gCollectedLevelItems.letterY)
         && ((gUnknown_030019AC->unk84->unkC & 0x4000) != 0))
         {
             if (gUnknown_03001B88 == gUnknown_030019AC->unk24 >> 8) {

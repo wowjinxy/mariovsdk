@@ -195,4 +195,4 @@ static void sub_08029FCC(void){
 
 }
 
-asm(".align 2, 0");
+FILE_PAD

@@ -625,7 +625,7 @@ FILES := \
 	assets/sprites/ui/gUnknown_082E8198.png \
 	assets/sprites/ui/gUnknown_082E830C.png \
 	assets/sprites/ui/gUnknown_082E84DC.png \
-	assets/sprites/ui/gUnknown_082E8908.png \
+	assets/sprites/ui/BBackToGame.png \
 	assets/sprites/ui/gUnknown_082E8A58.png \
 	assets/sprites/ui/gUnknown_082E8EA8.png \
 	assets/sprites/ui/gUnknown_082E911C.png \
@@ -3873,9 +3873,9 @@ assets/sprites/ui/gUnknown_082E84DC.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/ui/gUnknown_082E84DC.4bpp: baserom.gba ; $(call dump_data,0x2E84DC,0x400)
 assets/sprites/ui/gUnknown_082E84DC.png: $(TMPDIR)/palettes/37_world_one_obj.10.gbapal
 
-assets/sprites/ui/gUnknown_082E8908.png: GBAGFX_FLAGS := -width 4
-$(TMPDIR)/sprites/ui/gUnknown_082E8908.4bpp: baserom.gba ; $(call dump_data,0x2E8908,0x100)
-assets/sprites/ui/gUnknown_082E8908.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
+assets/sprites/ui/BBackToGame.png: GBAGFX_FLAGS := -width 4
+$(TMPDIR)/sprites/ui/BBackToGame.4bpp: baserom.gba ; $(call dump_data,0x2E8908,0x100)
+assets/sprites/ui/BBackToGame.png: $(TMPDIR)/palettes/37_world_one_obj.6.gbapal
 
 assets/sprites/ui/gUnknown_082E8A58.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/ui/gUnknown_082E8A58.4bpp: baserom.gba ; $(call dump_data,0x2E8A58,0x400)

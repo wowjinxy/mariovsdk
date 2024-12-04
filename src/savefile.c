@@ -599,7 +599,7 @@ static void init_current_save_file_080102B4(u8 world)  // unreferenced
     struct SaveFile *saveFile = &gSaveFilesPtr[*gSelectedSaveFileNumPtr];
     s16 level;
 
-    if (gLevelType == 0)
+    if (gLevelType == LEVEL_TYPE_MAIN)
     {
         for (level = 0; level < 6; level++)
         {
@@ -612,7 +612,7 @@ static void init_current_save_file_080102B4(u8 world)  // unreferenced
         saveFile->lives = 5;
         update_star_and_completion_count(gFileSelectMenuSel);
     }
-    else if (gLevelType == 1)
+    else if (gLevelType == LEVEL_TYPE_PLUS)
     {
         for (level = 0; level < 6; level++)
         {
@@ -755,7 +755,7 @@ void set_level_flags_08010534(u8 world, u8 level, u8 *presents)
     }
     if (gLevelType == LEVEL_TYPE_MAIN)
     {
-        if (gNextLevelInLevelTable.levelType & 1)
+        if (gNextLevelInLevelTable.levelFlags & 1)
         {
             if ((saveFile->mainLevels[world * 8 + 6].flags & 7) < 6)
             {
@@ -764,7 +764,7 @@ void set_level_flags_08010534(u8 world, u8 level, u8 *presents)
             }
             saveFile->mainLevels[world * 8 + 6].flags |= LEVEL_FLAG_COMPLETE;
         }
-        else if (gNextLevelInLevelTable.levelType & 2)
+        else if (gNextLevelInLevelTable.levelFlags & 2)
         {
             if ((saveFile->mainLevels[world * 8 + 7].flags & 7) < 6)
             {
@@ -858,7 +858,7 @@ void set_level_highscore_flag_080107E8(u8 world, u8 level, u16 score)
     gCurrentEnemyScore = 0;
     if (gLevelType == LEVEL_TYPE_MAIN)
     {
-        if (gNextLevelInLevelTable.levelType & 1)
+        if (gNextLevelInLevelTable.levelFlags & 1)
         {
             if (saveFile->mainLevels[world * 8 + 6].highScore <= score)
             {
@@ -870,7 +870,7 @@ void set_level_highscore_flag_080107E8(u8 world, u8 level, u16 score)
                 gCurrentPresentScore = score;
             }
         }
-        else if (gNextLevelInLevelTable.levelType & 2)
+        else if (gNextLevelInLevelTable.levelFlags & 2)
         {
             if (saveFile->mainLevels[world * 8 + 7].highScore <= score)
             {
@@ -981,11 +981,11 @@ void sub_08010A3C(u8 arg0, u8 arg1)
         {
             if (sp2 == 0 && arg0 >= sp0)
             {
-                if (gNextLevelInLevelTable.levelType & 1)
+                if (gNextLevelInLevelTable.levelFlags & 1)
                 {
                     saveFile->unk2 = saveFile->unk1 = (arg0 << 4) | 6;
                 }
-                else if (gNextLevelInLevelTable.levelType & 2)
+                else if (gNextLevelInLevelTable.levelFlags & 2)
                 {
                     if (gCurrentWorld > 5)
                         gCurrentWorld = 0;
@@ -1008,7 +1008,7 @@ void sub_08010A3C(u8 arg0, u8 arg1)
         {
             if (sp2 == 1 && arg0 >= sp0 )
             {
-                if (gNextLevelInLevelTable.levelType & 2)
+                if (gNextLevelInLevelTable.levelFlags & 2)
                 {
                     saveFile->unk1 = (arg0 << 4) | arg1;
                     if (arg0 > 4)
@@ -1066,11 +1066,11 @@ void sub_08010BE0(u8 arg0, u8 arg1)
             arg1 /= 2;
             if (sp2 == 0 && (arg0 > sp0 || (arg0 == sp0 && arg1 >= sp1)))
             {
-                if (gNextLevelInLevelTable.levelType & 1)
+                if (gNextLevelInLevelTable.levelFlags & 1)
                 {
                     saveFile->unk2 = saveFile->unk1 = (arg0 << 4) | 6;
                 }
-                else if (gNextLevelInLevelTable.levelType & 2)
+                else if (gNextLevelInLevelTable.levelFlags & 2)
                 {
                     if (gCurrentWorld > 5)
                         gCurrentWorld = 0;
@@ -1092,7 +1092,7 @@ void sub_08010BE0(u8 arg0, u8 arg1)
         {
             if (sp2 <= 1 && (arg0 > sp0 || (arg0 == sp0 && arg1 >= sp1)))
             {
-                if (gNextLevelInLevelTable.levelType & 2)
+                if (gNextLevelInLevelTable.levelFlags & 2)
                 {
                     saveFile->unk1 = (arg0 << 4) | arg1;
                     if (arg0 > 4)

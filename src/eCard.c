@@ -3,54 +3,46 @@
 #include "arena.h"
 #include "main.h"
 
-void e_world_from_menu_loop(void) {
-	
-    s32 temp1;
+void e_world_from_menu_loop(void)
+{
     u16 temp2 = 0;
 
-DmaFill32(3, 0xa0, gOamBuffer, 0x400); 
-    
+    DmaFill32(3, 0xA0, gOamBuffer, sizeof(gOamBuffer));
     sub_080351E0();
 
-      if (gUnknown_03000288 == 1) {
-    sub_08031D44(gUnknown_03000294,gUnknown_03000298,0x14,0);
-  }
-      else if (gUnknown_03000288 >= (temp1 = 1)) { 
-           if (6 > gUnknown_03000288) {
-           if ((gUnknown_03000288 >= (temp1 = 3))){ 
-    sub_08034CCC(gTextErasing,0xffff8001,0x14,0xffffffff,2);
-  }}}
-    
+    switch (gUnknown_03000288)
+    {
+    case 1:
+        sub_08031D44(gUnknown_03000294, gUnknown_03000298, 0x14, 0);
+        break;
+    case 3:
+    case 4:
+    case 5:
+         sub_08034CCC(gTextErasing, -0x7FFF, 0x14, -1, 2);
+         break;
+    }
+
     sub_08035108(&temp2);
-DmaCopy16(3, gOamBuffer, 0x7000000, 0x400);
+    DmaCopy16(3, gOamBuffer, 0x7000000, 0x400);
 }
 
-void e_world_from_menu_init_callback(void) {
-
-    u32 var1;
-    u16 var2[2];
+void e_world_from_menu_init_callback(void)
+{
     arena_restore_head(0);
     gVRAMCurrTileNum_03001930 = gObjVRAMCopyOffset_0300192C = 0;
     e_world_init_callback();
     sub_08006968(&gEWorldMenuData2);
-    var1 = sub_0802A458();
-    if (var1 != 0) {
+    if (sub_0802A458() != 0)
         sub_0802F06C();
-    }
-    var1 = get_current_bgm();
-    if (var1 != 10) {
+    if (get_current_bgm() != 10)
         play_bgm(10, 0x80, 1);
-    }
     gUnknown_0300028C = gUnknown_03000288 = 0;
     gUnknown_03000290 = 0;
-    var2[0] = 0;
-    CpuSet(var2,&gBGLayerOffsets.bg0_x,0x1000008);
+    CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));
 }
 
-
-void e_world_from_menu_end(void) {
-
-	return;
+void e_world_from_menu_end(void)
+{
 }
 
-asm(".short 0x0000");
+FILE_PAD

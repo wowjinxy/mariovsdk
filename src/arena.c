@@ -60,4 +60,4 @@ void sub_080348C8(const struct UnknownStruct10 *a, u32 b, u32 c, u32 d)
     gUnknown_03001770.unk28 = 0x8000;
 }
 
-asm(".align 2, 0");
+FILE_PAD

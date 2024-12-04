@@ -346,16 +346,16 @@ static void handle_main_menu_input(void)
             *gSelectedSaveFileNumPtr = gFileSelectMenuSel;
             inlinefunc5(*gSelectedSaveFileNumPtr, &gCurrentWorld, &gNextLevelID, &gLevelType);
             inlinefunc4(*gSelectedSaveFileNumPtr);
-            if (gLevelType == 0)
+            if (gLevelType == LEVEL_TYPE_MAIN)
                 gNextLevelID = gNextLevelID << 1;
             if (get_level_stats_0800FE2C(0, 0, 0, &spC))
             {
-                change_main_state(MAIN_STATE_LEVEL_SELECT, 1);
+                change_main_state(MAIN_STATE_LEVEL_SELECT, USE_FADE);
             }
             else
             {
-                movie_player_setup_data(3, 41, MAIN_STATE_LEVEL_SELECT, 1);
-                change_main_state(MAIN_STATE_MOVIE, 1);
+                movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 41, MAIN_STATE_LEVEL_SELECT, MOVIE_INTRO2);
+                change_main_state(MAIN_STATE_MOVIE, USE_FADE);
                 one = 1;
                 inlinefunc3(*gSelectedSaveFileNumPtr, one);
                 if (gUnknown_03000B50 == 1)
@@ -367,7 +367,7 @@ static void handle_main_menu_input(void)
     else if (gNewKeys & B_BUTTON)
     {
         play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 0x80, 0);
-        change_main_state(MAIN_STATE_TITLE_SCREEN, 1);
+        change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
         return;
     }
 
@@ -1418,4 +1418,4 @@ void main_menu_end(void)
     sub_080382A8();
 }
 
-asm(".balign 4, 0");
+FILE_PAD

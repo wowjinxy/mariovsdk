@@ -131,42 +131,42 @@ u16 setup_graphics_08032814(struct UnkStruct1 *arg0, int arg1)
 
 void load_some_palette_08032B30(s16 arg0, s16 arg1)
 {
-    if (gLevelType == 0)
+    if (gLevelType == LEVEL_TYPE_MAIN)
     {
         if (gMainState == MAIN_STATE_TUTORIAL)
         {
             if (arg0 <= 5)
-                load_predefined_palette(gPaletteIndices_0807DD34[arg1], 1);
+                load_predefined_palette(gPaletteIndices_0807DD34[arg1], LOAD_BG_PALETTE);
             else
-                load_predefined_palette(gPaletteIndices_0807DD4C[arg1], 1);
+                load_predefined_palette(gPaletteIndices_0807DD4C[arg1], LOAD_BG_PALETTE);
         }
         else
         {
             if (arg0 <= 11)
-                load_predefined_palette(gPaletteIndices_0807DD34[arg1], 1);
+                load_predefined_palette(gPaletteIndices_0807DD34[arg1], LOAD_BG_PALETTE);
             else if (arg0 == 12)
-                load_predefined_palette(gPaletteIndices_0807DD4C[arg1], 1);
+                load_predefined_palette(gPaletteIndices_0807DD4C[arg1], LOAD_BG_PALETTE);
             else if (arg0 == 13)
-                load_predefined_palette(gPaletteIndices_0807DD64[arg1], 1);
+                load_predefined_palette(gPaletteIndices_0807DD64[arg1], LOAD_BG_PALETTE);
         }
     }
-    else if (gLevelType == 1)
+    else if (gLevelType == LEVEL_TYPE_PLUS)
     {
         if (arg0 <= 5)
-            load_predefined_palette(gPaletteIndices_0807DD7C[arg1], 1);
+            load_predefined_palette(gPaletteIndices_0807DD7C[arg1], LOAD_BG_PALETTE);
         else if (arg1 == 2)
-            load_predefined_palette(58, 1);
+            load_predefined_palette(PALETTE_58, LOAD_BG_PALETTE);
         else
-            load_predefined_palette(gPaletteIndices_0807DD64[arg1], 1);
+            load_predefined_palette(gPaletteIndices_0807DD64[arg1], LOAD_BG_PALETTE);
     }
-    else if (gLevelType == 2)
-        load_predefined_palette(gPaletteIndices_0807DD34[arg1], 1);
-    else if (gLevelType == 3)
-        load_predefined_palette(gPaletteIndices_0807DD7C[arg1], 1);
-    else if (gLevelType == 4)
-        load_predefined_palette(62, 1);
-    else if (gLevelType == 5)
-        load_predefined_palette(63, 1);
+    else if (gLevelType == LEVEL_TYPE_EXPERT_1_6)
+        load_predefined_palette(gPaletteIndices_0807DD34[arg1], LOAD_BG_PALETTE);
+    else if (gLevelType == LEVEL_TYPE_EXPERT_7_12)
+        load_predefined_palette(gPaletteIndices_0807DD7C[arg1], LOAD_BG_PALETTE);
+    else if (gLevelType == LEVEL_TYPE_MAIN_BOSS)
+        load_predefined_palette(PALETTE_62, LOAD_BG_PALETTE);
+    else if (gLevelType == LEVEL_TYPE_PLUS_BOSS)
+        load_predefined_palette(PALETTE_63, LOAD_BG_PALETTE);
 }
 
 int sub_08032C44(struct UnknownStruct4 *arg0)

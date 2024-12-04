@@ -25,6 +25,11 @@
 #define static_assert(cond, msg) typedef char static_assertion_##msg[(cond)?1:-1]
 #endif
 
+// Modern GNU assembler pads code sections with nop by default.
+// Use this at the end of a file to pad with zero instead to match the
+// original behavior.
+#define FILE_PAD asm(".balign 4, 0");
+
 //------------------------------------------------------------------------------
 // Types
 //------------------------------------------------------------------------------
@@ -178,7 +183,8 @@ struct Struct30009B0
     s16 unk12;
 };
 
-extern struct Struct3000A10 {
+struct Struct3000A10
+{
     u32 *base;
     u8 unk4;
     u8 unk5;
@@ -190,7 +196,9 @@ extern struct Struct3000A10 {
     u8 unk2A;
     u8 unk2B;
     u8 unk2C;
-    u8 padA[0x3];
+    u8 unk2D;
+    u8 unk2E;
+    u8 unk2F;
     u8 unk30;
     u8 unk39;
     u8 unk3A;
@@ -207,7 +215,10 @@ extern struct Struct3000A10 {
     u8 unk90;
     u8 unk91;
     u8 unk92;
-    u8 pad6[0x43];
+    u8 filler93[0xB6-0x93];
+    u8 unkB6;
+    u8 fillerB7[0xD6-0xB7];
+    //u8 pad6[0x43];
     u8 unkD6;
     u16 pad3[0x24];
     u8 unk120;
@@ -216,7 +227,7 @@ extern struct Struct3000A10 {
     u8 unk123;
     u8 unk124;
     u8 unk125;
-} unk1;
+};
 
 struct UnknownStruct6
 {
@@ -236,6 +247,14 @@ struct UnknownStruct5
     /*0x10*/ u32 unk10;
 };
 
+struct Struct0807C0E0  // Is this supposed to be worldTableStruct?
+{
+    struct Struct168 *unk0;
+    u16 unk4;
+    u16 unk6;
+//    u8 filler6[2];
+};  // size = 0x8
+
 struct UnknownStruct4_child
 {
     u8 filler0[6];
@@ -247,15 +266,15 @@ struct UnknownStruct4
 {
     struct UnknownStruct5 *unk0;
     struct GraphicsConfig *unk4;
-    struct UnknownStruct4_child *unk8;
-    u32 (*unkC)(void);
+    struct Struct0807C0E0 *unk8;
+    void (*unkC)(void);  // camera callback? (for panning background)
     s16 unk10;
     s16 unk12;
     u32 unk14;
     u32 unk18;
     u8 filler1C;
     u8 unk1D[3];
-    /*0x20*/ u32 levelType;
+    /*0x20*/ u32 levelFlags;
 };
 
 
@@ -350,6 +369,27 @@ struct Movie_child
     struct Movie_child_child30 *unk30;  // video?
 };  // size = 0x34
 
+enum
+{
+    //Movies
+    MOVIE_INTRO = 0,
+    MOVIE_INTRO2 = 1,
+    MOVIE_DK_BOSS_1 = 2,
+    MOVIE_CREDITS_1 = 3,
+    MOVIE_DK_BOSS_1_END = 4,
+    MOVIE_DK_BOSS_2 = 5,
+    MOVIE_DK_BOSS_2_END = 6,
+    MOVIE_CREDITS_2 = 7,
+    MOVIE_UNUSED_1 = 8,
+    MOVIE_UNUSED_2 = 9,
+};
+
+enum  // Movie player flags
+{
+    MOVIE_PLAYER_ALLOW_SKIP = (1 << 0),
+    MOVIE_PLAYER_FLAG_2 = (1 << 1),
+};
+
 struct Movie
 {
     u16 unk0;
@@ -360,7 +400,7 @@ struct Movie
 struct MoviePlayerParamaters
 {
     struct Movie *movieData;
-    u8 unk4;
+    u8 flags;
     u8 songID;
     u8 nextMode;
     u8 movieID;
@@ -451,7 +491,7 @@ typedef struct unkst24 {
     u8 pad[0x24];
 } unkst24;
 
-struct levelCollectableFlags
+struct LevelItems
 {
     u8 redPresent;
     u8 yellowPresent;
@@ -473,13 +513,6 @@ struct worldTableStruct {
     s32 unk0;
     struct worldTableStruct_unk_size_c *unk4;
 };
-
-struct Struct0807C0E0  // Is this supposed to be worldTableStruct?
-{
-    struct Struct168 *unk0;
-    u16 unk4;
-    u8 filler6[2];
-};  // size = 0x8
 
 struct iwRAMBase {
 u32 base[0];
@@ -796,7 +829,6 @@ struct UnknownStruct12
 {
     u8 unk0_0:3;
     u8 unk0_3:2;
-    //u32 unk0_3:2;
     u8 unk0_5:1;
 };
 
@@ -808,12 +840,6 @@ enum LevelType
     LEVEL_TYPE_EXPERT_7_12,
     LEVEL_TYPE_MAIN_BOSS,
     LEVEL_TYPE_PLUS_BOSS,
-};
-
-enum
-{
-    LOAD_BG_PALETTE = (1 << 0),
-    LOAD_OBJ_PALETTE = (1 << 1),
 };
 
 struct SubSpriteTemplate
@@ -1042,8 +1068,14 @@ enum PaletteID
     PALETTE_3_OPTIONS_MENU,
     PALETTE_4,
     PALETTE_5_LEVEL_HELP,
-    
-    PALETTE_64 = 64,
+
+    PALETTE_58 = 58,
+    PALETTE_59,
+    PALETTE_60,
+    PALETTE_61,
+    PALETTE_62,
+    PALETTE_63,
+    PALETTE_64,
     PALETTE_65,
     PALETTE_66,
     PALETTE_67,
@@ -1057,6 +1089,12 @@ enum PaletteID
     PALETTE_75,
 };
 
+enum
+{
+    LOAD_BG_PALETTE = (1 << 0),
+    LOAD_OBJ_PALETTE = (1 << 1),
+};
+
 struct Struct1C0
 {
     u8 filler0[6];
@@ -1065,12 +1103,13 @@ struct Struct1C0
     u8 unk10;  // unknown type
 };
 
-struct Struct03000008 {
-	u32 unk0;
-    u32 unk4;
-	s32 unk8;
+struct Struct03000008
+{
+	void *unk0;  // copy src?
+    void *unk4;  // copy src?
+	s32 unk8;  // timer?
 	u32 unkC;
-	u32 unk10;
+	void *unk10;  // copy dest?
 	u32 unk14;
 };
 
@@ -1174,7 +1213,7 @@ extern u8 gUnknown_030008D8;
 extern u8 gUnknown_030008E8;
 extern u8 gUnknown_03000924;
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
-extern int (*gUnknown_03000968)(u32 *);
+extern int (*gUnknown_03000968)(struct Struct03000008 *);
 extern void *gUnknown_03000970[];
 extern struct Struct30009B0 gUnknown_030009B0;
 extern u8 gUnknown_030009D0;
@@ -1182,12 +1221,12 @@ extern u8 gUnknown_030009D4;
 extern u16 gUnknown_030009D8;
 extern u32 gUnknown_030009DC;
 extern u16 gUnknown_030009E0;
-extern u8 gUnknown_030009E4[];  // unknown type
+extern struct LevelItems gCollectedLevelItemsBackup;
 extern u8 gLevelTimerOnOffFlag;
 extern u8 gUnknown_030009EC;
 extern u8 gUnknown_030009FC;
 extern u32 gUnknown_03000A00;
-extern u16 gUnknown_03000A0C;
+extern u16 gBG1CNT_03000A0C;
 extern struct Struct3000A10 gUnknown_03000A10;
 extern s32 gUnknown_03000B44;
 extern u32 gPreviousPresentScore;
@@ -1202,7 +1241,7 @@ extern u8 gUnknown_03000B68;
 extern u32 gCurrentEnemyScore;
 extern u32 gUnknown_03000B70;
 extern s8 gNextLevelID;
-extern u8 gUnknown_03000B78;
+extern u8 gIsLevelViewActive;
 extern s8 gLevelType;
 extern struct UnknownStruct4 gNextLevelInLevelTable;
 extern s8 gLevelEWorldFlag;
@@ -1315,7 +1354,7 @@ extern u8 gUnknown_030019B0;
 extern u8 gPreviousSwitchState;
 extern u8 gUnknown_030019E4;
 extern u8 gUnknown_030019E8;
-extern struct levelCollectableFlags gLevelCollectableFlags;
+extern struct LevelItems gCollectedLevelItems;
 extern u8 gUnknown_03001A38;
 extern struct UnknownStruct8 gUnknown_03001B30;
 extern s32 gUnknown_03001B88;
@@ -1479,7 +1518,7 @@ extern struct
     u8 fillerA[0xC-0xA];
 } gMusicTable1[];
 
-extern struct UnknownStruct16 gEWorldMenuData2;
+extern struct GraphicsConfig gEWorldMenuData2;
 extern s32 gUnknown_03000288;
 extern u32 gUnknown_0300028C;
 extern u8 gUnknown_03000290;
@@ -1526,7 +1565,7 @@ void sub_080063E4(struct Struct802C31C *, int, void *);
 void sub_08007170(void);
 void level_play_main(void);
 void level_demo_main(void);
-void sub_08008238(void);
+void level_callback_08008238(void);
 void level_play_loop(void);
 void after_tutorial_init_callback(void);
 void level_play_init_callback(void);
@@ -1594,7 +1633,7 @@ void options_main(void);
 void options_loop(void);
 void options_end(void);
 void sub_08029080(void);
-//void sub_0802919C(int, s8);
+void sub_0802919C(int arg0, int arg1);
 void level_results_init_callback(void);
 void level_results_main(void);
 void level_results_loop(void);
@@ -1771,7 +1810,7 @@ void sub_080082C8();
 // Sort these later - Movie player uses these.
 
 u8 sub_0805727C();
-u8 sub_080573FC();
+u8 move_player_update_sprites();
 u8 sub_08057420(u32);
 u8 sub_08038B18();
 void sub_0802D608(void);
@@ -1804,20 +1843,19 @@ u8 sub_0800C5A4();
 u8 sub_08072118();
 void sub_0802BEA4(u8);
 
-void sub_08008764();
+void level_callback_08008764();
 
 u32 sub_08071F64(u32);
 u32 sub_08071F78(u32);
-u32 sub_08071F8C(u32);
-void sub_080084A4();
-void sub_08008330();
-void sub_08008600();
-void sub_080086A4();
+u8 *sub_08071F8C(u32);
+void level_callback_080084A4(void);
+void level_callback_08008330(void);
+void level_callback_08008600();
+void level_callback_080086A4();
 
 
 void update_level_08039C44();
 void sub_08038414(u16, u16);
-void sub_08007544();
 void sub_080149F8(u32);
 
 void sub_0802BAA0();
@@ -1831,7 +1869,7 @@ void sub_08031C1C();
 s8 sub_0801BAD8(void);
 void sub_0800F02C();
 void sub_0800F070(u8);
-void sub_0800F6EC();
+void level_setup();
 void sub_0802EDAC();
 void sub_08040D50();
 void load_arm_code_0802B998();

@@ -3048,7 +3048,7 @@ sub_0802EDAC: @ 0x0802EDAC
 	ldr r5, [r1]
 	ldrb r0, [r5, #8]
 	ldrb r1, [r5, #9]
-	bl sub_0800F6EC
+	bl level_setup
 	ldr r6, _0802EE10  @ =gNextLevelInLevelTable
 	ldr r0, [r6]
 	ldr r1, [r7]
@@ -3663,7 +3663,7 @@ e_world_debug_main: @ 0x0802F1EC
 	push {r4-r7,lr}
 	sub sp, sp, #12
 	bl process_input
-	bl sub_08008238
+	bl level_callback_08008238
 	ldr r7, _0802F228  @ =0x030001C8
 	ldrb r1, [r7]
 	cmp r1, #0
@@ -5513,7 +5513,7 @@ _0802FF54:
 	mov r5, #0
 	ldr r7, _0802FF90  @ =0x030001E0
 	ldr r4, _0802FF94  @ =0x030001D0
-	ldr r3, _0802FF98  @ =gLevelCollectableFlags
+	ldr r3, _0802FF98  @ =gCollectedLevelItems
 	add r2, r1, #0
 _0802FF64:
 	add r0, r5, r3
@@ -5545,7 +5545,7 @@ _0802FF90:
 _0802FF94:
 	.4byte 0x030001D0
 _0802FF98:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _0802FF9C:
 	mov r0, #0
 _0802FF9E:
@@ -5953,7 +5953,7 @@ sub_08030264: @ 0x08030264
 	cmp r0, #1
 	bls _080302D8
 	mov r1, #0
-	ldr r2, _080302EC  @ =gLevelCollectableFlags
+	ldr r2, _080302EC  @ =gCollectedLevelItems
 _08030290:
 	add r0, r1, r2
 	ldrb r0, [r0]
@@ -6003,7 +6003,7 @@ _080302E4:
 _080302E8:
 	.4byte gLevelType
 _080302EC:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _080302F0:
 	.4byte 0x030001D8
 _080302F4:

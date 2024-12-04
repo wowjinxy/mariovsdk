@@ -43,18 +43,6 @@ enum
     //Fade Flag for change_main_state
     NO_FADE = 0,
     USE_FADE = 1,
-    
-    //Movies
-    MOVIE_INTRO = 0,
-    MOVIE_INTRO2 = 1,
-    MOVIE_DK_BOSS_1 = 2,
-    MOVIE_CREDITS_1 = 3,
-    MOVIE_DK_BOSS_1_END = 4,
-    MOVIE_DK_BOSS_2 = 5,
-    MOVIE_DK_BOSS_2_END = 6,
-    MOVIE_CREDITS_2 = 7,
-    MOVIE_UNUSED_1 = 8,
-    MOVIE_UNUSED_2 = 9,
 };
 
 extern u32 gMainState;

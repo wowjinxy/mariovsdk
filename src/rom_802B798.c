@@ -692,21 +692,21 @@ void sub_0802C540(void)
         }
         else if (gUnknown_03000160 < gUnknown_03000164)
         {
-            u8 r = gLevelCollectableFlags.redPresent;
-            u8 g = gLevelCollectableFlags.yellowPresent;
+            u8 r = gCollectedLevelItems.redPresent;
+            u8 g = gCollectedLevelItems.yellowPresent;
             u32 r0 = r + g;
-            u8 b = gLevelCollectableFlags.bluePresent;
+            u8 b = gCollectedLevelItems.bluePresent;
             u32 r5;
             u32 r0_;
             r0 += b;
-            r0_ = gLevelCollectableFlags.letterT + r0 + gLevelCollectableFlags.letterO;
-            r5 = gLevelCollectableFlags.letterY + r0_;
+            r0_ = gCollectedLevelItems.letterT + r0 + gCollectedLevelItems.letterO;
+            r5 = gCollectedLevelItems.letterY + r0_;
 
             if ((gUnknown_03000168[gUnknown_03000160].unk0 == 0 && (int)(gUnknown_0300015C - gUnknown_03000D34) >= (int)gUnknown_03000168[gUnknown_03000160].unk4)
              || (gUnknown_03000168[gUnknown_03000160].unk0 == 1
-              && ((gUnknown_03000168[gUnknown_03000160].unk4 == 4 && (r != 0 || gLevelCollectableFlags.letterT != 0))
-               || (gUnknown_03000168[gUnknown_03000160].unk4 == 5 && (g != 0 || gLevelCollectableFlags.letterO != 0))
-               || (gUnknown_03000168[gUnknown_03000160].unk4 == 6 && (b != 0 || gLevelCollectableFlags.letterY != 0))
+              && ((gUnknown_03000168[gUnknown_03000160].unk4 == 4 && (r != 0 || gCollectedLevelItems.letterT != 0))
+               || (gUnknown_03000168[gUnknown_03000160].unk4 == 5 && (g != 0 || gCollectedLevelItems.letterO != 0))
+               || (gUnknown_03000168[gUnknown_03000160].unk4 == 6 && (b != 0 || gCollectedLevelItems.letterY != 0))
                || (gUnknown_03000168[gUnknown_03000160].unk4 == 1 && r5 != 0)
                || (gUnknown_03000168[gUnknown_03000160].unk4 == 2 && r5 > 1)
                || (gUnknown_03000168[gUnknown_03000160].unk4 == 3 && r5 > 2))))
@@ -1214,7 +1214,8 @@ void sub_0802D140(struct Struct0802D140 *arg0, u32 arg1)
 
         if (r2 == 6 && r5 != r12)
         {
-            struct struct_0807820C_sub8 *r3 = &gEWRAMBasePtr->unkC[r5 - 1];
+            // hmm...
+            struct struct_0807820C_sub8 *r3 = (void *)&gEWRAMBasePtr->unkC[r5 - 1];
             struct LinkedListHeaderMaybe *ptr = gUnknown_03000170.unk1C;
             struct LinkedListHeaderMaybe *endptr = ptr + 12;
 

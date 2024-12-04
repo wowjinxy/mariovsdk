@@ -1446,7 +1446,7 @@ sub_08009878: @ 0x08009878
 	mov r12, r0
 	cmp r6, #0
 	beq _08009910
-	ldr r1, _080098D0  @ =gLevelCollectableFlags
+	ldr r1, _080098D0  @ =gCollectedLevelItems
 	ldrb r0, [r1]
 	cmp r0, #0
 	beq _08009910
@@ -1480,7 +1480,7 @@ sub_08009878: @ 0x08009878
 _080098CC:
 	.4byte gUnknown_03000A10
 _080098D0:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _080098D4:
 	.4byte gUnknown_082EAF00
 _080098D8:
@@ -2146,7 +2146,7 @@ _08009D9A:
 	ldrb r0, [r7]
 	cmp r0, #0
 	bne _08009DEA
-	ldr r1, _08009E28  @ =gLevelCollectableFlags
+	ldr r1, _08009E28  @ =gCollectedLevelItems
 	ldrb r0, [r1, #3]
 	cmp r0, #0
 	beq _08009DEA
@@ -2212,7 +2212,7 @@ _08009DF6:
 _08009E24:
 	.4byte gUnknown_082F1B48
 _08009E28:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _08009E2C:
 	.4byte gUnknown_03001A1C
 _08009E30:
@@ -3181,7 +3181,7 @@ _0800A526:
 	str r1, [sp, #8]
 	mov r10, sp
 _0800A546:
-	ldr r0, _0800A5E0  @ =gLevelCollectableFlags
+	ldr r0, _0800A5E0  @ =gCollectedLevelItems
 	add r0, r0, r8
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -3260,7 +3260,7 @@ _0800A5D8:
 _0800A5DC:
 	.4byte gUnknown_03000A10
 _0800A5E0:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _0800A5E4:
 	.4byte OBJ_VRAM0
 _0800A5E8:
@@ -4540,7 +4540,7 @@ _0800AF50:
 _0800AF62:
 	mov r0, r12
 	add r0, r0, #3
-	ldr r1, _0800AF98  @ =gLevelCollectableFlags
+	ldr r1, _0800AF98  @ =gCollectedLevelItems
 	add r0, r0, r1
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -4567,7 +4567,7 @@ _0800AF90:
 _0800AF94:
 	.4byte 0xFFFFFC00
 _0800AF98:
-	.4byte gLevelCollectableFlags
+	.4byte gCollectedLevelItems
 _0800AF9C:
 	.4byte 0x03000AD0
 _0800AFA0:
@@ -7528,7 +7528,7 @@ sub_0800C5A4: @ 0x0800C5A4
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0800C624
-	ldr r0, _0800C61C  @ =gUnknown_03000B78
+	ldr r0, _0800C61C  @ =gIsLevelViewActive
 	strb r6, [r0]
 	ldr r0, _0800C620  @ =0xBFFFFFFF
 	and r1, r1, r0
@@ -7552,7 +7552,7 @@ _0800C614:
 _0800C618:
 	.4byte gUnknown_030019A0
 _0800C61C:
-	.4byte gUnknown_03000B78
+	.4byte gIsLevelViewActive
 _0800C620:
 	.4byte 0xBFFFFFFF
 _0800C624:

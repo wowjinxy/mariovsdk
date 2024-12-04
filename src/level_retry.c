@@ -473,4 +473,4 @@ void level_retry_loop(void)
     level_play_loop();
 }
 
-asm(".balign 4, 0");
+FILE_PAD
