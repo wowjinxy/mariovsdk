@@ -28,6 +28,9 @@
 	X(src/options_menu.o) \
 	X(src/level_results.o) \
 	X(data/data0.o) \
+	X(data/level_select_menu.o) \
+	X(data/title_screen_data.o) \
+	X(data/boss_clear_data.o) \
 	X(src/options_menu_data.o) \
 	X(data/data1.o) \
 	X(data/rodata.o) \

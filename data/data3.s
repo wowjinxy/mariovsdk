@@ -863,14 +863,15 @@ gUnknown_08706FC8:
 	.2byte 0x0108
 	.2byte 0x0001
 	.2byte 0x0000
-	.2byte 0x0900
-	.2byte 0x2000
-	.2byte 0x0B00
-	.2byte 0x1500
+	.2byte 0x0900 @ hitbox top offset
+	.2byte 0x2000 @ hitbox bottom offset
+	.2byte 0x0B00 @ hitbox left side offset
+	.2byte 0x1500 @ hitbox right side offset
 	.2byte 0x0680
 	.2byte 0x2000
 	.2byte 0x0000
 	.2byte 0x0000
+	
 	.INCBIN "baserom.gba", 0x706FEC, 0x707208-0x706FEC
 	
 	.INCBIN "baserom.gba", 0x707208, 0x707408-0x707208  @ unused palette
