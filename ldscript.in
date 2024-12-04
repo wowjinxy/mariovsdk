@@ -78,7 +78,7 @@
 	X(asm/rom_8038600.o) \
 	X(src/rom_804A8E8.o) \
 	X(asm/rom_804AAB8.o) \
-	X(asm/rom_807166C.o) \
+	X(asm/sound.o) \
 	X(asm/syscall.o) \
 	X(src/agb_flash.o) \
 	X(src/agb_flash_1m.o) \

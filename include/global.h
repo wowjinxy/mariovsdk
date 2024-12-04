@@ -1516,7 +1516,7 @@ extern struct
     u8 filler0[0x9];
     u8 unk9;
     u8 fillerA[0xC-0xA];
-} gMusicTable1[];
+} gMusicTable[];
 
 extern struct GraphicsConfig gEWorldMenuData2;
 extern s32 gUnknown_03000288;

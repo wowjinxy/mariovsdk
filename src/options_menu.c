@@ -645,7 +645,7 @@ void options_init_callback(void)
     gOptionsMenuData->unk1140 = 0;
     for (i = 0; i < gUnknown_08D7B10C; i++)
     {
-        if (gMusicTable1[i].unk9 == 0)
+        if (gMusicTable[i].unk9 == 0)
             gOptionsMenuData->unk1148[gOptionsMenuData->unk1140++] = i;
     }
     if (get_current_bgm() != 10)

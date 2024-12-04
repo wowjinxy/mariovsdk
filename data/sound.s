@@ -5290,13 +5290,10 @@ gUnknown_08D7B10C:
 	.2byte 70
 	.2byte 0
 
-	.GLOBAL gMusicTable1
-gMusicTable1:
+	.GLOBAL gMusicTable
+gMusicTable:
 	.4byte BGM_1AXM
 	.2byte 0x0064 @ Volume
-
-	.GLOBAL gMusicTable2
-gMusicTable2:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
