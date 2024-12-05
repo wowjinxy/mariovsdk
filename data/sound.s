@@ -1025,8 +1025,8 @@ gUnknown_08B3A4DC:
 	.2byte 250
 	.2byte 0
 
-	.GLOBAL gUnknown_08B3A4E0
-gUnknown_08B3A4E0:
+	.GLOBAL gSoundEffectTable
+gSoundEffectTable:
 	.4byte 0x00000C82 @ Sample size in bytes
 	.4byte CLIMB_8000Hz @ Sample pointer
 	.4byte 8000 @ Sample rate in Hz

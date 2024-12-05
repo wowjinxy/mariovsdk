@@ -83947,7 +83947,7 @@ _08071550:
 	bcc _08071596
 	mov r0, #0
 	strb r0, [r4]
-	ldr r0, _080715AC  @ =gUnknown_03001F10
+	ldr r0, _080715AC  @ =gSoundWork
 	ldr r1, [r0]
 	ldr r3, _080715B0  @ =0x00000FC8
 	add r0, r1, r3
@@ -83979,7 +83979,7 @@ _08071596:
 _080715A8:
 	.4byte gUnknown_03001EE4
 _080715AC:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _080715B0:
 	.4byte 0x00000FC8
 _080715B4:

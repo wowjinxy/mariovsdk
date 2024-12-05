@@ -14,7 +14,7 @@ sound_init: @ 0x0807166C
 	mov r7, #1
 _0807167E:
 	bl sub_08072230
-	ldr r5, _08071790  @ =gUnknown_03001F10
+	ldr r5, _08071790  @ =gSoundWork
 	sub r1, r7, #1
 	lsl r0, r1, #2
 	add r0, r0, r1
@@ -30,26 +30,26 @@ _0807167E:
 	mov r1, sp
 	ldrb r1, [r1, #28]
 	strb r1, [r0]
-	ldr r0, _0807179C  @ =gUnknown_03001EE0
+	ldr r0, _0807179C  @ =ptr_arm_clear_audio_buffer
 	ldr r6, [r5]
 	mov r3, #181
 	lsl r3, r3, #4
 	add r2, r6, r3
 	str r2, [r0]
 	ldr r1, _080717A0  @ =REG_DMA3SAD
-	ldr r3, _080717A4  @ =sub_0800023C
+	ldr r3, _080717A4  @ =arm_clear_audio_buffer
 	str r3, [r1]
 	str r2, [r1, #4]
 	ldr r0, _080717A8  @ =0x80000074
 	str r0, [r1, #8]
 	ldr r0, [r1, #8]
-	ldr r4, _080717AC  @ =gUnknown_03001EF8
-	ldr r0, _080717B0  @ =sound_related_08000260
+	ldr r4, _080717AC  @ =ptr_arm_load_sound_16bit_to_8bit
+	ldr r0, _080717B0  @ =arm_load_sound_16bit_to_8bit
 	sub r0, r0, r3
 	add r0, r2, r0
 	str r0, [r4]
-	ldr r4, _080717B4  @ =gUnknown_03001EE8
-	ldr r0, _080717B8  @ =sub_080002A0
+	ldr r4, _080717B4  @ =ptr_arm_set_sound_dma_regs
+	ldr r0, _080717B8  @ =arm_set_sound_dma_regs
 	sub r0, r0, r3
 	add r2, r2, r0
 	str r2, [r4]
@@ -148,27 +148,27 @@ _0807167E:
 	pop {r0}
 	bx r0
 _08071790:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071794:
 	.4byte 0x000014F0
 _08071798:
 	.4byte 0x000014C3
 _0807179C:
-	.4byte gUnknown_03001EE0
+	.4byte ptr_arm_clear_audio_buffer
 _080717A0:
 	.4byte REG_DMA3SAD
 _080717A4:
-	.4byte sub_0800023C
+	.4byte arm_clear_audio_buffer
 _080717A8:
 	.4byte 0x80000074
 _080717AC:
-	.4byte gUnknown_03001EF8
+	.4byte ptr_arm_load_sound_16bit_to_8bit
 _080717B0:
-	.4byte sound_related_08000260
+	.4byte arm_load_sound_16bit_to_8bit
 _080717B4:
-	.4byte gUnknown_03001EE8
+	.4byte ptr_arm_set_sound_dma_regs
 _080717B8:
-	.4byte sub_080002A0
+	.4byte arm_set_sound_dma_regs
 _080717BC:
 	.4byte gUnknown_03001EE4
 _080717C0:
@@ -213,7 +213,7 @@ sub_08071800: @ 0x08071800
 	mov r5, r8
 	push {r5-r7}
 	sub sp, sp, #8
-	ldr r6, _08071928  @ =gUnknown_03001F10
+	ldr r6, _08071928  @ =gSoundWork
 	ldr r4, [r6]
 	cmp r4, #0
 	bne _08071816
@@ -251,7 +251,7 @@ _08071816:
 	mov r0, #8
 	orr r0, r0, r2
 	strb r0, [r4, #1]
-	ldr r0, _08071930  @ =gUnknown_03001EE0
+	ldr r0, _08071930  @ =ptr_arm_clear_audio_buffer
 	ldr r2, [r0]
 	mov r0, r8
 	bl _call_via_r2
@@ -271,7 +271,7 @@ _08071816:
 	beq _08071896
 	mov r4, #0
 _0807187E:
-	ldr r0, _08071928  @ =gUnknown_03001F10
+	ldr r0, _08071928  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r2, _08071938  @ =0x00000FC8
 	add r0, r0, r2
@@ -284,7 +284,7 @@ _0807187E:
 	bcc _0807187E
 _08071896:
 	mov r4, #0
-	ldr r1, _08071928  @ =gUnknown_03001F10
+	ldr r1, _08071928  @ =gSoundWork
 	ldr r0, [r1]
 	add r3, r5, #1
 	mov r9, r3
@@ -311,20 +311,20 @@ _080718A8:
 _080718C8:
 	add r6, r6, #20
 	add r4, r4, #1
-	ldr r1, _08071928  @ =gUnknown_03001F10
+	ldr r1, _08071928  @ =gSoundWork
 	ldr r0, [r1]
 	ldrb r0, [r0]
 	cmp r4, r0
 	bcc _080718A8
 _080718D6:
-	ldr r0, _08071940  @ =gUnknown_03001EF8
+	ldr r0, _08071940  @ =ptr_arm_load_sound_16bit_to_8bit
 	ldr r4, [r0]
 	mov r0, r8
 	mov r1, r10
 	ldr r2, [sp]
 	add r3, r7, #0
 	bl _call_via_r4
-	ldr r3, _08071928  @ =gUnknown_03001F10
+	ldr r3, _08071928  @ =gSoundWork
 	ldr r0, [r3]
 	strb r5, [r0, #8]
 	mov r5, r9
@@ -361,11 +361,11 @@ _08071916:
 	.byte 0x00
 	.byte 0x00
 _08071928:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _0807192C:
 	.4byte gUnknown_03001F00
 _08071930:
-	.4byte gUnknown_03001EE0
+	.4byte ptr_arm_clear_audio_buffer
 _08071934:
 	.4byte 0x000014BA
 _08071938:
@@ -373,7 +373,7 @@ _08071938:
 _0807193C:
 	.4byte 0x000014DC
 _08071940:
-	.4byte gUnknown_03001EF8
+	.4byte ptr_arm_load_sound_16bit_to_8bit
 _08071944:
 	.4byte gUnknown_03001F04
 _08071948:
@@ -383,7 +383,7 @@ _08071948:
 	THUMB_FUNC_START sub_0807194C
 sub_0807194C: @ 0x0807194C
 	push {lr}
-	ldr r1, _08071970  @ =gUnknown_03001F10
+	ldr r1, _08071970  @ =gSoundWork
 	ldr r3, [r1]
 	cmp r3, #0
 	beq _0807198A
@@ -402,7 +402,7 @@ sub_0807194C: @ 0x0807194C
 	.byte 0x00
 	.byte 0x00
 _08071970:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071974:
 	mov r0, #1
 	orr r0, r0, r2
@@ -445,7 +445,7 @@ play_sound_effect_08071990: @ 0x08071990
 	str r4, [sp, #8]
 	mov r1, #0
 	mov r9, r1
-	ldr r2, _080719FC  @ =gUnknown_03001F10
+	ldr r2, _080719FC  @ =gSoundWork
 	ldr r6, [r2]
 	ldrb r3, [r6]
 	mov r10, r3
@@ -453,7 +453,7 @@ play_sound_effect_08071990: @ 0x08071990
 	lsl r1, r0, #3
 	sub r1, r1, r0
 	lsl r1, r1, #2
-	ldr r0, _08071A00  @ =gUnknown_08B3A4E0
+	ldr r0, _08071A00  @ =gSoundEffectTable
 	add r1, r1, r0
 	mov r12, r1
 	cmp r5, #15
@@ -479,9 +479,9 @@ _080719EA:
 	bl sub_08071E7C
 	b _08071BB8
 _080719FC:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071A00:
-	.4byte gUnknown_08B3A4E0
+	.4byte gSoundEffectTable
 _08071A04:
 	lsl r0, r5, #28
 	lsr r5, r0, #24
@@ -606,7 +606,7 @@ _08071AB2:
 	lsl r0, r2, #14
 	asr r0, r0, #14
 	str r0, [r4, #12]
-	ldr r5, _08071B00  @ =gUnknown_03001F10
+	ldr r5, _08071B00  @ =gSoundWork
 	ldr r3, [r5]
 	ldr r1, [r3, #12]
 	ldr r0, _08071B04  @ =0x7FFFFFFF
@@ -622,7 +622,7 @@ _08071AB2:
 	.byte 0x00
 	.byte 0x00
 _08071B00:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071B04:
 	.4byte 0x7FFFFFFF
 _08071B08:
@@ -681,7 +681,7 @@ _08071B3A:
 	lsl r0, r1, #14
 	asr r0, r0, #14
 	str r0, [r4, #12]
-	ldr r2, _08071BA4  @ =gUnknown_03001F10
+	ldr r2, _08071BA4  @ =gSoundWork
 	ldr r3, [r2]
 	ldr r1, [r3, #12]
 	ldr r0, _08071BA8  @ =0x7FFFFFFF
@@ -709,7 +709,7 @@ _08071B86:
 	ldr r0, [r4, #4]
 	b _08071BBC
 _08071BA4:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071BA8:
 	.4byte 0x7FFFFFFF
 _08071BAC:
@@ -736,7 +736,7 @@ _08071BBC:
 	THUMB_FUNC_START sub_08071BCC
 sub_08071BCC: @ 0x08071BCC
 	push {lr}
-	ldr r0, _08071BDC  @ =gUnknown_03001EE8
+	ldr r0, _08071BDC  @ =ptr_arm_set_sound_dma_regs
 	ldr r0, [r0]
 	bl _call_via_r0
 	pop {r0}
@@ -744,7 +744,7 @@ sub_08071BCC: @ 0x08071BCC
 	.byte 0x00
 	.byte 0x00
 _08071BDC:
-	.4byte gUnknown_03001EE8
+	.4byte ptr_arm_set_sound_dma_regs
 	THUMB_FUNC_END sub_08071BCC
 
 	THUMB_FUNC_START sub_08071BE0
@@ -754,7 +754,7 @@ sub_08071BE0: @ 0x08071BE0
 	str r1, [r0]
 	add r0, r0, #12
 	str r1, [r0]
-	ldr r0, _08071BFC  @ =gUnknown_03001F10
+	ldr r0, _08071BFC  @ =gSoundWork
 	ldr r2, [r0]
 	ldrb r1, [r2, #1]
 	mov r0, #4
@@ -764,12 +764,12 @@ sub_08071BE0: @ 0x08071BE0
 _08071BF8:
 	.4byte REG_DMA1CNT
 _08071BFC:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 	THUMB_FUNC_END sub_08071BE0
 
 	THUMB_FUNC_START sub_08071C00
 sub_08071C00: @ 0x08071C00
-	ldr r0, _08071C18  @ =gUnknown_03001F10
+	ldr r0, _08071C18  @ =gSoundWork
 	ldr r2, [r0]
 	ldrb r1, [r2, #1]
 	mov r0, #251
@@ -782,7 +782,7 @@ sub_08071C00: @ 0x08071C00
 	str r1, [r0]
 	bx lr
 _08071C18:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071C1C:
 	.4byte REG_DMA1CNT
 _08071C20:
@@ -793,7 +793,7 @@ _08071C20:
 sub_08071C24: @ 0x08071C24
 	push {r4-r6,lr}
 	mov r4, #0
-	ldr r1, _08071C60  @ =gUnknown_03001F10
+	ldr r1, _08071C60  @ =gSoundWork
 	ldr r0, [r1]
 	ldrb r0, [r0]
 	cmp r4, r0
@@ -823,7 +823,7 @@ _08071C5A:
 	pop {r0}
 	bx r0
 _08071C60:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071C64:
 	.4byte 0x000014DC
 _08071C68:
@@ -836,10 +836,10 @@ sub_08071C6C: @ 0x08071C6C
 	lsl r1, r0, #3
 	sub r1, r1, r0
 	lsl r1, r1, #2
-	ldr r0, _08071CC0  @ =gUnknown_08B3A4E0
+	ldr r0, _08071CC0  @ =gSoundEffectTable
 	add r7, r1, r0
 	mov r5, #0
-	ldr r1, _08071CC4  @ =gUnknown_03001F10
+	ldr r1, _08071CC4  @ =gSoundWork
 	ldr r0, [r1]
 	ldrb r0, [r0]
 	cmp r5, r0
@@ -878,9 +878,9 @@ _08071CB8:
 	.byte 0x00
 	.byte 0x00
 _08071CC0:
-	.4byte gUnknown_08B3A4E0
+	.4byte gSoundEffectTable
 _08071CC4:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071CC8:
 	.4byte 0x000014EC
 _08071CCC:
@@ -893,7 +893,7 @@ _08071CD0:
 sub_08071CD4: @ 0x08071CD4
 	push {r4-r6,lr}
 	mov r4, #0
-	ldr r1, _08071D1C  @ =gUnknown_03001F10
+	ldr r1, _08071D1C  @ =gSoundWork
 	ldr r0, [r1]
 	ldrb r0, [r0]
 	cmp r4, r0
@@ -931,7 +931,7 @@ _08071D14:
 	.byte 0x00
 	.byte 0x00
 _08071D1C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071D20:
 	.4byte 0x000014DC
 _08071D24:
@@ -946,7 +946,7 @@ sub_08071D28: @ 0x08071D28
 	add r5, r0, #0
 	mov r12, r1
 	add r7, r2, #0
-	ldr r1, _08071D6C  @ =gUnknown_03001F10
+	ldr r1, _08071D6C  @ =gSoundWork
 	ldr r0, [r1]
 	ldrb r4, [r0]
 	ldr r2, _08071D70  @ =0x000014DC
@@ -979,7 +979,7 @@ _08071D62:
 	neg r0, r0
 	b _08071D90
 _08071D6C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071D70:
 	.4byte 0x000014DC
 _08071D74:
@@ -1012,7 +1012,7 @@ _08071D90:
 sub_08071D9C: @ 0x08071D9C
 	push {r4-r7,lr}
 	add r5, r0, #0
-	ldr r1, _08071E04  @ =gUnknown_03001F10
+	ldr r1, _08071E04  @ =gSoundWork
 	ldr r0, [r1]
 	ldrb r4, [r0]
 	ldr r3, _08071E08  @ =0x000014DC
@@ -1068,7 +1068,7 @@ _08071DFC:
 	.byte 0x00
 	.byte 0x00
 _08071E04:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071E08:
 	.4byte 0x000014DC
 _08071E0C:
@@ -1086,10 +1086,10 @@ sub_08071E14: @ 0x08071E14
 	lsl r1, r0, #3
 	sub r1, r1, r0
 	lsl r1, r1, #2
-	ldr r0, _08071E6C  @ =gUnknown_08B3A4E0
+	ldr r0, _08071E6C  @ =gSoundEffectTable
 	add r1, r1, r0
 	mov r8, r1
-	ldr r0, _08071E70  @ =gUnknown_03001F10
+	ldr r0, _08071E70  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r1, _08071E74  @ =0x000014DC
 	add r4, r0, r1
@@ -1107,7 +1107,7 @@ _08071E38:
 	bne _08071E58
 	mov r0, #0
 	strb r0, [r4]
-	ldr r0, _08071E70  @ =gUnknown_03001F10
+	ldr r0, _08071E70  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r1, _08071E78  @ =0x00000FC8
 	add r0, r0, r1
@@ -1127,9 +1127,9 @@ _08071E60:
 	.byte 0x00
 	.byte 0x00
 _08071E6C:
-	.4byte gUnknown_08B3A4E0
+	.4byte gSoundEffectTable
 _08071E70:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071E74:
 	.4byte 0x000014DC
 _08071E78:
@@ -1143,7 +1143,7 @@ sub_08071E7C: @ 0x08071E7C
 	push {r7}
 	lsl r1, r1, #24
 	mov r7, #1
-	ldr r2, _08071ED8  @ =gUnknown_03001F10
+	ldr r2, _08071ED8  @ =gSoundWork
 	ldr r2, [r2]
 	ldr r3, _08071EDC  @ =0x000014DC
 	add r4, r2, r3
@@ -1170,7 +1170,7 @@ _08071EA2:
 	bne _08071EC6
 	mov r0, #0
 	strb r0, [r4]
-	ldr r0, _08071ED8  @ =gUnknown_03001F10
+	ldr r0, _08071ED8  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r1, _08071EE0  @ =0x00000FC8
 	add r0, r0, r1
@@ -1188,7 +1188,7 @@ _08071ECE:
 	pop {r0}
 	bx r0
 _08071ED8:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071EDC:
 	.4byte 0x000014DC
 _08071EE0:
@@ -1208,7 +1208,7 @@ sound_finish: @ 0x08071EE4
 	add r0, r0, #128
 	str r4, [r0]
 	bl sub_0807229C
-	ldr r0, _08071F0C  @ =gUnknown_03001F10
+	ldr r0, _08071F0C  @ =gSoundWork
 	str r4, [r0]
 	pop {r4}
 	pop {r0}
@@ -1218,14 +1218,14 @@ sound_finish: @ 0x08071EE4
 _08071F08:
 	.4byte REG_DMA1CNT
 _08071F0C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 	THUMB_FUNC_END sound_finish
 
 	THUMB_FUNC_START sub_08071F10
 sub_08071F10: @ 0x08071F10
 	push {lr}
 	add r1, r0, #0
-	ldr r0, _08071F24  @ =gUnknown_03001F10
+	ldr r0, _08071F24  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r2, _08071F28  @ =0x00000FC8
 	add r0, r0, r2
@@ -1233,7 +1233,7 @@ sub_08071F10: @ 0x08071F10
 	pop {r0}
 	bx r0
 _08071F24:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071F28:
 	.4byte 0x00000FC8
 	THUMB_FUNC_END sub_08071F10
@@ -1242,7 +1242,7 @@ _08071F28:
 sub_08071F2C: @ 0x08071F2C
 	push {lr}
 	add r1, r0, #0
-	ldr r0, _08071F40  @ =gUnknown_03001F10
+	ldr r0, _08071F40  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r2, _08071F44  @ =0x00000FC8
 	add r0, r0, r2
@@ -1250,7 +1250,7 @@ sub_08071F2C: @ 0x08071F2C
 	pop {r0}
 	bx r0
 _08071F40:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071F44:
 	.4byte 0x00000FC8
 	THUMB_FUNC_END sub_08071F2C
@@ -1258,7 +1258,7 @@ _08071F44:
 	THUMB_FUNC_START sub_08071F48
 sub_08071F48: @ 0x08071F48
 	push {lr}
-	ldr r0, _08071F5C  @ =gUnknown_03001F10
+	ldr r0, _08071F5C  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r1, _08071F60  @ =0x00000FC8
 	add r0, r0, r1
@@ -1268,7 +1268,7 @@ sub_08071F48: @ 0x08071F48
 	.byte 0x00
 	.byte 0x00
 _08071F5C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071F60:
 	.4byte 0x00000FC8
 	THUMB_FUNC_END sub_08071F48
@@ -1329,7 +1329,7 @@ sub_08071FA0: @ 0x08071FA0
 	mov r8, r1
 	mov r9, r2
 	mov r10, r3
-	ldr r5, _08071FDC  @ =gUnknown_03001F10
+	ldr r5, _08071FDC  @ =gSoundWork
 	ldr r0, [r5]
 	ldr r4, _08071FE0  @ =0x00000FC8
 	add r0, r0, r4
@@ -1349,7 +1349,7 @@ sub_08071FA0: @ 0x08071FA0
 	pop {r0}
 	bx r0
 _08071FDC:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08071FE0:
 	.4byte 0x00000FC8
 	THUMB_FUNC_END sub_08071FA0
@@ -1372,7 +1372,7 @@ _08071FF8:
 	ldrh r1, [r0]
 	cmp r2, r1
 	bge _0807201E
-	ldr r0, _0807202C  @ =gUnknown_03001F10
+	ldr r0, _0807202C  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r3, _08072030  @ =0x00000FC8
 	add r0, r0, r3
@@ -1397,7 +1397,7 @@ _08072022:
 _08072028:
 	.4byte gUnknown_08D7B10C
 _0807202C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072030:
 	.4byte 0x00000FC8
 _08072034:
@@ -1406,14 +1406,14 @@ _08072034:
 
 	THUMB_FUNC_START sub_08072038
 sub_08072038: @ 0x08072038
-	ldr r0, _08072044  @ =gUnknown_03001F10
+	ldr r0, _08072044  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r1, _08072048  @ =0x00000FC8
 	add r0, r0, r1
 	ldr r0, [r0]
 	bx lr
 _08072044:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072048:
 	.4byte 0x00000FC8
 	THUMB_FUNC_END sub_08072038
@@ -1428,7 +1428,7 @@ play_bgm: @ 0x0807204C
 	add r3, r0, #0
 	add r7, r1, #0
 	mov r10, r2
-	ldr r0, _080720A0  @ =gUnknown_03001F10
+	ldr r0, _080720A0  @ =gSoundWork
 	mov r9, r0
 	ldr r0, [r0]
 	ldr r1, _080720A4  @ =0x00000FC8
@@ -1461,7 +1461,7 @@ play_bgm: @ 0x0807204C
 	pop {r0}
 	bx r0
 _080720A0:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _080720A4:
 	.4byte 0x00000FC8
 _080720A8:
@@ -1471,7 +1471,7 @@ _080720A8:
 	THUMB_FUNC_START sub_080720AC
 sub_080720AC: @ 0x080720AC
 	push {r4,r5,lr}
-	ldr r4, _080720D8  @ =gUnknown_03001F10
+	ldr r4, _080720D8  @ =gSoundWork
 	ldr r1, [r4]
 	ldr r3, _080720DC  @ =0x000014BA
 	add r0, r1, r3
@@ -1495,7 +1495,7 @@ _080720C8:
 	.byte 0x00
 	.byte 0x00
 _080720D8:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _080720DC:
 	.4byte 0x000014BA
 _080720E0:
@@ -1505,7 +1505,7 @@ _080720E0:
 	THUMB_FUNC_START sub_080720E4
 sub_080720E4: @ 0x080720E4
 	push {r4,lr}
-	ldr r0, _0807210C  @ =gUnknown_03001F10
+	ldr r0, _0807210C  @ =gSoundWork
 	ldr r2, [r0]
 	ldr r0, _08072110  @ =0x000014BA
 	add r1, r2, r0
@@ -1527,7 +1527,7 @@ _08072104:
 	.byte 0x00
 	.byte 0x00
 _0807210C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072110:
 	.4byte 0x000014BA
 _08072114:
@@ -1537,7 +1537,7 @@ _08072114:
 	THUMB_FUNC_START sub_08072118
 sub_08072118: @ 0x08072118
 	push {lr}
-	ldr r0, _0807213C  @ =gUnknown_03001F10
+	ldr r0, _0807213C  @ =gSoundWork
 	ldr r2, [r0]
 	ldr r0, _08072140  @ =0x000014BA
 	add r3, r2, r0
@@ -1556,7 +1556,7 @@ _08072138:
 	pop {r0}
 	bx r0
 _0807213C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072140:
 	.4byte 0x000014BA
 	THUMB_FUNC_END sub_08072118
@@ -1565,7 +1565,7 @@ _08072140:
 sub_08072144: @ 0x08072144
 	push {lr}
 	mov r2, #0
-	ldr r0, _08072164  @ =gUnknown_03001F10
+	ldr r0, _08072164  @ =gSoundWork
 	ldr r0, [r0]
 	ldr r1, _08072168  @ =0x000014BA
 	add r0, r0, r1
@@ -1581,7 +1581,7 @@ _0807215E:
 	pop {r1}
 	bx r1
 _08072164:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072168:
 	.4byte 0x000014BA
 	THUMB_FUNC_END sub_08072144
@@ -1589,7 +1589,7 @@ _08072168:
 	THUMB_FUNC_START sub_0807216C
 sub_0807216C: @ 0x0807216C
 	push {r4,r5,lr}
-	ldr r0, _080721A0  @ =gUnknown_03001F10
+	ldr r0, _080721A0  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0]
 	mov r4, #0
@@ -1619,7 +1619,7 @@ _08072196:
 	.byte 0x00
 	.byte 0x00
 _080721A0:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _080721A4:
 	.4byte 0x000014DC
 	THUMB_FUNC_END sub_0807216C
@@ -1628,7 +1628,7 @@ _080721A4:
 sub_080721A8: @ 0x080721A8
 	push {r4-r6,lr}
 	add r5, r0, #0
-	ldr r0, _080721D4  @ =gUnknown_03001F10
+	ldr r0, _080721D4  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r4, [r0]
 	ldr r1, _080721D8  @ =0x000014DC
@@ -1651,7 +1651,7 @@ _080721BE:
 	.byte 0x00
 	.byte 0x00
 _080721D4:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _080721D8:
 	.4byte 0x000014DC
 _080721DC:
@@ -1677,7 +1677,7 @@ _080721EE:
 	.byte 0x00
 	THUMB_FUNC_START sub_080721F8
 sub_080721F8: @ 0x080721F8
-	ldr r0, _08072208  @ =gUnknown_03001F10
+	ldr r0, _08072208  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -1686,13 +1686,13 @@ sub_080721F8: @ 0x080721F8
 	lsr r0, r0, #28
 	bx lr
 _08072208:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 	THUMB_FUNC_END sub_080721F8
 
 	THUMB_FUNC_START sub_0807220C
 sub_0807220C: @ 0x0807220C
 	push {r4,lr}
-	ldr r4, _0807222C  @ =gUnknown_03001F10
+	ldr r4, _0807222C  @ =gSoundWork
 	ldr r3, [r4]
 	ldrb r2, [r3, #1]
 	mov r1, #239
@@ -1709,7 +1709,7 @@ sub_0807220C: @ 0x0807220C
 	.byte 0x00
 	.byte 0x00
 _0807222C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 	THUMB_FUNC_END sub_0807220C
 
 	THUMB_FUNC_START sub_08072230
@@ -2591,7 +2591,7 @@ _08072860:
 	cmp r0, #224
 	beq _08072894
 	b _080728A2
-_08072866:
+_08072866:  @ 112
 	add r0, r4, #0
 	add r0, r0, #44
 	mov r1, #15
@@ -2600,7 +2600,7 @@ _08072866:
 	add r1, r2, r3
 	strb r1, [r0]
 	b _080728A2
-_08072876:
+_08072876:  @ 96
 	add r1, r4, #0
 	add r1, r1, #44
 	mov r0, #15
@@ -2608,7 +2608,7 @@ _08072876:
 	ldrb r0, [r1]
 	sub r0, r0, r2
 	b _080728A0
-_08072884:
+_08072884:  @ 208
 	add r3, r4, #0
 	add r3, r3, #45
 	mov r0, #15
@@ -2617,7 +2617,7 @@ _08072884:
 	sub r0, r0, r2
 	strb r0, [r3]
 	b _080728A2
-_08072894:
+_08072894:  @ 224
 	add r1, r4, #0
 	add r1, r1, #45
 	mov r0, #15
@@ -2626,7 +2626,7 @@ _08072894:
 	add r0, r2, r3
 _080728A0:
 	strb r0, [r1]
-_080728A2:
+_080728A2:  @ end
 	ldr r2, [r4, #60]
 	add r0, r2, #0
 	add r0, r0, #201
@@ -2686,7 +2686,7 @@ sub_080728F0: @ 0x080728F0
 	add r6, r6, #45
 	mov r7, #0
 	ldrsb r7, [r6, r7]
-	ldr r0, _08072944  @ =gUnknown_03001F10
+	ldr r0, _08072944  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -2696,11 +2696,11 @@ sub_080728F0: @ 0x080728F0
 	mov r0, #32
 	strb r0, [r6]
 _08072922:
-	ldr r0, _08072948  @ =0x03001F28
+	ldr r0, _08072948  @ =gUnknown_03001F28
 	str r5, [r0]
 	ldr r4, _0807294C  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08072950  @ =0x03000820
+	ldr r0, _08072950  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072934
@@ -2714,21 +2714,21 @@ _08072934:
 	strb r7, [r6]
 	b _080729DC
 _08072944:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072948:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _0807294C:
 	.4byte gUnknown_03001EFC
 _08072950:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 _08072954:
-	ldr r0, _080729EC  @ =0x03000824
+	ldr r0, _080729EC  @ =gUnknown_03000824
 	ldr r3, [r0]
 	add r7, r5, #0
 	add r7, r7, #45
-	ldr r0, _080729F0  @ =gUnknown_03001F10
+	ldr r0, _080729F0  @ =gSoundWork
 	mov r9, r0
-	ldr r1, _080729F4  @ =0x03001F28
+	ldr r1, _080729F4  @ =gUnknown_03001F28
 	mov r10, r1
 	ldr r6, _080729F8  @ =gUnknown_08B39FC4
 	lsr r0, r4, #4
@@ -2781,7 +2781,7 @@ _080729BC:
 	mov r2, r10
 	str r5, [r2]
 	mov r3, #0
-	ldr r1, _080729FC  @ =0x03000820
+	ldr r1, _080729FC  @ =gUnknown_03000820
 	ldr r0, [r1]
 	cmp r0, #0
 	bne _080729CC
@@ -2804,15 +2804,15 @@ _080729DC:
 	pop {r0}
 	bx r0
 _080729EC:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _080729F0:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _080729F4:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _080729F8:
 	.4byte gUnknown_08B39FC4
 _080729FC:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 _08072A00:
 	.4byte gUnknown_03001EFC
 	THUMB_FUNC_END sub_080728F0
@@ -2828,7 +2828,7 @@ sub_08072A04: @ 0x08072A04
 	add r0, r0, #52
 	ldrb r1, [r0]
 _08072A14:
-	ldr r0, _08072A74  @ =0x03000824
+	ldr r0, _08072A74  @ =gUnknown_03000824
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _08072A34
@@ -2850,7 +2850,7 @@ _08072A34:
 	add r5, r5, #45
 	mov r7, #0
 	ldrsb r7, [r5, r7]
-	ldr r0, _08072A78  @ =gUnknown_03001F10
+	ldr r0, _08072A78  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -2860,11 +2860,11 @@ _08072A34:
 	mov r0, #32
 	strb r0, [r5]
 _08072A4E:
-	ldr r0, _08072A7C  @ =0x03001F28
+	ldr r0, _08072A7C  @ =gUnknown_03001F28
 	str r3, [r0]
 	ldr r4, _08072A80  @ =gUnknown_03001EFC
 	mov r6, #0
-	ldr r0, _08072A84  @ =0x03000820
+	ldr r0, _08072A84  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072A60
@@ -2880,15 +2880,15 @@ _08072A60:
 	pop {r0}
 	bx r0
 _08072A74:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08072A78:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072A7C:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08072A80:
 	.4byte gUnknown_03001EFC
 _08072A84:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08072A04
 
 	THUMB_FUNC_START sub_08072A88
@@ -2902,7 +2902,7 @@ sub_08072A88: @ 0x08072A88
 	add r0, r0, #53
 	ldrb r1, [r0]
 _08072A98:
-	ldr r0, _08072AFC  @ =0x03000824
+	ldr r0, _08072AFC  @ =gUnknown_03000824
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _08072ABA
@@ -2925,7 +2925,7 @@ _08072ABA:
 	add r5, r5, #45
 	mov r7, #0
 	ldrsb r7, [r5, r7]
-	ldr r0, _08072B00  @ =gUnknown_03001F10
+	ldr r0, _08072B00  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -2935,11 +2935,11 @@ _08072ABA:
 	mov r0, #32
 	strb r0, [r5]
 _08072AD4:
-	ldr r0, _08072B04  @ =0x03001F28
+	ldr r0, _08072B04  @ =gUnknown_03001F28
 	str r3, [r0]
 	ldr r4, _08072B08  @ =gUnknown_03001EFC
 	mov r6, #0
-	ldr r0, _08072B0C  @ =0x03000820
+	ldr r0, _08072B0C  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072AE6
@@ -2957,15 +2957,15 @@ _08072AE6:
 	.byte 0x00
 	.byte 0x00
 _08072AFC:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08072B00:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072B04:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08072B08:
 	.4byte gUnknown_03001EFC
 _08072B0C:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08072A88
 
 	THUMB_FUNC_START sub_08072B10
@@ -2985,7 +2985,7 @@ sub_08072B10: @ 0x08072B10
 	ldrb r4, [r0]
 _08072B2A:
 	lsl r4, r4, #2
-	ldr r0, _08072B44  @ =0x03000824
+	ldr r0, _08072B44  @ =gUnknown_03000824
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _08072B58
@@ -2998,7 +2998,7 @@ _08072B2A:
 	bgt _08072B52
 	b _08072B4E
 _08072B44:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08072B48:
 	add r1, r1, r4
 	cmp r1, r3
@@ -3015,7 +3015,7 @@ _08072B58:
 	add r6, r6, #45
 	mov r7, #0
 	ldrsb r7, [r6, r7]
-	ldr r0, _08072B98  @ =gUnknown_03001F10
+	ldr r0, _08072B98  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -3025,11 +3025,11 @@ _08072B58:
 	mov r0, #32
 	strb r0, [r6]
 _08072B72:
-	ldr r0, _08072B9C  @ =0x03001F28
+	ldr r0, _08072B9C  @ =gUnknown_03001F28
 	str r5, [r0]
 	ldr r4, _08072BA0  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08072BA4  @ =0x03000820
+	ldr r0, _08072BA4  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072B84
@@ -3046,13 +3046,13 @@ _08072B84:
 	.byte 0x00
 	.byte 0x00
 _08072B98:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072B9C:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08072BA0:
 	.4byte gUnknown_03001EFC
 _08072BA4:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08072B10
 
 	THUMB_FUNC_START sub_08072BA8
@@ -3083,9 +3083,9 @@ _08072BD4:
 	mov r0, #15
 	add r1, r3, #0
 	and r1, r1, r0
-	lsl r1, r1, #1
+	lsl r1, r1, #1  @ (r3 & 0xF) << 1
 	asr r3, r3, #4
-	and r3, r3, r0
+	and r3, r3, r0  @ (r3 >> 4) & 0xF
 	lsl r0, r4, #2
 	add r0, r0, r5
 	ldr r0, [r0]
@@ -3123,7 +3123,7 @@ _08072C10:
 	add r5, r5, #45
 	mov r6, #0
 	ldrsb r6, [r5, r6]
-	ldr r0, _08072C64  @ =gUnknown_03001F10
+	ldr r0, _08072C64  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -3133,12 +3133,12 @@ _08072C10:
 	mov r0, #32
 	strb r0, [r5]
 _08072C36:
-	ldr r0, _08072C68  @ =0x03001F28
+	ldr r0, _08072C68  @ =gUnknown_03001F28
 	mov r1, r12
 	str r1, [r0]
 	ldr r4, _08072C6C  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08072C70  @ =0x03000820
+	ldr r0, _08072C70  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072C4A
@@ -3158,13 +3158,13 @@ _08072C4A:
 	.byte 0x00
 	.byte 0x00
 _08072C64:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072C68:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08072C6C:
 	.4byte gUnknown_03001EFC
 _08072C70:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08072BA8
 
 	THUMB_FUNC_START sub_08072C74
@@ -3196,7 +3196,7 @@ _08072C9C:
 _08072CA2:
 	add r2, r0, #0
 	lsl r4, r4, #2
-	ldr r0, _08072CC0  @ =0x03000824
+	ldr r0, _08072CC0  @ =gUnknown_03000824
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _08072CFC
@@ -3211,7 +3211,7 @@ _08072CA2:
 	.byte 0x00
 	.byte 0x00
 _08072CC0:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08072CC4:
 	sub r1, r1, r4
 	cmp r1, r3
@@ -3251,7 +3251,7 @@ _08072CFC:
 	add r5, r5, #45
 	mov r6, #0
 	ldrsb r6, [r5, r6]
-	ldr r0, _08072D44  @ =gUnknown_03001F10
+	ldr r0, _08072D44  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -3261,12 +3261,12 @@ _08072CFC:
 	mov r0, #32
 	strb r0, [r5]
 _08072D16:
-	ldr r0, _08072D48  @ =0x03001F28
+	ldr r0, _08072D48  @ =gUnknown_03001F28
 	mov r1, r12
 	str r1, [r0]
 	ldr r4, _08072D4C  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08072D50  @ =0x03000820
+	ldr r0, _08072D50  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072D2A
@@ -3286,13 +3286,13 @@ _08072D2A:
 	.byte 0x00
 	.byte 0x00
 _08072D44:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072D48:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08072D4C:
 	.4byte gUnknown_03001EFC
 _08072D50:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08072C74
 
 	THUMB_FUNC_START sub_08072D54
@@ -3369,7 +3369,7 @@ _08072DCE:
 	mov r0, r12
 	add r0, r0, #72
 	strh r3, [r0]
-	ldr r0, _08072DF8  @ =0x03000824
+	ldr r0, _08072DF8  @ =gUnknown_03000824
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _08072E0C
@@ -3385,7 +3385,7 @@ _08072DCE:
 	mov r0, #0
 	b _08072E02
 _08072DF8:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08072DFC:
 	cmp r0, #64
 	ble _08072E04
@@ -3402,7 +3402,7 @@ _08072E0C:
 	add r5, r5, #45
 	mov r6, #0
 	ldrsb r6, [r5, r6]
-	ldr r0, _08072E54  @ =gUnknown_03001F10
+	ldr r0, _08072E54  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -3412,12 +3412,12 @@ _08072E0C:
 	mov r0, #32
 	strb r0, [r5]
 _08072E26:
-	ldr r0, _08072E58  @ =0x03001F28
+	ldr r0, _08072E58  @ =gUnknown_03001F28
 	mov r1, r12
 	str r1, [r0]
 	ldr r4, _08072E5C  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08072E60  @ =0x03000820
+	ldr r0, _08072E60  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072E3A
@@ -3437,13 +3437,13 @@ _08072E3A:
 	.byte 0x00
 	.byte 0x00
 _08072E54:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072E58:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08072E5C:
 	.4byte gUnknown_03001EFC
 _08072E60:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08072D54
 
 	THUMB_FUNC_START sub_08072E64
@@ -3512,7 +3512,7 @@ _08072EC8:
 	add r5, r5, #45
 	mov r6, #0
 	ldrsb r6, [r5, r6]
-	ldr r0, _08072F1C  @ =gUnknown_03001F10
+	ldr r0, _08072F1C  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -3522,12 +3522,12 @@ _08072EC8:
 	mov r0, #32
 	strb r0, [r5]
 _08072EEE:
-	ldr r0, _08072F20  @ =0x03001F28
+	ldr r0, _08072F20  @ =gUnknown_03001F28
 	mov r1, r12
 	str r1, [r0]
 	ldr r4, _08072F24  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08072F28  @ =0x03000820
+	ldr r0, _08072F28  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072F02
@@ -3547,13 +3547,13 @@ _08072F02:
 	.byte 0x00
 	.byte 0x00
 _08072F1C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072F20:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08072F24:
 	.4byte gUnknown_03001EFC
 _08072F28:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08072E64
 
 	THUMB_FUNC_START sub_08072F2C
@@ -3573,7 +3573,7 @@ _08072F40:
 	and r1, r1, r0
 	neg r3, r1
 _08072F46:
-	ldr r0, _08072F64  @ =0x03000824
+	ldr r0, _08072F64  @ =gUnknown_03000824
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _08072F78
@@ -3589,7 +3589,7 @@ _08072F46:
 	mov r0, #0
 	b _08072F6E
 _08072F64:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08072F68:
 	cmp r0, #64
 	ble _08072F70
@@ -3606,7 +3606,7 @@ _08072F78:
 	add r5, r5, #45
 	mov r7, #0
 	ldrsb r7, [r5, r7]
-	ldr r0, _08072FB8  @ =gUnknown_03001F10
+	ldr r0, _08072FB8  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -3616,11 +3616,11 @@ _08072F78:
 	mov r0, #32
 	strb r0, [r5]
 _08072F92:
-	ldr r0, _08072FBC  @ =0x03001F28
+	ldr r0, _08072FBC  @ =gUnknown_03001F28
 	str r6, [r0]
 	ldr r4, _08072FC0  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08072FC4  @ =0x03000820
+	ldr r0, _08072FC4  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08072FA4
@@ -3637,13 +3637,13 @@ _08072FA4:
 	.byte 0x00
 	.byte 0x00
 _08072FB8:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08072FBC:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08072FC0:
 	.4byte gUnknown_03001EFC
 _08072FC4:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08072F2C
 
 	THUMB_FUNC_START sub_08072FC8
@@ -3666,7 +3666,7 @@ sub_08072FC8: @ 0x08072FC8
 	add r0, r2, r1
 	ldrb r0, [r0]
 	str r0, [sp, #8]
-	ldr r0, _08073080  @ =0x03000820
+	ldr r0, _08073080  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _08073094
@@ -3700,7 +3700,7 @@ _08072FFE:
 	ldrb r7, [r6, #24]
 	cmp r7, #38
 	bne _08073038
-	ldr r0, _08073084  @ =0x03000824
+	ldr r0, _08073084  @ =gUnknown_03000824
 	ldr r0, [r0]
 	ldrb r1, [r6, #26]
 	cmp r0, r1
@@ -3710,7 +3710,7 @@ _08073038:
 	add r5, r5, #45
 	mov r7, #0
 	ldrsb r7, [r5, r7]
-	ldr r0, _08073088  @ =gUnknown_03001F10
+	ldr r0, _08073088  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -3720,11 +3720,11 @@ _08073038:
 	mov r0, #32
 	strb r0, [r5]
 _08073052:
-	ldr r0, _0807308C  @ =0x03001F28
+	ldr r0, _0807308C  @ =gUnknown_03001F28
 	str r6, [r0]
 	ldr r4, _08073090  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08073080  @ =0x03000820
+	ldr r0, _08073080  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08073064
@@ -3745,13 +3745,13 @@ _08073072:
 _0807307C:
 	.4byte 0x000004FA
 _08073080:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 _08073084:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08073088:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _0807308C:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08073090:
 	.4byte gUnknown_03001EFC
 _08073094:
@@ -3799,7 +3799,7 @@ _0807309E:
 	cmp r0, #0
 	beq _080730F8
 	add r1, r2, #0
-	add r1, r1, #148
+	add r1, r1, #148  @ unk3C + 0x94
 	ldrh r0, [r6, #50]
 	add r2, r4, #0
 	and r2, r2, r0
@@ -3817,7 +3817,7 @@ _080730F8:
 	add r0, r6, #0
 	add r0, r0, #8
 	add r1, r2, #0
-	add r1, r1, #228
+	add r1, r1, #228  @ unk3C + 0xE4
 	ldrh r3, [r6, #50]
 	add r2, r4, #0
 	and r2, r2, r3
@@ -3831,7 +3831,7 @@ _0807311A:
 	add r5, r5, #45
 	mov r7, #0
 	ldrsb r7, [r5, r7]
-	ldr r0, _08073164  @ =gUnknown_03001F10
+	ldr r0, _08073164  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -3841,11 +3841,11 @@ _0807311A:
 	mov r0, #32
 	strb r0, [r5]
 _0807313C:
-	ldr r0, _08073168  @ =0x03001F28
+	ldr r0, _08073168  @ =gUnknown_03001F28
 	str r6, [r0]
 	ldr r4, _0807316C  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08073170  @ =0x03000820
+	ldr r0, _08073170  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _0807314E
@@ -3863,13 +3863,13 @@ _0807314E:
 _08073160:
 	.4byte 0x00000119
 _08073164:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08073168:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _0807316C:
 	.4byte gUnknown_03001EFC
 _08073170:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 _08073174:
 	ldrb r7, [r6, #24]
 	ldrh r0, [r6, #40]
@@ -4360,11 +4360,11 @@ sub_080734F8: @ 0x080734F8
 	ldr r0, _080735C0  @ =0x0000FFFF
 	strh r0, [r2]
 	str r1, [r6]
-	mov r5, #0
+	mov r5, #0  @ i
 	mov r1, #0
-	mov r12, r1
+	mov r12, r1  @ constant
 	mov r2, #0
-	mov r8, r2
+	mov r8, r2  @ constant
 _08073514:
 	mov r0, #76
 	add r3, r5, #0
@@ -4587,7 +4587,7 @@ sub_080736A0: @ 0x080736A0
 	mov r9, r2
 	ldr r3, [r4]
 	ldr r0, _080736C4  @ =0x000004F2
-	add r5, r4, r0
+	add r5, r4, r0  @ arg0 + 0x4F2
 	mov r2, #0
 	ldrsh r1, [r5, r2]
 	cmp r1, #0
@@ -4599,7 +4599,7 @@ _080736C4:
 	.4byte 0x000004F2
 _080736C8:
 	mov r5, #158
-	lsl r5, r5, #3
+	lsl r5, r5, #3  @0x4F0
 	add r0, r4, r5
 	ldr r1, _080736D8  @ =0x0000FFFF
 	strh r1, [r0]
@@ -4613,17 +4613,17 @@ _080736DC:
 	ldr r2, _0807376C  @ =0x00000504
 	add r0, r4, r2
 	ldr r6, [r0]
-	sub r2, r2, #4
+	sub r2, r2, #4  @ 0x500
 	add r0, r4, r2
 	ldr r7, [r0]
 	mov r0, #68
 	add r0, r0, r3
-	mov r8, r0
+	mov r8, r0  @ data + 0x44
 	cmp r6, #0
 	bne _0807373C
 	cmp r7, #0
 	bne _0807373C
-	sub r2, r2, #16
+	sub r2, r2, #16  @ 0x4F0
 	add r2, r2, r4
 	mov r12, r2
 	mov r0, #0
@@ -4634,12 +4634,12 @@ _080736DC:
 	add r1, r4, r1
 	str r1, [sp, #4]
 	mov r2, #0
-	ldrsh r0, [r5, r2]
+	ldrsh r0, [r5, r2]  @ *0x4F2
 	add r0, r0, r8
 	ldrb r1, [r0]
 	lsl r1, r1, #3
 	mov r2, #162
-	lsl r2, r2, #2
+	lsl r2, r2, #2  @ 0x288
 	add r0, r3, r2
 	add r0, r0, r1
 	ldr r0, [r0]
@@ -4653,7 +4653,7 @@ _08073724:
 	ldr r5, _08073774  @ =0x000004F6
 	add r1, r4, r5
 	ldrh r2, [r1]
-	sub r5, r5, #2
+	sub r5, r5, #2  @ 0x4F4
 	add r0, r4, r5
 	strh r2, [r0]
 	ldrh r0, [r1]
@@ -4661,7 +4661,7 @@ _08073724:
 	strh r0, [r1]
 _0807373C:
 	mov r1, #158
-	lsl r1, r1, #3
+	lsl r1, r1, #3  @ 0x4F0
 	add r0, r4, r1
 	mov r2, #0
 	ldrsh r0, [r0, r2]
@@ -4669,15 +4669,15 @@ _0807373C:
 	ldrb r0, [r0]
 	lsl r0, r0, #3
 	mov r5, #161
-	lsl r5, r5, #2
+	lsl r5, r5, #2  @ 0x284
 	add r0, r0, r5
-	add r0, r3, r0
-	add r1, r1, #6
+	add r0, r3, r0  @ data + 0x284 + data->unk44[arg0->unk4F0]*8
+	add r1, r1, #6  @ 0x4F6
 	add r2, r4, r1
 	mov r5, #0
-	ldrsh r1, [r2, r5]
+	ldrsh r1, [r2, r5]  @ arg0->unk4F6
 	ldr r0, [r0]
-	ldr r5, _08073778  @ =0x03001F24
+	ldr r5, _08073778  @ =gUnknown_03001F24
 	mov r12, r5
 	cmp r1, r0
 	bcc _080737AE
@@ -4691,7 +4691,7 @@ _08073770:
 _08073774:
 	.4byte 0x000004F6
 _08073778:
-	.4byte 0x03001F24
+	.4byte gUnknown_03001F24
 _0807377C:
 	add r0, r0, r8
 	ldrb r0, [r0]
@@ -4709,20 +4709,20 @@ _08073786:
 	ldrsh r0, [r2, r1]
 	ldrh r1, [r3, #52]
 	cmp r0, r1
-	blt _0807377C
+	blt _0807377C  @ loop back (condition check)
 	ldr r1, _08073838  @ =0x000004EE
 	add r0, r4, r1
 	ldrh r1, [r0]
 	mov r0, #1
 	and r0, r0, r1
 	cmp r0, #0
-	bne _080736C8
+	bne _080736C8  @ jump up
 	ldr r0, _0807383C  @ =0x0000FFFE
-_080737AC:
+_080737AC:  @ come from above
 	strh r0, [r2]
 _080737AE:
 	mov r2, #157
-	lsl r2, r2, #3
+	lsl r2, r2, #3  @ 0x4E8
 	add r0, r4, r2
 	mov r5, #0
 	ldrsh r0, [r0, r5]
@@ -4745,18 +4745,18 @@ _080737CA:
 	sub r1, r1, r6
 	mov r9, r1
 _080737DC:
-	ldr r0, _08073844  @ =0x03000824
+	ldr r0, _08073844  @ =gUnknown_03000824
 	str r7, [r0]
-	ldr r0, _08073848  @ =0x03000820
+	ldr r0, _08073848  @ =gUnknown_03000820
 	str r6, [r0]
 	add r0, r4, #0
 	mov r1, r10
 	mov r2, r9
 	bl sub_08072FC8
-	ldr r0, _0807384C  @ =0x03001F24
+	ldr r0, _0807384C  @ =gUnknown_03001F24
 	ldr r1, [r0]
 	mov r2, #157
-	lsl r2, r2, #3
+	lsl r2, r2, #3  @ 0x4E8
 	add r0, r4, r2
 	strh r1, [r0]
 	add r6, r6, r9
@@ -4777,7 +4777,7 @@ _08073814:
 	add r0, r4, r2
 	str r6, [r0]
 	mov r5, #160
-	lsl r5, r5, #3
+	lsl r5, r5, #3  @ 0x500
 	add r0, r4, r5
 	str r7, [r0]
 _08073822:
@@ -4799,11 +4799,11 @@ _0807383C:
 _08073840:
 	.4byte 0x0000050C
 _08073844:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08073848:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 _0807384C:
-	.4byte 0x03001F24
+	.4byte gUnknown_03001F24
 _08073850:
 	.4byte 0x000004EC
 _08073854:
@@ -4972,7 +4972,7 @@ sub_0807394C: @ 0x0807394C
 	mov r0, #0
 	ldrsb r0, [r5, r0]
 	mov r8, r0
-	ldr r0, _080739A0  @ =gUnknown_03001F10
+	ldr r0, _080739A0  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -4982,11 +4982,11 @@ sub_0807394C: @ 0x0807394C
 	mov r0, #32
 	strb r0, [r5]
 _08073972:
-	ldr r0, _080739A4  @ =0x03001F28
+	ldr r0, _080739A4  @ =gUnknown_03001F28
 	str r3, [r0]
 	ldr r4, _080739A8  @ =gUnknown_03001EFC
 	mov r6, #0
-	ldr r0, _080739AC  @ =0x03000820
+	ldr r0, _080739AC  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08073984
@@ -5007,13 +5007,13 @@ _08073984:
 	.byte 0x00
 	.byte 0x00
 _080739A0:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _080739A4:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _080739A8:
 	.4byte gUnknown_03001EFC
 _080739AC:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_0807394C
 
 	THUMB_FUNC_START sub_080739B0
@@ -5031,7 +5031,7 @@ sub_080739B0: @ 0x080739B0
 	add r0, r0, #58
 	ldrb r4, [r0]
 _080739C8:
-	ldr r0, _08073A20  @ =0x03000824
+	ldr r0, _08073A20  @ =gUnknown_03000824
 	add r1, r4, #1
 	ldr r0, [r0]
 	bl __modsi3
@@ -5044,7 +5044,7 @@ _080739DA:
 	add r6, r6, #45
 	mov r7, #0
 	ldrsb r7, [r6, r7]
-	ldr r0, _08073A24  @ =gUnknown_03001F10
+	ldr r0, _08073A24  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -5054,11 +5054,11 @@ _080739DA:
 	mov r0, #32
 	strb r0, [r6]
 _080739F4:
-	ldr r0, _08073A28  @ =0x03001F28
+	ldr r0, _08073A28  @ =gUnknown_03001F28
 	str r5, [r0]
 	ldr r4, _08073A2C  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08073A30  @ =0x03000820
+	ldr r0, _08073A30  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08073A06
@@ -5077,15 +5077,15 @@ _08073A06:
 	pop {r0}
 	bx r0
 _08073A20:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08073A24:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08073A28:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08073A2C:
 	.4byte gUnknown_03001EFC
 _08073A30:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_080739B0
 
 	THUMB_FUNC_START sub_08073A34
@@ -5099,7 +5099,7 @@ sub_08073A34: @ 0x08073A34
 	add r0, r0, #59
 	ldrb r1, [r0]
 _08073A44:
-	ldr r0, _08073A98  @ =0x03000824
+	ldr r0, _08073A98  @ =gUnknown_03000824
 	ldr r0, [r0]
 	cmp r0, r1
 	bne _08073A58
@@ -5114,7 +5114,7 @@ _08073A58:
 	add r5, r5, #45
 	mov r6, #0
 	ldrsb r6, [r5, r6]
-	ldr r0, _08073A9C  @ =gUnknown_03001F10
+	ldr r0, _08073A9C  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -5124,12 +5124,12 @@ _08073A58:
 	mov r0, #32
 	strb r0, [r5]
 _08073A72:
-	ldr r0, _08073AA0  @ =0x03001F28
+	ldr r0, _08073AA0  @ =gUnknown_03001F28
 	mov r1, r12
 	str r1, [r0]
 	ldr r4, _08073AA4  @ =gUnknown_03001EFC
 	mov r3, #0
-	ldr r0, _08073AA8  @ =0x03000820
+	ldr r0, _08073AA8  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08073A86
@@ -5144,15 +5144,15 @@ _08073A86:
 	pop {r0}
 	bx r0
 _08073A98:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08073A9C:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08073AA0:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08073AA4:
 	.4byte gUnknown_03001EFC
 _08073AA8:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08073A34
 
 	THUMB_FUNC_START sub_08073AAC
@@ -5166,7 +5166,7 @@ sub_08073AAC: @ 0x08073AAC
 	add r0, r0, #56
 	ldrb r1, [r0]
 _08073ABC:
-	ldr r0, _08073B04  @ =0x03000824
+	ldr r0, _08073B04  @ =gUnknown_03000824
 	ldr r0, [r0]
 	cmp r0, r1
 	blt _08073AFE
@@ -5174,7 +5174,7 @@ _08073ABC:
 	add r5, r5, #45
 	mov r7, #0
 	ldrsb r7, [r5, r7]
-	ldr r0, _08073B08  @ =gUnknown_03001F10
+	ldr r0, _08073B08  @ =gSoundWork
 	ldr r0, [r0]
 	ldrb r1, [r0, #1]
 	mov r0, #16
@@ -5184,11 +5184,11 @@ _08073ABC:
 	mov r0, #32
 	strb r0, [r5]
 _08073ADE:
-	ldr r0, _08073B0C  @ =0x03001F28
+	ldr r0, _08073B0C  @ =gUnknown_03001F28
 	str r3, [r0]
 	ldr r4, _08073B10  @ =gUnknown_03001EFC
 	mov r6, #0
-	ldr r0, _08073B14  @ =0x03000820
+	ldr r0, _08073B14  @ =gUnknown_03000820
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _08073AF0
@@ -5205,15 +5205,15 @@ _08073AFE:
 	pop {r0}
 	bx r0
 _08073B04:
-	.4byte 0x03000824
+	.4byte gUnknown_03000824
 _08073B08:
-	.4byte gUnknown_03001F10
+	.4byte gSoundWork
 _08073B0C:
-	.4byte 0x03001F28
+	.4byte gUnknown_03001F28
 _08073B10:
 	.4byte gUnknown_03001EFC
 _08073B14:
-	.4byte 0x03000820
+	.4byte gUnknown_03000820
 	THUMB_FUNC_END sub_08073AAC
 
 	THUMB_FUNC_START sub_08073B18

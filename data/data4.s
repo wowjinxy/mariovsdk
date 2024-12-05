@@ -59,6 +59,8 @@ gCardEDataDummy2:
 gUnknown_08B3961C:
 	.INCBIN "baserom.gba", 0xB3961C, 0xB39C1C-0xB3961C
 
+@ sound related?
+
 	.GLOBAL gUnknown_08B39C1C
 gUnknown_08B39C1C:
 	.INCBIN "baserom.gba", 0xB39C1C, 0xB39F1C-0xB39C1C

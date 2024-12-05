@@ -1498,7 +1498,7 @@ extern const struct iwRAMBase *gUnknown_0807CA98;
 extern u16 gUnknown_08B3A4DC;
 extern u16 gUnknown_08D7B10C;
 
-extern struct Struct08B3A4E0
+extern struct SoundEffect
 {
     /*0x00*/ u32 sampleSize;
     /*0x04*/ void *samplePtr;
@@ -1509,7 +1509,7 @@ extern struct Struct08B3A4E0
              u8 unk13;
              u8 filler14[4];
     /*0x18*/ u32 unk18;
-} gUnknown_08B3A4E0[];
+} gSoundEffectTable[];
 
 extern struct MusicSequence
 {
