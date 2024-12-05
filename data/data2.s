@@ -50,8 +50,12 @@ gUnknown_080A999C:
 
 	.GLOBAL gUnknown_080A9D9C
 gUnknown_080A9D9C:
-	.INCBIN "baserom.gba", 0xA9D9C, 0xAA778-0xA9D9C
-
+	.INCBIN "baserom.gba", 0xA9D9C, 0xAA178-0xA9D9C
+	
+	.GLOBAL gUnknown_080AA178
+gUnknown_080AA178:
+	.INCBIN "baserom.gba", 0xAA178, 0xAA778-0xAA178
+	
 	.GLOBAL gUnknown_080AA778
 gUnknown_080AA778:
 	.INCBIN "baserom.gba", 0xAA778, 0xAAC64-0xAA778
@@ -74,7 +78,11 @@ gUnknown_080AB624:
 
 	.GLOBAL gUnknown_080ABBF4
 gUnknown_080ABBF4:
-	.INCBIN "baserom.gba", 0xABBF4, 0xAC54C-0xABBF4
+	.INCBIN "baserom.gba", 0xABBF4, 0xABE4C-0xABBF4
+	
+	.GLOBAL gUnknown_080ABE4C
+gUnknown_080ABE4C:
+	.INCBIN "baserom.gba", 0xABE4C, 0xAC54C-0xABE4C
 
 	.GLOBAL gUnknown_080AC54C
 gUnknown_080AC54C:
@@ -98,7 +106,11 @@ gUnknown_080AD418:
 
 	.GLOBAL gUnknown_080AD814
 gUnknown_080AD814:
-	.INCBIN "baserom.gba", 0xAD814, 0xAE610-0xAD814
+	.INCBIN "baserom.gba", 0xAD814, 0xADE10-0xAD814
+
+	.GLOBAL gUnknown_080ADE10
+gUnknown_080ADE10:
+	.INCBIN "baserom.gba", 0xADE10, 0xAE610-0xADE10
 
 	.GLOBAL gUnknown_080AE610
 gUnknown_080AE610:
@@ -122,7 +134,11 @@ gUnknown_080AF90C:
 
 	.GLOBAL gUnknown_080AFCB4
 gUnknown_080AFCB4:
-	.INCBIN "baserom.gba", 0xAFCB4, 0xB07EC-0xAFCB4
+	.INCBIN "baserom.gba", 0xAFCB4, 0xB00EC-0xAFCB4
+
+	.GLOBAL gUnknown_080B00EC
+gUnknown_080B00EC:
+	.INCBIN "baserom.gba", 0xB00EC, 0xB07EC-0xB00EC
 
 	.GLOBAL gUnknown_080B07EC
 gUnknown_080B07EC:
@@ -146,7 +162,11 @@ gUnknown_080B1B58:
 
 	.GLOBAL gUnknown_080B20A0
 gUnknown_080B20A0:
-	.INCBIN "baserom.gba", 0xB20A0, 0xB2D60-0xB20A0
+	.INCBIN "baserom.gba", 0xB20A0, 0xB25E0-0xB20A0
+
+	.GLOBAL gUnknown_080B25E0
+gUnknown_080B25E0:
+	.INCBIN "baserom.gba", 0xB25E0, 0xB2D60-0xB25E0
 
 	.GLOBAL gUnknown_080B2D60
 gUnknown_080B2D60:
@@ -170,7 +190,11 @@ gUnknown_080B4094:
 
 	.GLOBAL gUnknown_080B43B4
 gUnknown_080B43B4:
-	.INCBIN "baserom.gba", 0xB43B4, 0xB512C-0xB43B4
+	.INCBIN "baserom.gba", 0xB43B4, 0xB496C-0xB43B4
+
+	.GLOBAL gUnknown_080B496C
+gUnknown_080B496C:
+	.INCBIN "baserom.gba", 0xB496C, 0xB512C-0xB496C
 
 	.GLOBAL gWorldSpriteTableData
 gWorldSpriteTableData:
@@ -312,19 +336,19 @@ gUnknown_080B5300:
 gUnknown_080B5328:
 	.INCBIN "assets/gUnknown_080B5328.bin"
 
-	.GLOBAL gUnknown_080B53F4 @ TODO
+	.GLOBAL gUnknown_080B53F4
 gUnknown_080B53F4:
-	.4byte 0x080aa178
+	.4byte gUnknown_080AA178
 	.4byte 0x00000000
-	.4byte 0x080abe4c
+	.4byte gUnknown_080ABE4C
 	.4byte 0x00000000
-	.4byte 0x080ade10
+	.4byte gUnknown_080ADE10
 	.4byte 0x00000000
-	.4byte 0x080b00ec
+	.4byte gUnknown_080B00EC
 	.4byte 0x00000000
-	.4byte 0x080b25e0
+	.4byte gUnknown_080B25E0
 	.4byte 0x00000000
-	.4byte 0x080b496c
+	.4byte gUnknown_080B496C
 	.4byte 0x00000000
 
 	.GLOBAL gUnknown_080B5424
