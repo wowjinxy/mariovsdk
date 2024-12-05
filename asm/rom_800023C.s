@@ -40,7 +40,7 @@ ARM_FUNC_END sound_related_08000260
 
 	ARM_FUNC_START sub_080002A0
 sub_080002A0:
-	ldr r0, =0x03001F10
+	ldr r0, =gUnknown_03001F10
 	ldr r0, [r0]
 	ldrb r1, [r0, #2]
 	subs r1, r1, #1
@@ -1751,7 +1751,9 @@ _08001928:
 	cmp r0, r6
 	blt _08001928
 	b _080018FC
-_08001968:
+
+	ARM_FUNC_START sub_08001968
+sub_08001968:
 	push {r4-r11,lr}
 	ldrsh r4, [r0, #38]
 	ldr r5, [r0, #64]

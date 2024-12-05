@@ -253,7 +253,7 @@ SECTIONS
 		. = 0x394;		gUnknown_03000394 = .;
 		. = 0x395;		gUnknown_03000395 = .;
 		. = 0x396;		gUnknown_03000396 = .;
-
+		. = 0x840;		gUnknown_03000840 = .;
 		. = 0x880;
 		src/agb_flash.o(.bss);
 		tools/agbcc/lib/libgcc.a:dp-bit.o(.bss);
@@ -466,6 +466,20 @@ SECTIONS
 		. = 0x1D60;		gUnknown_03001D60 = .;
 		. = 0x1E38;		gUnknown_03001E38 = .;
 		. = 0x1E3C;		gUnknown_03001E3C = .;
+		
+		. = 0x1EE0;		gUnknown_03001EE0 = .;
+		. = 0x1EE4;		gUnknown_03001EE4 = .;
+		. = 0x1EE8;		gUnknown_03001EE8 = .;
+		. = 0x1EF8;		gUnknown_03001EF8 = .;
+		. = 0x1EFC;		gUnknown_03001EFC = .;
+		. = 0x1F00;		gUnknown_03001F00 = .;
+		. = 0x1F04;		gUnknown_03001F04 = .;
+		. = 0x1F08;		gUnknown_03001F08 = .;
+		. = 0x1F10;		gUnknown_03001F10 = .;
+		. = 0x1F14;		gUnknown_03001F14 = .;
+		. = 0x1F18;		gUnknown_03001F18 = .;
+		. = 0x1F1C;		gUnknown_03001F1C = .;
+		
 		. = 0x1F2C;		gFlashTimeoutFlag = .;
 		. = 0x1F30;		PollFlashStatus = .;
 		. = 0x1F34;		WaitForFlashWrite = .;

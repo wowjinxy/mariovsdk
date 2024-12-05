@@ -83937,7 +83937,7 @@ _08071550:
 	str r2, [sp, #24]
 	str r7, [sp, #28]
 	str r6, [sp, #32]
-	ldr r0, _080715A8  @ =0x03001EE4
+	ldr r0, _080715A8  @ =gUnknown_03001EE4
 	ldr r1, [r0]
 	mov r0, sp
 	bl _call_via_r1
@@ -83947,7 +83947,7 @@ _08071550:
 	bcc _08071596
 	mov r0, #0
 	strb r0, [r4]
-	ldr r0, _080715AC  @ =0x03001F10
+	ldr r0, _080715AC  @ =gUnknown_03001F10
 	ldr r1, [r0]
 	ldr r3, _080715B0  @ =0x00000FC8
 	add r0, r1, r3
@@ -83977,9 +83977,9 @@ _08071596:
 	.byte 0x00
 	.byte 0x00
 _080715A8:
-	.4byte 0x03001EE4
+	.4byte gUnknown_03001EE4
 _080715AC:
-	.4byte 0x03001F10
+	.4byte gUnknown_03001F10
 _080715B0:
 	.4byte 0x00000FC8
 _080715B4:
@@ -84062,7 +84062,7 @@ _0807163C:
 	str r2, [sp, #24]
 	str r5, [sp, #28]
 	str r6, [sp, #32]
-	ldr r0, _08071664  @ =0x03001EE4
+	ldr r0, _08071664  @ =gUnknown_03001EE4
 	ldr r1, [r0]
 	mov r0, sp
 	bl _call_via_r1
@@ -84077,7 +84077,7 @@ _0807163C:
 	pop {r1}
 	bx r1
 _08071664:
-	.4byte 0x03001EE4
+	.4byte gUnknown_03001EE4
 _08071668:
 	.4byte 0xFFFFF000
 	THUMB_FUNC_END sub_080715B8

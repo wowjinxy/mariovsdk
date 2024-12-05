@@ -10,8 +10,8 @@ void normal_world_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unk0 = &gUnknown_08B2CA5C[0].unk4[worldID].unk4[levelID];
     gNextLevelInLevelTable.unk4 = gUnknown_08B2CA5C[0].unk4[worldID].unk8;
 
-    gNextLevelInLevelTable.unk18 = sub_08071F64(gNextLevelInLevelTable.unk0->songID);
-    gNextLevelInLevelTable.unk14 = sub_08071F78(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk18 = get_song_volume(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk14 = get_song_data(gNextLevelInLevelTable.unk0->songID);
 
     var1 = sub_08071F8C(gNextLevelInLevelTable.unk0->songID);
     for (i = 0; i < 3; i++)
@@ -58,8 +58,8 @@ void plus_world_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unk0 = &gUnknown_08B2CDF4[0].unk4[worldID].unk4[levelID];
     gNextLevelInLevelTable.unk4 = gUnknown_08B2CDF4[0].unk4[worldID].unk8;
 
-    gNextLevelInLevelTable.unk18 = sub_08071F64(gNextLevelInLevelTable.unk0->songID);
-    gNextLevelInLevelTable.unk14 = sub_08071F78(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk18 = get_song_volume(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk14 = get_song_data(gNextLevelInLevelTable.unk0->songID);
 
     var1 = sub_08071F8C(gNextLevelInLevelTable.unk0->songID);
     for (i = 0; i < 3; i++)
@@ -100,8 +100,8 @@ void expert_1_6_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unk0 = &gUnknown_08B2CEBC[0].unk4[worldID].unk4[levelID];
     gNextLevelInLevelTable.unk4 = gUnknown_08B2CEBC[0].unk4[worldID].unk8;
 
-    gNextLevelInLevelTable.unk18 = sub_08071F64(gNextLevelInLevelTable.unk0->songID);
-    gNextLevelInLevelTable.unk14 = sub_08071F78(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk18 = get_song_volume(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk14 = get_song_data(gNextLevelInLevelTable.unk0->songID);
 
     var1 = sub_08071F8C(gNextLevelInLevelTable.unk0->songID);
     for (i = 0; i < 3; i++)
@@ -136,8 +136,8 @@ void expert_7_12_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unk0 = &gUnknown_08B2CF84[0].unk4[worldID].unk4[levelID];
     gNextLevelInLevelTable.unk4 = gUnknown_08B2CF84[0].unk4[worldID].unk8;
 
-    gNextLevelInLevelTable.unk18 = sub_08071F64(gNextLevelInLevelTable.unk0->songID);
-    gNextLevelInLevelTable.unk14 = sub_08071F78(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk18 = get_song_volume(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk14 = get_song_data(gNextLevelInLevelTable.unk0->songID);
 
     var1 = sub_08071F8C(gNextLevelInLevelTable.unk0->songID);
     for (i = 0; i < 3; i++)
@@ -172,8 +172,8 @@ void dk_boss_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unk0 = &gUnknown_08B2CFC0[0].unk4[worldID].unk4[levelID];
     gNextLevelInLevelTable.unk4 = gUnknown_08B2CFC0[0].unk4[worldID].unk8;
 
-    gNextLevelInLevelTable.unk18 = sub_08071F64(gNextLevelInLevelTable.unk0->songID);
-    gNextLevelInLevelTable.unk14 = sub_08071F78(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk18 = get_song_volume(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk14 = get_song_data(gNextLevelInLevelTable.unk0->songID);
 
     var1 = sub_08071F8C(gNextLevelInLevelTable.unk0->songID);
     for (i = 0; i < 3; i++)
@@ -194,8 +194,8 @@ void dk_boss_plus_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unk0 = &gUnknown_08B2CFC0[0].unk4[worldID].unk4[levelID];
     gNextLevelInLevelTable.unk4 = gUnknown_08B2CFC0[0].unk4[worldID].unk8;
 
-    gNextLevelInLevelTable.unk18 = sub_08071F64(gNextLevelInLevelTable.unk0->songID);
-    gNextLevelInLevelTable.unk14 = sub_08071F78(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk18 = get_song_volume(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk14 = get_song_data(gNextLevelInLevelTable.unk0->songID);
 
     var1 = sub_08071F8C(gNextLevelInLevelTable.unk0->songID);
     for (i = 0; i < 3; i++)
@@ -216,8 +216,8 @@ void tutorial_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unk0 = &gUnknown_08B2D378[0].unk4[worldID].unk4[levelID];
     gNextLevelInLevelTable.unk4 = gUnknown_08B2D378[0].unk4[worldID].unk8;
 
-    gNextLevelInLevelTable.unk18 = sub_08071F64(gNextLevelInLevelTable.unk0->songID);
-    gNextLevelInLevelTable.unk14 = sub_08071F78(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk18 = get_song_volume(gNextLevelInLevelTable.unk0->songID);
+    gNextLevelInLevelTable.unk14 = get_song_data(gNextLevelInLevelTable.unk0->songID);
 
     var1 = sub_08071F8C(gNextLevelInLevelTable.unk0->songID);
     for (i = 0; i < 3; i++)
