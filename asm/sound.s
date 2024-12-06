@@ -1924,7 +1924,7 @@ sub_08072368: @ 0x08072368
 _08072390:
 	mov r6, #0
 	mov r10, r6
-_08072394:
+_08072394:  @ loop start
 	mov r1, #63
 	and r1, r1, r2
 	sub r1, r1, #1
@@ -2014,12 +2014,12 @@ _08072428:
 	strb r0, [r4, #18]
 _08072436:
 	ldr r0, [sp]
-	ldr r1, [r0]
+	ldr r1, [r0]  @ arg0->data
 	ldrb r0, [r4, #18]
 	sub r0, r0, #1
 	lsl r0, r0, #1
 	mov r2, #162
-	lsl r2, r2, #1
+	lsl r2, r2, #1  @ 0x144
 	add r1, r1, r2
 	add r1, r1, r0
 	mov r3, #0

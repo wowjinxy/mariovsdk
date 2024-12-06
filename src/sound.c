@@ -19,7 +19,8 @@ struct SongData
     u16 unk3E;
     u16 unk40;
     u8 filler42[2];
-    u8 unk44[0x244-0x44];
+    u8 unk44[0x144-0x44];
+    s16 unk144[(0x244-0x144)/2];
     u8 unk244[1][2];
     u8 filler246[0x284-0x246];
     struct SongData_sub unk284[1];
@@ -44,14 +45,42 @@ struct Struct1F10_sub
     u8 sndBufB[0x120];
 };
 
-struct Struct1F10_sub3_sub_child
+struct Struct08072750
 {
-    u8 filler0[0x94];
-    u8 unk94[0xC9-0x94];  // Struct08072750
-    u8 unkC9;
-    u8 fillerCA[0xE4-0xCA];
-    u8 unkE4[0x119-0xE4];  // Struct08072750
-    u8 unk119;
+    //u16 unk0[0][2];
+    struct { u16 unk0, unk2; } unk0[0];
+    u8 filler0[0x30];
+    u8 unk30;
+    u8 unk31;
+    u8 filler32[0x33-0x32];
+    u8 unk33;
+    u8 unk34;
+    u8 unk35;
+    u16 unk36[1];  // TODO: extend
+};
+
+static_assert(sizeof(struct Struct08072750) == 0x38, size38);
+
+struct Instrument
+{
+    char name[0x10];
+    u8 unk10;
+    u8 filler11[0x17-0x11];
+    u8 unk17;
+    u8 filler18[0x94-0x18];
+    struct Struct08072750 unk94;
+    u8 fillerCC[0xE4-0xCC];
+    struct Struct08072750 unkE4;
+};
+
+extern struct Instrument gUnknown_08EBFE90[];
+
+struct Struct1F10_sub3_sub_child2
+{
+    u8 filler0[0xC];
+    u8 unkC;
+    u8 fillerD[0x10-0xD];
+    u8 unk10;
 };
 
 struct Struct1F10_sub3_sub
@@ -63,14 +92,25 @@ struct Struct1F10_sub3_sub
     //u8 unk5;
     u8 filler6[0xA-0x6];
     //u8 unk9;
-    u8 fillerA[0x14-0xA];
+    u8 fillerA[0x10-0xA];
+    u8 unk10;
+    u8 unk11;
+    u8 unk12;
+    u8 unk13;
     u8 unk14;
-    u8 filler15[3];
+    u8 unk15;
+    u8 unk16;
+    u8 unk17;
     u8 unk18;
-    u8 filler19[1];
+    u8 unk19;
     u8 unk1A;
-    u8 filler1B[0x24-0x1B];
-    u8 unk24;
+    u8 unk1B;
+    u8 filler1C;
+    u8 unk1D;
+    u8 filler1E[0x20-0x1E];
+    u32 unk20;
+    s8 unk24;
+    u8 unk25;
     s16 unk26;
     s16 unk28;
     s16 unk2A;
@@ -84,21 +124,24 @@ struct Struct1F10_sub3_sub
     u8 unk35;
     u8 unk36;
     u8 unk37;
-    u8 filler38[0x3C-0x38];
-    struct Struct1F10_sub3_sub_child *unk3C;
-    u8 filler40[4];
+    u8 unk38;
+    u8 unk39;
+    u8 unk3A;
+    u8 unk3B;
+    struct Instrument *unk3C;
+    struct Struct1F10_sub3_sub_child2 *unk40;
     u8 unk44;
     u8 unk45;
     u8 filler46[0x48-0x46];
     s16 unk48;
-    u8 filler4A[0x4C-0x4A];
+    s16 unk4A;
 };
 
 static_assert(offsetof(struct Struct1F10_sub3_sub, unk26) == 0x26, unk26);
 
 static_assert(sizeof(struct Struct1F10_sub3_sub) == 76, asdf);
 
-struct Struct1F10_sub3_child
+struct Struct1F10_sub3_child  // probably Struct1F10_sub3_sub
 {
     u8 filler0[0x1D];
     u8 unk1D;
@@ -119,7 +162,7 @@ struct Struct1F10_sub3
     //u32 unk4C4[1];
     struct Struct1F10_sub3_child *unk4C4[1];
     u8 filler4C8[0x4E4-0x4C8];
-    void *unk4E4;
+    u8 *unk4E4;
     s16 unk4E8;
     s16 unk4EA;
     s16 unk4EC;
@@ -182,6 +225,21 @@ extern u32 gUnknown_03001F04;
 extern u32 gUnknown_03001F08;
 extern struct Struct1F10 *gSoundWork;
 
+// TODO: decompile this
+void sub_080714B8();
+
+void sub_08071E7C(u8 arg0, u8 arg1);
+void sub_08072230(u8 *, int);
+void *sub_0807226C(int arg0);
+void sub_0807229C(void);
+void sub_080734F8(struct Struct1F10_sub3 *arg0, void *arg1);
+void sub_080735D0(struct Struct1F10_sub3 *arg0);
+int sub_080736A0(struct Struct1F10_sub3 *arg0, void *dest, int length);
+void sub_0807387C(struct Struct1F10_sub3 *arg0, int arg1, int arg2, u8 *arg3);
+void sub_080738D4(struct Struct1F10_sub3 *arg0, int arg1);
+void sub_08073914(struct Struct1F10_sub3 *arg0, int arg1);
+void sub_08073B18(void);
+
 #define DMA_FLAGS (DMA_ENABLE | DMA_INTR_ENABLE | DMA_START_SPECIAL | DMA_32BIT | DMA_REPEAT | DMA_SRC_INC | DMA_DEST_RELOAD)
 
 void sound_init(void *arg0, int arg1, int arg2, int arg3, int arg4)
@@ -192,16 +250,16 @@ void sound_init(void *arg0, int arg1, int arg2, int arg3, int arg4)
     if (arg2 == 0)
         arg2 = 1;
 
-    sub_08072230();
+    sub_08072230(arg0, arg1);
     gSoundWork = sub_0807226C((arg2 - 1) * 20 + 0x14F0);
     gSoundWork->unkFC8.unk4FB = arg4;
 
-    ptr_arm_clear_audio_buffer = buffer = (void *)gSoundWork->unkB50;
+    ptr_arm_clear_audio_buffer = (void *)buffer = (void *)gSoundWork->unkB50;
     DmaCopy16(3, arm_clear_audio_buffer, buffer, 0xE8);
     ptr_arm_load_sound_16bit_to_8bit = (void *)(buffer + (arm_load_sound_16bit_to_8bit - arm_clear_audio_buffer));
     ptr_arm_set_sound_dma_regs = (void *)(buffer + (arm_set_sound_dma_regs - arm_clear_audio_buffer));
 
-    gUnknown_03001EE4 = buffer2 = gSoundWork->unkC38;
+    gUnknown_03001EE4 = (void *)buffer2 = gSoundWork->unkC38;
     DmaCopy16(3, sub_08001760_end, buffer2, 0x390);
     gUnknown_03001EFC = (void *)((u8 *)buffer2 + (sub_08001968 - sub_08001760_end));
 
@@ -216,10 +274,10 @@ void sound_init(void *arg0, int arg1, int arg2, int arg3, int arg4)
     REG_SOUNDCNT_L = 0;
     REG_SOUNDCNT_H = SOUND_A_MIX_FULL | SOUND_A_LEFT_OUTPUT | SOUND_A_TIMER_1 | SOUND_A_FIFO_RESET
                    | SOUND_B_MIX_FULL | SOUND_B_RIGHT_OUTPUT | SOUND_B_TIMER_1 | SOUND_B_FIFO_RESET;
-    REG_DMA1DAD = &REG_FIFO_A;
-    REG_DMA2DAD = &REG_FIFO_B;
-    REG_DMA1SAD = &gSoundWork->unk10[gSoundWork->unk6].sndBufA;
-    REG_DMA2SAD = &gSoundWork->unk10[gSoundWork->unk6].sndBufB;
+    REG_DMA1DAD = (u32)&REG_FIFO_A;
+    REG_DMA2DAD = (u32)&REG_FIFO_B;
+    REG_DMA1SAD = (u32)gSoundWork->unk10[gSoundWork->unk6].sndBufA;
+    REG_DMA2SAD = (u32)gSoundWork->unk10[gSoundWork->unk6].sndBufB;
     REG_DMA1CNT = (DMA_FLAGS << 16) | 4;
     REG_DMA2CNT = (DMA_FLAGS << 16) | 4;
     REG_TM1CNT = ((TIMER_ENABLE | TIMER_1CLK) << 16) | 0xFC00;
@@ -562,12 +620,12 @@ void sound_finish(void)
     gSoundWork = NULL;
 }
 
-void sub_08071F10(int arg0)
+void sub_08071F10(void *arg0)
 {
     sub_080734F8(&gSoundWork->unkFC8, arg0);
 }
 
-void sub_08071F2C(int arg0)
+void sub_08071F2C(void *arg0)
 {
     sub_080734F8(&gSoundWork->unkFC8, arg0);
 }
@@ -592,7 +650,7 @@ u8 *sub_08071F8C(u32 bgmID)
     return gMusicTable[bgmID].unk6;
 }
 
-void sub_08071FA0(int arg0, int arg1, int arg2, int arg3)
+void sub_08071FA0(void *arg0, int arg1, int arg2, void *arg3)
 {
     sub_080734F8(&gSoundWork->unkFC8, arg0);
     sub_0807387C(&gSoundWork->unkFC8, arg1, arg2, arg3);
@@ -604,13 +662,10 @@ int get_current_bgm(void)
 
     if (sub_08072144() != 0)
         return -1;
-    if (gUnknown_08D7B10C >= 0)
+    for (i = 0; i < gUnknown_08D7B10C; i++)
     {
-        for (i = 0; i < gUnknown_08D7B10C; i++)
-        {
-            if (gSoundWork->unkFC8.unk0 == gMusicTable[i].data)
-                return i;
-        }
+        if (gSoundWork->unkFC8.unk0 == gMusicTable[i].data)
+            return i;
     }
     return -2;
 }
@@ -700,7 +755,7 @@ void sub_08072230(u8 *arg0, int arg1)
         gUnknown_03001F18[i] = 0;
 }
 
-u8 *sub_0807226C(int arg0)
+void *sub_0807226C(int arg0)
 {
     u8 *r2 = gUnknown_03001F18 + gUnknown_03001F1C;
     if (gUnknown_03001F1C + arg0 > gUnknown_03001F14)
@@ -714,26 +769,177 @@ void sub_0807229C(void)
     gUnknown_03001F18 = NULL;
 }
 
+int sub_080722A8(struct Struct1F10_sub3 *arg0, struct Struct1F10_sub3_sub *arg1)
+{
+    int r5 = arg1->unk1D;
+    struct Struct1F10_sub3_child **r6 = arg0->unk4C4;
+    int index = -1;
+    struct Struct1F10_sub3_child *r0;
+    int i;
+
+    if (arg0->unk4FA <= arg0->unk4FB)
+    {
+        index = arg1 - arg0->unk4;
+        if ((u32)r6[index] == 1)
+            return 0;
+    }
+    else
+    {
+        for (i = 0; i < arg0->unk4FB; i++)
+        {
+            r0 = r6[i];
+            if (r0 == NULL)
+            {
+                index = i;
+                break;
+            }
+            if ((u32)r0 != 1 && r0->unk1D < r5)
+            {
+                r5 = r0->unk1D;
+                index = i;
+            }
+        }
+    }
+    if (index >= 0)
+    {
+        if (r6[index] != NULL)
+            r6[index]->unk1D &= ~1;
+        r6[index] = arg1;
+        arg1->unk1D |= 1;
+        return 1;
+    }
+    return 0;
+}
+
+extern u8 gUnknown_08B39F1C[];
+
+void sub_08072368(struct Struct1F10_sub3 *arg0)
+{
+    int sp8 = 0;
+    u8 *r5 = arg0->unk4E4;
+    int r2;
+    struct Struct1F10_sub3_sub *r4;
+    u8 *spC;
+    int r8;
+    int r1;
+
+    while ((r2 = *r5++) != 0)
+    {
+        u8 r1_ = (r2 & 0x3F) - 1;
+        if (r1_ <= 15)
+        {
+            sp8 |= 1 << r1_;
+            r4 = &arg0->unk4[r1_];
+            if (r2 & 0x80)
+            {
+                r8 = *r5++;
+                spC = &r4->unk25;
+            }
+            else
+            {
+                r8 = r4->unk25;
+                spC = &r4->unk25;
+            }
+            //_080723DA
+            r2 = gUnknown_08B39F1C[r4->unk18];
+            if (r2 <= 7 && r4->unk1A != 0)
+                r4->unk34 = r4->unk1A;
+            //_080723F6
+            r4->unk1A = 0;
+            r4->unk18 = 0;
+            r4->unk14 = 0;
+            r4->unk12 = 0;
+            r4->unk10 = 0;
+            r4->unk16 = -128;
+            if (r8 & 2)
+            {
+                r4->unk12 = *r5;
+                r4->unk13 = *r5 & 0xFF;
+                r5++;
+            }
+            else if (r8 & 0x20)
+                r4->unk12 = r4->unk13;
+            //_08072436
+            r1 = arg0->unk0->unk144[r4->unk12];
+            r4->unk3C = &gUnknown_08EBFE90[r1];
+            if (r4->unk3C->unk17 & 0x80)
+                r4->unk2D = r4->unk3C->unk17 & 0x7F;
+            if (r4->unk40 != NULL)
+            {
+                r4->unk2C = r4->unk40->unkC;
+                r4->unk24 = r4->unk40->unkC;
+                if (r4->unk40->unk10 & 0x80)
+                    r4->unk2D = r4->unk40->unk10;
+            }
+            //_08072498
+            if (r8 & 4)
+            {
+                r4->unk14 = *r5;
+                r4->unk15 = *r5;
+                r5++;
+                r4->unk16 = *r5;
+                r4->unk17 = *r5;
+                r5++;
+            }
+            //_080724C4
+            else if (r8 & 0x40)
+            {
+                r4->unk14 = r4->unk15;
+                r4->unk16 = r4->unk17;
+            }
+            //_080724D6
+            if (r8 & 8)
+            {
+                r4->unk18 = *r5;
+                r4->unk19 = *r5 & 0xFF;
+                r5++;
+                r4->unk1A = *r5;
+                r4->unk1B = *r5 & 0xFF;
+                r5++;
+                if (gUnknown_08B39F1C[r4->unk18] <= 7 && r4->unk1A == 0)
+                {
+                    r4->unk1A = r4->unk34;  // [r2]?
+                }
+                //to _08072528
+            }
+            //_08072516
+            else if (r8 & 0x80)
+            {
+                r4->unk18 = r4->unk19;
+                r4->unk1A = r4->unk1B;
+            }
+            //_08072528
+            if (r8 & 1)
+            {
+                r4->unk10 = *r5;
+                r4->unk11 = *r5 & 0xFF;
+                r5++;
+            }
+            //_08072542
+            else if (r8 & 0x10)
+            {
+                r4->unk10 = r4->unk11;
+            }
+            // hmm... jump to _080726FA and _080726C4?
+
+            //_08072552
+            if (r4->unk10 <= 120)
+            {
+
+            }
+            //_080726C4
+        }
+        //_0807271E
+    }
+    //_08072728
+}
+
 extern u32 gUnknown_03001F24;
 extern u32 gUnknown_03000820;
-extern u32 gUnknown_03000824;
+extern s32 gUnknown_03000824;
 extern struct Struct1F10_sub3_sub *gUnknown_03001F28;
 
 extern void (*gUnknown_08B3A004[])(struct Struct1F10_sub3_sub *, void *, int);
-
-struct Struct08072750
-{
-    //u16 unk0[0][2];
-    struct { u16 unk0, unk2; } unk0[0];
-    u8 filler0[0x30];
-    u8 unk30;
-    u8 unk31;
-    u8 filler32[0x33-0x32];
-    u8 unk33;
-    u8 unk34;
-    u8 unk35;
-    u16 unk36[0];
-};
 
 void sub_08072750(struct Struct1F10_sub3_sub *arg0, struct Struct08072750 *arg1, int arg2)
 {
@@ -805,10 +1011,50 @@ void sub_0807282C(struct Struct1F10_sub3_sub *arg0)
     case 0xF0:  // needed to match
         break;
     }
-    if (arg0->unk3C->unkC9 & 1)
-        sub_08072750(arg0, arg0->unk3C->unk94, arg0->unk32 & 1);
-    if (arg0->unk3C->unk119 & 1)
-        sub_08072750((u8 *)arg0 + 8, arg0->unk3C->unkE4, arg0->unk32 & 1);
+    if (arg0->unk3C->unk94.unk35 & 1)
+        sub_08072750(arg0, &arg0->unk3C->unk94, arg0->unk32 & 1);
+    if (arg0->unk3C->unkE4.unk35 & 1)
+        sub_08072750((u8 *)arg0 + 8, &arg0->unk3C->unkE4, arg0->unk32 & 1);
+}
+
+extern u32 gUnknown_08B39FC4[];
+
+void sub_080728F0(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
+{
+    u32 r4 = arg0->unk1A;
+    int r7;
+    int r6;
+    int r3;
+    int sp0[3];
+
+    if (r4 == 0)
+    {
+        r7 = arg0->unk2D;
+        if (!(gSoundWork->unk1 & 0x10))
+            arg0->unk2D = 32;
+        gUnknown_03001F28 = arg0;
+        gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+        arg0->unk2D = r7;
+    }
+    else
+    {
+        r3 = gUnknown_03000824;
+        while (r3 >= 3)  // hey, ever heard of the modulo (%) operator?
+            r3 -= 3;
+        sp0[0] = arg0->unk28;
+        sp0[1] = sp0[0] - gUnknown_08B39FC4[(r4 >> 4) & 0xF];
+        sp0[2] = sp0[0] - gUnknown_08B39FC4[r4 & 0xF];
+        arg0->unk26 = sp0[r3];
+        if (arg0->unk26 < 40)
+            arg0->unk26 = 40;
+
+        r6 = arg0->unk2D;
+        if (!(gSoundWork->unk1 & 0x10))
+            arg0->unk2D = 32;
+        gUnknown_03001F28 = arg0;
+        gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+        arg0->unk2D = r6;
+    }
 }
 
 void sub_08072A04(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
@@ -903,13 +1149,13 @@ void sub_08072B10(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
     arg0->unk2D = r7;
 }
 
-extern u8 gUnknown_08B39C1C[];
+extern s32 gUnknown_08B39C1C[];
 
 void sub_08072BA8(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
 {
     int r3 = arg0->unk1A;
     int r2 = arg0->unk28;
-    s32 *r5 = gUnknown_08B39C1C + (arg0->unk44 << 8);
+    s32 *r5 = gUnknown_08B39C1C + (arg0->unk44 << 6);
     int r4 = arg0->unk48;
     int r7;
     int r1;
@@ -977,7 +1223,100 @@ void sub_08072C74(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
             arg0->unk2C = 64;
         arg0->unk24 = arg0->unk2C;
     }
-    //_08072CFC
+
+    r7 = arg0->unk2D;
+    if (!(gSoundWork->unk1 & 0x10))
+        arg0->unk2D = 32;
+    gUnknown_03001F28 = arg0;
+    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+    arg0->unk2D = r7;
+}
+
+void sub_08072D54(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
+{
+    int r4 = arg0->unk37;
+    int r6 = arg0->unk28;
+    u32 r5 = arg0->unk1A;
+    s32 *r2 = gUnknown_08B39C1C + (arg0->unk44 << 6);
+    int r3 = arg0->unk48;
+    int r1;
+    int r7;
+
+    r5 = ((r5 & 0xF0) != 0) ? (r5 >> 4) : -(r5 & 0xF);
+    r1 = (r4 & 0xF) << 1;
+    r4 = (r4 >> 4) & 0xF;
+    arg0->unk26 = r6 + ((r2[r3] * r1) >> 16);
+    if (arg0->unk26 < 40)
+        arg0->unk26 = 40;
+    else if (arg0->unk26 > 0x1E00)
+        arg0->unk26 = 0x1E00;
+    r3 += r4;
+    r3 &= 0x3F;
+    arg0->unk48 = r3;
+
+    if (gUnknown_03000824 != 0)
+    {
+        arg0->unk2C += r5;
+        if (arg0->unk2C < 0)
+            arg0->unk2C = 0;
+        else if (arg0->unk2C > 64)
+            arg0->unk2C = 64;
+        arg0->unk24 = arg0->unk2C;
+    }
+
+    r7 = arg0->unk2D;
+    if (!(gSoundWork->unk1 & 0x10))
+        arg0->unk2D = 32;
+    gUnknown_03001F28 = arg0;
+    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+    arg0->unk2D = r7;
+}
+
+void sub_08072E64(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
+{
+    int r3 = arg0->unk1A;
+    int r2 = arg0->unk24;
+    s32 *r5 = gUnknown_08B39C1C + (arg0->unk45 << 6);
+    int r4 = arg0->unk4A;
+    int r1;
+    int r7;
+
+    if (r3 == 0)
+        r3 = arg0->unk39;
+    r1 = (r3 & 0xF) << 2;
+    r3 = (r3 >> 4) & 0xF;
+    arg0->unk2C = r2 + ((r5[r4] * r1) >> 16);
+    if (arg0->unk2C < 0)
+        arg0->unk2C = 0;
+    else if (arg0->unk2C > 64)
+        arg0->unk2C = 64;
+    r4 += r3;
+    r4 &= 0x3F;
+    arg0->unk4A = r4;
+
+    r7 = arg0->unk2D;
+    if (!(gSoundWork->unk1 & 0x10))
+        arg0->unk2D = 32;
+    gUnknown_03001F28 = arg0;
+    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+    arg0->unk2D = r7;
+}
+
+void sub_08072F2C(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
+{
+    u32 r1 = arg0->unk1A;
+    int r3 = ((r1 & 0xF0) != 0) ? (r1 >> 4) : -(r1 & 0xF);
+    int r7;
+
+    if (gUnknown_03000824 != 0)
+    {
+        arg0->unk2C += r3;
+        if (arg0->unk2C < 0)
+            arg0->unk2C = 0;
+        else if (arg0->unk2C > 64)
+            arg0->unk2C = 64;
+        arg0->unk24 = arg0->unk2C;
+    }
 
     r7 = arg0->unk2D;
     if (!(gSoundWork->unk1 & 0x10))
@@ -1002,7 +1341,7 @@ void sub_08072FC8(struct Struct1F10_sub3 *arg0, void *arg1, int arg2)
             r6 = &arg0->unk4[i];
             if (r6->unk3C != NULL && r6->unk26 != 0)
             {
-                if (!((sp8 >> i) & 1) || (r7 = r6->unk18) != 38 || gUnknown_03000824 >= r6->unk1A)
+                if (!((sp8 >> i) & 1) || (r7 = r6->unk18) != 38 || (u32)gUnknown_03000824 >= r6->unk1A)
                 {
                     r7 = r6->unk2D;
                     if (!(gSoundWork->unk1 & 0x10))
@@ -1025,10 +1364,10 @@ void sub_08072FC8(struct Struct1F10_sub3 *arg0, void *arg1, int arg2)
                 {
                     r6->unk26 = r6->unk28;
                     r6->unk2C = r6->unk24;
-                    if (r6->unk3C->unkC9 & 1)
-                        sub_08072750(r6, r6->unk3C->unk94, r6->unk32 & 1);
-                    if (r6->unk3C->unk119 & 1)
-                        sub_08072750((u8 *)r6 + 8, r6->unk3C->unkE4, r6->unk32 & 1);
+                    if (r6->unk3C->unk94.unk35 & 1)
+                        sub_08072750(r6, &r6->unk3C->unk94, r6->unk32 & 1);
+                    if (r6->unk3C->unkE4.unk35 & 1)
+                        sub_08072750((u8 *)r6 + 8, &r6->unk3C->unkE4, r6->unk32 & 1);
                     r6->unk28 = r6->unk26;
                     r6->unk24 = r6->unk2C;
                     r7 = r6->unk2D;
@@ -1053,34 +1392,7 @@ void sub_08072FC8(struct Struct1F10_sub3 *arg0, void *arg1, int arg2)
     }
 }
 
-/*
-struct Struct080722A8_1
-{
-    u8 filler0[0x4C4];
-    u8 unk4C4;
-    u8 filler4C5[0x4FA-0x4C5];
-    u8 unk4FA;
-    u8 unk4FB;
-};
 
-struct Struct080722A8_2
-{
-    u8 filler0[0x1D];
-    u8 unk1D;
-};
-
-void sub_080722A8(struct Struct080722A8_1 *arg0, struct Struct080722A8_2 *arg1)
-{
-    int r1 = -1;
-
-    if (arg0->unk4FA <= arg0->unk4FB)
-    {
-
-    }
-    //_080722F4
-    else if (
-}
-*/
 
 static inline void testinline3(struct Struct1F10_sub3_sub *r4)
 {
@@ -1214,6 +1526,16 @@ int sub_080736A0(struct Struct1F10_sub3 *arg0, void *dest, int length)
     return length;
 }
 
+// unused
+void sub_08073858(struct Struct1F10_sub3 *arg0, void *arg1)
+{
+    void *dest = EWRAM;
+
+    arg0->unk0 = 0;
+    LZ77UnCompWram(arg1, dest);
+    sub_080734F8(arg0, dest);
+}
+
 void sub_0807387C(struct Struct1F10_sub3 *arg0, int arg1, int arg2, u8 *arg3)
 {
     int i;
@@ -1252,6 +1574,72 @@ void sub_08073914(struct Struct1F10_sub3 *arg0, int arg1)
         arg1 = arg0->unk510[arg1] - 1;
     if ((u32)arg0->unk4C4[arg1] == 1)
         arg0->unk4C4[arg1] = NULL;
+}
+
+void sub_0807394C(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
+{
+    int r7;
+
+    r7 = arg0->unk2D;
+    if (!(gSoundWork->unk1 & 0x10))
+        arg0->unk2D = 32;
+    gUnknown_03001F28 = arg0;
+    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+    arg0->unk2D = r7;
+}
+
+void sub_080739B0(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
+{
+    int r1 = arg0->unk1A;
+    int r7;
+
+    if (r1 == 0)
+        r1 = arg0->unk3A;
+    if (gUnknown_03000824 % (r1 + 1) == r1)
+        arg0->unk20 = 0;
+    r7 = arg0->unk2D;
+    if (!(gSoundWork->unk1 & 0x10))
+        arg0->unk2D = 32;
+    gUnknown_03001F28 = arg0;
+    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+    arg0->unk2D = r7;
+}
+
+void sub_08073A34(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
+{
+    int r1 = arg0->unk1A;
+    int r7;
+
+    if (r1 == 0)
+        r1 = arg0->unk3B;
+    if (gUnknown_03000824 == r1)
+    {
+        arg0->unk2C = 0;
+        arg0->unk24 = 0;
+    }
+    r7 = arg0->unk2D;
+    if (!(gSoundWork->unk1 & 0x10))
+        arg0->unk2D = 32;
+    gUnknown_03001F28 = arg0;
+    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+    arg0->unk2D = r7;
+}
+
+void sub_08073AAC(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
+{
+    int r1 = arg0->unk1A;
+    int r7;
+
+    if (r1 == 0)
+        r1 = arg0->unk38;
+    if (gUnknown_03000824 < r1)
+        return;
+    r7 = arg0->unk2D;
+    if (!(gSoundWork->unk1 & 0x10))
+        arg0->unk2D = 32;
+    gUnknown_03001F28 = arg0;
+    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
+    arg0->unk2D = r7;
 }
 
 struct Struct03000840_child_sub
