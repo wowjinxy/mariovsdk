@@ -10,7 +10,7 @@ struct SongData_sub
 
 struct SongData
 {
-    u8 filler0[0x34];
+    u8 filler0[0x34];  // name
     u16 unk34;
     u16 unk36;
     u16 unk38;
@@ -20,7 +20,7 @@ struct SongData
     u16 unk40;
     u8 filler42[2];
     u8 unk44[0x144-0x44];
-    s16 unk144[(0x244-0x144)/2];
+    s16 unk144[(0x244-0x144)/2];  // instrument IDs
     u8 unk244[1][2];
     u8 filler246[0x284-0x246];
     struct SongData_sub unk284[1];
@@ -34,7 +34,7 @@ struct Struct1F10_sub2
     u8 unk3;
     u32 unk4;
     u32 unk8;
-    u32 unkC;
+    u32 unkC;  // sample rate
     struct SoundEffect *unk10;
 };
 
@@ -61,17 +61,38 @@ struct Struct08072750
 
 static_assert(sizeof(struct Struct08072750) == 0x38, size38);
 
-struct Instrument
+struct Instrument_sub
+{
+    u8 filler0[0xC];
+    u8 unkC;
+    u8 unkD;
+    u8 unkE;
+    u8 fillerF;
+    u8 unk10;
+    u8 filler11[0x28-0x11];
+    u8 unk28;
+    u8 filler29[0x30-0x29];
+};
+
+struct Instrument  // size = 0x13C?
 {
     char name[0x10];
     u8 unk10;
-    u8 filler11[0x17-0x11];
+    u8 filler11[0x16-0x11];
+    u8 unk16;
     u8 unk17;
-    u8 filler18[0x94-0x18];
+    u8 filler18[0x1B-0x18];
+    u8 unk1B[0x94-0x1B];
     struct Struct08072750 unk94;
     u8 fillerCC[0xE4-0xCC];
     struct Struct08072750 unkE4;
+    u8 filler11C[0x134-0x11C];
+    u16 unk134;
+    u8 filler136[2];
+    struct Instrument_sub *unk138;
 };
+
+static_assert(offsetof(struct Instrument, unk138) == 0x138, offset138);
 
 extern struct Instrument gUnknown_08EBFE90[];
 
@@ -81,18 +102,20 @@ struct Struct1F10_sub3_sub_child2
     u8 unkC;
     u8 fillerD[0x10-0xD];
     u8 unk10;
+    s8 unk11;
 };
 
+// Music voice/channel?
 struct Struct1F10_sub3_sub
 {
-    u8 unk0[2];
+    u8 unk0[2];  // u16?
     u8 unk2;
     u16 unk4;
-    //u8 filler3[2];
-    //u8 unk5;
-    u8 filler6[0xA-0x6];
-    //u8 unk9;
-    u8 fillerA[0x10-0xA];
+    u8 filler6[2];
+    u16 unk8;
+    u16 unkA;
+    u16 unkC;
+    u8 fillerE[2];
     u8 unk10;
     u8 unk11;
     u8 unk12;
@@ -105,9 +128,9 @@ struct Struct1F10_sub3_sub
     u8 unk19;
     u8 unk1A;
     u8 unk1B;
-    u8 filler1C;
+    s8 unk1C;
     u8 unk1D;
-    u8 filler1E[0x20-0x1E];
+    u16 unk1E;
     u32 unk20;
     s8 unk24;
     u8 unk25;
@@ -116,11 +139,11 @@ struct Struct1F10_sub3_sub
     s16 unk2A;
     s8 unk2C;
     s8 unk2D;
-    u8 unk2E;
-    u8 filler2F[1];
+    s8 unk2E;
+    s8 unk2F;
     u16 unk30;
     u16 unk32;
-    u8 unk34;
+    u8 unk34[1];  // array?
     u8 unk35;
     u8 unk36;
     u8 unk37;
@@ -132,11 +155,14 @@ struct Struct1F10_sub3_sub
     struct Struct1F10_sub3_sub_child2 *unk40;
     u8 unk44;
     u8 unk45;
-    u8 filler46[0x48-0x46];
+    u16 unk46;
     s16 unk48;
     s16 unk4A;
 };
 
+static_assert(offsetof(struct Struct1F10_sub3_sub, unk20) == 0x20, unk20);
+static_assert(offsetof(struct Struct1F10_sub3_sub, unk30) == 0x30, unk30);
+static_assert(offsetof(struct Struct1F10_sub3_sub, unk36) == 0x36, unk36);
 static_assert(offsetof(struct Struct1F10_sub3_sub, unk26) == 0x26, unk26);
 
 static_assert(sizeof(struct Struct1F10_sub3_sub) == 76, asdf);
@@ -150,36 +176,24 @@ struct Struct1F10_sub3_child  // probably Struct1F10_sub3_sub
 struct Struct1F10_sub3
 {
     struct SongData *unk0;  // data of currently playing song
-    struct Struct1F10_sub3_sub unk4[0];
-    u8 filler4[0x9-0x4];
-    u8 filler9;
-    u8 fillerA[0x244-0xA];
-    //u8 filler50[0x244-0x50];
-    //u8 unk244;
-    //u8 unk245;
-    u8 filler244[2];
-    u8 filler246[0x4C4-0x246];
-    //u32 unk4C4[1];
-    struct Struct1F10_sub3_child *unk4C4[1];
-    u8 filler4C8[0x4E4-0x4C8];
+    struct Struct1F10_sub3_sub unk4[16];
+    struct Struct1F10_sub3_child *unk4C4[8];
     u8 *unk4E4;
     s16 unk4E8;
     s16 unk4EA;
     s16 unk4EC;
     u16 unk4EE;
     s16 unk4F0;
-    #define unk4F2 unk14BA
-    /*0x4F2*/ s16 unk14BA;
+    /*0x4F2*/ s16 unk4F2;
     u16 unk4F4;
     s16 unk4F6;
-    #define unk4F8 unk14C0
-    /*0x4F8*/ s16 unk14C0;
+    /*0x4F8*/ s16 unk4F8;
     u8 unk4FA;
     u8 unk4FB;
     u32 unk4FC;
     u32 unk500;
     u32 unk504;
-    u32 unk508;
+    s32 unk508;
     s32 unk50C;
     u8 unk510[1];
 };  // unknown size
@@ -201,11 +215,11 @@ struct Struct1F10
     struct Struct1F10_sub unk10[2];
     u8 filler490[0x6D0-0x490];
     u8 unk6D0[0xB50-0x6D0];
-    u8 unkB50[0xE8];  // ARM code buffer
-    u8 unkC38[0x390];  // ARM code buffer
-    struct Struct1F10_sub3 unkFC8;
+    /*0xB50*/ u8 codeBuf1[0xE8];  // ARM code buffer
+    /*0xC38*/ u8 codeBuf2[0x390];  // ARM code buffer
+    struct Struct1F10_sub3 unkFC8;  // music state?
     u8 filler14C4[0x14DC-0xFC8-sizeof(struct Struct1F10_sub3)];
-    struct Struct1F10_sub2 unk14DC[1];
+    struct Struct1F10_sub2 unk14DC[1];  // sound effect state?
 };
 
 // ARM code
@@ -254,12 +268,12 @@ void sound_init(void *arg0, int arg1, int arg2, int arg3, int arg4)
     gSoundWork = sub_0807226C((arg2 - 1) * 20 + 0x14F0);
     gSoundWork->unkFC8.unk4FB = arg4;
 
-    ptr_arm_clear_audio_buffer = (void *)buffer = (void *)gSoundWork->unkB50;
+    ptr_arm_clear_audio_buffer = (void *)buffer = (void *)gSoundWork->codeBuf1;
     DmaCopy16(3, arm_clear_audio_buffer, buffer, 0xE8);
     ptr_arm_load_sound_16bit_to_8bit = (void *)(buffer + (arm_load_sound_16bit_to_8bit - arm_clear_audio_buffer));
     ptr_arm_set_sound_dma_regs = (void *)(buffer + (arm_set_sound_dma_regs - arm_clear_audio_buffer));
 
-    gUnknown_03001EE4 = (void *)buffer2 = gSoundWork->unkC38;
+    gUnknown_03001EE4 = (void *)buffer2 = gSoundWork->codeBuf2;
     DmaCopy16(3, sub_08001760_end, buffer2, 0x390);
     gUnknown_03001EFC = (void *)((u8 *)buffer2 + (sub_08001968 - sub_08001760_end));
 
@@ -309,7 +323,7 @@ void sub_08071800(void)
     length = 0x120;
     gSoundWork->unk1 |= 8;
     ptr_arm_clear_audio_buffer(src, length);
-    if (gSoundWork->unkFC8.unk14BA != -1 && gSoundWork->unkFC8.unk0 != NULL)
+    if (gSoundWork->unkFC8.unk4F2 != -1 && gSoundWork->unkFC8.unk0 != NULL)
     {
         u32 pos = 0;
         while (pos < length)
@@ -350,7 +364,7 @@ void sub_0807194C(void)
     }
 }
 
-int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u32 arg5, int arg6)
+int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u32 arg5, int sampleRate)
 {
     struct Struct1F10_sub2 *r9 = NULL;
     u32 r10 = gSoundWork->unk0;
@@ -379,12 +393,12 @@ int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, 
 
     r3 = gSoundWork->unk14DC;
 
-    if (arg6 == 0)
-        arg6 = se->sampleRate;
-    else if (arg6 > 0)
-        arg6 = (arg6 * se->sampleRate) >> 13;
-    else if (arg6 < 0)
-        arg6 = -arg6;
+    if (sampleRate == 0)
+        sampleRate = se->sampleRate;
+    else if (sampleRate > 0)
+        sampleRate = (sampleRate * se->sampleRate) >> 13;
+    else if (sampleRate < 0)
+        sampleRate = -sampleRate;
 
     arg5 = arg5 * se->unk10 >> 7;
 
@@ -425,7 +439,7 @@ int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, 
         r4->unk2 = arg4;
         r4->unk3 = arg5;
         r4->unk8 = 0;
-        r4->unkC = (arg6 << 14) >> 14;
+        r4->unkC = (sampleRate << 14) >> 14;
         r4->unk4 = gSoundWork->unkC++ & 0x7FFFFFFF;
         sub_080738D4(&gSoundWork->unkFC8, r4 - gSoundWork->unk14DC);
         return r4->unk4;
@@ -459,7 +473,7 @@ int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, 
         r4->unk2 = arg4;
         r4->unk3 = arg5;
         r4->unk8 = 0;
-        r4->unkC = (arg6 << 14) >> 14;
+        r4->unkC = (sampleRate << 14) >> 14;
         r4->unk4 = gSoundWork->unkC++ & 0x7FFFFFFF;
         sub_080738D4(&gSoundWork->unkFC8, r4 - gSoundWork->unk14DC);
         return r4->unk4;
@@ -684,29 +698,29 @@ void play_bgm(int bgmID, int volume, int arg2)
 
 void sub_080720AC(void)
 {
-    if (gSoundWork->unkFC8.unk14BA >= 0)
-        gSoundWork->unkFC8.unk14C0 = gSoundWork->unkFC8.unk14BA;
-    gSoundWork->unkFC8.unk14BA = -2;
+    if (gSoundWork->unkFC8.unk4F2 >= 0)
+        gSoundWork->unkFC8.unk4F8 = gSoundWork->unkFC8.unk4F2;
+    gSoundWork->unkFC8.unk4F2 = -2;
 }
 
 void sub_080720E4(void)
 {
-    if (gSoundWork->unkFC8.unk14BA >= 0)
+    if (gSoundWork->unkFC8.unk4F2 >= 0)
     {
-        gSoundWork->unkFC8.unk14C0 = gSoundWork->unkFC8.unk14BA;
-        gSoundWork->unkFC8.unk14BA = -1;
+        gSoundWork->unkFC8.unk4F8 = gSoundWork->unkFC8.unk4F2;
+        gSoundWork->unkFC8.unk4F2 = -1;
     }
 }
 
 void sub_08072118(void)
 {
-    if (gSoundWork->unkFC8.unk14BA == -1)
-        gSoundWork->unkFC8.unk14BA = gSoundWork->unkFC8.unk14C0;
+    if (gSoundWork->unkFC8.unk4F2 == -1)
+        gSoundWork->unkFC8.unk4F2 = gSoundWork->unkFC8.unk4F8;
 }
 
 int sub_08072144(void)
 {
-    return (gSoundWork->unkFC8.unk14BA == -2);
+    return (gSoundWork->unkFC8.unk4F2 == -2);
 }
 
 int sub_0807216C(void)
@@ -813,125 +827,257 @@ int sub_080722A8(struct Struct1F10_sub3 *arg0, struct Struct1F10_sub3_sub *arg1)
 
 extern u8 gUnknown_08B39F1C[];
 
-void sub_08072368(struct Struct1F10_sub3 *arg0)
+static inline u32 stupid(u8 *r5)
 {
+    u32 r1 = *r5;
+    u32 r0 = 0xFF;
+    asm(""::"r"(r0));
+    r0 &= r1;
+    return r0;
+}
+
+int sub_08072368(struct Struct1F10_sub3 *arg0)
+{
+    struct Struct1F10_sub3_sub *sp4 = arg0->unk4;
     int sp8 = 0;
     u8 *r5 = arg0->unk4E4;
     int r2;
+    u8 r12_;
+    /*u16*/s16 r12;
     struct Struct1F10_sub3_sub *r4;
-    u8 *spC;
+    //u8 *spC;
     int r8;
-    int r1;
+    //int r1;
 
-    while ((r2 = *r5++) != 0)
+    while ((r12_ = *r5++) != 0)
     {
-        u8 r1_ = (r2 & 0x3F) - 1;
-        if (r1_ <= 15)
+        u8 r1_ = (r12_ & 0x3F) - 1;
+        if (r1_ > 15)
+            continue;
+        sp8 |= 1 << r1_;
+        //r4 = &arg0->unk4[r1_];
+        r4 = &sp4[r1_];
+        if (r12_ & 0x80)
         {
-            sp8 |= 1 << r1_;
-            r4 = &arg0->unk4[r1_];
-            if (r2 & 0x80)
+            r8 = *r5++;
+            //spC = &r4->unk25;
+        }
+        else
+        {
+            r8 = r4->unk25;
+            //spC = &r4->unk25;
+        }
+        //_080723DA
+        r2 = gUnknown_08B39F1C[r4->unk18];
+        if (r2 <= 7 && r4->unk1A != 0)
+            r4->unk34[r2] = r4->unk1A;
+        //_080723F6
+        r4->unk1A = 0;
+        r4->unk18 = 0;
+        r4->unk14 = 0;
+        r4->unk12 = 0;
+        r4->unk10 = 0;
+        r4->unk16 = -128;
+        if (r8 & 2)
+        {
+            r4->unk12 = *r5;
+            r4->unk13 = stupid(r5);
+            r5++;
+            //r5++;
+        }
+        else if (r8 & 0x20)
+            r4->unk12 = r4->unk13;
+        //_08072436
+        //r1 = arg0->unk0->unk144[r4->unk12 - 1];
+        r4->unk3C = &gUnknown_08EBFE90[arg0->unk0->unk144[r4->unk12 - 1]];
+        // hmm...
+        //r4->unk3C = (u8 *)gUnknown_08EBFE90 + r1 * 0x13C;
+        if (r4->unk3C->unk17 & 0x80)
+            r4->unk2D = r4->unk3C->unk17 & 0x7F;
+        //_08072472
+        if (r4->unk40 != NULL)
+        {
+            struct Struct1F10_sub3_sub_child2 *r2 = r4->unk40;
+
+            r4->unk2C = r2->unkC;
+            r4->unk24 = r2->unkC;
+            if (!(r4->unk40->unk10 & 0x80))
+                r4->unk2D = r4->unk40->unk10;
+        }
+        //_08072498
+        if (r8 & 4)
+        {
+            r4->unk14 = *r5;
+            r4->unk15 = stupid(r5);  // 0xFF
+            r5++;
+
+            r4->unk16 = *r5;
+            r4->unk17 = stupid(r5);  // 0xFF
+            r5++;
+        }
+        //_080724C4
+        else if (r8 & 0x40)
+        {
+            r4->unk14 = r4->unk15;
+            r4->unk16 = r4->unk17;
+        }
+        //_080724D6
+        if (r8 & 8)
+        {
+            //int r2;
+
+            r4->unk18 = *r5;
+            r4->unk19 = stupid(r5);
+            r5++;
+            r4->unk1A = *r5;
+            r4->unk1B = stupid(r5);
+            r5++;
+            r2 = gUnknown_08B39F1C[r4->unk18];
+            if (r2 <= 7 && r4->unk1A == 0)
             {
-                r8 = *r5++;
-                spC = &r4->unk25;
+                r4->unk1A = r4->unk34[r2];
             }
+            //to _08072528
+        }
+        //_08072516
+        else if (r8 & 0x80)
+        {
+            r4->unk18 = r4->unk19;
+            r4->unk1A = r4->unk1B;
+        }
+        //_08072528
+        if (r8 & 1)
+        {
+            r4->unk10 = *r5;
+            r4->unk11 = stupid(r5);
+            r5++;
+            //to _08072552
+        }
+        //_08072542
+        else
+        {
+            if (!(r8 & 0x10))
+                goto _080726FA;
+            r4->unk10 = r4->unk11;
+        }
+
+        //_08072552
+        if (r4->unk10 <= 120)
+        {
+            s16 r2;
+
+            r12 = r4->unk10;
+            if (r4->unk18 == 3 || r4->unk18 == 5)
+            {
+                int asdf;
+                asdf = (s16)r12 - 12;
+                r2 = r4->unk40->unk11 + asdf;
+                r4->unk2A = 0x1E00 - (r2<<6) - (r4->unk1C >> 1) + 64;
+                //to _080726E8
+            }
+            //_08072590
             else
             {
-                r8 = r4->unk25;
-                spC = &r4->unk25;
-            }
-            //_080723DA
-            r2 = gUnknown_08B39F1C[r4->unk18];
-            if (r2 <= 7 && r4->unk1A != 0)
-                r4->unk34 = r4->unk1A;
-            //_080723F6
-            r4->unk1A = 0;
-            r4->unk18 = 0;
-            r4->unk14 = 0;
-            r4->unk12 = 0;
-            r4->unk10 = 0;
-            r4->unk16 = -128;
-            if (r8 & 2)
-            {
-                r4->unk12 = *r5;
-                r4->unk13 = *r5 & 0xFF;
-                r5++;
-            }
-            else if (r8 & 0x20)
-                r4->unk12 = r4->unk13;
-            //_08072436
-            r1 = arg0->unk0->unk144[r4->unk12];
-            r4->unk3C = &gUnknown_08EBFE90[r1];
-            if (r4->unk3C->unk17 & 0x80)
-                r4->unk2D = r4->unk3C->unk17 & 0x7F;
-            if (r4->unk40 != NULL)
-            {
-                r4->unk2C = r4->unk40->unkC;
-                r4->unk24 = r4->unk40->unkC;
-                if (r4->unk40->unk10 & 0x80)
-                    r4->unk2D = r4->unk40->unk10;
-            }
-            //_08072498
-            if (r8 & 4)
-            {
-                r4->unk14 = *r5;
-                r4->unk15 = *r5;
-                r5++;
-                r4->unk16 = *r5;
-                r4->unk17 = *r5;
-                r5++;
-            }
-            //_080724C4
-            else if (r8 & 0x40)
-            {
-                r4->unk14 = r4->unk15;
-                r4->unk16 = r4->unk17;
-            }
-            //_080724D6
-            if (r8 & 8)
-            {
-                r4->unk18 = *r5;
-                r4->unk19 = *r5 & 0xFF;
-                r5++;
-                r4->unk1A = *r5;
-                r4->unk1B = *r5 & 0xFF;
-                r5++;
-                if (gUnknown_08B39F1C[r4->unk18] <= 7 && r4->unk1A == 0)
+                //s16 r2;
+                if (r4->unk3C != NULL)
                 {
-                    r4->unk1A = r4->unk34;  // [r2]?
+                    int zero;  // r7
+                    struct { u16 unk0; u8 unk2; u16 unk4; } *asdf;
+                    struct Instrument *r3_;
+                    int r1;
+                    struct Instrument_sub *r6;
+
+
+                    r3_ = r4->unk3C;
+                    r1 = r3_->unk1B[r12];
+                    r6 = &r3_->unk138[r1];
+                    if (r3_->unk17 & 0x80)
+                        r4->unk2D = r3_->unk17 & 0x7F;
+                    if (r6->unk28 <= 2)
+                        r4->unk46 = 0;
+                    else
+                        r4->unk46 = -1;
+                    zero = 0;
+                    r4->unk20 = zero;
+                    r4->unk1E = 1;
+                    r4->unk40 = r6;
+                    if (!(r6->unk10 & 0x80))
+                        r4->unk2D = r6->unk10;
+                    //_08072604
+                    r4->unk2C = r6->unkC;
+                    r4->unk1C = r6->unkE;
+                    r4->unk2F = (r4->unk2E * r3_->unk16) >> 6;
+                    r4->unk2F = (r4->unk2F * r6->unkD) >> 6;
+                    asdf = &r4->unk0;
+                    asdf->unk0 = 0x4000;
+                    asdf->unk2 = asdf->unk4 = zero;
+                    asdf++;
+                    asdf->unk0 = 0x2000;
+                    asdf->unk2 = asdf->unk4 = zero;
+                    asm(""::"r"(zero));
+                    asm(""::"r"(zero));
+                    /*
+                    r4->unk0 = 0x4000;
+                    r4->unk4 = 0;
+                    r4->unk2 = 0;
+                    //asm(""::"r"(&r4->unk8));
+                    #if 0
+                    asdf = &r4->unk8;
+                    asdf->unk0 = 0x2000;
+                    asdf->unk4 = 0;
+                    asdf->unk2 = 0;
+                    #else
+                    r4->unk8 = 0x2000;
+                    r4->unkC = 0;
+                    r4->unkA = 0;
+                    #endif
+                    */
+                    r12 += r4->unk40->unk11;
                 }
-                //to _08072528
-            }
-            //_08072516
-            else if (r8 & 0x80)
-            {
-                r4->unk18 = r4->unk19;
-                r4->unk1A = r4->unk1B;
-            }
-            //_08072528
-            if (r8 & 1)
-            {
-                r4->unk10 = *r5;
-                r4->unk11 = *r5 & 0xFF;
-                r5++;
-            }
-            //_08072542
-            else if (r8 & 0x10)
-            {
-                r4->unk10 = r4->unk11;
-            }
-            // hmm... jump to _080726FA and _080726C4?
+                //_08072660
+                r2 = r12 - 12;
+                r4->unk30 = -1;
+                r4->unk32 = 0;
+                //r2 = (r12 - 12) << 6;
+                //r2 = ((r12 << 16) + 0xFFF40000) >> 10;
 
-            //_08072552
-            if (r4->unk10 <= 120)
-            {
-
+                r4->unk28 = r4->unk26 = 0x1E00 - (r2 << 6) - r4->unk1C / 2 + 64;
+                r4->unk24 = r4->unk2C;
+                if (r4->unk1D & 1)
+                    r4->unk1D = (r4->unk2C << 1) | 1;
+                    //to _080726E8
+                else
+                {
+                    r4->unk1D = r4->unk2C << 1;
+                    sub_080722A8(arg0, r4);
+                }
             }
-            //_080726C4
+            //to _080726E8
         }
-        //_0807271E
+        //_080726C4
+        else if (r4->unk10 == 121)
+        {
+            if (r4->unk3C != 0)
+                r4->unk32 = (r4->unk3C->unk134 << 1) | 1;
+        }
+        //_080726E0
+        else
+            r4->unk2C = 0;
+        //_080726E8
+        if (r4->unk18 == 4 || r4->unk18 == 6)
+            r4->unk46 = -1;
+    _080726FA:
+        if (!(r4->unk16 & 0x80))
+            r4->unk2D = r4->unk16;
+        sub_080731C4(arg0, r4);
+        sub_08073464(r4);
+        //*spC = r8;
+        r4->unk25 = r8;
     }
     //_08072728
+    arg0->unk4FC = sp8;
+    arg0->unk4E4 = r5;
+    // missing return?
 }
 
 extern u32 gUnknown_03001F24;
@@ -1063,7 +1209,7 @@ void sub_08072A04(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
     int r7;
 
     if (r1 == 0)
-        r1 = arg0->unk34;
+        r1 = arg0->unk34[0];
 
     if (gUnknown_03000824 != 0)
     {
@@ -1392,7 +1538,146 @@ void sub_08072FC8(struct Struct1F10_sub3 *arg0, void *arg1, int arg2)
     }
 }
 
+void sub_080731C4(struct Struct1F10_sub3 *arg0, struct Struct1F10_sub3_sub *arg1)
+{
+    int r0 = arg1->unk18;
+    int r2 = arg1->unk1A;
 
+    switch (r0)
+    {
+    case 8:
+    case 33:
+        arg1->unk2D = r2;
+        break;
+    case 9:
+        arg1->unk20 = r2 << 22;
+        break;
+    case 12:
+        arg1->unk24 = r2;
+        if (arg1->unk24 > 64)
+            arg1->unk24 = 64;
+        break;
+    case 26:
+        arg1->unk28 -= r2 << 2;
+        if (arg1->unk28 < 40)
+            arg1->unk28 = 40;
+        break;
+    case 27:
+        arg1->unk28 += r2 << 2;
+        if (arg1->unk28 > 0x1E00)
+            arg1->unk28 = 0x1E00;
+        break;
+    case 29:
+        if (r2 <= 3)
+            arg1->unk48 = 0;
+        r2 &= 3;
+        if (r2 == 3)
+            r2 = 0;
+        arg1->unk44 = r2;
+        break;
+    case 32:
+        if (r2 <= 3)
+            arg1->unk4A = 0;
+        r2 &= 3;
+        if (r2 == 3)
+            r2 = 0;
+        arg1->unk45 = r2;
+        break;
+    case 35:
+        arg1->unk24 += r2;
+        if (arg1->unk24 > 64)
+            arg1->unk24 = 64;
+        break;
+    case 36:
+        arg1->unk24 -= r2;
+        if (arg1->unk24 < 0)
+            arg1->unk24 = 0;
+        break;
+    case 23:
+        arg1->unk28 -= r2;
+        if (arg1->unk28 < 40)
+            arg1->unk28 = 40;
+        break;
+    case 24:
+        arg1->unk28 += r2;
+        if (arg1->unk28 > 0x1E00)
+            arg1->unk28 = 0x1E00;
+        break;
+    case 15:
+        if (r2 != 0)
+        {
+            if (r2 <= 32)
+            {
+                arg0->unk4EC = r2;
+                arg0->unk508 = (arg0->unk4EC << 14) / arg0->unk4EA;
+                arg0->unk50C = arg0->unk508 / arg0->unk4EC;
+            }
+            else
+            {
+                arg0->unk4EA = r2 * 50 / 125;
+                arg0->unk508 = (arg0->unk4EC << 14) / arg0->unk4EA;
+                arg0->unk50C = arg0->unk508 / arg0->unk4EC;
+            }
+        }
+        if (arg0->unk508 == 0x3B1 && arg0->unk50C == 0x13B)
+            arg0->unk508 = 0x3B0;
+        break;
+    case 11:
+        if (arg0->unk4EE & 1)
+            arg0->unk4F2 = r2;
+        else
+            arg0->unk4F2 = -2;
+        arg0->unk4F6 = 0;
+        break;
+    case 13:
+        arg0->unk4F2 = arg0->unk4F0 + 1;
+        if (arg0->unk4F2 >= arg0->unk0->unk34)
+        {
+            if (arg0->unk4EE & 1)
+                arg0->unk4F2 = arg0->unk0->unk36;
+            else
+                arg0->unk4F2 = -2;
+        }
+        arg0->unk4F6 = ((r2 >> 4) * 10) + (r2 & 0xF);
+        break;
+    }
+}
+
+void sub_08073464(struct Struct1F10_sub3_sub *arg0)
+{
+    u32 r1 = arg0->unk14;
+    u32 r0 = r1 & 0xF0;
+    u32 r3 = r1 & 0x0F;
+
+    switch (r0)
+    {
+    default:
+    case 16:
+        if (r0 - 16 < 64)
+            arg0->unk24 = r1 - 16;
+        break;
+    case 128:
+        arg0->unk24 -= r3;
+        break;
+    case 144:
+        arg0->unk24 += r3;
+        break;
+    case 160:
+        arg0->unk37 = (arg0->unk37 & 0xF) | (r3 << 4);
+        break;
+    case 176:
+        if (r3 < 4)
+            arg0->unk48 = 0;
+        r3 &= 3;
+        if (r3 == 3)
+            r3 = 0;
+        arg0->unk44 = r3;
+        break;
+    case 192:
+        arg0->unk2D = r3;
+        break;
+    }
+}
 
 static inline void testinline3(struct Struct1F10_sub3_sub *r4)
 {
@@ -1401,6 +1686,22 @@ static inline void testinline3(struct Struct1F10_sub3_sub *r4)
             r4->unk0[j] = 0 /*0*/;  // r12
 }
 
+/*
+    i = 0;
+    while (i < 16)
+    {
+        volatile u16 *dest = REG_ADDR_WAVE_RAM0;
+        int end = i + 8;
+
+        while (i < end)
+        {
+            *dest++ = arg0->unk0[i];
+            i++;
+        }
+        REG_SOUND3CNT_L = 0x20;
+    }
+*/
+
 // nonmatching
 void sub_080734F8(struct Struct1F10_sub3 *arg0, void *arg1)
 {
@@ -1408,13 +1709,13 @@ void sub_080734F8(struct Struct1F10_sub3 *arg0, void *arg1)
     u32 j;  // r2
     //int r12 = 0;
 
-    arg0->unk14BA = -1;
+    arg0->unk4F2 = -1;
     arg0->unk0 = arg1;
     for (i = 0; i < 16; i++)
     {
         struct Struct1F10_sub3_sub *r3 = &arg0->unk4[i];
         u8 *r1 = arg0->unk0->unk244[i];
-        struct Struct1F10_sub3_sub *r4 = r3;
+        struct Struct1F10_sub3_sub *r4 = &arg0->unk4[i];
         //u8 *arr = r4->unk0;
 
         //testinline3(r3);
@@ -1436,7 +1737,7 @@ void sub_080734F8(struct Struct1F10_sub3 *arg0, void *arg1)
     arg0->unk4E8 = 0;
     arg0->unk4EE = 0;
     sub_080735D0(arg0);
-    arg0->unk14BA = -1;
+    arg0->unk4F2 = -1;
 }
 
 void sub_080735D0(struct Struct1F10_sub3 *arg0)
@@ -1453,8 +1754,8 @@ void sub_080735D0(struct Struct1F10_sub3 *arg0)
     arg0->unk4F4 = 0;
     arg0->unk4FC = 0;
     arg0->unk4F0 = -1;
-    arg0->unk14C0 = -1;
-    arg0->unk14BA = 0;
+    arg0->unk4F8 = -1;
+    arg0->unk4F2 = 0;
 
     for (i = 0; i < arg0->unk4FB; i++)
     {
@@ -1462,6 +1763,7 @@ void sub_080735D0(struct Struct1F10_sub3 *arg0)
             arg0->unk4C4[i] = 0;
     }
 }
+
 
 // copies (and mixes?) audio?
 int sub_080736A0(struct Struct1F10_sub3 *arg0, void *dest, int length)
@@ -1706,10 +2008,9 @@ void sub_08073B18(void)
     REG_IE |= INTR_FLAG_TIMER0;
 }
 
-// nonmatching
 void sub_08073B90(void)
 {
-    int i;  // r7
+    int i;
     struct Struct03000840_child_sub *r3;
     struct Struct03000840_child_sub *r4;
 
@@ -1720,48 +2021,43 @@ void sub_08073B90(void)
     if (gUnknown_03000840.unk34 >= gUnknown_03000840.unk3C->unk26)
         return;
     gUnknown_03000840.unk1 = 1;
-    for (i = 0; i < 2; i++)
+    for (i = 0; i < 3; i++)
     {
         struct Struct03000840_sub *r4 = &gUnknown_03000840.unk4[i];
-        int r1 = r4->unk4;
         struct Struct08B3A4AC *r0;
 
-        if (r1 == 0)
+        if (r4->unk4 == 0)
             r4->unk0 = r4->unk8;
-        else if (r1 > 0)
+        else if (r4->unk4 > 0)
         {
-            r4->unk0 += r1;
+            r4->unk0 += r4->unk4;
             if (r4->unk0 >= r4->unk8)
             {
                 r4->unk4 = 0;
-                r4->unk0 = r1;
+                r4->unk0 = r4->unk8;
             }
         }
         else
         {
-            r4->unk0 += r1;
+            r4->unk0 += r4->unk4;
             if (r4->unk0 <= r4->unk8)
             {
                 r4->unk4 = 0;
-                r4->unk0 = r1;
+                r4->unk0 = r4->unk8;
             }
         }
+
         r0 = &gUnknown_08B3A4AC[i];
-        *r0->unk4 = (r0->unk8 & *r0->unk4) | (r4->unk0 >> 9);
-        //*gUnknown_08B3A4AC[i].unk4 = (gUnknown_08B3A4AC[i].unk8 & *gUnknown_08B3A4AC[i].unk4) | (r4->unk0 >> 9);
+        *r0->unk4 = (*r0->unk4 & r0->unk8) | (r4->unk0 >> 9);
     }
 
     if (gUnknown_03000840.unk38 != 0)
     {
-        // to _08073CD2
         gUnknown_03000840.unk38--;
-        //gUnknown_03000840.unk1 = 0;
-        //return;
         gUnknown_03000840.unk1 = 0;
     }
     else
     {
-        //_08073C32
         r3 = &gUnknown_03000840.unk3C->unk28[gUnknown_03000840.unk34];
         r4 = &gUnknown_03000840.unk3C->unk28[gUnknown_03000840.unk3C->unk26];
 
@@ -1770,26 +2066,17 @@ void sub_08073B90(void)
             if (r3->unk3 == 0)
             {
                 struct Struct08B3A4AC *r0 = &gUnknown_08B3A4AC[r3->unk2];
+                *r0->unk4;
                 *r0->unk0 = r3->unk4;
-                *r0->unk4 = ((u32)(gUnknown_03000840.unk4[r3->unk2].unk0 << 7) >> 16) | r3->unk6;
-                /*
-                volatile u16 *r0;
-                volatile u16 *r2;
-                r0 = gUnknown_08B3A4AC[r3->unk2].unk0;
-                r2 = gUnknown_08B3A4AC[r3->unk2].unk4;
-                *r2;
-                *r0 = r3->unk4;
-                *r2 = ((u32)(gUnknown_03000840.unk4[r3->unk2].unk0 << 7) >> 16) | r3->unk6;
-                */
+                *r0->unk4 = ((u32)(gUnknown_03000840.unk4[r3->unk2].unk0 & 0x1FFFFFF)>>9) | r3->unk6;
             }
             else if (r3->unk3 == 1)
             {
-                gUnknown_03000840.unk4[r3->unk2].unk8 = (s32)(r3->unk4 << 21) >> 12;
+                gUnknown_03000840.unk4[r3->unk2].unk8 = (u32)(r3->unk4 << 21) >> 12;
                 gUnknown_03000840.unk4[r3->unk2].unk4 = *(s32 *)&r3->unk4 >> 11;
             }
-            //_08073CB0
         } while (++r3 < r4 && r3->unk0 == 0);
-        //_08073CB6
+
         if (r3 >= r4)
         {
             gUnknown_03000840.unk0 = 0;
@@ -1802,6 +2089,62 @@ void sub_08073B90(void)
             gUnknown_03000840.unk1 = 0;
         }
     }
+}
+
+struct Struct08073CE8
+{
+    u16 unk0[0];
+    u8 filler0[0x20];
+    u16 unk20[4];
+    u16 unk28;
+};
+
+static inline void sub_08073CE8_inline(struct Struct08073CE8 *arg0, int arg1, int arg2)
+{
+    int r1;
+
+    gUnknown_03000840.unk34 = 0;
+    gUnknown_03000840.unk38 = arg0->unk28;
+    gUnknown_03000840.unk3C = arg0;
+    arg1 >>= 4;
+    if (arg1 > 7)
+        arg1 = 7;
+    // interpolate
+    r1 = arg1;
+    if (arg2 < 64)
+        r1 = (arg1 * arg2) >> 6;
+    else if (arg2 > 64)
+        arg1 = (arg1 * (128 - arg2)) >> 6;
+    gUnknown_03000840.unk2 = (arg1 << 4) | r1;
+}
+
+void sub_08073CE8(struct Struct08073CE8 *arg0, int arg1, int arg2)  // unused?
+{
+    int i;
+
+    sub_08073E1C();
+    sub_08073CE8_inline(arg0, arg1, arg2);
+    REG_SOUND3CNT_L = 0x60;
+
+    i = 0;
+    while (i < 16)
+    {
+        volatile u16 *dest = REG_ADDR_WAVE_RAM0;
+        int end = i + 8;
+
+        while (i < end)
+        {
+            *dest++ = arg0->unk0[i];
+            i++;
+        }
+        REG_SOUND3CNT_L = 0x20;
+    }
+    REG_SOUND3CNT_L = 0xA0;
+    for (i = 0; i < 3; i++)
+        gUnknown_03000840.unk4[i].unk8 = gUnknown_03000840.unk4[i].unk0 = arg0->unk20[i] << 9;
+    REG_SOUNDCNT_L &= 0xFF00;
+    REG_SOUNDCNT_L |= gUnknown_03000840.unk2;
+    gUnknown_03000840.unk0 = 2;
 }
 
 void sub_08073DC4(void)
