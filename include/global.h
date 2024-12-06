@@ -1507,7 +1507,7 @@ extern struct SoundEffect
     /*0x10*/ u16 unk10;
     /*0x12*/ u8 unk12;
              u8 unk13;
-             u8 filler14[4];
+             u32 unk14;
     /*0x18*/ u32 unk18;
 } gSoundEffectTable[];
 
