@@ -244,7 +244,7 @@ sound_init: @ 0x0807166C
 	bne _0807167E
 	mov r7, #1
 _0807167E:
-	bl sub_08072230
+	bl init_sound_mem
 	ldr r5, _08071790  @ =gSoundWork
 	sub r1, r7, #1
 	lsl r0, r1, #2
@@ -252,7 +252,7 @@ _0807167E:
 	lsl r0, r0, #2
 	ldr r1, _08071794  @ =0x000014F0
 	add r0, r0, r1
-	bl sub_0807226C
+	bl alloc_sound_mem
 	str r0, [r5]
 	ldr r2, _08071798  @ =0x000014C3
 	add r0, r0, r2
@@ -1438,7 +1438,7 @@ sound_finish: @ 0x08071EE4
 	strh r4, [r0]
 	add r0, r0, #128
 	str r4, [r0]
-	bl sub_0807229C
+	bl reset_sound_mem
 	ldr r0, _08071F0C  @ =gSoundWork
 	str r4, [r0]
 	pop {r4}
@@ -1943,14 +1943,14 @@ _0807222C:
 	.4byte gSoundWork
 	THUMB_FUNC_END sub_0807220C
 
-	THUMB_FUNC_START sub_08072230
-sub_08072230: @ 0x08072230
+	THUMB_FUNC_START init_sound_mem
+init_sound_mem: @ 0x08072230
 	push {r4,r5,lr}
-	ldr r3, _08072260  @ =gUnknown_03001F18
+	ldr r3, _08072260  @ =sSoundMemHead
 	str r0, [r3]
-	ldr r5, _08072264  @ =gUnknown_03001F14
+	ldr r5, _08072264  @ =sSoundMemMaxSize
 	str r1, [r5]
-	ldr r2, _08072268  @ =gUnknown_03001F1C
+	ldr r2, _08072268  @ =sSoundMemSize
 	mov r0, #0
 	str r0, [r2]
 	mov r2, #0
@@ -1972,23 +1972,23 @@ _0807225A:
 	pop {r0}
 	bx r0
 _08072260:
-	.4byte gUnknown_03001F18
+	.4byte sSoundMemHead
 _08072264:
-	.4byte gUnknown_03001F14
+	.4byte sSoundMemMaxSize
 _08072268:
-	.4byte gUnknown_03001F1C
-	THUMB_FUNC_END sub_08072230
+	.4byte sSoundMemSize
+	THUMB_FUNC_END init_sound_mem
 
-	THUMB_FUNC_START sub_0807226C
-sub_0807226C: @ 0x0807226C
+	THUMB_FUNC_START alloc_sound_mem
+alloc_sound_mem: @ 0x0807226C
 	push {lr}
-	ldr r1, _08072288  @ =gUnknown_03001F18
-	ldr r3, _0807228C  @ =gUnknown_03001F1C
+	ldr r1, _08072288  @ =sSoundMemHead
+	ldr r3, _0807228C  @ =sSoundMemSize
 	ldr r2, [r1]
 	ldr r1, [r3]
 	add r2, r2, r1
 	add r1, r1, r0
-	ldr r0, _08072290  @ =gUnknown_03001F14
+	ldr r0, _08072290  @ =sSoundMemMaxSize
 	ldr r0, [r0]
 	cmp r1, r0
 	bhi _08072294
@@ -1996,29 +1996,29 @@ sub_0807226C: @ 0x0807226C
 	add r0, r2, #0
 	b _08072296
 _08072288:
-	.4byte gUnknown_03001F18
+	.4byte sSoundMemHead
 _0807228C:
-	.4byte gUnknown_03001F1C
+	.4byte sSoundMemSize
 _08072290:
-	.4byte gUnknown_03001F14
+	.4byte sSoundMemMaxSize
 _08072294:
 	mov r0, #0
 _08072296:
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_0807226C
+	THUMB_FUNC_END alloc_sound_mem
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0807229C
-sub_0807229C: @ 0x0807229C
-	ldr r1, _080722A4  @ =gUnknown_03001F18
+	THUMB_FUNC_START reset_sound_mem
+reset_sound_mem: @ 0x0807229C
+	ldr r1, _080722A4  @ =sSoundMemHead
 	mov r0, #0
 	str r0, [r1]
 	bx lr
 _080722A4:
-	.4byte gUnknown_03001F18
-	THUMB_FUNC_END sub_0807229C
+	.4byte sSoundMemHead
+	THUMB_FUNC_END reset_sound_mem
 
 	THUMB_FUNC_START sub_080722A8
 sub_080722A8: @ 0x080722A8
@@ -4908,7 +4908,7 @@ _0807373C:
 	mov r5, #0
 	ldrsh r1, [r2, r5]  @ arg0->unk4F6
 	ldr r0, [r0]
-	ldr r5, _08073778  @ =gUnknown_03001F24
+	ldr r5, _08073778  @ =gVolume_03001F24
 	mov r12, r5
 	cmp r1, r0
 	bcc _080737AE
@@ -4922,7 +4922,7 @@ _08073770:
 _08073774:
 	.4byte 0x000004F6
 _08073778:
-	.4byte gUnknown_03001F24
+	.4byte gVolume_03001F24
 _0807377C:
 	add r0, r0, r8
 	ldrb r0, [r0]
@@ -4984,7 +4984,7 @@ _080737DC:
 	mov r1, r10
 	mov r2, r9
 	bl sub_08072FC8
-	ldr r0, _0807384C  @ =gUnknown_03001F24
+	ldr r0, _0807384C  @ =gVolume_03001F24
 	ldr r1, [r0]
 	mov r2, #157
 	lsl r2, r2, #3  @ 0x4E8
@@ -5034,7 +5034,7 @@ _08073844:
 _08073848:
 	.4byte gUnknown_03000820
 _0807384C:
-	.4byte gUnknown_03001F24
+	.4byte gVolume_03001F24
 _08073850:
 	.4byte 0x000004EC
 _08073854:

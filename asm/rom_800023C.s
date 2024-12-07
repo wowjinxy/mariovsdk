@@ -1858,7 +1858,7 @@ _080019C8:
 	moveq r6, #0
 	orr r10, r10, r6, lsl #1
 	strb r10, [r0, #29]
-	ldr r10, =gUnknown_03001F24
+	ldr r10, =gVolume_03001F24
 	ldr r10, [r10]
 	mul r6, r10, r6
 	asrs r6, r6, #7

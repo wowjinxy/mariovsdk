@@ -25,7 +25,7 @@ struct SongData
     struct SongData_sub unk284[1];
 };
 
-struct Struct1F10_sub2
+struct SoundWork_sub3
 {
     u8 unk0;
     u8 unk1;
@@ -37,8 +37,7 @@ struct Struct1F10_sub2
     struct SoundEffect *unk10;
 };
 
-// sound buffers?
-struct Struct1F10_sub
+struct SoundBuffers
 {
     u8 sndBufA[0x120];
     u8 sndBufB[0x120];
@@ -516,6 +515,22 @@ u16 gUnknown_08B3A0A8[] =
     512,   0,
 };
 
+struct Struct08B3A4AC
+{
+    volatile u16 *unk0;
+    volatile u16 *unk4;
+    u16 unk8;
+    u16 unused;
+};
+
+struct Struct08B3A4AC gUnknown_08B3A4AC[] =
+{
+    { &REG_SOUND1CNT_H, &REG_SOUND1CNT_X, 0xF800, 0x07FF },
+    { &REG_SOUND2CNT_L, &REG_SOUND2CNT_H, 0xF800, 0x07FF },
+    { &REG_SOUND3CNT_H, &REG_SOUND3CNT_X, 0xF800, 0x07FF },
+    { &REG_SOUND4CNT_L, &REG_SOUND4CNT_H, 0xFFFF, 0x0000 },
+};
+
 #if 0
 
 static_assert(offsetof(struct Struct1F10_sub3_sub, unk20) == 0x20, unk20);
@@ -525,22 +540,13 @@ static_assert(offsetof(struct Struct1F10_sub3_sub, unk26) == 0x26, unk26);
 
 static_assert(sizeof(struct Struct1F10_sub3_sub) == 76, asdf);
 
-struct Struct1F10_sub3_child  // probably Struct1F10_sub3_sub
-{
-    u8 filler0[0x1D];
-    u8 unk1D;
-};
-
-#define Struct1F10_sub3_child Struct1F10_sub3_sub
-
-struct Struct1F10_sub3
+struct SoundWork_sub2
 {
     struct SongData *unk0;  // data of currently playing song
     struct Struct1F10_sub3_sub unk4[16];
-    //struct Struct1F10_sub3_child *unk4C4[8];
     struct Struct1F10_sub3_sub *unk4C4[8];
     u8 *unk4E4;  // ptr to note data?
-    s16 unk4E8;
+    /*0x4E8*/ s16 volume;
     s16 unk4EA;
     s16 unk4EC;
     u16 unk4EE;
@@ -559,9 +565,9 @@ struct Struct1F10_sub3
     u8 unk510[1];
 };  // unknown size
 
-static_assert(offsetof(struct Struct1F10_sub3, unk4FB) == 0x4FB, b);
+static_assert(offsetof(struct SoundWork_sub2, unk4FB) == 0x4FB, b);
 
-struct Struct1F10
+struct SoundWork
 {
     u8 unk0;
     u8 unk1;
@@ -573,15 +579,17 @@ struct Struct1F10
     u8 unk7;
     u8 unk8;
     u32 unkC;
-    struct Struct1F10_sub unk10[2];
+    struct SoundBuffers unk10[2];
     u8 filler490[0x6D0-0x490];
     u8 unk6D0[0xB50-0x6D0];
     /*0xB50*/ u8 codeBuf1[0xE8];  // ARM code buffer
     /*0xC38*/ u8 codeBuf2[0x390];  // ARM code buffer
-    struct Struct1F10_sub3 unkFC8;  // music state?
-    u8 filler14C4[0x14DC-0xFC8-sizeof(struct Struct1F10_sub3)];
-    struct Struct1F10_sub2 unk14DC[1];  // sound effect state?
+    struct SoundWork_sub2 unkFC8;  // music state?
+    u8 filler14C4[0x14DC-0xFC8-sizeof(struct SoundWork_sub2)];
+    struct SoundWork_sub3 unk14DC[1];  // variable length (by unk0) sound effect state?
 };
+
+static_assert(sizeof(struct SoundWork) == 0x14F0, SoundWork_size);
 
 // ARM code
 extern u8 arm_clear_audio_buffer[];
@@ -598,22 +606,22 @@ extern void (*gUnknown_03001EFC)();
 extern u32 gUnknown_03001F00;
 extern u32 gUnknown_03001F04;
 extern u32 gUnknown_03001F08;
-extern struct Struct1F10 *gSoundWork;
+extern struct SoundWork *gSoundWork;
 
-void sub_080714B8(struct Struct1F10_sub2 *arg0, void *arg1, int arg2);
-int sub_080715B8(struct Struct1F10_sub2 *arg0, void *arg1, int arg2);
+void sub_080714B8(struct SoundWork_sub3 *arg0, void *arg1, int arg2);
+int sub_080715B8(struct SoundWork_sub3 *arg0, void *arg1, int arg2);
 void sub_08071E7C(u8 arg0, u8 arg1);
-void sub_08072230(u8 *, int);
-void *sub_0807226C(int arg0);
-void sub_0807229C(void);
-void sub_080731C4(struct Struct1F10_sub3 *arg0, struct Struct1F10_sub3_sub *arg1);
+void init_sound_mem(u8 *, int);
+void *alloc_sound_mem(int size);
+void reset_sound_mem(void);
+void sub_080731C4(struct SoundWork_sub2 *arg0, struct Struct1F10_sub3_sub *arg1);
 void sub_08073464(struct Struct1F10_sub3_sub *arg0);
-void sub_080734F8(struct Struct1F10_sub3 *arg0, void *arg1);
-void sub_080735D0(struct Struct1F10_sub3 *arg0);
-int sub_080736A0(struct Struct1F10_sub3 *arg0, void *dest, int length);
-void sub_0807387C(struct Struct1F10_sub3 *arg0, int arg1, int arg2, u8 *arg3);
-void sub_080738D4(struct Struct1F10_sub3 *arg0, int arg1);
-void sub_08073914(struct Struct1F10_sub3 *arg0, int arg1);
+void sub_080734F8(struct SoundWork_sub2 *arg0, void *arg1);
+void sub_080735D0(struct SoundWork_sub2 *arg0);
+int sub_080736A0(struct SoundWork_sub2 *arg0, void *dest, int length);
+void sub_0807387C(struct SoundWork_sub2 *arg0, int arg1, int arg2, u8 *arg3);
+void sub_080738D4(struct SoundWork_sub2 *arg0, int arg1);
+void sub_08073914(struct SoundWork_sub2 *arg0, int arg1);
 void sub_08073B18(void);
 void sub_08073E1C(void);
 
@@ -632,7 +640,7 @@ struct Struct080714B8
     u32 unk20;
 };
 
-void sub_080714B8(struct Struct1F10_sub2 *arg0, void *arg1, int arg2)
+void sub_080714B8(struct SoundWork_sub3 *arg0, void *arg1, int arg2)
 {
     int r8 = arg0->unk10->sampleSize << 14;
     int r2 = arg0->unk3;
@@ -693,7 +701,7 @@ void sub_080714B8(struct Struct1F10_sub2 *arg0, void *arg1, int arg2)
     }
 }
 
-int sub_080715B8(struct Struct1F10_sub2 *arg0, void *arg1, int arg2)
+int sub_080715B8(struct SoundWork_sub3 *arg0, void *arg1, int arg2)
 {
     struct SoundEffect *se = arg0->unk10;
     int r12 = se->sampleSize << 14;
@@ -742,26 +750,26 @@ int sub_080715B8(struct Struct1F10_sub2 *arg0, void *arg1, int arg2)
     return sp0.unk8;
 }
 
-void sound_init(void *arg0, int arg1, int arg2, int arg3, int arg4)
+void sound_init(void *buffer, int bufferSize, int arg2, int arg3, int arg4)
 {
-    u8 *buffer;
-    u8 *buffer2;
+    u8 *codeBuf1;
+    u8 *codeBuf2;
 
     if (arg2 == 0)
         arg2 = 1;
 
-    sub_08072230(arg0, arg1);
-    gSoundWork = sub_0807226C((arg2 - 1) * 20 + 0x14F0);
+    init_sound_mem(buffer, bufferSize);
+    gSoundWork = alloc_sound_mem(sizeof(struct SoundWork) + (arg2 - 1) * sizeof(struct SoundWork_sub3));
     gSoundWork->unkFC8.unk4FB = arg4;
 
-    ptr_arm_clear_audio_buffer = (void *)buffer = (void *)gSoundWork->codeBuf1;
-    DmaCopy16(3, arm_clear_audio_buffer, buffer, 0xE8);
-    ptr_arm_load_sound_16bit_to_8bit = (void *)(buffer + (arm_load_sound_16bit_to_8bit - arm_clear_audio_buffer));
-    ptr_arm_set_sound_dma_regs = (void *)(buffer + (arm_set_sound_dma_regs - arm_clear_audio_buffer));
+    ptr_arm_clear_audio_buffer = (void *)codeBuf1 = (void *)gSoundWork->codeBuf1;
+    DmaCopy16(3, arm_clear_audio_buffer, codeBuf1, 0xE8);
+    ptr_arm_load_sound_16bit_to_8bit = (void *)(codeBuf1 + (arm_load_sound_16bit_to_8bit - arm_clear_audio_buffer));
+    ptr_arm_set_sound_dma_regs       = (void *)(codeBuf1 + (arm_set_sound_dma_regs - arm_clear_audio_buffer));
 
-    gUnknown_03001EE4 = (void *)buffer2 = gSoundWork->codeBuf2;
-    DmaCopy16(3, sub_08001760_end, buffer2, 0x390);
-    gUnknown_03001EFC = (void *)((u8 *)buffer2 + (sub_08001968 - sub_08001760_end));
+    gUnknown_03001EE4 = (void *)codeBuf2 = gSoundWork->codeBuf2;
+    DmaCopy16(3, sub_08001760_end, codeBuf2, 0x390);
+    gUnknown_03001EFC = (void *)((u8 *)codeBuf2 + (sub_08001968 - sub_08001760_end));
 
     gSoundWork->unk0 = arg2;
     gSoundWork->unk4 = arg4;
@@ -817,7 +825,7 @@ void sub_08071800(void)
     }
     for (i = 0; i < gSoundWork->unk0; i++)
     {
-        struct Struct1F10_sub2 *r2 = &gSoundWork->unk14DC[i];
+        struct SoundWork_sub3 *r2 = &gSoundWork->unk14DC[i];
 
         if ((r2->unk0 & 3) && (r2->unk0 & 1))
             sub_080714B8(r2, src, length);
@@ -852,13 +860,13 @@ void sub_0807194C(void)
 
 int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u32 arg5, int sampleRate)
 {
-    struct Struct1F10_sub2 *r9 = NULL;
+    struct SoundWork_sub3 *r9 = NULL;
     u32 r10 = gSoundWork->unk0;
     int spC = FALSE;
     struct SoundEffect *se = &gSoundEffectTable[soundID];
     u8 r7;
-    struct Struct1F10_sub2 *r3;
-    struct Struct1F10_sub2 *r4;
+    struct SoundWork_sub3 *r3;
+    struct SoundWork_sub3 *r4;
     int i;
 
     if (arg2 > 15)
@@ -1028,11 +1036,11 @@ void sub_08071CD4(void)
     }
 }
 
-static inline struct Struct1F10_sub2 *testinline2(int arg0)
+static inline struct SoundWork_sub3 *testinline2(int arg0)
 {
     int i;
     u8 r4 = gSoundWork->unk0;
-    struct Struct1F10_sub2 *r3 = gSoundWork->unk14DC;
+    struct SoundWork_sub3 *r3 = gSoundWork->unk14DC;
     int index;
 
     for (i = 0; i < r4; i++, r3++)
@@ -1045,7 +1053,7 @@ static inline struct Struct1F10_sub2 *testinline2(int arg0)
 
 int sub_08071D28(int arg0, int arg1, int arg2)
 {
-    struct Struct1F10_sub2 *r3 = testinline2(arg0);
+    struct SoundWork_sub3 *r3 = testinline2(arg0);
 
     if (r3 == NULL)
         return -1;
@@ -1061,7 +1069,7 @@ int sub_08071D28(int arg0, int arg1, int arg2)
 
 void sub_08071D9C(int arg0)
 {
-    struct Struct1F10_sub2 *r3 = testinline2(arg0);
+    struct SoundWork_sub3 *r3 = testinline2(arg0);
     int index;
 
     if (r3 == NULL)
@@ -1076,7 +1084,7 @@ void sub_08071E14(int arg0)
     int r7 = 1;
     int i;
     struct SoundEffect *r8 = &gSoundEffectTable[arg0];
-    struct Struct1F10_sub2 *r4 = gSoundWork->unk14DC;
+    struct SoundWork_sub3 *r4 = gSoundWork->unk14DC;
     u8 r6 = gSoundWork->unk0;
 
     for (i = 0; i < r6; i++, r4++)
@@ -1093,7 +1101,7 @@ void sub_08071E7C(u8 arg0, u8 arg1)
 {
     int r7 = 1;
     int i;
-    struct Struct1F10_sub2 *r4 = gSoundWork->unk14DC;
+    struct SoundWork_sub3 *r4 = gSoundWork->unk14DC;
     u8 r6 = gSoundWork->unk0;
 
     arg0 <<= 4;
@@ -1116,7 +1124,7 @@ void sound_finish(void)
     REG_DMA2CNT = 0;
     REG_SOUNDCNT_X = 0;
     REG_TM1CNT = 0;
-    sub_0807229C();
+    reset_sound_mem();
     gSoundWork = NULL;
 }
 
@@ -1214,7 +1222,7 @@ int sub_0807216C(void)
     int i;
     u8 r1 = gSoundWork->unk0;
     int r4 = 0;
-    struct Struct1F10_sub2 *r3 = gSoundWork->unk14DC;
+    struct SoundWork_sub3 *r3 = gSoundWork->unk14DC;
 
     for (i = 0; i < r1; i++, r3++)
     {
@@ -1240,41 +1248,45 @@ void sub_0807220C(int arg0)
     gSoundWork->unk1 |= arg0 << 4;
 }
 
-extern u32 gUnknown_03001F14;
-extern u8 *gUnknown_03001F18;
-extern u32 gUnknown_03001F1C;
+// Memory allocation
 
-void sub_08072230(u8 *arg0, int arg1)
+// TODO: static variables
+extern u32 sSoundMemMaxSize;
+extern u8 *sSoundMemHead;
+extern u32 sSoundMemSize;
+
+void init_sound_mem(u8 *arg0, int arg1)
 {
     int i;
 
-    gUnknown_03001F18 = arg0;
-    gUnknown_03001F14 = arg1;
-    gUnknown_03001F1C = 0;
-    for (i = 0; i < gUnknown_03001F14; i++)
-        gUnknown_03001F18[i] = 0;
+    sSoundMemHead = arg0;
+    sSoundMemMaxSize = arg1;
+    sSoundMemSize = 0;
+    for (i = 0; i < sSoundMemMaxSize; i++)
+        sSoundMemHead[i] = 0;
 }
 
-void *sub_0807226C(int arg0)
+void *alloc_sound_mem(int size)
 {
-    u8 *r2 = gUnknown_03001F18 + gUnknown_03001F1C;
-    if (gUnknown_03001F1C + arg0 > gUnknown_03001F14)
+    u8 *mem = sSoundMemHead + sSoundMemSize;
+
+    if (sSoundMemSize + size > sSoundMemMaxSize)
         return NULL;
-    gUnknown_03001F1C = gUnknown_03001F1C + arg0;
-    return r2;
+    sSoundMemSize += size;
+    return mem;
 }
 
-void sub_0807229C(void)
+void reset_sound_mem(void)
 {
-    gUnknown_03001F18 = NULL;
+    sSoundMemHead = NULL;
 }
 
-int sub_080722A8(struct Struct1F10_sub3 *arg0, struct Struct1F10_sub3_sub *arg1)
+int sub_080722A8(struct SoundWork_sub2 *arg0, struct Struct1F10_sub3_sub *arg1)
 {
     int r5 = arg1->unk1D;
-    struct Struct1F10_sub3_child **r6 = arg0->unk4C4;
+    struct Struct1F10_sub3_sub **r6 = arg0->unk4C4;
     int index = -1;
-    struct Struct1F10_sub3_child *r0;
+    struct Struct1F10_sub3_sub *r0;
     int i;
 
     if (arg0->unk4FA <= arg0->unk4FB)
@@ -1320,7 +1332,7 @@ static inline u32 stupid(u8 *r5)
     return r0;
 }
 
-int sub_08072368(struct Struct1F10_sub3 *arg0)
+int sub_08072368(struct SoundWork_sub2 *arg0)
 {
     struct Struct1F10_sub3_sub *sp4 = arg0->unk4;
     int sp8 = 0;
@@ -1564,12 +1576,10 @@ int sub_08072368(struct Struct1F10_sub3 *arg0)
     // missing return?
 }
 
-extern u32 gUnknown_03001F24;
+extern u32 gVolume_03001F24;
 extern u32 gUnknown_03000820;
 extern s32 gUnknown_03000824;
 extern struct Struct1F10_sub3_sub *gUnknown_03001F28;
-
-extern void (*gUnknown_08B3A004[])(struct Struct1F10_sub3_sub *, void *, int);
 
 void sub_08072750(struct Struct1F10_sub3_sub *arg0, struct Struct08072750 *arg1, int arg2)
 {
@@ -1952,7 +1962,7 @@ void sub_08072F2C(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
     arg0->unk2D = r7;
 }
 
-void sub_08072FC8(struct Struct1F10_sub3 *arg0, void *arg1, int arg2)
+void sub_08072FC8(struct SoundWork_sub2 *arg0, void *arg1, int arg2)
 {
     int r9 = arg0->unk4FA;
     u8 sp8 = arg0->unk4FC;
@@ -2018,7 +2028,7 @@ void sub_08072FC8(struct Struct1F10_sub3 *arg0, void *arg1, int arg2)
     }
 }
 
-void sub_080731C4(struct Struct1F10_sub3 *arg0, struct Struct1F10_sub3_sub *arg1)
+void sub_080731C4(struct SoundWork_sub2 *arg0, struct Struct1F10_sub3_sub *arg1)
 {
     int r0 = arg1->unk18;
     int r2 = arg1->unk1A;
@@ -2183,7 +2193,7 @@ static inline void testinline3(struct Struct1F10_sub3_sub *r4)
 */
 
 // nonmatching
-void sub_080734F8(struct Struct1F10_sub3 *arg0, void *arg1)
+void sub_080734F8(struct SoundWork_sub2 *arg0, void *arg1)
 {
     int i;  // r5
     u32 j;  // r2
@@ -2214,13 +2224,13 @@ void sub_080734F8(struct Struct1F10_sub3 *arg0, void *arg1)
     arg0->unk4FA = arg0->unk0->unk38;
     if (arg0->unk4FA >= 16)
         arg0->unk4FA = 16;
-    arg0->unk4E8 = 0;
+    arg0->volume = 0;
     arg0->unk4EE = 0;
     sub_080735D0(arg0);
     arg0->unk4F2 = -1;
 }
 
-void sub_080735D0(struct Struct1F10_sub3 *arg0)
+void sub_080735D0(struct SoundWork_sub2 *arg0)
 {
     int i;
 
@@ -2245,7 +2255,7 @@ void sub_080735D0(struct Struct1F10_sub3 *arg0)
 }
 
 // copies (and mixes?) audio?
-int sub_080736A0(struct Struct1F10_sub3 *arg0, void *dest, int length)
+int sub_080736A0(struct SoundWork_sub2 *arg0, void *dest, int length)
 {
     struct SongData *r3 = arg0->unk0;
     s32 r6;
@@ -2285,7 +2295,7 @@ int sub_080736A0(struct Struct1F10_sub3 *arg0, void *dest, int length)
             }
         } while (r3->unk44[arg0->unk4F2] >= r3->unk3A);
     }
-    gUnknown_03001F24 = arg0->unk4E8;
+    gVolume_03001F24 = arg0->volume;
     if (r6 == 0 && r7 == 0)
         sub_08072368(arg0);
     if (r6 + length >= arg0->unk50C)
@@ -2293,7 +2303,7 @@ int sub_080736A0(struct Struct1F10_sub3 *arg0, void *dest, int length)
     gUnknown_03000824 = r7;
     gUnknown_03000820 = r6;
     sub_08072FC8(arg0, dest, length);
-    arg0->unk4E8 = gUnknown_03001F24;
+    arg0->volume = gVolume_03001F24;
     r6 += length;
     if (r6 >= arg0->unk50C)
     {
@@ -2308,7 +2318,7 @@ int sub_080736A0(struct Struct1F10_sub3 *arg0, void *dest, int length)
 }
 
 // unused
-void sub_08073858(struct Struct1F10_sub3 *arg0, void *arg1)
+void sub_08073858(struct SoundWork_sub2 *arg0, void *arg1)
 {
     void *dest = (void *)EWRAM;
 
@@ -2317,11 +2327,11 @@ void sub_08073858(struct Struct1F10_sub3 *arg0, void *arg1)
     sub_080734F8(arg0, dest);
 }
 
-void sub_0807387C(struct Struct1F10_sub3 *arg0, int arg1, int arg2, u8 *arg3)
+void sub_0807387C(struct SoundWork_sub2 *arg0, int volume, int arg2, u8 *arg3)
 {
     int i;
 
-    arg0->unk4E8 = arg1;
+    arg0->volume = volume;
     arg0->unk4EE = arg2;
     if (arg3 != NULL)
     {
@@ -2336,25 +2346,25 @@ void sub_0807387C(struct Struct1F10_sub3 *arg0, int arg1, int arg2, u8 *arg3)
     sub_080735D0(arg0);
 }
 
-void sub_080738D4(struct Struct1F10_sub3 *arg0, int arg1)
+void sub_080738D4(struct SoundWork_sub2 *arg0, int index)
 {
-    if (arg0->unk510[arg1] == 0)
-        arg1 = 7 - arg1;
+    if (arg0->unk510[index] == 0)
+        index = 7 - index;
     else
-        arg1 = arg0->unk510[arg1] - 1;
-    if ((u32)arg0->unk4C4[arg1] >= 2)
-        arg0->unk4C4[arg1]->unk1D &= ~1;
-    arg0->unk4C4[arg1] = (void *)1;
+        index = arg0->unk510[index] - 1;
+    if ((u32)arg0->unk4C4[index] >= 2)
+        arg0->unk4C4[index]->unk1D &= ~1;
+    arg0->unk4C4[index] = (void *)1;
 }
 
-void sub_08073914(struct Struct1F10_sub3 *arg0, int arg1)
+void sub_08073914(struct SoundWork_sub2 *arg0, int index)
 {
-    if (arg0->unk510[arg1] == 0)
-        arg1 = 7 - arg1;
+    if (arg0->unk510[index] == 0)
+        index = 7 - index;
     else
-        arg1 = arg0->unk510[arg1] - 1;
-    if ((u32)arg0->unk4C4[arg1] == 1)
-        arg0->unk4C4[arg1] = NULL;
+        index = arg0->unk510[index] - 1;
+    if ((u32)arg0->unk4C4[index] == 1)
+        arg0->unk4C4[index] = NULL;
 }
 
 void sub_0807394C(struct Struct1F10_sub3_sub *arg0, void *arg1, int arg2)
@@ -2460,13 +2470,6 @@ extern struct
     u32 unk38;
     struct Struct08073CE8 *unk3C;
 } gUnknown_03000840;
-
-extern struct Struct08B3A4AC
-{
-    volatile u16 *unk0;
-    volatile u16 *unk4;
-    u16 unk8;
-} gUnknown_08B3A4AC[];
 
 void sub_08073B18(void)
 {

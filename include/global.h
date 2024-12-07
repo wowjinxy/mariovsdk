@@ -1495,10 +1495,10 @@ extern struct GraphicsConfig gLevelResultsData;
 
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
-extern u16 gUnknown_08B3A4DC;
+extern u16 gSoundEffectCount;
 extern u16 gUnknown_08D7B10C;
 
-extern struct SoundEffect
+struct SoundEffect
 {
     /*0x00*/ u32 sampleSize;
     /*0x04*/ void *samplePtr;
@@ -1509,7 +1509,9 @@ extern struct SoundEffect
              u8 unk13;
              u32 unk14;
     /*0x18*/ u32 unk18;
-} gSoundEffectTable[];
+};
+
+extern struct SoundEffect gSoundEffectTable[];
 
 extern struct MusicSequence
 {
