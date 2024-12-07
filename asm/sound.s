@@ -2260,7 +2260,7 @@ _08072436:
 	lsl r0, r0, #4  @ * 0x50
 	sub r0, r0, r1  @ * 0x4F
 	lsl r0, r0, #2  @ * 0x13C
-	ldr r1, _080724C0  @ =gUnknown_08EBFE90
+	ldr r1, _080724C0  @ =gInstruments
 	add r0, r1, r0
 	str r0, [r4, #60]
 	ldrb r1, [r0, #23]
@@ -2316,7 +2316,7 @@ _08072498:
 	add r5, r5, #1
 	b _080724D6
 _080724C0:
-	.4byte gUnknown_08EBFE90
+	.4byte gInstruments
 _080724C4:
 	mov r0, #64
 	mov r3, r8

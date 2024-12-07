@@ -1684,6 +1684,19 @@ ARM_FUNC_END sub_08001760
 	.GLOBAL sub_08001760_end
 sub_08001760_end:
 
+@ struct Struct080714B8
+@ {
+@     void *unk0;
+@     void *samplePtr;
+@     u32 unk8;
+@     u32 unkC;
+@     u32 unk10;
+@     u32 unk14;
+@     u32 unk18;
+@     u32 unk1C;
+@     u32 unk20;
+@ };
+
 	ARM_FUNC_START audio_related_08001840
 audio_related_08001840:
 _08001840:
@@ -1698,7 +1711,7 @@ _08001840:
 	bge _080018C0
 _08001864:
 	lsr r10, r2, #14
-	ldrsb r9, [r1, r10]  @ read PCM header byte
+	ldrsb r9, [r1, r10]
 	ldrsh r10, [r0]
 	mul r11, r7, r9
 	add r10, r10, r11, asr #6

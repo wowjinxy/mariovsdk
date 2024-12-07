@@ -71,14 +71,15 @@
 	X(data/movie3.o) \
 	X(data/movie8.o) \
 	X(data/unused_plus_worlds_unlocked.o) \
-	X(data/data4.o) \
-	X(data/sound.o) \
-	X(data/rodata3.o) \
 	X(src/rom_8038414.o) \
 	X(asm/rom_8038600.o) \
 	X(src/rom_804A8E8.o) \
 	X(asm/rom_804AAB8.o) \
+	X(data/data4.o) \
+	X(src/sound.o) \
 	X(asm/sound.o) \
+	X(data/sound.o) \
+	X(data/rodata3.o) \
 	X(asm/syscall.o) \
 	X(src/agb_flash.o) \
 	X(src/agb_flash_1m.o) \

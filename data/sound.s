@@ -5930,8 +5930,8 @@ gUnknown_08D7B458:
 gUnknown_08EBBF60:
 	.INCBIN "baserom.gba", 0xEBBF60, 0xEBFE90-0xEBBF60
 
-	.GLOBAL gUnknown_08EBFE90 @ Instrument Data 2
-gUnknown_08EBFE90:
+	.GLOBAL gInstruments @ Instrument Data 2
+gInstruments:
 	.INCBIN "baserom.gba", 0xEBFE90, 0xECCA3C-0xEBFE90
 	
 BGM_1AXM:
