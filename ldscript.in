@@ -1,7 +1,9 @@
 #define OBJECT_FILE_LIST \
 	X(data/rodata0.o) \
 	X(asm/crt0.o) \
-	X(asm/rom_800023C.o) \
+	X(asm/sound_arm_1.o) \
+	X(asm/rom_8000318.o) \
+	X(asm/sound_arm_2.o) \
 	X(asm/rom_8001BA4.o) \
 	X(src/rom_80066FC.o) \
 	X(asm/rom_80067F0.o) \
@@ -77,7 +79,6 @@
 	X(asm/rom_804AAB8.o) \
 	X(data/data4.o) \
 	X(src/sound.o) \
-	X(asm/sound.o) \
 	X(src/sound_data.o) \
 	X(data/sound.o) \
 	X(data/rodata3.o) \
@@ -473,7 +474,7 @@ SECTIONS
 		
 		. = 0x1EE0;		ptr_arm_clear_audio_buffer = .;
 		. = 0x1EE4;		gUnknown_03001EE4 = .;
-		. = 0x1EE8;		ptr_arm_set_sound_dma_regs = .;
+		. = 0x1EE8;		ptr_arm_update_sound_dma_transfer = .;
 		. = 0x1EF8;		ptr_arm_load_sound_16bit_to_8bit = .;
 		. = 0x1EFC;		gUnknown_03001EFC = .;
 		. = 0x1F00;		gUnknown_03001F00 = .;
