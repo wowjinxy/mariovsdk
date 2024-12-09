@@ -1,5 +1,7 @@
 	.SECTION .rodata
 
+	.BALIGN 4
+
 	.GLOBAL gUnknown_08077F2C
 gUnknown_08077F2C:
 	.4byte 0x03000882

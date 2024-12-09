@@ -17,7 +17,7 @@ void game_init_callback(void)
     sub_08032F68();
     arena_init(gUnknown_03001F50, gUnknown_03007AB0);
     sub_0802F060();
-    sub_0807166C(arena_allocate(0x15A4), 0x15A4, 3, 3, 8);
+    sound_init(arena_allocate(0x15A4), 0x15A4, 3, 3, 8);
     arena_save_head(0);
     CpuFill16(0, (void *)PLTT, 0x200);
     CpuCopy16(gUnknown_0807DD14, (void *)(PLTT + 0x200), 6);

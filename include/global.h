@@ -1495,25 +1495,29 @@ extern struct GraphicsConfig gLevelResultsData;
 
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
-extern u16 gUnknown_08B3A4DC;
+extern u16 gSoundEffectCount;
 extern u16 gUnknown_08D7B10C;
 
-extern struct
+struct SoundEffect
 {
     /*0x00*/ u32 sampleSize;
     /*0x04*/ void *samplePtr;
     /*0x08*/ u32 sampleRate;
     /*0x0C*/ char *sampleName;
     /*0x10*/ u16 unk10;
-    /*0x12*/ u8 filler12[1];
+    /*0x12*/ u8 unk12;
              u8 unk13;
-             u8 filler14[4];
+             u32 unk14;
     /*0x18*/ u32 unk18;
-} gUnknown_08B3A4E0[];
+};
 
-extern struct
+extern struct SoundEffect gSoundEffectTable[];
+
+extern struct MusicSequence
 {
-    u8 filler0[0x9];
+    /*0x00*/ void *data;
+    /*0x04*/ u16 volume;
+    u8 unk6[3];
     u8 unk9;
     u8 fillerA[0xC-0xA];
 } gMusicTable[];
@@ -1789,17 +1793,17 @@ void sub_08042FB0(void *, void *);
 u16 sub_0806C2C4(void);
 void sub_0806D1AC(u16, u16);
 void sub_080714A8(void);
-void sub_0807166C();
+//void sound_init();
 void sub_08071800(void);
 void sub_0807194C(void);
-int play_sound_effect_08071990(int, u8, u8, u8, u8, u8, u8);
+//int play_sound_effect_08071990(int, u8, u8, u8, u8, u8, u8);
 void sub_08071C24(void);
 void sub_08071CD4(void);
 void sub_08071D9C(int);
-void sub_08071E14(u8);
+void sub_08071E14(int);
 void sub_08071FA0();
 int get_current_bgm(void);
-int sub_08072038(void);
+void *sub_08072038(void);
 void play_bgm();
 void sub_080720AC(void);
 int sub_08072144(void);
@@ -1827,7 +1831,6 @@ s32 sub_080148F0(u32);
 void sub_080410B4(u8, u8,u8);
 
 u32 sub_08033658();
-void sub_08071E14(u8);
 
 u8 sub_0800EF30();
 u8 sub_0800EF8C();
@@ -1840,13 +1843,13 @@ void sub_080720E4();
 void sub_0800CC6C();
 void sub_08041F70();
 u8 sub_0800C5A4();
-u8 sub_08072118();
+void sub_08072118(void);
 void sub_0802BEA4(u8);
 
 void level_callback_08008764();
 
-u32 sub_08071F64(u32);
-u32 sub_08071F78(u32);
+u32 get_song_volume(u32);
+void *get_song_data(u32);
 u8 *sub_08071F8C(u32);
 void level_callback_080084A4(void);
 void level_callback_08008330(void);
@@ -1879,8 +1882,8 @@ void sub_080041B8();
 void sub_080072A4();
 void level_demo_reset_init_callback();
 void level_editor_init_callback();
-void sub_08071BE0();
-void sub_08071C00();
+void sound_disable_dma_transfer();
+void sound_enable_dma_transfer();
 void sub_08033F80(s16, s16);
 void sub_08071C6C();
 void sub_08008CE4();

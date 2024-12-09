@@ -634,11 +634,11 @@ void options_init_callback(void)
     gOptionsMenuData->unk1136 = gScreenModeRelatedPtr->unk0_3;
     gOptionsMenuData->unk1138 = gScreenModeRelatedPtr->unk0_5;
     load_predefined_palette(PALETTE_3_OPTIONS_MENU, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-    gOptionsMenuData->unk1144 = arena_allocate(gUnknown_08B3A4DC * 2);
+    gOptionsMenuData->unk1144 = arena_allocate(gSoundEffectCount * 2);
     gOptionsMenuData->unk113E = 0;
-    for (i = 0; i < gUnknown_08B3A4DC; i++)
+    for (i = 0; i < gSoundEffectCount; i++)
     {
-        if (gUnknown_08B3A4E0[i].unk13 == 0)
+        if (gSoundEffectTable[i].unk13 == 0)
             gOptionsMenuData->unk1144[gOptionsMenuData->unk113E++] = i;
     }
     gOptionsMenuData->unk1148 = arena_allocate(gUnknown_08D7B10C * 2);

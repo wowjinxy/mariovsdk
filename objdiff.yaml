@@ -33,6 +33,7 @@ units:
 - path: rom_8038414.o
 - path: rom_804A8E8.o
 - path: savefile.o
+- path: sound.o
 - path: title.o
 - path: rom_802B798.o
 - path: world_start.o
