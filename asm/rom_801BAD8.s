@@ -169,7 +169,7 @@ _0801BBEC:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #14
 	mov r1, #0
 	bl change_main_state
@@ -243,7 +243,7 @@ _0801BC96:
 	orr r1, r1, r2
 	str r1, [r0]
 _0801BCA2:
-	bl sub_080720AC
+	bl sound_stop_music
 	b _0801BE1C
 _0801BCA8:
 	.4byte gUnknown_030019A0
@@ -432,7 +432,7 @@ _0801BE04:
 	mov r0, #19
 	mov r1, #0
 	bl change_main_state
-	bl sub_08072118
+	bl sound_resume_music
 _0801BE1C:
 	ldr r0, _0801BE30  @ =gUnknown_030000B4
 	ldrb r0, [r0]

@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "sound.h"
 
 struct Struct0802B798
 {
@@ -1114,7 +1115,7 @@ void sub_0802CF78(void)
                 else
                 {
                     r8++;
-                    if (gUnknown_03000170.unk20 == -1 || sub_080721A8() != 0)
+                    if (gUnknown_03000170.unk20 == -1 || sub_080721A8(gUnknown_03000170.unk20) != 0)
                         gUnknown_03000170.unk20 = play_sound_effect_08071990(SE_CRUMBLE, 4, 16, 64, 0, 128, 0);
                     if (r4->unk4.as_struct.unk0 != 0)
                         r4->unk4.as_struct.unk0--;

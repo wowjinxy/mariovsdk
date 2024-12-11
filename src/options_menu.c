@@ -4,6 +4,7 @@
 #include "main.h"
 #include "options_menu.h"
 #include "savefile.h"
+#include "sound.h"
 #include "sprites.h"
 
 struct Struct0802834C_sub
@@ -438,7 +439,7 @@ void sub_080284E8(void)
 
     if (gNewKeys & START_BUTTON)
     {
-        sub_080720AC();
+        sound_stop_music();
         sub_08071C24();
     }
 
@@ -641,9 +642,9 @@ void options_init_callback(void)
         if (gSoundEffectTable[i].unk13 == 0)
             gOptionsMenuData->unk1144[gOptionsMenuData->unk113E++] = i;
     }
-    gOptionsMenuData->unk1148 = arena_allocate(gUnknown_08D7B10C * 2);
+    gOptionsMenuData->unk1148 = arena_allocate(gBGMCount * 2);
     gOptionsMenuData->unk1140 = 0;
-    for (i = 0; i < gUnknown_08D7B10C; i++)
+    for (i = 0; i < gBGMCount; i++)
     {
         if (gMusicTable[i].unk9 == 0)
             gOptionsMenuData->unk1148[gOptionsMenuData->unk1140++] = i;

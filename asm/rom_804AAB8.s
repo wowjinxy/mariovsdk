@@ -23924,7 +23924,7 @@ sub_08055A34: @ 0x08055A34
 	and r0, r0, r1
 	strh r0, [r2]
 	bl sub_08071C24
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r1, #0
 	str r1, [sp]
 	mov r0, #128
@@ -28685,7 +28685,7 @@ _08057CEA:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08057D72
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -28720,10 +28720,10 @@ _08057D30:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08057D72
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _08057D46
-	bl sub_080720AC
+	bl sound_stop_music
 _08057D46:
 	mov r1, #0
 	str r1, [sp]
@@ -32193,7 +32193,7 @@ _080596C6:
 	ldr r1, _080596E4  @ =0x03000434
 	mov r0, #2
 	strb r0, [r1]
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -32212,7 +32212,7 @@ _080596E8:
 	ldr r1, _0805970C  @ =0x03000434
 	mov r0, #2
 	strb r0, [r1]
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -38604,7 +38604,7 @@ _0805C5AE:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0805C636
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -38639,10 +38639,10 @@ _0805C5F4:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0805C636
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _0805C60A
-	bl sub_080720AC
+	bl sound_stop_music
 _0805C60A:
 	mov r1, #0
 	str r1, [sp]
@@ -43856,7 +43856,7 @@ _0805EC96:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0805ED1E
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -43891,10 +43891,10 @@ _0805ECDC:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0805ED1E
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _0805ECF2
-	bl sub_080720AC
+	bl sound_stop_music
 _0805ECF2:
 	mov r1, #0
 	str r1, [sp]
@@ -49934,7 +49934,7 @@ _08061966:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _080619EE
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -49969,10 +49969,10 @@ _080619AC:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _080619EE
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _080619C2
-	bl sub_080720AC
+	bl sound_stop_music
 _080619C2:
 	mov r1, #0
 	str r1, [sp]
@@ -52577,7 +52577,7 @@ _08062CF2:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08062D7A
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -52612,10 +52612,10 @@ _08062D38:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08062D7A
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _08062D4E
-	bl sub_080720AC
+	bl sound_stop_music
 _08062D4E:
 	mov r1, #0
 	str r1, [sp]
@@ -68718,7 +68718,7 @@ sub_0806A488: @ 0x0806A488
 	lsl r0, r0, #16
 	orr r3, r3, r0
 	str r3, [r4]
-	bl sub_080720AC
+	bl sound_stop_music
 	ldr r0, _0806A514  @ =gUnknown_03001B98 
 	ldrb r5, [r0]
 	cmp r5, #0
@@ -68940,7 +68940,7 @@ _0806A664:
 	ldr r1, _0806A6E4  @ =0xFF7FFFFF
 	and r0, r0, r1
 	str r0, [r2]
-	bl sub_080720AC
+	bl sound_stop_music
 	ldr r3, _0806A6E8  @ =gNextLevelInLevelTable
 	ldr r0, [r3, #20]
 	ldr r1, [r3, #24]
@@ -70373,7 +70373,7 @@ _0806B1A4:
 	add r1, r0, r2
 	mov r0, #1
 	strb r0, [r1]
-	bl sub_080720AC
+	bl sound_stop_music
 	str r7, [sp]
 	mov r0, #128
 	str r0, [sp, #4]

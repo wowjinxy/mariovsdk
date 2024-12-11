@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "sound.h"
 
 u16 gSoundEffectCount = 250;
 

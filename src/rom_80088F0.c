@@ -4,6 +4,7 @@
 #include "level_view.h"
 #include "main.h"
 #include "savefile.h"
+#include "sound.h"
 
 void level_play_loop(void)
 {
@@ -99,12 +100,12 @@ void level_play_end(void)
     if (gNextMainState == MAIN_STATE_PAUSE
      || gNextMainState == MAIN_STATE_HELP
      || gNextMainState == MAIN_STATE_LEVEL_SCROLL)
-		sub_080720E4();
+		sound_pause_music();
 	else
     {
 		sub_08071C6C(0x16);
 		if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
-			sub_080720AC();
+			sound_stop_music();
 	}
 }
 
@@ -176,6 +177,6 @@ void level_editor_end(void)
 {
     REG_BG1CNT = gBG1CNT_03000A0C;
     sub_080062D0();
-    sub_080720AC();
+    sound_stop_music();
     sub_08006A00();
 }

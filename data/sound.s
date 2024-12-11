@@ -1007,8 +1007,8 @@ gUnknown_08D7644C:
 gUnknown_08D79836:
 	.INCBIN "assets/sounds/dk_fall.pcm"
 
-	.GLOBAL gUnknown_08D7B10C @ Number of songs
-gUnknown_08D7B10C:
+	.GLOBAL gBGMCount @ Number of songs
+gBGMCount:
 	.2byte 70
 	.2byte 0
 

@@ -1,6 +1,7 @@
 #include "gba/gba.h"
 #include "global.h"
 #include "main.h"
+#include "sound.h"
 
 void sub_0800EEC0(void)
 {

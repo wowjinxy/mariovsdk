@@ -11236,7 +11236,7 @@ bonus_swapboxes_init_callback: @ 0x08027068
 	sub sp, sp, #24
 	mov r0, #0
 	bl arena_restore_head
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #68
 	mov r1, #128
 	mov r2, #0

@@ -3,6 +3,7 @@
 #include "global.h"
 #include "main.h"
 #include "savefile.h"
+#include "sound.h"
 
 static u16 gMainLevelDefaultHighScores[6][8] =
 {

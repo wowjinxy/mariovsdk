@@ -4,7 +4,7 @@
 	.GLOBAL sound_arm_1_start
 sound_arm_1_start:
 
-	ARM_FUNC_START arm_clear_audio_buffer
+ARM_FUNC_START arm_clear_audio_buffer
 @ Zeros a 16-byte aligned buffer
 @ params:
 @	r0 = pointer to buffer 
@@ -22,13 +22,13 @@ arm_clear_audio_buffer:
 	bx lr
 ARM_FUNC_END arm_clear_audio_buffer
 
-	ARM_FUNC_START arm_load_sound_16bit_to_8bit
-@ Clamps stereo sound data from 16-bit PCM to 8-bit PCM)
+ARM_FUNC_START arm_load_sound_16bit_to_8bit
+@ Clamps stereo sound data from 16-bit PCM to 8-bit PCM
 @ params:
 @	r0 = audio source (16-bit PCM with channels interleaved)
 @	r1 = bufA, left channel audio (8-bit PCM)
 @	r2 = bufB, right channel audio (8-bit PCM)
-@	r3 = length
+@	r3 = number of samples (per output)
 arm_load_sound_16bit_to_8bit:
 	add r3, r0, r3, lsl #2
   1:
@@ -55,7 +55,7 @@ arm_load_sound_16bit_to_8bit:
 	bx lr
 ARM_FUNC_END arm_load_sound_16bit_to_8bit
 
-	ARM_FUNC_START arm_update_sound_dma_transfer
+ARM_FUNC_START arm_update_sound_dma_transfer
 arm_update_sound_dma_transfer:
 	@ some kind of timer check?
 	ldr r0, =gSoundWork

@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "sound.h"
 
 #define EWRAM 0x02000000
 #define IWRAM 0x03000000
@@ -117,7 +118,7 @@ void sub_08033DCC(void)
         sub_08033EC8();
     }
     gUnknown_03001748++;
-    sub_08071800();
+    sound_update();
     irq_disable_t();
 }
 
@@ -330,7 +331,7 @@ bool32 sub_08034178(void)
         gCurrentWorld = 0;
         gNextLevelID = 0;
         gLevelEWorldFlag = 0;
-        sub_080720AC();
+        sound_stop_music();
         sub_08071C24();
         return TRUE;
     }

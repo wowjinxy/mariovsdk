@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "sound.h"
 
 void e_world_from_menu_loop(void)
 {

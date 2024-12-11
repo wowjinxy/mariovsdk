@@ -3,6 +3,7 @@
 #include "arena.h"
 #include "main.h"
 #include "savefile.h"
+#include "sound.h"
 
 extern u16 gUnknown_0807DD14[];
 extern const struct UnknownStruct10 gUnknown_08B2AD88;

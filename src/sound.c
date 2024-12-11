@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "sound.h"
 
 struct MusicPattern  // pattern?
 {
@@ -10,8 +11,8 @@ struct MusicPattern  // pattern?
 struct MusicFile
 {
     u8 filler0[0x34];  // name
-    u16 unk34;  // number of patterns?
-    u16 unk36;
+    /*0x034*/ u16 songLength;  // length of patternOrder table
+    /*0x036*/ u16 loopStart;  // loop start point (index into patternOrder array)
     u16 unk38;
     u16 unk3A;
     u8 filler3C[0x3E - 0x3C];
@@ -25,41 +26,37 @@ struct MusicFile
     /*0x284*/ struct MusicPattern patterns[1];
 };
 
-struct SoundWork_sub3
+struct SoundPlayer
 {
     u8 unk0;
-    u8 unk1;
-    u8 unk2;
-    u8 unk3;
-    u32 unk4;
-    u32 unk8;
-    u32 unkC;  // sample rate
+    /*0x01*/ u8 pan;
+    /*0x02*/ u8 unk2;
+    /*0x03*/ u8 volume;
+    /*0x04*/ u32 uid;  // unique ID of sound playing instance
+    /*0x08*/ u32 position;  // current byte offset within sound (14 fractional bits)
+    /*0x0C*/ u32 sampleDelta;  // delta between samples (14 fractional bits)
     /*0x10*/ struct SoundEffect *soundEffect;
 };
 
 struct SoundBuffers
 {
-    u8 sndBufA[0x120];
-    u8 sndBufB[0x120];
+    s8 sndBufA[0x120];
+    s8 sndBufB[0x120];
 };
 
 struct Struct08072750
 {
-    //u16 unk0[0][2];
-    struct { u16 unk0, unk2; } unk0[0];
-    u8 filler0[0x30];
+    struct { u16 unk0, unk2; } unk0[12];
     u8 unk30;
     u8 unk31;
     u8 filler32[0x33-0x32];
     u8 unk33;
     u8 unk34;
     u8 unk35;
-    u16 unk36[1];  // TODO: extend
+    u16 unk36[12];
 };
 
-static_assert(sizeof(struct Struct08072750) == 0x38, size38);
-
-struct Instrument_sub
+struct InstrumentSound
 {
     u8 filler0[0xC];
     u8 unkC;
@@ -70,28 +67,29 @@ struct Instrument_sub
     s8 unk11;
     u8 filler12[0x28-0x12];  // name?
     u8 unk28;
-    u8 filler29[0x30-0x29];
+    u8 filler29[1];
+    /*0x2C*/ s16 *samplePtr;  // sample data
 };
 
 struct Instrument  // size = 0x13C?
 {
-    char name[0x10];
+    char name[0xC];
+    u8 fillerC[4];
     u8 unk10;
     u8 filler11[0x16-0x11];
     u8 unk16;
     u8 unk17;
     u8 filler18[0x1B-0x18];
-    u8 unk1B[0x94-0x1B];
+    /*0x121*/ u8 noteToSoundMap[121];  // note to sound mapping
     struct Struct08072750 unk94;
-    u8 fillerCC[0xE4-0xCC];
     struct Struct08072750 unkE4;
-    u8 filler11C[0x134-0x11C];
     u16 unk134;
     u8 filler136[2];
-    struct Instrument_sub *unk138;
+    /*0x138*/ struct InstrumentSound *sounds;
 };
 
-static_assert(offsetof(struct Instrument, unk138) == 0x138, offset138);
+static_assert(offsetof(struct Instrument, unk134) == 0x134, Instrument_unk134);
+static_assert(offsetof(struct Instrument, sounds) == 0x138, Instrument_unk138);
 
 extern struct Instrument gInstruments[];
 
@@ -109,16 +107,16 @@ struct MusicChannel
     struct MusicChannel_sub unk8;
     /*0x10*/ u8 currNote;
     /*0x11*/ u8 prevNote;
-    /*0x12*/ u8 instrumentIndex;
-    u8 unk13;
-    u8 unk14;
+    /*0x12*/ u8 currInstrIndex;
+    /*0x13*/ u8 prevInstrIndex;
+    /*0x14*/ u8 currVolume;  // volume?
     u8 unk15;
     u8 unk16;
     u8 unk17;
-    u8 unk18;
-    u8 unk19;
-    u8 unk1A;
-    u8 unk1B;
+    /*0x18*/ u8 currEffect;
+    /*0x19*/ u8 prevEffect;
+    /*0x1A*/ u8 currEffectParam;
+    /*0x1B*/ u8 prevEffectParam;
     s8 unk1C;
     u8 unk1D;
     u16 unk1E;
@@ -127,9 +125,9 @@ struct MusicChannel
     /*0x25*/ u8 prevHdrByte;
     s16 unk26;
     s16 unk28;
-    s16 unk2A;
+    /*0x2A*/ s16 pitchRelated;  // something related to pitch?
     s8 unk2C;
-    s8 unk2D;
+    s8 unk2D;  // pan?
     s8 unk2E;
     s8 unk2F;
     u16 unk30;
@@ -143,7 +141,7 @@ struct MusicChannel
     u8 unk3A;
     u8 unk3B;
     /*0x3C*/ struct Instrument *instrument;
-    struct Instrument_sub *unk40;
+    /*0x40*/ struct InstrumentSound *instrSound;  // sound for currently playing note
     u8 unk44;
     u8 unk45;
     u16 unk46;
@@ -151,34 +149,34 @@ struct MusicChannel
     s16 unk4A;
 };
 
-struct SoundWork_sub2
+struct MusicPlayer
 {
-    struct MusicFile *unk0;  // data of currently playing song
+    struct MusicFile *musicFile;  // data of currently playing song
     struct MusicChannel channels[16];
     struct MusicChannel *unk4C4[8];
     /*0x4E4*/ u8 *noteDataPtr;  // ptr to note data?
     /*0x4E8*/ s16 volume;
     s16 unk4EA;
     /*0x4EC*/ s16 tickLength;
-    u16 unk4EE;
+    /*0x4EE*/ u16 loopFlag;  // music loops if bit 0 is set
     s16 unk4F0;
-    /*0x4F2*/ s16 unk4F2;
+    /*0x4F2*/ s16 currPatternIndex;
     u16 unk4F4;
     /*0x4F6*/ s16 currPatternTick;
     /*0x4F8*/ s16 unk4F8;
     u8 unk4FA;
     u8 unk4FB;
-    u32 unk4FC;
+    u32 unk4FC;  // bitmask of used channels?
     u32 unk500;
     u32 unk504;
     s32 unk508;
-    s32 unk50C;
-    u8 unk510[1];
+    s32 unk50C;  // length of current note (in samples)?
+    u8 unk510[3];
 };  // unknown size
 
 struct SoundWork
 {
-    u8 unk0;
+    /*0x00*/ u8 soundPlayersCount;
     u8 unk1;
     /*0x02*/ u8 updateTimer;  // timer until next buffer reload?
     u8 unk3;
@@ -190,29 +188,28 @@ struct SoundWork
     u32 unkC;
     struct SoundBuffers unk10[2];
     u8 filler490[0x6D0-0x490];
-    u8 unk6D0[0xB50-0x6D0];
+    /*0x6D0*/ s16 unk6D0[0x240];  // some sound buffer?
     /*0xB50*/ u8 codeBuf1[0xE8];  // ARM code buffer
     /*0xC38*/ u8 codeBuf2[0x390];  // ARM code buffer
-    struct SoundWork_sub2 unkFC8;  // music state?
-    u8 filler14C4[0x14DC-0xFC8-sizeof(struct SoundWork_sub2)];
-    struct SoundWork_sub3 unk14DC[1];  // variable length (by unk0) sound effect state?
+    /*0xFC8*/ struct MusicPlayer musicPlayer;  // music state?
+    /*0x14DC*/ struct SoundPlayer soundPlayers[1];  // variable length (by soundPlayersCount) sound effect state?
 };
 
-void sub_080728F0(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08072A04(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08072A88(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08072B10(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08072BA8(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08072C74(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08072D54(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08072E64(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08072F2C(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_0807394C(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_080739B0(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08073A34(struct MusicChannel *arg0, void *arg1, int arg2);
-void sub_08073AAC(struct MusicChannel *arg0, void *arg1, int arg2);
+static void effect_0_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_1_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_2_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_3_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_4_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_5_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_6_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_7_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_10_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_default_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_34_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_37_func(struct MusicChannel *chan, s16 *dest, int numSamples);
+static void effect_38_func(struct MusicChannel *chan, s16 *dest, int numSamples);
 
-u16 gUnknown_08B3961C[] =
+u16 gFrequencyLUT_08B3961C[768] =
 {
     16726, 16741, 16756, 16771, 16786, 16801, 16816, 16832,
     16847, 16862, 16877, 16892, 16908, 16923, 16938, 16953,
@@ -346,7 +343,7 @@ s32 gUnknown_08B39C1C[][64] =
     },
 };
 
-u8 gUnknown_08B39F1C[] =
+static u8 gUnknown_08B39F1C[] =
 {
     8,
     0,
@@ -429,139 +426,130 @@ u32 gUnknown_08B39F48[] =
     0x00A,
 };
 
-u32 gUnknown_08B39FC4[] =
+// No idea why this needs a lookup table
+static u32 sTimes64LUT[] =
 {
-    0x000,
-    0x040,
-    0x080,
-    0x0C0,
-    0x100,
-    0x140,
-    0x180,
-    0x1C0,
-    0x200,
-    0x240,
-    0x280,
-    0x2C0,
-    0x300,
-    0x340,
-    0x380,
-    0x3C0,
+    64*0,
+    64*1,
+    64*2,
+    64*3,
+    64*4,
+    64*5,
+    64*6,
+    64*7,
+    64*8,
+    64*9,
+    64*10,
+    64*11,
+    64*12,
+    64*13,
+    64*14,
+    64*15,
 };
 
 // effect functions?
-void (*gUnknown_08B3A004[])(struct MusicChannel *, void *, int) =
+static void (*sEffectFuncs[])(struct MusicChannel *chan, s16 *dest, int numSamples) =
 {
-    sub_080728F0,
-    sub_08072A04,
-    sub_08072A88,
-    sub_08072B10,
-    sub_08072BA8,
-    sub_08072C74,
-    sub_08072D54,
-    sub_08072E64,
-    sub_0807394C,
-    sub_0807394C,
-    sub_08072F2C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_0807394C,
-    sub_080739B0,
-    sub_0807394C,
-    sub_0807394C,
-    sub_08073A34,
-    sub_08073AAC,
-    sub_0807394C,
-    sub_0807394C,
+    effect_0_func,
+    effect_1_func,
+    effect_2_func,
+    effect_3_func,
+    effect_4_func,
+    effect_5_func,
+    effect_6_func,
+    effect_7_func,
+    effect_default_func,
+    effect_default_func,
+    effect_10_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_default_func,
+    effect_34_func,
+    effect_default_func,
+    effect_default_func,
+    effect_37_func,
+    effect_38_func,
+    effect_default_func,
+    effect_default_func,
 };
 
-u16 gUnknown_08B3A0A8[] =
+// Some kind of lookup table for adjusting volume
+u16 gVolumeAdjustTable[513] =
 {
-      0,   1,   3,   5,   7,   9,  11,  13,
-     15,  17,  19,  21,  22,  24,  26,  28,
-     30,  31,  33,  35,  36,  38,  40,  41,
-     43,  45,  46,  48,  49,  51,  52,  54,
-     56,  57,  58,  60,  61,  63,  64,  66,
-     67,  68,  70,  71,  72,  74,  75,  76,
-     78,  79,  80,  81,  82,  84,  85,  86,
-     87,  88,  89,  90,  91,  92,  93,  94,
-     96,  96,  97,  98,  99, 100, 101, 102,
-    103, 104, 105, 106, 106, 107, 108, 109,
-    110, 110, 111, 112, 112, 113, 114, 114,
-    115, 116, 116, 117, 117, 118, 118, 119,
-    120, 120, 120, 121, 121, 122, 122, 123,
-    123, 123, 124, 124, 124, 125, 125, 125,
-    126, 126, 126, 126, 126, 127, 127, 127,
-    127, 127, 127, 127, 127, 127, 127, 127,
-    128, 129, 130, 131, 132, 133, 134, 135,
-    136, 137, 138, 139, 140, 141, 142, 143,
-    144, 145, 146, 147, 148, 149, 150, 151,
-    152, 153, 154, 155, 156, 157, 158, 159,
-    160, 161, 162, 163, 164, 165, 166, 167,
-    168, 169, 170, 171, 172, 173, 174, 175,
-    176, 177, 178, 179, 180, 181, 182, 183,
-    184, 185, 186, 187, 188, 189, 190, 191,
-    192, 193, 194, 195, 196, 197, 198, 199,
-    200, 201, 202, 203, 204, 205, 206, 207,
-    208, 209, 210, 211, 212, 213, 214, 215,
-    216, 217, 218, 219, 220, 221, 222, 223,
-    224, 225, 226, 227, 228, 229, 230, 231,
-    232, 233, 234, 235, 236, 237, 238, 239,
-    240, 241, 242, 243, 244, 245, 246, 247,
-    248, 249, 250, 251, 252, 253, 254, 255,
-    256, 257, 258, 259, 260, 261, 262, 263,
-    264, 265, 266, 267, 268, 269, 270, 271,
-    272, 273, 274, 275, 276, 277, 278, 279,
-    280, 281, 282, 283, 284, 285, 286, 287,
-    288, 289, 290, 291, 292, 293, 294, 295,
-    296, 297, 298, 299, 300, 301, 302, 303,
-    304, 305, 306, 307, 308, 309, 310, 311,
-    312, 313, 314, 315, 316, 317, 318, 319,
-    320, 321, 322, 323, 324, 325, 326, 327,
-    328, 329, 330, 331, 332, 333, 334, 335,
-    336, 337, 338, 339, 340, 341, 342, 343,
-    344, 345, 346, 347, 348, 349, 350, 351,
-    352, 353, 354, 355, 356, 357, 358, 359,
-    360, 361, 362, 363, 364, 365, 366, 367,
-    368, 369, 370, 371, 372, 373, 374, 375,
-    376, 377, 378, 379, 380, 381, 382, 383,
-    384, 385, 386, 387, 388, 389, 390, 391,
-    392, 393, 394, 395, 396, 397, 398, 399,
-    400, 401, 402, 403, 404, 405, 406, 407,
-    408, 409, 410, 411, 412, 413, 414, 415,
-    416, 417, 418, 419, 420, 421, 422, 423,
-    424, 425, 426, 427, 428, 429, 430, 431,
-    432, 433, 434, 435, 436, 437, 438, 439,
-    440, 441, 442, 443, 444, 445, 446, 447,
-    448, 449, 450, 451, 452, 453, 454, 455,
-    456, 457, 458, 459, 460, 461, 462, 463,
-    464, 465, 466, 467, 468, 469, 470, 471,
-    472, 473, 474, 475, 476, 477, 478, 479,
-    480, 481, 482, 483, 484, 485, 486, 487,
-    488, 489, 490, 491, 492, 493, 494, 495,
-    496, 497, 498, 499, 500, 501, 502, 503,
-    504, 505, 506, 507, 508, 509, 510, 511,
-    512,   0,
+#define X(n) (n >= 128 ? n : (n*2.0f - n*n/128.0f))
+    X(0),   X(1),   X(2),   X(3),   X(4),   X(5),   X(6),   X(7),   X(8),   X(9), 
+    X(10),  X(11),  X(12),  X(13),  X(14),  X(15),  X(16),  X(17),  X(18),  X(19), 
+    X(20),  X(21),  X(22),  X(23),  X(24),  X(25),  X(26),  X(27),  X(28),  X(29), 
+    X(30),  X(31),  X(32),  X(33),  X(34),  X(35),  X(36),  X(37),  X(38),  X(39), 
+    X(40),  X(41),  X(42),  X(43),  X(44),  X(45),  X(46),  X(47),  X(48),  X(49), 
+    X(50),  X(51),  X(52),  X(53),  X(54),  X(55),  X(56),  X(57),  X(58),  X(59), 
+    X(60),  X(61),  X(62),  X(63),  X(64),  X(65),  X(66),  X(67),  X(68),  X(69), 
+    X(70),  X(71),  X(72),  X(73),  X(74),  X(75),  X(76),  X(77),  X(78),  X(79), 
+    X(80),  X(81),  X(82),  X(83),  X(84),  X(85),  X(86),  X(87),  X(88),  X(89), 
+    X(90),  X(91),  X(92),  X(93),  X(94),  X(95),  X(96),  X(97),  X(98),  X(99), 
+    X(100), X(101), X(102), X(103), X(104), X(105), X(106), X(107), X(108), X(109), 
+    X(110), X(111), X(112), X(113), X(114), X(115), X(116), X(117), X(118), X(119), 
+    X(120), X(121), X(122), X(123), X(124), X(125), X(126), X(127), X(128), X(129), 
+    X(130), X(131), X(132), X(133), X(134), X(135), X(136), X(137), X(138), X(139), 
+    X(140), X(141), X(142), X(143), X(144), X(145), X(146), X(147), X(148), X(149), 
+    X(150), X(151), X(152), X(153), X(154), X(155), X(156), X(157), X(158), X(159), 
+    X(160), X(161), X(162), X(163), X(164), X(165), X(166), X(167), X(168), X(169), 
+    X(170), X(171), X(172), X(173), X(174), X(175), X(176), X(177), X(178), X(179), 
+    X(180), X(181), X(182), X(183), X(184), X(185), X(186), X(187), X(188), X(189), 
+    X(190), X(191), X(192), X(193), X(194), X(195), X(196), X(197), X(198), X(199), 
+    X(200), X(201), X(202), X(203), X(204), X(205), X(206), X(207), X(208), X(209), 
+    X(210), X(211), X(212), X(213), X(214), X(215), X(216), X(217), X(218), X(219), 
+    X(220), X(221), X(222), X(223), X(224), X(225), X(226), X(227), X(228), X(229), 
+    X(230), X(231), X(232), X(233), X(234), X(235), X(236), X(237), X(238), X(239), 
+    X(240), X(241), X(242), X(243), X(244), X(245), X(246), X(247), X(248), X(249), 
+    X(250), X(251), X(252), X(253), X(254), X(255), X(256), X(257), X(258), X(259), 
+    X(260), X(261), X(262), X(263), X(264), X(265), X(266), X(267), X(268), X(269), 
+    X(270), X(271), X(272), X(273), X(274), X(275), X(276), X(277), X(278), X(279), 
+    X(280), X(281), X(282), X(283), X(284), X(285), X(286), X(287), X(288), X(289), 
+    X(290), X(291), X(292), X(293), X(294), X(295), X(296), X(297), X(298), X(299), 
+    X(300), X(301), X(302), X(303), X(304), X(305), X(306), X(307), X(308), X(309), 
+    X(310), X(311), X(312), X(313), X(314), X(315), X(316), X(317), X(318), X(319), 
+    X(320), X(321), X(322), X(323), X(324), X(325), X(326), X(327), X(328), X(329), 
+    X(330), X(331), X(332), X(333), X(334), X(335), X(336), X(337), X(338), X(339), 
+    X(340), X(341), X(342), X(343), X(344), X(345), X(346), X(347), X(348), X(349), 
+    X(350), X(351), X(352), X(353), X(354), X(355), X(356), X(357), X(358), X(359), 
+    X(360), X(361), X(362), X(363), X(364), X(365), X(366), X(367), X(368), X(369), 
+    X(370), X(371), X(372), X(373), X(374), X(375), X(376), X(377), X(378), X(379), 
+    X(380), X(381), X(382), X(383), X(384), X(385), X(386), X(387), X(388), X(389), 
+    X(390), X(391), X(392), X(393), X(394), X(395), X(396), X(397), X(398), X(399), 
+    X(400), X(401), X(402), X(403), X(404), X(405), X(406), X(407), X(408), X(409), 
+    X(410), X(411), X(412), X(413), X(414), X(415), X(416), X(417), X(418), X(419), 
+    X(420), X(421), X(422), X(423), X(424), X(425), X(426), X(427), X(428), X(429), 
+    X(430), X(431), X(432), X(433), X(434), X(435), X(436), X(437), X(438), X(439), 
+    X(440), X(441), X(442), X(443), X(444), X(445), X(446), X(447), X(448), X(449), 
+    X(450), X(451), X(452), X(453), X(454), X(455), X(456), X(457), X(458), X(459), 
+    X(460), X(461), X(462), X(463), X(464), X(465), X(466), X(467), X(468), X(469), 
+    X(470), X(471), X(472), X(473), X(474), X(475), X(476), X(477), X(478), X(479), 
+    X(480), X(481), X(482), X(483), X(484), X(485), X(486), X(487), X(488), X(489), 
+    X(490), X(491), X(492), X(493), X(494), X(495), X(496), X(497), X(498), X(499), 
+    X(500), X(501), X(502), X(503), X(504), X(505), X(506), X(507), X(508), X(509), 
+    X(510), X(511), X(512),
+#undef X
 };
 
 struct Struct08B3A4AC
@@ -572,7 +560,7 @@ struct Struct08B3A4AC
     u16 unused;
 };
 
-struct Struct08B3A4AC gUnknown_08B3A4AC[] =
+static struct Struct08B3A4AC sGBCSoundRegDefs[] =
 {
     { &REG_SOUND1CNT_H, &REG_SOUND1CNT_X, 0xF800, 0x07FF },
     { &REG_SOUND2CNT_L, &REG_SOUND2CNT_H, 0xF800, 0x07FF },
@@ -580,163 +568,160 @@ struct Struct08B3A4AC gUnknown_08B3A4AC[] =
     { &REG_SOUND4CNT_L, &REG_SOUND4CNT_H, 0xFFFF, 0x0000 },
 };
 
+struct Struct080714B8
+{
+    s16 *buffer;
+    void *samplePtr;
+    u32 position;  // current position? 14 fractional bits
+    u32 sampleDelta;  // delta between samples? 14 fractional bits
+    u32 unk10;
+    u32 unk14;
+    u32 unk18;
+    u32 leftVol;
+    u32 rightVol;
+};
+
 // ARM code
 extern u8 sound_arm_1_start[];
 extern u8 arm_update_sound_dma_transfer[];
 extern u8 arm_load_sound_16bit_to_8bit[];
 extern u8 sound_arm_2_start[];
-extern u8 sub_08001968[];
+extern u8 arm_mix_music_note[];
 
-extern void (*ptr_arm_clear_audio_buffer)(void *, int);
-extern void (*gUnknown_03001EE4)();
-extern void (*ptr_arm_update_sound_dma_transfer)(void);
-extern void (*ptr_arm_load_sound_16bit_to_8bit)();
-extern void (*gUnknown_03001EFC)();
-extern u32 gUnknown_03001F00;
-extern u32 gUnknown_03001F04;
-extern u32 gUnknown_03001F08;
+static void (*ptr_arm_clear_audio_buffer)(void *, int);
+static void (*ptr_arm_mix_wave_sound)(struct Struct080714B8 *);
+static void (*ptr_arm_update_sound_dma_transfer)(void);
+static u8 bss_pad_1EEC[0x1EF8-0x1EF0];  // unused
+static void (*ptr_arm_load_sound_16bit_to_8bit)(s16 *, s8 *, s8 *, int);
+static void (*ptr_arm_mix_music_note)(struct MusicChannel *chan, s16 *dest, int numSamples, int);
+static u32 gUnknown_03001F00;
+static u32 gUnknown_03001F04;
+static u32 gUnknown_03001F08;
 extern struct SoundWork *gSoundWork;
 
-void sub_080714B8(struct SoundWork_sub3 *arg0, void *arg1, int arg2);
-int sub_080715B8(struct SoundWork_sub3 *arg0, void *arg1, int arg2);
+static void render_sound_effect(struct SoundPlayer *arg0, s16 *buf, int arg2);
+static int sub_080715B8(struct SoundPlayer *arg0, s16 *buf, int arg2);
 void sub_08071E7C(u8 arg0, u8 arg1);
-void init_sound_mem(u8 *, int);
-void *alloc_sound_mem(int size);
-void reset_sound_mem(void);
-void sub_080731C4(struct SoundWork_sub2 *arg0, struct MusicChannel *arg1);
-void sub_08073464(struct MusicChannel *arg0);
-void sub_080734F8(struct SoundWork_sub2 *arg0, void *arg1);
-void sub_080735D0(struct SoundWork_sub2 *arg0);
-int sub_080736A0(struct SoundWork_sub2 *arg0, void *dest, int length);
-void sub_0807387C(struct SoundWork_sub2 *arg0, int arg1, int arg2, u8 *arg3);
-void sub_080738D4(struct SoundWork_sub2 *arg0, int arg1);
-void sub_08073914(struct SoundWork_sub2 *arg0, int arg1);
-void sub_08073B18(void);
-void sub_08073E1C(void);
+static void init_sound_mem(u8 *, int);
+static void *alloc_sound_mem(int size);
+static void reset_sound_mem(void);
+static void sub_080731C4(struct MusicPlayer *arg0, struct MusicChannel *arg1);
+static void sub_08073464(struct MusicChannel *arg0);
+static void sub_080734F8(struct MusicPlayer *arg0, struct MusicFile *musFile);
+static void sub_080735D0(struct MusicPlayer *arg0);
+static int render_music(struct MusicPlayer *arg0, s16 *dest, int length);
+static void sub_0807387C(struct MusicPlayer *arg0, int arg1, int arg2, u8 *arg3);
+static void sub_080738D4(struct MusicPlayer *arg0, int arg1);
+static void sub_08073914(struct MusicPlayer *arg0, int arg1);
+static void sub_08073B18(void);
+static void sub_08073E1C(void);
 
 #define DMA_FLAGS (DMA_ENABLE | DMA_INTR_ENABLE | DMA_START_SPECIAL | DMA_32BIT | DMA_REPEAT | DMA_SRC_INC | DMA_DEST_RELOAD)
 
-struct Struct080714B8
+static void render_sound_effect(struct SoundPlayer *arg0, s16 *buf, int numSamples)
 {
-    void *unk0;
-    void *samplePtr;
-    u32 unk8;
-    u32 unkC;
-    u32 unk10;
-    u32 unk14;
-    u32 unk18;
-    u32 unk1C;
-    u32 unk20;
-};
-
-void sub_080714B8(struct SoundWork_sub3 *arg0, void *arg1, int arg2)
-{
-    int r8 = arg0->soundEffect->sampleSize << 14;
-    int r2 = arg0->unk3;
-    u32 r3 = arg0->unk2;
-    int r5 = (s32)((128 - r3) * r2) >> 7;
-    int r7, r6;
+    int r8 = arg0->soundEffect->size << 14;
+    int coeff = (arg0->volume * (128 - arg0->unk2)) >> 7;
+    int leftVol, rightVol;
     u8 r0;
     struct SoundEffect *se;
-    struct Struct080714B8 sp0;
+    struct Struct080714B8 params;
 
-    r6 = arg0->unk1;
-    r7 = 128 - arg0->unk1;
+    rightVol = arg0->pan;
+    leftVol = 128 - arg0->pan;
 
-    r6 = (r6 * r5) >> 7;
-    r7 = (r7 * r5) >> 7;
+    rightVol = (rightVol * coeff) >> 7;
+    leftVol = (leftVol * coeff) >> 7;
 
-    if (r3 > 4)
+    if (arg0->unk2 > 4)
     {
-        u32 temp = sub_080715B8(arg0, arg1, arg2);
-        if (r5 == 0)
+        u32 temp = sub_080715B8(arg0, buf, numSamples);
+        if (coeff == 0)
         {
             if (temp >= r8)
                 arg0->unk0 = 0;
             else
-                arg0->unk8 = temp;
+                arg0->position = temp;
             return;
         }
     }
     se = arg0->soundEffect;
-    r7 = gUnknown_08B3A0A8[r7];
-    r6 = gUnknown_08B3A0A8[r6];
+    leftVol = gVolumeAdjustTable[leftVol];
+    rightVol = gVolumeAdjustTable[rightVol];
 
-    sp0.unk0 = arg1;
-    sp0.samplePtr = se->samplePtr;
-    sp0.unk8 = arg0->unk8;
-    sp0.unkC = arg0->unkC;
+    params.buffer = buf;
+    params.samplePtr = se->samplePtr;
+    params.position = arg0->position;
+    params.sampleDelta = arg0->sampleDelta;
     r0 = arg0->unk0 & 4;
     if (r0 != 0)
     {
-        int temp = se->unk18;
-        sp0.unk10 = temp << 14;
-        sp0.unk14 = (temp - se->unk14) << 15;
+        int temp = se->size2;
+        params.unk10 = temp << 14;
+        params.unk14 = (temp - se->unk14) << 15;
     }
     else
     {
-        sp0.unk10 = r8;
-        sp0.unk14 = r0;
+        params.unk10 = r8;
+        params.unk14 = r0;
     }
-    sp0.unk18 = arg2;
-    sp0.unk1C = r7;
-    sp0.unk20 = r6;
-    gUnknown_03001EE4(&sp0);
-    arg0->unk8 = sp0.unk8;
-    if (arg0->unk8 >= r8)
+    params.unk18 = numSamples;
+    params.leftVol = leftVol;
+    params.rightVol = rightVol;
+    ptr_arm_mix_wave_sound(&params);
+    arg0->position = params.position;
+    if (arg0->position >= r8)
     {
         arg0->unk0 = 0;
-        sub_08073914(&gSoundWork->unkFC8, arg0 - gSoundWork->unk14DC);
+        sub_08073914(&gSoundWork->musicPlayer, arg0 - gSoundWork->soundPlayers);
     }
 }
 
-int sub_080715B8(struct SoundWork_sub3 *arg0, void *arg1, int arg2)
+static int sub_080715B8(struct SoundPlayer *arg0, s16 *buf, int numSamples)
 {
     struct SoundEffect *se = arg0->soundEffect;
-    int r12 = se->sampleSize << 14;
-    int r2 = arg0->unk3;
-    int r3 = arg0->unk2;
-    int r4 = (r2 * r3) >> 7;
-    int r5;
-    int r6;
+    int r12 = se->size << 14;
+    int coeff = (arg0->volume * arg0->unk2) >> 7;
+    int leftVol;
+    int rightVol;
     u8 r0;
-    struct Struct080714B8 sp0;
+    struct Struct080714B8 params;
 
-    r5 = 128 - arg0->unk1;
-    r5 = (r5 >> 1) + 64;
+    leftVol = 128 - arg0->pan;
+    leftVol = (leftVol >> 1) + 64;
 
-    r6 = arg0->unk1;
-    r6 = (r6 >> 1) + 64;
+    rightVol = arg0->pan;
+    rightVol = (rightVol >> 1) + 64;
 
-    r5 = (r5 * r4) >> 7;
-    r6 = (r6 * r4) >> 7;
+    leftVol = (leftVol * coeff) >> 7;
+    rightVol = (rightVol * coeff) >> 7;
 
-    r5 = gUnknown_08B3A0A8[r5];
-    r6 = -gUnknown_08B3A0A8[r6];
+    leftVol = gVolumeAdjustTable[leftVol];
+    rightVol = -gVolumeAdjustTable[rightVol];
 
-    sp0.unk0 = arg1;
-    sp0.samplePtr = se->samplePtr;
-    sp0.unk8 = 0x1000 + arg0->unk8;
-    sp0.unkC = arg0->unkC;
+    params.buffer = buf;
+    params.samplePtr = se->samplePtr;
+    params.position = 0x1000 + arg0->position;
+    params.sampleDelta = arg0->sampleDelta;
 
     r0 = arg0->unk0 & 4;
     if (r0 != 0)
     {
-        int temp = se->unk18;
-        sp0.unk10 = temp << 14;
-        sp0.unk14 = (temp - se->unk14) << 15;
+        int temp = se->size2;
+        params.unk10 = temp << 14;
+        params.unk14 = (temp - se->unk14) << 15;
     }
     else
     {
-        sp0.unk10 = r12;
-        sp0.unk14 = r0;
+        params.unk10 = r12;
+        params.unk14 = r0;
     }
-    sp0.unk18 = arg2;
-    sp0.unk1C = r5;
-    sp0.unk20 = r6;
-    gUnknown_03001EE4(&sp0);
-    sp0.unk8 -= 0x1000;
-    return sp0.unk8;
+    params.unk18 = numSamples;
+    params.leftVol = leftVol;
+    params.rightVol = rightVol;
+    ptr_arm_mix_wave_sound(&params);
+    params.position -= 0x1000;
+    return params.position;
 }
 
 void sound_init(void *buffer, int bufferSize, int arg2, int arg3, int arg4)
@@ -748,19 +733,19 @@ void sound_init(void *buffer, int bufferSize, int arg2, int arg3, int arg4)
         arg2 = 1;
 
     init_sound_mem(buffer, bufferSize);
-    gSoundWork = alloc_sound_mem(sizeof(struct SoundWork) + (arg2 - 1) * sizeof(struct SoundWork_sub3));
-    gSoundWork->unkFC8.unk4FB = arg4;
+    gSoundWork = alloc_sound_mem(sizeof(struct SoundWork) + (arg2 - 1) * sizeof(struct SoundPlayer));
+    gSoundWork->musicPlayer.unk4FB = arg4;
 
     ptr_arm_clear_audio_buffer = (void *)codeBuf1 = (void *)gSoundWork->codeBuf1;
     DmaCopy16(3, sound_arm_1_start, codeBuf1, 0xE8);
     ptr_arm_load_sound_16bit_to_8bit  = (void *)(codeBuf1 + (arm_load_sound_16bit_to_8bit - sound_arm_1_start));
     ptr_arm_update_sound_dma_transfer = (void *)(codeBuf1 + (arm_update_sound_dma_transfer - sound_arm_1_start));
 
-    gUnknown_03001EE4 = (void *)codeBuf2 = gSoundWork->codeBuf2;
+    ptr_arm_mix_wave_sound = (void *)codeBuf2 = gSoundWork->codeBuf2;
     DmaCopy16(3, sound_arm_2_start, codeBuf2, 0x390);
-    gUnknown_03001EFC = (void *)((u8 *)codeBuf2 + (sub_08001968 - sound_arm_2_start));
+    ptr_arm_mix_music_note = (void *)(codeBuf2 + (arm_mix_music_note - sound_arm_2_start));
 
-    gSoundWork->unk0 = arg2;
+    gSoundWork->soundPlayersCount = arg2;
     gSoundWork->unk4 = arg4;
     gSoundWork->unk3 = arg3;
     gSoundWork->unk1 = 18;
@@ -777,17 +762,19 @@ void sound_init(void *buffer, int bufferSize, int arg2, int arg3, int arg4)
     REG_DMA2SAD = (u32)gSoundWork->unk10[gSoundWork->unk6].sndBufB;
     REG_DMA1CNT = (DMA_FLAGS << 16) | 4;
     REG_DMA2CNT = (DMA_FLAGS << 16) | 4;
-    REG_TM1CNT = ((TIMER_ENABLE | TIMER_1CLK) << 16) | 0xFC00;
+    // Initialize the timer so that it overflows every 1024th clock cycle
+    // The GBA runs at 16.78 MHz, so this should produce samples at 16384 Hz
+    REG_TM1CNT = ((TIMER_ENABLE | TIMER_1CLK) << 16) | (u16)-1024;
     REG_IE |= INTR_FLAG_DMA1 | INTR_FLAG_DMA2;
     sub_08073B18();
 }
 
-void sub_08071800(void)
+void sound_update(void)
 {
-    u8 *src;
-    u32 length;
-    void *bufA;
-    void *bufB;
+    s16 *src;
+    u32 numSamples;  // number of samples (per output)
+    s8 *outLeft;
+    s8 *outRight;
     int sp4;
     u32 i;
     u32 r5;
@@ -800,26 +787,30 @@ void sub_08071800(void)
         return;
     r5 = gSoundWork->unk5;
     src = gSoundWork->unk6D0;
-    bufA = gSoundWork->unk10[r5].sndBufA;
-    bufB = gSoundWork->unk10[r5].sndBufB;
+    outLeft  = gSoundWork->unk10[r5].sndBufA;
+    outRight = gSoundWork->unk10[r5].sndBufB;
     sp4 = gUnknown_03001F00;
-    length = 0x120;
+    numSamples = 0x120;
     gSoundWork->unk1 |= 8;
-    ptr_arm_clear_audio_buffer(src, length);
-    if (gSoundWork->unkFC8.unk4F2 != -1 && gSoundWork->unkFC8.unk0 != NULL)
+    ptr_arm_clear_audio_buffer(src, numSamples);
+
+    // mix music?
+    if (gSoundWork->musicPlayer.currPatternIndex != -1 && gSoundWork->musicPlayer.musicFile != NULL)
     {
         u32 pos = 0;
-        while (pos < length)
-            pos += sub_080736A0(&gSoundWork->unkFC8, src + pos * 4, length - pos);
+        while (pos < numSamples)
+            pos += render_music(&gSoundWork->musicPlayer, src + pos * 2, numSamples - pos);
     }
-    for (i = 0; i < gSoundWork->unk0; i++)
+
+    // mix sound effects?
+    for (i = 0; i < gSoundWork->soundPlayersCount; i++)
     {
-        struct SoundWork_sub3 *r2 = &gSoundWork->unk14DC[i];
+        struct SoundPlayer *r2 = &gSoundWork->soundPlayers[i];
 
         if ((r2->unk0 & 3) && (r2->unk0 & 1))
-            sub_080714B8(r2, src, length);
+            render_sound_effect(r2, src, numSamples);
     }
-    ptr_arm_load_sound_16bit_to_8bit(src, bufA, bufB, length);
+    ptr_arm_load_sound_16bit_to_8bit(src, outLeft, outRight, numSamples);
     gSoundWork->unk8 = r5;
     r5++;
     if (r5 > 2)
@@ -847,25 +838,25 @@ void sub_0807194C(void)
     }
 }
 
-int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u32 arg5, int sampleRate)
+int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 pan, u8 arg4, u32 volume, int sampleRate)
 {
-    struct SoundWork_sub3 *r9 = NULL;
-    u32 r10 = gSoundWork->unk0;
+    struct SoundPlayer *r9 = NULL;
+    u32 r10 = gSoundWork->soundPlayersCount;
     int spC = FALSE;
     struct SoundEffect *se = &gSoundEffectTable[soundID];
     u8 r7;
-    struct SoundWork_sub3 *r3;
-    struct SoundWork_sub3 *r4;
+    struct SoundPlayer *r3;
+    struct SoundPlayer *r4;
     int i;
 
     if (arg2 > 15)
         arg2 = se->unk12;
     if (!(gSoundWork->unk1 & 0x10))
     {
-        arg3 = 64;
+        pan = 64;
         arg4 = 0;
     }
-    if (se->sampleSize == 1)
+    if (se->size == 1)
     {
         sub_08071E7C(arg2, 0);
         goto error;
@@ -874,7 +865,7 @@ int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, 
     arg2 <<= 4;
     r7 = arg2;
 
-    r3 = gSoundWork->unk14DC;
+    r3 = gSoundWork->soundPlayers;
 
     if (sampleRate == 0)
         sampleRate = se->sampleRate;
@@ -883,7 +874,7 @@ int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, 
     else if (sampleRate < 0)
         sampleRate = -sampleRate;
 
-    arg5 = arg5 * se->unk10 >> 7;
+    volume = volume * se->unk10 >> 7;
 
     if (arg1 & 24)
     {
@@ -896,7 +887,7 @@ int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, 
                 if (r3->soundEffect == se)
                 {
                     if (!(arg1 & 8))
-                        return r3->unk4;
+                        return r3->uid;
                     r9 = r4;
                     break;
                 }
@@ -918,14 +909,14 @@ int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, 
         r4->soundEffect = se;
         r4->unk0 = 1;
         r4->unk0 |= (arg1 & 4) | arg2;
-        r4->unk1 = arg3;
+        r4->pan = pan;
         r4->unk2 = arg4;
-        r4->unk3 = arg5;
-        r4->unk8 = 0;
-        r4->unkC = (sampleRate << 14) >> 14;
-        r4->unk4 = gSoundWork->unkC++ & 0x7FFFFFFF;
-        sub_080738D4(&gSoundWork->unkFC8, r4 - gSoundWork->unk14DC);
-        return r4->unk4;
+        r4->volume = volume;
+        r4->position = 0;
+        r4->sampleDelta = (sampleRate << 14) >> 14;
+        r4->uid = gSoundWork->unkC++ & 0x7FFFFFFF;
+        sub_080738D4(&gSoundWork->musicPlayer, r4 - gSoundWork->soundPlayers);
+        return r4->uid;
     }
     else
     {
@@ -952,14 +943,14 @@ int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, 
         r4->soundEffect = se;
         r4->unk0 = 1;
         r4->unk0 |= arg1 | arg2;
-        r4->unk1 = arg3;
+        r4->pan = pan;
         r4->unk2 = arg4;
-        r4->unk3 = arg5;
-        r4->unk8 = 0;
-        r4->unkC = (sampleRate << 14) >> 14;
-        r4->unk4 = gSoundWork->unkC++ & 0x7FFFFFFF;
-        sub_080738D4(&gSoundWork->unkFC8, r4 - gSoundWork->unk14DC);
-        return r4->unk4;
+        r4->volume = volume;
+        r4->position = 0;
+        r4->sampleDelta = (sampleRate << 14) >> 14;
+        r4->uid = gSoundWork->unkC++ & 0x7FFFFFFF;
+        sub_080738D4(&gSoundWork->musicPlayer, r4 - gSoundWork->soundPlayers);
+        return r4->uid;
     }
 
 error:
@@ -989,10 +980,10 @@ void sub_08071C24(void)
 {
     int i;
 
-    for (i = 0; i < gSoundWork->unk0; i++)
+    for (i = 0; i < gSoundWork->soundPlayersCount; i++)
     {
-        gSoundWork->unk14DC[i].unk0 = 0;
-        sub_08073914(&gSoundWork->unkFC8, i);
+        gSoundWork->soundPlayers[i].unk0 = 0;
+        sub_08073914(&gSoundWork->musicPlayer, i);
     }
 }
 
@@ -1001,12 +992,12 @@ void sub_08071C6C(int soundID)
     int i;
     struct SoundEffect *se = &gSoundEffectTable[soundID];
 
-    for (i = 0; i < gSoundWork->unk0; i++)
+    for (i = 0; i < gSoundWork->soundPlayersCount; i++)
     {
-        if (gSoundWork->unk14DC[i].soundEffect != se)
+        if (gSoundWork->soundPlayers[i].soundEffect != se)
         {
-            gSoundWork->unk14DC[i].unk0 = 0;
-            sub_08073914(&gSoundWork->unkFC8, i);
+            gSoundWork->soundPlayers[i].unk0 = 0;
+            sub_08073914(&gSoundWork->musicPlayer, i);
         }
     }
 }
@@ -1015,57 +1006,57 @@ void sub_08071CD4(void)
 {
     int i;
 
-    for (i = 0; i < gSoundWork->unk0; i++)
+    for (i = 0; i < gSoundWork->soundPlayersCount; i++)
     {
-        if (gSoundWork->unk14DC[i].unk0 & 4)
+        if (gSoundWork->soundPlayers[i].unk0 & 4)
         {
-            gSoundWork->unk14DC[i].unk0 = 0;
-            sub_08073914(&gSoundWork->unkFC8, i);
+            gSoundWork->soundPlayers[i].unk0 = 0;
+            sub_08073914(&gSoundWork->musicPlayer, i);
         }
     }
 }
 
-static inline struct SoundWork_sub3 *testinline2(int arg0)
+static inline struct SoundPlayer *get_music_player_by_id(int uid)
 {
     int i;
-    u8 r4 = gSoundWork->unk0;
-    struct SoundWork_sub3 *r3 = gSoundWork->unk14DC;
+    u8 r4 = gSoundWork->soundPlayersCount;
+    struct SoundPlayer *r3 = gSoundWork->soundPlayers;
     int index;
 
     for (i = 0; i < r4; i++, r3++)
     {
-        if ((r3->unk0 & 3) && r3->unk4 == arg0)
+        if ((r3->unk0 & 3) && r3->uid == uid)
             return r3;
     }
     return NULL;
 }
 
-int sub_08071D28(int arg0, int arg1, int arg2)
+int sub_08071D28(int uid, int pan, int arg2)
 {
-    struct SoundWork_sub3 *r3 = testinline2(arg0);
+    struct SoundPlayer *r3 = get_music_player_by_id(uid);
 
     if (r3 == NULL)
         return -1;
     if (!(gSoundWork->unk1 & 0x10))
     {
-        arg1 = 64;
+        pan = 64;
         arg2 = 0;
     }
-    r3->unk1 = arg1;
+    r3->pan = pan;
     r3->unk2 = arg2;
-    return arg0;
+    return uid;
 }
 
-void sub_08071D9C(int arg0)
+void sub_08071D9C(int uid)
 {
-    struct SoundWork_sub3 *r3 = testinline2(arg0);
+    struct SoundPlayer *r3 = get_music_player_by_id(uid);
     int index;
 
     if (r3 == NULL)
         return;
-    index = r3 - gSoundWork->unk14DC;
+    index = r3 - gSoundWork->soundPlayers;
     r3->unk0 = 0;
-    sub_08073914(&gSoundWork->unkFC8, index);
+    sub_08073914(&gSoundWork->musicPlayer, index);
 }
 
 void sub_08071E14(int soundID)
@@ -1073,15 +1064,15 @@ void sub_08071E14(int soundID)
     int r7 = 1;
     int i;
     struct SoundEffect *se = &gSoundEffectTable[soundID];
-    struct SoundWork_sub3 *r4 = gSoundWork->unk14DC;
-    u8 r6 = gSoundWork->unk0;
+    struct SoundPlayer *r4 = gSoundWork->soundPlayers;
+    u8 r6 = gSoundWork->soundPlayersCount;
 
     for (i = 0; i < r6; i++, r4++)
     {
         if ((r4->unk0 & r7) == r7 && r4->soundEffect == se)
         {
             r4->unk0 = 0;
-            sub_08073914(&gSoundWork->unkFC8, i);
+            sub_08073914(&gSoundWork->musicPlayer, i);
         }
     }
 }
@@ -1090,8 +1081,8 @@ void sub_08071E7C(u8 arg0, u8 arg1)
 {
     int r7 = 1;
     int i;
-    struct SoundWork_sub3 *r4 = gSoundWork->unk14DC;
-    u8 r6 = gSoundWork->unk0;
+    struct SoundPlayer *r4 = gSoundWork->soundPlayers;
+    u8 r6 = gSoundWork->soundPlayersCount;
 
     arg0 <<= 4;
     if (arg1 == 0)
@@ -1102,7 +1093,7 @@ void sub_08071E7C(u8 arg0, u8 arg1)
         if ((r7 & r4->unk0) == r7 && (r0 = (r4->unk0 & 0xF0)) == arg0)
         {
             r4->unk0 = 0;
-            sub_08073914(&gSoundWork->unkFC8, i);
+            sub_08073914(&gSoundWork->musicPlayer, i);
         }
     }
 }
@@ -1117,27 +1108,27 @@ void sound_finish(void)
     gSoundWork = NULL;
 }
 
-void sub_08071F10(void *arg0)
+static void sub_08071F10(struct MusicFile *musFile)
 {
-    sub_080734F8(&gSoundWork->unkFC8, arg0);
+    sub_080734F8(&gSoundWork->musicPlayer, musFile);
 }
 
-void sub_08071F2C(void *arg0)
+static void sub_08071F2C(struct MusicFile *musFile)
 {
-    sub_080734F8(&gSoundWork->unkFC8, arg0);
+    sub_080734F8(&gSoundWork->musicPlayer, musFile);
 }
 
-void sub_08071F48(void)
+static void sub_08071F48(void)
 {
-    sub_080735D0(&gSoundWork->unkFC8);
+    sub_080735D0(&gSoundWork->musicPlayer);
 }
 
-u32 get_song_volume(u32 bgmID)
+u32 get_bgm_volume(u32 bgmID)
 {
     return gMusicTable[bgmID].volume;
 }
 
-void *get_song_data(u32 bgmID)
+void *get_bgm_data(u32 bgmID)
 {
     return gMusicTable[bgmID].data;
 }
@@ -1147,86 +1138,86 @@ u8 *sub_08071F8C(u32 bgmID)
     return gMusicTable[bgmID].unk6;
 }
 
-void sub_08071FA0(void *arg0, int arg1, int arg2, void *arg3)
+void sub_08071FA0(struct MusicFile *musFile, int arg1, int arg2, u8 *arg3)
 {
-    sub_080734F8(&gSoundWork->unkFC8, arg0);
-    sub_0807387C(&gSoundWork->unkFC8, arg1, arg2, arg3);
+    sub_080734F8(&gSoundWork->musicPlayer, musFile);
+    sub_0807387C(&gSoundWork->musicPlayer, arg1, arg2, arg3);
 }
 
 int get_current_bgm(void)
 {
     int i;
 
-    if (sub_08072144() != 0)
+    if (sound_is_music_finished())
         return -1;
-    for (i = 0; i < gUnknown_08D7B10C; i++)
+    for (i = 0; i < gBGMCount; i++)
     {
-        if (gSoundWork->unkFC8.unk0 == gMusicTable[i].data)
+        if (gSoundWork->musicPlayer.musicFile == gMusicTable[i].data)
             return i;
     }
     return -2;
 }
 
-void *sub_08072038(void)
+void *get_current_bgm_data(void)
 {
-    return gSoundWork->unkFC8.unk0;
+    return gSoundWork->musicPlayer.musicFile;
 }
 
 void play_bgm(int bgmID, int volume, int arg2)
 {
-    sub_080734F8(&gSoundWork->unkFC8, gMusicTable[bgmID].data);
+    sub_080734F8(&gSoundWork->musicPlayer, gMusicTable[bgmID].data);
     volume = (gMusicTable[bgmID].volume * volume) >> 7;
-    sub_0807387C(&gSoundWork->unkFC8, volume, arg2, gMusicTable[bgmID].unk6);
+    sub_0807387C(&gSoundWork->musicPlayer, volume, arg2, gMusicTable[bgmID].unk6);
 }
 
-void sub_080720AC(void)
+void sound_stop_music(void)
 {
-    if (gSoundWork->unkFC8.unk4F2 >= 0)
-        gSoundWork->unkFC8.unk4F8 = gSoundWork->unkFC8.unk4F2;
-    gSoundWork->unkFC8.unk4F2 = -2;
+    if (gSoundWork->musicPlayer.currPatternIndex >= 0)
+        gSoundWork->musicPlayer.unk4F8 = gSoundWork->musicPlayer.currPatternIndex;
+    gSoundWork->musicPlayer.currPatternIndex = -2;
 }
 
-void sub_080720E4(void)
+void sound_pause_music(void)
 {
-    if (gSoundWork->unkFC8.unk4F2 >= 0)
+    if (gSoundWork->musicPlayer.currPatternIndex >= 0)
     {
-        gSoundWork->unkFC8.unk4F8 = gSoundWork->unkFC8.unk4F2;
-        gSoundWork->unkFC8.unk4F2 = -1;
+        gSoundWork->musicPlayer.unk4F8 = gSoundWork->musicPlayer.currPatternIndex;
+        gSoundWork->musicPlayer.currPatternIndex = -1;
     }
 }
 
-void sub_08072118(void)
+void sound_resume_music(void)
 {
-    if (gSoundWork->unkFC8.unk4F2 == -1)
-        gSoundWork->unkFC8.unk4F2 = gSoundWork->unkFC8.unk4F8;
+    if (gSoundWork->musicPlayer.currPatternIndex == -1)
+        gSoundWork->musicPlayer.currPatternIndex = gSoundWork->musicPlayer.unk4F8;
 }
 
-int sub_08072144(void)
+int sound_is_music_finished(void)
 {
-    return (gSoundWork->unkFC8.unk4F2 == -2);
+    return (gSoundWork->musicPlayer.currPatternIndex == -2);
 }
 
-int sub_0807216C(void)
+static int sub_0807216C(void)
 {
     int i;
-    u8 r1 = gSoundWork->unk0;
+    u8 count = gSoundWork->soundPlayersCount;
     int r4 = 0;
-    struct SoundWork_sub3 *r3 = gSoundWork->unk14DC;
+    struct SoundPlayer *sndPlay = gSoundWork->soundPlayers;
 
-    for (i = 0; i < r1; i++, r3++)
+    for (i = 0; i < count; i++, sndPlay++)
     {
-        if (r3->unk0 & 3)
+        if (sndPlay->unk0 & 3)
             r4++;
     }
     return r4;
 }
 
-int sub_080721A8(int arg0)
+int sub_080721A8(int uid)
 {
-    return (testinline2(arg0) == NULL);
+    return (get_music_player_by_id(uid) == NULL);
 }
 
-u8 sub_080721F8(void)
+static u8 sub_080721F8(void)
 {
     return (gSoundWork->unk1 & 0x10) >> 4;
 }
@@ -1244,7 +1235,7 @@ extern u32 sSoundMemMaxSize;
 extern u8 *sSoundMemHead;
 extern u32 sSoundMemSize;
 
-void init_sound_mem(u8 *arg0, int arg1)
+static void init_sound_mem(u8 *arg0, int arg1)
 {
     int i;
 
@@ -1255,7 +1246,7 @@ void init_sound_mem(u8 *arg0, int arg1)
         sSoundMemHead[i] = 0;
 }
 
-void *alloc_sound_mem(int size)
+static void *alloc_sound_mem(int size)
 {
     u8 *mem = sSoundMemHead + sSoundMemSize;
 
@@ -1265,29 +1256,29 @@ void *alloc_sound_mem(int size)
     return mem;
 }
 
-void reset_sound_mem(void)
+static void reset_sound_mem(void)
 {
     sSoundMemHead = NULL;
 }
 
-int sub_080722A8(struct SoundWork_sub2 *arg0, struct MusicChannel *arg1)
+static int sub_080722A8(struct MusicPlayer *mplayer, struct MusicChannel *arg1)
 {
     int r5 = arg1->unk1D;
-    struct MusicChannel **r6 = arg0->unk4C4;
+    struct MusicChannel **chanPtrs = mplayer->unk4C4;
     int index = -1;
     int i;
 
-    if (arg0->unk4FA <= arg0->unk4FB)
+    if (mplayer->unk4FA <= mplayer->unk4FB)
     {
-        index = arg1 - arg0->channels;
-        if ((u32)r6[index] == 1)
+        index = arg1 - mplayer->channels;
+        if ((u32)chanPtrs[index] == 1)
             return 0;
     }
     else
     {
-        for (i = 0; i < arg0->unk4FB; i++)
+        for (i = 0; i < mplayer->unk4FB; i++)
         {
-            struct MusicChannel *r0 = r6[i];
+            struct MusicChannel *r0 = chanPtrs[i];
 
             if (r0 == NULL)
             {
@@ -1303,9 +1294,9 @@ int sub_080722A8(struct SoundWork_sub2 *arg0, struct MusicChannel *arg1)
     }
     if (index >= 0)
     {
-        if (r6[index] != NULL)
-            r6[index]->unk1D &= ~1;
-        r6[index] = arg1;
+        if (chanPtrs[index] != NULL)
+            chanPtrs[index]->unk1D &= ~1;
+        chanPtrs[index] = arg1;
         arg1->unk1D |= 1;
         return 1;
     }
@@ -1322,11 +1313,11 @@ static inline u32 stupid(u8 *r5)
     return r0;
 }
 
-int play_notes(struct SoundWork_sub2 *arg0)
+static int play_notes(struct MusicPlayer *mplayer)
 {
-    struct MusicChannel *channels = arg0->channels;
+    struct MusicChannel *channels = mplayer->channels;
     int sp8 = 0;
-    u8 *r5 = arg0->noteDataPtr;
+    u8 *r5 = mplayer->noteDataPtr;
     int r2;
     u8 r12_;
     /*u16*/s16 note;
@@ -1341,7 +1332,6 @@ int play_notes(struct SoundWork_sub2 *arg0)
         if (chanID > 15)
             continue;
         sp8 |= 1 << chanID;
-        //chan = &arg0->unk4[chanID];
         chan = &channels[chanID];
         if (r12_ & 0x80)
         {
@@ -1354,51 +1344,51 @@ int play_notes(struct SoundWork_sub2 *arg0)
             //spC = &chan->prevHdrByte;
         }
         //_080723DA
-        r2 = gUnknown_08B39F1C[chan->unk18];
-        if (r2 < 8 && chan->unk1A != 0)
-            chan->unk34[r2] = chan->unk1A;
+        r2 = gUnknown_08B39F1C[chan->currEffect];
+        if (r2 < 8 && chan->currEffectParam != 0)
+            chan->unk34[r2] = chan->currEffectParam;
         //_080723F6
-        chan->unk1A = 0;
-        chan->unk18 = 0;
-        chan->unk14 = 0;
-        chan->instrumentIndex = 0;
+        chan->currEffectParam = 0;
+        chan->currEffect = 0;
+        chan->currVolume = 0;
+        chan->currInstrIndex = 0;
         chan->currNote = 0;
         chan->unk16 = -128;
         if (hdrByte & 2)
         {
-            chan->instrumentIndex = *r5;
-            chan->unk13 = stupid(r5);
+            chan->currInstrIndex = *r5;
+            chan->prevInstrIndex = stupid(r5);
             r5++;
             //r5++;
         }
         else
         {
             if (hdrByte & 0x20)
-                chan->instrumentIndex = chan->unk13;
+                chan->currInstrIndex = chan->prevInstrIndex;
             else
                 goto _08072498;
         }
         //_08072436
-        //r1 = arg0->unk0->instrumentIDs[chan->instrumentIndex - 1];
-        chan->instrument = &gInstruments[arg0->unk0->instrumentIDs[chan->instrumentIndex - 1]];
+        //r1 = mplayer->unk0->instrumentIDs[chan->currInstrIndex - 1];
+        chan->instrument = &gInstruments[mplayer->musicFile->instrumentIDs[chan->currInstrIndex - 1]];
         if (chan->instrument->unk17 & 0x80)
             chan->unk2D = chan->instrument->unk17 & 0x7F;
         //_08072472
-        if (chan->unk40 != NULL)
+        if (chan->instrSound != NULL)
         {
-            struct Instrument_sub *r2 = chan->unk40;
+            //struct InstrumentSound *r2 = chan->instrSound;
 
-            chan->unk2C = r2->unkC;
-            chan->unk24 = r2->unkC;
-            if (!(chan->unk40->unk10 & 0x80))
-                chan->unk2D = chan->unk40->unk10;
+            chan->unk24 = chan->unk2C = chan->instrSound->unkC;
+            //chan->unk24 = r2->unkC;
+            if (!(chan->instrSound->unk10 & 0x80))
+                chan->unk2D = chan->instrSound->unk10;
         }
         //_08072498
 
     _08072498:
         if (hdrByte & 4)
         {
-            chan->unk14 = *r5;
+            chan->currVolume = *r5;
             chan->unk15 = stupid(r5);  // 0xFF
             r5++;
 
@@ -1409,7 +1399,7 @@ int play_notes(struct SoundWork_sub2 *arg0)
         //_080724C4
         else if (hdrByte & 0x40)
         {
-            chan->unk14 = chan->unk15;
+            chan->currVolume = chan->unk15;
             chan->unk16 = chan->unk17;
         }
 
@@ -1418,24 +1408,24 @@ int play_notes(struct SoundWork_sub2 *arg0)
         {
             //int r2;
 
-            chan->unk18 = *r5;
-            chan->unk19 = stupid(r5);
+            chan->currEffect = *r5;
+            chan->prevEffect = stupid(r5);
             r5++;
-            chan->unk1A = *r5;
-            chan->unk1B = stupid(r5);
+            chan->currEffectParam = *r5;
+            chan->prevEffectParam = stupid(r5);
             r5++;
-            r2 = gUnknown_08B39F1C[chan->unk18];
-            if (r2 <= 7 && chan->unk1A == 0)
+            r2 = gUnknown_08B39F1C[chan->currEffect];
+            if (r2 <= 7 && chan->currEffectParam == 0)
             {
-                chan->unk1A = chan->unk34[r2];
+                chan->currEffectParam = chan->unk34[r2];
             }
             //to _08072528
         }
         //_08072516
         else if (hdrByte & 0x80)
         {
-            chan->unk18 = chan->unk19;
-            chan->unk1A = chan->unk1B;
+            chan->currEffect = chan->prevEffect;
+            chan->currEffectParam = chan->prevEffectParam;
         }
 
         //_08072528
@@ -1458,15 +1448,16 @@ int play_notes(struct SoundWork_sub2 *arg0)
         //_08072552
         if (chan->currNote <= 120)
         {
+            s16 note;
             s16 r2;
 
             note = chan->currNote;
-            if (chan->unk18 == 3 || chan->unk18 == 5)
+            if (chan->currEffect == 3 || chan->currEffect == 5)
             {
                 int asdf;
                 asdf = (s16)note - 12;
-                r2 = chan->unk40->unk11 + asdf;
-                chan->unk2A = 0x1E00 - (r2<<6) - (chan->unk1C >> 1) + 64;
+                r2 = chan->instrSound->unk11 + asdf;
+                chan->pitchRelated = 0x1E00 - (r2<<6) - (chan->unk1C >> 1) + 64;
                 //to _080726E8
             }
             //_08072590
@@ -1479,12 +1470,12 @@ int play_notes(struct SoundWork_sub2 *arg0)
                     struct { u16 unk0; u8 unk2; u16 unk4; } *asdf;
                     struct Instrument *r3_;
                     int r1;
-                    struct Instrument_sub *r6;
+                    struct InstrumentSound *r6;
 
 
                     r3_ = chan->instrument;
-                    r1 = r3_->unk1B[note];
-                    r6 = &r3_->unk138[r1];
+                    r1 = r3_->noteToSoundMap[note];
+                    r6 = &r3_->sounds[r1];
                     if (r3_->unk17 & 0x80)
                         chan->unk2D = r3_->unk17 & 0x7F;
                     if (r6->unk28 <= 2)
@@ -1494,7 +1485,7 @@ int play_notes(struct SoundWork_sub2 *arg0)
                     zero = 0;
                     chan->unk20 = zero;
                     chan->unk1E = 1;
-                    chan->unk40 = r6;
+                    chan->instrSound = r6;
                     if (!(r6->unk10 & 0x80))
                         chan->unk2D = r6->unk10;
                     //_08072604
@@ -1502,7 +1493,7 @@ int play_notes(struct SoundWork_sub2 *arg0)
                     chan->unk1C = r6->unkE;
                     chan->unk2F = (chan->unk2E * r3_->unk16) >> 6;
                     chan->unk2F = (chan->unk2F * r6->unkD) >> 6;
-                    asdf = (void *)&chan->unk0;
+                    asdf = &chan->unk0;
                     asdf->unk0 = 0x4000;
                     asdf->unk2 = asdf->unk4 = zero;
                     asdf++;
@@ -1526,7 +1517,7 @@ int play_notes(struct SoundWork_sub2 *arg0)
                     chan->unkA = 0;
                     #endif
                     */
-                    note += chan->unk40->unk11;
+                    note += chan->instrSound->unk11;
                 }
                 //_08072660
                 r2 = note - 12;
@@ -1543,7 +1534,7 @@ int play_notes(struct SoundWork_sub2 *arg0)
                 else
                 {
                     chan->unk1D = chan->unk2C << 1;
-                    sub_080722A8(arg0, chan);
+                    sub_080722A8(mplayer, chan);
                 }
             }
             //to _080726E8
@@ -1558,23 +1549,23 @@ int play_notes(struct SoundWork_sub2 *arg0)
         else
             chan->unk2C = 0;
         //_080726E8
-        if (chan->unk18 == 4 || chan->unk18 == 6)
+        if (chan->currEffect == 4 || chan->currEffect == 6)
             chan->unk46 = -1;
     _080726FA:
         if (!(chan->unk16 & 0x80))
             chan->unk2D = chan->unk16;
-        sub_080731C4(arg0, chan);
+        sub_080731C4(mplayer, chan);
         sub_08073464(chan);
         chan->prevHdrByte = hdrByte;
     }
     //_08072728
-    arg0->unk4FC = sp8;
-    arg0->noteDataPtr = r5;
+    mplayer->unk4FC = sp8;
+    mplayer->noteDataPtr = r5;
     // missing return?
 }
 #else
 __attribute__((naked))
-int play_notes(struct SoundWork_sub2 *arg0)
+static int play_notes(struct MusicPlayer *mplayer)
 {
     asm(
     "push {r4-r7,lr}\n\
@@ -1690,7 +1681,7 @@ _08072428:\n\
 	strb r0, [r4, #18]\n\
 _08072436:\n\
 	ldr r0, [sp]\n\
-	ldr r1, [r0]  @ arg0->data\n\
+	ldr r1, [r0]  @ mplayer->data\n\
 	ldrb r0, [r4, #18]\n\
 	sub r0, r0, #1\n\
 	lsl r0, r0, #1\n\
@@ -2118,7 +2109,7 @@ extern u32 gUnknown_03000820;
 extern s32 gUnknown_03000824;
 extern struct MusicChannel *gUnknown_03001F28;
 
-void sub_08072750(struct MusicChannel_sub *arg0, struct Struct08072750 *arg1, int arg2)
+static void sub_08072750(struct MusicChannel_sub *arg0, struct Struct08072750 *arg1, int arg2)
 {
     u8 r6;
 
@@ -2154,9 +2145,9 @@ void sub_08072750(struct MusicChannel_sub *arg0, struct Struct08072750 *arg1, in
     }
 }
 
-void sub_0807282C(struct MusicChannel *chan)
+static void sub_0807282C(struct MusicChannel *chan)
 {
-    u8 r2 = chan->unk14;
+    u8 r2 = chan->currVolume;
 
     register int r0 asm("r0") = chan->unk32 >> 1;
     if (r0 != 0)
@@ -2173,16 +2164,16 @@ void sub_0807282C(struct MusicChannel *chan)
 
     switch (r2 & 0xF0)
     {
-    case 112:
+    case 0x70:
         chan->unk2C += r2 & 0xF;
         break;
-    case 96:
+    case 0x60:
         chan->unk2C -= r2 & 0xF;
         break;
-    case 208:
+    case 0xD0:
         chan->unk2D -= r2 & 0xF;
         break;
-    case 224:
+    case 0xE0:
         chan->unk2D += r2 & 0xF;
         break;
     case 0xF0:  // needed to match
@@ -2194,108 +2185,95 @@ void sub_0807282C(struct MusicChannel *chan)
         sub_08072750(&chan->unk8, &chan->instrument->unkE4, chan->unk32 & 1);
 }
 
-void sub_080728F0(struct MusicChannel *chan, void *arg1, int arg2)
+// TODO: compile with auto-inlining on
+static inline void effect_default_func_inline(struct MusicChannel *chan, s16 *arg1, int arg2)
 {
-    u32 r4 = chan->unk1A;
-    int r7;
-    int r6;
-    int r3;
-    int sp0[3];
-
-    if (r4 == 0)
-    {
-        r7 = chan->unk2D;
-        if (!(gSoundWork->unk1 & 0x10))
-            chan->unk2D = 32;
-        gUnknown_03001F28 = chan;
-        gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-        chan->unk2D = r7;
-    }
-    else
-    {
-        r3 = gUnknown_03000824;
-        while (r3 >= 3)  // hey, ever heard of the modulo (%) operator?
-            r3 -= 3;
-        sp0[0] = chan->unk28;
-        sp0[1] = sp0[0] - gUnknown_08B39FC4[(r4 >> 4) & 0xF];
-        sp0[2] = sp0[0] - gUnknown_08B39FC4[r4 & 0xF];
-        chan->unk26 = sp0[r3];
-        if (chan->unk26 < 40)
-            chan->unk26 = 40;
-
-        r6 = chan->unk2D;
-        if (!(gSoundWork->unk1 & 0x10))
-            chan->unk2D = 32;
-        gUnknown_03001F28 = chan;
-        gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-        chan->unk2D = r6;
-    }
-}
-
-void sub_08072A04(struct MusicChannel *chan, void *arg1, int arg2)
-{
-    int r1 = chan->unk1A;
     int r7;
 
-    if (r1 == 0)
-        r1 = chan->unk34[0];
-
-    if (gUnknown_03000824 != 0)
-    {
-        chan->unk26 -= r1 << 2;
-        if (chan->unk26 < 40)
-            chan->unk26 = 40;
-        chan->unk28 = chan->unk26;
-    }
     r7 = chan->unk2D;
     if (!(gSoundWork->unk1 & 0x10))
         chan->unk2D = 32;
     gUnknown_03001F28 = chan;
-    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
+    ptr_arm_mix_music_note(chan, arg1, arg2, (gUnknown_03000820 == 0));
     chan->unk2D = r7;
 }
 
-void sub_08072A88(struct MusicChannel *chan, void *arg1, int arg2)
+static void effect_0_func(struct MusicChannel *chan, s16 *dest, int numSamples)
 {
-    int r1 = chan->unk1A;
-    int r7;
+    u32 param = chan->currEffectParam;
+    int index;
+    int arr[3];
 
-    if (r1 == 0)
-        r1 = chan->unk35;
+    if (param == 0)
+    {
+        effect_default_func_inline(chan, dest, numSamples);
+    }
+    else
+    {
+        index = gUnknown_03000824;
+        while (index >= 3)  // hey, ever heard of the modulo (%) operator?
+            index -= 3;
+        arr[0] = chan->unk28;
+        arr[1] = arr[0] - sTimes64LUT[(param >> 4) & 0xF];
+        arr[2] = arr[0] - sTimes64LUT[param & 0xF];
+        chan->unk26 = arr[index];
+        if (chan->unk26 < 40)
+            chan->unk26 = 40;
+        effect_default_func_inline(chan, dest, numSamples);
+    }
+}
+
+static void effect_1_func(struct MusicChannel *chan, s16 *dest, int numSamples)
+{
+    int param = chan->currEffectParam;
+
+    if (param == 0)
+        param = chan->unk34[0];
 
     if (gUnknown_03000824 != 0)
     {
-        chan->unk26 += r1 << 2;
+        chan->unk26 -= param << 2;
+        if (chan->unk26 < 40)
+            chan->unk26 = 40;
+        chan->unk28 = chan->unk26;
+    }
+    effect_default_func_inline(chan, dest, numSamples);
+}
+
+static void effect_2_func(struct MusicChannel *chan, s16 *dest, int arg2)
+{
+    int param = chan->currEffectParam;
+
+    if (param == 0)
+        param = chan->unk35;
+
+    if (gUnknown_03000824 != 0)
+    {
+        chan->unk26 += param << 2;
         if (chan->unk26 > 0x1E00)
             chan->unk26 = 0x1E00;
         chan->unk28 = chan->unk26;
     }
-    r7 = chan->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        chan->unk2D = 32;
-    gUnknown_03001F28 = chan;
-    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-    chan->unk2D = r7;
+    effect_default_func_inline(chan, dest, arg2);
 }
 
-void sub_08072B10(struct MusicChannel *chan, void *arg1, int arg2)
+static void effect_3_func(struct MusicChannel *chan, s16 *dest, int arg2)
 {
-    int r4 = chan->unk1A;
+    int param = chan->currEffectParam;
     int r1 = chan->unk26;
-    int r3 = chan->unk2A;
-    int r7;
+    int r3 = chan->pitchRelated;
 
-    if (r4 == 0)
-        r4 = chan->unk36;
+    if (param == 0)
+        param = chan->unk36;
 
-    r4 <<= 2;
+    param <<= 2;
     if (gUnknown_03000824 != 0)
     {
         if (r3 != 0)
         {
             if (r1 > r3)
             {
-                r1 -= r4;
+                r1 -= param;
                 if (r1 <= r3)
                 {
                     r1 = r3;
@@ -2304,7 +2282,7 @@ void sub_08072B10(struct MusicChannel *chan, void *arg1, int arg2)
             }
             else
             {
-                r1 += r4;
+                r1 += param;
                 if (r1 >= r3)
                 {
                     r1 = r3;
@@ -2314,54 +2292,42 @@ void sub_08072B10(struct MusicChannel *chan, void *arg1, int arg2)
         }
         chan->unk26 = r1;
         chan->unk28 = r1;
-        chan->unk2A = r3;
+        chan->pitchRelated = r3;
     }
-    r7 = chan->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        chan->unk2D = 32;
-    gUnknown_03001F28 = chan;
-    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-    chan->unk2D = r7;
+    effect_default_func_inline(chan, dest, arg2);
 }
 
-void sub_08072BA8(struct MusicChannel *chan, void *arg1, int arg2)
+static void effect_4_func(struct MusicChannel *chan, s16 *dest, int arg2)
 {
-    int r3 = chan->unk1A;
+    int param = chan->currEffectParam;
     int r2 = chan->unk28;
     s32 *r5 = gUnknown_08B39C1C[chan->unk44];
     int r4 = chan->unk48;
-    int r7;
     int r1;
 
-    if (r3 == 0)
-        r3 = chan->unk37;
-    r1 = (r3 & 0xF) << 1;
-    r3 = (r3 >> 4) & 0xF;
+    if (param == 0)
+        param = chan->unk37;
+    r1 = (param & 0xF) << 1;
+    param = (param >> 4) & 0xF;
     chan->unk26 = r2 + ((r5[r4] * r1) >> 16);
     if (chan->unk26 < 40)
         chan->unk26 = 40;
     else if (chan->unk26 > 0x1E00)
         chan->unk26 = 0x1E00;
-    r4 += r3;
+    r4 += param;
     r4 &= 0x3F;
     chan->unk48 = r4;
-    r7 = chan->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        chan->unk2D = 32;
-    gUnknown_03001F28 = chan;
-    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-    chan->unk2D = r7;
+    effect_default_func_inline(chan, dest, arg2);
 }
 
-void sub_08072C74(struct MusicChannel *chan, void *arg1, int arg2)
+static void effect_5_func(struct MusicChannel *chan, s16 *dest, int arg2)
 {
     int r4 = chan->unk36;
-    u32 r2 = chan->unk1A;
-    int r3 = chan->unk2A;
+    u32 param = chan->currEffectParam;
+    int r3 = chan->pitchRelated;
     int r1 = chan->unk26;
-    int r7;
 
-    r2 = ((r2 & 0xF0) != 0) ? (r2 >> 4) : -(r2 & 0xF);
+    param = ((param & 0xF0) != 0) ? (param >> 4) : -(param & 0xF);
     r4 <<= 2;
     if (gUnknown_03000824 != 0)
     {
@@ -2386,10 +2352,10 @@ void sub_08072C74(struct MusicChannel *chan, void *arg1, int arg2)
                 }
             }
         }
-        chan->unk2A = r3;
+        chan->pitchRelated = r3;
         chan->unk26 = r1;
         chan->unk28 = r1;
-        chan->unk2C += r2;
+        chan->unk2C += param;
         if (chan->unk2C < 0)
             chan->unk2C = 0;
         else if (chan->unk2C > 64)
@@ -2397,25 +2363,19 @@ void sub_08072C74(struct MusicChannel *chan, void *arg1, int arg2)
         chan->unk24 = chan->unk2C;
     }
 
-    r7 = chan->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        chan->unk2D = 32;
-    gUnknown_03001F28 = chan;
-    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-    chan->unk2D = r7;
+    effect_default_func_inline(chan, dest, arg2);
 }
 
-void sub_08072D54(struct MusicChannel *chan, void *arg1, int arg2)
+static void effect_6_func(struct MusicChannel *chan, s16 *dest, int arg2)
 {
     int r4 = chan->unk37;
     int r6 = chan->unk28;
-    u32 r5 = chan->unk1A;
+    u32 param = chan->currEffectParam;
     s32 *r2 = gUnknown_08B39C1C[chan->unk44];
     int r3 = chan->unk48;
     int r1;
-    int r7;
 
-    r5 = ((r5 & 0xF0) != 0) ? (r5 >> 4) : -(r5 & 0xF);
+    param = ((param & 0xF0) != 0) ? (param >> 4) : -(param & 0xF);
     r1 = (r4 & 0xF) << 1;
     r4 = (r4 >> 4) & 0xF;
     chan->unk26 = r6 + ((r2[r3] * r1) >> 16);
@@ -2429,7 +2389,7 @@ void sub_08072D54(struct MusicChannel *chan, void *arg1, int arg2)
 
     if (gUnknown_03000824 != 0)
     {
-        chan->unk2C += r5;
+        chan->unk2C += param;
         if (chan->unk2C < 0)
             chan->unk2C = 0;
         else if (chan->unk2C > 64)
@@ -2437,49 +2397,37 @@ void sub_08072D54(struct MusicChannel *chan, void *arg1, int arg2)
         chan->unk24 = chan->unk2C;
     }
 
-    r7 = chan->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        chan->unk2D = 32;
-    gUnknown_03001F28 = chan;
-    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-    chan->unk2D = r7;
+    effect_default_func_inline(chan, dest, arg2);
 }
 
-void sub_08072E64(struct MusicChannel *chan, void *arg1, int arg2)
+static void effect_7_func(struct MusicChannel *chan, s16 *dest, int arg2)
 {
-    int r3 = chan->unk1A;
+    int param = chan->currEffectParam;
     int r2 = chan->unk24;
     s32 *r5 = gUnknown_08B39C1C[chan->unk45];
     int r4 = chan->unk4A;
     int r1;
-    int r7;
 
-    if (r3 == 0)
-        r3 = chan->unk39;
-    r1 = (r3 & 0xF) << 2;
-    r3 = (r3 >> 4) & 0xF;
+    if (param == 0)
+        param = chan->unk39;
+    r1 = (param & 0xF) << 2;
+    param = (param >> 4) & 0xF;
     chan->unk2C = r2 + ((r5[r4] * r1) >> 16);
     if (chan->unk2C < 0)
         chan->unk2C = 0;
     else if (chan->unk2C > 64)
         chan->unk2C = 64;
-    r4 += r3;
+    r4 += param;
     r4 &= 0x3F;
     chan->unk4A = r4;
 
-    r7 = chan->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        chan->unk2D = 32;
-    gUnknown_03001F28 = chan;
-    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-    chan->unk2D = r7;
+    effect_default_func_inline(chan, dest, arg2);
 }
 
-void sub_08072F2C(struct MusicChannel *chan, void *arg1, int arg2)
+static void effect_10_func(struct MusicChannel *chan, s16 *dest, int arg2)
 {
-    u32 r1 = chan->unk1A;
-    int r3 = ((r1 & 0xF0) != 0) ? (r1 >> 4) : -(r1 & 0xF);
-    int r7;
+    u32 param = chan->currEffectParam;
+    int r3 = ((param & 0xF0) != 0) ? (param >> 4) : -(param & 0xF);
 
     if (gUnknown_03000824 != 0)
     {
@@ -2491,37 +2439,27 @@ void sub_08072F2C(struct MusicChannel *chan, void *arg1, int arg2)
         chan->unk24 = chan->unk2C;
     }
 
-    r7 = chan->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        chan->unk2D = 32;
-    gUnknown_03001F28 = chan;
-    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-    chan->unk2D = r7;
+    effect_default_func_inline(chan, dest, arg2);
 }
 
-void sub_08072FC8(struct SoundWork_sub2 *arg0, void *arg1, int arg2)
+static void sub_08072FC8(struct MusicPlayer *mplayer, s16 *dest, int numSamples)
 {
-    int r9 = arg0->unk4FA;
-    u8 sp8 = arg0->unk4FC;
+    int r9 = mplayer->unk4FA;
+    u8 sp8 = mplayer->unk4FC;
     u32 i;
     struct MusicChannel *chan;
-    int r7;
+    int eff;
 
     if (gUnknown_03000820 != 0)
     {
         for (i = 0; i < r9; i++)
         {
-            chan = &arg0->channels[i];
+            chan = &mplayer->channels[i];
             if (chan->instrument != NULL && chan->unk26 != 0)
             {
-                if (!((sp8 >> i) & 1) || (r7 = chan->unk18) != 38 || (u32)gUnknown_03000824 >= chan->unk1A)
+                if (!((sp8 >> i) & 1) || (eff = chan->currEffect) != 38 || (u32)gUnknown_03000824 >= chan->currEffectParam)
                 {
-                    r7 = chan->unk2D;
-                    if (!(gSoundWork->unk1 & 0x10))
-                        chan->unk2D = 32;
-                    gUnknown_03001F28 = chan;
-                    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-                    chan->unk2D = r7;
+                    effect_default_func_inline(chan, dest, numSamples);
                 }
             }
         }
@@ -2530,7 +2468,7 @@ void sub_08072FC8(struct SoundWork_sub2 *arg0, void *arg1, int arg2)
     {
         for (i = 0; i < r9; i++)
         {
-            chan = &arg0->channels[i];
+            chan = &mplayer->channels[i];
             if (chan->instrument != NULL && chan->unk26 != 0)
             {
                 if (!((sp8 >> i) & 1))
@@ -2543,529 +2481,376 @@ void sub_08072FC8(struct SoundWork_sub2 *arg0, void *arg1, int arg2)
                         sub_08072750(&chan->unk8, &chan->instrument->unkE4, chan->unk32 & 1);
                     chan->unk28 = chan->unk26;
                     chan->unk24 = chan->unk2C;
-                    r7 = chan->unk2D;
-                    if (!(gSoundWork->unk1 & 0x10))
-                        chan->unk2D = 32;
-                    gUnknown_03001F28 = chan;
-                    gUnknown_03001EFC(chan, arg1, arg2, (gUnknown_03000820 == 0));
-                    chan->unk2D = r7;
+                    effect_default_func_inline(chan, dest, numSamples);
                 }
                 else
                 {
-                    r7 = chan->unk18;
+                    eff = chan->currEffect;
                     chan->unk26 = chan->unk28;
                     chan->unk2C = chan->unk24;
                     sub_0807282C(chan);
                     chan->unk28 = chan->unk26;
                     chan->unk24 = chan->unk2C;
-                    gUnknown_08B3A004[r7](chan, arg1, arg2);
+                    sEffectFuncs[eff](chan, dest, numSamples);
                 }
             }
         }
     }
 }
 
-void sub_080731C4(struct SoundWork_sub2 *arg0, struct MusicChannel *arg1)
+static void sub_080731C4(struct MusicPlayer *mplayer, struct MusicChannel *chan)
 {
-    int r0 = arg1->unk18;
-    int r2 = arg1->unk1A;
+    int effect = chan->currEffect;
+    int param = chan->currEffectParam;
 
-    switch (r0)
+    switch (effect)
     {
     case 8:
     case 33:
-        arg1->unk2D = r2;
+        chan->unk2D = param;
         break;
     case 9:
-        arg1->unk20 = r2 << 22;
+        chan->unk20 = param << 22;
         break;
     case 12:
-        arg1->unk24 = r2;
-        if (arg1->unk24 > 64)
-            arg1->unk24 = 64;
+        chan->unk24 = param;
+        if (chan->unk24 > 64)
+            chan->unk24 = 64;
         break;
     case 26:
-        arg1->unk28 -= r2 << 2;
-        if (arg1->unk28 < 40)
-            arg1->unk28 = 40;
+        chan->unk28 -= param << 2;
+        if (chan->unk28 < 40)
+            chan->unk28 = 40;
         break;
     case 27:
-        arg1->unk28 += r2 << 2;
-        if (arg1->unk28 > 0x1E00)
-            arg1->unk28 = 0x1E00;
+        chan->unk28 += param << 2;
+        if (chan->unk28 > 0x1E00)
+            chan->unk28 = 0x1E00;
         break;
     case 29:
-        if (r2 <= 3)
-            arg1->unk48 = 0;
-        r2 &= 3;
-        if (r2 == 3)
-            r2 = 0;
-        arg1->unk44 = r2;
+        if (param <= 3)
+            chan->unk48 = 0;
+        param &= 3;
+        if (param == 3)
+            param = 0;
+        chan->unk44 = param;
         break;
     case 32:
-        if (r2 <= 3)
-            arg1->unk4A = 0;
-        r2 &= 3;
-        if (r2 == 3)
-            r2 = 0;
-        arg1->unk45 = r2;
+        if (param <= 3)
+            chan->unk4A = 0;
+        param &= 3;
+        if (param == 3)
+            param = 0;
+        chan->unk45 = param;
         break;
     case 35:
-        arg1->unk24 += r2;
-        if (arg1->unk24 > 64)
-            arg1->unk24 = 64;
+        chan->unk24 += param;
+        if (chan->unk24 > 64)
+            chan->unk24 = 64;
         break;
     case 36:
-        arg1->unk24 -= r2;
-        if (arg1->unk24 < 0)
-            arg1->unk24 = 0;
+        chan->unk24 -= param;
+        if (chan->unk24 < 0)
+            chan->unk24 = 0;
         break;
     case 23:
-        arg1->unk28 -= r2;
-        if (arg1->unk28 < 40)
-            arg1->unk28 = 40;
+        chan->unk28 -= param;
+        if (chan->unk28 < 40)
+            chan->unk28 = 40;
         break;
     case 24:
-        arg1->unk28 += r2;
-        if (arg1->unk28 > 0x1E00)
-            arg1->unk28 = 0x1E00;
+        chan->unk28 += param;
+        if (chan->unk28 > 0x1E00)
+            chan->unk28 = 0x1E00;
         break;
     case 15:
-        if (r2 != 0)
+        if (param != 0)
         {
-            if (r2 <= 32)
+            if (param <= 32)
             {
-                arg0->tickLength = r2;
-                arg0->unk508 = (arg0->tickLength << 14) / arg0->unk4EA;
-                arg0->unk50C = arg0->unk508 / arg0->tickLength;
+                mplayer->tickLength = param;
+                mplayer->unk508 = (mplayer->tickLength << 14) / mplayer->unk4EA;
+                mplayer->unk50C = mplayer->unk508 / mplayer->tickLength;
             }
             else
             {
-                arg0->unk4EA = r2 * 50 / 125;
-                arg0->unk508 = (arg0->tickLength << 14) / arg0->unk4EA;
-                arg0->unk50C = arg0->unk508 / arg0->tickLength;
+                mplayer->unk4EA = param * 50 / 125;
+                mplayer->unk508 = (mplayer->tickLength << 14) / mplayer->unk4EA;
+                mplayer->unk50C = mplayer->unk508 / mplayer->tickLength;
             }
         }
-        if (arg0->unk508 == 0x3B1 && arg0->unk50C == 0x13B)
-            arg0->unk508 = 0x3B0;
+        if (mplayer->unk508 == 0x3B1 && mplayer->unk50C == 0x13B)
+            mplayer->unk508 = 0x3B0;
         break;
     case 11:
-        if (arg0->unk4EE & 1)
-            arg0->unk4F2 = r2;
+        if (mplayer->loopFlag & 1)
+            mplayer->currPatternIndex = param;
         else
-            arg0->unk4F2 = -2;
-        arg0->currPatternTick = 0;
+            mplayer->currPatternIndex = -2;
+        mplayer->currPatternTick = 0;
         break;
     case 13:
-        arg0->unk4F2 = arg0->unk4F0 + 1;
-        if (arg0->unk4F2 >= arg0->unk0->unk34)
+        mplayer->currPatternIndex = mplayer->unk4F0 + 1;
+        if (mplayer->currPatternIndex >= mplayer->musicFile->songLength)
         {
-            if (arg0->unk4EE & 1)
-                arg0->unk4F2 = arg0->unk0->unk36;
+            if (mplayer->loopFlag & 1)
+                mplayer->currPatternIndex = mplayer->musicFile->loopStart;
             else
-                arg0->unk4F2 = -2;
+                mplayer->currPatternIndex = -2;
         }
-        arg0->currPatternTick = ((r2 >> 4) * 10) + (r2 & 0xF);
+        mplayer->currPatternTick = ((param >> 4) * 10) + (param & 0xF);
         break;
     }
 }
 
-void sub_08073464(struct MusicChannel *arg0)
+static void sub_08073464(struct MusicChannel *chan)
 {
-    u32 r1 = arg0->unk14;
-    u32 r0 = r1 & 0xF0;
-    u32 r3 = r1 & 0x0F;
+    u32 r1 = chan->currVolume;
+    u32 hi = r1 & 0xF0;
+    u32 lo = r1 & 0x0F;
 
-    switch (r0)
+    switch (hi)
     {
     default:
     case 16:
-        if (r0 - 16 < 64)
-            arg0->unk24 = r1 - 16;
+        if (hi - 16 < 64)
+            chan->unk24 = r1 - 16;
         break;
     case 128:
-        arg0->unk24 -= r3;
+        chan->unk24 -= lo;
         break;
     case 144:
-        arg0->unk24 += r3;
+        chan->unk24 += lo;
         break;
     case 160:
-        arg0->unk37 = (arg0->unk37 & 0xF) | (r3 << 4);
+        chan->unk37 = (chan->unk37 & 0xF) | (lo << 4);
         break;
     case 176:
-        if (r3 < 4)
-            arg0->unk48 = 0;
-        r3 &= 3;
-        if (r3 == 3)
-            r3 = 0;
-        arg0->unk44 = r3;
+        if (lo < 4)
+            chan->unk48 = 0;
+        lo &= 3;
+        if (lo == 3)
+            lo = 0;
+        chan->unk44 = lo;
         break;
     case 192:
-        arg0->unk2D = r3;
+        chan->unk2D = lo;
         break;
     }
 }
 
-// nonmatching
-#ifdef NONMATCHING
-void sub_080734F8(struct SoundWork_sub2 *arg0, void *arg1)
+static inline void sub_080734F8_inline(struct MusicChannel *chan, u8 *r1)
 {
-    int i;  // r5
-    u32 j;  // r2
-    //int r12 = 0;
+    u8 *dest;
+    u32 i;
 
-    arg0->unk4F2 = -1;
-    arg0->unk0 = arg1;
-    for (i = 0; i < 16; i++)
-    {
-        struct MusicChannel *r3 = &arg0->channels[i];
-        u8 *r1 = arg0->unk0->unk244[i];
-        struct MusicChannel *r4 = &arg0->channels[i];
-        //u8 *arr = r4->unk0;
+    // zero out entire struct
+    dest = (u8 *)chan;
+    for (i = 0; i < 76; i++)
+        dest[i] = 0;
 
-        //testinline3(r3);
-        for (j = 0; j < 76; j++)
-            ((u8 *)r4)[j] = 20 /*0*/;  // r12
-        r3->unk2E = r1[0];
-        r3->unk2D = r1[1];
-        r3->unk45 = r3->unk44 = 8 /*0*/;  // r8
-        //r3->unk45 = 8 /*0*/;  // r8
-    }
-
-    for (i = 0; i < 8; i++)
-        arg0->unk4C4[i] = 0;
-    if (arg0->unk4FB >= 8)
-        arg0->unk4FB = 8;
-    arg0->unk4FA = arg0->unk0->unk38;
-    if (arg0->unk4FA >= 16)
-        arg0->unk4FA = 16;
-    arg0->volume = 0;
-    arg0->unk4EE = 0;
-    sub_080735D0(arg0);
-    arg0->unk4F2 = -1;
+    chan->unk2E = r1[0];
+    chan->unk2D = r1[1];
+    chan->unk44 = 0;
+    chan->unk45 = 0;
 }
-#else
-__attribute__((naked))
-void sub_080734F8(struct SoundWork_sub2 *arg0, void *arg1)
-{
-    asm(
-    "	push {r4-r7,lr}\n\
-	mov r7, r8\n\
-	push {r7}\n\
-	add r6, r0, #0\n\
-	ldr r0, _080735BC  @ =0x000004F2\n\
-	add r2, r6, r0\n\
-	ldr r0, _080735C0  @ =0x0000FFFF\n\
-	strh r0, [r2]\n\
-	str r1, [r6]\n\
-	mov r5, #0  @ i\n\
-	mov r1, #0\n\
-	mov r12, r1  @ constant\n\
-	mov r2, #0\n\
-	mov r8, r2  @ constant\n\
-_08073514:\n\
-	mov r0, #76\n\
-	add r3, r5, #0\n\
-	mul r3, r0, r3\n\
-	add r3, r3, r6\n\
-	add r3, r3, #4\n\
-	lsl r1, r5, #1\n\
-	ldr r0, [r6]\n\
-	add r1, r1, r0\n\
-	mov r7, #145\n\
-	lsl r7, r7, #2\n\
-	add r1, r1, r7\n\
-	add r4, r3, #0\n\
-	mov r2, #0\n\
-_0807352E:\n\
-	add r0, r4, r2\n\
-	mov r7, r12\n\
-	strb r7, [r0]\n\
-	add r2, r2, #1\n\
-	cmp r2, #75\n\
-	bls _0807352E\n\
-	ldrb r0, [r1]\n\
-	add r2, r3, #0\n\
-	add r2, r2, #46\n\
-	strb r0, [r2]\n\
-	ldrb r0, [r1, #1]\n\
-	sub r2, r2, #1\n\
-	strb r0, [r2]\n\
-	add r0, r3, #0\n\
-	add r0, r0, #68\n\
-	mov r1, r8\n\
-	strb r1, [r0]\n\
-	add r0, r0, #1\n\
-	strb r1, [r0]\n\
-	add r5, r5, #1\n\
-	cmp r5, #15\n\
-	ble _08073514\n\
-	mov r1, #0\n\
-	mov r5, #7\n\
-	mov r2, #156\n\
-	lsl r2, r2, #3\n\
-	add r0, r6, r2\n\
-_08073564:\n\
-	str r1, [r0]\n\
-	sub r0, r0, #4\n\
-	sub r5, r5, #1\n\
-	cmp r5, #0\n\
-	bge _08073564\n\
-	mov r5, #8\n\
-	ldr r7, _080735C4  @ =0x000004FB\n\
-	add r1, r6, r7\n\
-	ldrb r0, [r1]\n\
-	cmp r0, #7\n\
-	bls _0807357C\n\
-	strb r5, [r1]\n\
-_0807357C:\n\
-	ldr r0, [r6]\n\
-	ldrh r0, [r0, #56]\n\
-	ldr r2, _080735C8  @ =0x000004FA\n\
-	add r1, r6, r2\n\
-	mov r2, #0\n\
-	strb r0, [r1]\n\
-	lsl r0, r0, #24\n\
-	lsr r0, r0, #24\n\
-	cmp r0, #15\n\
-	bls _08073594\n\
-	mov r0, #16\n\
-	strb r0, [r1]\n\
-_08073594:\n\
-	mov r7, #157\n\
-	lsl r7, r7, #3\n\
-	add r0, r6, r7\n\
-	strh r2, [r0]\n\
-	ldr r1, _080735CC  @ =0x000004EE\n\
-	add r0, r6, r1\n\
-	strh r2, [r0]\n\
-	add r0, r6, #0\n\
-	bl sub_080735D0\n\
-	ldr r2, _080735BC  @ =0x000004F2\n\
-	add r1, r6, r2\n\
-	ldr r0, _080735C0  @ =0x0000FFFF\n\
-	strh r0, [r1]\n\
-	pop {r3}\n\
-	mov r8, r3\n\
-	pop {r4-r7}\n\
-	pop {r0}\n\
-	bx r0\n\
-	.byte 0x00\n\
-	.byte 0x00\n\
-_080735BC:\n\
-	.4byte 0x000004F2\n\
-_080735C0:\n\
-	.4byte 0x0000FFFF\n\
-_080735C4:\n\
-	.4byte 0x000004FB\n\
-_080735C8:\n\
-	.4byte 0x000004FA\n\
-_080735CC:\n\
-	.4byte 0x000004EE");
-}
-#endif
 
-void sub_080735D0(struct SoundWork_sub2 *arg0)
+static void sub_080734F8(struct MusicPlayer *mplayer, struct MusicFile *musFile)
 {
     int i;
 
-    arg0->unk500 = 0;
-    arg0->unk504 = 0;
-    arg0->unk4EA = arg0->unk0->unk40 * 50 / 125;
-    arg0->tickLength = arg0->unk0->tickLength;
-    arg0->unk508 = (arg0->tickLength << 14) / arg0->unk4EA;
-    arg0->unk50C = arg0->unk508 / arg0->tickLength;
-    arg0->currPatternTick = 0;
-    arg0->unk4F4 = 0;
-    arg0->unk4FC = 0;
-    arg0->unk4F0 = -1;
-    arg0->unk4F8 = -1;
-    arg0->unk4F2 = 0;
+    mplayer->currPatternIndex = -1;
+    mplayer->musicFile = musFile;
+    for (i = 0; i < 16; i++)
+        sub_080734F8_inline(&mplayer->channels[i], mplayer->musicFile->unk244[i]);
+    for (i = 0; i < 8; i++)
+        mplayer->unk4C4[i] = 0;
+    if (mplayer->unk4FB >= 8)
+        mplayer->unk4FB = 8;
+    mplayer->unk4FA = mplayer->musicFile->unk38;
+    if (mplayer->unk4FA >= 16)
+        mplayer->unk4FA = 16;
+    mplayer->volume = 0;
+    mplayer->loopFlag = 0;
+    sub_080735D0(mplayer);
+    mplayer->currPatternIndex = -1;
+}
 
-    for (i = 0; i < arg0->unk4FB; i++)
+static void sub_080735D0(struct MusicPlayer *mplayer)
+{
+    int i;
+
+    mplayer->unk500 = 0;
+    mplayer->unk504 = 0;
+    mplayer->unk4EA = mplayer->musicFile->unk40 * 50 / 125;
+    mplayer->tickLength = mplayer->musicFile->tickLength;
+    mplayer->unk508 = (mplayer->tickLength << 14) / mplayer->unk4EA;
+    mplayer->unk50C = mplayer->unk508 / mplayer->tickLength;
+    mplayer->currPatternTick = 0;
+    mplayer->unk4F4 = 0;
+    mplayer->unk4FC = 0;
+    mplayer->unk4F0 = -1;
+    mplayer->unk4F8 = -1;
+    mplayer->currPatternIndex = 0;
+
+    for (i = 0; i < mplayer->unk4FB; i++)
     {
-        if ((u32)arg0->unk4C4[i] != 1)
-            arg0->unk4C4[i] = NULL;
+        if ((u32)mplayer->unk4C4[i] != 1)
+            mplayer->unk4C4[i] = NULL;
     }
 }
 
-// copies (and mixes?) audio?
-int sub_080736A0(struct SoundWork_sub2 *arg0, void *dest, int length)
+static int render_music(struct MusicPlayer *mplayer, s16 *dest, int numSamples)
 {
-    struct MusicFile *musFile = arg0->unk0;
+    struct MusicFile *musFile = mplayer->musicFile;
     s32 r6;
     s32 r7;
     struct MusicPattern *pat;
 
-    if (arg0->unk4F2 < 0)
-        return length;
-    r6 = arg0->unk504;
-    r7 = arg0->unk500;
+    if (mplayer->currPatternIndex < 0)
+        return numSamples;
+    r6 = mplayer->unk504;
+    r7 = mplayer->unk500;
     if (r6 == 0 && r7 == 0)
     {
-        if (arg0->unk4F0 != arg0->unk4F2)
-            arg0->noteDataPtr = (u8 *)musFile + musFile->patterns[musFile->patternOrder[arg0->unk4F2]].offset;
-        arg0->unk4F0 = arg0->unk4F2;
-        arg0->unk4F4 = arg0->currPatternTick;
-        arg0->currPatternTick++;
+        if (mplayer->unk4F0 != mplayer->currPatternIndex)
+            mplayer->noteDataPtr = (u8 *)musFile + musFile->patterns[musFile->patternOrder[mplayer->currPatternIndex]].offset;
+        mplayer->unk4F0 = mplayer->currPatternIndex;
+        mplayer->unk4F4 = mplayer->currPatternTick;
+        mplayer->currPatternTick++;
     }
 
-    pat = &musFile->patterns[musFile->patternOrder[arg0->unk4F0]];
-    if (arg0->currPatternTick >= pat->length)
+    pat = &musFile->patterns[musFile->patternOrder[mplayer->unk4F0]];
+    if (mplayer->currPatternTick >= pat->length)  // end of pattern
     {
-        arg0->currPatternTick = 0;  // restart
+        mplayer->currPatternTick = 0;  // restart
         do
         {
-            arg0->unk4F2++;
-            if (arg0->unk4F2 >= musFile->unk34)
+            mplayer->currPatternIndex++;
+            if (mplayer->currPatternIndex >= musFile->songLength)
             {
-                if (arg0->unk4EE & 1)
+                if (mplayer->loopFlag & 1)
                 {
-                    arg0->unk4F0 = -1;
-                    arg0->unk4F2 = musFile->unk36;
+                    mplayer->unk4F0 = -1;
+                    mplayer->currPatternIndex = musFile->loopStart;
                 }
                 else
-                    arg0->unk4F2 = -2;
+                    mplayer->currPatternIndex = -2;
                 break;
             }
-        } while (musFile->patternOrder[arg0->unk4F2] >= musFile->unk3A);
+        } while (musFile->patternOrder[mplayer->currPatternIndex] >= musFile->unk3A);
     }
-    gVolume_03001F24 = arg0->volume;
+    gVolume_03001F24 = mplayer->volume;
     if (r6 == 0 && r7 == 0)
-        play_notes(arg0);
-    if (r6 + length >= arg0->unk50C)
-        length = arg0->unk50C - r6;
+        play_notes(mplayer);
+    if (r6 + numSamples >= mplayer->unk50C)
+        numSamples = mplayer->unk50C - r6;
     gUnknown_03000824 = r7;
     gUnknown_03000820 = r6;
-    sub_08072FC8(arg0, dest, length);
-    arg0->volume = gVolume_03001F24;
-    r6 += length;
-    if (r6 >= arg0->unk50C)
+    sub_08072FC8(mplayer, dest, numSamples);
+    mplayer->volume = gVolume_03001F24;
+    r6 += numSamples;
+    if (r6 >= mplayer->unk50C)
     {
         r6 = 0;
         r7++;
-        if (r7 >= arg0->tickLength)
+        if (r7 >= mplayer->tickLength)
             r7 = 0;
     }
-    arg0->unk504 = r6;
-    arg0->unk500 = r7;
-    return length;
+    mplayer->unk504 = r6;
+    mplayer->unk500 = r7;
+    return numSamples;
 }
 
 // unused
-void sub_08073858(struct SoundWork_sub2 *arg0, void *arg1)
+static void sub_08073858(struct MusicPlayer *mplayer, void *arg1)
 {
     void *dest = (void *)EWRAM;
 
-    arg0->unk0 = 0;
+    mplayer->musicFile = NULL;
     LZ77UnCompWram(arg1, dest);
-    sub_080734F8(arg0, dest);
+    sub_080734F8(mplayer, dest);
 }
 
-void sub_0807387C(struct SoundWork_sub2 *arg0, int volume, int arg2, u8 *arg3)
+static void sub_0807387C(struct MusicPlayer *mplayer, int volume, int loopFlag, u8 *arg3)
 {
     int i;
 
-    arg0->volume = volume;
-    arg0->unk4EE = arg2;
+    mplayer->volume = volume;
+    mplayer->loopFlag = loopFlag;
     if (arg3 != NULL)
     {
         for (i = 0; i < 3; i++)
-            arg0->unk510[i] = arg3[i];
+            mplayer->unk510[i] = arg3[i];
     }
     else
     {
         for (i = 0; i < 3; i++)
-            arg0->unk510[i] = 0;
+            mplayer->unk510[i] = 0;
     }
-    sub_080735D0(arg0);
+    sub_080735D0(mplayer);
 }
 
-void sub_080738D4(struct SoundWork_sub2 *arg0, int index)
+static void sub_080738D4(struct MusicPlayer *mplayer, int index)
 {
-    if (arg0->unk510[index] == 0)
+    if (mplayer->unk510[index] == 0)
         index = 7 - index;
     else
-        index = arg0->unk510[index] - 1;
-    if ((u32)arg0->unk4C4[index] >= 2)
-        arg0->unk4C4[index]->unk1D &= ~1;
-    arg0->unk4C4[index] = (void *)1;
+        index = mplayer->unk510[index] - 1;
+    if ((u32)mplayer->unk4C4[index] >= 2)
+        mplayer->unk4C4[index]->unk1D &= ~1;
+    mplayer->unk4C4[index] = (void *)1;
 }
 
-void sub_08073914(struct SoundWork_sub2 *arg0, int index)
+static void sub_08073914(struct MusicPlayer *mplayer, int index)
 {
-    if (arg0->unk510[index] == 0)
+    if (mplayer->unk510[index] == 0)
         index = 7 - index;
     else
-        index = arg0->unk510[index] - 1;
-    if ((u32)arg0->unk4C4[index] == 1)
-        arg0->unk4C4[index] = NULL;
+        index = mplayer->unk510[index] - 1;
+    if ((u32)mplayer->unk4C4[index] == 1)
+        mplayer->unk4C4[index] = NULL;
 }
 
-void sub_0807394C(struct MusicChannel *arg0, void *arg1, int arg2)
+static void effect_default_func(struct MusicChannel *chan, s16 *dest, int numSamples)
 {
-    int r7;
-
-    r7 = arg0->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        arg0->unk2D = 32;
-    gUnknown_03001F28 = arg0;
-    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
-    arg0->unk2D = r7;
+    effect_default_func_inline(chan, dest, numSamples);
 }
 
-void sub_080739B0(struct MusicChannel *arg0, void *arg1, int arg2)
+static void effect_34_func(struct MusicChannel *chan, s16 *dest, int numSamples)
 {
-    int r1 = arg0->unk1A;
-    int r7;
+    int param = chan->currEffectParam;
 
-    if (r1 == 0)
-        r1 = arg0->unk3A;
-    if (gUnknown_03000824 % (r1 + 1) == r1)
-        arg0->unk20 = 0;
-    r7 = arg0->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        arg0->unk2D = 32;
-    gUnknown_03001F28 = arg0;
-    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
-    arg0->unk2D = r7;
+    if (param == 0)
+        param = chan->unk3A;
+    if (gUnknown_03000824 % (param + 1) == param)
+        chan->unk20 = 0;
+    effect_default_func_inline(chan, dest, numSamples);
 }
 
-void sub_08073A34(struct MusicChannel *arg0, void *arg1, int arg2)
+static void effect_37_func(struct MusicChannel *chan, s16 *dest, int numSamples)
 {
-    int r1 = arg0->unk1A;
-    int r7;
+    int param = chan->currEffectParam;
 
-    if (r1 == 0)
-        r1 = arg0->unk3B;
-    if (gUnknown_03000824 == r1)
+    if (param == 0)
+        param = chan->unk3B;
+    if (gUnknown_03000824 == param)
     {
-        arg0->unk2C = 0;
-        arg0->unk24 = 0;
+        chan->unk2C = 0;
+        chan->unk24 = 0;
     }
-    r7 = arg0->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        arg0->unk2D = 32;
-    gUnknown_03001F28 = arg0;
-    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
-    arg0->unk2D = r7;
+    effect_default_func_inline(chan, dest, numSamples);
 }
 
-void sub_08073AAC(struct MusicChannel *arg0, void *arg1, int arg2)
+static void effect_38_func(struct MusicChannel *chan, s16 *dest, int numSamples)
 {
-    int r1 = arg0->unk1A;
-    int r7;
+    int param = chan->currEffectParam;
 
-    if (r1 == 0)
-        r1 = arg0->unk38;
-    if (gUnknown_03000824 < r1)
+    if (param == 0)
+        param = chan->unk38;
+    if (gUnknown_03000824 < param)
         return;
-    r7 = arg0->unk2D;
-    if (!(gSoundWork->unk1 & 0x10))
-        arg0->unk2D = 32;
-    gUnknown_03001F28 = arg0;
-    gUnknown_03001EFC(arg0, arg1, arg2, (gUnknown_03000820 == 0));
-    arg0->unk2D = r7;
+    effect_default_func_inline(chan, dest, numSamples);
 }
 
 struct Struct03000840_child_sub
@@ -3105,17 +2890,17 @@ extern struct
     struct Struct08073CE8 *unk3C;
 } gUnknown_03000840;
 
-void sub_08073B18(void)
+static void sub_08073B18(void)
 {
     int i;
 
     REG_SOUNDCNT_L |= 0xCC00;
     REG_SOUNDCNT_L &= 0xFF00;
-    REG_SOUNDCNT_H |= 2;
+    REG_SOUNDCNT_H |= SOUND_CGB_MIX_FULL;
     for (i = 0; i < 4; i++)
     {
-        *gUnknown_08B3A4AC[i].lenEnvReg = 0;
-        *gUnknown_08B3A4AC[i].freqReg = 0;
+        *sGBCSoundRegDefs[i].lenEnvReg = 0;
+        *sGBCSoundRegDefs[i].freqReg = 0;
     }
     gUnknown_03000840.unk0 = 0;
     gUnknown_03000840.unk3C = NULL;
@@ -3164,7 +2949,7 @@ void update_gbc_sound_regs(void)
             }
         }
 
-        r0 = &gUnknown_08B3A4AC[i];
+        r0 = &sGBCSoundRegDefs[i];
         *r0->freqReg = (*r0->freqReg & r0->unk8) | (r4->unk0 >> 9);
     }
 
@@ -3182,7 +2967,7 @@ void update_gbc_sound_regs(void)
         {
             if (r3->unk3 == 0)
             {
-                struct Struct08B3A4AC *r0 = &gUnknown_08B3A4AC[r3->unk2];
+                struct Struct08B3A4AC *r0 = &sGBCSoundRegDefs[r3->unk2];
                 *r0->freqReg;
                 *r0->lenEnvReg = r3->unk4;
                 *r0->freqReg = ((u32)(gUnknown_03000840.unk4[r3->unk2].unk0 & 0x1FFFFFF)>>9) | r3->unk6;
@@ -3227,7 +3012,8 @@ static inline void sub_08073CE8_inline(struct Struct08073CE8 *arg0, int arg1, in
     gUnknown_03000840.unk2 = (arg1 << 4) | r1;
 }
 
-void sub_08073CE8(struct Struct08073CE8 *arg0, int arg1, int arg2)  // unused?
+// unused
+static void sub_08073CE8(struct Struct08073CE8 *arg0, int arg1, int arg2)  // unused?
 {
     int i;
 
@@ -3256,7 +3042,7 @@ void sub_08073CE8(struct Struct08073CE8 *arg0, int arg1, int arg2)  // unused?
     gUnknown_03000840.unk0 = 2;
 }
 
-void sub_08073DC4(void)
+static void sub_08073DC4(void)
 {
     if (gUnknown_03000840.unk0 == 2)
     {
@@ -3265,7 +3051,7 @@ void sub_08073DC4(void)
     }
 }
 
-void sub_08073DEC(void)
+static void sub_08073DEC(void)
 {
     if (gUnknown_03000840.unk0 == 1)
     {
@@ -3275,7 +3061,7 @@ void sub_08073DEC(void)
     }
 }
 
-void sub_08073E1C(void)
+static void sub_08073E1C(void)
 {
     gUnknown_03000840.unk0 = 0;
     REG_SOUNDCNT_L &= 0xFF00;

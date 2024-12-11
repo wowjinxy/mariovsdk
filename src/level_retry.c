@@ -1,6 +1,7 @@
 #include "gba/gba.h"
 #include "global.h"
 #include "main.h"
+#include "sound.h"
 #include "sprites.h"
 
 static u8 gUnknown_03000150;
@@ -76,7 +77,7 @@ void level_retry_init_callback(void)
     else
     {
         if (gMainState == MAIN_STATE_DEMO)
-            sub_080720AC();
+            sound_stop_music();
         switch (gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk0)
         {
         case 0:

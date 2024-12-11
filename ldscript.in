@@ -471,15 +471,7 @@ SECTIONS
 		. = 0x1D60;		gUnknown_03001D60 = .;
 		. = 0x1E38;		gUnknown_03001E38 = .;
 		. = 0x1E3C;		gUnknown_03001E3C = .;
-		
-		. = 0x1EE0;		ptr_arm_clear_audio_buffer = .;
-		. = 0x1EE4;		gUnknown_03001EE4 = .;
-		. = 0x1EE8;		ptr_arm_update_sound_dma_transfer = .;
-		. = 0x1EF8;		ptr_arm_load_sound_16bit_to_8bit = .;
-		. = 0x1EFC;		gUnknown_03001EFC = .;
-		. = 0x1F00;		gUnknown_03001F00 = .;
-		. = 0x1F04;		gUnknown_03001F04 = .;
-		. = 0x1F08;		gUnknown_03001F08 = .;
+		. = 0x1EE0;		src/sound.o(.bss);
 		. = 0x1F10;		gSoundWork = .;
 		. = 0x1F14;		sSoundMemMaxSize = .;
 		. = 0x1F18;		sSoundMemHead = .;

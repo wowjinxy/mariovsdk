@@ -520,7 +520,7 @@ _0801C2E6:
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _0801C378
-	bl sub_080720AC
+	bl sound_stop_music
 	ldr r0, _0801C340  @ =gLevelEWorldFlag
 	ldrb r0, [r0]
 	lsl r0, r0, #24
@@ -574,7 +574,7 @@ _0801C358:
 	mov r3, #64
 	bl play_sound_effect_08071990
 _0801C378:
-	bl sub_080720AC
+	bl sound_stop_music
 	ldr r0, _0801C39C  @ =gCurrentWorld
 	strb r4, [r0]
 	ldr r0, _0801C3A0  @ =gNextLevelID
@@ -622,7 +622,7 @@ _0801C3B8:
 	ldrb r0, [r0]
 	cmp r0, #40
 	bne _0801C408
-	bl sub_080720AC
+	bl sound_stop_music
 	ldr r1, _0801C424  @ =gUnknown_0807976C
 	ldr r0, _0801C428  @ =gNextLevelInLevelTable
 	mov r2, #18
