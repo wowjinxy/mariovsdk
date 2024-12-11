@@ -1,6 +1,7 @@
 #include "gba/gba.h"
 #include "global.h"
 #include "main.h"
+#include "sound.h"
 
 void load_some_oam(void)
 {
@@ -131,7 +132,7 @@ static inline bool32 inline_2(void)
         gCurrentWorld = 0;
         gNextLevelID = 0;
         gLevelEWorldFlag = 0;
-        sub_080720AC();
+        sound_stop_music();
         sub_08071C24();
         return TRUE;
     }

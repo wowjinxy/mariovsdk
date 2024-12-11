@@ -23924,7 +23924,7 @@ sub_08055A34: @ 0x08055A34
 	and r0, r0, r1
 	strh r0, [r2]
 	bl sub_08071C24
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r1, #0
 	str r1, [sp]
 	mov r0, #128
@@ -28685,7 +28685,7 @@ _08057CEA:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08057D72
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -28720,10 +28720,10 @@ _08057D30:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08057D72
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _08057D46
-	bl sub_080720AC
+	bl sound_stop_music
 _08057D46:
 	mov r1, #0
 	str r1, [sp]
@@ -32193,7 +32193,7 @@ _080596C6:
 	ldr r1, _080596E4  @ =0x03000434
 	mov r0, #2
 	strb r0, [r1]
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -32212,7 +32212,7 @@ _080596E8:
 	ldr r1, _0805970C  @ =0x03000434
 	mov r0, #2
 	strb r0, [r1]
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -38604,7 +38604,7 @@ _0805C5AE:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0805C636
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -38639,10 +38639,10 @@ _0805C5F4:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0805C636
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _0805C60A
-	bl sub_080720AC
+	bl sound_stop_music
 _0805C60A:
 	mov r1, #0
 	str r1, [sp]
@@ -43856,7 +43856,7 @@ _0805EC96:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0805ED1E
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -43891,10 +43891,10 @@ _0805ECDC:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _0805ED1E
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _0805ECF2
-	bl sub_080720AC
+	bl sound_stop_music
 _0805ECF2:
 	mov r1, #0
 	str r1, [sp]
@@ -49934,7 +49934,7 @@ _08061966:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _080619EE
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -49969,10 +49969,10 @@ _080619AC:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _080619EE
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _080619C2
-	bl sub_080720AC
+	bl sound_stop_music
 _080619C2:
 	mov r1, #0
 	str r1, [sp]
@@ -52577,7 +52577,7 @@ _08062CF2:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08062D7A
-	bl sub_080720AC
+	bl sound_stop_music
 	mov r0, #22
 	mov r1, #128
 	mov r2, #0
@@ -52612,10 +52612,10 @@ _08062D38:
 	and r0, r0, r1
 	cmp r0, #0
 	beq _08062D7A
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _08062D4E
-	bl sub_080720AC
+	bl sound_stop_music
 _08062D4E:
 	mov r1, #0
 	str r1, [sp]
@@ -68718,7 +68718,7 @@ sub_0806A488: @ 0x0806A488
 	lsl r0, r0, #16
 	orr r3, r3, r0
 	str r3, [r4]
-	bl sub_080720AC
+	bl sound_stop_music
 	ldr r0, _0806A514  @ =gUnknown_03001B98 
 	ldrb r5, [r0]
 	cmp r5, #0
@@ -68940,7 +68940,7 @@ _0806A664:
 	ldr r1, _0806A6E4  @ =0xFF7FFFFF
 	and r0, r0, r1
 	str r0, [r2]
-	bl sub_080720AC
+	bl sound_stop_music
 	ldr r3, _0806A6E8  @ =gNextLevelInLevelTable
 	ldr r0, [r3, #20]
 	ldr r1, [r3, #24]
@@ -70373,7 +70373,7 @@ _0806B1A4:
 	add r1, r0, r2
 	mov r0, #1
 	strb r0, [r1]
-	bl sub_080720AC
+	bl sound_stop_music
 	str r7, [sp]
 	mov r0, #128
 	str r0, [sp, #4]
@@ -83850,234 +83850,3 @@ sub_080714A8: @ 0x080714A8
 _080714B4:
 	.4byte 0x03001E50
 	THUMB_FUNC_END sub_080714A8
-
-	THUMB_FUNC_START sub_080714B8
-sub_080714B8: @ 0x080714B8
-	push {r4-r7,lr}
-	mov r7, r10
-	mov r6, r9
-	mov r5, r8
-	push {r5-r7}
-	sub sp, sp, #36
-	add r4, r0, #0
-	mov r9, r1
-	mov r10, r2
-	ldr r0, [r4, #16]
-	ldr r0, [r0]
-	lsl r0, r0, #14
-	mov r8, r0
-	ldrb r2, [r4, #3]
-	ldrb r3, [r4, #2]
-	mov r1, #128
-	sub r0, r1, r3
-	mul r0, r2, r0
-	asr r5, r0, #7
-	ldrb r6, [r4, #1]
-	sub r7, r1, r6
-	add r0, r6, #0
-	mul r0, r5, r0
-	asr r6, r0, #7
-	add r0, r7, #0
-	mul r0, r5, r0
-	asr r7, r0, #7
-	cmp r3, #4
-	bls _0807150C
-	add r0, r4, #0
-	mov r1, r9
-	mov r2, r10
-	bl sub_080715B8
-	cmp r5, #0
-	bne _0807150C
-	cmp r0, r8
-	bcc _08071508
-	strb r5, [r4]
-	b _08071596
-_08071508:
-	str r0, [r4, #8]
-	b _08071596
-_0807150C:
-	ldr r2, [r4, #16]
-	ldr r1, _08071548  @ =gUnknown_08B3A0A8
-	lsl r0, r7, #1
-	add r0, r0, r1
-	ldrh r7, [r0]
-	lsl r0, r6, #1
-	add r0, r0, r1
-	ldrh r6, [r0]
-	mov r0, r9
-	str r0, [sp]
-	ldr r0, [r2, #4]
-	str r0, [sp, #4]
-	ldr r0, [r4, #8]
-	str r0, [sp, #8]
-	ldr r0, [r4, #12]
-	str r0, [sp, #12]
-	ldrb r1, [r4]
-	mov r0, #4
-	and r0, r0, r1
-	lsl r0, r0, #24
-	lsr r0, r0, #24
-	cmp r0, #0
-	beq _0807154C
-	ldr r0, [r2, #24]
-	lsl r1, r0, #14
-	str r1, [sp, #16]
-	ldr r1, [r2, #20]
-	sub r0, r0, r1
-	lsl r0, r0, #15
-	b _08071550
-_08071548:
-	.4byte gUnknown_08B3A0A8
-_0807154C:
-	mov r1, r8
-	str r1, [sp, #16]
-_08071550:
-	str r0, [sp, #20]
-	mov r2, r10
-	str r2, [sp, #24]
-	str r7, [sp, #28]
-	str r6, [sp, #32]
-	ldr r0, _080715A8  @ =0x03001EE4
-	ldr r1, [r0]
-	mov r0, sp
-	bl _call_via_r1
-	ldr r0, [sp, #8]
-	str r0, [r4, #8]
-	cmp r0, r8
-	bcc _08071596
-	mov r0, #0
-	strb r0, [r4]
-	ldr r0, _080715AC  @ =0x03001F10
-	ldr r1, [r0]
-	ldr r3, _080715B0  @ =0x00000FC8
-	add r0, r1, r3
-	ldr r3, _080715B4  @ =0xFFFFEB24
-	add r2, r4, r3
-	sub r2, r2, r1
-	lsl r1, r2, #1
-	add r1, r1, r2
-	lsl r2, r1, #4
-	add r1, r1, r2
-	lsl r2, r1, #8
-	add r1, r1, r2
-	lsl r2, r1, #16
-	add r1, r1, r2
-	neg r1, r1
-	asr r1, r1, #2
-	bl sub_08073914
-_08071596:
-	add sp, sp, #36
-	pop {r3-r5}
-	mov r8, r3
-	mov r9, r4
-	mov r10, r5
-	pop {r4-r7}
-	pop {r0}
-	bx r0
-	.byte 0x00
-	.byte 0x00
-_080715A8:
-	.4byte 0x03001EE4
-_080715AC:
-	.4byte 0x03001F10
-_080715B0:
-	.4byte 0x00000FC8
-_080715B4:
-	.4byte 0xFFFFEB24
-	THUMB_FUNC_END sub_080714B8
-
-	THUMB_FUNC_START sub_080715B8
-sub_080715B8: @ 0x080715B8
-	push {r4-r7,lr}
-	mov r7, r8
-	push {r7}
-	sub sp, sp, #36
-	mov r8, r2
-	ldr r7, [r0, #16]
-	ldr r2, [r7]
-	lsl r2, r2, #14
-	mov r12, r2
-	ldrb r3, [r0, #3]
-	ldrb r2, [r0, #2]
-	add r4, r3, #0
-	mul r4, r2, r4
-	asr r4, r4, #7
-	ldrb r3, [r0, #1]
-	mov r2, #128
-	sub r5, r2, r3
-	asr r2, r5, #1
-	add r5, r2, #0
-	add r5, r5, #64
-	lsr r3, r3, #1
-	add r6, r3, #0
-	add r6, r6, #64
-	add r2, r5, #0
-	mul r2, r4, r2
-	asr r5, r2, #7
-	add r2, r6, #0
-	mul r2, r4, r2
-	asr r6, r2, #7
-	ldr r3, _08071634  @ =gUnknown_08B3A0A8
-	lsl r2, r5, #1
-	add r2, r2, r3
-	ldrh r5, [r2]
-	lsl r2, r6, #1
-	add r2, r2, r3
-	ldrh r2, [r2]
-	neg r6, r2
-	str r1, [sp]
-	ldr r1, [r7, #4]
-	str r1, [sp, #4]
-	ldr r1, [r0, #8]
-	mov r2, #128
-	lsl r2, r2, #5
-	add r1, r1, r2
-	str r1, [sp, #8]
-	ldr r1, [r0, #12]
-	str r1, [sp, #12]
-	ldrb r1, [r0]
-	mov r0, #4
-	and r0, r0, r1
-	lsl r0, r0, #24
-	lsr r0, r0, #24
-	cmp r0, #0
-	beq _08071638
-	ldr r0, [r7, #24]
-	lsl r1, r0, #14
-	str r1, [sp, #16]
-	ldr r1, [r7, #20]
-	sub r0, r0, r1
-	lsl r0, r0, #15
-	b _0807163C
-	.byte 0x00
-	.byte 0x00
-_08071634:
-	.4byte gUnknown_08B3A0A8
-_08071638:
-	mov r1, r12
-	str r1, [sp, #16]
-_0807163C:
-	str r0, [sp, #20]
-	mov r2, r8
-	str r2, [sp, #24]
-	str r5, [sp, #28]
-	str r6, [sp, #32]
-	ldr r0, _08071664  @ =0x03001EE4
-	ldr r1, [r0]
-	mov r0, sp
-	bl _call_via_r1
-	ldr r0, [sp, #8]
-	ldr r1, _08071668  @ =0xFFFFF000
-	add r0, r0, r1
-	str r0, [sp, #8]
-	add sp, sp, #36
-	pop {r3}
-	mov r8, r3
-	pop {r4-r7}
-	pop {r1}
-	bx r1
-_08071664:
-	.4byte 0x03001EE4
-_08071668:
-	.4byte 0xFFFFF000
-	THUMB_FUNC_END sub_080715B8

@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "sound.h"
 
 static inline void someinline(int flags, int songID, int nextState, int movieID)
 {

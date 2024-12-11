@@ -4,6 +4,7 @@
 #include "main.h"
 #include "main_menu.h"
 #include "savefile.h"
+#include "sound.h"
 #include "sprites.h"
 
 static u16 gSomeOamIndex_03000040;

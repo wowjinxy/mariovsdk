@@ -626,7 +626,7 @@ _08015566:
 	ldr r0, _08015620  @ =0x81000100
 	str r0, [r1, #8]
 	ldr r0, [r1, #8]
-	bl sub_08072144
+	bl sound_is_music_finished
 	cmp r0, #0
 	beq _080155CE
 	mov r0, #10

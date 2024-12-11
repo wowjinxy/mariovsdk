@@ -17,7 +17,7 @@ print_error_message: @ 0x08037A04
 	ldr r0, _08037AC8  @ =0x04000208
 	mov r4, #0
 	strh r4, [r0]
-	bl sub_08071EE4
+	bl sound_finish
 	mov r0, #1
 	neg r0, r0
 	mov r10, r0

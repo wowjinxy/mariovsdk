@@ -25,6 +25,7 @@ units:
 - path: rom_800EEC0.o
 - path: rom_800F0C4.o
 - path: rom_800F1E4.o
+- path: rom_802B798.o
 - path: rom_802D614.o
 - path: rom_8032408.o
 - path: rom_8032814.o
@@ -33,6 +34,7 @@ units:
 - path: rom_8038414.o
 - path: rom_804A8E8.o
 - path: savefile.o
+- path: sound.o
 - path: title.o
 - path: rom_802B798.o
 - path: world_start.o

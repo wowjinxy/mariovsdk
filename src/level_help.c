@@ -1,6 +1,7 @@
 #include "gba/gba.h"
 #include "global.h"
 #include "main.h"
+#include "sound.h"
 #include "sprites.h"
 
 enum
@@ -420,7 +421,7 @@ void help_main(void)
         REG_DISPCNT &= ~DISPCNT_OBJWIN_ON;
         play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
         change_main_state(MAIN_STATE_UNKNOWN_19, NO_FADE);
-        sub_08072118();
+        sound_resume_music();
     }
 }
 

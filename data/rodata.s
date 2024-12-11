@@ -270,7 +270,7 @@ gUnknown_08076D58:
 	.4byte sub_08037ED4
 	.4byte dummy_loop_callback
 	.4byte tm0over_interrupt_handler
-	.4byte sub_08073B90
+	.4byte update_gbc_sound_regs
 	.4byte dummy_loop_callback
 
 	.GLOBAL gUnknown_08076D70
@@ -278,7 +278,7 @@ gUnknown_08076D70:
 	.4byte sub_0803413C
 	.4byte sub_08037ED4
 	.4byte dummy_loop_callback
-	.4byte sub_08071BCC
+	.4byte sound_update_dma_transfer
 	.4byte dummy_loop_callback
 	.4byte dummy_loop_callback
 	.4byte dummy_loop_callback

@@ -3,6 +3,7 @@
 #include "arena.h"
 #include "main.h"
 #include "savefile.h"
+#include "sound.h"
 #include "sprites.h"
 
 extern struct UnknownStruct15 *gUnknown_03000104;

@@ -1,7 +1,9 @@
 #define OBJECT_FILE_LIST \
 	X(data/rodata0.o) \
 	X(asm/crt0.o) \
-	X(asm/rom_800023C.o) \
+	X(asm/sound_arm_1.o) \
+	X(asm/rom_8000318.o) \
+	X(asm/sound_arm_2.o) \
 	X(asm/rom_8001BA4.o) \
 	X(src/rom_80066FC.o) \
 	X(asm/rom_80067F0.o) \
@@ -71,14 +73,15 @@
 	X(data/movie3.o) \
 	X(data/movie8.o) \
 	X(data/unused_plus_worlds_unlocked.o) \
-	X(data/data4.o) \
-	X(data/sound.o) \
-	X(data/rodata3.o) \
 	X(src/rom_8038414.o) \
 	X(asm/rom_8038600.o) \
 	X(src/rom_804A8E8.o) \
 	X(asm/rom_804AAB8.o) \
-	X(asm/sound.o) \
+	X(data/data4.o) \
+	X(src/sound.o) \
+	X(src/sound_data.o) \
+	X(data/sound.o) \
+	X(data/rodata3.o) \
 	X(asm/syscall.o) \
 	X(src/agb_flash.o) \
 	X(src/agb_flash_1m.o) \
@@ -253,7 +256,9 @@ SECTIONS
 		. = 0x394;		gUnknown_03000394 = .;
 		. = 0x395;		gUnknown_03000395 = .;
 		. = 0x396;		gUnknown_03000396 = .;
-
+		. = 0x820;		gUnknown_03000820 = .;
+		. = 0x824;		gUnknown_03000824 = .;
+		. = 0x840;		gUnknown_03000840 = .;
 		. = 0x880;
 		src/agb_flash.o(.bss);
 		tools/agbcc/lib/libgcc.a:dp-bit.o(.bss);
@@ -466,6 +471,14 @@ SECTIONS
 		. = 0x1D60;		gUnknown_03001D60 = .;
 		. = 0x1E38;		gUnknown_03001E38 = .;
 		. = 0x1E3C;		gUnknown_03001E3C = .;
+		. = 0x1EE0;		src/sound.o(.bss);
+		. = 0x1F10;		gSoundWork = .;
+		. = 0x1F14;		sSoundMemMaxSize = .;
+		. = 0x1F18;		sSoundMemHead = .;
+		. = 0x1F1C;		sSoundMemSize = .;
+		. = 0x1F24;		gVolume_03001F24 = .;
+		. = 0x1F28;		gUnknown_03001F28 = .;
+		
 		. = 0x1F2C;		gFlashTimeoutFlag = .;
 		. = 0x1F30;		PollFlashStatus = .;
 		. = 0x1F34;		WaitForFlashWrite = .;

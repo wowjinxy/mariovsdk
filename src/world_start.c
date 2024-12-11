@@ -2,6 +2,7 @@
 #include "global.h"
 #include "arena.h"
 #include "main.h"
+#include "sound.h"
 #include "sprites.h"
 
 static enum PaletteID sMainPalettes[] =

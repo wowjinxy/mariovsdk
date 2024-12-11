@@ -3097,7 +3097,7 @@ _0802EE14:
 	add r4, r0, #0
 	ldrb r0, [r5, #11]
 	sub r0, r0, #1
-	bl sub_08071F78
+	bl get_bgm_data
 	str r0, [r6, #20]
 	mov r2, #0
 	add r3, r6, #0
@@ -3112,7 +3112,7 @@ _0802EE2E:
 	ble _0802EE2E
 	ldrb r0, [r5, #11]
 	sub r0, r0, #1
-	bl sub_08071F64
+	bl get_bgm_volume
 	ldr r1, _0802EE50  @ =gNextLevelInLevelTable
 	str r0, [r1, #24]
 _0802EE48:

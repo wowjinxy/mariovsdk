@@ -2,6 +2,7 @@
 #include "global.h"
 #include "level_view.h"
 #include "main.h"
+#include "sound.h"
 #include "sprites.h"
 
 void level_view_main(void)
@@ -20,7 +21,7 @@ void level_view_main(void)
         gUnknown_03001A38 = sub_0800EF8C();
         if (gUnknown_03001A38 == 0)
         {
-            sub_08072118();
+            sound_resume_music();
             change_main_state(MAIN_STATE_UNKNOWN_19, NO_FADE);
         }
     }
@@ -51,7 +52,7 @@ u32 add_b_back_to_game_sprite(u16 *oamIndex, u16 *tileNum, u16 *vramOffset)
 
 void level_view_init_callback(void)
 {
-    sub_080720E4();
+    sound_pause_music();
     sub_08040F54();
     gUnknown_03001A38 = 1;
     sub_08071C24();

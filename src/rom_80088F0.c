@@ -4,6 +4,7 @@
 #include "level_view.h"
 #include "main.h"
 #include "savefile.h"
+#include "sound.h"
 
 void level_play_loop(void)
 {
@@ -99,12 +100,12 @@ void level_play_end(void)
     if (gNextMainState == MAIN_STATE_PAUSE
      || gNextMainState == MAIN_STATE_HELP
      || gNextMainState == MAIN_STATE_LEVEL_SCROLL)
-		sub_080720E4();
+		sound_pause_music();
 	else
     {
 		sub_08071C6C(0x16);
 		if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
-			sub_080720AC();
+			sound_stop_music();
 	}
 }
 
@@ -114,7 +115,7 @@ void sub_08008C30(void)
 
 void unknown_0A_init_callback(void)
 {
-    sub_08071BE0();
+    sound_disable_dma_transfer();
     gUnknown_03000B60 = 0;
     arena_restore_head(0);
     sub_08040D50();
@@ -122,7 +123,7 @@ void unknown_0A_init_callback(void)
     sub_08032C44(&gNextLevelInLevelTable);
     sub_080041B8(gNextLevelInLevelTable.unk4);
     sub_08038B18();
-    sub_08071C00();
+    sound_enable_dma_transfer();
     REG_DISPCNT &= ~DISPCNT_FORCED_BLANK;
     sub_08033F80(0,0);
     sub_08004428(gNextLevelInLevelTable.unk0->levelData);
@@ -176,6 +177,6 @@ void level_editor_end(void)
 {
     REG_BG1CNT = gBG1CNT_03000A0C;
     sub_080062D0();
-    sub_080720AC();
+    sound_stop_music();
     sub_08006A00();
 }

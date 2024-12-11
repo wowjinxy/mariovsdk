@@ -3,6 +3,7 @@
 #include "arena.h"
 #include "main.h"
 #include "savefile.h"
+#include "sound.h"
 
 void sub_08007154(void)
 {
@@ -83,7 +84,7 @@ void sub_080072A4(void)
     if ((!(gUnknown_03000B68 & 2) || (gNextLevelInLevelTable.levelFlags & 32))
      && gMainState != MAIN_STATE_TUTORIAL)
     {
-        sub_080720AC();
+        sound_stop_music();
         if (gLevelType == LEVEL_TYPE_EXPERT_1_6 || gLevelType == LEVEL_TYPE_EXPERT_7_12 || gLevelEWorldFlag)
         {
             gUnknown_03001BDC = 1;
@@ -181,7 +182,7 @@ static void sub_08007544(void)
             gUnknown_03000029 = 0;
             if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
             {
-                sub_080720AC();
+                sound_stop_music();
                 play_bgm(63, 128, 0);
             }
         }
@@ -195,7 +196,7 @@ static void sub_08007544(void)
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
-            sub_080720AC();
+            sound_stop_music();
             play_bgm(6, 128, 0);
         }
     }
@@ -205,7 +206,7 @@ static void sub_08007544(void)
         gUnknown_03000029 = 0;
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
-            sub_080720AC();
+            sound_stop_music();
             sub_08071CD4();
         }
         gLevelTimerOnOffFlag = 0;
@@ -213,7 +214,7 @@ static void sub_08007544(void)
 
     if (gUnknown_03000038 & 0x800)
         sub_08071CD4();
-    if ((gUnknown_03001A1C & 0x800) && sub_08072144() != 0)
+    if ((gUnknown_03001A1C & 0x800) && sound_is_music_finished() != 0)
     {
         gUnknown_030009D8++;
         if (gLivesCount > 1)
@@ -233,13 +234,13 @@ static void sub_08007544(void)
     {
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
-            sub_080720AC();
+            sound_stop_music();
             play_bgm(3, 128, 0);
         }
     }
     else
     {
-        if ((gUnknown_03001A1C & 0x80) && sub_08072144() != 0)
+        if ((gUnknown_03001A1C & 0x80) && sound_is_music_finished() != 0)
             change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
     }
 
@@ -255,7 +256,7 @@ static void sub_08007544(void)
             {
                 if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO && gLevelType != LEVEL_TYPE_PLUS_BOSS)
                 {
-                    sub_080720AC();
+                    sound_stop_music();
                     sub_08071FA0(gNextLevelInLevelTable.unk14, gNextLevelInLevelTable.unk18, 1, gNextLevelInLevelTable.unk1D);
                 }
                 gUnknown_03000029 = 1;
@@ -269,7 +270,7 @@ static void sub_08007544(void)
     }
 
     if (gUnknown_03000B5C == 0 && (gNextLevelInLevelTable.levelFlags & 2) && gUnknown_03000029 == 0
-     && gLevelTimerOnOffFlag != 0 && sub_08072144() != 0)
+     && gLevelTimerOnOffFlag != 0 && sound_is_music_finished() != 0)
     {
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
             sub_08071FA0(gNextLevelInLevelTable.unk14, gNextLevelInLevelTable.unk18, 1, gNextLevelInLevelTable.unk1D);
@@ -283,7 +284,7 @@ static void sub_08007544(void)
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
             sub_08071CD4();
-            sub_080720AC();
+            sound_stop_music();
             play_bgm(3, 128, 0);
         }
         gUnknown_03000B5C = 1;
@@ -297,7 +298,7 @@ static void sub_08007544(void)
          && gUnknown_03000B5C == 0)
         {
             sub_08071CD4();
-            sub_080720AC();
+            sound_stop_music();
             play_bgm(4, 128, 0);
         }
         gUnknown_03000B5C = 1;
@@ -311,7 +312,7 @@ static void sub_08007544(void)
          && gUnknown_03000B5C == 0)
         {
             sub_08071CD4();
-            sub_080720AC();
+            sound_stop_music();
             play_bgm(5, 128, 0);
         }
         gUnknown_03000B5C = 1;
@@ -328,17 +329,17 @@ static void sub_08007544(void)
         {
             if (gNextLevelInLevelTable.levelFlags & 8)
             {
-                sub_080720AC();
+                sound_stop_music();
                 play_bgm(21, 128, 0);
             }
             else if (gLevelType == LEVEL_TYPE_PLUS_BOSS)
             {
-                sub_080720AC();
+                sound_stop_music();
                 play_bgm(65, 128, 0);
             }
             else if (!(gNextLevelInLevelTable.levelFlags & 1))
             {
-                sub_080720AC();
+                sound_stop_music();
                 play_bgm(2, 128, 0);
             }
         }
@@ -353,7 +354,7 @@ static void sub_08007544(void)
             {
                 if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
                 {
-                    sub_080720AC();
+                    sound_stop_music();
                     play_bgm(14, 128, 1);
                 }
             }
@@ -361,7 +362,7 @@ static void sub_08007544(void)
             {
                 if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
                 {
-                    sub_080720AC();
+                    sound_stop_music();
                     sub_08071FA0(gNextLevelInLevelTable.unk14, gNextLevelInLevelTable.unk18, 1, gNextLevelInLevelTable.unk1D);
                 }
             }
@@ -371,15 +372,15 @@ static void sub_08007544(void)
             if ((gUnknown_03000038 & 1)
              || ((gUnknown_03001A1C & 1) && (gUnknown_03000034 & 4) && !(gUnknown_03001A1C & 4)))
             {
-                sub_080720AC();
+                sound_stop_music();
                 play_bgm(1, 128, 1);
             }
             if ((gUnknown_03000038 & 4)
              || ((gUnknown_03000034 & 1) && !(gUnknown_03001A1C & 1)))
             {
-                if (sub_08072038() != gNextLevelInLevelTable.unk14)
+                if (get_current_bgm_data() != gNextLevelInLevelTable.unk14)
                 {
-                    sub_080720AC();
+                    sound_stop_music();
                     sub_08071FA0(gNextLevelInLevelTable.unk14, gNextLevelInLevelTable.unk18, 1, gNextLevelInLevelTable.unk1D);
                 }
             }
