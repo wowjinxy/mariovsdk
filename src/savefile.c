@@ -130,7 +130,7 @@ static void update_star_and_completion_count(u8 fileNum)
 // Returns TRUE if the specified main or plus level is unlocked.
 // If levelType is LEVEL_TYPE_EXPERT_1_6 or LEVEL_TYPE_EXPERT_7_12, the world
 // parameter actually specifies the level instead.
-int is_level_unlocked(u8 levelType, u8 world, u8 level)
+u8 is_level_unlocked(u8 levelType, u8 world, u8 level)
 {
     struct SaveFile *saveFile = &gSaveFilesPtr[*gSelectedSaveFileNumPtr];
     s8 lastUnlocked;
