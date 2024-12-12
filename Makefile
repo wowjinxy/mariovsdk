@@ -33,6 +33,7 @@ LDSCRIPT := ldscript.txt
 CFILES   := $(wildcard src/*.c)
 SFILES   := $(wildcard asm/*.s) $(wildcard data/*.s)
 OFILES   := $(SFILES:.s=.o) $(CFILES:.c=.o)
+DEP_FILES := $(CFILES:.c=.dep)
 
 src/agb_flash.o: CC1FLAGS := -O1 -mthumb-interwork
 src/agb_flash_1m.o: CC1FLAGS := -O1 -mthumb-interwork
@@ -73,7 +74,7 @@ $(ELF): $(OFILES) $(LDSCRIPT)
 
 %.o: %.c
 	@echo 'Compiling $<'
-	$(QUIET) $(CPP) $(CPPFLAGS) $< | $(CC1) $(CC1FLAGS) -o $*.s
+	$(QUIET) $(CPP) $(CPPFLAGS) -MMD -MF $(@:.o=.dep) -MT $@ $< | $(CC1) $(CC1FLAGS) -o $*.s
 	$(QUIET) $(AS) $(ASFLAGS) $*.s -o $*.o
 
 %.o: %.s
@@ -94,6 +95,9 @@ ldscript.txt: ldscript.in
 
 $(GBAGFX):  ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)
+
+# Automatic dependency generation
+-include $(DEP_FILES)
 
 # Automatically scan files for incbins and add them as a dependency
 .SECONDEXPANSION:

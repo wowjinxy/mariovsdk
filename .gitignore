@@ -1,6 +1,7 @@
 # Output files
 src/*.s
 *.o
+*.dep
 *.elf
 *.gba
 *.map
