@@ -189,6 +189,7 @@ SECTIONS
 		. = 0x81;		gLevelSelectWorldCursor = .;
 		. = 0x82;		gLevelSelectMode = .;
 		. = 0x83;		gLevelSelect_03000083 = .;
+		. = 0x84;		gUnknown_03000084 = .;
 		. = 0x85;		gUnknown_03000085 = .;
 		. = 0x86;		gUnknown_03000086 = .;
 		. = 0x87;		gUnknown_03000087 = .;

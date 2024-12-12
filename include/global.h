@@ -597,7 +597,13 @@ struct SubSpriteTemplate
     /*0x04*/ u32 unk4;  // unknown/unused
     u32 unk8;  // some kind of flags?
     void *unkC;
-    u8 filler10[0x24-0x10];
+    //u8 filler10[0x24-0x10];
+    u8 filler10[0x1A-0x10];
+    u16 unk1A;
+    u16 unk1C;
+    u16 unk1E;
+    u16 unk20;
+    u8 filler22[0x24-0x22];
 };
 
 struct SpriteTemplate
@@ -1309,6 +1315,7 @@ void sub_08006388(void);
 void sub_080064D4();
 void sub_08006548();
 void sub_080065B4();
+void sub_0800667C();
 int sub_080066FC(u32 *, int, int, int);
 struct UnknownStruct15 *sub_08006968(struct GraphicsConfig *);
 void sub_08006D44(void);
@@ -1333,7 +1340,9 @@ void sub_0800EE70(void);
 void title_demo_setup(u32 titleDemoID);
 int sub_08014950();
 void sub_08014A58();
+u8 sub_08014AB8(void);
 void sub_08014B78(int, s8 *, u8 *, s8 *);
+u8 sub_08014BD0(void);
 void sub_08014D08(void);
 void sub_0801500C();
 void sub_08015044(void);
@@ -1387,6 +1396,7 @@ void options_end(void);
 void sub_08029080(void);
 void sub_0802919C(int arg0, int arg1);
 void level_results_init_callback(void);
+void sub_08029D80(void);
 void level_results_main(void);
 void level_results_loop(void);
 void level_results_end(void);

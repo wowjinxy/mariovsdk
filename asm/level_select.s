@@ -12302,7 +12302,7 @@ level_select_loop: @ 0x0801ADBC
 	strh r1, [r2]
 	mov r0, #0
 	strh r0, [r3, #2]
-	ldr r0, _0801AE20  @ =0x03000084
+	ldr r0, _0801AE20  @ =gUnknown_03000084
 	strb r1, [r0]
 	ldr r0, _0801AE24  @ =gLevelType
 	ldrb r0, [r0]
@@ -12332,7 +12332,7 @@ _0801AE18:
 _0801AE1C:
 	.4byte gObjVRAMCopyOffset_0300192C
 _0801AE20:
-	.4byte 0x03000084
+	.4byte gUnknown_03000084
 _0801AE24:
 	.4byte gLevelType
 _0801AE28:
@@ -12767,7 +12767,7 @@ sub_0801B174: @ 0x0801B174
 	add r4, r0, r1
 	mov r7, #0
 	ldr r5, _0801B1C8  @ =gOamBuffer
-	ldr r1, _0801B1CC  @ =0x03000084
+	ldr r1, _0801B1CC  @ =gUnknown_03000084
 	mov r0, #0
 	ldrsb r0, [r1, r0]
 	mov r12, r5
@@ -12802,7 +12802,7 @@ _0801B1C4:
 _0801B1C8:
 	.4byte gOamBuffer
 _0801B1CC:
-	.4byte 0x03000084
+	.4byte gUnknown_03000084
 _0801B1D0:
 	mov r0, #17
 	neg r0, r0

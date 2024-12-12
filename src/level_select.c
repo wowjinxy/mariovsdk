@@ -9,9 +9,19 @@
 struct Struct94
 {
     u16 unk0;
-    u8 filler2[2];
+    u16 unk2;
     u16 unk4;
-    u8 filler6[0x38-0x6];
+    u8 filler6[0xE - 0x6];
+    u16 unkE;
+    u16 unk10;
+    u16 unk12;
+    u8 filler14[2];
+    u16 unk16;
+    u16 unk18;
+    u16 unk1A;
+    u16 unk1C;
+    u8 filler1E[0x2A-0x1E];
+    u16 unk2A[(0x38-0x2A)/2];
 };
 
 extern struct GraphicsConfig *gLevelSelectBackgrounds[];
@@ -22,22 +32,23 @@ extern struct GraphicsConfig gLevelSelectDKBossBG;
 extern struct GraphicsConfig gLevelSelectDKPlusBossBG;
 extern s8 gLevelSelectWorld;
 extern s8 gLevelSelectLevel;
-extern u8 gLevelSelectMode;
-extern u8 gLevelSelectLevelCursor;
+extern s8 gLevelSelectMode;
+extern s8 gLevelSelectLevelCursor;
 extern s8 gLevelSelectWorldCursor;
 extern u32 gLevelSelectPaletteIDs[];
 extern u32 gLevelSelectPlusPaletteIDs[];
 extern struct UnknownStruct15 *gUnknown_03000070;
 extern void *gUnknown_03000074;
 extern u16 gUnknown_03000078;
-extern void *gUnknown_0300007C;
-extern u8 gLevelSelect_03000083;
+extern struct { u8 unk0; u8 unk1; u8 filler2[2]; } *gUnknown_0300007C;
+extern s8 gLevelSelect_03000083;
+extern s8 gUnknown_03000084;
 extern u8 gUnknown_03000085;
 extern u8 gUnknown_03000086;
 extern u8 gUnknown_03000087;
 extern u8 gUnknown_03000088;
 extern u8 gUnknown_03000089;
-extern u8 gUnknown_0300008A;
+extern s8 gUnknown_0300008A;
 extern u8 gUnknown_0300008B;
 extern u8 gUnknown_0300008C;
 extern u8 gUnknown_0300008D;
@@ -529,6 +540,418 @@ void sub_08015A54(void)
     }
 }
 
+extern struct SpriteTemplate gUnknown_08078CC4[];
+extern struct SpriteTemplate gUnknown_08078CF4[];
+
+void sub_08017944(void)
+{
+    int frameNum = (gLevelSelectWorldCursor == 1) ? 1 : 0;
+    register int dumb asm("r1");
+
+    DmaCopy32(3, gUnknown_08078CF4[dumb = frameNum].oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum += gUnknown_03000094->unkE;
+    gOamBuffer[gUnknown_03000094->unk2].x = 0;
+    gOamBuffer[gUnknown_03000094->unk2].y = 252;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_080179F8(void)
+{
+    int frameNum = (gLevelSelectWorldCursor == 6) ? 1 : 0;
+    register int dumb asm("r1");
+
+    if (sub_08014BD0() != 0)
+    {
+        DmaCopy32(3, gUnknown_08078CC4[dumb = frameNum].oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+        gOamBuffer[gUnknown_03000094->unk2].tileNum += gUnknown_03000094->unkE;
+        gOamBuffer[gUnknown_03000094->unk2].x = 184;
+        gOamBuffer[gUnknown_03000094->unk2].y = 252;
+        gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+        gUnknown_03000094->unk2++;
+    }
+}
+
+void sub_08017ABC(int unused, s8 arg1)
+{
+    s16 r5;
+    s16 r4;
+
+    arg1--;
+    if (arg1 < 0)
+        arg1 = 0;
+    else if (arg1 > 6)
+        arg1 = 6;
+    r5 = arg1 * 5;
+    r4 = arg1 * 3 + 7;
+    sub_0800667C(0, 0, 32, 2, gUnknown_03000074, 5, 0);
+    sub_08006548(r4, 0, gUnknown_03000070->unk108[r5], gUnknown_03000074, 5);
+    sub_08006548(0, 2, gUnknown_03000070->unk108[r5 + 1], gUnknown_03000074, 5);
+    sub_08006548(0, 5, gUnknown_03000070->unk108[r5 + 2], gUnknown_03000074, 5);
+    sub_08006548(29, 5, gUnknown_03000070->unk108[r5 + 3], gUnknown_03000074, 5);
+    sub_08006548(0, 17, gUnknown_03000070->unk108[r5 + 4], gUnknown_03000074, 5);
+}
+
+void sub_08017BD0(u8 x, u8 y, u8 maxLen, u16 n, u8 arg4)
+{
+    int i;
+    int end = x + (maxLen - 1) * 8;
+
+    if (arg4)
+    {
+        for (i = 0; i < maxLen; i++)
+        {
+            u16 digit = n % 10;
+
+            DmaCopy32(3, gUnknown_085DEA9C + digit * 64, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 64);
+            DmaCopy32(3, &gUnknown_085DEA94, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+            gOamBuffer[gUnknown_03000094->unk2].tileNum += gVRAMCurrTileNum_03001930;
+            gOamBuffer[gUnknown_03000094->unk2].x = end - i * 8;
+            gOamBuffer[gUnknown_03000094->unk2].y = y;
+            gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+            gVRAMCurrTileNum_03001930 += 2;
+            gObjVRAMCopyOffset_0300192C += 64;
+            gUnknown_03000094->unk2++;
+            n /= 10;
+        }
+    }
+    else
+    {
+        for (i = 0; i < maxLen; i++)
+        {
+            u16 digit = n % 10;
+
+            DmaCopy32(3, gUnknown_082EC750 + digit * 64, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 64);
+            DmaCopy32(3, &gUnknown_082EC748, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+            gOamBuffer[gUnknown_03000094->unk2].tileNum += gVRAMCurrTileNum_03001930;
+            gOamBuffer[gUnknown_03000094->unk2].x = end - i * 8;
+            gOamBuffer[gUnknown_03000094->unk2].y = y;
+            gOamBuffer[gUnknown_03000094->unk2].paletteNum = 9;
+            gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+            gVRAMCurrTileNum_03001930 += 2;
+            gObjVRAMCopyOffset_0300192C += 64;
+            gUnknown_03000094->unk2++;
+            n /= 10;
+        }
+    }
+}
+
+void sub_08017E4C(u8 x, u8 y, u8 maxLen, u16 n)
+{
+    int i;
+    int end = x + (maxLen - 1) * 8;
+
+    for (i = 0; i < maxLen; i++)
+    {
+        u16 digit = n % 10;
+
+        DmaCopy32(3, gUnknown_082EC750 + digit * 64, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 64);
+        DmaCopy32(3, &gUnknown_082EC748, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+        gOamBuffer[gUnknown_03000094->unk2].tileNum += gVRAMCurrTileNum_03001930;
+        gOamBuffer[gUnknown_03000094->unk2].x = end - i * 8;
+        gOamBuffer[gUnknown_03000094->unk2].y = y;
+        gOamBuffer[gUnknown_03000094->unk2].paletteNum = 9;
+        gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+        gVRAMCurrTileNum_03001930 += 2;
+        gObjVRAMCopyOffset_0300192C += 64;
+        gUnknown_03000094->unk2++;
+        n /= 10;
+    }
+}
+
+void sub_08017FB8(void)
+{
+    DmaCopy32(3, gUnknown_085D0900, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x100);
+    DmaCopy32(3, &gUnknown_085D08F8, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum += gVRAMCurrTileNum_03001930;
+    gOamBuffer[gUnknown_03000094->unk2].x = 8;
+    gOamBuffer[gUnknown_03000094->unk2].y = 136;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+    gVRAMCurrTileNum_03001930 += 8;
+    gObjVRAMCopyOffset_0300192C += 0x100;
+    gUnknown_03000094->unk2++;
+    sub_08017E4C(34, 140, 2, gLivesCount);
+}
+
+void sub_080180BC(void)
+{
+    DmaCopy32(3, gUnknown_085E2338, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x100);
+    DmaCopy32(3, &gUnknown_085E2330, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum += gVRAMCurrTileNum_03001930;
+    gOamBuffer[gUnknown_03000094->unk2].x = 58;
+    gOamBuffer[gUnknown_03000094->unk2].y = 136;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+    gVRAMCurrTileNum_03001930 += 8;
+    gObjVRAMCopyOffset_0300192C += 0x100;
+    gUnknown_03000094->unk2++;
+    sub_08017E4C(83, 140, 2, sub_08014AB8());
+}
+
+void sub_080181BC(void)
+{
+    if (gLevelSelectMode == 2)
+    {
+        u8 r2 = gLevelSelectWorld - 1;
+
+        if (r2 < 6)
+        {
+            u16 score = get_level_highscore_0801095C(r2, gLevelSelectLevel, 1);
+            sub_08017BD0(172, 140, 6, score, gUnknown_0300007C[gLevelSelectLevelCursor].unk1 >> 7);
+        }
+    }
+    else if (gLevelSelectMode == 0 && gLevelSelectWorld < 6)
+    {
+        u16 score = get_level_highscore_0801095C(gLevelSelectWorld, gLevelSelectLevel, 0);
+        sub_08017BD0(172, 140, 6, score, gUnknown_0300007C[gLevelSelectLevelCursor].unk1 >> 7);
+    }
+}
+
+void sub_0801827C(struct SpriteTemplate *sprite, u16 tileNum, int paletteNum, s16 x, s16 y)
+{
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = tileNum;
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].paletteNum = paletteNum;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018338(struct SpriteTemplate *sprite, u8 frameNum, u16 tileNum, s16 x, s16 y)
+{
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = tileNum;
+    gOamBuffer[gUnknown_03000094->unk2].x = x + sprite->subSprites[frameNum].x_offset;
+    gOamBuffer[gUnknown_03000094->unk2].y = y + sprite->subSprites[frameNum].y_offset;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018418(struct SpriteTemplate *sprite, u32 paletteNum, u8 frameNum)
+{
+    DmaCopy32(3, sprite->tileData, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, sprite->subSpriteSize);
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gVRAMCurrTileNum_03001930;
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].paletteNum = paletteNum;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gVRAMCurrTileNum_03001930 += sprite->unk6;
+    gObjVRAMCopyOffset_0300192C += sprite->subSpriteSize;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018528(struct SpriteTemplate *sprite, u32 paletteNum)
+{
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk12;
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].paletteNum = paletteNum;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_080185EC(struct SpriteTemplate *sprite, u32 paletteNum)
+{
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk10;
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].paletteNum = paletteNum;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_080186B0(struct SpriteTemplate *sprite, u8 frameNum)
+{
+    DmaCopy32(3, sprite->tileData + sprite->subSprites[frameNum].index * sprite->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, sprite->subSpriteSize);
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gVRAMCurrTileNum_03001930;
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gVRAMCurrTileNum_03001930 += sprite->unk6;
+    gObjVRAMCopyOffset_0300192C += sprite->subSpriteSize;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_080187C0(struct SpriteTemplate *sprite, u8 frameNum, u8 paletteNum)
+{
+    DmaCopy32(3, sprite->tileData + sprite->subSprites[frameNum].index * sprite->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, sprite->subSpriteSize);
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gVRAMCurrTileNum_03001930;
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].paletteNum = paletteNum;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gVRAMCurrTileNum_03001930 += sprite->unk6;
+    gObjVRAMCopyOffset_0300192C += sprite->subSpriteSize;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_080188E8(struct SpriteTemplate *sprite, u8 arg1)
+{
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk2A[arg1];
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018998(struct SpriteTemplate *sprite)
+{
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk16;
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018A3C(struct SpriteTemplate *sprite)
+{
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk18;
+    gOamBuffer[gUnknown_03000094->unk2].x = (s16)sprite->x;
+    gOamBuffer[gUnknown_03000094->unk2].y = sprite->y;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018AE0(struct SpriteTemplate *sprite, u8 frameNum, u16 x, u16 y)
+{
+    DmaCopy32(3, sprite->tileData + sprite->subSprites[frameNum].index * sprite->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, sprite->subSpriteSize);
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gVRAMCurrTileNum_03001930;
+    gOamBuffer[gUnknown_03000094->unk2].x = (x << 23) >> 23;
+    gOamBuffer[gUnknown_03000094->unk2].y = y;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gVRAMCurrTileNum_03001930 += sprite->unk6;
+    gObjVRAMCopyOffset_0300192C += sprite->subSpriteSize;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018BE8(struct SpriteTemplate *sprite, u8 frameNum, int paletteNum, u16 x, u16 y)
+{
+    DmaCopy32(3, sprite->tileData + sprite->subSprites[frameNum].index * sprite->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, sprite->subSpriteSize);
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gVRAMCurrTileNum_03001930;
+    gOamBuffer[gUnknown_03000094->unk2].x = (x << 23) >> 23;
+    gOamBuffer[gUnknown_03000094->unk2].y = y;
+    gOamBuffer[gUnknown_03000094->unk2].paletteNum = paletteNum;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gVRAMCurrTileNum_03001930 += sprite->unk6;
+    gObjVRAMCopyOffset_0300192C += sprite->subSpriteSize;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018D0C(struct SpriteTemplate *sprite, u8 frameNum, s16 x, s16 y)
+{
+    DmaCopy32(3, sprite->tileData + sprite->subSprites[frameNum].index * sprite->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, sprite->subSpriteSize);
+    DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+    gOamBuffer[gUnknown_03000094->unk2].tileNum = gVRAMCurrTileNum_03001930;
+    gOamBuffer[gUnknown_03000094->unk2].x = x + sprite->subSprites[frameNum].x_offset;
+    gOamBuffer[gUnknown_03000094->unk2].y = y + sprite->subSprites[frameNum].y_offset;
+    gOamBuffer[gUnknown_03000094->unk2].priority = 2;
+    gVRAMCurrTileNum_03001930 += sprite->unk6;
+    gObjVRAMCopyOffset_0300192C += sprite->subSpriteSize;
+    gUnknown_03000094->unk2++;
+}
+
+void sub_08018E38(struct SpriteTemplate *sprite, u16 x, u16 y)
+{
+    if (gLevelSelect_03000083 == 0)
+    {
+        DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+        gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk1A;
+        gOamBuffer[gUnknown_03000094->unk2].x = (x << 23) >> 23;
+        gOamBuffer[gUnknown_03000094->unk2].y = y;
+        gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+        gUnknown_03000094->unk2++;
+    }
+}
+
+void sub_08018EE0(struct SpriteTemplate *sprite, u16 x, u16 y)
+{
+    if (gLevelSelect_03000083 == 0)
+    {
+        DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
+        gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk1C;
+        gOamBuffer[gUnknown_03000094->unk2].x = (x << 23) >> 23;
+        gOamBuffer[gUnknown_03000094->unk2].y = y;
+        gOamBuffer[gUnknown_03000094->unk2].priority = 0;
+        gUnknown_03000094->unk2++;
+    }
+}
+
+void sub_0801B174(void)
+{
+    struct SubSpriteTemplate *r4 = &gUnknown_085CD18C[gUnknown_0300008A];
+    int r7 = 0;
+    struct OamData_alt *r5 = (struct OamData_alt *)gOamBuffer;
+
+    if (gUnknown_03000084 != 0)
+    {
+        u16 r6 = gUnknown_03000084;
+
+        r5[r6].matrixNum_b0_2 = 0;
+        r5[r6].affineMode = 3;
+        if (!r5[r6].matrixNum_hflip)
+        {
+            r5[0].affineParam = r4->unk1A;
+            r5[1].affineParam = r4->unk1C;
+        }
+        else
+        {
+            r5[r6].matrixNum_hflip = 0;
+            r5[0].affineParam = -r4->unk1A;
+            r5[1].affineParam = -r4->unk1C;
+        }
+        if (!((struct OamData_alt *)gOamBuffer)[r6].matrixNum_vflip)
+        {
+            (u16 *)(&r5[2].affineParam)[r7] = r4->unk1E;
+            (u16 *)(&r5[3].affineParam)[r7] = r4->unk20;
+        }
+        else
+        {
+            ((struct OamData_alt *)gOamBuffer)[r6].matrixNum_vflip = 0;
+            (u16 *)(&r5[2].affineParam)[r7] = -r4->unk1E;
+            (u16 *)(&r5[3].affineParam)[r7] = -r4->unk20;
+        }
+    }
+}
+
 void level_select_end(void)
 {
+}
+
+int sub_0801B224(void)
+{
+    if (gNewKeys & 0x110)
+    {
+        sub_08016260();
+        return 1;
+    }
+    if (gNewKeys & 0x220)
+    {
+        sub_080161AC();
+        return 1;
+    }
+    return 0;
+}
+
+int sub_0801B258(void)
+{
+    if (gNewKeys & 0x110)
+    {
+        sub_08016654();
+        return 1;
+    }
+    if (gNewKeys & 0x220)
+    {
+        sub_080163F4();
+        return 1;
+    }
 }
