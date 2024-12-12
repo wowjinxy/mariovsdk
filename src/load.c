@@ -241,7 +241,7 @@ int write_flash_sector_0802A370(u32 sectorNum, const u8 *data, int size)
     return ok;
 }
 
-void read_flash_sector_0802A430(int sector, u8 *buffer, int size)
+void read_flash_sector_0802A430(int sector, void *buffer, int size)
 {
     if (gUnknown_03000124 != 0)
         ReadFlash(sector, 0, buffer, size);

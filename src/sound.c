@@ -13,8 +13,8 @@ struct MusicFile
     u8 filler0[0x34];  // name
     /*0x034*/ u16 songLength;  // length of patternOrder table
     /*0x036*/ u16 loopStart;  // loop start point (index into patternOrder array)
-    u16 unk38;
-    u16 unk3A;
+    /*0x038*/ u16 numChans;  // max number of channels
+    u16 unk3A;  // something to do with looping
     u8 filler3C[0x3E - 0x3C];
     /*0x03E*/ u16 tickLength;
     u16 unk40;
@@ -164,9 +164,9 @@ struct MusicPlayer
     u16 unk4F4;
     /*0x4F6*/ s16 currPatternTick;
     /*0x4F8*/ s16 unk4F8;
-    u8 unk4FA;
+    /*0x4FA*/ u8 numChans;
     u8 unk4FB;
-    u32 unk4FC;  // bitmask of used channels?
+    /*0x4FC*/ u32 usedChanMask;  // bitmask of channels currently playing
     u32 unk500;
     u32 unk504;
     s32 unk508;
@@ -1268,7 +1268,7 @@ static int sub_080722A8(struct MusicPlayer *mplayer, struct MusicChannel *arg1)
     int index = -1;
     int i;
 
-    if (mplayer->unk4FA <= mplayer->unk4FB)
+    if (mplayer->numChans <= mplayer->unk4FB)
     {
         index = arg1 - mplayer->channels;
         if ((u32)chanPtrs[index] == 1)
@@ -1316,7 +1316,7 @@ static inline u32 stupid(u8 *r5)
 static int play_notes(struct MusicPlayer *mplayer)
 {
     struct MusicChannel *channels = mplayer->channels;
-    int sp8 = 0;
+    int usedChanMask = 0;
     u8 *r5 = mplayer->noteDataPtr;
     int r2;
     u8 r12_;
@@ -1331,7 +1331,7 @@ static int play_notes(struct MusicPlayer *mplayer)
         u8 chanID = (r12_ & 0x3F) - 1;
         if (chanID > 15)
             continue;
-        sp8 |= 1 << chanID;
+        usedChanMask |= 1 << chanID;
         chan = &channels[chanID];
         if (r12_ & 0x80)
         {
@@ -1559,7 +1559,7 @@ static int play_notes(struct MusicPlayer *mplayer)
         chan->prevHdrByte = hdrByte;
     }
     //_08072728
-    mplayer->unk4FC = sp8;
+    mplayer->usedChanMask = usedChanMask;
     mplayer->noteDataPtr = r5;
     // missing return?
 }
@@ -2444,20 +2444,20 @@ static void effect_10_func(struct MusicChannel *chan, s16 *dest, int arg2)
 
 static void sub_08072FC8(struct MusicPlayer *mplayer, s16 *dest, int numSamples)
 {
-    int r9 = mplayer->unk4FA;
-    u8 sp8 = mplayer->unk4FC;
+    int numChans = mplayer->numChans;
+    u8 usedChanMask = mplayer->usedChanMask;
     u32 i;
     struct MusicChannel *chan;
     int eff;
 
     if (gUnknown_03000820 != 0)
     {
-        for (i = 0; i < r9; i++)
+        for (i = 0; i < numChans; i++)
         {
             chan = &mplayer->channels[i];
             if (chan->instrument != NULL && chan->unk26 != 0)
             {
-                if (!((sp8 >> i) & 1) || (eff = chan->currEffect) != 38 || (u32)gUnknown_03000824 >= chan->currEffectParam)
+                if (!((usedChanMask >> i) & 1) || (eff = chan->currEffect) != 38 || (u32)gUnknown_03000824 >= chan->currEffectParam)
                 {
                     effect_default_func_inline(chan, dest, numSamples);
                 }
@@ -2466,12 +2466,12 @@ static void sub_08072FC8(struct MusicPlayer *mplayer, s16 *dest, int numSamples)
     }
     else
     {
-        for (i = 0; i < r9; i++)
+        for (i = 0; i < numChans; i++)
         {
             chan = &mplayer->channels[i];
             if (chan->instrument != NULL && chan->unk26 != 0)
             {
-                if (!((sp8 >> i) & 1))
+                if (!((usedChanMask >> i) & 1))
                 {
                     chan->unk26 = chan->unk28;
                     chan->unk2C = chan->unk24;
@@ -2667,9 +2667,9 @@ static void sub_080734F8(struct MusicPlayer *mplayer, struct MusicFile *musFile)
         mplayer->unk4C4[i] = 0;
     if (mplayer->unk4FB >= 8)
         mplayer->unk4FB = 8;
-    mplayer->unk4FA = mplayer->musicFile->unk38;
-    if (mplayer->unk4FA >= 16)
-        mplayer->unk4FA = 16;
+    mplayer->numChans = mplayer->musicFile->numChans;
+    if (mplayer->numChans >= 16)
+        mplayer->numChans = 16;
     mplayer->volume = 0;
     mplayer->loopFlag = 0;
     sub_080735D0(mplayer);
@@ -2688,7 +2688,7 @@ static void sub_080735D0(struct MusicPlayer *mplayer)
     mplayer->unk50C = mplayer->unk508 / mplayer->tickLength;
     mplayer->currPatternTick = 0;
     mplayer->unk4F4 = 0;
-    mplayer->unk4FC = 0;
+    mplayer->usedChanMask = 0;
     mplayer->unk4F0 = -1;
     mplayer->unk4F8 = -1;
     mplayer->currPatternIndex = 0;

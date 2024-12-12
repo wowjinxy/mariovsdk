@@ -1159,7 +1159,19 @@ extern u32 *gUnknown_080788F8;
 extern u8 *gSelectedSaveFileNumPtr;
 extern u16 gUnknown_080788E0[];
 extern struct UnknownStruct12 *gScreenModeRelatedPtr;
-extern u32 *gEWorldLevelCountPtr;
+struct EWorldLevelCount_sub
+{
+    u8 filler0[0xC00];
+};
+
+extern struct EWorldLevelCount
+{
+    u32 count;
+    u8 filler4[0x4C-0x4];
+    u8 unk4C[0x58-0x4C];
+    u8 unk58[0x68-0x58];
+    struct EWorldLevelCount_sub unk68[12];
+} *gEWorldLevelCountPtr;
 extern const struct UnknownStruct17 gUnknown_0807954C[];
 extern const u8 gTitleMarioEyesAnimData[];
 extern const u8 gTitleDKEyesAnimData[];
@@ -1251,8 +1263,25 @@ extern struct struct_0807820C *gEWRAMBasePtr;
 extern void *gSomeVRAMAddr_03000E90;
 extern void *gSomeVRAMAddr_03000E80;
 
+struct Struct08031C54_sub
+{
+    u32 unk0;
+    u32 unk4;
+};
+
+struct Struct08031C54
+{
+    u32 unk0;
+    u32 unk4;
+    s32 unk8;
+    struct Struct08031C54_sub unkC[3];
+    u8 filler24[0x25-0x24];
+    u8 unk25;
+    u8 unk26;
+};
+
 extern u32 gUnknown_03000294;
-extern u32 gUnknown_03000298;
+extern struct Struct08031C54 *gUnknown_03000298;
 extern s32 gUnknown_03000288;
 extern const u32 gTextErasing[];
 
@@ -1369,6 +1398,8 @@ void fade_transition_main(void);
 int sub_08029FD0(void);
 int sub_0802A0A8(void);
 int write_flash_sector_0802A164(void);
+int write_flash_sector_0802A290(int sectorNum, void *data, int size);
+void read_flash_sector_0802A430(int sector, void *buffer, int size);
 int sub_0802A464(void);
 void help_init_callback(void);
 void help_end(void);
@@ -1415,8 +1446,12 @@ void e_world_main(void);
 void e_world_loop(void);
 void e_world_init_callback(void);
 void e_world_end(void);
+void sub_0802ECC8(void);
+void sub_0802EE54(void);
+void sub_0802EEC8(int);
 void sub_0802F060(void);
 int sub_0802F090(void *);
+int sub_0802F12C(void *);
 void sub_0802F168(int, u8 *);
 void sub_0802F1AC(int, int);
 int sub_0802F1C0(int);
@@ -1442,6 +1477,7 @@ void sub_080317F8(void);
 int sub_08031944(void *);
 void sub_08031978(void *);
 int sub_080319BC(struct GraphicsConfig *, struct UnknownStruct5 *, int);
+int sub_08031A38(int);
 void sub_08031BF0();
 int sub_08031E04(void);
 void e_world_from_menu_main(void);
@@ -1481,7 +1517,7 @@ void goto_credits_main(void);
 void goto_credits_loop(void);
 void goto_credits_end(void);
 void sub_080348C8(const struct UnknownStruct10 *, u32, u32, u32);
-void sub_08034CCC();
+int sub_08034CCC();
 void sub_08035108();
 void sub_080351E0();
 void expert_levels_init_callback(void);

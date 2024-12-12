@@ -214,7 +214,7 @@ void main_menu_init_callback(void)
     arena_restore_head(0);
     gUnknown_03001740 = 0;
     gIsEWorldVisible_0300005D = gUnknown_03000062 = 0;
-    if (*gEWorldLevelCountPtr != 0)
+    if (gEWorldLevelCountPtr->count != 0)
         gIsEWorldVisible_0300005D = gUnknown_03000062 = 1;
 
     // set initial cursor position
@@ -308,7 +308,7 @@ static void handle_main_menu_input(void)
         {
             s8 toDelete = get_first_nonempty_file_num();
 
-            if (*gEWorldLevelCountPtr == 0 && toDelete == 0)
+            if (gEWorldLevelCountPtr->count == 0 && toDelete == 0)
             {
                 play_sound_effect_08071990(SE_ERROR, 8, 16, 64, 0, 128, 0);
             }
@@ -585,7 +585,7 @@ static void handle_erase_data_input(void)
          || gFileSelectMenuSel == FILE_SELECT_FILE_C)
             r1 = has_completed_first_level(gFileSelectMenuSel);
         else
-            r1 = *gEWorldLevelCountPtr;
+            r1 = gEWorldLevelCountPtr->count;
         if (!r1)
         {
             play_sound_effect_08071990(SE_ERROR, 8, 16, 64, 0, 128, 0);
@@ -757,7 +757,7 @@ void main_menu_main(void)
     sub_08038130(0);
     if (gIsFadeInProgress == 0)
     {
-        if (sub_08038228(0) != 0 || *gEWorldLevelCountPtr != 0)
+        if (sub_08038228(0) != 0 || gEWorldLevelCountPtr->count != 0)
             gIsEWorldVisible_0300005D = 1;
         else
             gIsEWorldVisible_0300005D = 0;
@@ -768,7 +768,7 @@ void main_menu_main(void)
     {
         if (gIsEWorldVisible_0300005D != 0)
         {
-            if (gUnknown_03000063 == 0 && *gEWorldLevelCountPtr == 0)
+            if (gUnknown_03000063 == 0 && gEWorldLevelCountPtr->count == 0)
                 gFileSelectMenuSel = FILE_SELECT_EWORLD;
             gUnknown_03000063 = 1;
             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
@@ -1192,7 +1192,7 @@ static void sub_08013A48(u8 fileNum, u8 arg1, s8 arg2, s16 x, s16 y)
     {
         struct SpriteTemplate *r0 = sFileIconSpriteTemplates;
         add_sprite_080138D0(&r0[3], 0, arg2, x + 6, y + 6);
-        print_digits_large(x + 14, y + 46, 2, *gEWorldLevelCountPtr, 0);
+        print_digits_large(x + 14, y + 46, 2, gEWorldLevelCountPtr->count, 0);
         add_sprite_080138D0(&sFileInfoBoxSpriteTemplate, 2, arg2, x, y + 44);
     }
     else
