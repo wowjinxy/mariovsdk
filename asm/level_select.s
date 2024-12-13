@@ -3629,7 +3629,7 @@ _08016C38:
 	.4byte _08016DF0
 	.4byte _08016E0C
 	.4byte _08016E30
-_08016C78:
+_08016C78:  @ 0
 	mov r0, #1
 	bl sub_08015238
 	lsl r0, r0, #24
@@ -3645,7 +3645,7 @@ _08016C86:
 	.byte 0x00
 _08016C90:
 	.4byte gLevelSelect_03000083
-_08016C94:
+_08016C94:  @ 1
 	mov r0, #0
 	bl sub_08015238
 	lsl r0, r0, #24
@@ -3697,7 +3697,7 @@ _08016CE4:
 _08016CF0:
 	bl sub_080161AC
 	b _0801706A
-_08016CF6:
+_08016CF6:  @ 5
 	mov r0, #1
 	bl sub_080150F0
 	ldr r1, _08016D04  @ =gLevelSelect_03000083
@@ -3706,7 +3706,7 @@ _08016CF6:
 	b _0801706A
 _08016D04:
 	.4byte gLevelSelect_03000083
-_08016D08:
+_08016D08:  @ 3
 	mov r0, #1
 	bl sub_08015238
 	lsl r0, r0, #24
@@ -3722,7 +3722,7 @@ _08016D16:
 	.byte 0x00
 _08016D20:
 	.4byte gLevelSelect_03000083
-_08016D24:
+_08016D24:  @ 4
 	mov r0, #0
 	bl sub_08015238
 	lsl r0, r0, #24
@@ -3777,7 +3777,7 @@ _08016D78:
 _08016D84:
 	bl sub_080163F4
 	b _0801706A
-_08016D8A:
+_08016D8A:  @ 2
 	mov r0, #0
 	bl sub_080150F0
 	ldr r1, _08016D98  @ =gLevelSelect_03000083
@@ -3786,7 +3786,7 @@ _08016D8A:
 	b _0801706A
 _08016D98:
 	.4byte gLevelSelect_03000083
-_08016D9C:
+_08016D9C:  @ 10
 	mov r0, #1
 	bl sub_08015238
 	lsl r0, r0, #24
@@ -3802,7 +3802,7 @@ _08016DAA:
 	.byte 0x00
 _08016DB4:
 	.4byte gLevelSelect_03000083
-_08016DB8:
+_08016DB8:  @ 11
 	mov r0, #0
 	bl sub_08015238
 	lsl r0, r0, #24
@@ -3822,7 +3822,7 @@ _08016DD4:
 	.4byte gLevelSelectMode
 _08016DD8:
 	.4byte gLevelSelect_03000083
-_08016DDC:
+_08016DDC:  @ 12
 	ldr r1, _08016DEC  @ =gLevelSelect_03000083
 	mov r0, #12
 	strb r0, [r1]
@@ -3833,7 +3833,7 @@ _08016DDC:
 	.byte 0x00
 _08016DEC:
 	.4byte gLevelSelect_03000083
-_08016DF0:
+_08016DF0:  @ 13
 	mov r0, #1
 	bl sub_08015238
 	lsl r0, r0, #24
@@ -3849,7 +3849,7 @@ _08016DFE:
 	.byte 0x00
 _08016E08:
 	.4byte gLevelSelect_03000083
-_08016E0C:
+_08016E0C:  @ 14
 	mov r0, #0
 	bl sub_08015238
 	lsl r0, r0, #24
@@ -3869,7 +3869,7 @@ _08016E28:
 	.4byte gLevelSelectMode
 _08016E2C:
 	.4byte gLevelSelect_03000083
-_08016E30:
+_08016E30:  @ 15
 	ldr r1, _08016E40  @ =gLevelSelect_03000083
 	mov r0, #15
 	strb r0, [r1]
@@ -3880,7 +3880,7 @@ _08016E30:
 	.byte 0x00
 _08016E40:
 	.4byte gLevelSelect_03000083
-_08016E44:
+_08016E44:  @ 6
 	bl update_fade_to_black_08029F7C
 	lsl r0, r0, #24
 	cmp r0, #0
@@ -3947,7 +3947,7 @@ _08016EC8:
 	.4byte gUnknown_03000070
 _08016ECC:
 	.4byte gLevelSelect_03000083
-_08016ED0:
+_08016ED0:  @ 7
 	ldr r0, _08016EEC  @ =gIsFadeInProgress
 	ldrb r2, [r0]
 	cmp r2, #0
@@ -3972,7 +3972,7 @@ _08016EF4:
 	.4byte gLevelSelect_03000083
 _08016EF8:
 	.4byte gLevelSelectMode
-_08016EFC:
+_08016EFC:  @ 8
 	bl update_fade_to_black_08029F7C
 	lsl r0, r0, #24
 	cmp r0, #0
@@ -4034,7 +4034,7 @@ _08016F74:
 	.4byte 0x00003D42
 _08016F78:
 	.4byte 0x0000A0A0
-_08016F7C:
+_08016F7C:  @ 9
 	ldr r0, _08016FA0  @ =gIsFadeInProgress
 	ldrb r1, [r0]
 	cmp r1, #0
@@ -4156,7 +4156,7 @@ _08017060:
 	b _0801706A
 _08017066:
 	bl sub_08016B2C
-_0801706A:
+_0801706A:  @ end of switch
 	ldr r0, _080170CC  @ =gUnknown_03000085
 	ldr r1, _080170D0  @ =gUnknown_0300008D
 	ldr r3, _080170D4  @ =gUnknown_085E1F2C

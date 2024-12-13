@@ -1088,7 +1088,7 @@ extern u32 gUnknown_03001718;
 extern u16 gUnknown_0300171C;
 extern s16 gCurrentLevelWidth;
 extern s16 gSpriteHorizontalOffset;
-extern struct backgroundLayerOffset gBGLayerOffsets;  // no idea what type this is
+extern struct backgroundLayerOffset gBGLayerOffsets;
 extern u8 gUnknown_03001740;
 extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
@@ -1656,7 +1656,7 @@ void sub_0803D248();
 void sub_08031D44();
 void sub_0806E594(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
 void sub_0800F0A8(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
-u32 update_fade_to_black_08029F7C(void);
+u8 update_fade_to_black_08029F7C(void);
 void sub_08007154(void);
 
 u32 VerifyFlashSector(u16 sectorNum, u8 *src);
