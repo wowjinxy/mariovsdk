@@ -18,7 +18,7 @@
 	X(src/savefile.o) \
 	X(src/main_menu.o) \
 	X(asm/rom_801488C.o) \
-	X(asm/level_select.o) \
+	X(src/level_select.o) \
 	X(asm/rom_801B310.o) \
 	X(src/title.o) \
 	X(src/intro.o) \

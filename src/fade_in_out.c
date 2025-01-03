@@ -168,7 +168,7 @@ void fade_transition_main(void) {
     REG_BLDY = sBldY;
 }
 
-u32 update_fade_to_black_08029F7C(void) {
+u8 update_fade_to_black_08029F7C(void) {
 
     // fade to black
     if (sBldY < 31) {

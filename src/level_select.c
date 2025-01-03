@@ -29,7 +29,7 @@ struct Struct94
     u16 unk24;
     u16 unk26;
     u16 unk28;
-    u16 unk2A[(0x38-0x2A)/2];
+    u16 unk2A[7];
 };
 
 extern struct GraphicsConfig *gLevelSelectBackgrounds[];
@@ -51,7 +51,7 @@ extern u16 gUnknown_03000078;
 extern struct { u8 unk0; u8 unk1; u8 filler2[2]; } *gUnknown_0300007C;
 extern s8 gLevelSelect_03000083;
 extern s8 gUnknown_03000084;
-extern u8 gUnknown_03000085;
+extern s8 gUnknown_03000085;
 extern u8 gUnknown_03000086;
 extern u8 gUnknown_03000087;
 extern s8 gUnknown_03000088;
@@ -66,6 +66,8 @@ extern u8 gUnknown_03000090;
 extern u8 gUnknown_03000091;
 extern u8 gUnknown_03000092;
 extern struct Struct94 *gUnknown_03000094;
+
+asm(".section .rodata\n.balign 4\n");
 
 void sub_080150F0(u8 arg0)
 {
@@ -754,7 +756,7 @@ void sub_08015F78(void)
                 }
                 else
                 {
-                    gLevelSelectWorld--;
+                    gLevelSelectWorld = gLevelSelectWorldCursor - 1;
                     gLevelSelectLevel = 0;
                     dumb = 4;
                     gLevelSelect_03000083 = 4;
@@ -1692,7 +1694,7 @@ void sub_08018338(struct SpriteTemplate *sprite, u8 frameNum, u16 tileNum, s16 x
     gUnknown_03000094->unk2++;
 }
 
-void sub_08018418(struct SpriteTemplate *sprite, u32 paletteNum)
+void sub_08018418(struct SpriteTemplate *sprite, s8 paletteNum)
 {
     DmaCopy32(3, sprite->tileData, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, sprite->subSpriteSize);
     DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
@@ -1706,7 +1708,7 @@ void sub_08018418(struct SpriteTemplate *sprite, u32 paletteNum)
     gUnknown_03000094->unk2++;
 }
 
-void sub_08018528(struct SpriteTemplate *sprite, u32 paletteNum)
+void sub_08018528(struct SpriteTemplate *sprite, s8 paletteNum)
 {
     DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
     gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk12;
@@ -1717,7 +1719,7 @@ void sub_08018528(struct SpriteTemplate *sprite, u32 paletteNum)
     gUnknown_03000094->unk2++;
 }
 
-void sub_080185EC(struct SpriteTemplate *sprite, u32 paletteNum)
+void sub_080185EC(struct SpriteTemplate *sprite, s8 paletteNum)
 {
     DmaCopy32(3, sprite->oamData, &gOamBuffer[gUnknown_03000094->unk2], sizeof(struct OamData));
     gOamBuffer[gUnknown_03000094->unk2].tileNum = gUnknown_03000094->unk10;
@@ -2300,8 +2302,321 @@ void sub_080196CC(s8 arg0, s8 arg1, s8 arg2, u8 arg3, u8 arg4)
 
 extern struct SpriteTemplate gUnknown_08078D24[];
 
-void sub_08019AF4(s8, s8);
-void sub_0801A2B8(s8, s8);
+static inline void sub_08019AF4_sub(s8 arg0, s8 i, u8 r1, u8 r4)
+{
+    u8 r6 = (i == arg0 && gLevelSelectMode == 2);
+
+    if (r4 != 0)
+    {
+        if (r6)
+        {
+            if ((r1 & 0xC0) == 0xC0)
+                sub_08018E38(&gUnknown_08079354, gUnknown_080789BC[i].x + 34, gUnknown_080789BC[i].y - 8);
+        }
+        else
+        {
+             if ((r1 & 0xC0) == 0xC0)
+                sub_08018EE0(&gUnknown_0807936C, gUnknown_080789BC[i].x + 34, gUnknown_080789BC[i].y - 8);
+        }
+    }
+}
+
+void sub_08019AF4(s8 arg0, s8 arg1)
+{
+    u8 i;
+
+    if (arg1 < 0)
+        goto asdf;
+    if (arg1 <= 5)
+    {
+    asdf:
+        for (i = 0; i < arg0; i++)
+            sub_08019AF4_sub(arg0, i, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+        sub_08019AF4_sub(arg0, i, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+        i++;
+        for (; i < 7; i++)
+            sub_08019AF4_sub(arg0, i, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+    }
+}
+
+extern struct SpriteTemplate gUnknown_0807933C;
+extern struct SpriteTemplate gUnknown_080792DC;
+extern struct SpriteTemplate gUnknown_080792F4;
+
+void sub_08019D0C(s8 arg0, s8 arg1, s8 arg2, u8 arg3, u8 arg4)
+{
+    u8 r3 = (arg0 == arg2 && gLevelSelectMode == 2);
+
+    if (arg0 == 6)
+    {
+        if (arg4 != 0)
+        {
+            if (r3)
+            {
+                if ((arg3 & 0xC0) == 0xC0)
+                    sub_08018D0C(&gUnknown_0807933C, 3, gUnknown_080789BC[6].x + 1, gUnknown_080789BC[6].y);
+                else
+                    sub_08018D0C(&gUnknown_0807933C, 0, gUnknown_080789BC[6].x + 1, gUnknown_0807897C[6].y);
+            }
+            else
+            {
+                if ((arg3 & 0xC0) == 0xC0)
+                    sub_08018D0C(&gUnknown_0807933C, 3, gUnknown_080789BC[6].x + 1, gUnknown_0807897C[6].y);
+                else
+                    sub_08018D0C(&gUnknown_0807933C, 0, gUnknown_080789BC[6].x + 1, gUnknown_0807897C[6].y);
+            }
+        }
+        else
+        {
+            if (r3)  // redundant
+                sub_08018D0C(&gUnknown_0807933C, 0, gUnknown_080789BC[6].x + 1, gUnknown_0807897C[6].y);
+            else
+                sub_08018D0C(&gUnknown_0807933C, 0, gUnknown_080789BC[6].x + 1, gUnknown_0807897C[6].y);
+        }
+
+    }
+    else
+    {
+        if (arg4 != 0)
+        {
+            if (r3)
+            {
+                if ((arg3 & 0xC0) == 0xC0)
+                {
+                    sub_08018D0C(&gUnknown_080792DC, arg1 + 18, gUnknown_080789BC[arg0].x, gUnknown_080789BC[arg0].y);
+                    sub_08018D0C(&gUnknown_080792F4, arg0 + 18, gUnknown_080789BC[arg0].x + 8, gUnknown_080789BC[arg0].y);
+                }
+                else
+                {
+                    sub_08018D0C(&gUnknown_080792DC, arg1, gUnknown_080789BC[arg0].x, gUnknown_080789BC[arg0].y);
+                    sub_08018D0C(&gUnknown_080792F4, arg0, gUnknown_080789BC[arg0].x + 8, gUnknown_080789BC[arg0].y);
+                }
+            }
+            else
+            {
+                if ((arg3 & 0xC0) == 0xC0)
+                {
+                    sub_08018D0C(&gUnknown_080792DC, arg1 + 24, gUnknown_080789BC[arg0].x, gUnknown_080789BC[arg0].y);
+                    sub_08018D0C(&gUnknown_080792F4, arg0 + 24, gUnknown_080789BC[arg0].x + 8, gUnknown_080789BC[arg0].y);
+                }
+                else
+                {
+                    sub_08018D0C(&gUnknown_080792DC, arg1, gUnknown_080789BC[arg0].x, gUnknown_080789BC[arg0].y);
+                    sub_08018D0C(&gUnknown_080792F4, arg0, gUnknown_080789BC[arg0].x + 8, gUnknown_080789BC[arg0].y);
+                }
+            }
+        }
+        else
+        {
+            if (r3)
+            {
+                sub_08018D0C(&gUnknown_080792DC, arg1, gUnknown_080789BC[arg0].x, gUnknown_080789BC[arg0].y);
+                sub_08018D0C(&gUnknown_080792F4, arg0, gUnknown_080789BC[arg0].x + 8, gUnknown_080789BC[arg0].y);
+            }
+            else
+            {
+                sub_08018D0C(&gUnknown_080792DC, arg1 + 6, gUnknown_080789BC[arg0].x, gUnknown_080789BC[arg0].y);
+                sub_08018D0C(&gUnknown_080792F4, arg0 + 6, gUnknown_080789BC[arg0].x + 8, gUnknown_080789BC[arg0].y);
+            }
+        }
+        sub_08019234(arg0, r3, arg3);
+    }
+}
+
+extern struct SpriteTemplate gLevelSelectLevelArtSpriteLayout[];
+extern struct SpriteTemplate gLevelSelectLevelPlusArtSpriteLayout[];
+extern struct SpriteTemplate gUnknown_0807915C[];
+extern struct SpriteTemplate gUnknown_08078FF4[];
+extern struct SpriteTemplate gUnknown_0807921C[];
+extern struct SpriteTemplate gUnknown_080790B4[];
+
+void sub_08019F8C(s8 arg0, s8 arg1)
+{
+    u8 i;
+
+    if (arg1 > 5)
+        return;
+    for (i = 0; i < arg0; i++)
+    {
+        sub_080196CC(i, arg1, arg0, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+        if (gUnknown_0300007C[i].unk0 != 0)
+        {
+            sub_080185EC(&gUnknown_0807915C[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i);
+        }
+        else
+        {
+            sub_080185EC(&gUnknown_0807915C[i], 0);
+            sub_080187C0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i, 14);
+        }
+    }
+    sub_080196CC(i, arg1, arg0, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+    if (gUnknown_0300007C[i].unk0 != 0)
+    {
+        if (gLevelSelectMode == 0)
+        {
+            if (i <= 6)
+                sub_08018528(&gUnknown_08078FF4[i], arg1 + 1);
+            else
+                sub_08018418(&gUnknown_08078FF4[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i);
+        }
+        else
+        {
+            if (i <= 6)
+                sub_080185EC(&gUnknown_0807915C[i], arg1 + 1);
+            else
+                sub_08018418(&gUnknown_0807915C[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i);
+        }
+    }
+    else if (arg0 == i && gLevelSelectMode == 0)
+    {
+        if (i <= 6)
+            sub_080185EC(&gUnknown_0807915C[i], arg1 + 1);
+        else
+            sub_08018418(&gUnknown_0807915C[i], arg1 + 1);
+        goto label1;
+    }
+    else
+    {
+        if (i <= 6)
+            sub_080185EC(&gUnknown_0807915C[i], 0);
+        else
+            sub_08018418(&gUnknown_0807915C[i], 0);
+label1:
+        sub_080187C0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i, 13);
+    }
+    i++;
+    for (; i < 8; i++)
+    {
+        sub_080196CC(i, arg1, arg0, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+        if (gUnknown_0300007C[i].unk1 != 0)
+        {
+            if (i <= 6)
+                sub_080185EC(&gUnknown_0807915C[i], arg1 + 1);
+            else
+                sub_08018418(&gUnknown_0807915C[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i);
+        }
+        else if (gUnknown_0300007C[i].unk0 != 0)
+        {
+            if (i <= 6)
+                sub_080185EC(&gUnknown_0807915C[i], arg1 + 1);
+            else
+                sub_08018418(&gUnknown_0807915C[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i);
+        }
+        else
+        {
+            if (i <= 6)
+            {
+                sub_080187C0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i, 14);
+                sub_080185EC(&gUnknown_0807915C[i], 0);
+            }
+            else
+            {
+                sub_080186B0(&gLevelSelectLevelArtSpriteLayout[i], arg1 * 8 + i);
+                sub_08018418(&gUnknown_0807915C[i], arg1 + 1);
+            }
+        }
+    }
+}
+
+void sub_0801A2B8(s8 arg0, s8 arg1)
+{
+    u8 i;
+
+    if (arg1 < 0)
+        arg1 = 0;
+    else if (arg1 > 5)
+        return;
+    for (i = 0; i < arg0; i++)
+    {
+        sub_08019D0C(i, arg1, arg0, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+        if (gUnknown_0300007C[i].unk0 != 0)
+        {
+            sub_080185EC(&gUnknown_0807921C[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i);
+        }
+        else
+        {
+            sub_080185EC(&gUnknown_0807921C[i], 0);
+            sub_080187C0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i, 14);
+        }
+    }
+    sub_08019D0C(i, arg1, arg0, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+    if (gUnknown_0300007C[i].unk0 != 0)
+    {
+        if (gLevelSelectMode == 2)
+        {
+            if (i <= 5)
+                sub_08018528(&gUnknown_080790B4[i], arg1 + 1);
+            else
+                sub_08018418(&gUnknown_080790B4[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i);
+        }
+        else
+        {
+            if (i <= 5)
+                sub_080185EC(&gUnknown_0807921C[i], arg1 + 1);
+            else
+                sub_08018418(&gUnknown_0807921C[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i);
+        }
+    }
+    else if (arg0 == i && gLevelSelectMode == 2)
+    {
+        if (i <= 5)
+            sub_080185EC(&gUnknown_0807921C[i], arg1 + 1);
+        else
+            sub_08018418(&gUnknown_0807921C[i], arg1 + 1);
+        goto label1;
+    }
+    else
+    {
+        if (i <= 5)
+            sub_080185EC(&gUnknown_0807921C[i], 0);
+        else
+            sub_08018418(&gUnknown_0807921C[i], 0);
+label1:
+        sub_080187C0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i, 14);
+    }
+    i++;
+    for (; i < 7; i++)
+    {
+        sub_08019D0C(i, arg1, arg0, gUnknown_0300007C[i].unk1, gUnknown_0300007C[i].unk0);
+        if (gUnknown_0300007C[i].unk1 != 0)
+        {
+            if (i <= 5)
+                sub_080185EC(&gUnknown_0807921C[i], arg1 + 1);
+            else
+                sub_08018418(&gUnknown_0807921C[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i);
+        }
+        else if (gUnknown_0300007C[i].unk0 != 0)
+        {
+            if (i <= 5)
+                sub_080185EC(&gUnknown_0807921C[i], arg1 + 1);
+            else
+                sub_08018418(&gUnknown_0807921C[i], arg1 + 1);
+            sub_080186B0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i);
+        }
+        else
+        {
+            if (i <= 5)
+            {
+                sub_080185EC(&gUnknown_0807921C[i], 0);
+                sub_080187C0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i, 14);
+            }
+            else
+            {
+                sub_08018418(&gUnknown_0807921C[i], arg1 + 1);
+                sub_080186B0(&gLevelSelectLevelPlusArtSpriteLayout[i], arg1 * 7 + i);
+            }
+        }
+    }
+}
 
 void sub_0801A5FC(void)
 {
@@ -2350,6 +2665,909 @@ extern struct SpriteTemplate gUnknown_08078C1C[];
 extern struct SpriteTemplate gUnknown_08078B74[];
 extern struct SpriteTemplate gUnknown_080794A4;
 extern struct SpriteTemplate gUnknown_080794BC;
+
+#ifdef NONMATCHING
+void sub_0801A7D8(void)
+{
+    struct SpriteTemplate *r2;
+
+    DmaCopy32(3, gUnknown_085CD848, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x800);  //
+    gUnknown_03000094->unk10 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x800/32;
+    gObjVRAMCopyOffset_0300192C += 0x800;
+
+    DmaCopy32(3, gUnknown_085CE074, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x800);  //
+    gUnknown_03000094->unk12 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x800/32;
+    gObjVRAMCopyOffset_0300192C += 0x800;
+
+    DmaCopy32(3, gUnknown_085C7D08 + gUnknown_085C7A78[gUnknown_0300008A].index * 0x800, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x800);  //
+    gUnknown_03000094->unk14 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x800/32;
+    gObjVRAMCopyOffset_0300192C += 0x800;
+
+    DmaCopy32(3, gUnknown_085E2B00 + gUnknown_085E2870[gUnknown_03000088].index * 0x100, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x100);  //
+    gUnknown_03000094->unk8 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x100/32;
+    gObjVRAMCopyOffset_0300192C += 0x100;
+
+    DmaCopy32(3, gUnknown_085E3190 + gUnknown_085E2F00[gUnknown_03000088].index * 0x100, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x100);  //
+    gUnknown_03000094->unkA = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x100/32;
+    gObjVRAMCopyOffset_0300192C += 0x100;
+
+    DmaCopy32(3, gUnknown_085E9360 + gUnknown_085E90D0[gUnknown_03000088].index * 0x400, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x400);  //
+    gUnknown_03000094->unkC = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x400/32;
+    gObjVRAMCopyOffset_0300192C += 0x400;
+
+    DmaCopy32(3, gUnknown_085C2588, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x80);  //
+    gUnknown_03000094->unk16 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x80/32;
+    gObjVRAMCopyOffset_0300192C += 0x80;
+
+    DmaCopy32(3, gUnknown_085C2634, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x80);  //
+    gUnknown_03000094->unk18 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x80/32;
+    gObjVRAMCopyOffset_0300192C += 0x80;
+
+    DmaCopy32(3, gUnknown_085E200C + gUnknown_085E1F2C[gUnknown_03000085].index * 0x80, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x80);  //
+    gUnknown_03000094->unk1A = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x80/32;
+    gObjVRAMCopyOffset_0300192C += 0x80;
+
+    DmaCopy32(3, gUnknown_085E1C2C, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, 0x80);  //
+    gUnknown_03000094->unk1C = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += 0x80/32;
+    gObjVRAMCopyOffset_0300192C += 0x80;
+
+    DmaCopy32(3, gUnknown_080793B4.tileData + gUnknown_080793B4.subSprites[gUnknown_03000086].index * gUnknown_080793B4.unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, gUnknown_080793B4.subSpriteSize);
+    gUnknown_03000094->unk1E = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += gUnknown_080793B4.unk6;
+    gObjVRAMCopyOffset_0300192C += gUnknown_080793B4.subSpriteSize;
+
+    DmaCopy32(3, gUnknown_08079414.tileData + gUnknown_08079414.subSprites[gUnknown_03000087].index * gUnknown_08079414.unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, gUnknown_08079414.subSpriteSize);
+    gUnknown_03000094->unk20 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += gUnknown_08079414.unk6;
+    gObjVRAMCopyOffset_0300192C += gUnknown_08079414.subSpriteSize;
+
+    DmaCopy32(3, gUnknown_08079474.tileData + gUnknown_08079474.subSprites[gUnknown_03000087].index * gUnknown_08079474.unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, gUnknown_08079474.subSpriteSize);
+    gUnknown_03000094->unk22 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += gUnknown_08079474.unk6;
+    gObjVRAMCopyOffset_0300192C += gUnknown_08079474.subSpriteSize;
+
+    DmaCopy32(3, gUnknown_08079384.tileData + gUnknown_08079384.subSprites[0].index * gUnknown_08079384.unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, gUnknown_08079384.subSpriteSize);
+    gUnknown_03000094->unk24 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += gUnknown_08079384.unk6;
+    gObjVRAMCopyOffset_0300192C += gUnknown_08079384.subSpriteSize;
+
+    DmaCopy32(3, gUnknown_080793E4.tileData + gUnknown_080793E4.subSprites[0].index * gUnknown_080793E4.unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, gUnknown_080793E4.subSpriteSize);
+    gUnknown_03000094->unk26 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += gUnknown_080793E4.unk6;
+    gObjVRAMCopyOffset_0300192C += gUnknown_080793E4.subSpriteSize;
+
+    DmaCopy32(3, gUnknown_08079444.tileData + gUnknown_08079444.subSprites[0].index * gUnknown_08079444.unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, gUnknown_08079444.subSpriteSize);
+    gUnknown_03000094->unk28 = gVRAMCurrTileNum_03001930;
+    gVRAMCurrTileNum_03001930 += gUnknown_08079444.unk6;
+    gObjVRAMCopyOffset_0300192C += gUnknown_08079444.subSpriteSize;
+
+    if (gLevelSelectMode == 2 || gLevelSelectMode == 3 || gLevelSelectMode == 5)
+    {
+        u8 sp0 = (gLevelSelectWorldCursor == 1);
+        s16 i;  // r3
+        //struct SpriteTemplate *r2;
+
+        for (i = 0; i < 7; i++)
+        {
+            s8 r1 = i;
+            r2 = &gUnknown_08078C1C[i];
+            DmaCopy32(3, r2->tileData + r2->subSprites[r1].index * r2->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, r2->subSpriteSize);
+            gUnknown_03000094->unk2A[i] = gVRAMCurrTileNum_03001930;
+            gVRAMCurrTileNum_03001930 += r2->unk6;
+            gObjVRAMCopyOffset_0300192C += r2->subSpriteSize;
+        }
+        //_0801AC9E
+        //to _0801AD44
+        r2 = &gUnknown_08078CF4[sp0];
+        DmaCopy32(3, r2->tileData + r2->subSprites[sp0].index * r2->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, r2->subSpriteSize);
+        gUnknown_03000094->unkE = gVRAMCurrTileNum_03001930;
+        gVRAMCurrTileNum_03001930 += r2->unk6;
+        gObjVRAMCopyOffset_0300192C += r2->subSpriteSize;
+    }
+    //_0801ACB4
+    else
+    {
+        u8 sp4 = (gLevelSelectWorldCursor == 6);
+        s16 i;  // r3
+        //struct SpriteTemplate *r2;
+
+        for (i = 0; i < 7; i++)
+        {
+            s8 r1 = i;
+            r2 = &gUnknown_08078B74[i];
+            DmaCopy32(3, r2->tileData + r2->subSprites[r1].index * r2->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, r2->subSpriteSize);
+            gUnknown_03000094->unk2A[i] = gVRAMCurrTileNum_03001930;
+            gVRAMCurrTileNum_03001930 += r2->unk6;
+            gObjVRAMCopyOffset_0300192C += r2->subSpriteSize;
+        }
+        r2 = &gUnknown_08078CC4[sp4];
+        DmaCopy32(3, r2->tileData + r2->subSprites[sp4].index * r2->unk4 * 4, OBJ_VRAM0 + gObjVRAMCopyOffset_0300192C, r2->subSpriteSize);
+        gUnknown_03000094->unkE = gVRAMCurrTileNum_03001930;
+        gVRAMCurrTileNum_03001930 += r2->unk6;
+        gObjVRAMCopyOffset_0300192C += r2->subSpriteSize;
+    }
+}
+#else
+__attribute__((naked))
+void sub_0801A7D8(void)
+{
+    asm("push {r4-r7,lr}\n\
+    mov r7, r10\n\
+    mov r6, r9\n\
+    mov r5, r8\n\
+    push {r5-r7}\n\
+    sub sp, sp, #8\n\
+    ldr r7, _0801ABBC  @ =REG_DMA3SAD\n\
+    ldr r0, _0801ABC0  @ =gUnknown_085CD848\n\
+    str r0, [r7]\n\
+    ldr r3, _0801ABC4  @ =gObjVRAMCopyOffset_0300192C\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldr r2, _0801ABCC  @ =0x84000200\n\
+    str r2, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    ldr r4, _0801ABD0  @ =gUnknown_03000094\n\
+    ldr r6, [r4]\n\
+    ldr r0, _0801ABD4  @ =gVRAMCurrTileNum_03001930\n\
+    mov r10, r0\n\
+    ldrh r1, [r0]\n\
+    mov r12, r1\n\
+    strh r1, [r6, #16]\n\
+    mov r4, r12\n\
+    add r4, r4, #64\n\
+    strh r4, [r0]\n\
+    ldrh r2, [r3]\n\
+    mov r9, r2\n\
+    mov r0, #128\n\
+    lsl r0, r0, #4\n\
+    mov r8, r0\n\
+    mov r2, r9\n\
+    add r2, r2, r8\n\
+    strh r2, [r3]\n\
+    ldr r0, _0801ABD8  @ =gUnknown_085CE074\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldr r0, _0801ABCC  @ =0x84000200\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r4, [r6, #18]\n\
+    add r4, r4, #64\n\
+    mov r1, r10\n\
+    strh r4, [r1]\n\
+    add r2, r2, r8\n\
+    strh r2, [r3]\n\
+    ldr r5, _0801ABDC  @ =gUnknown_085C7A78\n\
+    ldr r0, _0801ABE0  @ =gUnknown_0300008A\n\
+    mov r1, #0\n\
+    ldrsb r1, [r0, r1]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r5\n\
+    ldrb r0, [r0]\n\
+    lsl r0, r0, #11\n\
+    ldr r1, _0801ABE4  @ =gUnknown_085C7D08\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldr r0, _0801ABCC  @ =0x84000200\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r4, [r6, #20]\n\
+    add r4, r4, #64\n\
+    mov r1, r10\n\
+    strh r4, [r1]\n\
+    add r2, r2, r8\n\
+    strh r2, [r3]\n\
+    ldr r2, _0801ABE8  @ =gUnknown_085E2870\n\
+    ldr r5, _0801ABEC  @ =gUnknown_03000088\n\
+    mov r1, #0\n\
+    ldrsb r1, [r5, r1]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r2\n\
+    ldrb r0, [r0]\n\
+    lsl r0, r0, #8\n\
+    ldr r1, _0801ABF0  @ =gUnknown_085E2B00\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r2, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r2\n\
+    str r0, [r7, #4]\n\
+    ldr r0, _0801ABF4  @ =0x84000040\n\
+    mov r8, r0\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r4, [r6, #8]\n\
+    mov r4, r12\n\
+    add r4, r4, #200\n\
+    mov r1, r10\n\
+    strh r4, [r1]\n\
+    mov r0, #200\n\
+    lsl r0, r0, #5\n\
+    add r0, r0, r9\n\
+    strh r0, [r3]\n\
+    ldr r2, _0801ABF8  @ =gUnknown_085E2F00\n\
+    mov r1, #0\n\
+    ldrsb r1, [r5, r1]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r2\n\
+    ldrb r0, [r0]\n\
+    lsl r0, r0, #8\n\
+    ldr r1, _0801ABFC  @ =gUnknown_085E3190\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r2, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r2\n\
+    str r0, [r7, #4]\n\
+    mov r0, r8\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r4, [r6, #10]\n\
+    add r4, r4, #8\n\
+    mov r1, r10\n\
+    strh r4, [r1]\n\
+    mov r0, #208\n\
+    lsl r0, r0, #5\n\
+    add r0, r0, r9\n\
+    strh r0, [r3]\n\
+    ldr r2, _0801AC00  @ =gUnknown_085E90D0\n\
+    mov r1, #0\n\
+    ldrsb r1, [r5, r1]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r2\n\
+    ldrb r0, [r0]\n\
+    lsl r0, r0, #10\n\
+    ldr r1, _0801AC04  @ =gUnknown_085E9360\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r2, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r2\n\
+    str r0, [r7, #4]\n\
+    ldr r0, _0801AC08  @ =0x84000100\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r4, [r6, #12]\n\
+    mov r1, r12\n\
+    add r1, r1, #240\n\
+    mov r4, r10\n\
+    strh r1, [r4]\n\
+    mov r0, #240\n\
+    lsl r0, r0, #5\n\
+    add r0, r0, r9\n\
+    strh r0, [r3]\n\
+    ldr r0, _0801AC0C  @ =gUnknown_085C2588\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    add r0, r0, r2\n\
+    str r0, [r7, #4]\n\
+    ldr r4, _0801AC10  @ =0x84000020\n\
+    str r4, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r1, [r6, #22]\n\
+    add r1, r1, #4\n\
+    mov r0, r10\n\
+    strh r1, [r0]\n\
+    mov r0, #244\n\
+    lsl r0, r0, #5\n\
+    add r0, r0, r9\n\
+    strh r0, [r3]\n\
+    ldr r0, _0801AC14  @ =gUnknown_085C2634\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    add r0, r0, r2\n\
+    str r0, [r7, #4]\n\
+    str r4, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r1, [r6, #24]\n\
+    mov r5, r12\n\
+    add r5, r5, #248\n\
+    mov r1, r10\n\
+    strh r5, [r1]\n\
+    mov r0, #248\n\
+    lsl r0, r0, #5\n\
+    add r0, r0, r9\n\
+    strh r0, [r3]\n\
+    ldr r2, _0801AC18  @ =gUnknown_085E1F2C\n\
+    ldr r0, _0801AC1C  @ =gUnknown_03000085\n\
+    mov r1, #0\n\
+    ldrsb r1, [r0, r1]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r2\n\
+    ldrb r0, [r0]\n\
+    lsl r0, r0, #7\n\
+    ldr r1, _0801AC20  @ =gUnknown_085E200C\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r2, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r2\n\
+    str r0, [r7, #4]\n\
+    str r4, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r5, [r6, #26]\n\
+    mov r1, r12\n\
+    add r1, r1, #252\n\
+    mov r0, r10\n\
+    strh r1, [r0]\n\
+    mov r0, #252\n\
+    lsl r0, r0, #5\n\
+    add r0, r0, r9\n\
+    strh r0, [r3]\n\
+    ldr r0, _0801AC24  @ =gUnknown_085E1C2C\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    add r0, r0, r2\n\
+    str r0, [r7, #4]\n\
+    str r4, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r1, [r6, #28]\n\
+    mov r5, #128\n\
+    lsl r5, r5, #1\n\
+    add r5, r5, r12\n\
+    mov r1, r10\n\
+    strh r5, [r1]\n\
+    mov r2, #128\n\
+    lsl r2, r2, #6\n\
+    add r9, r9, r2\n\
+    mov r4, r9\n\
+    strh r4, [r3]\n\
+    ldr r0, _0801AC28  @ =gUnknown_03000086\n\
+    mov r12, r0\n\
+    ldrb r1, [r0]\n\
+    ldr r2, _0801AC2C  @ =gUnknown_080793B4\n\
+    ldr r4, [r2, #12]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r4\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r4, #132\n\
+    lsl r4, r4, #24\n\
+    mov r8, r4\n\
+    orr r0, r0, r4\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r5, [r6, #30]\n\
+    ldrh r5, [r2, #6]\n\
+    mov r0, r10\n\
+    ldrh r0, [r0]\n\
+    add r5, r5, r0\n\
+    mov r1, r10\n\
+    strh r5, [r1]\n\
+    ldrh r0, [r2, #8]\n\
+    ldrh r2, [r3]\n\
+    add r0, r0, r2\n\
+    strh r0, [r3]\n\
+    ldr r0, _0801AC30  @ =gUnknown_03000087\n\
+    ldrb r1, [r0]\n\
+    ldr r2, _0801AC34  @ =gUnknown_08079414\n\
+    ldr r4, _0801ABD0  @ =gUnknown_03000094\n\
+    ldr r4, [r4]\n\
+    mov r9, r4\n\
+    ldr r4, [r2, #12]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r4\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r4, r8\n\
+    orr r0, r0, r4\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    mov r0, r9\n\
+    strh r5, [r0, #32]\n\
+    ldrh r5, [r2, #6]\n\
+    mov r1, r10\n\
+    ldrh r1, [r1]\n\
+    add r5, r5, r1\n\
+    mov r4, r10\n\
+    strh r5, [r4]\n\
+    ldrh r0, [r2, #8]\n\
+    ldrh r1, [r3]\n\
+    add r0, r0, r1\n\
+    strh r0, [r3]\n\
+    mov r2, r12\n\
+    ldrb r1, [r2]\n\
+    ldr r2, _0801AC38  @ =gUnknown_08079474\n\
+    ldr r4, _0801ABD0  @ =gUnknown_03000094\n\
+    ldr r4, [r4]\n\
+    mov r9, r4\n\
+    ldr r4, [r2, #12]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r4\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r4, r8\n\
+    orr r0, r0, r4\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    mov r0, r9\n\
+    strh r5, [r0, #34]\n\
+    ldrh r4, [r2, #6]\n\
+    mov r1, r10\n\
+    ldrh r1, [r1]\n\
+    add r4, r4, r1\n\
+    mov r0, r10\n\
+    strh r4, [r0]\n\
+    ldrh r0, [r2, #8]\n\
+    ldrh r1, [r3]\n\
+    add r0, r0, r1\n\
+    strh r0, [r3]\n\
+    ldr r2, _0801AC3C  @ =gUnknown_08079384\n\
+    ldr r0, _0801ABD0  @ =gUnknown_03000094\n\
+    ldr r5, [r0]\n\
+    ldr r0, [r2, #12]\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r1, r8\n\
+    orr r0, r0, r1\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r4, [r5, #36]\n\
+    ldrh r4, [r2, #6]\n\
+    mov r0, r10\n\
+    ldrh r0, [r0]\n\
+    add r4, r4, r0\n\
+    mov r1, r10\n\
+    strh r4, [r1]\n\
+    ldrh r0, [r2, #8]\n\
+    ldrh r2, [r3]\n\
+    add r0, r0, r2\n\
+    strh r0, [r3]\n\
+    ldr r2, _0801AC40  @ =gUnknown_080793E4\n\
+    ldr r0, _0801ABD0  @ =gUnknown_03000094\n\
+    ldr r5, [r0]\n\
+    ldr r0, [r2, #12]\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r1, r8\n\
+    orr r0, r0, r1\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r4, [r5, #38]\n\
+    ldrh r4, [r2, #6]\n\
+    mov r0, r10\n\
+    ldrh r0, [r0]\n\
+    add r4, r4, r0\n\
+    mov r1, r10\n\
+    strh r4, [r1]\n\
+    ldrh r0, [r2, #8]\n\
+    ldrh r2, [r3]\n\
+    add r0, r0, r2\n\
+    strh r0, [r3]\n\
+    ldr r2, _0801AC44  @ =gUnknown_08079444\n\
+    ldr r0, _0801ABD0  @ =gUnknown_03000094\n\
+    ldr r5, [r0]\n\
+    ldr r0, [r2, #12]\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    ldrh r0, [r3]\n\
+    ldr r1, _0801ABC8  @ =OBJ_VRAM0\n\
+    add r0, r0, r1\n\
+    str r0, [r7, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r1, r8\n\
+    orr r0, r0, r1\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    strh r4, [r5, #40]\n\
+    ldrh r0, [r2, #6]\n\
+    mov r4, r10\n\
+    ldrh r4, [r4]\n\
+    add r0, r0, r4\n\
+    mov r1, r10\n\
+    strh r0, [r1]\n\
+    ldrh r0, [r2, #8]\n\
+    ldrh r2, [r3]\n\
+    add r0, r0, r2\n\
+    strh r0, [r3]\n\
+    ldr r0, _0801AC48  @ =gLevelSelectMode\n\
+    ldrb r1, [r0]\n\
+    sub r0, r1, #2\n\
+    lsl r0, r0, #24\n\
+    lsr r0, r0, #24\n\
+    mov r12, r3\n\
+    cmp r0, #1\n\
+    bls _0801AB7A\n\
+    cmp r1, #5\n\
+    beq _0801AB7A\n\
+    b _0801ACB4\n\
+_0801AB7A:\n\
+    mov r1, #0\n\
+    ldr r0, _0801AC4C  @ =gLevelSelectWorldCursor\n\
+    ldrb r0, [r0]\n\
+    lsl r0, r0, #24\n\
+    asr r0, r0, #24\n\
+    cmp r0, #1\n\
+    bne _0801AB8A\n\
+    mov r1, #1\n\
+_0801AB8A:\n\
+    str r1, [sp]\n\
+    mov r1, #0\n\
+    mov r8, r12\n\
+    mov r6, r10\n\
+_0801AB92:\n\
+    lsl r3, r1, #16\n\
+    asr r3, r3, #16\n\
+    lsl r1, r1, #24\n\
+    lsr r1, r1, #24\n\
+    lsl r5, r3, #1\n\
+    add r2, r5, r3\n\
+    lsl r2, r2, #3\n\
+    ldr r4, _0801AC50  @ =gUnknown_08078C1C\n\
+    add r2, r2, r4\n\
+    ldr r4, _0801ABD0  @ =gUnknown_03000094\n\
+    ldr r0, [r4]\n\
+    add r5, r5, r0\n\
+    ldr r4, [r2, #12]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r4\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    b _0801AC54\n\
+    .byte 0x00\n\
+    .byte 0x00\n\
+_0801ABBC:\n\
+    .4byte 0x040000D4\n\
+_0801ABC0:\n\
+    .4byte gUnknown_085CD848\n\
+_0801ABC4:\n\
+    .4byte gObjVRAMCopyOffset_0300192C\n\
+_0801ABC8:\n\
+    .4byte 0x06010000\n\
+_0801ABCC:\n\
+    .4byte 0x84000200\n\
+_0801ABD0:\n\
+    .4byte gUnknown_03000094\n\
+_0801ABD4:\n\
+    .4byte gVRAMCurrTileNum_03001930\n\
+_0801ABD8:\n\
+    .4byte gUnknown_085CE074\n\
+_0801ABDC:\n\
+    .4byte gUnknown_085C7A78\n\
+_0801ABE0:\n\
+    .4byte gUnknown_0300008A\n\
+_0801ABE4:\n\
+    .4byte gUnknown_085C7D08\n\
+_0801ABE8:\n\
+    .4byte gUnknown_085E2870\n\
+_0801ABEC:\n\
+    .4byte gUnknown_03000088\n\
+_0801ABF0:\n\
+    .4byte gUnknown_085E2B00\n\
+_0801ABF4:\n\
+    .4byte 0x84000040\n\
+_0801ABF8:\n\
+    .4byte gUnknown_085E2F00\n\
+_0801ABFC:\n\
+    .4byte gUnknown_085E3190\n\
+_0801AC00:\n\
+    .4byte gUnknown_085E90D0\n\
+_0801AC04:\n\
+    .4byte gUnknown_085E9360\n\
+_0801AC08:\n\
+    .4byte 0x84000100\n\
+_0801AC0C:\n\
+    .4byte gUnknown_085C2588\n\
+_0801AC10:\n\
+    .4byte 0x84000020\n\
+_0801AC14:\n\
+    .4byte gUnknown_085C2634\n\
+_0801AC18:\n\
+    .4byte gUnknown_085E1F2C\n\
+_0801AC1C:\n\
+    .4byte gUnknown_03000085\n\
+_0801AC20:\n\
+    .4byte gUnknown_085E200C\n\
+_0801AC24:\n\
+    .4byte gUnknown_085E1C2C\n\
+_0801AC28:\n\
+    .4byte gUnknown_03000086\n\
+_0801AC2C:\n\
+    .4byte gUnknown_080793B4\n\
+_0801AC30:\n\
+    .4byte gUnknown_03000087\n\
+_0801AC34:\n\
+    .4byte gUnknown_08079414\n\
+_0801AC38:\n\
+    .4byte gUnknown_08079474\n\
+_0801AC3C:\n\
+    .4byte gUnknown_08079384\n\
+_0801AC40:\n\
+    .4byte gUnknown_080793E4\n\
+_0801AC44:\n\
+    .4byte gUnknown_08079444\n\
+_0801AC48:\n\
+    .4byte gLevelSelectMode\n\
+_0801AC4C:\n\
+    .4byte gLevelSelectWorldCursor\n\
+_0801AC50:\n\
+    .4byte gUnknown_08078C1C\n\
+_0801AC54:\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    mov r1, r8\n\
+    ldrh r0, [r1]\n\
+    ldr r4, _0801ACAC  @ =OBJ_VRAM0\n\
+    add r0, r0, r4\n\
+    str r0, [r7, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r1, #132\n\
+    lsl r1, r1, #24\n\
+    mov r9, r1\n\
+    orr r0, r0, r1\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    ldrh r0, [r6]\n\
+    strh r0, [r5, #42]\n\
+    ldrh r0, [r2, #6]\n\
+    ldrh r4, [r6]\n\
+    add r0, r0, r4\n\
+    strh r0, [r6]\n\
+    ldrh r0, [r2, #8]\n\
+    mov r1, r8\n\
+    ldrh r1, [r1]\n\
+    add r0, r0, r1\n\
+    mov r2, r8\n\
+    strh r0, [r2]\n\
+    add r3, r3, #1\n\
+    lsl r3, r3, #16\n\
+    lsr r1, r3, #16\n\
+    asr r3, r3, #16\n\
+    cmp r3, #6\n\
+    bgt _0801AC9E\n\
+    b _0801AB92\n\
+_0801AC9E:\n\
+    ldr r1, [sp]\n\
+    lsl r2, r1, #1\n\
+    add r2, r2, r1\n\
+    lsl r2, r2, #3\n\
+    ldr r3, _0801ACB0  @ =gUnknown_08078CF4\n\
+    b _0801AD44\n\
+    .byte 0x00\n\
+    .byte 0x00\n\
+_0801ACAC:\n\
+    .4byte 0x06010000\n\
+_0801ACB0:\n\
+    .4byte gUnknown_08078CF4\n\
+_0801ACB4:\n\
+    mov r1, #0\n\
+    ldr r0, _0801ADA4  @ =gLevelSelectWorldCursor\n\
+    ldrb r0, [r0]\n\
+    lsl r0, r0, #24\n\
+    asr r0, r0, #24\n\
+    cmp r0, #6\n\
+    bne _0801ACC4\n\
+    mov r1, #1\n\
+_0801ACC4:\n\
+    str r1, [sp, #4]\n\
+    mov r1, #0\n\
+    mov r8, r12\n\
+    mov r6, r10\n\
+_0801ACCC:\n\
+    lsl r3, r1, #16\n\
+    asr r3, r3, #16\n\
+    lsl r1, r1, #24\n\
+    lsr r1, r1, #24\n\
+    lsl r5, r3, #1\n\
+    add r2, r5, r3\n\
+    lsl r2, r2, #3\n\
+    ldr r4, _0801ADA8  @ =gUnknown_08078B74\n\
+    add r2, r2, r4\n\
+    ldr r4, _0801ADAC  @ =gUnknown_03000094\n\
+    ldr r0, [r4]\n\
+    add r5, r5, r0\n\
+    ldr r4, [r2, #12]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r4\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r7]\n\
+    mov r1, r8\n\
+    ldrh r0, [r1]\n\
+    ldr r4, _0801ADB0  @ =OBJ_VRAM0\n\
+    add r0, r0, r4\n\
+    str r0, [r7, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r1, #132\n\
+    lsl r1, r1, #24\n\
+    mov r9, r1\n\
+    orr r0, r0, r1\n\
+    str r0, [r7, #8]\n\
+    ldr r0, [r7, #8]\n\
+    ldrh r0, [r6]\n\
+    strh r0, [r5, #42]\n\
+    ldrh r0, [r2, #6]\n\
+    ldrh r4, [r6]\n\
+    add r0, r0, r4\n\
+    strh r0, [r6]\n\
+    ldrh r0, [r2, #8]\n\
+    mov r1, r8\n\
+    ldrh r1, [r1]\n\
+    add r0, r0, r1\n\
+    mov r2, r8\n\
+    strh r0, [r2]\n\
+    add r3, r3, #1\n\
+    lsl r3, r3, #16\n\
+    lsr r1, r3, #16\n\
+    asr r3, r3, #16\n\
+    cmp r3, #6\n\
+    ble _0801ACCC\n\
+    ldr r1, [sp, #4]\n\
+    lsl r2, r1, #1\n\
+    add r2, r2, r1\n\
+    lsl r2, r2, #3\n\
+    ldr r3, _0801ADB4  @ =gUnknown_08078CC4\n\
+_0801AD44:\n\
+    add r2, r2, r3\n\
+    ldr r4, _0801ADAC  @ =gUnknown_03000094\n\
+    ldr r5, [r4]\n\
+    ldr r3, _0801ADB8  @ =REG_DMA3SAD\n\
+    ldr r4, [r2, #12]\n\
+    lsl r0, r1, #3\n\
+    add r0, r0, r1\n\
+    lsl r0, r0, #2\n\
+    add r0, r0, r4\n\
+    ldrb r1, [r0]\n\
+    ldrh r0, [r2, #4]\n\
+    mul r1, r0, r1\n\
+    lsl r1, r1, #2\n\
+    ldr r0, [r2, #20]\n\
+    add r0, r0, r1\n\
+    str r0, [r3]\n\
+    mov r1, r12\n\
+    ldrh r0, [r1]\n\
+    ldr r4, _0801ADB0  @ =OBJ_VRAM0\n\
+    add r0, r0, r4\n\
+    str r0, [r3, #4]\n\
+    ldrh r0, [r2, #8]\n\
+    lsr r0, r0, #2\n\
+    mov r1, r9\n\
+    orr r0, r0, r1\n\
+    str r0, [r3, #8]\n\
+    ldr r0, [r3, #8]\n\
+    mov r3, r10\n\
+    ldrh r0, [r3]\n\
+    strh r0, [r5, #14]\n\
+    ldrh r0, [r2, #6]\n\
+    ldrh r4, [r3]\n\
+    add r0, r0, r4\n\
+    strh r0, [r3]\n\
+    ldrh r0, [r2, #8]\n\
+    mov r1, r12\n\
+    ldrh r1, [r1]\n\
+    add r0, r0, r1\n\
+    mov r2, r12\n\
+    strh r0, [r2]\n\
+    add sp, sp, #8\n\
+    pop {r3-r5}\n\
+    mov r8, r3\n\
+    mov r9, r4\n\
+    mov r10, r5\n\
+    pop {r4-r7}\n\
+    pop {r0}\n\
+    bx r0\n\
+_0801ADA4:\n\
+    .4byte gLevelSelectWorldCursor\n\
+_0801ADA8:\n\
+    .4byte gUnknown_08078B74\n\
+_0801ADAC:\n\
+    .4byte gUnknown_03000094\n\
+_0801ADB0:\n\
+    .4byte 0x06010000\n\
+_0801ADB4:\n\
+    .4byte gUnknown_08078CC4\n\
+_0801ADB8:\n\
+    .4byte 0x040000D4\n");
+}
+#endif
 
 void level_select_loop(void)
 {
