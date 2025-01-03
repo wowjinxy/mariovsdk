@@ -18,7 +18,7 @@
 	X(src/savefile.o) \
 	X(src/main_menu.o) \
 	X(asm/rom_801488C.o) \
-	X(asm/level_select.o) \
+	X(src/level_select.o) \
 	X(asm/rom_801B310.o) \
 	X(src/title.o) \
 	X(src/intro.o) \
@@ -30,7 +30,7 @@
 	X(src/options_menu.o) \
 	X(src/level_results.o) \
 	X(data/data0.o) \
-	X(data/level_select_menu.o) \
+	X(src/level_select_data.o) \
 	X(data/title_screen_data.o) \
 	X(data/boss_clear_data.o) \
 	X(src/options_menu_data.o) \
@@ -181,15 +181,8 @@ SECTIONS
 		. = 0x64;		gMainMenuInitDelayTimer = .;
 		. = 0x65;		gUnknown_03000065 = .;
 		. = 0x66;		gUnknown_03000066 = .;
-		. = 0x70;		gUnknown_03000070 = .;
-		. = 0x80;		gLevelSelectLevelCursor = .;
-		. = 0x81;		gLevelSelectWorldCursor = .;
-		. = 0x82;		gLevelSelectMode = .;
-		. = 0x83;		gLevelSelect_03000083 = .;
-		. = 0xA4;		gUnknown_030000A4 = .;
-		. = 0xA8;		gPressStartFadeDir = .;
-		. = 0xA9;		gTitleScreenFrameCounter = .;
-		. = 0xAA;		gPressStartOpacity = .;
+		. = 0x70;		src/level_select.o(.bss);
+		. = 0xA4;		src/title.o(.bss);
 		. = 0xAC;		gUnknown_030000AC = .;
 		. = 0xB0;		gUnknown_030000B0 = .;
 		. = 0xB4;		gUnknown_030000B4 = .;

@@ -597,7 +597,13 @@ struct SubSpriteTemplate
     /*0x04*/ u32 unk4;  // unknown/unused
     u32 unk8;  // some kind of flags?
     void *unkC;
-    u8 filler10[0x24-0x10];
+    //u8 filler10[0x24-0x10];
+    u8 filler10[0x1A-0x10];
+    u16 unk1A;
+    u16 unk1C;
+    u16 unk1E;
+    u16 unk20;
+    u8 filler22[0x24-0x22];
 };
 
 struct SpriteTemplate
@@ -815,6 +821,21 @@ enum PaletteID
     PALETTE_4,
     PALETTE_5_LEVEL_HELP,
 
+    PALETTE_11 = 11,
+    PALETTE_12,
+    PALETTE_13,
+    PALETTE_14,
+    PALETTE_15,
+    PALETTE_16,
+    PALETTE_17,
+    PALETTE_18,
+    PALETTE_19,
+    PALETTE_20,
+    PALETTE_21,
+    PALETTE_22,
+    PALETTE_23,
+    PALETTE_24,
+
     PALETTE_58 = 58,
     PALETTE_59,
     PALETTE_60,
@@ -900,10 +921,7 @@ extern u8 gUnknown_03000063;
 extern u8 gMainMenuInitDelayTimer;
 extern u8 gUnknown_03000065;
 extern u8 gUnknown_03000066[];
-extern struct UnknownStruct15 *gUnknown_030000A4;
-extern u8 gPressStartFadeDir;
-extern u8 gTitleScreenFrameCounter;
-extern u16 gPressStartOpacity;
+
 extern u8 gUnknown_030000AC;
 extern s32 gUnknown_030000B0;
 extern s8 gUnknown_030000B4;
@@ -1082,7 +1100,7 @@ extern u32 gUnknown_03001718;
 extern u16 gUnknown_0300171C;
 extern s16 gCurrentLevelWidth;
 extern s16 gSpriteHorizontalOffset;
-extern struct backgroundLayerOffset gBGLayerOffsets;  // no idea what type this is
+extern struct backgroundLayerOffset gBGLayerOffsets;
 extern u8 gUnknown_03001740;
 extern u8 gUnknown_03001744;
 extern u16 gUnknown_03001748;
@@ -1251,6 +1269,19 @@ extern struct GraphicsConfig gWorldSixPlusStartData;
 
 extern struct GraphicsConfig gLevelResultsData;
 
+extern struct GraphicsConfig gLevelSelectWorldOneBG;
+extern struct GraphicsConfig gLevelSelectWorldTwoBG;
+extern struct GraphicsConfig gLevelSelectWorldThreeBG;
+extern struct GraphicsConfig gLevelSelectWorldFourBG;
+extern struct GraphicsConfig gLevelSelectWorldFiveBG;
+extern struct GraphicsConfig gLevelSelectWorldSixBG;
+extern struct GraphicsConfig gLevelSelectWorldOnePlusBG;
+extern struct GraphicsConfig gLevelSelectWorldTwoPlusBG;
+extern struct GraphicsConfig gLevelSelectWorldThreePlusBG;
+extern struct GraphicsConfig gLevelSelectWorldFourPlusBG;
+extern struct GraphicsConfig gLevelSelectWorldFivePlusBG;
+extern struct GraphicsConfig gLevelSelectWorldSixPlusBG;
+
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
 extern struct GraphicsConfig gEWorldMenuData2;
@@ -1309,6 +1340,7 @@ void sub_08006388(void);
 void sub_080064D4();
 void sub_08006548();
 void sub_080065B4();
+void sub_0800667C();
 int sub_080066FC(u32 *, int, int, int);
 struct UnknownStruct15 *sub_08006968(struct GraphicsConfig *);
 void sub_08006D44(void);
@@ -1330,10 +1362,13 @@ void level_editor_end(void);
 void sub_080091A8(void *, void *);
 void sub_0800A2B8(int, int, u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
 void sub_0800EE70(void);
+void tutorial_level_setup(u32 worldID, u32 levelID);
 void title_demo_setup(u32 titleDemoID);
 int sub_08014950();
 void sub_08014A58();
+u8 sub_08014AB8(void);
 void sub_08014B78(int, s8 *, u8 *, s8 *);
+u8 sub_08014BD0(void);
 void sub_08014D08(void);
 void sub_0801500C();
 void sub_08015044(void);
@@ -1387,10 +1422,12 @@ void options_end(void);
 void sub_08029080(void);
 void sub_0802919C(int arg0, int arg1);
 void level_results_init_callback(void);
+void black_screen_08029D80(void);
 void level_results_main(void);
 void level_results_loop(void);
 void level_results_end(void);
 int update_fade_from_black(void);
+void save_blend_regs_from_graphicsconfig(struct GraphicsConfig *param_1);
 void save_blend_regs();
 void fade_transition_init_callback(void);
 void fade_transition_end(void);
@@ -1646,7 +1683,7 @@ void sub_0803D248();
 void sub_08031D44();
 void sub_0806E594(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
 void sub_0800F0A8(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
-u32 update_fade_to_black_08029F7C(void);
+u8 update_fade_to_black_08029F7C(void);
 void sub_08007154(void);
 
 u32 VerifyFlashSector(u16 sectorNum, u8 *src);

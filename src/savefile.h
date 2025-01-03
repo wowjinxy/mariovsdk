@@ -37,7 +37,7 @@ struct SaveFile
 extern struct SaveFile *gSaveFilesPtr;
 
 s8 get_last_unlocked_level_for_world(u8 levelType, u8 world);
-int is_level_unlocked(u8 levelType, u8 world, u8 level);
+u8 is_level_unlocked(u8 levelType, u8 world, u8 level);
 int get_level_stats_0800FB28(u8 levelType, u8 world, u8 level, u8 *stats);
 int got_star_on_level(u8 levelType, u8 world, u8 level);
 u8 get_level_stats_0800FE2C(u8 levelType, u8 world, u8 level, u8 *stats);

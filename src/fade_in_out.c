@@ -71,7 +71,7 @@ void fade_transition_init_callback(void) {
     REG_BLDY = 0;
 }
 
-void sub_08029D80(void) {
+void black_screen_08029D80(void) {
     // blacken screen
     sBldY = 31;
     sInitialFadeDelay = 0;
@@ -168,7 +168,7 @@ void fade_transition_main(void) {
     REG_BLDY = sBldY;
 }
 
-u32 update_fade_to_black_08029F7C(void) {
+u8 update_fade_to_black_08029F7C(void) {
 
     // fade to black
     if (sBldY < 31) {

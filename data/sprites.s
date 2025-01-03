@@ -20033,65 +20033,65 @@ gUnknown_085C2454:
 gUnknown_085C245C:
 	.INCBIN "assets/sprites/unused/gUnknown_085C245C.4bpp"
 
-	.GLOBAL gUnknown_085C255C
-gUnknown_085C255C:
+	.GLOBAL gfxLButtonAnim
+gfxLButtonAnim:
 	.INCBIN "baserom.gba", 0x5C255C, 0x5C2580-0x5C255C
 
-	.GLOBAL gUnknown_085C2580
-gUnknown_085C2580:
+	.GLOBAL gfxLButtonOAM
+gfxLButtonOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=11
 
-	.GLOBAL gUnknown_085C2588
-gUnknown_085C2588:
-	.INCBIN "assets/sprites/level_select/gUnknown_085C2588.4bpp"
+	.GLOBAL gfxLButton4bpp
+gfxLButton4bpp:
+	.INCBIN "assets/sprites/level_select/LButton.4bpp"
 
-	.GLOBAL gUnknown_085C2608
-gUnknown_085C2608:
+	.GLOBAL gfxRButtonAnim
+gfxRButtonAnim:
 	.INCBIN "baserom.gba", 0x5C2608, 0x5C262C-0x5C2608
 
-	.GLOBAL gUnknown_085C262C
-gUnknown_085C262C:
+	.GLOBAL gfxRButtonOAM
+gfxRButtonOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=11
 
-	.GLOBAL gUnknown_085C2634
-gUnknown_085C2634:
-	.INCBIN "assets/sprites/level_select/gUnknown_085C2634.4bpp"
+	.GLOBAL gfxRButton4bpp
+gfxRButton4bpp:
+	.INCBIN "assets/sprites/level_select/RButton.4bpp"
 
-	.GLOBAL gUnknown_085C26B4
-gUnknown_085C26B4:
+	.GLOBAL gfxArrowBottomRowAnim
+gfxArrowBottomRowAnim:
 	.INCBIN "baserom.gba", 0x5C26B4, 0x5C26D8-0x5C26B4
 
-	.GLOBAL gUnknown_085C26D8
-gUnknown_085C26D8:
+	.GLOBAL gfxArrowBottomRowOAM
+gfxArrowBottomRowOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=11
 
-	.GLOBAL gUnknown_085C26E0
-gUnknown_085C26E0:
-	.INCBIN "assets/sprites/level_select/gUnknown_085C26E0.4bpp"
+	.GLOBAL gfxArrowBottomRow4bpp
+gfxArrowBottomRow4bpp:
+	.INCBIN "assets/sprites/level_select/ArrowBottomRow.4bpp"
 
-	.GLOBAL gUnknown_085C2760
-gUnknown_085C2760:
+	.GLOBAL gfxArrowTopRowAnim
+gfxArrowTopRowAnim:
 	.INCBIN "baserom.gba", 0x5C2760, 0x5C2784-0x5C2760
 
-	.GLOBAL gUnknown_085C2784
-gUnknown_085C2784:
+	.GLOBAL gfxArrowTopRowOAM
+gfxArrowTopRowOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=11
 
-	.GLOBAL gUnknown_085C278C
-gUnknown_085C278C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085C278C.4bpp"
+	.GLOBAL gfxArrowTopRow4bpp
+gfxArrowTopRow4bpp:
+	.INCBIN "assets/sprites/level_select/ArrowTopRow.4bpp"
 
-	.GLOBAL gUnknown_085C280C
-gUnknown_085C280C:
+	.GLOBAL gfxShortArrowAnim
+gfxShortArrowAnim:
 	.INCBIN "baserom.gba", 0x5C280C, 0x5C2830-0x5C280C
 
-	.GLOBAL gUnknown_085C2830
-gUnknown_085C2830:
+	.GLOBAL gfxShortArrowOAM
+gfxShortArrowOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=11
 
-	.GLOBAL gUnknown_085C2838
-gUnknown_085C2838:
-	.INCBIN "assets/sprites/level_select/gUnknown_085C2838.4bpp"
+	.GLOBAL gfxShortArrow4bpp
+gfxShortArrow4bpp:
+	.INCBIN "assets/sprites/level_select/ShortArrow.4bpp"
 
 	.GLOBAL gUnknown_085C2858
 gUnknown_085C2858:
@@ -20177,17 +20177,17 @@ gUnknown_085C7670:
 gUnknown_085C7678:
 	.INCBIN "assets/sprites/level_select/gUnknown_085C7678.4bpp"
 
-	.GLOBAL gUnknown_085C7A78
-gUnknown_085C7A78:
+	.GLOBAL gfxLevelButtonHighlightAnim
+gfxLevelButtonHighlightAnim:
 	.INCBIN "baserom.gba", 0x5C7A78, 0x5C7D00-0x5C7A78
 
-	.GLOBAL gUnknown_085C7D00
-gUnknown_085C7D00:
+	.GLOBAL gfxLevelButtonHighlightOAM
+gfxLevelButtonHighlightOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=3, paletteNum=0
 
-	.GLOBAL gUnknown_085C7D08
-gUnknown_085C7D08:
-	.INCBIN "assets/sprites/level_select/gUnknown_085C7D08.4bpp"
+	.GLOBAL gfxLevelButtonHighlight4bpp
+gfxLevelButtonHighlight4bpp:
+	.INCBIN "assets/sprites/level_select/LevelButtonHighlight.4bpp"
 
 	.GLOBAL gUnknown_085CBD08
 gUnknown_085CBD08:
@@ -20201,29 +20201,29 @@ gUnknown_085CBD2C:
 gUnknown_085CBD34:
 	.INCBIN "assets/sprites/unused/gUnknown_085CBD34.4bpp"
 
-	.GLOBAL gUnknown_085CC134
-gUnknown_085CC134:
+	.GLOBAL gfxLockedDKLvlFrameAnim
+gfxLockedDKLvlFrameAnim:
 	.INCBIN "baserom.gba", 0x5CC134, 0x5CC158-0x5CC134
 
-	.GLOBAL gUnknown_085CC158
-gUnknown_085CC158:
+	.GLOBAL gfxLockedDKLvlFrameOAM
+gfxLockedDKLvlFrameOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=3, paletteNum=0
 
-	.GLOBAL gUnknown_085CC160
-gUnknown_085CC160:
-	.INCBIN "assets/sprites/level_select/gUnknown_085CC160.4bpp"
+	.GLOBAL gfxLockedDKLvlFrame4bpp
+gfxLockedDKLvlFrame4bpp:
+	.INCBIN "assets/sprites/level_select/LockedDKLvlFrame.4bpp"
 
-	.GLOBAL gUnknown_085CC960
-gUnknown_085CC960:
+	.GLOBAL gfxUnlockedDKLvlFrameAnim
+gfxUnlockedDKLvlFrameAnim:
 	.INCBIN "baserom.gba", 0x5CC960, 0x5CC984-0x5CC960
 
-	.GLOBAL gUnknown_085CC984
-gUnknown_085CC984:
+	.GLOBAL gfxUnlockedDKLvlFrameOAM
+gfxUnlockedDKLvlFrameOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=3, paletteNum=0
 
-	.GLOBAL gUnknown_085CC98C
-gUnknown_085CC98C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085CC98C.4bpp"
+	.GLOBAL gfxUnlockedDKLvlFrame4bpp
+gfxUnlockedDKLvlFrame4bpp:
+	.INCBIN "assets/sprites/level_select/UnlockedDKLvlFrame.4bpp"
 
 	.GLOBAL gUnknown_085CD18C
 gUnknown_085CD18C:
@@ -20237,29 +20237,29 @@ gUnknown_085CD414:
 gUnknown_085CD41C:
 	.INCBIN "assets/sprites/unused/gUnknown_085CD41C.4bpp"
 
-	.GLOBAL gUnknown_085CD81C
-gUnknown_085CD81C:
+	.GLOBAL gfxLockedLvlFrameAnim
+gfxLockedLvlFrameAnim:
 	.INCBIN "baserom.gba", 0x5CD81C, 0x5CD840-0x5CD81C
 
-	.GLOBAL gUnknown_085CD840
-gUnknown_085CD840:
+	.GLOBAL gfxLockedLvlFrameOAM
+gfxLockedLvlFrameOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=3, paletteNum=0
 
-	.GLOBAL gUnknown_085CD848
-gUnknown_085CD848:
-	.INCBIN "assets/sprites/level_select/gUnknown_085CD848.4bpp"
+	.GLOBAL gfxLockedLvlFrame4bpp
+gfxLockedLvlFrame4bpp:
+	.INCBIN "assets/sprites/level_select/LockedLvlFrame.4bpp"
 
-	.GLOBAL gUnknown_085CE048
-gUnknown_085CE048:
+	.GLOBAL gfxUnlockedLvlFrameAnim
+gfxUnlockedLvlFrameAnim:
 	.INCBIN "baserom.gba", 0x5CE048, 0x5CE06C-0x5CE048
 
-	.GLOBAL gUnknown_085CE06C
-gUnknown_085CE06C:
+	.GLOBAL gfxUnlockedLvlFrameOAM
+gfxUnlockedLvlFrameOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=3, paletteNum=0
 
-	.GLOBAL gUnknown_085CE074
-gUnknown_085CE074:
-	.INCBIN "assets/sprites/level_select/gUnknown_085CE074.4bpp"
+	.GLOBAL gfxUnlockedLvlFrame4bpp
+gfxUnlockedLvlFrame4bpp:
+	.INCBIN "assets/sprites/level_select/UnlockedLvlFrame.4bpp"
 
 	.GLOBAL gUnknown_085CE874
 gUnknown_085CE874:
@@ -20285,8 +20285,8 @@ gUnknown_085CF0C4:
 gUnknown_085CF0CC:
 	.INCBIN "assets/sprites/level_select/gUnknown_085CF0CC.4bpp"
 
-	.GLOBAL gUnknown_085CF8CC
-gUnknown_085CF8CC:
+	.GLOBAL gfxMainWorldSelectTabsAnim
+gfxMainWorldSelectTabsAnim:
 	.INCBIN "baserom.gba", 0x5CF8CC, 0x5CF9C8-0x5CF8CC
 
 	.GLOBAL gfxMainWorldSelectTabsOAM
@@ -20297,8 +20297,8 @@ gfxMainWorldSelectTabsOAM:
 gfxMainWorldSelectTabs4bpp:
 	.INCBIN "assets/sprites/level_select/MainWorldSelectTabs.4bpp"
 
-	.GLOBAL gUnknown_085D00D0
-gUnknown_085D00D0:
+	.GLOBAL gfxPlusWorldSelectTabsAnim
+gfxPlusWorldSelectTabsAnim:
 	.INCBIN "baserom.gba", 0x5D00D0, 0x5D01CC-0x5D00D0
 
 	.GLOBAL gfxPlusWorldSelectTabsOAM
@@ -20309,20 +20309,20 @@ gfxPlusWorldSelectTabsOAM:
 gfxPlusWorldSelectTabs4bpp:
 	.INCBIN "assets/sprites/level_select/PlusWorldSelectTabs.4bpp"
 
-	.GLOBAL gUnknown_085D08D4
-gUnknown_085D08D4:
+	.GLOBAL gfxLifeCounterAnim
+gfxLifeCounterAnim:
 	.INCBIN "baserom.gba", 0x5D08D4, 0x5D08F8-0x5D08D4
 
-	.GLOBAL gUnknown_085D08F8
-gUnknown_085D08F8:
+	.GLOBAL gfxLifeCounterOAM
+gfxLifeCounterOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=12
 
-	.GLOBAL gUnknown_085D0900
-gUnknown_085D0900:
-	.INCBIN "assets/sprites/level_select/gUnknown_085D0900.4bpp"
+	.GLOBAL gfxLifeCounter4bpp
+gfxLifeCounter4bpp:
+	.INCBIN "assets/sprites/level_select/LifeCounter.4bpp"
 
-	.GLOBAL gUnknown_085D0A00
-gUnknown_085D0A00:
+	.GLOBAL gfxMainLevelIconPicsAnim
+gfxMainLevelIconPicsAnim:
 	.INCBIN "baserom.gba", 0x5D0A00, 0x5D10C0-0x5D0A00
 
 	.GLOBAL gfxMainLevelIconPicsOAM
@@ -20333,8 +20333,8 @@ gfxMainLevelIconPicsOAM:
 gfxMainLevelIconPics4bpp:
 	.INCBIN "assets/sprites/level_select/MainLevelIconPics.4bpp"
 
-	.GLOBAL gUnknown_085D70C8
-gUnknown_085D70C8:
+	.GLOBAL gfxPlusWorldIconPicsAnim
+gfxPlusWorldIconPicsAnim:
 	.INCBIN "baserom.gba", 0x5D70C8, 0x5D76B0-0x5D70C8
 
 	.GLOBAL gfxPlusLevelIconPicsOAM
@@ -20345,41 +20345,41 @@ gfxPlusLevelIconPicsOAM:
 gfxPlusLevelIconPics4bpp:
 	.INCBIN "assets/sprites/level_select/PlusLevelIconPics.4bpp"
 
-	.GLOBAL gUnknown_085DCAB8
-gUnknown_085DCAB8:
+	.GLOBAL gfxDKLabelAnim
+gfxDKLabelAnim:
 	.INCBIN "baserom.gba", 0x5DCAB8, 0x5DCB6C-0x5DCAB8
 
-	.GLOBAL gUnknown_085DCB6C
-gUnknown_085DCB6C:
+	.GLOBAL gfxDKLabelOAM
+gfxDKLabelOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=0, paletteNum=11
 
-	.GLOBAL gUnknown_085DCB74
-gUnknown_085DCB74:
-	.INCBIN "assets/sprites/level_select/gUnknown_085DCB74.4bpp"
+	.GLOBAL gfxDKLabel4bpp
+gfxDKLabel4bpp:
+	.INCBIN "assets/sprites/level_select/DKLabel.4bpp"
 
-	.GLOBAL gUnknown_085DCC34
-gUnknown_085DCC34:
+	.GLOBAL gfxDKPlusLabelAnim
+gfxDKPlusLabelAnim:
 	.INCBIN "baserom.gba", 0x5DCC34, 0x5DCCC4-0x5DCC34
 
-	.GLOBAL gUnknown_085DCCC4
-gUnknown_085DCCC4:
+	.GLOBAL gfxDKPlusLabelOAM
+gfxDKPlusLabelOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=1, paletteNum=11
 
-	.GLOBAL gUnknown_085DCCCC
-gUnknown_085DCCCC:
-	.INCBIN "assets/sprites/level_select/gUnknown_085DCCCC.4bpp"
+	.GLOBAL gfxDKPlusLabel4bpp
+gfxDKPlusLabel4bpp:
+	.INCBIN "assets/sprites/level_select/DKPlusLabel.4bpp"
 
-	.GLOBAL gUnknown_085DCECC
-gUnknown_085DCECC:
+	.GLOBAL gfxMMLabelAnim
+gfxMMLabelAnim:
 	.INCBIN "baserom.gba", 0x5DCECC, 0x5DCF80-0x5DCECC
 
-	.GLOBAL gUnknown_085DCF80
-gUnknown_085DCF80:
+	.GLOBAL gfxMMLabelOAM
+gfxMMLabelOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=1, paletteNum=11
 
-	.GLOBAL gUnknown_085DCF88
-gUnknown_085DCF88:
-	.INCBIN "assets/sprites/level_select/gUnknown_085DCF88.4bpp"
+	.GLOBAL gfxMMLabel4bpp
+gfxMMLabel4bpp:
+	.INCBIN "assets/sprites/level_select/MMLabel.4bpp"
 
 	.GLOBAL gUnknown_085DD108
 gUnknown_085DD108:
@@ -20405,41 +20405,41 @@ gUnknown_085DD744:
 gUnknown_085DD74C:
 	.INCBIN "assets/sprites/level_select/gUnknown_085DD74C.4bpp"
 
-	.GLOBAL gUnknown_085DD9EC
-gUnknown_085DD9EC:
+	.GLOBAL gfxMainLvlLabelsAnim
+gfxMainLvlLabelsAnim:
 	.INCBIN "baserom.gba", 0x5DD9EC, 0x5DDE24-0x5DD9EC
 
-	.GLOBAL gUnknown_085DDE24
-gUnknown_085DDE24:
+	.GLOBAL gfxMainLvlLabelsOAM
+gfxMainLvlLabelsOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=11
 
-	.GLOBAL gUnknown_085DDE2C
-gUnknown_085DDE2C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085DDE2C.4bpp"
+	.GLOBAL gfxMainLvlLabels4bpp
+gfxMainLvlLabels4bpp:
+	.INCBIN "assets/sprites/level_select/MainLvlLabels.4bpp"
 
-	.GLOBAL gUnknown_085DE06C
-gUnknown_085DE06C:
+	.GLOBAL gfxPlusLvlLabelsAnim
+gfxPlusLvlLabelsAnim:
 	.INCBIN "baserom.gba", 0x5DE06C, 0x5DE4A4-0x5DE06C
 
-	.GLOBAL gUnknown_085DE4A4
-gUnknown_085DE4A4:
+	.GLOBAL gfxPlusLvlLabelsOAM
+gfxPlusLvlLabelsOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=0, paletteNum=11
 
-	.GLOBAL gUnknown_085DE4AC
-gUnknown_085DE4AC:
-	.INCBIN "assets/sprites/level_select/gUnknown_085DE4AC.4bpp"
+	.GLOBAL gfxPlusLvlLabels4bpp
+gfxPlusLvlLabels4bpp:
+	.INCBIN "assets/sprites/level_select/PlusLvlLabels.4bpp"
 
-	.GLOBAL gUnknown_085DE92C
-gUnknown_085DE92C:
+	.GLOBAL gfxHighScoreDigitsAnim
+gfxHighScoreDigitsAnim:
 	.INCBIN "baserom.gba", 0x5DE92C, 0x5DEA94-0x5DE92C
 
-	.GLOBAL gUnknown_085DEA94
-gUnknown_085DEA94:
+	.GLOBAL gfxHighScoreDigitsOAM
+gfxHighScoreDigitsOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_V_RECTANGLE, size=0, paletteNum=9
 
-	.GLOBAL gUnknown_085DEA9C
-gUnknown_085DEA9C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085DEA9C.4bpp"
+	.GLOBAL gfxHighScoreDigits4bpp
+gfxHighScoreDigits4bpp:
+	.INCBIN "assets/sprites/level_select/HighScoreDigits.4bpp"
 
 	.GLOBAL gUnknown_085DED1C
 gUnknown_085DED1C:
@@ -20513,17 +20513,17 @@ gUnknown_085E0684:
 gUnknown_085E068C:
 	.INCBIN "assets/sprites/expert_levels/gUnknown_085E068C.4bpp"
 
-	.GLOBAL gUnknown_085E078C
-gUnknown_085E078C:
+	.GLOBAL gfxBluePresentMovingAnim
+gfxBluePresentMovingAnim:
 	.INCBIN "baserom.gba", 0x5E078C, 0x5E07D4-0x5E078C
 
-	.GLOBAL gUnknown_085E07D4
-gUnknown_085E07D4:
+	.GLOBAL gfxBluePresentMovingOAM
+gfxBluePresentMovingOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=9
 
-	.GLOBAL gUnknown_085E07DC
-gUnknown_085E07DC:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E07DC.4bpp"
+	.GLOBAL gfxBluePresentMoving4bpp
+gfxBluePresentMoving4bpp:
+	.INCBIN "assets/sprites/level_select/BluePresentMoving.4bpp"
 
 	.GLOBAL gUnknown_085E08DC
 gUnknown_085E08DC:
@@ -20537,17 +20537,17 @@ gUnknown_085E0900:
 gUnknown_085E0908:
 	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0908.4bpp"
 
-	.GLOBAL gUnknown_085E0988
-gUnknown_085E0988:
+	.GLOBAL gfxBluePresentAnim
+gfxBluePresentAnim:
 	.INCBIN "baserom.gba", 0x5E0988, 0x5E09AC-0x5E0988
 
-	.GLOBAL gUnknown_085E09AC
-gUnknown_085E09AC:
+	.GLOBAL gfxBluePresentOAM
+gfxBluePresentOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=9
 
-	.GLOBAL gUnknown_085E09B4
-gUnknown_085E09B4:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E09B4.4bpp"
+	.GLOBAL gfxBluePresent4bpp
+gfxBluePresent4bpp:
+	.INCBIN "assets/sprites/level_select/BluePresent.4bpp"
 
 	.GLOBAL gUnknown_085E0A34
 gUnknown_085E0A34:
@@ -20573,17 +20573,17 @@ gUnknown_085E0B0C:
 gUnknown_085E0B14:
 	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0B14.4bpp"
 
-	.GLOBAL gUnknown_085E0C14
-gUnknown_085E0C14:
+	.GLOBAL gfxRedPresentMovingAnim
+gfxRedPresentMovingAnim:
 	.INCBIN "baserom.gba", 0x5E0C14, 0x5E0C5C-0x5E0C14
 
-	.GLOBAL gUnknown_085E0C5C
-gUnknown_085E0C5C:
+	.GLOBAL gfxRedPresentMovingOAM
+gfxRedPresentMovingOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=9
 
-	.GLOBAL gUnknown_085E0C64
-gUnknown_085E0C64:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E0C64.4bpp"
+	.GLOBAL gfxRedPresentMoving4bpp
+gfxRedPresentMoving4bpp:
+	.INCBIN "assets/sprites/level_select/RedPresentMoving.4bpp"
 
 	.GLOBAL gUnknown_085E0D64
 gUnknown_085E0D64:
@@ -20597,17 +20597,17 @@ gUnknown_085E0D88:
 gUnknown_085E0D90:
 	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0D90.4bpp"
 
-	.GLOBAL gUnknown_085E0E10
-gUnknown_085E0E10:
+	.GLOBAL gfxRedPresentAnim
+gfxRedPresentAnim:
 	.INCBIN "baserom.gba", 0x5E0E10, 0x5E0E34-0x5E0E10
 
-	.GLOBAL gUnknown_085E0E34
-gUnknown_085E0E34:
+	.GLOBAL gfxRedPresentOAM
+gfxRedPresentOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=9
 
-	.GLOBAL gUnknown_085E0E3C
-gUnknown_085E0E3C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E0E3C.4bpp"
+	.GLOBAL gfxRedPresent4bpp
+gfxRedPresent4bpp:
+	.INCBIN "assets/sprites/level_select/RedPresent.4bpp"
 
 	.GLOBAL gUnknown_085E0EBC
 gUnknown_085E0EBC:
@@ -20621,17 +20621,17 @@ gUnknown_085E0F04:
 gUnknown_085E0F0C:
 	.INCBIN "assets/sprites/expert_levels/gUnknown_085E0F0C.4bpp"
 
-	.GLOBAL gUnknown_085E100C
-gUnknown_085E100C:
+	.GLOBAL gfxYellowPresentMovingAnim
+gfxYellowPresentMovingAnim:
 	.INCBIN "baserom.gba", 0x5E100C, 0x5E1054-0x5E100C
 
-	.GLOBAL gUnknown_085E1054
-gUnknown_085E1054:
+	.GLOBAL gfxYellowPresentMovingOAM
+gfxYellowPresentMovingOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=9
 
-	.GLOBAL gUnknown_085E105C
-gUnknown_085E105C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E105C.4bpp"
+	.GLOBAL gfxYellowPresentMoving4bpp
+gfxYellowPresentMoving4bpp:
+	.INCBIN "assets/sprites/level_select/YellowPresentMoving.4bpp"
 
 	.GLOBAL gUnknown_085E115C
 gUnknown_085E115C:
@@ -20645,17 +20645,17 @@ gUnknown_085E1180:
 gUnknown_085E1188:
 	.INCBIN "assets/sprites/expert_levels/gUnknown_085E1188.4bpp"
 
-	.GLOBAL gUnknown_085E1208
-gUnknown_085E1208:
+	.GLOBAL gfxYellowPresentAnim
+gfxYellowPresentAnim:
 	.INCBIN "baserom.gba", 0x5E1208, 0x5E122C-0x5E1208
 
-	.GLOBAL gUnknown_085E122C
-gUnknown_085E122C:
+	.GLOBAL gfxYellowPresentOAM
+gfxYellowPresentOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=9
 
-	.GLOBAL gUnknown_085E1234
-gUnknown_085E1234:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E1234.4bpp"
+	.GLOBAL gfxYellowPresent4bpp
+gfxYellowPresent4bpp:
+	.INCBIN "assets/sprites/level_select/YellowPresent.4bpp"
 
 	.GLOBAL gUnknown_085E12B4
 gUnknown_085E12B4:
@@ -20669,41 +20669,41 @@ gUnknown_085E1344:
 gUnknown_085E134C:
 	.INCBIN "assets/sprites/level_select/gUnknown_085E134C.4bpp"
 
-	.GLOBAL gUnknown_085E1B4C
-gUnknown_085E1B4C:
+	.GLOBAL gfxRotatingStarAltAnim
+gfxRotatingStarAltAnim:
 	.INCBIN "baserom.gba", 0x5E1B4C, 0x5E1C24-0x5E1B4C
 
-	.GLOBAL gUnknown_085E1C24
-gUnknown_085E1C24:
+	.GLOBAL gfxRotatingStarAltOAM
+gfxRotatingStarAltOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=11
 
-	.GLOBAL gUnknown_085E1C2C
-gUnknown_085E1C2C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E1C2C.4bpp"
+	.GLOBAL gfxRotatingStarAlt4bpp
+gfxRotatingStarAlt4bpp:
+	.INCBIN "assets/sprites/level_select/RotatingStarAlt.4bpp"
 
-	.GLOBAL gUnknown_085E1F2C
-gUnknown_085E1F2C:
+	.GLOBAL gfxRotatingStarAnim
+gfxRotatingStarAnim:
 	.INCBIN "baserom.gba", 0x5E1F2C, 0x5E2004-0x5E1F2C
 
-	.GLOBAL gUnknown_085E2004
-gUnknown_085E2004:
+	.GLOBAL gfxRotatingStarOAM
+gfxRotatingStarOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=1, paletteNum=11
 
-	.GLOBAL gUnknown_085E200C
-gUnknown_085E200C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E200C.4bpp"
+	.GLOBAL gfxRotatingStar4bpp
+gfxRotatingStar4bpp:
+	.INCBIN "assets/sprites/level_select/RotatingStar.4bpp"
 
 	.GLOBAL gUnknown_085E230C
 gUnknown_085E230C:
 	.INCBIN "baserom.gba", 0x5E230C, 0x5E2330-0x5E230C
 
-	.GLOBAL gUnknown_085E2330
-gUnknown_085E2330:
+	.GLOBAL gfxStarCounterOAM
+gfxStarCounterOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=2, paletteNum=11
 
-	.GLOBAL gUnknown_085E2338
-gUnknown_085E2338:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E2338.4bpp"
+	.GLOBAL gfxStarCounter4bpp
+gfxStarCounter4bpp:
+	.INCBIN "assets/sprites/level_select/StarCounter.4bpp"
 
 	.GLOBAL gUnknown_085E2438
 gUnknown_085E2438:
@@ -20861,53 +20861,53 @@ gUnknown_085E3818:
 gUnknown_085E3820:
 	.INCBIN "assets/sprites/level_select/gUnknown_085E3820.4bpp"
 
-	.GLOBAL gUnknown_085E8020
-gUnknown_085E8020:
+	.GLOBAL gfxMainButtonDisabledAnim
+gfxMainButtonDisabledAnim:
 	.INCBIN "baserom.gba", 0x5E8020, 0x5E8044-0x5E8020
 
-	.GLOBAL gUnknown_085E8044
-gUnknown_085E8044:
+	.GLOBAL gfxMainButtonDisabledOAM
+gfxMainButtonDisabledOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=3, paletteNum=9
 
-	.GLOBAL gUnknown_085E804C
-gUnknown_085E804C:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E804C.4bpp"
+	.GLOBAL gfxMainButtonDisabled4bpp
+gfxMainButtonDisabled4bpp:
+	.INCBIN "assets/sprites/level_select/MainButtonDisabled.4bpp"
 
-	.GLOBAL gUnknown_085E844C
-gUnknown_085E844C:
+	.GLOBAL gfxMainButtonEnabledAnim
+gfxMainButtonEnabledAnim:
 	.INCBIN "baserom.gba", 0x5E844C, 0x5E8470-0x5E844C
 
-	.GLOBAL gUnknown_085E8470
-gUnknown_085E8470:
+	.GLOBAL gfxMainButtonEnabledOAM
+gfxMainButtonEnabledOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=3, paletteNum=9
 
-	.GLOBAL gUnknown_085E8478
-gUnknown_085E8478:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E8478.4bpp"
+	.GLOBAL gfxMainButtonEnabled4bpp
+gfxMainButtonEnabled4bpp:
+	.INCBIN "assets/sprites/level_select/MainButtonEnabled.4bpp"
 
-	.GLOBAL gUnknown_085E8878
-gUnknown_085E8878:
+	.GLOBAL gfxPlusButtonDisabledAnim
+gfxPlusButtonDisabledAnim:
 	.INCBIN "baserom.gba", 0x5E8878, 0x5E889C-0x5E8878
 
-	.GLOBAL gUnknown_085E889C
-gUnknown_085E889C:
+	.GLOBAL gfxPlusButtonDisabledOAM
+gfxPlusButtonDisabledOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=3, paletteNum=9
 
-	.GLOBAL gUnknown_085E88A4
-gUnknown_085E88A4:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E88A4.4bpp"
+	.GLOBAL gfxPlusButtonDisabled4bpp
+gfxPlusButtonDisabled4bpp:
+	.INCBIN "assets/sprites/level_select/PlusButtonDisabled.4bpp"
 
-	.GLOBAL gUnknown_085E8CA4
-gUnknown_085E8CA4:
+	.GLOBAL gfxPlusButtonEnabledAnim
+gfxPlusButtonEnabledAnim:
 	.INCBIN "baserom.gba", 0x5E8CA4, 0x5E8CC8-0x5E8CA4
 
-	.GLOBAL gUnknown_085E8CC8
-gUnknown_085E8CC8:
+	.GLOBAL gfxPlusButtonEnabledOAM
+gfxPlusButtonEnabledOAM:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=3, paletteNum=9
 
-	.GLOBAL gUnknown_085E8CD0
-gUnknown_085E8CD0:
-	.INCBIN "assets/sprites/level_select/gUnknown_085E8CD0.4bpp"
+	.GLOBAL gfxPlusButtonEnabled4bpp
+gfxPlusButtonEnabled4bpp:
+	.INCBIN "assets/sprites/level_select/PlusButtonEnabled.4bpp"
 
 	.GLOBAL gUnknown_085E90D0
 gUnknown_085E90D0:
@@ -34590,9 +34590,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C255C @ Animation Data
-	.4byte gUnknown_085C2580 @ OAM
-	.4byte gUnknown_085C2588 @ Sprite Graphics
+	.4byte gfxLButtonAnim @ Animation Data
+	.4byte gfxLButtonOAM @ OAM
+	.4byte gfxLButton4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -34601,9 +34601,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C2608 @ Animation Data
-	.4byte gUnknown_085C262C @ OAM
-	.4byte gUnknown_085C2634 @ Sprite Graphics
+	.4byte gfxRButtonAnim @ Animation Data
+	.4byte gfxRButtonOAM @ OAM
+	.4byte gfxRButton4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -34612,9 +34612,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C26B4 @ Animation Data
-	.4byte gUnknown_085C26D8 @ OAM
-	.4byte gUnknown_085C26E0 @ Sprite Graphics
+	.4byte gfxArrowBottomRowAnim @ Animation Data
+	.4byte gfxArrowBottomRowOAM @ OAM
+	.4byte gfxArrowBottomRow4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -34623,9 +34623,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C2760 @ Animation Data
-	.4byte gUnknown_085C2784 @ OAM
-	.4byte gUnknown_085C278C @ Sprite Graphics
+	.4byte gfxArrowTopRowAnim @ Animation Data
+	.4byte gfxArrowTopRowOAM @ OAM
+	.4byte gfxArrowTopRow4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0020 @ Bytes per frame graphic
@@ -34634,9 +34634,9 @@ gUncompressedGraphicsTable:
 	.byte 0x08 @ Sprite Width
 	.byte 0x08 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C280C @ Animation Data
-	.4byte gUnknown_085C2830 @ OAM
-	.4byte gUnknown_085C2838 @ Sprite Graphics
+	.4byte gfxShortArrowAnim @ Animation Data
+	.4byte gfxShortArrowOAM @ OAM
+	.4byte gfxShortArrow4bpp @ Sprite Graphics
 
 	.2byte 0x0002 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -34722,9 +34722,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x40 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085C7A78 @ Animation Data
-	.4byte gUnknown_085C7D00 @ OAM
-	.4byte gUnknown_085C7D08 @ Sprite Graphics
+	.4byte gfxLevelButtonHighlightAnim @ Animation Data
+	.4byte gfxLevelButtonHighlightOAM @ OAM
+	.4byte gfxLevelButtonHighlight4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0400 @ Bytes per frame graphic
@@ -34744,9 +34744,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x40 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CC134 @ Animation Data
-	.4byte gUnknown_085CC158 @ OAM
-	.4byte gUnknown_085CC160 @ Sprite Graphics
+	.4byte gfxLockedDKLvlFrameAnim @ Animation Data
+	.4byte gfxLockedDKLvlFrameOAM @ OAM
+	.4byte gfxLockedDKLvlFrame4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0800 @ Bytes per frame graphic
@@ -34755,9 +34755,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x40 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CC960 @ Animation Data
-	.4byte gUnknown_085CC984 @ OAM
-	.4byte gUnknown_085CC98C @ Sprite Graphics
+	.4byte gfxUnlockedDKLvlFrameAnim @ Animation Data
+	.4byte gfxUnlockedDKLvlFrameOAM @ OAM
+	.4byte gfxUnlockedDKLvlFrame4bpp @ Sprite Graphics
 
 	.2byte 0x0012 @ Number of Animation frames
 	.2byte 0x0400 @ Bytes per frame graphic
@@ -34777,9 +34777,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x40 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CD81C @ Animation Data
-	.4byte gUnknown_085CD840 @ OAM
-	.4byte gUnknown_085CD848 @ Sprite Graphics
+	.4byte gfxLockedLvlFrameAnim @ Animation Data
+	.4byte gfxLockedLvlFrameOAM @ OAM
+	.4byte gfxLockedLvlFrame4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0800 @ Bytes per frame graphic
@@ -34788,9 +34788,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x40 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CE048 @ Animation Data
-	.4byte gUnknown_085CE06C @ OAM
-	.4byte gUnknown_085CE074 @ Sprite Graphics
+	.4byte gfxUnlockedLvlFrameAnim @ Animation Data
+	.4byte gfxUnlockedLvlFrameOAM @ OAM
+	.4byte gfxUnlockedLvlFrame4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0800 @ Bytes per frame graphic
@@ -34821,7 +34821,7 @@ gUncompressedGraphicsTable:
 	.byte 0x20 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085CF8CC @ Animation Data
+	.4byte gfxMainWorldSelectTabsAnim @ Animation Data
 	.4byte gfxMainWorldSelectTabsOAM @ OAM
 	.4byte gfxMainWorldSelectTabs4bpp @ Sprite Graphics
 
@@ -34832,7 +34832,7 @@ gUncompressedGraphicsTable:
 	.byte 0x20 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D00D0 @ Animation Data
+	.4byte gfxPlusWorldSelectTabsAnim @ Animation Data
 	.4byte gfxPlusWorldSelectTabsOAM @ OAM
 	.4byte gfxPlusWorldSelectTabs4bpp @ Sprite Graphics
 
@@ -34843,9 +34843,9 @@ gUncompressedGraphicsTable:
 	.byte 0x20 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D08D4 @ Animation Data
-	.4byte gUnknown_085D08F8 @ OAM
-	.4byte gUnknown_085D0900 @ Sprite Graphics
+	.4byte gfxLifeCounterAnim @ Animation Data
+	.4byte gfxLifeCounterOAM @ OAM
+	.4byte gfxLifeCounter4bpp @ Sprite Graphics
 
 	.2byte 0x0030 @ Number of Animation frames
 	.2byte 0x0200 @ Bytes per frame graphic
@@ -34854,7 +34854,7 @@ gUncompressedGraphicsTable:
 	.byte 0x20 @ Sprite width in pixels
 	.byte 0x20 @ Sprite height in pixels
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D0A00 @ Animation Data
+	.4byte gfxMainLevelIconPicsAnim @ Animation Data
 	.4byte gfxMainLevelIconPicsOAM @ OAM
 	.4byte gfxMainLevelIconPics4bpp @ Sprite Graphics
 
@@ -34865,7 +34865,7 @@ gUncompressedGraphicsTable:
 	.byte 0x20 @ Sprite width in pixels
 	.byte 0x20 @ Sprite height in pixels
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085D70C8 @ Animation Data
+	.4byte gfxPlusWorldIconPicsAnim @ Animation Data
 	.4byte gfxPlusLevelIconPicsOAM @ OAM
 	.4byte gfxPlusLevelIconPics4bpp @ Sprite Graphics
 
@@ -34876,9 +34876,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x08 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DCAB8 @ Animation Data
-	.4byte gUnknown_085DCB6C @ OAM
-	.4byte gUnknown_085DCB74 @ Sprite Graphics
+	.4byte gfxDKLabelAnim @ Animation Data
+	.4byte gfxDKLabelOAM @ OAM
+	.4byte gfxDKLabel4bpp @ Sprite Graphics
 
 	.2byte 0x0004 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -34887,9 +34887,9 @@ gUncompressedGraphicsTable:
 	.byte 0x20 @ Sprite Width
 	.byte 0x08 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DCC34 @ Animation Data
-	.4byte gUnknown_085DCCC4 @ OAM
-	.4byte gUnknown_085DCCCC @ Sprite Graphics
+	.4byte gfxDKPlusLabelAnim @ Animation Data
+	.4byte gfxDKPlusLabelOAM @ OAM
+	.4byte gfxDKPlusLabel4bpp @ Sprite Graphics
 
 	.2byte 0x0005 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -34898,9 +34898,9 @@ gUncompressedGraphicsTable:
 	.byte 0x20 @ Sprite Width
 	.byte 0x08 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DCECC @ Animation Data
-	.4byte gUnknown_085DCF80 @ OAM
-	.4byte gUnknown_085DCF88 @ Sprite Graphics
+	.4byte gfxMMLabelAnim @ Animation Data
+	.4byte gfxMMLabelOAM @ OAM
+	.4byte gfxMMLabel4bpp @ Sprite Graphics
 
 	.2byte 0x0002 @ Number of Animation frames
 	.2byte 0x0100 @ Bytes per frame graphic
@@ -34931,9 +34931,9 @@ gUncompressedGraphicsTable:
 	.byte 0x08 @ Sprite Width
 	.byte 0x08 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DD9EC @ Animation Data
-	.4byte gUnknown_085DDE24 @ OAM
-	.4byte gUnknown_085DDE2C @ Sprite Graphics
+	.4byte gfxMainLvlLabelsAnim @ Animation Data
+	.4byte gfxMainLvlLabelsOAM @ OAM
+	.4byte gfxMainLvlLabels4bpp @ Sprite Graphics
 
 	.2byte 0x001E @ Number of Animation frames
 	.2byte 0x0040 @ Bytes per frame graphic
@@ -34942,9 +34942,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x08 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DE06C @ Animation Data
-	.4byte gUnknown_085DE4A4 @ OAM
-	.4byte gUnknown_085DE4AC @ Sprite Graphics
+	.4byte gfxPlusLvlLabelsAnim @ Animation Data
+	.4byte gfxPlusLvlLabelsOAM @ OAM
+	.4byte gfxPlusLvlLabels4bpp @ Sprite Graphics
 
 	.2byte 0x000A @ Number of Animation frames
 	.2byte 0x0040 @ Bytes per frame graphic
@@ -34953,9 +34953,9 @@ gUncompressedGraphicsTable:
 	.byte 0x08 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085DE92C @ Animation Data
-	.4byte gUnknown_085DEA94 @ OAM
-	.4byte gUnknown_085DEA9C @ Sprite Graphics
+	.4byte gfxHighScoreDigitsAnim @ Animation Data
+	.4byte gfxHighScoreDigitsOAM @ OAM
+	.4byte gfxHighScoreDigits4bpp @ Sprite Graphics
 
 	.2byte 0x0012 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -35030,9 +35030,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E078C @ Animation Data
-	.4byte gUnknown_085E07D4 @ OAM
-	.4byte gUnknown_085E07DC @ Sprite Graphics
+	.4byte gfxBluePresentMovingAnim @ Animation Data
+	.4byte gfxBluePresentMovingOAM @ OAM
+	.4byte gfxBluePresentMoving4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -35052,9 +35052,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0988 @ Animation Data
-	.4byte gUnknown_085E09AC @ OAM
-	.4byte gUnknown_085E09B4 @ Sprite Graphics
+	.4byte gfxBluePresentAnim @ Animation Data
+	.4byte gfxBluePresentOAM @ OAM
+	.4byte gfxBluePresent4bpp @ Sprite Graphics
 
 	.2byte 0x0002 @ Number of Animation frames
 	.2byte 0x0020 @ Bytes per frame graphic
@@ -35085,9 +35085,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0C14 @ Animation Data
-	.4byte gUnknown_085E0C5C @ OAM
-	.4byte gUnknown_085E0C64 @ Sprite Graphics
+	.4byte gfxRedPresentMovingAnim @ Animation Data
+	.4byte gfxRedPresentMovingOAM @ OAM
+	.4byte gfxRedPresentMoving4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -35107,9 +35107,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E0E10 @ Animation Data
-	.4byte gUnknown_085E0E34 @ OAM
-	.4byte gUnknown_085E0E3C @ Sprite Graphics
+	.4byte gfxRedPresentAnim @ Animation Data
+	.4byte gfxRedPresentOAM @ OAM
+	.4byte gfxRedPresent4bpp @ Sprite Graphics
 
 	.2byte 0x0002 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -35129,9 +35129,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E100C @ Animation Data
-	.4byte gUnknown_085E1054 @ OAM
-	.4byte gUnknown_085E105C @ Sprite Graphics
+	.4byte gfxYellowPresentMovingAnim @ Animation Data
+	.4byte gfxYellowPresentMovingOAM @ OAM
+	.4byte gfxYellowPresentMoving4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -35151,9 +35151,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E1208 @ Animation Data
-	.4byte gUnknown_085E122C @ OAM
-	.4byte gUnknown_085E1234 @ Sprite Graphics
+	.4byte gfxYellowPresentAnim @ Animation Data
+	.4byte gfxYellowPresentOAM @ OAM
+	.4byte gfxYellowPresent4bpp @ Sprite Graphics
 
 	.2byte 0x0004 @ Number of Animation frames
 	.2byte 0x0800 @ Bytes per frame graphic
@@ -35173,9 +35173,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E1B4C @ Animation Data
-	.4byte gUnknown_085E1C24 @ OAM
-	.4byte gUnknown_085E1C2C @ Sprite Graphics
+	.4byte gfxRotatingStarAltAnim @ Animation Data
+	.4byte gfxRotatingStarAltOAM @ OAM
+	.4byte gfxRotatingStarAlt4bpp @ Sprite Graphics
 
 	.2byte 0x0006 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -35184,9 +35184,9 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Width
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E1F2C @ Animation Data
-	.4byte gUnknown_085E2004 @ OAM
-	.4byte gUnknown_085E200C @ Sprite Graphics
+	.4byte gfxRotatingStarAnim @ Animation Data
+	.4byte gfxRotatingStarOAM @ OAM
+	.4byte gfxRotatingStar4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0100 @ Bytes per frame graphic
@@ -35196,8 +35196,8 @@ gUncompressedGraphicsTable:
 	.byte 0x10 @ Sprite Height
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_085E230C @ Animation Data
-	.4byte gUnknown_085E2330 @ OAM
-	.4byte gUnknown_085E2338 @ Sprite Graphics
+	.4byte gfxStarCounterOAM @ OAM
+	.4byte gfxStarCounter4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0040 @ Bytes per frame graphic
@@ -35349,9 +35349,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x20 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E8020 @ Animation Data
-	.4byte gUnknown_085E8044 @ OAM
-	.4byte gUnknown_085E804C @ Sprite Graphics
+	.4byte gfxMainButtonDisabledAnim @ Animation Data
+	.4byte gfxMainButtonDisabledOAM @ OAM
+	.4byte gfxMainButtonDisabled4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0400 @ Bytes per frame graphic
@@ -35360,9 +35360,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x20 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E844C @ Animation Data
-	.4byte gUnknown_085E8470 @ OAM
-	.4byte gUnknown_085E8478 @ Sprite Graphics
+	.4byte gfxMainButtonEnabledAnim @ Animation Data
+	.4byte gfxMainButtonEnabledOAM @ OAM
+	.4byte gfxMainButtonEnabled4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0400 @ Bytes per frame graphic
@@ -35371,9 +35371,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x20 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E8878 @ Animation Data
-	.4byte gUnknown_085E889C @ OAM
-	.4byte gUnknown_085E88A4 @ Sprite Graphics
+	.4byte gfxPlusButtonDisabledAnim @ Animation Data
+	.4byte gfxPlusButtonDisabledOAM @ OAM
+	.4byte gfxPlusButtonDisabled4bpp @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0400 @ Bytes per frame graphic
@@ -35382,9 +35382,9 @@ gUncompressedGraphicsTable:
 	.byte 0x40 @ Sprite Width
 	.byte 0x20 @ Sprite Height
 	.2byte 0x0000 @ unused
-	.4byte gUnknown_085E8CA4 @ Animation Data
-	.4byte gUnknown_085E8CC8 @ OAM
-	.4byte gUnknown_085E8CD0 @ Sprite Graphics
+	.4byte gfxPlusButtonEnabledAnim @ Animation Data
+	.4byte gfxPlusButtonEnabledOAM @ OAM
+	.4byte gfxPlusButtonEnabled4bpp @ Sprite Graphics
 
 	.2byte 0x0012 @ Number of Animation frames
 	.2byte 0x0400 @ Bytes per frame graphic
