@@ -821,6 +821,21 @@ enum PaletteID
     PALETTE_4,
     PALETTE_5_LEVEL_HELP,
 
+    PALETTE_11 = 11,
+    PALETTE_12,
+    PALETTE_13,
+    PALETTE_14,
+    PALETTE_15,
+    PALETTE_16,
+    PALETTE_17,
+    PALETTE_18,
+    PALETTE_19,
+    PALETTE_20,
+    PALETTE_21,
+    PALETTE_22,
+    PALETTE_23,
+    PALETTE_24,
+
     PALETTE_58 = 58,
     PALETTE_59,
     PALETTE_60,
@@ -906,10 +921,7 @@ extern u8 gUnknown_03000063;
 extern u8 gMainMenuInitDelayTimer;
 extern u8 gUnknown_03000065;
 extern u8 gUnknown_03000066[];
-extern struct UnknownStruct15 *gUnknown_030000A4;
-extern u8 gPressStartFadeDir;
-extern u8 gTitleScreenFrameCounter;
-extern u16 gPressStartOpacity;
+
 extern u8 gUnknown_030000AC;
 extern s32 gUnknown_030000B0;
 extern s8 gUnknown_030000B4;
@@ -1257,6 +1269,19 @@ extern struct GraphicsConfig gWorldSixPlusStartData;
 
 extern struct GraphicsConfig gLevelResultsData;
 
+extern struct GraphicsConfig gLevelSelectWorldOneBG;
+extern struct GraphicsConfig gLevelSelectWorldTwoBG;
+extern struct GraphicsConfig gLevelSelectWorldThreeBG;
+extern struct GraphicsConfig gLevelSelectWorldFourBG;
+extern struct GraphicsConfig gLevelSelectWorldFiveBG;
+extern struct GraphicsConfig gLevelSelectWorldSixBG;
+extern struct GraphicsConfig gLevelSelectWorldOnePlusBG;
+extern struct GraphicsConfig gLevelSelectWorldTwoPlusBG;
+extern struct GraphicsConfig gLevelSelectWorldThreePlusBG;
+extern struct GraphicsConfig gLevelSelectWorldFourPlusBG;
+extern struct GraphicsConfig gLevelSelectWorldFivePlusBG;
+extern struct GraphicsConfig gLevelSelectWorldSixPlusBG;
+
 extern const struct iwRAMBase *gUnknown_0807CA98;
 
 extern struct GraphicsConfig gEWorldMenuData2;
@@ -1337,6 +1362,7 @@ void level_editor_end(void);
 void sub_080091A8(void *, void *);
 void sub_0800A2B8(int, int, u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
 void sub_0800EE70(void);
+void tutorial_level_setup(u32 worldID, u32 levelID);
 void title_demo_setup(u32 titleDemoID);
 int sub_08014950();
 void sub_08014A58();
@@ -1396,11 +1422,12 @@ void options_end(void);
 void sub_08029080(void);
 void sub_0802919C(int arg0, int arg1);
 void level_results_init_callback(void);
-void sub_08029D80(void);
+void black_screen_08029D80(void);
 void level_results_main(void);
 void level_results_loop(void);
 void level_results_end(void);
 int update_fade_from_black(void);
+void save_blend_regs_from_graphicsconfig(struct GraphicsConfig *param_1);
 void save_blend_regs();
 void fade_transition_init_callback(void);
 void fade_transition_end(void);

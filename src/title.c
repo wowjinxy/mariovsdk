@@ -11,6 +11,11 @@ enum
     FADE_DOWN,
 };
 
+static struct UnknownStruct15 *gUnknown_030000A4;
+static u8 gPressStartFadeDir;
+static u8 gTitleScreenFrameCounter;
+static u16 gPressStartOpacity;
+
 void title_init_callback(void)
 {
     struct GraphicsConfig *arr[4];

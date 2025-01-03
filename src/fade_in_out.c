@@ -71,7 +71,7 @@ void fade_transition_init_callback(void) {
     REG_BLDY = 0;
 }
 
-void sub_08029D80(void) {
+void black_screen_08029D80(void) {
     // blacken screen
     sBldY = 31;
     sInitialFadeDelay = 0;

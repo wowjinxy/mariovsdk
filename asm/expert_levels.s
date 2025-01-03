@@ -22,7 +22,7 @@ expert_levels_init_callback: @ 0x08035388
 	mov r0, #1
 	strb r0, [r1]
 	ldr r1, _08035474  @ =0x030002EC
-	ldr r0, _08035478  @ =gUnknown_085E1F2C
+	ldr r0, _08035478  @ =gfxRotatingStarAnim
 	ldrb r0, [r0, #1]
 	strb r0, [r1]
 	ldr r2, _0803547C  @ =0x030002ED
@@ -34,7 +34,7 @@ expert_levels_init_callback: @ 0x08035388
 	ldrb r0, [r0]
 	strb r0, [r1]
 	ldr r1, _08035488  @ =0x030002EF
-	ldr r0, _0803548C  @ =gUnknown_085C7A78
+	ldr r0, _0803548C  @ =gfxLevelButtonHighlightAnim
 	ldrb r0, [r0, #1]
 	strb r0, [r1]
 	mov r4, #0
@@ -117,7 +117,7 @@ _08035470:
 _08035474:
 	.4byte 0x030002EC
 _08035478:
-	.4byte gUnknown_085E1F2C
+	.4byte gfxRotatingStarAnim
 _0803547C:
 	.4byte 0x030002ED
 _08035480:
@@ -127,7 +127,7 @@ _08035484:
 _08035488:
 	.4byte 0x030002EF
 _0803548C:
-	.4byte gUnknown_085C7A78
+	.4byte gfxLevelButtonHighlightAnim
 _08035490:
 	.4byte gExpertLevelMenuData
 _08035494:
@@ -775,7 +775,7 @@ _08035950:
 _08035958:
 	ldr r1, _08035A30  @ =0x030002E8
 	ldr r2, _08035A34  @ =0x030002EC
-	ldr r3, _08035A38  @ =gUnknown_085E1F2C
+	ldr r3, _08035A38  @ =gfxRotatingStarAnim
 	ldrb r0, [r2]
 	sub r0, r0, #1
 	strb r0, [r2]
@@ -803,7 +803,7 @@ _0803597C:
 _0803598C:
 	ldr r1, _08035A3C  @ =0x030002EB
 	ldr r2, _08035A40  @ =0x030002EF
-	ldr r3, _08035A44  @ =gUnknown_085C7A78
+	ldr r3, _08035A44  @ =gfxLevelButtonHighlightAnim
 	ldrb r0, [r2]
 	sub r0, r0, #1
 	strb r0, [r2]
@@ -895,13 +895,13 @@ _08035A30:
 _08035A34:
 	.4byte 0x030002EC
 _08035A38:
-	.4byte gUnknown_085E1F2C
+	.4byte gfxRotatingStarAnim
 _08035A3C:
 	.4byte 0x030002EB
 _08035A40:
 	.4byte 0x030002EF
 _08035A44:
-	.4byte gUnknown_085C7A78
+	.4byte gfxLevelButtonHighlightAnim
 _08035A48:
 	.4byte 0x030002E9
 _08035A4C:
@@ -962,7 +962,7 @@ _08035AA8:
 	bl __umodsi3
 	lsl r0, r0, #16
 	lsr r0, r0, #10
-	ldr r1, _08035B78  @ =gUnknown_085DEA9C
+	ldr r1, _08035B78  @ =gfxHighScoreDigits4bpp
 	add r0, r0, r1
 	str r0, [r4]
 	ldr r2, _08035B7C  @ =gObjVRAMCopyOffset_0300192C
@@ -973,7 +973,7 @@ _08035AA8:
 	ldr r0, _08035B84  @ =0x84000010
 	str r0, [r4, #8]
 	ldr r0, [r4, #8]
-	ldr r0, _08035B88  @ =gUnknown_085DEA94
+	ldr r0, _08035B88  @ =gfxHighScoreDigitsOAM
 	str r0, [r4]
 	ldrh r0, [r5]
 	lsl r0, r0, #3
@@ -1061,7 +1061,7 @@ _08035B70:
 _08035B74:
 	.4byte gVRAMCurrTileNum_03001930
 _08035B78:
-	.4byte gUnknown_085DEA9C
+	.4byte gfxHighScoreDigits4bpp
 _08035B7C:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08035B80:
@@ -1069,7 +1069,7 @@ _08035B80:
 _08035B84:
 	.4byte 0x84000010
 _08035B88:
-	.4byte gUnknown_085DEA94
+	.4byte gfxHighScoreDigitsOAM
 _08035B8C:
 	.4byte 0x84000002
 _08035B90:
@@ -2555,7 +2555,7 @@ sub_080366D0: @ 0x080366D0
 	mov r7, r8
 	push {r7}
 	ldr r2, _0803678C  @ =REG_DMA3SAD
-	ldr r0, _08036790  @ =gUnknown_085D0900
+	ldr r0, _08036790  @ =gfxLifeCounter4bpp
 	str r0, [r2]
 	ldr r0, _08036794  @ =gObjVRAMCopyOffset_0300192C
 	mov r8, r0
@@ -2566,7 +2566,7 @@ sub_080366D0: @ 0x080366D0
 	ldr r0, _0803679C  @ =0x84000040
 	str r0, [r2, #8]
 	ldr r0, [r2, #8]
-	ldr r0, _080367A0  @ =gUnknown_085D08F8
+	ldr r0, _080367A0  @ =gfxLifeCounterOAM
 	str r0, [r2]
 	ldr r3, _080367A4  @ =0x030002D0
 	ldrh r0, [r3]
@@ -2646,7 +2646,7 @@ sub_080366D0: @ 0x080366D0
 _0803678C:
 	.4byte REG_DMA3SAD
 _08036790:
-	.4byte gUnknown_085D0900
+	.4byte gfxLifeCounter4bpp
 _08036794:
 	.4byte gObjVRAMCopyOffset_0300192C
 _08036798:
@@ -2654,7 +2654,7 @@ _08036798:
 _0803679C:
 	.4byte 0x84000040
 _080367A0:
-	.4byte gUnknown_085D08F8
+	.4byte gfxLifeCounterOAM
 _080367A4:
 	.4byte 0x030002D0
 _080367A8:

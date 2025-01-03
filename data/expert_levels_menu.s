@@ -585,18 +585,18 @@ gUnknown_080A82C0:
 	.2byte 0x0004
 	.2byte 0x0080
 	.2byte 0x0000
-	.4byte gUnknown_085C255C
-	.4byte gUnknown_085C2580
-	.4byte gUnknown_085C2588
+	.4byte gfxLButtonAnim
+	.4byte gfxLButtonOAM
+	.4byte gfxLButton4bpp
 	.2byte 0x00E0
 	.2byte 0x0050
 	.2byte 0x0020
 	.2byte 0x0004
 	.2byte 0x0080
 	.2byte 0x0000
-	.4byte gUnknown_085C2608
-	.4byte gUnknown_085C262C
-	.4byte gUnknown_085C2634
+	.4byte gfxRButtonAnim
+	.4byte gfxRButtonOAM
+	.4byte gfxRButton4bpp
 
 	.GLOBAL gUnknown_080A8308
 gUnknown_080A8308:
