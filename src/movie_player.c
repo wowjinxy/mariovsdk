@@ -10,7 +10,7 @@ static inline void someinline(int flags, int songID, int nextState, int movieID)
     gMoviePlayerParams.songID = songID;
     gMoviePlayerParams.nextMode = nextState;
     gMoviePlayerParams.movieID = movieID;
-    gMoviePlayerParams.movieData = &gMovie4;
+    gMoviePlayerParams.movieData = &gMovieDKBoss1End;
 }
 
 void movie_player_main(void)
@@ -132,34 +132,34 @@ void movie_player_setup_data(u8 flags, u8 songID, u8 nextMode, u8 movieID)
     switch(movieID)
     {
     case MOVIE_INTRO: //Movie ID 0 (Intro)
-        gMoviePlayerParams.movieData = &gMovie0;
+        gMoviePlayerParams.movieData = &gMovieIntro;
         break;
     case MOVIE_INTRO2: //Movie ID 1 (New Game)
-        gMoviePlayerParams.movieData = &gMovie1;
+        gMoviePlayerParams.movieData = &gMovieNewGame;
         break;
     case MOVIE_DK_BOSS_1: //Movie ID 2 (Main levels final boss intro)
-        gMoviePlayerParams.movieData = &gMovie2;
+        gMoviePlayerParams.movieData = &gMovieDKBoss1Intro;
         break;
     case MOVIE_DK_BOSS_1_END: //Movie ID 4 (Plus worlds intro)
-        gMoviePlayerParams.movieData = &gMovie4;
+        gMoviePlayerParams.movieData = &gMovieDKBoss1End;
         break;
     case MOVIE_DK_BOSS_2: //Movie ID 5 (Plus levels final boss intro)
-        gMoviePlayerParams.movieData = &gMovie5;
+        gMoviePlayerParams.movieData = &gMovieDKBoss2Intro;
         break;
     case MOVIE_DK_BOSS_2_END: //Movie ID 6 (Plus final boss ending cutscene)
-        gMoviePlayerParams.movieData = &gMovie6;
+        gMoviePlayerParams.movieData = &gMovieDKBoss2End;
         break;
     case MOVIE_CREDITS_2: //Movie ID 7 (Credits 2)
-        gMoviePlayerParams.movieData = &gMovie7;
+        gMoviePlayerParams.movieData = &gMovieCredits2;
         break;
     case MOVIE_CREDITS_1: //Movie ID 3 (Credits 1)
-        gMoviePlayerParams.movieData = &gMovie3;
+        gMoviePlayerParams.movieData = &gMovieCredits1;
         break;
     case MOVIE_UNUSED_1: //Movie ID 8 (Unused -- DK Falling)
-        gMoviePlayerParams.movieData = &gMovie8;
+        gMoviePlayerParams.movieData = &gMovieUnusedDKFalling;
         break;
     case MOVIE_UNUSED_2: //Movie ID 9 (Unused -- "Plus Worlds Unlocked!" message)
-        gMoviePlayerParams.movieData = &gMovie9;
+        gMoviePlayerParams.movieData = &gMovieUnusedPlusWorldsUnlocked;
         break;
     }
 }

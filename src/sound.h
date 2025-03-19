@@ -287,7 +287,7 @@ extern u16 gBGMCount;
 void sound_init(void *buffer, int bufferSize, int arg2, int arg3, int arg4);
 void sound_update(void);
 void sub_0807194C(void);
-int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u32 arg5, int sampleRate);
+int play_sound_effect_08071990(int soundID, u8 arg1, u8 arg2, u8 pan, u8 arg4, u32 volume, int sampleRate);
 void sound_update_dma_transfer(void);
 void sound_disable_dma_transfer(void);
 void sound_enable_dma_transfer(void);

@@ -1644,13 +1644,384 @@ gMusicTable:
 	.byte 0x00
 	.byte 0x00
 
-	.GLOBAL gUnknown_08D7B458 @ Sound Sample Data
+	.GLOBAL gUnknown_08D7B458 @ Vibraphone Sound Sample Data
 gUnknown_08D7B458:
-	.INCBIN "baserom.gba", 0xD7B458, 0xEBBF60-0xD7B458
+	.INCBIN "baserom.gba", 0xD7B458, 0xD7CDEC-0xD7B458
 
+	.GLOBAL gUnknown_08D7CDEC
+gUnknown_08D7CDEC:
+	.INCBIN "baserom.gba", 0xD7CDEC, 0xD7E541-0xD7CDEC
+	
+	.GLOBAL gUnknown_08D7E541
+gUnknown_08D7E541:
+	.INCBIN "baserom.gba", 0xD7E541, 0xD7F311-0xD7E541
+	
+	.GLOBAL gUnknown_08D7F311
+gUnknown_08D7F311:
+	.INCBIN "baserom.gba", 0xD7F311, 0xD7FC60-0xD7F311	
+
+	.GLOBAL gUnknown_08D7FC60
+gUnknown_08D7FC60:
+	.INCBIN "baserom.gba", 0xD7FC60, 0xD80618-0xD7FC60
+	
+	
+	.GLOBAL gUnknown_08D80618 @ Picked Bass Sound Sample Data
+gUnknown_08D80618:
+	.INCBIN "baserom.gba", 0xD80618, 0xD8221B-0xD80618
+	
+	.GLOBAL gUnknown_08D8221B
+gUnknown_08D8221B:
+	.INCBIN "baserom.gba", 0xD8221B, 0xD83CD0-0xD8221B
+	
+	.GLOBAL gUnknown_08D83CD0
+gUnknown_08D83CD0:
+	.INCBIN "baserom.gba", 0xD83CD0, 0xD84B43-0xD83CD0
+	
+	.GLOBAL gUnknown_08D84B43
+gUnknown_08D84B43:
+	.INCBIN "baserom.gba", 0xD84B43, 0xD84B44-0xD84B43
+	
+	
+	.GLOBAL gUnknown_08D84B44 @ Not Done Sound Sample Data
+gUnknown_08D84B44:
+	.INCBIN "baserom.gba", 0xD84B44, 0xEBBF60-0xD84B44
+	
+	
 	.GLOBAL gUnknown_08EBBF60 @ Instrument Data 1
 gUnknown_08EBBF60:
-	.INCBIN "baserom.gba", 0xEBBF60, 0xEBFE90-0xEBBF60
+	.4byte 0x00199400
+	.4byte 0x0016F600
+	.4byte 0x00029D00
+	.byte 0x40
+	.byte 0x2D
+	.byte 0x64
+	.byte 0x01
+	.2byte 0x18A0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Vibraphone  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D7B458 @ Instrument Sample Pointer
+	
+	
+	
+	.4byte 0x00175500
+	.4byte 0x00164800
+	.4byte 0x00010C00
+	.byte 0x40
+	.byte 0x28
+	.byte 0x67
+	.byte 0x01
+	.2byte 0x0CA0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Vibraphone  "
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D7CDEC @ Instrument Sample Pointer
+
+
+
+	.4byte 0x000DD000
+	.4byte 0x000CE400
+	.4byte 0x0000EB00
+	.byte 0x40
+	.byte 0x1F
+	.byte 0x6B
+	.byte 0x01
+	.2byte 0x00A0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Vibraphone  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D7E541 @ Instrument Sample Pointer
+
+
+
+	.4byte 0x00094F00
+	.4byte 0x0008D800
+	.4byte 0x00007600
+	.byte 0x40
+	.byte 0x27
+	.byte 0x74
+	.byte 0x01
+	.2byte 0xF4A0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Vibraphone  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D7F311 @ Instrument Sample Pointer
+
+
+
+	.4byte 0x0009B800
+	.4byte 0x00097C00
+	.4byte 0x00003B00
+	.byte 0x40
+	.byte 0x18
+	.byte 0x74
+	.byte 0x01
+	.2byte 0xE8A0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Vibraphone  " @ unused - never read by the game
+	
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D7FC60 @ Instrument Sample Pointer
+	
+	.GLOBAL gUnknown_08EBC050
+gUnknown_08EBC050:
+	.4byte 0x001C0300
+	.4byte 0x001A2400
+	.4byte 0x0001DE00
+	.byte 0x40
+	.byte 0x30
+	.byte 0x69
+	.byte 0x01
+	.2byte 0x2EA0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Picked Bs.  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D80618 @ Instrument Sample Pointer
+
+
+
+	.4byte 0x001AB500
+	.4byte 0x00189E00
+	.4byte 0x00021600
+	.byte 0x40
+	.byte 0x27
+	.byte 0x5F
+	.byte 0x01
+	.2byte 0x24A0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Picked Bs.  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D8221B @ Instrument Sample Pointer
+
+
+
+	.4byte 0x000E7300
+	.4byte 0x000D4500
+	.4byte 0x00012D00
+	.byte 0x40
+	.byte 0x27
+	.byte 0x69
+	.byte 0x01
+	.2byte 0x1AA0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Picked Bs.  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D83CD0 @ Instrument Sample Pointer
+
+
+
+	.4byte 0x00000100
+	.4byte 0x00000000
+	.4byte 0x00000100
+	.byte 0x40
+	.byte 0x1F
+	.byte 0x66
+	.byte 0x01
+	.2byte 0xF8A0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Picked Bs.  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D84B43 @ Instrument Sample Pointer
+
+
+
+	.4byte 0x00000100
+	.4byte 0x00000000
+	.4byte 0x00000100
+	.byte 0x40
+	.byte 0x1C
+	.byte 0x65
+	.byte 0x01
+	.2byte 0xEFA0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Picked Bs.  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D84B43 @ Instrument Sample Pointer
+
+
+
+	.4byte 0x00000100
+	.4byte 0x00000000
+	.4byte 0x00000100
+	.byte 0x40
+	.byte 0x1C
+	.byte 0x63
+	.byte 0x01
+	.2byte 0xE7A0 @ first byte of this is read as a ldrb, while the second byte of this is a ldrh oddly
+
+	.ASCII "Picked Bs.  " @ unused - never read by the game
+
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+
+	.byte 0x04
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.byte 0x00 @ unused
+	.4byte gUnknown_08D84B43 @ Instrument Sample Pointer
+
+
+	
+	.GLOBAL gUnknown_08EBC170
+gUnknown_08EBC170:
+	.INCBIN "baserom.gba", 0xEBC170, 0xEBFE90-0xEBC170
 
 	.GLOBAL gInstruments @ Instrument Data 2
 gInstruments:

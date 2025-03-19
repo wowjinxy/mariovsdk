@@ -1215,16 +1215,16 @@ extern struct GraphicsConfig gNintendoSoftwareTechnologyLogo;
 extern struct GraphicsConfig gTitleScreenLeftData;
 extern struct GraphicsConfig gTitleScreenRightData;
 extern struct GraphicsConfig gTitleMarioDKEyes;  // non-const (likely in .data instead of .rodata)
-extern struct Movie gMovie4; // Movie player uses the below
-extern struct Movie gMovie0;
-extern struct Movie gMovie1;
-extern struct Movie gMovie2;
-extern struct Movie gMovie3;
-extern struct Movie gMovie5;
-extern struct Movie gMovie6;
-extern struct Movie gMovie7;
-extern struct Movie gMovie8;
-extern struct Movie gMovie9;
+extern struct Movie gMovieDKBoss1End; // Movie player uses the below
+extern struct Movie gMovieIntro;
+extern struct Movie gMovieNewGame;
+extern struct Movie gMovieDKBoss1Intro;
+extern struct Movie gMovieCredits1;
+extern struct Movie gMovieDKBoss2Intro;
+extern struct Movie gMovieDKBoss2End;
+extern struct Movie gMovieCredits2;
+extern struct Movie gMovieUnusedDKFalling;
+extern struct Movie gMovieUnusedPlusWorldsUnlocked;
 
 extern const s16 gUnknown_0807C118[][2];
 
