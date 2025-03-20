@@ -39,8 +39,8 @@ void title_init_callback(void)
     gUnknown_03000BE4 = 0;
     gUnknown_03000BE8 = 0;
     gGeneralTimer = 0;
-    if (get_current_bgm() != 10)
-        play_bgm(10, 128, 1);
+    if (get_current_bgm() != TITLE)
+        play_bgm(TITLE, 128, 1);
     sub_08033C74();
     save_blend_regs(gTitleScreenLeftData.bldCnt, gTitleScreenLeftData.bldAlpha, gTitleScreenLeftData.bldY);
     load_predefined_palette(PALETTE_0_TITLE_SCREEN, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);

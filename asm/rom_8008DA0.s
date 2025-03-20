@@ -703,7 +703,7 @@ sub_080091A8: @ 0x080091A8
 	lsr r0, r0, #16
 	mov r1, r12
 	str r0, [r1, #32]
-	ldr r0, _080095C8  @ =gUnknown_082F0C90
+	ldr r0, _080095C8  @ =gfxUISec
 	str r0, [r7]
 	ldrh r0, [r6]
 	ldr r3, _080095AC  @ =OBJ_VRAM0
@@ -723,7 +723,7 @@ sub_080091A8: @ 0x080091A8
 	mov r1, r12
 	add r1, r1, #228
 	str r0, [r1]
-	ldr r0, _080095D0  @ =gUnknown_082EFC70
+	ldr r0, _080095D0  @ =gfxPauseMenuBottomLeft
 	str r0, [r7]
 	ldrh r0, [r6]
 	add r0, r0, r3
@@ -744,7 +744,7 @@ sub_080091A8: @ 0x080091A8
 	mov r1, r12
 	add r1, r1, #232
 	str r0, [r1]
-	ldr r0, _080095D4  @ =gUnknown_082EFCBC
+	ldr r0, _080095D4  @ =gfxPauseMenuLeft
 	str r0, [r7]
 	ldrh r0, [r6]
 	ldr r1, _080095AC  @ =OBJ_VRAM0
@@ -763,7 +763,7 @@ sub_080091A8: @ 0x080091A8
 	mov r1, r12
 	add r1, r1, #236
 	str r0, [r1]
-	ldr r0, _080095D8  @ =gUnknown_082F0770
+	ldr r0, _080095D8  @ =gfxPauseMenuTopLeft1
 	str r0, [r7]
 	ldrh r0, [r6]
 	ldr r1, _080095AC  @ =OBJ_VRAM0
@@ -782,7 +782,7 @@ sub_080091A8: @ 0x080091A8
 	mov r1, r12
 	add r1, r1, #240
 	str r0, [r1]
-	ldr r0, _080095DC  @ =gUnknown_082F07BC
+	ldr r0, _080095DC  @ =gfxPauseMenuTopLeft2
 	str r0, [r7]
 	ldrh r0, [r6]
 	ldr r1, _080095AC  @ =OBJ_VRAM0
@@ -801,7 +801,7 @@ sub_080091A8: @ 0x080091A8
 	mov r1, r12
 	add r1, r1, #244
 	str r0, [r1]
-	ldr r0, _080095E0  @ =gUnknown_082F0808
+	ldr r0, _080095E0  @ =gfxPauseMenuTop
 	str r0, [r7]
 	ldrh r0, [r6]
 	ldr r1, _080095AC  @ =OBJ_VRAM0
@@ -820,7 +820,7 @@ sub_080091A8: @ 0x080091A8
 	mov r1, r12
 	add r1, r1, #248
 	str r0, [r1]
-	ldr r0, _080095E4  @ =gUnknown_082F0854
+	ldr r0, _080095E4  @ =gfxPauseMenuTopRight2
 	str r0, [r7]
 	ldrh r0, [r6]
 	ldr r1, _080095AC  @ =OBJ_VRAM0
@@ -1079,21 +1079,21 @@ _080095C0:
 _080095C4:
 	.4byte gUnknown_082F0CFC
 _080095C8:
-	.4byte gUnknown_082F0C90
+	.4byte gfxUISec
 _080095CC:
 	.4byte 0x84000010
 _080095D0:
-	.4byte gUnknown_082EFC70
+	.4byte gfxPauseMenuBottomLeft
 _080095D4:
-	.4byte gUnknown_082EFCBC
+	.4byte gfxPauseMenuLeft
 _080095D8:
-	.4byte gUnknown_082F0770
+	.4byte gfxPauseMenuTopLeft1
 _080095DC:
-	.4byte gUnknown_082F07BC
+	.4byte gfxPauseMenuTopLeft2
 _080095E0:
-	.4byte gUnknown_082F0808
+	.4byte gfxPauseMenuTop
 _080095E4:
-	.4byte gUnknown_082F0854
+	.4byte gfxPauseMenuTopRight2
 _080095E8:
 	.4byte gUnknown_082EFDB4
 _080095EC:

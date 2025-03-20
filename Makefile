@@ -31,7 +31,7 @@ ELF      := $(ROM:.gba=.elf)
 MAP      := $(ROM:.gba=.map)
 LDSCRIPT := ldscript.txt
 CFILES   := $(wildcard src/*.c)
-SFILES   := $(wildcard asm/*.s) $(wildcard data/*.s)
+SFILES   := $(wildcard asm/*.s) $(wildcard data/*.s) $(wildcard data/common_sprites/*.s) $(wildcard data/particle_sprites/*.s) $(wildcard data/world_one_sprites/*.s) $(wildcard data/world_two_sprites/*.s)
 OFILES   := $(SFILES:.s=.o) $(CFILES:.c=.o)
 DEP_FILES := $(CFILES:.c=.dep)
 

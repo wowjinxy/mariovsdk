@@ -10621,9 +10621,9 @@ gUnknown_082EFC44:
 gUnknown_082EFC68:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=6
 
-	.GLOBAL gUnknown_082EFC70
-gUnknown_082EFC70:
-	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFC70.4bpp"
+	.GLOBAL gfxPauseMenuBottomLeft
+gfxPauseMenuBottomLeft:
+	.INCBIN "assets/sprites/pause_menu/pause_menu_bottom_left.4bpp"
 
 	.GLOBAL gUnknown_082EFC90
 gUnknown_082EFC90:
@@ -10633,9 +10633,9 @@ gUnknown_082EFC90:
 gUnknown_082EFCB4:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=6
 
-	.GLOBAL gUnknown_082EFCBC
-gUnknown_082EFCBC:
-	.INCBIN "assets/sprites/pause_menu/gUnknown_082EFCBC.4bpp"
+	.GLOBAL gfxPauseMenuLeft
+gfxPauseMenuLeft:
+	.INCBIN "assets/sprites/pause_menu/pause_menu_left.4bpp"
 
 	.GLOBAL gUnknown_082EFCDC
 gUnknown_082EFCDC:
@@ -10785,9 +10785,9 @@ gUnknown_082F0744:
 gUnknown_082F0768:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=6
 
-	.GLOBAL gUnknown_082F0770
-gUnknown_082F0770:
-	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0770.4bpp"
+	.GLOBAL gfxPauseMenuTopLeft1
+gfxPauseMenuTopLeft1:
+	.INCBIN "assets/sprites/pause_menu/pause_menu_top_left_1.4bpp"
 
 	.GLOBAL gUnknown_082F0790
 gUnknown_082F0790:
@@ -10797,9 +10797,9 @@ gUnknown_082F0790:
 gUnknown_082F07B4:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=6
 
-	.GLOBAL gUnknown_082F07BC
-gUnknown_082F07BC:
-	.INCBIN "assets/sprites/pause_menu/gUnknown_082F07BC.4bpp"
+	.GLOBAL gfxPauseMenuTopLeft2
+gfxPauseMenuTopLeft2:
+	.INCBIN "assets/sprites/pause_menu/pause_menu_top_left_2.4bpp"
 
 	.GLOBAL gUnknown_082F07DC
 gUnknown_082F07DC:
@@ -10809,9 +10809,9 @@ gUnknown_082F07DC:
 gUnknown_082F0800:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=6
 
-	.GLOBAL gUnknown_082F0808
-gUnknown_082F0808:
-	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0808.4bpp"
+	.GLOBAL gfxPauseMenuTop
+gfxPauseMenuTop:
+	.INCBIN "assets/sprites/pause_menu/pause_menu_top.4bpp"
 
 	.GLOBAL gUnknown_082F0828
 gUnknown_082F0828:
@@ -10821,9 +10821,9 @@ gUnknown_082F0828:
 gUnknown_082F084C:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_SQUARE, size=0, paletteNum=6
 
-	.GLOBAL gUnknown_082F0854
-gUnknown_082F0854:
-	.INCBIN "assets/sprites/pause_menu/gUnknown_082F0854.4bpp"
+	.GLOBAL gfxPauseMenuTopRight2
+gfxPauseMenuTopRight2:
+	.INCBIN "assets/sprites/pause_menu/pause_menu_top_right_2.4bpp"
 
 	.GLOBAL gUnknown_082F0874
 gUnknown_082F0874:
@@ -10905,9 +10905,9 @@ gUnknown_082F0C64:
 gUnknown_082F0C88:
 	OamData bpp=ST_OAM_4BPP, shape=ST_OAM_H_RECTANGLE, size=0, paletteNum=6
 
-	.GLOBAL gUnknown_082F0C90
-gUnknown_082F0C90:
-	.INCBIN "assets/sprites/ui/gUnknown_082F0C90.4bpp"
+	.GLOBAL gfxUISec
+gfxUISec:
+	.INCBIN "assets/sprites/ui/ui_sec.4bpp"
 
 	.GLOBAL gUnknown_082F0CD0
 gUnknown_082F0CD0:
@@ -31677,7 +31677,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082EFC44 @ Animation Data
 	.4byte gUnknown_082EFC68 @ OAM
-	.4byte gUnknown_082EFC70 @ Sprite Graphics
+	.4byte gfxPauseMenuBottomLeft @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0020 @ Bytes per frame graphic
@@ -31688,7 +31688,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082EFC90 @ Animation Data
 	.4byte gUnknown_082EFCB4 @ OAM
-	.4byte gUnknown_082EFCBC @ Sprite Graphics
+	.4byte gfxPauseMenuLeft @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -31820,7 +31820,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082F0744 @ Animation Data
 	.4byte gUnknown_082F0768 @ OAM
-	.4byte gUnknown_082F0770 @ Sprite Graphics
+	.4byte gfxPauseMenuTopLeft1 @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0020 @ Bytes per frame graphic
@@ -31831,7 +31831,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082F0790 @ Animation Data
 	.4byte gUnknown_082F07B4 @ OAM
-	.4byte gUnknown_082F07BC @ Sprite Graphics
+	.4byte gfxPauseMenuTopLeft2 @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0020 @ Bytes per frame graphic
@@ -31842,7 +31842,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082F07DC @ Animation Data
 	.4byte gUnknown_082F0800 @ OAM
-	.4byte gUnknown_082F0808 @ Sprite Graphics
+	.4byte gfxPauseMenuTop @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0020 @ Bytes per frame graphic
@@ -31853,7 +31853,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082F0828 @ Animation Data
 	.4byte gUnknown_082F084C @ OAM
-	.4byte gUnknown_082F0854 @ Sprite Graphics
+	.4byte gfxPauseMenuTopRight2 @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic
@@ -31930,7 +31930,7 @@ gUncompressedGraphicsTable:
 	.2byte 0x0000 @ unused
 	.4byte gUnknown_082F0C64 @ Animation Data
 	.4byte gUnknown_082F0C88 @ OAM
-	.4byte gUnknown_082F0C90 @ Sprite Graphics
+	.4byte gfxUISec @ Sprite Graphics
 
 	.2byte 0x0001 @ Number of Animation frames
 	.2byte 0x0080 @ Bytes per frame graphic

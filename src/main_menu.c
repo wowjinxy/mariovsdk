@@ -238,8 +238,8 @@ void main_menu_init_callback(void)
     gCameraVerticalOffset = 0;
     load_graphics_config_bg2_08032EB8(&gMainMenuData);
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
-    if (get_current_bgm() != 10)
-        play_bgm(10, 0x80, 1);
+    if (get_current_bgm() != TITLE)
+        play_bgm(TITLE, 0x80, 1);
     save_blend_regs(gMainMenuData.bldCnt, gMainMenuData.bldAlpha, gMainMenuData.bldY);
     REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG0_ON | DISPCNT_BG1_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     load_predefined_palette(PALETTE_1_MAIN_MENU, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);

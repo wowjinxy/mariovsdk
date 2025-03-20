@@ -649,8 +649,8 @@ void options_init_callback(void)
         if (gMusicTable[i].unk9 == 0)
             gOptionsMenuData->unk1148[gOptionsMenuData->unk1140++] = i;
     }
-    if (get_current_bgm() != 10)
-        play_bgm(10, 128, 1);
+    if (get_current_bgm() != TITLE)
+        play_bgm(TITLE, 128, 1);
     for (i = 7; i > 0; i--)
     {
         if (sub_08014950(0, gUnknown_080799D0[i]) == 1
@@ -728,8 +728,8 @@ void options_main(void)
         {
             sub_08071C24();
             go_to_submenu(gOptionsMenuData->currSubMenu->returnSubMenuID);
-            if (get_current_bgm() != 10)
-                play_bgm(10, 128, 1);
+            if (get_current_bgm() != TITLE)
+                play_bgm(TITLE, 128, 1);
         }
         play_sound_effect_08071990(SE_BACK, 8, 16, 64, 0, 128, 0);
     }

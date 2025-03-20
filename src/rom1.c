@@ -88,7 +88,7 @@ void sub_080072A4(void)
         if (gLevelType == LEVEL_TYPE_EXPERT_1_6 || gLevelType == LEVEL_TYPE_EXPERT_7_12 || gLevelEWorldFlag)
         {
             gUnknown_03001BDC = 1;
-            play_bgm(17, 128, 0);
+            play_bgm(INTRO_3, 128, 0);
         }
         else
         {
@@ -99,17 +99,17 @@ void sub_080072A4(void)
                 if (gNextLevelInLevelTable.unk10 > 0)
                     gUnknown_03001BDC = 1;
                 if (gUnknown_03001BDC == 0)
-                    play_bgm(7, 128, 0);
+                    play_bgm(INTRO_2, 128, 0);
                 else
-                    play_bgm(17, 128, 0);
+                    play_bgm(INTRO_3, 128, 0);
             }
             else if (gNextLevelInLevelTable.levelFlags & 1)
             {
-                play_bgm(32, 128, 1);
+                play_bgm(BGM_MM_INTRO, 128, 1);
             }
         }
         if ((gNextLevelInLevelTable.levelFlags & 2) || gLevelType == LEVEL_TYPE_MAIN_BOSS)
-            play_bgm(16, 128, 0);
+            play_bgm(INTRO_1, 128, 0);
     }
     sub_08033FC8();
     gUnknown_03000034 = 0;
@@ -144,8 +144,8 @@ void level_demo_reset_init_callback(void)
     gUnknown_03000032 = 0;
     gUnknown_03000030 = 0;
     gUnknown_03000031 = 0;
-    if (get_current_bgm() != 11)
-        play_bgm(11, 128, 1);
+    if (get_current_bgm() != RESULTS)
+        play_bgm(RESULTS, 128, 1);
 }
 
 static void sub_08007544(void)
@@ -183,7 +183,7 @@ static void sub_08007544(void)
             if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
             {
                 sound_stop_music();
-                play_bgm(63, 128, 0);
+                play_bgm(FAIL_4, 128, 0);
             }
         }
     }
@@ -197,7 +197,7 @@ static void sub_08007544(void)
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
             sound_stop_music();
-            play_bgm(6, 128, 0);
+            play_bgm(TIME, 128, 0);
         }
     }
 
@@ -235,7 +235,7 @@ static void sub_08007544(void)
         if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
         {
             sound_stop_music();
-            play_bgm(3, 128, 0);
+            play_bgm(FAIL_1, 128, 0);
         }
     }
     else
@@ -285,7 +285,7 @@ static void sub_08007544(void)
         {
             sub_08071CD4();
             sound_stop_music();
-            play_bgm(3, 128, 0);
+            play_bgm(FAIL_1, 128, 0);
         }
         gUnknown_03000B5C = 1;
     }
@@ -299,7 +299,7 @@ static void sub_08007544(void)
         {
             sub_08071CD4();
             sound_stop_music();
-            play_bgm(4, 128, 0);
+            play_bgm(FAIL_2, 128, 0);
         }
         gUnknown_03000B5C = 1;
     }
@@ -313,7 +313,7 @@ static void sub_08007544(void)
         {
             sub_08071CD4();
             sound_stop_music();
-            play_bgm(5, 128, 0);
+            play_bgm(FAIL_3, 128, 0);
         }
         gUnknown_03000B5C = 1;
     }
@@ -330,17 +330,17 @@ static void sub_08007544(void)
             if (gNextLevelInLevelTable.levelFlags & 8)
             {
                 sound_stop_music();
-                play_bgm(21, 128, 0);
+                play_bgm(WIN2, 128, 0);
             }
             else if (gLevelType == LEVEL_TYPE_PLUS_BOSS)
             {
                 sound_stop_music();
-                play_bgm(65, 128, 0);
+                play_bgm(WIN_FINALBOSS, 128, 0);
             }
             else if (!(gNextLevelInLevelTable.levelFlags & 1))
             {
                 sound_stop_music();
-                play_bgm(2, 128, 0);
+                play_bgm(WIN, 128, 0);
             }
         }
         gUnknown_03000B5C = 1;
@@ -355,7 +355,7 @@ static void sub_08007544(void)
                 if (gMainState != MAIN_STATE_TUTORIAL && gMainState != MAIN_STATE_DEMO)
                 {
                     sound_stop_music();
-                    play_bgm(14, 128, 1);
+                    play_bgm(MM_PROTECT, 128, 1);
                 }
             }
             else if (gUnknown_0300003C & 0x4000000)
@@ -373,7 +373,7 @@ static void sub_08007544(void)
              || ((gUnknown_03001A1C & 1) && (gUnknown_03000034 & 4) && !(gUnknown_03001A1C & 4)))
             {
                 sound_stop_music();
-                play_bgm(1, 128, 1);
+                play_bgm(HAMMER, 128, 1);
             }
             if ((gUnknown_03000038 & 4)
              || ((gUnknown_03000034 & 1) && !(gUnknown_03001A1C & 1)))

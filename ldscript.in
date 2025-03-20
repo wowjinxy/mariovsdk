@@ -62,9 +62,23 @@
 	X(data/data2.o) \
 	X(data/sprites.o) \
 	X(data/data3.o) \
-	X(data/mario_sprite_related.o) \
-	X(data/hammer_sprite_related.o) \
+	X(data/common_sprites/mario_sprite_related.o) \
+	X(data/common_sprites/hammer_sprite_related.o) \
+	X(data/common_sprites/key_door_sprite_related.o) \
+	X(data/common_sprites/mini_mario_crystal_ball_sprite_related.o) \
+	X(data/common_sprites/unused_help_bubble_sprite_related.o) \
+	X(data/common_sprites/common_sprite_data.o) \
+	X(data/particle_sprites/particle_sprite_data.o) \
+	X(data/world_one_sprites/world_one_sprite_data.o) \
+	X(data/world_two_sprites/world_two_sprite_data.o) \
 	X(data/data4.o) \
+	X(src/main_world_data.o) \
+	X(src/plus_world_data.o) \
+	X(src/expert_level_data.o) \
+	X(src/boss_level_data.o) \
+	X(src/title_demo_data.o) \
+	X(src/prelevel_tutorial_data.o) \
+	X(data/prelevel_tutorial_data.o) \
 	X(data/movie_beta_new_game.o) \
 	X(data/movie_dk_boss_2_end.o) \
 	X(data/movie_dk_boss_2_intro.o) \
