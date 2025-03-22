@@ -3,35 +3,6 @@
 
 	.SECTION .data
 
-	@ world 3 sprites
-	.GLOBAL gUnknown_08723934
-gUnknown_08723934:
-	.INCBIN "baserom.gba", 0x723934, 0x7326E8-0x723934
-
-	.GLOBAL gUnknown_087326E8
-gUnknown_087326E8:
-	.INCBIN "baserom.gba", 0x7326E8, 0x75A154-0x7326E8
-
-	.GLOBAL gUnknown_0875A154
-gUnknown_0875A154:
-	.INCBIN "baserom.gba", 0x75A154, 0x771D24-0x75A154
-
-	.GLOBAL gUnknown_08771D24
-gUnknown_08771D24:
-	.INCBIN "baserom.gba", 0x771D24, 0x796104-0x771D24
-
-	.GLOBAL gUnknown_08796104
-gUnknown_08796104:
-	.INCBIN "baserom.gba", 0x796104, 0x7AC8DC-0x796104
-
-	.GLOBAL gUnknown_087AC8DC
-gUnknown_087AC8DC:
-	.INCBIN "baserom.gba", 0x7AC8DC, 0x7AFAA0-0x7AC8DC
-
-	.GLOBAL gUnknown_087AFAA0
-gUnknown_087AFAA0:
-	.INCBIN "baserom.gba", 0x7AFAA0, 0x7AFC08-0x7AFAA0
-	
 	.GLOBAL gDKPlusLeftovers
 gDKPlusLeftovers:
 	.INCBIN "assets/unused/DKPlusLeftoverData.bin"

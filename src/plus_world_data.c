@@ -12,7 +12,7 @@ struct UnknownStruct5 gWorldOnePlusTable[] =
 	{&gWorldOnePlusHorizontalBG, &gLevel14Plus,  150, BGM_1A, 2, 0x000000E1, 0},
 	{&gWorldOnePlusHorizontalBG, &gLevel15Plus,  150, BGM_1B, 2, 0x000000E1, 0},
 	{&gWorldOnePlusHorizontalBG, &gLevel16Plus,  120, BGM_1C, 2, 0x000000E1, 0},
-	{&gWorldOneBossBG,           &gLevel1DKPlus, 120, BOSS1, 2, 0x00000001, 0},
+	{&gWorldOneBossBG,           &gLevel1DKPlus, 120, BOSS1,  2, 0x00000001, 0},
 };	
 
 struct UnknownStruct5 gWorldTwoPlusTable[] =

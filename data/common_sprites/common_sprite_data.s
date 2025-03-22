@@ -114,7 +114,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x01
-	.byte 0x01
+	.byte 0x01 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -122,8 +122,8 @@ gUnknown_08706FC8:
 	.2byte 0x2000 @ hitbox bottom offset
 	.2byte 0x0B00 @ hitbox left side offset
 	.2byte 0x1500 @ hitbox right side offset
-	.2byte 0x0680
-	.2byte 0x2000
+	.2byte 0x0680 @ Unknown
+	.2byte 0x2000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -137,7 +137,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x07
 	.byte 0x01
-	.byte 0x03
+	.byte 0x03 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -145,8 +145,8 @@ gUnknown_08706FC8:
 	.2byte 0x1E00 @ hitbox bottom offset
 	.2byte 0x0B00 @ hitbox left side offset
 	.2byte 0x1700 @ hitbox right side offset
-	.2byte 0x0680
-	.2byte 0x1E00
+	.2byte 0x0680 @ Unknown
+	.2byte 0x1E00 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -160,7 +160,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x02
-	.byte 0x01
+	.byte 0x01 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -168,8 +168,8 @@ gUnknown_08706FC8:
 	.2byte 0x2000 @ hitbox bottom offset
 	.2byte 0x1000 @ hitbox left side offset
 	.2byte 0x3000 @ hitbox right side offset
-	.2byte 0x1000
-	.2byte 0x2000
+	.2byte 0x1000 @ Unknown
+	.2byte 0x2000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -183,7 +183,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x03
-	.byte 0x08
+	.byte 0x08 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -191,8 +191,8 @@ gUnknown_08706FC8:
 	.2byte 0x2000 @ hitbox bottom offset
 	.2byte 0x0900 @ hitbox left side offset
 	.2byte 0x1800 @ hitbox right side offset
-	.2byte 0x0880
-	.2byte 0x2000
+	.2byte 0x0880 @ Unknown
+	.2byte 0x2000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -206,7 +206,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -214,8 +214,8 @@ gUnknown_08706FC8:
 	.2byte 0x0100 @ hitbox bottom offset
 	.2byte 0x0000 @ hitbox left side offset
 	.2byte 0x0100 @ hitbox right side offset
-	.2byte 0x0080
-	.2byte 0x0100
+	.2byte 0x0080 @ Unknown
+	.2byte 0x0100 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -229,7 +229,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x04
-	.byte 0x06
+	.byte 0x06 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -237,8 +237,8 @@ gUnknown_08706FC8:
 	.2byte 0x1000 @ hitbox bottom offset
 	.2byte 0x0400 @ hitbox left side offset
 	.2byte 0x0D00 @ hitbox right side offset
-	.2byte 0x0480
-	.2byte 0x1000
+	.2byte 0x0480 @ Unknown
+	.2byte 0x1000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -252,7 +252,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x06
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -260,8 +260,8 @@ gUnknown_08706FC8:
 	.2byte 0x2000 @ hitbox bottom offset
 	.2byte 0x0200 @ hitbox left side offset
 	.2byte 0x0F00 @ hitbox right side offset
-	.2byte 0x0800
-	.2byte 0x2000
+	.2byte 0x0800 @ Unknown
+	.2byte 0x2000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -275,7 +275,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x07
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -283,8 +283,8 @@ gUnknown_08706FC8:
 	.2byte 0x2000 @ hitbox bottom offset
 	.2byte 0x0200 @ hitbox left side offset
 	.2byte 0x0F00 @ hitbox right side offset
-	.2byte 0x0800
-	.2byte 0x2000
+	.2byte 0x0800 @ Unknown
+	.2byte 0x2000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -298,7 +298,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x08
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -306,8 +306,8 @@ gUnknown_08706FC8:
 	.2byte 0x2000 @ hitbox bottom offset
 	.2byte 0x0200 @ hitbox left side offset
 	.2byte 0x0F00 @ hitbox right side offset
-	.2byte 0x0800
-	.2byte 0x2000
+	.2byte 0x0800 @ Unknown
+	.2byte 0x2000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -321,7 +321,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x09
-	.byte 0x01
+	.byte 0x01 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -329,8 +329,8 @@ gUnknown_08706FC8:
 	.2byte 0x2000 @ hitbox bottom offset
 	.2byte 0x0000 @ hitbox left side offset
 	.2byte 0x2000 @ hitbox right side offset
-	.2byte 0x1000
-	.2byte 0x2000
+	.2byte 0x1000 @ Unknown
+	.2byte 0x2000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -344,7 +344,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -352,8 +352,8 @@ gUnknown_08706FC8:
 	.2byte 0x1000 @ hitbox bottom offset
 	.2byte 0x0200 @ hitbox left side offset
 	.2byte 0x0F00 @ hitbox right side offset
-	.2byte 0x0700
-	.2byte 0x1000
+	.2byte 0x0700 @ Unknown
+	.2byte 0x1000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -367,7 +367,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x08
 	.byte 0x0B
-	.byte 0x08
+	.byte 0x08 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -375,8 +375,8 @@ gUnknown_08706FC8:
 	.2byte 0x0D00 @ hitbox bottom offset
 	.2byte 0x0400 @ hitbox left side offset
 	.2byte 0x0D00 @ hitbox right side offset
-	.2byte 0x0500
-	.2byte 0x0D00
+	.2byte 0x0500 @ Unknown
+	.2byte 0x0D00 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -390,7 +390,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -398,8 +398,8 @@ gUnknown_08706FC8:
 	.2byte 0x1000 @ hitbox bottom offset
 	.2byte 0x0200 @ hitbox left side offset
 	.2byte 0x0F00 @ hitbox right side offset
-	.2byte 0x0700
-	.2byte 0x1000
+	.2byte 0x0700 @ Unknown
+	.2byte 0x1000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -413,7 +413,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -421,8 +421,8 @@ gUnknown_08706FC8:
 	.2byte 0x1000 @ hitbox bottom offset
 	.2byte 0x0400 @ hitbox left side offset
 	.2byte 0x0D00 @ hitbox right side offset
-	.2byte 0x0480
-	.2byte 0x1000
+	.2byte 0x0480 @ Unknown
+	.2byte 0x1000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -436,7 +436,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -444,8 +444,8 @@ gUnknown_08706FC8:
 	.2byte 0x2000 @ hitbox bottom offset
 	.2byte 0x1000 @ hitbox left side offset
 	.2byte 0x3000 @ hitbox right side offset
-	.2byte 0x1000
-	.2byte 0x2000
+	.2byte 0x1000 @ Unknown
+	.2byte 0x2000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 
@@ -459,7 +459,7 @@ gUnknown_08706FC8:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
-	.byte 0x00
+	.byte 0x00 @ Number of this sprite that can exist in a given level
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -467,8 +467,8 @@ gUnknown_08706FC8:
 	.2byte 0x1000 @ hitbox bottom offset
 	.2byte 0x0000 @ hitbox left side offset
 	.2byte 0x2000 @ hitbox right side offset
-	.2byte 0x1000
-	.2byte 0x1000
+	.2byte 0x1000 @ Unknown
+	.2byte 0x1000 @ Unknown
 	.2byte 0x0000
 	.2byte 0x0000
 	

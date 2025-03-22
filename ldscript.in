@@ -71,6 +71,17 @@
 	X(data/particle_sprites/particle_sprite_data.o) \
 	X(data/world_one_sprites/world_one_sprite_data.o) \
 	X(data/world_two_sprites/world_two_sprite_data.o) \
+	X(data/world_three_sprites/world_three_sprite_data.o) \
+	X(data/world_four_sprites/world_four_sprite_data.o) \
+	X(data/world_five_sprites/world_five_sprite_data.o) \
+	X(data/world_six_sprites/world_six_sprite_data.o) \
+	X(data/main_boss_sprites/main_boss_sprite_data.o) \
+	X(data/plus_boss_sprites/dk_mech_base_related.o) \
+	X(data/plus_boss_sprites/dk_mech_left_hand_related.o) \
+	X(data/plus_boss_sprites/dk_mech_right_hand_related.o) \
+	X(data/plus_boss_sprites/dk_mech_nose_collision_related.o) \
+	X(data/plus_boss_sprites/dk_mech_falling_dumbell_related.o) \
+	X(data/plus_boss_sprites/plus_boss_sprite_data.o) \
 	X(data/data4.o) \
 	X(src/main_world_data.o) \
 	X(src/plus_world_data.o) \

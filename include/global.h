@@ -551,9 +551,21 @@ struct struct_0807820C
 
 enum SpriteID  // Index of sprites in gUncompressedGraphicsTable
 {
-    SPRITE_ID_DK_WORLD_INTRO = 241,
-    SPRITE_ID_MARIO_STAND    = 727,
-    SPRITE_ID_MARIO_RUN      = 737,
+    SPRITE_ID_DK_WORLD_INTRO  = 241,
+
+    SPRITE_ID_MARIO_STAND     = 727,
+    SPRITE_ID_MARIO_RUN       = 737,
+	
+    SPRITE_ID_MOVIE_ONE       = 892,
+    SPRITE_ID_MOVIE_TWO       = 893,
+    SPRITE_ID_MOVIE_THREE     = 894,
+    SPRITE_ID_MOVIE_CREDITS_1 = 895,
+    SPRITE_ID_MOVIE_FIVE      = 896,
+    SPRITE_ID_MOVIE_SIX       = 897,
+    SPRITE_ID_MOVIE_SEVEN     = 898,
+    SPRITE_ID_MOVIE_CREDITS_2 = 899,
+    SPRITE_ID_MOVIE_UNUSED    = 900,
+    SPRITE_ID_MOVIE_UNUSED_2  = 901,
 };
 
 struct UnknownStruct13

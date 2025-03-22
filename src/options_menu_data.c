@@ -131,15 +131,15 @@ u32 gOptionsMenuSpriteIDTable[] =
     0x34E,  // Selction box center sprite ID 
     0x386,  // Movie selction box sprite ID 
     0x3A3,  // Erase save data selection box sprite ID 
-    0x37C,  // Movie 1 preview sprite ID 
-    0x37D,  // Movie 2 preview sprite ID 
-    0x37E,  // Movie 3 preview sprite ID 
-    0x37F,  // Credits 1 preview sprite ID (movie 4)
-    0x380,  // Movie 5 preview sprite ID 
-    0x381,  // Movie 6 preview sprite ID 
-    0x382,  // Movie 7 preview sprite ID 
-    0x383,  // Credits 2 preview sprite ID (movie 8) -- sprite ID 0x0384 is a unsued alternate of this one
-    0x385,  // Unused movie preview sprite ID
+    SPRITE_ID_MOVIE_ONE,        // Movie 1 preview sprite ID 
+    SPRITE_ID_MOVIE_TWO,        // Movie 2 preview sprite ID 
+    SPRITE_ID_MOVIE_THREE,      // Movie 3 preview sprite ID 
+    SPRITE_ID_MOVIE_CREDITS_1,  // Credits 1 preview sprite ID (movie 4)
+    SPRITE_ID_MOVIE_FIVE,       // Movie 5 preview sprite ID 
+    SPRITE_ID_MOVIE_SIX,        // Movie 6 preview sprite ID 
+    SPRITE_ID_MOVIE_SEVEN,      // Movie 7 preview sprite ID 
+    SPRITE_ID_MOVIE_CREDITS_2,  // Credits 2 preview sprite ID (movie 8) -- sprite ID 0x0384 is a unsued alternate of this one
+    SPRITE_ID_MOVIE_UNUSED_2,   // Unused movie preview sprite ID
 };
 
 s32 gUnknown_080799D0[] =

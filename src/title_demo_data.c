@@ -11,32 +11,32 @@ extern u32 g63BTitleDemo;
 enum 
 {
 	//Level IDs
-	level_1A = 0,
-	level_1B = 1,
+	LEVEL_1A = 0,
+	LEVEL_1B = 1,
 
-	level_2A = 2,
-	level_2B = 3,
+	LEVEL_2A = 2,
+	LEVEL_2B = 3,
 
-	level_3A = 4,
-	level_3B = 5,
+	LEVEL_3A = 4,
+	LEVEL_3B = 5,
 
-	level_4A = 6,
-	level_4B = 7,
+	LEVEL_4A = 6,
+	LEVEL_4B = 7,
 
-	level_5A = 8,
-	level_5B = 9,
+	LEVEL_5A = 8,
+	LEVEL_5B = 9,
 
-	level_6A = 10,
-	level_6B = 11,
+	LEVEL_6A = 10,
+	LEVEL_6B = 11,
 
-	level_MM = 12,
-	level_DK = 13
+	LEVEL_MM = 12,
+	LEVEL_DK = 13
 };
 
 
 u8 gTitleDemoLevelIDs[] =
 {
-	level_1B, level_6B, level_3A, level_4B, level_2A, level_3B, level_1A, level_1A
+	LEVEL_1B, LEVEL_6B, LEVEL_3A, LEVEL_4B, LEVEL_2A, LEVEL_3B, LEVEL_1A, LEVEL_1A
 };
 
 // not a struct, but silences "initialization makes integer from pointer without a cast" warnings
