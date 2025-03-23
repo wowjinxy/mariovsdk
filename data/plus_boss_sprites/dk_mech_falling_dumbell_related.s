@@ -101,7 +101,7 @@ gUnknown_087ACFA4:
 	.2byte 0x0002
 	.byte 0x00
 	.byte 0x00
-	.4byte 0x087ACF9C @ Sprite X Velocity Animation
+	.4byte gUnknown_087ACF9C @ Sprite X Velocity Animation
 	.4byte gUnknown_087ACFA0 @ Sprite Y Velocity Animation
 	.4byte gUnknown_087ACF44 @ Hitbox Adjustment 
 	.4byte gUnknown_087ACF4C @ Sprite Action Data

@@ -1370,7 +1370,7 @@ gLevel4MMTutorial:
 	INCBIN_LEVEL "assets/level/level_data/world_four/4_mm_tutorial.bin.lz.orig"
 	
 @ World 5
-@ here
+
 	.GLOBAL gLevel51A
 gLevel51A:
 	INCBIN_LEVEL "assets/level/level_data/world_five/5_1A.bin.lz"

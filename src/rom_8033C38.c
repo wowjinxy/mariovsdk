@@ -945,9 +945,9 @@ void goto_credits_init_callback(void)
     
     arena_restore_head(0);
     if (gLevelType == LEVEL_TYPE_PLUS)
-        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 61, MAIN_STATE_LEVEL_SELECT, MOVIE_CREDITS_1); // ??, Song ID, Mode after movie finishes, Movie ID
+        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MIDCREDITS, MAIN_STATE_LEVEL_SELECT, MOVIE_CREDITS_1); // ??, Song ID, Mode after movie finishes, Movie ID
     else
-        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 47, MAIN_STATE_TITLE_SCREEN, MOVIE_CREDITS_2);
+        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, CREDITS, MAIN_STATE_TITLE_SCREEN, MOVIE_CREDITS_2);
     change_main_state(MAIN_STATE_MOVIE, USE_FADE);
 }
 

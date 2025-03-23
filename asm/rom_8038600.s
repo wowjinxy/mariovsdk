@@ -23931,8 +23931,8 @@ _080434C8:
 	.4byte 0xFFFFFC00
 	THUMB_FUNC_END sub_080430D4
 
-	THUMB_FUNC_START sub_080434CC
-sub_080434CC: @ 0x080434CC
+	THUMB_FUNC_START draw_big_font
+draw_big_font: @ 0x080434CC
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -24083,10 +24083,10 @@ _080435EC:
 	.4byte 0x000003FF
 _080435F0:
 	.4byte 0xFFFFFC00
-	THUMB_FUNC_END sub_080434CC
+	THUMB_FUNC_END draw_big_font
 
-	THUMB_FUNC_START sub_080435F4
-sub_080435F4: @ 0x080435F4
+	THUMB_FUNC_START draw_small_font
+draw_small_font: @ 0x080435F4
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -24270,7 +24270,7 @@ _08043748:
 	.4byte 0x0000FFBF
 _0804374C:
 	.4byte 0xFFFFFC00
-	THUMB_FUNC_END sub_080435F4
+	THUMB_FUNC_END draw_small_font
 
 	THUMB_FUNC_START sub_08043750
 sub_08043750: @ 0x08043750
@@ -24643,7 +24643,7 @@ _08043A0A:
 	mov r1, #56
 	mov r2, #64
 	add r3, r7, #0
-	bl sub_080434CC
+	bl draw_big_font
 	ldr r0, _08043B3C  @ =gTextMiniMarios
 	mov r5, r9
 	str r5, [sp]
@@ -24653,7 +24653,7 @@ _08043A0A:
 	mov r1, #24
 	mov r2, #80
 	add r3, r7, #0
-	bl sub_080434CC
+	bl draw_big_font
 	ldrh r0, [r5]
 	sub r0, r0, #4
 	strh r0, [r5]
@@ -24734,7 +24734,7 @@ _08043ACA:
 	mov r1, #32
 	mov r2, #40
 	add r3, r7, #0
-	bl sub_080435F4
+	bl draw_small_font
 _08043AE6:
 	add sp, sp, #16
 	pop {r3-r5}

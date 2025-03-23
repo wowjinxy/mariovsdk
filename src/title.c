@@ -82,7 +82,7 @@ void title_main(void)
         sub_08071E14(229);
         if (gUnknown_0807954C[gUnknown_03000B64].unk0 != 0)
         {
-            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 23, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
+            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
         }
         else

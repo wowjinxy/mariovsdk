@@ -1,5 +1,6 @@
 #include "gba/gba.h"
 #include "global.h"
+#include "main.h"
 #include "options_menu.h"
 
 extern void options_menu_play_music(void);
@@ -114,14 +115,14 @@ u8 gOptionsMenuMovieIDTable[] =
 
 u8 gOptionsMenuMovieSongIDTable[] =
 {
-    0x17,
-    0x29,
-    0x2B,
-    0x3D,
-    0x2C,
-    0x2D,
-    0x2E,
-    0x2F,
+    MOVIE,
+    MOVIE01,
+    MOVIE3,
+    MIDCREDITS,
+    MOVIE4,
+    MOVIE5,
+    MOVIE6,
+    CREDITS,
 };
 
 u32 gOptionsMenuSpriteIDTable[] =

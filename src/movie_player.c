@@ -42,12 +42,12 @@ void movie_player_main(void)
         if ((gMoviePlayerParams.flags & MOVIE_PLAYER_ALLOW_SKIP)
          && gGeneralTimer > 180 && (gNewKeys & (B_BUTTON | START_BUTTON)))
         {
-            someinline(3, 44, 8, 4);
+            someinline(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE4, MAIN_STATE_LEVEL_SELECT, MOVIE_DK_BOSS_1_END);
             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
         }
         if (!(gMoviePlayerParams.flags & MOVIE_PLAYER_FLAG_2))
         {
-            someinline(3, 44, 8, 4);
+            someinline(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE4, MAIN_STATE_LEVEL_SELECT, MOVIE_DK_BOSS_1_END);
             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
         }
     }

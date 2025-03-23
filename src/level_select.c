@@ -206,8 +206,8 @@ void level_select_init_callback(void)
     gUnknown_0300007C = temp = arena_allocate(sizeof(*gUnknown_0300007C) * 8);
     gLevelSelectWork = arena_allocate(sizeof(*gLevelSelectWork));
     CpuFill16(0, gLevelSelectWork, sizeof(*gLevelSelectWork));
-    if (get_current_bgm() != 11)
-        play_bgm(11, 128, 1);
+    if (get_current_bgm() != RESULTS)
+        play_bgm(RESULTS, 128, 1);
     gLevelSelectWork->unk4 = 0;
     gUnknown_030009D8 = 0;
     gUnknown_03001740 = 0;
@@ -318,7 +318,7 @@ void level_select_init_callback(void)
     gUnknown_03000BD0 = 0;
     DmaFill16(3, 0xA0, OAM, OAM_SIZE/2);
     if (sound_is_music_finished())
-        play_bgm(10, 128, 1);
+        play_bgm(TITLE, 128, 1);
     save_blend_regs_from_graphicsconfig(&gLevelSelectData);
     REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG0_ON | DISPCNT_BG2_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));
@@ -559,7 +559,7 @@ static void handle_input_mode_1(void)
                 gLevelType = LEVEL_TYPE_MAIN_BOSS;
                 play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
                 level_setup(0, 0);
-                gCurrentWorld = 0;
+                gCurrentWorld = WORLD_1;
                 gNextLevelID = 0;
                 sub_08004428(gNextLevelInLevelTable.unk0->levelData);
                 change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);

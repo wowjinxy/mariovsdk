@@ -237,7 +237,7 @@ gBossOneSpriteTableData:
 	
 	.GLOBAL gBossTwoSpriteTableData
 gBossTwoSpriteTableData:
-	.4byte gUnknown_087AFAA0 @ TODO: replace this with gBossTwoSpriteTable once split
+	.4byte gDKMechBossSpriteTable
 	.4byte 63 @ Palette
 	.2byte 10 @ Sprite count
 	.2byte 0x00

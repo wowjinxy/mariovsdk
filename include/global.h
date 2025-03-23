@@ -390,6 +390,57 @@ enum  // Movie player flags
     MOVIE_PLAYER_FLAG_2 = (1 << 1),
 };
 
+enum // World IDs 
+{
+	WORLD_1 = 0,
+	WORLD_2 = 1,
+	WORLD_3 = 2,
+	WORLD_4 = 3,
+	WORLD_5 = 4,
+	WORLD_6 = 5,
+};
+
+enum  // Level flags
+{
+    LEVEL_FLAG_NONE = 0,
+    LEVEL_FLAG_1 = (1 << 0),
+    LEVEL_FLAG_2 = (1 << 1),
+    LEVEL_FLAG_3 = (1 << 2),
+    LEVEL_FLAG_4 = (1 << 3),
+    LEVEL_FLAG_BG0_SPECIAL = (1 << 4), // Used for the lava geysers in level 3-1A, 3-1B, used for the lava in 3-DK, 3-DK+
+    LEVEL_FLAG_ITEM_1 = (1 << 5), // Red present
+    LEVEL_FLAG_ITEM_2 = (1 << 6), // Yellow present
+    LEVEL_FLAG_ITEM_3 = (1 << 7), // Blue present
+
+    // Unused flags, level flags are 4 bytes big, reads all 4 bytes
+    LEVEL_FLAG_9 = (1 << 8), // used in dk_boss_level_setup as part of gNextLevelInLevelTable.levelFlags
+    LEVEL_FLAG_10 = (1 << 9), // used in dk_boss_plus_level_setup as part of gNextLevelInLevelTable.levelFlags
+    LEVEL_FLAG_11 = (1 << 10), // used in expert_7_12_level_setup as part of gNextLevelInLevelTable.levelFlags
+    LEVEL_FLAG_12 = (1 << 11),
+    LEVEL_FLAG_13 = (1 << 12),
+    LEVEL_FLAG_14 = (1 << 13),
+    LEVEL_FLAG_15 = (1 << 14),
+    LEVEL_FLAG_16 = (1 << 15),
+
+    LEVEL_FLAG_17 = (1 << 16),
+    LEVEL_FLAG_18 = (1 << 17),
+    LEVEL_FLAG_19 = (1 << 18),
+    LEVEL_FLAG_20 = (1 << 19),
+    LEVEL_FLAG_21 = (1 << 20),
+    LEVEL_FLAG_22 = (1 << 21),
+    LEVEL_FLAG_23 = (1 << 22),
+    LEVEL_FLAG_24 = (1 << 23),
+
+    LEVEL_FLAG_25 = (1 << 24),
+    LEVEL_FLAG_26 = (1 << 25),
+    LEVEL_FLAG_27 = (1 << 26),
+    LEVEL_FLAG_28 = (1 << 27),
+    LEVEL_FLAG_29 = (1 << 28),
+    LEVEL_FLAG_30 = (1 << 29),
+    LEVEL_FLAG_31 = (1 << 30),
+    LEVEL_FLAG_32 = (1 << 31),
+};
+
 struct Movie
 {
     u16 unk0;
@@ -1566,7 +1617,7 @@ void goto_credits_main(void);
 void goto_credits_loop(void);
 void goto_credits_end(void);
 void sub_080348C8(const struct UnknownStruct10 *, u32, u32, u32);
-int sub_08034CCC();
+int draw_text_font();
 void sub_08035108();
 void sub_080351E0();
 void expert_levels_init_callback(void);

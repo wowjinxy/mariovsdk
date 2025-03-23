@@ -6,32 +6,32 @@
 
 struct UnknownStruct5 gExpert1Table[] =
 {
-	{&gWorldOneHorizontalBG,   &gLevelExpert1, 150, EXPERT_1, 2, 0x000000E1, 0},
+	{&gWorldOneHorizontalBG,   &gLevelExpert1, 150, EXPERT_1, 2, LEVEL_FLAG_1|LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,              0},
 };
 
 struct UnknownStruct5 gExpert2Table[] =
 {
-	{&gWorldTwoVerticalBG,     &gLevelExpert2, 150, EXPERT_2, 1, 0x000000E2, 0},
+	{&gWorldTwoVerticalBG,     &gLevelExpert2, 150, EXPERT_2, 1, LEVEL_FLAG_2|LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,              0},
 };
 
 struct UnknownStruct5 gExpert3Table[] = 
 {
-	{&gWorldThreeHorizontalBG, &gLevelExpert3, 150, EXPERT_3, 2, 0x000000E0, 0},
+	{&gWorldThreeHorizontalBG, &gLevelExpert3, 150, EXPERT_3, 2, LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,                           0},
 };
 
 struct UnknownStruct5 gExpert4Table[] = 
 {
-	{&gWorldFourVerticalBG,    &gLevelExpert4, 150, EXPERT_4, 1, 0x000000E1, 0},
+	{&gWorldFourVerticalBG,    &gLevelExpert4, 150, EXPERT_4, 1, LEVEL_FLAG_1|LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,              0},
 };
 
 struct UnknownStruct5 gExpert5Table[] =
 {
-	{&gWorldFiveHorizontalBG,  &gLevelExpert5, 150, EXPERT_5, 2, 0x000000E0, 0},
+	{&gWorldFiveHorizontalBG,  &gLevelExpert5, 150, EXPERT_5, 2, LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,                           0},
 };
 	
 struct UnknownStruct5 gExpert6Table[] = 
 {
-	{&gWorldSixHorizontalBG,   &gLevelExpert6, 180, EXPERT_6, 2, 0x000000E3, 0},
+	{&gWorldSixHorizontalBG,   &gLevelExpert6, 180, EXPERT_6, 2, LEVEL_FLAG_1|LEVEL_FLAG_2|LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3, 0},
 };	
 
 struct worldTableStruct_unk_size_c gExpertWorldTable[] =
@@ -53,32 +53,32 @@ struct worldTableStruct gUnknown_08B2CEBC[] =
 	
 struct UnknownStruct5 gExpert7Table[] = 
 {
-	{&gWorldOnePlusHorizontalBG,   &gLevelExpert7,  150, EXPERT_7,  2, 0x000000E3, 0},
+	{&gWorldOnePlusHorizontalBG,   &gLevelExpert7,  150, EXPERT_7,  2, LEVEL_FLAG_1|LEVEL_FLAG_2|LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,  0},
 };	
 
 struct UnknownStruct5 gExpert8Table[] = 
 {
-	{&gWorldTwoPlusVerticalBG,     &gLevelExpert8,  120, EXPERT_8,  1, 0x000000E0, 0},
+	{&gWorldTwoPlusVerticalBG,     &gLevelExpert8,  120, EXPERT_8,  1, LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,                            0},
 };
 
 struct UnknownStruct5 gExpert9Table[] = 
 {
-	{&gWorldThreePlusHorizontalBG, &gLevelExpert9,  120, EXPERT_9,  2, 0x000000E3, 0},
+	{&gWorldThreePlusHorizontalBG, &gLevelExpert9,  120, EXPERT_9,  2, LEVEL_FLAG_1|LEVEL_FLAG_2|LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,  0},
 };	
 
 struct UnknownStruct5 gExpert10Table[] = 
 {
-	{&gWorldFourPlusHorizontalBG,  &gLevelExpert10, 150, EXPERT_10,  2, 0x000000E0, 0},
+	{&gWorldFourPlusHorizontalBG,  &gLevelExpert10, 150, EXPERT_10,  2, LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,                           0},
 };	
 
 struct UnknownStruct5 gExpert11Table[] = 
 {
-	{&gWorldFivePlusHorizontalBG,  &gLevelExpert11, 120, EXPERT_11,  2, 0x000000E1, 0},
+	{&gWorldFivePlusHorizontalBG,  &gLevelExpert11, 120, EXPERT_11,  2, LEVEL_FLAG_1|LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3,              0},
 };	
 
 struct UnknownStruct5 gExpert12Table[] = 
 {
-	{&gWorldSixPlusHorizontalBG,   &gLevelExpert12, 180, EXPERT_12,  2, 0x000000E3, 0},
+	{&gWorldSixPlusHorizontalBG,   &gLevelExpert12, 180, EXPERT_12,  2, LEVEL_FLAG_1|LEVEL_FLAG_2|LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_2|LEVEL_FLAG_ITEM_3, 0},
 };	
 
 struct worldTableStruct_unk_size_c gExpertWorldTable2[] =

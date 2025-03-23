@@ -7,8 +7,8 @@
 	
 	.INCBIN "baserom.gba", 0x7ACFE4, 0x7AFAA0-0x7ACFE4
 	
-	.GLOBAL gUnknown_087AFAA0
-gUnknown_087AFAA0:
+	.GLOBAL gDKMechBossSpriteTable
+gDKMechBossSpriteTable:
 	.4byte gDKMechHeadTable @ Sprite Table
 	.2byte 0x0019
 	.byte 0x00 @ Palette line used

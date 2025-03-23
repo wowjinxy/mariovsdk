@@ -37,7 +37,7 @@ void intro_main(void)
     gUnknown_03000BE0++;
     if (gUnknown_03000BE0 > 180)
     {
-        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 23, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
+        movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
         gNextMainState = MAIN_STATE_MOVIE;
     }
     level_callback_08008238();

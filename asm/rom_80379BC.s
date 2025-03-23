@@ -63,7 +63,7 @@ print_error_message: @ 0x08037A04
 	ldr r1, _08037AF0  @ =0xFFFF8001
 	mov r2, #48
 	mov r3, r10
-	bl sub_08034CCC
+	bl draw_text_font
 	mov r0, r9
 	bl sub_08035108
 	mov r0, r8
@@ -149,7 +149,7 @@ sub_08037B04: @ 0x08037B04
 	mov r2, #16
 	str r2, [sp]
 	mov r2, #48
-	bl sub_08034CCC
+	bl draw_text_font
 	add r0, r6, #0
 	bl sub_08035108
 	str r5, [r4]

@@ -103,73 +103,45 @@ gUnknown_080797E0:
 
 	.GLOBAL gUnknown_080797F8
 gUnknown_080797F8: 
-	.2byte 0x034D
-	.2byte 0x0000
-	.2byte 0x7038
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x7040
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x7048
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x7050
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x7058
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x7060
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x7068
-	.2byte 0x0000
-	.2byte 0x034D
-	.2byte 0x0002
-	.2byte 0x7070
-	.2byte 0x0000
+	.4byte 0x0000034D
+	.4byte 0x00007038
+	.4byte 0x0001034E
+	.4byte 0x00007040
+	.4byte 0x0001034E
+	.4byte 0x00007048
+	.4byte 0x0001034E
+	.4byte 0x00007050
+	.4byte 0x0001034E
+	.4byte 0x00007058
+	.4byte 0x0001034E
+	.4byte 0x00007060
+	.4byte 0x0001034E
+	.4byte 0x00007068
+	.4byte 0x0002034D
+	.4byte 0x00007070
 	
 	.GLOBAL gUnknown_08079838
 gUnknown_08079838: 
-	.2byte 0x034D
-	.2byte 0x0000
-	.2byte 0x7088
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x7090
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x7098
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x70A0
-	.2byte 0x0000
-	.2byte 0x034E
-	.2byte 0x0001
-	.2byte 0x70A8
-	.2byte 0x0000
-	.2byte 0x034D
-	.2byte 0x0002
-	.2byte 0x70B0
-	.2byte 0x0000
+	.4byte 0x0000034D
+	.4byte 0x00007088
+	.4byte 0x0001034E
+	.4byte 0x00007090
+	.4byte 0x0001034E
+	.4byte 0x00007098
+	.4byte 0x0001034E
+	.4byte 0x000070A0
+	.4byte 0x0001034E
+	.4byte 0x000070A8
+	.4byte 0x0002034D
+	.4byte 0x000070B0
 	
 	.GLOBAL gUnknown_08079868
 gUnknown_08079868:
 	.4byte gUnknown_080797F8
-	.2byte 0x0008
+	.2byte 0x0008 @ Unknown count, seems to be half whats contained in the above pointer
 	.2byte 0x0000
 	.4byte gUnknown_08079838
-	.2byte 0x0006
+	.2byte 0x0006 @ Unknown count, seems to be half whats contained in the above pointer
 	.2byte 0x0000
 
 	.GLOBAL gUnknown_08079878

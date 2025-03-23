@@ -20,25 +20,25 @@ void normal_world_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unkC = level_callback_08008238;
     gNextLevelInLevelTable.unk10 = levelID;
     gNextLevelInLevelTable.unk12 = worldID;
-    gNextLevelInLevelTable.levelFlags = 0;
+    gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_NONE;
     gNextLevelInLevelTable.unk8 = 0;
 
     if (levelID == 0xC)
-        gNextLevelInLevelTable.levelFlags = 1;
+        gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_1;
     else if (levelID == 0xD)
     {
-        gNextLevelInLevelTable.levelFlags = 2;
+        gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_2;
         if (worldID == 0x1)
             gNextLevelInLevelTable.unkC = level_callback_080086A4;
         else
             gNextLevelInLevelTable.unkC = level_callback_08008600;
     }
     else if ((levelID & 1) != 0)
-        gNextLevelInLevelTable.levelFlags = 8;
+        gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_4;
     if (levelID == 0x0)
-        gNextLevelInLevelTable.levelFlags |= 0x20;
+        gNextLevelInLevelTable.levelFlags |= LEVEL_FLAG_ITEM_1;
     else if (levelID >= gUnknown_08B2CA5C[0].unk4[worldID].unk0 - 1)
-        gNextLevelInLevelTable.levelFlags |= 0x4;
+        gNextLevelInLevelTable.levelFlags |= LEVEL_FLAG_3;
 
     if (worldID == 0x2)
     {
@@ -68,20 +68,20 @@ void plus_world_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unkC = level_callback_08008238;
     gNextLevelInLevelTable.unk10 = levelID;
     gNextLevelInLevelTable.unk12 = worldID;
-    gNextLevelInLevelTable.levelFlags = 0x40;
+    gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_ITEM_2;
     gNextLevelInLevelTable.unk8 = 0;
 
     if (levelID == 6) {
-        gNextLevelInLevelTable.levelFlags = 0x42;
+        gNextLevelInLevelTable.levelFlags = (LEVEL_FLAG_2|LEVEL_FLAG_ITEM_2);
         if (worldID == 0x1)
             gNextLevelInLevelTable.unkC = level_callback_080086A4;
         else
             gNextLevelInLevelTable.unkC = level_callback_08008600;
     }
     if (levelID == 0x0)
-        gNextLevelInLevelTable.levelFlags |= 0x20;
+        gNextLevelInLevelTable.levelFlags |= LEVEL_FLAG_ITEM_1;
     else if (levelID >= gUnknown_08B2CDF4[0].unk4[worldID].unk0 - 1)
-        gNextLevelInLevelTable.levelFlags |= 0x4;
+        gNextLevelInLevelTable.levelFlags |= LEVEL_FLAG_3;
 
     if (worldID == 0x2) {
         gNextLevelInLevelTable.unk8 = &gUnknown_0807C098[levelID];
@@ -110,13 +110,13 @@ void expert_1_6_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unkC = level_callback_08008238;
     gNextLevelInLevelTable.unk10 = levelID;
     gNextLevelInLevelTable.unk12 = worldID;
-    gNextLevelInLevelTable.levelFlags = 0x80;
+    gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_ITEM_3;
     gNextLevelInLevelTable.unk8 = 0;
 
     if (levelID == 0)
-       gNextLevelInLevelTable.levelFlags = 0xA0;
+       gNextLevelInLevelTable.levelFlags = (LEVEL_FLAG_ITEM_1|LEVEL_FLAG_ITEM_3);
     else if (levelID >= gUnknown_08B2CEBC[0].unk4[worldID].unk0 - 1)
-        gNextLevelInLevelTable.levelFlags = 0x84;
+        gNextLevelInLevelTable.levelFlags = (LEVEL_FLAG_3|LEVEL_FLAG_ITEM_3);
 
     if (worldID == 0x2)
     {
@@ -146,13 +146,13 @@ void expert_7_12_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unkC = level_callback_08008238;
     gNextLevelInLevelTable.unk10 = levelID;
     gNextLevelInLevelTable.unk12 = worldID;
-    gNextLevelInLevelTable.levelFlags = 0x400;
+    gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_11;
     gNextLevelInLevelTable.unk8 = 0;
 
     if (levelID == 0)
-        gNextLevelInLevelTable.levelFlags |= 0x20;
+        gNextLevelInLevelTable.levelFlags |= LEVEL_FLAG_ITEM_1;
     else if (levelID >= gUnknown_08B2CEBC[0].unk4[worldID].unk0 - 1)
-        gNextLevelInLevelTable.levelFlags |= 0x4;
+        gNextLevelInLevelTable.levelFlags |= LEVEL_FLAG_3;
 
     if (worldID == 0x2)
     {
@@ -182,7 +182,7 @@ void dk_boss_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unkC = level_callback_08008238;
     gNextLevelInLevelTable.unk10 = levelID;
     gNextLevelInLevelTable.unk12 = worldID;
-    gNextLevelInLevelTable.levelFlags = 0x100;
+    gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_9;
     gNextLevelInLevelTable.unk8 = 0;
 }
 
@@ -204,7 +204,7 @@ void dk_boss_plus_level_setup(u32 worldID, u32 levelID)
     gNextLevelInLevelTable.unkC = level_callback_08008764;
     gNextLevelInLevelTable.unk10 = levelID;
     gNextLevelInLevelTable.unk12 = worldID;
-    gNextLevelInLevelTable.levelFlags = 0x200;
+    gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_10;
     gNextLevelInLevelTable.unk8  = 0;
 }
 
@@ -225,21 +225,21 @@ void tutorial_level_setup(u32 worldID, u32 levelID)
 
     gNextLevelInLevelTable.unk12 = worldID;
     gNextLevelInLevelTable.unk10 = levelID;
-    gNextLevelInLevelTable.levelFlags = 0;
+    gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_NONE;
     gNextLevelInLevelTable.unk8 = 0;
     gNextLevelInLevelTable.unkC = level_callback_08008238;
 
     if (levelID == 6)
-        gNextLevelInLevelTable.levelFlags = 0x1;
+        gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_1;
     else if (levelID == 7)
     {
-        gNextLevelInLevelTable.levelFlags = 0x2;
-        if (worldID == 0x1)
+        gNextLevelInLevelTable.levelFlags = LEVEL_FLAG_2;
+        if (worldID == WORLD_2)
             gNextLevelInLevelTable.unkC = level_callback_080086A4;
         else
             gNextLevelInLevelTable.unkC = level_callback_08008600;
     }
-    if (worldID == 0x2)
+    if (worldID == WORLD_3)
     {
         gNextLevelInLevelTable.unk8 = &gUnknown_0807C0E0[levelID];
         gNextLevelInLevelTable.unkC = level_callback_08008330;

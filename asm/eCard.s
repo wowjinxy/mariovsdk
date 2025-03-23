@@ -702,7 +702,7 @@ e_card_scan_loop: @ 0x0802DBEC
 	str r0, [sp]
 	add r0, r2, #0
 	mov r2, #138
-	bl sub_08034CCC
+	bl draw_text_font
 _0802DC34:
 	ldr r2, [r5]
 	cmp r2, #6
@@ -724,7 +724,7 @@ _0802DC46:
 	mov r2, #18
 	str r2, [sp]
 	mov r2, #26
-	bl sub_08034CCC
+	bl draw_text_font
 	add r6, r0, #0
 _0802DC60:
 	ldr r4, _0802DCE0  @ =gUnknown_030001A8
@@ -782,7 +782,7 @@ _0802DCBA:
 	mov r2, #18
 	str r2, [sp]
 	add r2, r6, #0
-	bl sub_08034CCC
+	bl draw_text_font
 	b _0802DD18
 	.byte 0x00
 	.byte 0x00
@@ -821,7 +821,7 @@ _0802DCFC:
 	mov r2, #18
 	str r2, [sp]
 	add r2, r6, #0
-	bl sub_08034CCC
+	bl draw_text_font
 _0802DD18:
 	add r0, r7, #0
 	bl sub_08035108
@@ -2336,7 +2336,7 @@ _0802E7DC:
 	str r1, [sp]
 	mov r1, #44
 	mov r2, #141
-	bl sub_08034CCC
+	bl draw_text_font
 _0802E86A:
 	add sp, sp, #4
 	pop {r3,r4}
@@ -2542,7 +2542,7 @@ _0802E9AC:
 	mov r2, #3
 	str r2, [sp]
 	mov r2, #141
-	bl sub_08034CCC
+	bl draw_text_font
 _0802E9FC:
 	ldr r4, _0802EA1C  @ =gUnknown_030001C4
 	ldr r1, [r4]
@@ -2589,7 +2589,7 @@ _0802EA26:
 	mov r2, #18
 	str r2, [sp]
 	mov r2, #58
-	bl sub_08034CCC
+	bl draw_text_font
 	b _0802EA9C
 	.byte 0x00
 	.byte 0x00
@@ -2615,14 +2615,14 @@ _0802EA64:
 	add r1, r4, #0
 	mov r2, #32
 	add r3, r5, #0
-	bl sub_08034CCC
+	bl draw_text_font
 	ldr r0, _0802EAE0  @ =gTextOK
 	mov r1, #2
 	str r1, [sp]
 	add r1, r4, #0
 	mov r2, #109
 	add r3, r5, #0
-	bl sub_08034CCC
+	bl draw_text_font
 _0802EA9C:
 	add r0, sp, #8
 	bl sub_08035108
@@ -4040,7 +4040,7 @@ _0802F4AE:
 	mov r1, #20
 	add r2, r6, #0
 	add r3, r7, #0
-	bl sub_08034CCC
+	bl draw_text_font
 	add r5, r5, #4
 	add r4, r4, #1
 	add r6, r6, #20
@@ -4066,7 +4066,7 @@ _0802F4DE:
 	mov r2, #104
 	mov r3, #1
 	neg r3, r3
-	bl sub_08034CCC
+	bl draw_text_font
 	b _0802F556
 _0802F4F0:
 	.4byte 0xFFFF8001
@@ -4108,7 +4108,7 @@ _0802F52E:
 	mov r1, #20
 	add r2, r6, #0
 	add r3, r5, #0
-	bl sub_08034CCC
+	bl draw_text_font
 	add r4, r4, #1
 	add r6, r6, #20
 	ldr r2, _0802F57C  @ =gPreloadedCardETable

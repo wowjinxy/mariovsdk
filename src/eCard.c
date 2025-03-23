@@ -85,18 +85,18 @@ void sub_08031D44(int arg0, struct Struct08031C54 *arg1, int arg2, int arg3)
     int i;
 
     if (arg1->unk25 != 0)
-        arg2 = sub_08034CCC(sub_08031A38(0), -0x7FFF, arg2, -1, 2);
+        arg2 = draw_text_font(sub_08031A38(0), -0x7FFF, arg2, -1, 2);
     if (arg1->unk4 != 0)
-        arg2 = sub_08034CCC(arg1->unk4, -0x7FFF, arg2, -1, 2);
+        arg2 = draw_text_font(arg1->unk4, -0x7FFF, arg2, -1, 2);
     if (arg1->unk26 != 0)
-        arg2 = sub_08034CCC(sub_08031A38(arg3), -0x7FFF, arg2, -1, 2);
+        arg2 = draw_text_font(sub_08031A38(arg3), -0x7FFF, arg2, -1, 2);
     if (arg1->unk0 == 1)
         return;
     arg2 += 20;
     for (i = 0; i < arg1->unk8; i++)
     {
         if (arg1->unkC[i].unk4 != 0)
-            arg2 = sub_08034CCC(arg1->unkC[i].unk4, -0x7FFF, arg2, -1, (i == arg0) ? 2 : 3);
+            arg2 = draw_text_font(arg1->unkC[i].unk4, -0x7FFF, arg2, -1, (i == arg0) ? 2 : 3);
     }
 }
 
@@ -240,7 +240,7 @@ void e_world_from_menu_loop(void)
     case 3:
     case 4:
     case 5:
-         sub_08034CCC(gTextErasing, -0x7FFF, 0x14, -1, 2);
+         draw_text_font(gTextErasing, -0x7FFF, 0x14, -1, 2);
          break;
     }
 
@@ -256,8 +256,8 @@ void e_world_from_menu_init_callback(void)
     sub_08006968(&gEWorldMenuData2);
     if (sub_0802A458() != 0)
         sub_0802F06C();
-    if (get_current_bgm() != 10)
-        play_bgm(10, 0x80, 1);
+    if (get_current_bgm() != TITLE)
+        play_bgm(TITLE, 0x80, 1);
     gUnknown_0300028C = gUnknown_03000288 = 0;
     gUnknown_03000290 = 0;
     CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));

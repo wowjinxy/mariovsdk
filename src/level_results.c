@@ -57,7 +57,7 @@ void sub_0802919C(int arg0, int arg1)
     }
     else
     {
-        if (gNextLevelInLevelTable.levelFlags & 2)
+        if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_2)
         {
             asm("":::"r2");
             gUnknown_03000DD0 = arg0;
@@ -108,7 +108,7 @@ void sub_0802919C(int arg0, int arg1)
                 gUnknown_0300010C = arg1;
             }
             gUnknown_0300010D = gUnknown_03000DF4 + 9;
-            if (gNextLevelInLevelTable.levelFlags & 1)
+            if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_1)
                 gUnknown_0300010D = 21;
         }
     }
@@ -382,14 +382,14 @@ void level_results_init_callback(void)
     r0 = sub_08006968(&gLevelResultsData);
     gUnknown_03000104 = r0;
     DmaFill16(3, 0xA0, OAM, OAM_SIZE/2);
-    if (gNextLevelInLevelTable.levelFlags & 3)
+    if (gNextLevelInLevelTable.levelFlags & (LEVEL_FLAG_1|LEVEL_FLAG_2))
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     else
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     gUnknown_03001A1C = 0;
-    if (gNextLevelInLevelTable.levelFlags & 2)
+    if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_2)
         r4 = 3;
-    else if (gNextLevelInLevelTable.levelFlags & 1)
+    else if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_1)
         r4 = 2;
     else
     {
@@ -401,20 +401,20 @@ void level_results_init_callback(void)
     sub_08029A80();
     sub_08030408(r4);
     save_blend_regs(gLevelResultsData.bldCnt, gLevelResultsData.bldAlpha, gLevelResultsData.bldY);
-    if (get_current_bgm() != 11)
-        play_bgm(11, 128, 1);
+    if (get_current_bgm() != RESULTS)
+        play_bgm(RESULTS, 128, 1);
     sub_08038B18();
     r4 = 0;
     CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));
-    if (gNextLevelInLevelTable.levelFlags & 1)
+    if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_1)
         sub_0802F648(&gUnknown_03000E00, gUnknown_08079DA0.unk4);
-    else if (gNextLevelInLevelTable.levelFlags & 2)
+    else if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_2)
         sub_0802F648(&gUnknown_03000E00, gUnknown_08079DA0.unk8);
     else if (!gLevelEWorldFlag && gLevelType == LEVEL_TYPE_MAIN)
         sub_0802F648(&gUnknown_03000E00, gUnknown_08079DA0.unk0);
     else
         sub_0802F648(&gUnknown_03000E00, gUnknown_08079DA0.unkC);
-    if (gNextLevelInLevelTable.levelFlags & 1)
+    if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_1)
     {
         if (gMiniMariosRescued_03001BA0 < 6)
             r4 += gMiniMariosRescued_03001BA0 * 1000;
@@ -438,7 +438,7 @@ void level_results_init_callback(void)
         set_level_flags_08010534(5, (u8)gUnknown_03000DF8, &gCollectedLevelItems);
     else
         set_level_flags_08010534((u8)gUnknown_03000DD0, (u8)gUnknown_03000DF8, &gCollectedLevelItems);
-    if (gNextLevelInLevelTable.levelFlags & 2)
+    if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_2)
     {
         if ((s8)gUnknown_03000DD0 <= 4)
             sub_08010BE0((u8)(gUnknown_03000DD0 + 1), 0);
@@ -465,7 +465,7 @@ void level_results_main(void)
         {
             if (gNewKeys & (A_BUTTON|START_BUTTON))
             {
-                if ((gNextLevelInLevelTable.levelFlags & 3) != 0
+                if ((gNextLevelInLevelTable.levelFlags & (LEVEL_FLAG_1|LEVEL_FLAG_2)) != 0
                  || !gCollectedLevelItems.redPresent
                  || !gCollectedLevelItems.yellowPresent
                  || !gCollectedLevelItems.bluePresent)
@@ -522,7 +522,7 @@ void level_results_main(void)
                 change_main_state(MAIN_STATE_EXPERT_LEVEL_SELECT, USE_FADE);
             else
             {
-                if (gNextLevelInLevelTable.levelFlags & 4)
+                if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_3)
                 {
                     if (gLevelType == LEVEL_TYPE_MAIN)
                     {
@@ -541,10 +541,10 @@ void level_results_main(void)
                             gLevelType = LEVEL_TYPE_MAIN_BOSS;
                             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
                             level_setup(0, 0);
-                            gCurrentWorld = 0;
+                            gCurrentWorld = WORLD_1;
                             gNextLevelID = 0;
                             sub_08004428(gNextLevelInLevelTable.unk0->levelData);
-                            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 43, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_1);
+                            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE3, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_1);
                             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
                         }
                     }
@@ -565,17 +565,17 @@ void level_results_main(void)
                             gLevelType = LEVEL_TYPE_PLUS_BOSS;
                             play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
                             level_setup(0, 1);
-                            gCurrentWorld = 0;
+                            gCurrentWorld = WORLD_1;
                             gNextLevelID = 1;
                             sub_08004428(gNextLevelInLevelTable.unk0->levelData);
-                            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 45, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_2);
+                            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE5, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_2);
                             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
                         }
                     }
                     else
                     {
                         change_main_state(MAIN_STATE_TITLE_SCREEN, USE_FADE);
-                        gCurrentWorld = 0;
+                        gCurrentWorld = WORLD_1;
                         gNextLevelID = 0;
                     }
                 }
@@ -603,7 +603,7 @@ void level_results_main(void)
                     }
                     else
                     {
-                        if (gNextLevelInLevelTable.levelFlags & 1)
+                        if (gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_1)
                             change_main_state(MAIN_STATE_UKNOWN_12, USE_FADE);
                         else
                             change_main_state(MAIN_STATE_LEVEL_SELECT, USE_FADE);

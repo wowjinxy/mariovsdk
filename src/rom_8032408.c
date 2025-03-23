@@ -127,11 +127,10 @@ void game_init_main(void)
 void game_init_loop(void)
 {
     u16 val = 0;
-
     DmaFill32(3, 0xA0, gOamBuffer, 0x400);
     sub_080351E0();
     if (gUnknown_0300029C->unk1008 != NULL)
-        sub_08034CCC(gUnknown_0300029C->unk1008->unk0, -32767, -32767, -1, 16);
+        draw_text_font(gUnknown_0300029C->unk1008->unk0, -32767, -32767, -1, 16);
     sub_08035108(&val);
     DmaCopy32(3, gOamBuffer, (void *)OAM, 0x400);
 }

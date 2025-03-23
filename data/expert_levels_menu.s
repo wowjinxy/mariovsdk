@@ -387,7 +387,7 @@ gUnknown_080A8008:
 
 	.GLOBAL gUnknown_080A8128
 gUnknown_080A8128:
-		.2byte 0x0048 @ X Position
+	.2byte 0x0048 @ X Position
 	.2byte 0x0010 @ Y Position
 	.2byte 0x0040 @ Skip 4 pixels count?
 	.2byte 0x0008 @ Total tiles

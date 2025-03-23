@@ -27206,7 +27206,7 @@ _0805724C:
 	mov r0, r12
 	add r1, r6, #0
 	add r2, r5, #0
-	bl sub_08034CCC
+	bl draw_text_font
 _0805725A:
 	add r0, r4, #1
 	lsl r0, r0, #16
@@ -27408,7 +27408,7 @@ _08057384:
 	mov r0, r12
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_08034CCC
+	bl draw_text_font
 _08057392:
 	add sp, sp, #4
 	pop {r4,r5}

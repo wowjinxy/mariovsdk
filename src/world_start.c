@@ -280,7 +280,7 @@ void world_start_main(void)
         play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
         if (gPreviousMainState == MAIN_STATE_FILE_SELECT)
         {
-            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 41, MAIN_STATE_LEVEL_SELECT, MOVIE_INTRO2);
+            movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE01, MAIN_STATE_LEVEL_SELECT, MOVIE_INTRO2);
             change_main_state(MAIN_STATE_MOVIE, TRUE);
             sub_080148A4(1, 1);
         }

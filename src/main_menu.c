@@ -355,7 +355,7 @@ static void handle_main_menu_input(void)
             }
             else
             {
-                movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, 41, MAIN_STATE_LEVEL_SELECT, MOVIE_INTRO2);
+                movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE01, MAIN_STATE_LEVEL_SELECT, MOVIE_INTRO2);
                 change_main_state(MAIN_STATE_MOVIE, USE_FADE);
                 one = 1;
                 inlinefunc3(*gSelectedSaveFileNumPtr, one);

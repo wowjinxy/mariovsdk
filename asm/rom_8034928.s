@@ -505,8 +505,8 @@ _08034CC8:
 	.4byte gUnknown_03001770
 	THUMB_FUNC_END sub_08034AAC
 
-	THUMB_FUNC_START sub_08034CCC
-sub_08034CCC: @ 0x08034CCC
+	THUMB_FUNC_START draw_text_font
+draw_text_font: @ 0x08034CCC
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -898,7 +898,7 @@ _08034FA8:
 	.4byte OBJ_VRAM0
 _08034FAC:
 	.4byte gUnknown_03001770
-	THUMB_FUNC_END sub_08034CCC
+	THUMB_FUNC_END draw_text_font
 
 	
 	THUMB_FUNC_START sub_08034FB0

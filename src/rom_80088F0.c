@@ -29,7 +29,7 @@ void level_play_loop(void)
         {
             DmaCopy16(3, &gEWRAMBasePtr->unk800C[uVar2], gSomeVRAMAddr_03000E80 + uVar2 * 2, 0x800);
             if (!(gUnknown_030009D0 & 0x18)
-             && (gCurrentWorld != 2 || !(gNextLevelInLevelTable.levelFlags & 2)))
+             && (gCurrentWorld != WORLD_3 || !(gNextLevelInLevelTable.levelFlags & LEVEL_FLAG_2)))
             {
                 DmaCopy16(3, &gEWRAMBasePtr->unk800C[uVar2 + 0x1000], gSomeVRAMAddr_03000E90 + uVar2 * 2, 0x800);
             }
