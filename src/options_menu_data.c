@@ -7,99 +7,13 @@ extern void options_menu_play_music(void);
 extern void options_menu_play_sound_effect(void);
 extern void options_menu_play_movie(void);
 
-void sub_0802200C();
-void sub_080258A8(void);
-void sub_08025914(void);
-void sub_080259C4(void);
-void sub_08025A60(void);
-void sub_08025FA8(void);
-void sub_0802606C(void);
-void sub_08026164(void);
-void sub_08026640(void);
-void sub_080266EC(void);
-void sub_080267E4(void);
-void sub_080268E0(void);
-void sub_0802698C(void);
-void sub_080269E4(void);
-void sub_08026AD8(void);
-void sub_08026FE8(void);
-void sub_08027B9C(void);
-void sub_08027BE8(void);
-void sub_08027C34();
-void sub_08027C78(void);
-void sub_08027CD0();
-void sub_08027D08();
-void sub_08027D40();
-void sub_08027D84(void);
-void sub_08027DD0();
-void sub_08027DE4();
-void sub_08027DF8();
-void sub_08027E0C();
-void sub_08027E20();
-void sub_08027E34();
-void sub_08027E48();
-void sub_08027E5C();
-void sub_08027E70();
-void sub_08027E84();
-void sub_08027EC8();
-void sub_08027F0C(void);
-void sub_08027F58();
-void sub_08027F9C();
-void sub_08027FE0();
-void sub_08028024();
+
 void sub_080284E8(void);
 void sub_08028604(u16 *);
 void sub_08028740(void);
 void sub_08028824(u16 *);
 void sub_08029190(void);
 
-void (*gUnknown_080798E8[])(void) =
-{
-    sub_08027B9C,
-    sub_08027BE8,
-    sub_08027C78,
-    sub_080258A8,
-    sub_08025914,
-    sub_08027D84,
-    sub_080259C4,
-    sub_08025A60,
-    sub_08025FA8,
-    sub_0802606C,
-    sub_08026164,
-    sub_08026640,
-    sub_080266EC,
-    sub_080267E4,
-    sub_080268E0,
-    sub_0802698C,
-    sub_08027F0C,
-    sub_080269E4,
-    sub_08026AD8,
-    sub_08026FE8,
-};
-
-void (*gUnknown_08079938[])() =
-{
-    sub_0802200C,
-    sub_08027C34,
-    sub_08027CD0,
-    sub_08027D08,
-    sub_08027D40,
-    sub_08027DD0,
-    sub_08027DE4,
-    sub_08027DF8,
-    sub_08027E0C,
-    sub_08027E20,
-    sub_08027E34,
-    sub_08027E48,
-    sub_08027E5C,
-    sub_08027E70,
-    sub_08027E84,
-    sub_08027EC8,
-    sub_08027F58,
-    sub_08027F9C,
-    sub_08027FE0,
-    sub_08028024,
-};
 
 u8 gOptionsMenuMovieIDTable[] =
 {

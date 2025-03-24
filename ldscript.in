@@ -32,7 +32,9 @@
 	X(data/data0.o) \
 	X(src/level_select_data.o) \
 	X(src/title_screen_data.o) \
-	X(data/boss_clear_data.o) \
+	X(src/boss_clear_data.o) \
+	X(src/bonus_stoparrow_data.o) \
+	X(src/bonus_swapboxes_data.o) \
 	X(src/options_menu_data.o) \
 	X(data/data1.o) \
 	X(data/rodata.o) \
