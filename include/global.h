@@ -1253,9 +1253,9 @@ extern struct EWorldLevelCount
     u8 unk58[0x68-0x58];
     struct EWorldLevelCount_sub unk68[12];
 } *gEWorldLevelCountPtr;
-extern const struct UnknownStruct17 gUnknown_0807954C[];
-extern const u8 gTitleMarioEyesAnimData[];
-extern const u8 gTitleDKEyesAnimData[];
+extern struct UnknownStruct17 gUnknown_0807954C[];
+extern u8 gTitleMarioEyesAnimData[];
+extern u8 gTitleDKEyesAnimData[];
 extern struct
 {
     void *unk0;
