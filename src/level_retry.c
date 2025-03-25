@@ -15,54 +15,67 @@ static s8 gUnknown_03000157;
 
 struct Struct0807A974
 {
-    u8 unk0;
-    u8 unk1;
+    u8 wipeType;
+    u8 offset;
+};
+
+enum // tutorial screen wipe
+{
+	WIPE_LEFT = 0,
+	WIPE_RIGHT = 1,
+	WIPE_DOWN = 2,
+	WIPE_UP = 3,
 };
 
 static struct Struct0807A974 gUnknown_0807A974[] =
 {
-    { 1, 11 },
-    { 3,  7 },
-    { 1, 11 },
-    { 0, 11 },
-    { 0, 11 },
-    { 1, 11 },
-    { 2,  7 },
-    { 1, 11 },
-    { 0, 11 },
-    { 3,  7 },
-    { 1, 11 },
-    { 0, 11 },
-    { 3,  7 },
-    { 1, 11 },
-    { 1, 11 },
-    { 0, 11 },
-    { 2,  7 },
-    { 0, 11 },
-    { 2,  7 },
-    { 2,  7 },
-    { 3,  8 },
-    { 1, 11 },
-    { 2,  7 },
-    { 3,  7 },
-    { 0, 11 },
-    { 1, 11 },
-    { 0, 11 },
-    { 1, 11 },
-    { 1, 11 },
-    { 0, 11 },
-    { 3,  8 },
-    { 1, 11 },
-    { 0, 11 },
-    { 1, 11 },
-    { 2,  7 },
-    { 2,  7 },
-    { 0, 11 },
-    { 1, 11 },
-    { 2,  7 },
-    { 0, 11 },
-    { 1, 11 },
-    { 3,  7 },
+    { WIPE_RIGHT, 11 },
+    { WIPE_UP,    7  },
+    { WIPE_RIGHT, 11 },
+    { WIPE_LEFT,  11 },
+    { WIPE_LEFT,  11 },
+    { WIPE_RIGHT, 11 },
+    { WIPE_DOWN,  7  },
+	
+    { WIPE_RIGHT, 11 },
+    { WIPE_LEFT,  11 },
+    { WIPE_UP,    7  },
+    { WIPE_RIGHT, 11 },
+    { WIPE_LEFT,  11 },
+    { WIPE_UP,    7  },
+    { WIPE_RIGHT, 11 },
+	
+    { WIPE_RIGHT, 11 },
+    { WIPE_LEFT,  11 },
+    { WIPE_DOWN,  7  },
+    { WIPE_LEFT,  11 },
+    { WIPE_DOWN,  7  },
+    { WIPE_DOWN,  7  },
+    { WIPE_UP,    8  },
+	
+    { WIPE_RIGHT, 11 },
+    { WIPE_DOWN,  7  },
+    { WIPE_UP,    7  },
+    { WIPE_LEFT,  11 },
+    { WIPE_RIGHT, 11 },
+    { WIPE_LEFT,  11 },
+    { WIPE_RIGHT, 11 },
+	
+    { WIPE_RIGHT, 11 },
+    { WIPE_LEFT,  11 },
+    { WIPE_UP,    8  },
+    { WIPE_RIGHT, 11 },
+    { WIPE_LEFT,  11 },
+    { WIPE_RIGHT, 11 },
+    { WIPE_DOWN,  7  },
+	
+    { WIPE_DOWN,  7  },
+    { WIPE_LEFT,  11 },
+    { WIPE_RIGHT, 11 },
+    { WIPE_DOWN,  7  },
+    { WIPE_LEFT,  11 },
+    { WIPE_RIGHT, 11 },
+    { WIPE_UP,    7  },
 };
 
 void level_retry_init_callback(void)
@@ -78,37 +91,37 @@ void level_retry_init_callback(void)
     {
         if (gMainState == MAIN_STATE_DEMO)
             sound_stop_music();
-        switch (gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk0)
+        switch (gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].wipeType)
         {
         case 0:
-            gUnknown_03000156 = gUnknown_03000152 = gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk1;
+            gUnknown_03000156 = gUnknown_03000152 = gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].offset;
             gUnknown_03000157 = 20;
             gUnknown_03000153 = 0;
             gUnknown_03000154 = 30;
             gUnknown_03000155 = 20;
             break;
         case 1:
-            gUnknown_03000156 = 30 - gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk1;
+            gUnknown_03000156 = 30 - gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].offset;
             gUnknown_03000157 = 20;
             gUnknown_03000152 = 0;
             gUnknown_03000153 = 0;
-            gUnknown_03000154 = 30 - gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk1;
+            gUnknown_03000154 = 30 - gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].offset;
             gUnknown_03000155 = 20;
             break;
         case 2:
             gUnknown_03000156 = 30;
-            gUnknown_03000157 = gUnknown_03000153 = gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk1;
+            gUnknown_03000157 = gUnknown_03000153 = gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].offset;
             gUnknown_03000152 = 0;
             gUnknown_03000154 = 30;
             gUnknown_03000155 = 20;
             break;
         case 3:
             gUnknown_03000156 = 30;
-            gUnknown_03000157 = 20 - gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk1;
+            gUnknown_03000157 = 20 - gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].offset;
             gUnknown_03000152 = 0;
             gUnknown_03000153 = 0;
             gUnknown_03000154 = 30;
-            gUnknown_03000155 = 20 - gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk1;
+            gUnknown_03000155 = 20 - gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].offset;
             break;
         }
     }
@@ -438,7 +451,7 @@ void sub_0802B674(u16 *oamIndex, u16 *tileNum, u16 *vramOffset)
         sub_0800A2B8(8, 0, oamIndex, tileNum, vramOffset);
         if (gMainState != MAIN_STATE_UNKNOWN_18 || gUnknown_03000150 == 0)
             return;
-        switch (gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].unk0)
+        switch (gUnknown_0807A974[(gNextLevelID >> 1) + gCurrentWorld * 7].wipeType)
         {
         case 0:
             sub_0802AF24(oamIndex, tileNum, vramOffset);

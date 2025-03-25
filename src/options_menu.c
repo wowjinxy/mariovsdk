@@ -1169,7 +1169,7 @@ void options_menu_play_movie(void)
         gOptionsMenuMovieIDTable[gOptionsMenuData->unk1134]);
     change_main_state(MAIN_STATE_MOVIE, USE_FADE);
     gPreviousMovieOption = gOptionsMenuData->unk1134;
-    play_sound_effect_08071990(35, 8, 16, 64, 0, 128, 0);
+    play_sound_effect_08071990(SE_START, 8, 16, 64, 0, 128, 0);
 }
 
 void sub_08029190(void)

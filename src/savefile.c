@@ -1156,9 +1156,9 @@ static void init_all_save_files_08010E90(void)  // unreferenced
     for (world = 0; world < 1; world++)
     {
         for (level = 0; level < 6; level++)
-            saveFile->mainLevels[world * 8 + level].flags = 0x80;
+            saveFile->mainLevels[world * 8 + level].flags = LEVEL_FLAG_COMPLETE;
         saveFile->mainLevels[world * 8 + level].flags = 0x86;
-        saveFile->mainLevels[world * 8 + level + 1].flags = 0x80;
+        saveFile->mainLevels[world * 8 + level + 1].flags = LEVEL_FLAG_COMPLETE;
     }
     update_star_and_completion_count(1);
 
@@ -1169,9 +1169,9 @@ static void init_all_save_files_08010E90(void)  // unreferenced
     for (world = 0; world < 3; world++)
     {
         for (level = 0; level < 6; level++)
-            saveFile->mainLevels[world * 8 + level].flags = 0x80;
+            saveFile->mainLevels[world * 8 + level].flags = LEVEL_FLAG_COMPLETE;
         saveFile->mainLevels[world * 8 + level].flags = 0x86;
-        saveFile->mainLevels[world * 8 + level + 1].flags = 0x80;
+        saveFile->mainLevels[world * 8 + level + 1].flags = LEVEL_FLAG_COMPLETE;
     }
     update_star_and_completion_count(2);
 }
@@ -1311,24 +1311,24 @@ static void process_some_key_sequence_0801138C(void)  // unreferenced
     if (gHeldKeys & SELECT_BUTTON)
     {
         gHeldKeys &= ~SELECT_BUTTON;
-        if (gHeldKeys == gUnknown_080788E0[gUnknown_03000065])
+        if (gHeldKeys == gUnknown_080788E0[gUnlockEverythingProgress])
         {
-            gUnknown_03000065++;
-            if (gUnknown_03000065 == 10)
+            gUnlockEverythingProgress++;
+            if (gUnlockEverythingProgress == 10)
                 play_sound_effect_08071990(SE_HERE_WEGO, 8, 16, 64, 0, 0x80, 0);
         }
-        else if (gUnknown_03000065 != 0
+        else if (gUnlockEverythingProgress != 0
          && gHeldKeys != 0
-         && gHeldKeys != gUnknown_080788E0[gUnknown_03000065 - 1])
+         && gHeldKeys != gUnknown_080788E0[gUnlockEverythingProgress - 1])
         {
-            gUnknown_03000065 = 0;
+            gUnlockEverythingProgress = 0;
         }
         gNewKeys = 0;
         gHeldKeys = 0;
     }
     else
     {
-        gUnknown_03000065 = 0;
+        gUnlockEverythingProgress = 0;
     }
 }
 

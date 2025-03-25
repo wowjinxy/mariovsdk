@@ -148,7 +148,7 @@ static inline u8 is_expert_unlocked(u8 menuSel)
     struct SaveFile *saveFile = &gSaveFilesPtr[menuSel];
     if (menuSel != FILE_SELECT_EWORLD
      && (saveFile->mainBossLevel.flags & LEVEL_FLAG_COMPLETE)
-     && saveFile->stars >= gExpertLevelsStarsNeeded)
+     && saveFile->stars >= *&gExpertLevelsStarsNeeded[0])
         return TRUE;
     else
         return FALSE;
@@ -233,7 +233,7 @@ void main_menu_init_callback(void)
     gMainMenuCrownFrameNum = 0;
     gMainMenuCrownFrameTimer = gUnknown_08617030[0].duration;
     gMainMenuInitDelayTimer = 0;
-    gUnknown_03000065 = 0;
+    gUnlockEverythingProgress = 0;
     gCameraHorizontalOffset = 0;
     gCameraVerticalOffset = 0;
     load_graphics_config_bg2_08032EB8(&gMainMenuData);

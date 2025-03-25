@@ -42,8 +42,11 @@
 	X(src/load.o) \
 	X(src/level_help.o) \
 	X(src/level_retry.o) \
+	X(data/data_807AA1C.o) \
+	X(data/rising_lava_data.o) \
+	X(data/lava_geyser_data.o) \
 	X(data/data.o) \
-	X(data/expert_levels_menu.o)\
+	X(src/expert_level_menu_data.o)\
 	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \
 	X(src/rom_802D614.o) \
@@ -209,7 +212,7 @@ SECTIONS
 		. = 0x62;		gUnknown_03000062 = .;
 		. = 0x63;		gUnknown_03000063 = .;
 		. = 0x64;		gMainMenuInitDelayTimer = .;
-		. = 0x65;		gUnknown_03000065 = .;
+		. = 0x65;		gUnlockEverythingProgress = .;
 		. = 0x66;		gUnknown_03000066 = .;
 		. = 0x70;		src/level_select.o(.bss);
 		. = 0xA4;		src/title.o(.bss);

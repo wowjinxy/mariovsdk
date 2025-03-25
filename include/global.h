@@ -996,7 +996,7 @@ extern u8 gMainMenuCrownFrameTimer;
 extern u8 gUnknown_03000062;
 extern u8 gUnknown_03000063;
 extern u8 gMainMenuInitDelayTimer;
-extern u8 gUnknown_03000065;
+extern u8 gUnlockEverythingProgress;
 extern u8 gUnknown_03000066[];
 
 extern u8 gUnknown_030000AC;
@@ -1329,7 +1329,7 @@ extern struct GraphicsConfig gMainMenuData;
 extern struct GraphicsConfig gOptionsMenuBGConfig;
 
 extern struct Struct0807C0E0 gUnknown_0807C0D8;
-extern u8 gExpertLevelsStarsNeeded;
+extern u8 gExpertLevelsStarsNeeded[];
 
 extern struct GraphicsConfig gWorldOneStartData;
 extern struct GraphicsConfig gWorldTwoStartData;
@@ -1407,6 +1407,22 @@ extern u8 sub_080003D0[];
 extern u8 sub_080006D8[];
 extern u8 sub_0800169C[]; extern u8 sub_0800169C_end[];
 extern u8 sub_08001760[]; extern u8 sub_08001760_end[];
+
+void sub_08001668();
+void sub_080012BC();
+void sub_08001514();
+void sub_080014B0();
+void sub_080013C4();
+void sub_08001458();
+void sub_08001478();
+void sub_080014EC();
+void sub_08001344();
+void sub_080012D0();
+void sub_0800125C();
+void sub_08001284();
+void sub_0800124C();
+void sub_08001378();
+void sub_0800142C();
 
 void sub_08001BA4(void *, void *);
 void level_edit_delete_object(struct Struct802C31C *);

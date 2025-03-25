@@ -988,7 +988,7 @@ static void sub_080163F4(void)
         gLevelSelect_03000083 = 9;
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
         load_level_select_background(5);
-        play_sound_effect_08071990(183, 8, 16, 64, 0, 128, 0);
+        play_sound_effect_08071990(SE_PLUS_MAIN, 8, 16, 64, 0, 128, 0);
     }
 }
 
