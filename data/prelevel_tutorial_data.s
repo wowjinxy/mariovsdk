@@ -25,8 +25,3 @@ gUnknown_08B2D6C4:
 	.GLOBAL gUnknown_08B2DC74
 gUnknown_08B2DC74:
 	.INCBIN "baserom.gba", 0xB2DC74, 0xB2DDC4-0xB2DC74
-
-@ Unreferenced
-	.GLOBAL gUnknown_08B2DDC4
-gUnknown_08B2DDC4:
-	.INCBIN "baserom.gba", 0xB2DDC4, 0xB2DEBC-0xB2DDC4

@@ -1054,11 +1054,11 @@ void sub_08010BE0(u8 arg0, u8 arg1)
     if (gLevelEWorldFlag != 0)
     {
         sub_0802F1D4();
-        *gUnknown_080788F8 |= 1;
+        *gLastLevelEWorld |= 1;
         write_flash_sector_0802A164();
         return;
     }
-    *gUnknown_080788F8 &= ~1;
+    *gLastLevelEWorld &= ~1;
     if (!(saveFile->plusBossLevel.flags & LEVEL_FLAG_COMPLETE))
     {
         sub_08014B78(*gSelectedSaveFileNumPtr, &sp0, &sp1, &sp2);
@@ -1306,12 +1306,27 @@ u8 sub_080111B4(u8 fileNum)
     return sp8;
 }
 
+//u16 gUnlockEverythingButtonCode[] = // currently getting placed at the wrong ROM location
+//{
+//    B_BUTTON,
+//	A_BUTTON,
+//	R_BUTTON,
+//	DPAD_RIGHT,
+//	L_BUTTON,
+//	
+//	DPAD_LEFT,
+//	A_BUTTON,
+//	DPAD_DOWN,
+//	DPAD_DOWN,
+//	R_BUTTON,
+//};
+
 static void process_some_key_sequence_0801138C(void)  // unreferenced
 {
     if (gHeldKeys & SELECT_BUTTON)
     {
         gHeldKeys &= ~SELECT_BUTTON;
-        if (gHeldKeys == gUnknown_080788E0[gUnlockEverythingProgress])
+        if (gHeldKeys == gUnlockEverythingButtonCode[gUnlockEverythingProgress])
         {
             gUnlockEverythingProgress++;
             if (gUnlockEverythingProgress == 10)
@@ -1319,7 +1334,7 @@ static void process_some_key_sequence_0801138C(void)  // unreferenced
         }
         else if (gUnlockEverythingProgress != 0
          && gHeldKeys != 0
-         && gHeldKeys != gUnknown_080788E0[gUnlockEverythingProgress - 1])
+         && gHeldKeys != gUnlockEverythingButtonCode[gUnlockEverythingProgress - 1])
         {
             gUnlockEverythingProgress = 0;
         }

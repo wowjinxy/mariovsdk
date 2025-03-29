@@ -16,13 +16,13 @@ void sub_0802D614(struct Struct1C0 *param_1)
 
     temp_r4 = gUnknown_030001C0;
     if (temp_r4->unk6 == 1) {
-        if (sub_08031944(temp_r4) == 2)
+        if (check_if_theme_card_exists_08031944(temp_r4) == 2)
             var2 = 6;
-        else if (sub_08031944(temp_r4) == 1)
+        else if (check_if_theme_card_exists_08031944(temp_r4) == 1)
             var2 = 7;
         else
         {
-            sub_08031978(temp_r4);
+            load_theme_card_08031978(temp_r4);
             var2 = 5;
         }
     } else {

@@ -85,11 +85,11 @@ void sub_08031D44(int arg0, struct Struct08031C54 *arg1, int arg2, int arg3)
     int i;
 
     if (arg1->unk25 != 0)
-        arg2 = draw_text_font(sub_08031A38(0), -0x7FFF, arg2, -1, 2);
+        arg2 = draw_text_font(get_theme_card_name_08031A38(0), -0x7FFF, arg2, -1, 2);
     if (arg1->unk4 != 0)
         arg2 = draw_text_font(arg1->unk4, -0x7FFF, arg2, -1, 2);
     if (arg1->unk26 != 0)
-        arg2 = draw_text_font(sub_08031A38(arg3), -0x7FFF, arg2, -1, 2);
+        arg2 = draw_text_font(get_theme_card_name_08031A38(arg3), -0x7FFF, arg2, -1, 2);
     if (arg1->unk0 == 1)
         return;
     arg2 += 20;

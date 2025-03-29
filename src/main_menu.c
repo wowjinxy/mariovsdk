@@ -222,7 +222,7 @@ void main_menu_init_callback(void)
         gFileSelectMenuSel = FILE_SELECT_OPTION_MENU;
     else if ((gPreviousMainState == MAIN_STATE_EWORLD_LEVEL_SELECT || gPreviousMainState == MAIN_STATE_UKNOWN_25) && gIsEWorldVisible_0300005D)
         gFileSelectMenuSel = FILE_SELECT_EWORLD;
-    else if ((*gUnknown_080788F8 & 1) && gIsEWorldVisible_0300005D)
+    else if ((*gLastLevelEWorld & 1) && gIsEWorldVisible_0300005D)
         gFileSelectMenuSel = gPrevFileSelectMenuSel = FILE_SELECT_EWORLD;
     else
         gFileSelectMenuSel = gPrevFileSelectMenuSel = *gSelectedSaveFileNumPtr;
@@ -1411,7 +1411,7 @@ void main_menu_loop(void)
     sub_08014118();
     sub_0801456C();
     DmaCopy32(3, gOamBuffer, (void *)OAM, 0x400);
-    sub_0801B4BC();
+    update_animated_tiles_0801B4BC();
 }
 
 void main_menu_end(void)

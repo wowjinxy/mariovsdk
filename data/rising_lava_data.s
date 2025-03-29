@@ -3,21 +3,9 @@
 
 	.SECTION .data
 
-	.GLOBAL gUnknown_0807AA58
-gUnknown_0807AA58:
-	.INCBIN "baserom.gba", 0x7AA58, 0x7BA58-0x7AA58
-
-	.GLOBAL gUnknown_0807BA58
-gUnknown_0807BA58:
-	.INCBIN "baserom.gba", 0x7BA58, 0x7BA68-0x7BA58
-
-	.GLOBAL gUnknown_0807BA68
-gUnknown_0807BA68:
-	.INCBIN "baserom.gba", 0x7BA68, 0x7BB30-0x7BA68
-
-	.GLOBAL gUnknown_0807BB30
-gUnknown_0807BB30:
-	.INCBIN "baserom.gba", 0x7BB30, 0x7C028-0x7BB30
+	.GLOBAL gUnknown_0807BB40
+gUnknown_0807BB40:
+	.INCBIN "baserom.gba", 0x7BB40, 0x7C028-0x7BB40
 
 	.GLOBAL gUnknown_0807C028
 gUnknown_0807C028:

@@ -43,14 +43,21 @@
 	X(src/level_help.o) \
 	X(src/level_retry.o) \
 	X(data/data_807AA1C.o) \
+	X(data/moving_platform_data.o) \
+	X(data/background_data.o) \
 	X(data/rising_lava_data.o) \
 	X(data/lava_geyser_data.o) \
+	X(data/eCard_data.o) \
 	X(data/data.o) \
 	X(src/expert_level_menu_data.o)\
 	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \
 	X(src/rom_802D614.o) \
 	X(asm/eCard.o) \
+	X(asm/level_results_2.o) \
+	X(asm/rom_802F5C0.o) \
+	X(asm/theme_card.o) \
+	X(asm/rom_8031A64.o) \
 	X(src/eCard.o) \
 	X(src/level_view.o) \
 	X(src/rom_8032408.o) \
@@ -95,7 +102,9 @@
 	X(src/title_demo_data.o) \
 	X(src/prelevel_tutorial_data.o) \
 	X(data/prelevel_tutorial_data.o) \
+	X(data/data_unused_8B2DDC4.o) \
 	X(data/movie_beta_new_game.o) \
+	X(src/movie_beta_new_game_data.o) \
 	X(data/movie_dk_boss_2_end.o) \
 	X(data/movie_dk_boss_2_intro.o) \
 	X(data/movie_dk_boss_1_intro.o) \
@@ -257,6 +266,7 @@ SECTIONS
 		. = 0x1BC;		gUnknown_030001BC = .;
 		. = 0x1C0;		gUnknown_030001C0 = .;
 		. = 0x1C4;		gUnknown_030001C4 = .;
+		. = 0x280; 		gThemeCardExists_03000280 = .;
 		. = 0x284; 		gUnknown_03000284 = .;
 		. = 0x288; 		gUnknown_03000288 = .;
 		. = 0x28C; 		gUnknown_0300028C = .;

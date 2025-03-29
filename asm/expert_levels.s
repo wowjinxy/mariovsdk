@@ -3754,7 +3754,7 @@ _08036FDC:
 	ldr r0, _08037048  @ =0x84000100
 	str r0, [r1, #8]
 	ldr r0, [r1, #8]
-	bl sub_0801B4BC
+	bl update_animated_tiles_0801B4BC
 	add sp, sp, #8
 	pop {r4-r7}
 	pop {r0}

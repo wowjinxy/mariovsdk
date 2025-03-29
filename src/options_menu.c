@@ -864,7 +864,7 @@ void options_loop(void)
         sub_080281C8(&gOptionsMenuData->unk0[4], button->x, button->y, &sp8, 1);
     }
 
-    sub_0801B4BC();
+    update_animated_tiles_0801B4BC();
     DmaCopy32(3, gOamBuffer, OAM, sizeof(gOamBuffer));
 }
 #else
@@ -1107,7 +1107,7 @@ _08029004:\n\
 	add r3, sp, #8\n\
 	bl sub_080281C8\n\
 _0802901A:\n\
-	bl sub_0801B4BC\n\
+	bl update_animated_tiles_0801B4BC\n\
 	ldr r1, _08029040  @ =0x040000D4\n\
 	ldr r0, _08029044  @ =gOamBuffer\n\
 	str r0, [r1]\n\

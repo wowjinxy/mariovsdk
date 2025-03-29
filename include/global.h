@@ -355,18 +355,18 @@ struct MovieSoundEffect  // Movie sound effects
 struct Movie_child
 {
     u32 unk0;
-    u16 unk4;
-    struct Movie_child_child8 *unk8;
+    u16 spriteCount;
+    struct MovieSpriteTable *movieSprite;
     u16 unkC;
     struct Movie_child_child10 *unk10;
     /*0x14*/ u16 soundEffectsCount;
     /*0x18*/ struct MovieSoundEffect *soundEffects;
     u16 unk1C;
     struct Movie_child_child20 *unk20;
-    u16 unk24;
-    struct Movie_child_child28 *unk28;
-    u16 unk2C;
-    struct Movie_child_child30 *unk30;  // video?
+    u16 textBankCount;
+    struct MovieTextBank *textBank;
+    u16 sceneCount;
+    struct MovieSceneBank *sceneBank;  // video?
 };  // size = 0x34
 
 enum
@@ -388,6 +388,21 @@ enum  // Movie player flags
 {
     MOVIE_PLAYER_ALLOW_SKIP = (1 << 0),
     MOVIE_PLAYER_FLAG_2 = (1 << 1),
+};
+
+struct Movie
+{
+    u16 unk0;
+    struct Movie_child *unk4;
+};
+
+struct MoviePlayerParamaters
+{
+    struct Movie *movieData;
+    u8 flags;
+    u8 songID;
+    u8 nextMode;
+    u8 movieID;
 };
 
 enum // World IDs 
@@ -439,22 +454,6 @@ enum  // Level flags
     LEVEL_FLAG_30 = (1 << 29),
     LEVEL_FLAG_31 = (1 << 30),
     LEVEL_FLAG_32 = (1 << 31),
-};
-
-struct Movie
-{
-    u16 unk0;
-    u8 filler2[2];
-    struct Movie_child *unk4;
-};
-
-struct MoviePlayerParamaters
-{
-    struct Movie *movieData;
-    u8 flags;
-    u8 songID;
-    u8 nextMode;
-    u8 movieID;
 };
 
 struct backgroundLayerOffset
@@ -941,7 +940,8 @@ enum
 
 struct Struct1C0
 {
-    u8 filler0[6];
+	u32 *cardData;
+    u8 filler0[2];
     u16 unk6;
     u8 filler8[0x10-0x8];
     u8 unk10;  // unknown type
@@ -1250,9 +1250,9 @@ extern struct Struct08078210
     u8 filler0[0x108];
     struct Struct08078210_sub *unk108[1];
 } *gObjectTileDataRAMPtr;
-extern u32 *gUnknown_080788F8;
+extern u32 *gLastLevelEWorld;
 extern u8 *gSelectedSaveFileNumPtr;
-extern u16 gUnknown_080788E0[];
+extern u16 gUnlockEverythingButtonCode[];
 extern struct UnknownStruct12 *gScreenModeRelatedPtr;
 struct EWorldLevelCount_sub
 {
@@ -1279,7 +1279,7 @@ extern struct
 } gUnknown_08079DA0;
 extern void *gUnknown_0807AA1C[];
 extern struct UnkStruct1_sub_child_data68 gUnknown_0807BA58;
-extern u8 gUnknown_0807BA68[];
+extern u16 gUnknown_0807BA68[];
 extern void *gUnknown_0807BB30[];
 extern s16 gUnknown_0807C83A[];
 extern const u32 gUnknown_0807C850[];
@@ -1604,10 +1604,10 @@ void sub_08030DA0(int);
 int sub_08030DE8(void);
 void sub_0803109C(void);
 void sub_080317F8(void);
-int sub_08031944(void *);
-void sub_08031978(void *);
-int sub_080319BC(struct GraphicsConfig *, struct UnknownStruct5 *, int);
-int sub_08031A38(int);
+int check_if_theme_card_exists_08031944(void *);
+void load_theme_card_08031978(void *);
+int load_level_with_theme_card_080319BC(struct GraphicsConfig *, struct UnknownStruct5 *, int);
+int get_theme_card_name_08031A38(int *);
 void sub_08031BF0();
 int sub_08031E04(void);
 void e_world_from_menu_main(void);
@@ -1768,10 +1768,9 @@ u32 sub_0802A458(void);
 void sub_0802F06C();
 void sub_080062D0();
 void sub_08006A00();
-void sub_0801B4BC();
+void update_animated_tiles_0801B4BC();
 void sub_08031AD4();
 void sub_0802BA38();
-void sub_0801B4BC();
 void sub_0803D248();
 void sub_08031D44();
 void sub_0806E594(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);

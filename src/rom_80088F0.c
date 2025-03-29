@@ -36,7 +36,7 @@ void level_play_loop(void)
         }
         gUnknown_030009EC = 0;
     }
-    sub_0801B4BC();
+    update_animated_tiles_0801B4BC();
 }
 
 void after_tutorial_init_callback(void)

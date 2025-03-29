@@ -224,8 +224,8 @@ gUnknown_080769B0:
 	.4byte 0x0000001A
 	.4byte 0x0000001B
 
-	.GLOBAL gUnknown_080769B8
-gUnknown_080769B8:
+	.GLOBAL gTextBlank2
+gTextBlank2:
 	.ASCII "\0\0\0\0"
 	
 	.GLOBAL gUnknown_080769BC

@@ -75,8 +75,8 @@ gUnknown_0807C358:
 	.byte 0x01 @ Pass over 7
 	.byte 0x01 @ Pass over 8
 
-	.4byte 0x00011800
-	.4byte 0x00005000
+	.4byte 0x00011800 @ Start X position
+	.4byte 0x00005000 @ End Y position
 	.2byte 0x00C0 @ Speed going up
 	.2byte 0x0080 @ Speed going down
 	.2byte 0x0000
