@@ -5123,7 +5123,7 @@ _0803AB70:
 	add r0, r6, #0
 	mov r1, sp
 	mov r2, #171
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803ACD0
 _0803AB8C:
 	.4byte gUnknown_030019A4
@@ -5327,8 +5327,8 @@ _0803ACF8:
 	.4byte 0xFFFFFF00
 	THUMB_FUNC_END sub_0803AA74
 
-	THUMB_FUNC_START sub_0803ACFC
-sub_0803ACFC: @ 0x0803ACFC
+	THUMB_FUNC_START update_grabbed_object_0803ACFC
+update_grabbed_object_0803ACFC: @ 0x0803ACFC
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -5496,7 +5496,7 @@ _0803AE0C:
 	ldrsh r2, [r7, r0]
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	b _0803AE52
 _0803AE44:
 	ldr r1, [sp, #4]
@@ -5504,7 +5504,7 @@ _0803AE44:
 	asr r2, r2, #16
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 _0803AE52:
 	ldr r0, [r7, #92]
 	ldr r1, _0803AEB8  @ =0xFFFFF3FF
@@ -5592,7 +5592,7 @@ _0803AEE6:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0803ACFC
+	THUMB_FUNC_END update_grabbed_object_0803ACFC
 
 	.byte 0x00
 	.byte 0x00
@@ -6190,7 +6190,7 @@ sub_0803B300: @ 0x0803B300
 	mov r0, r8
 	mov r1, sp
 	mov r2, #27
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #30
@@ -6217,12 +6217,12 @@ _0803B354:
 	mov r0, r8
 	add r1, r5, #0
 	mov r2, #31
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #31
 _0803B38C:
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	ldr r0, [r7, #92]
 	ldr r1, _0803B3AC  @ =0xFFFFF3FF
 	and r0, r0, r1
@@ -6285,7 +6285,7 @@ _0803B3CA:
 	add r0, r7, #0
 	mov r1, sp
 	mov r2, #27
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	ldr r0, _0803B430  @ =gNextLevelInLevelTable
 	ldr r0, [r0, #32]
 	mov r1, #2
@@ -6332,7 +6332,7 @@ _0803B438:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #31
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	ldr r0, _0803B4AC  @ =gNextLevelInLevelTable
 	ldr r0, [r0, #32]
 	mov r1, #2
@@ -6352,7 +6352,7 @@ _0803B48A:
 	add r0, r6, #0
 	mov r2, #32
 _0803B48E:
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	ldr r0, [r6, #92]
 	ldr r1, _0803B4B4  @ =0xFFFFF3FF
 	and r0, r0, r1
@@ -6489,7 +6489,7 @@ _0803B544:
 	add r0, r5, #0
 	add r1, r4, #0
 	mov r2, #72
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803B5BA
 _0803B598:
 	.4byte 0x00100800
@@ -6506,7 +6506,7 @@ _0803B59C:
 	add r0, r5, #0
 	add r1, r4, #0
 	mov r2, #74
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 _0803B5BA:
 	mov r0, #1
 	neg r0, r0
@@ -6695,7 +6695,7 @@ _0803B6F4:
 	add r0, r6, #0
 	add r1, r4, #0
 _0803B70E:
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	mov r0, #18
 	bl sub_08071E14
 	add r0, r6, #0
@@ -6776,7 +6776,7 @@ _0803B75E:
 	add r0, r7, #0
 	add r1, sp, #12
 	mov r2, #62
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	bl _0803C284
 _0803B7B0:
 	.4byte 0x00100800
@@ -6793,7 +6793,7 @@ _0803B7B4:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #64
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	bl _0803C284
 	.byte 0x00
 	.byte 0x00
@@ -6842,7 +6842,7 @@ _0803B7EC:
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #27
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	mov r5, #1
 	neg r5, r5
 	str r5, [r4, #76]
@@ -6864,7 +6864,7 @@ _0803B7EC:
 	add r0, r7, #0
 	add r1, sp, #12
 	mov r2, r8
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	str r5, [r7, #76]
 	ldr r0, [r7, #92]
 	and r0, r0, r6
@@ -6916,7 +6916,7 @@ _0803B898:
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #28
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	mov r5, #1
 	neg r5, r5
 	str r5, [r4, #76]
@@ -6939,7 +6939,7 @@ _0803B898:
 	add r0, r7, #0
 	add r1, r6, #0
 	mov r2, r9
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	str r5, [r7, #76]
 	ldr r0, [r7, #92]
 	mov r1, r8
@@ -7049,7 +7049,7 @@ _0803B998:
 	add r0, r7, #0
 	add r1, sp, #12
 	mov r2, r8
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	mov r0, #18
 	bl sub_08071E14
 	add r0, r7, #0
@@ -7070,7 +7070,7 @@ _0803B9F4:
 	add r0, r7, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	mov r0, #18
 	bl sub_08071E14
 	add r0, r7, #0
@@ -7175,7 +7175,7 @@ _0803BA84:
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #8
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	ldr r0, [r4, #92]
 	ldr r1, _0803BB18  @ =0xFFFFF3FF
 	and r0, r0, r1
@@ -7208,7 +7208,7 @@ _0803BB20:
 	add r0, r7, #0
 	add r1, r6, #0
 	mov r2, #203
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BB2C:
 	mov r2, #4
@@ -7246,13 +7246,13 @@ _0803BB3C:
 	add r1, r5, #0
 _0803BB6E:
 	mov r2, #171
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BB76:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #203
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BB82:
 	ldr r1, [r7, #72]
@@ -7294,7 +7294,7 @@ _0803BB82:
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #8
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	ldr r0, [r4, #92]
 	ldr r1, _0803BC04  @ =0xFFFFF3FF
 	and r0, r0, r1
@@ -7325,7 +7325,7 @@ _0803BC0C:
 	add r0, r7, #0
 	add r1, r6, #0
 	mov r2, #34
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BC18:
 	mov r1, #4
@@ -7363,13 +7363,13 @@ _0803BC28:
 	add r1, r5, #0
 _0803BC5A:
 	mov r2, #30
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BC62:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #34
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BC6E:
 	ldr r0, _0803BCD8  @ =gNextLevelInLevelTable
@@ -7420,7 +7420,7 @@ _0803BC6E:
 	add r0, r7, #0
 	add r1, sp, #12
 	mov r2, #72
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803BD06
 _0803BCD8:
 	.4byte gNextLevelInLevelTable
@@ -7443,7 +7443,7 @@ _0803BCE8:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #74
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 _0803BD06:
 	ldr r2, _0803BD18  @ =gUnknown_030019A0
 	ldr r0, [r2]
@@ -7510,7 +7510,7 @@ _0803BD1C:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #72
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803BDC2
 _0803BD90:
 	.4byte gUnknown_03000D84
@@ -7535,7 +7535,7 @@ _0803BDA4:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #74
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 _0803BDC2:
 	mov r0, #1
 	neg r0, r0
@@ -7571,7 +7571,7 @@ _0803BDE0:
 	add r0, r7, #0
 	add r1, sp, #12
 	mov r2, #145
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	ldr r0, [r5]
 	ldr r1, _0803BE24  @ =0xFFFFFDFF
 	and r0, r0, r1
@@ -7609,7 +7609,7 @@ _0803BE30:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #177
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	ldr r0, [r5]
 	ldr r1, _0803BE6C  @ =0xFFFFFBFF
 	and r0, r0, r1
@@ -7700,7 +7700,7 @@ _0803BF00:
 	str r0, [r4, #28]
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BF0C:
 	.4byte 0x00200800
@@ -7724,7 +7724,7 @@ _0803BF10:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #77
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 	.byte 0x00
 	.byte 0x00
@@ -7743,7 +7743,7 @@ _0803BF44:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #78
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BF64:
 	.4byte 0x00220800
@@ -7796,7 +7796,7 @@ _0803BFB8:
 	asr r2, r2, #16
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C284
 _0803BFD0:
 	.4byte gNextLevelInLevelTable
@@ -7912,7 +7912,7 @@ _0803C074:
 	add r2, r6, #0
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	mov r0, #1
 	neg r0, r0
 	str r0, [r7, #72]
@@ -7932,7 +7932,7 @@ _0803C0BC:
 	ldr r0, [r5]
 	add r2, r6, #0
 	add r1, r4, #0
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	ldr r1, [r5]
 	mov r0, #1
 	neg r0, r0
@@ -7999,7 +7999,7 @@ _0803C124:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #50
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C186
 _0803C160:
 	.4byte gUnknown_030019A0
@@ -8018,7 +8018,7 @@ _0803C168:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #52
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 _0803C186:
 	ldr r0, [r7, #36]
 	mov r1, #128
@@ -8055,7 +8055,7 @@ _0803C19C:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #56
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C27E
 	.byte 0x00
 	.byte 0x00
@@ -8074,7 +8074,7 @@ _0803C1D8:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #58
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C27E
 _0803C1F8:
 	.4byte 0x00200800
@@ -8096,7 +8096,7 @@ _0803C1FC:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #79
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	str r5, [sp]
 	mov r0, #128
 	str r0, [sp, #4]
@@ -8129,7 +8129,7 @@ _0803C244:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #80
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	ldr r0, [r7, #32]
 	ldr r2, _0803C29C  @ =0xFFFFFE00
 	add r0, r0, r2
@@ -9023,7 +9023,7 @@ _0803C8F0:
 	ldrsh r2, [r7, r0]
 	add r0, r7, #0
 	add r1, r6, #0
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	b _0803C922
 _0803C8FE:
 	ldrh r0, [r7]
@@ -9035,7 +9035,7 @@ _0803C8FE:
 _0803C90A:
 	add r0, r7, #0
 	add r1, r6, #0
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	b _0803C922
 _0803C914:
 	mov r3, r10
@@ -9043,7 +9043,7 @@ _0803C914:
 	asr r2, r2, #16
 	add r0, r7, #0
 	add r1, r6, #0
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 _0803C922:
 	ldr r0, [r7, #92]
 	ldr r1, _0803C98C  @ =0xFFFFF3FF
@@ -9177,7 +9177,7 @@ sub_0803C9D4: @ 0x0803C9D4
 	ldrsh r2, [r6, r0]
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_0803ED98
+	bl update_mario_action_0803ED98
 	ldr r0, [r5, #28]
 	mov r1, #16
 	and r0, r0, r1
@@ -12945,7 +12945,7 @@ _0803E56E:
 	orr r0, r0, r1
 	str r0, [r4, #92]
 	add r0, r4, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 	ldr r0, [r4, #32]
 	mov r1, #128
 	lsl r1, r1, #1
@@ -13017,7 +13017,7 @@ _0803E5F2:
 	orr r0, r0, r1
 	str r0, [r4, #92]
 	add r0, r4, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 	ldr r0, [r4, #32]
 	ldr r1, _0803E614  @ =0xFFFFFF00
 	add r0, r0, r1
@@ -13066,7 +13066,7 @@ _0803E650:
 	orr r0, r0, r1
 	str r0, [r4, #96]
 	add r0, r4, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 	ldr r0, [r4, #36]
 	ldr r1, _0803E694  @ =0xFFFFFF00
 	add r0, r0, r1
@@ -13270,7 +13270,7 @@ _0803E7C8:
 	add r0, r5, #0
 	mov r1, sp
 	mov r2, #3
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	b _0803E82E
 _0803E7E2:
 	ldr r1, [r5, #20]
@@ -13283,7 +13283,7 @@ _0803E7E2:
 	add r0, r5, #0
 	mov r1, sp
 	mov r2, #2
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	b _0803E82E
 _0803E7FC:
 	ldr r1, [r5, #20]
@@ -13296,7 +13296,7 @@ _0803E7FC:
 	add r0, r5, #0
 	mov r1, sp
 	mov r2, #5
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 	b _0803E82E
 _0803E816:
 	ldr r1, [r5, #20]
@@ -13309,7 +13309,7 @@ _0803E816:
 	add r0, r5, #0
 	mov r1, sp
 	mov r2, #4
-	bl sub_0803E84C
+	bl update_level_object_0803E84C
 _0803E82E:
 	lsl r0, r7, #16
 	mov r1, #128
@@ -13329,8 +13329,8 @@ _0803E82E:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0803E84C
-sub_0803E84C: @ 0x0803E84C
+	THUMB_FUNC_START update_level_object_0803E84C
+update_level_object_0803E84C: @ 0x0803E84C
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -14053,10 +14053,10 @@ _0803ED82:
 	.byte 0x00
 _0803ED94:
 	.4byte 0xBFFFFFFF
-	THUMB_FUNC_END sub_0803E84C
+	THUMB_FUNC_END update_level_object_0803E84C
 
-	THUMB_FUNC_START sub_0803ED98
-sub_0803ED98: @ 0x0803ED98
+	THUMB_FUNC_START update_mario_action_0803ED98
+update_mario_action_0803ED98: @ 0x0803ED98
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -15026,7 +15026,7 @@ _0803F4A0:
 	pop {r4-r7}
 	pop {r0}
 	bx r0
-	THUMB_FUNC_END sub_0803ED98
+	THUMB_FUNC_END update_mario_action_0803ED98
 
 	THUMB_FUNC_START sub_0803F4B0
 sub_0803F4B0: @ 0x0803F4B0
@@ -30845,7 +30845,7 @@ _08046686:
 	orr r0, r0, r1
 	str r0, [r2, #92]
 	add r0, r2, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 	b _08046766
 _08046698:
 	.4byte gUnknown_03001990
@@ -30954,7 +30954,7 @@ _08046720:
 	orr r0, r0, r1
 	str r0, [r2, #92]
 	add r0, r2, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 	mov r3, r8
 	strb r4, [r3, #11]
 _08046766:
@@ -31036,7 +31036,7 @@ _080467E8:
 	orr r0, r0, r1
 	str r0, [r4, #92]
 	add r0, r4, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 	mov r0, #1
 	b _0804684E
 _080467FC:
@@ -31072,7 +31072,7 @@ _08046832:
 	orr r0, r0, r1
 	str r0, [r4, #92]
 	add r0, r4, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 	strb r6, [r5, #11]
 	mov r0, #1
 	b _0804684E
@@ -36168,7 +36168,7 @@ sub_08048ABC: @ 0x08048ABC
 	orr r0, r0, r1
 	str r0, [r4, #92]
 	add r0, r4, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 	mov r0, #1
 	b _08048B4A
 	.byte 0x00
@@ -36214,7 +36214,7 @@ sub_08048B54: @ 0x08048B54
 	cmp r0, #5
 	beq _08048B88
 	add r0, r2, #0
-	bl sub_0803ACFC
+	bl update_grabbed_object_0803ACFC
 _08048B88:
 	ldr r0, _08048B9C  @ =gUnknown_03001A1C
 	ldr r1, [r0]
@@ -40831,7 +40831,7 @@ _0804A82E:
 	mov r1, #18
 	ldrsh r0, [r2, r1]
 	lsl r0, r0, #3
-	ldr r2, _0804A88C  @ =gUnknown_080B53F4
+	ldr r2, _0804A88C  @ =gMiniMarioActionMapMainLevelTable_080B53F4
 	add r0, r0, r2
 	ldr r1, _0804A890  @ =gUnknown_03000374
 	str r0, [r1]
@@ -40876,7 +40876,7 @@ _0804A82E:
 _0804A888:
 	.4byte gNextLevelInLevelTable
 _0804A88C:
-	.4byte gUnknown_080B53F4
+	.4byte gMiniMarioActionMapMainLevelTable_080B53F4
 _0804A890:
 	.4byte gUnknown_03000374
 _0804A894:

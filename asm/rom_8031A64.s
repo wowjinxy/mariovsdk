@@ -1,7 +1,7 @@
 	.INCLUDE "macro.inc"
 	.INCLUDE "gba.inc"
 
-	THUMB_FUNC_START sub_08031A64 @ Present collection related
+	THUMB_FUNC_START sub_08031A64 @ Score gain numbers
 sub_08031A64: @ 0x08031A64
 	push {r4-r7,lr}
 	add r3, r0, #0

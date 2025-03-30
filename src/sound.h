@@ -233,9 +233,9 @@ enum SoundID
     SE_MOVIE2_10      = 227,
     SE_MOVIE_08       = 228,
     SE_TITLE          = 229,  // "Mario vs. Donkey Kong!"
-    SE_YOU_WON1       = 230,
-    SE_YOU_WON2       = 231,
-    SE_YOU_WON3       = 232,
+    SE_YOU_WON1       = 230,  // "Way to go!"
+    SE_YOU_WON2       = 231,  // "Good job!"
+    SE_YOU_WON3       = 232,  // "All you, it's all you baby!"
     SE_STAR           = 233,
     SE_DK_WALK        = 234,
     SE_SCUFF2         = 235,

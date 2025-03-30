@@ -55,6 +55,7 @@
 	X(src/rom_802D614.o) \
 	X(asm/eCard.o) \
 	X(asm/level_results_2.o) \
+	X(asm/bobomb_explode.o) \
 	X(asm/rom_802F5C0.o) \
 	X(asm/theme_card.o) \
 	X(asm/rom_8031A64.o) \
@@ -72,8 +73,35 @@
 	X(src/world_start.o) \
 	X(asm/rom_80379BC.o) \
 	X(data/data2.o) \
+	X(data/mini_mario_level_action_map_data.o) \
+	X(data/world_sprite_table_data.o) \
+	X(data/data_80B51D8.o) \
+	X(data/main_level_mini_mario_data.o) \
+	X(data/plus_level_mini_mario_data.o) \
 	X(data/sprites.o) \
 	X(data/data3.o) \
+	X(data/world_one_sprites/world_one_dk_boss_data.o) \
+	X(data/world_one_sprites/world_one_dk_boss_falling_objects_data.o) \
+	X(data/world_two_sprites/world_two_dk_boss_data.o) \
+	X(data/world_two_sprites/world_two_dk_boss_snapjaw_data.o) \
+	X(data/world_three_sprites/world_three_dk_boss_data.o) \
+	X(data/world_three_sprites/world_three_dk_boss_thrown_objects_data.o) \
+	X(data/world_four_sprites/world_four_dk_boss_data.o) \
+	X(data/world_four_sprites/world_four_dk_boss_polterguy_data.o) \
+	X(data/world_five_sprites/world_five_dk_boss_data.o) \
+	X(data/world_six_sprites/world_six_dk_boss_data.o) \
+	X(data/main_boss_sprites/main_boss_dk_data.o) \
+	X(data/main_boss_sprites/main_boss_spiky_barrel_data.o) \
+	X(data/main_boss_sprites/main_boss_big_barrel_data.o) \
+	X(data/main_boss_sprites/main_boss_toad_cage_data.o) \
+	X(data/main_boss_sprites/main_boss_toads_carrying_big_barrel_data.o) \
+	X(data/plus_boss_sprites/dk_mech_falling_objects_data.o) \
+	X(data/plus_boss_sprites/dk_mech_arms_data.o) \
+	X(data/plus_boss_sprites/dk_mech_mini_mario_data.o) \
+	X(data/plus_boss_sprites/dk_mech_boss_data.o) \
+	X(data/world_four_moving_platform_data.o) \
+	X(data/level_mm_opening_data.o) \
+	X(data/data_8669D6C.o) \
 	X(data/common_sprites/mario_sprite_related.o) \
 	X(data/common_sprites/hammer_sprite_related.o) \
 	X(data/common_sprites/key_door_sprite_related.o) \
@@ -119,6 +147,8 @@
 	X(asm/rom_8038600.o) \
 	X(src/rom_804A8E8.o) \
 	X(asm/rom_804AAB8.o) \
+	X(asm/dk_mech_boss.o) \
+	X(asm/rom_806C848.o) \
 	X(data/preloaded_eCard.o) \
 	X(src/sound.o) \
 	X(src/sound_data.o) \
