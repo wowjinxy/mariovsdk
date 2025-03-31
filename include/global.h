@@ -236,13 +236,22 @@ struct UnknownStruct6
     s32 unk24;
 };
 
+enum // enum for backgroundType in the below
+{
+	BACKGROUND_TYPE_LEVEL_TILES = 0,
+	BACKGROUND_TYPE_VERTICAL = 1,
+	BACKGROUND_TYPE_HORIZONTAL = 2,
+	BACKGROUND_TYPE_MM = 3,
+	BACKGROUND_TYPE_BOSS = 4,
+};
+
 struct UnknownStruct5
 {
     /*0x00*/ struct GraphicsConfig *backgroundData;
     /*0x04*/ u32 *levelData;
     /*0x08*/ u16 levelTimer;
     /*0x0A*/ u8 songID;
-    /*0x0B*/ u8 levelType;
+    /*0x0B*/ u8 backgroundType;
     /*0x0C*/ u32 levelFlags;
     /*0x10*/ u32 unk10;
 };
@@ -284,12 +293,53 @@ struct UnknownStruct7
     s8 unk34;
 };
 
+enum // flags for UnknownStruct8.failType
+{
+    FAIL_TYPE_NONE = 0,
+    FAIL_TYPE_UNK_1 = (1 << 0),
+    FAIL_TYPE_UNK_2 = (1 << 1),
+    FAIL_TYPE_UNK_3 = (1 << 2),
+    FAIL_TYPE_UNK_4 = (1 << 3),
+    FAIL_TYPE_UNK_TEXT = (1 << 4), // Draws "O  OB"
+    FAIL_TYPE_TIME_UP = (1 << 5), // Draws "Time up!" text
+    FAIL_TYPE_GET_TOY_CARDS = (1 << 6), // Draws "GET TOY CARDS!"
+    FAIL_TYPE_LOST_ALL_MM = (1 << 7), // Draws "LOST ALL MINI MARIOS!"
+
+    // Unused flags, fail type flags are 4 bytes big, reads all 4 bytes
+    FAIL_TYPE_9 = (1 << 8),
+    FAIL_TYPE_10 = (1 << 9),
+    FAIL_TYPE_11 = (1 << 10), 
+    FAIL_TYPE_12 = (1 << 11),
+    FAIL_TYPE_13 = (1 << 12),
+    FAIL_TYPE_14 = (1 << 13),
+    FAIL_TYPE_15 = (1 << 14),
+    FAIL_TYPE_16 = (1 << 15),
+
+    FAIL_TYPE_17 = (1 << 16),
+    FAIL_TYPE_18 = (1 << 17),
+    FAIL_TYPE_19 = (1 << 18),
+    FAIL_TYPE_20 = (1 << 19),
+    FAIL_TYPE_21 = (1 << 20),
+    FAIL_TYPE_22 = (1 << 21),
+    FAIL_TYPE_23 = (1 << 22),
+    FAIL_TYPE_24 = (1 << 23),
+
+    FAIL_TYPE_25 = (1 << 24),
+    FAIL_TYPE_26 = (1 << 25),
+    FAIL_TYPE_27 = (1 << 26),
+    FAIL_TYPE_28 = (1 << 27),
+    FAIL_TYPE_29 = (1 << 28),
+    FAIL_TYPE_30 = (1 << 29),
+    FAIL_TYPE_31 = (1 << 30),
+    FAIL_TYPE_32 = (1 << 31),
+};
+
 struct UnknownStruct8
 {
     u8 filler0[4];
     u32 unk4;
     u8 filler8[0x14-0x8];
-    u32 unk14;
+    u32 failType;
 };
 
 struct UnknownStruct10
@@ -1210,8 +1260,8 @@ extern u8 gUnknown_03000389;
 extern u8 gUnknown_0300038A;
 extern u8 gUnknown_03001B90;
 extern u8 gUnknown_03001BB0;
-extern u8 gUnknown_03001BC8;
-extern u8 gUnknown_03001BCC;
+extern u8 gMiniMariosAliveInLevel_03001BC8;
+extern u8 gMiniMariosLost_03001BCC;
 extern u8 gUnknown_03001BDC;
 extern s32 gUnknown_03001BE4;
 extern s32 gUnknown_03001BEC;
@@ -1386,6 +1436,22 @@ struct Struct08031C54
     u8 filler24[0x25-0x24];
     u8 unk25;
     u8 unk26;
+};
+
+
+struct CardSomething
+{
+	u16 unk0;
+	u16 unk2;
+	u32 *unk4;
+	u16 worldType;
+	u16 unkA;
+    char name[15];
+    u16 unk1C;
+    u8 pad[8];
+    u16 unk26;
+    u8 pad2;
+    u8 cardData[0];
 };
 
 extern u32 gUnknown_03000294;
@@ -1607,7 +1673,7 @@ void sub_080317F8(void);
 int check_if_theme_card_exists_08031944(void *);
 void load_theme_card_08031978(void *);
 int load_level_with_theme_card_080319BC(struct GraphicsConfig *, struct UnknownStruct5 *, int);
-int get_theme_card_name_08031A38(int *);
+char *get_theme_card_name_08031A38(struct CardSomething *);
 void sub_08031BF0();
 int sub_08031E04(void);
 void e_world_from_menu_main(void);

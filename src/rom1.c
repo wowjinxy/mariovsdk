@@ -176,7 +176,7 @@ static void sub_08007544(void)
         }
         if (gGeneralTimer <= 0 && !(gUnknown_030019A0 & 0x80000000))
         {
-            gUnknown_03001B30.unk14 |= 32;
+            gUnknown_03001B30.failType |= FAIL_TYPE_TIME_UP;
             gGeneralTimer = 0;
             gUnknown_03001A1C |= 0x400;
             gUnknown_03000029 = 0;

@@ -318,34 +318,3 @@ _08031A30:
 _08031A34:
 	.4byte gThemeCardPtr
 	THUMB_FUNC_END load_level_with_theme_card_080319BC
-
-	THUMB_FUNC_START get_theme_card_name_08031A38
-get_theme_card_name_08031A38: @ 0x08031A38
-	push {lr}
-	cmp r0, #0
-	bne _08031A58
-	ldr r0, _08031A4C  @ =gThemeCardExists_03000280
-	ldr r0, [r0]
-	cmp r0, #0
-	bne _08031A54
-	ldr r0, _08031A50  @ =gTextBlank2
-	b _08031A5A
-	.byte 0x00
-	.byte 0x00
-_08031A4C:
-	.4byte gThemeCardExists_03000280
-_08031A50:
-	.4byte gTextBlank2
-_08031A54:
-	ldr r0, _08031A60  @ =gThemeCardPtr
-	ldr r0, [r0]
-_08031A58:
-	add r0, r0, #12
-_08031A5A:
-	pop {r1}
-	bx r1
-	.byte 0x00
-	.byte 0x00
-_08031A60:
-	.4byte gThemeCardPtr
-	THUMB_FUNC_END get_theme_card_name_08031A38

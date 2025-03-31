@@ -1902,7 +1902,7 @@ _08009BE0:
 	bne _08009BEC
 	b _08009E9C
 _08009BEC:
-	ldr r0, _08009C48  @ =gUnknown_03001BC8
+	ldr r0, _08009C48  @ =gMiniMariosAliveInLevel_03001BC8
 	ldr r1, _08009C4C  @ =gMiniMariosRescued_03001BA0
 	ldrb r2, [r0]
 	ldrb r0, [r1]
@@ -1950,7 +1950,7 @@ _08009C04:
 	strb r0, [r5]
 	b _08009C68
 _08009C48:
-	.4byte gUnknown_03001BC8
+	.4byte gMiniMariosAliveInLevel_03001BC8
 _08009C4C:
 	.4byte gMiniMariosRescued_03001BA0
 _08009C50:
@@ -5196,9 +5196,9 @@ _0800B448:
 _0800B44C:
 	mov r1, #0
 	mov r12, r1
-	ldr r3, _0800B4B8  @ =gUnknown_03001BC8
+	ldr r3, _0800B4B8  @ =gMiniMariosAliveInLevel_03001BC8
 	ldrb r1, [r3]
-	ldr r2, _0800B4BC  @ =gUnknown_03001BCC
+	ldr r2, _0800B4BC  @ =gMiniMariosLost_03001BCC
 	ldrb r0, [r2]
 	sub r1, r1, r0
 	cmp r12, r1
@@ -5251,9 +5251,9 @@ _0800B46C:
 	.byte 0x00
 	.byte 0x00
 _0800B4B8:
-	.4byte gUnknown_03001BC8
+	.4byte gMiniMariosAliveInLevel_03001BC8
 _0800B4BC:
-	.4byte gUnknown_03001BCC
+	.4byte gMiniMariosLost_03001BCC
 _0800B4C0:
 	.4byte REG_DMA3SAD
 _0800B4C4:
@@ -5317,9 +5317,9 @@ _0800B51E:
 	add r9, r9, r1
 	mov r2, #1
 	add r12, r12, r2
-	ldr r3, _0800B5D4  @ =gUnknown_03001BC8
+	ldr r3, _0800B5D4  @ =gMiniMariosAliveInLevel_03001BC8
 	ldrb r0, [r3]
-	ldr r2, _0800B5D8  @ =gUnknown_03001BCC
+	ldr r2, _0800B5D8  @ =gMiniMariosLost_03001BCC
 	ldrb r1, [r2]
 	sub r0, r0, r1
 	cmp r12, r0
@@ -5397,9 +5397,9 @@ _0800B5CC:
 _0800B5D0:
 	.4byte 0x000003FF
 _0800B5D4:
-	.4byte gUnknown_03001BC8
+	.4byte gMiniMariosAliveInLevel_03001BC8
 _0800B5D8:
-	.4byte gUnknown_03001BCC
+	.4byte gMiniMariosLost_03001BCC
 _0800B5DC:
 	.4byte REG_DMA3SAD
 _0800B5E0:

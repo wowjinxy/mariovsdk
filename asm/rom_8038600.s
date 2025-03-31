@@ -21941,7 +21941,7 @@ sub_08042614: @ 0x08042614
 	push {r5-r7}
 	sub sp, sp, #24
 	ldr r1, _0804270C  @ =0x03001AA0
-	ldr r0, _08042710  @ =gUnknown_03001BC8
+	ldr r0, _08042710  @ =gMiniMariosAliveInLevel_03001BC8
 	ldrb r0, [r0]
 	add r2, r1, #0
 	add r2, r2, #105
@@ -22068,7 +22068,7 @@ _08042688:
 _0804270C:
 	.4byte 0x03001AA0
 _08042710:
-	.4byte gUnknown_03001BC8
+	.4byte gMiniMariosAliveInLevel_03001BC8
 _08042714:
 	.4byte gUnknown_03001B90
 _08042718:
@@ -40838,9 +40838,9 @@ _0804A82E:
 	mov r0, #0
 	ldr r2, _0804A894  @ =gMiniMariosRescued_03001BA0
 	strb r0, [r2]
-	ldr r1, _0804A898  @ =gUnknown_03001BCC
+	ldr r1, _0804A898  @ =gMiniMariosLost_03001BCC
 	strb r0, [r1]
-	ldr r2, _0804A89C  @ =gUnknown_03001BC8
+	ldr r2, _0804A89C  @ =gMiniMariosAliveInLevel_03001BC8
 	strb r0, [r2]
 	ldr r1, _0804A8A0  @ =gUnknown_03000396
 	strb r0, [r1]
@@ -40882,9 +40882,9 @@ _0804A890:
 _0804A894:
 	.4byte gMiniMariosRescued_03001BA0
 _0804A898:
-	.4byte gUnknown_03001BCC
+	.4byte gMiniMariosLost_03001BCC
 _0804A89C:
-	.4byte gUnknown_03001BC8
+	.4byte gMiniMariosAliveInLevel_03001BC8
 _0804A8A0:
 	.4byte gUnknown_03000396
 _0804A8A4:

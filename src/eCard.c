@@ -80,7 +80,7 @@ int sub_08031C54(s32 *arg0, struct Struct08031C54 *arg1)
     return -1;
 }
 
-void sub_08031D44(int arg0, struct Struct08031C54 *arg1, int arg2, int *arg3)
+void sub_08031D44(int arg0, struct Struct08031C54 *arg1, int arg2, struct CardSomething *arg3)
 {
     int i;
 

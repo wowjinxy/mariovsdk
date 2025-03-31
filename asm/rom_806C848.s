@@ -5562,7 +5562,7 @@ sub_0806F898: @ 0x0806F898
 	str r0, [r4]
 _0806F8E0:
 	mov r3, #0
-	ldr r0, _0806F9AC  @ =gUnknown_03001BC8
+	ldr r0, _0806F9AC  @ =gMiniMariosAliveInLevel_03001BC8
 	ldr r5, _0806F9B0  @ =0x03000720
 	ldr r1, _0806F9B4  @ =gUnknown_0854301C
 	mov r8, r1
@@ -5664,7 +5664,7 @@ _0806F9A4:
 _0806F9A8:
 	.4byte 0x03000754
 _0806F9AC:
-	.4byte gUnknown_03001BC8
+	.4byte gMiniMariosAliveInLevel_03001BC8
 _0806F9B0:
 	.4byte 0x03000720
 _0806F9B4:
@@ -5927,7 +5927,7 @@ sub_0806FB90: @ 0x0806FB90
 	mov r5, r8
 	push {r5-r7}
 	mov r5, #0
-	ldr r0, _0806FC04  @ =gUnknown_03001BC8
+	ldr r0, _0806FC04  @ =gMiniMariosAliveInLevel_03001BC8
 	mov r12, r0
 	ldr r6, _0806FC08  @ =0x03000720
 	ldr r0, _0806FC0C  @ =gUnknown_03001940
@@ -5984,7 +5984,7 @@ _0806FBE8:
 	.byte 0x00
 	.byte 0x00
 _0806FC04:
-	.4byte gUnknown_03001BC8
+	.4byte gMiniMariosAliveInLevel_03001BC8
 _0806FC08:
 	.4byte 0x03000720
 _0806FC0C:
@@ -6688,7 +6688,7 @@ sub_08070058: @ 0x08070058
 	strh r0, [r7]
 	mov r0, #0
 	mov r10, r0
-	ldr r1, _08070274  @ =gUnknown_03001BC8
+	ldr r1, _08070274  @ =gMiniMariosAliveInLevel_03001BC8
 	ldrb r1, [r1]
 	cmp r10, r1
 	bcs _08070226
@@ -6804,7 +6804,7 @@ _08070142:
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	mov r10, r0
-	ldr r0, _08070274  @ =gUnknown_03001BC8
+	ldr r0, _08070274  @ =gMiniMariosAliveInLevel_03001BC8
 	ldrb r0, [r0]
 	cmp r10, r0
 	bcc _08070142
@@ -6850,7 +6850,7 @@ _0807026C:
 _08070270:
 	.4byte gCameraVerticalOffset
 _08070274:
-	.4byte gUnknown_03001BC8
+	.4byte gMiniMariosAliveInLevel_03001BC8
 _08070278:
 	.4byte gUnknown_085BD588
 _0807027C:

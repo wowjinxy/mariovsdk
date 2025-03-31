@@ -58,6 +58,7 @@
 	X(asm/bobomb_explode.o) \
 	X(asm/rom_802F5C0.o) \
 	X(asm/theme_card.o) \
+	X(src/theme_card.o) \
 	X(asm/rom_8031A64.o) \
 	X(src/eCard.o) \
 	X(src/level_view.o) \
@@ -79,7 +80,7 @@
 	X(data/main_level_mini_mario_data.o) \
 	X(data/plus_level_mini_mario_data.o) \
 	X(data/sprites.o) \
-	X(data/data3.o) \
+	X(data/level_intro_sprite_velocity_data.o) \
 	X(data/world_one_sprites/world_one_dk_boss_data.o) \
 	X(data/world_one_sprites/world_one_dk_boss_falling_objects_data.o) \
 	X(data/world_two_sprites/world_two_dk_boss_data.o) \
@@ -99,7 +100,7 @@
 	X(data/plus_boss_sprites/dk_mech_arms_data.o) \
 	X(data/plus_boss_sprites/dk_mech_mini_mario_data.o) \
 	X(data/plus_boss_sprites/dk_mech_boss_data.o) \
-	X(data/world_four_moving_platform_data.o) \
+	X(data/world_four_sprites/world_four_moving_platform_data.o) \
 	X(data/level_mm_opening_data.o) \
 	X(data/data_8669D6C.o) \
 	X(data/common_sprites/mario_sprite_related.o) \
@@ -516,8 +517,8 @@ SECTIONS
 		. = 0x1BA0;		gMiniMariosRescued_03001BA0 = .;
 		. = 0x1BA4;		gUnknown_03001BA4 = .;
 		. = 0x1BB0;		gUnknown_03001BB0 = .;
-		. = 0x1BC8;		gUnknown_03001BC8 = .;
-		. = 0x1BCC;		gUnknown_03001BCC = .;
+		. = 0x1BC8;		gMiniMariosAliveInLevel_03001BC8 = .;
+		. = 0x1BCC;		gMiniMariosLost_03001BCC = .;
 		. = 0x1BD0;		gUnknown_03001BD0 = .;
 		
 		. = 0x1BDC;		gUnknown_03001BDC = .;
