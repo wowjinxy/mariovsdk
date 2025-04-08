@@ -52,15 +52,16 @@
 	X(src/expert_level_menu_data.o)\
 	X(src/rom_802B798.o) \
 	X(src/movie_player.o) \
-	X(src/rom_802D614.o) \
+	X(src/eCard_scan.o) \
 	X(asm/eCard.o) \
+	X(asm/eCard_debug.o) \
 	X(asm/level_results_2.o) \
 	X(asm/bobomb_explode.o) \
 	X(asm/rom_802F5C0.o) \
 	X(asm/theme_card.o) \
 	X(src/theme_card.o) \
 	X(asm/rom_8031A64.o) \
-	X(src/eCard.o) \
+	X(src/eCard_menu.o) \
 	X(src/level_view.o) \
 	X(src/rom_8032408.o) \
 	X(src/rom_8032814.o) \
@@ -289,8 +290,8 @@ SECTIONS
 		. = 0x168;		gUnknown_03000168 = .;
 		. = 0x170;		gUnknown_03000170 = .;
 		. = 0x1A0;		gMoviePlayerParams = .;
-		. = 0x1A8;		gUnknown_030001A8 = .;
-		. = 0x1AC;		gUnknown_030001AC = .;
+		. = 0x1A8;		gECardMenuState_030001A8 = .;
+		. = 0x1AC;		gCardReadFailReason_030001AC = .;
 		. = 0x1B0;		gUnknown_030001B0 = .;
 		. = 0x1B4;		gUnknown_030001B4 = .;
 		. = 0x1B8;		gUnknown_030001B8 = .;
@@ -465,7 +466,7 @@ SECTIONS
 		. = 0x1300;		gIntrMainBuffer = .;
 		. = 0x1700;		gUnknown_03001700 = .;
 		. = 0x1704;		gUnknown_03001704 = .;
-		. = 0x1708;		gUnknown_03001708 = .;
+		. = 0x1708;		gCurrentInput = .;
 		. = 0x170C;		gCurrentLevelHeight = .;
 		. = 0x1710;		gCameraVerticalOffset = .;
 		. = 0x1714;		gUnknown_03001714 = .;

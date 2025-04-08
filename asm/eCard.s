@@ -8,7 +8,7 @@ e_card_scan_main: @ 0x0802D6DC
 	bl process_input
 	bl update_fade_from_black
 	mov r1, #0
-	ldr r4, _0802D710  @ =gUnknown_030001A8
+	ldr r4, _0802D710  @ = gECardMenuState_030001A8
 	ldr r0, [r4]
 	sub r0, r0, #1
 	cmp r0, #2
@@ -30,7 +30,7 @@ _0802D704:
 	.byte 0x00
 	.byte 0x00
 _0802D710:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802D714:
 	.4byte _0802D718
 _0802D718:
@@ -66,7 +66,7 @@ _0802D754:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _0802D788  @ =gUnknown_030001A8
+	ldr r1, _0802D788  @ = gECardMenuState_030001A8
 	mov r0, #1
 	str r0, [r1]
 	ldr r0, _0802D78C  @ =gUnknown_030001B8
@@ -77,7 +77,7 @@ _0802D754:
 _0802D784:
 	.4byte gNewKeys
 _0802D788:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802D78C:
 	.4byte gUnknown_030001B8
 _0802D790:
@@ -114,14 +114,14 @@ _0802D7B0:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _0802D7DC  @ =gUnknown_030001A8
+	ldr r1, _0802D7DC  @ = gECardMenuState_030001A8
 	mov r0, #2
 	str r0, [r1]
 	b _0802DBD4
 _0802D7D8:
 	.4byte gUnknown_030001B4
 _0802D7DC:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802D7E0:
 	ldr r0, _0802D7FC  @ =gNewKeys
 	ldrh r1, [r0]
@@ -167,10 +167,10 @@ _0802D820:
 	mov r3, #64
 	bl play_sound_effect_08071990
 	str r4, [r5]
-	ldr r1, _0802D848  @ =gUnknown_030001A8
+	ldr r1, _0802D848  @ = gECardMenuState_030001A8
 	mov r0, #6
 	str r0, [r1]
-	ldr r1, _0802D84C  @ =gUnknown_030001AC
+	ldr r1, _0802D84C  @ =gCardReadFailReason_030001AC
 	ldr r0, _0802D850  @ =gUnknown_0807C850
 	add r0, r0, #40
 	str r0, [r1]
@@ -178,9 +178,9 @@ _0802D820:
 	.byte 0x00
 	.byte 0x00
 _0802D848:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802D84C:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802D850:
 	.4byte gUnknown_0807C850
 _0802D854:
@@ -200,10 +200,10 @@ _0802D854:
 	bl play_sound_effect_08071990
 	ldr r0, _0802D888  @ =gUnknown_030001B8
 	str r4, [r0]
-	ldr r1, _0802D88C  @ =gUnknown_030001A8
+	ldr r1, _0802D88C  @ = gECardMenuState_030001A8
 	mov r0, #6
 	str r0, [r1]
-	ldr r1, _0802D890  @ =gUnknown_030001AC
+	ldr r1, _0802D890  @ =gCardReadFailReason_030001AC
 	ldr r0, _0802D894  @ =gUnknown_0807C850
 	add r0, r0, #80
 	str r0, [r1]
@@ -211,9 +211,9 @@ _0802D854:
 _0802D888:
 	.4byte gUnknown_030001B8
 _0802D88C:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802D890:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802D894:
 	.4byte gUnknown_0807C850
 _0802D898:
@@ -235,7 +235,7 @@ _0802D898:
 	mov r2, #16
 	mov r3, #64
 	bl play_sound_effect_08071990
-	ldr r1, _0802D8D4  @ =gUnknown_030001A8
+	ldr r1, _0802D8D4  @ = gECardMenuState_030001A8
 	mov r0, #3
 	str r0, [r1]
 	bl sub_08038280
@@ -247,7 +247,7 @@ _0802D8CC:
 _0802D8D0:
 	.4byte gUnknown_030001B8
 _0802D8D4:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802D8D8:
 	mov r0, #2
 	and r0, r0, r2
@@ -295,10 +295,10 @@ _0802D910:
 	bl play_sound_effect_08071990
 	ldr r0, _0802D944  @ =gUnknown_030001B8
 	str r4, [r0]
-	ldr r1, _0802D948  @ =gUnknown_030001A8
+	ldr r1, _0802D948  @ = gECardMenuState_030001A8
 	mov r0, #6
 	str r0, [r1]
-	ldr r1, _0802D94C  @ =gUnknown_030001AC
+	ldr r1, _0802D94C  @ =gCardReadFailReason_030001AC
 	ldr r0, _0802D950  @ =gUnknown_0807C850
 	add r0, r0, #80
 	str r0, [r1]
@@ -308,9 +308,9 @@ _0802D910:
 _0802D944:
 	.4byte gUnknown_030001B8
 _0802D948:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802D94C:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802D950:
 	.4byte gUnknown_0807C850
 _0802D954:
@@ -347,10 +347,10 @@ _0802D980:
 	mov r3, #64
 	bl play_sound_effect_08071990
 	str r4, [r5]
-	ldr r1, _0802D9A8  @ =gUnknown_030001A8
+	ldr r1, _0802D9A8  @ = gECardMenuState_030001A8
 	mov r0, #6
 	str r0, [r1]
-	ldr r1, _0802D9AC  @ =gUnknown_030001AC
+	ldr r1, _0802D9AC  @ =gCardReadFailReason_030001AC
 	ldr r0, _0802D9B0  @ =gUnknown_0807C850
 	add r0, r0, #40
 	str r0, [r1]
@@ -358,9 +358,9 @@ _0802D980:
 	.byte 0x00
 	.byte 0x00
 _0802D9A8:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802D9AC:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802D9B0:
 	.4byte gUnknown_0807C850
 _0802D9B4:
@@ -378,16 +378,16 @@ _0802D9C2:
 	strb r0, [r1]
 	ldr r4, _0802D9F8  @ =gUnknown_030001C0
 	ldr r0, [r4]
-	bl sub_0802F12C
+	bl check_card_checksum_0802F12C
 	add r2, r0, #0
 	cmp r2, #0
 	bne _0802DA0C
 	ldr r0, _0802D9F0  @ =gUnknown_030001B8
 	str r2, [r0]
-	ldr r1, _0802D9FC  @ =gUnknown_030001A8
+	ldr r1, _0802D9FC  @ = gECardMenuState_030001A8
 	mov r0, #6
 	str r0, [r1]
-	ldr r1, _0802DA00  @ =gUnknown_030001AC
+	ldr r1, _0802DA00  @ =gCardReadFailReason_030001AC
 	ldr r0, _0802DA04  @ =gUnknown_0807C850
 	str r0, [r1]
 	ldr r0, _0802DA08  @ =gUnknown_030001B0
@@ -402,9 +402,9 @@ _0802D9F4:
 _0802D9F8:
 	.4byte gUnknown_030001C0
 _0802D9FC:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DA00:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802DA04:
 	.4byte gUnknown_0807C850
 _0802DA08:
@@ -449,7 +449,7 @@ _0802DA4C:
 	neg r0, r0
 	cmp r3, r0
 	bne _0802DA6C
-	ldr r1, _0802DA68  @ =gUnknown_030001A8
+	ldr r1, _0802DA68  @ = gECardMenuState_030001A8
 	mov r0, #4
 	str r0, [r1]
 	b _0802DBD4
@@ -458,21 +458,21 @@ _0802DA4C:
 _0802DA64:
 	.4byte gUnknown_030001B8
 _0802DA68:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DA6C:
 	cmp r3, #3
 	bne _0802DA7C
-	ldr r1, _0802DA78  @ =gUnknown_030001A8
+	ldr r1, _0802DA78  @ = gECardMenuState_030001A8
 	mov r0, #5
 	str r0, [r1]
 	b _0802DBD4
 _0802DA78:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DA7C:
-	ldr r1, _0802DA98  @ =gUnknown_030001A8
+	ldr r1, _0802DA98  @ = gECardMenuState_030001A8
 	mov r0, #6
 	str r0, [r1]
-	ldr r2, _0802DA9C  @ =gUnknown_030001AC
+	ldr r2, _0802DA9C  @ =gCardReadFailReason_030001AC
 	lsl r0, r3, #2
 	add r0, r0, r3
 	lsl r0, r0, #3
@@ -486,9 +486,9 @@ _0802DA90:
 	.byte 0x00
 	.byte 0x00
 _0802DA98:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DA9C:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802DAA0:
 	.4byte gUnknown_0807C850
 _0802DAA4:
@@ -502,7 +502,7 @@ _0802DAA8:
 	bne _0802DAB6
 	b _0802DBD4
 _0802DAB6:
-	ldr r1, _0802DAD8  @ =gUnknown_030001A8
+	ldr r1, _0802DAD8  @ = gECardMenuState_030001A8
 	mov r0, #7
 	str r0, [r1]
 	mov r1, #0
@@ -519,7 +519,7 @@ _0802DAB6:
 _0802DAD4:
 	.4byte gNewKeys
 _0802DAD8:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DADC:
 	ldr r0, _0802DAEC  @ =gNewKeys
 	ldrh r1, [r0]
@@ -560,7 +560,7 @@ _0802DB18:
 	strb r0, [r4]
 	mov r0, #0
 	strb r0, [r4, #1]
-	ldr r1, _0802DB38  @ =gUnknown_030001A8
+	ldr r1, _0802DB38  @ = gECardMenuState_030001A8
 	mov r0, #9
 	str r0, [r1]
 	b _0802DBD4
@@ -569,21 +569,21 @@ _0802DB30:
 _0802DB34:
 	.4byte gUnknown_030001BC
 _0802DB38:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DB3C:
 	ldr r0, _0802DB50  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
 	mov r0, #2
 	mov r2, #104
 	bl write_flash_sector_0802A370
-	ldr r1, _0802DB54  @ =gUnknown_030001A8
+	ldr r1, _0802DB54  @ = gECardMenuState_030001A8
 	mov r0, #10
 	str r0, [r1]
 	b _0802DBD4
 _0802DB50:
 	.4byte gEWorldLevelCountPtr
 _0802DB54:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DB58:
 	ldr r0, _0802DB7C  @ =gEWorldLevelCountPtr
 	ldr r1, [r0]
@@ -618,14 +618,14 @@ _0802DB8C:
 _0802DB8E:
 	bl load_theme_card_08031978
 _0802DB92:
-	ldr r1, _0802DB9C  @ =gUnknown_030001A8
+	ldr r1, _0802DB9C  @ = gECardMenuState_030001A8
 	mov r0, #11
 	str r0, [r1]
 	b _0802DBD4
 	.byte 0x00
 	.byte 0x00
 _0802DB9C:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DBA0:
 	mov r1, #0
 	str r1, [sp]
@@ -645,13 +645,13 @@ _0802DBB6:
 	b _0802DBD4
 _0802DBC0:
 	ldr r0, _0802DBE0  @ =gUnknown_030001B0
-	ldr r1, _0802DBE4  @ =gUnknown_030001AC
+	ldr r1, _0802DBE4  @ =gCardReadFailReason_030001AC
 	ldr r1, [r1]
 	bl sub_08031C54
 	add r1, r0, #0
 	cmp r1, #0
 	blt _0802DBD4
-	ldr r0, _0802DBE8  @ =gUnknown_030001A8
+	ldr r0, _0802DBE8  @ = gECardMenuState_030001A8
 	str r1, [r0]
 _0802DBD4:
 	bl sub_0802ECC8
@@ -662,9 +662,9 @@ _0802DBD4:
 _0802DBE0:
 	.4byte gUnknown_030001B0
 _0802DBE4:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802DBE8:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 	THUMB_FUNC_END e_card_scan_main
 
 	THUMB_FUNC_START e_card_scan_loop
@@ -687,7 +687,7 @@ e_card_scan_loop: @ 0x0802DBEC
 	bl sub_080351E0
 	mov r6, #26
 	ldr r1, _0802DCDC  @ =gUnknown_0807C9CC
-	ldr r5, _0802DCE0  @ =gUnknown_030001A8
+	ldr r5, _0802DCE0  @ = gECardMenuState_030001A8
 	ldr r0, [r5]
 	lsl r0, r0, #2
 	add r0, r0, r1
@@ -707,7 +707,7 @@ _0802DC34:
 	ldr r2, [r5]
 	cmp r2, #6
 	bne _0802DC46
-	ldr r0, _0802DCE8  @ =gUnknown_030001AC
+	ldr r0, _0802DCE8  @ =gCardReadFailReason_030001AC
 	ldr r0, [r0]
 	add r0, r0, #36
 	ldrb r0, [r0]
@@ -727,13 +727,13 @@ _0802DC46:
 	bl draw_text_font
 	add r6, r0, #0
 _0802DC60:
-	ldr r4, _0802DCE0  @ =gUnknown_030001A8
+	ldr r4, _0802DCE0  @ = gECardMenuState_030001A8
 	ldr r0, [r4]
 	cmp r0, #6
 	bne _0802DC7A
 	ldr r0, _0802DCF0  @ =gUnknown_030001B0
 	ldr r0, [r0]
-	ldr r1, _0802DCE8  @ =gUnknown_030001AC
+	ldr r1, _0802DCE8  @ =gCardReadFailReason_030001AC
 	ldr r1, [r1]
 	ldr r2, _0802DCF4  @ =gUnknown_030001C0
 	ldr r3, [r2]
@@ -795,11 +795,11 @@ _0802DCD8:
 _0802DCDC:
 	.4byte gUnknown_0807C9CC
 _0802DCE0:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DCE4:
 	.4byte 0xFFFF8001
 _0802DCE8:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802DCEC:
 	.4byte gUnknown_0807C990
 _0802DCF0:
@@ -858,13 +858,13 @@ e_card_scan_init_callback: @ 0x0802DD4C
 	ldr r2, [r0]
 	cmp r2, #0
 	bne _0802DD68
-	ldr r0, _0802DDC4  @ =gUnknown_030001A8
+	ldr r0, _0802DDC4  @ = gECardMenuState_030001A8
 	str r2, [r0]
 	ldr r1, _0802DDC8  @ =gUnknown_030001C0
 	mov r0, #128
 	lsl r0, r0, #18
 	str r0, [r1]
-	ldr r0, _0802DDCC  @ =gUnknown_030001AC
+	ldr r0, _0802DDCC  @ =gCardReadFailReason_030001AC
 	str r2, [r0]
 _0802DD68:
 	mov r0, #3
@@ -912,11 +912,11 @@ _0802DD68:
 _0802DDC0:
 	.4byte gUnknown_030001B4
 _0802DDC4:
-	.4byte gUnknown_030001A8
+	.4byte  gECardMenuState_030001A8
 _0802DDC8:
 	.4byte gUnknown_030001C0
 _0802DDCC:
-	.4byte gUnknown_030001AC
+	.4byte gCardReadFailReason_030001AC
 _0802DDD0:
 	.4byte gUnknown_030001BC
 _0802DDD4:
@@ -1286,7 +1286,7 @@ _0802E08C:
 	add r1, r1, #202
 	mov r3, #0
 	strh r0, [r1]
-	ldr r0, _0802E0C8  @ =gUnknown_03001708
+	ldr r0, _0802E0C8  @ =gCurrentInput
 	ldrh r1, [r0]
 	mov r0, #64
 	and r0, r0, r1
@@ -1309,7 +1309,7 @@ _0802E08C:
 _0802E0C4:
 	.4byte gUnknown_0807CA2C
 _0802E0C8:
-	.4byte gUnknown_03001708
+	.4byte gCurrentInput
 _0802E0CC:
 	mov r5, #128
 	add r0, r5, #0
@@ -1672,7 +1672,7 @@ _0802E35C:
 	mov r10, r2
 	add r6, r1, #0
 	and r6, r6, r2
-	ldr r0, _0802E3AC  @ =gUnknown_03001708
+	ldr r0, _0802E3AC  @ =gCurrentInput
 	ldrh r3, [r0]
 	mov r0, #64
 	and r0, r0, r3
@@ -1700,7 +1700,7 @@ _0802E35C:
 	.byte 0x00
 	.byte 0x00
 _0802E3AC:
-	.4byte gUnknown_03001708
+	.4byte gCurrentInput
 _0802E3B0:
 	sub r4, r7, #1
 	mov r5, #0
@@ -3535,8 +3535,8 @@ _0802F126:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_0802F12C
-sub_0802F12C: @ 0x0802F12C
+	THUMB_FUNC_START check_card_checksum_0802F12C
+check_card_checksum_0802F12C: @ 0x0802F12C
 	push {r4,lr}
 	add r2, r0, #0
 	add r1, r2, #4
@@ -3572,7 +3572,7 @@ _0802F162:
 	pop {r4}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_0802F12C
+	THUMB_FUNC_END check_card_checksum_0802F12C
 
 	THUMB_FUNC_START sub_0802F168
 sub_0802F168: @ 0x0802F168
@@ -3657,533 +3657,3 @@ sub_0802F1D4: @ 0x0802F1D4
 _0802F1E8:
 	.4byte gEWorldLevelCountPtr
 	THUMB_FUNC_END sub_0802F1D4
-
-	THUMB_FUNC_START e_world_debug_main
-e_world_debug_main: @ 0x0802F1EC
-	push {r4-r7,lr}
-	sub sp, sp, #12
-	bl process_input
-	bl level_callback_08008238
-	ldr r7, _0802F228  @ =0x030001C8
-	ldrb r1, [r7]
-	cmp r1, #0
-	beq _0802F202
-	b _0802F306
-_0802F202:
-	ldr r0, _0802F22C  @ =gUnknown_03001708
-	ldrh r2, [r0]
-	mov r0, #64
-	and r0, r0, r2
-	cmp r0, #0
-	beq _0802F234
-	ldr r2, _0802F230  @ =0x030001C9
-	ldrb r0, [r2]
-	cmp r0, #0
-	bne _0802F218
-	b _0802F432
-_0802F218:
-	sub r0, r0, #1
-	strb r0, [r2]
-	str r1, [sp]
-	mov r0, #128
-	str r0, [sp, #4]
-	str r1, [sp, #8]
-	mov r0, #178
-	b _0802F404
-_0802F228:
-	.4byte 0x030001C8
-_0802F22C:
-	.4byte gUnknown_03001708
-_0802F230:
-	.4byte 0x030001C9
-_0802F234:
-	mov r5, #128
-	add r0, r5, #0
-	and r0, r0, r2
-	lsl r0, r0, #16
-	lsr r4, r0, #16
-	cmp r4, #0
-	beq _0802F260
-	ldr r2, _0802F25C  @ =0x030001C9
-	ldrb r0, [r2]
-	add r1, r0, #0
-	cmp r1, #0
-	beq _0802F24E
-	b _0802F432
-_0802F24E:
-	add r0, r0, #1
-	strb r0, [r2]
-	str r1, [sp]
-	str r5, [sp, #4]
-	str r1, [sp, #8]
-	mov r0, #178
-	b _0802F404
-_0802F25C:
-	.4byte 0x030001C9
-_0802F260:
-	ldr r0, _0802F2A8  @ =gNewKeys
-	ldrh r2, [r0]
-	mov r1, #9
-	and r1, r1, r2
-	cmp r1, #0
-	beq _0802F2E0
-	str r4, [sp]
-	str r5, [sp, #4]
-	str r4, [sp, #8]
-	mov r0, #35
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl play_sound_effect_08071990
-	ldr r6, _0802F2AC  @ =0x030001C9
-	ldrb r0, [r6]
-	cmp r0, #0
-	bne _0802F2BC
-	ldr r0, _0802F2B0  @ =gEWorldLevelCountPtr
-	ldr r0, [r0]
-	ldr r0, [r0]
-	cmp r0, #11
-	bhi _0802F2B4
-	str r4, [sp]
-	str r5, [sp, #4]
-	str r4, [sp, #8]
-	mov r0, #35
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl play_sound_effect_08071990
-	mov r0, #26
-	b _0802F2FE
-	.byte 0x00
-	.byte 0x00
-_0802F2A8:
-	.4byte gNewKeys
-_0802F2AC:
-	.4byte 0x030001C9
-_0802F2B0:
-	.4byte gEWorldLevelCountPtr
-_0802F2B4:
-	str r4, [sp]
-	str r5, [sp, #4]
-	str r4, [sp, #8]
-	b _0802F402
-_0802F2BC:
-	str r4, [sp]
-	str r5, [sp, #4]
-	str r4, [sp, #8]
-	mov r0, #35
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl play_sound_effect_08071990
-	ldr r0, _0802F2DC  @ =0x030001CA
-	strb r4, [r6]
-	strb r4, [r0]
-	mov r0, #1
-	strb r0, [r7]
-	b _0802F432
-	.byte 0x00
-	.byte 0x00
-_0802F2DC:
-	.4byte 0x030001CA
-_0802F2E0:
-	mov r0, #2
-	and r0, r0, r2
-	cmp r0, #0
-	bne _0802F2EA
-	b _0802F432
-_0802F2EA:
-	str r1, [sp]
-	str r5, [sp, #4]
-	str r1, [sp, #8]
-	mov r0, #22
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl play_sound_effect_08071990
-	mov r0, #25
-_0802F2FE:
-	mov r1, #0
-	bl change_main_state
-	b _0802F432
-_0802F306:
-	ldr r0, _0802F340  @ =gUnknown_03001708
-	ldrh r1, [r0]
-	mov r0, #64
-	and r0, r0, r1
-	lsl r0, r0, #16
-	lsr r4, r0, #16
-	cmp r4, #0
-	beq _0802F34C
-	ldr r2, _0802F344  @ =0x030001C9
-	ldrb r0, [r2]
-	cmp r0, #0
-	bne _0802F320
-	b _0802F432
-_0802F320:
-	sub r1, r0, #1
-	strb r1, [r2]
-	ldr r2, _0802F348  @ =0x030001CA
-	lsl r0, r1, #24
-	lsr r0, r0, #24
-	ldrb r3, [r2]
-	cmp r0, r3
-	bcs _0802F332
-	strb r1, [r2]
-_0802F332:
-	mov r1, #0
-	str r1, [sp]
-	mov r0, #128
-	str r0, [sp, #4]
-	str r1, [sp, #8]
-	mov r0, #178
-	b _0802F404
-_0802F340:
-	.4byte gUnknown_03001708
-_0802F344:
-	.4byte 0x030001C9
-_0802F348:
-	.4byte 0x030001CA
-_0802F34C:
-	mov r5, #128
-	add r0, r5, #0
-	and r0, r0, r1
-	lsl r0, r0, #16
-	lsr r1, r0, #16
-	cmp r1, #0
-	beq _0802F3B0
-	ldr r3, _0802F378  @ =0x030001C9
-	ldrb r0, [r3]
-	add r0, r0, #1
-	strb r0, [r3]
-	ldr r1, _0802F37C  @ =gPreloadedCardETable
-	ldrb r2, [r3]
-	lsl r0, r2, #3
-	add r0, r0, r1
-	ldr r0, [r0]
-	cmp r0, #0
-	bne _0802F380
-	sub r0, r2, #1
-	strb r0, [r3]
-	b _0802F392
-	.byte 0x00
-	.byte 0x00
-_0802F378:
-	.4byte 0x030001C9
-_0802F37C:
-	.4byte  gPreloadedCardETable
-_0802F380:
-	str r4, [sp]
-	str r5, [sp, #4]
-	str r4, [sp, #8]
-	mov r0, #178
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl play_sound_effect_08071990
-_0802F392:
-	ldr r0, _0802F3A8  @ =0x030001C9
-	ldrb r1, [r0]
-	ldr r3, _0802F3AC  @ =0x030001CA
-	ldrb r2, [r3]
-	add r0, r2, #6
-	cmp r1, r0
-	blt _0802F432
-	add r0, r2, #1
-	strb r0, [r3]
-	b _0802F432
-	.byte 0x00
-	.byte 0x00
-_0802F3A8:
-	.4byte 0x030001C9
-_0802F3AC:
-	.4byte 0x030001CA
-_0802F3B0:
-	ldr r0, _0802F3EC  @ =gNewKeys
-	ldrh r2, [r0]
-	mov r4, #9
-	and r4, r4, r2
-	cmp r4, #0
-	beq _0802F410
-	ldr r0, _0802F3F0  @ =gEWorldLevelCountPtr
-	ldr r0, [r0]
-	ldr r0, [r0]
-	cmp r0, #11
-	bhi _0802F3FC
-	str r1, [sp]
-	str r5, [sp, #4]
-	str r1, [sp, #8]
-	mov r0, #35
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl play_sound_effect_08071990
-	ldr r1, _0802F3F4  @ =gPreloadedCardETable
-	ldr r0, _0802F3F8  @ =0x030001C9
-	ldrb r0, [r0]
-	lsl r0, r0, #3
-	add r1, r1, #4
-	add r0, r0, r1
-	ldr r0, [r0]
-	bl sub_0802D614
-	b _0802F432
-_0802F3EC:
-	.4byte gNewKeys
-_0802F3F0:
-	.4byte gEWorldLevelCountPtr
-_0802F3F4:
-	.4byte gPreloadedCardETable
-_0802F3F8:
-	.4byte 0x030001C9
-_0802F3FC:
-	str r1, [sp]
-	str r5, [sp, #4]
-	str r1, [sp, #8]
-_0802F402:
-	mov r0, #27
-_0802F404:
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl play_sound_effect_08071990
-	b _0802F432
-_0802F410:
-	mov r0, #2
-	and r0, r0, r2
-	cmp r0, #0
-	beq _0802F432
-	str r4, [sp]
-	str r5, [sp, #4]
-	str r4, [sp, #8]
-	mov r0, #22
-	mov r1, #8
-	mov r2, #16
-	mov r3, #64
-	bl play_sound_effect_08071990
-	strb r4, [r7]
-	ldr r1, _0802F43C  @ =0x030001C9
-	mov r0, #1
-	strb r0, [r1]
-_0802F432:
-	add sp, sp, #12
-	pop {r4-r7}
-	pop {r0}
-	bx r0
-	.byte 0x00
-	.byte 0x00
-_0802F43C:
-	.4byte 0x030001C9
-	THUMB_FUNC_END e_world_debug_main
-
-	THUMB_FUNC_START e_world_debug_loop
-e_world_debug_loop: @ 0x0802F440
-	push {r4-r7,lr}
-	mov r7, r8
-	push {r7}
-	sub sp, sp, #20
-	ldr r0, _0802F494  @ =gUnknown_08076994
-	ldr r1, [r0, #4]
-	ldr r0, [r0]
-	str r0, [sp, #12]
-	str r1, [sp, #16]
-	add r4, sp, #8
-	mov r0, #0
-	strh r0, [r4]
-	mov r0, #160
-	str r0, [sp, #4]
-	ldr r1, _0802F498  @ =REG_DMA3SAD
-	add r0, sp, #4
-	str r0, [r1]
-	ldr r0, _0802F49C  @ =gOamBuffer
-	str r0, [r1, #4]
-	ldr r0, _0802F4A0  @ =0x85000100
-	str r0, [r1, #8]
-	ldr r0, [r1, #8]
-	bl sub_080351E0
-	ldr r0, _0802F4A4  @ =0x030001C8
-	ldrb r0, [r0]
-	mov r8, r4
-	cmp r0, #0
-	bne _0802F4F4
-	mov r4, #0
-	mov r6, #20
-	mov r7, #1
-	neg r7, r7
-	add r5, sp, #12
-_0802F484:
-	ldr r1, [r5]
-	ldr r0, _0802F4A8  @ =0x030001C9
-	ldrb r0, [r0]
-	cmp r4, r0
-	bne _0802F4AC
-	mov r0, #2
-	b _0802F4AE
-	.byte 0x00
-	.byte 0x00
-_0802F494:
-	.4byte gUnknown_08076994
-_0802F498:
-	.4byte REG_DMA3SAD
-_0802F49C:
-	.4byte gOamBuffer
-_0802F4A0:
-	.4byte 0x85000100
-_0802F4A4:
-	.4byte 0x030001C8
-_0802F4A8:
-	.4byte 0x030001C9
-_0802F4AC:
-	mov r0, #3
-_0802F4AE:
-	str r0, [sp]
-	add r0, r1, #0
-	mov r1, #20
-	add r2, r6, #0
-	add r3, r7, #0
-	bl draw_text_font
-	add r5, r5, #4
-	add r4, r4, #1
-	add r6, r6, #20
-	cmp r4, #1
-	ble _0802F484
-	ldr r1, _0802F4D4  @ =gTextPressBToReturn
-	ldr r0, _0802F4D8  @ =0x030001C9
-	ldrb r0, [r0]
-	cmp r4, r0
-	bne _0802F4DC
-	mov r0, #2
-	b _0802F4DE
-_0802F4D4:
-	.4byte gTextPressBToReturn
-_0802F4D8:
-	.4byte 0x030001C9
-_0802F4DC:
-	mov r0, #3
-_0802F4DE:
-	str r0, [sp]
-	add r0, r1, #0
-	ldr r1, _0802F4F0  @ =0xFFFF8001
-	mov r2, #104
-	mov r3, #1
-	neg r3, r3
-	bl draw_text_font
-	b _0802F556
-_0802F4F0:
-	.4byte 0xFFFF8001
-_0802F4F4:
-	ldr r0, _0802F520  @ =0x030001CA
-	ldrb r4, [r0]
-	mov r6, #20
-	ldr r2, _0802F524  @ =gPreloadedCardETable
-	lsl r1, r4, #3
-	add r0, r1, r2
-	ldr r0, [r0]
-	cmp r0, #0
-	beq _0802F556
-	add r0, r4, #6
-	cmp r4, r0
-	bge _0802F556
-	mov r5, #1
-	neg r5, r5
-_0802F510:
-	add r0, r1, r2
-	ldr r1, [r0]
-	ldr r0, _0802F528  @ =0x030001C9
-	ldrb r0, [r0]
-	cmp r4, r0
-	bne _0802F52C
-	mov r0, #2
-	b _0802F52E
-_0802F520:
-	.4byte 0x030001CA
-_0802F524:
-	.4byte gPreloadedCardETable
-_0802F528:
-	.4byte 0x030001C9
-_0802F52C:
-	mov r0, #3
-_0802F52E:
-	str r0, [sp]
-	add r0, r1, #0
-	mov r1, #20
-	add r2, r6, #0
-	add r3, r5, #0
-	bl draw_text_font
-	add r4, r4, #1
-	add r6, r6, #20
-	ldr r2, _0802F57C  @ =gPreloadedCardETable
-	lsl r1, r4, #3
-	add r0, r1, r2
-	ldr r0, [r0]
-	cmp r0, #0
-	beq _0802F556
-	ldr r0, _0802F580  @ =0x030001CA
-	ldrb r0, [r0]
-	add r0, r0, #6
-	cmp r4, r0
-	blt _0802F510
-_0802F556:
-	mov r0, r8
-	bl sub_08035108
-	ldr r1, _0802F584  @ =REG_DMA3SAD
-	ldr r0, _0802F588  @ =gOamBuffer
-	str r0, [r1]
-	mov r0, #224
-	lsl r0, r0, #19
-	str r0, [r1, #4]
-	ldr r0, _0802F58C  @ =0x80000200
-	str r0, [r1, #8]
-	ldr r0, [r1, #8]
-	add sp, sp, #20
-	pop {r3}
-	mov r8, r3
-	pop {r4-r7}
-	pop {r0}
-	bx r0
-	.byte 0x00
-	.byte 0x00
-_0802F57C:
-	.4byte gPreloadedCardETable
-_0802F580:
-	.4byte 0x030001CA
-_0802F584:
-	.4byte REG_DMA3SAD
-_0802F588:
-	.4byte gOamBuffer
-_0802F58C:
-	.4byte 0x80000200
-	THUMB_FUNC_END e_world_debug_loop
-
-	THUMB_FUNC_START e_world_debug_init_callback
-e_world_debug_init_callback: @ 0x0802F590
-	ldr r3, _0802F5AC  @ =0x030001C8
-	ldr r2, _0802F5B0  @ =0x030001C9
-	ldr r1, _0802F5B4  @ =0x030001CA
-	mov r0, #0
-	strb r0, [r1]
-	strb r0, [r2]
-	strb r0, [r3]
-	mov r2, #128
-	lsl r2, r2, #19
-	ldrh r1, [r2]
-	ldr r0, _0802F5B8  @ =0x0000FDFF
-	and r0, r0, r1
-	strh r0, [r2]
-	bx lr
-_0802F5AC:
-	.4byte 0x030001C8
-_0802F5B0:
-	.4byte 0x030001C9
-_0802F5B4:
-	.4byte 0x030001CA
-_0802F5B8:
-	.4byte 0x0000FDFF
-	THUMB_FUNC_END e_world_debug_init_callback
-
-	THUMB_FUNC_START e_world_debug_end
-e_world_debug_end: @ 0x0802F5BC
-	bx lr
-	THUMB_FUNC_END e_world_debug_end
-
-	.byte 0x00
-	.byte 0x00

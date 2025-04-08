@@ -212,7 +212,7 @@ int sub_08032C44(struct UnknownStruct4 *arg0)
     sp0.unk2D = 1;
     REG_DISPCNT |= setup_graphics_08032814(&sp0, (gNextLevelInLevelTable.unk12 == 2) ? 1 : 0);
     load_some_palette_08032B30(arg0->unk10, arg0->unk12);
-    return load_level_with_theme_card_080319BC(arg0->unk4, r6, arg0->unk12);
+	load_level_with_theme_card_080319BC(arg0->unk4, r6, arg0->unk12);
 }
 
 struct Struct08032D50

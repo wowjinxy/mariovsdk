@@ -158,11 +158,11 @@ void level_edit_main(void)
     {
 		process_input();
         if (gHeldKeys == A_BUTTON)
-            gNewKeys = gHeldKeys = gUnknown_03001708 = 0;
+            gNewKeys = gHeldKeys = gCurrentInput = 0;
         else if (gHeldKeys != 0)
             gUnknown_030009FC = 1;
 	}
-    sub_08004FBC();
+    level_edit_process_input_08004FBC();
     sub_08005FA0();
     sub_0801B310();
     if ((gNewKeys & START_BUTTON) && sub_08006A34() == 7)

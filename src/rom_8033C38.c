@@ -211,7 +211,7 @@ void sub_08033FC8(void)
 
     gHeldKeys = 0xFFFF;
     gNewKeys = 0;
-    gUnknown_03001708 = 0;
+    gCurrentInput = 0;
     for (i = 0; i < 16; i++)
         gUnknown_030012B0[i] = 20;
 }

@@ -988,13 +988,24 @@ enum
     LOAD_OBJ_PALETTE = (1 << 1),
 };
 
-struct Struct1C0
+enum CardType
 {
-	u32 *cardData;
-    u8 filler0[2];
-    u16 unk6;
-    u8 filler8[0x10-0x8];
-    u8 unk10;  // unknown type
+	CARD_TYPE_LEVEL = 0,
+	CARD_TYPE_THEME = 1,
+};
+
+struct LevelCardHeader
+{
+	u32 cardChecksum;
+    u16 cardSize;
+    u16 cardType;
+    u8 worldID;
+    u8 unk9;
+    u8 unkA;
+    u8 songID;
+	u16 cardSize2;
+	u16 unkE;	
+    char cardName[16];
 };
 
 struct Struct03000008
@@ -1072,13 +1083,13 @@ extern u16 gUnknown_03000164;
 extern struct Struct168 *gUnknown_03000168;
 extern struct Struct170 gUnknown_03000170;
 extern struct MoviePlayerParamaters gMoviePlayerParams;
-extern u32 gUnknown_030001A8;
-extern u32 gUnknown_030001AC;
+extern u32 gECardMenuState_030001A8;
+extern u32 gCardReadFailReason_030001AC;
 extern u32 gUnknown_030001B0;
 extern u32 gUnknown_030001B4;
 extern u32 gUnknown_030001B8;
 extern u8 *gUnknown_030001BC;
-extern struct Struct1C0 *gUnknown_030001C0;
+extern struct LevelCardHeader *gUnknown_030001C0;
 extern u8 gUnknown_030002A0[];
 extern u16 gUnknown_030002AA;
 extern struct Struct30002B8 gUnknown_030002B0;
@@ -1219,7 +1230,7 @@ extern void (*gUnknown_030012FC)(void);
 extern u8 gIntrMainBuffer[];
 extern volatile u16 gUnknown_03001700;  // vblank counter, to run at 30 FPS?
 extern u8 gUnknown_03001704;
-extern u16 gUnknown_03001708;
+extern u16 gCurrentInput; // keys currently pressed
 extern s16 gCurrentLevelHeight;
 extern s16 gCameraVerticalOffset;
 extern u32 gUnknown_03001714;
@@ -1439,19 +1450,16 @@ struct Struct08031C54
 };
 
 
-struct CardSomething
+struct ThemeCardHeader
 {
-	u16 unk0;
-	u16 unk2;
+	u32 cardChecksum;
 	u32 *unk4;
 	u16 worldType;
 	u16 unkA;
     char name[15];
-    u16 unk1C;
-    u8 pad[8];
-    u16 unk26;
-    u8 pad2;
-    u8 cardData[0];
+    u16 dataPtrs[5];
+    u16 palPtr;
+    struct CmprHeader cardData[0];
 };
 
 extern u32 gUnknown_03000294;
@@ -1595,6 +1603,7 @@ int sub_08029FD0(void);
 int sub_0802A0A8(void);
 int write_flash_sector_0802A164(void);
 int write_flash_sector_0802A290(int sectorNum, void *data, int size);
+int write_flash_sector_0802A370(u32 sectorNum, const u8 *data, int size);
 void read_flash_sector_0802A430(int sector, void *buffer, int size);
 int sub_0802A464(void);
 void help_init_callback(void);
@@ -1645,9 +1654,10 @@ void e_world_end(void);
 void sub_0802ECC8(void);
 void sub_0802EE54(void);
 void sub_0802EEC8(int);
+int sub_0802EF70();
 void sub_0802F060(void);
 int sub_0802F090(void *);
-int sub_0802F12C(void *);
+int check_card_checksum_0802F12C(void *);
 void sub_0802F168(int, u8 *);
 void sub_0802F1AC(int, int);
 int sub_0802F1C0(int);
@@ -1670,10 +1680,11 @@ void sub_08030DA0(int);
 int sub_08030DE8(void);
 void sub_0803109C(void);
 void sub_080317F8(void);
-int check_if_theme_card_exists_08031944(void *);
-void load_theme_card_08031978(void *);
-int load_level_with_theme_card_080319BC(struct GraphicsConfig *, struct UnknownStruct5 *, int);
-char *get_theme_card_name_08031A38(struct CardSomething *);
+int check_if_theme_card_exists_08031944(struct ThemeCardHeader *);
+void load_theme_card_08031978(struct ThemeCardHeader *);
+void load_level_with_theme_card_080319BC(struct GraphicsConfig *, struct UnknownStruct5 *, u32);
+char *get_theme_card_name_08031A38(struct ThemeCardHeader *);
+int sub_08031C54();
 void sub_08031BF0();
 int sub_08031E04(void);
 void e_world_from_menu_main(void);
@@ -1731,6 +1742,8 @@ void print_error_message(char *);
 void sub_08038130(int);
 void sub_080381E4(int, int);
 int sub_08038228(int);
+void sub_08038280(void);
+int sub_08038264(void);
 void sub_080382A8(void);
 void sub_080386DC(void);
 extern u8 sub_08038DF4(u8, u8, int, u16, u16, int);
@@ -1826,7 +1839,7 @@ void sub_08008CE4();
 void sub_080069E8();
 void sub_080040D8();
 void sub_0800EF0C();
-void sub_08004FBC();
+void level_edit_process_input_08004FBC();
 void sub_08005FA0();
 u32 sub_08006A34();
 void e_world_init_callback();

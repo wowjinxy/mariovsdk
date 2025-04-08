@@ -205,21 +205,21 @@ void process_input(void)
                 gNewKeys = gHeldKeys = 0;
             }
         }
-        gUnknown_03001708 = 0;
+        gCurrentInput = 0;
 
         for (i = 0; i < 16; i++)
         {
             u16 r3 = 1 << i;
 
             if (gNewKeys & r3)
-                gUnknown_03001708 |= r3;
+                gCurrentInput |= r3;
             if ((u16)gHeldKeys & r3)
             {
                 gUnknown_030012B0[i]--;
                 if (gUnknown_030012B0[i] == 0)
                 {
                     gUnknown_030012B0[i] = 6;
-                    gUnknown_03001708 |= r3;
+                    gCurrentInput |= r3;
                 }
             }
             else

@@ -432,9 +432,9 @@ void sub_080284E8(void)
     s16 r6;
     s16 *r4;
 
-    if (gUnknown_03001708 & 0x20)
+    if (gCurrentInput & DPAD_LEFT)
         r5 = -1;
-    else if (gUnknown_03001708 & 0x10)
+    else if (gCurrentInput & DPAD_RIGHT)
         r5 = 1;
 
     if (gNewKeys & START_BUTTON)
@@ -521,9 +521,9 @@ void sub_08028740(void)
     s16 r5;
     s16 *r3;
 
-    if (gUnknown_03001708 & 0x20)
+    if (gCurrentInput & DPAD_LEFT)
         r4 = -1;
-    else if (gUnknown_03001708 & 0x10)
+    else if (gCurrentInput & DPAD_RIGHT)
         r4 = 1;
 
     if (r4)

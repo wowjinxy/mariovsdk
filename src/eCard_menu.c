@@ -42,7 +42,7 @@ int sub_08031C54(s32 *arg0, struct Struct08031C54 *arg1)
 {
     if (arg1->unk0 == 0)
     {
-        if (gUnknown_03001708 & 0x40)
+        if (gCurrentInput & DPAD_UP)
         {
             if (*arg0 > 0)
             {
@@ -50,7 +50,7 @@ int sub_08031C54(s32 *arg0, struct Struct08031C54 *arg1)
                 play_sound_effect_08071990(SE_CURSOR_UP_DN, 8, 16, 64, 0, 128, 0);
             }
         }
-        else if (gUnknown_03001708 & 0x80)
+        else if (gCurrentInput & DPAD_DOWN)
         {
             if (*arg0 < arg1->unk8 - 1)
             {
@@ -80,7 +80,7 @@ int sub_08031C54(s32 *arg0, struct Struct08031C54 *arg1)
     return -1;
 }
 
-void sub_08031D44(int arg0, struct Struct08031C54 *arg1, int arg2, struct CardSomething *arg3)
+void sub_08031D44(int arg0, struct Struct08031C54 *arg1, int arg2, struct ThemeCardHeader *arg3)
 {
     int i;
 
@@ -125,7 +125,7 @@ int sub_08031E04(void)
             CpuFill16(0, gEWorldLevelCountPtr, 0x68);
             return 0;
         }
-        if (sub_0802F12C(&gEWorldLevelCountPtr->unk68[r1]) == 0)
+        if (check_card_checksum_0802F12C(&gEWorldLevelCountPtr->unk68[r1]) == 0)
             r6 |= 1 << r4;
     }
     if (r6 == 0)
@@ -182,7 +182,7 @@ void e_world_from_menu_main(void)
                 r5 = 0;
                 for (i = 0; i < gEWorldLevelCountPtr->count; i++)
                 {
-                    if (sub_0802F12C(&gEWorldLevelCountPtr->unk68[gEWorldLevelCountPtr->unk58[i]]) == 0)
+                    if (check_card_checksum_0802F12C(&gEWorldLevelCountPtr->unk68[gEWorldLevelCountPtr->unk58[i]]) == 0)
                         r5 |= 1 << gEWorldLevelCountPtr->unk4C[i];
                 }
                 if (r5 == 0)

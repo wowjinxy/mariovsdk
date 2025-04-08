@@ -7123,8 +7123,8 @@ _08004FB8:
 	.4byte 0x00000FFF
 	THUMB_FUNC_END sub_08004634
 
-	THUMB_FUNC_START sub_08004FBC
-sub_08004FBC: @ 0x08004FBC
+	THUMB_FUNC_START level_edit_process_input_08004FBC
+level_edit_process_input_08004FBC: @ 0x08004FBC
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -8374,7 +8374,7 @@ _080058FE:
 	.byte 0x00
 _08005910:
 	.4byte gUnknown_03000004
-	THUMB_FUNC_END sub_08004FBC
+	THUMB_FUNC_END level_edit_process_input_08004FBC
 
 	THUMB_FUNC_START sub_08005914
 sub_08005914: @ 0x08005914

@@ -371,6 +371,6 @@ void change_main_state(s32 newState, s32 useFadeFlag)
         }
 
         gUnknown_03000024 = 1;
-        gNewKeys = gUnknown_03001708 = 0;
+        gNewKeys = gCurrentInput = 0;
     }
 }
