@@ -105,7 +105,7 @@ gUnknown_08706FB0:
 	.GLOBAL gUnknown_08706FC8 @ Common sprite tables
 gUnknown_08706FC8:
 	.4byte gMarioSpriteTable @ Sprite Table
-	.2byte 0x0000
+	.2byte 0x0000 @ Sprite ID
 	.byte 0x0D @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -128,7 +128,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gHammerSpriteTable @ Sprite Table
-	.2byte 0x0004
+	.2byte 0x0004 @ Sprite ID
 	.byte 0x02 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -151,7 +151,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_086F2BE8 @ Sprite Table
-	.2byte 0x0002
+	.2byte 0x0002 @ Sprite ID
 	.byte 0x0D @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -174,7 +174,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_086F8A8C @ Sprite Table
-	.2byte 0x0005
+	.2byte 0x0005 @ Sprite ID
 	.byte 0x0F @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -197,7 +197,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnusedHelpBubbleSpriteTable @ Sprite Table
-	.2byte 0x0001
+	.2byte 0x0001 @ Sprite ID
 	.byte 0x00 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -220,7 +220,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_086F9150 @ Sprite Table
-	.2byte 0x0007
+	.2byte 0x0007 @ Sprite ID
 	.byte 0x0F @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -243,7 +243,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_086FB230 @ Sprite Table
-	.2byte 0x0010
+	.2byte 0x0010 @ Sprite ID
 	.byte 0x0A @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -266,7 +266,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_086FD670 @ Sprite Table
-	.2byte 0x000F
+	.2byte 0x000F @ Sprite ID
 	.byte 0x09 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -289,7 +289,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_086FFAD8 @ Sprite Table
-	.2byte 0x000E
+	.2byte 0x000E @ Sprite ID
 	.byte 0x08 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -312,7 +312,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_087001C0 @ Sprite Table
-	.2byte 0x0008
+	.2byte 0x0008 @ Sprite ID
 	.byte 0x0B @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -335,7 +335,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_0870043C @ Sprite Table
-	.2byte 0x0011
+	.2byte 0x0011 @ Sprite ID
 	.byte 0x02 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -358,7 +358,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_087006A0 @ Sprite Table
-	.2byte 0x0013
+	.2byte 0x0013 @ Sprite ID
 	.byte 0x0C @ Palette line used
 	.byte 0x00
 	.2byte 0x0003
@@ -381,7 +381,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_0870660C @ Sprite Table
-	.2byte 0x0012
+	.2byte 0x0012 @ Sprite ID
 	.byte 0x02 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -404,7 +404,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_08706BF0 @ Sprite Table
-	.2byte 0x0009
+	.2byte 0x0009 @ Sprite ID
 	.byte 0x0F @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -427,7 +427,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_08706EA0 @ Sprite Table
-	.2byte 0x0017
+	.2byte 0x0017 @ Sprite ID
 	.byte 0x0D @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -450,7 +450,7 @@ gUnknown_08706FC8:
 	.2byte 0x0000
 
 	.4byte gUnknown_08706FB0 @ Sprite Table
-	.2byte 0x0031
+	.2byte 0x0031 @ Sprite ID
 	.byte 0x06 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000

@@ -124,12 +124,12 @@ void world_start_init_callback(void)
     REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_BG3_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP;
     if (gLevelType == LEVEL_TYPE_MAIN || gLevelType == LEVEL_TYPE_MAIN_BOSS)
     {
-        gUnknown_030002F0 = sub_08006968(sWorldStartTable[gCurrentWorld]);
+        gUnknown_030002F0 = repoint_tile_objects_08006968(sWorldStartTable[gCurrentWorld]);
         load_predefined_palette(sMainPalettes[gCurrentWorld], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
     }
     else
     {
-        gUnknown_030002F0 = sub_08006968(sWorldPlusStartTable[gCurrentWorld]);
+        gUnknown_030002F0 = repoint_tile_objects_08006968(sWorldPlusStartTable[gCurrentWorld]);
         load_predefined_palette(sPlusPalettes[gCurrentWorld], LOAD_BG_PALETTE);
         load_predefined_palette(sMainPalettes[gCurrentWorld], LOAD_OBJ_PALETTE);
     }

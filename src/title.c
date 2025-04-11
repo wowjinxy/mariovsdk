@@ -33,7 +33,7 @@ void title_init_callback(void)
     arr[2] = &gTitleMarioDKEyes;
     arr[3] = NULL;
     load_graphics_config_08032F24(arr, 0);
-    var = sub_08006968(&gTitleMarioDKEyes);
+    var = repoint_tile_objects_08006968(&gTitleMarioDKEyes);
     gUnknown_030000A4 = var;
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
     gUnknown_03000BE4 = 0;
@@ -90,7 +90,7 @@ void title_main(void)
             gLevelType = LEVEL_TYPE_MAIN;
             gCurrentWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
             title_demo_setup(gCurrentWorld);
-            sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+            decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
             change_main_state(MAIN_STATE_DEMO, USE_FADE);
             gUnknown_030012F8 = 0;
         }

@@ -213,8 +213,8 @@ _08006956:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08006968
-sub_08006968: @ 0x08006968
+	THUMB_FUNC_START repoint_tile_objects_08006968
+repoint_tile_objects_08006968: @ 0x08006968
 	push {r4-r6,lr}
 	ldr r1, [r0, #112]
 	add r0, r0, r1
@@ -259,7 +259,7 @@ _080069AC:
 	.byte 0x00
 _080069B8:
 	.4byte gObjectTileDataRAMPtr
-	THUMB_FUNC_END sub_08006968
+	THUMB_FUNC_END repoint_tile_objects_08006968
 
 	THUMB_FUNC_START sub_080069BC
 sub_080069BC: @ 0x080069BC

@@ -379,7 +379,7 @@ void level_results_init_callback(void)
     gCameraVerticalOffset = 0;
     load_graphics_config_bg2_08032EB8(&gLevelResultsData);
     sub_0802BCA4(0, 0);
-    r0 = sub_08006968(&gLevelResultsData);
+    r0 = repoint_tile_objects_08006968(&gLevelResultsData);
     gUnknown_03000104 = r0;
     DmaFill16(3, 0xA0, OAM, OAM_SIZE/2);
     if (gNextLevelInLevelTable.levelFlags & (LEVEL_FLAG_1|LEVEL_FLAG_2))
@@ -543,7 +543,7 @@ void level_results_main(void)
                             level_setup(0, 0);
                             gCurrentWorld = WORLD_1;
                             gNextLevelID = 0;
-                            sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+                            decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
                             movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE3, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_1);
                             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
                         }
@@ -567,7 +567,7 @@ void level_results_main(void)
                             level_setup(0, 1);
                             gCurrentWorld = WORLD_1;
                             gNextLevelID = 1;
-                            sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+                            decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
                             movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE5, MAIN_STATE_LEVEL_PLAY, MOVIE_DK_BOSS_2);
                             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
                         }

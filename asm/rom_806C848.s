@@ -7153,7 +7153,7 @@ _08070478:
 	mov r1, #187
 	mov r2, #0
 _0807049A:
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	asr r2, r0, #24
 	cmp r2, r8
@@ -7253,7 +7253,7 @@ _08070538:
 	mov r1, #187
 	mov r2, #0
 _0807055A:
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	asr r2, r0, #24
 	cmp r2, r8
@@ -7849,7 +7849,7 @@ _08070998:
 	mov r0, #20
 	mov r1, #190
 	mov r2, #6
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	mov r1, r8
 	str r1, [sp]
 	mov r0, #128
@@ -8164,7 +8164,7 @@ _08070BF0:
 	mov r0, #20
 	mov r1, #190
 	mov r2, #6
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	str r6, [sp]
 	mov r0, #128
 	str r0, [sp, #4]
@@ -8405,7 +8405,7 @@ _08070DB4:
 	mov r0, #20
 	mov r1, #190
 	mov r2, #4
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	mov r1, r8
 	str r1, [sp]
 	mov r0, #128
@@ -8551,7 +8551,7 @@ _08070EC6:
 	mov r0, #20
 	mov r1, #190
 	mov r2, #8
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	str r6, [sp]
 	mov r0, #128
 	str r0, [sp, #4]
@@ -8757,7 +8757,7 @@ _08071048:
 	mov r0, #20
 	mov r1, #190
 	mov r2, #10
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	mov r1, r8
 	str r1, [sp]
 	mov r0, #128
@@ -9005,7 +9005,7 @@ _08071216:
 	mov r1, #190
 	mov r2, #8
 _08071230:
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	str r5, [sp]
 	mov r0, #128
 	str r0, [sp, #4]

@@ -38,7 +38,7 @@ void sub_08007170(void)
         sub_0802C7A4();
     else
         sub_0802CF08();
-    sub_08006968(gNextLevelInLevelTable.unk4);
+    repoint_tile_objects_08006968(gNextLevelInLevelTable.unk4);
     gUnknown_03000B5C = 0;
     gLevelEndTimer = -1;
     gUnknown_03000B60 = 0;
@@ -66,7 +66,7 @@ void sub_080072A4(void)
     sub_08007170();
     state = gMainState;
     gMainState = MAIN_STATE_LEVEL_PLAY;
-    sub_08004634(1);
+    load_level_data_08004634(1);
     gMainState = state;
     r1 = sub_08040F30(sub_08040EE8(2));
     if (r1 == NULL)
@@ -129,7 +129,7 @@ void level_demo_reset_init_callback(void)
     state = gMainState;
     if (gMainState != MAIN_STATE_DEMO)
         gMainState = MAIN_STATE_TUTORIAL;
-    sub_08004634(1);
+    load_level_data_08004634(1);
     gMainState = state;
     r1 = sub_08040F30(sub_08040EE8(2));
     if (r1 == NULL)

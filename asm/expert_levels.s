@@ -361,7 +361,7 @@ _080355EC:
 	ldr r0, _08035660  @ =gNextLevelInLevelTable
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
-	bl sub_08004428
+	bl decompress_level_data_08004428
 	mov r0, #13
 	mov r1, #1
 	bl change_main_state
@@ -672,7 +672,7 @@ _08035838:
 	ldr r0, _080358B0  @ =gNextLevelInLevelTable
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
-	bl sub_08004428
+	bl decompress_level_data_08004428
 	mov r0, #13
 	mov r1, #1
 	bl change_main_state

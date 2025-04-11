@@ -236,6 +236,123 @@ struct UnknownStruct6
     s32 unk24;
 };
 
+enum // spriteID
+{
+	LEVEL_SPRITE_MARIO                               = 0x0,
+	LEVEL_SPRITE_HELP_BUBBLE                         = 0x1,
+	LEVEL_SPRITE_KEY_DOOR                            = 0x2,
+	LEVEL_SPRITE_UNK_3                               = 0x3,
+	LEVEL_SPRITE_HAMMER                              = 0x4,
+	LEVEL_SPRITE_MINI_MARIO_CRYSTAL                  = 0x5,
+	LEVEL_SPRITE_UNK_6                               = 0x6,
+	LEVEL_SPRITE_MINI_MARIO                          = 0x7,
+	LEVEL_SPRITE_TOY_CHEST                           = 0x8,
+	LEVEL_SPRITE_MINI_MARIO_NO_KEY                   = 0x9,
+	LEVEL_SPRITE_TUTORIAL_INPUT_DISPLAY_HANDLER      = 0xa,
+	LEVEL_SPRITE_DK_WORLD_1                          = 0xb,
+	LEVEL_SPRITE_DK_WORLD_2                          = 0xc,
+	LEVEL_SPRITE_DK_WORLD_3                          = 0xd,
+	LEVEL_SPRITE_RED_TRASHBIN                        = 0xe,
+	LEVEL_SPRITE_BLUE_TRASHBIN                       = 0xf,
+	LEVEL_SPRITE_YELLOW_TRASHBIN                     = 0x10,
+	LEVEL_SPRITE_MINI_MARIO_WITH_KEY                 = 0x11,
+	LEVEL_SPRITE_KEY                                 = 0x12,
+	LEVEL_SPRITE_UNUSED_FRUIT                        = 0x13,
+	LEVEL_SPRITE_DK_WORLD_4                          = 0x14,
+	LEVEL_SPRITE_DK_WORLD_5                          = 0x15,
+	LEVEL_SPRITE_DK_WORLD_6                          = 0x16,
+	LEVEL_SPRITE_MINI_MARIO_KEY_DOOR                 = 0x17,
+	LEVEL_SPRITE_DK_MAIN_BOSS                        = 0x18,
+	LEVEL_SPRITE_DK_MECH_BOSS                        = 0x19,
+	LEVEL_SPRITE_RED_TOAD                            = 0x1a,
+	LEVEL_SPRITE_BLUE_TOAD                           = 0x1b,
+	LEVEL_SPRITE_YELLOW_TOAD                         = 0x1c,
+	LEVEL_SPRITE_RED_KEY                             = 0x1d,
+	LEVEL_SPRITE_BLUE_KEY                            = 0x1e,
+	LEVEL_SPRITE_YELLOW_KEY                          = 0x1f,
+	LEVEL_SPRITE_TOAD_CARRYING_BIG_BARREL            = 0x20,
+	LEVEL_SPRITE_RED_TOAD_CAGE_CRYSTAL               = 0x21,
+	LEVEL_SPRITE_BLUE_TOAD_CAGE_CRYSTAL              = 0x22,
+	LEVEL_SPRITE_YELLOW_TOAD_CAGE_CRYSTAL            = 0x23,
+	LEVEL_SPRITE_DK_MECH_NOSE_PLATFORM               = 0x26,
+	LEVEL_SPRITE_DK_PLUS_MINI_MARIO                  = 0x27,
+	LEVEL_SPRITE_B_SKIP                              = 0x31,
+	LEVEL_SPRITE_SHY_GUY                             = 0x64,
+	LEVEL_SPRITE_OIL_BARREL_CANDLE                   = 0x65,
+	LEVEL_SPRITE_SPARKY                              = 0x67,
+	LEVEL_SPRITE_BUCKETMAN                           = 0x69,
+	LEVEL_SPRITE_MONCHEE                             = 0x6c,
+	LEVEL_SPRITE_TANE_PAKKUN                         = 0x6d,
+	LEVEL_SPRITE_BIRD_SPAWNER                        = 0x6e,
+	LEVEL_SPRITE_RAMRAM                              = 0x6f,
+	LEVEL_SPRITE_SNAPJAW                             = 0x70,
+	LEVEL_SPRITE_TANE_PAKKUN_BULLET                  = 0x71,
+	LEVEL_SPRITE_BIRD                                = 0x72,
+	LEVEL_SPRITE_MONCHEE_TAIL_DOWN                   = 0x73,
+	LEVEL_SPRITE_PODOBOO                             = 0x74,
+	LEVEL_SPRITE_NINJI                               = 0x75,
+	LEVEL_SPRITE_SHY_GUY_FIRE                        = 0x76,
+	LEVEL_SPRITE_THWOMP_TUTORIAL                     = 0x78,
+	LEVEL_SPRITE_THWIMP                              = 0x79,
+	LEVEL_SPRITE_SIR_SHOVALOT                        = 0x7a,
+	LEVEL_SPRITE_FALLING_SPIKE                       = 0x7b,
+	LEVEL_SPRITE_DONUT_BLOCK                         = 0x7c,
+	LEVEL_SPRITE_RED_POLTERGUY_BLOCK                 = 0x7d,
+	LEVEL_SPRITE_BLUE_POLTERGUY_BLOCK                = 0x7e,
+	LEVEL_SPRITE_YELLOW_POLTERGUY_BLOCK              = 0x7f,
+	LEVEL_SPRITE_BOO                                 = 0x80,
+	LEVEL_SPRITE_THWOMP_1                            = 0x81,
+	LEVEL_SPRITE_THWOMP_2                            = 0x82,
+	LEVEL_SPRITE_THWOMP_3                            = 0x83,
+	LEVEL_SPRITE_THWOMP_4                            = 0x84,
+	LEVEL_SPRITE_THWOMP_5                            = 0x85,
+	LEVEL_SPRITE_THWOMP_6                            = 0x86,
+	LEVEL_SPRITE_DK_MECH_LEFT_HAND                   = 0x87,
+	LEVEL_SPRITE_DK_MECH_RIGHT_HAND                  = 0x88,
+	LEVEL_SPRITE_TRASHBIN_BARREL                     = 0x96,
+	LEVEL_SPRITE_NONMOVING_PLATFORM_WORLD_1          = 0x97,
+	LEVEL_SPRITE_HORIZONTAL_MOVING_PLATFORM_WORLD_1  = 0x98,
+	LEVEL_SPRITE_UNUSED_LONG_MOVING_PLATFORM_WORLD_1 = 0x9a,
+	LEVEL_SPRITE_FALLING_BRICK                       = 0x9b,
+	LEVEL_SPRITE_FALLING_DUMBELL                     = 0x9c,
+	LEVEL_SPRITE_FALLING_WHEEL_RIM                   = 0x9d,
+	LEVEL_SPRITE_RESPAWNING_BANANA_FRUIT             = 0x9e,
+	LEVEL_SPRITE_RESPAWNING_APPLE_FRUIT              = 0x9f,
+	LEVEL_SPRITE_DK_THROWN_SNAPJAW                   = 0xa0,
+	LEVEL_SPRITE_MOVING_PLATFORM_WORLD_2             = 0xa2,
+	LEVEL_SPRITE_UNUSED_LONG_MOVING_PLATFORM_WORLD_2 = 0xa3,
+	LEVEL_SPRITE_APPLE_FRUIT                         = 0xa5,
+	LEVEL_SPRITE_BANANA_FRUIT                        = 0xa6,
+	LEVEL_SPRITE_NONMOVING_PLATFORM_WORLD_3          = 0xa8,
+	LEVEL_SPRITE_MOVING_PLATFORM_WORLD_3             = 0xa9,
+	LEVEL_SPRITE_RISING_PLATFORM_BLOCK               = 0xaa,
+	LEVEL_SPRITE_MOVING_PLATFORM_WORLD_3_2           = 0xab,
+	LEVEL_SPRITE_DK_THROWN_BARREL                    = 0xae,
+	LEVEL_SPRITE_DK_THROWN_ROCK                      = 0xaf,
+	LEVEL_SPRITE_DK_GRABABLE_BARREL                  = 0xb0,
+	LEVEL_SPRITE_RED_POLTERGUY_GHOST_BOSS            = 0xb1,
+	LEVEL_SPRITE_RED_POLTERGUY_BOSS                  = 0xb2,
+	LEVEL_SPRITE_BLUE_POLTERGUY_GHOST_BOSS           = 0xb3,
+	LEVEL_SPRITE_YELLOW_POLTERGUY_GHOST_BOSS         = 0xb4,
+	LEVEL_SPRITE_BLUE_POLTERGUY_BOSS                 = 0xb5,
+	LEVEL_SPRITE_YELLOW_POLTERGUY_BOSS               = 0xb6,
+	LEVEL_SPRITE_MOVING_PLATFORM_WORLD_4             = 0xb8,
+	LEVEL_SPRITE_BELT_SWITCH                         = 0xb9,
+	LEVEL_SPRITE_SPEAR_GUY                           = 0xba,
+	LEVEL_SPRITE_BAT_SPAWNER                         = 0xbb,
+	LEVEL_SPRITE_BOBOMB_SPAWNER                      = 0xbc,
+	LEVEL_SPRITE_CANNONBALL                          = 0xbe,
+	LEVEL_SPRITE_MOVING_PLATFORM_WORLD_5             = 0xbf,
+	LEVEL_SPRITE_DK_THROWN_BOBOMB                    = 0xc0,
+	LEVEL_SPRITE_BOBOMB_EXPLOSION                    = 0xc1,
+	LEVEL_SPRITE_ROBO_MONCHEE                        = 0xc4,
+	LEVEL_SPRITE_ROBO_MONCHEE_TAIL_DOWN              = 0xc5,
+	LEVEL_SPRITE_DK_BOSS_SPIKE_BARREL                = 0xc6,
+	LEVEL_SPRITE_DK_BOSS_ROLLING_BIG_BARREL          = 0xc7,
+	LEVEL_SPRITE_DK_BOSS_BIG_BARREL                  = 0xc8,
+	LEVEL_SPRITE_DK_HIT_BARREL                       = 0xca,
+};
+
 enum // enum for backgroundType in the below
 {
 	BACKGROUND_TYPE_LEVEL_TILES = 0,
@@ -1501,15 +1618,15 @@ void sub_0800142C();
 void sub_08001BA4(void *, void *);
 void level_edit_delete_object(struct Struct802C31C *);
 void press_color_switch(int, int);
-void sub_08004428();
-void sub_08004634();
+void decompress_level_data_08004428();
+void load_level_data_08004634();
 void sub_08006388(void);
 void sub_080064D4();
 void sub_08006548();
 void sub_080065B4();
 void sub_0800667C();
 int sub_080066FC(u32 *, int, int, int);
-struct UnknownStruct15 *sub_08006968(struct GraphicsConfig *);
+struct UnknownStruct15 *repoint_tile_objects_08006968(struct GraphicsConfig *);
 void sub_08006D44(void);
 void sub_080063E4(struct Struct802C31C *, int, void *);
 
@@ -1746,7 +1863,7 @@ void sub_08038280(void);
 int sub_08038264(void);
 void sub_080382A8(void);
 void sub_080386DC(void);
-extern u8 sub_08038DF4(u8, u8, int, u16, u16, int);
+extern u8 spawn_sprite_08038DF4(u8, u8, int, u16, u16, int);
 void sub_08040B28(void);
 s8 sub_08040EE8();
 struct UnknownStruct6 *sub_08040F30(s8);

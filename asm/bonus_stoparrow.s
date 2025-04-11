@@ -9989,7 +9989,7 @@ _0802177E:
 	add r0, r2, #0
 	strh r0, [r1]
 	add r0, r4, #0
-	bl sub_08006968
+	bl repoint_tile_objects_08006968
 	ldr r1, _080218F4  @ =0x030000CC
 	str r0, [r1]
 	add r5, sp, #16

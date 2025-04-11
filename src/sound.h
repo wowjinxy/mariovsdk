@@ -37,7 +37,7 @@ enum SoundID
     SE_ITEM           = 31,  // empty -- wouldve been used for switching objects in the level editor
     SE_SELECT_M       = 32,
     SE_SELECT_S       = 33,
-    SE_STAMP          = 34,  // empty -- wouldve been used when you placded a object in the level editor
+    SE_STAMP          = 34,  // empty -- wouldve been used when you placed a object in the level editor
     SE_START          = 35,
     SE_BEAM           = 36,
     SE_BURN2          = 37,
@@ -140,15 +140,15 @@ enum SoundID
     SE_SCATTER        = 134,
     SE_REACH          = 135,
     SE_DK_HEAD        = 136,
-    SE_GOTCHA         = 137, // "Haha! Gotcha!"
+    SE_GOTCHA         = 137,  // "Haha! Gotcha!"
     SE_TOAD_WALK      = 138,
     SE_TOAD_TOSS      = 139,
     SE_BOX_FALL       = 140,
     SE_SPARKY_LOOP    = 141,
     SE_DK_BLUB        = 142,
-    SE_YANK           = 143, // DK pulls chain
-    SE_SPIKE          = 144, // falling spike platform seen in world 4
-    SE_BONE           = 145, // wrench shy guy
+    SE_YANK           = 143,  // DK pulls chain
+    SE_SPIKE          = 144,  // falling spike platform seen in world 4
+    SE_BONE           = 145,  // wrench shy guy
     SE_MM_BOINGUP     = 146,
     SE_LASER          = 147,
     SE_DK_JUMP        = 148,
@@ -164,7 +164,7 @@ enum SoundID
     SE_JUMP_D         = 158,
     SE_SHUFFLE        = 159,
     SE_MOVIE_07       = 160,
-    SE_MOVIE_01       = 161, // TV chatter
+    SE_MOVIE_01       = 161,  // TV chatter
     SE_MINI_KEY       = 162,
     SE_MOVIE2_1       = 163,
     SE_MOVIE2_2       = 164,

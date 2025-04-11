@@ -53,7 +53,7 @@ void after_tutorial_init_callback(void)
             return;
         }
     }
-    sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+    decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
     change_main_state(MAIN_STATE_LEVEL_PLAY, NO_FADE);
 }
 
@@ -126,7 +126,7 @@ void unknown_0A_init_callback(void)
     sound_enable_dma_transfer();
     REG_DISPCNT &= ~DISPCNT_FORCED_BLANK;
     sub_08033F80(0,0);
-    sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+    decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
     arena_save_head(2);
     level_editor_init_callback();
 }
@@ -139,7 +139,7 @@ void level_editor_init_callback(void)
     sub_080040D8();
     sub_0802C20C();
     sub_080386DC();
-    sub_08004634(0);
+    load_level_data_08004634(0);
     gBG1CNT_03000A0C = REG_BG1CNT;
     REG_BG1CNT &= ~3;  // Set priority to 0
     sub_0800EF0C();

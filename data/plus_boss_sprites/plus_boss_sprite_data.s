@@ -10,7 +10,7 @@
 	.GLOBAL gDKMechBossSpriteTable
 gDKMechBossSpriteTable:
 	.4byte gDKMechHeadTable @ Sprite Table
-	.2byte 0x0019
+	.2byte 0x0019 @ Sprite ID
 	.byte 0x00 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -33,7 +33,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte gDKMechLeftHandTable @ Sprite Table
-	.2byte 0x0087
+	.2byte 0x0087 @ Sprite ID
 	.byte 0x00 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -56,7 +56,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte gDKMechRightHandTable @ Sprite Table
-	.2byte 0x0088
+	.2byte 0x0088 @ Sprite ID
 	.byte 0x00 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -79,7 +79,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte gDKMechNoseCollisionTable @ Sprite Table
-	.2byte 0x0026
+	.2byte 0x0026 @ Sprite ID
 	.byte 0x00 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -102,7 +102,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte gFallingDumbellDKMech @ Sprite Table
-	.2byte 0x009C
+	.2byte 0x009C @ Sprite ID
 	.byte 0x05 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -125,7 +125,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte 0x087AD064 @ Sprite Table (Falling barrel)
-	.2byte 0x00C9
+	.2byte 0x00C9 @ Sprite ID
 	.byte 0x02 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -148,7 +148,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte 0x087AF598 @ Sprite Table (Barrel)
-	.2byte 0x00B0
+	.2byte 0x00B0 @ Sprite ID
 	.byte 0x02 @ Palette line used
 	.byte 0x00
 	.2byte 0x000B
@@ -171,7 +171,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte 0x087AF948 @ Sprite Table (Mini Mario)
-	.2byte 0x0027
+	.2byte 0x0027 @ Sprite ID
 	.byte 0x0F @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -194,7 +194,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte 0x087AF9E8 @ Sprite Table (Bricks)
-	.2byte 0x009B
+	.2byte 0x009B @ Sprite ID
 	.byte 0x02 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000
@@ -217,7 +217,7 @@ gDKMechBossSpriteTable:
 	.2byte 0x0000
 
 	.4byte 0x087AFA88 @ Sprite Table (Wheel Rim)
-	.2byte 0x009D
+	.2byte 0x009D @ Sprite ID
 	.byte 0x05 @ Palette line used
 	.byte 0x00
 	.2byte 0x0000

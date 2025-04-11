@@ -253,7 +253,7 @@ void e_world_from_menu_init_callback(void)
     arena_restore_head(0);
     gVRAMCurrTileNum_03001930 = gObjVRAMCopyOffset_0300192C = 0;
     e_world_init_callback();
-    sub_08006968(&gEWorldMenuData2);
+    repoint_tile_objects_08006968(&gEWorldMenuData2);
     if (sub_0802A458() != 0)
         sub_0802F06C();
     if (get_current_bgm() != TITLE)

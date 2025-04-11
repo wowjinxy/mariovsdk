@@ -972,7 +972,7 @@ e_world_return_init_callback: @ 0x0802DE08
 	mov r0, sp
 	bl CpuSet
 	add r0, r4, #0
-	bl sub_08006968
+	bl repoint_tile_objects_08006968
 	ldr r3, [r6]
 	ldr r2, _0802DF28  @ =0x000008F8
 	add r1, r3, r2

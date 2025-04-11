@@ -12085,7 +12085,7 @@ _08027664:
 	lsl r1, r1, #19
 	strh r0, [r1]
 	add r0, r4, #0
-	bl sub_08006968
+	bl repoint_tile_objects_08006968
 	ldr r1, _080278C0  @ =0x030000E4
 	str r0, [r1]
 	add r5, sp, #20

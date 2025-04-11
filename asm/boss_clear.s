@@ -417,7 +417,7 @@ _0801C23C:
 	bl level_setup
 	ldr r0, [r4]
 	ldr r0, [r0, #4]
-	bl sub_08004428
+	bl decompress_level_data_08004428
 _0801C250:
 	ldr r1, _0801C270  @ =gNextLevelInLevelTable
 	mov r2, #18

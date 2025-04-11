@@ -136,7 +136,7 @@ static void load_level_select_background(u8 arg0)
         arr[3] = gLevelSelectBackgrounds[gLevelSelectWorld];
         load_graphics_config_08032F24(arr, -1);
         load_predefined_palette(gLevelSelectPaletteIDs[gLevelSelectWorld], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectData);
         break;
     case 1:
         arr[0] = NULL;
@@ -145,7 +145,7 @@ static void load_level_select_background(u8 arg0)
         arr[3] = gLevelSelectPlusBackgrounds[gLevelSelectWorld - 1];
         load_graphics_config_08032F24(arr, -1);
         load_predefined_palette(gLevelSelectPlusPaletteIDs[gLevelSelectWorld - 1], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectPlusData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectPlusData);
         break;
     case 2:
         arr[0] = NULL;
@@ -154,7 +154,7 @@ static void load_level_select_background(u8 arg0)
         arr[3] = &gLevelSelectDKBossBG;
         load_graphics_config_08032F24(arr, -1);
         load_predefined_palette(PALETTE_17, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectData);
         break;
     case 3:
         arr[0] = NULL;
@@ -163,7 +163,7 @@ static void load_level_select_background(u8 arg0)
         arr[3] = &gLevelSelectDKPlusBossBG;
         load_graphics_config_08032F24(arr, -1);
         load_predefined_palette(PALETTE_24, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectPlusData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectPlusData);
         break;
     case 4:
         gLevelSelect_03000083 = 7;
@@ -245,7 +245,7 @@ void level_select_init_callback(void)
         arr[3] = gLevelSelectPlusBackgrounds[gLevelSelectWorld - 1];
         load_graphics_config_08032F24(arr, 2);
         load_predefined_palette(gLevelSelectPlusPaletteIDs[gLevelSelectWorld - 1], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectPlusData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectPlusData);
     }
     else if (gLevelType == LEVEL_TYPE_MAIN_BOSS)
     {
@@ -259,7 +259,7 @@ void level_select_init_callback(void)
         arr[3] = &gLevelSelectDKBossBG;
         load_graphics_config_08032F24(arr, 3);
         load_predefined_palette(PALETTE_17, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectData);
     }
     else if (gLevelType == LEVEL_TYPE_PLUS_BOSS)
     {
@@ -273,7 +273,7 @@ void level_select_init_callback(void)
         arr[3] = &gLevelSelectDKPlusBossBG;
         load_graphics_config_08032F24(arr, 3);
         load_predefined_palette(PALETTE_24, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectPlusData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectPlusData);
     }
     else if (gLevelType == LEVEL_TYPE_EXPERT_1_6)
     {
@@ -286,7 +286,7 @@ void level_select_init_callback(void)
         arr[3] = gLevelSelectBackgrounds[gLevelSelectWorld];
         load_graphics_config_08032F24(arr, 3);
         load_predefined_palette(gLevelSelectPaletteIDs[gLevelSelectWorld], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectData);
     }
     else if (gLevelType == LEVEL_TYPE_EXPERT_7_12)
     {
@@ -299,7 +299,7 @@ void level_select_init_callback(void)
         arr[3] = gLevelSelectPlusBackgrounds[gLevelSelectWorld];
         load_graphics_config_08032F24(arr, 3);
         load_predefined_palette(gLevelSelectPlusPaletteIDs[gLevelSelectWorld], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectPlusData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectPlusData);
     }
     else
     {
@@ -310,7 +310,7 @@ void level_select_init_callback(void)
         arr[3] = gLevelSelectBackgrounds[gLevelSelectWorld];
         load_graphics_config_08032F24(arr, 3);
         load_predefined_palette(gLevelSelectPaletteIDs[gLevelSelectWorld], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-        gUnknown_03000070 = sub_08006968(&gLevelSelectData);
+        gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectData);
     }
     gUnknown_03000078 = 0x800;
     gUnknown_03000074 = temp2 = arena_allocate(0x800);
@@ -464,7 +464,7 @@ static void handle_input_mode_0(void)
                 gNextLevelID = gLevelSelectLevel;
                 gCurrentWorld = gLevelSelectWorld;
                 tutorial_level_setup(gLevelSelectWorld, (gLevelSelectLevel + 1) >> 1);
-                sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+                decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
                 change_main_state(MAIN_STATE_TUTORIAL, USE_FADE);
                 gUnknown_030012F8 = 0;
             }
@@ -475,7 +475,7 @@ static void handle_input_mode_0(void)
                 gNextLevelID = gLevelSelectLevel;
                 gCurrentWorld = gLevelSelectWorld;
                 level_setup(gLevelSelectWorld, gLevelSelectLevel);
-                sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+                decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
                 change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
             }
 
@@ -489,7 +489,7 @@ static void handle_input_mode_0(void)
                 gNextLevelID = gLevelSelectLevel;
                 gCurrentWorld = gLevelSelectWorld;
                 tutorial_level_setup(gLevelSelectWorld, (gLevelSelectLevel + 1) >> 1);
-                sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+                decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
                 change_main_state(MAIN_STATE_TUTORIAL, USE_FADE);
                 gUnknown_030012F8 = 0;
             }
@@ -501,7 +501,7 @@ static void handle_input_mode_0(void)
                 gNextLevelID = gLevelSelectLevel;
                 gCurrentWorld = gLevelSelectWorld;
                 level_setup(gLevelSelectWorld, gLevelSelectLevel);
-                sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+                decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
                 change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
             }
         }
@@ -561,7 +561,7 @@ static void handle_input_mode_1(void)
                 level_setup(0, 0);
                 gCurrentWorld = WORLD_1;
                 gNextLevelID = 0;
-                sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+                decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
                 change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
             }
             else if (gLevelSelectWorldCursor == 7)
@@ -705,7 +705,7 @@ static void handle_input_mode_2(void)
             gNextLevelID = gLevelSelectLevel;
             gCurrentWorld = gLevelSelectWorld - 1;
             level_setup(gLevelSelectWorld - 1, gLevelSelectLevel);
-            sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+            decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
             change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
         }
         else if (is_level_unlocked(gLevelType, gLevelSelectWorld - 1, gLevelSelectLevel))
@@ -715,7 +715,7 @@ static void handle_input_mode_2(void)
             gNextLevelID = gLevelSelectLevel;
             gCurrentWorld = gLevelSelectWorld - 1;
             level_setup(gLevelSelectWorld - 1, gLevelSelectLevel);
-            sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+            decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
             change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
         }
         else
@@ -781,7 +781,7 @@ static void handle_input_mode_3(void)
                 level_setup(0, 1);
                 gNextLevelID = 1;
                 gCurrentWorld = 0;
-                sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+                decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
                 change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
             }
             else if (gLevelSelectWorldCursor == 0)
@@ -1126,7 +1126,7 @@ static void handle_input_mode_4(void)
         level_setup(0, 0);
         gCurrentWorld = 0;
         gNextLevelID = 0;
-        sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+        decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
         change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
     }
     else if (gNewKeys & B_BUTTON)
@@ -1188,7 +1188,7 @@ static void handle_input_mode_5(void)
         level_setup(0, 1);
         gNextLevelID = 1;
         gCurrentWorld = 0;
-        sub_08004428(gNextLevelInLevelTable.unk0->levelData);
+        decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
         change_main_state(MAIN_STATE_LEVEL_PLAY, USE_FADE);
     }
     else if (gNewKeys & B_BUTTON)
@@ -1304,7 +1304,7 @@ void level_select_main(void)
                 load_graphics_config_08032F24(arr, 3);
                 load_predefined_palette(gLevelSelectPlusPaletteIDs[gLevelSelectWorld - 1], LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
                 CpuFill16(0, gUnknown_03000074, gUnknown_03000078);
-                gUnknown_03000070 = sub_08006968(&gLevelSelectPlusData);
+                gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectPlusData);
                 gLevelSelect_03000083 = 8;
                 save_blend_regs(0x3D42, 0xA0A0, 0);
             }
@@ -1330,7 +1330,7 @@ void level_select_main(void)
                 load_graphics_config_08032F24(arr, 3);
                 CpuFill16(0, gUnknown_03000074, gUnknown_03000078);
                 load_predefined_palette(PALETTE_17, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
-                gUnknown_03000070 = sub_08006968(&gLevelSelectData);
+                gUnknown_03000070 = repoint_tile_objects_08006968(&gLevelSelectData);
                 gLevelSelect_03000083 = 10;
                 save_blend_regs(0x3D42, 0xA0A0, 0);
             }

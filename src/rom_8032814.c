@@ -101,10 +101,10 @@ u16 setup_graphics_08032814(struct UnkStruct1 *arg0, int arg1)
             *(vu16 *)&gUnknown_03000E60 <<= 1;
         if (arg0->unk33 & 2)
         {
-            sub_08004428(arg0->levelData);
+            decompress_level_data_08004428(arg0->levelData);
             sub_080041B8(r5);
-            sub_08006968(r5);
-            sub_08004634(1);
+            repoint_tile_objects_08006968(r5);
+            load_level_data_08004634(1);
         }
         else
             sub_08006388();

@@ -612,7 +612,7 @@ void options_init_callback(void)
     gCameraVerticalOffset = 0;
     save_blend_regs(gOptionsMenuBGConfig.bldCnt, gOptionsMenuBGConfig.bldAlpha, gOptionsMenuBGConfig.bldY);
     REG_DISPCNT = load_graphics_config_bg2_08032EB8(&gOptionsMenuBGConfig) | DISPCNT_BG0_ON | DISPCNT_BG1_ON;
-    sub_08006968(&gOptionsMenuBGConfig);
+    repoint_tile_objects_08006968(&gOptionsMenuBGConfig);
     gOptionsMenuData = arena_allocate(sizeof(*gOptionsMenuData));
     CpuFill16(0, gOptionsMenuData, sizeof(*gOptionsMenuData));
     if (gPreviousMainState == MAIN_STATE_MOVIE)

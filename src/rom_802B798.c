@@ -803,7 +803,7 @@ void sub_0802C938(void)
         struct StructD7C **r6 = gUnknown_03000DA0;
         s16 r5 = i;
 
-        r1 = sub_08038DF4(255, 171, -1, (gUnknown_03000D78[r5].unk0 >> 8) + 12, gUnknown_030009E0 - 8, r7);
+        r1 = spawn_sprite_08038DF4(255, 171, -1, (gUnknown_03000D78[r5].unk0 >> 8) + 12, gUnknown_030009E0 - 8, r7);
         r6[r5] = &gUnknown_03001940[r1];
     }
 }
@@ -851,7 +851,7 @@ _0802C954:\n\
     mov r1, #171\n\
     mov r2, #1\n\
     neg r2, r2\n\
-    bl sub_08038DF4\n\
+    bl spawn_sprite_08038DF4\n\
     lsl r0, r0, #24\n\
     lsr r1, r0, #24\n\
     lsl r2, r5, #2\n\

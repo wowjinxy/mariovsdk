@@ -975,8 +975,8 @@ _08038D18:
 	bx r0
 	THUMB_FUNC_END sub_08038C4C
 
-	THUMB_FUNC_START sub_08038D1C
-sub_08038D1C: @ 0x08038D1C
+	THUMB_FUNC_START get_sprite_table_08038D1C
+get_sprite_table_08038D1C: @ 0x08038D1C
 	push {r4-r6,lr}
 	lsl r0, r0, #24
 	lsr r2, r0, #24
@@ -1096,10 +1096,10 @@ _08038DEE:
 	pop {r4-r6}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08038D1C
+	THUMB_FUNC_END get_sprite_table_08038D1C
 
-	THUMB_FUNC_START sub_08038DF4
-sub_08038DF4: @ 0x08038DF4
+	THUMB_FUNC_START spawn_sprite_08038DF4
+spawn_sprite_08038DF4: @ 0x08038DF4
 	push {r4-r7,lr}
 	mov r7, r10
 	mov r6, r9
@@ -1159,7 +1159,7 @@ _08038E44:
 	b _08039498
 _08038E62:
 	add r0, r7, #0
-	bl sub_08038D1C
+	bl get_sprite_table_08038D1C
 	mov r8, r0
 	cmp r0, #0
 	beq _08038E3A
@@ -1900,7 +1900,7 @@ _080393C8:
 	mov r1, #197
 	ldr r3, [sp, #12]
 _080393E4:
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	.byte 0x00
 	.byte 0x06
 	.byte 0x00
@@ -2019,7 +2019,7 @@ _08039498:
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08038DF4
+	THUMB_FUNC_END spawn_sprite_08038DF4
 
 	THUMB_FUNC_START sub_080394A8
 sub_080394A8: @ 0x080394A8
@@ -2046,7 +2046,7 @@ sub_080394A8: @ 0x080394A8
 	lsr r4, r4, #16
 	str r4, [sp, #12]
 	mov r0, r10
-	bl sub_08038D1C
+	bl get_sprite_table_08038D1C
 	add r7, r0, #0
 	cmp r7, #0
 	bne _080394E2
@@ -2899,7 +2899,7 @@ _08039B20:
 _08039B30:
 	mov r2, #0
 	ldr r3, [sp, #8]
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	b _08039B52
 _08039B3A:
 	mov r1, r10
@@ -2912,7 +2912,7 @@ _08039B3A:
 	mov r1, #35
 	mov r2, #0
 	ldr r3, [sp, #8]
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 _08039B52:
 	mov r0, r8
 _08039B54:
@@ -8342,7 +8342,7 @@ _0803C3BC:
 	mov r1, #193
 	mov r2, #0
 	mov r3, #0
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	ldr r1, [r7]
 	lsl r0, r0, #24
 	lsr r4, r0, #24
@@ -8361,7 +8361,7 @@ _0803C3FC:
 	mov r1, #193
 	mov r2, #0
 	mov r3, #0
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	lsr r4, r0, #24
 	str r6, [sp]
@@ -8586,7 +8586,7 @@ _0803C58E:
 	mov r1, #193
 	mov r2, #0
 	mov r3, #0
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	ldr r1, [r5]
 	lsl r0, r0, #24
 	lsr r4, r0, #24
@@ -8607,7 +8607,7 @@ _0803C5D0:
 	mov r1, #193
 	mov r2, #0
 	mov r3, #0
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	lsr r4, r0, #24
 	str r6, [sp]
@@ -12366,7 +12366,7 @@ sub_0803E128: @ 0x0803E128
 	ldr r0, [r2]
 	add r7, r0, r1
 	ldrb r0, [r7]
-	bl sub_08038D1C
+	bl get_sprite_table_08038D1C
 	add r6, r0, #0
 	cmp r4, #19
 	bgt _0803E1DE
@@ -13131,7 +13131,7 @@ sub_0803E69C: @ 0x0803E69C
 	mov r0, #255
 	mov r1, #155
 	mov r2, r9
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	ldr r6, _0803E760  @ =gUnknown_03001940
@@ -13158,7 +13158,7 @@ sub_0803E69C: @ 0x0803E69C
 	mov r0, #255
 	mov r1, #155
 	mov r2, r9
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	ldr r1, [r6]
@@ -13183,7 +13183,7 @@ sub_0803E69C: @ 0x0803E69C
 	mov r0, #255
 	mov r1, #155
 	mov r2, r9
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	ldr r1, [r6]
@@ -13343,7 +13343,7 @@ update_level_object_0803E84C: @ 0x0803E84C
 	lsr r2, r2, #16
 	mov r9, r2
 	ldrb r0, [r5]
-	bl sub_08038D1C
+	bl get_sprite_table_08038D1C
 	mov r10, r0
 	ldrh r1, [r0, #10]
 	mov r2, r9
@@ -13843,7 +13843,7 @@ _0803EBF4:
 	str r4, [sp, #4]
 _0803EC12:
 	mov r0, #255
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	str r0, [r5, #72]
@@ -14068,7 +14068,7 @@ update_mario_action_0803ED98: @ 0x0803ED98
 	lsl r2, r2, #16
 	lsr r4, r2, #16
 	ldrb r0, [r5]
-	bl sub_08038D1C
+	bl get_sprite_table_08038D1C
 	add r6, r0, #0
 	ldrh r1, [r6, #10]
 	lsl r0, r4, #16
@@ -14467,7 +14467,7 @@ _0803F080:
 	str r4, [sp, #4]
 _0803F09E:
 	mov r0, #255
-	bl sub_08038DF4
+	bl spawn_sprite_08038DF4
 	lsl r0, r0, #24
 	lsr r0, r0, #24
 	str r0, [r5, #72]
