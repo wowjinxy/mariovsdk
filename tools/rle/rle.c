@@ -47,44 +47,44 @@ static bool rle_decompress(FILE *in, FILE *out)
 	dataSize = hdr >> 8;
 
 	dprintf("size = 0x%lX\n", dataSize);
-    while (uncSize < dataSize)
-    {
+	while (uncSize < dataSize)
+	{
 		uint8_t hdrByte;
 		uint8_t runLen;
 
-        if (!read_u8(in, &hdrByte))
+		if (!read_u8(in, &hdrByte))
 			goto read_error;
-        if (hdrByte & 0x80)  // fill
-        {
+		if (hdrByte & 0x80)  // fill
+		{
 			uint8_t fillByte;
 			runLen = (hdrByte & 0x7F) + 3;
-            if (!read_u8(in, &fillByte))
+			if (!read_u8(in, &fillByte))
 				goto read_error;
 			dprintf("fill %ix 0x%02X\n", runLen, fillByte);
-            while (runLen != 0)
-            {
-                if (!write_u8(out, fillByte))
+			while (runLen != 0)
+			{
+				if (!write_u8(out, fillByte))
 					goto write_error;
-                runLen--;
-                uncSize++;
-            }
-        }
-        else  // copy
-        {
-            runLen = hdrByte + 1;
+				runLen--;
+				uncSize++;
+			}
+		}
+		else  // copy
+		{
+			runLen = hdrByte + 1;
 			dprintf("copy %ix\n", runLen);
-            while (runLen != 0)
-            {
+			while (runLen != 0)
+			{
 				uint8_t temp;
 				if (!read_u8(in, &temp))
 					goto read_error;
 				if (!write_u8(out, temp))
 					goto read_error;
-                runLen--;
-                uncSize++;
-            }
-        }
-    }
+				runLen--;
+				uncSize++;
+			}
+		}
+	}
 	return true;
 
 read_error:
