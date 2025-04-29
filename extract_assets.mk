@@ -1167,6 +1167,8 @@ FILES := \
 	assets/sprites/moving_platform/gUnknown_08659274.png \
 	assets/sprites/moving_platform/gUnknown_08659320.png \
 	assets/unused/DKPlusLeftoverBG.png \
+	assets/unused/EarlyOptionsMenuBG.png \
+	assets/unused/EarlyOptionsMenuBG.gbapal.bin \
 	assets/level/data/WorldFiveBG.png \
 	assets/sounds/climb.aif \
 	assets/sounds/skid.aif \
@@ -6009,6 +6011,10 @@ assets/sprites/moving_platform/gUnknown_08659320.png: $(TMPDIR)/palettes/40_worl
 
 assets/unused/DKPlusLeftoverBG.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/unused/DKPlusLeftoverBG.4bpp.rle: baserom.gba ; $(call dump_data,0x7AFC80,0x2121)
+
+$(TMPDIR)/unused/EarlyOptionsMenuBG.8bpp.rle: baserom.gba ; $(call dump_data,0x8703A4,0x2ECA)
+# TODO: dump this as a .pal file once I fix the issue with the most significant bit being set in some colors
+assets/unused/EarlyOptionsMenuBG.gbapal.bin: baserom.gba ; $(call dump_data,0x873820,0x200)
 
 assets/level/data/WorldFiveBG.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/level/data/WorldFiveBG.4bpp.rle: baserom.gba ; $(call dump_data,0xA3F344,0x2D84)

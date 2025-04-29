@@ -290,8 +290,33 @@ gTitleMarioDKEyes:
 
 	.GLOBAL gUnusedOptionsMenuData
 gUnusedOptionsMenuData:
-	.INCBIN "assets/unused/EarlyOptionsMenu.bin"
-	
+	.4byte 0x74 | (1 << 31)  @ unk0
+	.4byte gUnusedOptionsMenuData.end - gUnusedOptionsMenuData  @ filler4
+	.4byte gUnusedOptionsMenuData.bg - gUnusedOptionsMenuData - 4  @ gfxOffset
+	.4byte 0x2F44, 0x2F90, 0x2FDC, 0x3028  @ unkOffsets
+	.4byte gUnusedOptionsMenuData.pal - gUnusedOptionsMenuData - 4  @ palOffset
+	.skip 0xC  @ filler20
+	.2byte 0  @ unk2C
+	.2byte 0xA0  @ unk2E
+	.2byte 0  @ bldCnt
+	.2byte 0  @ bldAlpha
+	.2byte 0  @ bldY
+	.byte 0, 0xF  @ filler36
+	.2byte 0x0084, 0x0184, 0x0284, 0x0384  @ bgCnt
+	.4byte 0x06000000, 0x06000800, 0x06001000, 0x06001800  @ bgVramMapAddrs
+	.4byte 0x06004000, 0x06004000, 0x06004000, 0x06004000  @ vramAddr50
+	.byte 0, 0, 0, 0, 0, 0, 0, 0  @ filler60
+	.4byte 0  @ unk68
+	.4byte 0  @ unk6C
+	.byte 0xF4, 0x36, 0x00, 0x00, 0xCC, 0x2E, 0x00, 0x00  @ unknown
+gUnusedOptionsMenuData.bg:
+	.INCBIN "assets/unused/EarlyOptionsMenuBG.8bpp.rle"
+	.INCBIN "assets/unused/EarlyOptionsMenu.bin", 0x2F42, 0x34F4-0x2F42
+gUnusedOptionsMenuData.pal:
+	.INCBIN "assets/unused/EarlyOptionsMenuBG.gbapal.bin"
+	.INCBIN "assets/unused/EarlyOptionsMenu.bin", 0x36F4
+gUnusedOptionsMenuData.end:
+
 	.GLOBAL gOptionsMenuBGConfig
 gOptionsMenuBGConfig:
 	.INCBIN "assets/menu/OptionsMenuData.bin"
