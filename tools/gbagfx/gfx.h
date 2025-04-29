@@ -55,7 +55,7 @@ void WriteTileImage(char *path, enum NumTilesMode numTilesMode, int numTiles, in
 void ReadPlainImage(char *path, int dataWidth, struct Image *image, bool invertColors);
 void WritePlainImage(char *path, int dataWidth, struct Image *image, bool invertColors);
 void FreeImage(struct Image *image);
-void ReadGbaPalette(char *path, struct Palette *palette);
-void WriteGbaPalette(char *path, struct Palette *palette);
+void ReadGbaPalette(char *path, struct Palette *palette, bool msbHack);
+void WriteGbaPalette(char *path, struct Palette *palette, bool msbHack);
 
 #endif // GFX_H

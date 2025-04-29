@@ -313,7 +313,7 @@ gUnusedOptionsMenuData.bg:
 	.INCBIN "assets/unused/EarlyOptionsMenuBG.8bpp.rle"
 	.INCBIN "assets/unused/EarlyOptionsMenu.bin", 0x2F42, 0x34F4-0x2F42
 gUnusedOptionsMenuData.pal:
-	.INCBIN "assets/unused/EarlyOptionsMenuBG.gbapal.bin"
+	.INCBIN "assets/unused/EarlyOptionsMenuBG.gbapal"
 	.INCBIN "assets/unused/EarlyOptionsMenu.bin", 0x36F4
 gUnusedOptionsMenuData.end:
 
