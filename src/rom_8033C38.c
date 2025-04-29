@@ -483,7 +483,7 @@ void sub_0803446C(int a, int b)
 int sub_080344F8(s32 a)
 {
     s32 r2 = gCameraHorizontalOffset >> 1;
-    
+
     a >>= 8;
     if (a < r2 + 64)
         return 1;
@@ -495,7 +495,7 @@ int sub_080344F8(s32 a)
 int sub_08034528(s32 a)
 {
     s32 r2 = gCameraVerticalOffset >> 1;
-    
+
     a >>= 8;
     if (a < r2 + 24)
         return 1;
@@ -512,22 +512,22 @@ struct UnknownStruct1
 
 void decompress_rle(struct CmprHeader *hdr, u16 *dest)
 {
-    u8 *romPos = (u8 *)hdr + sizeof(struct CmprHeader);  // skip over header 
+    u8 *romPos = (u8 *)hdr + sizeof(struct CmprHeader);  // skip over header
     u32 dataSize = hdr->size;
     u32 uncSize = 0;
-    u8 dataLeft;
+    u8 runLength;
     u8 uncData2;
     u16 uncData;
-    
+
     while (uncSize < dataSize)
     {
-        dataLeft = *romPos++;
-        if (dataLeft & 0x80)
+        runLength = *romPos++;
+        if (runLength & 0x80)  // fill
         {
-            dataLeft &= ~0x80;
-            dataLeft += 3;
+            runLength &= ~0x80;
+            runLength += 3;
             uncData2 = *romPos++;
-            while (dataLeft != 0)
+            while (runLength != 0)
             {
                 if (uncSize & 1)
                 {
@@ -539,15 +539,15 @@ void decompress_rle(struct CmprHeader *hdr, u16 *dest)
                 {
                     uncData = uncData2;
                 }
-                dataLeft--;
+                runLength--;
                 uncSize++;
             }
         }
-        else
+        else  // copy
         {
-            dataLeft++;
-			
-            while (dataLeft != 0) 
+            runLength++;
+
+            while (runLength != 0)
             {
                 if (uncSize & 1)
                 {
@@ -555,12 +555,12 @@ void decompress_rle(struct CmprHeader *hdr, u16 *dest)
                     *dest++ = uncData;
                     uncData = 0;
                 }
-				
+
                 else
                 {
                     uncData = *romPos++;
                 }
-                dataLeft--;
+                runLength--;
                 uncSize++;
             }
         }
@@ -580,18 +580,18 @@ void sub_08034608(struct UnknownStruct1 *a, u16 *b)
     u32 r3;
     u32 r2;
     u32 sp4;
-    
+
     while (r5 < r9)
     {
         u8 r7 = *r4++;
-        
+
         while (r5 < r9)
         {
             if (r7 & 0x80)
             {
                 u8 r0 = *r4++;
                 u8 *ptr;
-                
+
                 r3 = r0 >> 4;
                 r2 = *r4++ | ((r0 & 0xF) << 8);
                 ptr = (u8 *)b + r5;
@@ -793,24 +793,24 @@ void sub_08034700(struct UnknownStruct1 *a, u8 *b)
     u8 *r4 = a->unk4;
     u32 r6 = 0;
     u32 r12 = a->unk0 >> 8;
-    
+
     while (r6 < r12)
     {
         u8 r8 = *r4++;
         u8 r7 = 0x80;
-        
+
         while (r7 != 0 && r6 < r12)
         {
             if (r8 & r7)
             {
                 u8 *r1;
                 u32 r2;
-                
+
                 u8 r0_1 = *r4++;
                 u32 r3 = r0_1 >> 4;
                 u32 r2_2 = *r4++ | ((r0_1 & 0xF) << 8);
                 r1 = b + r6 - r2_2 - 1;
-                
+
                 //r1 -= (r2 + 1);
                 r2 = r6 + r3;
                 //r7 /= 2;
@@ -920,7 +920,7 @@ _08034782:\n\
 void *load_compressed_data(struct CmprHeader *src, void *dest, int toVram)
 {
     struct CmprHeader header = *src;
-    
+
     switch (header.compressionType)
     {
     case 3:  // RLE
@@ -942,7 +942,7 @@ void *load_compressed_data(struct CmprHeader *src, void *dest, int toVram)
 void goto_credits_init_callback(void)
 {
     u8 arr[16];  // Needed to match. Probably some unused variable
-    
+
     arena_restore_head(0);
     if (gLevelType == LEVEL_TYPE_PLUS)
         movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MIDCREDITS, MAIN_STATE_LEVEL_SELECT, MOVIE_CREDITS_1); // ??, Song ID, Mode after movie finishes, Movie ID

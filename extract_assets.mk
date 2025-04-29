@@ -11,6 +11,7 @@ endif
 TMPDIR := .extract
 
 GBAGFX  := tools/gbagfx/gbagfx
+RLE     := tools/rle/rle
 AIF2PCM := tools/aif2pcm/aif2pcm
 
 # canned recipe to extract bytes from binary file
@@ -1165,6 +1166,7 @@ FILES := \
 	assets/sprites/moving_platform/gUnknown_086591C8.png \
 	assets/sprites/moving_platform/gUnknown_08659274.png \
 	assets/sprites/moving_platform/gUnknown_08659320.png \
+	assets/unused/DKPlusLeftoverBG.png \
 	assets/sounds/climb.aif \
 	assets/sounds/skid.aif \
 	assets/sounds/pound.aif \
@@ -6002,6 +6004,9 @@ assets/sprites/moving_platform/gUnknown_08659320.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/moving_platform/gUnknown_08659320.4bpp: baserom.gba ; $(call dump_data,0x659320,0x80)
 assets/sprites/moving_platform/gUnknown_08659320.png: $(TMPDIR)/palettes/40_world_four_obj.2.gbapal
 
+assets/unused/DKPlusLeftoverBG.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/unused/DKPlusLeftoverBG.4bpp.rle: baserom.gba ; $(call dump_data,0x7AFC80,0x2121)
+
 ### Sounds ###
 
 SAMPLE_RATE := 8000
@@ -6519,7 +6524,16 @@ assets/%: $(TMPDIR)/%.lz
 	@echo Decompressing $<
 	@mkdir -p $(@D)
 	$(QUIET) $(GBAGFX) $< $@
+$(TMPDIR)/%: $(TMPDIR)/%.rle
+	@echo Decompressing $<
+	@mkdir -p $(@D)
+	$(QUIET) $(RLE) -d $< $@
+assets/%: $(TMPDIR)/%.rle
+	@echo Decompressing $<
+	@mkdir -p $(@D)
+	$(QUIET) $(RLE) -d $< $@
 
 # build tools
 $(GBAGFX):  ; $(MAKE) -C $(@D)
+$(RLE):     ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)

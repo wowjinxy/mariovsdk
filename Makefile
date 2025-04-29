@@ -17,6 +17,7 @@ LD       := $(DEVKITARM)/bin/arm-none-eabi-ld
 OBJCOPY  := $(DEVKITARM)/bin/arm-none-eabi-objcopy
 
 GBAGFX   := tools/gbagfx/gbagfx
+RLE      := tools/rle/rle
 AIF2PCM  := tools/aif2pcm/aif2pcm
 
 CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -O2 -fhex-asm -fno-common
@@ -58,6 +59,7 @@ clean:
 	find . -name '*.4bpp' -exec rm {} +
 	find . -name '*.8bpp' -exec rm {} +
 	find . -name '*.gbapal' -exec rm {} +
+	find . -name '*.rle' -exec rm {} +
 	$(RM) assets/sounds/*.pcm
 	$(MAKE) -C tools/gbagfx clean
 
@@ -97,8 +99,10 @@ ldscript.txt: ldscript.in
 %.pcm:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
 
 %.lz:     %     $(GBAGFX) ; $(GBAGFX) $< $@
+%.rle:    %     $(RLE)    ; $(RLE) $< $@
 
 $(GBAGFX):  ; $(MAKE) -C $(@D)
+$(RLE):     ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)
 
 # Automatic dependency generation

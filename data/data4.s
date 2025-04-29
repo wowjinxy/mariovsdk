@@ -5,7 +5,28 @@
 
 	.GLOBAL gDKPlusLeftovers
 gDKPlusLeftovers:
-	.INCBIN "assets/unused/DKPlusLeftoverData.bin"
+	.4byte 0x74 | (1 << 31)  @ unk0
+	.4byte 0x2DE4  @ filler4
+	.4byte gDKPlusLeftovers.bg - gDKPlusLeftovers - 4  @ gfxOffset
+	.4byte 0x219C, 0, 0, 0  @ unkOffsets
+	.4byte 0  @ palOffset
+	.skip 0xC  @ filler20
+	.2byte 0x50  @ unk2C
+	.2byte 0  @ unk2E
+	.2byte 0  @ bldCnt
+	.2byte 0  @ bldAlpha
+	.2byte 0  @ bldY
+	.byte 0, 1  @ filler36
+	.2byte 0x0004, 0x0108, 0x0508, 0x0908  @ bgCnt
+	.4byte 0x06000000, 0x06000800, 0x06002800, 0x06004800  @ bgVramMapAddrs
+	.4byte 0x06004000, 0x06008000, 0x06008000, 0x06008000  @ vramAddr50
+	.byte 0xC0, 0x22, 0, 0, 0, 0, 0, 0  @ filler60
+	.4byte 0  @ unk68
+	.4byte 0  @ unk6C
+	.byte 0x30, 0x24, 0x00, 0x00, 0x24, 0x21, 0x00, 0x00  @ unknown, some more RLE stuff?
+gDKPlusLeftovers.bg:
+	.INCBIN "assets/unused/DKPlusLeftoverBG.4bpp.rle"
+	.INCBIN "assets/unused/DKPlusLeftoverBGUnknown.bin" 
 	
 	.GLOBAL gMainMenuData
 gMainMenuData:
