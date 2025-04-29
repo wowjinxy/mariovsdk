@@ -1167,6 +1167,7 @@ FILES := \
 	assets/sprites/moving_platform/gUnknown_08659274.png \
 	assets/sprites/moving_platform/gUnknown_08659320.png \
 	assets/unused/DKPlusLeftoverBG.png \
+	assets/level/data/WorldFiveBG.png \
 	assets/sounds/climb.aif \
 	assets/sounds/skid.aif \
 	assets/sounds/pound.aif \
@@ -6004,8 +6005,13 @@ assets/sprites/moving_platform/gUnknown_08659320.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/moving_platform/gUnknown_08659320.4bpp: baserom.gba ; $(call dump_data,0x659320,0x80)
 assets/sprites/moving_platform/gUnknown_08659320.png: $(TMPDIR)/palettes/40_world_four_obj.2.gbapal
 
+### Backgrounds ###
+
 assets/unused/DKPlusLeftoverBG.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/unused/DKPlusLeftoverBG.4bpp.rle: baserom.gba ; $(call dump_data,0x7AFC80,0x2121)
+
+assets/level/data/WorldFiveBG.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/level/data/WorldFiveBG.4bpp.rle: baserom.gba ; $(call dump_data,0xA3F344,0x2D84)
 
 ### Sounds ###
 

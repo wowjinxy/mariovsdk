@@ -848,7 +848,29 @@ gWorldFourData:
 
 	.GLOBAL gWorldFiveData
 gWorldFiveData:
-	.INCBIN "assets/level/data/WorldFiveData.bin"
+	.4byte 0x74 | (1 << 31)  @ unk0
+	.4byte gWorldFiveData.end - gWorldFiveData  @ filler4
+	.4byte gWorldFiveData.bg - gWorldFiveData - 4  @ gfxOffset
+	.4byte 0, 0x2DFC, 0, 0  @ unkOffsets
+	.4byte 0  @ palOffset
+	.skip 0xC  @ filler20
+	.2byte 0  @ unk2C
+	.2byte 0x0200  @ unk2E
+	.2byte 0  @ bldCnt
+	.2byte 0  @ bldAlpha
+	.2byte 0  @ bldY
+	.byte 0, 2  @ filler36
+	.2byte 0x000C, 0x810E, 0x0506, 0x0906  @ bgCnt
+	.4byte 0x06000000, 0x06000800, 0x06002800, 0x06004800  @ bgVramMapAddrs
+	.4byte 0x0600C000, 0x0600C000, 0x06004000, 0x06004000  @ vramAddr50
+	.byte 0x24, 0x2E, 0, 0, 0, 0, 0, 0  @ filler60
+	.4byte 0  @ unk68
+	.4byte 0  @ unk6C
+	.byte 0xDC, 0x44, 0x00, 0x00, 0x84, 0x2D, 0x00, 0x00  @ unknown
+gWorldFiveData.bg:
+	.INCBIN "assets/level/data/WorldFiveBG.4bpp.rle"
+	.INCBIN "assets/level/data/WorldFiveUnknown.bin"
+gWorldFiveData.end:
 
 	.GLOBAL gWorldSixData
 gWorldSixData:
