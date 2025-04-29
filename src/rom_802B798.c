@@ -24,10 +24,10 @@ void hit_switch_0802B798(struct Struct0802B798 *arg0, u32 arg1)
             if (gCurrentSwitchState != 1)
             {
                 index = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-                x = gEWRAMBasePtr->unkC[index].x;
+                x = gEWRAMBasePtr->levelObject[index].x;
                 x <<= 25;
                 x >>= 22;
-                y = gEWRAMBasePtr->unkC[index].y;
+                y = gEWRAMBasePtr->levelObject[index].y;
                 y <<= 3;
                 gPreviousSwitchState = gCurrentSwitchState;
                 gCurrentSwitchState = 1;
@@ -46,10 +46,10 @@ void hit_switch_0802B798(struct Struct0802B798 *arg0, u32 arg1)
             if (gCurrentSwitchState != 2)
             {
                 index = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-                x = gEWRAMBasePtr->unkC[index].x;
+                x = gEWRAMBasePtr->levelObject[index].x;
                 x <<= 25;
                 x >>= 22;
-                y = gEWRAMBasePtr->unkC[index].y;
+                y = gEWRAMBasePtr->levelObject[index].y;
                 y <<= 3;
                 gPreviousSwitchState = gCurrentSwitchState;
                 gCurrentSwitchState = 2;
@@ -68,10 +68,10 @@ void hit_switch_0802B798(struct Struct0802B798 *arg0, u32 arg1)
             if (gCurrentSwitchState != 3)
             {
                 index = gEWRAMBasePtr->unk600C[arg1 >> 16] - 1;
-                x = gEWRAMBasePtr->unkC[index].x;
+                x = gEWRAMBasePtr->levelObject[index].x;
                 x <<= 25;
                 x >>= 22;
-                y = gEWRAMBasePtr->unkC[index].y;
+                y = gEWRAMBasePtr->levelObject[index].y;
                 y <<= 3;
                 gPreviousSwitchState = gCurrentSwitchState;
                 gCurrentSwitchState = 3;
@@ -133,7 +133,7 @@ struct LinkedListHeaderMaybe *sub_0802BA00(void)
     return &r0->header;
 }
 
-void sub_0802BA38(int arg0, int arg1, int arg2, int arg3)
+void update_level_springs_0802BA38(int arg0, int arg1, int arg2, int arg3)
 {
     if (gUnknown_03000C30.unk4 != NULL)
     {
@@ -614,7 +614,7 @@ void sub_0802C31C(void)
         r0 = gEWRAMBasePtr->unk600C[index];
         if (r0 != 0)
         {
-            int objectID = gEWRAMBasePtr->unkC[r0 - 1].objectID;
+            int objectID = gEWRAMBasePtr->levelObject[r0 - 1].objectID;
             if (gObjectTileDataRAMPtr->unk108[objectID - 1]->unk4 == 40)
             {
                 struct Struct08078210_sub *r0 = gObjectTileDataRAMPtr->unk108[objectID];
@@ -636,7 +636,7 @@ void sub_0802C31C(void)
                     r0 = gEWRAMBasePtr->unk600C[index];
                     if (r0 != 0)
                     {
-                        objectID = gEWRAMBasePtr->unkC[r0 - 1].objectID;
+                        objectID = gEWRAMBasePtr->levelObject[r0 - 1].objectID;
                         if (gObjectTileDataRAMPtr->unk108[objectID - 1]->unk4 == 41)
                         {
                             struct Struct08078210_sub *r4 = gObjectTileDataRAMPtr->unk108[objectID];
@@ -1210,13 +1210,13 @@ void sub_0802D140(struct Struct0802D140 *arg0, u32 arg1)
     r7 += (arg1 & ~0x3F);
     while (arg1 <= r7)
     {
-        int r2 = gEWRAMBasePtr->unk400C[arg1];
+        int r2 = gEWRAMBasePtr->levelCollision[arg1];
         int r5 = gEWRAMBasePtr->unk600C[arg1];
 
         if (r2 == 6 && r5 != r12)
         {
             // hmm...
-            struct struct_0807820C_sub8 *r3 = (void *)&gEWRAMBasePtr->unkC[r5 - 1];
+            struct struct_0807820C_sub8 *r3 = (void *)&gEWRAMBasePtr->levelObject[r5 - 1];
             struct LinkedListHeaderMaybe *ptr = gUnknown_03000170.unk1C;
             struct LinkedListHeaderMaybe *endptr = ptr + 12;
 

@@ -89,7 +89,7 @@ struct WorldIntroCharacter
     s16 speed;
     s16 subSpriteIndex;
     s16 frameTimer;
-    u32 unk10;
+    u32 soundEffect;
 };
 
 static struct WorldIntroCharacter *sDonkeyKong;
@@ -106,7 +106,7 @@ void world_start_init_callback(void)
     if (get_current_bgm() != RESULTS)
         play_bgm(RESULTS, 128, 1);
     gUnknown_030002FC = arena_allocate(2 * sizeof(*gUnknown_030002FC));
-    gUnknown_03000BE0 = 0;
+    gDemoTimer_03000BE0 = 0;
     gfxConfig[0] = NULL;
     gfxConfig[1] = NULL;
     if (gLevelType == LEVEL_TYPE_MAIN || gLevelType == LEVEL_TYPE_MAIN_BOSS)
@@ -136,8 +136,8 @@ void world_start_init_callback(void)
     if (gCurrentWorld == 0)
     {
         sWorldIntroState = STATE_DK_RUN;
-        sDonkeyKong->unk10 = play_sound_effect_08071990(SE_DK_WALK, 12, 16, 64, 0, 128, 0);
-        sub_08040FC0(sDonkeyKong->unk10, sDonkeyKong->x);
+        sDonkeyKong->soundEffect = play_sound_effect_08071990(SE_DK_WALK, 12, 16, 64, 0, 128, 0);
+        sub_08040FC0(sDonkeyKong->soundEffect, sDonkeyKong->x);
         play_sound_effect_08071990(SE_MOVIE2_6, 8, 16, 64, 0, 128, 0);
         sub_080379BC(1, 0);
     }
@@ -192,8 +192,8 @@ static void sub_080372A0(void)
             {
                 r4->unk6 = 1;
                 sWorldIntroState = 1;
-                sDonkeyKong->unk10 = play_sound_effect_08071990(SE_DK_WALK, 12, 16, 64, 0, 128, 0);
-                sub_08040FC0(sDonkeyKong->unk10, sDonkeyKong->x);
+                sDonkeyKong->soundEffect = play_sound_effect_08071990(SE_DK_WALK, 12, 16, 64, 0, 128, 0);
+                sub_08040FC0(sDonkeyKong->soundEffect, sDonkeyKong->x);
                 play_sound_effect_08071990(SE_MOVIE2_6, 8, 16, 64, 0, 128, 0);
             }
         }
@@ -203,14 +203,14 @@ static void sub_080372A0(void)
         if (sDonkeyKong->x < (240 << 8))
         {
             sDonkeyKong->x += sDonkeyKong->speed;
-            sub_08040FC0(sDonkeyKong->unk10, sDonkeyKong->x);
+            sub_08040FC0(sDonkeyKong->soundEffect, sDonkeyKong->x);
         }
         else
         {
             sWorldIntroState = STATE_MARIO_RUN;
             sub_08071E14(234);
-            sMario->unk10 = play_sound_effect_08071990(SE_WALK, 12, 16, 64, 0, 128, 0);
-            sub_08040FC0(sMario->unk10, sMario->x);
+            sMario->soundEffect = play_sound_effect_08071990(SE_WALK, 12, 16, 64, 0, 128, 0);
+            sub_08040FC0(sMario->soundEffect, sMario->x);
         }
         if (--r4->unk1 == 0)
         {
@@ -229,7 +229,7 @@ static void sub_080372A0(void)
         if (sMario->x < (100 << 8))
         {
             sMario->x += sMario->speed;
-            sub_08040FC0(sMario->unk10, sMario->x);
+            sub_08040FC0(sMario->soundEffect, sMario->x);
         }
         else
         {

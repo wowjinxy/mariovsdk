@@ -377,7 +377,7 @@ SECTIONS
 		. = 0xB58;		gCurrentWorld = .;
 		. = 0xB5C;		gUnknown_03000B5C = .;
 		. = 0xB60;		gUnknown_03000B60 = .;
-		. = 0xB64;		gUnknown_03000B64 = .;
+		. = 0xB64;		gTitleScreenAttractCount = .;
 		. = 0xB68;		gUnknown_03000B68 = .;
 		. = 0xB6C;		gCurrentEnemyScore = .;
 		. = 0xB70;		gUnknown_03000B70 = .;
@@ -391,9 +391,9 @@ SECTIONS
 		. = 0xBD0;		gUnknown_03000BD0 = .;
 		. = 0xBD4;		gLevelSelectWorld = .;
 		. = 0xBD8;		gLevelSelectLevel = .;
-		. = 0xBE0;		gUnknown_03000BE0 = .;
-		. = 0xBE4;		gUnknown_03000BE4 = .;
-		. = 0xBE8;		gUnknown_03000BE8 = .;
+		. = 0xBE0;		gDemoTimer_03000BE0 = .;
+		. = 0xBE4;		gMarioEyesTimer = .;
+		. = 0xBE8;		gDKEyesTimer = .;
 		. = 0xBEC;		gUnknown_03000BEC = .;
 		. = 0xBF0;		gUnknown_03000BF0 = .;
 		. = 0xBF8;		gUnknown_03000BF8 = .;

@@ -368,14 +368,14 @@ _08000798:
 	streqb r1, [r4, #15]
 	beq _08000848
 	cmp r0, #2
-	bleq _080009D8
+	bleq collision_fire_080009D8
 	and r0, r9, #127
 	cmp r0, #6
 	bleq _080009E8
 	and r0, r9, #127
 	cmp r0, #7
 	bne _08000848
-	bl _080009CC
+	bl collision_spring_080009CC
 	strb r0, [r4, #53]
 	b _08000848
 _08000820:
@@ -454,7 +454,7 @@ _08000904:
 	str r11, [r4, #116]
 	and r0, r9, #127
 	cmp r0, #2
-	bleq _080009D8
+	bleq collision_fire_080009D8
 _08000940:
 	add sp, sp, #16
 	b _08000960
@@ -501,11 +501,11 @@ _080009BC:
 	mov r1, r9
 	ldr r12, _08001674  @ =hit_switch_0802B798
 	bx r12
-_080009CC:
+collision_spring_080009CC:
 	lsr r0, r9, #16
 	ldr r1, _08001678  @ =sub_0802BC00
 	bx r1
-_080009D8:
+collision_fire_080009D8:
 	mov r0, r4
 	mov r1, r9
 	ldr r12, _0800167C  @ =sub_0802B984

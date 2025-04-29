@@ -6,7 +6,7 @@ void intro_init_callback(void)
 {
     struct GraphicsConfig *arr[4];
 
-    gUnknown_03000BE0 = 0;
+    gDemoTimer_03000BE0 = 0;
     gUnknown_03000BD0 = 0;
     gCameraHorizontalOffset = 0;
     gCameraVerticalOffset = 0;
@@ -34,14 +34,14 @@ void title_end(void)
 void intro_main(void)
 {
     update_fade_from_black();
-    gUnknown_03000BE0++;
-    if (gUnknown_03000BE0 > 180)
+    gDemoTimer_03000BE0++;
+    if (gDemoTimer_03000BE0 > 180)
     {
         movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
         gNextMainState = MAIN_STATE_MOVIE;
     }
     level_callback_08008238();
-    gUnknown_03000BE0 &= 0xFFFF;
+    gDemoTimer_03000BE0 &= 0xFFFF;
 }
 
 void intro_loop(void)

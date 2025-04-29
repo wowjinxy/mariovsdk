@@ -209,7 +209,7 @@ static void main_loop(void);
 
 void sub_08006DD8(void) { // possible inline for AgbMain?
 
-	gUnknown_03000B64 = 0;
+	gTitleScreenAttractCount = 0;
 	gIsLevelViewActive = FALSE;
 	gNextMainState = MAIN_STATE_INIT;
 }
@@ -218,7 +218,7 @@ void sub_08006DD8(void) { // possible inline for AgbMain?
 void AgbMain(void)
 {
     clear_ram();
-    gUnknown_03000B64 = 0;
+    gTitleScreenAttractCount = 0;
     gIsLevelViewActive = FALSE;
     gNextMainState = MAIN_STATE_INIT;
     init_timer_regs();

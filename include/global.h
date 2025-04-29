@@ -756,15 +756,16 @@ struct struct_0807820C
     u16 backgroundVerticalShift;
     u16 levelWidthPixels;
     u16 levelHeightPixels;
-    u16 unk8;
+    u16 deathPlane;
     u16 unkA;
-    struct LevelObject unkC[1];
-    u8 filler10[0x400C-0x10];
-    u16 unk400C[0x1000];
+    struct LevelObject levelObject[0x1000];
+    u16 levelCollision[0x1000];
     u16 unk600C[0x1000];
     u16 unk800C[0x2000];
     u32 unkC00C;
 };
+
+
 
 enum SpriteID  // Index of sprites in gUncompressedGraphicsTable
 {
@@ -933,6 +934,32 @@ struct StructC40
     u32 unk18;
     u32 unk1C;
     struct LinkedListHeaderMaybe *unk20;  // array
+};
+
+struct TileData 
+{
+	u8 tileID;
+	u8 paletteLine;
+	u8 unk2;
+	u8 unk3;
+	u16 tileX;
+	u16 tileY;
+};
+
+struct AnimatedTileData
+{
+	u16 sizeX; //0x0
+	u16 sizeY; //0x2
+	u8 tileAction; // 0x4
+	u8 u8_at_0x581; // 0x5
+	u8 objectID; // 0x6
+	u8 u8_at_0x583; // 0x7
+	u8 array_at_0x584[16]; //0x8
+	u16 tileCount; //0x18
+	u16 u16_at_0x596;//0x1A
+	u16 u16_at_0x598;//0x1C
+	u16 u16_at_0x59A;//0x1E
+	struct TileData *tiledata_at_0x2D60[0]; // 0x20
 };
 
 struct StructC70
@@ -1255,7 +1282,7 @@ extern s32 gGeneralTimer;
 extern s8 gCurrentWorld;
 extern u8 gUnknown_03000B5C;
 extern u8 gUnknown_03000B60;
-extern s8 gUnknown_03000B64;
+extern s8 gTitleScreenAttractCount;
 extern u8 gUnknown_03000B68;
 extern u32 gCurrentEnemyScore;
 extern u32 gUnknown_03000B70;
@@ -1267,9 +1294,9 @@ extern s8 gLevelEWorldFlag;
 extern u32 gUnknown_03000BB8;
 extern s8 gLivesCount;
 extern u8 gUnknown_03000BD0;
-extern u32 gUnknown_03000BE0;
-extern u16 gUnknown_03000BE4;
-extern u16 gUnknown_03000BE8;
+extern u32 gDemoTimer_03000BE0;
+extern u16 gMarioEyesTimer;
+extern u16 gDKEyesTimer;
 extern u8 gUnknown_03000BEC;
 extern u8 gUnknown_03000BF0;
 extern u8 gUnknown_03000BF8;
@@ -1662,7 +1689,7 @@ void level_select_loop(void);
 void level_select_end(void);
 void sub_0801B2CC();
 void reset_some_array_0801B3C0(void);
-void sub_0801B3DC(struct GraphicsConfig *, int, int);
+void setup_animated_tiles_0801B3DC(struct GraphicsConfig *, int, int);
 void sub_0801B50C(int);
 void title_init_callback(void);
 void title_main(void);
@@ -1966,7 +1993,7 @@ void sub_080062D0();
 void sub_08006A00();
 void update_animated_tiles_0801B4BC();
 void sub_08031AD4();
-void sub_0802BA38();
+void update_level_springs_0802BA38();
 void sub_0803D248();
 void sub_08031D44();
 void sub_0806E594(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);

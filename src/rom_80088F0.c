@@ -18,7 +18,7 @@ void level_play_loop(void)
     sub_08031AD4(&oamIndex);
     add_b_back_to_game_sprite(&oamIndex, &tileNum, &vramOffset);
     DmaCopy16(3, gOamBuffer, OAM, sizeof(gOamBuffer));
-    sub_0802BA38(gSomeVRAMAddr_03000E80, 6, gEWRAMBasePtr->unk800C, 6);
+    update_level_springs_0802BA38(gSomeVRAMAddr_03000E80, 6, gEWRAMBasePtr->unk800C, 6);
     if (gUnknown_030009EC != 0
      || gMainState == MAIN_STATE_UNKNOWN_10 || gMainState == MAIN_STATE_LEVEL_EDIT
      || (gUnknown_03001A1C & 0x1000))

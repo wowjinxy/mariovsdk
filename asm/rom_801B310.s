@@ -119,8 +119,8 @@ _0801B3D8:
 	.4byte 0x0300009C
 	THUMB_FUNC_END reset_some_array_0801B3C0
 
-	THUMB_FUNC_START sub_0801B3DC
-sub_0801B3DC: @ 0x0801B3DC
+	THUMB_FUNC_START setup_animated_tiles_0801B3DC
+setup_animated_tiles_0801B3DC: @ 0x0801B3DC
 	push {r4-r6,lr}
 	add r3, r0, #0
 	add r5, r1, #0
@@ -164,7 +164,7 @@ _0801B428:
 	.4byte 0x030000A0
 _0801B42C:
 	.4byte 0x0300009C
-	THUMB_FUNC_END sub_0801B3DC
+	THUMB_FUNC_END setup_animated_tiles_0801B3DC
 
 	THUMB_FUNC_START sub_0801B430
 sub_0801B430: @ 0x0801B430

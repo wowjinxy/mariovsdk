@@ -66,7 +66,7 @@ u16 setup_graphics_08032814(struct UnkStruct1 *arg0, int arg1)
 
             if (r4->unk6 == 0)
             {
-                sub_0801B3DC(r4->unk0, !(r4->unk0->bgCnt[bgNum] & BGCNT_256COLOR), bgNum);
+                setup_animated_tiles_0801B3DC(r4->unk0, !(r4->unk0->bgCnt[bgNum] & BGCNT_256COLOR), bgNum);
             }
         }
     }

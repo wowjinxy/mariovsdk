@@ -24,7 +24,7 @@ void title_init_callback(void)
     arena_restore_head(0);
     sub_08071CD4();
     gUnknown_03001740 = 0;
-    gUnknown_03000BE0 = 0;
+    gDemoTimer_03000BE0 = 0;
     gUnknown_030000B0 = -1;
     gCameraHorizontalOffset = 0;
     gCameraVerticalOffset = 0;
@@ -36,8 +36,8 @@ void title_init_callback(void)
     var = repoint_tile_objects_08006968(&gTitleMarioDKEyes);
     gUnknown_030000A4 = var;
     DmaFill16(3, 0xA0, (void *)OAM, 0x200);
-    gUnknown_03000BE4 = 0;
-    gUnknown_03000BE8 = 0;
+    gMarioEyesTimer = 0;
+    gDKEyesTimer = 0;
     gGeneralTimer = 0;
     if (get_current_bgm() != TITLE)
         play_bgm(TITLE, 128, 1);
@@ -59,28 +59,28 @@ void title_main(void)
     update_fade_from_black();
     if (gUnknown_030000AC == 0 && gIsFadeInProgress == 0 && gUnknown_030000B0 == -1)
         gUnknown_030000B0 = play_sound_effect_08071990(SE_TITLE, 8, 16, 64, 0, 128, 0);
-    if (gUnknown_03000BE0 > 5)
+    if (gDemoTimer_03000BE0 > 5)
         REG_DISPCNT = 0x1740;
     arr[0] = 0;
     arr[1] = 13;
-    sub_080064D4(arr, gUnknown_030000A4->unk108[gTitleMarioEyesAnimData[gUnknown_03000BE4]], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
+    sub_080064D4(arr, gUnknown_030000A4->unk108[gTitleMarioEyesAnimData[gMarioEyesTimer]], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
     arr[0] = 22;
     arr[1] = 0;
-    sub_080064D4(arr, gUnknown_030000A4->unk108[gTitleDKEyesAnimData[gUnknown_03000BE8] + 3], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
-    if (gUnknown_03000BE4 < 299)
-        gUnknown_03000BE4++;
+    sub_080064D4(arr, gUnknown_030000A4->unk108[gTitleDKEyesAnimData[gDKEyesTimer] + 3], gTitleMarioDKEyes.bgVramMapAddrs[2], 5);
+    if (gMarioEyesTimer < 299)
+        gMarioEyesTimer++;
     else
-        gUnknown_03000BE4 = 0;
-    if (gUnknown_03000BE8 < 209)
-        gUnknown_03000BE8++;
+        gMarioEyesTimer = 0;
+    if (gDKEyesTimer < 209)
+        gDKEyesTimer++;
     else
-        gUnknown_03000BE8 = 0;
-    if (gUnknown_03000BE0 > 1280)
+        gDKEyesTimer = 0;
+    if (gDemoTimer_03000BE0 > 1280)
     {
-        if (gUnknown_03000B64 > 7 || gUnknown_03000B64 < 0)
-            gUnknown_03000B64 = 0;
+        if (gTitleScreenAttractCount > 7 || gTitleScreenAttractCount < 0)
+            gTitleScreenAttractCount = 0;
         sub_08071E14(229);
-        if (gUnknown_0807954C[gUnknown_03000B64].unk0 != 0)
+        if (gUnknown_0807954C[gTitleScreenAttractCount].unk0 != 0)
         {
             movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);
             change_main_state(MAIN_STATE_MOVIE, USE_FADE);
@@ -88,14 +88,14 @@ void title_main(void)
         else
         {
             gLevelType = LEVEL_TYPE_MAIN;
-            gCurrentWorld = gUnknown_0807954C[gUnknown_03000B64].unk1;
+            gCurrentWorld = gUnknown_0807954C[gTitleScreenAttractCount].unk1;
             title_demo_setup(gCurrentWorld);
             decompress_level_data_08004428(gNextLevelInLevelTable.unk0->levelData);
             change_main_state(MAIN_STATE_DEMO, USE_FADE);
             gUnknown_030012F8 = 0;
         }
-        gUnknown_03000B64++;
-        gUnknown_03000B64 = (gUnknown_03000B64 < 8) ? gUnknown_03000B64 : 0;
+        gTitleScreenAttractCount++;
+        gTitleScreenAttractCount = (gTitleScreenAttractCount < 8) ? gTitleScreenAttractCount : 0;
     }
     if (!gIsFadeInProgress && sub_080721A8(gUnknown_030000B0) != 0)
     {
@@ -108,8 +108,8 @@ void title_main(void)
         sub_0801B88C();
     }
     level_callback_08008238();
-    gUnknown_03000BE0++;
-    gUnknown_03000BE0 &= 0xFFFF;
+    gDemoTimer_03000BE0++;
+    gDemoTimer_03000BE0 &= 0xFFFF;
 }
 
 void sub_0801B88C(void)
