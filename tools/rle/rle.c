@@ -31,22 +31,11 @@ static bool write_u8(FILE *out, const uint8_t val)
 	return (fputc(val, out) != EOF);
 }
 
-static bool write_u16(FILE *out, const uint16_t val)
-{
-	uint8_t bytes[2];
-	bytes[0] = val & 0xFF;
-	bytes[1] = val >> 8;
-	return (fwrite(bytes, sizeof(bytes), 1, out) == 1);
-}
-
 static bool rle_decompress(FILE *in, FILE *out)
 {
 	uint32_t hdr;
 	size_t dataSize;
 	size_t uncSize = 0;
-	uint8_t runLength;
-	uint8_t uncData2;
-	uint16_t uncData = 0;
 
 	if (!read_u32(in, &hdr))
 		goto read_error;
@@ -60,68 +49,42 @@ static bool rle_decompress(FILE *in, FILE *out)
 	dprintf("size = 0x%lX\n", dataSize);
     while (uncSize < dataSize)
     {
-        if (!read_u8(in, &runLength))
-			goto read_error;
-        if (runLength & 0x80)  // fill
-        {
-            runLength &= ~0x80;
-            runLength += 3;
-            if (!read_u8(in, &uncData2))
-				goto read_error;
-			dprintf("fill %ix 0x%02X\n", runLength, uncData2);
-            while (runLength != 0)
-            {
-                if (uncSize & 1)
-                {
-                    uncData |= uncData2 << 8;
-                    if (!write_u16(out, uncData))
-						goto write_error;
-                    uncData = 0;
-                }
-                else
-                {
-                    uncData = uncData2;
-                }
-                //if (!write_u8(out, uncData2))
-				//	goto write_error;
+		uint8_t hdrByte;
+		uint8_t runLen;
 
-                runLength--;
+        if (!read_u8(in, &hdrByte))
+			goto read_error;
+        if (hdrByte & 0x80)  // fill
+        {
+			uint8_t fillByte;
+			runLen = (hdrByte & 0x7F) + 3;
+            if (!read_u8(in, &fillByte))
+				goto read_error;
+			dprintf("fill %ix 0x%02X\n", runLen, fillByte);
+            while (runLen != 0)
+            {
+                if (!write_u8(out, fillByte))
+					goto write_error;
+                runLen--;
                 uncSize++;
             }
         }
         else  // copy
         {
-            runLength++;
-			dprintf("copy %ix\n", runLength);
-            while (runLength != 0)
+            runLen = hdrByte + 1;
+			dprintf("copy %ix\n", runLen);
+            while (runLen != 0)
             {
-				uint8_t byte;
-                if (uncSize & 1)
-                {
-                    if (!read_u8(in, &byte))
-						goto read_error;
-					uncData |= byte << 8;
-                    if (!write_u16(out, uncData))
-						goto write_error;
-                    uncData = 0;
-                }
-
-                else
-                {
-                    if (!read_u8(in, &byte))
-						goto read_error;
-					uncData = byte;
-                }
-                runLength--;
+				uint8_t temp;
+				if (!read_u8(in, &temp))
+					goto read_error;
+				if (!write_u8(out, temp))
+					goto read_error;
+                runLen--;
                 uncSize++;
             }
         }
     }
-    if (uncSize & 1)
-    {
-		if (!write_u16(out, uncData))
-			goto write_error;
-	}
 	return true;
 
 read_error:
@@ -136,17 +99,11 @@ write_error:
 
 static bool rle_compress(FILE *in, FILE *out)
 {
-	int fillLen = 0;
-	//int prevByte = -1;
-	//uint8_t currByte = 0;
 	int copyStart = 0;
 	int copyEnd = 0;
 
-	// write header
 	fseek(out, 4, SEEK_SET);  // skip over header, will write this later
 
-	copyStart = 0;
-	copyEnd = 0;
 	// read first byte
 	uint8_t fillByte;
 	if (!read_u8(in, &fillByte))
@@ -156,7 +113,7 @@ static bool rle_compress(FILE *in, FILE *out)
 		uint8_t byte;
 
 		// Find length of fill run (max 130 bytes)
-		fillLen = 1;
+		int fillLen = 1;
 		while (read_u8(in, &byte) && byte == fillByte && fillLen < 130)
 			fillLen++;
 
@@ -166,8 +123,6 @@ static bool rle_compress(FILE *in, FILE *out)
 			int copyLen = copyEnd - copyStart;
 			if (copyLen > 0)
 			{
-				//printf("copyStart %i\n", copyStart);
-
 				long int savedPos = ftell(in);
 				fseek(in, copyStart, SEEK_SET);
 
@@ -187,9 +142,7 @@ static bool rle_compress(FILE *in, FILE *out)
 				}
 
 				fseek(in, savedPos, SEEK_SET);
-
 			}
-
 			copyStart = ftell(in) - 1;
 			copyEnd = copyStart;
 
@@ -199,7 +152,6 @@ static bool rle_compress(FILE *in, FILE *out)
 				goto write_error;
 			if (!write_u8(out, fillByte))
 				goto write_error;
-
 		}
 		else  // didn't get enough bytes for a fill, so put this to the copy run
 			copyEnd += fillLen;
