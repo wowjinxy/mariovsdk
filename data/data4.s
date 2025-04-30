@@ -7,8 +7,8 @@
 gDKPlusLeftovers:
 	.4byte 0x74 | (1 << 31)  @ unk0
 	.4byte 0x2DE4  @ filler4
-	.4byte gDKPlusLeftovers.bg - gDKPlusLeftovers - 4  @ gfxOffset
-	.4byte 0x219C, 0, 0, 0  @ unkOffsets
+	.4byte gDKPlusLeftovers.bg - gDKPlusLeftovers  @ gfxOffset
+	.4byte gDKPlusLeftovers.bg0map - gDKPlusLeftovers, 0, 0, 0  @ unkOffsets
 	.4byte 0  @ palOffset
 	.skip 0xC  @ filler20
 	.2byte 0x50  @ unk2C
@@ -23,11 +23,14 @@ gDKPlusLeftovers:
 	.byte 0xC0, 0x22, 0, 0, 0, 0, 0, 0  @ filler60
 	.4byte 0  @ unk68
 	.4byte 0  @ unk6C
-	.byte 0x30, 0x24, 0x00, 0x00, 0x24, 0x21, 0x00, 0x00  @ unknown, some more RLE stuff?
+	.byte 0x30, 0x24, 0x00, 0x00  @ unknown, some more RLE stuff?
 gDKPlusLeftovers.bg:
+	.4byte 0x2124  @ size?
 	.INCBIN "assets/unused/DKPlusLeftoverBG.4bpp.rle"
-	.INCBIN "assets/unused/DKPlusLeftoverBGUnknown.bin" 
-	
+	.byte 0xCD, 0xCD, 0xCD
+gDKPlusLeftovers.bg0map:
+	.INCBIN "assets/unused/DKPlusLeftoverBG0Map.bin"
+
 	.GLOBAL gMainMenuData
 gMainMenuData:
 	.INCBIN "assets/menu/MainMenuData.bin"
@@ -292,9 +295,9 @@ gTitleMarioDKEyes:
 gUnusedOptionsMenuData:
 	.4byte 0x74 | (1 << 31)  @ unk0
 	.4byte gUnusedOptionsMenuData.end - gUnusedOptionsMenuData  @ filler4
-	.4byte gUnusedOptionsMenuData.bg - gUnusedOptionsMenuData - 4  @ gfxOffset
-	.4byte 0x2F44, 0x2F90, 0x2FDC, 0x3028  @ unkOffsets
-	.4byte gUnusedOptionsMenuData.pal - gUnusedOptionsMenuData - 4  @ palOffset
+	.4byte gUnusedOptionsMenuData.bg - gUnusedOptionsMenuData  @ gfxOffset
+	.4byte gUnusedOptionsMenuData.bg0map - gUnusedOptionsMenuData, gUnusedOptionsMenuData.bg1map - gUnusedOptionsMenuData, gUnusedOptionsMenuData.bg2map - gUnusedOptionsMenuData, gUnusedOptionsMenuData.bg3map - gUnusedOptionsMenuData  @ unkOffsets
+	.4byte gUnusedOptionsMenuData.pal - gUnusedOptionsMenuData  @ palOffset
 	.skip 0xC  @ filler20
 	.2byte 0  @ unk2C
 	.2byte 0xA0  @ unk2E
@@ -308,11 +311,21 @@ gUnusedOptionsMenuData:
 	.byte 0, 0, 0, 0, 0, 0, 0, 0  @ filler60
 	.4byte 0  @ unk68
 	.4byte 0  @ unk6C
-	.byte 0xF4, 0x36, 0x00, 0x00, 0xCC, 0x2E, 0x00, 0x00  @ unknown
+	.4byte 0x36F4  @ unknown
 gUnusedOptionsMenuData.bg:
+	.4byte 0x2ECC  @ size?
 	.INCBIN "assets/unused/EarlyOptionsMenuBG.8bpp.rle"
-	.INCBIN "assets/unused/EarlyOptionsMenu.bin", 0x2F42, 0x34F4-0x2F42
+	.byte 0xCD, 0xCD
+gUnusedOptionsMenuData.bg0map:
+	.INCBIN "assets/unused/EarlyOptionsMenuBG0Map.bin"
+gUnusedOptionsMenuData.bg1map:
+	.INCBIN "assets/unused/EarlyOptionsMenuBG1Map.bin"
+gUnusedOptionsMenuData.bg2map:
+	.INCBIN "assets/unused/EarlyOptionsMenuBG2Map.bin"
+gUnusedOptionsMenuData.bg3map:
+	.INCBIN "assets/unused/EarlyOptionsMenuBG3Map.bin"
 gUnusedOptionsMenuData.pal:
+	.4byte 0x200  @ size?
 	.INCBIN "assets/unused/EarlyOptionsMenuBG.gbapal"
 	.INCBIN "assets/unused/EarlyOptionsMenu.bin", 0x36F4
 gUnusedOptionsMenuData.end:
@@ -875,7 +888,7 @@ gWorldFourData:
 gWorldFiveData:
 	.4byte 0x74 | (1 << 31)  @ unk0
 	.4byte gWorldFiveData.end - gWorldFiveData  @ filler4
-	.4byte gWorldFiveData.bg - gWorldFiveData - 4  @ gfxOffset
+	.4byte gWorldFiveData.bg - gWorldFiveData  @ gfxOffset
 	.4byte 0, 0x2DFC, 0, 0  @ unkOffsets
 	.4byte 0  @ palOffset
 	.skip 0xC  @ filler20
@@ -891,8 +904,9 @@ gWorldFiveData:
 	.byte 0x24, 0x2E, 0, 0, 0, 0, 0, 0  @ filler60
 	.4byte 0  @ unk68
 	.4byte 0  @ unk6C
-	.byte 0xDC, 0x44, 0x00, 0x00, 0x84, 0x2D, 0x00, 0x00  @ unknown
+	.byte 0xDC, 0x44, 0x00, 0x00  @ unknown
 gWorldFiveData.bg:
+	.4byte 0x2D84
 	.INCBIN "assets/level/data/WorldFiveBG.4bpp.rle"
 	.INCBIN "assets/level/data/WorldFiveUnknown.bin"
 gWorldFiveData.end:
