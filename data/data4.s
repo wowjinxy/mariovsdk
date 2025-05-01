@@ -29,6 +29,9 @@ gDKPlusLeftovers.bg:
 	.INCBIN "assets/unused/DKPlusLeftoverBG.4bpp.rle"
 	.byte 0xCD, 0xCD, 0xCD
 gDKPlusLeftovers.bg0map:
+	.4byte 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	.4byte 0x04000010, 0x04000012, 0x00000100, 0x00000100
+	.byte 0xFC, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
 	.INCBIN "assets/unused/DKPlusLeftoverBG0Map.bin"
 
 	.GLOBAL gMainMenuData
@@ -317,12 +320,24 @@ gUnusedOptionsMenuData.bg:
 	.INCBIN "assets/unused/EarlyOptionsMenuBG.8bpp.rle"
 	.byte 0xCD, 0xCD
 gUnusedOptionsMenuData.bg0map:
-	.INCBIN "assets/unused/EarlyOptionsMenuBG0Map.bin"
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x04000010, 0x04000012, 0x00000100, 0x00000100
+	.byte 0x24, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.INCBIN "assets/unused/EarlyOptionsMenuBG0Map.bin.rle"
 gUnusedOptionsMenuData.bg1map:
-	.INCBIN "assets/unused/EarlyOptionsMenuBG1Map.bin"
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x04000014, 0x04000016, 0x00000100, 0x00000100
+	.byte 0x24, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.INCBIN "assets/unused/EarlyOptionsMenuBG1Map.bin.rle"
 gUnusedOptionsMenuData.bg2map:
-	.INCBIN "assets/unused/EarlyOptionsMenuBG2Map.bin"
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x04000018, 0x0400001A, 0x00000100, 0x00000100
+	.byte 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	.INCBIN "assets/unused/EarlyOptionsMenuBG2Map.bin.rle"
 gUnusedOptionsMenuData.bg3map:
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x0400001C, 0x0400001E, 0x00000100, 0x00000100
+	.byte 0xA0, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 	.INCBIN "assets/unused/EarlyOptionsMenuBG3Map.bin"
 gUnusedOptionsMenuData.pal:
 	.4byte 0x200  @ size?
@@ -889,7 +904,7 @@ gWorldFiveData:
 	.4byte 0x74 | (1 << 31)  @ unk0
 	.4byte gWorldFiveData.end - gWorldFiveData  @ filler4
 	.4byte gWorldFiveData.bg - gWorldFiveData  @ gfxOffset
-	.4byte 0, 0x2DFC, 0, 0  @ unkOffsets
+	.4byte 0, gWorldFiveData.bg1map - gWorldFiveData, 0, 0  @ unkOffsets
 	.4byte 0  @ palOffset
 	.skip 0xC  @ filler20
 	.2byte 0  @ unk2C
@@ -908,7 +923,11 @@ gWorldFiveData:
 gWorldFiveData.bg:
 	.4byte 0x2D84
 	.INCBIN "assets/level/data/WorldFiveBG.4bpp.rle"
-	.INCBIN "assets/level/data/WorldFiveUnknown.bin"
+gWorldFiveData.bg1map:
+	.4byte 0x00000000, 0x02000100, 0x00000000, 0x00000000
+	.4byte 0x04000014, 0x04000016, 0x00000100, 0x00000200
+	.byte 0x00, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.INCBIN "assets/level/data/WorldFiveBG1Map.bin"
 gWorldFiveData.end:
 
 	.GLOBAL gWorldSixData
