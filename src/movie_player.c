@@ -25,7 +25,7 @@ void movie_player_main(void)
         update_fade_from_black();
 
     sub_0805739C(gMoviePlayerParams.movieData);
-    sub_0802BE50();
+    update_level_background_0802BE50();
     process_input();
     gGeneralTimer++;
 

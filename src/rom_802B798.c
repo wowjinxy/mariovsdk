@@ -277,9 +277,9 @@ void sub_0802BCA4(struct GraphicsConfig *config, int arg1)
     int r4_;
 
     if (config != NULL && config->unk0 < 0 && (config->unk0 & 0x7FFFFFFF) > r3
-     && config->unk68 != 0
-     && ((struct UnkStruct1_sub_child_data68 *)((u8 *)config + config->unk68))->unk2 != 0)
-        r5 = (struct UnkStruct1_sub_child_data68 *)((u8 *)config + config->unk68);
+     && config->bgScanlineScrollOffset != 0
+     && ((struct UnkStruct1_sub_child_data68 *)((u8 *)config + config->bgScanlineScrollOffset))->scrollLayerCount != 0)
+        r5 = (struct UnkStruct1_sub_child_data68 *)((u8 *)config + config->bgScanlineScrollOffset);
     else if (arg1 == 0)
     {
         gUnknown_03000C90.armFunc = NULL;
@@ -299,24 +299,24 @@ void sub_0802BCA4(struct GraphicsConfig *config, int arg1)
     else
         CpuCopy16(sub_0800169C, gUnknown_03000C90.armFunc, size);
 
-    gUnknown_03000C90.unk14 = arena_allocate(r5->unk2 * 0x10 + 1);
+    gUnknown_03000C90.unk14 = arena_allocate(r5->scrollLayerCount * 0x10 + 1);
     for (i = 0; i < 2; i++)
         gUnknown_03000C90.unkC[i] = arena_allocate(0x1C8);
-    CpuFill32(0, gUnknown_03000C90.unk14, r5->unk2 * 0x10);
+    CpuFill32(0, gUnknown_03000C90.unk14, r5->scrollLayerCount * 0x10);
 
-    for (i = 0; i < r5->unk2; i++)
+    for (i = 0; i < r5->scrollLayerCount; i++)
     {
-        struct UnkStruct1_sub_child_data68_sub *r2 = &r5->unk4[i];
+        struct UnkStruct1_sub_child_data68_sub *bgScanlineData = &r5->unk4[i];
         struct StructC90_child14 *r1 = &gUnknown_03000C90.unk14[i];
 
-        r1->unk0 = r2->unk0;
-        r1->unkC = r2->unk8;
-        r1->unk4 = r2->unk4;
+        r1->speed = bgScanlineData->speed;
+        r1->scanline = bgScanlineData->scanline;
+        r1->unk4 = bgScanlineData->unk4;
     }
 
-    gUnknown_03000C70.unk18 = r5->unk2;
+    gUnknown_03000C70.unk18 = r5->scrollLayerCount;
     gUnknown_03000C70.unk14 = gUnknown_03000C90.unk14;
-    r4_ = r5->unk0;
+    r4_ = r5->bgLayerScrolled;
     gUnknown_03000C70.unk0 = gUnknown_0807BB30[r4_];
     CpuFill16(0, &gBGLayerOffsets, sizeof(gBGLayerOffsets));
     gUnknown_03000C70.unk8 = (u8 *)&gBGLayerOffsets + r4_ * 4;
@@ -335,16 +335,16 @@ int has_0x68_struct_0802BE18(struct GraphicsConfig *config)
     register u32 r3 asm("r3") = 0x68;
 
     if (config != NULL && config->unk0 < 0 && (config->unk0 & 0x7FFFFFFF) > r3
-     && config->unk68 != 0)
+     && config->bgScanlineScrollOffset != 0)
     {
-        struct UnkStruct1_sub_child_data68 *r0 = (struct UnkStruct1_sub_child_data68 *)((u8 *)config + config->unk68);
-        if (r0->unk2 != 0)
+        struct UnkStruct1_sub_child_data68 *r0 = (struct UnkStruct1_sub_child_data68 *)((u8 *)config + config->bgScanlineScrollOffset);
+        if (r0->scrollLayerCount != 0)
             return TRUE;
     }
     return FALSE;
 }
 
-void sub_0802BE50(void)
+void update_level_background_0802BE50(void)
 {
     if (gUnknown_03000C90.armFunc != NULL)
         gUnknown_03000C90.armFunc(&gUnknown_03000C90, &gUnknown_03000C70, NULL, 0);
@@ -364,7 +364,7 @@ void sub_0802BE74(void)
     gUnknown_03000C90.unk8 = 0;
 }
 
-void sub_0802BEA4(u8 arg0)
+void update_level_background_waves_0802BEA4(u8 arg0)
 {
     if (gUnknown_03000C90.armFunc != NULL)
     {
@@ -503,16 +503,16 @@ void gfx_related_0802C0B8(struct GraphicsConfig *config)
 {
     struct StructD20 *r3 = &gCurrentPalette;
 
-    if (config == NULL || config->unk0 >= 0 || (u32)(config->unk0 & 0x7FFFFFFF) <= 0x6C || config->unk6C == 0)
+    if (config == NULL || config->unk0 >= 0 || (u32)(config->unk0 & 0x7FFFFFFF) <= 0x6C || config->waterLayerOffset == 0)
         r3->unk10 = 0x400;
     else
     {
-        struct GraphicsConfig_6C *r1 = (void *)((u8 *)config + config->unk6C);
+        struct GraphicsConfig_WaterLayer *r1 = (void *)((u8 *)config + config->waterLayerOffset);
 
-        r3->unk8 = r1->unk4;
-        r3->unkC = r1->unk204;
-        r3->unk10 = r1->unk0;
-        r3->unk12 = r1->unk2;
+        r3->unk8 = r1->bgRepPal;
+        r3->unkC = r1->sprRepPal;
+        r3->unk10 = r1->startScanline;
+        r3->unk12 = r1->flags;
     }
 }
 
@@ -521,9 +521,9 @@ void sub_0802C104(int arg0, int arg1, void *arg2)
     gCurrentPalette.unk0[arg0][arg1] = arg2;
 }
 
-int has_0x6C_struct_0802C118(struct GraphicsConfig *arg0)
+int has_water_layer_struct_0802C118(struct GraphicsConfig *arg0)
 {
-    if (arg0 == NULL || arg0->unk0 >= 0 || (u32)(arg0->unk0 & 0x7FFFFFFF) <= 0x6C || arg0->unk6C == 0)
+    if (arg0 == NULL || arg0->unk0 >= 0 || (u32)(arg0->unk0 & 0x7FFFFFFF) <= 0x6C || arg0->waterLayerOffset == 0)
         return FALSE;
     else
         return TRUE;

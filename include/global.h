@@ -89,33 +89,33 @@ struct UnkStruct1_sub_child_data
 
 struct UnkStruct1_sub_child_data68_sub
 {
-    u32 unk0;
+    u32 speed;
     u32 unk4;  // something to do with VRAM allocation?
-    u16 unk8;
+    u16 scanline;
     u8 fillerA[2];
 };  // size = 0xC
 
 struct UnkStruct1_sub_child_data68
 {
-    u16 unk0;
-    u16 unk2;  // count of unk4 array
+    u16 bgLayerScrolled;
+    u16 scrollLayerCount;  // count of unk4 array
     struct UnkStruct1_sub_child_data68_sub unk4[1];
 };
 
-struct GraphicsConfig_6C
+struct GraphicsConfig_WaterLayer
 {
-    u16 unk0;
-    u16 unk2;
-    u8 unk4[0x200];
-    u8 unk204[0];
+    u16 startScanline;
+    u16 flags;
+    u8 bgRepPal[0x200];
+    u8 sprRepPal[0x200];
 };
 
 struct GraphicsConfig
 {
     s32 unk0;  // size of this struct? bit 31 is some flag
-    u8 filler4[4];
+	u32 dataSize; // includes unk0
     /*0x08*/ u32 gfxOffset;  // offset to CmprHeader containing graphics data. Actually 4 bytes ahead of this
-    /*0x0C*/ s32 unkOffsets[4];  // offsets to UnkStruct1_sub_child_data structs from the beginning of this struct. Is this tilemap related?
+    /*0x0C*/ s32 bgMapOffsets[4];  // offsets to UnkStruct1_sub_child_data structs from the beginning of this struct. Is this tilemap related?
     /*0x1C*/ u32 palOffset;  // offset from the beginning of this struct to palette. Palette is actually 4 bytes after the address.
     u8 filler20[0xC];
     u16 unk2C;
@@ -127,9 +127,11 @@ struct GraphicsConfig
     /*0x38*/ u16 bgCnt[4];  // bgcnt for BGs 0-3
     /*0x40*/ u8 *bgVramMapAddrs[4];  // VRAM tile map addresses for each BG?
     /*0x50*/ u8 *vramAddr50[4];  // VRAM addresses?
-    u8 filler60[8];
-    u32 unk68;  // some offset
-    u32 unk6C;  // offset to a GraphicsConfig_6C struct
+	u32 animTileGFXOffset;
+    u8 filler64[4];
+    u32 bgScanlineScrollOffset;  // some offset
+    u32 waterLayerOffset;  // offset to a GraphicsConfig_WaterLayer struct
+	u32 tileObjectOffset; // offset to tile object data with a CmprHeader (how the tile objects for stuff like the options menu work)
 };
 
 struct UnkStruct1_sub
@@ -425,7 +427,7 @@ enum // flags for UnknownStruct8.failType
     // Unused flags, fail type flags are 4 bytes big, reads all 4 bytes
     FAIL_TYPE_9 = (1 << 8),
     FAIL_TYPE_10 = (1 << 9),
-    FAIL_TYPE_11 = (1 << 10), 
+    FAIL_TYPE_11 = (1 << 10),
     FAIL_TYPE_12 = (1 << 11),
     FAIL_TYPE_13 = (1 << 12),
     FAIL_TYPE_14 = (1 << 13),
@@ -572,7 +574,7 @@ struct MoviePlayerParamaters
     u8 movieID;
 };
 
-enum // World IDs 
+enum // World IDs
 {
 	WORLD_1 = 0,
 	WORLD_2 = 1,
@@ -773,7 +775,7 @@ enum SpriteID  // Index of sprites in gUncompressedGraphicsTable
 
     SPRITE_ID_MARIO_STAND     = 727,
     SPRITE_ID_MARIO_RUN       = 737,
-	
+
     SPRITE_ID_MOVIE_ONE       = 892,
     SPRITE_ID_MOVIE_TWO       = 893,
     SPRITE_ID_MOVIE_THREE     = 894,
@@ -936,7 +938,7 @@ struct StructC40
     struct LinkedListHeaderMaybe *unk20;  // array
 };
 
-struct TileData 
+struct TileData
 {
 	u8 tileID;
 	u8 paletteLine;
@@ -975,10 +977,10 @@ struct StructC70
 
 struct StructC90_child14
 {
-    u32 unk0;
+    u32 speed;
     u32 unk4;
     u8 filler8[4];
-    u16 unkC;
+    u16 scanline;
     u8 fillerE[2];
 };  // size = 0x10
 
@@ -1091,14 +1093,14 @@ enum PaletteID
     PALETTE_22,
     PALETTE_23,
     PALETTE_24,
-    
+
     PALETTE_25_WORLD_ONE_BOSS_CLEAR,
     PALETTE_26_WORLD_TWO_BOSS_CLEAR,
     PALETTE_27_WORLD_THREE_BOSS_CLEAR,
     PALETTE_28_WORLD_FOUR_BOSS_CLEAR,
     PALETTE_29_WORLD_FIVE_BOSS_CLEAR,
-    PALETTE_30_WORLD_SIX_BOSS_CLEAR, 
-	
+    PALETTE_30_WORLD_SIX_BOSS_CLEAR,
+
     PALETTE_31_WORLD_ONE_PLUS_BOSS_CLEAR,
     PALETTE_32_WORLD_TWO_PLUS_BOSS_CLEAR,
     PALETTE_33_WORLD_THREE_PLUS_BOSS_CLEAR,
@@ -1148,7 +1150,7 @@ struct LevelCardHeader
     u8 unkA;
     u8 songID;
 	u16 cardSize2;
-	u16 unkE;	
+	u16 unkE;
     char cardName[16];
 };
 
@@ -1488,10 +1490,10 @@ extern u16 gUnknown_0807BA68[];
 extern void *gUnknown_0807BB30[];
 extern s16 gUnknown_0807C83A[];
 extern const u32 gUnknown_0807C850[];
-extern u32 gPaletteIndices_0807DD34[];
-extern u32 gPaletteIndices_0807DD4C[];
-extern u32 gPaletteIndices_0807DD64[];
-extern u32 gPaletteIndices_0807DD7C[];
+extern u32 gPaletteIndicesMain1_6_0807DD34[];
+extern u32 gPaletteIndicesPlus1_6_0807DD4C[];
+extern u32 gPaletteIndicesExpert1_6_0807DD64[];
+extern u32 gPaletteIndicesExpert7_12_0807DD7C[];
 extern u16 *const gUnknown_0807DD94;
 extern struct GraphicsConfig gNintendoSoftwareTechnologyLogo;
 extern struct GraphicsConfig gTitleScreenLeftData;
@@ -1913,7 +1915,7 @@ u8 sub_08038B18();
 void sub_0802D608(void);
 
 u8 sub_0805739C(struct Movie *);
-void sub_0802BE50(void);
+void update_level_background_0802BE50(void);
 u8 sub_0801B310();
 u32 update_quick_fade_from_black();
 u8 sub_080148A4(u32, u8);
@@ -1937,7 +1939,7 @@ void sub_0800CC6C();
 void sub_08041F70();
 u8 sub_0800C5A4();
 void sound_resume_music(void);
-void sub_0802BEA4(u8);
+void update_level_background_waves_0802BEA4(u8);
 
 void level_callback_08008764();
 

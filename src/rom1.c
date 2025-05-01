@@ -560,10 +560,10 @@ void level_play_main(void)
     gNextLevelInLevelTable.unkC();
 
     if (gNextLevelInLevelTable.unk12 == 2) {
-        sub_0802BEA4(gUnknown_03001A00);
+        update_level_background_waves_0802BEA4(gUnknown_03001A00);
     }
     else if (var1) {
-        sub_0802BE50();
+        update_level_background_0802BE50();
     }
     if (gUnknown_03001A00 != 0x0) {
         sub_0801B310();
@@ -629,9 +629,9 @@ void level_demo_main(void)
     }
     gNextLevelInLevelTable.unkC();
     if (gNextLevelInLevelTable.unk12 == 2) {
-        sub_0802BEA4(gUnknown_03001A00);
+        update_level_background_waves_0802BEA4(gUnknown_03001A00);
     } else if (bVar1) {
-        sub_0802BE50();
+        update_level_background_0802BE50();
     }
     sub_0801B310();
 }

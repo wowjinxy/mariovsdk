@@ -34676,8 +34676,8 @@ _080480EA:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_080480F0
-sub_080480F0: @ 0x080480F0
+	THUMB_FUNC_START mario_walking_080480F0
+mario_walking_080480F0: @ 0x080480F0
 	push {lr}
 	add r3, r1, #0
 	ldr r2, _08048120  @ =gUnknown_030019A4
@@ -34722,12 +34722,12 @@ _0804813C:
 _0804813E:
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_080480F0
+	THUMB_FUNC_END mario_walking_080480F0
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08048144
-sub_08048144: @ 0x08048144
+	THUMB_FUNC_START mario_off_ladder_08048144
+mario_off_ladder_08048144: @ 0x08048144
 	push {r4,r5,lr}
 	sub sp, sp, #20
 	add r5, r0, #0
@@ -34792,12 +34792,12 @@ _080481BA:
 	pop {r4,r5}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08048144
+	THUMB_FUNC_END mario_off_ladder_08048144
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_080481C4
-sub_080481C4: @ 0x080481C4
+	THUMB_FUNC_START mario_climb_ladder_down_080481C
+mario_climb_ladder_down_080481C: @ 0x080481C4
 	push {r4,r5,lr}
 	sub sp, sp, #20
 	add r5, r0, #0
@@ -34863,12 +34863,12 @@ _0804823A:
 	pop {r4,r5}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_080481C4
+	THUMB_FUNC_END mario_climb_ladder_down_080481C
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08048244
-sub_08048244: @ 0x08048244
+	THUMB_FUNC_START mario_climb_ladder1_08048244
+mario_climb_ladder1_08048244: @ 0x08048244
 	push {r4-r6,lr}
 	sub sp, sp, #16
 	add r4, r0, #0
@@ -34919,10 +34919,10 @@ _0804829C:
 	pop {r4-r6}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08048244
+	THUMB_FUNC_END mario_climb_ladder1_08048244
 
-	THUMB_FUNC_START sub_080482A4
-sub_080482A4: @ 0x080482A4
+	THUMB_FUNC_START mario_climb_ladder2_080482A4
+mario_climb_ladder2_080482A4: @ 0x080482A4
 	push {r4-r6,lr}
 	sub sp, sp, #20
 	add r5, r0, #0
@@ -34976,10 +34976,10 @@ _08048300:
 	pop {r4-r6}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_080482A4
+	THUMB_FUNC_END mario_climb_ladder2_080482A4
 
-	THUMB_FUNC_START sub_08048308
-sub_08048308: @ 0x08048308
+	THUMB_FUNC_START mario_jump_08048308
+mario_jump_08048308: @ 0x08048308
 	push {r4,r5,lr}
 	sub sp, sp, #20
 	add r5, r0, #0
@@ -35042,12 +35042,12 @@ _0804837A:
 	pop {r4,r5}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08048308
+	THUMB_FUNC_END mario_jump_08048308
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08048384
-sub_08048384: @ 0x08048384
+	THUMB_FUNC_START mario_start_falling_08048384
+mario_start_falling_08048384: @ 0x08048384
 	push {r4,r5,lr}
 	sub sp, sp, #20
 	add r5, r0, #0
@@ -35110,12 +35110,12 @@ _080483F6:
 	pop {r4,r5}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08048384
+	THUMB_FUNC_END mario_start_falling_08048384
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08048400
-sub_08048400: @ 0x08048400
+	THUMB_FUNC_START mario_ladder_shift_off_08048400
+mario_ladder_shift_off_08048400: @ 0x08048400
 	push {r4,r5,lr}
 	sub sp, sp, #20
 	add r5, r0, #0
@@ -35162,7 +35162,7 @@ _08048452:
 	pop {r4,r5}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08048400
+	THUMB_FUNC_END mario_ladder_shift_off_08048400
 
 	.byte 0x00
 	.byte 0x00
