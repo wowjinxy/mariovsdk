@@ -5,8 +5,35 @@
 
 	.GLOBAL gDKPlusLeftovers
 gDKPlusLeftovers:
-	.INCBIN "assets/unused/DKPlusLeftoverData.bin"
-	
+	.4byte 0x74 | (1 << 31)  @ unk0
+	.4byte 0x2DE4  @ filler4
+	.4byte gDKPlusLeftovers.bg - gDKPlusLeftovers  @ gfxOffset
+	.4byte gDKPlusLeftovers.bg0map - gDKPlusLeftovers, 0, 0, 0  @ unkOffsets
+	.4byte 0  @ palOffset
+	.skip 0xC  @ filler20
+	.2byte 0x50  @ unk2C
+	.2byte 0  @ unk2E
+	.2byte 0  @ bldCnt
+	.2byte 0  @ bldAlpha
+	.2byte 0  @ bldY
+	.byte 0, 1  @ filler36
+	.2byte 0x0004, 0x0108, 0x0508, 0x0908  @ bgCnt
+	.4byte 0x06000000, 0x06000800, 0x06002800, 0x06004800  @ bgVramMapAddrs
+	.4byte 0x06004000, 0x06008000, 0x06008000, 0x06008000  @ vramAddr50
+	.byte 0xC0, 0x22, 0, 0, 0, 0, 0, 0  @ filler60
+	.4byte 0  @ unk68
+	.4byte 0  @ unk6C
+	.byte 0x30, 0x24, 0x00, 0x00  @ unknown, some more RLE stuff?
+gDKPlusLeftovers.bg:
+	.4byte 0x2124  @ size?
+	.INCBIN "assets/unused/DKPlusLeftoverBG.4bpp.rle"
+	.byte 0xCD, 0xCD, 0xCD
+gDKPlusLeftovers.bg0map:
+	.4byte 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	.4byte 0x04000010, 0x04000012, 0x00000100, 0x00000100
+	.byte 0xFC, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.INCBIN "assets/unused/DKPlusLeftoverBG0Map.bin"
+
 	.GLOBAL gMainMenuData
 gMainMenuData:
 	.INCBIN "assets/menu/MainMenuData.bin"
@@ -269,8 +296,55 @@ gTitleMarioDKEyes:
 
 	.GLOBAL gUnusedOptionsMenuData
 gUnusedOptionsMenuData:
-	.INCBIN "assets/unused/EarlyOptionsMenu.bin"
-	
+	.4byte 0x74 | (1 << 31)  @ unk0
+	.4byte gUnusedOptionsMenuData.end - gUnusedOptionsMenuData  @ filler4
+	.4byte gUnusedOptionsMenuData.bg - gUnusedOptionsMenuData  @ gfxOffset
+	.4byte gUnusedOptionsMenuData.bg0map - gUnusedOptionsMenuData, gUnusedOptionsMenuData.bg1map - gUnusedOptionsMenuData, gUnusedOptionsMenuData.bg2map - gUnusedOptionsMenuData, gUnusedOptionsMenuData.bg3map - gUnusedOptionsMenuData  @ unkOffsets
+	.4byte gUnusedOptionsMenuData.pal - gUnusedOptionsMenuData  @ palOffset
+	.skip 0xC  @ filler20
+	.2byte 0  @ unk2C
+	.2byte 0xA0  @ unk2E
+	.2byte 0  @ bldCnt
+	.2byte 0  @ bldAlpha
+	.2byte 0  @ bldY
+	.byte 0, 0xF  @ filler36
+	.2byte 0x0084, 0x0184, 0x0284, 0x0384  @ bgCnt
+	.4byte 0x06000000, 0x06000800, 0x06001000, 0x06001800  @ bgVramMapAddrs
+	.4byte 0x06004000, 0x06004000, 0x06004000, 0x06004000  @ vramAddr50
+	.byte 0, 0, 0, 0, 0, 0, 0, 0  @ filler60
+	.4byte 0  @ unk68
+	.4byte 0  @ unk6C
+	.4byte 0x36F4  @ unknown
+gUnusedOptionsMenuData.bg:
+	.4byte 0x2ECC  @ size?
+	.INCBIN "assets/unused/EarlyOptionsMenuBG.8bpp.rle"
+	.byte 0xCD, 0xCD
+gUnusedOptionsMenuData.bg0map:
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x04000010, 0x04000012, 0x00000100, 0x00000100
+	.byte 0x24, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.INCBIN "assets/unused/EarlyOptionsMenuBG0Map.bin.rle"
+gUnusedOptionsMenuData.bg1map:
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x04000014, 0x04000016, 0x00000100, 0x00000100
+	.byte 0x24, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.INCBIN "assets/unused/EarlyOptionsMenuBG1Map.bin.rle"
+gUnusedOptionsMenuData.bg2map:
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x04000018, 0x0400001A, 0x00000100, 0x00000100
+	.byte 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	.INCBIN "assets/unused/EarlyOptionsMenuBG2Map.bin.rle"
+gUnusedOptionsMenuData.bg3map:
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x0400001C, 0x0400001E, 0x00000100, 0x00000100
+	.byte 0xA0, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	.INCBIN "assets/unused/EarlyOptionsMenuBG3Map.bin"
+gUnusedOptionsMenuData.pal:
+	.4byte 0x200  @ size?
+	.INCBIN "assets/unused/EarlyOptionsMenuBG.gbapal"
+	.INCBIN "assets/unused/EarlyOptionsMenu.bin", 0x36F4
+gUnusedOptionsMenuData.end:
+
 	.GLOBAL gOptionsMenuBGConfig
 gOptionsMenuBGConfig:
 	.INCBIN "assets/menu/OptionsMenuData.bin"
@@ -827,7 +901,34 @@ gWorldFourData:
 
 	.GLOBAL gWorldFiveData
 gWorldFiveData:
-	.INCBIN "assets/level/data/WorldFiveData.bin"
+	.4byte 0x74 | (1 << 31)  @ unk0
+	.4byte gWorldFiveData.end - gWorldFiveData  @ filler4
+	.4byte gWorldFiveData.bg - gWorldFiveData  @ gfxOffset
+	.4byte 0, gWorldFiveData.bg1map - gWorldFiveData, 0, 0  @ unkOffsets
+	.4byte 0  @ palOffset
+	.skip 0xC  @ filler20
+	.2byte 0  @ unk2C
+	.2byte 0x0200  @ unk2E
+	.2byte 0  @ bldCnt
+	.2byte 0  @ bldAlpha
+	.2byte 0  @ bldY
+	.byte 0, 2  @ filler36
+	.2byte 0x000C, 0x810E, 0x0506, 0x0906  @ bgCnt
+	.4byte 0x06000000, 0x06000800, 0x06002800, 0x06004800  @ bgVramMapAddrs
+	.4byte 0x0600C000, 0x0600C000, 0x06004000, 0x06004000  @ vramAddr50
+	.byte 0x24, 0x2E, 0, 0, 0, 0, 0, 0  @ filler60
+	.4byte 0  @ unk68
+	.4byte 0  @ unk6C
+	.byte 0xDC, 0x44, 0x00, 0x00  @ unknown
+gWorldFiveData.bg:
+	.4byte 0x2D84
+	.INCBIN "assets/level/data/WorldFiveBG.4bpp.rle"
+gWorldFiveData.bg1map:
+	.4byte 0x00000000, 0x02000100, 0x00000000, 0x00000000
+	.4byte 0x04000014, 0x04000016, 0x00000100, 0x00000200
+	.byte 0x00, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.INCBIN "assets/level/data/WorldFiveBG1Map.bin"
+gWorldFiveData.end:
 
 	.GLOBAL gWorldSixData
 gWorldSixData:

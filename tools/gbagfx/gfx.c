@@ -541,7 +541,7 @@ void FreeImage(struct Image *image)
 	image->pixels = NULL;
 }
 
-void ReadGbaPalette(char *path, struct Palette *palette)
+void ReadGbaPalette(char *path, struct Palette *palette, bool msbHack)
 {
 	int fileSize;
 	unsigned char *data = ReadWholeFile(path, &fileSize);
@@ -558,6 +558,20 @@ void ReadGbaPalette(char *path, struct Palette *palette)
 		palette->colors[i].red = UPCONVERT_BIT_DEPTH(GET_GBA_PAL_RED(paletteEntry));
 		palette->colors[i].green = UPCONVERT_BIT_DEPTH(GET_GBA_PAL_GREEN(paletteEntry));
 		palette->colors[i].blue = UPCONVERT_BIT_DEPTH(GET_GBA_PAL_BLUE(paletteEntry));
+
+		if (msbHack)
+		{
+			// Some palette colors in Mario vs DK inexplicably have the most significant
+			// bit set, even though it is ignored. In order to match this, we store this
+			// bit in the least significant bit of the green channel.
+			//if (palette->colors[i].green & 1)
+			//	printf("green %i\n", palette->colors[i].green);
+			//assert(!(palette->colors[i].green & 1));
+			if (paletteEntry & (1 << 15))
+				palette->colors[i].green |= 1;
+			else
+				palette->colors[i].green &= ~1;
+		}
 	}
 	// png can only accept 16 or 256 colors, so fill the remainder with black
 	if (palette->numColors > 16)
@@ -569,7 +583,7 @@ void ReadGbaPalette(char *path, struct Palette *palette)
 	free(data);
 }
 
-void WriteGbaPalette(char *path, struct Palette *palette)
+void WriteGbaPalette(char *path, struct Palette *palette, bool msbHack)
 {
 	FILE *fp = fopen(path, "wb");
 
@@ -580,8 +594,16 @@ void WriteGbaPalette(char *path, struct Palette *palette)
 		unsigned char red = DOWNCONVERT_BIT_DEPTH(palette->colors[i].red);
 		unsigned char green = DOWNCONVERT_BIT_DEPTH(palette->colors[i].green);
 		unsigned char blue = DOWNCONVERT_BIT_DEPTH(palette->colors[i].blue);
-
 		uint16_t paletteEntry = SET_GBA_PAL(red, green, blue);
+
+		if (msbHack)
+		{
+			// Store the least significant bit of the original green channel as the
+			// most significant bit in the GBA color. This most significant bit is
+			// completely ignored on the GBA, but we do this for matching purposes.
+			if (palette->colors[i].green & 1)
+				paletteEntry |= (1 << 15);
+		}
 
 		fputc(paletteEntry & 0xFF, fp);
 		fputc(paletteEntry >> 8, fp);

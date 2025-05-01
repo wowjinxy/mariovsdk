@@ -65,7 +65,7 @@ struct Coords32
 struct CmprHeader
 {
     u32 reserved:4;
-    u32 compressionType:4;  // 1 = LZ77
+    u32 compressionType:4;  // 1 = LZ77, 3 = RLE
     u32 size:24;  // size of decompressed data
     // data follows this header
 };

@@ -34,7 +34,7 @@ void ConvertGbaToPng(char *inputPath, char *outputPath, struct GbaToPngOptions *
 
         if (strcmp(paletteFileExtension, "gbapal") == 0)
         {
-            ReadGbaPalette(options->paletteFilePath, &image.palette);
+            ReadGbaPalette(options->paletteFilePath, &image.palette, false);
         }
         else
         {
@@ -302,20 +302,34 @@ void HandlePngToGbaPaletteCommand(char *inputPath, char *outputPath, int argc UN
     struct Palette palette = {};
 
     ReadPngPalette(inputPath, &palette);
-    WriteGbaPalette(outputPath, &palette);
+    WriteGbaPalette(outputPath, &palette, false);
 }
 
-void HandleGbaToJascPaletteCommand(char *inputPath, char *outputPath, int argc UNUSED, char **argv UNUSED)
+void HandleGbaToJascPaletteCommand(char *inputPath, char *outputPath, int argc, char **argv)
 {
     struct Palette palette = {};
+	bool msbHack = false;
 
-    ReadGbaPalette(inputPath, &palette);
+	for (int i = 3; i < argc; i++)
+	{
+		char *option = argv[i];
+
+		if (strcmp(option, "-msbhack") == 0)
+			msbHack = true;
+        else
+        {
+            FATAL_ERROR("Unrecognized option \"%s\".\n", option);
+        }
+	}
+
+    ReadGbaPalette(inputPath, &palette, msbHack);
     WriteJascPalette(outputPath, &palette);
 }
 
 void HandleJascToGbaPaletteCommand(char *inputPath, char *outputPath, int argc, char **argv)
 {
     int numColors = 0;
+    bool msbHack = false;
 
     for (int i = 3; i < argc; i++)
     {
@@ -334,6 +348,8 @@ void HandleJascToGbaPaletteCommand(char *inputPath, char *outputPath, int argc, 
             if (numColors < 1)
                 FATAL_ERROR("Number of colors must be positive.\n");
         }
+        else if (strcmp(option, "-msbhack") == 0)
+			msbHack = true;
         else
         {
             FATAL_ERROR("Unrecognized option \"%s\".\n", option);
@@ -347,7 +363,7 @@ void HandleJascToGbaPaletteCommand(char *inputPath, char *outputPath, int argc, 
     if (numColors != 0)
         palette.numColors = numColors;
 
-    WriteGbaPalette(outputPath, &palette);
+    WriteGbaPalette(outputPath, &palette, msbHack);
 }
 
 void HandleLatinFontToPngCommand(char *inputPath, char *outputPath, int argc UNUSED, char **argv UNUSED)

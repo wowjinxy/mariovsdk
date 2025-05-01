@@ -11,6 +11,7 @@ endif
 TMPDIR := .extract
 
 GBAGFX  := tools/gbagfx/gbagfx
+RLE     := tools/rle/rle
 AIF2PCM := tools/aif2pcm/aif2pcm
 
 # canned recipe to extract bytes from binary file
@@ -1165,6 +1166,16 @@ FILES := \
 	assets/sprites/moving_platform/gUnknown_086591C8.png \
 	assets/sprites/moving_platform/gUnknown_08659274.png \
 	assets/sprites/moving_platform/gUnknown_08659320.png \
+	assets/unused/DKPlusLeftoverBG.png \
+	assets/unused/DKPlusLeftoverBG0Map.bin \
+	assets/unused/EarlyOptionsMenuBG.png \
+	assets/unused/EarlyOptionsMenuBG.pal \
+	assets/unused/EarlyOptionsMenuBG0Map.bin \
+	assets/unused/EarlyOptionsMenuBG1Map.bin \
+	assets/unused/EarlyOptionsMenuBG2Map.bin \
+	assets/unused/EarlyOptionsMenuBG3Map.bin \
+	assets/level/data/WorldFiveBG.png \
+	assets/level/data/WorldFiveBG1Map.bin \
 	assets/sounds/climb.aif \
 	assets/sounds/skid.aif \
 	assets/sounds/pound.aif \
@@ -6002,6 +6013,25 @@ assets/sprites/moving_platform/gUnknown_08659320.png: GBAGFX_FLAGS := -width 4
 $(TMPDIR)/sprites/moving_platform/gUnknown_08659320.4bpp: baserom.gba ; $(call dump_data,0x659320,0x80)
 assets/sprites/moving_platform/gUnknown_08659320.png: $(TMPDIR)/palettes/40_world_four_obj.2.gbapal
 
+### Backgrounds ###
+
+assets/unused/DKPlusLeftoverBG.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/unused/DKPlusLeftoverBG.4bpp.rle: baserom.gba ; $(call dump_data,0x7AFC80,0x2121)
+assets/unused/DKPlusLeftoverBG0Map.bin: baserom.gba ; $(call dump_data,0x7B1DCC,0x122C)
+
+$(TMPDIR)/unused/EarlyOptionsMenuBG.8bpp.rle: baserom.gba ; $(call dump_data,0x8703A4,0x2ECA)
+assets/unused/EarlyOptionsMenuBG.pal: GBAGFX_FLAGS := -msbhack
+$(TMPDIR)/unused/EarlyOptionsMenuBG.gbapal: baserom.gba ; $(call dump_data,0x873820,0x200)
+assets/unused/EarlyOptionsMenuBG.png: $(TMPDIR)/unused/EarlyOptionsMenuBG.gbapal
+$(TMPDIR)/unused/EarlyOptionsMenuBG0Map.bin.rle: baserom.gba ; $(call dump_data,0x873298,0x24)
+$(TMPDIR)/unused/EarlyOptionsMenuBG1Map.bin.rle: baserom.gba ; $(call dump_data,0x8732E4,0x24)
+$(TMPDIR)/unused/EarlyOptionsMenuBG2Map.bin.rle: baserom.gba ; $(call dump_data,0x873330,0x24)
+assets/unused/EarlyOptionsMenuBG3Map.bin: baserom.gba ; $(call dump_data,0x87337C,0x4A0)
+
+assets/level/data/WorldFiveBG.png: GBAGFX_FLAGS := -width 8
+$(TMPDIR)/level/data/WorldFiveBG.4bpp.rle: baserom.gba ; $(call dump_data,0xA3F344,0x2D84)
+assets/level/data/WorldFiveBG1Map.bin: baserom.gba ; $(call dump_data,0xA420F0,0x2D48)
+
 ### Sounds ###
 
 SAMPLE_RATE := 8000
@@ -6519,7 +6549,16 @@ assets/%: $(TMPDIR)/%.lz
 	@echo Decompressing $<
 	@mkdir -p $(@D)
 	$(QUIET) $(GBAGFX) $< $@
+$(TMPDIR)/%: $(TMPDIR)/%.rle
+	@echo Decompressing $<
+	@mkdir -p $(@D)
+	$(QUIET) $(RLE) -d $< $@
+assets/%: $(TMPDIR)/%.rle
+	@echo Decompressing $<
+	@mkdir -p $(@D)
+	$(QUIET) $(RLE) -d $< $@
 
 # build tools
 $(GBAGFX):  ; $(MAKE) -C $(@D)
+$(RLE):     ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)
