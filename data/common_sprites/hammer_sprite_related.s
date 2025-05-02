@@ -36,16 +36,13 @@ gUnknown_086F26C4:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x10 @ Sound effect ID (Subtract 1)
-	.byte 0x01
+	.2byte 0x0001 @ time to wait to spawn extra sprite
 	.byte 0x00
 	.byte 0x00
+	.byte 0x00 @ sprite spawned
 	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
+	.2byte 0x0000 @ sprite spawned X
+	.2byte 0x0000 @ sprite spawned Y
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -68,16 +65,13 @@ gUnknown_086F26EC:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00 @ Sound effect ID (Subtract 1)
+	.2byte 0x0000 @ time to wait to spawn extra sprite
 	.byte 0x00
 	.byte 0x00
+	.byte 0x00 @ sprite spawned
 	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
+	.2byte 0x0000 @ sprite spawned X
+	.2byte 0x0000 @ sprite spawned Y
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -100,16 +94,13 @@ gUnknown_086F2714:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x10 @ Sound effect ID (Subtract 1)
+	.2byte 0x0000 @ time to wait to spawn extra sprite
 	.byte 0x00
 	.byte 0x00
+	.byte 0x00 @ sprite spawned
 	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
+	.2byte 0x0000 @ sprite spawned X
+	.2byte 0x0000 @ sprite spawned Y
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -132,16 +123,13 @@ gUnknown_086F273C:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00 @ Sound effect ID (Subtract 1)
+	.2byte 0x0000 @ time to wait to spawn extra sprite
 	.byte 0x00
 	.byte 0x00
+	.byte 0x00 @ sprite spawned
 	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
+	.2byte 0x0000 @ sprite spawned X
+	.2byte 0x0000 @ sprite spawned Y
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -164,16 +152,13 @@ gUnknown_086F2764:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x10 @ Sound effect ID (Subtract 1)
+	.2byte 0x0000 @ time to wait to spawn extra sprite
 	.byte 0x00
 	.byte 0x00
+	.byte 0x00 @ sprite spawned
 	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
+	.2byte 0x0000 @ sprite spawned X
+	.2byte 0x0000 @ sprite spawned Y
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -196,16 +181,13 @@ gUnknown_086F278C:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00 @ Sound effect ID (Subtract 1)
+	.2byte 0x0000 @ time to wait to spawn extra sprite
 	.byte 0x00
 	.byte 0x00
+	.byte 0x00 @ sprite spawned
 	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
+	.2byte 0x0000 @ sprite spawned X
+	.2byte 0x0000 @ sprite spawned Y
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00
@@ -228,16 +210,13 @@ gUnknown_086F27B4:
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00 @ Sound effect ID (Subtract 1)
+	.2byte 0x0000 @ time to wait to spawn extra sprite
 	.byte 0x00
 	.byte 0x00
+	.byte 0x00 @ sprite spawned
 	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
-	.byte 0x00
+	.2byte 0x0000 @ sprite spawned X
+	.2byte 0x0000 @ sprite spawned Y
 	.byte 0x00
 	.byte 0x00
 	.byte 0x00

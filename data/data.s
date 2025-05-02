@@ -19,8 +19,8 @@ gUnknown_0807DD1C:
 
 @ rom_8032814.c?
 
-	.GLOBAL gPaletteIndices_0807DD34
-gPaletteIndices_0807DD34:
+	.GLOBAL gPaletteIndicesMain1_6_0807DD34
+gPaletteIndicesMain1_6_0807DD34:
 	.4byte 37 @ World 1 palette
 	.4byte 38 @ World 2 palette
 	.4byte 39 @ World 3 palette
@@ -28,8 +28,8 @@ gPaletteIndices_0807DD34:
 	.4byte 41 @ World 5 palette
 	.4byte 42 @ World 6 palette
 
-	.GLOBAL gPaletteIndices_0807DD4C
-gPaletteIndices_0807DD4C:
+	.GLOBAL gPaletteIndicesPlus1_6_0807DD4C
+gPaletteIndicesPlus1_6_0807DD4C:
 	.4byte 43 @ World 1 Plus palette
 	.4byte 44 @ World 2 Plus palette
 	.4byte 45 @ World 3 Plus palette
@@ -37,8 +37,8 @@ gPaletteIndices_0807DD4C:
 	.4byte 47 @ World 5 Plus palette
 	.4byte 48 @ World 6 Plus palette
 
-	.GLOBAL gPaletteIndices_0807DD64
-gPaletteIndices_0807DD64:
+	.GLOBAL gPaletteIndicesExpert1_6_0807DD64
+gPaletteIndicesExpert1_6_0807DD64:
 	.4byte 49 @ Expert 1 palette
 	.4byte 50 @ Expert 2 palette
 	.4byte 51 @ Expert 3 palette
@@ -46,8 +46,8 @@ gPaletteIndices_0807DD64:
 	.4byte 53 @ Expert 5 palette
 	.4byte 54 @ Expert 6 palette
 
-	.GLOBAL gPaletteIndices_0807DD7C
-gPaletteIndices_0807DD7C:
+	.GLOBAL gPaletteIndicesExpert7_12_0807DD7C
+gPaletteIndicesExpert7_12_0807DD7C:
 	.4byte 55 @ Expert 7 palette
 	.4byte 56 @ Expert 8 palette
 	.4byte 57 @ Expert 9 palette

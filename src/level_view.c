@@ -27,9 +27,9 @@ void level_view_main(void)
     }
     gNextLevelInLevelTable.unkC();
     if (gNextLevelInLevelTable.unk12 == 2)
-        sub_0802BEA4(0);
+        update_level_background_waves_0802BEA4(0);
     else
-        sub_0802BE50();
+        update_level_background_0802BE50();
 }
 
 u32 add_b_back_to_game_sprite(u16 *oamIndex, u16 *tileNum, u16 *vramOffset)

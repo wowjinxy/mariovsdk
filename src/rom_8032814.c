@@ -76,12 +76,12 @@ u16 setup_graphics_08032814(struct UnkStruct1 *arg0, int arg1)
     if (r2 != NULL)
     {
         gUnknown_030012E4 = r2->unk2E;
-        if (r2->unkOffsets[arg0->unk32] == 0)
+        if (r2->bgMapOffsets[arg0->unk32] == 0)
         {
         }
-        else if (r2->unkOffsets[arg0->unk32] > 0)
+        else if (r2->bgMapOffsets[arg0->unk32] > 0)
         {
-            struct UnkStruct1_sub_child_data *r2_ = (void *)((u8 *)r2 + r2->unkOffsets[arg0->unk32]);
+            struct UnkStruct1_sub_child_data *r2_ = (void *)((u8 *)r2 + r2->bgMapOffsets[arg0->unk32]);
             gCurrentLevelWidth = r2_->unk4;
             gCurrentLevelHeight = r2_->unk6;
             gBGHorizontalOffset = gUnknown_03000E70[1]->unk8.as_s8;
@@ -129,40 +129,40 @@ u16 setup_graphics_08032814(struct UnkStruct1 *arg0, int arg1)
     return dispcnt;
 }
 
-void load_some_palette_08032B30(s16 arg0, s16 arg1)
+void load_some_palette_08032B30(s16 arg0, s16 worldID)
 {
     if (gLevelType == LEVEL_TYPE_MAIN)
     {
         if (gMainState == MAIN_STATE_TUTORIAL)
         {
             if (arg0 <= 5)
-                load_predefined_palette(gPaletteIndices_0807DD34[arg1], LOAD_BG_PALETTE);
+                load_predefined_palette(gPaletteIndicesMain1_6_0807DD34[worldID], LOAD_BG_PALETTE);
             else
-                load_predefined_palette(gPaletteIndices_0807DD4C[arg1], LOAD_BG_PALETTE);
+                load_predefined_palette(gPaletteIndicesPlus1_6_0807DD4C[worldID], LOAD_BG_PALETTE);
         }
         else
         {
             if (arg0 <= 11)
-                load_predefined_palette(gPaletteIndices_0807DD34[arg1], LOAD_BG_PALETTE);
+                load_predefined_palette(gPaletteIndicesMain1_6_0807DD34[worldID], LOAD_BG_PALETTE);
             else if (arg0 == 12)
-                load_predefined_palette(gPaletteIndices_0807DD4C[arg1], LOAD_BG_PALETTE);
+                load_predefined_palette(gPaletteIndicesPlus1_6_0807DD4C[worldID], LOAD_BG_PALETTE);
             else if (arg0 == 13)
-                load_predefined_palette(gPaletteIndices_0807DD64[arg1], LOAD_BG_PALETTE);
+                load_predefined_palette(gPaletteIndicesExpert1_6_0807DD64[worldID], LOAD_BG_PALETTE);
         }
     }
     else if (gLevelType == LEVEL_TYPE_PLUS)
     {
         if (arg0 <= 5)
-            load_predefined_palette(gPaletteIndices_0807DD7C[arg1], LOAD_BG_PALETTE);
-        else if (arg1 == 2)
+            load_predefined_palette(gPaletteIndicesExpert7_12_0807DD7C[worldID], LOAD_BG_PALETTE);
+        else if (worldID == 2)
             load_predefined_palette(PALETTE_58, LOAD_BG_PALETTE);
         else
-            load_predefined_palette(gPaletteIndices_0807DD64[arg1], LOAD_BG_PALETTE);
+            load_predefined_palette(gPaletteIndicesExpert1_6_0807DD64[worldID], LOAD_BG_PALETTE);
     }
     else if (gLevelType == LEVEL_TYPE_EXPERT_1_6)
-        load_predefined_palette(gPaletteIndices_0807DD34[arg1], LOAD_BG_PALETTE);
+        load_predefined_palette(gPaletteIndicesMain1_6_0807DD34[worldID], LOAD_BG_PALETTE);
     else if (gLevelType == LEVEL_TYPE_EXPERT_7_12)
-        load_predefined_palette(gPaletteIndices_0807DD7C[arg1], LOAD_BG_PALETTE);
+        load_predefined_palette(gPaletteIndicesExpert7_12_0807DD7C[worldID], LOAD_BG_PALETTE);
     else if (gLevelType == LEVEL_TYPE_MAIN_BOSS)
         load_predefined_palette(PALETTE_62, LOAD_BG_PALETTE);
     else if (gLevelType == LEVEL_TYPE_PLUS_BOSS)
@@ -265,10 +265,10 @@ u32 load_bg_tilemap_08032E24(struct GraphicsConfig *config, int start, int end)
 
     for (i = start; i < end; i++)
     {
-        if (config->unkOffsets[i] > 0)
+        if (config->bgMapOffsets[i] > 0)
         {
             dispcnt |= 1 << i;
-            gUnknown_03000E70[i] = (struct UnkStruct1_sub_child_data *)(base + config->unkOffsets[i]);
+            gUnknown_03000E70[i] = (struct UnkStruct1_sub_child_data *)(base + config->bgMapOffsets[i]);
             // load tilemap
             load_compressed_data((struct CmprHeader *)((u8 *)gUnknown_03000E70[i] + 0x28), config->bgVramMapAddrs[i], 1);
         }

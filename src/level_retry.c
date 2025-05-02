@@ -141,9 +141,9 @@ void level_retry_main(void)
                 sub_08040B28();
                 gNextLevelInLevelTable.unkC();
                 if (gNextLevelInLevelTable.unk12 == 2)
-                    sub_0802BEA4(0);
+                    update_level_background_waves_0802BEA4(0);
                 else
-                    sub_0802BE50();
+                    update_level_background_0802BE50();
             }
             else
             {
@@ -169,9 +169,9 @@ void level_retry_main(void)
         {
             gNextLevelInLevelTable.unkC();
             if (gNextLevelInLevelTable.unk12 == 2)
-                sub_0802BEA4(0);
+                update_level_background_waves_0802BEA4(0);
             else
-                sub_0802BE50();
+                update_level_background_0802BE50();
         }
     }
 }

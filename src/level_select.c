@@ -123,11 +123,11 @@ extern u32 gLevelSelectPlusPaletteIDs[];
 extern struct GraphicsConfig *gLevelSelectBackgrounds[];
 extern struct GraphicsConfig *gLevelSelectPlusBackgrounds[];
 
-static void load_level_select_background(u8 arg0)
+static void load_level_select_background(u8 levelSelectMode)
 {
     struct GraphicsConfig *arr[4];
 
-    switch (arg0)
+    switch (levelSelectMode)
     {
     case 0:
         arr[0] = NULL;
