@@ -6058,10 +6058,10 @@ assets/sprites/moving_platform/gUnknown_08659320.png: $(TMPDIR)/palettes/40_worl
 
 assets/unused/DKPlusLeftoverBG.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/unused/DKPlusLeftoverBG.4bpp.rle: baserom.gba ; $(call dump_data,0x7AFC80,0x2124)
-assets/unused/DKPlusLeftoverBG0Map.bin: baserom.gba ; $(call dump_data,0x7B1DCC,0xFC)
+assets/unused/DKPlusLeftoverBG0Map.lz.orig: baserom.gba ; $(call dump_data,0x7B1DCC,0xFC)
 assets/unused/DKPlusLeftoverAnimatedTileGFX.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/unused/DKPlusLeftoverAnimatedTileGFX.4bpp: baserom.gba ; $(call dump_data,0x7B1ECC,0x120)
-assets/unused/DKPlusLeftoverTileObjectData.bin.lz: baserom.gba ; $(call dump_data,0x7B2038,0xFC0)
+assets/unused/DKPlusLeftoverTileObjectData.lz.orig: baserom.gba ; $(call dump_data,0x7B2038,0xFC0)
 
 $(TMPDIR)/unused/EarlyOptionsMenuBG.8bpp.rle: baserom.gba ; $(call dump_data,0x8703A4,0x2ECC)
 assets/unused/EarlyOptionsMenuBG.pal: GBAGFX_FLAGS := -msbhack

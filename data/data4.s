@@ -36,7 +36,7 @@ gDKPlusLeftovers.bg0map:
 	.2byte 0xCDCD @ paralax X speed
 	.2byte 0xCDCD @ paralax Y speed
 	.byte 0x00, 0x00 @ filler26
-	.INCBIN "assets/unused/DKPlusLeftoverBG0Map.bin"
+	.INCBIN "assets/unused/DKPlusLeftoverBG0Map.lz.orig"
 gDKPlusLeftovers.animatedtilegfx:
 	.4byte gDKPlusLeftovers.animatedtiledata - gDKPlusLeftovers.animatedtilegfx - 4 @ graphics size
 	.INCBIN "assets/unused/DKPlusLeftoverAnimatedTileGFX.4bpp"
@@ -106,7 +106,7 @@ gDKPlusLeftovers.animatedtiledata:
 	.byte 0x02 @ unk 2
 	.byte 0x03 @ frames waited
 gDKPlusLeftovers.tileobjectdata:
-	.INCBIN "assets/unused/DKPlusLeftoverTileObjectData.bin.lz"
+	.INCBIN "assets/unused/DKPlusLeftoverTileObjectData.lz.orig"
 	
 
 	.GLOBAL gMainMenuData
