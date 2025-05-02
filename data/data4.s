@@ -20,19 +20,94 @@ gDKPlusLeftovers:
 	.2byte 0x0004, 0x0108, 0x0508, 0x0908  @ bgCnt
 	.4byte 0x06000000, 0x06000800, 0x06002800, 0x06004800  @ bgVramMapAddrs
 	.4byte 0x06004000, 0x06008000, 0x06008000, 0x06008000  @ vramAddr50
-	.byte 0xC0, 0x22, 0, 0, 0, 0, 0, 0  @ filler60
-	.4byte 0  @ unk68
-	.4byte 0  @ unk6C
-	.byte 0x30, 0x24, 0x00, 0x00  @ unknown, some more RLE stuff?
+	.4byte gDKPlusLeftovers.animatedtilegfx - gDKPlusLeftovers @ animTileDataOffset
+	.byte 0, 0, 0, 0  @ filler64
+	.4byte 0  @ bgScanlineScrollOffset
+	.4byte 0  @ waterLayerOffset
+	.4byte gDKPlusLeftovers.tileobjectdata - gDKPlusLeftovers @ tileObjectOffset
 gDKPlusLeftovers.bg:
-	.4byte 0x2124  @ size?
+	.4byte 0x2124  @ size
 	.INCBIN "assets/unused/DKPlusLeftoverBG.4bpp.rle"
-	.byte 0xCD, 0xCD, 0xCD
 gDKPlusLeftovers.bg0map:
 	.4byte 0x00000000, 0x00000000, 0x00000000, 0x00000000
-	.4byte 0x04000010, 0x04000012, 0x00000100, 0x00000100
-	.byte 0xFC, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.4byte 0x04000010, 0x04000012
+	.4byte 256, 256 @ width, height
+	.2byte 0x00FC @ unk20
+	.2byte 0xCDCD @ paralax X speed
+	.2byte 0xCDCD @ paralax Y speed
+	.byte 0x00, 0x00 @ filler26
 	.INCBIN "assets/unused/DKPlusLeftoverBG0Map.bin"
+gDKPlusLeftovers.animatedtilegfx:
+	.4byte gDKPlusLeftovers.animatedtiledata - gDKPlusLeftovers.animatedtilegfx - 4 @ graphics size
+	.INCBIN "assets/unused/DKPlusLeftoverAnimatedTileGFX.4bpp"
+gDKPlusLeftovers.animatedtiledata:
+	.4byte 3 @ number animated tiles
+	
+	.2byte 4 @ frame count
+	.byte 0x00 @ filler2
+	.byte 0x00 @ flags
+	.4byte 0x00002500 @ tile to be animated, offset in VRAM
+	
+	.2byte 0x0000 @ tile graphics offset from .animatedtilegfx (minus the 4 byte offset)
+	.byte 0x02 @ unk 2
+	.byte 0x08 @ frames waited
+	
+	.2byte 0x0020 @ tile graphics offset from .animatedtilegfx (minus the 4 byte offset) 
+	.byte 0x02 @ unk 2
+	.byte 0x04 @ frames waited
+	
+	.2byte 0x0040 @ tile graphics offset from .animatedtilegfx (minus the 4 byte offset)
+	.byte 0x02 @ unk 2
+	.byte 0x04 @ frames waited
+	
+	.2byte 0x0020 @ tile graphics offset from .animatedtilegfx (minus the 4 byte offset)
+	.byte 0x02 @ unk 2
+	.byte 0x04 @ frames waited
+	
+	.2byte 0x0004 @ frame count
+	.byte 0x00 @ filler2
+	.byte 0x00 @ flags
+	.4byte 0x00002560 @ tile to be animated, offset in VRAM
+
+	.2byte 0x0060 @ tile graphics offset from .animatedtilegfx (minus the 4 byte size offset)
+	.byte 0x02 @ unk 2
+	.byte 0x03 @ frames waited
+
+	.2byte 0x0080 @ tile graphics offset from .animatedtilegfx (minus the 4 byte size offset)
+	.byte 0x02 @ unk 2
+	.byte 0x03 @ frames waited
+
+	.2byte 0x00A0 @ tile graphics offset from .animatedtilegfx (minus the 4 byte size offset)
+	.byte 0x02 @ unk 2
+	.byte 0x03 @ frames waited
+
+	.2byte 0x0080 @ tile graphics offset from .animatedtilegfx (minus the 4 byte size offset)
+	.byte 0x02 @ unk 2
+	.byte 0x03 @ frames waited
+
+	.2byte 0x0004 @ frame count
+	.byte 0x00 @ filler2
+	.byte 0x00 @ flags
+	.4byte 0x000025C0 @ tile to be animated, offset in VRAM
+
+	.2byte 0x00C0 @ tile graphics offset from .animatedtilegfx (minus the 4 byte size offset)
+	.byte 0x02 @ unk 2
+	.byte 0x03 @ frames waited
+
+	.2byte 0x00E0 @ tile graphics offset from .animatedtilegfx (minus the 4 byte size offset)
+	.byte 0x02 @ unk 2
+	.byte 0x03 @ frames waited
+
+	.2byte 0x0100 @ tile graphics offset from .animatedtilegfx (minus the 4 byte size offset)
+	.byte 0x02 @ unk 2
+	.byte 0x03 @ frames waited
+
+	.2byte 0x00E0 @ tile graphics offset from .animatedtilegfx (minus the 4 byte size offset)
+	.byte 0x02 @ unk 2
+	.byte 0x03 @ frames waited
+gDKPlusLeftovers.tileobjectdata:
+	.INCBIN "assets/unused/DKPlusLeftoverTileObjectData.bin.lz"
+	
 
 	.GLOBAL gMainMenuData
 gMainMenuData:
@@ -311,33 +386,49 @@ gUnusedOptionsMenuData:
 	.2byte 0x0084, 0x0184, 0x0284, 0x0384  @ bgCnt
 	.4byte 0x06000000, 0x06000800, 0x06001000, 0x06001800  @ bgVramMapAddrs
 	.4byte 0x06004000, 0x06004000, 0x06004000, 0x06004000  @ vramAddr50
-	.byte 0, 0, 0, 0, 0, 0, 0, 0  @ filler60
-	.4byte 0  @ unk68
-	.4byte 0  @ unk6C
-	.4byte 0x36F4  @ unknown
+	.4byte 0  @ animTileDataOffset
+	.byte 0, 0, 0, 0  @ filler64
+	.4byte 0  @ bgScanlineScrollOffset
+	.4byte 0  @ waterLayerOffset
+	.4byte 0x36F4  @ tileObjectOffset
 gUnusedOptionsMenuData.bg:
-	.4byte 0x2ECC  @ size?
+	.4byte 0x2ECC  @ size
 	.INCBIN "assets/unused/EarlyOptionsMenuBG.8bpp.rle"
-	.byte 0xCD, 0xCD
 gUnusedOptionsMenuData.bg0map:
 	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
-	.4byte 0x04000010, 0x04000012, 0x00000100, 0x00000100
-	.byte 0x24, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.4byte 0x04000010, 0x04000012
+	.4byte 0x00000100, 0x00000100 @ width, height
+	.2byte 0x0024 @ unk20
+	.2byte 0xCDCD @ paralax X speed
+	.2byte 0xCDCD @ paralax Y speed
+	.byte 0x00, 0x00 @ filler26
 	.INCBIN "assets/unused/EarlyOptionsMenuBG0Map.bin.rle"
 gUnusedOptionsMenuData.bg1map:
 	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
-	.4byte 0x04000014, 0x04000016, 0x00000100, 0x00000100
-	.byte 0x24, 0x00, 0xCD, 0xCD, 0xCD, 0xCD, 0x00, 0x00
+	.4byte 0x04000014, 0x04000016
+	.4byte 0x00000100, 0x00000100 @ width, height
+	.2byte 0x0024 @ unk20
+	.2byte 0xCDCD @ paralax X speed
+	.2byte 0xCDCD @ paralax Y speed
+	.byte 0x00, 0x00 @ filler26
 	.INCBIN "assets/unused/EarlyOptionsMenuBG1Map.bin.rle"
 gUnusedOptionsMenuData.bg2map:
 	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
-	.4byte 0x04000018, 0x0400001A, 0x00000100, 0x00000100
-	.byte 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	.4byte 0x04000018, 0x0400001A
+	.4byte 0x00000100, 0x00000100 @ width, height
+	.2byte 0x0024 @ unk20
+	.2byte 0x0000 @ paralax X speed
+	.2byte 0x0000 @ paralax Y speed
+	.byte 0x00, 0x00 @ filler26
 	.INCBIN "assets/unused/EarlyOptionsMenuBG2Map.bin.rle"
 gUnusedOptionsMenuData.bg3map:
 	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
-	.4byte 0x0400001C, 0x0400001E, 0x00000100, 0x00000100
-	.byte 0xA0, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	.4byte 0x0400001C, 0x0400001E
+	.4byte 0x00000100, 0x00000100 @ width, height
+	.2byte 0x04A0 @ unk20
+	.2byte 0x0000 @ paralax X speed
+	.2byte 0x0000 @ paralax Y speed
+	.byte 0x00, 0x00 @ filler26
 	.INCBIN "assets/unused/EarlyOptionsMenuBG3Map.bin"
 gUnusedOptionsMenuData.pal:
 	.4byte 0x200  @ size?

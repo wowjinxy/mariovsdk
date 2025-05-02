@@ -33,7 +33,7 @@ gUnknown_087ACD3C:
 	.byte 0x00
 	.4byte 0x00000000 @ Unknown Flags 1
 	.4byte 0x00000000 @ Unknown Flags 2
-	.4byte sub_08047D14 @ Sprite Function
+	.4byte sprite_return_0_08047D14 @ Sprite Function
 
 	.GLOBAL gUnknown_087ACD64
 gUnknown_087ACD64:
