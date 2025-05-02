@@ -1669,6 +1669,47 @@ FILES += \
 	assets/level/level_data/world_six/6_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_mm_tutorial.bin.lz.orig \
 
+# Misc. binary files
+FILES += \
+	assets/NSTLogo.bin \
+	assets/gUnknown_080B5328.bin \
+	assets/gUnknown_08076AD8.bin \
+	assets/bonus/BonusStopArrowBackground.bin \
+	assets/bonus/BonusStopArrowData.bin \
+	assets/bonus/BonusSwapBoxesBackground.bin \
+	assets/bonus/BonusSwapBoxesData.bin \
+	assets/card-e/A_Tricky_Candle.bin \
+	assets/card-e/Boo_In_A_Box.bin \
+	assets/card-e/Climb_And_Fall.bin \
+	assets/card-e/Danger_Flowers.bin \
+	assets/card-e/Dummy2.bin \
+	assets/card-e/Egg_Attack.bin \
+	assets/card-e/Hot_Feet.bin \
+	assets/card-e/Key_To_The_Key.bin \
+	assets/card-e/Later_Gator.bin \
+	assets/card-e/One_Shot_Blue.bin \
+	assets/card-e/Revenge.bin \
+	assets/card-e/The_Long_Way.bin \
+	assets/card-e/The_Thwamplet.bin \
+	assets/cutscene/UnusedPlusWorldsUnlocked.bin \
+	assets/level/gUnknown_08AF43E4.bin \
+	assets/level_select/LevelSelectDKBossBG.bin \
+	assets/level_select/LevelSelectData.bin \
+	assets/level_select/LevelSelectWorldFiveBG.bin \
+	assets/level_select/LevelSelectWorldFourBG.bin \
+	assets/level_select/LevelSelectWorldOneBG.bin \
+	assets/level_select/LevelSelectWorldSixBG.bin \
+	assets/level_select/LevelSelectWorldThreeBG.bin \
+	assets/level_select/LevelSelectWorldTwoBG.bin \
+	assets/level_select_plus/LevelSelectDKPlusBossBG.bin \
+	assets/level_select_plus/LevelSelectPlusData.bin \
+	assets/level_select_plus/LevelSelectWorldFivePlusBG.bin \
+	assets/level_select_plus/LevelSelectWorldFourPlusBG.bin \
+	assets/level_select_plus/LevelSelectWorldOnePlusBG.bin \
+	assets/level_select_plus/LevelSelectWorldSixPlusBG.bin \
+	assets/level_select_plus/LevelSelectWorldThreePlusBG.bin \
+	assets/level_select_plus/LevelSelectWorldTwoPlusBG.bin \
+
 all: $(FILES)
 
 clean:
@@ -6518,6 +6559,46 @@ $(TMPDIR)/level/level_data/world_six_plus/6_DK_plus.bin.lz: baserom.gba ; $(call
 $(TMPDIR)/level/level_data/world_six_plus/6_unused_DK.bin.lz: baserom.gba ; $(call dump_data,0xB0F8A8,0xF0)
 $(TMPDIR)/level/level_data/boss/DK_boss.bin.lz: baserom.gba ; $(call dump_data,0xB199EC,0x170)
 $(TMPDIR)/level/level_data/boss/DK_boss_plus.bin.lz: baserom.gba ; $(call dump_data,0xB19B60,0xB8)
+
+### Misc. binary files ###
+assets/NSTLogo.bin:                                       baserom.gba ; $(call dump_data,0x866A48,0xB18)
+assets/gUnknown_080B5328.bin:                             baserom.gba ; $(call dump_data,0xB5328,0xCC)
+assets/gUnknown_08076AD8.bin:                             baserom.gba ; $(call dump_data,0x76AD8,0x280)
+assets/bonus/BonusStopArrowBackground.bin:                baserom.gba ; $(call dump_data,0x85D720,0x2B0C)
+assets/bonus/BonusStopArrowData.bin:                      baserom.gba ; $(call dump_data,0x85C4C4,0x125C)
+assets/bonus/BonusSwapBoxesBackground.bin:                baserom.gba ; $(call dump_data,0x8637E8,0x3260)
+assets/bonus/BonusSwapBoxesData.bin:                      baserom.gba ; $(call dump_data,0x86022C,0x35BC)
+assets/card-e/A_Tricky_Candle.bin:                        baserom.gba ; $(call dump_data,0xB38888,0x244)
+assets/card-e/Boo_In_A_Box.bin:                           baserom.gba ; $(call dump_data,0xB3835C,0x22C)
+assets/card-e/Climb_And_Fall.bin:                         baserom.gba ; $(call dump_data,0xB39128,0x448)
+assets/card-e/Danger_Flowers.bin:                         baserom.gba ; $(call dump_data,0xB38F60,0x1C8)
+assets/card-e/Dummy2.bin:                                 baserom.gba ; $(call dump_data,0xB39570,0xAC)
+assets/card-e/Egg_Attack.bin:                             baserom.gba ; $(call dump_data,0xB37C88,0x1C8)
+assets/card-e/Hot_Feet.bin:                               baserom.gba ; $(call dump_data,0xB3808C,0x2D0)
+assets/card-e/Key_To_The_Key.bin:                         baserom.gba ; $(call dump_data,0xB38ACC,0x494)
+assets/card-e/Later_Gator.bin:                            baserom.gba ; $(call dump_data,0xB37E50,0x23C)
+assets/card-e/One_Shot_Blue.bin:                          baserom.gba ; $(call dump_data,0xB37998,0x2F0)
+assets/card-e/Revenge.bin:                                baserom.gba ; $(call dump_data,0xB3742C,0x1D4)
+assets/card-e/The_Long_Way.bin:                           baserom.gba ; $(call dump_data,0xB37600,0x398)
+assets/card-e/The_Thwamplet.bin:                          baserom.gba ; $(call dump_data,0xB38588,0x300)
+assets/cutscene/UnusedPlusWorldsUnlocked.bin:             baserom.gba ; $(call dump_data,0xA28710,0xDB0)
+assets/level/gUnknown_08AF43E4.bin:                       baserom.gba ; $(call dump_data,0xAF43E4,0x2004)
+assets/level_select/LevelSelectDKBossBG.bin:              baserom.gba ; $(call dump_data,0x7C81C8,0x3044)
+assets/level_select/LevelSelectData.bin:                  baserom.gba ; $(call dump_data,0x7B8A08,0x4430)
+assets/level_select/LevelSelectWorldFiveBG.bin:           baserom.gba ; $(call dump_data,0x7C411C,0x2908)
+assets/level_select/LevelSelectWorldFourBG.bin:           baserom.gba ; $(call dump_data,0x7C2EA4,0x1278)
+assets/level_select/LevelSelectWorldOneBG.bin:            baserom.gba ; $(call dump_data,0x7BCE38,0x203C)
+assets/level_select/LevelSelectWorldSixBG.bin:            baserom.gba ; $(call dump_data,0x7C6A24,0x17A4)
+assets/level_select/LevelSelectWorldThreeBG.bin:          baserom.gba ; $(call dump_data,0x7C0D0C,0x2198)
+assets/level_select/LevelSelectWorldTwoBG.bin:            baserom.gba ; $(call dump_data,0x7BEE74,0x1E98)
+assets/level_select_plus/LevelSelectDKPlusBossBG.bin:     baserom.gba ; $(call dump_data,0x7D9894,0x33BC)
+assets/level_select_plus/LevelSelectPlusData.bin:         baserom.gba ; $(call dump_data,0x7CB20C,0x3F44)
+assets/level_select_plus/LevelSelectWorldFivePlusBG.bin:  baserom.gba ; $(call dump_data,0x7D5C74,0x247C)
+assets/level_select_plus/LevelSelectWorldFourPlusBG.bin:  baserom.gba ; $(call dump_data,0x7D4270,0x1A04)
+assets/level_select_plus/LevelSelectWorldOnePlusBG.bin:   baserom.gba ; $(call dump_data,0x7CF150,0x1BDC)
+assets/level_select_plus/LevelSelectWorldSixPlusBG.bin:   baserom.gba ; $(call dump_data,0x7C6A24,0x17A4)
+assets/level_select_plus/LevelSelectWorldThreePlusBG.bin: baserom.gba ; $(call dump_data,0x7D2BC4,0x16AC)
+assets/level_select_plus/LevelSelectWorldTwoPlusBG.bin:   baserom.gba ; $(call dump_data,0x7BEE74,0x1E98)
 
 assets/%.orig: $(TMPDIR)/%
 	@mkdir -p $(@D)
