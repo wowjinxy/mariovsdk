@@ -28,6 +28,7 @@ gDKPlusLeftovers:
 gDKPlusLeftovers.bg:
 	.4byte 0x2124  @ size
 	.INCBIN "assets/unused/DKPlusLeftoverBG.4bpp.rle"
+	.byte 0xCD, 0xCD, 0xCD
 gDKPlusLeftovers.bg0map:
 	.4byte 0x00000000, 0x00000000, 0x00000000, 0x00000000
 	.4byte 0x04000010, 0x04000012
@@ -394,6 +395,7 @@ gUnusedOptionsMenuData:
 gUnusedOptionsMenuData.bg:
 	.4byte 0x2ECC  @ size
 	.INCBIN "assets/unused/EarlyOptionsMenuBG.8bpp.rle"
+	.byte 0xCD, 0xCD
 gUnusedOptionsMenuData.bg0map:
 	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
 	.4byte 0x04000010, 0x04000012

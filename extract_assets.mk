@@ -1167,7 +1167,7 @@ FILES := \
 	assets/sprites/moving_platform/gUnknown_08659274.png \
 	assets/sprites/moving_platform/gUnknown_08659320.png \
 	assets/unused/DKPlusLeftoverBG.png \
-	assets/unused/DKPlusLeftoverBG0Map.bin \
+	assets/unused/DKPlusLeftoverBG0Map.lz.orig \
 	assets/unused/EarlyOptionsMenuBG.png \
 	assets/unused/EarlyOptionsMenuBG.pal \
 	assets/unused/EarlyOptionsMenuBG0Map.bin \
