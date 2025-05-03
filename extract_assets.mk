@@ -11,7 +11,7 @@ endif
 TMPDIR := .extract
 
 GBAGFX  := tools/gbagfx/gbagfx
-RLE     := tools/rle/rle
+GBACOMP := tools/gbacomp/gbacomp
 AIF2PCM := tools/aif2pcm/aif2pcm
 
 # canned recipe to extract bytes from binary file
@@ -6633,13 +6633,13 @@ assets/%: $(TMPDIR)/%.lz
 $(TMPDIR)/%: $(TMPDIR)/%.rle
 	@echo Decompressing $<
 	@mkdir -p $(@D)
-	$(QUIET) $(RLE) -d $< $@
+	$(QUIET) $(GBACOMP) -d $< $@
 assets/%: $(TMPDIR)/%.rle
 	@echo Decompressing $<
 	@mkdir -p $(@D)
-	$(QUIET) $(RLE) -d $< $@
+	$(QUIET) $(GBACOMP) -d $< $@
 
 # build tools
 $(GBAGFX):  ; $(MAKE) -C $(@D)
-$(RLE):     ; $(MAKE) -C $(@D)
+$(GBACOMP): ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)

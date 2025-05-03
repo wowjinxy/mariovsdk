@@ -17,7 +17,7 @@ LD       := $(DEVKITARM)/bin/arm-none-eabi-ld
 OBJCOPY  := $(DEVKITARM)/bin/arm-none-eabi-objcopy
 
 GBAGFX   := tools/gbagfx/gbagfx
-RLE      := tools/rle/rle
+GBACOMP  := tools/gbacomp/gbacomp
 AIF2PCM  := tools/aif2pcm/aif2pcm
 
 CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -O2 -fhex-asm -fno-common
@@ -100,10 +100,10 @@ ldscript.txt: ldscript.in
 %.pcm:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
 
 %.lz:     %     $(GBAGFX) ; $(GBAGFX) $< $@
-%.rle:    %     $(RLE)    ; $(RLE) $< $@
+%.rle:    %     $(GBACOMP) ; $(GBACOMP) -r $< $@
 
 $(GBAGFX):  ; $(MAKE) -C $(@D)
-$(RLE):     ; $(MAKE) -C $(@D)
+$(GBACOMP): ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)
 
 # Automatic dependency generation
