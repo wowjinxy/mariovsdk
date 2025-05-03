@@ -1641,7 +1641,6 @@ FILES := \
 
 # Level files that don't match
 FILES += \
-	assets/level/level_data/world_one/1_1_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_2_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_4_tutorial.bin.lz.orig \
@@ -1649,24 +1648,11 @@ FILES += \
 	assets/level/level_data/world_one/1_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_mm_tutorial.bin.lz.orig \
 	assets/level/level_data/world_two/2_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_four/4_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_6_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_mm_tutorial.bin.lz.orig \
 	assets/level/level_data/world_five/5_1_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_2_tutorial.bin.lz.orig \
 	assets/level/level_data/world_five/5_3_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_6_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_mm_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_1_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_2_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_mm_tutorial.bin.lz.orig \
 
 # Misc. binary files

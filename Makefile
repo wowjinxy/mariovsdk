@@ -50,6 +50,22 @@ src/libc.o: CC1FLAGS := -O2
 
 assets/unused/EarlyOptionsMenuBG.gbapal: GBAGFX_FLAGS := -msbhack
 
+# Some tutorial levels need the other LZ compression algorithm
+assets/level/level_data/world_one/1_1_tutorial.bin.lz:   LZ_VERSION := 1
+assets/level/level_data/world_five/4_3_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/4_5_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/4_6_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/4_mm_tutorial.bin.lz: LZ_VERSION := 1
+assets/level/level_data/world_five/5_2_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/5_4_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/5_5_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/5_6_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/5_mm_tutorial.bin.lz: LZ_VERSION := 1
+assets/level/level_data/world_five/6_2_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/6_3_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/6_5_tutorial.bin.lz:  LZ_VERSION := 1
+assets/level/level_data/world_five/6_6_tutorial.bin.lz:  LZ_VERSION := 1
+
 #### Main Targets ####
 
 compare: $(ROM)
@@ -100,9 +116,9 @@ ldscript.txt: ldscript.in
 
 %.pcm:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
 
-LZ77_VERSION := 2
+LZ_VERSION := 2
 
-%.lz:     %     $(GBACOMP) ; $(GBACOMP) -l -v $(LZ77_VERSION) $< $@
+%.lz:     %     $(GBACOMP) ; $(GBACOMP) -l -v $(LZ_VERSION) $< $@
 %.rle:    %     $(GBACOMP) ; $(GBACOMP) -r $< $@
 
 $(GBAGFX):  ; $(MAKE) -C $(@D)
