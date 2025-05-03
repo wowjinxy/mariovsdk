@@ -60,6 +60,7 @@ clean:
 	find . -name '*.4bpp' -exec rm {} +
 	find . -name '*.8bpp' -exec rm {} +
 	find . -name '*.gbapal' -exec rm {} +
+	find . -name '*.lz' -exec rm {} +
 	find . -name '*.rle' -exec rm {} +
 	$(RM) assets/sounds/*.pcm
 	$(MAKE) -C tools/gbagfx clean
@@ -99,7 +100,9 @@ ldscript.txt: ldscript.in
 
 %.pcm:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
 
-%.lz:     %     $(GBAGFX) ; $(GBAGFX) $< $@
+LZ77_VERSION := 2
+
+%.lz:     %     $(GBACOMP) ; $(GBACOMP) -l -v $(LZ77_VERSION) $< $@
 %.rle:    %     $(GBACOMP) ; $(GBACOMP) -r $< $@
 
 $(GBAGFX):  ; $(MAKE) -C $(@D)

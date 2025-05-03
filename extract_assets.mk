@@ -6629,7 +6629,7 @@ assets/sounds/%.aif: $(TMPDIR)/sounds/%.pcm $(AIF2PCM)
 assets/%: $(TMPDIR)/%.lz
 	@echo Decompressing $<
 	@mkdir -p $(@D)
-	$(QUIET) $(GBAGFX) $< $@
+	$(QUIET) $(GBACOMP) -d $< $@
 $(TMPDIR)/%: $(TMPDIR)/%.rle
 	@echo Decompressing $<
 	@mkdir -p $(@D)

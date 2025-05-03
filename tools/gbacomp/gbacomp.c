@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <errno.h>
+#include <limits.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -78,6 +79,18 @@ static bool write_file(const char *name, struct Buffer buf)
 	return success;
 }
 
+static bool parse_number(const char *text, unsigned int *n)
+{
+	char *end;
+	unsigned long int value = strtoul(text, &end, 0);
+	if (*end == 0 && value <= UINT_MAX)
+	{
+		*n = value;
+		return true;
+	}
+	return false;
+}
+
 //------------------------------------------------------------------------------
 // LZ77
 //------------------------------------------------------------------------------
@@ -90,7 +103,7 @@ struct Match { size_t pos; uint8_t len; };
 
 // Given the byte sequence at pos in the input buffer, seeks back to find the longest match
 // Returns the position and length of the match
-static struct Match find_match(const struct Buffer input, int pos)
+static struct Match find_match_v1(const struct Buffer input, int pos)
 {
 	struct Match best = { 0 };
 	struct Buffer tofind = { input.data + pos, input.size - pos };
@@ -100,7 +113,10 @@ static struct Match find_match(const struct Buffer input, int pos)
 		int len = 0;
 		// Note: Although the match must start before pos, it may overlap it. This allows
 		// efficient coding of repeated sequences
-		while (i + len < input.size && len < tofind.size && len < MAX_MATCH_LEN && input.data[i + len] == tofind.data[len])
+		while (i + len < input.size
+		 && len < tofind.size
+		 && len < MAX_MATCH_LEN
+		 && input.data[i + len] == tofind.data[len])
 			len++;
 		if (len > best.len)
 		{
@@ -111,7 +127,40 @@ static struct Match find_match(const struct Buffer input, int pos)
 	return best;
 }
 
-static struct Buffer lz77_compress(const struct Buffer input)
+static struct Match find_match_v2(const struct Buffer input, int pos)
+{
+	static int prevFindPos;
+	struct Match best = { 0 };
+	struct Buffer tofind = { input.data + pos, input.size - pos };
+	int start = MAX(0, pos - MAX_DISPLACEMENT);
+
+	int i = prevFindPos;
+	for (int x = start; x < pos; x++)
+	{
+		int len = 0;
+		while (i + len < input.size && len < tofind.size
+		 && len < MAX_MATCH_LEN
+		 && input.data[i + len] == tofind.data[len]
+		 && len <= pos)  // needed to match compression for some files
+			len++;
+		if (len > best.len)
+		{
+			best.len = len;
+			best.pos = i;
+		}
+
+		i++;
+		// wrap around
+		if (i >= pos)
+			i = MAX(0, pos - 0x1000);
+	}
+
+	if (best.len >= 3)
+		prevFindPos = i;
+	return best;
+}
+
+static struct Buffer lz77_compress(const struct Buffer input, int lzAlgoVer)
 {
 	struct Buffer output = { 0 };
 
@@ -136,7 +185,9 @@ static struct Buffer lz77_compress(const struct Buffer input)
 			buffer_push_u8(&output, 0);
 		}
 
-		struct Match m = find_match(input, inPos);
+		struct Match m = lzAlgoVer == 1
+		               ? find_match_v1(input, inPos)
+		               : find_match_v2(input, inPos);
 		if (m.len >= 3)  // found - add token
 		{
 #if DEBUG
@@ -349,12 +400,21 @@ int main(int argc, char **argv)
 	const char *inName = NULL, *outName = NULL;
 	char mode = 0;
 	struct Buffer input, output;
+	unsigned int lzAlgoVer = 1;
 
 	for (int i = 1; i < argc; i++)
 	{
 		const char *opt = argv[i];
 
-		if      (strcmp("-d", opt) == 0) mode = 'd';
+		if (strcmp("-v", opt) == 0)
+		{
+			i++;
+			if (i >= argc || !parse_number(argv[i], &lzAlgoVer))
+				goto usage;
+			if (lzAlgoVer != 1 && lzAlgoVer != 2)
+				goto usage;
+		}
+		else if (strcmp("-d", opt) == 0) mode = 'd';
 		else if (strcmp("-l", opt) == 0) mode = 'l';
 		else if (strcmp("-r", opt) == 0) mode = 'r';
 		else if (inName == NULL) inName = opt;
@@ -384,7 +444,7 @@ int main(int argc, char **argv)
 		default: goto inval_header;
 		}
 		break;
-	case 'l': output = lz77_compress(input); break;
+	case 'l': output = lz77_compress(input, lzAlgoVer); break;
 	case 'r': output = rle_compress(input); break;
 	}
 	if (!write_file(outName, output))
@@ -400,9 +460,10 @@ usage:
 	printf("usage: %s [-d|-l|-r] INPUT_FILE OUTPUT_FILE\n"
 	       "GBA compression tool\n"
 	       "Options:\n"
-	       " -d  decompress. Format is automatically detected from the file header.\n"
-	       " -l  compress with LZ77\n"
-	       " -r  compress with RLE\n",
+	       " -d        decompress. Format is automatically detected from the file header.\n"
+	       " -l        compress with LZ77\n"
+	       " -r        compress with RLE\n"
+	       " -v {1|2}  specifies which variant of the LZ77 compression algorithm to use\n"  ,
 	       argv[0]);
 	return 1;
 }
