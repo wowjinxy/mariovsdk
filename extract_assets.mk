@@ -1699,7 +1699,7 @@ FILES += \
 all: $(FILES)
 
 clean:
-	$(RM) -r $(FILES) $(TMPDIR) assets/sprites/* assets/sounds/* assets/level/level_data/*
+	$(RM) -r $(FILES) $(TMPDIR)/* assets/sprites/* assets/sounds/* assets/level/level_data/*
 
 ### Predefined palettes ###
 
