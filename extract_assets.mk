@@ -1167,7 +1167,7 @@ FILES := \
 	assets/sprites/moving_platform/gUnknown_08659274.png \
 	assets/sprites/moving_platform/gUnknown_08659320.png \
 	assets/unused/DKPlusLeftoverBG.png \
-	assets/unused/DKPlusLeftoverBG0Map.bin \
+	assets/unused/DKPlusLeftoverBG0Map.lz.orig \
 	assets/unused/EarlyOptionsMenuBG.png \
 	assets/unused/EarlyOptionsMenuBG.pal \
 	assets/unused/EarlyOptionsMenuBG0Map.bin \
@@ -6043,10 +6043,13 @@ assets/sprites/moving_platform/gUnknown_08659320.png: $(TMPDIR)/palettes/40_worl
 ### Backgrounds ###
 
 assets/unused/DKPlusLeftoverBG.png: GBAGFX_FLAGS := -width 8
-$(TMPDIR)/unused/DKPlusLeftoverBG.4bpp.rle: baserom.gba ; $(call dump_data,0x7AFC80,0x2121)
-assets/unused/DKPlusLeftoverBG0Map.bin: baserom.gba ; $(call dump_data,0x7B1DCC,0x122C)
+$(TMPDIR)/unused/DKPlusLeftoverBG.4bpp.rle: baserom.gba ; $(call dump_data,0x7AFC80,0x2124)
+assets/unused/DKPlusLeftoverBG0Map.lz.orig: baserom.gba ; $(call dump_data,0x7B1DCC,0xFC)
+assets/unused/DKPlusLeftoverAnimatedTileGFX.png: GBAGFX_FLAGS := -width 1
+$(TMPDIR)/unused/DKPlusLeftoverAnimatedTileGFX.4bpp: baserom.gba ; $(call dump_data,0x7B1ECC,0x120)
+assets/unused/DKPlusLeftoverTileObjectData.lz.orig: baserom.gba ; $(call dump_data,0x7B2038,0xFC0)
 
-$(TMPDIR)/unused/EarlyOptionsMenuBG.8bpp.rle: baserom.gba ; $(call dump_data,0x8703A4,0x2ECA)
+$(TMPDIR)/unused/EarlyOptionsMenuBG.8bpp.rle: baserom.gba ; $(call dump_data,0x8703A4,0x2ECC)
 assets/unused/EarlyOptionsMenuBG.pal: GBAGFX_FLAGS := -msbhack
 $(TMPDIR)/unused/EarlyOptionsMenuBG.gbapal: baserom.gba ; $(call dump_data,0x873820,0x200)
 assets/unused/EarlyOptionsMenuBG.png: $(TMPDIR)/unused/EarlyOptionsMenuBG.gbapal

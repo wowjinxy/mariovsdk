@@ -33,7 +33,7 @@ gUnknown_087ACE0C:
 	.byte 0x00
 	.4byte 0x00000000 @ Unknown Flags 1
 	.4byte 0x00000000 @ Unknown Flags 2
-	.4byte sub_08047D14 @ Sprite Function
+	.4byte sprite_return_0_08047D14 @ Sprite Function
 	
 	.GLOBAL gUnknown_087ACE34
 gUnknown_087ACE34:
@@ -65,7 +65,7 @@ gUnknown_087ACE34:
 	.byte 0x00
 	.4byte 0x00000000 @ Unknown Flags 1
 	.4byte 0x00000000 @ Unknown Flags 2
-	.4byte sub_08047D14 @ Sprite Function
+	.4byte sprite_return_0_08047D14 @ Sprite Function
 
 	.GLOBAL gUnknown_087ACE5C
 gUnknown_087ACE5C:
@@ -97,7 +97,7 @@ gUnknown_087ACE5C:
 	.byte 0x00
 	.4byte 0x00000000 @ Unknown Flags 1
 	.4byte 0x00000000 @ Unknown Flags 2
-	.4byte sub_08047D14 @ Sprite Function
+	.4byte sprite_return_0_08047D14 @ Sprite Function
 
 	.GLOBAL gUnknown_087ACE84
 gUnknown_087ACE84:

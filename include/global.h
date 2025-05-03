@@ -127,7 +127,7 @@ struct GraphicsConfig
     /*0x38*/ u16 bgCnt[4];  // bgcnt for BGs 0-3
     /*0x40*/ u8 *bgVramMapAddrs[4];  // VRAM tile map addresses for each BG?
     /*0x50*/ u8 *vramAddr50[4];  // VRAM addresses?
-	u32 animTileGFXOffset;
+	u32 animTileDataOffset;
     u8 filler64[4];
     u32 bgScanlineScrollOffset;  // some offset
     u32 waterLayerOffset;  // offset to a GraphicsConfig_WaterLayer struct

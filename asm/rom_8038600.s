@@ -33398,8 +33398,8 @@ _0804789E:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_080478B0
-sub_080478B0: @ 0x080478B0
+	THUMB_FUNC_START mario_handle_hitbox_080478B0
+mario_handle_hitbox_080478B0: @ 0x080478B0
 	push {r4-r7,lr}
 	mov r7, r8
 	push {r7}
@@ -33492,8 +33492,10 @@ _08047952:
 	pop {r4-r7}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_080478B0
+	THUMB_FUNC_END mario_handle_hitbox_080478B0
 
+
+@ Used by a unused sprite
 	THUMB_FUNC_START sub_0804795C
 sub_0804795C: @ 0x0804795C
 	push {r4-r7,lr}
@@ -33691,6 +33693,8 @@ _08047AAE:
 	bx r1
 	THUMB_FUNC_END sub_08047A30
 
+
+
 	THUMB_FUNC_START sub_08047AB8
 sub_08047AB8: @ 0x08047AB8
 	push {r4-r7,lr}
@@ -33824,8 +33828,8 @@ _08047BA2:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08047BAC
-sub_08047BAC: @ 0x08047BAC
+	THUMB_FUNC_START mario_handle_spring_08047BAC
+mario_handle_spring_08047BAC: @ 0x08047BAC
 	push {r4,r5,lr}
 	add r3, r0, #0
 	add r4, r3, #0
@@ -33886,10 +33890,10 @@ _08047C0E:
 	bx r1
 _08047C14:
 	.4byte gUnknown_030019C0
-	THUMB_FUNC_END sub_08047BAC
+	THUMB_FUNC_END mario_handle_spring_08047BAC
 
-	THUMB_FUNC_START sub_08047C18
-sub_08047C18: @ 0x08047C18
+	THUMB_FUNC_START mario_handle_sideflip_08047C18
+mario_handle_sideflip_08047C18: @ 0x08047C18
 	push {r4-r7,lr}
 	sub sp, sp, #16
 	add r4, r0, #0
@@ -33975,10 +33979,11 @@ _08047CB0:
 	.4byte gUnknown_03001A10
 _08047CB4:
 	.4byte 0xFFFFFB00
-	THUMB_FUNC_END sub_08047C18
+	THUMB_FUNC_END mario_handle_sideflip_08047C18
 
-	THUMB_FUNC_START sub_08047CB8
-sub_08047CB8: @ 0x08047CB8
+
+	THUMB_FUNC_START trashbin_thrown_upwards_08047CB8
+trashbin_thrown_upwards_08047CB8: @ 0x08047CB8
 	push {lr}
 	sub sp, sp, #16
 	ldr r1, [r0, #108]
@@ -33996,8 +34001,10 @@ sub_08047CB8: @ 0x08047CB8
 	add sp, sp, #16
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08047CB8
+	THUMB_FUNC_END trashbin_thrown_upwards_08047CB8
 
+
+@ Key related
 	THUMB_FUNC_START sub_08047CDC
 sub_08047CDC: @ 0x08047CDC
 	push {lr}
@@ -34039,14 +34046,16 @@ _08047D0E:
 	pop {r1}
 	bx r1
 	THUMB_FUNC_END sub_08047CF8
+	
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08047D14
-sub_08047D14: @ 0x08047D14
+	
+	THUMB_FUNC_START sprite_return_0_08047D14
+sprite_return_0_08047D14: @ 0x08047D14
 	mov r0, #0
 	bx lr
-	THUMB_FUNC_END sub_08047D14
+	THUMB_FUNC_END sprite_return_0_08047D14
 
 	THUMB_FUNC_START sub_08047D18
 sub_08047D18: @ 0x08047D18
@@ -34067,8 +34076,9 @@ _08047D2A:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08047D30
-sub_08047D30: @ 0x08047D30
+	
+	THUMB_FUNC_START mario_held_movement_input_08047D30
+mario_held_movement_input_08047D30: @ 0x08047D30
 	push {lr}
 	ldr r2, _08047D6C  @ =gUnknown_030019A4
 	mov r0, #0
@@ -34115,18 +34125,21 @@ _08047D80:
 _08047D82:
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08047D30
+	THUMB_FUNC_END mario_held_movement_input_08047D30
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_08047D88
-sub_08047D88: @ 0x08047D88
+	
+	
+	THUMB_FUNC_START sprite_return_0_08047D88 @ unreferenced
+sprite_return_0_08047D88: @ 0x08047D88
 	mov r0, #0
 	bx lr
-	THUMB_FUNC_END sub_08047D88
+	THUMB_FUNC_END sprite_return_0_08047D88
+	
 
-	THUMB_FUNC_START sub_08047D8C
-sub_08047D8C: @ 0x08047D8C
+	THUMB_FUNC_START mario_wire_spin_08047D8C
+mario_wire_spin_08047D8C: @ 0x08047D8C
 	push {r4,r5,lr}
 	add r4, r1, #0
 	ldr r1, _08047DBC  @ =gUnknown_030019A4
@@ -34172,7 +34185,9 @@ _08047DD6:
 	pop {r4,r5}
 	pop {r1}
 	bx r1
-	THUMB_FUNC_END sub_08047D8C
+	THUMB_FUNC_END mario_wire_spin_08047D8C
+
+@ unreferenced funcs
 
 	THUMB_FUNC_START sub_08047DDC
 sub_08047DDC: @ 0x08047DDC
@@ -34308,6 +34323,9 @@ _08047EA8:
 
 	.byte 0x00
 	.byte 0x00
+
+@ unreferenced funcs end
+
 	THUMB_FUNC_START sub_08047EB0
 sub_08047EB0: @ 0x08047EB0
 	push {r4-r6,lr}
