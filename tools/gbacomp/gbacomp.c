@@ -127,16 +127,42 @@ static struct Match find_match_v1(const struct Buffer input, int pos)
 	return best;
 }
 
+struct Run
+{
+	int byte;
+	int start;
+	int len;
+};
+
+struct Run currRun;
+
 static struct Match find_match_v2(const struct Buffer input, int pos)
 {
-	static int prevFindPos;
 	struct Match best = { 0 };
 	struct Buffer tofind = { input.data + pos, input.size - pos };
 	int start = MAX(0, pos - MAX_DISPLACEMENT);
+	int end = pos - 1;
+	int searchStart = start;
 
-	int i = prevFindPos;
-	for (int x = start; x < pos; x++)
+	// The original compression appears to do some really stupid things
+	// when a long string of the same byte is encountered. It will not detect
+	// any matches until the last 18 occurrences of the byte.
+	if (currRun.len > 0
+	 && tofind.data[0] == currRun.byte
+	 && tofind.data[1] == currRun.byte
+	 && tofind.data[2] == currRun.byte)
 	{
+		searchStart = currRun.start;
+		if (searchStart >= end)  // Don't check for any matches if the start of the run is ahead of us.
+			return best;
+	}
+
+	// Find longest match
+	int i = searchStart;
+	for (int x = start; x < end; x++, i++)
+	{
+		if (i >= end) i = start;  // wrap around
+
 		int len = 0;
 		while (i + len < input.size && len < tofind.size
 		 && len < MAX_MATCH_LEN
@@ -148,15 +174,28 @@ static struct Match find_match_v2(const struct Buffer input, int pos)
 			best.len = len;
 			best.pos = i;
 		}
-
-		i++;
-		// wrap around
-		if (i >= pos)
-			i = MAX(0, pos - 0x1000);
 	}
 
+	// Try to find repeated run of byte
 	if (best.len >= 3)
-		prevFindPos = i;
+		pos = pos + best.len - 1;
+	uint8_t byte = input.data[pos];
+	int runStart = pos;
+	while (runStart >= 0 && input.data[runStart] == byte)
+		runStart--;
+	runStart++;
+	int runEnd = pos;
+	while (runEnd < input.size && input.data[runEnd] == byte)
+		runEnd++;
+	runStart = MAX(runStart, runEnd - MAX_MATCH_LEN);  // grab the last 18 bytes of the run
+	int runLen = runEnd - runStart;
+	if (runLen >= MAX_MATCH_LEN && input.data[pos] == byte)
+	{
+		currRun.byte = byte;
+		currRun.start = runStart;
+		currRun.len = runLen;
+	}
+
 	return best;
 }
 

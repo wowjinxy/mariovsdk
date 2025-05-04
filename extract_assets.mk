@@ -1647,7 +1647,6 @@ FILES += \
 	assets/level/level_data/world_one/1_5_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_mm_tutorial.bin.lz.orig \
-	assets/level/level_data/world_two/2_5_tutorial.bin.lz.orig \
 	assets/level/level_data/world_four/4_4_tutorial.bin.lz.orig \
 	assets/level/level_data/world_five/5_1_tutorial.bin.lz.orig \
 	assets/level/level_data/world_five/5_3_tutorial.bin.lz.orig \
@@ -6615,15 +6614,15 @@ assets/sounds/%.aif: $(TMPDIR)/sounds/%.pcm $(AIF2PCM)
 	$(QUIET) $(AIF2PCM) -s $(SAMPLE_RATE) $< $@
 
 # decompress files
-assets/%: $(TMPDIR)/%.lz
+assets/%: $(TMPDIR)/%.lz $(GBACOMP)
 	@echo Decompressing $<
 	@mkdir -p $(@D)
 	$(QUIET) $(GBACOMP) -d $< $@
-$(TMPDIR)/%: $(TMPDIR)/%.rle
+$(TMPDIR)/%: $(TMPDIR)/%.rle $(GBACOMP)
 	@echo Decompressing $<
 	@mkdir -p $(@D)
 	$(QUIET) $(GBACOMP) -d $< $@
-assets/%: $(TMPDIR)/%.rle
+assets/%: $(TMPDIR)/%.rle $(GBACOMP)
 	@echo Decompressing $<
 	@mkdir -p $(@D)
 	$(QUIET) $(GBACOMP) -d $< $@

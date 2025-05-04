@@ -1351,7 +1351,7 @@ gLevel25B:
 
 	.GLOBAL gLevel25Tutorial
 gLevel25Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_two/2_5_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_5_tutorial.bin.lz"
 
 
 	.GLOBAL gLevel26A
