@@ -188,7 +188,45 @@ gEWorldMenuData1:
 
 	.GLOBAL gWorldOneBossClearData1
 gWorldOneBossClearData1:
-	.INCBIN "baserom.gba", 0x7E21D0, 0x7E4B48-0x7E21D0
+	.4byte 0x74 | (1 << 31)  @ unk0
+	.4byte gWorldOneBossClearData1.end - gWorldOneBossClearData1 @ filler4 (size, including unk0)
+	.4byte gWorldOneBossClearData1.gfx - gWorldOneBossClearData1 @ gfxOffset
+	.4byte gWorldOneBossClearData1.bg0data - gWorldOneBossClearData1, 0x00000000, 0x00000000, 0x00000000 @ bgMapOffsets
+	.4byte gWorldOneBossClearData1.pal - gWorldOneBossClearData1 @ palOffset
+	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 @ filler20
+	.2byte 0x0000 @ unk2C
+	.2byte 0x0000 @ unk2E
+	.2byte 0x0000 @ bldCnt
+	.2byte 0x0000 @ bldAlpha
+	.2byte 0x0000 @ bldY
+	.byte 0x00, 0x01 @ filler36
+	.2byte 0x0087, 0x028B, 0x0487, 0x0687 @ bgCnt
+	.4byte 0x06000000, 0x06001000, 0x06002000, 0x06003000 @ bgVramMapAddrs
+	.4byte 0x06004000, 0x06008000, 0x06004000, 0x06004000 @ vramAddr50
+	.4byte 0x00000000 @ animTileDataOffset
+	.byte 0x00, 0x00, 0x00, 0x00 @ filler64
+	.4byte 0x00000000 @ bgScanlineScrollOffset
+	.4byte 0x00000000 @ waterLayerOffset
+	.4byte gWorldOneBossClearData1.tileobjectdata - gWorldOneBossClearData1 @ tileObjectOffset
+gWorldOneBossClearData1.gfx:
+	.4byte gWorldOneBossClearData1.bg0data - gWorldOneBossClearData1.gfx - 4 @ size
+	.INCBIN "assets/boss_clear/world_one/gWorldOneBossClearDataGFX.8bpp.lz.orig"
+gWorldOneBossClearData1.bg0data:
+	.4byte 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	.4byte 0x04000010, 0x04000012
+	.4byte 256, 256 @ witdth, height
+	.2byte gWorldOneBossClearData1.pal - gWorldOneBossClearData1.bg0tilemap @ compressed data size
+	.2byte 0xCDCD @ paralax X speed
+	.2byte 0xCDCD @ paralax Y speed
+	.byte 0x00, 0x00 @ filler26
+gWorldOneBossClearData1.bg0tilemap:
+	.INCBIN "assets/boss_clear/world_one/gWorldOneBossClearDataBG0Map.rle"
+gWorldOneBossClearData1.pal:
+	.4byte gWorldOneBossClearData1.tileobjectdata - gWorldOneBossClearData1.pal - 4 @ size
+	.INCBIN "assets/boss_clear/world_one/gWorldOneBossClearData1BG.gbapal"
+gWorldOneBossClearData1.tileobjectdata:
+	.INCBIN "assets/boss_clear/world_one/gWorldOneBossClearData1TileObjectData.lz.orig"
+gWorldOneBossClearData1.end:
 
 	.GLOBAL gWorldOneBossClearData2
 gWorldOneBossClearData2:

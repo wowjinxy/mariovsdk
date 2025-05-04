@@ -1711,6 +1711,11 @@ FILES += \
 	assets/level_select_plus/LevelSelectWorldSixPlusBG.bin \
 	assets/level_select_plus/LevelSelectWorldThreePlusBG.bin \
 	assets/level_select_plus/LevelSelectWorldTwoPlusBG.bin \
+	assets/boss_clear/world_one/gWorldOneBossClearDataGFX.8bpp.lz.orig \
+	assets/boss_clear/world_one/gWorldOneBossClearDataBG0Map.rle \
+	assets/boss_clear/world_one/gWorldOneBossClearData1BG.pal \
+	assets/boss_clear/world_one/gWorldOneBossClearData1TileObjectData.lz.orig
+
 
 all: $(FILES)
 
@@ -6078,6 +6083,14 @@ $(TMPDIR)/unused/EarlyOptionsMenuBG0Map.bin.rle: baserom.gba ; $(call dump_data,
 $(TMPDIR)/unused/EarlyOptionsMenuBG1Map.bin.rle: baserom.gba ; $(call dump_data,0x8732E4,0x24)
 $(TMPDIR)/unused/EarlyOptionsMenuBG2Map.bin.rle: baserom.gba ; $(call dump_data,0x873330,0x24)
 assets/unused/EarlyOptionsMenuBG3Map.bin: baserom.gba ; $(call dump_data,0x87337C,0x4A0)
+
+
+
+assets/boss_clear/world_one/gWorldOneBossClearDataGFX.8bpp.lz.orig: baserom.gba ; $(call dump_data,0x7E2248,0x221C)
+assets/boss_clear/world_one/gWorldOneBossClearDataBG0Map.rle: baserom.gba ; $(call dump_data,0x7E448C, 0x20C)
+assets/boss_clear/world_one/gWorldOneBossClearData1BG.pal:
+$(TMPDIR)/boss_clear/world_one/gWorldOneBossClearData1BG.gbapal: baserom.gba ; $(call dump_data,0x7E469C,0x200)
+assets/boss_clear/world_one/gWorldOneBossClearData1TileObjectData.lz.orig: baserom.gba ; $(call dump_data,0x7E489C,0x2AC)
 
 assets/level/data/WorldFiveBG.png: GBAGFX_FLAGS := -width 8
 $(TMPDIR)/level/data/WorldFiveBG.4bpp.rle: baserom.gba ; $(call dump_data,0xA3F344,0x2D84)
