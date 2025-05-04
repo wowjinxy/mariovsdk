@@ -6072,7 +6072,7 @@ assets/unused/DKPlusLeftoverTileObjectData.lz.orig: baserom.gba ; $(call dump_da
 
 assets/NSTLogo.4bpp.lz.orig: baserom.gba ; $(call dump_data,0x866AC0,0x76C)
 assets/NSTLogoBG0Map.bin.rle: baserom.gba ; $(call dump_data,0x867254,0x106)
-assets/NSTLogoBG.pal:
+assets/NSTLogoBG.pal: GBAGFX_FLAGS := -msbhack
 $(TMPDIR)/NSTLogoBG.gbapal: baserom.gba ; $(call dump_data,0x867360,0x200)
 
 $(TMPDIR)/unused/EarlyOptionsMenuBG.8bpp.rle: baserom.gba ; $(call dump_data,0x8703A4,0x2ECC)
@@ -6084,11 +6084,9 @@ $(TMPDIR)/unused/EarlyOptionsMenuBG1Map.bin.rle: baserom.gba ; $(call dump_data,
 $(TMPDIR)/unused/EarlyOptionsMenuBG2Map.bin.rle: baserom.gba ; $(call dump_data,0x873330,0x24)
 assets/unused/EarlyOptionsMenuBG3Map.bin: baserom.gba ; $(call dump_data,0x87337C,0x4A0)
 
-
-
 assets/boss_clear/world_one/gWorldOneBossClearDataGFX.8bpp.lz.orig: baserom.gba ; $(call dump_data,0x7E2248,0x221C)
 assets/boss_clear/world_one/gWorldOneBossClearDataBG0Map.rle: baserom.gba ; $(call dump_data,0x7E448C, 0x20C)
-assets/boss_clear/world_one/gWorldOneBossClearData1BG.pal:
+assets/boss_clear/world_one/gWorldOneBossClearData1BG.pal: GBAGFX_FLAGS := -msbhack
 $(TMPDIR)/boss_clear/world_one/gWorldOneBossClearData1BG.gbapal: baserom.gba ; $(call dump_data,0x7E469C,0x200)
 assets/boss_clear/world_one/gWorldOneBossClearData1TileObjectData.lz.orig: baserom.gba ; $(call dump_data,0x7E489C,0x2AC)
 

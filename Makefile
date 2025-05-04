@@ -48,7 +48,9 @@ src/agb_flash_mx.o: CC1FLAGS := -O1 -mthumb-interwork
 src/libc.o: CC1 := $(CC1_OLD)
 src/libc.o: CC1FLAGS := -O2
 
+assets/NSTLogoBG.gbapal: GBAGFX_FLAGS := -msbhack
 assets/unused/EarlyOptionsMenuBG.gbapal: GBAGFX_FLAGS := -msbhack
+assets/boss_clear/world_one/gWorldOneBossClearData1BG.gbapal: GBAGFX_FLAGS := -msbhack
 
 #### Main Targets ####
 
