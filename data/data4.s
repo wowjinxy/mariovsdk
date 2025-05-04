@@ -356,7 +356,43 @@ gBonusSwapBoxesBackgroundData:
 
 	.GLOBAL gNintendoSoftwareTechnologyLogo
 gNintendoSoftwareTechnologyLogo:
-	.INCBIN "assets/NSTLogo.bin"
+	.4byte 0x74 | (1 << 31)  @ unk0
+	.4byte gNintendoSoftwareTechnologyLogo.end - gNintendoSoftwareTechnologyLogo @ filler4 (size, including unk0)
+	.4byte gNintendoSoftwareTechnologyLogo.gfx - gNintendoSoftwareTechnologyLogo @ gfxOffset
+	.4byte gNintendoSoftwareTechnologyLogo.bg0map - gNintendoSoftwareTechnologyLogo, 0x00000000, 0x00000000, 0x00000000 @ bgMapOffsets
+	.4byte gNintendoSoftwareTechnologyLogo.pal - gNintendoSoftwareTechnologyLogo @ palOffset
+	.skip 0xC @ filler20
+	.2byte 0 @ unk2C
+	.2byte 0x00A0 @ unk2E
+	.2byte 0 @ bldCnt
+	.2byte 0 @ bldAlpha
+	.2byte 0 @ bldY
+	.byte 0, 0x1 @ filler36
+	.2byte 0x0005, 0x0105, 0x0205, 0x0305 @ bgCnt
+	.4byte 0x06000000, 0x06000800, 0x06001000, 0x06001800 @ bgVramMapAddrs
+	.4byte 0x06004000, 0x06004000, 0x06004000, 0x06004000 @ vramAddr50
+	.4byte 0 @ animTileDataOffset
+	.byte 0, 0, 0, 0 @ filler64
+	.4byte 0 @ bgScanlineScrollOffset
+	.4byte 0 @ waterLayerOffset
+	.4byte 0 @ tileObjectOffset
+gNintendoSoftwareTechnologyLogo.gfx:
+	.4byte gNintendoSoftwareTechnologyLogo.bg0map - gNintendoSoftwareTechnologyLogo.gfx - 4 @ size
+	.INCBIN "assets/NSTLogo.4bpp.lz.orig"
+gNintendoSoftwareTechnologyLogo.bg0map:
+	.4byte 0x00000000, 0x00A000F0, 0x00000000, 0x00000000
+	.4byte 0x04000010, 0x04000012
+	.4byte 256, 256 @ width, height
+	.2byte 0x0108 @ unk20
+	.2byte 0xCDCD @ paralax X speed
+	.2byte 0xCDCD @ paralax Y speed
+	.byte 0x00, 0x00 @ filler26
+	.INCBIN "assets/NSTLogoBG0Map.bin.rle"
+	.byte 0xCD, 0xCD @ padding
+gNintendoSoftwareTechnologyLogo.pal:
+	.4byte 0x200 @ size
+	.INCBIN "assets/NSTLogoBG.gbapal"
+gNintendoSoftwareTechnologyLogo.end:
 
 	.GLOBAL gTitleScreenLeftData
 gTitleScreenLeftData:

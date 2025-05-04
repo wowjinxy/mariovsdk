@@ -1671,7 +1671,9 @@ FILES += \
 
 # Misc. binary files
 FILES += \
-	assets/NSTLogo.bin \
+	assets/NSTLogo.4bpp.lz.orig \
+	assets/NSTLogoBG0Map.bin.rle \
+	assets/NSTLogoBG.pal \
 	assets/gUnknown_080B5328.bin \
 	assets/gUnknown_08076AD8.bin \
 	assets/bonus/BonusStopArrowBackground.bin \
@@ -6063,6 +6065,11 @@ assets/unused/DKPlusLeftoverAnimatedTileGFX.png: GBAGFX_FLAGS := -width 1
 $(TMPDIR)/unused/DKPlusLeftoverAnimatedTileGFX.4bpp: baserom.gba ; $(call dump_data,0x7B1ECC,0x120)
 assets/unused/DKPlusLeftoverTileObjectData.lz.orig: baserom.gba ; $(call dump_data,0x7B2038,0xFC0)
 
+assets/NSTLogo.4bpp.lz.orig: baserom.gba ; $(call dump_data,0x866AC0,0x76C)
+assets/NSTLogoBG0Map.bin.rle: baserom.gba ; $(call dump_data,0x867254,0x106)
+assets/NSTLogoBG.pal:
+$(TMPDIR)/NSTLogoBG.gbapal: baserom.gba ; $(call dump_data,0x867360,0x200)
+
 $(TMPDIR)/unused/EarlyOptionsMenuBG.8bpp.rle: baserom.gba ; $(call dump_data,0x8703A4,0x2ECC)
 assets/unused/EarlyOptionsMenuBG.pal: GBAGFX_FLAGS := -msbhack
 $(TMPDIR)/unused/EarlyOptionsMenuBG.gbapal: baserom.gba ; $(call dump_data,0x873820,0x200)
@@ -6564,7 +6571,6 @@ $(TMPDIR)/level/level_data/boss/DK_boss.bin.lz: baserom.gba ; $(call dump_data,0
 $(TMPDIR)/level/level_data/boss/DK_boss_plus.bin.lz: baserom.gba ; $(call dump_data,0xB19B60,0xB8)
 
 ### Misc. binary files ###
-assets/NSTLogo.bin:                                       baserom.gba ; $(call dump_data,0x866A48,0xB18)
 assets/gUnknown_080B5328.bin:                             baserom.gba ; $(call dump_data,0xB5328,0xCC)
 assets/gUnknown_08076AD8.bin:                             baserom.gba ; $(call dump_data,0x76AD8,0x280)
 assets/bonus/BonusStopArrowBackground.bin:                baserom.gba ; $(call dump_data,0x85D720,0x2B0C)
