@@ -220,7 +220,7 @@ gWorldOneBossClearData1.bg0data:
 	.2byte 0xCDCD @ paralax Y speed
 	.byte 0x00, 0x00 @ filler26
 gWorldOneBossClearData1.bg0tilemap:
-	.INCBIN "assets/boss_clear/world_one/gWorldOneBossClearDataBG0Map.rle"
+	.INCBIN "assets/boss_clear/world_one/gWorldOneBossClearDataBG0Map.bin.rle.orig"
 gWorldOneBossClearData1.pal:
 	.4byte gWorldOneBossClearData1.tileobjectdata - gWorldOneBossClearData1.pal - 4 @ size
 	.INCBIN "assets/boss_clear/world_one/gWorldOneBossClearData1BG.gbapal"
