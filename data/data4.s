@@ -1281,7 +1281,7 @@ gLevel11B:
 	
 	.GLOBAL gLevel11Tutorial
 gLevel11Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_one/1_1_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_one/1_1_tutorial.bin.lz"
 	
 	
 	.GLOBAL gLevel12A
@@ -1425,7 +1425,7 @@ gLevel25B:
 
 	.GLOBAL gLevel25Tutorial
 gLevel25Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_two/2_5_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_two/2_5_tutorial.bin.lz"
 
 
 	.GLOBAL gLevel26A
@@ -1583,7 +1583,7 @@ gLevel43B:
 
 	.GLOBAL gLevel43Tutorial
 gLevel43Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_four/4_3_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_3_tutorial.bin.lz"
 	
 	
 	.GLOBAL gLevel44A
@@ -1609,7 +1609,7 @@ gLevel45B:
 
 	.GLOBAL gLevel45Tutorial
 gLevel45Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_four/4_5_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_5_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel46A
@@ -1622,7 +1622,7 @@ gLevel46B:
 
 	.GLOBAL gLevel46Tutorial
 gLevel46Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_four/4_6_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_6_tutorial.bin.lz"
 
 
 	.GLOBAL gLevel4MM
@@ -1635,7 +1635,7 @@ gLevel4DK:
 
 	.GLOBAL gLevel4MMTutorial
 gLevel4MMTutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_four/4_mm_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_four/4_mm_tutorial.bin.lz"
 	
 @ World 5
 
@@ -1662,7 +1662,7 @@ gLevel52B:
 
 	.GLOBAL gLevel52Tutorial
 gLevel52Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_five/5_2_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_2_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel53A
@@ -1688,7 +1688,7 @@ gLevel54B:
 
 	.GLOBAL gLevel54Tutorial
 gLevel54Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_five/5_4_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_4_tutorial.bin.lz"
 
 	
 	.GLOBAL gLevel55A
@@ -1701,7 +1701,7 @@ gLevel55B:
 
 	.GLOBAL gLevel55Tutorial
 gLevel55Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_five/5_5_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_5_tutorial.bin.lz"
 	
 
 	.GLOBAL gLevel56A
@@ -1714,7 +1714,7 @@ gLevel56B:
 
 	.GLOBAL gLevel56Tutorial
 gLevel56Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_five/5_6_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_6_tutorial.bin.lz"
 
 
 	.GLOBAL gLevel5MM
@@ -1727,7 +1727,7 @@ gLevel5DK:
 
 	.GLOBAL gLevel5MMTutorial
 gLevel5MMTutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_five/5_mm_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_five/5_mm_tutorial.bin.lz"
 	
 @ World 6
 	
@@ -1754,7 +1754,7 @@ gLevel62B:
 
 	.GLOBAL gLevel62Tutorial
 gLevel62Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_six/6_2_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_2_tutorial.bin.lz"
 	
 	
 	.GLOBAL gLevel63A
@@ -1767,7 +1767,7 @@ gLevel63B:
 
 	.GLOBAL gLevel63Tutorial 
 gLevel63Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_six/6_3_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_3_tutorial.bin.lz"
 
 
 	.GLOBAL gLevel64A
@@ -1793,7 +1793,7 @@ gLevel65B:
 	
 	.GLOBAL gLevel65Tutorial
 gLevel65Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_six/6_5_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_5_tutorial.bin.lz"
 	
 	
 	.GLOBAL gLevel66A
@@ -1806,7 +1806,7 @@ gLevel66B:
 	
 	.GLOBAL gLevel66Tutorial
 gLevel66Tutorial:
-	INCBIN_LEVEL "assets/level/level_data/world_six/6_6_tutorial.bin.lz.orig"
+	INCBIN_LEVEL "assets/level/level_data/world_six/6_6_tutorial.bin.lz"
 	
 	
 	.GLOBAL gLevel6MM

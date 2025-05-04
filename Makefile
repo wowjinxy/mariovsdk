@@ -17,7 +17,7 @@ LD       := $(DEVKITARM)/bin/arm-none-eabi-ld
 OBJCOPY  := $(DEVKITARM)/bin/arm-none-eabi-objcopy
 
 GBAGFX   := tools/gbagfx/gbagfx
-RLE      := tools/rle/rle
+GBACOMP  := tools/gbacomp/gbacomp
 AIF2PCM  := tools/aif2pcm/aif2pcm
 
 CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -O2 -fhex-asm -fno-common
@@ -62,9 +62,11 @@ clean:
 	find . -name '*.4bpp' -exec rm {} +
 	find . -name '*.8bpp' -exec rm {} +
 	find . -name '*.gbapal' -exec rm {} +
+	find . -name '*.lz' -exec rm {} +
 	find . -name '*.rle' -exec rm {} +
 	$(RM) assets/sounds/*.pcm
 	$(MAKE) -C tools/gbagfx clean
+	$(MAKE) -C tools/gbacomp clean
 
 # Compile a set of baserom objects for use with objdiff
 baserom-objs: compare
@@ -101,11 +103,13 @@ ldscript.txt: ldscript.in
 
 %.pcm:    %.aif $(AIF2PCM) ; $(AIF2PCM) $< $@
 
-%.lz:     %     $(GBAGFX) ; $(GBAGFX) $< $@
-%.rle:    %     $(RLE)    ; $(RLE) $< $@
+LZ_VERSION := 2
+
+%.lz:     %     $(GBACOMP) ; $(GBACOMP) -l -v $(LZ_VERSION) $< $@
+%.rle:    %     $(GBACOMP) ; $(GBACOMP) -r $< $@
 
 $(GBAGFX):  ; $(MAKE) -C $(@D)
-$(RLE):     ; $(MAKE) -C $(@D)
+$(GBACOMP): ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)
 
 # Automatic dependency generation

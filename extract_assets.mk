@@ -11,7 +11,7 @@ endif
 TMPDIR := .extract
 
 GBAGFX  := tools/gbagfx/gbagfx
-RLE     := tools/rle/rle
+GBACOMP := tools/gbacomp/gbacomp
 AIF2PCM := tools/aif2pcm/aif2pcm
 
 # canned recipe to extract bytes from binary file
@@ -1641,32 +1641,17 @@ FILES := \
 
 # Level files that don't match
 FILES += \
-	assets/level/level_data/world_one/1_1_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_2_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_4_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_5_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_one/1_mm_tutorial.bin.lz.orig \
-	assets/level/level_data/world_two/2_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_four/4_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_6_tutorial.bin.lz.orig \
-	assets/level/level_data/world_four/4_mm_tutorial.bin.lz.orig \
 	assets/level/level_data/world_five/5_1_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_2_tutorial.bin.lz.orig \
 	assets/level/level_data/world_five/5_3_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_6_tutorial.bin.lz.orig \
-	assets/level/level_data/world_five/5_mm_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_1_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_2_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_3_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_4_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_5_tutorial.bin.lz.orig \
-	assets/level/level_data/world_six/6_6_tutorial.bin.lz.orig \
 	assets/level/level_data/world_six/6_mm_tutorial.bin.lz.orig \
 
 # Misc. binary files
@@ -1720,7 +1705,7 @@ FILES += \
 all: $(FILES)
 
 clean:
-	$(RM) -r $(FILES) $(TMPDIR) assets/sprites/* assets/sounds/* assets/level/level_data/*
+	$(RM) -r $(FILES) $(TMPDIR)/* assets/sprites/* assets/sounds/* assets/level/level_data/*
 
 ### Predefined palettes ###
 
@@ -6646,20 +6631,20 @@ assets/sounds/%.aif: $(TMPDIR)/sounds/%.pcm $(AIF2PCM)
 	$(QUIET) $(AIF2PCM) -s $(SAMPLE_RATE) $< $@
 
 # decompress files
-assets/%: $(TMPDIR)/%.lz
+assets/%: $(TMPDIR)/%.lz $(GBACOMP)
 	@echo Decompressing $<
 	@mkdir -p $(@D)
-	$(QUIET) $(GBAGFX) $< $@
-$(TMPDIR)/%: $(TMPDIR)/%.rle
+	$(QUIET) $(GBACOMP) -d $< $@
+$(TMPDIR)/%: $(TMPDIR)/%.rle $(GBACOMP)
 	@echo Decompressing $<
 	@mkdir -p $(@D)
-	$(QUIET) $(RLE) -d $< $@
-assets/%: $(TMPDIR)/%.rle
+	$(QUIET) $(GBACOMP) -d $< $@
+assets/%: $(TMPDIR)/%.rle $(GBACOMP)
 	@echo Decompressing $<
 	@mkdir -p $(@D)
-	$(QUIET) $(RLE) -d $< $@
+	$(QUIET) $(GBACOMP) -d $< $@
 
 # build tools
 $(GBAGFX):  ; $(MAKE) -C $(@D)
-$(RLE):     ; $(MAKE) -C $(@D)
+$(GBACOMP): ; $(MAKE) -C $(@D)
 $(AIF2PCM): ; $(MAKE) -C $(@D)
