@@ -41,8 +41,7 @@
 
 @ Includes a compressed level file and adds a header
 .MACRO INCBIN_LEVEL filename
-	.2byte 2f - 1f
-	.2byte 0x8000
+	.4byte (2f - 1f) | 0x80000000
 1:
 	.INCBIN "\filename"
 2:

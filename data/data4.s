@@ -2220,207 +2220,207 @@ gLevelDKBossPlus:
 	
 	.GLOBAL g11BTitleDemo
 g11BTitleDemo:
-	.INCBIN "assets/demo_inputs/title/1_1B_demo_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/title/1_1B_demo_inputs.bin"
 	
 	.GLOBAL g26BTitleDemo
 g26BTitleDemo:
-	.INCBIN "assets/demo_inputs/title/2_6B_demo_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/title/2_6B_demo_inputs.bin"
 	
 	.GLOBAL g33ATitleDemo
 g33ATitleDemo:
-	.INCBIN "assets/demo_inputs/title/3_3A_demo_inputs.bin"
-	
+	INCBIN_LEVEL "assets/demo_inputs/title/3_3A_demo_inputs.bin"
+
 	.GLOBAL g44BTitleDemo
 g44BTitleDemo:
-	.INCBIN "assets/demo_inputs/title/4_4B_demo_inputs.bin"
-	
+	INCBIN_LEVEL "assets/demo_inputs/title/4_4B_demo_inputs.bin"
+
 	.GLOBAL g52ATitleDemo
 g52ATitleDemo:
-	.INCBIN "assets/demo_inputs/title/5_2A_demo_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/title/5_2A_demo_inputs.bin"
 	
 	.GLOBAL g63BTitleDemo
 g63BTitleDemo:
-	.INCBIN "assets/demo_inputs/title/6_3B_demo_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/title/6_3B_demo_inputs.bin"
 	
 @ World 1 Tutorials
 	
 	.GLOBAL g11TutorialDemo
 g11TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_one/1_1_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_one/1_1_tutorial_inputs.bin"
 
 	.GLOBAL g12TutorialDemo
 g12TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_one/1_2_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_one/1_2_tutorial_inputs.bin"
 	
 	.GLOBAL g13TutorialDemo
 g13TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_one/1_3_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_one/1_3_tutorial_inputs.bin"
 
 	.GLOBAL g14TutorialDemo
 g14TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_one/1_4_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_one/1_4_tutorial_inputs.bin"
 	
 	.GLOBAL g15TutorialDemo
 g15TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_one/1_5_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_one/1_5_tutorial_inputs.bin"
 
 	.GLOBAL g16TutorialDemo
 g16TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_one/1_6_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_one/1_6_tutorial_inputs.bin"
 	
 	.GLOBAL g1MMTutorialDemo
 g1MMTutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_one/1_mm_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_one/1_mm_tutorial_inputs.bin"
 	
 @ World 2 Tutorials
 	
 	.GLOBAL g21TutorialDemo
 g21TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_two/2_1_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_two/2_1_tutorial_inputs.bin"
 
 	.GLOBAL g22TutorialDemo
 g22TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_two/2_2_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_two/2_2_tutorial_inputs.bin"
 	
 	.GLOBAL g23TutorialDemo
 g23TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_two/2_3_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_two/2_3_tutorial_inputs.bin"
 
 	.GLOBAL g24TutorialDemo
 g24TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_two/2_4_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_two/2_4_tutorial_inputs.bin"
 	
 	.GLOBAL g25TutorialDemo
 g25TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_two/2_5_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_two/2_5_tutorial_inputs.bin"
 
 	.GLOBAL g26TutorialDemo
 g26TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_two/2_6_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_two/2_6_tutorial_inputs.bin"
 	
 	.GLOBAL g2MMTutorialDemo
 g2MMTutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_two/2_mm_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_two/2_mm_tutorial_inputs.bin"
 	
 @ World 3 Tutorials
 	
 	.GLOBAL g31TutorialDemo
 g31TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_three/3_1_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_three/3_1_tutorial_inputs.bin"
 
 	.GLOBAL g32TutorialDemo
 g32TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_three/3_2_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_three/3_2_tutorial_inputs.bin"
 	
 	.GLOBAL g33TutorialDemo
 g33TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_three/3_3_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_three/3_3_tutorial_inputs.bin"
 
 	.GLOBAL g34TutorialDemo
 g34TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_three/3_4_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_three/3_4_tutorial_inputs.bin"
 	
 	.GLOBAL g35TutorialDemo
 g35TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_three/3_5_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_three/3_5_tutorial_inputs.bin"
 
 	.GLOBAL g36TutorialDemo
 g36TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_three/3_6_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_three/3_6_tutorial_inputs.bin"
 	
 	.GLOBAL g3MMTutorialDemo
 g3MMTutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_three/3_mm_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_three/3_mm_tutorial_inputs.bin"
 	
 @ World 4 Tutorials
 	
 	.GLOBAL g41TutorialDemo
 g41TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_four/4_1_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_four/4_1_tutorial_inputs.bin"
 
 	.GLOBAL g42TutorialDemo
 g42TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_four/4_2_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_four/4_2_tutorial_inputs.bin"
 	
 	.GLOBAL g43TutorialDemo
 g43TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_four/4_3_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_four/4_3_tutorial_inputs.bin"
 
 	.GLOBAL g44TutorialDemo
 g44TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_four/4_4_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_four/4_4_tutorial_inputs.bin"
 	
 	.GLOBAL g45TutorialDemo
 g45TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_four/4_5_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_four/4_5_tutorial_inputs.bin"
 
 	.GLOBAL g46TutorialDemo
 g46TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_four/4_6_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_four/4_6_tutorial_inputs.bin"
 	
 	.GLOBAL g4MMTutorialDemo
 g4MMTutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_four/4_mm_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_four/4_mm_tutorial_inputs.bin"
 	
 @ World 5 Tutorials
 	
 	.GLOBAL g51TutorialDemo
 g51TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_five/5_1_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_five/5_1_tutorial_inputs.bin"
 
 	.GLOBAL g52TutorialDemo
 g52TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_five/5_2_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_five/5_2_tutorial_inputs.bin"
 	
 	.GLOBAL g53TutorialDemo
 g53TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_five/5_3_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_five/5_3_tutorial_inputs.bin"
 
 	.GLOBAL g54TutorialDemo
 g54TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_five/5_4_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_five/5_4_tutorial_inputs.bin"
 	
 	.GLOBAL g55TutorialDemo
 g55TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_five/5_5_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_five/5_5_tutorial_inputs.bin"
 
 	.GLOBAL g56TutorialDemo
 g56TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_five/5_6_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_five/5_6_tutorial_inputs.bin"
 	
 	.GLOBAL g5MMTutorialDemo
 g5MMTutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_five/5_mm_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_five/5_mm_tutorial_inputs.bin"
 	
 @ World 6 Tutorials
 	
 	.GLOBAL g61TutorialDemo
 g61TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_six/6_1_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_six/6_1_tutorial_inputs.bin"
 
 	.GLOBAL g62TutorialDemo
 g62TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_six/6_2_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_six/6_2_tutorial_inputs.bin"
 	
 	.GLOBAL g63TutorialDemo
 g63TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_six/6_3_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_six/6_3_tutorial_inputs.bin"
 
 	.GLOBAL g64TutorialDemo
 g64TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_six/6_4_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_six/6_4_tutorial_inputs.bin"
 	
 	.GLOBAL g65TutorialDemo
 g65TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_six/6_5_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_six/6_5_tutorial_inputs.bin"
 
 	.GLOBAL g66TutorialDemo
 g66TutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_six/6_6_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_six/6_6_tutorial_inputs.bin"
 	
 	.GLOBAL g6MMTutorialDemo
 g6MMTutorialDemo:
-	.INCBIN "assets/demo_inputs/tutorial/world_six/6_mm_tutorial_inputs.bin"
+	INCBIN_LEVEL "assets/demo_inputs/tutorial/world_six/6_mm_tutorial_inputs.bin"
 	
 	
 	.GLOBAL gUnknown_08B28D84
