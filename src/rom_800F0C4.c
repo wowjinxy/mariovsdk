@@ -2,7 +2,7 @@
 #include "global.h"
 #include "sprites.h"
 
-u16 sub_0800F0C4(const void *src, u16 *arg1, u16 *vramOffset, u16 size)
+u16 setup_sprite_gfx_tiles_vram_0800F0C4(const void *src, u16 *arg1, u16 *vramOffset, u16 size)
 {
     u32 ret;
 

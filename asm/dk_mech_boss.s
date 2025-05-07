@@ -2621,7 +2621,7 @@ sub_0806B600: @ 0x0806B600
 	lsl r3, r3, #2
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_0800F0C4
+	bl setup_sprite_gfx_tiles_vram_0800F0C4
 	ldr r1, [r6]
 	mov r2, #202
 	lsl r2, r2, #1
@@ -2631,7 +2631,7 @@ sub_0806B600: @ 0x0806B600
 	add r1, r4, #0
 	add r2, r5, #0
 	mov r3, #128
-	bl sub_0800F0C4
+	bl setup_sprite_gfx_tiles_vram_0800F0C4
 	ldr r1, [r6]
 	mov r2, #204
 	lsl r2, r2, #1
@@ -2644,7 +2644,7 @@ sub_0806B600: @ 0x0806B600
 	add r1, r4, #0
 	add r2, r5, #0
 	mov r3, r8
-	bl sub_0800F0C4
+	bl setup_sprite_gfx_tiles_vram_0800F0C4
 	ldr r1, [r6]
 	mov r2, #206
 	lsl r2, r2, #1
@@ -2655,7 +2655,7 @@ sub_0806B600: @ 0x0806B600
 	lsl r3, r3, #1
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_0800F0C4
+	bl setup_sprite_gfx_tiles_vram_0800F0C4
 	ldr r1, [r6]
 	mov r2, #208
 	lsl r2, r2, #1
@@ -2665,7 +2665,7 @@ sub_0806B600: @ 0x0806B600
 	add r1, r4, #0
 	add r2, r5, #0
 	mov r3, r8
-	bl sub_0800F0C4
+	bl setup_sprite_gfx_tiles_vram_0800F0C4
 	pop {r3}
 	mov r8, r3
 	pop {r4-r6}

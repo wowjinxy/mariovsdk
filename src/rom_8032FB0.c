@@ -60,7 +60,7 @@ void sub_08033024(void)
             }
             else
             {
-                sub_0806D1AC(gNewKeys, gHeldKeys);
+                update_tutorial_button_display_0806D1AC(gNewKeys, gHeldKeys);
                 if (gUnknown_03001938 & 0x800)
                 {
                     sub_0800EE70();

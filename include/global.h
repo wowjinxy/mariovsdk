@@ -1901,7 +1901,7 @@ void sub_0804138C(int, int, u32, u32);
 extern void sub_08041F2C(s8);
 void sub_08042FB0(void *, void *);
 u16 sub_0806C2C4(void);
-void sub_0806D1AC(u16, u16);
+void update_tutorial_button_display_0806D1AC(u16, u16);
 void sub_080714A8(void);
 
 void sub_080082C8();
@@ -1998,7 +1998,7 @@ void sub_08031AD4();
 void update_level_springs_0802BA38();
 void sub_0803D248();
 void sub_08031D44();
-void sub_0806E594(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
+void update_level_tutorial_thought_bubble_OAM_0806E594(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
 void sub_0800F0A8(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
 u8 update_fade_to_black_08029F7C(void);
 void sub_08007154(void);

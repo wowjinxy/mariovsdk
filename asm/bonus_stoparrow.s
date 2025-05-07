@@ -10031,7 +10031,7 @@ _0802177E:
 	lsl r3, r3, #2
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_0800F0C4
+	bl setup_sprite_gfx_tiles_vram_0800F0C4
 	ldr r1, [r6]
 	str r0, [r1, #12]
 	ldr r0, _08021910  @ =gUnknown_082ECB40
@@ -10039,7 +10039,7 @@ _0802177E:
 	lsl r3, r3, #2
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_0800F0C4
+	bl setup_sprite_gfx_tiles_vram_0800F0C4
 	ldr r0, [r6]
 	mov r1, r8
 	strb r1, [r0, #1]

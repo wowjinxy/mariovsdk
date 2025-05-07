@@ -150,7 +150,9 @@
 	X(src/rom_804A8E8.o) \
 	X(asm/rom_804AAB8.o) \
 	X(asm/dk_mech_boss.o) \
-	X(asm/rom_806C848.o) \
+	X(asm/tutorial_button_display.o) \
+	X(asm/level_tutorial_thought_bubble.o) \
+	X(asm/rom_806EDD0.o) \
 	X(data/preloaded_eCard.o) \
 	X(src/sound.o) \
 	X(src/sound_data.o) \

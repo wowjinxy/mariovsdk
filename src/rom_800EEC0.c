@@ -115,5 +115,5 @@ void sub_0800F070(u8 param_1)
 void sub_0800F0A8(u16 *oamIndex, u16 *tileNum, u16 *vramOffset)
 {
     if (gUnknown_03000A10.unk28 == 1)
-        sub_0806E594(oamIndex, tileNum, vramOffset);
+        update_level_tutorial_thought_bubble_OAM_0806E594(oamIndex, tileNum, vramOffset);
 }

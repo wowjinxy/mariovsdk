@@ -447,7 +447,7 @@ void sub_0802B674(u16 *oamIndex, u16 *tileNum, u16 *vramOffset)
     }
     else
     {
-        sub_0806E594(oamIndex, tileNum, vramOffset);
+        update_level_tutorial_thought_bubble_OAM_0806E594(oamIndex, tileNum, vramOffset);
         sub_0800A2B8(8, 0, oamIndex, tileNum, vramOffset);
         if (gMainState != MAIN_STATE_UNKNOWN_18 || gUnknown_03000150 == 0)
             return;

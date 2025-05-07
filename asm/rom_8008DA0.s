@@ -12814,7 +12814,7 @@ sub_0800ED18: @ 0x0800ED18
 	add r3, r3, #9
 	ldr r2, _0800EE6C  @ =gUnknown_082EB118
 	str r2, [r3]
-	bl sub_0806CFB0
+	bl setup_tutorial_button_display_0806CFB0
 	pop {r3-r5}
 	mov r8, r3
 	mov r9, r4
@@ -12857,7 +12857,7 @@ sub_0800EE70: @ 0x0800EE70
 	ldrb r0, [r0]
 	cmp r0, #1
 	bne _0800EEAC
-	bl sub_0806D7EC
+	bl update_level_tutorial_thought_bubble_0806D7EC
 	lsl r1, r5, #24
 	asr r1, r1, #24
 	ldr r0, _0800EEBC  @ =0x0000199A
