@@ -1446,6 +1446,38 @@ extern u8 gUnknown_03001944;
 extern u8 gUnknown_030019F4;
 extern u8 gUnknown_030019A4;
 extern struct UnknownStruct7 *gUnknown_03001C78;
+
+struct struct_03001D70{
+    u16 somePosition[21]; // unk0, 1D70
+    u16 someCounter; // unk2A, 1D9A
+    u32 vramTileOffsets[16]; // unk2C, 1D9C
+    u32 vramTileOffsetDpad; // 1DDC
+    struct OamData *InputDisplayOAMDpad; // 1DE3
+    u32 vramTileOffsetABtn; // 1DE4
+    struct OamData *InputDisplayOAMABtn; // 1DEB
+    u32 vramTileOffsetBBtn; // 1DEC
+    struct OamData *InputDisplayOAMBBtn; //1DF3
+    u16 unk84; // 1DF4
+    u16 unk86; // 1DF6
+    u16 unk88; // 1DF8
+    u16 unk8A; // 1DFA
+    u16 unk8C; // 1DFC
+    u16 unk8E; // 1DFE
+    u32 currentDemoInputFrame; //unk90, 1E00
+    u16 unk94; // 1E04
+    u16 unk96; // 1E06
+    u16 unk98; // 1E08
+    u16 unk9A; // 1E0A
+    u16 unk9C; // 1E0C
+    u16 unk9E; // 1E0E
+    u8 unkA0; // 1E10
+    u8 padA1[15]; // 1E11-1E1F
+};
+
+extern struct struct_03001D70 gUnknown_03001D70;
+
+extern u32 gUnknown_03001E20[6];
+
 extern u8 gUnknown_03001E38;
 extern u8 gUnknown_03001E3C;
 extern u8 gUnknown_03001F50[];  // unknown type
@@ -2002,6 +2034,7 @@ void update_level_tutorial_thought_bubble_OAM_0806E594(u16 *oamIndex, u16 *tileN
 void sub_0800F0A8(u16 *oamIndex, u16 *tileNum, u16 *vramOffset);
 u8 update_fade_to_black_08029F7C(void);
 void sub_08007154(void);
+u32 setup_sprite_gfx_tiles_vram_0800F0C4(const void *, u16 *, u16 *, u16);
 
 u32 VerifyFlashSector(u16 sectorNum, u8 *src);
 

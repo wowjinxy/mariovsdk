@@ -1125,7 +1125,7 @@ spawn_sprite_08038DF4: @ 0x08038DF4
 	beq _08038E3A
 	cmp r7, #10
 	bne _08038E44
-	ldr r0, _08038E40  @ =0x03001D70
+	ldr r0, _08038E40  @ =gUnknown_03001D70
 	ldr r1, [sp, #12]
 	sub r1, r1, #16
 	add r2, r0, #0
@@ -1141,7 +1141,7 @@ _08038E3A:
 	.byte 0x00
 	.byte 0x00
 _08038E40:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _08038E44:
 	cmp r7, #49
 	bhi _08038E62

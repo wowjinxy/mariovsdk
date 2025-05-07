@@ -17,7 +17,7 @@ update_level_tutorial_thought_bubble_0806D7EC: @ 0x0806D7EC
 	mov r0, #0
 	strb r0, [r4]
 _0806D808:
-	ldr r0, _0806D8C8  @ =0x03001D70
+	ldr r0, _0806D8C8  @ =gUnknown_03001D70
 	mov r12, r0
 	mov r1, r12
 	add r1, r1, #132
@@ -119,7 +119,7 @@ _0806D8A0:
 _0806D8C4:
 	.4byte 0x030006E8
 _0806D8C8:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806D8CC:
 	.4byte gUnknown_08B2D574
 _0806D8D0:
@@ -920,7 +920,7 @@ _0806DEA8:
 _0806DEAC:
 	.4byte 0xFFFFF7FF
 _0806DEB0:
-	ldr r0, _0806DEC4  @ =0x03001D70
+	ldr r0, _0806DEC4  @ =gUnknown_03001D70
 	add r2, r0, #0
 	add r2, r2, #158
 	mov r1, #0
@@ -932,9 +932,9 @@ _0806DEB0:
 	.byte 0x00
 	.byte 0x00
 _0806DEC4:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806DEC8:
-	ldr r0, _0806DED4  @ =0x03001D70
+	ldr r0, _0806DED4  @ =gUnknown_03001D70
 	add r0, r0, #160
 	mov r1, #0
 	strb r1, [r0]
@@ -942,9 +942,9 @@ _0806DEC8:
 	.byte 0x00
 	.byte 0x00
 _0806DED4:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806DED8:
-	ldr r0, _0806DEFC  @ =0x03001D70
+	ldr r0, _0806DEFC  @ =gUnknown_03001D70
 	add r0, r0, #158
 	mov r2, #0
 	strh r2, [r0]
@@ -964,11 +964,11 @@ _0806DEF0:
 	str r2, [r1, #8]
 	b _0806DF52
 _0806DEFC:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806DF00:
 	.4byte 0x03001E20
 _0806DF04:
-	ldr r0, _0806DF28  @ =0x03001D70
+	ldr r0, _0806DF28  @ =gUnknown_03001D70
 	add r0, r0, #158
 	mov r2, #0
 	strh r2, [r0]
@@ -988,11 +988,11 @@ _0806DF18:
 	str r2, [r1, #8]
 	b _0806DF52
 _0806DF28:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806DF2C:
 	.4byte 0x03001E20
 _0806DF30:
-	ldr r0, _0806DF60  @ =0x03001D70
+	ldr r0, _0806DF60  @ =gUnknown_03001D70
 	add r0, r0, #158
 	mov r2, #0
 	strh r2, [r0]
@@ -1021,11 +1021,11 @@ _0806DF52:
 	.byte 0x00
 	.byte 0x00
 _0806DF60:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806DF64:
 	.4byte 0x03001E20
 _0806DF68:
-	ldr r0, _0806DF98  @ =0x03001D70
+	ldr r0, _0806DF98  @ =gUnknown_03001D70
 	add r0, r0, #158
 	mov r2, #0
 	strh r2, [r0]
@@ -1054,11 +1054,11 @@ _0806DF90:
 	.byte 0x00
 	.byte 0x00
 _0806DF98:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806DF9C:
 	.4byte 0x03001E20
 _0806DFA0:
-	ldr r0, _0806DFB0  @ =0x03001D70
+	ldr r0, _0806DFB0  @ =gUnknown_03001D70
 	add r0, r0, #158
 	mov r1, #0
 	strh r1, [r0]
@@ -1067,11 +1067,11 @@ _0806DFA0:
 	str r0, [r1, #16]
 	b _0806DFC6
 _0806DFB0:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806DFB4:
 	.4byte 0x03001E20
 _0806DFB8:
-	ldr r0, _0806E010  @ =0x03001D70
+	ldr r0, _0806E010  @ =gUnknown_03001D70
 	add r0, r0, #158
 	mov r1, #0
 	strh r1, [r0]
@@ -1097,7 +1097,7 @@ _0806DFC6:
 	add r0, r0, r2
 	lsl r0, r0, #3
 	add r0, r0, r4
-	ldr r1, _0806E010  @ =0x03001D70
+	ldr r1, _0806E010  @ =gUnknown_03001D70
 	mov r12, r1
 _0806DFEC:
 	ldrb r0, [r0]
@@ -1121,7 +1121,7 @@ _0806DFF4:
 	.byte 0x00
 	.byte 0x00
 _0806E010:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806E014:
 	.4byte 0x03001E20
 _0806E018:
@@ -1851,7 +1851,7 @@ update_level_tutorial_thought_bubble_OAM_0806E594: @ 0x0806E594
 	add r7, r0, #0
 	str r1, [sp, #8]
 	mov r10, r2
-	ldr r1, _0806E920  @ =0x03001D70
+	ldr r1, _0806E920  @ =gUnknown_03001D70
 	ldr r2, _0806E924  @ =0x03001DF4
 	ldrh r0, [r2]
 	str r1, [sp, #12]
@@ -2205,7 +2205,7 @@ _0806E722:
 	bcs _0806E85E
 	b _0806E722
 _0806E85E:
-	ldr r2, _0806E920  @ =0x03001D70
+	ldr r2, _0806E920  @ =gUnknown_03001D70
 	add r3, r2, #0
 	add r3, r3, #134
 	add r0, r2, #0
@@ -2303,7 +2303,7 @@ _0806E8C4:
 	bcc _0806E8C4
 	b _0806EAE8
 _0806E920:
-	.4byte 0x03001D70
+	.4byte gUnknown_03001D70
 _0806E924:
 	.4byte 0x03001DF4
 _0806E928:
