@@ -339,9 +339,42 @@ fail:
 // RLE
 //------------------------------------------------------------------------------
 
-static struct Buffer rle_compress(const struct Buffer input)
+#define RLE_MAX_COPY (0x7F + 1)
+#define RLE_MAX_FILL (0x7F + 3)
+
+static bool write_copy_run(struct Buffer *output, const struct Buffer copy)
+{
+#if DEBUG
+	if (copy.size > 0)
+	{
+		printf("copy ");
+		buffer_print(copy);
+		puts("");
+	}
+#endif
+
+	int pos = 0;
+	while (pos < copy.size)
+	{
+		int len = MIN(RLE_MAX_COPY, copy.size - pos);
+		assert(len - 1 >= 0 && len - 1 <= 0x7F);
+		int outPos = output->size;
+		if (!buffer_resize(output, output->size + 1 + len))
+			return false;
+		output->data[outPos++] = len - 1;
+		memcpy(output->data + outPos, copy.data + pos, len);
+		pos += len;
+	}
+	return true;
+}
+
+struct Buffer rle_compress(const struct Buffer input)
 {
 	struct Buffer output = { 0 };
+
+#if DEBUG
+	printf("compressing %zu bytes of data\n", input.size);
+#endif
 
 	// write 4-byte header
 	buffer_resize(&output, 4);
@@ -350,54 +383,53 @@ static struct Buffer rle_compress(const struct Buffer input)
 	output.data[2] = (input.size >>  8) & 0xFF;
 	output.data[3] = (input.size >> 16) & 0xFF;
 
-	int copyStart = 0, copyEnd = 0;
-
 	int inPos = 0;
-	uint8_t fillByte = input.data[inPos++];
+	int copyStart = 0;
 	while (inPos < input.size)
 	{
-		uint8_t byte;
-
-		// find length of fill run (max 130 bytes
-		int fillLen = 1;
-		while (inPos < input.size
-		 && (byte = input.data[inPos++]) == fillByte && fillLen < 130)
+		// find length of fill run
+		uint8_t fillByte = input.data[inPos];
+		int fillLen = 0;
+		while (inPos + fillLen < input.size && fillLen < RLE_MAX_FILL && input.data[inPos + fillLen] == fillByte)
 			fillLen++;
+
 		if (fillLen >= 3)
 		{
-			// write any previous copy run
-			int copyLen = copyEnd - copyStart;
-			if (copyLen > 0)
-			{
-				int copyPos = copyStart;
-				// if the copy is greater than 128 bytes, it must be split up
-				while (copyLen > 0)
-				{
-					int chunkLen = MIN(128, copyLen);
-#if DEBUG
-					printf("copy %ix\n", chunkLen);
-#endif
-					buffer_push_u8(&output, chunkLen - 1);
-					for (int i = 0; i < chunkLen; i++)
-						buffer_push_u8(&output, input.data[copyPos++]);
-					copyLen -= chunkLen;
-				}
-			}
-			copyEnd = copyStart = inPos - 1;
+			// flush previous bytes
+			write_copy_run(&output, (struct Buffer){ input.data + copyStart, inPos - copyStart });
 
 			// write fill run
 #if DEBUG
-			printf("fill %ix 0x%02X\n", fillLen, fillByte);
+			printf("fill %02X x %i\n", fillByte, fillLen);
 #endif
-			buffer_push_u8(&output, 0x80 | (fillLen - 3));
-			buffer_push_u8(&output, fillByte);
+			assert(fillLen - 3 >= 0 && fillLen - 3 <= 0x7F);
+			if (!buffer_push_u8(&output, (1 << 7) | (fillLen - 3)))
+				goto mem_error;
+			if (!buffer_push_u8(&output, fillByte))
+				goto mem_error;
+			inPos += fillLen;
+			copyStart = inPos;
 		}
-		else  // didn't get enough bytes for a fill, so put this to the copy run
-			copyEnd += fillLen;
-		fillByte = byte;
+		else
+			inPos += 1;
 	}
 
+	// flush remaining data
+	if (!write_copy_run(&output, (struct Buffer){ input.data + copyStart, inPos - copyStart }))
+		goto mem_error;
+
+	// pad to multiple of 4 bytes
+	while (output.size % 4 != 0)
+		if (!buffer_push_u8(&output, 0xCD))
+			goto mem_error;
+
+#if DEBUG
+	printf("compressed %zu bytes to %zu (%.2f%% ratio)\n", input.size, output.size, output.size * 100.0f / input.size);
+#endif
 	return output;
+mem_error:
+	puts("failed to allocate memory");
+	return (struct Buffer){ 0 };
 }
 
 static struct Buffer rle_decompress(const struct Buffer input, size_t uncompSize)
