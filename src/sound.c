@@ -451,8 +451,8 @@ static u32 sTimes64LUT[] =
 static void (*sEffectFuncs[])(struct MusicChannel *chan, s16 *dest, int numSamples) =
 {
     effect_0_func,
-    effect_1_func,
-    effect_2_func,
+    effect_1_func, // Portamento Up 
+    effect_2_func, // Portamento Down
     effect_3_func,
     effect_4_func,
     effect_5_func,
@@ -465,6 +465,7 @@ static void (*sEffectFuncs[])(struct MusicChannel *chan, s16 *dest, int numSampl
     effect_default_func,
     effect_default_func,
     effect_default_func,
+    effect_default_func, // effect 15/0xF - set tempo/BPM
     effect_default_func,
     effect_default_func,
     effect_default_func,
@@ -483,8 +484,7 @@ static void (*sEffectFuncs[])(struct MusicChannel *chan, s16 *dest, int numSampl
     effect_default_func,
     effect_default_func,
     effect_default_func,
-    effect_default_func,
-    effect_34_func,
+    effect_34_func, // seems to be a reverb
     effect_default_func,
     effect_default_func,
     effect_37_func,

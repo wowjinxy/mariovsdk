@@ -1,0 +1,114 @@
+The music format is based off the XM music format, but its not quite exactly the XM music format
+as it doesnt store the instrument samples and data for those instruments within it
+
+The first 52 bytes of a music file are unused name/module names for the given music track
+then its as follows:
+
+2 bytes     - song length in patterns (NOT TO BE CONFUSED WITH NUMBER OF PATTERNS)
+2 bytes     - pattern to return to when song hits the end of its last pattern
+2 bytes     - number of song channels
+2 bytes     - number of patterns (NOT TO BE CONFUSED WITH SONG LENGTH)
+2 bytes     - number of instruments (unused)
+2 bytes     - tick length (seems to be either default tempo or default BPM, its in the place where flags is in a standard XM file)
+2 bytes     - unknown
+2 bytes     - unknown
+256 bytes   - pattern order (has a bunch of random data inside near the end of it, probably some XM file related things)
+128 2 bytes - instrument IDs (unfilled instrument IDs are 0xFFFF)
+
+32 2 byte structs of the following: (the game only uses the first 16 channels, leaving the last 16 unused)
+1 byte - default channel volume
+1 byte - unknown
+
+after those
+struct of the size of number of patterns (line 10)
+4 bytes - pattern length in ticks
+4 bytes - pattern offset from start of file
+
+then comes the actual music data
+
+lets take the first note/tick of HAMMERXM as reference for how the format works:
+
+81 0F 01 23 80 0F B2 3D
+
+the first byte is split into 2 parts, the MSB (most significant bit) is used to tell it if theres packed channel data within 
+the struct, the last half of the byte (0x01 in this case) is the channel number its in
+the next byte is in binary, the stuff thats packed within that struct
+
+still using HAMMERXM:
+
+0x0F converts to 
+`00001111` in binary
+and using those bits:
+
+first bit from the right   - note packed into the struct
+second bit from the right  - instrument change is packed into the struct
+third bit from the right   - panning change is packed into the struct
+fourth bit from the right  - effect data is packed into the struct
+
+if any of these next 4 bits are set, they allow you to play notes or whatever in a different format alongside doing a its own effect
+
+fifth bit from the right   - ???
+sixth bit from the right   - ???
+seventh bit from the right - ???
+eigth bit from the right   - ??? (allows you to do a pitchbend like thing)
+
+after those first 2 bytes we have
+
+0x01 - instrument
+0x23 - volume (seems to be exlusive to the first note in a channel, changing it when its not in the start of a new channel causes weirdness with volume on that channel)
+0x80 - panning
+0x0F - effect (this and the one below are packed together when the effect data bit is set)
+0xB2 - effect paramater (this and the one above are packed together when the effect data bit is set)
+0x3D - note played (different from the XM format as note 0x79 is note off unlike the normal XM format which has 0x61 as note off)
+
+after this in HAMMERXM is a 0x00 which means the game can go to the next tick of the song until it hits something that isnt a 0x00
+
+if any packed data bits 5-8 are set in the last note for a channel you can play notes via the following format:
+0x01 - channel
+0x3D - note played
+
+each pattern is padded by zeros until it has hit the nearest 4 byte boundary
+
+and for the effect byte the following table should be referenced:
+
+effect 0  (0x00) - Appregio                       - works
+effect 1  (0x01) - Portamento Up                  - works (used by plus final boss)
+effect 2  (0x02) - Portamento Down                - works (used by plus final boss)
+effect 3  (0x03) - Portamento Tone                - dont know how this works
+effect 4  (0x04) - Vibrato                        - works
+effect 5  (0x05) - Portamento Tone + Volume slide - dont know how this works
+effect 6  (0x06) - Vibrato + Volume slide         - seems to work
+effect 7  (0x07) - Tremolo                        - works
+effect 8  (0x08) - Set panning                    - works
+effect 9  (0x09) - Sample offset                  - seems to work
+effect 10 (0x0A) - Volume slide                   - works
+effect 11 (0x0B) - Position jump                  - works
+effect 12 (0x0C) - Set volume                     - works
+effect 13 (0x0D) - Pattern Break                  - works
+effect 14 (0x0E) - 
+effect 15 (0x0F) - Set tempo/BPM                  - works (used by basically every song at the start)
+effect 16 (0x10) - Set global volume
+effect 17 (0x11) - 
+effect 18 (0x12) - 
+effect 19 (0x13) - 
+effect 20 (0x14) - 
+effect 21 (0x15) - 
+effect 22 (0x16) - 
+effect 23 (0x17) - Portamento Up + Vibrato?       - works?
+effect 24 (0x18) - Portamento Down + Vibrato?     - works?
+effect 25 (0x19) - Portamento Tone + Vibrato?     - dont know how this works
+effect 26 (0x1A) - Portamento Up + Tremolo?       - works?
+effect 27 (0x1B) - Portamento Down + Tremolo?     - works?
+effect 28 (0x1C) - Portamento Tone + Tremolo?     - dont know how this works
+effect 29 (0x1D) - 
+effect 30 (0x1E) - 
+effect 31 (0x1F) - 
+effect 32 (0x20) - 
+effect 33 (0x21) - 
+effect 34 (0x22) - 
+effect 35 (0x23) - 
+effect 36 (0x24) - ???                            - works? (something to do with setting volume)
+effect 37 (0x25) - 
+effect 38 (0x26) - ???                            - works? (this seems to be like Pattern delay or Note delay based off what the name suggests)
+effect 39 (0x27) - 
+effect 40 (0x28) - 
