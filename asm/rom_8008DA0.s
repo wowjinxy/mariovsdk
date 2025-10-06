@@ -8167,7 +8167,7 @@ _0800CA98:
 	cmp r0, #1
 	bne _0800CAAA
 	mov r0, #64
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0800CAAA:
 	strb r6, [r4]
 _0800CAAC:

@@ -405,7 +405,7 @@ void sub_08071C6C(int soundID);
 void sub_08071CD4(void);
 int sub_08071D28(int arg0, int arg1, int arg2);
 void sub_08071D9C(int arg0);
-void sub_08071E14(int soundID);
+void sound_effect_thing_08071E14(int soundID);
 void sub_08071E7C(u8 arg0, u8 arg1);
 void sound_finish(void);
 u32 get_bgm_volume(u32 bgmID);

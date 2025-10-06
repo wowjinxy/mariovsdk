@@ -188,7 +188,7 @@ _0804ABE0:
 	bl play_sound_effect_08071990
 _0804AC0A:
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0804AC10:
 	ldr r0, _0804AC34  @ =gMainState
 	ldr r0, [r0]
@@ -27928,7 +27928,7 @@ _0805773C:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0805775C:
 	ldr r4, _08057790  @ =0x030003E0
 	ldrh r0, [r4]
@@ -28125,7 +28125,7 @@ _080578B4:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _080578D4:
 	ldr r4, _0805790C  @ =0x030003E0
 	ldrh r0, [r4]
@@ -28249,8 +28249,8 @@ _080579AA:
 
 	.byte 0x00
 	.byte 0x00
-	THUMB_FUNC_START sub_080579B8
-sub_080579B8: @ 0x080579B8
+	THUMB_FUNC_START dk_world_one_switch_slam
+dk_world_one_switch_slam: @ 0x080579B8
 	push {r4-r6,lr}
 	sub sp, sp, #4
 	add r4, r0, #0
@@ -28275,7 +28275,7 @@ sub_080579B8: @ 0x080579B8
 	cmp r0, #2
 	beq _08057A1E
 	mov r0, #2
-	bl sub_08058350
+	bl dk_world_one_change_switch_state
 	b _08057A1E
 _080579F0:
 	.4byte gCurrentSwitchState
@@ -28287,7 +28287,7 @@ _080579F4:
 	cmp r0, #3
 	beq _08057A1E
 	mov r0, #3
-	bl sub_08058350
+	bl dk_world_one_change_switch_state
 	b _08057A1E
 _08057A08:
 	.4byte gCurrentSwitchState
@@ -28299,7 +28299,7 @@ _08057A0C:
 	cmp r0, #1
 	beq _08057A1E
 	mov r0, #1
-	bl sub_08058350
+	bl dk_world_one_change_switch_state
 _08057A1E:
 	strh r6, [r5]
 	b _08057A48
@@ -28332,7 +28332,7 @@ _08057A50:
 	.4byte 0x030003C9
 _08057A54:
 	.4byte gUnknown_086604B8
-	THUMB_FUNC_END sub_080579B8
+	THUMB_FUNC_END dk_world_one_switch_slam
 
 	THUMB_FUNC_START sub_08057A58
 sub_08057A58: @ 0x08057A58
@@ -28608,7 +28608,7 @@ sub_08057C40: @ 0x08057C40
 	b _08057D72
 _08057C5A:
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -28851,7 +28851,7 @@ _08057E16:
 	orr r1, r1, r2
 	str r1, [r0]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08057E3A:
 	add sp, sp, #12
 	pop {r4}
@@ -29544,8 +29544,8 @@ _08058346:
 	bx r0
 	THUMB_FUNC_END sub_0805824C
 
-	THUMB_FUNC_START sub_08058350
-sub_08058350: @ 0x08058350
+	THUMB_FUNC_START dk_world_one_change_switch_state
+dk_world_one_change_switch_state: @ 0x08058350
 	push {r4-r6,lr}
 	sub sp, sp, #24
 	add r5, r0, #0
@@ -29623,7 +29623,7 @@ _080583EC:
 	.4byte gCurrentSwitchState
 _080583F0:
 	.4byte gUnknown_03001C78
-	THUMB_FUNC_END sub_08058350
+	THUMB_FUNC_END dk_world_one_change_switch_state
 
 	THUMB_FUNC_START sub_080583F4
 sub_080583F4: @ 0x080583F4
@@ -32928,7 +32928,7 @@ _08059C04:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08059C24:
 	ldr r4, _08059C58  @ =0x03000442
 	ldrh r0, [r4]
@@ -33125,7 +33125,7 @@ _08059D7C:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08059D9C:
 	ldr r4, _08059DD4  @ =0x03000442
 	ldrh r0, [r4]
@@ -33812,7 +33812,7 @@ _0805A294:
 	orr r0, r0, r1
 	str r0, [r2]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	b _0805A2F2
 _0805A2C0:
 	.4byte 0x03000434
@@ -33838,7 +33838,7 @@ _0805A2CC:
 	orr r0, r0, r1
 	str r0, [r2]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0805A2F2:
 	add sp, sp, #12
 	pop {r4}
@@ -34117,11 +34117,11 @@ _0805A4DC:
 	add r0, r0, r1
 	str r0, [r5, #36]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	mov r0, #61
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	mov r0, #62
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	ldr r2, _0805A560  @ =gUnknown_030019A0
 	ldr r0, [r2]
 	ldr r1, _0805A564  @ =0x20040000
@@ -37463,7 +37463,7 @@ _0805BD30:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0805BD50:
 	ldr r4, _0805BD84  @ =0x030004F2
 	ldrh r0, [r4]
@@ -37660,7 +37660,7 @@ _0805BEA8:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0805BEC8:
 	ldr r4, _0805BF00  @ =0x030004F2
 	ldrh r0, [r4]
@@ -38527,7 +38527,7 @@ sub_0805C504: @ 0x0805C504
 	b _0805C636
 _0805C51E:
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -38770,7 +38770,7 @@ _0805C6DA:
 	orr r1, r1, r2
 	str r1, [r0]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0805C6FE:
 	add sp, sp, #12
 	pop {r4}
@@ -43214,7 +43214,7 @@ _0805E7D0:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0805E7F0:
 	ldr r4, _0805E824  @ =0x030005F0
 	ldrh r0, [r4]
@@ -43411,7 +43411,7 @@ _0805E948:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0805E968:
 	ldr r4, _0805E9A0  @ =0x030005F0
 	ldrh r0, [r4]
@@ -43779,7 +43779,7 @@ sub_0805EBEC: @ 0x0805EBEC
 	b _0805ED1E
 _0805EC06:
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -44022,7 +44022,7 @@ _0805EDC2:
 	orr r1, r1, r2
 	str r1, [r0]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0805EDE6:
 	add sp, sp, #12
 	pop {r4}
@@ -49330,7 +49330,7 @@ _080614D8:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _080614F8:
 	ldr r4, _0806152C  @ =0x03000696
 	ldrh r0, [r4]
@@ -49527,7 +49527,7 @@ _08061650:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08061670:
 	ldr r4, _080616A8  @ =0x03000696
 	ldrh r0, [r4]
@@ -49857,7 +49857,7 @@ sub_080618BC: @ 0x080618BC
 	b _080619EE
 _080618D6:
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -50100,7 +50100,7 @@ _08061A92:
 	orr r1, r1, r2
 	str r1, [r0]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08061AB6:
 	add sp, sp, #12
 	pop {r4}
@@ -52025,7 +52025,7 @@ _080628C8:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _080628E8:
 	ldr r4, _0806291C  @ =0x030006C2
 	ldrh r0, [r4]
@@ -52222,7 +52222,7 @@ _08062A40:
 	ldrb r0, [r0, #1]
 	strh r0, [r1]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08062A60:
 	ldr r4, _08062A98  @ =0x030006C2
 	ldrh r0, [r4]
@@ -52500,7 +52500,7 @@ sub_08062C48: @ 0x08062C48
 	b _08062D7A
 _08062C62:
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r4, #0
 	add r0, r0, #64
 	ldrb r2, [r0]
@@ -54242,7 +54242,7 @@ sub_08063928: @ 0x08063928
 	orr r0, r0, r1
 	str r0, [r2]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08063952:
 	pop {r0}
 	bx r0
@@ -54781,7 +54781,7 @@ _08063D44:
 	.4byte 0x00007FFF
 _08063D48:
 	mov r0, #138
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	mov r1, #0
 	strh r1, [r4, #50]
 	strh r1, [r4, #48]
@@ -54904,7 +54904,7 @@ _08063E1C:
 	ldrb r0, [r0, #1]
 	strh r0, [r1, #26]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08063E38:
 	ldr r1, _08063E6C  @ =0x030006E0
 	ldr r4, [r1]
@@ -55094,7 +55094,7 @@ _08063F8C:
 	ldrb r0, [r0, #1]
 	strh r0, [r1, #26]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08063FA8:
 	ldr r1, _08063FDC  @ =0x030006E0
 	ldr r4, [r1]
@@ -61844,7 +61844,7 @@ sub_08067170: @ 0x08067170
 	orr r1, r1, r2
 	str r1, [r3]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _08067196:
 	pop {r0}
 	bx r0
@@ -61899,7 +61899,7 @@ sub_080671CC: @ 0x080671CC
 	cmp r0, #88
 	bne _08067218
 	mov r0, #153
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r4, #0
 	add r0, r0, #61
 	ldrb r0, [r0]

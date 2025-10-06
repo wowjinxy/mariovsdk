@@ -1,8 +1,8 @@
 	.INCLUDE "macro.inc"
 	.INCLUDE "gba.inc"
 
-	THUMB_FUNC_START sub_0801BAD8
-sub_0801BAD8: @ 0x0801BAD8
+	THUMB_FUNC_START pause_menu_handle_menu_0801BAD8
+pause_menu_handle_menu_0801BAD8: @ 0x0801BAD8
 	push {r4-r7,lr}
 	sub sp, sp, #16
 	ldr r0, _0801BB04  @ =gUnknown_03000BEC
@@ -446,5 +446,5 @@ _0801BE2C:
 	.4byte gHeldKeys
 _0801BE30:
 	.4byte gUnknown_030000B4
-	THUMB_FUNC_END sub_0801BAD8
+	THUMB_FUNC_END pause_menu_handle_menu_0801BAD8
 	

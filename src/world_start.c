@@ -208,7 +208,7 @@ static void sub_080372A0(void)
         else
         {
             sWorldIntroState = STATE_MARIO_RUN;
-            sub_08071E14(234);
+            sound_effect_thing_08071E14(SE_DK_WALK);
             sMario->soundEffect = play_sound_effect_08071990(SE_WALK, 12, 16, 64, 0, 128, 0);
             sub_08040FC0(sMario->soundEffect, sMario->x);
         }
@@ -237,7 +237,7 @@ static void sub_080372A0(void)
             sWorldIntroTextYPos = -50 << 8;
             gBGLayerOffsets.bg2_y = sWorldIntroTextYPos >> 8;
             sWorldIntroState = STATE_TEXT_SCROLL;
-            sub_08071E14(18);
+            sound_effect_thing_08071E14(SE_WALK);
             if (gLevelType == LEVEL_TYPE_MAIN || gLevelType == LEVEL_TYPE_MAIN_BOSS)
                 isPlus = 0;
             else

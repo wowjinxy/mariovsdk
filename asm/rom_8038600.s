@@ -3828,7 +3828,7 @@ _0803A204:
 	b _0803A402
 _0803A216:
 	mov r5, r8
-	ldr r0, _0803A298  @ =gUnknown_03000C2C
+	ldr r0, _0803A298  @ =gSpriteCollisionCode_03000C2C
 	mov r1, r9
 	ldr r2, [r0]
 	mov r0, r8
@@ -3895,7 +3895,7 @@ _0803A290:
 _0803A294:
 	.4byte 0xFFFFFE00
 _0803A298:
-	.4byte gUnknown_03000C2C
+	.4byte gSpriteCollisionCode_03000C2C
 _0803A29C:
 	.4byte 0x03001958
 _0803A2A0:
@@ -6697,7 +6697,7 @@ _0803B6F4:
 _0803B70E:
 	bl update_mario_action_0803ED98
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r6, #0
 	add r0, r0, #70
 	strh r5, [r0]
@@ -6870,7 +6870,7 @@ _0803B7EC:
 	and r0, r0, r6
 	str r0, [r7, #92]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r7, #0
 	add r0, r0, #70
 	mov r1, r10
@@ -6946,7 +6946,7 @@ _0803B898:
 	and r0, r0, r1
 	str r0, [r7, #92]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r7, #0
 	add r0, r0, #70
 	mov r2, r10
@@ -7051,7 +7051,7 @@ _0803B998:
 	mov r2, r8
 	bl update_mario_action_0803ED98
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r7, #0
 	add r0, r0, #70
 	strh r6, [r0]
@@ -7072,7 +7072,7 @@ _0803B9F4:
 	add r2, r5, #0
 	bl update_mario_action_0803ED98
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r0, r7, #0
 	add r0, r0, #70
 	strh r6, [r0]
@@ -7114,9 +7114,9 @@ _0803BA58:
 	bl _0803C284
 _0803BA62:
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	mov r0, #14
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	add r1, r7, #0
 	add r1, r1, #70
 	mov r0, #0
@@ -26583,7 +26583,7 @@ sub_080447B8: @ 0x080447B8
 	push {r4-r7,lr}
 	sub sp, sp, #36
 	add r6, r0, #0
-	ldr r2, _08044858  @ =0x03001718
+	ldr r2, _08044858  @ =gRandomState_03001718
 	ldr r1, [r2]
 	ldr r0, _0804485C  @ =0x41C64E6D
 	mul r0, r1, r0
@@ -26660,7 +26660,7 @@ sub_080447B8: @ 0x080447B8
 	.byte 0x00
 	.byte 0x00
 _08044858:
-	.4byte 0x03001718
+	.4byte gRandomState_03001718
 _0804485C:
 	.4byte 0x41C64E6D
 _08044860:
@@ -27281,7 +27281,7 @@ sub_08044CC8: @ 0x08044CC8
 	push {r4,r5,lr}
 	sub sp, sp, #28
 	add r5, r0, #0
-	ldr r2, _08044D24  @ =0x03001718
+	ldr r2, _08044D24  @ =gRandomState_03001718
 	ldr r1, [r2]
 	ldr r0, _08044D28  @ =0x41C64E6D
 	mul r0, r1, r0
@@ -27325,7 +27325,7 @@ _08044D20:
 	mov r0, #0
 	b _08044D3E
 _08044D24:
-	.4byte 0x03001718
+	.4byte gRandomState_03001718
 _08044D28:
 	.4byte 0x41C64E6D
 _08044D2C:
@@ -27352,7 +27352,7 @@ sub_08044D48: @ 0x08044D48
 	push {r4-r7,lr}
 	sub sp, sp, #44
 	add r6, r0, #0
-	ldr r2, _08044DF0  @ =0x03001718
+	ldr r2, _08044DF0  @ =gRandomState_03001718
 	ldr r1, [r2]
 	ldr r0, _08044DF4  @ =0x41C64E6D
 	mul r0, r1, r0
@@ -27433,7 +27433,7 @@ _08044DE4:
 	mov r0, #1
 	b _08044DFE
 _08044DF0:
-	.4byte 0x03001718
+	.4byte gRandomState_03001718
 _08044DF4:
 	.4byte 0x41C64E6D
 _08044DF8:
@@ -35189,7 +35189,7 @@ sub_0804845C: @ 0x0804845C
 	push {r4,r5,lr}
 	sub sp, sp, #20
 	add r5, r0, #0
-	ldr r2, _080484B8  @ =0x03001718
+	ldr r2, _080484B8  @ =gRandomState_03001718
 	ldr r1, [r2]
 	ldr r0, _080484BC  @ =0x41C64E6D
 	mul r0, r1, r0
@@ -35234,7 +35234,7 @@ _080484B2:
 	.byte 0x00
 	.byte 0x00
 _080484B8:
-	.4byte 0x03001718
+	.4byte gRandomState_03001718
 _080484BC:
 	.4byte 0x41C64E6D
 _080484C0:
@@ -35319,7 +35319,7 @@ _0804853C:
 	THUMB_FUNC_START sub_08048540
 sub_08048540: @ 0x08048540
 	push {lr}
-	ldr r2, _08048560  @ =0x03001718
+	ldr r2, _08048560  @ =gRandomState_03001718
 	ldr r1, [r2]
 	ldr r0, _08048564  @ =0x41C64E6D
 	mul r0, r1, r0
@@ -35336,7 +35336,7 @@ sub_08048540: @ 0x08048540
 	.byte 0x00
 	.byte 0x00
 _08048560:
-	.4byte 0x03001718
+	.4byte gRandomState_03001718
 _08048564:
 	.4byte 0x41C64E6D
 _08048568:
@@ -35355,7 +35355,7 @@ _08048572:
 	THUMB_FUNC_START sub_08048578
 sub_08048578: @ 0x08048578
 	push {lr}
-	ldr r2, _08048598  @ =0x03001718
+	ldr r2, _08048598  @ =gRandomState_03001718
 	ldr r1, [r2]
 	ldr r0, _0804859C  @ =0x41C64E6D
 	mul r0, r1, r0
@@ -35372,7 +35372,7 @@ sub_08048578: @ 0x08048578
 	.byte 0x00
 	.byte 0x00
 _08048598:
-	.4byte 0x03001718
+	.4byte gRandomState_03001718
 _0804859C:
 	.4byte 0x41C64E6D
 _080485A0:
@@ -40005,7 +40005,7 @@ _0804A23E:
 
 	THUMB_FUNC_START sub_0804A244
 sub_0804A244: @ 0x0804A244
-	ldr r2, _0804A258  @ =0x03001718
+	ldr r2, _0804A258  @ =gRandomState_03001718
 	ldr r1, [r2]
 	ldr r0, _0804A25C  @ =0x41C64E6D
 	mul r0, r1, r0
@@ -40016,7 +40016,7 @@ sub_0804A244: @ 0x0804A244
 	lsr r0, r0, #17
 	bx lr
 _0804A258:
-	.4byte 0x03001718
+	.4byte gRandomState_03001718
 _0804A25C:
 	.4byte 0x41C64E6D
 _0804A260:

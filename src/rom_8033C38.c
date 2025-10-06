@@ -17,10 +17,10 @@ void init_timer_regs(void)
     REG_IME = 1;
 }
 
-void sub_08033C74(void)
+void setup_random_state_08033C74(void)
 {
     REG_IME = 0;
-    gUnknown_03001718 = (REG_TM3CNT_L << 16) | REG_TM2CNT_L;
+    gRandomState_03001718 = (REG_TM3CNT_L << 16) | REG_TM2CNT_L;
     REG_IME = 1;
 }
 

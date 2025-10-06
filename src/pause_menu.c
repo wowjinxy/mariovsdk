@@ -16,7 +16,7 @@ void pause_menu_main(void)
 
     process_input();
     
-    switch(sub_0801BAD8()) {
+    switch(pause_menu_handle_menu_0801BAD8()) {
         case 0:
             sub_0800F070(0);
             break;

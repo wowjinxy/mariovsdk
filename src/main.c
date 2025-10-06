@@ -206,8 +206,8 @@ static void (*gUnknown_0807846C[])(void) =
 
 static void main_loop(void);
 
-
-void sub_08006DD8(void) { // possible inline for AgbMain?
+// 0x08006DD8
+void AgbMain_sub(void) { // possible inline for AgbMain?
 
 	gTitleScreenAttractCount = 0;
 	gIsLevelViewActive = FALSE;

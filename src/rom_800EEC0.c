@@ -37,7 +37,7 @@ u8 sub_0800EF30(void)
     if (sub_08033658() != 0)
     {
         gUnknown_03000A10.unk2C = 0;
-        sub_08071E14(0x40);
+        sound_effect_thing_08071E14(SE_SCROLL);
         return 3;
     }
     else if (gUnknown_03000A10.unkB6 == 1)

@@ -192,7 +192,13 @@ struct Struct3000A10
     u8 unk5;
     u8 unk6;
     u8 unk7;
-    u8 pad4[0x28];
+    u8 unk8;
+    u8 unk9;
+    u8 unkA;
+    u8 unkB;
+    u8 uiLivesDigit2;
+    u8 uiLivesDigit1;
+    u8 pad4[0x22];
     u8 unk28;
     u8 unk29;
     u8 unk2A;
@@ -1259,7 +1265,7 @@ extern u8 gUnknown_030008C4;
 extern u8 gUnknown_030008D4;
 extern u8 gUnknown_030008D8;
 extern u8 gUnknown_030008E8;
-extern u8 gUnknown_03000924;
+extern u32 *gUnknown_03000924; // seems to be level editor related, functions which write to this are called from level editor things
 extern int (*gUnknown_03000964)(u32 *, int, int, int);
 extern int (*gUnknown_03000968)(struct Struct03000008 *);
 extern void *gUnknown_03000970[];
@@ -1311,7 +1317,7 @@ extern void (*gUnknown_03000C10)(void);
 extern u8 gUnknown_03000C1C;
 extern u8 gDKLevelMarioLivesLeft_03000C20;
 extern u8 gIsFadeInProgress;
-extern void *gUnknown_03000C2C;
+extern void *gSpriteCollisionCode_03000C2C;
 extern struct StructC30 gUnknown_03000C30;
 extern struct StructC40 gUnknown_03000C40;
 extern struct StructC70 gUnknown_03000C70;
@@ -1380,7 +1386,7 @@ extern u16 gCurrentInput; // keys currently pressed
 extern s16 gCurrentLevelHeight;
 extern s16 gCameraVerticalOffset;
 extern u32 gUnknown_03001714;
-extern u32 gUnknown_03001718;
+extern u32 gRandomState_03001718;
 extern u16 gUnknown_0300171C;
 extern s16 gCurrentLevelWidth;
 extern s16 gSpriteHorizontalOffset;
@@ -1486,7 +1492,9 @@ extern void *gUnknown_03007FFC;
 
 extern struct Struct08078210
 {
-    u8 filler0[0x108];
+	u8 filler0[4];
+	u32 numTileObjects;
+    u8 filler8[0x100];
     struct Struct08078210_sub *unk108[1];
 } *gObjectTileDataRAMPtr;
 extern u32 *gLastLevelEWorld;
@@ -1883,7 +1891,7 @@ void load_some_oam(void);
 void process_input(void);
 void sub_08033440(void);
 void init_timer_regs(void);
-void sub_08033C74(void);
+void setup_random_state_08033C74(void);
 void clear_ram(void);
 void clear_graphics_memory(void);
 void sub_08033D30(void);
@@ -1996,14 +2004,14 @@ void sub_0802C9D8();
 void sub_080315A4();
 void sub_08031C1C();
 
-s8 sub_0801BAD8(void);
+s8 pause_menu_handle_menu_0801BAD8(void);
 void sub_0800F02C();
 void sub_0800F070(u8);
 void level_setup();
 void sub_0802EDAC();
 void sub_08040D50();
 void load_arm_code_0802B998();
-void sub_080069BC();
+void load_arm_code_2_080069BC();
 int sub_08032C44(struct UnknownStruct4 *arg0);
 void sub_080041B8();
 void sub_080072A4();

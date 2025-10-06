@@ -102,7 +102,7 @@ void load_arm_code_0802B998(void)
     u8 **dest;
 
     CpuCopy32(romBase, buffer, 0x1068);
-    gUnknown_03000C2C = buffer;
+    gSpriteCollisionCode_03000C2C = buffer;
     dest = (u8 **)gUnknown_03000970;
     src = (u8 **)gUnknown_0807AA1C;
     for (i = 0; i < 15; i++)
@@ -516,9 +516,9 @@ void gfx_related_0802C0B8(struct GraphicsConfig *config)
     }
 }
 
-void sub_0802C104(int arg0, int arg1, void *arg2)
+void sub_0802C104(int arg0, int paletteType, void *palette)
 {
-    gCurrentPalette.unk0[arg0][arg1] = arg2;
+    gCurrentPalette.unk0[arg0][paletteType] = palette;
 }
 
 int has_water_layer_struct_0802C118(struct GraphicsConfig *arg0)

@@ -171,7 +171,7 @@ gUnknown_086604B8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte sub_08059144
-	.4byte sub_080579B8
+	.4byte dk_world_one_switch_slam
 
 	.4byte gUnknown_03001C50
 	.4byte gUnknown_08230EDC @ Sprite Animation
@@ -193,7 +193,7 @@ gUnknown_086604B8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte sub_08059144
-	.4byte sub_080579B8
+	.4byte dk_world_one_switch_slam
 
 	.4byte gUnknown_03001C50
 	.4byte gUnknown_082380DC @ Sprite Animation
@@ -215,7 +215,7 @@ gUnknown_086604B8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte sub_08059144
-	.4byte sub_080579B8
+	.4byte dk_world_one_switch_slam
 
 	.4byte gUnknown_03001C50
 	.4byte gUnknown_081B8F80 @ Sprite Animation

@@ -65,7 +65,7 @@ void level_play_init_callback(void)
     sub_0805727C();
     sub_08038B18();
     load_arm_code_0802B998();
-    sub_080069BC();
+    load_arm_code_2_080069BC();
     gUnknown_030009D0 = gNextLevelInLevelTable.unk0->levelFlags;
     gUnknown_030009D8 = 0;
     gUnknown_03000B60 = 0;
@@ -85,7 +85,7 @@ void level_demo_init_callback(void) {
     sub_0805727C();
     sub_08038B18();
     load_arm_code_0802B998();
-    sub_080069BC();
+    load_arm_code_2_080069BC();
     gUnknown_030009D0 = (u32)gNextLevelInLevelTable.unk0->levelFlags;
     gUnknown_030009D8 = 0;
     gUnknown_03000B60 = 0;

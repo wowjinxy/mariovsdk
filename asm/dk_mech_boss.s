@@ -5640,7 +5640,7 @@ _0806CC18:
 	mov r0, #1
 	strb r0, [r1]
 	mov r0, #245
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	ldr r2, [r4]
 	add r0, r2, #0
 	add r0, r0, #24
@@ -6055,7 +6055,7 @@ sub_0806CF10: @ 0x0806CF10
 	cmp r1, r0
 	bne _0806CF26
 	mov r0, #180
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 _0806CF26:
 	pop {r0}
 	bx r0
@@ -6109,7 +6109,7 @@ sub_0806CF64: @ 0x0806CF64
 	orr r0, r0, r1
 	str r0, [r2]
 	mov r0, #18
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	ldr r2, _0806CFA8  @ =gUnknown_03001938
 	ldr r0, [r2]
 	ldr r1, _0806CFAC  @ =0xFFFFFBFF

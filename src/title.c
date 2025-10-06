@@ -41,7 +41,7 @@ void title_init_callback(void)
     gGeneralTimer = 0;
     if (get_current_bgm() != TITLE)
         play_bgm(TITLE, 128, 1);
-    sub_08033C74();
+    setup_random_state_08033C74();
     save_blend_regs(gTitleScreenLeftData.bldCnt, gTitleScreenLeftData.bldAlpha, gTitleScreenLeftData.bldY);
     load_predefined_palette(PALETTE_0_TITLE_SCREEN, LOAD_BG_PALETTE|LOAD_OBJ_PALETTE);
     gPressStartFadeDir = FADE_UP;
@@ -79,7 +79,7 @@ void title_main(void)
     {
         if (gTitleScreenAttractCount > 7 || gTitleScreenAttractCount < 0)
             gTitleScreenAttractCount = 0;
-        sub_08071E14(229);
+        sound_effect_thing_08071E14(SE_TITLE);
         if (gUnknown_0807954C[gTitleScreenAttractCount].unk0 != 0)
         {
             movie_player_setup_data(MOVIE_PLAYER_ALLOW_SKIP|MOVIE_PLAYER_FLAG_2, MOVIE, MAIN_STATE_TITLE_SCREEN, MOVIE_INTRO);

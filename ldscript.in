@@ -7,7 +7,10 @@
 	X(asm/rom_8001BA4.o) \
 	X(src/rom_80066FC.o) \
 	X(asm/rom_80067F0.o) \
-	X(src/rom_80067F0.o) \
+	X(src/rom_80069E8.o) \
+	X(asm/rom_8006A0C.o) \
+	X(asm/rom_8006A6C.o) \
+	X(src/rom_8006CF0.o) \
 	X(src/main.o) \
 	X(src/rom1.o) \
 	X(src/rom_80088F0.o) \
@@ -411,7 +414,7 @@ SECTIONS
 		. = 0xC20;		gDKLevelMarioLivesLeft_03000C20 = .;
 		. = 0xC24;		gUnknown_03000C24 = .;
 		. = 0xC28;		gIsFadeInProgress = .;
-		. = 0xC2C;		gUnknown_03000C2C = .;
+		. = 0xC2C;		gSpriteCollisionCode_03000C2C = .;
 		. = 0xC30;		gUnknown_03000C30 = .;
 		. = 0xC40;		gUnknown_03000C40 = .;
 		. = 0xC70;		gUnknown_03000C70 = .;
@@ -473,7 +476,7 @@ SECTIONS
 		. = 0x170C;		gCurrentLevelHeight = .;
 		. = 0x1710;		gCameraVerticalOffset = .;
 		. = 0x1714;		gUnknown_03001714 = .;
-		. = 0x1718;		gUnknown_03001718 = .;
+		. = 0x1718;		gRandomState_03001718 = .;
 		. = 0x171C;		gUnknown_0300171C = .;
 		. = 0x1720;		gCurrentLevelWidth = .;
 		. = 0x1724;		gSpriteHorizontalOffset = .;

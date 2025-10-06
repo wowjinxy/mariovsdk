@@ -631,7 +631,7 @@ _0801C3B8:
 	add r0, r0, r1
 	mov r1, #0
 	ldrsh r0, [r0, r1]
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	str r4, [sp]
 	mov r0, #128
 	str r0, [sp, #4]

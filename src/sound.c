@@ -1059,7 +1059,7 @@ void sub_08071D9C(int uid)
     sub_08073914(&gSoundWork->musicPlayer, index);
 }
 
-void sub_08071E14(int soundID)
+void sound_effect_thing_08071E14(int soundID)
 {
     int r7 = 1;
     int i;

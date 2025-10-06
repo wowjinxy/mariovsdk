@@ -1218,7 +1218,7 @@ _0806F660:
 	cmp r0, #0
 	beq _0806F694
 	mov r0, #138
-	bl sub_08071E14
+	bl sound_effect_thing_08071E14
 	ldr r1, _0806F6C8  @ =0x03000754
 	mov r0, #1
 	neg r0, r0
